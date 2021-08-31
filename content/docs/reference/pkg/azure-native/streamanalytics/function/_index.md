@@ -71,7 +71,46 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	streamanalytics "github.com/pulumi/pulumi-azure-native/sdk/go/azure/streamanalytics"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := streamanalytics.NewFunction(ctx, "function", &streamanalytics.FunctionArgs{
+			FunctionName: pulumi.String("function8197"),
+			JobName:      pulumi.String("sj8653"),
+			Properties: &streamanalytics.ScalarFunctionPropertiesArgs{
+				Binding: &streamanalytics.JavaScriptFunctionBindingArgs{
+					Script: "function (x, y) { return x + y; }",
+					Type:   pulumi.String("Microsoft.StreamAnalytics/JavascriptUdf"),
+				},
+				Inputs: streamanalytics.FunctionInputArray{
+					&streamanalytics.FunctionInputArgs{
+						DataType: pulumi.String("Any"),
+					},
+				},
+				Output: &streamanalytics.FunctionOutputArgs{
+					DataType: pulumi.String("Any"),
+				},
+				Type: pulumi.String("Scalar"),
+			},
+			ResourceGroupName: pulumi.String("sjrg1637"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -86,19 +125,19 @@ import pulumi_azure_native as azure_native
 function = azure_native.streamanalytics.Function("function",
     function_name="function8197",
     job_name="sj8653",
-    properties={
-        "binding": azure_native.streamanalytics.JavaScriptFunctionBindingArgs(
+    properties=azure_native.streamanalytics.ScalarFunctionPropertiesArgs(
+        binding=azure_native.streamanalytics.JavaScriptFunctionBindingArgs(
             script="function (x, y) { return x + y; }",
             type="Microsoft.StreamAnalytics/JavascriptUdf",
         ),
-        "inputs": [azure_native.streamanalytics.FunctionInputArgs(
+        inputs=[azure_native.streamanalytics.FunctionInputArgs(
             data_type="Any",
         )],
-        "output": azure_native.streamanalytics.FunctionOutputArgs(
+        output=azure_native.streamanalytics.FunctionOutputArgs(
             data_type="Any",
         ),
-        "type": "Scalar",
-    },
+        type="Scalar",
+    ),
     resource_group_name="sjrg1637")
 
 ```
@@ -215,7 +254,64 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	streamanalytics "github.com/pulumi/pulumi-azure-native/sdk/go/azure/streamanalytics"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := streamanalytics.NewFunction(ctx, "function", &streamanalytics.FunctionArgs{
+			FunctionName: pulumi.String("function588"),
+			JobName:      pulumi.String("sj9093"),
+			Properties: &streamanalytics.ScalarFunctionPropertiesArgs{
+				Binding: &streamanalytics.AzureMachineLearningWebServiceFunctionBindingArgs{
+					ApiKey:    "someApiKey==",
+					BatchSize: 1000,
+					Endpoint:  "someAzureMLEndpointURL",
+					Inputs: &streamanalytics.AzureMachineLearningWebServiceInputsArgs{
+						ColumnNames: []streamanalytics.AzureMachineLearningWebServiceInputColumnArgs{
+							&streamanalytics.AzureMachineLearningWebServiceInputColumnArgs{
+								DataType: "string",
+								MapTo:    0,
+								Name:     "tweet",
+							},
+						},
+						Name: "input1",
+					},
+					Outputs: []streamanalytics.AzureMachineLearningWebServiceOutputColumnArgs{
+						&streamanalytics.AzureMachineLearningWebServiceOutputColumnArgs{
+							DataType: "string",
+							Name:     "Sentiment",
+						},
+					},
+					Type: pulumi.String("Microsoft.MachineLearning/WebService"),
+				},
+				Inputs: streamanalytics.FunctionInputArray{
+					&streamanalytics.FunctionInputArgs{
+						DataType: pulumi.String("nvarchar(max)"),
+					},
+				},
+				Output: &streamanalytics.FunctionOutputArgs{
+					DataType: pulumi.String("nvarchar(max)"),
+				},
+				Type: pulumi.String("Scalar"),
+			},
+			ResourceGroupName: pulumi.String("sjrg7"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -230,8 +326,8 @@ import pulumi_azure_native as azure_native
 function = azure_native.streamanalytics.Function("function",
     function_name="function588",
     job_name="sj9093",
-    properties={
-        "binding": azure_native.streamanalytics.AzureMachineLearningWebServiceFunctionBindingArgs(
+    properties=azure_native.streamanalytics.ScalarFunctionPropertiesArgs(
+        binding=azure_native.streamanalytics.AzureMachineLearningWebServiceFunctionBindingArgs(
             api_key="someApiKey==",
             batch_size=1000,
             endpoint="someAzureMLEndpointURL",
@@ -249,14 +345,14 @@ function = azure_native.streamanalytics.Function("function",
             )],
             type="Microsoft.MachineLearning/WebService",
         ),
-        "inputs": [azure_native.streamanalytics.FunctionInputArgs(
+        inputs=[azure_native.streamanalytics.FunctionInputArgs(
             data_type="nvarchar(max)",
         )],
-        "output": azure_native.streamanalytics.FunctionOutputArgs(
+        output=azure_native.streamanalytics.FunctionOutputArgs(
             data_type="nvarchar(max)",
         ),
-        "type": "Scalar",
-    },
+        type="Scalar",
+    ),
     resource_group_name="sjrg7")
 
 ```

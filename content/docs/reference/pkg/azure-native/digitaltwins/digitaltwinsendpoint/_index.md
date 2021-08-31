@@ -71,9 +71,9 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := digitaltwins.NewDigitalTwinsEndpoint(ctx, "digitalTwinsEndpoint", &digitaltwins.DigitalTwinsEndpointArgs{
 			EndpointName: pulumi.String("myServiceBus"),
-			Properties: digitaltwins.ServiceBus{
+			Properties: &digitaltwins.ServiceBusArgs{
 				AuthenticationType:        "KeyBased",
-				EndpointType:              "ServiceBus",
+				EndpointType:              pulumi.String("ServiceBus"),
 				PrimaryConnectionString:   "Endpoint=sb://mysb.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=xyzxyzoX4=;EntityPath=abcabc",
 				SecondaryConnectionString: "Endpoint=sb://mysb.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=xyzxyzoX4=;EntityPath=abcabc",
 			},
@@ -195,9 +195,9 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := digitaltwins.NewDigitalTwinsEndpoint(ctx, "digitalTwinsEndpoint", &digitaltwins.DigitalTwinsEndpointArgs{
 			EndpointName: pulumi.String("myServiceBus"),
-			Properties: digitaltwins.ServiceBus{
+			Properties: &digitaltwins.ServiceBusArgs{
 				AuthenticationType: "IdentityBased",
-				EndpointType:       "ServiceBus",
+				EndpointType:       pulumi.String("ServiceBus"),
 				EndpointUri:        "sb://mysb.servicebus.windows.net/",
 				EntityPath:         "mysbtopic",
 			},

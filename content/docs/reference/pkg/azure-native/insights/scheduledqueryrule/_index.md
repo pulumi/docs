@@ -100,16 +100,16 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := insights.NewScheduledQueryRule(ctx, "scheduledQueryRule", &insights.ScheduledQueryRuleArgs{
-			Action: insights.AlertingAction{
-				AznsAction: insights.AzNsActionGroup{
+			Action: &insights.AlertingActionArgs{
+				AznsAction: &insights.AzNsActionGroupArgs{
 					ActionGroup:          []interface{}{},
 					CustomWebhookPayload: "{}",
 					EmailSubject:         "Email Header",
 				},
-				OdataType: "Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.AlertingAction",
+				OdataType: pulumi.String("Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.AlertingAction"),
 				Severity:  "1",
-				Trigger: insights.TriggerCondition{
-					MetricTrigger: insights.LogMetricTrigger{
+				Trigger: &insights.TriggerConditionArgs{
+					MetricTrigger: &insights.LogMetricTriggerArgs{
 						MetricColumn:      "Computer",
 						MetricTriggerType: "Consecutive",
 						Threshold:         5,
@@ -329,16 +329,16 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := insights.NewScheduledQueryRule(ctx, "scheduledQueryRule", &insights.ScheduledQueryRuleArgs{
-			Action: insights.AlertingAction{
-				AznsAction: insights.AzNsActionGroup{
+			Action: &insights.AlertingActionArgs{
+				AznsAction: &insights.AzNsActionGroupArgs{
 					ActionGroup: []string{
 						"/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/Rac46PostSwapRG/providers/microsoft.insights/actiongroups/test-ag",
 					},
 					EmailSubject: "Cross Resource Mail!!",
 				},
-				OdataType: "Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.AlertingAction",
+				OdataType: pulumi.String("Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.AlertingAction"),
 				Severity:  "3",
-				Trigger: insights.TriggerCondition{
+				Trigger: &insights.TriggerConditionArgs{
 					Threshold:         5000,
 					ThresholdOperator: "GreaterThan",
 				},
@@ -535,14 +535,14 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := insights.NewScheduledQueryRule(ctx, "scheduledQueryRule", &insights.ScheduledQueryRuleArgs{
-			Action: insights.LogToMetricAction{
-				Criteria: []insights.Criteria{
-					insights.Criteria{
-						Dimensions: []insights.Dimension{},
+			Action: &insights.LogToMetricActionArgs{
+				Criteria: []insights.CriteriaArgs{
+					&insights.CriteriaArgs{
+						Dimensions: []insights.DimensionArgs{},
 						MetricName: fmt.Sprintf("%v%v%v", "Average_", "%", " Idle Time"),
 					},
 				},
-				OdataType: "Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.LogToMetricAction",
+				OdataType: pulumi.String("Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.LogToMetricAction"),
 			},
 			Description:       pulumi.String("log to metric description"),
 			Enabled:           pulumi.String("true"),

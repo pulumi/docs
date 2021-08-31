@@ -18,6 +18,8 @@ Explore the resources and functions of the azure-native.automation module.
     <li><a href="credential" title="Credential"><span class="symbol resource"></span>Credential</a></li>
     <li><a href="dscconfiguration" title="DscConfiguration"><span class="symbol resource"></span>DscConfiguration</a></li>
     <li><a href="dscnodeconfiguration" title="DscNodeConfiguration"><span class="symbol resource"></span>DscNodeConfiguration</a></li>
+    <li><a href="hybridrunbookworker" title="HybridRunbookWorker"><span class="symbol resource"></span>HybridRunbookWorker</a></li>
+    <li><a href="hybridrunbookworkergroup" title="HybridRunbookWorkerGroup"><span class="symbol resource"></span>HybridRunbookWorkerGroup</a></li>
     <li><a href="jobschedule" title="JobSchedule"><span class="symbol resource"></span>JobSchedule</a></li>
     <li><a href="module" title="Module"><span class="symbol resource"></span>Module</a></li>
     <li><a href="privateendpointconnection" title="PrivateEndpointConnection"><span class="symbol resource"></span>PrivateEndpointConnection</a></li>
@@ -40,6 +42,8 @@ Explore the resources and functions of the azure-native.automation module.
     <li><a href="getcredential" title="GetCredential"><span class="symbol function"></span>GetCredential</a></li>
     <li><a href="getdscconfiguration" title="GetDscConfiguration"><span class="symbol function"></span>GetDscConfiguration</a></li>
     <li><a href="getdscnodeconfiguration" title="GetDscNodeConfiguration"><span class="symbol function"></span>GetDscNodeConfiguration</a></li>
+    <li><a href="gethybridrunbookworker" title="GetHybridRunbookWorker"><span class="symbol function"></span>GetHybridRunbookWorker</a></li>
+    <li><a href="gethybridrunbookworkergroup" title="GetHybridRunbookWorkerGroup"><span class="symbol function"></span>GetHybridRunbookWorkerGroup</a></li>
     <li><a href="getjobschedule" title="GetJobSchedule"><span class="symbol function"></span>GetJobSchedule</a></li>
     <li><a href="getmodule" title="GetModule"><span class="symbol function"></span>GetModule</a></li>
     <li><a href="getprivateendpointconnection" title="GetPrivateEndpointConnection"><span class="symbol function"></span>GetPrivateEndpointConnection</a></li>
@@ -61,6 +65,6 @@ Explore the resources and functions of the azure-native.automation module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.23.0</dd>
+	<dd>1.24.0</dd>
 </dl>
 

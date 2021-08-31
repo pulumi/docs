@@ -177,12 +177,12 @@ func main() {
 			Rules: []network.RulesEngineRuleArgs{
 				&network.RulesEngineRuleArgs{
 					Action: &network.RulesEngineActionArgs{
-						RouteConfigurationOverride: network.RedirectConfiguration{
+						RouteConfigurationOverride: &network.RedirectConfigurationArgs{
 							CustomFragment:    "fragment",
 							CustomHost:        "www.bing.com",
 							CustomPath:        "/api",
 							CustomQueryString: "a=b",
-							OdataType:         "#Microsoft.Azure.FrontDoor.Models.FrontdoorRedirectConfiguration",
+							OdataType:         pulumi.String("#Microsoft.Azure.FrontDoor.Models.FrontdoorRedirectConfiguration"),
 							RedirectProtocol:  "HttpsOnly",
 							RedirectType:      "Moved",
 						},
@@ -227,18 +227,18 @@ func main() {
 				},
 				&network.RulesEngineRuleArgs{
 					Action: &network.RulesEngineActionArgs{
-						RouteConfigurationOverride: network.ForwardingConfiguration{
-							BackendPool: network.SubResource{
+						RouteConfigurationOverride: &network.ForwardingConfigurationArgs{
+							BackendPool: &network.SubResourceArgs{
 								Id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoors/frontDoor1/backendPools/backendPool1",
 							},
-							CacheConfiguration: network.CacheConfiguration{
+							CacheConfiguration: &network.CacheConfigurationArgs{
 								CacheDuration:                "P1DT12H20M30S",
 								DynamicCompression:           "Disabled",
 								QueryParameterStripDirective: "StripOnly",
 								QueryParameters:              "a=b,p=q",
 							},
 							ForwardingProtocol: "HttpsOnly",
-							OdataType:          "#Microsoft.Azure.FrontDoor.Models.FrontdoorForwardingConfiguration",
+							OdataType:          pulumi.String("#Microsoft.Azure.FrontDoor.Models.FrontdoorForwardingConfiguration"),
 						},
 					},
 					MatchConditions: network.RulesEngineMatchConditionArray{

@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-native.logz.listMonitorUserRoles functio
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Response for list of user's role for Logz.io account.
-API Version: 2020-10-01-preview.
+API Version: 2020-10-01.
 
 
 

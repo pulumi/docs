@@ -88,7 +88,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the mount target{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The name of the snapshot{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="volumename_csharp">
 <a href="#volumename_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Name</a>
@@ -132,7 +132,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the mount target{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The name of the snapshot{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="volumename_go">
 <a href="#volumename_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Name</a>
@@ -176,7 +176,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the mount target{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The name of the snapshot{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="volumename_nodejs">
 <a href="#volumename_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Name</a>
@@ -220,7 +220,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the mount target{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The name of the snapshot{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="volume_name_python">
 <a href="#volume_name_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>name</a>

@@ -60,40 +60,7 @@ class MyStack : Stack
 
 {{< example go >}}
 
-
-```go
-package main
-
-import (
-	"fmt"
-
-	resources "github.com/pulumi/pulumi-azure-native/sdk/go/azure/resources"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := resources.NewDeployment(ctx, "deployment", &resources.DeploymentArgs{
-			DeploymentName: pulumi.String("my-deployment"),
-			Properties: &resources.DeploymentPropertiesArgs{
-				Mode:       "Incremental",
-				Parameters: nil,
-				TemplateLink: &resources.TemplateLinkArgs{
-					QueryString: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v", "sv=2019-02-02&st=2019-04-29T22", "%", "3A18", "%", "3A26Z&se=2019-04-30T02", "%", "3A23", "%", "3A26Z&sr=b&sp=rw&sip=168.1.5.60-168.1.5.70&spr=https&sig=xxxxxxxx0xxxxxxxxxxxxx", "%", "2bxxxxxxxxxxxxxxxxxxxx", "%", "3d")),
-					Uri:         pulumi.String("https://example.com/exampleTemplate.json"),
-				},
-			},
-			ResourceGroupName: pulumi.String("my-resource-group"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
+Coming soon!
 
 {{< /example >}}
 
@@ -190,37 +157,7 @@ class MyStack : Stack
 
 {{< example go >}}
 
-
-```go
-package main
-
-import (
-	resources "github.com/pulumi/pulumi-azure-native/sdk/go/azure/resources"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := resources.NewDeployment(ctx, "deployment", &resources.DeploymentArgs{
-			DeploymentName: pulumi.String("my-deployment"),
-			Properties: &resources.DeploymentPropertiesArgs{
-				Mode:       "Incremental",
-				Parameters: nil,
-				TemplateLink: &resources.TemplateLinkArgs{
-					Id: pulumi.String("/subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/my-resource-group/providers/Microsoft.Resources/TemplateSpecs/TemplateSpec-Name/versions/v1"),
-				},
-			},
-			ResourceGroupName: pulumi.String("my-resource-group"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
+Coming soon!
 
 {{< /example >}}
 
@@ -320,41 +257,7 @@ class MyStack : Stack
 
 {{< example go >}}
 
-
-```go
-package main
-
-import (
-	resources "github.com/pulumi/pulumi-azure-native/sdk/go/azure/resources"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := resources.NewDeployment(ctx, "deployment", &resources.DeploymentArgs{
-			DeploymentName: pulumi.String("my-deployment"),
-			Properties: &resources.DeploymentPropertiesArgs{
-				Mode: "Complete",
-				OnErrorDeployment: &resources.OnErrorDeploymentArgs{
-					DeploymentName: pulumi.String("name-of-deployment-to-use"),
-					Type:           "SpecificDeployment",
-				},
-				Parameters: nil,
-				TemplateLink: &resources.TemplateLinkArgs{
-					Uri: pulumi.String("https://example.com/exampleTemplate.json"),
-				},
-			},
-			ResourceGroupName: pulumi.String("my-resource-group"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
+Coming soon!
 
 {{< /example >}}
 
@@ -461,40 +364,7 @@ class MyStack : Stack
 
 {{< example go >}}
 
-
-```go
-package main
-
-import (
-	resources "github.com/pulumi/pulumi-azure-native/sdk/go/azure/resources"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := resources.NewDeployment(ctx, "deployment", &resources.DeploymentArgs{
-			DeploymentName: pulumi.String("my-deployment"),
-			Properties: &resources.DeploymentPropertiesArgs{
-				Mode: "Complete",
-				OnErrorDeployment: &resources.OnErrorDeploymentArgs{
-					Type: "LastSuccessful",
-				},
-				Parameters: nil,
-				TemplateLink: &resources.TemplateLinkArgs{
-					Uri: pulumi.String("https://example.com/exampleTemplate.json"),
-				},
-			},
-			ResourceGroupName: pulumi.String("my-resource-group"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
+Coming soon!
 
 {{< /example >}}
 

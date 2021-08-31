@@ -121,93 +121,7 @@ class MyStack : Stack
 
 {{< example go >}}
 
-
-```go
-package main
-
-import (
-	keyvault "github.com/pulumi/pulumi-azure-native/sdk/go/azure/keyvault"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := keyvault.NewVault(ctx, "vault", &keyvault.VaultArgs{
-			Location: pulumi.String("westus"),
-			Properties: &keyvault.VaultPropertiesArgs{
-				AccessPolicies: keyvault.AccessPolicyEntryArray{
-					&keyvault.AccessPolicyEntryArgs{
-						ObjectId: pulumi.String("00000000-0000-0000-0000-000000000000"),
-						Permissions: &keyvault.PermissionsArgs{
-							Certificates: pulumi.StringArray{
-								pulumi.String("get"),
-								pulumi.String("list"),
-								pulumi.String("delete"),
-								pulumi.String("create"),
-								pulumi.String("import"),
-								pulumi.String("update"),
-								pulumi.String("managecontacts"),
-								pulumi.String("getissuers"),
-								pulumi.String("listissuers"),
-								pulumi.String("setissuers"),
-								pulumi.String("deleteissuers"),
-								pulumi.String("manageissuers"),
-								pulumi.String("recover"),
-								pulumi.String("purge"),
-							},
-							Keys: pulumi.StringArray{
-								pulumi.String("encrypt"),
-								pulumi.String("decrypt"),
-								pulumi.String("wrapKey"),
-								pulumi.String("unwrapKey"),
-								pulumi.String("sign"),
-								pulumi.String("verify"),
-								pulumi.String("get"),
-								pulumi.String("list"),
-								pulumi.String("create"),
-								pulumi.String("update"),
-								pulumi.String("import"),
-								pulumi.String("delete"),
-								pulumi.String("backup"),
-								pulumi.String("restore"),
-								pulumi.String("recover"),
-								pulumi.String("purge"),
-							},
-							Secrets: pulumi.StringArray{
-								pulumi.String("get"),
-								pulumi.String("list"),
-								pulumi.String("set"),
-								pulumi.String("delete"),
-								pulumi.String("backup"),
-								pulumi.String("restore"),
-								pulumi.String("recover"),
-								pulumi.String("purge"),
-							},
-						},
-						TenantId: pulumi.String("00000000-0000-0000-0000-000000000000"),
-					},
-				},
-				EnabledForDeployment:         pulumi.Bool(true),
-				EnabledForDiskEncryption:     pulumi.Bool(true),
-				EnabledForTemplateDeployment: pulumi.Bool(true),
-				Sku: &keyvault.SkuArgs{
-					Family: pulumi.String("A"),
-					Name:   "standard",
-				},
-				TenantId: pulumi.String("00000000-0000-0000-0000-000000000000"),
-			},
-			ResourceGroupName: pulumi.String("sample-resource-group"),
-			VaultName:         pulumi.String("sample-vault"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
+Coming soon!
 
 {{< /example >}}
 
@@ -437,58 +351,7 @@ class MyStack : Stack
 
 {{< example go >}}
 
-
-```go
-package main
-
-import (
-	keyvault "github.com/pulumi/pulumi-azure-native/sdk/go/azure/keyvault"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := keyvault.NewVault(ctx, "vault", &keyvault.VaultArgs{
-			Location: pulumi.String("westus"),
-			Properties: &keyvault.VaultPropertiesArgs{
-				EnabledForDeployment:         pulumi.Bool(true),
-				EnabledForDiskEncryption:     pulumi.Bool(true),
-				EnabledForTemplateDeployment: pulumi.Bool(true),
-				NetworkAcls: &keyvault.NetworkRuleSetArgs{
-					Bypass:        pulumi.String("AzureServices"),
-					DefaultAction: pulumi.String("Deny"),
-					IpRules: keyvault.IPRuleArray{
-						&keyvault.IPRuleArgs{
-							Value: pulumi.String("124.56.78.91"),
-						},
-						&keyvault.IPRuleArgs{
-							Value: pulumi.String("'10.91.4.0/24'"),
-						},
-					},
-					VirtualNetworkRules: keyvault.VirtualNetworkRuleArray{
-						&keyvault.VirtualNetworkRuleArgs{
-							Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/test-vnet/subnets/subnet1"),
-						},
-					},
-				},
-				Sku: &keyvault.SkuArgs{
-					Family: pulumi.String("A"),
-					Name:   "standard",
-				},
-				TenantId: pulumi.String("00000000-0000-0000-0000-000000000000"),
-			},
-			ResourceGroupName: pulumi.String("sample-resource-group"),
-			VaultName:         pulumi.String("sample-vault"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
+Coming soon!
 
 {{< /example >}}
 

@@ -92,64 +92,7 @@ class MyStack : Stack
 
 {{< example go >}}
 
-
-```go
-package main
-
-import (
-	datalakestore "github.com/pulumi/pulumi-azure-native/sdk/go/azure/datalakestore"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := datalakestore.NewAccount(ctx, "account", &datalakestore.AccountArgs{
-			AccountName:  pulumi.String("contosoadla"),
-			DefaultGroup: pulumi.String("test_default_group"),
-			EncryptionConfig: &datalakestore.EncryptionConfigArgs{
-				KeyVaultMetaInfo: &datalakestore.KeyVaultMetaInfoArgs{
-					EncryptionKeyName:    pulumi.String("test_encryption_key_name"),
-					EncryptionKeyVersion: pulumi.String("encryption_key_version"),
-					KeyVaultResourceId:   pulumi.String("34adfa4f-cedf-4dc0-ba29-b6d1a69ab345"),
-				},
-				Type: "UserManaged",
-			},
-			EncryptionState:       "Enabled",
-			FirewallAllowAzureIps: "Enabled",
-			FirewallRules: []datalakestore.CreateFirewallRuleWithAccountParametersArgs{
-				&datalakestore.CreateFirewallRuleWithAccountParametersArgs{
-					EndIpAddress:   pulumi.String("2.2.2.2"),
-					Name:           pulumi.String("test_rule"),
-					StartIpAddress: pulumi.String("1.1.1.1"),
-				},
-			},
-			FirewallState: "Enabled",
-			Identity: &datalakestore.EncryptionIdentityArgs{
-				Type: "SystemAssigned",
-			},
-			Location:          pulumi.String("eastus2"),
-			NewTier:           "Consumption",
-			ResourceGroupName: pulumi.String("contosorg"),
-			Tags: pulumi.StringMap{
-				"test_key": pulumi.String("test_value"),
-			},
-			TrustedIdProviderState: "Enabled",
-			TrustedIdProviders: []datalakestore.CreateTrustedIdProviderWithAccountParametersArgs{
-				&datalakestore.CreateTrustedIdProviderWithAccountParametersArgs{
-					IdProvider: pulumi.String("https://sts.windows.net/ea9ec534-a3e3-4e45-ad36-3afc5bb291c1"),
-					Name:       pulumi.String("test_trusted_id_provider_name"),
-				},
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
+Coming soon!
 
 {{< /example >}}
 

@@ -61,39 +61,7 @@ class MyStack : Stack
 
 {{< example go >}}
 
-
-```go
-package main
-
-import (
-	relay "github.com/pulumi/pulumi-azure-native/sdk/go/azure/relay"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := relay.NewNamespace(ctx, "namespace", &relay.NamespaceArgs{
-			Location:          pulumi.String("West US"),
-			NamespaceName:     pulumi.String("example-RelayNamespace-01"),
-			ResourceGroupName: pulumi.String("resourcegroup"),
-			Sku: &relay.SkuArgs{
-				Name: "Standard",
-				Tier: "Standard",
-			},
-			Tags: pulumi.StringMap{
-				"tag1": pulumi.String("value1"),
-				"tag2": pulumi.String("value2"),
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
+Coming soon!
 
 {{< /example >}}
 

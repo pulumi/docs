@@ -92,8 +92,8 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := security.NewAutomation(ctx, "automation", &security.AutomationArgs{
 			Actions: pulumi.AnyArray{
-				security.AutomationActionLogicApp{
-					ActionType:         "LogicApp",
+				&security.AutomationActionLogicAppArgs{
+					ActionType:         pulumi.String("LogicApp"),
 					LogicAppResourceId: "/subscriptions/e54a4a18-5b94-4f90-9471-bd3decad8a2e/resourceGroups/sample/providers/Microsoft.Logic/workflows/MyTest1",
 					Uri:                "https://exampleTriggerUri1.com",
 				},
@@ -289,8 +289,8 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := security.NewAutomation(ctx, "automation", &security.AutomationArgs{
 			Actions: pulumi.AnyArray{
-				security.AutomationActionLogicApp{
-					ActionType:         "LogicApp",
+				&security.AutomationActionLogicAppArgs{
+					ActionType:         pulumi.String("LogicApp"),
 					LogicAppResourceId: "/subscriptions/e54a4a18-5b94-4f90-9471-bd3decad8a2e/resourceGroups/sample/providers/Microsoft.Logic/workflows/MyTest1",
 					Uri:                "https://exampleTriggerUri1.com",
 				},
@@ -516,8 +516,8 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := security.NewAutomation(ctx, "automation", &security.AutomationArgs{
 			Actions: pulumi.AnyArray{
-				security.AutomationActionLogicApp{
-					ActionType:         "LogicApp",
+				&security.AutomationActionLogicAppArgs{
+					ActionType:         pulumi.String("LogicApp"),
 					LogicAppResourceId: "/subscriptions/e54a4a18-5b94-4f90-9471-bd3decad8a2e/resourceGroups/sample/providers/Microsoft.Logic/workflows/MyTest1",
 					Uri:                "https://exampleTriggerUri1.com",
 				},

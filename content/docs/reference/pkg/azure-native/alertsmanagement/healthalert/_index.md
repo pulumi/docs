@@ -94,7 +94,63 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	alertsmanagement "github.com/pulumi/pulumi-azure-native/sdk/go/azure/alertsmanagement"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := alertsmanagement.NewHealthAlert(ctx, "healthAlert", &alertsmanagement.HealthAlertArgs{
+			Actions: []alertsmanagement.HealthAlertActionArgs{
+				&alertsmanagement.HealthAlertActionArgs{
+					ActionGroupId: pulumi.String("/subscriptions/14ddf0c5-77c5-4b53-84f6-e1fa43ad68f7/resourcegroups/gigtest/providers/microsoft.insights/notificationgroups/group2"),
+					WebHookProperties: pulumi.StringMap{
+						"key11": pulumi.String("value11"),
+						"key12": pulumi.String("value12"),
+					},
+				},
+			},
+			Criteria: &alertsmanagement.HealthAlertCriteriaArgs{
+				AllOf: alertsmanagement.VmGuestHealthAlertCriterionArray{
+					&alertsmanagement.VmGuestHealthAlertCriterionArgs{
+						HealthStates: alertsmanagement.HealthStateArray{
+							&alertsmanagement.HealthStateArgs{
+								Severity: pulumi.Float64(2),
+							},
+							&alertsmanagement.HealthStateArgs{
+								Severity: pulumi.Float64(3),
+							},
+						},
+						MonitorNames: pulumi.StringArray{
+							pulumi.String("root"),
+						},
+						Namespace: pulumi.String("GuestVmHealth"),
+					},
+				},
+			},
+			Description:       pulumi.String("This is the description of the rule1"),
+			Enabled:           pulumi.Bool(true),
+			Location:          pulumi.String("global"),
+			ResourceGroupName: pulumi.String("gigtest"),
+			RuleName:          pulumi.String("highcpu"),
+			Scopes: pulumi.StringArray{
+				pulumi.String("/subscriptions/14ddf0c5-77c5-4b53-84f6-e1fa43ad68f7/resourceGroups/gigtest/providers/Microsoft.Compute/virtualMachines/gigwadme"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -115,8 +171,8 @@ health_alert = azure_native.alertsmanagement.HealthAlert("healthAlert",
         },
     )],
     criteria=azure_native.alertsmanagement.HealthAlertCriteriaArgs(
-        all_of=[{
-            "healthStates": [
+        all_of=[azure_native.alertsmanagement.VmGuestHealthAlertCriterionArgs(
+            health_states=[
                 azure_native.alertsmanagement.HealthStateArgs(
                     severity=2,
                 ),
@@ -124,9 +180,9 @@ health_alert = azure_native.alertsmanagement.HealthAlert("healthAlert",
                     severity=3,
                 ),
             ],
-            "monitorNames": ["root"],
-            "namespace": "GuestVmHealth",
-        }],
+            monitor_names=["root"],
+            namespace="GuestVmHealth",
+        )],
     ),
     description="This is the description of the rule1",
     enabled=True,

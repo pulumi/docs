@@ -56,36 +56,7 @@ class MyStack : Stack
 
 {{< example go >}}
 
-
-```go
-package main
-
-import (
-	batch "github.com/pulumi/pulumi-azure-native/sdk/go/azure/batch"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := batch.NewCertificate(ctx, "certificate", &batch.CertificateArgs{
-			AccountName:         pulumi.String("sampleacct"),
-			CertificateName:     pulumi.String("sha1-0a0e4f50d51beadeac1d35afc5116098e7902e6e"),
-			Data:                pulumi.String("MIIJsgIBAzCCCW4GCSqGSIb3DQE..."),
-			Format:              "Pfx",
-			Password:            pulumi.String("<ExamplePassword>"),
-			ResourceGroupName:   pulumi.String("default-azurebatch-japaneast"),
-			Thumbprint:          pulumi.String("0a0e4f50d51beadeac1d35afc5116098e7902e6e"),
-			ThumbprintAlgorithm: pulumi.String("sha1"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
+Coming soon!
 
 {{< /example >}}
 
@@ -172,33 +143,7 @@ class MyStack : Stack
 
 {{< example go >}}
 
-
-```go
-package main
-
-import (
-	batch "github.com/pulumi/pulumi-azure-native/sdk/go/azure/batch"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := batch.NewCertificate(ctx, "certificate", &batch.CertificateArgs{
-			AccountName:       pulumi.String("sampleacct"),
-			CertificateName:   pulumi.String("sha1-0a0e4f50d51beadeac1d35afc5116098e7902e6e"),
-			Data:              pulumi.String("MIICrjCCAZagAwI..."),
-			Format:            "Cer",
-			ResourceGroupName: pulumi.String("default-azurebatch-japaneast"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
+Coming soon!
 
 {{< /example >}}
 

@@ -78,8 +78,8 @@ func main() {
 			NetworkMappingName: pulumi.String("corpe2amap"),
 			NetworkName:        pulumi.String("e2267b5c-2650-49bd-ab3f-d66aae694c06"),
 			Properties: &recoveryservices.CreateNetworkMappingInputPropertiesArgs{
-				FabricSpecificDetails: recoveryservices.VmmToAzureCreateNetworkMappingInput{
-					InstanceType: "VmmToAzure",
+				FabricSpecificDetails: &recoveryservices.VmmToAzureCreateNetworkMappingInputArgs{
+					InstanceType: pulumi.String("VmmToAzure"),
 				},
 				RecoveryFabricName: pulumi.String("Microsoft Azure"),
 				RecoveryNetworkId:  pulumi.String("/subscriptions/c183865e-6077-46f2-a3b1-deb0f4f4650a/resourceGroups/siterecoveryProd1/providers/Microsoft.Network/virtualNetworks/vnetavrai"),

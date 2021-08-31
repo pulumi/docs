@@ -72,8 +72,8 @@ func main() {
 		_, err := recoveryservices.NewReplicationPolicy(ctx, "replicationPolicy", &recoveryservices.ReplicationPolicyArgs{
 			PolicyName: pulumi.String("protectionprofile1"),
 			Properties: &recoveryservices.CreatePolicyInputPropertiesArgs{
-				ProviderSpecificInput: recoveryservices.HyperVReplicaAzurePolicyInput{
-					InstanceType: "HyperVReplicaAzure",
+				ProviderSpecificInput: &recoveryservices.HyperVReplicaAzurePolicyInputArgs{
+					InstanceType: pulumi.String("HyperVReplicaAzure"),
 				},
 			},
 			ResourceGroupName: pulumi.String("resourceGroupPS1"),

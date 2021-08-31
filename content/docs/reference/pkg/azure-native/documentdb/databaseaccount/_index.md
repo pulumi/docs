@@ -133,96 +133,7 @@ class MyStack : Stack
 
 {{< example go >}}
 
-
-```go
-package main
-
-import (
-	documentdb "github.com/pulumi/pulumi-azure-native/sdk/go/azure/documentdb"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := documentdb.NewDatabaseAccount(ctx, "databaseAccount", &documentdb.DatabaseAccountArgs{
-			AccountName: pulumi.String("ddb1"),
-			ApiProperties: &documentdb.ApiPropertiesArgs{
-				ServerVersion: pulumi.String("3.2"),
-			},
-			BackupPolicy: documentdb.PeriodicModeBackupPolicy{
-				PeriodicModeProperties: documentdb.PeriodicModeProperties{
-					BackupIntervalInMinutes:        240,
-					BackupRetentionIntervalInHours: 8,
-				},
-				Type: "Periodic",
-			},
-			ConsistencyPolicy: &documentdb.ConsistencyPolicyArgs{
-				DefaultConsistencyLevel: "BoundedStaleness",
-				MaxIntervalInSeconds:    pulumi.Int(10),
-				MaxStalenessPrefix:      pulumi.Float64(200),
-			},
-			Cors: []documentdb.CorsPolicyArgs{
-				&documentdb.CorsPolicyArgs{
-					AllowedOrigins: pulumi.String("https://test"),
-				},
-			},
-			DatabaseAccountOfferType: "Standard",
-			DefaultIdentity:          pulumi.String("FirstPartyIdentity"),
-			EnableAnalyticalStorage:  pulumi.Bool(true),
-			EnableFreeTier:           pulumi.Bool(false),
-			Identity: &documentdb.ManagedServiceIdentityArgs{
-				Type: "SystemAssigned,UserAssigned",
-				UserAssignedIdentities: pulumi.AnyMap{
-					"/subscriptions/fa5fc227-a624-475e-b696-cdd604c735bc/resourceGroups/eu2cgroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/id1": nil,
-				},
-			},
-			IpRules: []documentdb.IpAddressOrRangeArgs{
-				&documentdb.IpAddressOrRangeArgs{
-					IpAddressOrRange: pulumi.String("23.43.230.120"),
-				},
-				&documentdb.IpAddressOrRangeArgs{
-					IpAddressOrRange: pulumi.String("110.12.240.0/12"),
-				},
-			},
-			IsVirtualNetworkFilterEnabled: pulumi.Bool(true),
-			KeyVaultKeyUri:                pulumi.String("https://myKeyVault.vault.azure.net"),
-			Kind:                          pulumi.String("MongoDB"),
-			Location:                      pulumi.String("westus"),
-			Locations: documentdb.LocationArray{
-				&documentdb.LocationArgs{
-					FailoverPriority: pulumi.Int(0),
-					IsZoneRedundant:  pulumi.Bool(false),
-					LocationName:     pulumi.String("southcentralus"),
-				},
-				&documentdb.LocationArgs{
-					FailoverPriority: pulumi.Int(1),
-					IsZoneRedundant:  pulumi.Bool(false),
-					LocationName:     pulumi.String("eastus"),
-				},
-			},
-			NetworkAclBypass: "AzureServices",
-			NetworkAclBypassResourceIds: pulumi.StringArray{
-				pulumi.String("/subscriptions/subId/resourcegroups/rgName/providers/Microsoft.Synapse/workspaces/workspaceName"),
-			},
-			PublicNetworkAccess: pulumi.String("Enabled"),
-			ResourceGroupName:   pulumi.String("rg1"),
-			Tags:                nil,
-			VirtualNetworkRules: []documentdb.VirtualNetworkRuleArgs{
-				&documentdb.VirtualNetworkRuleArgs{
-					Id:                               pulumi.String("/subscriptions/subId/resourceGroups/rg/providers/Microsoft.Network/virtualNetworks/vnet1/subnets/subnet1"),
-					IgnoreMissingVNetServiceEndpoint: pulumi.Bool(false),
-				},
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
+Coming soon!
 
 {{< /example >}}
 
@@ -425,39 +336,7 @@ class MyStack : Stack
 
 {{< example go >}}
 
-
-```go
-package main
-
-import (
-	documentdb "github.com/pulumi/pulumi-azure-native/sdk/go/azure/documentdb"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := documentdb.NewDatabaseAccount(ctx, "databaseAccount", &documentdb.DatabaseAccountArgs{
-			AccountName:              pulumi.String("ddb1"),
-			DatabaseAccountOfferType: "Standard",
-			Location:                 pulumi.String("westus"),
-			Locations: documentdb.LocationArray{
-				&documentdb.LocationArgs{
-					FailoverPriority: pulumi.Int(0),
-					IsZoneRedundant:  pulumi.Bool(false),
-					LocationName:     pulumi.String("southcentralus"),
-				},
-			},
-			ResourceGroupName: pulumi.String("rg1"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
+Coming soon!
 
 {{< /example >}}
 

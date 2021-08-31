@@ -82,56 +82,7 @@ class MyStack : Stack
 
 {{< example go >}}
 
-
-```go
-package main
-
-import (
-	vmwarecloudsimple "github.com/pulumi/pulumi-azure-native/sdk/go/azure/vmwarecloudsimple"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := vmwarecloudsimple.NewVirtualMachine(ctx, "virtualMachine", &vmwarecloudsimple.VirtualMachineArgs{
-			AmountOfRam: pulumi.Int(4096),
-			Disks: []vmwarecloudsimple.VirtualDiskArgs{
-				&vmwarecloudsimple.VirtualDiskArgs{
-					ControllerId:     pulumi.String("1000"),
-					IndependenceMode: "persistent",
-					TotalSize:        pulumi.Int(10485760),
-					VirtualDiskId:    pulumi.String("2000"),
-				},
-			},
-			Location: pulumi.String("westus2"),
-			Nics: []vmwarecloudsimple.VirtualNicArgs{
-				&vmwarecloudsimple.VirtualNicArgs{
-					Network: &vmwarecloudsimple.VirtualNetworkArgs{
-						Id: pulumi.String("/subscriptions/{subscription-id}/providers/Microsoft.VMwareCloudSimple/locations/westus2/privateClouds/myPrivateCloud/virtualNetworks/dvportgroup-19"),
-					},
-					NicType:      "E1000",
-					PowerOnBoot:  pulumi.Bool(true),
-					VirtualNicId: pulumi.String("4000"),
-				},
-			},
-			NumberOfCores:     pulumi.Int(2),
-			PrivateCloudId:    pulumi.String("/subscriptions/{subscription-id}/providers/Microsoft.VMwareCloudSimple/locations/westus2/privateClouds/myPrivateCloud"),
-			ResourceGroupName: pulumi.String("myResourceGroup"),
-			ResourcePool: &vmwarecloudsimple.ResourcePoolArgs{
-				Id: pulumi.String("/subscriptions/{subscription-id}/providers/Microsoft.VMwareCloudSimple/locations/westus2/privateClouds/myPrivateCloud/resourcePools/resgroup-26"),
-			},
-			TemplateId:         pulumi.String("/subscriptions/{subscription-id}/providers/Microsoft.VMwareCloudSimple/locations/westus2/privateClouds/myPrivateCloud/virtualMachineTemplates/vm-34"),
-			VirtualMachineName: pulumi.String("myVirtualMachine"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
+Coming soon!
 
 {{< /example >}}
 

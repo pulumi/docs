@@ -330,7 +330,7 @@ The Snapshot resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the mount target{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The name of the snapshot{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -382,7 +382,7 @@ The Snapshot resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the mount target{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The name of the snapshot{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -434,7 +434,7 @@ The Snapshot resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the mount target{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The name of the snapshot{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -486,7 +486,7 @@ The Snapshot resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the mount target{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The name of the snapshot{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

@@ -1183,7 +1183,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">string | <a href="#skuname">Pulumi.<wbr>Azure<wbr>Native.<wbr>Hardware<wbr>Security<wbr>Modules.<wbr>Sku<wbr>Name</a></span>
     </dt>
     <dd>{{% md %}}SKU of the dedicated HSM{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1195,7 +1195,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">string | <a href="#skuname">Sku<wbr>Name</a></span>
     </dt>
     <dd>{{% md %}}SKU of the dedicated HSM{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1207,7 +1207,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">string | <a href="#skuname">Sku<wbr>Name</a></span>
     </dt>
     <dd>{{% md %}}SKU of the dedicated HSM{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1219,9 +1219,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">str | <a href="#skuname">Sku<wbr>Name</a></span>
     </dt>
     <dd>{{% md %}}SKU of the dedicated HSM{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="skuname">Sku<wbr>Name</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Safe<wbr>Net_Luna_Network_HSM_A790</dt>
+    <dd>SafeNet Luna Network HSM A790</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Sku<wbr>Name_Safe<wbr>Net_Luna_Network_HSM_A790</dt>
+    <dd>SafeNet Luna Network HSM A790</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Safe<wbr>Net_Luna_Network_HSM_A790</dt>
+    <dd>SafeNet Luna Network HSM A790</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>SAFE_NET_LUNA_NETWORK_HS_M_A790</dt>
+    <dd>SafeNet Luna Network HSM A790</dd></dl>
 {{% /choosable %}}
 
 <h4 id="skuresponse">Sku<wbr>Response</h4>

@@ -63,7 +63,41 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	operationalinsights "github.com/pulumi/pulumi-azure-native/sdk/go/azure/operationalinsights"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := operationalinsights.NewMachineGroup(ctx, "machineGroup", &operationalinsights.MachineGroupArgs{
+			Count:            pulumi.Int(1),
+			DisplayName:      pulumi.String("Foo"),
+			Etag:             pulumi.String("8cd3a8a1-4b1f-43fc-ae3c-b2c092561444"),
+			Kind:             pulumi.String("machineGroup"),
+			MachineGroupName: pulumi.String("ccfbf4bf-dc08-4371-9e9b-00a8d875d45a"),
+			Machines: []operationalinsights.MachineReferenceWithHintsArgs{
+				&operationalinsights.MachineReferenceWithHintsArgs{
+					Id:   pulumi.String("/subscriptions/63BE4E24-FDF0-4E9C-9342-6A5D5A359722/resourceGroups/rg-sm/providers/Microsoft.OperationalInsights/workspaces/D6F79F14-E563-469B-84B5-9286D2803B2F/machines/m-0fe4b501-7ac9-41d7-a4e1-1591a0789519"),
+					Kind: pulumi.String("ref:machinewithhints"),
+				},
+			},
+			ResourceGroupName: pulumi.String("rg-sm"),
+			WorkspaceName:     pulumi.String("D6F79F14-E563-469B-84B5-9286D2803B2F"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -81,10 +115,10 @@ machine_group = azure_native.operationalinsights.MachineGroup("machineGroup",
     etag="8cd3a8a1-4b1f-43fc-ae3c-b2c092561444",
     kind="machineGroup",
     machine_group_name="ccfbf4bf-dc08-4371-9e9b-00a8d875d45a",
-    machines=[{
-        "id": "/subscriptions/63BE4E24-FDF0-4E9C-9342-6A5D5A359722/resourceGroups/rg-sm/providers/Microsoft.OperationalInsights/workspaces/D6F79F14-E563-469B-84B5-9286D2803B2F/machines/m-0fe4b501-7ac9-41d7-a4e1-1591a0789519",
-        "kind": "ref:machinewithhints",
-    }],
+    machines=[azure_native.operationalinsights.MachineReferenceWithHintsArgs(
+        id="/subscriptions/63BE4E24-FDF0-4E9C-9342-6A5D5A359722/resourceGroups/rg-sm/providers/Microsoft.OperationalInsights/workspaces/D6F79F14-E563-469B-84B5-9286D2803B2F/machines/m-0fe4b501-7ac9-41d7-a4e1-1591a0789519",
+        kind="ref:machinewithhints",
+    )],
     resource_group_name="rg-sm",
     workspace_name="D6F79F14-E563-469B-84B5-9286D2803B2F")
 

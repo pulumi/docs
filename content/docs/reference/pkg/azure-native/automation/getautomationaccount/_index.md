@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-native.automation.getAutomationAccount f
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Definition of the automation account type.
-API Version: 2019-06-01.
+API Version: 2021-06-22.
 
 
 
@@ -184,6 +184,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Gets status of account.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="systemdata_csharp">
+<a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Automation.<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Resource system metadata.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
@@ -191,6 +199,14 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the resource.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="automationhybridserviceurl_csharp">
+<a href="#automationhybridserviceurl_csharp" style="color: inherit; text-decoration: inherit;">Automation<wbr>Hybrid<wbr>Service<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}URL of automation hybrid service which is used for hybrid worker on-boarding.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -200,6 +216,22 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Gets or sets the description.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="disablelocalauth_csharp">
+<a href="#disablelocalauth_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Local<wbr>Auth</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether requests using non-AAD authentication are blocked{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="encryption_csharp">
+<a href="#encryption_csharp" style="color: inherit; text-decoration: inherit;">Encryption</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#encryptionpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Automation.<wbr>Outputs.<wbr>Encryption<wbr>Properties<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Encryption properties for the automation account{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="etag_csharp">
 <a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
 </span>
@@ -207,6 +239,14 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the etag of the resource.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="identity_csharp">
+<a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#identityresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Automation.<wbr>Outputs.<wbr>Identity<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Identity for the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastmodifiedby_csharp">
 <a href="#lastmodifiedby_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By</a>
@@ -223,6 +263,22 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Azure Region where the resource lives{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="privateendpointconnections_csharp">
+<a href="#privateendpointconnections_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint<wbr>Connections</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#privateendpointconnectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Automation.<wbr>Outputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Response&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}List of Automation operations supported by the Automation resource provider.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="publicnetworkaccess_csharp">
+<a href="#publicnetworkaccess_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether traffic on the non-ARM endpoint (Webhook/Agent) is allowed from the public internet{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sku_csharp">
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
@@ -284,6 +340,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Gets status of account.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="systemdata_go">
+<a href="#systemdata_go" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Resource system metadata.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
@@ -291,6 +355,14 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the resource.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="automationhybridserviceurl_go">
+<a href="#automationhybridserviceurl_go" style="color: inherit; text-decoration: inherit;">Automation<wbr>Hybrid<wbr>Service<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}URL of automation hybrid service which is used for hybrid worker on-boarding.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -300,6 +372,22 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Gets or sets the description.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="disablelocalauth_go">
+<a href="#disablelocalauth_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Local<wbr>Auth</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether requests using non-AAD authentication are blocked{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="encryption_go">
+<a href="#encryption_go" style="color: inherit; text-decoration: inherit;">Encryption</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#encryptionpropertiesresponse">Encryption<wbr>Properties<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Encryption properties for the automation account{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="etag_go">
 <a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
 </span>
@@ -307,6 +395,14 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the etag of the resource.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="identity_go">
+<a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#identityresponse">Identity<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Identity for the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastmodifiedby_go">
 <a href="#lastmodifiedby_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By</a>
@@ -323,6 +419,22 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Azure Region where the resource lives{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="privateendpointconnections_go">
+<a href="#privateendpointconnections_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint<wbr>Connections</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#privateendpointconnectionresponse">[]Private<wbr>Endpoint<wbr>Connection<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}List of Automation operations supported by the Automation resource provider.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="publicnetworkaccess_go">
+<a href="#publicnetworkaccess_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether traffic on the non-ARM endpoint (Webhook/Agent) is allowed from the public internet{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sku_go">
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
@@ -384,6 +496,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Gets status of account.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="systemdata_nodejs">
+<a href="#systemdata_nodejs" style="color: inherit; text-decoration: inherit;">system<wbr>Data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Resource system metadata.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
@@ -391,6 +511,14 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the resource.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="automationhybridserviceurl_nodejs">
+<a href="#automationhybridserviceurl_nodejs" style="color: inherit; text-decoration: inherit;">automation<wbr>Hybrid<wbr>Service<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}URL of automation hybrid service which is used for hybrid worker on-boarding.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -400,6 +528,22 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Gets or sets the description.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="disablelocalauth_nodejs">
+<a href="#disablelocalauth_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Local<wbr>Auth</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether requests using non-AAD authentication are blocked{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="encryption_nodejs">
+<a href="#encryption_nodejs" style="color: inherit; text-decoration: inherit;">encryption</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#encryptionpropertiesresponse">Encryption<wbr>Properties<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Encryption properties for the automation account{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="etag_nodejs">
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
@@ -407,6 +551,14 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the etag of the resource.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="identity_nodejs">
+<a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#identityresponse">Identity<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Identity for the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastmodifiedby_nodejs">
 <a href="#lastmodifiedby_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By</a>
@@ -423,6 +575,22 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Azure Region where the resource lives{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="privateendpointconnections_nodejs">
+<a href="#privateendpointconnections_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Endpoint<wbr>Connections</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#privateendpointconnectionresponse">Private<wbr>Endpoint<wbr>Connection<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}List of Automation operations supported by the Automation resource provider.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="publicnetworkaccess_nodejs">
+<a href="#publicnetworkaccess_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Network<wbr>Access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether traffic on the non-ARM endpoint (Webhook/Agent) is allowed from the public internet{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sku_nodejs">
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
@@ -484,6 +652,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Gets status of account.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="system_data_python">
+<a href="#system_data_python" style="color: inherit; text-decoration: inherit;">system_<wbr>data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Resource system metadata.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
@@ -491,6 +667,14 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the resource.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="automation_hybrid_service_url_python">
+<a href="#automation_hybrid_service_url_python" style="color: inherit; text-decoration: inherit;">automation_<wbr>hybrid_<wbr>service_<wbr>url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}URL of automation hybrid service which is used for hybrid worker on-boarding.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -500,6 +684,22 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Gets or sets the description.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="disable_local_auth_python">
+<a href="#disable_local_auth_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>local_<wbr>auth</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether requests using non-AAD authentication are blocked{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="encryption_python">
+<a href="#encryption_python" style="color: inherit; text-decoration: inherit;">encryption</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#encryptionpropertiesresponse">Encryption<wbr>Properties<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Encryption properties for the automation account{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="etag_python">
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
@@ -507,6 +707,14 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets the etag of the resource.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="identity_python">
+<a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#identityresponse">Identity<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Identity for the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="last_modified_by_python">
 <a href="#last_modified_by_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by</a>
@@ -523,6 +731,22 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Azure Region where the resource lives{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="private_endpoint_connections_python">
+<a href="#private_endpoint_connections_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint_<wbr>connections</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#privateendpointconnectionresponse">Sequence[Private<wbr>Endpoint<wbr>Connection<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}List of Automation operations supported by the Automation resource provider.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="public_network_access_python">
+<a href="#public_network_access_python" style="color: inherit; text-decoration: inherit;">public_<wbr>network_<wbr>access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether traffic on the non-ARM endpoint (Webhook/Agent) is allowed from the public internet{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sku_python">
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
@@ -546,6 +770,870 @@ The following output properties are available:
 
 ## Supporting Types
 
+
+<h4 id="encryptionpropertiesresponse">Encryption<wbr>Properties<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="identity_csharp">
+<a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#encryptionpropertiesresponseidentity">Pulumi.<wbr>Azure<wbr>Native.<wbr>Automation.<wbr>Inputs.<wbr>Encryption<wbr>Properties<wbr>Response<wbr>Identity</a></span>
+    </dt>
+    <dd>{{% md %}}User identity used for CMK.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="keysource_csharp">
+<a href="#keysource_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Source</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Encryption Key Source{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="keyvaultproperties_csharp">
+<a href="#keyvaultproperties_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Properties</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#keyvaultpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Automation.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Properties<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Key vault properties.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="identity_go">
+<a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#encryptionpropertiesresponseidentity">Encryption<wbr>Properties<wbr>Response<wbr>Identity</a></span>
+    </dt>
+    <dd>{{% md %}}User identity used for CMK.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="keysource_go">
+<a href="#keysource_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Source</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Encryption Key Source{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="keyvaultproperties_go">
+<a href="#keyvaultproperties_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Properties</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#keyvaultpropertiesresponse">Key<wbr>Vault<wbr>Properties<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Key vault properties.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="identity_nodejs">
+<a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#encryptionpropertiesresponseidentity">Encryption<wbr>Properties<wbr>Response<wbr>Identity</a></span>
+    </dt>
+    <dd>{{% md %}}User identity used for CMK.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="keysource_nodejs">
+<a href="#keysource_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Source</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Encryption Key Source{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="keyvaultproperties_nodejs">
+<a href="#keyvaultproperties_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault<wbr>Properties</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#keyvaultpropertiesresponse">Key<wbr>Vault<wbr>Properties<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Key vault properties.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="identity_python">
+<a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#encryptionpropertiesresponseidentity">Encryption<wbr>Properties<wbr>Response<wbr>Identity</a></span>
+    </dt>
+    <dd>{{% md %}}User identity used for CMK.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="key_source_python">
+<a href="#key_source_python" style="color: inherit; text-decoration: inherit;">key_<wbr>source</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Encryption Key Source{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="key_vault_properties_python">
+<a href="#key_vault_properties_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>properties</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#keyvaultpropertiesresponse">Key<wbr>Vault<wbr>Properties<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Key vault properties.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="encryptionpropertiesresponseidentity">Encryption<wbr>Properties<wbr>Response<wbr>Identity</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="userassignedidentity_csharp">
+<a href="#userassignedidentity_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}The user identity used for CMK. It will be an ARM resource id in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="userassignedidentity_go">
+<a href="#userassignedidentity_go" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}The user identity used for CMK. It will be an ARM resource id in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="userassignedidentity_nodejs">
+<a href="#userassignedidentity_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}The user identity used for CMK. It will be an ARM resource id in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="user_assigned_identity_python">
+<a href="#user_assigned_identity_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}The user identity used for CMK. It will be an ARM resource id in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="identityresponse">Identity<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="principalid_csharp">
+<a href="#principalid_csharp" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The principal ID of resource identity.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="tenantid_csharp">
+<a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The tenant ID of resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The identity type.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="userassignedidentities_csharp">
+<a href="#userassignedidentities_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Automation.<wbr>Inputs.<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities&gt;</span>
+    </dt>
+    <dd>{{% md %}}The list of user identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="principalid_go">
+<a href="#principalid_go" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The principal ID of resource identity.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="tenantid_go">
+<a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The tenant ID of resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The identity type.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="userassignedidentities_go">
+<a href="#userassignedidentities_go" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities</span>
+    </dt>
+    <dd>{{% md %}}The list of user identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="principalid_nodejs">
+<a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The principal ID of resource identity.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="tenantid_nodejs">
+<a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The tenant ID of resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The identity type.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="userassignedidentities_nodejs">
+<a href="#userassignedidentities_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities}</span>
+    </dt>
+    <dd>{{% md %}}The list of user identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="principal_id_python">
+<a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The principal ID of resource identity.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="tenant_id_python">
+<a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The tenant ID of resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The identity type.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="user_assigned_identities_python">
+<a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities]</span>
+    </dt>
+    <dd>{{% md %}}The list of user identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="identityresponseuserassignedidentities">Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="clientid_csharp">
+<a href="#clientid_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The client id of user assigned identity.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="principalid_csharp">
+<a href="#principalid_csharp" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The principal id of user assigned identity.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="clientid_go">
+<a href="#clientid_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The client id of user assigned identity.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="principalid_go">
+<a href="#principalid_go" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The principal id of user assigned identity.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="clientid_nodejs">
+<a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The client id of user assigned identity.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="principalid_nodejs">
+<a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The principal id of user assigned identity.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="client_id_python">
+<a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The client id of user assigned identity.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="principal_id_python">
+<a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The principal id of user assigned identity.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="keyvaultpropertiesresponse">Key<wbr>Vault<wbr>Properties<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="keyname_csharp">
+<a href="#keyname_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of key used to encrypt data.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="keyversion_csharp">
+<a href="#keyversion_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The key version of the key used to encrypt data.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="keyvaulturi_csharp">
+<a href="#keyvaulturi_csharp" style="color: inherit; text-decoration: inherit;">Keyvault<wbr>Uri</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The URI of the key vault key used to encrypt data.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="keyname_go">
+<a href="#keyname_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of key used to encrypt data.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="keyversion_go">
+<a href="#keyversion_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The key version of the key used to encrypt data.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="keyvaulturi_go">
+<a href="#keyvaulturi_go" style="color: inherit; text-decoration: inherit;">Keyvault<wbr>Uri</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The URI of the key vault key used to encrypt data.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="keyname_nodejs">
+<a href="#keyname_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of key used to encrypt data.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="keyversion_nodejs">
+<a href="#keyversion_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The key version of the key used to encrypt data.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="keyvaulturi_nodejs">
+<a href="#keyvaulturi_nodejs" style="color: inherit; text-decoration: inherit;">keyvault<wbr>Uri</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The URI of the key vault key used to encrypt data.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="key_name_python">
+<a href="#key_name_python" style="color: inherit; text-decoration: inherit;">key_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of key used to encrypt data.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="key_version_python">
+<a href="#key_version_python" style="color: inherit; text-decoration: inherit;">key_<wbr>version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The key version of the key used to encrypt data.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="keyvault_uri_python">
+<a href="#keyvault_uri_python" style="color: inherit; text-decoration: inherit;">keyvault_<wbr>uri</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The URI of the key vault key used to encrypt data.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="privateendpointconnectionresponse">Private<wbr>Endpoint<wbr>Connection<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Fully qualified resource Id for the resource{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="privateendpoint_csharp">
+<a href="#privateendpoint_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#privateendpointpropertyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Automation.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Property<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Private endpoint which the connection belongs to.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="privatelinkserviceconnectionstate_csharp">
+<a href="#privatelinkserviceconnectionstate_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstatepropertyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Automation.<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Property<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Connection State of the Private Endpoint Connection.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Fully qualified resource Id for the resource{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="privateendpoint_go">
+<a href="#privateendpoint_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#privateendpointpropertyresponse">Private<wbr>Endpoint<wbr>Property<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Private endpoint which the connection belongs to.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="privatelinkserviceconnectionstate_go">
+<a href="#privatelinkserviceconnectionstate_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstatepropertyresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Property<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Connection State of the Private Endpoint Connection.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Fully qualified resource Id for the resource{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="privateendpoint_nodejs">
+<a href="#privateendpoint_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#privateendpointpropertyresponse">Private<wbr>Endpoint<wbr>Property<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Private endpoint which the connection belongs to.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="privatelinkserviceconnectionstate_nodejs">
+<a href="#privatelinkserviceconnectionstate_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstatepropertyresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Property<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Connection State of the Private Endpoint Connection.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Fully qualified resource Id for the resource{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="private_endpoint_python">
+<a href="#private_endpoint_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#privateendpointpropertyresponse">Private<wbr>Endpoint<wbr>Property<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Private endpoint which the connection belongs to.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="private_link_service_connection_state_python">
+<a href="#private_link_service_connection_state_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>service_<wbr>connection_<wbr>state</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstatepropertyresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Property<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Connection State of the Private Endpoint Connection.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="privateendpointpropertyresponse">Private<wbr>Endpoint<wbr>Property<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource id of the private endpoint.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource id of the private endpoint.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource id of the private endpoint.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Resource id of the private endpoint.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="privatelinkserviceconnectionstatepropertyresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Property<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="actionsrequired_csharp">
+<a href="#actionsrequired_csharp" style="color: inherit; text-decoration: inherit;">Actions<wbr>Required</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Any action that is required beyond basic workflow (approve/ reject/ disconnect){{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The private link service connection description.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="status_csharp">
+<a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The private link service connection status.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="actionsrequired_go">
+<a href="#actionsrequired_go" style="color: inherit; text-decoration: inherit;">Actions<wbr>Required</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Any action that is required beyond basic workflow (approve/ reject/ disconnect){{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The private link service connection description.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="status_go">
+<a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The private link service connection status.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="actionsrequired_nodejs">
+<a href="#actionsrequired_nodejs" style="color: inherit; text-decoration: inherit;">actions<wbr>Required</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Any action that is required beyond basic workflow (approve/ reject/ disconnect){{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The private link service connection description.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="status_nodejs">
+<a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The private link service connection status.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="actions_required_python">
+<a href="#actions_required_python" style="color: inherit; text-decoration: inherit;">actions_<wbr>required</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Any action that is required beyond basic workflow (approve/ reject/ disconnect){{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The private link service connection description.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="status_python">
+<a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The private link service connection status.{{% /md %}}</dd></dl>
+{{% /choosable %}}
 
 <h4 id="skuresponse">Sku<wbr>Response</h4>
 
@@ -661,6 +1749,218 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets the SKU family.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="systemdataresponse">System<wbr>Data<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="createdat_csharp">
+<a href="#createdat_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="createdby_csharp">
+<a href="#createdby_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="createdbytype_csharp">
+<a href="#createdbytype_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedat_csharp">
+<a href="#lastmodifiedat_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>At</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedby_csharp">
+<a href="#lastmodifiedby_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedbytype_csharp">
+<a href="#lastmodifiedbytype_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="createdat_go">
+<a href="#createdat_go" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="createdby_go">
+<a href="#createdby_go" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="createdbytype_go">
+<a href="#createdbytype_go" style="color: inherit; text-decoration: inherit;">Created<wbr>By<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedat_go">
+<a href="#lastmodifiedat_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>At</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedby_go">
+<a href="#lastmodifiedby_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedbytype_go">
+<a href="#lastmodifiedbytype_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="createdat_nodejs">
+<a href="#createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="createdby_nodejs">
+<a href="#createdby_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="createdbytype_nodejs">
+<a href="#createdbytype_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedat_nodejs">
+<a href="#lastmodifiedat_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>At</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedby_nodejs">
+<a href="#lastmodifiedby_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedbytype_nodejs">
+<a href="#lastmodifiedbytype_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="created_at_python">
+<a href="#created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="created_by_python">
+<a href="#created_by_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="created_by_type_python">
+<a href="#created_by_type_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="last_modified_at_python">
+<a href="#last_modified_at_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>at</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="last_modified_by_python">
+<a href="#last_modified_by_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="last_modified_by_type_python">
+<a href="#last_modified_by_type_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

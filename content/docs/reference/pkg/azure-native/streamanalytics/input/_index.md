@@ -55,11 +55,11 @@ class MyStack : Stack
                     TimeFormat = "HH",
                     Type = "Microsoft.Storage/Blob",
                 },
-                Serialization = new AzureNative.StreamAnalytics.Inputs.CsvSerializationArgs
+                Serialization = 
                 {
-                    Encoding = "UTF8",
-                    FieldDelimiter = ",",
-                    Type = "Csv",
+                    { "encoding", "UTF8" },
+                    { "fieldDelimiter", "," },
+                    { "type", "Csv" },
                 },
                 Type = "Reference",
             },
@@ -77,52 +77,7 @@ class MyStack : Stack
 
 {{< example go >}}
 
-
-```go
-package main
-
-import (
-	streamanalytics "github.com/pulumi/pulumi-azure-native/sdk/go/azure/streamanalytics"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := streamanalytics.NewInput(ctx, "input", &streamanalytics.InputArgs{
-			InputName: pulumi.String("input7225"),
-			JobName:   pulumi.String("sj9597"),
-			Properties: streamanalytics.ReferenceInputProperties{
-				Datasource: streamanalytics.BlobReferenceInputDataSource{
-					Container:   "state",
-					DateFormat:  "yyyy/MM/dd",
-					PathPattern: "{date}/{time}",
-					StorageAccounts: []streamanalytics.StorageAccount{
-						streamanalytics.StorageAccount{
-							AccountKey:  "someAccountKey==",
-							AccountName: "someAccountName",
-						},
-					},
-					TimeFormat: "HH",
-					Type:       "Microsoft.Storage/Blob",
-				},
-				Serialization: streamanalytics.CsvSerialization{
-					Encoding:       "UTF8",
-					FieldDelimiter: ",",
-					Type:           "Csv",
-				},
-				Type: "Reference",
-			},
-			ResourceGroupName: pulumi.String("sjrg8440"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
+Coming soon!
 
 {{< /example >}}
 
@@ -149,11 +104,11 @@ input = azure_native.streamanalytics.Input("input",
             time_format="HH",
             type="Microsoft.Storage/Blob",
         ),
-        serialization=azure_native.streamanalytics.CsvSerializationArgs(
-            encoding="UTF8",
-            field_delimiter=",",
-            type="Csv",
-        ),
+        serialization={
+            "encoding": "UTF8",
+            "fieldDelimiter": ",",
+            "type": "Csv",
+        },
         type="Reference",
     ),
     resource_group_name="sjrg8440")
@@ -223,19 +178,19 @@ class MyStack : Stack
             JobName = "sj197",
             Properties = new AzureNative.StreamAnalytics.Inputs.StreamInputPropertiesArgs
             {
-                Datasource = new AzureNative.StreamAnalytics.Inputs.EventHubStreamInputDataSourceArgs
+                Datasource = 
                 {
-                    ConsumerGroupName = "sdkconsumergroup",
-                    EventHubName = "sdkeventhub",
-                    ServiceBusNamespace = "sdktest",
-                    SharedAccessPolicyKey = "someSharedAccessPolicyKey==",
-                    SharedAccessPolicyName = "RootManageSharedAccessKey",
-                    Type = "Microsoft.ServiceBus/EventHub",
+                    { "consumerGroupName", "sdkconsumergroup" },
+                    { "eventHubName", "sdkeventhub" },
+                    { "serviceBusNamespace", "sdktest" },
+                    { "sharedAccessPolicyKey", "someSharedAccessPolicyKey==" },
+                    { "sharedAccessPolicyName", "RootManageSharedAccessKey" },
+                    { "type", "Microsoft.ServiceBus/EventHub" },
                 },
-                Serialization = new AzureNative.StreamAnalytics.Inputs.JsonSerializationArgs
+                Serialization = 
                 {
-                    Encoding = "UTF8",
-                    Type = "Json",
+                    { "encoding", "UTF8" },
+                    { "type", "Json" },
                 },
                 Type = "Stream",
             },
@@ -253,46 +208,7 @@ class MyStack : Stack
 
 {{< example go >}}
 
-
-```go
-package main
-
-import (
-	streamanalytics "github.com/pulumi/pulumi-azure-native/sdk/go/azure/streamanalytics"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := streamanalytics.NewInput(ctx, "input", &streamanalytics.InputArgs{
-			InputName: pulumi.String("input7425"),
-			JobName:   pulumi.String("sj197"),
-			Properties: streamanalytics.StreamInputProperties{
-				Datasource: streamanalytics.EventHubStreamInputDataSource{
-					ConsumerGroupName:      "sdkconsumergroup",
-					EventHubName:           "sdkeventhub",
-					ServiceBusNamespace:    "sdktest",
-					SharedAccessPolicyKey:  "someSharedAccessPolicyKey==",
-					SharedAccessPolicyName: "RootManageSharedAccessKey",
-					Type:                   "Microsoft.ServiceBus/EventHub",
-				},
-				Serialization: streamanalytics.JsonSerialization{
-					Encoding: "UTF8",
-					Type:     "Json",
-				},
-				Type: "Stream",
-			},
-			ResourceGroupName: pulumi.String("sjrg3139"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
+Coming soon!
 
 {{< /example >}}
 
@@ -308,18 +224,18 @@ input = azure_native.streamanalytics.Input("input",
     input_name="input7425",
     job_name="sj197",
     properties=azure_native.streamanalytics.StreamInputPropertiesArgs(
-        datasource=azure_native.streamanalytics.EventHubStreamInputDataSourceArgs(
-            consumer_group_name="sdkconsumergroup",
-            event_hub_name="sdkeventhub",
-            service_bus_namespace="sdktest",
-            shared_access_policy_key="someSharedAccessPolicyKey==",
-            shared_access_policy_name="RootManageSharedAccessKey",
-            type="Microsoft.ServiceBus/EventHub",
-        ),
-        serialization=azure_native.streamanalytics.JsonSerializationArgs(
-            encoding="UTF8",
-            type="Json",
-        ),
+        datasource={
+            "consumerGroupName": "sdkconsumergroup",
+            "eventHubName": "sdkeventhub",
+            "serviceBusNamespace": "sdktest",
+            "sharedAccessPolicyKey": "someSharedAccessPolicyKey==",
+            "sharedAccessPolicyName": "RootManageSharedAccessKey",
+            "type": "Microsoft.ServiceBus/EventHub",
+        },
+        serialization={
+            "encoding": "UTF8",
+            "type": "Json",
+        },
         type="Stream",
     ),
     resource_group_name="sjrg3139")
@@ -385,18 +301,18 @@ class MyStack : Stack
             JobName = "sj9742",
             Properties = new AzureNative.StreamAnalytics.Inputs.StreamInputPropertiesArgs
             {
-                Datasource = new AzureNative.StreamAnalytics.Inputs.IoTHubStreamInputDataSourceArgs
+                Datasource = 
                 {
-                    ConsumerGroupName = "sdkconsumergroup",
-                    Endpoint = "messages/events",
-                    IotHubNamespace = "iothub",
-                    SharedAccessPolicyKey = "sharedAccessPolicyKey=",
-                    SharedAccessPolicyName = "owner",
-                    Type = "Microsoft.Devices/IotHubs",
+                    { "consumerGroupName", "sdkconsumergroup" },
+                    { "endpoint", "messages/events" },
+                    { "iotHubNamespace", "iothub" },
+                    { "sharedAccessPolicyKey", "sharedAccessPolicyKey=" },
+                    { "sharedAccessPolicyName", "owner" },
+                    { "type", "Microsoft.Devices/IotHubs" },
                 },
-                Serialization = new AzureNative.StreamAnalytics.Inputs.AvroSerializationArgs
+                Serialization = 
                 {
-                    Type = "Avro",
+                    { "type", "Avro" },
                 },
                 Type = "Stream",
             },
@@ -414,45 +330,7 @@ class MyStack : Stack
 
 {{< example go >}}
 
-
-```go
-package main
-
-import (
-	streamanalytics "github.com/pulumi/pulumi-azure-native/sdk/go/azure/streamanalytics"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := streamanalytics.NewInput(ctx, "input", &streamanalytics.InputArgs{
-			InputName: pulumi.String("input7970"),
-			JobName:   pulumi.String("sj9742"),
-			Properties: streamanalytics.StreamInputProperties{
-				Datasource: streamanalytics.IoTHubStreamInputDataSource{
-					ConsumerGroupName:      "sdkconsumergroup",
-					Endpoint:               "messages/events",
-					IotHubNamespace:        "iothub",
-					SharedAccessPolicyKey:  "sharedAccessPolicyKey=",
-					SharedAccessPolicyName: "owner",
-					Type:                   "Microsoft.Devices/IotHubs",
-				},
-				Serialization: streamanalytics.AvroSerialization{
-					Type: "Avro",
-				},
-				Type: "Stream",
-			},
-			ResourceGroupName: pulumi.String("sjrg3467"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
+Coming soon!
 
 {{< /example >}}
 
@@ -468,17 +346,17 @@ input = azure_native.streamanalytics.Input("input",
     input_name="input7970",
     job_name="sj9742",
     properties=azure_native.streamanalytics.StreamInputPropertiesArgs(
-        datasource=azure_native.streamanalytics.IoTHubStreamInputDataSourceArgs(
-            consumer_group_name="sdkconsumergroup",
-            endpoint="messages/events",
-            iot_hub_namespace="iothub",
-            shared_access_policy_key="sharedAccessPolicyKey=",
-            shared_access_policy_name="owner",
-            type="Microsoft.Devices/IotHubs",
-        ),
-        serialization=azure_native.streamanalytics.AvroSerializationArgs(
-            type="Avro",
-        ),
+        datasource={
+            "consumerGroupName": "sdkconsumergroup",
+            "endpoint": "messages/events",
+            "iotHubNamespace": "iothub",
+            "sharedAccessPolicyKey": "sharedAccessPolicyKey=",
+            "sharedAccessPolicyName": "owner",
+            "type": "Microsoft.Devices/IotHubs",
+        },
+        serialization={
+            "type": "Avro",
+        },
         type="Stream",
     ),
     resource_group_name="sjrg3467")
@@ -543,28 +421,28 @@ class MyStack : Stack
             JobName = "sj6695",
             Properties = new AzureNative.StreamAnalytics.Inputs.StreamInputPropertiesArgs
             {
-                Datasource = new AzureNative.StreamAnalytics.Inputs.BlobStreamInputDataSourceArgs
+                Datasource = 
                 {
-                    Container = "state",
-                    DateFormat = "yyyy/MM/dd",
-                    PathPattern = "{date}/{time}",
-                    SourcePartitionCount = 16,
-                    StorageAccounts = 
+                    { "container", "state" },
+                    { "dateFormat", "yyyy/MM/dd" },
+                    { "pathPattern", "{date}/{time}" },
+                    { "sourcePartitionCount", 16 },
+                    { "storageAccounts", 
                     {
                         new AzureNative.StreamAnalytics.Inputs.StorageAccountArgs
                         {
                             AccountKey = "someAccountKey==",
                             AccountName = "someAccountName",
                         },
-                    },
-                    TimeFormat = "HH",
-                    Type = "Microsoft.Storage/Blob",
+                    } },
+                    { "timeFormat", "HH" },
+                    { "type", "Microsoft.Storage/Blob" },
                 },
-                Serialization = new AzureNative.StreamAnalytics.Inputs.CsvSerializationArgs
+                Serialization = 
                 {
-                    Encoding = "UTF8",
-                    FieldDelimiter = ",",
-                    Type = "Csv",
+                    { "encoding", "UTF8" },
+                    { "fieldDelimiter", "," },
+                    { "type", "Csv" },
                 },
                 Type = "Stream",
             },
@@ -582,53 +460,7 @@ class MyStack : Stack
 
 {{< example go >}}
 
-
-```go
-package main
-
-import (
-	streamanalytics "github.com/pulumi/pulumi-azure-native/sdk/go/azure/streamanalytics"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := streamanalytics.NewInput(ctx, "input", &streamanalytics.InputArgs{
-			InputName: pulumi.String("input8899"),
-			JobName:   pulumi.String("sj6695"),
-			Properties: streamanalytics.StreamInputProperties{
-				Datasource: streamanalytics.BlobStreamInputDataSource{
-					Container:            "state",
-					DateFormat:           "yyyy/MM/dd",
-					PathPattern:          "{date}/{time}",
-					SourcePartitionCount: 16,
-					StorageAccounts: []streamanalytics.StorageAccount{
-						streamanalytics.StorageAccount{
-							AccountKey:  "someAccountKey==",
-							AccountName: "someAccountName",
-						},
-					},
-					TimeFormat: "HH",
-					Type:       "Microsoft.Storage/Blob",
-				},
-				Serialization: streamanalytics.CsvSerialization{
-					Encoding:       "UTF8",
-					FieldDelimiter: ",",
-					Type:           "Csv",
-				},
-				Type: "Stream",
-			},
-			ResourceGroupName: pulumi.String("sjrg8161"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
+Coming soon!
 
 {{< /example >}}
 
@@ -644,23 +476,23 @@ input = azure_native.streamanalytics.Input("input",
     input_name="input8899",
     job_name="sj6695",
     properties=azure_native.streamanalytics.StreamInputPropertiesArgs(
-        datasource=azure_native.streamanalytics.BlobStreamInputDataSourceArgs(
-            container="state",
-            date_format="yyyy/MM/dd",
-            path_pattern="{date}/{time}",
-            source_partition_count=16,
-            storage_accounts=[azure_native.streamanalytics.StorageAccountArgs(
+        datasource={
+            "container": "state",
+            "dateFormat": "yyyy/MM/dd",
+            "pathPattern": "{date}/{time}",
+            "sourcePartitionCount": 16,
+            "storageAccounts": [azure_native.streamanalytics.StorageAccountArgs(
                 account_key="someAccountKey==",
                 account_name="someAccountName",
             )],
-            time_format="HH",
-            type="Microsoft.Storage/Blob",
-        ),
-        serialization=azure_native.streamanalytics.CsvSerializationArgs(
-            encoding="UTF8",
-            field_delimiter=",",
-            type="Csv",
-        ),
+            "timeFormat": "HH",
+            "type": "Microsoft.Storage/Blob",
+        },
+        serialization={
+            "encoding": "UTF8",
+            "fieldDelimiter": ",",
+            "type": "Csv",
+        },
         type="Stream",
     ),
     resource_group_name="sjrg8161")

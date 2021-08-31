@@ -73,14 +73,14 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := streamanalytics.NewOutput(ctx, "output", &streamanalytics.OutputArgs{
-			Datasource: streamanalytics.DocumentDbOutputDataSource{
+			Datasource: &streamanalytics.DocumentDbOutputDataSourceArgs{
 				AccountId:             "someAccountId",
 				AccountKey:            "accountKey==",
 				CollectionNamePattern: "collection",
 				Database:              "db01",
 				DocumentId:            "documentId",
 				PartitionKey:          "key",
-				Type:                  "Microsoft.Storage/DocumentDB",
+				Type:                  pulumi.String("Microsoft.Storage/DocumentDB"),
 			},
 			JobName:           pulumi.String("sj2331"),
 			OutputName:        pulumi.String("output3022"),
@@ -210,7 +210,7 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := streamanalytics.NewOutput(ctx, "output", &streamanalytics.OutputArgs{
-			Datasource: streamanalytics.PowerBIOutputDataSource{
+			Datasource: &streamanalytics.PowerBIOutputDataSourceArgs{
 				Dataset:                "someDataset",
 				GroupId:                "ac40305e-3e8d-43ac-8161-c33799f43e95",
 				GroupName:              "MyPowerBIGroup",
@@ -218,7 +218,7 @@ func main() {
 				Table:                  "someTable",
 				TokenUserDisplayName:   "Bob Smith",
 				TokenUserPrincipalName: "bobsmith@contoso.com",
-				Type:                   "PowerBI",
+				Type:                   pulumi.String("PowerBI"),
 			},
 			JobName:           pulumi.String("sj2331"),
 			OutputName:        pulumi.String("output3022"),
@@ -356,7 +356,7 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := streamanalytics.NewOutput(ctx, "output", &streamanalytics.OutputArgs{
-			Datasource: streamanalytics.ServiceBusQueueOutputDataSource{
+			Datasource: &streamanalytics.ServiceBusQueueOutputDataSourceArgs{
 				PropertyColumns: []string{
 					"column1",
 					"column2",
@@ -365,13 +365,13 @@ func main() {
 				ServiceBusNamespace:    "sdktest",
 				SharedAccessPolicyKey:  "sharedAccessPolicyKey=",
 				SharedAccessPolicyName: "RootManageSharedAccessKey",
-				Type:                   "Microsoft.ServiceBus/Queue",
+				Type:                   pulumi.String("Microsoft.ServiceBus/Queue"),
 			},
 			JobName:           pulumi.String("sj5095"),
 			OutputName:        pulumi.String("output3456"),
 			ResourceGroupName: pulumi.String("sjrg3410"),
-			Serialization: streamanalytics.AvroSerialization{
-				Type: "Avro",
+			Serialization: &streamanalytics.AvroSerializationArgs{
+				Type: pulumi.String("Avro"),
 			},
 		})
 		if err != nil {
@@ -516,7 +516,7 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := streamanalytics.NewOutput(ctx, "output", &streamanalytics.OutputArgs{
-			Datasource: streamanalytics.ServiceBusTopicOutputDataSource{
+			Datasource: &streamanalytics.ServiceBusTopicOutputDataSourceArgs{
 				PropertyColumns: []string{
 					"column1",
 					"column2",
@@ -525,15 +525,15 @@ func main() {
 				SharedAccessPolicyKey:  "sharedAccessPolicyKey=",
 				SharedAccessPolicyName: "RootManageSharedAccessKey",
 				TopicName:              "sdktopic",
-				Type:                   "Microsoft.ServiceBus/Topic",
+				Type:                   pulumi.String("Microsoft.ServiceBus/Topic"),
 			},
 			JobName:           pulumi.String("sj7094"),
 			OutputName:        pulumi.String("output7886"),
 			ResourceGroupName: pulumi.String("sjrg6450"),
-			Serialization: streamanalytics.CsvSerialization{
+			Serialization: &streamanalytics.CsvSerializationArgs{
 				Encoding:       "UTF8",
 				FieldDelimiter: ",",
-				Type:           "Csv",
+				Type:           pulumi.String("Csv"),
 			},
 		})
 		if err != nil {
@@ -685,26 +685,26 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := streamanalytics.NewOutput(ctx, "output", &streamanalytics.OutputArgs{
-			Datasource: streamanalytics.BlobOutputDataSource{
+			Datasource: &streamanalytics.BlobOutputDataSourceArgs{
 				Container:   "state",
 				DateFormat:  "yyyy/MM/dd",
 				PathPattern: "{date}/{time}",
-				StorageAccounts: []streamanalytics.StorageAccount{
-					streamanalytics.StorageAccount{
+				StorageAccounts: []streamanalytics.StorageAccountArgs{
+					&streamanalytics.StorageAccountArgs{
 						AccountKey:  "accountKey==",
 						AccountName: "someAccountName",
 					},
 				},
 				TimeFormat: "HH",
-				Type:       "Microsoft.Storage/Blob",
+				Type:       pulumi.String("Microsoft.Storage/Blob"),
 			},
 			JobName:           pulumi.String("sj900"),
 			OutputName:        pulumi.String("output1623"),
 			ResourceGroupName: pulumi.String("sjrg5023"),
-			Serialization: streamanalytics.CsvSerialization{
+			Serialization: &streamanalytics.CsvSerializationArgs{
 				Encoding:       "UTF8",
 				FieldDelimiter: ",",
-				Type:           "Csv",
+				Type:           pulumi.String("Csv"),
 			},
 		})
 		if err != nil {
@@ -852,7 +852,7 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := streamanalytics.NewOutput(ctx, "output", &streamanalytics.OutputArgs{
-			Datasource: streamanalytics.AzureDataLakeStoreOutputDataSource{
+			Datasource: &streamanalytics.AzureDataLakeStoreOutputDataSourceArgs{
 				AccountName:            "someaccount",
 				DateFormat:             "yyyy/MM/dd",
 				FilePathPrefix:         "{date}/{time}",
@@ -861,15 +861,15 @@ func main() {
 				TimeFormat:             "HH",
 				TokenUserDisplayName:   "Bob Smith",
 				TokenUserPrincipalName: "bobsmith@contoso.com",
-				Type:                   "Microsoft.DataLake/Accounts",
+				Type:                   pulumi.String("Microsoft.DataLake/Accounts"),
 			},
 			JobName:           pulumi.String("sj3310"),
 			OutputName:        pulumi.String("output5195"),
 			ResourceGroupName: pulumi.String("sjrg6912"),
-			Serialization: streamanalytics.JsonSerialization{
+			Serialization: &streamanalytics.JsonSerializationArgs{
 				Encoding: "UTF8",
 				Format:   "Array",
-				Type:     "Json",
+				Type:     pulumi.String("Json"),
 			},
 		})
 		if err != nil {
@@ -1008,12 +1008,12 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := streamanalytics.NewOutput(ctx, "output", &streamanalytics.OutputArgs{
-			Datasource: streamanalytics.AzureSqlDatabaseOutputDataSource{
+			Datasource: &streamanalytics.AzureSqlDatabaseOutputDataSourceArgs{
 				Database: "someDatabase",
 				Password: "somePassword",
 				Server:   "someServer",
 				Table:    "someTable",
-				Type:     "Microsoft.Sql/Server/Database",
+				Type:     pulumi.String("Microsoft.Sql/Server/Database"),
 				User:     "<user>",
 			},
 			JobName:           pulumi.String("sj6458"),
@@ -1146,7 +1146,7 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := streamanalytics.NewOutput(ctx, "output", &streamanalytics.OutputArgs{
-			Datasource: streamanalytics.AzureTableOutputDataSource{
+			Datasource: &streamanalytics.AzureTableOutputDataSourceArgs{
 				AccountKey:  "accountKey==",
 				AccountName: "someAccountName",
 				BatchSize:   25,
@@ -1157,7 +1157,7 @@ func main() {
 				PartitionKey: "partitionKey",
 				RowKey:       "rowKey",
 				Table:        "samples",
-				Type:         "Microsoft.Storage/Table",
+				Type:         pulumi.String("Microsoft.Storage/Table"),
 			},
 			JobName:           pulumi.String("sj2790"),
 			OutputName:        pulumi.String("output958"),
@@ -1299,21 +1299,21 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := streamanalytics.NewOutput(ctx, "output", &streamanalytics.OutputArgs{
-			Datasource: streamanalytics.EventHubOutputDataSource{
+			Datasource: &streamanalytics.EventHubOutputDataSourceArgs{
 				EventHubName:           "sdkeventhub",
 				PartitionKey:           "partitionKey",
 				ServiceBusNamespace:    "sdktest",
 				SharedAccessPolicyKey:  "sharedAccessPolicyKey=",
 				SharedAccessPolicyName: "RootManageSharedAccessKey",
-				Type:                   "Microsoft.ServiceBus/EventHub",
+				Type:                   pulumi.String("Microsoft.ServiceBus/EventHub"),
 			},
 			JobName:           pulumi.String("sj3310"),
 			OutputName:        pulumi.String("output5195"),
 			ResourceGroupName: pulumi.String("sjrg6912"),
-			Serialization: streamanalytics.JsonSerialization{
+			Serialization: &streamanalytics.JsonSerializationArgs{
 				Encoding: "UTF8",
 				Format:   "Array",
-				Type:     "Json",
+				Type:     pulumi.String("Json"),
 			},
 		})
 		if err != nil {

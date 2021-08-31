@@ -128,29 +128,29 @@ func main() {
 		_, err := alertsmanagement.NewActionRuleByName(ctx, "actionRuleByName", &alertsmanagement.ActionRuleByNameArgs{
 			ActionRuleName: pulumi.String("DailySuppression"),
 			Location:       pulumi.String("Global"),
-			Properties: alertsmanagement.Suppression{
-				Conditions: alertsmanagement.Conditions{
-					MonitorCondition: alertsmanagement.Condition{
+			Properties: &alertsmanagement.SuppressionArgs{
+				Conditions: &alertsmanagement.ConditionsArgs{
+					MonitorCondition: &alertsmanagement.ConditionArgs{
 						Operator: "Equals",
 						Values: []string{
 							"Fired",
 						},
 					},
-					MonitorService: alertsmanagement.Condition{
+					MonitorService: &alertsmanagement.ConditionArgs{
 						Operator: "Equals",
 						Values: []string{
 							"Platform",
 							"Application Insights",
 						},
 					},
-					Severity: alertsmanagement.Condition{
+					Severity: &alertsmanagement.ConditionArgs{
 						Operator: "Equals",
 						Values: []string{
 							"Sev0",
 							"Sev2",
 						},
 					},
-					TargetResourceType: alertsmanagement.Condition{
+					TargetResourceType: &alertsmanagement.ConditionArgs{
 						Operator: "NotEquals",
 						Values: []string{
 							"Microsoft.Compute/VirtualMachines",
@@ -158,23 +158,23 @@ func main() {
 					},
 				},
 				Description: "Action rule on resource group for daily suppression",
-				Scope: alertsmanagement.Scope{
+				Scope: &alertsmanagement.ScopeArgs{
 					ScopeType: "ResourceGroup",
 					Values: []string{
 						"/subscriptions/1e3ff1c0-771a-4119-a03b-be82a51e232d/resourceGroups/alertscorrelationrg",
 					},
 				},
 				Status: "Enabled",
-				SuppressionConfig: alertsmanagement.SuppressionConfig{
+				SuppressionConfig: &alertsmanagement.SuppressionConfigArgs{
 					RecurrenceType: "Daily",
-					Schedule: alertsmanagement.SuppressionSchedule{
+					Schedule: &alertsmanagement.SuppressionScheduleArgs{
 						EndDate:   "12/18/2018",
 						EndTime:   "14:00:00",
 						StartDate: "12/09/2018",
 						StartTime: "06:00:00",
 					},
 				},
-				Type: "Suppression",
+				Type: pulumi.String("Suppression"),
 			},
 			ResourceGroupName: pulumi.String("alertscorrelationrg"),
 			Tags:              nil,

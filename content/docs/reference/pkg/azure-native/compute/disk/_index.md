@@ -665,38 +665,7 @@ class MyStack : Stack
 
 {{< example go >}}
 
-
-```go
-package main
-
-import (
-	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := compute.NewDisk(ctx, "disk", &compute.DiskArgs{
-			CreationData: &compute.CreationDataArgs{
-				CreateOption: pulumi.String("FromImage"),
-				ImageReference: &compute.ImageDiskReferenceArgs{
-					Id: pulumi.String("/Subscriptions/{subscriptionId}/Providers/Microsoft.Compute/Locations/westus/Publishers/{publisher}/ArtifactTypes/VMImage/Offers/{offer}/Skus/{sku}/Versions/1.0.0"),
-				},
-			},
-			DiskName:          pulumi.String("myDisk"),
-			Location:          pulumi.String("West US"),
-			OsType:            "Windows",
-			ResourceGroupName: pulumi.String("myResourceGroup"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
+Coming soon!
 
 {{< /example >}}
 
@@ -914,41 +883,7 @@ class MyStack : Stack
 
 {{< example go >}}
 
-
-```go
-package main
-
-import (
-	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := compute.NewDisk(ctx, "disk", &compute.DiskArgs{
-			CreationData: &compute.CreationDataArgs{
-				CreateOption: pulumi.String("FromImage"),
-				ImageReference: &compute.ImageDiskReferenceArgs{
-					Id: pulumi.String("/Subscriptions/{subscriptionId}/Providers/Microsoft.Compute/Locations/uswest/Publishers/Microsoft/ArtifactTypes/VMImage/Offers/{offer}"),
-				},
-			},
-			DiskName:          pulumi.String("myDisk"),
-			Location:          pulumi.String("North Central US"),
-			OsType:            "Windows",
-			ResourceGroupName: pulumi.String("myResourceGroup"),
-			SecurityProfile: &compute.DiskSecurityProfileArgs{
-				SecurityType: pulumi.String("TrustedLaunch"),
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
+Coming soon!
 
 {{< /example >}}
 

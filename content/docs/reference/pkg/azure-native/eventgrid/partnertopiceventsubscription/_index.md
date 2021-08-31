@@ -74,8 +74,8 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := eventgrid.NewPartnerTopicEventSubscription(ctx, "partnerTopicEventSubscription", &eventgrid.PartnerTopicEventSubscriptionArgs{
-			Destination: eventgrid.WebHookEventSubscriptionDestination{
-				EndpointType: "WebHook",
+			Destination: &eventgrid.WebHookEventSubscriptionDestinationArgs{
+				EndpointType: pulumi.String("WebHook"),
 				EndpointUrl:  "https://requestb.in/15ksip71",
 			},
 			EventSubscriptionName: pulumi.String("exampleEventSubscriptionName1"),

@@ -69,9 +69,9 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := synapse.NewIntegrationRuntime(ctx, "integrationRuntime", &synapse.IntegrationRuntimeArgs{
 			IntegrationRuntimeName: pulumi.String("exampleIntegrationRuntime"),
-			Properties: synapse.SelfHostedIntegrationRuntime{
+			Properties: &synapse.SelfHostedIntegrationRuntimeArgs{
 				Description: "A selfhosted integration runtime",
-				Type:        "SelfHosted",
+				Type:        pulumi.String("SelfHosted"),
 			},
 			ResourceGroupName: pulumi.String("exampleResourceGroup"),
 			WorkspaceName:     pulumi.String("exampleWorkspace"),

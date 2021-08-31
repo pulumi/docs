@@ -103,73 +103,7 @@ class MyStack : Stack
 
 {{< example go >}}
 
-
-```go
-package main
-
-import (
-	synapse "github.com/pulumi/pulumi-azure-native/sdk/go/azure/synapse"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := synapse.NewWorkspace(ctx, "workspace", &synapse.WorkspaceArgs{
-			DefaultDataLakeStorage: &synapse.DataLakeStorageAccountDetailsArgs{
-				AccountUrl: pulumi.String("https://accountname.dfs.core.windows.net"),
-				Filesystem: pulumi.String("default"),
-			},
-			Encryption: &synapse.EncryptionDetailsArgs{
-				Cmk: &synapse.CustomerManagedKeyDetailsArgs{
-					Key: &synapse.WorkspaceKeyDetailsArgs{
-						KeyVaultUrl: pulumi.String("https://vault.azure.net/keys/key1"),
-						Name:        pulumi.String("default"),
-					},
-				},
-			},
-			Identity: &synapse.ManagedIdentityArgs{
-				Type: "SystemAssigned",
-			},
-			Location:                 pulumi.String("East US"),
-			ManagedResourceGroupName: pulumi.String("workspaceManagedResourceGroupUnique"),
-			ManagedVirtualNetwork:    pulumi.String("default"),
-			ManagedVirtualNetworkSettings: &synapse.ManagedVirtualNetworkSettingsArgs{
-				AllowedAadTenantIdsForLinking: pulumi.StringArray{
-					pulumi.String("740239CE-A25B-485B-86A0-262F29F6EBDB"),
-				},
-				LinkedAccessCheckOnTargetResource: pulumi.Bool(false),
-				PreventDataExfiltration:           pulumi.Bool(false),
-			},
-			PublicNetworkAccess: pulumi.String("Enabled"),
-			PurviewConfiguration: &synapse.PurviewConfigurationArgs{
-				PurviewResourceId: pulumi.String("/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup1/providers/Microsoft.ProjectPurview/accounts/accountname1"),
-			},
-			ResourceGroupName:             pulumi.String("resourceGroup1"),
-			SqlAdministratorLogin:         pulumi.String("login"),
-			SqlAdministratorLoginPassword: pulumi.String("password"),
-			Tags: pulumi.StringMap{
-				"key": pulumi.String("value"),
-			},
-			WorkspaceName: pulumi.String("workspace1"),
-			WorkspaceRepositoryConfiguration: &synapse.WorkspaceRepositoryConfigurationArgs{
-				AccountName:         pulumi.String("mygithubaccount"),
-				CollaborationBranch: pulumi.String("master"),
-				HostName:            pulumi.String(""),
-				ProjectName:         pulumi.String("myproject"),
-				RepositoryName:      pulumi.String("myrepository"),
-				RootFolder:          pulumi.String("/"),
-				Type:                pulumi.String("FactoryGitHubConfiguration"),
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
+Coming soon!
 
 {{< /example >}}
 

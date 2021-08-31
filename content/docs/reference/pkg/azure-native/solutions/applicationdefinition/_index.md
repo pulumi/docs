@@ -63,41 +63,7 @@ class MyStack : Stack
 
 {{< example go >}}
 
-
-```go
-package main
-
-import (
-	solutions "github.com/pulumi/pulumi-azure-native/sdk/go/azure/solutions"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := solutions.NewApplicationDefinition(ctx, "applicationDefinition", &solutions.ApplicationDefinitionArgs{
-			ApplicationDefinitionName: pulumi.String("myManagedApplicationDef"),
-			Authorizations: []solutions.ApplicationAuthorizationArgs{
-				&solutions.ApplicationAuthorizationArgs{
-					PrincipalId:      pulumi.String("validprincipalguid"),
-					RoleDefinitionId: pulumi.String("validroleguid"),
-				},
-			},
-			Description:       pulumi.String("myManagedApplicationDef description"),
-			DisplayName:       pulumi.String("myManagedApplicationDef"),
-			Location:          pulumi.String("East US 2"),
-			LockLevel:         "None",
-			PackageFileUri:    pulumi.String("https://path/to/packagezipfile"),
-			ResourceGroupName: pulumi.String("rg"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
+Coming soon!
 
 {{< /example >}}
 
