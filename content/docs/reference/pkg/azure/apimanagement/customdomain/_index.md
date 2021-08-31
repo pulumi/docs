@@ -1229,6 +1229,14 @@ The following state arguments are supported:
     <dd>{{% md %}}The password associated with the certificate provided above.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="expiry_csharp">
+<a href="#expiry_csharp" style="color: inherit; text-decoration: inherit;">Expiry</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="keyvaultid_csharp">
 <a href="#keyvaultid_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Id</a>
 </span>
@@ -1245,7 +1253,31 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should Client Certificate Negotiation be enabled for this Hostname? Defaults to false.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sslkeyvaultidentityclientid_csharp">
+<a href="#sslkeyvaultidentityclientid_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Keyvault<wbr>Identity<wbr>Client<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="subject_csharp">
+<a href="#subject_csharp" style="color: inherit; text-decoration: inherit;">Subject</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="thumbprint_csharp">
+<a href="#thumbprint_csharp" style="color: inherit; text-decoration: inherit;">Thumbprint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1278,6 +1310,14 @@ The following state arguments are supported:
     <dd>{{% md %}}The password associated with the certificate provided above.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="expiry_go">
+<a href="#expiry_go" style="color: inherit; text-decoration: inherit;">Expiry</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="keyvaultid_go">
 <a href="#keyvaultid_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Id</a>
 </span>
@@ -1294,7 +1334,31 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should Client Certificate Negotiation be enabled for this Hostname? Defaults to false.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sslkeyvaultidentityclientid_go">
+<a href="#sslkeyvaultidentityclientid_go" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Keyvault<wbr>Identity<wbr>Client<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="subject_go">
+<a href="#subject_go" style="color: inherit; text-decoration: inherit;">Subject</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="thumbprint_go">
+<a href="#thumbprint_go" style="color: inherit; text-decoration: inherit;">Thumbprint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1327,6 +1391,14 @@ The following state arguments are supported:
     <dd>{{% md %}}The password associated with the certificate provided above.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="expiry_nodejs">
+<a href="#expiry_nodejs" style="color: inherit; text-decoration: inherit;">expiry</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="keyvaultid_nodejs">
 <a href="#keyvaultid_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault<wbr>Id</a>
 </span>
@@ -1343,7 +1415,31 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should Client Certificate Negotiation be enabled for this Hostname? Defaults to false.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sslkeyvaultidentityclientid_nodejs">
+<a href="#sslkeyvaultidentityclientid_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Keyvault<wbr>Identity<wbr>Client<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="subject_nodejs">
+<a href="#subject_nodejs" style="color: inherit; text-decoration: inherit;">subject</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="thumbprint_nodejs">
+<a href="#thumbprint_nodejs" style="color: inherit; text-decoration: inherit;">thumbprint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1376,6 +1472,14 @@ The following state arguments are supported:
     <dd>{{% md %}}The password associated with the certificate provided above.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="expiry_python">
+<a href="#expiry_python" style="color: inherit; text-decoration: inherit;">expiry</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="key_vault_id_python">
 <a href="#key_vault_id_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>id</a>
 </span>
@@ -1392,7 +1496,31 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should Client Certificate Negotiation be enabled for this Hostname? Defaults to false.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ssl_keyvault_identity_client_id_python">
+<a href="#ssl_keyvault_identity_client_id_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>keyvault_<wbr>identity_<wbr>client_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="subject_python">
+<a href="#subject_python" style="color: inherit; text-decoration: inherit;">subject</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="thumbprint_python">
+<a href="#thumbprint_python" style="color: inherit; text-decoration: inherit;">thumbprint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="customdomainmanagement">Custom<wbr>Domain<wbr>Management</h4>
@@ -1427,6 +1555,14 @@ The following state arguments are supported:
     <dd>{{% md %}}The password associated with the certificate provided above.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="expiry_csharp">
+<a href="#expiry_csharp" style="color: inherit; text-decoration: inherit;">Expiry</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="keyvaultid_csharp">
 <a href="#keyvaultid_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Id</a>
 </span>
@@ -1443,7 +1579,31 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should Client Certificate Negotiation be enabled for this Hostname? Defaults to false.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sslkeyvaultidentityclientid_csharp">
+<a href="#sslkeyvaultidentityclientid_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Keyvault<wbr>Identity<wbr>Client<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="subject_csharp">
+<a href="#subject_csharp" style="color: inherit; text-decoration: inherit;">Subject</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="thumbprint_csharp">
+<a href="#thumbprint_csharp" style="color: inherit; text-decoration: inherit;">Thumbprint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1476,6 +1636,14 @@ The following state arguments are supported:
     <dd>{{% md %}}The password associated with the certificate provided above.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="expiry_go">
+<a href="#expiry_go" style="color: inherit; text-decoration: inherit;">Expiry</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="keyvaultid_go">
 <a href="#keyvaultid_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Id</a>
 </span>
@@ -1492,7 +1660,31 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should Client Certificate Negotiation be enabled for this Hostname? Defaults to false.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sslkeyvaultidentityclientid_go">
+<a href="#sslkeyvaultidentityclientid_go" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Keyvault<wbr>Identity<wbr>Client<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="subject_go">
+<a href="#subject_go" style="color: inherit; text-decoration: inherit;">Subject</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="thumbprint_go">
+<a href="#thumbprint_go" style="color: inherit; text-decoration: inherit;">Thumbprint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1525,6 +1717,14 @@ The following state arguments are supported:
     <dd>{{% md %}}The password associated with the certificate provided above.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="expiry_nodejs">
+<a href="#expiry_nodejs" style="color: inherit; text-decoration: inherit;">expiry</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="keyvaultid_nodejs">
 <a href="#keyvaultid_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault<wbr>Id</a>
 </span>
@@ -1541,7 +1741,31 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should Client Certificate Negotiation be enabled for this Hostname? Defaults to false.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sslkeyvaultidentityclientid_nodejs">
+<a href="#sslkeyvaultidentityclientid_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Keyvault<wbr>Identity<wbr>Client<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="subject_nodejs">
+<a href="#subject_nodejs" style="color: inherit; text-decoration: inherit;">subject</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="thumbprint_nodejs">
+<a href="#thumbprint_nodejs" style="color: inherit; text-decoration: inherit;">thumbprint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1574,6 +1798,14 @@ The following state arguments are supported:
     <dd>{{% md %}}The password associated with the certificate provided above.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="expiry_python">
+<a href="#expiry_python" style="color: inherit; text-decoration: inherit;">expiry</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="key_vault_id_python">
 <a href="#key_vault_id_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>id</a>
 </span>
@@ -1590,7 +1822,31 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should Client Certificate Negotiation be enabled for this Hostname? Defaults to false.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ssl_keyvault_identity_client_id_python">
+<a href="#ssl_keyvault_identity_client_id_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>keyvault_<wbr>identity_<wbr>client_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="subject_python">
+<a href="#subject_python" style="color: inherit; text-decoration: inherit;">subject</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="thumbprint_python">
+<a href="#thumbprint_python" style="color: inherit; text-decoration: inherit;">thumbprint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="customdomainportal">Custom<wbr>Domain<wbr>Portal</h4>
@@ -1625,6 +1881,14 @@ The following state arguments are supported:
     <dd>{{% md %}}The password associated with the certificate provided above.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="expiry_csharp">
+<a href="#expiry_csharp" style="color: inherit; text-decoration: inherit;">Expiry</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="keyvaultid_csharp">
 <a href="#keyvaultid_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Id</a>
 </span>
@@ -1641,7 +1905,31 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should Client Certificate Negotiation be enabled for this Hostname? Defaults to false.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sslkeyvaultidentityclientid_csharp">
+<a href="#sslkeyvaultidentityclientid_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Keyvault<wbr>Identity<wbr>Client<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="subject_csharp">
+<a href="#subject_csharp" style="color: inherit; text-decoration: inherit;">Subject</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="thumbprint_csharp">
+<a href="#thumbprint_csharp" style="color: inherit; text-decoration: inherit;">Thumbprint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1674,6 +1962,14 @@ The following state arguments are supported:
     <dd>{{% md %}}The password associated with the certificate provided above.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="expiry_go">
+<a href="#expiry_go" style="color: inherit; text-decoration: inherit;">Expiry</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="keyvaultid_go">
 <a href="#keyvaultid_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Id</a>
 </span>
@@ -1690,7 +1986,31 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should Client Certificate Negotiation be enabled for this Hostname? Defaults to false.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sslkeyvaultidentityclientid_go">
+<a href="#sslkeyvaultidentityclientid_go" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Keyvault<wbr>Identity<wbr>Client<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="subject_go">
+<a href="#subject_go" style="color: inherit; text-decoration: inherit;">Subject</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="thumbprint_go">
+<a href="#thumbprint_go" style="color: inherit; text-decoration: inherit;">Thumbprint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1723,6 +2043,14 @@ The following state arguments are supported:
     <dd>{{% md %}}The password associated with the certificate provided above.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="expiry_nodejs">
+<a href="#expiry_nodejs" style="color: inherit; text-decoration: inherit;">expiry</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="keyvaultid_nodejs">
 <a href="#keyvaultid_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault<wbr>Id</a>
 </span>
@@ -1739,7 +2067,31 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should Client Certificate Negotiation be enabled for this Hostname? Defaults to false.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sslkeyvaultidentityclientid_nodejs">
+<a href="#sslkeyvaultidentityclientid_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Keyvault<wbr>Identity<wbr>Client<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="subject_nodejs">
+<a href="#subject_nodejs" style="color: inherit; text-decoration: inherit;">subject</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="thumbprint_nodejs">
+<a href="#thumbprint_nodejs" style="color: inherit; text-decoration: inherit;">thumbprint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1772,6 +2124,14 @@ The following state arguments are supported:
     <dd>{{% md %}}The password associated with the certificate provided above.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="expiry_python">
+<a href="#expiry_python" style="color: inherit; text-decoration: inherit;">expiry</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="key_vault_id_python">
 <a href="#key_vault_id_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>id</a>
 </span>
@@ -1788,7 +2148,31 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should Client Certificate Negotiation be enabled for this Hostname? Defaults to false.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ssl_keyvault_identity_client_id_python">
+<a href="#ssl_keyvault_identity_client_id_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>keyvault_<wbr>identity_<wbr>client_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="subject_python">
+<a href="#subject_python" style="color: inherit; text-decoration: inherit;">subject</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="thumbprint_python">
+<a href="#thumbprint_python" style="color: inherit; text-decoration: inherit;">thumbprint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="customdomainproxy">Custom<wbr>Domain<wbr>Proxy</h4>
@@ -1832,6 +2216,14 @@ The following state arguments are supported:
     <dd>{{% md %}}Is the certificate associated with this Hostname the Default SSL Certificate? This is used when an SNI header isn't specified by a client. Defaults to false.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="expiry_csharp">
+<a href="#expiry_csharp" style="color: inherit; text-decoration: inherit;">Expiry</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="keyvaultid_csharp">
 <a href="#keyvaultid_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Id</a>
 </span>
@@ -1848,7 +2240,31 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should Client Certificate Negotiation be enabled for this Hostname? Defaults to false.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sslkeyvaultidentityclientid_csharp">
+<a href="#sslkeyvaultidentityclientid_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Keyvault<wbr>Identity<wbr>Client<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="subject_csharp">
+<a href="#subject_csharp" style="color: inherit; text-decoration: inherit;">Subject</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="thumbprint_csharp">
+<a href="#thumbprint_csharp" style="color: inherit; text-decoration: inherit;">Thumbprint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1890,6 +2306,14 @@ The following state arguments are supported:
     <dd>{{% md %}}Is the certificate associated with this Hostname the Default SSL Certificate? This is used when an SNI header isn't specified by a client. Defaults to false.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="expiry_go">
+<a href="#expiry_go" style="color: inherit; text-decoration: inherit;">Expiry</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="keyvaultid_go">
 <a href="#keyvaultid_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Id</a>
 </span>
@@ -1906,7 +2330,31 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should Client Certificate Negotiation be enabled for this Hostname? Defaults to false.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sslkeyvaultidentityclientid_go">
+<a href="#sslkeyvaultidentityclientid_go" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Keyvault<wbr>Identity<wbr>Client<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="subject_go">
+<a href="#subject_go" style="color: inherit; text-decoration: inherit;">Subject</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="thumbprint_go">
+<a href="#thumbprint_go" style="color: inherit; text-decoration: inherit;">Thumbprint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1948,6 +2396,14 @@ The following state arguments are supported:
     <dd>{{% md %}}Is the certificate associated with this Hostname the Default SSL Certificate? This is used when an SNI header isn't specified by a client. Defaults to false.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="expiry_nodejs">
+<a href="#expiry_nodejs" style="color: inherit; text-decoration: inherit;">expiry</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="keyvaultid_nodejs">
 <a href="#keyvaultid_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault<wbr>Id</a>
 </span>
@@ -1964,7 +2420,31 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should Client Certificate Negotiation be enabled for this Hostname? Defaults to false.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sslkeyvaultidentityclientid_nodejs">
+<a href="#sslkeyvaultidentityclientid_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Keyvault<wbr>Identity<wbr>Client<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="subject_nodejs">
+<a href="#subject_nodejs" style="color: inherit; text-decoration: inherit;">subject</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="thumbprint_nodejs">
+<a href="#thumbprint_nodejs" style="color: inherit; text-decoration: inherit;">thumbprint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -2006,6 +2486,14 @@ The following state arguments are supported:
     <dd>{{% md %}}Is the certificate associated with this Hostname the Default SSL Certificate? This is used when an SNI header isn't specified by a client. Defaults to false.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="expiry_python">
+<a href="#expiry_python" style="color: inherit; text-decoration: inherit;">expiry</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="key_vault_id_python">
 <a href="#key_vault_id_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>id</a>
 </span>
@@ -2022,7 +2510,31 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should Client Certificate Negotiation be enabled for this Hostname? Defaults to false.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ssl_keyvault_identity_client_id_python">
+<a href="#ssl_keyvault_identity_client_id_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>keyvault_<wbr>identity_<wbr>client_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="subject_python">
+<a href="#subject_python" style="color: inherit; text-decoration: inherit;">subject</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="thumbprint_python">
+<a href="#thumbprint_python" style="color: inherit; text-decoration: inherit;">thumbprint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="customdomainscm">Custom<wbr>Domain<wbr>Scm</h4>
@@ -2057,6 +2569,14 @@ The following state arguments are supported:
     <dd>{{% md %}}The password associated with the certificate provided above.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="expiry_csharp">
+<a href="#expiry_csharp" style="color: inherit; text-decoration: inherit;">Expiry</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="keyvaultid_csharp">
 <a href="#keyvaultid_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Id</a>
 </span>
@@ -2073,7 +2593,31 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should Client Certificate Negotiation be enabled for this Hostname? Defaults to false.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sslkeyvaultidentityclientid_csharp">
+<a href="#sslkeyvaultidentityclientid_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Keyvault<wbr>Identity<wbr>Client<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="subject_csharp">
+<a href="#subject_csharp" style="color: inherit; text-decoration: inherit;">Subject</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="thumbprint_csharp">
+<a href="#thumbprint_csharp" style="color: inherit; text-decoration: inherit;">Thumbprint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2106,6 +2650,14 @@ The following state arguments are supported:
     <dd>{{% md %}}The password associated with the certificate provided above.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="expiry_go">
+<a href="#expiry_go" style="color: inherit; text-decoration: inherit;">Expiry</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="keyvaultid_go">
 <a href="#keyvaultid_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Id</a>
 </span>
@@ -2122,7 +2674,31 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should Client Certificate Negotiation be enabled for this Hostname? Defaults to false.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sslkeyvaultidentityclientid_go">
+<a href="#sslkeyvaultidentityclientid_go" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Keyvault<wbr>Identity<wbr>Client<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="subject_go">
+<a href="#subject_go" style="color: inherit; text-decoration: inherit;">Subject</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="thumbprint_go">
+<a href="#thumbprint_go" style="color: inherit; text-decoration: inherit;">Thumbprint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2155,6 +2731,14 @@ The following state arguments are supported:
     <dd>{{% md %}}The password associated with the certificate provided above.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="expiry_nodejs">
+<a href="#expiry_nodejs" style="color: inherit; text-decoration: inherit;">expiry</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="keyvaultid_nodejs">
 <a href="#keyvaultid_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault<wbr>Id</a>
 </span>
@@ -2171,7 +2755,31 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should Client Certificate Negotiation be enabled for this Hostname? Defaults to false.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sslkeyvaultidentityclientid_nodejs">
+<a href="#sslkeyvaultidentityclientid_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Keyvault<wbr>Identity<wbr>Client<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="subject_nodejs">
+<a href="#subject_nodejs" style="color: inherit; text-decoration: inherit;">subject</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="thumbprint_nodejs">
+<a href="#thumbprint_nodejs" style="color: inherit; text-decoration: inherit;">thumbprint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -2204,6 +2812,14 @@ The following state arguments are supported:
     <dd>{{% md %}}The password associated with the certificate provided above.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="expiry_python">
+<a href="#expiry_python" style="color: inherit; text-decoration: inherit;">expiry</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="key_vault_id_python">
 <a href="#key_vault_id_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>id</a>
 </span>
@@ -2220,7 +2836,31 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should Client Certificate Negotiation be enabled for this Hostname? Defaults to false.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ssl_keyvault_identity_client_id_python">
+<a href="#ssl_keyvault_identity_client_id_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>keyvault_<wbr>identity_<wbr>client_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="subject_python">
+<a href="#subject_python" style="color: inherit; text-decoration: inherit;">subject</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="thumbprint_python">
+<a href="#thumbprint_python" style="color: inherit; text-decoration: inherit;">thumbprint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

@@ -128,6 +128,8 @@ const example = new azure.network.FirewallPolicy("example", {
                    <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
                    <span class="nx">base_policy_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                    <span class="nx">dns</span><span class="p">:</span> <span class="nx">Optional[FirewallPolicyDnsArgs]</span> = None<span class="p">,</span>
+                   <span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[FirewallPolicyIdentityArgs]</span> = None<span class="p">,</span>
+                   <span class="nx">intrusion_detection</span><span class="p">:</span> <span class="nx">Optional[FirewallPolicyIntrusionDetectionArgs]</span> = None<span class="p">,</span>
                    <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                    <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                    <span class="nx">private_ip_ranges</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
@@ -135,7 +137,8 @@ const example = new azure.network.FirewallPolicy("example", {
                    <span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                    <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
                    <span class="nx">threat_intelligence_allowlist</span><span class="p">:</span> <span class="nx">Optional[FirewallPolicyThreatIntelligenceAllowlistArgs]</span> = None<span class="p">,</span>
-                   <span class="nx">threat_intelligence_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+                   <span class="nx">threat_intelligence_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">tls_certificate</span><span class="p">:</span> <span class="nx">Optional[FirewallPolicyTlsCertificateArgs]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">FirewallPolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                    <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">FirewallPolicyArgs</a></span><span class="p">,</span>
@@ -292,6 +295,24 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
     <dd>{{% md %}}A `dns` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="identity_csharp">
+<a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewallpolicyidentity">Firewall<wbr>Policy<wbr>Identity<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `identity` block as defined below. Changing this forces a new Firewall Policy to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="intrusiondetection_csharp">
+<a href="#intrusiondetection_csharp" style="color: inherit; text-decoration: inherit;">Intrusion<wbr>Detection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewallpolicyintrusiondetection">Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `intrusion_detection` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
 </span>
@@ -325,7 +346,7 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The SKU Tier of the Firewall Policy. Possible values are `Standard`, `Premium`.
+    <dd>{{% md %}}The SKU Tier of the Firewall Policy. Possible values are `Standard`, `Premium`. Changing this forces a new Firewall Policy to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
@@ -353,6 +374,15 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The operation mode for Threat Intelligence. Possible values are `Alert`, `Deny` and `Off`. Defaults to `Alert`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tlscertificate_csharp">
+<a href="#tlscertificate_csharp" style="color: inherit; text-decoration: inherit;">Tls<wbr>Certificate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewallpolicytlscertificate">Firewall<wbr>Policy<wbr>Tls<wbr>Certificate<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `tls_certificate` block as defined below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -384,6 +414,24 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type"><a href="#firewallpolicydns">Firewall<wbr>Policy<wbr>Dns<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `dns` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="identity_go">
+<a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewallpolicyidentity">Firewall<wbr>Policy<wbr>Identity<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `identity` block as defined below. Changing this forces a new Firewall Policy to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="intrusiondetection_go">
+<a href="#intrusiondetection_go" style="color: inherit; text-decoration: inherit;">Intrusion<wbr>Detection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewallpolicyintrusiondetection">Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `intrusion_detection` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
@@ -419,7 +467,7 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The SKU Tier of the Firewall Policy. Possible values are `Standard`, `Premium`.
+    <dd>{{% md %}}The SKU Tier of the Firewall Policy. Possible values are `Standard`, `Premium`. Changing this forces a new Firewall Policy to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
@@ -447,6 +495,15 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The operation mode for Threat Intelligence. Possible values are `Alert`, `Deny` and `Off`. Defaults to `Alert`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tlscertificate_go">
+<a href="#tlscertificate_go" style="color: inherit; text-decoration: inherit;">Tls<wbr>Certificate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewallpolicytlscertificate">Firewall<wbr>Policy<wbr>Tls<wbr>Certificate<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `tls_certificate` block as defined below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -478,6 +535,24 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type"><a href="#firewallpolicydns">Firewall<wbr>Policy<wbr>Dns<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `dns` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="identity_nodejs">
+<a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewallpolicyidentity">Firewall<wbr>Policy<wbr>Identity<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `identity` block as defined below. Changing this forces a new Firewall Policy to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="intrusiondetection_nodejs">
+<a href="#intrusiondetection_nodejs" style="color: inherit; text-decoration: inherit;">intrusion<wbr>Detection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewallpolicyintrusiondetection">Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `intrusion_detection` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
@@ -513,7 +588,7 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The SKU Tier of the Firewall Policy. Possible values are `Standard`, `Premium`.
+    <dd>{{% md %}}The SKU Tier of the Firewall Policy. Possible values are `Standard`, `Premium`. Changing this forces a new Firewall Policy to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
@@ -541,6 +616,15 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The operation mode for Threat Intelligence. Possible values are `Alert`, `Deny` and `Off`. Defaults to `Alert`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tlscertificate_nodejs">
+<a href="#tlscertificate_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Certificate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewallpolicytlscertificate">Firewall<wbr>Policy<wbr>Tls<wbr>Certificate<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `tls_certificate` block as defined below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -572,6 +656,24 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type"><a href="#firewallpolicydns">Firewall<wbr>Policy<wbr>Dns<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `dns` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="identity_python">
+<a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewallpolicyidentity">Firewall<wbr>Policy<wbr>Identity<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `identity` block as defined below. Changing this forces a new Firewall Policy to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="intrusion_detection_python">
+<a href="#intrusion_detection_python" style="color: inherit; text-decoration: inherit;">intrusion_<wbr>detection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewallpolicyintrusiondetection">Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `intrusion_detection` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
@@ -607,7 +709,7 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The SKU Tier of the Firewall Policy. Possible values are `Standard`, `Premium`.
+    <dd>{{% md %}}The SKU Tier of the Firewall Policy. Possible values are `Standard`, `Premium`. Changing this forces a new Firewall Policy to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
@@ -635,6 +737,15 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The operation mode for Threat Intelligence. Possible values are `Alert`, `Deny` and `Off`. Defaults to `Alert`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tls_certificate_python">
+<a href="#tls_certificate_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>certificate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewallpolicytlscertificate">Firewall<wbr>Policy<wbr>Tls<wbr>Certificate<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `tls_certificate` block as defined below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -821,6 +932,8 @@ Get an existing FirewallPolicy resource's state with the given name, ID, and opt
         <span class="nx">child_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
         <span class="nx">dns</span><span class="p">:</span> <span class="nx">Optional[FirewallPolicyDnsArgs]</span> = None<span class="p">,</span>
         <span class="nx">firewalls</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+        <span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[FirewallPolicyIdentityArgs]</span> = None<span class="p">,</span>
+        <span class="nx">intrusion_detection</span><span class="p">:</span> <span class="nx">Optional[FirewallPolicyIntrusionDetectionArgs]</span> = None<span class="p">,</span>
         <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">private_ip_ranges</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
@@ -829,7 +942,8 @@ Get an existing FirewallPolicy resource's state with the given name, ID, and opt
         <span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
         <span class="nx">threat_intelligence_allowlist</span><span class="p">:</span> <span class="nx">Optional[FirewallPolicyThreatIntelligenceAllowlistArgs]</span> = None<span class="p">,</span>
-        <span class="nx">threat_intelligence_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> FirewallPolicy</code></pre></div>
+        <span class="nx">threat_intelligence_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">tls_certificate</span><span class="p">:</span> <span class="nx">Optional[FirewallPolicyTlsCertificateArgs]</span> = None<span class="p">) -&gt;</span> FirewallPolicy</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -978,6 +1092,24 @@ The following state arguments are supported:
     <dd>{{% md %}}A list of references to Azure Firewalls that this Firewall Policy is associated with.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_identity_csharp">
+<a href="#state_identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewallpolicyidentity">Firewall<wbr>Policy<wbr>Identity<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `identity` block as defined below. Changing this forces a new Firewall Policy to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_intrusiondetection_csharp">
+<a href="#state_intrusiondetection_csharp" style="color: inherit; text-decoration: inherit;">Intrusion<wbr>Detection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewallpolicyintrusiondetection">Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `intrusion_detection` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_location_csharp">
 <a href="#state_location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
 </span>
@@ -1029,7 +1161,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The SKU Tier of the Firewall Policy. Possible values are `Standard`, `Premium`.
+    <dd>{{% md %}}The SKU Tier of the Firewall Policy. Possible values are `Standard`, `Premium`. Changing this forces a new Firewall Policy to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
@@ -1057,6 +1189,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The operation mode for Threat Intelligence. Possible values are `Alert`, `Deny` and `Off`. Defaults to `Alert`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_tlscertificate_csharp">
+<a href="#state_tlscertificate_csharp" style="color: inherit; text-decoration: inherit;">Tls<wbr>Certificate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewallpolicytlscertificate">Firewall<wbr>Policy<wbr>Tls<wbr>Certificate<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `tls_certificate` block as defined below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1097,6 +1238,24 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of references to Azure Firewalls that this Firewall Policy is associated with.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_identity_go">
+<a href="#state_identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewallpolicyidentity">Firewall<wbr>Policy<wbr>Identity<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `identity` block as defined below. Changing this forces a new Firewall Policy to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_intrusiondetection_go">
+<a href="#state_intrusiondetection_go" style="color: inherit; text-decoration: inherit;">Intrusion<wbr>Detection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewallpolicyintrusiondetection">Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `intrusion_detection` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_go">
@@ -1150,7 +1309,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The SKU Tier of the Firewall Policy. Possible values are `Standard`, `Premium`.
+    <dd>{{% md %}}The SKU Tier of the Firewall Policy. Possible values are `Standard`, `Premium`. Changing this forces a new Firewall Policy to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
@@ -1178,6 +1337,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The operation mode for Threat Intelligence. Possible values are `Alert`, `Deny` and `Off`. Defaults to `Alert`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_tlscertificate_go">
+<a href="#state_tlscertificate_go" style="color: inherit; text-decoration: inherit;">Tls<wbr>Certificate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewallpolicytlscertificate">Firewall<wbr>Policy<wbr>Tls<wbr>Certificate<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `tls_certificate` block as defined below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1218,6 +1386,24 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of references to Azure Firewalls that this Firewall Policy is associated with.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_identity_nodejs">
+<a href="#state_identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewallpolicyidentity">Firewall<wbr>Policy<wbr>Identity<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `identity` block as defined below. Changing this forces a new Firewall Policy to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_intrusiondetection_nodejs">
+<a href="#state_intrusiondetection_nodejs" style="color: inherit; text-decoration: inherit;">intrusion<wbr>Detection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewallpolicyintrusiondetection">Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `intrusion_detection` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_nodejs">
@@ -1271,7 +1457,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The SKU Tier of the Firewall Policy. Possible values are `Standard`, `Premium`.
+    <dd>{{% md %}}The SKU Tier of the Firewall Policy. Possible values are `Standard`, `Premium`. Changing this forces a new Firewall Policy to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
@@ -1299,6 +1485,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The operation mode for Threat Intelligence. Possible values are `Alert`, `Deny` and `Off`. Defaults to `Alert`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_tlscertificate_nodejs">
+<a href="#state_tlscertificate_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Certificate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewallpolicytlscertificate">Firewall<wbr>Policy<wbr>Tls<wbr>Certificate<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `tls_certificate` block as defined below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1339,6 +1534,24 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of references to Azure Firewalls that this Firewall Policy is associated with.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_identity_python">
+<a href="#state_identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewallpolicyidentity">Firewall<wbr>Policy<wbr>Identity<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `identity` block as defined below. Changing this forces a new Firewall Policy to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_intrusion_detection_python">
+<a href="#state_intrusion_detection_python" style="color: inherit; text-decoration: inherit;">intrusion_<wbr>detection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewallpolicyintrusiondetection">Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `intrusion_detection` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_python">
@@ -1392,7 +1605,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The SKU Tier of the Firewall Policy. Possible values are `Standard`, `Premium`.
+    <dd>{{% md %}}The SKU Tier of the Firewall Policy. Possible values are `Standard`, `Premium`. Changing this forces a new Firewall Policy to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
@@ -1420,6 +1633,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The operation mode for Threat Intelligence. Possible values are `Alert`, `Deny` and `Off`. Defaults to `Alert`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_tls_certificate_python">
+<a href="#state_tls_certificate_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>certificate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewallpolicytlscertificate">Firewall<wbr>Policy<wbr>Tls<wbr>Certificate<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `tls_certificate` block as defined below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1443,7 +1665,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been deprecated as the service team has removed it from all API versions and is no longer supported by Azure. It will be removed in v3.0 of the provider.{{% /md %}}</p></dd><dt class="property-optional"
+    <dd>{{% md %}}Should the network rule fqdn be enabled?
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been deprecated as the service team has removed it from all API versions and is no longer supported by Azure. It will be removed in v3.0 of the provider.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="proxyenabled_csharp">
 <a href="#proxyenabled_csharp" style="color: inherit; text-decoration: inherit;">Proxy<wbr>Enabled</a>
@@ -1473,7 +1696,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been deprecated as the service team has removed it from all API versions and is no longer supported by Azure. It will be removed in v3.0 of the provider.{{% /md %}}</p></dd><dt class="property-optional"
+    <dd>{{% md %}}Should the network rule fqdn be enabled?
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been deprecated as the service team has removed it from all API versions and is no longer supported by Azure. It will be removed in v3.0 of the provider.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="proxyenabled_go">
 <a href="#proxyenabled_go" style="color: inherit; text-decoration: inherit;">Proxy<wbr>Enabled</a>
@@ -1503,7 +1727,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been deprecated as the service team has removed it from all API versions and is no longer supported by Azure. It will be removed in v3.0 of the provider.{{% /md %}}</p></dd><dt class="property-optional"
+    <dd>{{% md %}}Should the network rule fqdn be enabled?
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been deprecated as the service team has removed it from all API versions and is no longer supported by Azure. It will be removed in v3.0 of the provider.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="proxyenabled_nodejs">
 <a href="#proxyenabled_nodejs" style="color: inherit; text-decoration: inherit;">proxy<wbr>Enabled</a>
@@ -1533,7 +1758,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been deprecated as the service team has removed it from all API versions and is no longer supported by Azure. It will be removed in v3.0 of the provider.{{% /md %}}</p></dd><dt class="property-optional"
+    <dd>{{% md %}}Should the network rule fqdn be enabled?
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been deprecated as the service team has removed it from all API versions and is no longer supported by Azure. It will be removed in v3.0 of the provider.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="proxy_enabled_python">
 <a href="#proxy_enabled_python" style="color: inherit; text-decoration: inherit;">proxy_<wbr>enabled</a>
@@ -1551,6 +1777,682 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of custom DNS servers' IP addresses.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="firewallpolicyidentity">Firewall<wbr>Policy<wbr>Identity</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of the identity. At the moment only "UserAssigned" is supported. Changing this forces a new Firewall Policy to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="principalid_csharp">
+<a href="#principalid_csharp" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tenantid_csharp">
+<a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="userassignedidentityids_csharp">
+<a href="#userassignedidentityids_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identity<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Specifies a list of user assigned managed identities.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of the identity. At the moment only "UserAssigned" is supported. Changing this forces a new Firewall Policy to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="principalid_go">
+<a href="#principalid_go" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tenantid_go">
+<a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="userassignedidentityids_go">
+<a href="#userassignedidentityids_go" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identity<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}Specifies a list of user assigned managed identities.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of the identity. At the moment only "UserAssigned" is supported. Changing this forces a new Firewall Policy to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="principalid_nodejs">
+<a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tenantid_nodejs">
+<a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="userassignedidentityids_nodejs">
+<a href="#userassignedidentityids_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identity<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}Specifies a list of user assigned managed identities.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Type of the identity. At the moment only "UserAssigned" is supported. Changing this forces a new Firewall Policy to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="principal_id_python">
+<a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tenant_id_python">
+<a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="user_assigned_identity_ids_python">
+<a href="#user_assigned_identity_ids_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identity_<wbr>ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}Specifies a list of user assigned managed identities.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="firewallpolicyintrusiondetection">Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="mode_csharp">
+<a href="#mode_csharp" style="color: inherit; text-decoration: inherit;">Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}In which mode you want to run intrusion detection: "Off", "Alert" or "Deny".
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="signatureoverrides_csharp">
+<a href="#signatureoverrides_csharp" style="color: inherit; text-decoration: inherit;">Signature<wbr>Overrides</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewallpolicyintrusiondetectionsignatureoverride">List&lt;Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>Signature<wbr>Override&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `signature_overrides` blocks as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="trafficbypasses_csharp">
+<a href="#trafficbypasses_csharp" style="color: inherit; text-decoration: inherit;">Traffic<wbr>Bypasses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewallpolicyintrusiondetectiontrafficbypass">List&lt;Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>Traffic<wbr>Bypass&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `traffic_bypass` blocks as defined below.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="mode_go">
+<a href="#mode_go" style="color: inherit; text-decoration: inherit;">Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}In which mode you want to run intrusion detection: "Off", "Alert" or "Deny".
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="signatureoverrides_go">
+<a href="#signatureoverrides_go" style="color: inherit; text-decoration: inherit;">Signature<wbr>Overrides</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewallpolicyintrusiondetectionsignatureoverride">[]Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>Signature<wbr>Override</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `signature_overrides` blocks as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="trafficbypasses_go">
+<a href="#trafficbypasses_go" style="color: inherit; text-decoration: inherit;">Traffic<wbr>Bypasses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewallpolicyintrusiondetectiontrafficbypass">[]Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>Traffic<wbr>Bypass</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `traffic_bypass` blocks as defined below.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="mode_nodejs">
+<a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}In which mode you want to run intrusion detection: "Off", "Alert" or "Deny".
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="signatureoverrides_nodejs">
+<a href="#signatureoverrides_nodejs" style="color: inherit; text-decoration: inherit;">signature<wbr>Overrides</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewallpolicyintrusiondetectionsignatureoverride">Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>Signature<wbr>Override[]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `signature_overrides` blocks as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="trafficbypasses_nodejs">
+<a href="#trafficbypasses_nodejs" style="color: inherit; text-decoration: inherit;">traffic<wbr>Bypasses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewallpolicyintrusiondetectiontrafficbypass">Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>Traffic<wbr>Bypass[]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `traffic_bypass` blocks as defined below.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="mode_python">
+<a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}In which mode you want to run intrusion detection: "Off", "Alert" or "Deny".
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="signature_overrides_python">
+<a href="#signature_overrides_python" style="color: inherit; text-decoration: inherit;">signature_<wbr>overrides</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewallpolicyintrusiondetectionsignatureoverride">Sequence[Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>Signature<wbr>Override]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `signature_overrides` blocks as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="traffic_bypasses_python">
+<a href="#traffic_bypasses_python" style="color: inherit; text-decoration: inherit;">traffic_<wbr>bypasses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewallpolicyintrusiondetectiontrafficbypass">Sequence[Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>Traffic<wbr>Bypass]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `traffic_bypass` blocks as defined below.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="firewallpolicyintrusiondetectionsignatureoverride">Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>Signature<wbr>Override</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}12-digit number (id) which identifies your signature.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_csharp">
+<a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}state can be any of "Off", "Alert" or "Deny".
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}12-digit number (id) which identifies your signature.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_go">
+<a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}state can be any of "Off", "Alert" or "Deny".
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}12-digit number (id) which identifies your signature.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_nodejs">
+<a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}state can be any of "Off", "Alert" or "Deny".
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}12-digit number (id) which identifies your signature.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_python">
+<a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}state can be any of "Off", "Alert" or "Deny".
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="firewallpolicyintrusiondetectiontrafficbypass">Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>Traffic<wbr>Bypass</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name which should be used for this bypass traffic setting.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="protocol_csharp">
+<a href="#protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The protocols any of "ANY", "TCP", "ICMP", "UDP" that shall be bypassed by intrusion detection.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The description for this bypass traffic setting.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="destinationaddresses_csharp">
+<a href="#destinationaddresses_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Specifies a list of destination IP addresses that shall be bypassed by intrusion detection.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="destinationipgroups_csharp">
+<a href="#destinationipgroups_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Ip<wbr>Groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Specifies a list of destination IP groups that shall be bypassed by intrusion detection.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="destinationports_csharp">
+<a href="#destinationports_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Ports</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Specifies a list of destination IP ports that shall be bypassed by intrusion detection.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sourceaddresses_csharp">
+<a href="#sourceaddresses_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Specifies a list of source addresses that shall be bypassed by intrusion detection.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sourceipgroups_csharp">
+<a href="#sourceipgroups_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Ip<wbr>Groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Specifies a list of source ip groups that shall be bypassed by intrusion detection.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name which should be used for this bypass traffic setting.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="protocol_go">
+<a href="#protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The protocols any of "ANY", "TCP", "ICMP", "UDP" that shall be bypassed by intrusion detection.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The description for this bypass traffic setting.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="destinationaddresses_go">
+<a href="#destinationaddresses_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}Specifies a list of destination IP addresses that shall be bypassed by intrusion detection.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="destinationipgroups_go">
+<a href="#destinationipgroups_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Ip<wbr>Groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}Specifies a list of destination IP groups that shall be bypassed by intrusion detection.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="destinationports_go">
+<a href="#destinationports_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Ports</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}Specifies a list of destination IP ports that shall be bypassed by intrusion detection.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sourceaddresses_go">
+<a href="#sourceaddresses_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}Specifies a list of source addresses that shall be bypassed by intrusion detection.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sourceipgroups_go">
+<a href="#sourceipgroups_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Ip<wbr>Groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}Specifies a list of source ip groups that shall be bypassed by intrusion detection.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name which should be used for this bypass traffic setting.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="protocol_nodejs">
+<a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The protocols any of "ANY", "TCP", "ICMP", "UDP" that shall be bypassed by intrusion detection.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The description for this bypass traffic setting.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="destinationaddresses_nodejs">
+<a href="#destinationaddresses_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}Specifies a list of destination IP addresses that shall be bypassed by intrusion detection.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="destinationipgroups_nodejs">
+<a href="#destinationipgroups_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Ip<wbr>Groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}Specifies a list of destination IP groups that shall be bypassed by intrusion detection.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="destinationports_nodejs">
+<a href="#destinationports_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Ports</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}Specifies a list of destination IP ports that shall be bypassed by intrusion detection.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sourceaddresses_nodejs">
+<a href="#sourceaddresses_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}Specifies a list of source addresses that shall be bypassed by intrusion detection.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sourceipgroups_nodejs">
+<a href="#sourceipgroups_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Ip<wbr>Groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}Specifies a list of source ip groups that shall be bypassed by intrusion detection.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name which should be used for this bypass traffic setting.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="protocol_python">
+<a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The protocols any of "ANY", "TCP", "ICMP", "UDP" that shall be bypassed by intrusion detection.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The description for this bypass traffic setting.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="destination_addresses_python">
+<a href="#destination_addresses_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}Specifies a list of destination IP addresses that shall be bypassed by intrusion detection.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="destination_ip_groups_python">
+<a href="#destination_ip_groups_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>ip_<wbr>groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}Specifies a list of destination IP groups that shall be bypassed by intrusion detection.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="destination_ports_python">
+<a href="#destination_ports_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>ports</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}Specifies a list of destination IP ports that shall be bypassed by intrusion detection.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="source_addresses_python">
+<a href="#source_addresses_python" style="color: inherit; text-decoration: inherit;">source_<wbr>addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}Specifies a list of source addresses that shall be bypassed by intrusion detection.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="source_ip_groups_python">
+<a href="#source_ip_groups_python" style="color: inherit; text-decoration: inherit;">source_<wbr>ip_<wbr>groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}Specifies a list of source ip groups that shall be bypassed by intrusion detection.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1643,10 +2545,100 @@ The following state arguments are supported:
     <dd>{{% md %}}A list of IP addresses or IP address ranges that will be skipped for threat detection.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
+
+<h4 id="firewallpolicytlscertificate">Firewall<wbr>Policy<wbr>Tls<wbr>Certificate</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="keyvaultsecretid_csharp">
+<a href="#keyvaultsecretid_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Secret<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Key Vault, where the secret or certificate is stored.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the certificate.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="keyvaultsecretid_go">
+<a href="#keyvaultsecretid_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Secret<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Key Vault, where the secret or certificate is stored.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the certificate.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="keyvaultsecretid_nodejs">
+<a href="#keyvaultsecretid_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault<wbr>Secret<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Key Vault, where the secret or certificate is stored.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the certificate.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_vault_secret_id_python">
+<a href="#key_vault_secret_id_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>secret_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Key Vault, where the secret or certificate is stored.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the certificate.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
 ## Import
 
 
-networks can be imported using the `resource id`, e.g.
+Firewall Policies can be imported using the `resource id`, e.g.
 
 ```sh
  $ pulumi import azure:network/firewallPolicy:FirewallPolicy example /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/mygroup1/providers/Microsoft.Network/firewallPolicies/policy1

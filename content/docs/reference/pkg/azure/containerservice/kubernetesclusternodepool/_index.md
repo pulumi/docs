@@ -56,6 +56,7 @@ Kubernetes Cluster Node Pools can be imported using the `resource id`, e.g.
                               <span class="nx">os_disk_size_gb</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
                               <span class="nx">os_disk_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                               <span class="nx">os_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                              <span class="nx">pod_subnet_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                               <span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                               <span class="nx">proximity_placement_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                               <span class="nx">spot_max_price</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">,</span>
@@ -409,6 +410,15 @@ The KubernetesClusterNodePool resource accepts the following [input]({{< relref 
     <dd>{{% md %}}The Operating System which should be used for this Node Pool. Changing this forces a new resource to be created. Possible values are `Linux` and `Windows`. Defaults to `Linux`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="podsubnetid_csharp">
+<a href="#podsubnetid_csharp" style="color: inherit; text-decoration: inherit;">Pod<wbr>Subnet<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Subnet where the pods in the default Node Pool should exist. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="priority_csharp">
 <a href="#priority_csharp" style="color: inherit; text-decoration: inherit;">Priority</a>
 </span>
@@ -690,6 +700,15 @@ The KubernetesClusterNodePool resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Operating System which should be used for this Node Pool. Changing this forces a new resource to be created. Possible values are `Linux` and `Windows`. Defaults to `Linux`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="podsubnetid_go">
+<a href="#podsubnetid_go" style="color: inherit; text-decoration: inherit;">Pod<wbr>Subnet<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Subnet where the pods in the default Node Pool should exist. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="priority_go">
@@ -975,6 +994,15 @@ The KubernetesClusterNodePool resource accepts the following [input]({{< relref 
     <dd>{{% md %}}The Operating System which should be used for this Node Pool. Changing this forces a new resource to be created. Possible values are `Linux` and `Windows`. Defaults to `Linux`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="podsubnetid_nodejs">
+<a href="#podsubnetid_nodejs" style="color: inherit; text-decoration: inherit;">pod<wbr>Subnet<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Subnet where the pods in the default Node Pool should exist. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="priority_nodejs">
 <a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
@@ -1258,6 +1286,15 @@ The KubernetesClusterNodePool resource accepts the following [input]({{< relref 
     <dd>{{% md %}}The Operating System which should be used for this Node Pool. Changing this forces a new resource to be created. Possible values are `Linux` and `Windows`. Defaults to `Linux`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="pod_subnet_id_python">
+<a href="#pod_subnet_id_python" style="color: inherit; text-decoration: inherit;">pod_<wbr>subnet_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Subnet where the pods in the default Node Pool should exist. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="priority_python">
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
@@ -1416,6 +1453,7 @@ Get an existing KubernetesClusterNodePool resource's state with the given name, 
         <span class="nx">os_disk_size_gb</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">os_disk_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">os_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">pod_subnet_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">proximity_placement_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">spot_max_price</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">,</span>
@@ -1743,6 +1781,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The Operating System which should be used for this Node Pool. Changing this forces a new resource to be created. Possible values are `Linux` and `Windows`. Defaults to `Linux`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_podsubnetid_csharp">
+<a href="#state_podsubnetid_csharp" style="color: inherit; text-decoration: inherit;">Pod<wbr>Subnet<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Subnet where the pods in the default Node Pool should exist. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_priority_csharp">
 <a href="#state_priority_csharp" style="color: inherit; text-decoration: inherit;">Priority</a>
 </span>
@@ -2024,6 +2071,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Operating System which should be used for this Node Pool. Changing this forces a new resource to be created. Possible values are `Linux` and `Windows`. Defaults to `Linux`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_podsubnetid_go">
+<a href="#state_podsubnetid_go" style="color: inherit; text-decoration: inherit;">Pod<wbr>Subnet<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Subnet where the pods in the default Node Pool should exist. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_priority_go">
@@ -2309,6 +2365,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The Operating System which should be used for this Node Pool. Changing this forces a new resource to be created. Possible values are `Linux` and `Windows`. Defaults to `Linux`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_podsubnetid_nodejs">
+<a href="#state_podsubnetid_nodejs" style="color: inherit; text-decoration: inherit;">pod<wbr>Subnet<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Subnet where the pods in the default Node Pool should exist. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_priority_nodejs">
 <a href="#state_priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
@@ -2590,6 +2655,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Operating System which should be used for this Node Pool. Changing this forces a new resource to be created. Possible values are `Linux` and `Windows`. Defaults to `Linux`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_pod_subnet_id_python">
+<a href="#state_pod_subnet_id_python" style="color: inherit; text-decoration: inherit;">pod_<wbr>subnet_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Subnet where the pods in the default Node Pool should exist. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_priority_python">

@@ -174,22 +174,6 @@ The following output properties are available:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-"
             title="">
-        <span id="aliasprimaryconnectionstring_csharp">
-<a href="#aliasprimaryconnectionstring_csharp" style="color: inherit; text-decoration: inherit;">Alias<wbr>Primary<wbr>Connection<wbr>String</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="aliassecondaryconnectionstring_csharp">
-<a href="#aliassecondaryconnectionstring_csharp" style="color: inherit; text-decoration: inherit;">Alias<wbr>Secondary<wbr>Connection<wbr>String</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
-            title="">
         <span id="defaultprimarykey_csharp">
 <a href="#defaultprimarykey_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Primary<wbr>Key</a>
 </span>
@@ -239,8 +223,24 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="primaryconnectionstringalias_csharp">
+<a href="#primaryconnectionstringalias_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Connection<wbr>String<wbr>Alias</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="secondaryconnectionstringalias_csharp">
+<a href="#secondaryconnectionstringalias_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Connection<wbr>String<wbr>Alias</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -250,22 +250,6 @@ The following output properties are available:
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-"
-            title="">
-        <span id="aliasprimaryconnectionstring_go">
-<a href="#aliasprimaryconnectionstring_go" style="color: inherit; text-decoration: inherit;">Alias<wbr>Primary<wbr>Connection<wbr>String</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="aliassecondaryconnectionstring_go">
-<a href="#aliassecondaryconnectionstring_go" style="color: inherit; text-decoration: inherit;">Alias<wbr>Secondary<wbr>Connection<wbr>String</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="defaultprimarykey_go">
 <a href="#defaultprimarykey_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Primary<wbr>Key</a>
@@ -316,8 +300,24 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="primaryconnectionstringalias_go">
+<a href="#primaryconnectionstringalias_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Connection<wbr>String<wbr>Alias</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="secondaryconnectionstringalias_go">
+<a href="#secondaryconnectionstringalias_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Connection<wbr>String<wbr>Alias</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -327,22 +327,6 @@ The following output properties are available:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-"
-            title="">
-        <span id="aliasprimaryconnectionstring_nodejs">
-<a href="#aliasprimaryconnectionstring_nodejs" style="color: inherit; text-decoration: inherit;">alias<wbr>Primary<wbr>Connection<wbr>String</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="aliassecondaryconnectionstring_nodejs">
-<a href="#aliassecondaryconnectionstring_nodejs" style="color: inherit; text-decoration: inherit;">alias<wbr>Secondary<wbr>Connection<wbr>String</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="defaultprimarykey_nodejs">
 <a href="#defaultprimarykey_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Primary<wbr>Key</a>
@@ -393,8 +377,24 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="primaryconnectionstringalias_nodejs">
+<a href="#primaryconnectionstringalias_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Connection<wbr>String<wbr>Alias</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="secondaryconnectionstringalias_nodejs">
+<a href="#secondaryconnectionstringalias_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Connection<wbr>String<wbr>Alias</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -404,22 +404,6 @@ The following output properties are available:
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-"
-            title="">
-        <span id="alias_primary_connection_string_python">
-<a href="#alias_primary_connection_string_python" style="color: inherit; text-decoration: inherit;">alias_<wbr>primary_<wbr>connection_<wbr>string</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="alias_secondary_connection_string_python">
-<a href="#alias_secondary_connection_string_python" style="color: inherit; text-decoration: inherit;">alias_<wbr>secondary_<wbr>connection_<wbr>string</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="default_primary_key_python">
 <a href="#default_primary_key_python" style="color: inherit; text-decoration: inherit;">default_<wbr>primary_<wbr>key</a>
@@ -470,8 +454,24 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="primary_connection_string_alias_python">
+<a href="#primary_connection_string_alias_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>connection_<wbr>string_<wbr>alias</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="secondary_connection_string_alias_python">
+<a href="#secondary_connection_string_alias_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>connection_<wbr>string_<wbr>alias</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>

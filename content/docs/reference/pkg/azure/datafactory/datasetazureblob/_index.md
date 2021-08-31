@@ -410,7 +410,7 @@ The DatasetAzureBlob resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Is the `path` using dynamic expression, function or system variables? Defaults to `false`.
+    <dd>{{% md %}}Is the `filename` using dynamic expression, function or system variables? Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dynamicpathenabled_csharp">
@@ -540,7 +540,7 @@ The DatasetAzureBlob resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Is the `path` using dynamic expression, function or system variables? Defaults to `false`.
+    <dd>{{% md %}}Is the `filename` using dynamic expression, function or system variables? Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dynamicpathenabled_go">
@@ -670,7 +670,7 @@ The DatasetAzureBlob resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Is the `path` using dynamic expression, function or system variables? Defaults to `false`.
+    <dd>{{% md %}}Is the `filename` using dynamic expression, function or system variables? Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dynamicpathenabled_nodejs">
@@ -800,7 +800,7 @@ The DatasetAzureBlob resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Is the `path` using dynamic expression, function or system variables? Defaults to `false`.
+    <dd>{{% md %}}Is the `filename` using dynamic expression, function or system variables? Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dynamic_path_enabled_python">
@@ -1106,7 +1106,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Is the `path` using dynamic expression, function or system variables? Defaults to `false`.
+    <dd>{{% md %}}Is the `filename` using dynamic expression, function or system variables? Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dynamicpathenabled_csharp">
@@ -1236,7 +1236,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Is the `path` using dynamic expression, function or system variables? Defaults to `false`.
+    <dd>{{% md %}}Is the `filename` using dynamic expression, function or system variables? Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dynamicpathenabled_go">
@@ -1366,7 +1366,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Is the `path` using dynamic expression, function or system variables? Defaults to `false`.
+    <dd>{{% md %}}Is the `filename` using dynamic expression, function or system variables? Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dynamicpathenabled_nodejs">
@@ -1496,7 +1496,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Is the `path` using dynamic expression, function or system variables? Defaults to `false`.
+    <dd>{{% md %}}Is the `filename` using dynamic expression, function or system variables? Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dynamic_path_enabled_python">

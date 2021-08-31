@@ -1240,6 +1240,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Whether to enable pre-shutdown notifications. Possible values are `true` and `false`. Defaults to `false`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="email_csharp">
+<a href="#email_csharp" style="color: inherit; text-decoration: inherit;">Email</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}E-mail address to which the notification will be sent.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="timeinminutes_csharp">
 <a href="#timeinminutes_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>In<wbr>Minutes</a>
 </span>
@@ -1269,6 +1278,15 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to enable pre-shutdown notifications. Possible values are `true` and `false`. Defaults to `false`
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="email_go">
+<a href="#email_go" style="color: inherit; text-decoration: inherit;">Email</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}E-mail address to which the notification will be sent.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeinminutes_go">
@@ -1302,6 +1320,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Whether to enable pre-shutdown notifications. Possible values are `true` and `false`. Defaults to `false`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="email_nodejs">
+<a href="#email_nodejs" style="color: inherit; text-decoration: inherit;">email</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}E-mail address to which the notification will be sent.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="timeinminutes_nodejs">
 <a href="#timeinminutes_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>In<wbr>Minutes</a>
 </span>
@@ -1331,6 +1358,15 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to enable pre-shutdown notifications. Possible values are `true` and `false`. Defaults to `false`
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="email_python">
+<a href="#email_python" style="color: inherit; text-decoration: inherit;">email</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}E-mail address to which the notification will be sent.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="time_in_minutes_python">

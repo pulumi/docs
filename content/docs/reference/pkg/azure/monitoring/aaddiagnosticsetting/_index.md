@@ -12,6 +12,8 @@ meta_desc: "Documentation for the azure.monitoring.AadDiagnosticSetting resource
 
 Manages an Azure Active Directory Diagnostic Setting for Azure Monitor.
 
+!> **Authentication** The API for this resource does not support service principal authentication. This resource can only be used with Azure CLI authentication.
+
 {{% examples %}}
 
 ## Example Usage
@@ -1177,7 +1179,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The log category for the Azure Active Directory Diagnostic. Possible values are `AuditLogs`, `SignInLogs`, `ADFSSignInLogs`, `ManagedIdentitySignInLogs`, `NonInteractiveUserSignInLogs`, `ProvisioningLogs`, `ServicePrincipalSignInLogs`.
+    <dd>{{% md %}}The log category for the Azure Active Directory Diagnostic. Possible values are `AuditLogs`, `SignInLogs`, `ADFSSignInLogs`, `ManagedIdentitySignInLogs`, `NonInteractiveUserSignInLogs`, `ProvisioningLogs`, `RiskyUsers`, `ServicePrincipalSignInLogs`, `UserRiskEvents`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="retentionpolicy_csharp">
@@ -1208,7 +1210,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The log category for the Azure Active Directory Diagnostic. Possible values are `AuditLogs`, `SignInLogs`, `ADFSSignInLogs`, `ManagedIdentitySignInLogs`, `NonInteractiveUserSignInLogs`, `ProvisioningLogs`, `ServicePrincipalSignInLogs`.
+    <dd>{{% md %}}The log category for the Azure Active Directory Diagnostic. Possible values are `AuditLogs`, `SignInLogs`, `ADFSSignInLogs`, `ManagedIdentitySignInLogs`, `NonInteractiveUserSignInLogs`, `ProvisioningLogs`, `RiskyUsers`, `ServicePrincipalSignInLogs`, `UserRiskEvents`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="retentionpolicy_go">
@@ -1239,7 +1241,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The log category for the Azure Active Directory Diagnostic. Possible values are `AuditLogs`, `SignInLogs`, `ADFSSignInLogs`, `ManagedIdentitySignInLogs`, `NonInteractiveUserSignInLogs`, `ProvisioningLogs`, `ServicePrincipalSignInLogs`.
+    <dd>{{% md %}}The log category for the Azure Active Directory Diagnostic. Possible values are `AuditLogs`, `SignInLogs`, `ADFSSignInLogs`, `ManagedIdentitySignInLogs`, `NonInteractiveUserSignInLogs`, `ProvisioningLogs`, `RiskyUsers`, `ServicePrincipalSignInLogs`, `UserRiskEvents`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="retentionpolicy_nodejs">
@@ -1270,7 +1272,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The log category for the Azure Active Directory Diagnostic. Possible values are `AuditLogs`, `SignInLogs`, `ADFSSignInLogs`, `ManagedIdentitySignInLogs`, `NonInteractiveUserSignInLogs`, `ProvisioningLogs`, `ServicePrincipalSignInLogs`.
+    <dd>{{% md %}}The log category for the Azure Active Directory Diagnostic. Possible values are `AuditLogs`, `SignInLogs`, `ADFSSignInLogs`, `ManagedIdentitySignInLogs`, `NonInteractiveUserSignInLogs`, `ProvisioningLogs`, `RiskyUsers`, `ServicePrincipalSignInLogs`, `UserRiskEvents`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="retention_policy_python">

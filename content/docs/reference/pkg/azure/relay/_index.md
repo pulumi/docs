@@ -12,7 +12,9 @@ Explore the resources and functions of the azure.relay module.
 <h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="hybridconnection" title="HybridConnection"><span class="symbol resource"></span>HybridConnection</a></li>
+    <li><a href="hybridconnectionauthorizationrule" title="HybridConnectionAuthorizationRule"><span class="symbol resource"></span>HybridConnectionAuthorizationRule</a></li>
     <li><a href="namespace" title="Namespace"><span class="symbol resource"></span>Namespace</a></li>
+    <li><a href="namespaceauthorizationrule" title="NamespaceAuthorizationRule"><span class="symbol resource"></span>NamespaceAuthorizationRule</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -24,6 +26,6 @@ Explore the resources and functions of the azure.relay module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/hashicorp/terraform-provider-azurerm).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.15.0</dd>
+	<dd>4.16.0</dd>
 </dl>
 

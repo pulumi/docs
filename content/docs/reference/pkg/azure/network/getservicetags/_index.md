@@ -40,10 +40,13 @@ class MyStack : Stack
             LocationFilter = "northeurope",
         }));
         this.AddressPrefixes = example.Apply(example => example.AddressPrefixes);
+        this.Ipv4Cidrs = example.Apply(example => example.Ipv4Cidrs);
     }
 
     [Output("addressPrefixes")]
     public Output<string> AddressPrefixes { get; set; }
+    [Output("ipv4Cidrs")]
+    public Output<string> Ipv4Cidrs { get; set; }
 }
 ```
 
@@ -73,6 +76,7 @@ func main() {
 			return err
 		}
 		ctx.Export("addressPrefixes", example.AddressPrefixes)
+		ctx.Export("ipv4Cidrs", example.Ipv4Cidrs)
 		return nil
 	})
 }
@@ -92,6 +96,7 @@ example = azure.network.get_service_tags(location="westcentralus",
     service="AzureKeyVault",
     location_filter="northeurope")
 pulumi.export("addressPrefixes", example.address_prefixes)
+pulumi.export("ipv4Cidrs", example.ipv4_cidrs)
 ```
 
 
@@ -111,6 +116,7 @@ const example = azure.network.getServiceTags({
     locationFilter: "northeurope",
 });
 export const addressPrefixes = example.then(example => example.addressPrefixes);
+export const ipv4Cidrs = example.then(example => example.ipv4Cidrs);
 ```
 
 
@@ -316,6 +322,24 @@ The following output properties are available:
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="ipv4cidrs_csharp">
+<a href="#ipv4cidrs_csharp" style="color: inherit; text-decoration: inherit;">Ipv4Cidrs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}List of IPv4 addresses for the service type (and optionally a specific region)
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="ipv6cidrs_csharp">
+<a href="#ipv6cidrs_csharp" style="color: inherit; text-decoration: inherit;">Ipv6Cidrs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}List of IPv6 addresses for the service type (and optionally a specific region)
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
 </span>
@@ -360,6 +384,24 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="ipv4cidrs_go">
+<a href="#ipv4cidrs_go" style="color: inherit; text-decoration: inherit;">Ipv4Cidrs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}List of IPv4 addresses for the service type (and optionally a specific region)
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="ipv6cidrs_go">
+<a href="#ipv6cidrs_go" style="color: inherit; text-decoration: inherit;">Ipv6Cidrs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}List of IPv6 addresses for the service type (and optionally a specific region)
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_go">
@@ -408,6 +450,24 @@ The following output properties are available:
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="ipv4cidrs_nodejs">
+<a href="#ipv4cidrs_nodejs" style="color: inherit; text-decoration: inherit;">ipv4Cidrs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}List of IPv4 addresses for the service type (and optionally a specific region)
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="ipv6cidrs_nodejs">
+<a href="#ipv6cidrs_nodejs" style="color: inherit; text-decoration: inherit;">ipv6Cidrs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}List of IPv6 addresses for the service type (and optionally a specific region)
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
@@ -452,6 +512,24 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="ipv4_cidrs_python">
+<a href="#ipv4_cidrs_python" style="color: inherit; text-decoration: inherit;">ipv4_<wbr>cidrs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}List of IPv4 addresses for the service type (and optionally a specific region)
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="ipv6_cidrs_python">
+<a href="#ipv6_cidrs_python" style="color: inherit; text-decoration: inherit;">ipv6_<wbr>cidrs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}List of IPv6 addresses for the service type (and optionally a specific region)
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_python">
