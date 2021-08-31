@@ -38,6 +38,7 @@ construction to achieve fine-grained programmatic control over provider settings
              <span class="nx">apigee_custom_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">app_engine_custom_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">artifact_registry_custom_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">assured_workloads_custom_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">batching</span><span class="p">:</span> <span class="nx">Optional[ProviderBatchingArgs]</span> = None<span class="p">,</span>
              <span class="nx">big_query_custom_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">bigquery_connection_custom_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -323,6 +324,14 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
             title="Optional">
         <span id="artifactregistrycustomendpoint_csharp">
 <a href="#artifactregistrycustomendpoint_csharp" style="color: inherit; text-decoration: inherit;">Artifact<wbr>Registry<wbr>Custom<wbr>Endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="assuredworkloadscustomendpoint_csharp">
+<a href="#assuredworkloadscustomendpoint_csharp" style="color: inherit; text-decoration: inherit;">Assured<wbr>Workloads<wbr>Custom<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -1181,6 +1190,14 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="assuredworkloadscustomendpoint_go">
+<a href="#assuredworkloadscustomendpoint_go" style="color: inherit; text-decoration: inherit;">Assured<wbr>Workloads<wbr>Custom<wbr>Endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="batching_go">
 <a href="#batching_go" style="color: inherit; text-decoration: inherit;">Batching</a>
 </span>
@@ -2033,6 +2050,14 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="assuredworkloadscustomendpoint_nodejs">
+<a href="#assuredworkloadscustomendpoint_nodejs" style="color: inherit; text-decoration: inherit;">assured<wbr>Workloads<wbr>Custom<wbr>Endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="batching_nodejs">
 <a href="#batching_nodejs" style="color: inherit; text-decoration: inherit;">batching</a>
 </span>
@@ -2879,6 +2904,14 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
             title="Optional">
         <span id="artifact_registry_custom_endpoint_python">
 <a href="#artifact_registry_custom_endpoint_python" style="color: inherit; text-decoration: inherit;">artifact_<wbr>registry_<wbr>custom_<wbr>endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="assured_workloads_custom_endpoint_python">
+<a href="#assured_workloads_custom_endpoint_python" style="color: inherit; text-decoration: inherit;">assured_<wbr>workloads_<wbr>custom_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>

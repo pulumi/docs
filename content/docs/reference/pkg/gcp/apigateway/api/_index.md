@@ -1011,15 +1011,15 @@ If it is not provided, the provider project is used.
 Api can be imported using any of these accepted formats
 
 ```sh
- $ pulumi import gcp:apigateway/api:Api default projects/{{project}}/locations/global/apis/{{name}}
+ $ pulumi import gcp:apigateway/api:Api default projects/{{project}}/locations/global/apis/{{api_id}}
 ```
 
 ```sh
- $ pulumi import gcp:apigateway/api:Api default {{project}}/{{name}}
+ $ pulumi import gcp:apigateway/api:Api default {{project}}/{{api_id}}
 ```
 
 ```sh
- $ pulumi import gcp:apigateway/api:Api default {{name}}
+ $ pulumi import gcp:apigateway/api:Api default {{api_id}}
 ```
 
 

@@ -428,6 +428,11 @@ class MyStack : Stack
             {
                 { "k", "val" },
             },
+            NicType = "VIRTIO_NET",
+            ReservationAffinity = new Gcp.Notebooks.Inputs.InstanceReservationAffinityArgs
+            {
+                ConsumeReservationType = "NO_RESERVATION",
+            },
         });
     }
 
@@ -487,6 +492,10 @@ func main() {
 			Labels: pulumi.StringMap{
 				"k": pulumi.String("val"),
 			},
+			NicType: pulumi.String("VIRTIO_NET"),
+			ReservationAffinity: &notebooks.InstanceReservationAffinityArgs{
+				ConsumeReservationType: pulumi.String("NO_RESERVATION"),
+			},
 		})
 		if err != nil {
 			return err
@@ -527,7 +536,11 @@ instance = gcp.notebooks.Instance("instance",
     subnet=my_subnetwork.id,
     labels={
         "k": "val",
-    })
+    },
+    nic_type="VIRTIO_NET",
+    reservation_affinity=gcp.notebooks.InstanceReservationAffinityArgs(
+        consume_reservation_type="NO_RESERVATION",
+    ))
 ```
 
 
@@ -566,6 +579,10 @@ const instance = new gcp.notebooks.Instance("instance", {
     subnet: mySubnetwork.then(mySubnetwork => mySubnetwork.id),
     labels: {
         k: "val",
+    },
+    nicType: "VIRTIO_NET",
+    reservationAffinity: {
+        consumeReservationType: "NO_RESERVATION",
     },
 });
 ```
@@ -612,11 +629,13 @@ const instance = new gcp.notebooks.Instance("instance", {
              <span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
              <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">nic_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">no_proxy_access</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
              <span class="nx">no_public_ip</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
              <span class="nx">no_remove_data_disk</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
              <span class="nx">post_startup_script</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">reservation_affinity</span><span class="p">:</span> <span class="nx">Optional[InstanceReservationAffinityArgs]</span> = None<span class="p">,</span>
              <span class="nx">service_account</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">service_account_scopes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
              <span class="nx">shielded_instance_config</span><span class="p">:</span> <span class="nx">Optional[InstanceShieldedInstanceConfigArgs]</span> = None<span class="p">,</span>
@@ -938,6 +957,15 @@ An object containing a list of "key": value pairs. Example: { "name": "wrench", 
 Format: projects/{project_id}/global/networks/{network_id}
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="nictype_csharp">
+<a href="#nictype_csharp" style="color: inherit; text-decoration: inherit;">Nic<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of vNIC driver. Possible values: ["UNSPECIFIED_NIC_TYPE", "VIRTIO_NET", "GVNIC"]
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="noproxyaccess_csharp">
 <a href="#noproxyaccess_csharp" style="color: inherit; text-decoration: inherit;">No<wbr>Proxy<wbr>Access</a>
 </span>
@@ -984,6 +1012,15 @@ or Cloud Storage path (gs://path-to-file/file-name).
     </dt>
     <dd>{{% md %}}The name of the Google Cloud project that this VM image belongs to.
 Format: projects/{project_id}
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="reservationaffinity_csharp">
+<a href="#reservationaffinity_csharp" style="color: inherit; text-decoration: inherit;">Reservation<wbr>Affinity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancereservationaffinity">Instance<wbr>Reservation<wbr>Affinity<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Reservation Affinity for consuming Zonal reservation.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceaccount_csharp">
@@ -1249,6 +1286,15 @@ An object containing a list of "key": value pairs. Example: { "name": "wrench", 
 Format: projects/{project_id}/global/networks/{network_id}
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="nictype_go">
+<a href="#nictype_go" style="color: inherit; text-decoration: inherit;">Nic<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of vNIC driver. Possible values: ["UNSPECIFIED_NIC_TYPE", "VIRTIO_NET", "GVNIC"]
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="noproxyaccess_go">
 <a href="#noproxyaccess_go" style="color: inherit; text-decoration: inherit;">No<wbr>Proxy<wbr>Access</a>
 </span>
@@ -1295,6 +1341,15 @@ or Cloud Storage path (gs://path-to-file/file-name).
     </dt>
     <dd>{{% md %}}The name of the Google Cloud project that this VM image belongs to.
 Format: projects/{project_id}
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="reservationaffinity_go">
+<a href="#reservationaffinity_go" style="color: inherit; text-decoration: inherit;">Reservation<wbr>Affinity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancereservationaffinity">Instance<wbr>Reservation<wbr>Affinity<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Reservation Affinity for consuming Zonal reservation.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceaccount_go">
@@ -1560,6 +1615,15 @@ An object containing a list of "key": value pairs. Example: { "name": "wrench", 
 Format: projects/{project_id}/global/networks/{network_id}
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="nictype_nodejs">
+<a href="#nictype_nodejs" style="color: inherit; text-decoration: inherit;">nic<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of vNIC driver. Possible values: ["UNSPECIFIED_NIC_TYPE", "VIRTIO_NET", "GVNIC"]
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="noproxyaccess_nodejs">
 <a href="#noproxyaccess_nodejs" style="color: inherit; text-decoration: inherit;">no<wbr>Proxy<wbr>Access</a>
 </span>
@@ -1606,6 +1670,15 @@ or Cloud Storage path (gs://path-to-file/file-name).
     </dt>
     <dd>{{% md %}}The name of the Google Cloud project that this VM image belongs to.
 Format: projects/{project_id}
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="reservationaffinity_nodejs">
+<a href="#reservationaffinity_nodejs" style="color: inherit; text-decoration: inherit;">reservation<wbr>Affinity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancereservationaffinity">Instance<wbr>Reservation<wbr>Affinity<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Reservation Affinity for consuming Zonal reservation.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceaccount_nodejs">
@@ -1871,6 +1944,15 @@ An object containing a list of "key": value pairs. Example: { "name": "wrench", 
 Format: projects/{project_id}/global/networks/{network_id}
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="nic_type_python">
+<a href="#nic_type_python" style="color: inherit; text-decoration: inherit;">nic_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The type of vNIC driver. Possible values: ["UNSPECIFIED_NIC_TYPE", "VIRTIO_NET", "GVNIC"]
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="no_proxy_access_python">
 <a href="#no_proxy_access_python" style="color: inherit; text-decoration: inherit;">no_<wbr>proxy_<wbr>access</a>
 </span>
@@ -1917,6 +1999,15 @@ or Cloud Storage path (gs://path-to-file/file-name).
     </dt>
     <dd>{{% md %}}The name of the Google Cloud project that this VM image belongs to.
 Format: projects/{project_id}
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="reservation_affinity_python">
+<a href="#reservation_affinity_python" style="color: inherit; text-decoration: inherit;">reservation_<wbr>affinity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancereservationaffinity">Instance<wbr>Reservation<wbr>Affinity<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Reservation Affinity for consuming Zonal reservation.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="service_account_python">
@@ -2155,12 +2246,14 @@ Get an existing Instance resource's state with the given name, ID, and optional 
         <span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">nic_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">no_proxy_access</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">no_public_ip</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">no_remove_data_disk</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">post_startup_script</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">proxy_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">reservation_affinity</span><span class="p">:</span> <span class="nx">Optional[InstanceReservationAffinityArgs]</span> = None<span class="p">,</span>
         <span class="nx">service_account</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">service_account_scopes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
         <span class="nx">shielded_instance_config</span><span class="p">:</span> <span class="nx">Optional[InstanceShieldedInstanceConfigArgs]</span> = None<span class="p">,</span>
@@ -2466,6 +2559,15 @@ An object containing a list of "key": value pairs. Example: { "name": "wrench", 
 Format: projects/{project_id}/global/networks/{network_id}
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_nictype_csharp">
+<a href="#state_nictype_csharp" style="color: inherit; text-decoration: inherit;">Nic<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of vNIC driver. Possible values: ["UNSPECIFIED_NIC_TYPE", "VIRTIO_NET", "GVNIC"]
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_noproxyaccess_csharp">
 <a href="#state_noproxyaccess_csharp" style="color: inherit; text-decoration: inherit;">No<wbr>Proxy<wbr>Access</a>
 </span>
@@ -2521,6 +2623,15 @@ Format: projects/{project_id}
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The proxy endpoint that is used to access the Jupyter notebook.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_reservationaffinity_csharp">
+<a href="#state_reservationaffinity_csharp" style="color: inherit; text-decoration: inherit;">Reservation<wbr>Affinity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancereservationaffinity">Instance<wbr>Reservation<wbr>Affinity<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Reservation Affinity for consuming Zonal reservation.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceaccount_csharp">
@@ -2795,6 +2906,15 @@ An object containing a list of "key": value pairs. Example: { "name": "wrench", 
 Format: projects/{project_id}/global/networks/{network_id}
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_nictype_go">
+<a href="#state_nictype_go" style="color: inherit; text-decoration: inherit;">Nic<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of vNIC driver. Possible values: ["UNSPECIFIED_NIC_TYPE", "VIRTIO_NET", "GVNIC"]
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_noproxyaccess_go">
 <a href="#state_noproxyaccess_go" style="color: inherit; text-decoration: inherit;">No<wbr>Proxy<wbr>Access</a>
 </span>
@@ -2850,6 +2970,15 @@ Format: projects/{project_id}
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The proxy endpoint that is used to access the Jupyter notebook.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_reservationaffinity_go">
+<a href="#state_reservationaffinity_go" style="color: inherit; text-decoration: inherit;">Reservation<wbr>Affinity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancereservationaffinity">Instance<wbr>Reservation<wbr>Affinity<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Reservation Affinity for consuming Zonal reservation.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceaccount_go">
@@ -3124,6 +3253,15 @@ An object containing a list of "key": value pairs. Example: { "name": "wrench", 
 Format: projects/{project_id}/global/networks/{network_id}
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_nictype_nodejs">
+<a href="#state_nictype_nodejs" style="color: inherit; text-decoration: inherit;">nic<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of vNIC driver. Possible values: ["UNSPECIFIED_NIC_TYPE", "VIRTIO_NET", "GVNIC"]
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_noproxyaccess_nodejs">
 <a href="#state_noproxyaccess_nodejs" style="color: inherit; text-decoration: inherit;">no<wbr>Proxy<wbr>Access</a>
 </span>
@@ -3179,6 +3317,15 @@ Format: projects/{project_id}
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The proxy endpoint that is used to access the Jupyter notebook.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_reservationaffinity_nodejs">
+<a href="#state_reservationaffinity_nodejs" style="color: inherit; text-decoration: inherit;">reservation<wbr>Affinity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancereservationaffinity">Instance<wbr>Reservation<wbr>Affinity<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Reservation Affinity for consuming Zonal reservation.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceaccount_nodejs">
@@ -3453,6 +3600,15 @@ An object containing a list of "key": value pairs. Example: { "name": "wrench", 
 Format: projects/{project_id}/global/networks/{network_id}
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_nic_type_python">
+<a href="#state_nic_type_python" style="color: inherit; text-decoration: inherit;">nic_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The type of vNIC driver. Possible values: ["UNSPECIFIED_NIC_TYPE", "VIRTIO_NET", "GVNIC"]
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_no_proxy_access_python">
 <a href="#state_no_proxy_access_python" style="color: inherit; text-decoration: inherit;">no_<wbr>proxy_<wbr>access</a>
 </span>
@@ -3508,6 +3664,15 @@ Format: projects/{project_id}
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The proxy endpoint that is used to access the Jupyter notebook.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_reservation_affinity_python">
+<a href="#state_reservation_affinity_python" style="color: inherit; text-decoration: inherit;">reservation_<wbr>affinity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancereservationaffinity">Instance<wbr>Reservation<wbr>Affinity<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Reservation Affinity for consuming Zonal reservation.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_service_account_python">
@@ -3788,6 +3953,136 @@ For example: gcr.io/{project_id}/{imageName}
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The tag of the container image. If not specified, this defaults to the latest tag.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="instancereservationaffinity">Instance<wbr>Reservation<wbr>Affinity</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="consumereservationtype_csharp">
+<a href="#consumereservationtype_csharp" style="color: inherit; text-decoration: inherit;">Consume<wbr>Reservation<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of Compute Reservation.
+Possible values are `NO_RESERVATION`, `ANY_RESERVATION`, and `SPECIFIC_RESERVATION`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="key_csharp">
+<a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Corresponds to the label key of reservation resource.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="values_csharp">
+<a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Corresponds to the label values of reservation resource.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="consumereservationtype_go">
+<a href="#consumereservationtype_go" style="color: inherit; text-decoration: inherit;">Consume<wbr>Reservation<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of Compute Reservation.
+Possible values are `NO_RESERVATION`, `ANY_RESERVATION`, and `SPECIFIC_RESERVATION`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="key_go">
+<a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Corresponds to the label key of reservation resource.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="values_go">
+<a href="#values_go" style="color: inherit; text-decoration: inherit;">Values</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}Corresponds to the label values of reservation resource.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="consumereservationtype_nodejs">
+<a href="#consumereservationtype_nodejs" style="color: inherit; text-decoration: inherit;">consume<wbr>Reservation<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of Compute Reservation.
+Possible values are `NO_RESERVATION`, `ANY_RESERVATION`, and `SPECIFIC_RESERVATION`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="key_nodejs">
+<a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Corresponds to the label key of reservation resource.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="values_nodejs">
+<a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}Corresponds to the label values of reservation resource.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="consume_reservation_type_python">
+<a href="#consume_reservation_type_python" style="color: inherit; text-decoration: inherit;">consume_<wbr>reservation_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The type of Compute Reservation.
+Possible values are `NO_RESERVATION`, `ANY_RESERVATION`, and `SPECIFIC_RESERVATION`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="key_python">
+<a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Corresponds to the label key of reservation resource.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="values_python">
+<a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}Corresponds to the label values of reservation resource.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

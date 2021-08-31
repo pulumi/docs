@@ -26,6 +26,9 @@ Explore the resources and functions of the gcp.compute module.
     <li><a href="diskresourcepolicyattachment" title="DiskResourcePolicyAttachment"><span class="symbol resource"></span>DiskResourcePolicyAttachment</a></li>
     <li><a href="externalvpngateway" title="ExternalVpnGateway"><span class="symbol resource"></span>ExternalVpnGateway</a></li>
     <li><a href="firewall" title="Firewall"><span class="symbol resource"></span>Firewall</a></li>
+    <li><a href="firewallpolicy" title="FirewallPolicy"><span class="symbol resource"></span>FirewallPolicy</a></li>
+    <li><a href="firewallpolicyassociation" title="FirewallPolicyAssociation"><span class="symbol resource"></span>FirewallPolicyAssociation</a></li>
+    <li><a href="firewallpolicyrule" title="FirewallPolicyRule"><span class="symbol resource"></span>FirewallPolicyRule</a></li>
     <li><a href="forwardingrule" title="ForwardingRule"><span class="symbol resource"></span>ForwardingRule</a></li>
     <li><a href="globaladdress" title="GlobalAddress"><span class="symbol resource"></span>GlobalAddress</a></li>
     <li><a href="globalforwardingrule" title="GlobalForwardingRule"><span class="symbol resource"></span>GlobalForwardingRule</a></li>
@@ -159,6 +162,6 @@ Explore the resources and functions of the gcp.compute module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>5.17.0</dd>
+	<dd>5.18.0</dd>
 </dl>
 
