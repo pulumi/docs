@@ -62,7 +62,7 @@ class MyStack : Stack
                     },
                     Ipv6s = 
                     {
-                        "ff00::/8",
+                        "::/0",
                     },
                 },
                 new Linode.Inputs.FirewallInboundArgs
@@ -77,7 +77,7 @@ class MyStack : Stack
                     },
                     Ipv6s = 
                     {
-                        "ff00::/8",
+                        "::/0",
                     },
                 },
             },
@@ -96,7 +96,7 @@ class MyStack : Stack
                     },
                     Ipv6s = 
                     {
-                        "ff00::/8",
+                        "::/0",
                     },
                 },
                 new Linode.Inputs.FirewallOutboundArgs
@@ -111,7 +111,7 @@ class MyStack : Stack
                     },
                     Ipv6s = 
                     {
-                        "ff00::/8",
+                        "::/0",
                     },
                 },
             },
@@ -160,7 +160,7 @@ my_firewall = linode.Firewall("myFirewall",
             protocol="TCP",
             ports="80",
             ipv4s=["0.0.0.0/0"],
-            ipv6s=["ff00::/8"],
+            ipv6s=["::/0"],
         ),
         linode.FirewallInboundArgs(
             label="allow-https",
@@ -168,7 +168,7 @@ my_firewall = linode.Firewall("myFirewall",
             protocol="TCP",
             ports="443",
             ipv4s=["0.0.0.0/0"],
-            ipv6s=["ff00::/8"],
+            ipv6s=["::/0"],
         ),
     ],
     inbound_policy="DROP",
@@ -179,7 +179,7 @@ my_firewall = linode.Firewall("myFirewall",
             protocol="TCP",
             ports="80",
             ipv4s=["0.0.0.0/0"],
-            ipv6s=["ff00::/8"],
+            ipv6s=["::/0"],
         ),
         linode.FirewallOutboundArgs(
             label="reject-https",
@@ -187,7 +187,7 @@ my_firewall = linode.Firewall("myFirewall",
             protocol="TCP",
             ports="443",
             ipv4s=["0.0.0.0/0"],
-            ipv6s=["ff00::/8"],
+            ipv6s=["::/0"],
         ),
     ],
     outbound_policy="ACCEPT",
@@ -223,7 +223,7 @@ const myFirewall = new linode.Firewall("myFirewall", {
             protocol: "TCP",
             ports: "80",
             ipv4s: ["0.0.0.0/0"],
-            ipv6s: ["ff00::/8"],
+            ipv6s: ["::/0"],
         },
         {
             label: "allow-https",
@@ -231,7 +231,7 @@ const myFirewall = new linode.Firewall("myFirewall", {
             protocol: "TCP",
             ports: "443",
             ipv4s: ["0.0.0.0/0"],
-            ipv6s: ["ff00::/8"],
+            ipv6s: ["::/0"],
         },
     ],
     inboundPolicy: "DROP",
@@ -242,7 +242,7 @@ const myFirewall = new linode.Firewall("myFirewall", {
             protocol: "TCP",
             ports: "80",
             ipv4s: ["0.0.0.0/0"],
-            ipv6s: ["ff00::/8"],
+            ipv6s: ["::/0"],
         },
         {
             label: "reject-https",
@@ -250,7 +250,7 @@ const myFirewall = new linode.Firewall("myFirewall", {
             protocol: "TCP",
             ports: "443",
             ipv4s: ["0.0.0.0/0"],
-            ipv6s: ["ff00::/8"],
+            ipv6s: ["::/0"],
         },
     ],
     outboundPolicy: "ACCEPT",
