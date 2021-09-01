@@ -180,6 +180,576 @@ const example = new okta.app.Saml("example", {
 
 
 
+### With inline hook
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using Okta = Pulumi.Okta;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var testHook = new Okta.Inline.Hook("testHook", new Okta.Inline.HookArgs
+        {
+            Status = "ACTIVE",
+            Type = "com.okta.saml.tokens.transform",
+            Version = "1.0.2",
+            Channel = 
+            {
+                { "type", "HTTP" },
+                { "version", "1.0.0" },
+                { "uri", "https://example.com/test1" },
+                { "method", "POST" },
+            },
+            Auth = 
+            {
+                { "key", "Authorization" },
+                { "type", "HEADER" },
+                { "value", "secret" },
+            },
+        });
+        var testSaml = new Okta.App.Saml("testSaml", new Okta.App.SamlArgs
+        {
+            Label = "testAcc_replace_with_uuid",
+            SsoUrl = "http://google.com",
+            Recipient = "http://here.com",
+            Destination = "http://its-about-the-journey.com",
+            Audience = "http://audience.com",
+            SubjectNameIdTemplate = user.UserName,
+            SubjectNameIdFormat = "urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress",
+            ResponseSigned = true,
+            SignatureAlgorithm = "RSA_SHA256",
+            DigestAlgorithm = "SHA256",
+            HonorForceAuthn = false,
+            AuthnContextClassRef = "urn:oasis:names:tc:SAML:2.0:ac:classes:PasswordProtectedTransport",
+            InlineHookId = testHook.Id,
+            AttributeStatements = 
+            {
+                new Okta.App.Inputs.SamlAttributeStatementArgs
+                {
+                    Type = "GROUP",
+                    Name = "groups",
+                    FilterType = "REGEX",
+                    FilterValue = ".*",
+                },
+            },
+        }, new CustomResourceOptions
+        {
+            DependsOn = 
+            {
+                testHook,
+            },
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-okta/sdk/v3/go/okta/app"
+	"github.com/pulumi/pulumi-okta/sdk/v3/go/okta/inline"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		testHook, err := inline.NewHook(ctx, "testHook", &inline.HookArgs{
+			Status:  pulumi.String("ACTIVE"),
+			Type:    pulumi.String("com.okta.saml.tokens.transform"),
+			Version: pulumi.String("1.0.2"),
+			Channel: pulumi.StringMap{
+				"type":    pulumi.String("HTTP"),
+				"version": pulumi.String("1.0.0"),
+				"uri":     pulumi.String("https://example.com/test1"),
+				"method":  pulumi.String("POST"),
+			},
+			Auth: pulumi.StringMap{
+				"key":   pulumi.String("Authorization"),
+				"type":  pulumi.String("HEADER"),
+				"value": pulumi.String("secret"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = app.NewSaml(ctx, "testSaml", &app.SamlArgs{
+			Label:                 pulumi.String("testAcc_replace_with_uuid"),
+			SsoUrl:                pulumi.String("http://google.com"),
+			Recipient:             pulumi.String("http://here.com"),
+			Destination:           pulumi.String("http://its-about-the-journey.com"),
+			Audience:              pulumi.String("http://audience.com"),
+			SubjectNameIdTemplate: pulumi.Any(user.UserName),
+			SubjectNameIdFormat:   pulumi.String("urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress"),
+			ResponseSigned:        pulumi.Bool(true),
+			SignatureAlgorithm:    pulumi.String("RSA_SHA256"),
+			DigestAlgorithm:       pulumi.String("SHA256"),
+			HonorForceAuthn:       pulumi.Bool(false),
+			AuthnContextClassRef:  pulumi.String("urn:oasis:names:tc:SAML:2.0:ac:classes:PasswordProtectedTransport"),
+			InlineHookId:          testHook.ID(),
+			AttributeStatements: app.SamlAttributeStatementArray{
+				&app.SamlAttributeStatementArgs{
+					Type:        pulumi.String("GROUP"),
+					Name:        pulumi.String("groups"),
+					FilterType:  pulumi.String("REGEX"),
+					FilterValue: pulumi.String(".*"),
+				},
+			},
+		}, pulumi.DependsOn([]pulumi.Resource{
+			testHook,
+		}))
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_okta as okta
+
+test_hook = okta.inline.Hook("testHook",
+    status="ACTIVE",
+    type="com.okta.saml.tokens.transform",
+    version="1.0.2",
+    channel={
+        "type": "HTTP",
+        "version": "1.0.0",
+        "uri": "https://example.com/test1",
+        "method": "POST",
+    },
+    auth={
+        "key": "Authorization",
+        "type": "HEADER",
+        "value": "secret",
+    })
+test_saml = okta.app.Saml("testSaml",
+    label="testAcc_replace_with_uuid",
+    sso_url="http://google.com",
+    recipient="http://here.com",
+    destination="http://its-about-the-journey.com",
+    audience="http://audience.com",
+    subject_name_id_template=user["userName"],
+    subject_name_id_format="urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress",
+    response_signed=True,
+    signature_algorithm="RSA_SHA256",
+    digest_algorithm="SHA256",
+    honor_force_authn=False,
+    authn_context_class_ref="urn:oasis:names:tc:SAML:2.0:ac:classes:PasswordProtectedTransport",
+    inline_hook_id=test_hook.id,
+    attribute_statements=[okta.app.SamlAttributeStatementArgs(
+        type="GROUP",
+        name="groups",
+        filter_type="REGEX",
+        filter_value=".*",
+    )],
+    opts=pulumi.ResourceOptions(depends_on=[test_hook]))
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as okta from "@pulumi/okta";
+
+const testHook = new okta.inline.Hook("testHook", {
+    status: "ACTIVE",
+    type: "com.okta.saml.tokens.transform",
+    version: "1.0.2",
+    channel: {
+        type: "HTTP",
+        version: "1.0.0",
+        uri: "https://example.com/test1",
+        method: "POST",
+    },
+    auth: {
+        key: "Authorization",
+        type: "HEADER",
+        value: "secret",
+    },
+});
+const testSaml = new okta.app.Saml("testSaml", {
+    label: "testAcc_replace_with_uuid",
+    ssoUrl: "http://google.com",
+    recipient: "http://here.com",
+    destination: "http://its-about-the-journey.com",
+    audience: "http://audience.com",
+    subjectNameIdTemplate: user.userName,
+    subjectNameIdFormat: "urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress",
+    responseSigned: true,
+    signatureAlgorithm: "RSA_SHA256",
+    digestAlgorithm: "SHA256",
+    honorForceAuthn: false,
+    authnContextClassRef: "urn:oasis:names:tc:SAML:2.0:ac:classes:PasswordProtectedTransport",
+    inlineHookId: testHook.id,
+    attributeStatements: [{
+        type: "GROUP",
+        name: "groups",
+        filterType: "REGEX",
+        filterValue: ".*",
+    }],
+}, {
+    dependsOn: [testHook],
+});
+```
+
+
+{{< /example >}}
+
+
+
+
+### Pre-configured app with SAML 1.1 sign-on mode
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using Okta = Pulumi.Okta;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var test = new Okta.App.Saml("test", new Okta.App.SamlArgs
+        {
+            AppSettingsJson = @"{
+    ""groupFilter"": ""app1.*"",
+    ""siteURL"": ""http://www.okta.com""
+}
+
+",
+            Label = "SharePoint (On-Premise)",
+            PreconfiguredApp = "sharepoint_onpremise",
+            SamlVersion = "1.1",
+            Status = "ACTIVE",
+            UserNameTemplate = source.Login,
+            UserNameTemplateType = "BUILT_IN",
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-okta/sdk/v3/go/okta/app"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := app.NewSaml(ctx, "test", &app.SamlArgs{
+			AppSettingsJson:      pulumi.String(fmt.Sprintf("%v%v%v%v%v", "{\n", "    \"groupFilter\": \"app1.*\",\n", "    \"siteURL\": \"http://www.okta.com\"\n", "}\n", "\n")),
+			Label:                pulumi.String("SharePoint (On-Premise)"),
+			PreconfiguredApp:     pulumi.String("sharepoint_onpremise"),
+			SamlVersion:          pulumi.String("1.1"),
+			Status:               pulumi.String("ACTIVE"),
+			UserNameTemplate:     pulumi.Any(source.Login),
+			UserNameTemplateType: pulumi.String("BUILT_IN"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_okta as okta
+
+test = okta.app.Saml("test",
+    app_settings_json="""{
+    "groupFilter": "app1.*",
+    "siteURL": "http://www.okta.com"
+}
+
+""",
+    label="SharePoint (On-Premise)",
+    preconfigured_app="sharepoint_onpremise",
+    saml_version="1.1",
+    status="ACTIVE",
+    user_name_template=source["login"],
+    user_name_template_type="BUILT_IN")
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as okta from "@pulumi/okta";
+
+const test = new okta.app.Saml("test", {
+    appSettingsJson: `{
+    "groupFilter": "app1.*",
+    "siteURL": "http://www.okta.com"
+}
+`,
+    label: "SharePoint (On-Premise)",
+    preconfiguredApp: "sharepoint_onpremise",
+    samlVersion: "1.1",
+    status: "ACTIVE",
+    userNameTemplate: "${source.login}",
+    userNameTemplateType: "BUILT_IN",
+});
+```
+
+
+{{< /example >}}
+
+
+
+
+### Pre-configured app with SAML 1.1 sign-on mode, `app_settings_json` and `app_links_json`
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using Okta = Pulumi.Okta;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var office365 = new Okta.App.Saml("office365", new Okta.App.SamlArgs
+        {
+            AppLinksJson = @"  {
+      ""calendar"": false,
+      ""crm"": false,
+      ""delve"": false,
+      ""excel"": false,
+      ""forms"": false,
+      ""mail"": false,
+      ""newsfeed"": false,
+      ""onedrive"": false,
+      ""people"": false,
+      ""planner"": false,
+      ""powerbi"": false,
+      ""powerpoint"": false,
+      ""sites"": false,
+      ""sway"": false,
+      ""tasks"": false,
+      ""teams"": false,
+      ""video"": false,
+      ""word"": false,
+      ""yammer"": false,
+      ""login"": true
+  }
+
+",
+            AppSettingsJson = @"    {
+       ""wsFedConfigureType"": ""AUTO"",
+       ""windowsTransportEnabled"": false,
+       ""domain"": ""okta.com"",
+       ""msftTenant"": ""okta"",
+       ""domains"": [],
+       ""requireAdminConsent"": false
+    }
+
+",
+            Label = "Microsoft Office 365",
+            PreconfiguredApp = "office365",
+            SamlVersion = "1.1",
+            Status = "ACTIVE",
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-okta/sdk/v3/go/okta/app"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := app.NewSaml(ctx, "office365", &app.SamlArgs{
+			AppLinksJson:     pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "  {\n", "      \"calendar\": false,\n", "      \"crm\": false,\n", "      \"delve\": false,\n", "      \"excel\": false,\n", "      \"forms\": false,\n", "      \"mail\": false,\n", "      \"newsfeed\": false,\n", "      \"onedrive\": false,\n", "      \"people\": false,\n", "      \"planner\": false,\n", "      \"powerbi\": false,\n", "      \"powerpoint\": false,\n", "      \"sites\": false,\n", "      \"sway\": false,\n", "      \"tasks\": false,\n", "      \"teams\": false,\n", "      \"video\": false,\n", "      \"word\": false,\n", "      \"yammer\": false,\n", "      \"login\": true\n", "  }\n", "\n")),
+			AppSettingsJson:  pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v", "    {\n", "       \"wsFedConfigureType\": \"AUTO\",\n", "       \"windowsTransportEnabled\": false,\n", "       \"domain\": \"okta.com\",\n", "       \"msftTenant\": \"okta\",\n", "       \"domains\": [],\n", "       \"requireAdminConsent\": false\n", "    }\n", "\n")),
+			Label:            pulumi.String("Microsoft Office 365"),
+			PreconfiguredApp: pulumi.String("office365"),
+			SamlVersion:      pulumi.String("1.1"),
+			Status:           pulumi.String("ACTIVE"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_okta as okta
+
+office365 = okta.app.Saml("office365",
+    app_links_json="""  {
+      "calendar": false,
+      "crm": false,
+      "delve": false,
+      "excel": false,
+      "forms": false,
+      "mail": false,
+      "newsfeed": false,
+      "onedrive": false,
+      "people": false,
+      "planner": false,
+      "powerbi": false,
+      "powerpoint": false,
+      "sites": false,
+      "sway": false,
+      "tasks": false,
+      "teams": false,
+      "video": false,
+      "word": false,
+      "yammer": false,
+      "login": true
+  }
+
+""",
+    app_settings_json="""    {
+       "wsFedConfigureType": "AUTO",
+       "windowsTransportEnabled": false,
+       "domain": "okta.com",
+       "msftTenant": "okta",
+       "domains": [],
+       "requireAdminConsent": false
+    }
+
+""",
+    label="Microsoft Office 365",
+    preconfigured_app="office365",
+    saml_version="1.1",
+    status="ACTIVE")
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as okta from "@pulumi/okta";
+
+const office365 = new okta.app.Saml("office365", {
+    appLinksJson: `  {
+      "calendar": false,
+      "crm": false,
+      "delve": false,
+      "excel": false,
+      "forms": false,
+      "mail": false,
+      "newsfeed": false,
+      "onedrive": false,
+      "people": false,
+      "planner": false,
+      "powerbi": false,
+      "powerpoint": false,
+      "sites": false,
+      "sway": false,
+      "tasks": false,
+      "teams": false,
+      "video": false,
+      "word": false,
+      "yammer": false,
+      "login": true
+  }
+`,
+    appSettingsJson: `    {
+       "wsFedConfigureType": "AUTO",
+       "windowsTransportEnabled": false,
+       "domain": "okta.com",
+       "msftTenant": "okta",
+       "domains": [],
+       "requireAdminConsent": false
+    }
+`,
+    label: "Microsoft Office 365",
+    preconfiguredApp: "office365",
+    samlVersion: "1.1",
+    status: "ACTIVE",
+});
+```
+
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
 
@@ -203,6 +773,7 @@ const example = new okta.app.Saml("example", {
          <span class="nx">accessibility_self_service</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
          <span class="nx">acs_endpoints</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
          <span class="nx">admin_note</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+         <span class="nx">app_links_json</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
          <span class="nx">app_settings_json</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
          <span class="nx">assertion_signed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
          <span class="nx">attribute_statements</span><span class="p">:</span> <span class="nx">Optional[Sequence[SamlAttributeStatementArgs]]</span> = None<span class="p">,</span>
@@ -228,6 +799,7 @@ const example = new okta.app.Saml("example", {
          <span class="nx">recipient</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
          <span class="nx">request_compressed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
          <span class="nx">response_signed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+         <span class="nx">saml_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
          <span class="nx">signature_algorithm</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
          <span class="nx">single_logout_certificate</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
          <span class="nx">single_logout_issuer</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -422,6 +994,15 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Application notes for admins.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="applinksjson_csharp">
+<a href="#applinksjson_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Links<wbr>Json</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Displays specific appLinks for the app. The value for the link should be boolean.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="appsettingsjson_csharp">
@@ -641,6 +1222,15 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
     <dd>{{% md %}}Determines whether the SAML auth response message is digitally signed.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="samlversion_csharp">
+<a href="#samlversion_csharp" style="color: inherit; text-decoration: inherit;">Saml<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}SAML version for the app's sign-on mode. Valid values are: `"2.0"` or `"1.1"`. Default is `"2.0"`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="signaturealgorithm_csharp">
 <a href="#signaturealgorithm_csharp" style="color: inherit; text-decoration: inherit;">Signature<wbr>Algorithm</a>
 </span>
@@ -816,6 +1406,15 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Application notes for admins.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="applinksjson_go">
+<a href="#applinksjson_go" style="color: inherit; text-decoration: inherit;">App<wbr>Links<wbr>Json</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Displays specific appLinks for the app. The value for the link should be boolean.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="appsettingsjson_go">
@@ -1035,6 +1634,15 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
     <dd>{{% md %}}Determines whether the SAML auth response message is digitally signed.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="samlversion_go">
+<a href="#samlversion_go" style="color: inherit; text-decoration: inherit;">Saml<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}SAML version for the app's sign-on mode. Valid values are: `"2.0"` or `"1.1"`. Default is `"2.0"`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="signaturealgorithm_go">
 <a href="#signaturealgorithm_go" style="color: inherit; text-decoration: inherit;">Signature<wbr>Algorithm</a>
 </span>
@@ -1210,6 +1818,15 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Application notes for admins.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="applinksjson_nodejs">
+<a href="#applinksjson_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Links<wbr>Json</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Displays specific appLinks for the app. The value for the link should be boolean.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="appsettingsjson_nodejs">
@@ -1429,6 +2046,15 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
     <dd>{{% md %}}Determines whether the SAML auth response message is digitally signed.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="samlversion_nodejs">
+<a href="#samlversion_nodejs" style="color: inherit; text-decoration: inherit;">saml<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}SAML version for the app's sign-on mode. Valid values are: `"2.0"` or `"1.1"`. Default is `"2.0"`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="signaturealgorithm_nodejs">
 <a href="#signaturealgorithm_nodejs" style="color: inherit; text-decoration: inherit;">signature<wbr>Algorithm</a>
 </span>
@@ -1604,6 +2230,15 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Application notes for admins.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="app_links_json_python">
+<a href="#app_links_json_python" style="color: inherit; text-decoration: inherit;">app_<wbr>links_<wbr>json</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Displays specific appLinks for the app. The value for the link should be boolean.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="app_settings_json_python">
@@ -1821,6 +2456,15 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines whether the SAML auth response message is digitally signed.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="saml_version_python">
+<a href="#saml_version_python" style="color: inherit; text-decoration: inherit;">saml_<wbr>version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}SAML version for the app's sign-on mode. Valid values are: `"2.0"` or `"1.1"`. Default is `"2.0"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="signature_algorithm_python">
@@ -2415,6 +3059,7 @@ Get an existing Saml resource's state with the given name, ID, and optional extr
         <span class="nx">accessibility_self_service</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">acs_endpoints</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
         <span class="nx">admin_note</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">app_links_json</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">app_settings_json</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">assertion_signed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">attribute_statements</span><span class="p">:</span> <span class="nx">Optional[Sequence[SamlAttributeStatementArgs]]</span> = None<span class="p">,</span>
@@ -2450,6 +3095,7 @@ Get an existing Saml resource's state with the given name, ID, and optional extr
         <span class="nx">recipient</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">request_compressed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">response_signed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">saml_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">sign_on_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">signature_algorithm</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">single_logout_certificate</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -2619,6 +3265,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Application notes for admins.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_applinksjson_csharp">
+<a href="#state_applinksjson_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Links<wbr>Json</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Displays specific appLinks for the app. The value for the link should be boolean.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_appsettingsjson_csharp">
@@ -2937,6 +3592,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Determines whether the SAML auth response message is digitally signed.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_samlversion_csharp">
+<a href="#state_samlversion_csharp" style="color: inherit; text-decoration: inherit;">Saml<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}SAML version for the app's sign-on mode. Valid values are: `"2.0"` or `"1.1"`. Default is `"2.0"`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_signonmode_csharp">
 <a href="#state_signonmode_csharp" style="color: inherit; text-decoration: inherit;">Sign<wbr>On<wbr>Mode</a>
 </span>
@@ -3112,6 +3776,15 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Application notes for admins.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_applinksjson_go">
+<a href="#state_applinksjson_go" style="color: inherit; text-decoration: inherit;">App<wbr>Links<wbr>Json</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Displays specific appLinks for the app. The value for the link should be boolean.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_appsettingsjson_go">
@@ -3430,6 +4103,15 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
     <dd>{{% md %}}Determines whether the SAML auth response message is digitally signed.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_samlversion_go">
+<a href="#state_samlversion_go" style="color: inherit; text-decoration: inherit;">Saml<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}SAML version for the app's sign-on mode. Valid values are: `"2.0"` or `"1.1"`. Default is `"2.0"`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_signonmode_go">
 <a href="#state_signonmode_go" style="color: inherit; text-decoration: inherit;">Sign<wbr>On<wbr>Mode</a>
 </span>
@@ -3605,6 +4287,15 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Application notes for admins.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_applinksjson_nodejs">
+<a href="#state_applinksjson_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Links<wbr>Json</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Displays specific appLinks for the app. The value for the link should be boolean.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_appsettingsjson_nodejs">
@@ -3923,6 +4614,15 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
     <dd>{{% md %}}Determines whether the SAML auth response message is digitally signed.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_samlversion_nodejs">
+<a href="#state_samlversion_nodejs" style="color: inherit; text-decoration: inherit;">saml<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}SAML version for the app's sign-on mode. Valid values are: `"2.0"` or `"1.1"`. Default is `"2.0"`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_signonmode_nodejs">
 <a href="#state_signonmode_nodejs" style="color: inherit; text-decoration: inherit;">sign<wbr>On<wbr>Mode</a>
 </span>
@@ -4098,6 +4798,15 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Application notes for admins.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_app_links_json_python">
+<a href="#state_app_links_json_python" style="color: inherit; text-decoration: inherit;">app_<wbr>links_<wbr>json</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Displays specific appLinks for the app. The value for the link should be boolean.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_app_settings_json_python">
@@ -4414,6 +5123,15 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines whether the SAML auth response message is digitally signed.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_saml_version_python">
+<a href="#state_saml_version_python" style="color: inherit; text-decoration: inherit;">saml_<wbr>version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}SAML version for the app's sign-on mode. Valid values are: `"2.0"` or `"1.1"`. Default is `"2.0"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sign_on_mode_python">

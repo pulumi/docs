@@ -251,6 +251,7 @@ const example = new okta.network.Zone("example", {
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Zone</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+         <span class="nx">asns</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
          <span class="nx">dynamic_locations</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
          <span class="nx">dynamic_proxy_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
          <span class="nx">gateways</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
@@ -396,6 +397,15 @@ The Zone resource accepts the following [input]({{< relref "/docs/intro/concepts
     <dd>{{% md %}}Type of the Network Zone - can either be `"IP"` or `"DYNAMIC"` only.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="asns_csharp">
+<a href="#asns_csharp" style="color: inherit; text-decoration: inherit;">Asns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Array of Autonomous System Numbers (each element is a string representation of an ASN numeric value).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="dynamiclocations_csharp">
 <a href="#dynamiclocations_csharp" style="color: inherit; text-decoration: inherit;">Dynamic<wbr>Locations</a>
 </span>
@@ -462,6 +472,15 @@ and [ISO-3166-2](https://en.wikipedia.org/wiki/ISO_3166-2). Format code: country
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of the Network Zone - can either be `"IP"` or `"DYNAMIC"` only.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="asns_go">
+<a href="#asns_go" style="color: inherit; text-decoration: inherit;">Asns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}Array of Autonomous System Numbers (each element is a string representation of an ASN numeric value).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dynamiclocations_go">
@@ -532,6 +551,15 @@ and [ISO-3166-2](https://en.wikipedia.org/wiki/ISO_3166-2). Format code: country
     <dd>{{% md %}}Type of the Network Zone - can either be `"IP"` or `"DYNAMIC"` only.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="asns_nodejs">
+<a href="#asns_nodejs" style="color: inherit; text-decoration: inherit;">asns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}Array of Autonomous System Numbers (each element is a string representation of an ASN numeric value).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="dynamiclocations_nodejs">
 <a href="#dynamiclocations_nodejs" style="color: inherit; text-decoration: inherit;">dynamic<wbr>Locations</a>
 </span>
@@ -598,6 +626,15 @@ and [ISO-3166-2](https://en.wikipedia.org/wiki/ISO_3166-2). Format code: country
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of the Network Zone - can either be `"IP"` or `"DYNAMIC"` only.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="asns_python">
+<a href="#asns_python" style="color: inherit; text-decoration: inherit;">asns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}Array of Autonomous System Numbers (each element is a string representation of an ASN numeric value).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dynamic_locations_python">
@@ -727,6 +764,7 @@ Get an existing Zone resource's state with the given name, ID, and optional extr
 <span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">asns</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
         <span class="nx">dynamic_locations</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
         <span class="nx">dynamic_proxy_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">gateways</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
@@ -846,6 +884,15 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="state_asns_csharp">
+<a href="#state_asns_csharp" style="color: inherit; text-decoration: inherit;">Asns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Array of Autonomous System Numbers (each element is a string representation of an ASN numeric value).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_dynamiclocations_csharp">
 <a href="#state_dynamiclocations_csharp" style="color: inherit; text-decoration: inherit;">Dynamic<wbr>Locations</a>
 </span>
@@ -913,6 +960,15 @@ and [ISO-3166-2](https://en.wikipedia.org/wiki/ISO_3166-2). Format code: country
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="state_asns_go">
+<a href="#state_asns_go" style="color: inherit; text-decoration: inherit;">Asns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}Array of Autonomous System Numbers (each element is a string representation of an ASN numeric value).
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dynamiclocations_go">
 <a href="#state_dynamiclocations_go" style="color: inherit; text-decoration: inherit;">Dynamic<wbr>Locations</a>
@@ -982,6 +1038,15 @@ and [ISO-3166-2](https://en.wikipedia.org/wiki/ISO_3166-2). Format code: country
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="state_asns_nodejs">
+<a href="#state_asns_nodejs" style="color: inherit; text-decoration: inherit;">asns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}Array of Autonomous System Numbers (each element is a string representation of an ASN numeric value).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_dynamiclocations_nodejs">
 <a href="#state_dynamiclocations_nodejs" style="color: inherit; text-decoration: inherit;">dynamic<wbr>Locations</a>
 </span>
@@ -1049,6 +1114,15 @@ and [ISO-3166-2](https://en.wikipedia.org/wiki/ISO_3166-2). Format code: country
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="state_asns_python">
+<a href="#state_asns_python" style="color: inherit; text-decoration: inherit;">asns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}Array of Autonomous System Numbers (each element is a string representation of an ASN numeric value).
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dynamic_locations_python">
 <a href="#state_dynamic_locations_python" style="color: inherit; text-decoration: inherit;">dynamic_<wbr>locations</a>

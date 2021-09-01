@@ -28,6 +28,7 @@ meta_desc: "Documentation for the okta.deprecated.AuthLoginApp resource with exa
                  <span class="nx">accessibility_error_redirect_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                  <span class="nx">accessibility_self_service</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                  <span class="nx">admin_note</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">app_settings_json</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                  <span class="nx">auto_submit_toolbar</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                  <span class="nx">credentials_scheme</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                  <span class="nx">enduser_note</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -210,6 +211,15 @@ The AuthLoginApp resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Application notes for admins.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="appsettingsjson_csharp">
+<a href="#appsettingsjson_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Settings<wbr>Json</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Application settings in JSON format
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autosubmittoolbar_csharp">
@@ -414,6 +424,15 @@ The AuthLoginApp resource accepts the following [input]({{< relref "/docs/intro/
     <dd>{{% md %}}Application notes for admins.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="appsettingsjson_go">
+<a href="#appsettingsjson_go" style="color: inherit; text-decoration: inherit;">App<wbr>Settings<wbr>Json</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Application settings in JSON format
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="autosubmittoolbar_go">
 <a href="#autosubmittoolbar_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Submit<wbr>Toolbar</a>
 </span>
@@ -616,6 +635,15 @@ The AuthLoginApp resource accepts the following [input]({{< relref "/docs/intro/
     <dd>{{% md %}}Application notes for admins.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="appsettingsjson_nodejs">
+<a href="#appsettingsjson_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Settings<wbr>Json</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Application settings in JSON format
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="autosubmittoolbar_nodejs">
 <a href="#autosubmittoolbar_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Submit<wbr>Toolbar</a>
 </span>
@@ -816,6 +844,15 @@ The AuthLoginApp resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Application notes for admins.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="app_settings_json_python">
+<a href="#app_settings_json_python" style="color: inherit; text-decoration: inherit;">app_<wbr>settings_<wbr>json</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Application settings in JSON format
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="auto_submit_toolbar_python">
@@ -1163,6 +1200,7 @@ Get an existing AuthLoginApp resource's state with the given name, ID, and optio
         <span class="nx">accessibility_error_redirect_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">accessibility_self_service</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">admin_note</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">app_settings_json</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">auto_submit_toolbar</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">credentials_scheme</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">enduser_note</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -1322,6 +1360,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Application notes for admins.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_appsettingsjson_csharp">
+<a href="#state_appsettingsjson_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Settings<wbr>Json</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Application settings in JSON format
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autosubmittoolbar_csharp">
@@ -1553,6 +1600,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Application notes for admins.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_appsettingsjson_go">
+<a href="#state_appsettingsjson_go" style="color: inherit; text-decoration: inherit;">App<wbr>Settings<wbr>Json</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Application settings in JSON format
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_autosubmittoolbar_go">
 <a href="#state_autosubmittoolbar_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Submit<wbr>Toolbar</a>
 </span>
@@ -1782,6 +1838,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Application notes for admins.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_appsettingsjson_nodejs">
+<a href="#state_appsettingsjson_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Settings<wbr>Json</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Application settings in JSON format
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_autosubmittoolbar_nodejs">
 <a href="#state_autosubmittoolbar_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Submit<wbr>Toolbar</a>
 </span>
@@ -2009,6 +2074,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Application notes for admins.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_app_settings_json_python">
+<a href="#state_app_settings_json_python" style="color: inherit; text-decoration: inherit;">app_<wbr>settings_<wbr>json</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Application settings in JSON format
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_auto_submit_toolbar_python">

@@ -30,6 +30,7 @@ meta_desc: "Documentation for the okta.deprecated.SamlApp resource with examples
             <span class="nx">accessibility_self_service</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
             <span class="nx">acs_endpoints</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
             <span class="nx">admin_note</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">app_links_json</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">app_settings_json</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">assertion_signed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
             <span class="nx">attribute_statements</span><span class="p">:</span> <span class="nx">Optional[Sequence[SamlAppAttributeStatementArgs]]</span> = None<span class="p">,</span>
@@ -55,6 +56,7 @@ meta_desc: "Documentation for the okta.deprecated.SamlApp resource with examples
             <span class="nx">recipient</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">request_compressed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
             <span class="nx">response_signed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+            <span class="nx">saml_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">signature_algorithm</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">single_logout_certificate</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">single_logout_issuer</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -249,6 +251,15 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Application notes for admins.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="applinksjson_csharp">
+<a href="#applinksjson_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Links<wbr>Json</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Application settings in JSON format
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="appsettingsjson_csharp">
@@ -466,6 +477,15 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}Determines whether the SAML auth response message is digitally signed
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="samlversion_csharp">
+<a href="#samlversion_csharp" style="color: inherit; text-decoration: inherit;">Saml<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}SAML version for the app's sign-on mode
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="signaturealgorithm_csharp">
 <a href="#signaturealgorithm_csharp" style="color: inherit; text-decoration: inherit;">Signature<wbr>Algorithm</a>
 </span>
@@ -639,6 +659,15 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Application notes for admins.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="applinksjson_go">
+<a href="#applinksjson_go" style="color: inherit; text-decoration: inherit;">App<wbr>Links<wbr>Json</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Application settings in JSON format
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="appsettingsjson_go">
@@ -856,6 +885,15 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}Determines whether the SAML auth response message is digitally signed
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="samlversion_go">
+<a href="#samlversion_go" style="color: inherit; text-decoration: inherit;">Saml<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}SAML version for the app's sign-on mode
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="signaturealgorithm_go">
 <a href="#signaturealgorithm_go" style="color: inherit; text-decoration: inherit;">Signature<wbr>Algorithm</a>
 </span>
@@ -1029,6 +1067,15 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Application notes for admins.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="applinksjson_nodejs">
+<a href="#applinksjson_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Links<wbr>Json</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Application settings in JSON format
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="appsettingsjson_nodejs">
@@ -1246,6 +1293,15 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}Determines whether the SAML auth response message is digitally signed
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="samlversion_nodejs">
+<a href="#samlversion_nodejs" style="color: inherit; text-decoration: inherit;">saml<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}SAML version for the app's sign-on mode
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="signaturealgorithm_nodejs">
 <a href="#signaturealgorithm_nodejs" style="color: inherit; text-decoration: inherit;">signature<wbr>Algorithm</a>
 </span>
@@ -1419,6 +1475,15 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Application notes for admins.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="app_links_json_python">
+<a href="#app_links_json_python" style="color: inherit; text-decoration: inherit;">app_<wbr>links_<wbr>json</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Application settings in JSON format
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="app_settings_json_python">
@@ -1634,6 +1699,15 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines whether the SAML auth response message is digitally signed
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="saml_version_python">
+<a href="#saml_version_python" style="color: inherit; text-decoration: inherit;">saml_<wbr>version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}SAML version for the app's sign-on mode
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="signature_algorithm_python">
@@ -2226,6 +2300,7 @@ Get an existing SamlApp resource's state with the given name, ID, and optional e
         <span class="nx">accessibility_self_service</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">acs_endpoints</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
         <span class="nx">admin_note</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">app_links_json</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">app_settings_json</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">assertion_signed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">attribute_statements</span><span class="p">:</span> <span class="nx">Optional[Sequence[SamlAppAttributeStatementArgs]]</span> = None<span class="p">,</span>
@@ -2261,6 +2336,7 @@ Get an existing SamlApp resource's state with the given name, ID, and optional e
         <span class="nx">recipient</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">request_compressed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">response_signed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">saml_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">sign_on_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">signature_algorithm</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">single_logout_certificate</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -2430,6 +2506,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Application notes for admins.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_applinksjson_csharp">
+<a href="#state_applinksjson_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Links<wbr>Json</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Application settings in JSON format
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_appsettingsjson_csharp">
@@ -2746,6 +2831,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Determines whether the SAML auth response message is digitally signed
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_samlversion_csharp">
+<a href="#state_samlversion_csharp" style="color: inherit; text-decoration: inherit;">Saml<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}SAML version for the app's sign-on mode
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_signonmode_csharp">
 <a href="#state_signonmode_csharp" style="color: inherit; text-decoration: inherit;">Sign<wbr>On<wbr>Mode</a>
 </span>
@@ -2919,6 +3013,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Application notes for admins.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_applinksjson_go">
+<a href="#state_applinksjson_go" style="color: inherit; text-decoration: inherit;">App<wbr>Links<wbr>Json</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Application settings in JSON format
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_appsettingsjson_go">
@@ -3235,6 +3338,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Determines whether the SAML auth response message is digitally signed
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_samlversion_go">
+<a href="#state_samlversion_go" style="color: inherit; text-decoration: inherit;">Saml<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}SAML version for the app's sign-on mode
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_signonmode_go">
 <a href="#state_signonmode_go" style="color: inherit; text-decoration: inherit;">Sign<wbr>On<wbr>Mode</a>
 </span>
@@ -3408,6 +3520,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Application notes for admins.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_applinksjson_nodejs">
+<a href="#state_applinksjson_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Links<wbr>Json</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Application settings in JSON format
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_appsettingsjson_nodejs">
@@ -3724,6 +3845,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Determines whether the SAML auth response message is digitally signed
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_samlversion_nodejs">
+<a href="#state_samlversion_nodejs" style="color: inherit; text-decoration: inherit;">saml<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}SAML version for the app's sign-on mode
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_signonmode_nodejs">
 <a href="#state_signonmode_nodejs" style="color: inherit; text-decoration: inherit;">sign<wbr>On<wbr>Mode</a>
 </span>
@@ -3897,6 +4027,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Application notes for admins.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_app_links_json_python">
+<a href="#state_app_links_json_python" style="color: inherit; text-decoration: inherit;">app_<wbr>links_<wbr>json</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Application settings in JSON format
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_app_settings_json_python">
@@ -4211,6 +4350,15 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines whether the SAML auth response message is digitally signed
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_saml_version_python">
+<a href="#state_saml_version_python" style="color: inherit; text-decoration: inherit;">saml_<wbr>version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}SAML version for the app's sign-on mode
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sign_on_mode_python">
