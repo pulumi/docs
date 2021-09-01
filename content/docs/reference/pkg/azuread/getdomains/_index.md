@@ -12,101 +12,13 @@ meta_desc: "Documentation for the azuread.getDomains function with examples, inp
 
 Use this data source to access information about existing Domains within Azure Active Directory.
 
-> **NOTE:** If you're authenticating using a Service Principal then it must have permissions to `Directory.Read.All` within the `Windows Azure Active Directory` API.
+## API Permissions
 
+The following API permissions are required in order to use this data source.
 
-{{% examples %}}
+When authenticated with a service principal, this data source requires one of the following application roles: `Domain.Read.All` or `Directory.Read.All`
 
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-
-
-
-
-{{< example csharp >}}
-
-```csharp
-using Pulumi;
-using AzureAD = Pulumi.AzureAD;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var aadDomains = Output.Create(AzureAD.GetDomains.InvokeAsync());
-        this.Domains = aadDomains.Apply(aadDomains => aadDomains.Domains);
-    }
-
-    [Output("domains")]
-    public Output<string> Domains { get; set; }
-}
-```
-
-
-{{< /example >}}
-
-
-{{< example go >}}
-
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-azuread/sdk/v4/go/azuread"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		aadDomains, err := azuread.GetDomains(ctx, nil, nil)
-		if err != nil {
-			return err
-		}
-		ctx.Export("domains", aadDomains.Domains)
-		return nil
-	})
-}
-```
-
-
-{{< /example >}}
-
-
-{{< example python >}}
-
-```python
-import pulumi
-import pulumi_azuread as azuread
-
-aad_domains = azuread.get_domains()
-pulumi.export("domains", aad_domains.domains)
-```
-
-
-{{< /example >}}
-
-
-{{< example typescript >}}
-
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azuread from "@pulumi/azuread";
-
-const aadDomains = azuread.getDomains({});
-export const domains = aadDomains.then(aadDomains => aadDomains.domains);
-```
-
-
-{{< /example >}}
-
-
-
-
-
-{{% /examples %}}
+When authenticated with a user principal, this data source does not require any additional roles.
 
 
 
@@ -122,9 +34,12 @@ export const domains = aadDomains.then(aadDomains => aadDomains.domains);
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_domains(</span><span class="nx">include_unverified</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_domains(</span><span class="nx">admin_managed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                <span class="nx">include_unverified</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                 <span class="nx">only_default</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                 <span class="nx">only_initial</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                <span class="nx">only_root</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                <span class="nx">supports_services</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetDomainsResult</code></pre></div>
 {{% /choosable %}}
 
@@ -151,6 +66,15 @@ The following arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="adminmanaged_csharp">
+<a href="#adminmanaged_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>Managed</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Set to `true` to only return domains whose DNS is managed by Microsoft 365. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="includeunverified_csharp">
 <a href="#includeunverified_csharp" style="color: inherit; text-decoration: inherit;">Include<wbr>Unverified</a>
 </span>
@@ -176,11 +100,38 @@ The following arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to `true` to only return the initial domain, which is your primary Azure Active Directory tenant domain. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="onlyroot_csharp">
+<a href="#onlyroot_csharp" style="color: inherit; text-decoration: inherit;">Only<wbr>Root</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Set to `true` to only return verified root domains. Excludes subdomains and unverified domains.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="supportsservices_csharp">
+<a href="#supportsservices_csharp" style="color: inherit; text-decoration: inherit;">Supports<wbr>Services</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of supported services that must be supported by a domain. Possible values include `Email`, `Sharepoint`, `EmailInternalRelayOnly`, `OfficeCommunicationsOnline`, `SharePointDefaultDomain`, `FullRedelegation`, `SharePointPublic`, `OrgIdAuthentication`, `Yammer` and `Intune`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="adminmanaged_go">
+<a href="#adminmanaged_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>Managed</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Set to `true` to only return domains whose DNS is managed by Microsoft 365. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="includeunverified_go">
 <a href="#includeunverified_go" style="color: inherit; text-decoration: inherit;">Include<wbr>Unverified</a>
@@ -207,11 +158,38 @@ The following arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to `true` to only return the initial domain, which is your primary Azure Active Directory tenant domain. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="onlyroot_go">
+<a href="#onlyroot_go" style="color: inherit; text-decoration: inherit;">Only<wbr>Root</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Set to `true` to only return verified root domains. Excludes subdomains and unverified domains.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="supportsservices_go">
+<a href="#supportsservices_go" style="color: inherit; text-decoration: inherit;">Supports<wbr>Services</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of supported services that must be supported by a domain. Possible values include `Email`, `Sharepoint`, `EmailInternalRelayOnly`, `OfficeCommunicationsOnline`, `SharePointDefaultDomain`, `FullRedelegation`, `SharePointPublic`, `OrgIdAuthentication`, `Yammer` and `Intune`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="adminmanaged_nodejs">
+<a href="#adminmanaged_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>Managed</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Set to `true` to only return domains whose DNS is managed by Microsoft 365. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="includeunverified_nodejs">
 <a href="#includeunverified_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Unverified</a>
@@ -238,11 +216,38 @@ The following arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Set to `true` to only return the initial domain, which is your primary Azure Active Directory tenant domain. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="onlyroot_nodejs">
+<a href="#onlyroot_nodejs" style="color: inherit; text-decoration: inherit;">only<wbr>Root</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Set to `true` to only return verified root domains. Excludes subdomains and unverified domains.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="supportsservices_nodejs">
+<a href="#supportsservices_nodejs" style="color: inherit; text-decoration: inherit;">supports<wbr>Services</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of supported services that must be supported by a domain. Possible values include `Email`, `Sharepoint`, `EmailInternalRelayOnly`, `OfficeCommunicationsOnline`, `SharePointDefaultDomain`, `FullRedelegation`, `SharePointPublic`, `OrgIdAuthentication`, `Yammer` and `Intune`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="admin_managed_python">
+<a href="#admin_managed_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>managed</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Set to `true` to only return domains whose DNS is managed by Microsoft 365. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="include_unverified_python">
 <a href="#include_unverified_python" style="color: inherit; text-decoration: inherit;">include_<wbr>unverified</a>
@@ -269,6 +274,24 @@ The following arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to `true` to only return the initial domain, which is your primary Azure Active Directory tenant domain. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="only_root_python">
+<a href="#only_root_python" style="color: inherit; text-decoration: inherit;">only_<wbr>root</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Set to `true` to only return verified root domains. Excludes subdomains and unverified domains.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="supports_services_python">
+<a href="#supports_services_python" style="color: inherit; text-decoration: inherit;">supports_<wbr>services</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of supported services that must be supported by a domain. Possible values include `Email`, `Sharepoint`, `EmailInternalRelayOnly`, `OfficeCommunicationsOnline`, `SharePointDefaultDomain`, `FullRedelegation`, `SharePointPublic`, `OrgIdAuthentication`, `Yammer` and `Intune`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -290,7 +313,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getdomainsdomain">List&lt;Pulumi.<wbr>Azure<wbr>AD.<wbr>Outputs.<wbr>Get<wbr>Domains<wbr>Domain&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of domains. Each `domain` object provides the attributes documented below.
+    <dd>{{% md %}}A list of tenant domains. Each `domain` object provides the attributes documented below.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
@@ -300,6 +323,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="adminmanaged_csharp">
+<a href="#adminmanaged_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>Managed</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the DNS for the domain is managed by Microsoft 365.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="includeunverified_csharp">
@@ -324,6 +356,22 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="onlyroot_csharp">
+<a href="#onlyroot_csharp" style="color: inherit; text-decoration: inherit;">Only<wbr>Root</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="supportsservices_csharp">
+<a href="#supportsservices_csharp" style="color: inherit; text-decoration: inherit;">Supports<wbr>Services</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -336,7 +384,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getdomainsdomain">[]Get<wbr>Domains<wbr>Domain</a></span>
     </dt>
-    <dd>{{% md %}}A list of domains. Each `domain` object provides the attributes documented below.
+    <dd>{{% md %}}A list of tenant domains. Each `domain` object provides the attributes documented below.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
@@ -346,6 +394,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="adminmanaged_go">
+<a href="#adminmanaged_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>Managed</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the DNS for the domain is managed by Microsoft 365.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="includeunverified_go">
@@ -370,6 +427,22 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="onlyroot_go">
+<a href="#onlyroot_go" style="color: inherit; text-decoration: inherit;">Only<wbr>Root</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="supportsservices_go">
+<a href="#supportsservices_go" style="color: inherit; text-decoration: inherit;">Supports<wbr>Services</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -382,7 +455,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getdomainsdomain">Get<wbr>Domains<wbr>Domain[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of domains. Each `domain` object provides the attributes documented below.
+    <dd>{{% md %}}A list of tenant domains. Each `domain` object provides the attributes documented below.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
@@ -392,6 +465,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="adminmanaged_nodejs">
+<a href="#adminmanaged_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>Managed</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether the DNS for the domain is managed by Microsoft 365.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="includeunverified_nodejs">
@@ -416,6 +498,22 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="onlyroot_nodejs">
+<a href="#onlyroot_nodejs" style="color: inherit; text-decoration: inherit;">only<wbr>Root</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="supportsservices_nodejs">
+<a href="#supportsservices_nodejs" style="color: inherit; text-decoration: inherit;">supports<wbr>Services</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -428,7 +526,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getdomainsdomain">Sequence[Get<wbr>Domains<wbr>Domain]</a></span>
     </dt>
-    <dd>{{% md %}}A list of domains. Each `domain` object provides the attributes documented below.
+    <dd>{{% md %}}A list of tenant domains. Each `domain` object provides the attributes documented below.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
@@ -438,6 +536,15 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="admin_managed_python">
+<a href="#admin_managed_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>managed</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the DNS for the domain is managed by Microsoft 365.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="include_unverified_python">
@@ -462,6 +569,22 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="only_root_python">
+<a href="#only_root_python" style="color: inherit; text-decoration: inherit;">only_<wbr>root</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="supports_services_python">
+<a href="#supports_services_python" style="color: inherit; text-decoration: inherit;">supports_<wbr>services</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -478,13 +601,31 @@ The following output properties are available:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
+        <span id="adminmanaged_csharp">
+<a href="#adminmanaged_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>Managed</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Set to `true` to only return domains whose DNS is managed by Microsoft 365. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="authenticationtype_csharp">
 <a href="#authenticationtype_csharp" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The authentication type of the domain (Managed or Federated).
+    <dd>{{% md %}}The authentication type of the domain. Possible values include `Managed` or `Federated`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="default_csharp">
+<a href="#default_csharp" style="color: inherit; text-decoration: inherit;">Default</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether this is the default domain that is used for user creation.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="domainname_csharp">
@@ -496,36 +637,54 @@ The following output properties are available:
     <dd>{{% md %}}The name of the domain.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="isdefault_csharp">
-<a href="#isdefault_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Default</a>
+        <span id="initial_csharp">
+<a href="#initial_csharp" style="color: inherit; text-decoration: inherit;">Initial</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}`True` if this is the default domain that is used for user creation.
+    <dd>{{% md %}}Whether this is the initial domain created by Azure Active Directory.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="isinitial_csharp">
-<a href="#isinitial_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Initial</a>
+        <span id="root_csharp">
+<a href="#root_csharp" style="color: inherit; text-decoration: inherit;">Root</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}`True` if this is the initial domain created by Azure Active Directory.
+    <dd>{{% md %}}Whether the domain is a verified root domain (not a subdomain).
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="isverified_csharp">
-<a href="#isverified_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Verified</a>
+        <span id="supportedservices_csharp">
+<a href="#supportedservices_csharp" style="color: inherit; text-decoration: inherit;">Supported<wbr>Services</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of capabilities / services supported by the domain. Possible values include `Email`, `Sharepoint`, `EmailInternalRelayOnly`, `OfficeCommunicationsOnline`, `SharePointDefaultDomain`, `FullRedelegation`, `SharePointPublic`, `OrgIdAuthentication`, `Yammer` and `Intune`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="verified_csharp">
+<a href="#verified_csharp" style="color: inherit; text-decoration: inherit;">Verified</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}`True` if the domain has completed domain ownership verification.
+    <dd>{{% md %}}Whether the domain has completed domain ownership verification.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="adminmanaged_go">
+<a href="#adminmanaged_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>Managed</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Set to `true` to only return domains whose DNS is managed by Microsoft 365. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="authenticationtype_go">
 <a href="#authenticationtype_go" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Type</a>
@@ -533,7 +692,16 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The authentication type of the domain (Managed or Federated).
+    <dd>{{% md %}}The authentication type of the domain. Possible values include `Managed` or `Federated`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="default_go">
+<a href="#default_go" style="color: inherit; text-decoration: inherit;">Default</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether this is the default domain that is used for user creation.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="domainname_go">
@@ -545,36 +713,54 @@ The following output properties are available:
     <dd>{{% md %}}The name of the domain.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="isdefault_go">
-<a href="#isdefault_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Default</a>
+        <span id="initial_go">
+<a href="#initial_go" style="color: inherit; text-decoration: inherit;">Initial</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}`True` if this is the default domain that is used for user creation.
+    <dd>{{% md %}}Whether this is the initial domain created by Azure Active Directory.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="isinitial_go">
-<a href="#isinitial_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Initial</a>
+        <span id="root_go">
+<a href="#root_go" style="color: inherit; text-decoration: inherit;">Root</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}`True` if this is the initial domain created by Azure Active Directory.
+    <dd>{{% md %}}Whether the domain is a verified root domain (not a subdomain).
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="isverified_go">
-<a href="#isverified_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Verified</a>
+        <span id="supportedservices_go">
+<a href="#supportedservices_go" style="color: inherit; text-decoration: inherit;">Supported<wbr>Services</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of capabilities / services supported by the domain. Possible values include `Email`, `Sharepoint`, `EmailInternalRelayOnly`, `OfficeCommunicationsOnline`, `SharePointDefaultDomain`, `FullRedelegation`, `SharePointPublic`, `OrgIdAuthentication`, `Yammer` and `Intune`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="verified_go">
+<a href="#verified_go" style="color: inherit; text-decoration: inherit;">Verified</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}`True` if the domain has completed domain ownership verification.
+    <dd>{{% md %}}Whether the domain has completed domain ownership verification.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="adminmanaged_nodejs">
+<a href="#adminmanaged_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>Managed</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Set to `true` to only return domains whose DNS is managed by Microsoft 365. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="authenticationtype_nodejs">
 <a href="#authenticationtype_nodejs" style="color: inherit; text-decoration: inherit;">authentication<wbr>Type</a>
@@ -582,7 +768,16 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The authentication type of the domain (Managed or Federated).
+    <dd>{{% md %}}The authentication type of the domain. Possible values include `Managed` or `Federated`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="default_nodejs">
+<a href="#default_nodejs" style="color: inherit; text-decoration: inherit;">default</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether this is the default domain that is used for user creation.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="domainname_nodejs">
@@ -594,36 +789,54 @@ The following output properties are available:
     <dd>{{% md %}}The name of the domain.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="isdefault_nodejs">
-<a href="#isdefault_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Default</a>
+        <span id="initial_nodejs">
+<a href="#initial_nodejs" style="color: inherit; text-decoration: inherit;">initial</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}`True` if this is the default domain that is used for user creation.
+    <dd>{{% md %}}Whether this is the initial domain created by Azure Active Directory.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="isinitial_nodejs">
-<a href="#isinitial_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Initial</a>
+        <span id="root_nodejs">
+<a href="#root_nodejs" style="color: inherit; text-decoration: inherit;">root</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}`True` if this is the initial domain created by Azure Active Directory.
+    <dd>{{% md %}}Whether the domain is a verified root domain (not a subdomain).
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="isverified_nodejs">
-<a href="#isverified_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Verified</a>
+        <span id="supportedservices_nodejs">
+<a href="#supportedservices_nodejs" style="color: inherit; text-decoration: inherit;">supported<wbr>Services</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of capabilities / services supported by the domain. Possible values include `Email`, `Sharepoint`, `EmailInternalRelayOnly`, `OfficeCommunicationsOnline`, `SharePointDefaultDomain`, `FullRedelegation`, `SharePointPublic`, `OrgIdAuthentication`, `Yammer` and `Intune`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="verified_nodejs">
+<a href="#verified_nodejs" style="color: inherit; text-decoration: inherit;">verified</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}`True` if the domain has completed domain ownership verification.
+    <dd>{{% md %}}Whether the domain has completed domain ownership verification.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="admin_managed_python">
+<a href="#admin_managed_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>managed</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Set to `true` to only return domains whose DNS is managed by Microsoft 365. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="authentication_type_python">
 <a href="#authentication_type_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>type</a>
@@ -631,7 +844,16 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The authentication type of the domain (Managed or Federated).
+    <dd>{{% md %}}The authentication type of the domain. Possible values include `Managed` or `Federated`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="default_python">
+<a href="#default_python" style="color: inherit; text-decoration: inherit;">default</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether this is the default domain that is used for user creation.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="domain_name_python">
@@ -643,31 +865,40 @@ The following output properties are available:
     <dd>{{% md %}}The name of the domain.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="is_default_python">
-<a href="#is_default_python" style="color: inherit; text-decoration: inherit;">is_<wbr>default</a>
+        <span id="initial_python">
+<a href="#initial_python" style="color: inherit; text-decoration: inherit;">initial</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}`True` if this is the default domain that is used for user creation.
+    <dd>{{% md %}}Whether this is the initial domain created by Azure Active Directory.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="is_initial_python">
-<a href="#is_initial_python" style="color: inherit; text-decoration: inherit;">is_<wbr>initial</a>
+        <span id="root_python">
+<a href="#root_python" style="color: inherit; text-decoration: inherit;">root</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}`True` if this is the initial domain created by Azure Active Directory.
+    <dd>{{% md %}}Whether the domain is a verified root domain (not a subdomain).
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="is_verified_python">
-<a href="#is_verified_python" style="color: inherit; text-decoration: inherit;">is_<wbr>verified</a>
+        <span id="supported_services_python">
+<a href="#supported_services_python" style="color: inherit; text-decoration: inherit;">supported_<wbr>services</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of capabilities / services supported by the domain. Possible values include `Email`, `Sharepoint`, `EmailInternalRelayOnly`, `OfficeCommunicationsOnline`, `SharePointDefaultDomain`, `FullRedelegation`, `SharePointPublic`, `OrgIdAuthentication`, `Yammer` and `Intune`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="verified_python">
+<a href="#verified_python" style="color: inherit; text-decoration: inherit;">verified</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}`True` if the domain has completed domain ownership verification.
+    <dd>{{% md %}}Whether the domain has completed domain ownership verification.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

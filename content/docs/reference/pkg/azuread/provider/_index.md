@@ -23,38 +23,37 @@ construction to achieve fine-grained programmatic control over provider settings
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Provider</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ProviderArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Provider</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">ProviderArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Provider</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+             <span class="nx">client_certificate</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">client_certificate_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">client_certificate_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">client_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">client_secret</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">disable_terraform_partner_id</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
              <span class="nx">environment</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-             <span class="nx">metadata_host</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">msi_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">partner_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">tenant_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">use_cli</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
-             <span class="nx">use_microsoft_graph</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
              <span class="nx">use_msi</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Provider</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-             <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ProviderArgs</a></span><span class="p">,</span>
+             <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Optional[ProviderArgs]</a></span> = None<span class="p">,</span>
              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewProvider</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ProviderArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Provider</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewProvider</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">ProviderArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Provider</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Provider</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ProviderArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Provider</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ProviderArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -66,7 +65,7 @@ construction to achieve fine-grained programmatic control over provider settings
         <span class="property-type">string</span>
     </dt>
     <dd>The unique name of the resource.</dd><dt
-        class="property-required" title="Required">
+        class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ProviderArgs</a></span>
@@ -90,7 +89,7 @@ construction to achieve fine-grained programmatic control over provider settings
         <span class="property-type">str</span>
     </dt>
     <dd>The unique name of the resource.</dd><dt
-        class="property-required" title="Required">
+        class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ProviderArgs</a></span>
@@ -111,7 +110,7 @@ construction to achieve fine-grained programmatic control over provider settings
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
@@ -120,7 +119,7 @@ construction to achieve fine-grained programmatic control over provider settings
         <span class="property-type">string</span>
     </dt>
     <dd>The unique name of the resource.</dd><dt
-        class="property-required" title="Required">
+        class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ProviderArgs</a></span>
@@ -129,7 +128,7 @@ construction to achieve fine-grained programmatic control over provider settings
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
@@ -144,7 +143,7 @@ construction to achieve fine-grained programmatic control over provider settings
         <span class="property-type">string</span>
     </dt>
     <dd>The unique name of the resource.</dd><dt
-        class="property-required" title="Required">
+        class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ProviderArgs</a></span>
@@ -161,7 +160,7 @@ construction to achieve fine-grained programmatic control over provider settings
 
 ## Provider Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Architecture and Concepts docs.
 
 ### Inputs
 
@@ -170,15 +169,15 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="metadatahost_csharp">
-<a href="#metadatahost_csharp" style="color: inherit; text-decoration: inherit;">Metadata<wbr>Host</a>
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="clientcertificate_csharp">
+<a href="#clientcertificate_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Certificate</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}[DEPRECATED] The Hostname which should be used for the Azure Metadata Service.
+    <dd>{{% md %}}Base64 encoded PKCS#12 certificate bundle to use when authenticating as a Service Principal using a Client Certificate
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientcertificatepassword_csharp">
@@ -187,7 +186,9 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The password to decrypt the Client Certificate. For use when authenticating as a Service Principal using a Client
+Certificate
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientcertificatepath_csharp">
 <a href="#clientcertificatepath_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Certificate<wbr>Path</a>
@@ -196,7 +197,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to the Client Certificate associated with the Service Principal for use when authenticating as a Service
-Principal using a Client Certificate.
+Principal using a Client Certificate
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientid_csharp">
@@ -205,7 +206,7 @@ Principal using a Client Certificate.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Client ID which should be used for service principal authentication.
+    <dd>{{% md %}}The Client ID which should be used for service principal authentication
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientsecret_csharp">
@@ -214,8 +215,7 @@ Principal using a Client Certificate.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The password to decrypt the Client Certificate. For use when authenticating as a Service Principal using a Client
-Certificate
+    <dd>{{% md %}}The application password to use when authenticating as a Service Principal using a Client Secret
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disableterraformpartnerid_csharp">
@@ -224,7 +224,7 @@ Certificate
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Disable the Terraform Partner ID which is used if a custom `partner_id` isn't specified.
+    <dd>{{% md %}}Disable the Terraform Partner ID, which is used if a custom `partner_id` isn't specified
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="environment_csharp">
@@ -234,7 +234,7 @@ Certificate
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The cloud environment which should be used. Possible values are `global` (formerly `public`), `usgovernment`, `dod`,
-`germany`, and `china`. Defaults to `global`.
+`germany`, and `china`. Defaults to `global`
  It can also be sourced from the following environment variable: `ARM_ENVIRONMENT`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="msiendpoint_csharp">
@@ -243,7 +243,7 @@ Certificate
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The path to a custom endpoint for Managed Identity - in most circumstances this should be detected automatically.
+    <dd>{{% md %}}The path to a custom endpoint for Managed Identity - in most circumstances this should be detected automatically
  It can also be sourced from the following environment variable: `ARM_MSI_ENDPOINT`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="partnerid_csharp">
@@ -252,7 +252,7 @@ Certificate
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A GUID/UUID that is registered with Microsoft to facilitate partner resource usage attribution.
+    <dd>{{% md %}}A GUID/UUID that is registered with Microsoft to facilitate partner resource usage attribution
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_csharp">
@@ -261,7 +261,7 @@ Certificate
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Tenant ID which should be used. Works with all authentication methods except Managed Identity.
+    <dd>{{% md %}}The Tenant ID which should be used. Works with all authentication methods except Managed Identity
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usecli_csharp">
@@ -270,16 +270,7 @@ Certificate
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Allow Azure CLI to be used for Authentication.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="usemicrosoftgraph_csharp">
-<a href="#usemicrosoftgraph_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Microsoft<wbr>Graph</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Beta: Use the Microsoft Graph API, instead of the legacy Azure Active Directory Graph API, where supported.
+    <dd>{{% md %}}Allow Azure CLI to be used for Authentication
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usemsi_csharp">
@@ -288,20 +279,20 @@ Certificate
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Allow Managed Identity to be used for Authentication.
+    <dd>{{% md %}}Allow Managed Identity to be used for Authentication
  It can also be sourced from the following environment variable: `ARM_USE_MSI`{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="metadatahost_go">
-<a href="#metadatahost_go" style="color: inherit; text-decoration: inherit;">Metadata<wbr>Host</a>
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="clientcertificate_go">
+<a href="#clientcertificate_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Certificate</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}[DEPRECATED] The Hostname which should be used for the Azure Metadata Service.
+    <dd>{{% md %}}Base64 encoded PKCS#12 certificate bundle to use when authenticating as a Service Principal using a Client Certificate
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientcertificatepassword_go">
@@ -310,7 +301,9 @@ Certificate
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The password to decrypt the Client Certificate. For use when authenticating as a Service Principal using a Client
+Certificate
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientcertificatepath_go">
 <a href="#clientcertificatepath_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Certificate<wbr>Path</a>
@@ -319,7 +312,7 @@ Certificate
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to the Client Certificate associated with the Service Principal for use when authenticating as a Service
-Principal using a Client Certificate.
+Principal using a Client Certificate
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientid_go">
@@ -328,7 +321,7 @@ Principal using a Client Certificate.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Client ID which should be used for service principal authentication.
+    <dd>{{% md %}}The Client ID which should be used for service principal authentication
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientsecret_go">
@@ -337,8 +330,7 @@ Principal using a Client Certificate.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The password to decrypt the Client Certificate. For use when authenticating as a Service Principal using a Client
-Certificate
+    <dd>{{% md %}}The application password to use when authenticating as a Service Principal using a Client Secret
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disableterraformpartnerid_go">
@@ -347,7 +339,7 @@ Certificate
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Disable the Terraform Partner ID which is used if a custom `partner_id` isn't specified.
+    <dd>{{% md %}}Disable the Terraform Partner ID, which is used if a custom `partner_id` isn't specified
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="environment_go">
@@ -357,7 +349,7 @@ Certificate
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The cloud environment which should be used. Possible values are `global` (formerly `public`), `usgovernment`, `dod`,
-`germany`, and `china`. Defaults to `global`.
+`germany`, and `china`. Defaults to `global`
  It can also be sourced from the following environment variable: `ARM_ENVIRONMENT`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="msiendpoint_go">
@@ -366,7 +358,7 @@ Certificate
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The path to a custom endpoint for Managed Identity - in most circumstances this should be detected automatically.
+    <dd>{{% md %}}The path to a custom endpoint for Managed Identity - in most circumstances this should be detected automatically
  It can also be sourced from the following environment variable: `ARM_MSI_ENDPOINT`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="partnerid_go">
@@ -375,7 +367,7 @@ Certificate
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A GUID/UUID that is registered with Microsoft to facilitate partner resource usage attribution.
+    <dd>{{% md %}}A GUID/UUID that is registered with Microsoft to facilitate partner resource usage attribution
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_go">
@@ -384,7 +376,7 @@ Certificate
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Tenant ID which should be used. Works with all authentication methods except Managed Identity.
+    <dd>{{% md %}}The Tenant ID which should be used. Works with all authentication methods except Managed Identity
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usecli_go">
@@ -393,16 +385,7 @@ Certificate
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Allow Azure CLI to be used for Authentication.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="usemicrosoftgraph_go">
-<a href="#usemicrosoftgraph_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Microsoft<wbr>Graph</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Beta: Use the Microsoft Graph API, instead of the legacy Azure Active Directory Graph API, where supported.
+    <dd>{{% md %}}Allow Azure CLI to be used for Authentication
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usemsi_go">
@@ -411,20 +394,20 @@ Certificate
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Allow Managed Identity to be used for Authentication.
+    <dd>{{% md %}}Allow Managed Identity to be used for Authentication
  It can also be sourced from the following environment variable: `ARM_USE_MSI`{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="metadatahost_nodejs">
-<a href="#metadatahost_nodejs" style="color: inherit; text-decoration: inherit;">metadata<wbr>Host</a>
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="clientcertificate_nodejs">
+<a href="#clientcertificate_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Certificate</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}[DEPRECATED] The Hostname which should be used for the Azure Metadata Service.
+    <dd>{{% md %}}Base64 encoded PKCS#12 certificate bundle to use when authenticating as a Service Principal using a Client Certificate
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientcertificatepassword_nodejs">
@@ -433,7 +416,9 @@ Certificate
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The password to decrypt the Client Certificate. For use when authenticating as a Service Principal using a Client
+Certificate
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientcertificatepath_nodejs">
 <a href="#clientcertificatepath_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Certificate<wbr>Path</a>
@@ -442,7 +427,7 @@ Certificate
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to the Client Certificate associated with the Service Principal for use when authenticating as a Service
-Principal using a Client Certificate.
+Principal using a Client Certificate
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientid_nodejs">
@@ -451,7 +436,7 @@ Principal using a Client Certificate.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Client ID which should be used for service principal authentication.
+    <dd>{{% md %}}The Client ID which should be used for service principal authentication
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientsecret_nodejs">
@@ -460,8 +445,7 @@ Principal using a Client Certificate.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The password to decrypt the Client Certificate. For use when authenticating as a Service Principal using a Client
-Certificate
+    <dd>{{% md %}}The application password to use when authenticating as a Service Principal using a Client Secret
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disableterraformpartnerid_nodejs">
@@ -470,7 +454,7 @@ Certificate
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Disable the Terraform Partner ID which is used if a custom `partner_id` isn't specified.
+    <dd>{{% md %}}Disable the Terraform Partner ID, which is used if a custom `partner_id` isn't specified
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="environment_nodejs">
@@ -480,7 +464,7 @@ Certificate
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The cloud environment which should be used. Possible values are `global` (formerly `public`), `usgovernment`, `dod`,
-`germany`, and `china`. Defaults to `global`.
+`germany`, and `china`. Defaults to `global`
  It can also be sourced from the following environment variable: `ARM_ENVIRONMENT`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="msiendpoint_nodejs">
@@ -489,7 +473,7 @@ Certificate
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The path to a custom endpoint for Managed Identity - in most circumstances this should be detected automatically.
+    <dd>{{% md %}}The path to a custom endpoint for Managed Identity - in most circumstances this should be detected automatically
  It can also be sourced from the following environment variable: `ARM_MSI_ENDPOINT`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="partnerid_nodejs">
@@ -498,7 +482,7 @@ Certificate
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A GUID/UUID that is registered with Microsoft to facilitate partner resource usage attribution.
+    <dd>{{% md %}}A GUID/UUID that is registered with Microsoft to facilitate partner resource usage attribution
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_nodejs">
@@ -507,7 +491,7 @@ Certificate
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Tenant ID which should be used. Works with all authentication methods except Managed Identity.
+    <dd>{{% md %}}The Tenant ID which should be used. Works with all authentication methods except Managed Identity
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usecli_nodejs">
@@ -516,16 +500,7 @@ Certificate
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Allow Azure CLI to be used for Authentication.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="usemicrosoftgraph_nodejs">
-<a href="#usemicrosoftgraph_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Microsoft<wbr>Graph</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}Beta: Use the Microsoft Graph API, instead of the legacy Azure Active Directory Graph API, where supported.
+    <dd>{{% md %}}Allow Azure CLI to be used for Authentication
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usemsi_nodejs">
@@ -534,20 +509,20 @@ Certificate
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Allow Managed Identity to be used for Authentication.
+    <dd>{{% md %}}Allow Managed Identity to be used for Authentication
  It can also be sourced from the following environment variable: `ARM_USE_MSI`{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="metadata_host_python">
-<a href="#metadata_host_python" style="color: inherit; text-decoration: inherit;">metadata_<wbr>host</a>
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="client_certificate_python">
+<a href="#client_certificate_python" style="color: inherit; text-decoration: inherit;">client_<wbr>certificate</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}[DEPRECATED] The Hostname which should be used for the Azure Metadata Service.
+    <dd>{{% md %}}Base64 encoded PKCS#12 certificate bundle to use when authenticating as a Service Principal using a Client Certificate
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="client_certificate_password_python">
@@ -556,7 +531,9 @@ Certificate
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The password to decrypt the Client Certificate. For use when authenticating as a Service Principal using a Client
+Certificate
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="client_certificate_path_python">
 <a href="#client_certificate_path_python" style="color: inherit; text-decoration: inherit;">client_<wbr>certificate_<wbr>path</a>
@@ -565,7 +542,7 @@ Certificate
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path to the Client Certificate associated with the Service Principal for use when authenticating as a Service
-Principal using a Client Certificate.
+Principal using a Client Certificate
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="client_id_python">
@@ -574,7 +551,7 @@ Principal using a Client Certificate.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Client ID which should be used for service principal authentication.
+    <dd>{{% md %}}The Client ID which should be used for service principal authentication
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="client_secret_python">
@@ -583,8 +560,7 @@ Principal using a Client Certificate.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The password to decrypt the Client Certificate. For use when authenticating as a Service Principal using a Client
-Certificate
+    <dd>{{% md %}}The application password to use when authenticating as a Service Principal using a Client Secret
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disable_terraform_partner_id_python">
@@ -593,7 +569,7 @@ Certificate
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Disable the Terraform Partner ID which is used if a custom `partner_id` isn't specified.
+    <dd>{{% md %}}Disable the Terraform Partner ID, which is used if a custom `partner_id` isn't specified
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="environment_python">
@@ -603,7 +579,7 @@ Certificate
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The cloud environment which should be used. Possible values are `global` (formerly `public`), `usgovernment`, `dod`,
-`germany`, and `china`. Defaults to `global`.
+`germany`, and `china`. Defaults to `global`
  It can also be sourced from the following environment variable: `ARM_ENVIRONMENT`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="msi_endpoint_python">
@@ -612,7 +588,7 @@ Certificate
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The path to a custom endpoint for Managed Identity - in most circumstances this should be detected automatically.
+    <dd>{{% md %}}The path to a custom endpoint for Managed Identity - in most circumstances this should be detected automatically
  It can also be sourced from the following environment variable: `ARM_MSI_ENDPOINT`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="partner_id_python">
@@ -621,7 +597,7 @@ Certificate
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A GUID/UUID that is registered with Microsoft to facilitate partner resource usage attribution.
+    <dd>{{% md %}}A GUID/UUID that is registered with Microsoft to facilitate partner resource usage attribution
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenant_id_python">
@@ -630,7 +606,7 @@ Certificate
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Tenant ID which should be used. Works with all authentication methods except Managed Identity.
+    <dd>{{% md %}}The Tenant ID which should be used. Works with all authentication methods except Managed Identity
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="use_cli_python">
@@ -639,16 +615,7 @@ Certificate
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Allow Azure CLI to be used for Authentication.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="use_microsoft_graph_python">
-<a href="#use_microsoft_graph_python" style="color: inherit; text-decoration: inherit;">use_<wbr>microsoft_<wbr>graph</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Beta: Use the Microsoft Graph API, instead of the legacy Azure Active Directory Graph API, where supported.
+    <dd>{{% md %}}Allow Azure CLI to be used for Authentication
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="use_msi_python">
@@ -657,7 +624,7 @@ Certificate
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Allow Managed Identity to be used for Authentication.
+    <dd>{{% md %}}Allow Managed Identity to be used for Authentication
  It can also be sourced from the following environment variable: `ARM_USE_MSI`{{% /md %}}</dd></dl>
 {{% /choosable %}}
 

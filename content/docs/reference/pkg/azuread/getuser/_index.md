@@ -12,7 +12,13 @@ meta_desc: "Documentation for the azuread.getUser function with examples, input 
 
 Gets information about an Azure Active Directory user.
 
-> **NOTE:** If you're authenticating using a Service Principal then it must have permissions to `Read directory data` within the `Windows Azure Active Directory` API.
+## API Permissions
+
+The following API permissions are required in order to use this data source.
+
+When authenticated with a service principal, this data source requires one of the following application roles: `User.Read.All` or `Directory.Read.All`
+
+When authenticated with a user principal, this data source does not require any additional roles.
 
 
 {{% examples %}}
@@ -54,14 +60,14 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-azuread/sdk/v4/go/azuread"
+	"github.com/pulumi/pulumi-azuread/sdk/v5/go/azuread"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		opt0 := "user@hashicorp.com"
-		_, err := azuread.LookupUser(ctx, &azuread.LookupUserArgs{
+		_, err := azuread.LookupUser(ctx, &GetUserArgs{
 			UserPrincipalName: &opt0,
 		}, nil)
 		if err != nil {
@@ -159,7 +165,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The email alias of the Azure AD User.
+    <dd>{{% md %}}The email alias of the user.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="objectid_csharp">
@@ -168,7 +174,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the Object ID of the User within Azure Active Directory.
+    <dd>{{% md %}}The object ID of the user.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userprincipalname_csharp">
@@ -177,7 +183,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The User Principal Name of the Azure AD User.
+    <dd>{{% md %}}The user principal name (UPN) of the user.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -190,7 +196,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The email alias of the Azure AD User.
+    <dd>{{% md %}}The email alias of the user.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="objectid_go">
@@ -199,7 +205,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the Object ID of the User within Azure Active Directory.
+    <dd>{{% md %}}The object ID of the user.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userprincipalname_go">
@@ -208,7 +214,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The User Principal Name of the Azure AD User.
+    <dd>{{% md %}}The user principal name (UPN) of the user.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -221,7 +227,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The email alias of the Azure AD User.
+    <dd>{{% md %}}The email alias of the user.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="objectid_nodejs">
@@ -230,7 +236,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the Object ID of the User within Azure Active Directory.
+    <dd>{{% md %}}The object ID of the user.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userprincipalname_nodejs">
@@ -239,7 +245,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The User Principal Name of the Azure AD User.
+    <dd>{{% md %}}The user principal name (UPN) of the user.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -252,7 +258,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The email alias of the Azure AD User.
+    <dd>{{% md %}}The email alias of the user.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="object_id_python">
@@ -261,7 +267,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the Object ID of the User within Azure Active Directory.
+    <dd>{{% md %}}The object ID of the user.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_principal_name_python">
@@ -270,7 +276,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The User Principal Name of the Azure AD User.
+    <dd>{{% md %}}The user principal name (UPN) of the user.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -292,7 +298,25 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}`True` if the account is enabled; otherwise `False`.
+    <dd>{{% md %}}Whether or not the account is enabled.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="agegroup_csharp">
+<a href="#agegroup_csharp" style="color: inherit; text-decoration: inherit;">Age<wbr>Group</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The age group of the user. Supported values are `Adult`, `NotAdult` and `Minor`.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="businessphones_csharp">
+<a href="#businessphones_csharp" style="color: inherit; text-decoration: inherit;">Business<wbr>Phones</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of telephone numbers for the user.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="city_csharp">
@@ -313,13 +337,31 @@ The following output properties are available:
     <dd>{{% md %}}The company name which the user is associated. This property can be useful for describing the company that an external user comes from.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="consentprovidedforminor_csharp">
+<a href="#consentprovidedforminor_csharp" style="color: inherit; text-decoration: inherit;">Consent<wbr>Provided<wbr>For<wbr>Minor</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Whether consent has been obtained for minors. Supported values are `Granted`, `Denied` and `NotRequired`.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="country_csharp">
 <a href="#country_csharp" style="color: inherit; text-decoration: inherit;">Country</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The country/region in which the user is located; for example, “US” or “UK”.
+    <dd>{{% md %}}The country/region in which the user is located, e.g. `US` or `UK`.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="creationtype_csharp">
+<a href="#creationtype_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether the user account was created as a regular school or work account (`null`), an external account (`Invitation`), a local account for an Azure Active Directory B2C tenant (`LocalAccount`) or self-service sign-up using email verification (`EmailVerified`).
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="department_csharp">
@@ -337,7 +379,34 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Display Name of the Azure AD User.
+    <dd>{{% md %}}The display name of the user.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="employeeid_csharp">
+<a href="#employeeid_csharp" style="color: inherit; text-decoration: inherit;">Employee<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The employee identifier assigned to the user by the organisation.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="externaluserstate_csharp">
+<a href="#externaluserstate_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>User<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}For an external user invited to the tenant, this property represents the invited user's invitation status. Possible values are `PendingAcceptance` or `Accepted`.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="faxnumber_csharp">
+<a href="#faxnumber_csharp" style="color: inherit; text-decoration: inherit;">Fax<wbr>Number</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The fax number of the user.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="givenname_csharp">
@@ -356,16 +425,16 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd><dt class="property- property-deprecated"
-            title=", Deprecated">
-        <span id="immutableid_csharp">
-<a href="#immutableid_csharp" style="color: inherit; text-decoration: inherit;">Immutable<wbr>Id</a>
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="imaddresses_csharp">
+<a href="#imaddresses_csharp" style="color: inherit; text-decoration: inherit;">Im<wbr>Addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}(**Deprecated**) The value used to associate an on-premise Active Directory user account with their Azure AD user object. Deprecated in favour of `onpremises_immutable_id`.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `onpremises_immutable_id` and will be removed in version 2.0 of the AzureAD provider{{% /md %}}</p></dd><dt class="property-"
+    <dd>{{% md %}}A list of instant message voice over IP (VOIP) session initiation protocol (SIP) addresses for the user.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="jobtitle_csharp">
 <a href="#jobtitle_csharp" style="color: inherit; text-decoration: inherit;">Job<wbr>Title</a>
@@ -382,7 +451,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The primary email address of the Azure AD User.
+    <dd>{{% md %}}The SMTP address for the user.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="mailnickname_csharp">
@@ -391,17 +460,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The email alias of the Azure AD User.
-{{% /md %}}</dd><dt class="property- property-deprecated"
-            title=", Deprecated">
-        <span id="mobile_csharp">
-<a href="#mobile_csharp" style="color: inherit; text-decoration: inherit;">Mobile</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}(**Deprecated**) The primary cellular telephone number for the user. Deprecated in favour of `mobile_phone`.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `mobile_phone` and will be removed in version 2.0 of the AzureAD provider{{% /md %}}</p></dd><dt class="property-"
+    <dd>{{% md %}}The email alias of the user.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="mobilephone_csharp">
 <a href="#mobilephone_csharp" style="color: inherit; text-decoration: inherit;">Mobile<wbr>Phone</a>
@@ -418,7 +478,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The object ID of the user.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="officelocation_csharp">
 <a href="#officelocation_csharp" style="color: inherit; text-decoration: inherit;">Office<wbr>Location</a>
@@ -427,6 +488,24 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The office location in the user's place of business.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="onpremisesdistinguishedname_csharp">
+<a href="#onpremisesdistinguishedname_csharp" style="color: inherit; text-decoration: inherit;">Onpremises<wbr>Distinguished<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The on-premises distinguished name (DN) of the user, synchronised from the on-premises directory when Azure AD Connect is used.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="onpremisesdomainname_csharp">
+<a href="#onpremisesdomainname_csharp" style="color: inherit; text-decoration: inherit;">Onpremises<wbr>Domain<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The on-premises FQDN, also called dnsDomainName, synchronised from the on-premises directory when Azure AD Connect is used.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="onpremisesimmutableid_csharp">
@@ -444,7 +523,25 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The on-premise SAM account name of the Azure AD User.
+    <dd>{{% md %}}The on-premise SAM account name of the user.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="onpremisessecurityidentifier_csharp">
+<a href="#onpremisessecurityidentifier_csharp" style="color: inherit; text-decoration: inherit;">Onpremises<wbr>Security<wbr>Identifier</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The on-premises security identifier (SID), synchronised from the on-premises directory when Azure AD Connect is used.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="onpremisessyncenabled_csharp">
+<a href="#onpremisessyncenabled_csharp" style="color: inherit; text-decoration: inherit;">Onpremises<wbr>Sync<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether this user is synchronised from an on-premises directory (`true`), no longer synchronised (`false`), or has never been synchronised (`null`).
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="onpremisesuserprincipalname_csharp">
@@ -453,17 +550,17 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The on-premise user principal name of the Azure AD User.
-{{% /md %}}</dd><dt class="property- property-deprecated"
-            title=", Deprecated">
-        <span id="physicaldeliveryofficename_csharp">
-<a href="#physicaldeliveryofficename_csharp" style="color: inherit; text-decoration: inherit;">Physical<wbr>Delivery<wbr>Office<wbr>Name</a>
+    <dd>{{% md %}}The on-premise user principal name of the user.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="othermails_csharp">
+<a href="#othermails_csharp" style="color: inherit; text-decoration: inherit;">Other<wbr>Mails</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}(**Deprecated**) The office location in the user's place of business. Deprecated in favour of `office_location`.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `office_location` and will be removed in version 2.0 of the AzureAD provider{{% /md %}}</p></dd><dt class="property-"
+    <dd>{{% md %}}A list of additional email addresses for the user.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="postalcode_csharp">
 <a href="#postalcode_csharp" style="color: inherit; text-decoration: inherit;">Postal<wbr>Code</a>
@@ -472,6 +569,33 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The postal code for the user's postal address. The postal code is specific to the user's country/region. In the United States of America, this attribute contains the ZIP code.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="preferredlanguage_csharp">
+<a href="#preferredlanguage_csharp" style="color: inherit; text-decoration: inherit;">Preferred<wbr>Language</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The user's preferred language, in ISO 639-1 notation.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="proxyaddresses_csharp">
+<a href="#proxyaddresses_csharp" style="color: inherit; text-decoration: inherit;">Proxy<wbr>Addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}List of email addresses for the user that direct to the same mailbox.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="showinaddresslist_csharp">
+<a href="#showinaddresslist_csharp" style="color: inherit; text-decoration: inherit;">Show<wbr>In<wbr>Address<wbr>List</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether or not the Outlook global address list should include this user.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="state_csharp">
@@ -507,7 +631,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The usage location of the Azure AD User.
+    <dd>{{% md %}}The usage location of the user.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="userprincipalname_csharp">
@@ -516,7 +640,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The User Principal Name of the Azure AD User.
+    <dd>{{% md %}}The user principal name (UPN) of the user.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="usertype_csharp">
@@ -525,7 +649,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The user type in the directory. One of `Guest` or `Member`.
+    <dd>{{% md %}}The user type in the directory. Possible values are `Guest` or `Member`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -538,7 +662,25 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}`True` if the account is enabled; otherwise `False`.
+    <dd>{{% md %}}Whether or not the account is enabled.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="agegroup_go">
+<a href="#agegroup_go" style="color: inherit; text-decoration: inherit;">Age<wbr>Group</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The age group of the user. Supported values are `Adult`, `NotAdult` and `Minor`.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="businessphones_go">
+<a href="#businessphones_go" style="color: inherit; text-decoration: inherit;">Business<wbr>Phones</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of telephone numbers for the user.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="city_go">
@@ -559,13 +701,31 @@ The following output properties are available:
     <dd>{{% md %}}The company name which the user is associated. This property can be useful for describing the company that an external user comes from.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="consentprovidedforminor_go">
+<a href="#consentprovidedforminor_go" style="color: inherit; text-decoration: inherit;">Consent<wbr>Provided<wbr>For<wbr>Minor</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Whether consent has been obtained for minors. Supported values are `Granted`, `Denied` and `NotRequired`.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="country_go">
 <a href="#country_go" style="color: inherit; text-decoration: inherit;">Country</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The country/region in which the user is located; for example, “US” or “UK”.
+    <dd>{{% md %}}The country/region in which the user is located, e.g. `US` or `UK`.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="creationtype_go">
+<a href="#creationtype_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether the user account was created as a regular school or work account (`null`), an external account (`Invitation`), a local account for an Azure Active Directory B2C tenant (`LocalAccount`) or self-service sign-up using email verification (`EmailVerified`).
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="department_go">
@@ -583,7 +743,34 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Display Name of the Azure AD User.
+    <dd>{{% md %}}The display name of the user.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="employeeid_go">
+<a href="#employeeid_go" style="color: inherit; text-decoration: inherit;">Employee<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The employee identifier assigned to the user by the organisation.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="externaluserstate_go">
+<a href="#externaluserstate_go" style="color: inherit; text-decoration: inherit;">External<wbr>User<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}For an external user invited to the tenant, this property represents the invited user's invitation status. Possible values are `PendingAcceptance` or `Accepted`.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="faxnumber_go">
+<a href="#faxnumber_go" style="color: inherit; text-decoration: inherit;">Fax<wbr>Number</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The fax number of the user.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="givenname_go">
@@ -602,16 +789,16 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd><dt class="property- property-deprecated"
-            title=", Deprecated">
-        <span id="immutableid_go">
-<a href="#immutableid_go" style="color: inherit; text-decoration: inherit;">Immutable<wbr>Id</a>
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="imaddresses_go">
+<a href="#imaddresses_go" style="color: inherit; text-decoration: inherit;">Im<wbr>Addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}(**Deprecated**) The value used to associate an on-premise Active Directory user account with their Azure AD user object. Deprecated in favour of `onpremises_immutable_id`.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `onpremises_immutable_id` and will be removed in version 2.0 of the AzureAD provider{{% /md %}}</p></dd><dt class="property-"
+    <dd>{{% md %}}A list of instant message voice over IP (VOIP) session initiation protocol (SIP) addresses for the user.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="jobtitle_go">
 <a href="#jobtitle_go" style="color: inherit; text-decoration: inherit;">Job<wbr>Title</a>
@@ -628,7 +815,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The primary email address of the Azure AD User.
+    <dd>{{% md %}}The SMTP address for the user.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="mailnickname_go">
@@ -637,17 +824,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The email alias of the Azure AD User.
-{{% /md %}}</dd><dt class="property- property-deprecated"
-            title=", Deprecated">
-        <span id="mobile_go">
-<a href="#mobile_go" style="color: inherit; text-decoration: inherit;">Mobile</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}(**Deprecated**) The primary cellular telephone number for the user. Deprecated in favour of `mobile_phone`.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `mobile_phone` and will be removed in version 2.0 of the AzureAD provider{{% /md %}}</p></dd><dt class="property-"
+    <dd>{{% md %}}The email alias of the user.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="mobilephone_go">
 <a href="#mobilephone_go" style="color: inherit; text-decoration: inherit;">Mobile<wbr>Phone</a>
@@ -664,7 +842,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The object ID of the user.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="officelocation_go">
 <a href="#officelocation_go" style="color: inherit; text-decoration: inherit;">Office<wbr>Location</a>
@@ -673,6 +852,24 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The office location in the user's place of business.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="onpremisesdistinguishedname_go">
+<a href="#onpremisesdistinguishedname_go" style="color: inherit; text-decoration: inherit;">Onpremises<wbr>Distinguished<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The on-premises distinguished name (DN) of the user, synchronised from the on-premises directory when Azure AD Connect is used.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="onpremisesdomainname_go">
+<a href="#onpremisesdomainname_go" style="color: inherit; text-decoration: inherit;">Onpremises<wbr>Domain<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The on-premises FQDN, also called dnsDomainName, synchronised from the on-premises directory when Azure AD Connect is used.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="onpremisesimmutableid_go">
@@ -690,7 +887,25 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The on-premise SAM account name of the Azure AD User.
+    <dd>{{% md %}}The on-premise SAM account name of the user.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="onpremisessecurityidentifier_go">
+<a href="#onpremisessecurityidentifier_go" style="color: inherit; text-decoration: inherit;">Onpremises<wbr>Security<wbr>Identifier</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The on-premises security identifier (SID), synchronised from the on-premises directory when Azure AD Connect is used.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="onpremisessyncenabled_go">
+<a href="#onpremisessyncenabled_go" style="color: inherit; text-decoration: inherit;">Onpremises<wbr>Sync<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether this user is synchronised from an on-premises directory (`true`), no longer synchronised (`false`), or has never been synchronised (`null`).
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="onpremisesuserprincipalname_go">
@@ -699,17 +914,17 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The on-premise user principal name of the Azure AD User.
-{{% /md %}}</dd><dt class="property- property-deprecated"
-            title=", Deprecated">
-        <span id="physicaldeliveryofficename_go">
-<a href="#physicaldeliveryofficename_go" style="color: inherit; text-decoration: inherit;">Physical<wbr>Delivery<wbr>Office<wbr>Name</a>
+    <dd>{{% md %}}The on-premise user principal name of the user.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="othermails_go">
+<a href="#othermails_go" style="color: inherit; text-decoration: inherit;">Other<wbr>Mails</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}(**Deprecated**) The office location in the user's place of business. Deprecated in favour of `office_location`.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `office_location` and will be removed in version 2.0 of the AzureAD provider{{% /md %}}</p></dd><dt class="property-"
+    <dd>{{% md %}}A list of additional email addresses for the user.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="postalcode_go">
 <a href="#postalcode_go" style="color: inherit; text-decoration: inherit;">Postal<wbr>Code</a>
@@ -718,6 +933,33 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The postal code for the user's postal address. The postal code is specific to the user's country/region. In the United States of America, this attribute contains the ZIP code.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="preferredlanguage_go">
+<a href="#preferredlanguage_go" style="color: inherit; text-decoration: inherit;">Preferred<wbr>Language</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The user's preferred language, in ISO 639-1 notation.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="proxyaddresses_go">
+<a href="#proxyaddresses_go" style="color: inherit; text-decoration: inherit;">Proxy<wbr>Addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}List of email addresses for the user that direct to the same mailbox.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="showinaddresslist_go">
+<a href="#showinaddresslist_go" style="color: inherit; text-decoration: inherit;">Show<wbr>In<wbr>Address<wbr>List</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether or not the Outlook global address list should include this user.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="state_go">
@@ -753,7 +995,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The usage location of the Azure AD User.
+    <dd>{{% md %}}The usage location of the user.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="userprincipalname_go">
@@ -762,7 +1004,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The User Principal Name of the Azure AD User.
+    <dd>{{% md %}}The user principal name (UPN) of the user.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="usertype_go">
@@ -771,7 +1013,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The user type in the directory. One of `Guest` or `Member`.
+    <dd>{{% md %}}The user type in the directory. Possible values are `Guest` or `Member`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -784,7 +1026,25 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}`True` if the account is enabled; otherwise `False`.
+    <dd>{{% md %}}Whether or not the account is enabled.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="agegroup_nodejs">
+<a href="#agegroup_nodejs" style="color: inherit; text-decoration: inherit;">age<wbr>Group</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The age group of the user. Supported values are `Adult`, `NotAdult` and `Minor`.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="businessphones_nodejs">
+<a href="#businessphones_nodejs" style="color: inherit; text-decoration: inherit;">business<wbr>Phones</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of telephone numbers for the user.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="city_nodejs">
@@ -805,13 +1065,31 @@ The following output properties are available:
     <dd>{{% md %}}The company name which the user is associated. This property can be useful for describing the company that an external user comes from.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="consentprovidedforminor_nodejs">
+<a href="#consentprovidedforminor_nodejs" style="color: inherit; text-decoration: inherit;">consent<wbr>Provided<wbr>For<wbr>Minor</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Whether consent has been obtained for minors. Supported values are `Granted`, `Denied` and `NotRequired`.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="country_nodejs">
 <a href="#country_nodejs" style="color: inherit; text-decoration: inherit;">country</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The country/region in which the user is located; for example, “US” or “UK”.
+    <dd>{{% md %}}The country/region in which the user is located, e.g. `US` or `UK`.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="creationtype_nodejs">
+<a href="#creationtype_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether the user account was created as a regular school or work account (`null`), an external account (`Invitation`), a local account for an Azure Active Directory B2C tenant (`LocalAccount`) or self-service sign-up using email verification (`EmailVerified`).
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="department_nodejs">
@@ -829,7 +1107,34 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Display Name of the Azure AD User.
+    <dd>{{% md %}}The display name of the user.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="employeeid_nodejs">
+<a href="#employeeid_nodejs" style="color: inherit; text-decoration: inherit;">employee<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The employee identifier assigned to the user by the organisation.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="externaluserstate_nodejs">
+<a href="#externaluserstate_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>User<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}For an external user invited to the tenant, this property represents the invited user's invitation status. Possible values are `PendingAcceptance` or `Accepted`.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="faxnumber_nodejs">
+<a href="#faxnumber_nodejs" style="color: inherit; text-decoration: inherit;">fax<wbr>Number</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The fax number of the user.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="givenname_nodejs">
@@ -848,16 +1153,16 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd><dt class="property- property-deprecated"
-            title=", Deprecated">
-        <span id="immutableid_nodejs">
-<a href="#immutableid_nodejs" style="color: inherit; text-decoration: inherit;">immutable<wbr>Id</a>
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="imaddresses_nodejs">
+<a href="#imaddresses_nodejs" style="color: inherit; text-decoration: inherit;">im<wbr>Addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}(**Deprecated**) The value used to associate an on-premise Active Directory user account with their Azure AD user object. Deprecated in favour of `onpremises_immutable_id`.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `onpremises_immutable_id` and will be removed in version 2.0 of the AzureAD provider{{% /md %}}</p></dd><dt class="property-"
+    <dd>{{% md %}}A list of instant message voice over IP (VOIP) session initiation protocol (SIP) addresses for the user.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="jobtitle_nodejs">
 <a href="#jobtitle_nodejs" style="color: inherit; text-decoration: inherit;">job<wbr>Title</a>
@@ -874,7 +1179,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The primary email address of the Azure AD User.
+    <dd>{{% md %}}The SMTP address for the user.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="mailnickname_nodejs">
@@ -883,17 +1188,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The email alias of the Azure AD User.
-{{% /md %}}</dd><dt class="property- property-deprecated"
-            title=", Deprecated">
-        <span id="mobile_nodejs">
-<a href="#mobile_nodejs" style="color: inherit; text-decoration: inherit;">mobile</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}(**Deprecated**) The primary cellular telephone number for the user. Deprecated in favour of `mobile_phone`.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `mobile_phone` and will be removed in version 2.0 of the AzureAD provider{{% /md %}}</p></dd><dt class="property-"
+    <dd>{{% md %}}The email alias of the user.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="mobilephone_nodejs">
 <a href="#mobilephone_nodejs" style="color: inherit; text-decoration: inherit;">mobile<wbr>Phone</a>
@@ -910,7 +1206,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The object ID of the user.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="officelocation_nodejs">
 <a href="#officelocation_nodejs" style="color: inherit; text-decoration: inherit;">office<wbr>Location</a>
@@ -919,6 +1216,24 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The office location in the user's place of business.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="onpremisesdistinguishedname_nodejs">
+<a href="#onpremisesdistinguishedname_nodejs" style="color: inherit; text-decoration: inherit;">onpremises<wbr>Distinguished<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The on-premises distinguished name (DN) of the user, synchronised from the on-premises directory when Azure AD Connect is used.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="onpremisesdomainname_nodejs">
+<a href="#onpremisesdomainname_nodejs" style="color: inherit; text-decoration: inherit;">onpremises<wbr>Domain<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The on-premises FQDN, also called dnsDomainName, synchronised from the on-premises directory when Azure AD Connect is used.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="onpremisesimmutableid_nodejs">
@@ -936,7 +1251,25 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The on-premise SAM account name of the Azure AD User.
+    <dd>{{% md %}}The on-premise SAM account name of the user.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="onpremisessecurityidentifier_nodejs">
+<a href="#onpremisessecurityidentifier_nodejs" style="color: inherit; text-decoration: inherit;">onpremises<wbr>Security<wbr>Identifier</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The on-premises security identifier (SID), synchronised from the on-premises directory when Azure AD Connect is used.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="onpremisessyncenabled_nodejs">
+<a href="#onpremisessyncenabled_nodejs" style="color: inherit; text-decoration: inherit;">onpremises<wbr>Sync<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether this user is synchronised from an on-premises directory (`true`), no longer synchronised (`false`), or has never been synchronised (`null`).
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="onpremisesuserprincipalname_nodejs">
@@ -945,17 +1278,17 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The on-premise user principal name of the Azure AD User.
-{{% /md %}}</dd><dt class="property- property-deprecated"
-            title=", Deprecated">
-        <span id="physicaldeliveryofficename_nodejs">
-<a href="#physicaldeliveryofficename_nodejs" style="color: inherit; text-decoration: inherit;">physical<wbr>Delivery<wbr>Office<wbr>Name</a>
+    <dd>{{% md %}}The on-premise user principal name of the user.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="othermails_nodejs">
+<a href="#othermails_nodejs" style="color: inherit; text-decoration: inherit;">other<wbr>Mails</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}(**Deprecated**) The office location in the user's place of business. Deprecated in favour of `office_location`.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `office_location` and will be removed in version 2.0 of the AzureAD provider{{% /md %}}</p></dd><dt class="property-"
+    <dd>{{% md %}}A list of additional email addresses for the user.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="postalcode_nodejs">
 <a href="#postalcode_nodejs" style="color: inherit; text-decoration: inherit;">postal<wbr>Code</a>
@@ -964,6 +1297,33 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The postal code for the user's postal address. The postal code is specific to the user's country/region. In the United States of America, this attribute contains the ZIP code.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="preferredlanguage_nodejs">
+<a href="#preferredlanguage_nodejs" style="color: inherit; text-decoration: inherit;">preferred<wbr>Language</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The user's preferred language, in ISO 639-1 notation.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="proxyaddresses_nodejs">
+<a href="#proxyaddresses_nodejs" style="color: inherit; text-decoration: inherit;">proxy<wbr>Addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}List of email addresses for the user that direct to the same mailbox.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="showinaddresslist_nodejs">
+<a href="#showinaddresslist_nodejs" style="color: inherit; text-decoration: inherit;">show<wbr>In<wbr>Address<wbr>List</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether or not the Outlook global address list should include this user.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="state_nodejs">
@@ -999,7 +1359,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The usage location of the Azure AD User.
+    <dd>{{% md %}}The usage location of the user.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="userprincipalname_nodejs">
@@ -1008,7 +1368,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The User Principal Name of the Azure AD User.
+    <dd>{{% md %}}The user principal name (UPN) of the user.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="usertype_nodejs">
@@ -1017,7 +1377,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The user type in the directory. One of `Guest` or `Member`.
+    <dd>{{% md %}}The user type in the directory. Possible values are `Guest` or `Member`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1030,7 +1390,25 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}`True` if the account is enabled; otherwise `False`.
+    <dd>{{% md %}}Whether or not the account is enabled.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="age_group_python">
+<a href="#age_group_python" style="color: inherit; text-decoration: inherit;">age_<wbr>group</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The age group of the user. Supported values are `Adult`, `NotAdult` and `Minor`.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="business_phones_python">
+<a href="#business_phones_python" style="color: inherit; text-decoration: inherit;">business_<wbr>phones</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of telephone numbers for the user.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="city_python">
@@ -1051,13 +1429,31 @@ The following output properties are available:
     <dd>{{% md %}}The company name which the user is associated. This property can be useful for describing the company that an external user comes from.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="consent_provided_for_minor_python">
+<a href="#consent_provided_for_minor_python" style="color: inherit; text-decoration: inherit;">consent_<wbr>provided_<wbr>for_<wbr>minor</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Whether consent has been obtained for minors. Supported values are `Granted`, `Denied` and `NotRequired`.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="country_python">
 <a href="#country_python" style="color: inherit; text-decoration: inherit;">country</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The country/region in which the user is located; for example, “US” or “UK”.
+    <dd>{{% md %}}The country/region in which the user is located, e.g. `US` or `UK`.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="creation_type_python">
+<a href="#creation_type_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether the user account was created as a regular school or work account (`null`), an external account (`Invitation`), a local account for an Azure Active Directory B2C tenant (`LocalAccount`) or self-service sign-up using email verification (`EmailVerified`).
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="department_python">
@@ -1075,7 +1471,34 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Display Name of the Azure AD User.
+    <dd>{{% md %}}The display name of the user.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="employee_id_python">
+<a href="#employee_id_python" style="color: inherit; text-decoration: inherit;">employee_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The employee identifier assigned to the user by the organisation.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="external_user_state_python">
+<a href="#external_user_state_python" style="color: inherit; text-decoration: inherit;">external_<wbr>user_<wbr>state</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}For an external user invited to the tenant, this property represents the invited user's invitation status. Possible values are `PendingAcceptance` or `Accepted`.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="fax_number_python">
+<a href="#fax_number_python" style="color: inherit; text-decoration: inherit;">fax_<wbr>number</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The fax number of the user.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="given_name_python">
@@ -1094,16 +1517,16 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd><dt class="property- property-deprecated"
-            title=", Deprecated">
-        <span id="immutable_id_python">
-<a href="#immutable_id_python" style="color: inherit; text-decoration: inherit;">immutable_<wbr>id</a>
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="im_addresses_python">
+<a href="#im_addresses_python" style="color: inherit; text-decoration: inherit;">im_<wbr>addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}(**Deprecated**) The value used to associate an on-premise Active Directory user account with their Azure AD user object. Deprecated in favour of `onpremises_immutable_id`.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `onpremises_immutable_id` and will be removed in version 2.0 of the AzureAD provider{{% /md %}}</p></dd><dt class="property-"
+    <dd>{{% md %}}A list of instant message voice over IP (VOIP) session initiation protocol (SIP) addresses for the user.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="job_title_python">
 <a href="#job_title_python" style="color: inherit; text-decoration: inherit;">job_<wbr>title</a>
@@ -1120,7 +1543,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The primary email address of the Azure AD User.
+    <dd>{{% md %}}The SMTP address for the user.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="mail_nickname_python">
@@ -1129,17 +1552,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The email alias of the Azure AD User.
-{{% /md %}}</dd><dt class="property- property-deprecated"
-            title=", Deprecated">
-        <span id="mobile_python">
-<a href="#mobile_python" style="color: inherit; text-decoration: inherit;">mobile</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}(**Deprecated**) The primary cellular telephone number for the user. Deprecated in favour of `mobile_phone`.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `mobile_phone` and will be removed in version 2.0 of the AzureAD provider{{% /md %}}</p></dd><dt class="property-"
+    <dd>{{% md %}}The email alias of the user.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="mobile_phone_python">
 <a href="#mobile_phone_python" style="color: inherit; text-decoration: inherit;">mobile_<wbr>phone</a>
@@ -1156,7 +1570,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The object ID of the user.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="office_location_python">
 <a href="#office_location_python" style="color: inherit; text-decoration: inherit;">office_<wbr>location</a>
@@ -1165,6 +1580,24 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The office location in the user's place of business.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="onpremises_distinguished_name_python">
+<a href="#onpremises_distinguished_name_python" style="color: inherit; text-decoration: inherit;">onpremises_<wbr>distinguished_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The on-premises distinguished name (DN) of the user, synchronised from the on-premises directory when Azure AD Connect is used.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="onpremises_domain_name_python">
+<a href="#onpremises_domain_name_python" style="color: inherit; text-decoration: inherit;">onpremises_<wbr>domain_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The on-premises FQDN, also called dnsDomainName, synchronised from the on-premises directory when Azure AD Connect is used.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="onpremises_immutable_id_python">
@@ -1182,7 +1615,25 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The on-premise SAM account name of the Azure AD User.
+    <dd>{{% md %}}The on-premise SAM account name of the user.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="onpremises_security_identifier_python">
+<a href="#onpremises_security_identifier_python" style="color: inherit; text-decoration: inherit;">onpremises_<wbr>security_<wbr>identifier</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The on-premises security identifier (SID), synchronised from the on-premises directory when Azure AD Connect is used.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="onpremises_sync_enabled_python">
+<a href="#onpremises_sync_enabled_python" style="color: inherit; text-decoration: inherit;">onpremises_<wbr>sync_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether this user is synchronised from an on-premises directory (`true`), no longer synchronised (`false`), or has never been synchronised (`null`).
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="onpremises_user_principal_name_python">
@@ -1191,17 +1642,17 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The on-premise user principal name of the Azure AD User.
-{{% /md %}}</dd><dt class="property- property-deprecated"
-            title=", Deprecated">
-        <span id="physical_delivery_office_name_python">
-<a href="#physical_delivery_office_name_python" style="color: inherit; text-decoration: inherit;">physical_<wbr>delivery_<wbr>office_<wbr>name</a>
+    <dd>{{% md %}}The on-premise user principal name of the user.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="other_mails_python">
+<a href="#other_mails_python" style="color: inherit; text-decoration: inherit;">other_<wbr>mails</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}(**Deprecated**) The office location in the user's place of business. Deprecated in favour of `office_location`.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `office_location` and will be removed in version 2.0 of the AzureAD provider{{% /md %}}</p></dd><dt class="property-"
+    <dd>{{% md %}}A list of additional email addresses for the user.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="postal_code_python">
 <a href="#postal_code_python" style="color: inherit; text-decoration: inherit;">postal_<wbr>code</a>
@@ -1210,6 +1661,33 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The postal code for the user's postal address. The postal code is specific to the user's country/region. In the United States of America, this attribute contains the ZIP code.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="preferred_language_python">
+<a href="#preferred_language_python" style="color: inherit; text-decoration: inherit;">preferred_<wbr>language</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The user's preferred language, in ISO 639-1 notation.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="proxy_addresses_python">
+<a href="#proxy_addresses_python" style="color: inherit; text-decoration: inherit;">proxy_<wbr>addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}List of email addresses for the user that direct to the same mailbox.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="show_in_address_list_python">
+<a href="#show_in_address_list_python" style="color: inherit; text-decoration: inherit;">show_<wbr>in_<wbr>address_<wbr>list</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether or not the Outlook global address list should include this user.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="state_python">
@@ -1245,7 +1723,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The usage location of the Azure AD User.
+    <dd>{{% md %}}The usage location of the user.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="user_principal_name_python">
@@ -1254,7 +1732,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The User Principal Name of the Azure AD User.
+    <dd>{{% md %}}The user principal name (UPN) of the user.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="user_type_python">
@@ -1263,7 +1741,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The user type in the directory. One of `Guest` or `Member`.
+    <dd>{{% md %}}The user type in the directory. Possible values are `Guest` or `Member`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

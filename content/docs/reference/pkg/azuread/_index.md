@@ -15,11 +15,9 @@ A Pulumi package for creating and managing azuread cloud resources.
 <h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="application" title="Application"><span class="symbol resource"></span>Application</a></li>
-    <li><a href="applicationapprole" title="ApplicationAppRole"><span class="symbol resource"></span>ApplicationAppRole</a></li>
     <li><a href="applicationcertificate" title="ApplicationCertificate"><span class="symbol resource"></span>ApplicationCertificate</a></li>
-    <li><a href="applicationoauth2permission" title="ApplicationOAuth2Permission"><span class="symbol resource"></span>ApplicationOAuth2Permission</a></li>
-    <li><a href="applicationoauth2permissionscope" title="ApplicationOauth2PermissionScope"><span class="symbol resource"></span>ApplicationOauth2PermissionScope</a></li>
     <li><a href="applicationpassword" title="ApplicationPassword"><span class="symbol resource"></span>ApplicationPassword</a></li>
+    <li><a href="applicationpreauthorized" title="ApplicationPreAuthorized"><span class="symbol resource"></span>ApplicationPreAuthorized</a></li>
     <li><a href="group" title="Group"><span class="symbol resource"></span>Group</a></li>
     <li><a href="groupmember" title="GroupMember"><span class="symbol resource"></span>GroupMember</a></li>
     <li><a href="provider" title="Provider"><span class="symbol resource"></span>Provider</a></li>
@@ -32,6 +30,7 @@ A Pulumi package for creating and managing azuread cloud resources.
 <h2 id="functions">Functions</h2>
 <ul class="api">
     <li><a href="getapplication" title="GetApplication"><span class="symbol function"></span>GetApplication</a></li>
+    <li><a href="getapplicationpublishedappids" title="GetApplicationPublishedAppIds"><span class="symbol function"></span>GetApplicationPublishedAppIds</a></li>
     <li><a href="getclientconfig" title="GetClientConfig"><span class="symbol function"></span>GetClientConfig</a></li>
     <li><a href="getdomains" title="GetDomains"><span class="symbol function"></span>GetDomains</a></li>
     <li><a href="getgroup" title="GetGroup"><span class="symbol function"></span>GetGroup</a></li>
@@ -50,6 +49,6 @@ A Pulumi package for creating and managing azuread cloud resources.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`azuread` Terraform Provider](https://github.com/hashicorp/terraform-provider-azuread).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.3.0</dd>
+	<dd>5.0.0</dd>
 </dl>
 
