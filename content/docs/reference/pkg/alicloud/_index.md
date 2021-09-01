@@ -21,9 +21,11 @@ A Pulumi package for creating and managing AliCloud resources.
     <li><a href="amqp/" title="amqp"><span class="symbol module"></span>amqp</a></li>
     <li><a href="apigateway/" title="apigateway"><span class="symbol module"></span>apigateway</a></li>
     <li><a href="arms/" title="arms"><span class="symbol module"></span>arms</a></li>
+    <li><a href="bastionhost/" title="bastionhost"><span class="symbol module"></span>bastionhost</a></li>
     <li><a href="brain/" title="brain"><span class="symbol module"></span>brain</a></li>
     <li><a href="cas/" title="cas"><span class="symbol module"></span>cas</a></li>
     <li><a href="cassandra/" title="cassandra"><span class="symbol module"></span>cassandra</a></li>
+    <li><a href="cddc/" title="cddc"><span class="symbol module"></span>cddc</a></li>
     <li><a href="cdn/" title="cdn"><span class="symbol module"></span>cdn</a></li>
     <li><a href="cen/" title="cen"><span class="symbol module"></span>cen</a></li>
     <li><a href="cfg/" title="cfg"><span class="symbol module"></span>cfg</a></li>
@@ -38,6 +40,7 @@ A Pulumi package for creating and managing AliCloud resources.
     <li><a href="dcdn/" title="dcdn"><span class="symbol module"></span>dcdn</a></li>
     <li><a href="ddos/" title="ddos"><span class="symbol module"></span>ddos</a></li>
     <li><a href="dds/" title="dds"><span class="symbol module"></span>dds</a></li>
+    <li><a href="dfs/" title="dfs"><span class="symbol module"></span>dfs</a></li>
     <li><a href="directmail/" title="directmail"><span class="symbol module"></span>directmail</a></li>
     <li><a href="dms/" title="dms"><span class="symbol module"></span>dms</a></li>
     <li><a href="dns/" title="dns"><span class="symbol module"></span>dns</a></li>
@@ -47,11 +50,14 @@ A Pulumi package for creating and managing AliCloud resources.
     <li><a href="ecs/" title="ecs"><span class="symbol module"></span>ecs</a></li>
     <li><a href="edas/" title="edas"><span class="symbol module"></span>edas</a></li>
     <li><a href="eds/" title="eds"><span class="symbol module"></span>eds</a></li>
+    <li><a href="ehpc/" title="ehpc"><span class="symbol module"></span>ehpc</a></li>
     <li><a href="eipanycast/" title="eipanycast"><span class="symbol module"></span>eipanycast</a></li>
     <li><a href="elasticsearch/" title="elasticsearch"><span class="symbol module"></span>elasticsearch</a></li>
     <li><a href="emr/" title="emr"><span class="symbol module"></span>emr</a></li>
+    <li><a href="ens/" title="ens"><span class="symbol module"></span>ens</a></li>
     <li><a href="ess/" title="ess"><span class="symbol module"></span>ess</a></li>
     <li><a href="eventbridge/" title="eventbridge"><span class="symbol module"></span>eventbridge</a></li>
+    <li><a href="expressconnect/" title="expressconnect"><span class="symbol module"></span>expressconnect</a></li>
     <li><a href="fc/" title="fc"><span class="symbol module"></span>fc</a></li>
     <li><a href="fnf/" title="fnf"><span class="symbol module"></span>fnf</a></li>
     <li><a href="ga/" title="ga"><span class="symbol module"></span>ga</a></li>
@@ -61,6 +67,7 @@ A Pulumi package for creating and managing AliCloud resources.
     <li><a href="iot/" title="iot"><span class="symbol module"></span>iot</a></li>
     <li><a href="kms/" title="kms"><span class="symbol module"></span>kms</a></li>
     <li><a href="kvstore/" title="kvstore"><span class="symbol module"></span>kvstore</a></li>
+    <li><a href="lindorm/" title="lindorm"><span class="symbol module"></span>lindorm</a></li>
     <li><a href="log/" title="log"><span class="symbol module"></span>log</a></li>
     <li><a href="marketplace/" title="marketplace"><span class="symbol module"></span>marketplace</a></li>
     <li><a href="maxcompute/" title="maxcompute"><span class="symbol module"></span>maxcompute</a></li>
@@ -83,6 +90,8 @@ A Pulumi package for creating and managing AliCloud resources.
     <li><a href="sae/" title="sae"><span class="symbol module"></span>sae</a></li>
     <li><a href="sag/" title="sag"><span class="symbol module"></span>sag</a></li>
     <li><a href="scdn/" title="scdn"><span class="symbol module"></span>scdn</a></li>
+    <li><a href="sddp/" title="sddp"><span class="symbol module"></span>sddp</a></li>
+    <li><a href="securitycenter/" title="securitycenter"><span class="symbol module"></span>securitycenter</a></li>
     <li><a href="slb/" title="slb"><span class="symbol module"></span>slb</a></li>
     <li><a href="tsdb/" title="tsdb"><span class="symbol module"></span>tsdb</a></li>
     <li><a href="videosurveillance/" title="videosurveillance"><span class="symbol module"></span>videosurveillance</a></li>
@@ -94,6 +103,7 @@ A Pulumi package for creating and managing AliCloud resources.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
+    <li><a href="mscsubcontract" title="MscSubContract"><span class="symbol resource"></span>MscSubContract</a></li>
     <li><a href="provider" title="Provider"><span class="symbol resource"></span>Provider</a></li>
 </ul>
 
@@ -102,6 +112,7 @@ A Pulumi package for creating and managing AliCloud resources.
     <li><a href="getaccount" title="GetAccount"><span class="symbol function"></span>GetAccount</a></li>
     <li><a href="getcalleridentity" title="GetCallerIdentity"><span class="symbol function"></span>GetCallerIdentity</a></li>
     <li><a href="getfilecrc64checksum" title="GetFileCrc64Checksum"><span class="symbol function"></span>GetFileCrc64Checksum</a></li>
+    <li><a href="getmscsubcontracts" title="GetMscSubContracts"><span class="symbol function"></span>GetMscSubContracts</a></li>
     <li><a href="getregions" title="GetRegions"><span class="symbol function"></span>GetRegions</a></li>
     <li><a href="getzones" title="GetZones"><span class="symbol function"></span>GetZones</a></li>
 </ul>
@@ -115,6 +126,6 @@ A Pulumi package for creating and managing AliCloud resources.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>3.6.0</dd>
+	<dd>3.7.0</dd>
 </dl>
 

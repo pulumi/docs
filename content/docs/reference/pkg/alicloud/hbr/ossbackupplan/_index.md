@@ -28,21 +28,120 @@ For information about HBR Oss Backup Plan and how to use it, see [What is Oss Ba
 
 {{< example csharp >}}
 
-Coming soon!
+```csharp
+using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var config = new Config();
+        var name = config.Get("name") ?? "%s";
+        var defaultVault = new AliCloud.Hbr.Vault("defaultVault", new AliCloud.Hbr.VaultArgs
+        {
+            VaultName = name,
+        });
+        var defaultBuckets = Output.Create(AliCloud.Oss.GetBuckets.InvokeAsync(new AliCloud.Oss.GetBucketsArgs
+        {
+            NameRegex = "bosh-cf-blobstore-hz",
+        }));
+        var example = new AliCloud.Hbr.OssBackupPlan("example", new AliCloud.Hbr.OssBackupPlanArgs
+        {
+            OssBackupPlanName = name,
+            VaultId = defaultVault.Id,
+            Bucket = alicloud_oss_bucket.Default.Bucket,
+            Prefix = "/home",
+            Retention = "1",
+            Schedule = "I|1602673264|PT2H",
+            BackupType = "COMPLETE",
+        });
+    }
+
+}
+```
+
 
 {{< /example >}}
 
 
 {{< example go >}}
 
-Coming soon!
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-alicloud/sdk/v3/go/alicloud/hbr"
+	"github.com/pulumi/pulumi-alicloud/sdk/v3/go/alicloud/oss"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi/config"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		cfg := config.New(ctx, "")
+		name := fmt.Sprintf("%v%v", "%", "s")
+		if param := cfg.Get("name"); param != "" {
+			name = param
+		}
+		defaultVault, err := hbr.NewVault(ctx, "defaultVault", &hbr.VaultArgs{
+			VaultName: pulumi.String(name),
+		})
+		if err != nil {
+			return err
+		}
+		opt0 := "bosh-cf-blobstore-hz"
+		_, err = oss.GetBuckets(ctx, &oss.GetBucketsArgs{
+			NameRegex: &opt0,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		_, err = hbr.NewOssBackupPlan(ctx, "example", &hbr.OssBackupPlanArgs{
+			OssBackupPlanName: pulumi.String(name),
+			VaultId:           defaultVault.ID(),
+			Bucket:            pulumi.Any(alicloud_oss_bucket.Default.Bucket),
+			Prefix:            pulumi.String("/home"),
+			Retention:         pulumi.String("1"),
+			Schedule:          pulumi.String("I|1602673264|PT2H"),
+			BackupType:        pulumi.String("COMPLETE"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 
 {{< /example >}}
 
 
 {{< example python >}}
 
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+config = pulumi.Config()
+name = config.get("name")
+if name is None:
+    name = "%s"
+default_vault = alicloud.hbr.Vault("defaultVault", vault_name=name)
+default_buckets = alicloud.oss.get_buckets(name_regex="bosh-cf-blobstore-hz")
+example = alicloud.hbr.OssBackupPlan("example",
+    oss_backup_plan_name=name,
+    vault_id=default_vault.id,
+    bucket=alicloud_oss_bucket["default"]["bucket"],
+    prefix="/home",
+    retention="1",
+    schedule="I|1602673264|PT2H",
+    backup_type="COMPLETE")
+```
+
 
 {{< /example >}}
 
@@ -61,9 +160,10 @@ const defaultBuckets = alicloud.oss.getBuckets({
     nameRegex: "bosh-cf-blobstore-hz",
 });
 const example = new alicloud.hbr.OssBackupPlan("example", {
-    ossBackupPlanName: "example_value",
-    instanceId: defaultBuckets.then(defaultBuckets => defaultBuckets.buckets[0].name),
+    ossBackupPlanName: name,
     vaultId: defaultVault.id,
+    bucket: alicloud_oss_bucket["default"].bucket,
+    prefix: "/home",
     retention: "1",
     schedule: "I|1602673264|PT2H",
     backupType: "COMPLETE",
