@@ -12,6 +12,10 @@ meta_desc: "Documentation for the azuread.getClientConfig function with examples
 
 Use this data source to access the configuration of the AzureAD provider.
 
+## API Permissions
+
+No additional roles are required to use this data source.
+
 
 {{% examples %}}
 
@@ -34,11 +38,11 @@ class MyStack : Stack
     public MyStack()
     {
         var current = Output.Create(AzureAD.GetClientConfig.InvokeAsync());
-        this.AccountId = current.Apply(current => current.ClientId);
+        this.ObjectId = current.Apply(current => current.ObjectId);
     }
 
-    [Output("accountId")]
-    public Output<string> AccountId { get; set; }
+    [Output("objectId")]
+    public Output<string> ObjectId { get; set; }
 }
 ```
 
@@ -52,7 +56,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-azuread/sdk/v4/go/azuread"
+	"github.com/pulumi/pulumi-azuread/sdk/v5/go/azuread"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
@@ -62,7 +66,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		ctx.Export("accountId", current.ClientId)
+		ctx.Export("objectId", current.ObjectId)
 		return nil
 	})
 }
@@ -79,7 +83,7 @@ import pulumi
 import pulumi_azuread as azuread
 
 current = azuread.get_client_config()
-pulumi.export("accountId", current.client_id)
+pulumi.export("objectId", current.object_id)
 ```
 
 
@@ -94,7 +98,7 @@ import * as pulumi from "@pulumi/pulumi";
 import * as azuread from "@pulumi/azuread";
 
 const current = azuread.getClientConfig({});
-export const accountId = current.then(current => current.clientId);
+export const objectId = current.then(current => current.objectId);
 ```
 
 
@@ -156,7 +160,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The client ID (application ID) linked to the authenticated principal, or the application used for delegated authentication.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -173,7 +178,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The object ID of the authenticated principal.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tenantid_csharp">
 <a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -181,7 +187,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The tenant ID of the authenticated principal.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -193,7 +200,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The client ID (application ID) linked to the authenticated principal, or the application used for delegated authentication.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -210,7 +218,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The object ID of the authenticated principal.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tenantid_go">
 <a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -218,7 +227,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The tenant ID of the authenticated principal.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -230,7 +240,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The client ID (application ID) linked to the authenticated principal, or the application used for delegated authentication.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -247,7 +258,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The object ID of the authenticated principal.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tenantid_nodejs">
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
@@ -255,7 +267,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The tenant ID of the authenticated principal.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -267,7 +280,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The client ID (application ID) linked to the authenticated principal, or the application used for delegated authentication.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -284,7 +298,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The object ID of the authenticated principal.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tenant_id_python">
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
@@ -292,7 +307,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The tenant ID of the authenticated principal.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
