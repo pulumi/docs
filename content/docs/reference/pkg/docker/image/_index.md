@@ -213,19 +213,19 @@ const myImage = new docker.Image(customImage, {
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Image</span><span class="p">(</span><span class="nx">image_name</span><span class="p">:</span> <span class="nx"></span><span class="p">,</span>
-          <span class="nx">build</span><span class="p">:</span> <span class="nx"></span><span class="p">,</span>
-          <span class="nx">local_image_name</span><span class="p">:</span> <span class="nx"></span>=None<span class="p">,</span>
-          <span class="nx">registry</span><span class="p">:</span> <span class="nx"></span>=None<span class="p">,</span>
-          <span class="nx">skip_push</span><span class="p">:</span> <span class="nx"></span>=None<span class="p">,</span>
-          <span class="nx">opts</span><span class="p">:</span> <span class="nx"></span>=None<span class="p">)</span>
+<span class="k">def </span><span class="nx">Image</span><span class="p">(</span><span class="nx">image_name</span><span class="p">,</span>
+          <span class="nx">build</span><span class="p">,</span>
+          <span class="nx">local_image_name</span>=None<span class="p">,</span>
+          <span class="nx">registry</span>=None<span class="p">,</span>
+          <span class="nx">skip_push</span>=None<span class="p">,</span>
+          <span class="nx">opts</span>=None<span class="p">)</span>
 <span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Image</span><span class="p">(</span><span class="nx">image_name</span><span class="p">:</span> <span class="nx"></span><span class="p">,</span>
-          <span class="nx">build</span><span class="p">:</span> <span class="nx"></span><span class="p">,</span>
-          <span class="nx">local_image_name</span><span class="p">:</span> <span class="nx"></span>=None<span class="p">,</span>
-          <span class="nx">registry</span><span class="p">:</span> <span class="nx"></span>=None<span class="p">,</span>
-          <span class="nx">skip_push</span><span class="p">:</span> <span class="nx"></span>=None<span class="p">,</span>
-          <span class="nx">opts</span><span class="p">:</span> <span class="nx"></span>=None<span class="p">)</span></code></pre></div>
+<span class="k">def </span><span class="nx">Image</span><span class="p">(</span><span class="nx">image_name</span><span class="p">,</span>
+          <span class="nx">build</span><span class="p">,</span>
+          <span class="nx">local_image_name</span>=None<span class="p">,</span>
+          <span class="nx">registry</span>=None<span class="p">,</span>
+          <span class="nx">skip_push</span>=None<span class="p">,</span>
+          <span class="nx">opts</span>=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -244,25 +244,19 @@ const myImage = new docker.Image(customImage, {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ImageArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -274,49 +268,37 @@ const myImage = new docker.Image(customImage, {
         <span class="property-indicator"></span>
         <span class="property-type"></span>
     </dt>
-    <dd>
-      
-    </dd><dt
+    <dd></dd><dt
         class="property-required" title="Required">
         <span>build</span>
         <span class="property-indicator"></span>
         <span class="property-type"></span>
     </dt>
-    <dd>
-      
-    </dd><dt
+    <dd></dd><dt
         class="property-required" title="Required">
         <span>local_image_name</span>
         <span class="property-indicator"></span>
         <span class="property-type"></span>
     </dt>
-    <dd>
-      
-    </dd><dt
+    <dd></dd><dt
         class="property-required" title="Required">
         <span>registry</span>
         <span class="property-indicator"></span>
         <span class="property-type"></span>
     </dt>
-    <dd>
-      
-    </dd><dt
+    <dd></dd><dt
         class="property-required" title="Required">
         <span>skip_push</span>
         <span class="property-indicator"></span>
         <span class="property-type"></span>
     </dt>
-    <dd>
-      
-    </dd><dt
+    <dd></dd><dt
         class="property-required" title="Required">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"></span>
     </dt>
-    <dd>
-      
-    </dd></dl>
+    <dd></dd></dl>
 
 {{% /choosable %}}
 
@@ -328,33 +310,25 @@ const myImage = new docker.Image(customImage, {
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ImageArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -366,31 +340,25 @@ const myImage = new docker.Image(customImage, {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ImageArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
 ## Image Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Architecture and Concepts docs.
 
 ### Inputs
 
@@ -453,7 +421,7 @@ Either [imageName] or [localImageName] can have a tag. However, if both have a t
 <a href="#build_go" style="color: inherit; text-decoration: inherit;">Build</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#dockerbuild">Docker<wbr>Build</a></span>
+        <span class="property-type">string | <a href="#dockerbuild">Docker<wbr>Build<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Docker build context, as a folder path or a detailed DockerBuild object.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -481,7 +449,7 @@ Either [imageName] or [localImageName] can have a tag. However, if both have a t
 <a href="#registry_go" style="color: inherit; text-decoration: inherit;">Registry</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imageregistry">Image<wbr>Registry</a></span>
+        <span class="property-type"><a href="#imageregistry">Image<wbr>Registry<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Credentials for the docker registry to push to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -850,7 +818,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cachefrom_csharp" style="color: inherit; text-decoration: inherit;">Cache<wbr>From</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool | <a href="#cachefrom">Cache<wbr>From<wbr>Args</a></span>
+        <span class="property-type">bool | <a href="#cachefrom">Cache<wbr>From</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -970,7 +938,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cachefrom_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>From</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean | <a href="#cachefrom">Cache<wbr>From<wbr>Args</a></span>
+        <span class="property-type">boolean | <a href="#cachefrom">Cache<wbr>From</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1030,7 +998,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cache_from_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>from</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool | <a href="#cachefrom">Cache<wbr>From<wbr>Args</a></span>
+        <span class="property-type">bool | <a href="#cachefrom">Cache<wbr>From</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

@@ -12,7 +12,7 @@ meta_desc: "Documentation for the docker.Secret resource with examples, input pr
 
 ## Import
 
-Docker secret cannot be imported as the secret data, once set, is never exposed again.
+Import is supported using the following syntax#!/bin/bash # Docker secret cannot be imported as the secret data, once set, is never exposed again.
 
 
 
@@ -54,25 +54,19 @@ Docker secret cannot be imported as the secret data, once set, is never exposed 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">SecretArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -84,25 +78,19 @@ Docker secret cannot be imported as the secret data, once set, is never exposed 
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">SecretArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -114,33 +102,25 @@ Docker secret cannot be imported as the secret data, once set, is never exposed 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">SecretArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -152,31 +132,25 @@ Docker secret cannot be imported as the secret data, once set, is never exposed 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">SecretArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
 ## Secret Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Architecture and Concepts docs.
 
 ### Inputs
 
@@ -193,7 +167,7 @@ The Secret resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The base64 encoded data of the secret.
+    <dd>{{% md %}}Base64-url-safe-encoded secret data
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_csharp">
@@ -202,7 +176,7 @@ The Secret resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretlabel">List&lt;Secret<wbr>Label<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}See Labels below for details.
+    <dd>{{% md %}}User-defined key/value metadata
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
@@ -211,7 +185,7 @@ The Secret resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Docker secret.
+    <dd>{{% md %}}User-defined name of the secret
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -224,16 +198,16 @@ The Secret resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The base64 encoded data of the secret.
+    <dd>{{% md %}}Base64-url-safe-encoded secret data
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_go">
 <a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretlabel">[]Secret<wbr>Label</a></span>
+        <span class="property-type"><a href="#secretlabel">[]Secret<wbr>Label<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}See Labels below for details.
+    <dd>{{% md %}}User-defined key/value metadata
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
@@ -242,7 +216,7 @@ The Secret resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Docker secret.
+    <dd>{{% md %}}User-defined name of the secret
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -255,7 +229,7 @@ The Secret resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The base64 encoded data of the secret.
+    <dd>{{% md %}}Base64-url-safe-encoded secret data
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_nodejs">
@@ -264,7 +238,7 @@ The Secret resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretlabel">Secret<wbr>Label<wbr>Args[]</a></span>
     </dt>
-    <dd>{{% md %}}See Labels below for details.
+    <dd>{{% md %}}User-defined key/value metadata
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
@@ -273,7 +247,7 @@ The Secret resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Docker secret.
+    <dd>{{% md %}}User-defined name of the secret
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -286,7 +260,7 @@ The Secret resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The base64 encoded data of the secret.
+    <dd>{{% md %}}Base64-url-safe-encoded secret data
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_python">
@@ -295,7 +269,7 @@ The Secret resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretlabel">Sequence[Secret<wbr>Label<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}See Labels below for details.
+    <dd>{{% md %}}User-defined key/value metadata
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
@@ -304,7 +278,7 @@ The Secret resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the Docker secret.
+    <dd>{{% md %}}User-defined name of the secret
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -500,7 +474,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The base64 encoded data of the secret.
+    <dd>{{% md %}}Base64-url-safe-encoded secret data
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_csharp">
@@ -509,7 +483,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretlabel">List&lt;Secret<wbr>Label<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}See Labels below for details.
+    <dd>{{% md %}}User-defined key/value metadata
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
@@ -518,7 +492,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Docker secret.
+    <dd>{{% md %}}User-defined name of the secret
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -531,16 +505,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The base64 encoded data of the secret.
+    <dd>{{% md %}}Base64-url-safe-encoded secret data
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_go">
 <a href="#state_labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretlabel">[]Secret<wbr>Label</a></span>
+        <span class="property-type"><a href="#secretlabel">[]Secret<wbr>Label<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}See Labels below for details.
+    <dd>{{% md %}}User-defined key/value metadata
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
@@ -549,7 +523,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Docker secret.
+    <dd>{{% md %}}User-defined name of the secret
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -562,7 +536,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The base64 encoded data of the secret.
+    <dd>{{% md %}}Base64-url-safe-encoded secret data
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_nodejs">
@@ -571,7 +545,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretlabel">Secret<wbr>Label<wbr>Args[]</a></span>
     </dt>
-    <dd>{{% md %}}See Labels below for details.
+    <dd>{{% md %}}User-defined key/value metadata
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
@@ -580,7 +554,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Docker secret.
+    <dd>{{% md %}}User-defined name of the secret
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -593,7 +567,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The base64 encoded data of the secret.
+    <dd>{{% md %}}Base64-url-safe-encoded secret data
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_python">
@@ -602,7 +576,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretlabel">Sequence[Secret<wbr>Label<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}See Labels below for details.
+    <dd>{{% md %}}User-defined key/value metadata
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
@@ -611,7 +585,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the Docker secret.
+    <dd>{{% md %}}User-defined name of the secret
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -635,8 +609,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the label
-{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -644,8 +617,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Value of the label
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -657,8 +629,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the label
-{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -666,8 +637,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Value of the label
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -679,8 +649,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the label
-{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -688,8 +657,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Value of the label
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -701,8 +669,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the label
-{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -710,8 +677,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Value of the label
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
