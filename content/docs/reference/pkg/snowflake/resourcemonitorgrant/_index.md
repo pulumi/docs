@@ -17,6 +17,62 @@ meta_desc: "Documentation for the snowflake.ResourceMonitorGrant resource with e
 ```
 
 
+{{% examples %}}
+
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+
+
+
+
+{{< example csharp >}}
+
+Coming soon!
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+Coming soon!
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+Coming soon!
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as snowflake from "@pulumi/snowflake";
+
+const grant = new snowflake.MonitorGrant("grant", {
+    monitorName: "monitor",
+    privilege: "MODIFY",
+    roles: ["role1"],
+    withGrantOption: false,
+});
+```
+
+
+{{< /example >}}
+
+
+
+
+
+{{% /examples %}}
+
+
 
 
 ## Create a ResourceMonitorGrant Resource {#create}
