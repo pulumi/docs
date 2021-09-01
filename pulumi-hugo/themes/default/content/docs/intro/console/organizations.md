@@ -29,6 +29,10 @@ Organizations are a space for you to collaborate on shared projects and stacks.
 
 ## Creating an Organization
 
+Creating an organization will start a free trial that has access to all features.
+At the end of the trial, you can choose to move to Team or Enterprise.
+Learn more about the edition features on the [Pricing Page]({{< relref "/pricing" >}}).
+
 To create an organization:
 
 1. Select the organization menu at the top of the page.
