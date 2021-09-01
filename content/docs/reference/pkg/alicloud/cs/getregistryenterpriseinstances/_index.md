@@ -137,7 +137,8 @@ export const output = myInstances.instances;
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_registry_enterprise_instances(</span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_registry_enterprise_instances(</span><span class="nx">enable_details</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                                      <span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
                                       <span class="nx">name_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                                       <span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                                       <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetRegistryEnterpriseInstancesResult</code></pre></div>
@@ -165,6 +166,15 @@ The following arguments are supported:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="enabledetails_csharp">
+<a href="#enabledetails_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Default to `true`. Set it to true can output instance authorization token.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ids_csharp">
 <a href="#ids_csharp" style="color: inherit; text-decoration: inherit;">Ids</a>
@@ -196,6 +206,15 @@ The following arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="enabledetails_go">
+<a href="#enabledetails_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Default to `true`. Set it to true can output instance authorization token.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="ids_go">
 <a href="#ids_go" style="color: inherit; text-decoration: inherit;">Ids</a>
 </span>
@@ -226,6 +245,15 @@ The following arguments are supported:
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="enabledetails_nodejs">
+<a href="#enabledetails_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Default to `true`. Set it to true can output instance authorization token.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="ids_nodejs">
 <a href="#ids_nodejs" style="color: inherit; text-decoration: inherit;">ids</a>
 </span>
@@ -255,6 +283,15 @@ The following arguments are supported:
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="enable_details_python">
+<a href="#enable_details_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Default to `true`. Set it to true can output instance authorization token.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ids_python">
 <a href="#ids_python" style="color: inherit; text-decoration: inherit;">ids</a>
@@ -331,6 +368,14 @@ The following output properties are available:
     <dd>{{% md %}}A list of instance names.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="enabledetails_csharp">
+<a href="#enabledetails_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="nameregex_csharp">
 <a href="#nameregex_csharp" style="color: inherit; text-decoration: inherit;">Name<wbr>Regex</a>
 </span>
@@ -386,6 +431,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}A list of instance names.
 {{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="enabledetails_go">
+<a href="#enabledetails_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nameregex_go">
 <a href="#nameregex_go" style="color: inherit; text-decoration: inherit;">Name<wbr>Regex</a>
@@ -443,6 +496,14 @@ The following output properties are available:
     <dd>{{% md %}}A list of instance names.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="enabledetails_nodejs">
+<a href="#enabledetails_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="nameregex_nodejs">
 <a href="#nameregex_nodejs" style="color: inherit; text-decoration: inherit;">name<wbr>Regex</a>
 </span>
@@ -499,6 +560,14 @@ The following output properties are available:
     <dd>{{% md %}}A list of instance names.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="enable_details_python">
+<a href="#enable_details_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="name_regex_python">
 <a href="#name_regex_python" style="color: inherit; text-decoration: inherit;">name_<wbr>regex</a>
 </span>
@@ -528,6 +597,15 @@ The following output properties are available:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="authorizationtoken_csharp">
+<a href="#authorizationtoken_csharp" style="color: inherit; text-decoration: inherit;">Authorization<wbr>Token</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The password that was used to log on to the registry.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -610,6 +688,15 @@ The following output properties are available:
     <dd>{{% md %}}Specification of Container Registry Enterprise Edition instance.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="tempusername_csharp">
+<a href="#tempusername_csharp" style="color: inherit; text-decoration: inherit;">Temp<wbr>Username</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The username that was used to log on to the registry.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="vpcendpoints_csharp">
 <a href="#vpcendpoints_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Endpoints</a>
 </span>
@@ -622,6 +709,15 @@ The following output properties are available:
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="authorizationtoken_go">
+<a href="#authorizationtoken_go" style="color: inherit; text-decoration: inherit;">Authorization<wbr>Token</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The password that was used to log on to the registry.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -704,6 +800,15 @@ The following output properties are available:
     <dd>{{% md %}}Specification of Container Registry Enterprise Edition instance.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="tempusername_go">
+<a href="#tempusername_go" style="color: inherit; text-decoration: inherit;">Temp<wbr>Username</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The username that was used to log on to the registry.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="vpcendpoints_go">
 <a href="#vpcendpoints_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Endpoints</a>
 </span>
@@ -716,6 +821,15 @@ The following output properties are available:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="authorizationtoken_nodejs">
+<a href="#authorizationtoken_nodejs" style="color: inherit; text-decoration: inherit;">authorization<wbr>Token</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The password that was used to log on to the registry.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -798,6 +912,15 @@ The following output properties are available:
     <dd>{{% md %}}Specification of Container Registry Enterprise Edition instance.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="tempusername_nodejs">
+<a href="#tempusername_nodejs" style="color: inherit; text-decoration: inherit;">temp<wbr>Username</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The username that was used to log on to the registry.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="vpcendpoints_nodejs">
 <a href="#vpcendpoints_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Endpoints</a>
 </span>
@@ -810,6 +933,15 @@ The following output properties are available:
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="authorization_token_python">
+<a href="#authorization_token_python" style="color: inherit; text-decoration: inherit;">authorization_<wbr>token</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The password that was used to log on to the registry.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -890,6 +1022,15 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specification of Container Registry Enterprise Edition instance.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="temp_username_python">
+<a href="#temp_username_python" style="color: inherit; text-decoration: inherit;">temp_<wbr>username</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The username that was used to log on to the registry.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vpc_endpoints_python">

@@ -30,7 +30,7 @@ backend_port | http & https & tcp & udp | 1-65535 |
 frontend_port | http & https & tcp & udp | 1-65535 |
 protocol | http & https & tcp & udp |
 bandwidth | http & https & tcp & udp | -1 / 1-1000 |
-scheduler | http & https & tcp & udp | wrr rr or wlc |
+scheduler | http & https & tcp & udp | wrr, rr, wlc, tch, qch |
 sticky_session | http & https | on or off |
 sticky_session_type | http & https | insert or server |
 cookie_timeout | http & https | 1-86400  |
@@ -666,7 +666,8 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Scheduling algorithm,  Valid values: `wrr`, `rr`, `wlc`, `sch`. Default to `wrr`. Only when `protocol` is `tcp` or `udp`, `scheduler` can be set to `sch`.
+    <dd>{{% md %}}Scheduling algorithm,  Valid values: `wrr`, `rr`, `wlc`, `sch`, `tcp`, `qch`. Default to `wrr`. 
+Only when `protocol` is `tcp` or `udp`, `scheduler` can be set to `sch`. Only when instance is guaranteed-performance instance and `protocol` is `tcp` or `udp`, `scheduler` can be set to `tch`. Only when instance is guaranteed-performance instance and `protocol` is `udp`, `scheduler` can be set to `qch`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servercertificateid_csharp">
@@ -1062,7 +1063,8 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Scheduling algorithm,  Valid values: `wrr`, `rr`, `wlc`, `sch`. Default to `wrr`. Only when `protocol` is `tcp` or `udp`, `scheduler` can be set to `sch`.
+    <dd>{{% md %}}Scheduling algorithm,  Valid values: `wrr`, `rr`, `wlc`, `sch`, `tcp`, `qch`. Default to `wrr`. 
+Only when `protocol` is `tcp` or `udp`, `scheduler` can be set to `sch`. Only when instance is guaranteed-performance instance and `protocol` is `tcp` or `udp`, `scheduler` can be set to `tch`. Only when instance is guaranteed-performance instance and `protocol` is `udp`, `scheduler` can be set to `qch`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servercertificateid_go">
@@ -1458,7 +1460,8 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Scheduling algorithm,  Valid values: `wrr`, `rr`, `wlc`, `sch`. Default to `wrr`. Only when `protocol` is `tcp` or `udp`, `scheduler` can be set to `sch`.
+    <dd>{{% md %}}Scheduling algorithm,  Valid values: `wrr`, `rr`, `wlc`, `sch`, `tcp`, `qch`. Default to `wrr`. 
+Only when `protocol` is `tcp` or `udp`, `scheduler` can be set to `sch`. Only when instance is guaranteed-performance instance and `protocol` is `tcp` or `udp`, `scheduler` can be set to `tch`. Only when instance is guaranteed-performance instance and `protocol` is `udp`, `scheduler` can be set to `qch`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servercertificateid_nodejs">
@@ -1854,7 +1857,8 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Scheduling algorithm,  Valid values: `wrr`, `rr`, `wlc`, `sch`. Default to `wrr`. Only when `protocol` is `tcp` or `udp`, `scheduler` can be set to `sch`.
+    <dd>{{% md %}}Scheduling algorithm,  Valid values: `wrr`, `rr`, `wlc`, `sch`, `tcp`, `qch`. Default to `wrr`. 
+Only when `protocol` is `tcp` or `udp`, `scheduler` can be set to `sch`. Only when instance is guaranteed-performance instance and `protocol` is `tcp` or `udp`, `scheduler` can be set to `tch`. Only when instance is guaranteed-performance instance and `protocol` is `udp`, `scheduler` can be set to `qch`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="server_certificate_id_python">
@@ -2474,7 +2478,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Scheduling algorithm,  Valid values: `wrr`, `rr`, `wlc`, `sch`. Default to `wrr`. Only when `protocol` is `tcp` or `udp`, `scheduler` can be set to `sch`.
+    <dd>{{% md %}}Scheduling algorithm,  Valid values: `wrr`, `rr`, `wlc`, `sch`, `tcp`, `qch`. Default to `wrr`. 
+Only when `protocol` is `tcp` or `udp`, `scheduler` can be set to `sch`. Only when instance is guaranteed-performance instance and `protocol` is `tcp` or `udp`, `scheduler` can be set to `tch`. Only when instance is guaranteed-performance instance and `protocol` is `udp`, `scheduler` can be set to `qch`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servercertificateid_csharp">
@@ -2870,7 +2875,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Scheduling algorithm,  Valid values: `wrr`, `rr`, `wlc`, `sch`. Default to `wrr`. Only when `protocol` is `tcp` or `udp`, `scheduler` can be set to `sch`.
+    <dd>{{% md %}}Scheduling algorithm,  Valid values: `wrr`, `rr`, `wlc`, `sch`, `tcp`, `qch`. Default to `wrr`. 
+Only when `protocol` is `tcp` or `udp`, `scheduler` can be set to `sch`. Only when instance is guaranteed-performance instance and `protocol` is `tcp` or `udp`, `scheduler` can be set to `tch`. Only when instance is guaranteed-performance instance and `protocol` is `udp`, `scheduler` can be set to `qch`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servercertificateid_go">
@@ -3266,7 +3272,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Scheduling algorithm,  Valid values: `wrr`, `rr`, `wlc`, `sch`. Default to `wrr`. Only when `protocol` is `tcp` or `udp`, `scheduler` can be set to `sch`.
+    <dd>{{% md %}}Scheduling algorithm,  Valid values: `wrr`, `rr`, `wlc`, `sch`, `tcp`, `qch`. Default to `wrr`. 
+Only when `protocol` is `tcp` or `udp`, `scheduler` can be set to `sch`. Only when instance is guaranteed-performance instance and `protocol` is `tcp` or `udp`, `scheduler` can be set to `tch`. Only when instance is guaranteed-performance instance and `protocol` is `udp`, `scheduler` can be set to `qch`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servercertificateid_nodejs">
@@ -3662,7 +3669,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Scheduling algorithm,  Valid values: `wrr`, `rr`, `wlc`, `sch`. Default to `wrr`. Only when `protocol` is `tcp` or `udp`, `scheduler` can be set to `sch`.
+    <dd>{{% md %}}Scheduling algorithm,  Valid values: `wrr`, `rr`, `wlc`, `sch`, `tcp`, `qch`. Default to `wrr`. 
+Only when `protocol` is `tcp` or `udp`, `scheduler` can be set to `sch`. Only when instance is guaranteed-performance instance and `protocol` is `tcp` or `udp`, `scheduler` can be set to `tch`. Only when instance is guaranteed-performance instance and `protocol` is `udp`, `scheduler` can be set to `qch`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_server_certificate_id_python">

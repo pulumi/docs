@@ -440,7 +440,7 @@ The NodePool resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodepoolscalingconfig">Pulumi.<wbr>Ali<wbr>Cloud.<wbr>CS.<wbr>Inputs.<wbr>Node<wbr>Pool<wbr>Scaling<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Auto scaling node pool configuration. For more details, see `scaling_config`.
+    <dd>{{% md %}}Auto scaling node pool configuration. For more details, see `scaling_config`. With auto-scaling is enabled, the nodes in the node pool will be labeled with `k8s.aliyun.com=true` to prevent system pods such as coredns, metrics-servers from being scheduled to elastic nodes, and to prevent node shrinkage from causing business abnormalities.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scalingpolicy_csharp">
@@ -785,7 +785,7 @@ The NodePool resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodepoolscalingconfig">Node<wbr>Pool<wbr>Scaling<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Auto scaling node pool configuration. For more details, see `scaling_config`.
+    <dd>{{% md %}}Auto scaling node pool configuration. For more details, see `scaling_config`. With auto-scaling is enabled, the nodes in the node pool will be labeled with `k8s.aliyun.com=true` to prevent system pods such as coredns, metrics-servers from being scheduled to elastic nodes, and to prevent node shrinkage from causing business abnormalities.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scalingpolicy_go">
@@ -1130,7 +1130,7 @@ The NodePool resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodepoolscalingconfig">Node<wbr>Pool<wbr>Scaling<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Auto scaling node pool configuration. For more details, see `scaling_config`.
+    <dd>{{% md %}}Auto scaling node pool configuration. For more details, see `scaling_config`. With auto-scaling is enabled, the nodes in the node pool will be labeled with `k8s.aliyun.com=true` to prevent system pods such as coredns, metrics-servers from being scheduled to elastic nodes, and to prevent node shrinkage from causing business abnormalities.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scalingpolicy_nodejs">
@@ -1475,7 +1475,7 @@ The NodePool resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodepoolscalingconfig">Node<wbr>Pool<wbr>Scaling<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Auto scaling node pool configuration. For more details, see `scaling_config`.
+    <dd>{{% md %}}Auto scaling node pool configuration. For more details, see `scaling_config`. With auto-scaling is enabled, the nodes in the node pool will be labeled with `k8s.aliyun.com=true` to prevent system pods such as coredns, metrics-servers from being scheduled to elastic nodes, and to prevent node shrinkage from causing business abnormalities.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scaling_policy_python">
@@ -2099,7 +2099,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodepoolscalingconfig">Pulumi.<wbr>Ali<wbr>Cloud.<wbr>CS.<wbr>Inputs.<wbr>Node<wbr>Pool<wbr>Scaling<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Auto scaling node pool configuration. For more details, see `scaling_config`.
+    <dd>{{% md %}}Auto scaling node pool configuration. For more details, see `scaling_config`. With auto-scaling is enabled, the nodes in the node pool will be labeled with `k8s.aliyun.com=true` to prevent system pods such as coredns, metrics-servers from being scheduled to elastic nodes, and to prevent node shrinkage from causing business abnormalities.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_scalinggroupid_csharp">
@@ -2461,7 +2461,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodepoolscalingconfig">Node<wbr>Pool<wbr>Scaling<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Auto scaling node pool configuration. For more details, see `scaling_config`.
+    <dd>{{% md %}}Auto scaling node pool configuration. For more details, see `scaling_config`. With auto-scaling is enabled, the nodes in the node pool will be labeled with `k8s.aliyun.com=true` to prevent system pods such as coredns, metrics-servers from being scheduled to elastic nodes, and to prevent node shrinkage from causing business abnormalities.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_scalinggroupid_go">
@@ -2823,7 +2823,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodepoolscalingconfig">Node<wbr>Pool<wbr>Scaling<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Auto scaling node pool configuration. For more details, see `scaling_config`.
+    <dd>{{% md %}}Auto scaling node pool configuration. For more details, see `scaling_config`. With auto-scaling is enabled, the nodes in the node pool will be labeled with `k8s.aliyun.com=true` to prevent system pods such as coredns, metrics-servers from being scheduled to elastic nodes, and to prevent node shrinkage from causing business abnormalities.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_scalinggroupid_nodejs">
@@ -3185,7 +3185,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodepoolscalingconfig">Node<wbr>Pool<wbr>Scaling<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Auto scaling node pool configuration. For more details, see `scaling_config`.
+    <dd>{{% md %}}Auto scaling node pool configuration. For more details, see `scaling_config`. With auto-scaling is enabled, the nodes in the node pool will be labeled with `k8s.aliyun.com=true` to prevent system pods such as coredns, metrics-servers from being scheduled to elastic nodes, and to prevent node shrinkage from causing business abnormalities.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_scaling_group_id_python">

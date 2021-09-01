@@ -613,7 +613,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An KMS encrypts password used to a instance. If the `password` is filled in, this field will be ignored.
+    <dd>{{% md %}}An KMS encrypts password used to an instance. If the `password` is filled in, this field will be ignored.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kmsencryptioncontext_csharp">
@@ -1105,7 +1105,7 @@ Note: This functionality is supported by Cluster mode (Redis 2.8, 4.0, 5.0) and 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An KMS encrypts password used to a instance. If the `password` is filled in, this field will be ignored.
+    <dd>{{% md %}}An KMS encrypts password used to an instance. If the `password` is filled in, this field will be ignored.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kmsencryptioncontext_go">
@@ -1597,7 +1597,7 @@ Note: This functionality is supported by Cluster mode (Redis 2.8, 4.0, 5.0) and 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An KMS encrypts password used to a instance. If the `password` is filled in, this field will be ignored.
+    <dd>{{% md %}}An KMS encrypts password used to an instance. If the `password` is filled in, this field will be ignored.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kmsencryptioncontext_nodejs">
@@ -2089,7 +2089,7 @@ Note: This functionality is supported by Cluster mode (Redis 2.8, 4.0, 5.0) and 
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}An KMS encrypts password used to a instance. If the `password` is filled in, this field will be ignored.
+    <dd>{{% md %}}An KMS encrypts password used to an instance. If the `password` is filled in, this field will be ignored.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kms_encryption_context_python">
@@ -3067,7 +3067,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An KMS encrypts password used to a instance. If the `password` is filled in, this field will be ignored.
+    <dd>{{% md %}}An KMS encrypts password used to an instance. If the `password` is filled in, this field will be ignored.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kmsencryptioncontext_csharp">
@@ -3612,7 +3612,7 @@ Note: This functionality is supported by Cluster mode (Redis 2.8, 4.0, 5.0) and 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An KMS encrypts password used to a instance. If the `password` is filled in, this field will be ignored.
+    <dd>{{% md %}}An KMS encrypts password used to an instance. If the `password` is filled in, this field will be ignored.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kmsencryptioncontext_go">
@@ -4157,7 +4157,7 @@ Note: This functionality is supported by Cluster mode (Redis 2.8, 4.0, 5.0) and 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An KMS encrypts password used to a instance. If the `password` is filled in, this field will be ignored.
+    <dd>{{% md %}}An KMS encrypts password used to an instance. If the `password` is filled in, this field will be ignored.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kmsencryptioncontext_nodejs">
@@ -4702,7 +4702,7 @@ Note: This functionality is supported by Cluster mode (Redis 2.8, 4.0, 5.0) and 
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}An KMS encrypts password used to a instance. If the `password` is filled in, this field will be ignored.
+    <dd>{{% md %}}An KMS encrypts password used to an instance. If the `password` is filled in, this field will be ignored.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kms_encryption_context_python">

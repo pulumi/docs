@@ -26,7 +26,9 @@ The following arguments are supported:
 * `auto_add_new_nodes` - (Optional) Whether the new node automatically joins the default cluster address. Valid values are `Enable`, `Disable`. When creating a new custom endpoint, default to `Disable`.
 * `endpoint_config` - (Optional) The advanced settings of the endpoint of Apsara PolarDB clusters are in JSON format. Including the settings of consistency level, transaction splitting, connection pool, and offload reads from primary node. For more details, see the [description of EndpointConfig in the Request parameters table for details](https://www.alibabacloud.com/help/doc-detail/116593.htm).
 * `ssl_enabled` - (Optional, Available in v1.121.0+) Specifies how to modify the SSL encryption status. Valid values: `Disable`, `Enable`, `Update`.
-* `net_type` - (Optional, Available in v1.121.0+) The network type of the endpoint address.\
+* `net_type` - (Optional, Available in v1.121.0+) The network type of the endpoint address.
+* `ssl_auto_rotate` - (Available in v1.132.0+) Specifies whether automatic rotation of SSL certificates is enabled. Valid values: `Enable`,`Disable`.
+* `ssl_certificate_url` - (Available in v1.132.0+) Specifies SSL certificate download link.\
     **NOTE:** For a PolarDB for MySQL cluster, this parameter is required, and only one connection string in each endpoint can enable the ssl, for other notes, see [Configure SSL encryption](https://www.alibabacloud.com/help/doc-detail/153182.htm).\
     For a PolarDB for PostgreSQL cluster or a PolarDB-O cluster, this parameter is not required, by default, SSL encryption is enabled for all endpoints.
 
@@ -261,6 +263,7 @@ const endpoint = new alicloud.polardb.Endpoint("endpoint", {
              <span class="nx">net_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">nodes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
              <span class="nx">read_write_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">ssl_auto_rotate</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">ssl_enabled</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Endpoint</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
@@ -448,6 +451,14 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="sslautorotate_csharp">
+<a href="#sslautorotate_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Auto<wbr>Rotate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="sslenabled_csharp">
 <a href="#sslenabled_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Enabled</a>
 </span>
@@ -511,6 +522,14 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
             title="Optional">
         <span id="readwritemode_go">
 <a href="#readwritemode_go" style="color: inherit; text-decoration: inherit;">Read<wbr>Write<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sslautorotate_go">
+<a href="#sslautorotate_go" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Auto<wbr>Rotate</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -586,6 +605,14 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="sslautorotate_nodejs">
+<a href="#sslautorotate_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Auto<wbr>Rotate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="sslenabled_nodejs">
 <a href="#sslenabled_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Enabled</a>
 </span>
@@ -655,6 +682,14 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="ssl_auto_rotate_python">
+<a href="#ssl_auto_rotate_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>auto_<wbr>rotate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="ssl_enabled_python">
 <a href="#ssl_enabled_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>enabled</a>
 </span>
@@ -681,6 +716,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="sslcertificateurl_csharp">
+<a href="#sslcertificateurl_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Certificate<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sslconnectionstring_csharp">
 <a href="#sslconnectionstring_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Connection<wbr>String</a>
@@ -712,6 +755,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="sslcertificateurl_go">
+<a href="#sslcertificateurl_go" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Certificate<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="sslconnectionstring_go">
 <a href="#sslconnectionstring_go" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Connection<wbr>String</a>
 </span>
@@ -742,6 +793,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="sslcertificateurl_nodejs">
+<a href="#sslcertificateurl_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Certificate<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="sslconnectionstring_nodejs">
 <a href="#sslconnectionstring_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Connection<wbr>String</a>
 </span>
@@ -771,6 +830,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="ssl_certificate_url_python">
+<a href="#ssl_certificate_url_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>certificate_<wbr>url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ssl_connection_string_python">
 <a href="#ssl_connection_string_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>connection_<wbr>string</a>
@@ -814,6 +881,8 @@ Get an existing Endpoint resource's state with the given name, ID, and optional 
         <span class="nx">net_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">nodes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
         <span class="nx">read_write_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">ssl_auto_rotate</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">ssl_certificate_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">ssl_connection_string</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">ssl_enabled</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">ssl_expire_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Endpoint</code></pre></div>
@@ -986,6 +1055,22 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_sslautorotate_csharp">
+<a href="#state_sslautorotate_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Auto<wbr>Rotate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_sslcertificateurl_csharp">
+<a href="#state_sslcertificateurl_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Certificate<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_sslconnectionstring_csharp">
 <a href="#state_sslconnectionstring_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Connection<wbr>String</a>
 </span>
@@ -1067,6 +1152,22 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_readwritemode_go">
 <a href="#state_readwritemode_go" style="color: inherit; text-decoration: inherit;">Read<wbr>Write<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_sslautorotate_go">
+<a href="#state_sslautorotate_go" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Auto<wbr>Rotate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_sslcertificateurl_go">
+<a href="#state_sslcertificateurl_go" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Certificate<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -1160,6 +1261,22 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_sslautorotate_nodejs">
+<a href="#state_sslautorotate_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Auto<wbr>Rotate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_sslcertificateurl_nodejs">
+<a href="#state_sslcertificateurl_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Certificate<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_sslconnectionstring_nodejs">
 <a href="#state_sslconnectionstring_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Connection<wbr>String</a>
 </span>
@@ -1241,6 +1358,22 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_read_write_mode_python">
 <a href="#state_read_write_mode_python" style="color: inherit; text-decoration: inherit;">read_<wbr>write_<wbr>mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_ssl_auto_rotate_python">
+<a href="#state_ssl_auto_rotate_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>auto_<wbr>rotate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_ssl_certificate_url_python">
+<a href="#state_ssl_certificate_url_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>certificate_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>

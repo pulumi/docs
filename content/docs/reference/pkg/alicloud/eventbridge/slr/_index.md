@@ -39,7 +39,7 @@ class MyStack : Stack
     {
         var slr = new AliCloud.EventBridge.Slr("slr", new AliCloud.EventBridge.SlrArgs
         {
-            ProductName = "AliyunServiceRoleForEventBridgeSourceRocketMQ",
+            ProductName = "AliyunServiceRoleForEventBridgeSendToMNS",
         });
     }
 
@@ -63,7 +63,7 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := eventbridge.NewSlr(ctx, "slr", &eventbridge.SlrArgs{
-			ProductName: pulumi.String("AliyunServiceRoleForEventBridgeSourceRocketMQ"),
+			ProductName: pulumi.String("AliyunServiceRoleForEventBridgeSendToMNS"),
 		})
 		if err != nil {
 			return err
@@ -83,7 +83,7 @@ func main() {
 import pulumi
 import pulumi_alicloud as alicloud
 
-slr = alicloud.eventbridge.Slr("slr", product_name="AliyunServiceRoleForEventBridgeSourceRocketMQ")
+slr = alicloud.eventbridge.Slr("slr", product_name="AliyunServiceRoleForEventBridgeSendToMNS")
 ```
 
 
@@ -98,7 +98,7 @@ import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
 const slr = new alicloud.eventbridge.Slr("slr", {
-    productName: "AliyunServiceRoleForEventBridgeSourceRocketMQ",
+    productName: "AliyunServiceRoleForEventBridgeSendToMNS",
 });
 ```
 
@@ -263,7 +263,7 @@ The Slr resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The product name for SLR. EventBridge can automatically create the following service-linked roles:
-Event source related: `AliyunServiceRoleForEventBridgeSourceRocketMQ`, `AliyunServiceRoleForEventBridgeSourceActionTrail`, `AliyunServiceRoleForEventBridgeSourceRabbitMQ`
+Event source related: `AliyunServiceRoleForEventBridgeSendToMNS`,`AliyunServiceRoleForEventBridgeSourceRocketMQ`, `AliyunServiceRoleForEventBridgeSourceActionTrail`, `AliyunServiceRoleForEventBridgeSourceRabbitMQ`
 Target related: `AliyunServiceRoleForEventBridgeConnectVPC`, `AliyunServiceRoleForEventBridgeSendToFC`, `AliyunServiceRoleForEventBridgeSendToSMS`, `AliyunServiceRoleForEventBridgeSendToDirectMail`, `AliyunServiceRoleForEventBridgeSendToRabbitMQ`, `AliyunServiceRoleForEventBridgeSendToRocketMQ`
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -278,7 +278,7 @@ Target related: `AliyunServiceRoleForEventBridgeConnectVPC`, `AliyunServiceRoleF
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The product name for SLR. EventBridge can automatically create the following service-linked roles:
-Event source related: `AliyunServiceRoleForEventBridgeSourceRocketMQ`, `AliyunServiceRoleForEventBridgeSourceActionTrail`, `AliyunServiceRoleForEventBridgeSourceRabbitMQ`
+Event source related: `AliyunServiceRoleForEventBridgeSendToMNS`,`AliyunServiceRoleForEventBridgeSourceRocketMQ`, `AliyunServiceRoleForEventBridgeSourceActionTrail`, `AliyunServiceRoleForEventBridgeSourceRabbitMQ`
 Target related: `AliyunServiceRoleForEventBridgeConnectVPC`, `AliyunServiceRoleForEventBridgeSendToFC`, `AliyunServiceRoleForEventBridgeSendToSMS`, `AliyunServiceRoleForEventBridgeSendToDirectMail`, `AliyunServiceRoleForEventBridgeSendToRabbitMQ`, `AliyunServiceRoleForEventBridgeSendToRocketMQ`
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -293,7 +293,7 @@ Target related: `AliyunServiceRoleForEventBridgeConnectVPC`, `AliyunServiceRoleF
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The product name for SLR. EventBridge can automatically create the following service-linked roles:
-Event source related: `AliyunServiceRoleForEventBridgeSourceRocketMQ`, `AliyunServiceRoleForEventBridgeSourceActionTrail`, `AliyunServiceRoleForEventBridgeSourceRabbitMQ`
+Event source related: `AliyunServiceRoleForEventBridgeSendToMNS`,`AliyunServiceRoleForEventBridgeSourceRocketMQ`, `AliyunServiceRoleForEventBridgeSourceActionTrail`, `AliyunServiceRoleForEventBridgeSourceRabbitMQ`
 Target related: `AliyunServiceRoleForEventBridgeConnectVPC`, `AliyunServiceRoleForEventBridgeSendToFC`, `AliyunServiceRoleForEventBridgeSendToSMS`, `AliyunServiceRoleForEventBridgeSendToDirectMail`, `AliyunServiceRoleForEventBridgeSendToRabbitMQ`, `AliyunServiceRoleForEventBridgeSendToRocketMQ`
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -308,7 +308,7 @@ Target related: `AliyunServiceRoleForEventBridgeConnectVPC`, `AliyunServiceRoleF
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The product name for SLR. EventBridge can automatically create the following service-linked roles:
-Event source related: `AliyunServiceRoleForEventBridgeSourceRocketMQ`, `AliyunServiceRoleForEventBridgeSourceActionTrail`, `AliyunServiceRoleForEventBridgeSourceRabbitMQ`
+Event source related: `AliyunServiceRoleForEventBridgeSendToMNS`,`AliyunServiceRoleForEventBridgeSourceRocketMQ`, `AliyunServiceRoleForEventBridgeSourceActionTrail`, `AliyunServiceRoleForEventBridgeSourceRabbitMQ`
 Target related: `AliyunServiceRoleForEventBridgeConnectVPC`, `AliyunServiceRoleForEventBridgeSendToFC`, `AliyunServiceRoleForEventBridgeSendToSMS`, `AliyunServiceRoleForEventBridgeSendToDirectMail`, `AliyunServiceRoleForEventBridgeSendToRabbitMQ`, `AliyunServiceRoleForEventBridgeSendToRocketMQ`
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -504,7 +504,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The product name for SLR. EventBridge can automatically create the following service-linked roles:
-Event source related: `AliyunServiceRoleForEventBridgeSourceRocketMQ`, `AliyunServiceRoleForEventBridgeSourceActionTrail`, `AliyunServiceRoleForEventBridgeSourceRabbitMQ`
+Event source related: `AliyunServiceRoleForEventBridgeSendToMNS`,`AliyunServiceRoleForEventBridgeSourceRocketMQ`, `AliyunServiceRoleForEventBridgeSourceActionTrail`, `AliyunServiceRoleForEventBridgeSourceRabbitMQ`
 Target related: `AliyunServiceRoleForEventBridgeConnectVPC`, `AliyunServiceRoleForEventBridgeSendToFC`, `AliyunServiceRoleForEventBridgeSendToSMS`, `AliyunServiceRoleForEventBridgeSendToDirectMail`, `AliyunServiceRoleForEventBridgeSendToRabbitMQ`, `AliyunServiceRoleForEventBridgeSendToRocketMQ`
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -519,7 +519,7 @@ Target related: `AliyunServiceRoleForEventBridgeConnectVPC`, `AliyunServiceRoleF
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The product name for SLR. EventBridge can automatically create the following service-linked roles:
-Event source related: `AliyunServiceRoleForEventBridgeSourceRocketMQ`, `AliyunServiceRoleForEventBridgeSourceActionTrail`, `AliyunServiceRoleForEventBridgeSourceRabbitMQ`
+Event source related: `AliyunServiceRoleForEventBridgeSendToMNS`,`AliyunServiceRoleForEventBridgeSourceRocketMQ`, `AliyunServiceRoleForEventBridgeSourceActionTrail`, `AliyunServiceRoleForEventBridgeSourceRabbitMQ`
 Target related: `AliyunServiceRoleForEventBridgeConnectVPC`, `AliyunServiceRoleForEventBridgeSendToFC`, `AliyunServiceRoleForEventBridgeSendToSMS`, `AliyunServiceRoleForEventBridgeSendToDirectMail`, `AliyunServiceRoleForEventBridgeSendToRabbitMQ`, `AliyunServiceRoleForEventBridgeSendToRocketMQ`
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -534,7 +534,7 @@ Target related: `AliyunServiceRoleForEventBridgeConnectVPC`, `AliyunServiceRoleF
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The product name for SLR. EventBridge can automatically create the following service-linked roles:
-Event source related: `AliyunServiceRoleForEventBridgeSourceRocketMQ`, `AliyunServiceRoleForEventBridgeSourceActionTrail`, `AliyunServiceRoleForEventBridgeSourceRabbitMQ`
+Event source related: `AliyunServiceRoleForEventBridgeSendToMNS`,`AliyunServiceRoleForEventBridgeSourceRocketMQ`, `AliyunServiceRoleForEventBridgeSourceActionTrail`, `AliyunServiceRoleForEventBridgeSourceRabbitMQ`
 Target related: `AliyunServiceRoleForEventBridgeConnectVPC`, `AliyunServiceRoleForEventBridgeSendToFC`, `AliyunServiceRoleForEventBridgeSendToSMS`, `AliyunServiceRoleForEventBridgeSendToDirectMail`, `AliyunServiceRoleForEventBridgeSendToRabbitMQ`, `AliyunServiceRoleForEventBridgeSendToRocketMQ`
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -549,7 +549,7 @@ Target related: `AliyunServiceRoleForEventBridgeConnectVPC`, `AliyunServiceRoleF
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The product name for SLR. EventBridge can automatically create the following service-linked roles:
-Event source related: `AliyunServiceRoleForEventBridgeSourceRocketMQ`, `AliyunServiceRoleForEventBridgeSourceActionTrail`, `AliyunServiceRoleForEventBridgeSourceRabbitMQ`
+Event source related: `AliyunServiceRoleForEventBridgeSendToMNS`,`AliyunServiceRoleForEventBridgeSourceRocketMQ`, `AliyunServiceRoleForEventBridgeSourceActionTrail`, `AliyunServiceRoleForEventBridgeSourceRabbitMQ`
 Target related: `AliyunServiceRoleForEventBridgeConnectVPC`, `AliyunServiceRoleForEventBridgeSendToFC`, `AliyunServiceRoleForEventBridgeSendToSMS`, `AliyunServiceRoleForEventBridgeSendToDirectMail`, `AliyunServiceRoleForEventBridgeSendToRabbitMQ`, `AliyunServiceRoleForEventBridgeSendToRocketMQ`
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
