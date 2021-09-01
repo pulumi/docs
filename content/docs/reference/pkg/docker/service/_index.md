@@ -12,10 +12,36 @@ meta_desc: "Documentation for the docker.Service resource with examples, input p
 
 ## Import
 
-Docker service can be imported using the long id, e.g. for a service with the short id `55ba873dd`
+### Example Assuming you created a `service` as follows #!/bin/bash docker service create --name foo -p 8080:80 nginx # prints th ID 4pcphbxkfn2rffhbhe6czytgi you provide the definition for the resource as follows terraform resource "docker_service" "foo" {
+
+ name = "foo"
+
+ task_spec {
+
+ container_spec {
+
+ image = "nginx"
+
+ }
+
+ }
+
+ endpoint_spec {
+
+ ports {
+
+ target_port
+
+= "80"
+
+ published_port = "8080"
+
+ }
+
+ } } then the import command is as follows #!/bin/bash
 
 ```sh
- $ pulumi import docker:index/service:Service foo $(docker service inspect -f {{.ID}} 55b)
+ $ pulumi import docker:index/service:Service foo 4pcphbxkfn2rffhbhe6czytgi
 ```
 
 
@@ -64,25 +90,19 @@ Docker service can be imported using the long id, e.g. for a service with the sh
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ServiceArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -94,25 +114,19 @@ Docker service can be imported using the long id, e.g. for a service with the sh
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ServiceArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -124,33 +138,25 @@ Docker service can be imported using the long id, e.g. for a service with the sh
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ServiceArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -162,31 +168,25 @@ Docker service can be imported using the long id, e.g. for a service with the sh
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ServiceArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
 ## Service Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Architecture and Concepts docs.
 
 ### Inputs
 
@@ -203,7 +203,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetaskspec">Service<wbr>Task<wbr>Spec<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}See TaskSpec below for details.
+    <dd>{{% md %}}User modifiable task configuration
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="auth_csharp">
@@ -212,7 +212,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceauth">Service<wbr>Auth<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}See Auth below for details.
+    <dd>{{% md %}}Configuration for the authentication for pulling the images of the service
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="convergeconfig_csharp">
@@ -221,7 +221,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceconvergeconfig">Service<wbr>Converge<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}See Converge Config below for details.
+    <dd>{{% md %}}A configuration to ensure that a service converges aka reaches the desired that of all task up and running
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpointspec_csharp">
@@ -230,7 +230,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceendpointspec">Service<wbr>Endpoint<wbr>Spec<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}See EndpointSpec below for details.
+    <dd>{{% md %}}Properties that can be configured to access and load balance a service
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_csharp">
@@ -239,7 +239,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicelabel">List&lt;Service<wbr>Label<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}See Labels below for details.
+    <dd>{{% md %}}User-defined key/value metadata
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mode_csharp">
@@ -248,7 +248,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicemode">Service<wbr>Mode<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}See Mode below for details.
+    <dd>{{% md %}}Scheduling mode for the service
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
@@ -257,7 +257,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Docker service.
+    <dd>{{% md %}}Name of the service
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rollbackconfig_csharp">
@@ -266,7 +266,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicerollbackconfig">Service<wbr>Rollback<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}See RollbackConfig below for details.
+    <dd>{{% md %}}Specification for the rollback strategy of the service
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="updateconfig_csharp">
@@ -275,7 +275,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceupdateconfig">Service<wbr>Update<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}See UpdateConfig below for details.
+    <dd>{{% md %}}Specification for the update strategy of the service
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -286,54 +286,54 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#taskspec_go" style="color: inherit; text-decoration: inherit;">Task<wbr>Spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspec">Service<wbr>Task<wbr>Spec</a></span>
+        <span class="property-type"><a href="#servicetaskspec">Service<wbr>Task<wbr>Spec<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}See TaskSpec below for details.
+    <dd>{{% md %}}User modifiable task configuration
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="auth_go">
 <a href="#auth_go" style="color: inherit; text-decoration: inherit;">Auth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceauth">Service<wbr>Auth</a></span>
+        <span class="property-type"><a href="#serviceauth">Service<wbr>Auth<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}See Auth below for details.
+    <dd>{{% md %}}Configuration for the authentication for pulling the images of the service
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="convergeconfig_go">
 <a href="#convergeconfig_go" style="color: inherit; text-decoration: inherit;">Converge<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceconvergeconfig">Service<wbr>Converge<wbr>Config</a></span>
+        <span class="property-type"><a href="#serviceconvergeconfig">Service<wbr>Converge<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}See Converge Config below for details.
+    <dd>{{% md %}}A configuration to ensure that a service converges aka reaches the desired that of all task up and running
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpointspec_go">
 <a href="#endpointspec_go" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceendpointspec">Service<wbr>Endpoint<wbr>Spec</a></span>
+        <span class="property-type"><a href="#serviceendpointspec">Service<wbr>Endpoint<wbr>Spec<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}See EndpointSpec below for details.
+    <dd>{{% md %}}Properties that can be configured to access and load balance a service
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_go">
 <a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicelabel">[]Service<wbr>Label</a></span>
+        <span class="property-type"><a href="#servicelabel">[]Service<wbr>Label<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}See Labels below for details.
+    <dd>{{% md %}}User-defined key/value metadata
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mode_go">
 <a href="#mode_go" style="color: inherit; text-decoration: inherit;">Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicemode">Service<wbr>Mode</a></span>
+        <span class="property-type"><a href="#servicemode">Service<wbr>Mode<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}See Mode below for details.
+    <dd>{{% md %}}Scheduling mode for the service
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
@@ -342,25 +342,25 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Docker service.
+    <dd>{{% md %}}Name of the service
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rollbackconfig_go">
 <a href="#rollbackconfig_go" style="color: inherit; text-decoration: inherit;">Rollback<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicerollbackconfig">Service<wbr>Rollback<wbr>Config</a></span>
+        <span class="property-type"><a href="#servicerollbackconfig">Service<wbr>Rollback<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}See RollbackConfig below for details.
+    <dd>{{% md %}}Specification for the rollback strategy of the service
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="updateconfig_go">
 <a href="#updateconfig_go" style="color: inherit; text-decoration: inherit;">Update<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceupdateconfig">Service<wbr>Update<wbr>Config</a></span>
+        <span class="property-type"><a href="#serviceupdateconfig">Service<wbr>Update<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}See UpdateConfig below for details.
+    <dd>{{% md %}}Specification for the update strategy of the service
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -373,7 +373,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetaskspec">Service<wbr>Task<wbr>Spec<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}See TaskSpec below for details.
+    <dd>{{% md %}}User modifiable task configuration
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="auth_nodejs">
@@ -382,7 +382,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceauth">Service<wbr>Auth<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}See Auth below for details.
+    <dd>{{% md %}}Configuration for the authentication for pulling the images of the service
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="convergeconfig_nodejs">
@@ -391,7 +391,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceconvergeconfig">Service<wbr>Converge<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}See Converge Config below for details.
+    <dd>{{% md %}}A configuration to ensure that a service converges aka reaches the desired that of all task up and running
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpointspec_nodejs">
@@ -400,7 +400,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceendpointspec">Service<wbr>Endpoint<wbr>Spec<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}See EndpointSpec below for details.
+    <dd>{{% md %}}Properties that can be configured to access and load balance a service
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_nodejs">
@@ -409,7 +409,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicelabel">Service<wbr>Label<wbr>Args[]</a></span>
     </dt>
-    <dd>{{% md %}}See Labels below for details.
+    <dd>{{% md %}}User-defined key/value metadata
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mode_nodejs">
@@ -418,7 +418,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicemode">Service<wbr>Mode<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}See Mode below for details.
+    <dd>{{% md %}}Scheduling mode for the service
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
@@ -427,7 +427,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Docker service.
+    <dd>{{% md %}}Name of the service
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rollbackconfig_nodejs">
@@ -436,7 +436,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicerollbackconfig">Service<wbr>Rollback<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}See RollbackConfig below for details.
+    <dd>{{% md %}}Specification for the rollback strategy of the service
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="updateconfig_nodejs">
@@ -445,7 +445,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceupdateconfig">Service<wbr>Update<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}See UpdateConfig below for details.
+    <dd>{{% md %}}Specification for the update strategy of the service
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -458,7 +458,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetaskspec">Service<wbr>Task<wbr>Spec<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}See TaskSpec below for details.
+    <dd>{{% md %}}User modifiable task configuration
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="auth_python">
@@ -467,7 +467,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceauth">Service<wbr>Auth<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}See Auth below for details.
+    <dd>{{% md %}}Configuration for the authentication for pulling the images of the service
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="converge_config_python">
@@ -476,7 +476,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceconvergeconfig">Service<wbr>Converge<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}See Converge Config below for details.
+    <dd>{{% md %}}A configuration to ensure that a service converges aka reaches the desired that of all task up and running
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpoint_spec_python">
@@ -485,7 +485,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceendpointspec">Service<wbr>Endpoint<wbr>Spec<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}See EndpointSpec below for details.
+    <dd>{{% md %}}Properties that can be configured to access and load balance a service
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_python">
@@ -494,7 +494,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicelabel">Sequence[Service<wbr>Label<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}See Labels below for details.
+    <dd>{{% md %}}User-defined key/value metadata
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mode_python">
@@ -503,7 +503,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicemode">Service<wbr>Mode<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}See Mode below for details.
+    <dd>{{% md %}}Scheduling mode for the service
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
@@ -512,7 +512,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the Docker service.
+    <dd>{{% md %}}Name of the service
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rollback_config_python">
@@ -521,7 +521,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicerollbackconfig">Service<wbr>Rollback<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}See RollbackConfig below for details.
+    <dd>{{% md %}}Specification for the rollback strategy of the service
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="update_config_python">
@@ -530,7 +530,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceupdateconfig">Service<wbr>Update<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}See UpdateConfig below for details.
+    <dd>{{% md %}}Specification for the update strategy of the service
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -732,7 +732,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceauth">Service<wbr>Auth<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}See Auth below for details.
+    <dd>{{% md %}}Configuration for the authentication for pulling the images of the service
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_convergeconfig_csharp">
@@ -741,7 +741,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceconvergeconfig">Service<wbr>Converge<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}See Converge Config below for details.
+    <dd>{{% md %}}A configuration to ensure that a service converges aka reaches the desired that of all task up and running
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_endpointspec_csharp">
@@ -750,7 +750,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceendpointspec">Service<wbr>Endpoint<wbr>Spec<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}See EndpointSpec below for details.
+    <dd>{{% md %}}Properties that can be configured to access and load balance a service
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_csharp">
@@ -759,7 +759,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicelabel">List&lt;Service<wbr>Label<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}See Labels below for details.
+    <dd>{{% md %}}User-defined key/value metadata
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mode_csharp">
@@ -768,7 +768,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicemode">Service<wbr>Mode<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}See Mode below for details.
+    <dd>{{% md %}}Scheduling mode for the service
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
@@ -777,7 +777,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Docker service.
+    <dd>{{% md %}}Name of the service
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rollbackconfig_csharp">
@@ -786,7 +786,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicerollbackconfig">Service<wbr>Rollback<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}See RollbackConfig below for details.
+    <dd>{{% md %}}Specification for the rollback strategy of the service
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_taskspec_csharp">
@@ -795,7 +795,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetaskspec">Service<wbr>Task<wbr>Spec<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}See TaskSpec below for details.
+    <dd>{{% md %}}User modifiable task configuration
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_updateconfig_csharp">
@@ -804,7 +804,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceupdateconfig">Service<wbr>Update<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}See UpdateConfig below for details.
+    <dd>{{% md %}}Specification for the update strategy of the service
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -815,45 +815,45 @@ The following state arguments are supported:
 <a href="#state_auth_go" style="color: inherit; text-decoration: inherit;">Auth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceauth">Service<wbr>Auth</a></span>
+        <span class="property-type"><a href="#serviceauth">Service<wbr>Auth<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}See Auth below for details.
+    <dd>{{% md %}}Configuration for the authentication for pulling the images of the service
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_convergeconfig_go">
 <a href="#state_convergeconfig_go" style="color: inherit; text-decoration: inherit;">Converge<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceconvergeconfig">Service<wbr>Converge<wbr>Config</a></span>
+        <span class="property-type"><a href="#serviceconvergeconfig">Service<wbr>Converge<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}See Converge Config below for details.
+    <dd>{{% md %}}A configuration to ensure that a service converges aka reaches the desired that of all task up and running
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_endpointspec_go">
 <a href="#state_endpointspec_go" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceendpointspec">Service<wbr>Endpoint<wbr>Spec</a></span>
+        <span class="property-type"><a href="#serviceendpointspec">Service<wbr>Endpoint<wbr>Spec<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}See EndpointSpec below for details.
+    <dd>{{% md %}}Properties that can be configured to access and load balance a service
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_go">
 <a href="#state_labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicelabel">[]Service<wbr>Label</a></span>
+        <span class="property-type"><a href="#servicelabel">[]Service<wbr>Label<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}See Labels below for details.
+    <dd>{{% md %}}User-defined key/value metadata
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mode_go">
 <a href="#state_mode_go" style="color: inherit; text-decoration: inherit;">Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicemode">Service<wbr>Mode</a></span>
+        <span class="property-type"><a href="#servicemode">Service<wbr>Mode<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}See Mode below for details.
+    <dd>{{% md %}}Scheduling mode for the service
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
@@ -862,34 +862,34 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Docker service.
+    <dd>{{% md %}}Name of the service
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rollbackconfig_go">
 <a href="#state_rollbackconfig_go" style="color: inherit; text-decoration: inherit;">Rollback<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicerollbackconfig">Service<wbr>Rollback<wbr>Config</a></span>
+        <span class="property-type"><a href="#servicerollbackconfig">Service<wbr>Rollback<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}See RollbackConfig below for details.
+    <dd>{{% md %}}Specification for the rollback strategy of the service
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_taskspec_go">
 <a href="#state_taskspec_go" style="color: inherit; text-decoration: inherit;">Task<wbr>Spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspec">Service<wbr>Task<wbr>Spec</a></span>
+        <span class="property-type"><a href="#servicetaskspec">Service<wbr>Task<wbr>Spec<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}See TaskSpec below for details.
+    <dd>{{% md %}}User modifiable task configuration
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_updateconfig_go">
 <a href="#state_updateconfig_go" style="color: inherit; text-decoration: inherit;">Update<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceupdateconfig">Service<wbr>Update<wbr>Config</a></span>
+        <span class="property-type"><a href="#serviceupdateconfig">Service<wbr>Update<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}See UpdateConfig below for details.
+    <dd>{{% md %}}Specification for the update strategy of the service
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -902,7 +902,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceauth">Service<wbr>Auth<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}See Auth below for details.
+    <dd>{{% md %}}Configuration for the authentication for pulling the images of the service
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_convergeconfig_nodejs">
@@ -911,7 +911,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceconvergeconfig">Service<wbr>Converge<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}See Converge Config below for details.
+    <dd>{{% md %}}A configuration to ensure that a service converges aka reaches the desired that of all task up and running
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_endpointspec_nodejs">
@@ -920,7 +920,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceendpointspec">Service<wbr>Endpoint<wbr>Spec<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}See EndpointSpec below for details.
+    <dd>{{% md %}}Properties that can be configured to access and load balance a service
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_nodejs">
@@ -929,7 +929,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicelabel">Service<wbr>Label<wbr>Args[]</a></span>
     </dt>
-    <dd>{{% md %}}See Labels below for details.
+    <dd>{{% md %}}User-defined key/value metadata
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mode_nodejs">
@@ -938,7 +938,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicemode">Service<wbr>Mode<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}See Mode below for details.
+    <dd>{{% md %}}Scheduling mode for the service
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
@@ -947,7 +947,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Docker service.
+    <dd>{{% md %}}Name of the service
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rollbackconfig_nodejs">
@@ -956,7 +956,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicerollbackconfig">Service<wbr>Rollback<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}See RollbackConfig below for details.
+    <dd>{{% md %}}Specification for the rollback strategy of the service
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_taskspec_nodejs">
@@ -965,7 +965,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetaskspec">Service<wbr>Task<wbr>Spec<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}See TaskSpec below for details.
+    <dd>{{% md %}}User modifiable task configuration
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_updateconfig_nodejs">
@@ -974,7 +974,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceupdateconfig">Service<wbr>Update<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}See UpdateConfig below for details.
+    <dd>{{% md %}}Specification for the update strategy of the service
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -987,7 +987,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceauth">Service<wbr>Auth<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}See Auth below for details.
+    <dd>{{% md %}}Configuration for the authentication for pulling the images of the service
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_converge_config_python">
@@ -996,7 +996,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceconvergeconfig">Service<wbr>Converge<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}See Converge Config below for details.
+    <dd>{{% md %}}A configuration to ensure that a service converges aka reaches the desired that of all task up and running
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_endpoint_spec_python">
@@ -1005,7 +1005,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceendpointspec">Service<wbr>Endpoint<wbr>Spec<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}See EndpointSpec below for details.
+    <dd>{{% md %}}Properties that can be configured to access and load balance a service
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_python">
@@ -1014,7 +1014,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicelabel">Sequence[Service<wbr>Label<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}See Labels below for details.
+    <dd>{{% md %}}User-defined key/value metadata
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mode_python">
@@ -1023,7 +1023,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicemode">Service<wbr>Mode<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}See Mode below for details.
+    <dd>{{% md %}}Scheduling mode for the service
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
@@ -1032,7 +1032,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the Docker service.
+    <dd>{{% md %}}Name of the service
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rollback_config_python">
@@ -1041,7 +1041,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicerollbackconfig">Service<wbr>Rollback<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}See RollbackConfig below for details.
+    <dd>{{% md %}}Specification for the rollback strategy of the service
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_task_spec_python">
@@ -1050,7 +1050,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetaskspec">Service<wbr>Task<wbr>Spec<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}See TaskSpec below for details.
+    <dd>{{% md %}}User modifiable task configuration
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_update_config_python">
@@ -1059,7 +1059,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceupdateconfig">Service<wbr>Update<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}See UpdateConfig below for details.
+    <dd>{{% md %}}Specification for the update strategy of the service
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1083,8 +1083,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The address of the registry server
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_csharp">
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -1092,8 +1091,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The password to use for authenticating to the registry. If this is blank, the `DOCKER_REGISTRY_PASS` is also be checked.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="username_csharp">
 <a href="#username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
@@ -1101,8 +1099,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The username to use for authenticating to the registry. If this is blank, the `DOCKER_REGISTRY_USER` is also be checked.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1114,8 +1111,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The address of the registry server
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_go">
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -1123,8 +1119,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The password to use for authenticating to the registry. If this is blank, the `DOCKER_REGISTRY_PASS` is also be checked.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="username_go">
 <a href="#username_go" style="color: inherit; text-decoration: inherit;">Username</a>
@@ -1132,8 +1127,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The username to use for authenticating to the registry. If this is blank, the `DOCKER_REGISTRY_USER` is also be checked.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1145,8 +1139,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The address of the registry server
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_nodejs">
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
@@ -1154,8 +1147,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The password to use for authenticating to the registry. If this is blank, the `DOCKER_REGISTRY_PASS` is also be checked.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="username_nodejs">
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
@@ -1163,8 +1155,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The username to use for authenticating to the registry. If this is blank, the `DOCKER_REGISTRY_USER` is also be checked.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1176,8 +1167,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The address of the registry server
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_python">
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
@@ -1185,8 +1175,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The password to use for authenticating to the registry. If this is blank, the `DOCKER_REGISTRY_PASS` is also be checked.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="username_python">
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
@@ -1194,8 +1183,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The username to use for authenticating to the registry. If this is blank, the `DOCKER_REGISTRY_USER` is also be checked.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="serviceconvergeconfig">Service<wbr>Converge<wbr>Config</h4>
@@ -1209,9 +1197,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time between each the check to check docker endpoint `(ms|s|m|h)`. For example, to check if
-all tasks are up when a service is created, or to check if all tasks are successfully updated on an update. Default: `7s`.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeout_csharp">
 <a href="#timeout_csharp" style="color: inherit; text-decoration: inherit;">Timeout</a>
@@ -1219,8 +1205,7 @@ all tasks are up when a service is created, or to check if all tasks are success
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timeout of the service to reach the desired state `(s|m)`. Default: `3m`.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1232,9 +1217,7 @@ all tasks are up when a service is created, or to check if all tasks are success
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time between each the check to check docker endpoint `(ms|s|m|h)`. For example, to check if
-all tasks are up when a service is created, or to check if all tasks are successfully updated on an update. Default: `7s`.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeout_go">
 <a href="#timeout_go" style="color: inherit; text-decoration: inherit;">Timeout</a>
@@ -1242,8 +1225,7 @@ all tasks are up when a service is created, or to check if all tasks are success
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timeout of the service to reach the desired state `(s|m)`. Default: `3m`.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1255,9 +1237,7 @@ all tasks are up when a service is created, or to check if all tasks are success
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time between each the check to check docker endpoint `(ms|s|m|h)`. For example, to check if
-all tasks are up when a service is created, or to check if all tasks are successfully updated on an update. Default: `7s`.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeout_nodejs">
 <a href="#timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
@@ -1265,8 +1245,7 @@ all tasks are up when a service is created, or to check if all tasks are success
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timeout of the service to reach the desired state `(s|m)`. Default: `3m`.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1278,9 +1257,7 @@ all tasks are up when a service is created, or to check if all tasks are success
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Time between each the check to check docker endpoint `(ms|s|m|h)`. For example, to check if
-all tasks are up when a service is created, or to check if all tasks are successfully updated on an update. Default: `7s`.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeout_python">
 <a href="#timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
@@ -1288,8 +1265,7 @@ all tasks are up when a service is created, or to check if all tasks are success
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The timeout of the service to reach the desired state `(s|m)`. Default: `3m`.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="serviceendpointspec">Service<wbr>Endpoint<wbr>Spec</h4>
@@ -1303,17 +1279,15 @@ all tasks are up when a service is created, or to check if all tasks are success
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The mode of resolution to use for internal load balancing between tasks. `(vip|dnsrr)`. Default: `vip`.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ports_csharp">
 <a href="#ports_csharp" style="color: inherit; text-decoration: inherit;">Ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceendpointspecport">List&lt;Service<wbr>Endpoint<wbr>Spec<wbr>Port<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#serviceendpointspecport">List&lt;Service<wbr>Endpoint<wbr>Spec<wbr>Port&gt;</a></span>
     </dt>
-    <dd>{{% md %}}See Ports below for details.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1325,8 +1299,7 @@ all tasks are up when a service is created, or to check if all tasks are success
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The mode of resolution to use for internal load balancing between tasks. `(vip|dnsrr)`. Default: `vip`.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ports_go">
 <a href="#ports_go" style="color: inherit; text-decoration: inherit;">Ports</a>
@@ -1334,8 +1307,7 @@ all tasks are up when a service is created, or to check if all tasks are success
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceendpointspecport">[]Service<wbr>Endpoint<wbr>Spec<wbr>Port</a></span>
     </dt>
-    <dd>{{% md %}}See Ports below for details.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1347,17 +1319,15 @@ all tasks are up when a service is created, or to check if all tasks are success
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The mode of resolution to use for internal load balancing between tasks. `(vip|dnsrr)`. Default: `vip`.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ports_nodejs">
 <a href="#ports_nodejs" style="color: inherit; text-decoration: inherit;">ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceendpointspecport">Service<wbr>Endpoint<wbr>Spec<wbr>Port<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#serviceendpointspecport">Service<wbr>Endpoint<wbr>Spec<wbr>Port[]</a></span>
     </dt>
-    <dd>{{% md %}}See Ports below for details.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1369,17 +1339,15 @@ all tasks are up when a service is created, or to check if all tasks are success
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The mode of resolution to use for internal load balancing between tasks. `(vip|dnsrr)`. Default: `vip`.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ports_python">
 <a href="#ports_python" style="color: inherit; text-decoration: inherit;">ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceendpointspecport">Sequence[Service<wbr>Endpoint<wbr>Spec<wbr>Port<wbr>Args]</a></span>
+        <span class="property-type"><a href="#serviceendpointspecport">Sequence[Service<wbr>Endpoint<wbr>Spec<wbr>Port]</a></span>
     </dt>
-    <dd>{{% md %}}See Ports below for details.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="serviceendpointspecport">Service<wbr>Endpoint<wbr>Spec<wbr>Port</h4>
@@ -1393,8 +1361,7 @@ all tasks are up when a service is created, or to check if all tasks are success
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Port inside the container.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1402,8 +1369,7 @@ all tasks are up when a service is created, or to check if all tasks are success
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Docker service.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protocol_csharp">
 <a href="#protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
@@ -1411,8 +1377,7 @@ all tasks are up when a service is created, or to check if all tasks are success
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Protocol that can be used over this port: `tcp|udp|sctp`. Default: `tcp`.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publishmode_csharp">
 <a href="#publishmode_csharp" style="color: inherit; text-decoration: inherit;">Publish<wbr>Mode</a>
@@ -1420,8 +1385,7 @@ all tasks are up when a service is created, or to check if all tasks are success
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Represents the mode in which the port is to be published: `ingress|host`
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publishedport_csharp">
 <a href="#publishedport_csharp" style="color: inherit; text-decoration: inherit;">Published<wbr>Port</a>
@@ -1429,8 +1393,7 @@ all tasks are up when a service is created, or to check if all tasks are success
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The port on the swarm hosts. If not set the value of `target_port` will be used.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1442,8 +1405,7 @@ all tasks are up when a service is created, or to check if all tasks are success
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Port inside the container.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1451,8 +1413,7 @@ all tasks are up when a service is created, or to check if all tasks are success
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Docker service.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protocol_go">
 <a href="#protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
@@ -1460,8 +1421,7 @@ all tasks are up when a service is created, or to check if all tasks are success
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Protocol that can be used over this port: `tcp|udp|sctp`. Default: `tcp`.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publishmode_go">
 <a href="#publishmode_go" style="color: inherit; text-decoration: inherit;">Publish<wbr>Mode</a>
@@ -1469,8 +1429,7 @@ all tasks are up when a service is created, or to check if all tasks are success
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Represents the mode in which the port is to be published: `ingress|host`
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publishedport_go">
 <a href="#publishedport_go" style="color: inherit; text-decoration: inherit;">Published<wbr>Port</a>
@@ -1478,8 +1437,7 @@ all tasks are up when a service is created, or to check if all tasks are success
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The port on the swarm hosts. If not set the value of `target_port` will be used.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1491,8 +1449,7 @@ all tasks are up when a service is created, or to check if all tasks are success
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Port inside the container.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1500,8 +1457,7 @@ all tasks are up when a service is created, or to check if all tasks are success
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Docker service.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protocol_nodejs">
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
@@ -1509,8 +1465,7 @@ all tasks are up when a service is created, or to check if all tasks are success
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Protocol that can be used over this port: `tcp|udp|sctp`. Default: `tcp`.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publishmode_nodejs">
 <a href="#publishmode_nodejs" style="color: inherit; text-decoration: inherit;">publish<wbr>Mode</a>
@@ -1518,8 +1473,7 @@ all tasks are up when a service is created, or to check if all tasks are success
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Represents the mode in which the port is to be published: `ingress|host`
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publishedport_nodejs">
 <a href="#publishedport_nodejs" style="color: inherit; text-decoration: inherit;">published<wbr>Port</a>
@@ -1527,8 +1481,7 @@ all tasks are up when a service is created, or to check if all tasks are success
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The port on the swarm hosts. If not set the value of `target_port` will be used.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1540,8 +1493,7 @@ all tasks are up when a service is created, or to check if all tasks are success
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Port inside the container.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1549,8 +1501,7 @@ all tasks are up when a service is created, or to check if all tasks are success
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the Docker service.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protocol_python">
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
@@ -1558,8 +1509,7 @@ all tasks are up when a service is created, or to check if all tasks are success
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Protocol that can be used over this port: `tcp|udp|sctp`. Default: `tcp`.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publish_mode_python">
 <a href="#publish_mode_python" style="color: inherit; text-decoration: inherit;">publish_<wbr>mode</a>
@@ -1567,8 +1517,7 @@ all tasks are up when a service is created, or to check if all tasks are success
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Represents the mode in which the port is to be published: `ingress|host`
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="published_port_python">
 <a href="#published_port_python" style="color: inherit; text-decoration: inherit;">published_<wbr>port</a>
@@ -1576,8 +1525,7 @@ all tasks are up when a service is created, or to check if all tasks are success
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The port on the swarm hosts. If not set the value of `target_port` will be used.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="servicelabel">Service<wbr>Label</h4>
@@ -1591,8 +1539,7 @@ all tasks are up when a service is created, or to check if all tasks are success
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the label
-{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -1600,8 +1547,7 @@ all tasks are up when a service is created, or to check if all tasks are success
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Value of the label
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1613,8 +1559,7 @@ all tasks are up when a service is created, or to check if all tasks are success
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the label
-{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -1622,8 +1567,7 @@ all tasks are up when a service is created, or to check if all tasks are success
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Value of the label
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1635,8 +1579,7 @@ all tasks are up when a service is created, or to check if all tasks are success
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the label
-{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -1644,8 +1587,7 @@ all tasks are up when a service is created, or to check if all tasks are success
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Value of the label
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1657,8 +1599,7 @@ all tasks are up when a service is created, or to check if all tasks are success
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the label
-{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -1666,8 +1607,7 @@ all tasks are up when a service is created, or to check if all tasks are success
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Value of the label
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="servicemode">Service<wbr>Mode</h4>
@@ -1681,17 +1621,15 @@ all tasks are up when a service is created, or to check if all tasks are success
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}set it to `true` to run the service in the global mode
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replicated_csharp">
 <a href="#replicated_csharp" style="color: inherit; text-decoration: inherit;">Replicated</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicemodereplicated">Service<wbr>Mode<wbr>Replicated<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicemodereplicated">Service<wbr>Mode<wbr>Replicated</a></span>
     </dt>
-    <dd>{{% md %}}, which contains atm only the amount of `replicas`
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1703,8 +1641,7 @@ all tasks are up when a service is created, or to check if all tasks are success
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}set it to `true` to run the service in the global mode
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replicated_go">
 <a href="#replicated_go" style="color: inherit; text-decoration: inherit;">Replicated</a>
@@ -1712,8 +1649,7 @@ all tasks are up when a service is created, or to check if all tasks are success
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicemodereplicated">Service<wbr>Mode<wbr>Replicated</a></span>
     </dt>
-    <dd>{{% md %}}, which contains atm only the amount of `replicas`
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1725,17 +1661,15 @@ all tasks are up when a service is created, or to check if all tasks are success
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}set it to `true` to run the service in the global mode
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replicated_nodejs">
 <a href="#replicated_nodejs" style="color: inherit; text-decoration: inherit;">replicated</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicemodereplicated">Service<wbr>Mode<wbr>Replicated<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicemodereplicated">Service<wbr>Mode<wbr>Replicated</a></span>
     </dt>
-    <dd>{{% md %}}, which contains atm only the amount of `replicas`
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1747,17 +1681,15 @@ all tasks are up when a service is created, or to check if all tasks are success
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}set it to `true` to run the service in the global mode
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replicated_python">
 <a href="#replicated_python" style="color: inherit; text-decoration: inherit;">replicated</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicemodereplicated">Service<wbr>Mode<wbr>Replicated<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicemodereplicated">Service<wbr>Mode<wbr>Replicated</a></span>
     </dt>
-    <dd>{{% md %}}, which contains atm only the amount of `replicas`
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="servicemodereplicated">Service<wbr>Mode<wbr>Replicated</h4>
@@ -1821,9 +1753,7 @@ all tasks are up when a service is created, or to check if all tasks are success
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Delay between restart attempts `(ms|s|m|h)`
-all tasks are up when a service is created, or to check if all tasks are successfully updated on an update. Default: `7s`.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="failureaction_csharp">
 <a href="#failureaction_csharp" style="color: inherit; text-decoration: inherit;">Failure<wbr>Action</a>
@@ -1831,8 +1761,7 @@ all tasks are up when a service is created, or to check if all tasks are success
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Action on update failure: `pause|continue|rollback`.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxfailureratio_csharp">
 <a href="#maxfailureratio_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Failure<wbr>Ratio</a>
@@ -1840,9 +1769,7 @@ all tasks are up when a service is created, or to check if all tasks are success
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The failure rate to tolerate during an update as `float`. **Important:** the `float`need to be wrapped in a `string` to avoid internal
-casting and precision errors.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitor_csharp">
 <a href="#monitor_csharp" style="color: inherit; text-decoration: inherit;">Monitor</a>
@@ -1850,8 +1777,7 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Duration after each task update to monitor for failure `(ns|us|ms|s|m|h)`
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="order_csharp">
 <a href="#order_csharp" style="color: inherit; text-decoration: inherit;">Order</a>
@@ -1859,8 +1785,7 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Update order either 'stop-first' or 'start-first'.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parallelism_csharp">
 <a href="#parallelism_csharp" style="color: inherit; text-decoration: inherit;">Parallelism</a>
@@ -1868,8 +1793,7 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum number of tasks to be updated in one iteration simultaneously (0 to update all at once).
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1881,9 +1805,7 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Delay between restart attempts `(ms|s|m|h)`
-all tasks are up when a service is created, or to check if all tasks are successfully updated on an update. Default: `7s`.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="failureaction_go">
 <a href="#failureaction_go" style="color: inherit; text-decoration: inherit;">Failure<wbr>Action</a>
@@ -1891,8 +1813,7 @@ all tasks are up when a service is created, or to check if all tasks are success
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Action on update failure: `pause|continue|rollback`.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxfailureratio_go">
 <a href="#maxfailureratio_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Failure<wbr>Ratio</a>
@@ -1900,9 +1821,7 @@ all tasks are up when a service is created, or to check if all tasks are success
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The failure rate to tolerate during an update as `float`. **Important:** the `float`need to be wrapped in a `string` to avoid internal
-casting and precision errors.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitor_go">
 <a href="#monitor_go" style="color: inherit; text-decoration: inherit;">Monitor</a>
@@ -1910,8 +1829,7 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Duration after each task update to monitor for failure `(ns|us|ms|s|m|h)`
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="order_go">
 <a href="#order_go" style="color: inherit; text-decoration: inherit;">Order</a>
@@ -1919,8 +1837,7 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Update order either 'stop-first' or 'start-first'.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parallelism_go">
 <a href="#parallelism_go" style="color: inherit; text-decoration: inherit;">Parallelism</a>
@@ -1928,8 +1845,7 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum number of tasks to be updated in one iteration simultaneously (0 to update all at once).
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1941,9 +1857,7 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Delay between restart attempts `(ms|s|m|h)`
-all tasks are up when a service is created, or to check if all tasks are successfully updated on an update. Default: `7s`.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="failureaction_nodejs">
 <a href="#failureaction_nodejs" style="color: inherit; text-decoration: inherit;">failure<wbr>Action</a>
@@ -1951,8 +1865,7 @@ all tasks are up when a service is created, or to check if all tasks are success
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Action on update failure: `pause|continue|rollback`.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxfailureratio_nodejs">
 <a href="#maxfailureratio_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Failure<wbr>Ratio</a>
@@ -1960,9 +1873,7 @@ all tasks are up when a service is created, or to check if all tasks are success
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The failure rate to tolerate during an update as `float`. **Important:** the `float`need to be wrapped in a `string` to avoid internal
-casting and precision errors.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitor_nodejs">
 <a href="#monitor_nodejs" style="color: inherit; text-decoration: inherit;">monitor</a>
@@ -1970,8 +1881,7 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Duration after each task update to monitor for failure `(ns|us|ms|s|m|h)`
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="order_nodejs">
 <a href="#order_nodejs" style="color: inherit; text-decoration: inherit;">order</a>
@@ -1979,8 +1889,7 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Update order either 'stop-first' or 'start-first'.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parallelism_nodejs">
 <a href="#parallelism_nodejs" style="color: inherit; text-decoration: inherit;">parallelism</a>
@@ -1988,8 +1897,7 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The maximum number of tasks to be updated in one iteration simultaneously (0 to update all at once).
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -2001,9 +1909,7 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Delay between restart attempts `(ms|s|m|h)`
-all tasks are up when a service is created, or to check if all tasks are successfully updated on an update. Default: `7s`.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="failure_action_python">
 <a href="#failure_action_python" style="color: inherit; text-decoration: inherit;">failure_<wbr>action</a>
@@ -2011,8 +1917,7 @@ all tasks are up when a service is created, or to check if all tasks are success
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Action on update failure: `pause|continue|rollback`.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_failure_ratio_python">
 <a href="#max_failure_ratio_python" style="color: inherit; text-decoration: inherit;">max_<wbr>failure_<wbr>ratio</a>
@@ -2020,9 +1925,7 @@ all tasks are up when a service is created, or to check if all tasks are success
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The failure rate to tolerate during an update as `float`. **Important:** the `float`need to be wrapped in a `string` to avoid internal
-casting and precision errors.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitor_python">
 <a href="#monitor_python" style="color: inherit; text-decoration: inherit;">monitor</a>
@@ -2030,8 +1933,7 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Duration after each task update to monitor for failure `(ns|us|ms|s|m|h)`
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="order_python">
 <a href="#order_python" style="color: inherit; text-decoration: inherit;">order</a>
@@ -2039,8 +1941,7 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Update order either 'stop-first' or 'start-first'.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parallelism_python">
 <a href="#parallelism_python" style="color: inherit; text-decoration: inherit;">parallelism</a>
@@ -2048,8 +1949,7 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum number of tasks to be updated in one iteration simultaneously (0 to update all at once).
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="servicetaskspec">Service<wbr>Task<wbr>Spec</h4>
@@ -2061,10 +1961,9 @@ casting and precision errors.
 <a href="#containerspec_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspeccontainerspec">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicetaskspeccontainerspec">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec</a></span>
     </dt>
-    <dd>{{% md %}}See ContainerSpec below for details.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="forceupdate_csharp">
 <a href="#forceupdate_csharp" style="color: inherit; text-decoration: inherit;">Force<wbr>Update</a>
@@ -2072,17 +1971,15 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}A counter that triggers an update even if no relevant parameters have been changed. See [Docker Spec](https://github.com/docker/swarmkit/blob/master/api/specs.proto#L126).
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logdriver_csharp">
 <a href="#logdriver_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Driver</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspeclogdriver">Service<wbr>Task<wbr>Spec<wbr>Log<wbr>Driver<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicetaskspeclogdriver">Service<wbr>Task<wbr>Spec<wbr>Log<wbr>Driver</a></span>
     </dt>
-    <dd>{{% md %}}See Log Driver below for details.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networks_csharp">
 <a href="#networks_csharp" style="color: inherit; text-decoration: inherit;">Networks</a>
@@ -2090,35 +1987,31 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Ids of the networks in which the container will be put in.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="placement_csharp">
 <a href="#placement_csharp" style="color: inherit; text-decoration: inherit;">Placement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspecplacement">Service<wbr>Task<wbr>Spec<wbr>Placement<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicetaskspecplacement">Service<wbr>Task<wbr>Spec<wbr>Placement</a></span>
     </dt>
-    <dd>{{% md %}}See Placement below for details.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resources_csharp">
 <a href="#resources_csharp" style="color: inherit; text-decoration: inherit;">Resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspecresources">Service<wbr>Task<wbr>Spec<wbr>Resources<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicetaskspecresources">Service<wbr>Task<wbr>Spec<wbr>Resources</a></span>
     </dt>
-    <dd>{{% md %}}See Resources below for details.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="restartpolicy_csharp">
 <a href="#restartpolicy_csharp" style="color: inherit; text-decoration: inherit;">Restart<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspecrestartpolicy">Service<wbr>Task<wbr>Spec<wbr>Restart<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicetaskspecrestartpolicy">Service<wbr>Task<wbr>Spec<wbr>Restart<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}See Restart Policy below for details.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="runtime_csharp">
 <a href="#runtime_csharp" style="color: inherit; text-decoration: inherit;">Runtime</a>
@@ -2126,8 +2019,7 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Runtime is the type of runtime specified for the task executor. See [Docker Runtime](https://github.com/moby/moby/blob/master/api/types/swarm/runtime.go).
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2139,8 +2031,7 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetaskspeccontainerspec">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec</a></span>
     </dt>
-    <dd>{{% md %}}See ContainerSpec below for details.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="forceupdate_go">
 <a href="#forceupdate_go" style="color: inherit; text-decoration: inherit;">Force<wbr>Update</a>
@@ -2148,8 +2039,7 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}A counter that triggers an update even if no relevant parameters have been changed. See [Docker Spec](https://github.com/docker/swarmkit/blob/master/api/specs.proto#L126).
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logdriver_go">
 <a href="#logdriver_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Driver</a>
@@ -2157,8 +2047,7 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetaskspeclogdriver">Service<wbr>Task<wbr>Spec<wbr>Log<wbr>Driver</a></span>
     </dt>
-    <dd>{{% md %}}See Log Driver below for details.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networks_go">
 <a href="#networks_go" style="color: inherit; text-decoration: inherit;">Networks</a>
@@ -2166,8 +2055,7 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Ids of the networks in which the container will be put in.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="placement_go">
 <a href="#placement_go" style="color: inherit; text-decoration: inherit;">Placement</a>
@@ -2175,8 +2063,7 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetaskspecplacement">Service<wbr>Task<wbr>Spec<wbr>Placement</a></span>
     </dt>
-    <dd>{{% md %}}See Placement below for details.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resources_go">
 <a href="#resources_go" style="color: inherit; text-decoration: inherit;">Resources</a>
@@ -2184,8 +2071,7 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetaskspecresources">Service<wbr>Task<wbr>Spec<wbr>Resources</a></span>
     </dt>
-    <dd>{{% md %}}See Resources below for details.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="restartpolicy_go">
 <a href="#restartpolicy_go" style="color: inherit; text-decoration: inherit;">Restart<wbr>Policy</a>
@@ -2193,8 +2079,7 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetaskspecrestartpolicy">Service<wbr>Task<wbr>Spec<wbr>Restart<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}See Restart Policy below for details.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="runtime_go">
 <a href="#runtime_go" style="color: inherit; text-decoration: inherit;">Runtime</a>
@@ -2202,8 +2087,7 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Runtime is the type of runtime specified for the task executor. See [Docker Runtime](https://github.com/moby/moby/blob/master/api/types/swarm/runtime.go).
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2213,10 +2097,9 @@ casting and precision errors.
 <a href="#containerspec_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspeccontainerspec">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicetaskspeccontainerspec">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec</a></span>
     </dt>
-    <dd>{{% md %}}See ContainerSpec below for details.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="forceupdate_nodejs">
 <a href="#forceupdate_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Update</a>
@@ -2224,17 +2107,15 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}A counter that triggers an update even if no relevant parameters have been changed. See [Docker Spec](https://github.com/docker/swarmkit/blob/master/api/specs.proto#L126).
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logdriver_nodejs">
 <a href="#logdriver_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Driver</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspeclogdriver">Service<wbr>Task<wbr>Spec<wbr>Log<wbr>Driver<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicetaskspeclogdriver">Service<wbr>Task<wbr>Spec<wbr>Log<wbr>Driver</a></span>
     </dt>
-    <dd>{{% md %}}See Log Driver below for details.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networks_nodejs">
 <a href="#networks_nodejs" style="color: inherit; text-decoration: inherit;">networks</a>
@@ -2242,35 +2123,31 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Ids of the networks in which the container will be put in.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="placement_nodejs">
 <a href="#placement_nodejs" style="color: inherit; text-decoration: inherit;">placement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspecplacement">Service<wbr>Task<wbr>Spec<wbr>Placement<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicetaskspecplacement">Service<wbr>Task<wbr>Spec<wbr>Placement</a></span>
     </dt>
-    <dd>{{% md %}}See Placement below for details.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resources_nodejs">
 <a href="#resources_nodejs" style="color: inherit; text-decoration: inherit;">resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspecresources">Service<wbr>Task<wbr>Spec<wbr>Resources<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicetaskspecresources">Service<wbr>Task<wbr>Spec<wbr>Resources</a></span>
     </dt>
-    <dd>{{% md %}}See Resources below for details.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="restartpolicy_nodejs">
 <a href="#restartpolicy_nodejs" style="color: inherit; text-decoration: inherit;">restart<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspecrestartpolicy">Service<wbr>Task<wbr>Spec<wbr>Restart<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicetaskspecrestartpolicy">Service<wbr>Task<wbr>Spec<wbr>Restart<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}See Restart Policy below for details.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="runtime_nodejs">
 <a href="#runtime_nodejs" style="color: inherit; text-decoration: inherit;">runtime</a>
@@ -2278,8 +2155,7 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Runtime is the type of runtime specified for the task executor. See [Docker Runtime](https://github.com/moby/moby/blob/master/api/types/swarm/runtime.go).
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -2289,10 +2165,9 @@ casting and precision errors.
 <a href="#container_spec_python" style="color: inherit; text-decoration: inherit;">container_<wbr>spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspeccontainerspec">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicetaskspeccontainerspec">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec</a></span>
     </dt>
-    <dd>{{% md %}}See ContainerSpec below for details.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="force_update_python">
 <a href="#force_update_python" style="color: inherit; text-decoration: inherit;">force_<wbr>update</a>
@@ -2300,17 +2175,15 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}A counter that triggers an update even if no relevant parameters have been changed. See [Docker Spec](https://github.com/docker/swarmkit/blob/master/api/specs.proto#L126).
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="log_driver_python">
 <a href="#log_driver_python" style="color: inherit; text-decoration: inherit;">log_<wbr>driver</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspeclogdriver">Service<wbr>Task<wbr>Spec<wbr>Log<wbr>Driver<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicetaskspeclogdriver">Service<wbr>Task<wbr>Spec<wbr>Log<wbr>Driver</a></span>
     </dt>
-    <dd>{{% md %}}See Log Driver below for details.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networks_python">
 <a href="#networks_python" style="color: inherit; text-decoration: inherit;">networks</a>
@@ -2318,35 +2191,31 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Ids of the networks in which the container will be put in.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="placement_python">
 <a href="#placement_python" style="color: inherit; text-decoration: inherit;">placement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspecplacement">Service<wbr>Task<wbr>Spec<wbr>Placement<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicetaskspecplacement">Service<wbr>Task<wbr>Spec<wbr>Placement</a></span>
     </dt>
-    <dd>{{% md %}}See Placement below for details.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resources_python">
 <a href="#resources_python" style="color: inherit; text-decoration: inherit;">resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspecresources">Service<wbr>Task<wbr>Spec<wbr>Resources<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicetaskspecresources">Service<wbr>Task<wbr>Spec<wbr>Resources</a></span>
     </dt>
-    <dd>{{% md %}}See Resources below for details.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="restart_policy_python">
 <a href="#restart_policy_python" style="color: inherit; text-decoration: inherit;">restart_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspecrestartpolicy">Service<wbr>Task<wbr>Spec<wbr>Restart<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicetaskspecrestartpolicy">Service<wbr>Task<wbr>Spec<wbr>Restart<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}See Restart Policy below for details.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="runtime_python">
 <a href="#runtime_python" style="color: inherit; text-decoration: inherit;">runtime</a>
@@ -2354,8 +2223,7 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Runtime is the type of runtime specified for the task executor. See [Docker Runtime](https://github.com/moby/moby/blob/master/api/types/swarm/runtime.go).
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="servicetaskspeccontainerspec">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec</h4>
@@ -2369,8 +2237,7 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The image used to create the Docker service.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="args_csharp">
 <a href="#args_csharp" style="color: inherit; text-decoration: inherit;">Args</a>
@@ -2378,8 +2245,7 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Arguments to the command.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="commands_csharp">
 <a href="#commands_csharp" style="color: inherit; text-decoration: inherit;">Commands</a>
@@ -2387,17 +2253,15 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The command to be run in the image.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="configs_csharp">
 <a href="#configs_csharp" style="color: inherit; text-decoration: inherit;">Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspeccontainerspecconfig">List&lt;Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Config<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#servicetaskspeccontainerspecconfig">List&lt;Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Config&gt;</a></span>
     </dt>
-    <dd>{{% md %}}See Configs below for details.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dir_csharp">
 <a href="#dir_csharp" style="color: inherit; text-decoration: inherit;">Dir</a>
@@ -2405,17 +2269,15 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The working directory for commands to run in.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dnsconfig_csharp">
 <a href="#dnsconfig_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspeccontainerspecdnsconfig">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Dns<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicetaskspeccontainerspecdnsconfig">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Dns<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}See DNS Config below for details.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="env_csharp">
 <a href="#env_csharp" style="color: inherit; text-decoration: inherit;">Env</a>
@@ -2423,8 +2285,7 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}A list of environment variables in the form VAR=value.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groups_csharp">
 <a href="#groups_csharp" style="color: inherit; text-decoration: inherit;">Groups</a>
@@ -2432,17 +2293,15 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}A list of additional groups that the container process will run as.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="healthcheck_csharp">
 <a href="#healthcheck_csharp" style="color: inherit; text-decoration: inherit;">Healthcheck</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspeccontainerspechealthcheck">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Healthcheck<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicetaskspeccontainerspechealthcheck">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Healthcheck</a></span>
     </dt>
-    <dd>{{% md %}}See Healthcheck below for details.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hostname_csharp">
 <a href="#hostname_csharp" style="color: inherit; text-decoration: inherit;">Hostname</a>
@@ -2450,14 +2309,13 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The hostname to use for the container, as a valid RFC 1123 hostname.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hosts_csharp">
 <a href="#hosts_csharp" style="color: inherit; text-decoration: inherit;">Hosts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspeccontainerspechost">List&lt;Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Host<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#servicetaskspeccontainerspechost">List&lt;Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Host&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2467,35 +2325,31 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Isolation technology of the containers running the service. (Windows only). Valid values are: `default|process|hyperv`
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_csharp">
 <a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspeccontainerspeclabel">List&lt;Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Label<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#servicetaskspeccontainerspeclabel">List&lt;Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Label&gt;</a></span>
     </dt>
-    <dd>{{% md %}}See Labels below for details.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mounts_csharp">
 <a href="#mounts_csharp" style="color: inherit; text-decoration: inherit;">Mounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspeccontainerspecmount">List&lt;Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Mount<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#servicetaskspeccontainerspecmount">List&lt;Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Mount&gt;</a></span>
     </dt>
-    <dd>{{% md %}}See Mounts below for details.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privileges_csharp">
 <a href="#privileges_csharp" style="color: inherit; text-decoration: inherit;">Privileges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspeccontainerspecprivileges">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Privileges<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicetaskspeccontainerspecprivileges">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Privileges</a></span>
     </dt>
-    <dd>{{% md %}}See Privileges below for details.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="readonly_csharp">
 <a href="#readonly_csharp" style="color: inherit; text-decoration: inherit;">Read<wbr>Only</a>
@@ -2503,17 +2357,15 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Mount the container's root filesystem as read only.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secrets_csharp">
 <a href="#secrets_csharp" style="color: inherit; text-decoration: inherit;">Secrets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspeccontainerspecsecret">List&lt;Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Secret<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#servicetaskspeccontainerspecsecret">List&lt;Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Secret&gt;</a></span>
     </dt>
-    <dd>{{% md %}}See Secrets below for details.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stopgraceperiod_csharp">
 <a href="#stopgraceperiod_csharp" style="color: inherit; text-decoration: inherit;">Stop<wbr>Grace<wbr>Period</a>
@@ -2521,8 +2373,7 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Amount of time to wait for the container to terminate before forcefully removing it `(ms|s|m|h)`.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stopsignal_csharp">
 <a href="#stopsignal_csharp" style="color: inherit; text-decoration: inherit;">Stop<wbr>Signal</a>
@@ -2530,8 +2381,7 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Signal to stop the container.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_csharp">
 <a href="#user_csharp" style="color: inherit; text-decoration: inherit;">User</a>
@@ -2539,8 +2389,7 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The user inside the container.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2552,8 +2401,7 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The image used to create the Docker service.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="args_go">
 <a href="#args_go" style="color: inherit; text-decoration: inherit;">Args</a>
@@ -2561,8 +2409,7 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Arguments to the command.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="commands_go">
 <a href="#commands_go" style="color: inherit; text-decoration: inherit;">Commands</a>
@@ -2570,8 +2417,7 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The command to be run in the image.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="configs_go">
 <a href="#configs_go" style="color: inherit; text-decoration: inherit;">Configs</a>
@@ -2579,8 +2425,7 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetaskspeccontainerspecconfig">[]Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}See Configs below for details.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dir_go">
 <a href="#dir_go" style="color: inherit; text-decoration: inherit;">Dir</a>
@@ -2588,8 +2433,7 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The working directory for commands to run in.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dnsconfig_go">
 <a href="#dnsconfig_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Config</a>
@@ -2597,8 +2441,7 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetaskspeccontainerspecdnsconfig">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Dns<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}See DNS Config below for details.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="env_go">
 <a href="#env_go" style="color: inherit; text-decoration: inherit;">Env</a>
@@ -2606,8 +2449,7 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}A list of environment variables in the form VAR=value.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groups_go">
 <a href="#groups_go" style="color: inherit; text-decoration: inherit;">Groups</a>
@@ -2615,8 +2457,7 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}A list of additional groups that the container process will run as.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="healthcheck_go">
 <a href="#healthcheck_go" style="color: inherit; text-decoration: inherit;">Healthcheck</a>
@@ -2624,8 +2465,7 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetaskspeccontainerspechealthcheck">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Healthcheck</a></span>
     </dt>
-    <dd>{{% md %}}See Healthcheck below for details.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hostname_go">
 <a href="#hostname_go" style="color: inherit; text-decoration: inherit;">Hostname</a>
@@ -2633,8 +2473,7 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The hostname to use for the container, as a valid RFC 1123 hostname.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hosts_go">
 <a href="#hosts_go" style="color: inherit; text-decoration: inherit;">Hosts</a>
@@ -2650,8 +2489,7 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Isolation technology of the containers running the service. (Windows only). Valid values are: `default|process|hyperv`
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_go">
 <a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -2659,8 +2497,7 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetaskspeccontainerspeclabel">[]Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Label</a></span>
     </dt>
-    <dd>{{% md %}}See Labels below for details.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mounts_go">
 <a href="#mounts_go" style="color: inherit; text-decoration: inherit;">Mounts</a>
@@ -2668,8 +2505,7 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetaskspeccontainerspecmount">[]Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Mount</a></span>
     </dt>
-    <dd>{{% md %}}See Mounts below for details.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privileges_go">
 <a href="#privileges_go" style="color: inherit; text-decoration: inherit;">Privileges</a>
@@ -2677,8 +2513,7 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetaskspeccontainerspecprivileges">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Privileges</a></span>
     </dt>
-    <dd>{{% md %}}See Privileges below for details.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="readonly_go">
 <a href="#readonly_go" style="color: inherit; text-decoration: inherit;">Read<wbr>Only</a>
@@ -2686,8 +2521,7 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Mount the container's root filesystem as read only.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secrets_go">
 <a href="#secrets_go" style="color: inherit; text-decoration: inherit;">Secrets</a>
@@ -2695,8 +2529,7 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetaskspeccontainerspecsecret">[]Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Secret</a></span>
     </dt>
-    <dd>{{% md %}}See Secrets below for details.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stopgraceperiod_go">
 <a href="#stopgraceperiod_go" style="color: inherit; text-decoration: inherit;">Stop<wbr>Grace<wbr>Period</a>
@@ -2704,8 +2537,7 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Amount of time to wait for the container to terminate before forcefully removing it `(ms|s|m|h)`.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stopsignal_go">
 <a href="#stopsignal_go" style="color: inherit; text-decoration: inherit;">Stop<wbr>Signal</a>
@@ -2713,8 +2545,7 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Signal to stop the container.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_go">
 <a href="#user_go" style="color: inherit; text-decoration: inherit;">User</a>
@@ -2722,8 +2553,7 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The user inside the container.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2735,8 +2565,7 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The image used to create the Docker service.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="args_nodejs">
 <a href="#args_nodejs" style="color: inherit; text-decoration: inherit;">args</a>
@@ -2744,8 +2573,7 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Arguments to the command.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="commands_nodejs">
 <a href="#commands_nodejs" style="color: inherit; text-decoration: inherit;">commands</a>
@@ -2753,17 +2581,15 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The command to be run in the image.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="configs_nodejs">
 <a href="#configs_nodejs" style="color: inherit; text-decoration: inherit;">configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspeccontainerspecconfig">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Config<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#servicetaskspeccontainerspecconfig">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Config[]</a></span>
     </dt>
-    <dd>{{% md %}}See Configs below for details.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dir_nodejs">
 <a href="#dir_nodejs" style="color: inherit; text-decoration: inherit;">dir</a>
@@ -2771,17 +2597,15 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The working directory for commands to run in.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dnsconfig_nodejs">
 <a href="#dnsconfig_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspeccontainerspecdnsconfig">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Dns<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicetaskspeccontainerspecdnsconfig">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Dns<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}See DNS Config below for details.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="env_nodejs">
 <a href="#env_nodejs" style="color: inherit; text-decoration: inherit;">env</a>
@@ -2789,8 +2613,7 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}A list of environment variables in the form VAR=value.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groups_nodejs">
 <a href="#groups_nodejs" style="color: inherit; text-decoration: inherit;">groups</a>
@@ -2798,17 +2621,15 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}A list of additional groups that the container process will run as.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="healthcheck_nodejs">
 <a href="#healthcheck_nodejs" style="color: inherit; text-decoration: inherit;">healthcheck</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspeccontainerspechealthcheck">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Healthcheck<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicetaskspeccontainerspechealthcheck">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Healthcheck</a></span>
     </dt>
-    <dd>{{% md %}}See Healthcheck below for details.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hostname_nodejs">
 <a href="#hostname_nodejs" style="color: inherit; text-decoration: inherit;">hostname</a>
@@ -2816,14 +2637,13 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The hostname to use for the container, as a valid RFC 1123 hostname.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hosts_nodejs">
 <a href="#hosts_nodejs" style="color: inherit; text-decoration: inherit;">hosts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspeccontainerspechost">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Host<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#servicetaskspeccontainerspechost">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Host[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2833,35 +2653,31 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Isolation technology of the containers running the service. (Windows only). Valid values are: `default|process|hyperv`
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_nodejs">
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspeccontainerspeclabel">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Label<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#servicetaskspeccontainerspeclabel">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Label[]</a></span>
     </dt>
-    <dd>{{% md %}}See Labels below for details.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mounts_nodejs">
 <a href="#mounts_nodejs" style="color: inherit; text-decoration: inherit;">mounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspeccontainerspecmount">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Mount<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#servicetaskspeccontainerspecmount">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Mount[]</a></span>
     </dt>
-    <dd>{{% md %}}See Mounts below for details.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privileges_nodejs">
 <a href="#privileges_nodejs" style="color: inherit; text-decoration: inherit;">privileges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspeccontainerspecprivileges">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Privileges<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicetaskspeccontainerspecprivileges">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Privileges</a></span>
     </dt>
-    <dd>{{% md %}}See Privileges below for details.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="readonly_nodejs">
 <a href="#readonly_nodejs" style="color: inherit; text-decoration: inherit;">read<wbr>Only</a>
@@ -2869,17 +2685,15 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Mount the container's root filesystem as read only.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secrets_nodejs">
 <a href="#secrets_nodejs" style="color: inherit; text-decoration: inherit;">secrets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspeccontainerspecsecret">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Secret<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#servicetaskspeccontainerspecsecret">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Secret[]</a></span>
     </dt>
-    <dd>{{% md %}}See Secrets below for details.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stopgraceperiod_nodejs">
 <a href="#stopgraceperiod_nodejs" style="color: inherit; text-decoration: inherit;">stop<wbr>Grace<wbr>Period</a>
@@ -2887,8 +2701,7 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Amount of time to wait for the container to terminate before forcefully removing it `(ms|s|m|h)`.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stopsignal_nodejs">
 <a href="#stopsignal_nodejs" style="color: inherit; text-decoration: inherit;">stop<wbr>Signal</a>
@@ -2896,8 +2709,7 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Signal to stop the container.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_nodejs">
 <a href="#user_nodejs" style="color: inherit; text-decoration: inherit;">user</a>
@@ -2905,8 +2717,7 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The user inside the container.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -2918,8 +2729,7 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The image used to create the Docker service.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="args_python">
 <a href="#args_python" style="color: inherit; text-decoration: inherit;">args</a>
@@ -2927,8 +2737,7 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Arguments to the command.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="commands_python">
 <a href="#commands_python" style="color: inherit; text-decoration: inherit;">commands</a>
@@ -2936,17 +2745,15 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The command to be run in the image.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="configs_python">
 <a href="#configs_python" style="color: inherit; text-decoration: inherit;">configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspeccontainerspecconfig">Sequence[Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicetaskspeccontainerspecconfig">Sequence[Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Config]</a></span>
     </dt>
-    <dd>{{% md %}}See Configs below for details.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dir_python">
 <a href="#dir_python" style="color: inherit; text-decoration: inherit;">dir</a>
@@ -2954,17 +2761,15 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The working directory for commands to run in.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dns_config_python">
 <a href="#dns_config_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspeccontainerspecdnsconfig">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Dns<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicetaskspeccontainerspecdnsconfig">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Dns<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}See DNS Config below for details.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="env_python">
 <a href="#env_python" style="color: inherit; text-decoration: inherit;">env</a>
@@ -2972,8 +2777,7 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}A list of environment variables in the form VAR=value.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groups_python">
 <a href="#groups_python" style="color: inherit; text-decoration: inherit;">groups</a>
@@ -2981,17 +2785,15 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}A list of additional groups that the container process will run as.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="healthcheck_python">
 <a href="#healthcheck_python" style="color: inherit; text-decoration: inherit;">healthcheck</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspeccontainerspechealthcheck">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Healthcheck<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicetaskspeccontainerspechealthcheck">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Healthcheck</a></span>
     </dt>
-    <dd>{{% md %}}See Healthcheck below for details.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hostname_python">
 <a href="#hostname_python" style="color: inherit; text-decoration: inherit;">hostname</a>
@@ -2999,14 +2801,13 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The hostname to use for the container, as a valid RFC 1123 hostname.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hosts_python">
 <a href="#hosts_python" style="color: inherit; text-decoration: inherit;">hosts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspeccontainerspechost">Sequence[Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Host<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicetaskspeccontainerspechost">Sequence[Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Host]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3016,35 +2817,31 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Isolation technology of the containers running the service. (Windows only). Valid values are: `default|process|hyperv`
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_python">
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspeccontainerspeclabel">Sequence[Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Label<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicetaskspeccontainerspeclabel">Sequence[Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Label]</a></span>
     </dt>
-    <dd>{{% md %}}See Labels below for details.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mounts_python">
 <a href="#mounts_python" style="color: inherit; text-decoration: inherit;">mounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspeccontainerspecmount">Sequence[Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Mount<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicetaskspeccontainerspecmount">Sequence[Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Mount]</a></span>
     </dt>
-    <dd>{{% md %}}See Mounts below for details.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privileges_python">
 <a href="#privileges_python" style="color: inherit; text-decoration: inherit;">privileges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspeccontainerspecprivileges">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Privileges<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicetaskspeccontainerspecprivileges">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Privileges</a></span>
     </dt>
-    <dd>{{% md %}}See Privileges below for details.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="read_only_python">
 <a href="#read_only_python" style="color: inherit; text-decoration: inherit;">read_<wbr>only</a>
@@ -3052,17 +2849,15 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Mount the container's root filesystem as read only.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secrets_python">
 <a href="#secrets_python" style="color: inherit; text-decoration: inherit;">secrets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspeccontainerspecsecret">Sequence[Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Secret<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicetaskspeccontainerspecsecret">Sequence[Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Secret]</a></span>
     </dt>
-    <dd>{{% md %}}See Secrets below for details.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stop_grace_period_python">
 <a href="#stop_grace_period_python" style="color: inherit; text-decoration: inherit;">stop_<wbr>grace_<wbr>period</a>
@@ -3070,8 +2865,7 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Amount of time to wait for the container to terminate before forcefully removing it `(ms|s|m|h)`.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stop_signal_python">
 <a href="#stop_signal_python" style="color: inherit; text-decoration: inherit;">stop_<wbr>signal</a>
@@ -3079,8 +2873,7 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Signal to stop the container.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_python">
 <a href="#user_python" style="color: inherit; text-decoration: inherit;">user</a>
@@ -3088,8 +2881,7 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The user inside the container.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="servicetaskspeccontainerspecconfig">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Config</h4>
@@ -3103,8 +2895,7 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ConfigID represents the ID of the specific config.
-{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="filename_csharp">
 <a href="#filename_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>Name</a>
@@ -3112,8 +2903,7 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Represents the final filename in the filesystem. The specific target file that the config data is written within the docker container, e.g. `/root/config/config.json`
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="configname_csharp">
 <a href="#configname_csharp" style="color: inherit; text-decoration: inherit;">Config<wbr>Name</a>
@@ -3121,8 +2911,7 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the config that this references, but internally it is just provided for lookup/display purposes
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filegid_csharp">
 <a href="#filegid_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>Gid</a>
@@ -3130,8 +2919,7 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Represents the file GID. Defaults: `0`
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filemode_csharp">
 <a href="#filemode_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>Mode</a>
@@ -3139,8 +2927,7 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Represents the FileMode of the file. Defaults: `0444`
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fileuid_csharp">
 <a href="#fileuid_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>Uid</a>
@@ -3148,8 +2935,7 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Represents the file UID. Defaults: `0`
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -3161,8 +2947,7 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ConfigID represents the ID of the specific config.
-{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="filename_go">
 <a href="#filename_go" style="color: inherit; text-decoration: inherit;">File<wbr>Name</a>
@@ -3170,8 +2955,7 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Represents the final filename in the filesystem. The specific target file that the config data is written within the docker container, e.g. `/root/config/config.json`
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="configname_go">
 <a href="#configname_go" style="color: inherit; text-decoration: inherit;">Config<wbr>Name</a>
@@ -3179,8 +2963,7 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the config that this references, but internally it is just provided for lookup/display purposes
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filegid_go">
 <a href="#filegid_go" style="color: inherit; text-decoration: inherit;">File<wbr>Gid</a>
@@ -3188,8 +2971,7 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Represents the file GID. Defaults: `0`
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filemode_go">
 <a href="#filemode_go" style="color: inherit; text-decoration: inherit;">File<wbr>Mode</a>
@@ -3197,8 +2979,7 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Represents the FileMode of the file. Defaults: `0444`
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fileuid_go">
 <a href="#fileuid_go" style="color: inherit; text-decoration: inherit;">File<wbr>Uid</a>
@@ -3206,8 +2987,7 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Represents the file UID. Defaults: `0`
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -3219,8 +2999,7 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ConfigID represents the ID of the specific config.
-{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="filename_nodejs">
 <a href="#filename_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Name</a>
@@ -3228,8 +3007,7 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Represents the final filename in the filesystem. The specific target file that the config data is written within the docker container, e.g. `/root/config/config.json`
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="configname_nodejs">
 <a href="#configname_nodejs" style="color: inherit; text-decoration: inherit;">config<wbr>Name</a>
@@ -3237,8 +3015,7 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the config that this references, but internally it is just provided for lookup/display purposes
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filegid_nodejs">
 <a href="#filegid_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Gid</a>
@@ -3246,8 +3023,7 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Represents the file GID. Defaults: `0`
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filemode_nodejs">
 <a href="#filemode_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Mode</a>
@@ -3255,8 +3031,7 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Represents the FileMode of the file. Defaults: `0444`
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fileuid_nodejs">
 <a href="#fileuid_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Uid</a>
@@ -3264,8 +3039,7 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Represents the file UID. Defaults: `0`
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -3277,8 +3051,7 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}ConfigID represents the ID of the specific config.
-{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="file_name_python">
 <a href="#file_name_python" style="color: inherit; text-decoration: inherit;">file_<wbr>name</a>
@@ -3286,8 +3059,7 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Represents the final filename in the filesystem. The specific target file that the config data is written within the docker container, e.g. `/root/config/config.json`
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="config_name_python">
 <a href="#config_name_python" style="color: inherit; text-decoration: inherit;">config_<wbr>name</a>
@@ -3295,8 +3067,7 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the config that this references, but internally it is just provided for lookup/display purposes
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="file_gid_python">
 <a href="#file_gid_python" style="color: inherit; text-decoration: inherit;">file_<wbr>gid</a>
@@ -3304,8 +3075,7 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Represents the file GID. Defaults: `0`
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="file_mode_python">
 <a href="#file_mode_python" style="color: inherit; text-decoration: inherit;">file_<wbr>mode</a>
@@ -3313,8 +3083,7 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Represents the FileMode of the file. Defaults: `0444`
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="file_uid_python">
 <a href="#file_uid_python" style="color: inherit; text-decoration: inherit;">file_<wbr>uid</a>
@@ -3322,8 +3091,7 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Represents the file UID. Defaults: `0`
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="servicetaskspeccontainerspecdnsconfig">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Dns<wbr>Config</h4>
@@ -3337,8 +3105,7 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The IP addresses of the name servers, for example, `8.8.8.8`
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="options_csharp">
 <a href="#options_csharp" style="color: inherit; text-decoration: inherit;">Options</a>
@@ -3346,8 +3113,7 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}A list of internal resolver variables to be modified, for example, `debug`, `ndots:3`
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="searches_csharp">
 <a href="#searches_csharp" style="color: inherit; text-decoration: inherit;">Searches</a>
@@ -3355,8 +3121,7 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}A search list for host-name lookup.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -3368,8 +3133,7 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The IP addresses of the name servers, for example, `8.8.8.8`
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="options_go">
 <a href="#options_go" style="color: inherit; text-decoration: inherit;">Options</a>
@@ -3377,8 +3141,7 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}A list of internal resolver variables to be modified, for example, `debug`, `ndots:3`
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="searches_go">
 <a href="#searches_go" style="color: inherit; text-decoration: inherit;">Searches</a>
@@ -3386,8 +3149,7 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}A search list for host-name lookup.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -3399,8 +3161,7 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The IP addresses of the name servers, for example, `8.8.8.8`
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="options_nodejs">
 <a href="#options_nodejs" style="color: inherit; text-decoration: inherit;">options</a>
@@ -3408,8 +3169,7 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}A list of internal resolver variables to be modified, for example, `debug`, `ndots:3`
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="searches_nodejs">
 <a href="#searches_nodejs" style="color: inherit; text-decoration: inherit;">searches</a>
@@ -3417,8 +3177,7 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}A search list for host-name lookup.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -3430,8 +3189,7 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The IP addresses of the name servers, for example, `8.8.8.8`
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="options_python">
 <a href="#options_python" style="color: inherit; text-decoration: inherit;">options</a>
@@ -3439,8 +3197,7 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}A list of internal resolver variables to be modified, for example, `debug`, `ndots:3`
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="searches_python">
 <a href="#searches_python" style="color: inherit; text-decoration: inherit;">searches</a>
@@ -3448,8 +3205,7 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}A search list for host-name lookup.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="servicetaskspeccontainerspechealthcheck">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Healthcheck</h4>
@@ -3463,9 +3219,7 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Command to run to check health. For example, to run `curl -f http://localhost/health` set the
-command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="interval_csharp">
 <a href="#interval_csharp" style="color: inherit; text-decoration: inherit;">Interval</a>
@@ -3473,8 +3227,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time between running the check `(ms|s|m|h)`. Default: `0s`.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retries_csharp">
 <a href="#retries_csharp" style="color: inherit; text-decoration: inherit;">Retries</a>
@@ -3482,8 +3235,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Consecutive failures needed to report unhealthy. Default: `0`.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="startperiod_csharp">
 <a href="#startperiod_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Period</a>
@@ -3491,8 +3243,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Start period for the container to initialize before counting retries towards unstable `(ms|s|m|h)`. Default: `0s`.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeout_csharp">
 <a href="#timeout_csharp" style="color: inherit; text-decoration: inherit;">Timeout</a>
@@ -3500,8 +3251,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Maximum time to allow one check to run `(ms|s|m|h)`. Default: `0s`.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -3513,9 +3263,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Command to run to check health. For example, to run `curl -f http://localhost/health` set the
-command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="interval_go">
 <a href="#interval_go" style="color: inherit; text-decoration: inherit;">Interval</a>
@@ -3523,8 +3271,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time between running the check `(ms|s|m|h)`. Default: `0s`.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retries_go">
 <a href="#retries_go" style="color: inherit; text-decoration: inherit;">Retries</a>
@@ -3532,8 +3279,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Consecutive failures needed to report unhealthy. Default: `0`.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="startperiod_go">
 <a href="#startperiod_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Period</a>
@@ -3541,8 +3287,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Start period for the container to initialize before counting retries towards unstable `(ms|s|m|h)`. Default: `0s`.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeout_go">
 <a href="#timeout_go" style="color: inherit; text-decoration: inherit;">Timeout</a>
@@ -3550,8 +3295,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Maximum time to allow one check to run `(ms|s|m|h)`. Default: `0s`.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -3563,9 +3307,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Command to run to check health. For example, to run `curl -f http://localhost/health` set the
-command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="interval_nodejs">
 <a href="#interval_nodejs" style="color: inherit; text-decoration: inherit;">interval</a>
@@ -3573,8 +3315,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time between running the check `(ms|s|m|h)`. Default: `0s`.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retries_nodejs">
 <a href="#retries_nodejs" style="color: inherit; text-decoration: inherit;">retries</a>
@@ -3582,8 +3323,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Consecutive failures needed to report unhealthy. Default: `0`.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="startperiod_nodejs">
 <a href="#startperiod_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Period</a>
@@ -3591,8 +3331,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Start period for the container to initialize before counting retries towards unstable `(ms|s|m|h)`. Default: `0s`.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeout_nodejs">
 <a href="#timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
@@ -3600,8 +3339,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Maximum time to allow one check to run `(ms|s|m|h)`. Default: `0s`.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -3613,9 +3351,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Command to run to check health. For example, to run `curl -f http://localhost/health` set the
-command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="interval_python">
 <a href="#interval_python" style="color: inherit; text-decoration: inherit;">interval</a>
@@ -3623,8 +3359,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Time between running the check `(ms|s|m|h)`. Default: `0s`.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retries_python">
 <a href="#retries_python" style="color: inherit; text-decoration: inherit;">retries</a>
@@ -3632,8 +3367,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Consecutive failures needed to report unhealthy. Default: `0`.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="start_period_python">
 <a href="#start_period_python" style="color: inherit; text-decoration: inherit;">start_<wbr>period</a>
@@ -3641,8 +3375,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Start period for the container to initialize before counting retries towards unstable `(ms|s|m|h)`. Default: `0s`.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeout_python">
 <a href="#timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
@@ -3650,8 +3383,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Maximum time to allow one check to run `(ms|s|m|h)`. Default: `0s`.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="servicetaskspeccontainerspechost">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Host</h4>
@@ -3665,8 +3397,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A list of hostname/IP mappings to add to the container's hosts file.
-{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ip_csharp">
 <a href="#ip_csharp" style="color: inherit; text-decoration: inherit;">Ip</a>
@@ -3674,8 +3405,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ip
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -3687,8 +3417,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A list of hostname/IP mappings to add to the container's hosts file.
-{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ip_go">
 <a href="#ip_go" style="color: inherit; text-decoration: inherit;">Ip</a>
@@ -3696,8 +3425,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ip
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -3709,8 +3437,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A list of hostname/IP mappings to add to the container's hosts file.
-{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ip_nodejs">
 <a href="#ip_nodejs" style="color: inherit; text-decoration: inherit;">ip</a>
@@ -3718,8 +3445,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ip
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -3731,8 +3457,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A list of hostname/IP mappings to add to the container's hosts file.
-{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ip_python">
 <a href="#ip_python" style="color: inherit; text-decoration: inherit;">ip</a>
@@ -3740,8 +3465,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ip
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="servicetaskspeccontainerspeclabel">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Label</h4>
@@ -3755,8 +3479,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the label
-{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -3764,8 +3487,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Value of the label
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -3777,8 +3499,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the label
-{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -3786,8 +3507,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Value of the label
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -3799,8 +3519,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the label
-{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -3808,8 +3527,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Value of the label
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -3821,8 +3539,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the label
-{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -3830,8 +3547,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Value of the label
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="servicetaskspeccontainerspecmount">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Mount</h4>
@@ -3845,8 +3561,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The container path.
-{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -3854,17 +3569,15 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SELinux type label
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bindoptions_csharp">
 <a href="#bindoptions_csharp" style="color: inherit; text-decoration: inherit;">Bind<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspeccontainerspecmountbindoptions">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Mount<wbr>Bind<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicetaskspeccontainerspecmountbindoptions">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Mount<wbr>Bind<wbr>Options</a></span>
     </dt>
-    <dd>{{% md %}}Optional configuration for the `bind` type.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="readonly_csharp">
 <a href="#readonly_csharp" style="color: inherit; text-decoration: inherit;">Read<wbr>Only</a>
@@ -3872,8 +3585,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Mount the container's root filesystem as read only.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_csharp">
 <a href="#source_csharp" style="color: inherit; text-decoration: inherit;">Source</a>
@@ -3881,26 +3593,23 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The mount source (e.g., a volume name, a host path)
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tmpfsoptions_csharp">
 <a href="#tmpfsoptions_csharp" style="color: inherit; text-decoration: inherit;">Tmpfs<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspeccontainerspecmounttmpfsoptions">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Mount<wbr>Tmpfs<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicetaskspeccontainerspecmounttmpfsoptions">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Mount<wbr>Tmpfs<wbr>Options</a></span>
     </dt>
-    <dd>{{% md %}}Optional configuration for the `tmpf` type.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumeoptions_csharp">
 <a href="#volumeoptions_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspeccontainerspecmountvolumeoptions">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Mount<wbr>Volume<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicetaskspeccontainerspecmountvolumeoptions">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Mount<wbr>Volume<wbr>Options</a></span>
     </dt>
-    <dd>{{% md %}}Optional configuration for the `volume` type.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -3912,8 +3621,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The container path.
-{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -3921,8 +3629,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SELinux type label
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bindoptions_go">
 <a href="#bindoptions_go" style="color: inherit; text-decoration: inherit;">Bind<wbr>Options</a>
@@ -3930,8 +3637,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetaskspeccontainerspecmountbindoptions">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Mount<wbr>Bind<wbr>Options</a></span>
     </dt>
-    <dd>{{% md %}}Optional configuration for the `bind` type.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="readonly_go">
 <a href="#readonly_go" style="color: inherit; text-decoration: inherit;">Read<wbr>Only</a>
@@ -3939,8 +3645,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Mount the container's root filesystem as read only.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_go">
 <a href="#source_go" style="color: inherit; text-decoration: inherit;">Source</a>
@@ -3948,8 +3653,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The mount source (e.g., a volume name, a host path)
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tmpfsoptions_go">
 <a href="#tmpfsoptions_go" style="color: inherit; text-decoration: inherit;">Tmpfs<wbr>Options</a>
@@ -3957,8 +3661,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetaskspeccontainerspecmounttmpfsoptions">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Mount<wbr>Tmpfs<wbr>Options</a></span>
     </dt>
-    <dd>{{% md %}}Optional configuration for the `tmpf` type.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumeoptions_go">
 <a href="#volumeoptions_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Options</a>
@@ -3966,8 +3669,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetaskspeccontainerspecmountvolumeoptions">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Mount<wbr>Volume<wbr>Options</a></span>
     </dt>
-    <dd>{{% md %}}Optional configuration for the `volume` type.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -3979,8 +3681,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The container path.
-{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -3988,17 +3689,15 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SELinux type label
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bindoptions_nodejs">
 <a href="#bindoptions_nodejs" style="color: inherit; text-decoration: inherit;">bind<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspeccontainerspecmountbindoptions">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Mount<wbr>Bind<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicetaskspeccontainerspecmountbindoptions">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Mount<wbr>Bind<wbr>Options</a></span>
     </dt>
-    <dd>{{% md %}}Optional configuration for the `bind` type.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="readonly_nodejs">
 <a href="#readonly_nodejs" style="color: inherit; text-decoration: inherit;">read<wbr>Only</a>
@@ -4006,8 +3705,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Mount the container's root filesystem as read only.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_nodejs">
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
@@ -4015,26 +3713,23 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The mount source (e.g., a volume name, a host path)
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tmpfsoptions_nodejs">
 <a href="#tmpfsoptions_nodejs" style="color: inherit; text-decoration: inherit;">tmpfs<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspeccontainerspecmounttmpfsoptions">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Mount<wbr>Tmpfs<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicetaskspeccontainerspecmounttmpfsoptions">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Mount<wbr>Tmpfs<wbr>Options</a></span>
     </dt>
-    <dd>{{% md %}}Optional configuration for the `tmpf` type.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumeoptions_nodejs">
 <a href="#volumeoptions_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspeccontainerspecmountvolumeoptions">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Mount<wbr>Volume<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicetaskspeccontainerspecmountvolumeoptions">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Mount<wbr>Volume<wbr>Options</a></span>
     </dt>
-    <dd>{{% md %}}Optional configuration for the `volume` type.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -4046,8 +3741,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The container path.
-{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -4055,17 +3749,15 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}SELinux type label
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bind_options_python">
 <a href="#bind_options_python" style="color: inherit; text-decoration: inherit;">bind_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspeccontainerspecmountbindoptions">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Mount<wbr>Bind<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicetaskspeccontainerspecmountbindoptions">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Mount<wbr>Bind<wbr>Options</a></span>
     </dt>
-    <dd>{{% md %}}Optional configuration for the `bind` type.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="read_only_python">
 <a href="#read_only_python" style="color: inherit; text-decoration: inherit;">read_<wbr>only</a>
@@ -4073,8 +3765,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Mount the container's root filesystem as read only.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_python">
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
@@ -4082,26 +3773,23 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The mount source (e.g., a volume name, a host path)
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tmpfs_options_python">
 <a href="#tmpfs_options_python" style="color: inherit; text-decoration: inherit;">tmpfs_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspeccontainerspecmounttmpfsoptions">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Mount<wbr>Tmpfs<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicetaskspeccontainerspecmounttmpfsoptions">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Mount<wbr>Tmpfs<wbr>Options</a></span>
     </dt>
-    <dd>{{% md %}}Optional configuration for the `tmpf` type.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volume_options_python">
 <a href="#volume_options_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspeccontainerspecmountvolumeoptions">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Mount<wbr>Volume<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicetaskspeccontainerspecmountvolumeoptions">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Mount<wbr>Volume<wbr>Options</a></span>
     </dt>
-    <dd>{{% md %}}Optional configuration for the `volume` type.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="servicetaskspeccontainerspecmountbindoptions">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Mount<wbr>Bind<wbr>Options</h4>
@@ -4115,8 +3803,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A propagation mode with the value.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -4128,8 +3815,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A propagation mode with the value.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -4141,8 +3827,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A propagation mode with the value.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -4154,8 +3839,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A propagation mode with the value.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="servicetaskspeccontainerspecmounttmpfsoptions">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Mount<wbr>Tmpfs<wbr>Options</h4>
@@ -4169,8 +3853,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}See Mode below for details.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sizebytes_csharp">
 <a href="#sizebytes_csharp" style="color: inherit; text-decoration: inherit;">Size<wbr>Bytes</a>
@@ -4178,8 +3861,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The size for the tmpfs mount in bytes.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -4191,8 +3873,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}See Mode below for details.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sizebytes_go">
 <a href="#sizebytes_go" style="color: inherit; text-decoration: inherit;">Size<wbr>Bytes</a>
@@ -4200,8 +3881,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The size for the tmpfs mount in bytes.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -4213,8 +3893,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}See Mode below for details.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sizebytes_nodejs">
 <a href="#sizebytes_nodejs" style="color: inherit; text-decoration: inherit;">size<wbr>Bytes</a>
@@ -4222,8 +3901,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The size for the tmpfs mount in bytes.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -4235,8 +3913,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}See Mode below for details.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="size_bytes_python">
 <a href="#size_bytes_python" style="color: inherit; text-decoration: inherit;">size_<wbr>bytes</a>
@@ -4244,8 +3921,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The size for the tmpfs mount in bytes.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="servicetaskspeccontainerspecmountvolumeoptions">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Mount<wbr>Volume<wbr>Options</h4>
@@ -4273,10 +3949,9 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspeccontainerspecmountvolumeoptionslabel">List&lt;Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Mount<wbr>Volume<wbr>Options<wbr>Label<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#servicetaskspeccontainerspecmountvolumeoptionslabel">List&lt;Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Mount<wbr>Volume<wbr>Options<wbr>Label&gt;</a></span>
     </dt>
-    <dd>{{% md %}}See Labels below for details.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nocopy_csharp">
 <a href="#nocopy_csharp" style="color: inherit; text-decoration: inherit;">No<wbr>Copy</a>
@@ -4284,8 +3959,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether to populate volume with data from the target.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -4313,8 +3987,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetaskspeccontainerspecmountvolumeoptionslabel">[]Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Mount<wbr>Volume<wbr>Options<wbr>Label</a></span>
     </dt>
-    <dd>{{% md %}}See Labels below for details.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nocopy_go">
 <a href="#nocopy_go" style="color: inherit; text-decoration: inherit;">No<wbr>Copy</a>
@@ -4322,8 +3995,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether to populate volume with data from the target.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -4349,10 +4021,9 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspeccontainerspecmountvolumeoptionslabel">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Mount<wbr>Volume<wbr>Options<wbr>Label<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#servicetaskspeccontainerspecmountvolumeoptionslabel">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Mount<wbr>Volume<wbr>Options<wbr>Label[]</a></span>
     </dt>
-    <dd>{{% md %}}See Labels below for details.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nocopy_nodejs">
 <a href="#nocopy_nodejs" style="color: inherit; text-decoration: inherit;">no<wbr>Copy</a>
@@ -4360,8 +4031,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether to populate volume with data from the target.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -4387,10 +4057,9 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspeccontainerspecmountvolumeoptionslabel">Sequence[Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Mount<wbr>Volume<wbr>Options<wbr>Label<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicetaskspeccontainerspecmountvolumeoptionslabel">Sequence[Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Mount<wbr>Volume<wbr>Options<wbr>Label]</a></span>
     </dt>
-    <dd>{{% md %}}See Labels below for details.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="no_copy_python">
 <a href="#no_copy_python" style="color: inherit; text-decoration: inherit;">no_<wbr>copy</a>
@@ -4398,8 +4067,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether to populate volume with data from the target.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="servicetaskspeccontainerspecmountvolumeoptionslabel">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Mount<wbr>Volume<wbr>Options<wbr>Label</h4>
@@ -4413,8 +4081,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the label
-{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -4422,8 +4089,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Value of the label
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -4435,8 +4101,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the label
-{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -4444,8 +4109,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Value of the label
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -4457,8 +4121,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the label
-{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -4466,8 +4129,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Value of the label
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -4479,8 +4141,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the label
-{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -4488,8 +4149,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Value of the label
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="servicetaskspeccontainerspecprivileges">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Privileges</h4>
@@ -4501,19 +4161,17 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#credentialspec_csharp" style="color: inherit; text-decoration: inherit;">Credential<wbr>Spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspeccontainerspecprivilegescredentialspec">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Privileges<wbr>Credential<wbr>Spec<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicetaskspeccontainerspecprivilegescredentialspec">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Privileges<wbr>Credential<wbr>Spec</a></span>
     </dt>
-    <dd>{{% md %}}For managed service account (Windows only)
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="selinuxcontext_csharp">
 <a href="#selinuxcontext_csharp" style="color: inherit; text-decoration: inherit;">Se<wbr>Linux<wbr>Context</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspeccontainerspecprivilegesselinuxcontext">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Privileges<wbr>Se<wbr>Linux<wbr>Context<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicetaskspeccontainerspecprivilegesselinuxcontext">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Privileges<wbr>Se<wbr>Linux<wbr>Context</a></span>
     </dt>
-    <dd>{{% md %}}SELinux labels of the container
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -4525,8 +4183,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetaskspeccontainerspecprivilegescredentialspec">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Privileges<wbr>Credential<wbr>Spec</a></span>
     </dt>
-    <dd>{{% md %}}For managed service account (Windows only)
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="selinuxcontext_go">
 <a href="#selinuxcontext_go" style="color: inherit; text-decoration: inherit;">Se<wbr>Linux<wbr>Context</a>
@@ -4534,8 +4191,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetaskspeccontainerspecprivilegesselinuxcontext">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Privileges<wbr>Se<wbr>Linux<wbr>Context</a></span>
     </dt>
-    <dd>{{% md %}}SELinux labels of the container
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -4545,19 +4201,17 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#credentialspec_nodejs" style="color: inherit; text-decoration: inherit;">credential<wbr>Spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspeccontainerspecprivilegescredentialspec">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Privileges<wbr>Credential<wbr>Spec<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicetaskspeccontainerspecprivilegescredentialspec">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Privileges<wbr>Credential<wbr>Spec</a></span>
     </dt>
-    <dd>{{% md %}}For managed service account (Windows only)
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="selinuxcontext_nodejs">
 <a href="#selinuxcontext_nodejs" style="color: inherit; text-decoration: inherit;">se<wbr>Linux<wbr>Context</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspeccontainerspecprivilegesselinuxcontext">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Privileges<wbr>Se<wbr>Linux<wbr>Context<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicetaskspeccontainerspecprivilegesselinuxcontext">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Privileges<wbr>Se<wbr>Linux<wbr>Context</a></span>
     </dt>
-    <dd>{{% md %}}SELinux labels of the container
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -4567,19 +4221,17 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#credential_spec_python" style="color: inherit; text-decoration: inherit;">credential_<wbr>spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspeccontainerspecprivilegescredentialspec">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Privileges<wbr>Credential<wbr>Spec<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicetaskspeccontainerspecprivilegescredentialspec">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Privileges<wbr>Credential<wbr>Spec</a></span>
     </dt>
-    <dd>{{% md %}}For managed service account (Windows only)
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="se_linux_context_python">
 <a href="#se_linux_context_python" style="color: inherit; text-decoration: inherit;">se_<wbr>linux_<wbr>context</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspeccontainerspecprivilegesselinuxcontext">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Privileges<wbr>Se<wbr>Linux<wbr>Context<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicetaskspeccontainerspecprivilegesselinuxcontext">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Privileges<wbr>Se<wbr>Linux<wbr>Context</a></span>
     </dt>
-    <dd>{{% md %}}SELinux labels of the container
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="servicetaskspeccontainerspecprivilegescredentialspec">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Privileges<wbr>Credential<wbr>Spec</h4>
@@ -4593,8 +4245,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Load credential spec from this file.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="registry_csharp">
 <a href="#registry_csharp" style="color: inherit; text-decoration: inherit;">Registry</a>
@@ -4602,8 +4253,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Load credential spec from this value in the Windows registry.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -4615,8 +4265,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Load credential spec from this file.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="registry_go">
 <a href="#registry_go" style="color: inherit; text-decoration: inherit;">Registry</a>
@@ -4624,8 +4273,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Load credential spec from this value in the Windows registry.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -4637,8 +4285,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Load credential spec from this file.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="registry_nodejs">
 <a href="#registry_nodejs" style="color: inherit; text-decoration: inherit;">registry</a>
@@ -4646,8 +4293,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Load credential spec from this value in the Windows registry.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -4659,8 +4305,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Load credential spec from this file.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="registry_python">
 <a href="#registry_python" style="color: inherit; text-decoration: inherit;">registry</a>
@@ -4668,8 +4313,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Load credential spec from this value in the Windows registry.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="servicetaskspeccontainerspecprivilegesselinuxcontext">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Privileges<wbr>Se<wbr>Linux<wbr>Context</h4>
@@ -4683,8 +4327,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Disable SELinux
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="level_csharp">
 <a href="#level_csharp" style="color: inherit; text-decoration: inherit;">Level</a>
@@ -4692,8 +4335,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SELinux level label
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="role_csharp">
 <a href="#role_csharp" style="color: inherit; text-decoration: inherit;">Role</a>
@@ -4701,8 +4343,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SELinux role label
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -4710,8 +4351,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SELinux type label
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_csharp">
 <a href="#user_csharp" style="color: inherit; text-decoration: inherit;">User</a>
@@ -4719,8 +4359,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The user inside the container.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -4732,8 +4371,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Disable SELinux
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="level_go">
 <a href="#level_go" style="color: inherit; text-decoration: inherit;">Level</a>
@@ -4741,8 +4379,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SELinux level label
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="role_go">
 <a href="#role_go" style="color: inherit; text-decoration: inherit;">Role</a>
@@ -4750,8 +4387,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SELinux role label
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -4759,8 +4395,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SELinux type label
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_go">
 <a href="#user_go" style="color: inherit; text-decoration: inherit;">User</a>
@@ -4768,8 +4403,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The user inside the container.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -4781,8 +4415,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Disable SELinux
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="level_nodejs">
 <a href="#level_nodejs" style="color: inherit; text-decoration: inherit;">level</a>
@@ -4790,8 +4423,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SELinux level label
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="role_nodejs">
 <a href="#role_nodejs" style="color: inherit; text-decoration: inherit;">role</a>
@@ -4799,8 +4431,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SELinux role label
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -4808,8 +4439,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SELinux type label
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_nodejs">
 <a href="#user_nodejs" style="color: inherit; text-decoration: inherit;">user</a>
@@ -4817,8 +4447,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The user inside the container.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -4830,8 +4459,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Disable SELinux
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="level_python">
 <a href="#level_python" style="color: inherit; text-decoration: inherit;">level</a>
@@ -4839,8 +4467,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}SELinux level label
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="role_python">
 <a href="#role_python" style="color: inherit; text-decoration: inherit;">role</a>
@@ -4848,8 +4475,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}SELinux role label
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -4857,8 +4483,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}SELinux type label
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_python">
 <a href="#user_python" style="color: inherit; text-decoration: inherit;">user</a>
@@ -4866,8 +4491,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The user inside the container.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="servicetaskspeccontainerspecsecret">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Secret</h4>
@@ -4881,8 +4505,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Represents the final filename in the filesystem. The specific target file that the secret data is written within the docker container, e.g. `/root/secret/secret.json`
-{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secretid_csharp">
 <a href="#secretid_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Id</a>
@@ -4890,8 +4513,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ConfigID represents the ID of the specific secret.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filegid_csharp">
 <a href="#filegid_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>Gid</a>
@@ -4899,8 +4521,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Represents the file GID. Defaults: `0`
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filemode_csharp">
 <a href="#filemode_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>Mode</a>
@@ -4908,8 +4529,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Represents the FileMode of the file. Defaults: `0444`
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fileuid_csharp">
 <a href="#fileuid_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>Uid</a>
@@ -4917,8 +4537,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Represents the file UID. Defaults: `0`
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secretname_csharp">
 <a href="#secretname_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Name</a>
@@ -4926,8 +4545,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the secret that this references, but internally it is just provided for lookup/display purposes
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -4939,8 +4557,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Represents the final filename in the filesystem. The specific target file that the secret data is written within the docker container, e.g. `/root/secret/secret.json`
-{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secretid_go">
 <a href="#secretid_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Id</a>
@@ -4948,8 +4565,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ConfigID represents the ID of the specific secret.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filegid_go">
 <a href="#filegid_go" style="color: inherit; text-decoration: inherit;">File<wbr>Gid</a>
@@ -4957,8 +4573,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Represents the file GID. Defaults: `0`
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filemode_go">
 <a href="#filemode_go" style="color: inherit; text-decoration: inherit;">File<wbr>Mode</a>
@@ -4966,8 +4581,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Represents the FileMode of the file. Defaults: `0444`
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fileuid_go">
 <a href="#fileuid_go" style="color: inherit; text-decoration: inherit;">File<wbr>Uid</a>
@@ -4975,8 +4589,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Represents the file UID. Defaults: `0`
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secretname_go">
 <a href="#secretname_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Name</a>
@@ -4984,8 +4597,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the secret that this references, but internally it is just provided for lookup/display purposes
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -4997,8 +4609,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Represents the final filename in the filesystem. The specific target file that the secret data is written within the docker container, e.g. `/root/secret/secret.json`
-{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secretid_nodejs">
 <a href="#secretid_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Id</a>
@@ -5006,8 +4617,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ConfigID represents the ID of the specific secret.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filegid_nodejs">
 <a href="#filegid_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Gid</a>
@@ -5015,8 +4625,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Represents the file GID. Defaults: `0`
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filemode_nodejs">
 <a href="#filemode_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Mode</a>
@@ -5024,8 +4633,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Represents the FileMode of the file. Defaults: `0444`
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fileuid_nodejs">
 <a href="#fileuid_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Uid</a>
@@ -5033,8 +4641,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Represents the file UID. Defaults: `0`
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secretname_nodejs">
 <a href="#secretname_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Name</a>
@@ -5042,8 +4649,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the secret that this references, but internally it is just provided for lookup/display purposes
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -5055,8 +4661,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Represents the final filename in the filesystem. The specific target file that the secret data is written within the docker container, e.g. `/root/secret/secret.json`
-{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secret_id_python">
 <a href="#secret_id_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>id</a>
@@ -5064,8 +4669,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}ConfigID represents the ID of the specific secret.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="file_gid_python">
 <a href="#file_gid_python" style="color: inherit; text-decoration: inherit;">file_<wbr>gid</a>
@@ -5073,8 +4677,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Represents the file GID. Defaults: `0`
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="file_mode_python">
 <a href="#file_mode_python" style="color: inherit; text-decoration: inherit;">file_<wbr>mode</a>
@@ -5082,8 +4685,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Represents the FileMode of the file. Defaults: `0444`
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="file_uid_python">
 <a href="#file_uid_python" style="color: inherit; text-decoration: inherit;">file_<wbr>uid</a>
@@ -5091,8 +4693,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Represents the file UID. Defaults: `0`
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secret_name_python">
 <a href="#secret_name_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>name</a>
@@ -5100,8 +4701,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the secret that this references, but internally it is just provided for lookup/display purposes
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="servicetaskspeclogdriver">Service<wbr>Task<wbr>Spec<wbr>Log<wbr>Driver</h4>
@@ -5115,8 +4715,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The logging driver to use. Either `(none|json-file|syslog|journald|gelf|fluentd|awslogs|splunk|etwlogs|gcplogs)`.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="options_csharp">
 <a href="#options_csharp" style="color: inherit; text-decoration: inherit;">Options</a>
@@ -5124,8 +4723,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}The options for the logging driver, e.g.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -5137,8 +4735,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The logging driver to use. Either `(none|json-file|syslog|journald|gelf|fluentd|awslogs|splunk|etwlogs|gcplogs)`.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="options_go">
 <a href="#options_go" style="color: inherit; text-decoration: inherit;">Options</a>
@@ -5146,8 +4743,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}The options for the logging driver, e.g.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -5159,8 +4755,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The logging driver to use. Either `(none|json-file|syslog|journald|gelf|fluentd|awslogs|splunk|etwlogs|gcplogs)`.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="options_nodejs">
 <a href="#options_nodejs" style="color: inherit; text-decoration: inherit;">options</a>
@@ -5168,8 +4763,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}The options for the logging driver, e.g.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -5181,8 +4775,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The logging driver to use. Either `(none|json-file|syslog|journald|gelf|fluentd|awslogs|splunk|etwlogs|gcplogs)`.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="options_python">
 <a href="#options_python" style="color: inherit; text-decoration: inherit;">options</a>
@@ -5190,8 +4783,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}The options for the logging driver, e.g.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="servicetaskspecplacement">Service<wbr>Task<wbr>Spec<wbr>Placement</h4>
@@ -5205,8 +4797,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}An array of constraints. e.g.: `node.role==manager`
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxreplicas_csharp">
 <a href="#maxreplicas_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Replicas</a>
@@ -5214,17 +4805,15 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Maximum number of replicas for per node (default value is 0, which is unlimited)
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="platforms_csharp">
 <a href="#platforms_csharp" style="color: inherit; text-decoration: inherit;">Platforms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspecplacementplatform">List&lt;Service<wbr>Task<wbr>Spec<wbr>Placement<wbr>Platform<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#servicetaskspecplacementplatform">List&lt;Service<wbr>Task<wbr>Spec<wbr>Placement<wbr>Platform&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Platforms stores all the platforms that the service's image can run on
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prefs_csharp">
 <a href="#prefs_csharp" style="color: inherit; text-decoration: inherit;">Prefs</a>
@@ -5232,8 +4821,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Preferences provide a way to make the scheduler aware of factors such as topology. They are provided in order from highest to lowest precedence, e.g.: `spread=node.role.manager`
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -5245,8 +4833,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}An array of constraints. e.g.: `node.role==manager`
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxreplicas_go">
 <a href="#maxreplicas_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Replicas</a>
@@ -5254,8 +4841,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Maximum number of replicas for per node (default value is 0, which is unlimited)
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="platforms_go">
 <a href="#platforms_go" style="color: inherit; text-decoration: inherit;">Platforms</a>
@@ -5263,8 +4849,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetaskspecplacementplatform">[]Service<wbr>Task<wbr>Spec<wbr>Placement<wbr>Platform</a></span>
     </dt>
-    <dd>{{% md %}}Platforms stores all the platforms that the service's image can run on
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prefs_go">
 <a href="#prefs_go" style="color: inherit; text-decoration: inherit;">Prefs</a>
@@ -5272,8 +4857,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Preferences provide a way to make the scheduler aware of factors such as topology. They are provided in order from highest to lowest precedence, e.g.: `spread=node.role.manager`
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -5285,8 +4869,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}An array of constraints. e.g.: `node.role==manager`
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxreplicas_nodejs">
 <a href="#maxreplicas_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Replicas</a>
@@ -5294,17 +4877,15 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Maximum number of replicas for per node (default value is 0, which is unlimited)
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="platforms_nodejs">
 <a href="#platforms_nodejs" style="color: inherit; text-decoration: inherit;">platforms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspecplacementplatform">Service<wbr>Task<wbr>Spec<wbr>Placement<wbr>Platform<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#servicetaskspecplacementplatform">Service<wbr>Task<wbr>Spec<wbr>Placement<wbr>Platform[]</a></span>
     </dt>
-    <dd>{{% md %}}Platforms stores all the platforms that the service's image can run on
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prefs_nodejs">
 <a href="#prefs_nodejs" style="color: inherit; text-decoration: inherit;">prefs</a>
@@ -5312,8 +4893,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Preferences provide a way to make the scheduler aware of factors such as topology. They are provided in order from highest to lowest precedence, e.g.: `spread=node.role.manager`
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -5325,8 +4905,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}An array of constraints. e.g.: `node.role==manager`
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_replicas_python">
 <a href="#max_replicas_python" style="color: inherit; text-decoration: inherit;">max_<wbr>replicas</a>
@@ -5334,17 +4913,15 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Maximum number of replicas for per node (default value is 0, which is unlimited)
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="platforms_python">
 <a href="#platforms_python" style="color: inherit; text-decoration: inherit;">platforms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspecplacementplatform">Sequence[Service<wbr>Task<wbr>Spec<wbr>Placement<wbr>Platform<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicetaskspecplacementplatform">Sequence[Service<wbr>Task<wbr>Spec<wbr>Placement<wbr>Platform]</a></span>
     </dt>
-    <dd>{{% md %}}Platforms stores all the platforms that the service's image can run on
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prefs_python">
 <a href="#prefs_python" style="color: inherit; text-decoration: inherit;">prefs</a>
@@ -5352,8 +4929,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Preferences provide a way to make the scheduler aware of factors such as topology. They are provided in order from highest to lowest precedence, e.g.: `spread=node.role.manager`
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="servicetaskspecplacementplatform">Service<wbr>Task<wbr>Spec<wbr>Placement<wbr>Platform</h4>
@@ -5367,8 +4943,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The architecture, e.g., `amd64`
-{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="os_csharp">
 <a href="#os_csharp" style="color: inherit; text-decoration: inherit;">Os</a>
@@ -5376,8 +4951,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The operation system, e.g., `linux`
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -5389,8 +4963,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The architecture, e.g., `amd64`
-{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="os_go">
 <a href="#os_go" style="color: inherit; text-decoration: inherit;">Os</a>
@@ -5398,8 +4971,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The operation system, e.g., `linux`
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -5411,8 +4983,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The architecture, e.g., `amd64`
-{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="os_nodejs">
 <a href="#os_nodejs" style="color: inherit; text-decoration: inherit;">os</a>
@@ -5420,8 +4991,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The operation system, e.g., `linux`
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -5433,8 +5003,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The architecture, e.g., `amd64`
-{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="os_python">
 <a href="#os_python" style="color: inherit; text-decoration: inherit;">os</a>
@@ -5442,8 +5011,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The operation system, e.g., `linux`
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="servicetaskspecresources">Service<wbr>Task<wbr>Spec<wbr>Resources</h4>
@@ -5455,19 +5023,17 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#limits_csharp" style="color: inherit; text-decoration: inherit;">Limits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspecresourceslimits">Service<wbr>Task<wbr>Spec<wbr>Resources<wbr>Limits<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicetaskspecresourceslimits">Service<wbr>Task<wbr>Spec<wbr>Resources<wbr>Limits</a></span>
     </dt>
-    <dd>{{% md %}}Describes the resources which can be advertised by a node and requested by a task.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reservation_csharp">
 <a href="#reservation_csharp" style="color: inherit; text-decoration: inherit;">Reservation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspecresourcesreservation">Service<wbr>Task<wbr>Spec<wbr>Resources<wbr>Reservation<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicetaskspecresourcesreservation">Service<wbr>Task<wbr>Spec<wbr>Resources<wbr>Reservation</a></span>
     </dt>
-    <dd>{{% md %}}An object describing the resources which can be advertised by a node and requested by a task.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -5479,8 +5045,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetaskspecresourceslimits">Service<wbr>Task<wbr>Spec<wbr>Resources<wbr>Limits</a></span>
     </dt>
-    <dd>{{% md %}}Describes the resources which can be advertised by a node and requested by a task.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reservation_go">
 <a href="#reservation_go" style="color: inherit; text-decoration: inherit;">Reservation</a>
@@ -5488,8 +5053,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetaskspecresourcesreservation">Service<wbr>Task<wbr>Spec<wbr>Resources<wbr>Reservation</a></span>
     </dt>
-    <dd>{{% md %}}An object describing the resources which can be advertised by a node and requested by a task.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -5499,19 +5063,17 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#limits_nodejs" style="color: inherit; text-decoration: inherit;">limits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspecresourceslimits">Service<wbr>Task<wbr>Spec<wbr>Resources<wbr>Limits<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicetaskspecresourceslimits">Service<wbr>Task<wbr>Spec<wbr>Resources<wbr>Limits</a></span>
     </dt>
-    <dd>{{% md %}}Describes the resources which can be advertised by a node and requested by a task.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reservation_nodejs">
 <a href="#reservation_nodejs" style="color: inherit; text-decoration: inherit;">reservation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspecresourcesreservation">Service<wbr>Task<wbr>Spec<wbr>Resources<wbr>Reservation<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicetaskspecresourcesreservation">Service<wbr>Task<wbr>Spec<wbr>Resources<wbr>Reservation</a></span>
     </dt>
-    <dd>{{% md %}}An object describing the resources which can be advertised by a node and requested by a task.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -5521,19 +5083,17 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#limits_python" style="color: inherit; text-decoration: inherit;">limits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspecresourceslimits">Service<wbr>Task<wbr>Spec<wbr>Resources<wbr>Limits<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicetaskspecresourceslimits">Service<wbr>Task<wbr>Spec<wbr>Resources<wbr>Limits</a></span>
     </dt>
-    <dd>{{% md %}}Describes the resources which can be advertised by a node and requested by a task.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reservation_python">
 <a href="#reservation_python" style="color: inherit; text-decoration: inherit;">reservation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspecresourcesreservation">Service<wbr>Task<wbr>Spec<wbr>Resources<wbr>Reservation<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicetaskspecresourcesreservation">Service<wbr>Task<wbr>Spec<wbr>Resources<wbr>Reservation</a></span>
     </dt>
-    <dd>{{% md %}}An object describing the resources which can be advertised by a node and requested by a task.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="servicetaskspecresourceslimits">Service<wbr>Task<wbr>Spec<wbr>Resources<wbr>Limits</h4>
@@ -5541,23 +5101,13 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="genericresources_csharp">
-<a href="#genericresources_csharp" style="color: inherit; text-decoration: inherit;">Generic<wbr>Resources</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspecresourceslimitsgenericresources">Service<wbr>Task<wbr>Spec<wbr>Resources<wbr>Limits<wbr>Generic<wbr>Resources<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}User-defined resources can be either Integer resources (e.g, SSD=3) or String resources (e.g, GPU=UUID1)
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="memorybytes_csharp">
 <a href="#memorybytes_csharp" style="color: inherit; text-decoration: inherit;">Memory<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The amount of memory in bytes the container allocates
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nanocpus_csharp">
 <a href="#nanocpus_csharp" style="color: inherit; text-decoration: inherit;">Nano<wbr>Cpus</a>
@@ -5565,21 +5115,11 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}CPU shares in units of 1/1e9 (or 10^-9) of the CPU. Should be at least 1000000
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="genericresources_go">
-<a href="#genericresources_go" style="color: inherit; text-decoration: inherit;">Generic<wbr>Resources</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspecresourceslimitsgenericresources">Service<wbr>Task<wbr>Spec<wbr>Resources<wbr>Limits<wbr>Generic<wbr>Resources</a></span>
-    </dt>
-    <dd>{{% md %}}User-defined resources can be either Integer resources (e.g, SSD=3) or String resources (e.g, GPU=UUID1)
-{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="memorybytes_go">
 <a href="#memorybytes_go" style="color: inherit; text-decoration: inherit;">Memory<wbr>Bytes</a>
@@ -5587,8 +5127,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The amount of memory in bytes the container allocates
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nanocpus_go">
 <a href="#nanocpus_go" style="color: inherit; text-decoration: inherit;">Nano<wbr>Cpus</a>
@@ -5596,21 +5135,11 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}CPU shares in units of 1/1e9 (or 10^-9) of the CPU. Should be at least 1000000
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="genericresources_nodejs">
-<a href="#genericresources_nodejs" style="color: inherit; text-decoration: inherit;">generic<wbr>Resources</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspecresourceslimitsgenericresources">Service<wbr>Task<wbr>Spec<wbr>Resources<wbr>Limits<wbr>Generic<wbr>Resources<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}User-defined resources can be either Integer resources (e.g, SSD=3) or String resources (e.g, GPU=UUID1)
-{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="memorybytes_nodejs">
 <a href="#memorybytes_nodejs" style="color: inherit; text-decoration: inherit;">memory<wbr>Bytes</a>
@@ -5618,8 +5147,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The amount of memory in bytes the container allocates
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nanocpus_nodejs">
 <a href="#nanocpus_nodejs" style="color: inherit; text-decoration: inherit;">nano<wbr>Cpus</a>
@@ -5627,21 +5155,11 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}CPU shares in units of 1/1e9 (or 10^-9) of the CPU. Should be at least 1000000
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="generic_resources_python">
-<a href="#generic_resources_python" style="color: inherit; text-decoration: inherit;">generic_<wbr>resources</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspecresourceslimitsgenericresources">Service<wbr>Task<wbr>Spec<wbr>Resources<wbr>Limits<wbr>Generic<wbr>Resources<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}User-defined resources can be either Integer resources (e.g, SSD=3) or String resources (e.g, GPU=UUID1)
-{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="memory_bytes_python">
 <a href="#memory_bytes_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>bytes</a>
@@ -5649,8 +5167,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The amount of memory in bytes the container allocates
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nano_cpus_python">
 <a href="#nano_cpus_python" style="color: inherit; text-decoration: inherit;">nano_<wbr>cpus</a>
@@ -5658,98 +5175,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}CPU shares in units of 1/1e9 (or 10^-9) of the CPU. Should be at least 1000000
-{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="servicetaskspecresourceslimitsgenericresources">Service<wbr>Task<wbr>Spec<wbr>Resources<wbr>Limits<wbr>Generic<wbr>Resources</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="discreteresourcesspecs_csharp">
-<a href="#discreteresourcesspecs_csharp" style="color: inherit; text-decoration: inherit;">Discrete<wbr>Resources<wbr>Specs</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
-    </dt>
-    <dd>{{% md %}}The Integer resources, delimited by `=`
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="namedresourcesspecs_csharp">
-<a href="#namedresourcesspecs_csharp" style="color: inherit; text-decoration: inherit;">Named<wbr>Resources<wbr>Specs</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
-    </dt>
-    <dd>{{% md %}}The String resources, delimited by `=`
-{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="discreteresourcesspecs_go">
-<a href="#discreteresourcesspecs_go" style="color: inherit; text-decoration: inherit;">Discrete<wbr>Resources<wbr>Specs</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}The Integer resources, delimited by `=`
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="namedresourcesspecs_go">
-<a href="#namedresourcesspecs_go" style="color: inherit; text-decoration: inherit;">Named<wbr>Resources<wbr>Specs</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}The String resources, delimited by `=`
-{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="discreteresourcesspecs_nodejs">
-<a href="#discreteresourcesspecs_nodejs" style="color: inherit; text-decoration: inherit;">discrete<wbr>Resources<wbr>Specs</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
-    </dt>
-    <dd>{{% md %}}The Integer resources, delimited by `=`
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="namedresourcesspecs_nodejs">
-<a href="#namedresourcesspecs_nodejs" style="color: inherit; text-decoration: inherit;">named<wbr>Resources<wbr>Specs</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
-    </dt>
-    <dd>{{% md %}}The String resources, delimited by `=`
-{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="discrete_resources_specs_python">
-<a href="#discrete_resources_specs_python" style="color: inherit; text-decoration: inherit;">discrete_<wbr>resources_<wbr>specs</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
-    </dt>
-    <dd>{{% md %}}The Integer resources, delimited by `=`
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="named_resources_specs_python">
-<a href="#named_resources_specs_python" style="color: inherit; text-decoration: inherit;">named_<wbr>resources_<wbr>specs</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
-    </dt>
-    <dd>{{% md %}}The String resources, delimited by `=`
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="servicetaskspecresourcesreservation">Service<wbr>Task<wbr>Spec<wbr>Resources<wbr>Reservation</h4>
@@ -5761,10 +5187,9 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#genericresources_csharp" style="color: inherit; text-decoration: inherit;">Generic<wbr>Resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspecresourcesreservationgenericresources">Service<wbr>Task<wbr>Spec<wbr>Resources<wbr>Reservation<wbr>Generic<wbr>Resources<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicetaskspecresourcesreservationgenericresources">Service<wbr>Task<wbr>Spec<wbr>Resources<wbr>Reservation<wbr>Generic<wbr>Resources</a></span>
     </dt>
-    <dd>{{% md %}}User-defined resources can be either Integer resources (e.g, SSD=3) or String resources (e.g, GPU=UUID1)
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="memorybytes_csharp">
 <a href="#memorybytes_csharp" style="color: inherit; text-decoration: inherit;">Memory<wbr>Bytes</a>
@@ -5772,8 +5197,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The amount of memory in bytes the container allocates
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nanocpus_csharp">
 <a href="#nanocpus_csharp" style="color: inherit; text-decoration: inherit;">Nano<wbr>Cpus</a>
@@ -5781,8 +5205,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}CPU shares in units of 1/1e9 (or 10^-9) of the CPU. Should be at least 1000000
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -5794,8 +5217,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetaskspecresourcesreservationgenericresources">Service<wbr>Task<wbr>Spec<wbr>Resources<wbr>Reservation<wbr>Generic<wbr>Resources</a></span>
     </dt>
-    <dd>{{% md %}}User-defined resources can be either Integer resources (e.g, SSD=3) or String resources (e.g, GPU=UUID1)
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="memorybytes_go">
 <a href="#memorybytes_go" style="color: inherit; text-decoration: inherit;">Memory<wbr>Bytes</a>
@@ -5803,8 +5225,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The amount of memory in bytes the container allocates
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nanocpus_go">
 <a href="#nanocpus_go" style="color: inherit; text-decoration: inherit;">Nano<wbr>Cpus</a>
@@ -5812,8 +5233,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}CPU shares in units of 1/1e9 (or 10^-9) of the CPU. Should be at least 1000000
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -5823,10 +5243,9 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#genericresources_nodejs" style="color: inherit; text-decoration: inherit;">generic<wbr>Resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspecresourcesreservationgenericresources">Service<wbr>Task<wbr>Spec<wbr>Resources<wbr>Reservation<wbr>Generic<wbr>Resources<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicetaskspecresourcesreservationgenericresources">Service<wbr>Task<wbr>Spec<wbr>Resources<wbr>Reservation<wbr>Generic<wbr>Resources</a></span>
     </dt>
-    <dd>{{% md %}}User-defined resources can be either Integer resources (e.g, SSD=3) or String resources (e.g, GPU=UUID1)
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="memorybytes_nodejs">
 <a href="#memorybytes_nodejs" style="color: inherit; text-decoration: inherit;">memory<wbr>Bytes</a>
@@ -5834,8 +5253,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The amount of memory in bytes the container allocates
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nanocpus_nodejs">
 <a href="#nanocpus_nodejs" style="color: inherit; text-decoration: inherit;">nano<wbr>Cpus</a>
@@ -5843,8 +5261,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}CPU shares in units of 1/1e9 (or 10^-9) of the CPU. Should be at least 1000000
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -5854,10 +5271,9 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#generic_resources_python" style="color: inherit; text-decoration: inherit;">generic_<wbr>resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspecresourcesreservationgenericresources">Service<wbr>Task<wbr>Spec<wbr>Resources<wbr>Reservation<wbr>Generic<wbr>Resources<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicetaskspecresourcesreservationgenericresources">Service<wbr>Task<wbr>Spec<wbr>Resources<wbr>Reservation<wbr>Generic<wbr>Resources</a></span>
     </dt>
-    <dd>{{% md %}}User-defined resources can be either Integer resources (e.g, SSD=3) or String resources (e.g, GPU=UUID1)
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="memory_bytes_python">
 <a href="#memory_bytes_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>bytes</a>
@@ -5865,8 +5281,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The amount of memory in bytes the container allocates
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nano_cpus_python">
 <a href="#nano_cpus_python" style="color: inherit; text-decoration: inherit;">nano_<wbr>cpus</a>
@@ -5874,8 +5289,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}CPU shares in units of 1/1e9 (or 10^-9) of the CPU. Should be at least 1000000
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="servicetaskspecresourcesreservationgenericresources">Service<wbr>Task<wbr>Spec<wbr>Resources<wbr>Reservation<wbr>Generic<wbr>Resources</h4>
@@ -5889,8 +5303,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The Integer resources, delimited by `=`
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="namedresourcesspecs_csharp">
 <a href="#namedresourcesspecs_csharp" style="color: inherit; text-decoration: inherit;">Named<wbr>Resources<wbr>Specs</a>
@@ -5898,8 +5311,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The String resources, delimited by `=`
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -5911,8 +5323,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The Integer resources, delimited by `=`
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="namedresourcesspecs_go">
 <a href="#namedresourcesspecs_go" style="color: inherit; text-decoration: inherit;">Named<wbr>Resources<wbr>Specs</a>
@@ -5920,8 +5331,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The String resources, delimited by `=`
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -5933,8 +5343,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The Integer resources, delimited by `=`
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="namedresourcesspecs_nodejs">
 <a href="#namedresourcesspecs_nodejs" style="color: inherit; text-decoration: inherit;">named<wbr>Resources<wbr>Specs</a>
@@ -5942,8 +5351,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The String resources, delimited by `=`
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -5955,8 +5363,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The Integer resources, delimited by `=`
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="named_resources_specs_python">
 <a href="#named_resources_specs_python" style="color: inherit; text-decoration: inherit;">named_<wbr>resources_<wbr>specs</a>
@@ -5964,8 +5371,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The String resources, delimited by `=`
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="servicetaskspecrestartpolicy">Service<wbr>Task<wbr>Spec<wbr>Restart<wbr>Policy</h4>
@@ -5979,8 +5385,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Condition for restart: `(none|on-failure|any)`
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="delay_csharp">
 <a href="#delay_csharp" style="color: inherit; text-decoration: inherit;">Delay</a>
@@ -5988,8 +5393,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Delay between restart attempts `(ms|s|m|h)`
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxattempts_csharp">
 <a href="#maxattempts_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Attempts</a>
@@ -5997,8 +5401,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Maximum attempts to restart a given container before giving up (default value is `0`, which is ignored)
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="window_csharp">
 <a href="#window_csharp" style="color: inherit; text-decoration: inherit;">Window</a>
@@ -6006,8 +5409,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time window used to evaluate the restart policy (default value is `0`, which is unbounded) `(ms|s|m|h)`
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -6019,8 +5421,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Condition for restart: `(none|on-failure|any)`
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="delay_go">
 <a href="#delay_go" style="color: inherit; text-decoration: inherit;">Delay</a>
@@ -6028,8 +5429,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Delay between restart attempts `(ms|s|m|h)`
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxattempts_go">
 <a href="#maxattempts_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Attempts</a>
@@ -6037,8 +5437,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Maximum attempts to restart a given container before giving up (default value is `0`, which is ignored)
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="window_go">
 <a href="#window_go" style="color: inherit; text-decoration: inherit;">Window</a>
@@ -6046,8 +5445,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time window used to evaluate the restart policy (default value is `0`, which is unbounded) `(ms|s|m|h)`
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -6059,8 +5457,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Condition for restart: `(none|on-failure|any)`
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="delay_nodejs">
 <a href="#delay_nodejs" style="color: inherit; text-decoration: inherit;">delay</a>
@@ -6068,8 +5465,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Delay between restart attempts `(ms|s|m|h)`
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxattempts_nodejs">
 <a href="#maxattempts_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Attempts</a>
@@ -6077,8 +5473,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Maximum attempts to restart a given container before giving up (default value is `0`, which is ignored)
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="window_nodejs">
 <a href="#window_nodejs" style="color: inherit; text-decoration: inherit;">window</a>
@@ -6086,8 +5481,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time window used to evaluate the restart policy (default value is `0`, which is unbounded) `(ms|s|m|h)`
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -6099,8 +5493,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Condition for restart: `(none|on-failure|any)`
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="delay_python">
 <a href="#delay_python" style="color: inherit; text-decoration: inherit;">delay</a>
@@ -6108,8 +5501,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Delay between restart attempts `(ms|s|m|h)`
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_attempts_python">
 <a href="#max_attempts_python" style="color: inherit; text-decoration: inherit;">max_<wbr>attempts</a>
@@ -6117,8 +5509,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Maximum attempts to restart a given container before giving up (default value is `0`, which is ignored)
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="window_python">
 <a href="#window_python" style="color: inherit; text-decoration: inherit;">window</a>
@@ -6126,8 +5517,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The time window used to evaluate the restart policy (default value is `0`, which is unbounded) `(ms|s|m|h)`
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="serviceupdateconfig">Service<wbr>Update<wbr>Config</h4>
@@ -6141,8 +5531,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Delay between updates `(ns|us|ms|s|m|h)`, e.g. `5s`.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="failureaction_csharp">
 <a href="#failureaction_csharp" style="color: inherit; text-decoration: inherit;">Failure<wbr>Action</a>
@@ -6150,8 +5539,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Action on update failure: `pause|continue|rollback`.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxfailureratio_csharp">
 <a href="#maxfailureratio_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Failure<wbr>Ratio</a>
@@ -6159,9 +5547,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The failure rate to tolerate during an update as `float`. **Important:** the `float`need to be wrapped in a `string` to avoid internal
-casting and precision errors.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitor_csharp">
 <a href="#monitor_csharp" style="color: inherit; text-decoration: inherit;">Monitor</a>
@@ -6169,8 +5555,7 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Duration after each task update to monitor for failure `(ns|us|ms|s|m|h)`
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="order_csharp">
 <a href="#order_csharp" style="color: inherit; text-decoration: inherit;">Order</a>
@@ -6178,8 +5563,7 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Update order either 'stop-first' or 'start-first'.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parallelism_csharp">
 <a href="#parallelism_csharp" style="color: inherit; text-decoration: inherit;">Parallelism</a>
@@ -6187,8 +5571,7 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum number of tasks to be updated in one iteration simultaneously (0 to update all at once).
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -6200,8 +5583,7 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Delay between updates `(ns|us|ms|s|m|h)`, e.g. `5s`.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="failureaction_go">
 <a href="#failureaction_go" style="color: inherit; text-decoration: inherit;">Failure<wbr>Action</a>
@@ -6209,8 +5591,7 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Action on update failure: `pause|continue|rollback`.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxfailureratio_go">
 <a href="#maxfailureratio_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Failure<wbr>Ratio</a>
@@ -6218,9 +5599,7 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The failure rate to tolerate during an update as `float`. **Important:** the `float`need to be wrapped in a `string` to avoid internal
-casting and precision errors.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitor_go">
 <a href="#monitor_go" style="color: inherit; text-decoration: inherit;">Monitor</a>
@@ -6228,8 +5607,7 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Duration after each task update to monitor for failure `(ns|us|ms|s|m|h)`
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="order_go">
 <a href="#order_go" style="color: inherit; text-decoration: inherit;">Order</a>
@@ -6237,8 +5615,7 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Update order either 'stop-first' or 'start-first'.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parallelism_go">
 <a href="#parallelism_go" style="color: inherit; text-decoration: inherit;">Parallelism</a>
@@ -6246,8 +5623,7 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum number of tasks to be updated in one iteration simultaneously (0 to update all at once).
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -6259,8 +5635,7 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Delay between updates `(ns|us|ms|s|m|h)`, e.g. `5s`.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="failureaction_nodejs">
 <a href="#failureaction_nodejs" style="color: inherit; text-decoration: inherit;">failure<wbr>Action</a>
@@ -6268,8 +5643,7 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Action on update failure: `pause|continue|rollback`.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxfailureratio_nodejs">
 <a href="#maxfailureratio_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Failure<wbr>Ratio</a>
@@ -6277,9 +5651,7 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The failure rate to tolerate during an update as `float`. **Important:** the `float`need to be wrapped in a `string` to avoid internal
-casting and precision errors.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitor_nodejs">
 <a href="#monitor_nodejs" style="color: inherit; text-decoration: inherit;">monitor</a>
@@ -6287,8 +5659,7 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Duration after each task update to monitor for failure `(ns|us|ms|s|m|h)`
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="order_nodejs">
 <a href="#order_nodejs" style="color: inherit; text-decoration: inherit;">order</a>
@@ -6296,8 +5667,7 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Update order either 'stop-first' or 'start-first'.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parallelism_nodejs">
 <a href="#parallelism_nodejs" style="color: inherit; text-decoration: inherit;">parallelism</a>
@@ -6305,8 +5675,7 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The maximum number of tasks to be updated in one iteration simultaneously (0 to update all at once).
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -6318,8 +5687,7 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Delay between updates `(ns|us|ms|s|m|h)`, e.g. `5s`.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="failure_action_python">
 <a href="#failure_action_python" style="color: inherit; text-decoration: inherit;">failure_<wbr>action</a>
@@ -6327,8 +5695,7 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Action on update failure: `pause|continue|rollback`.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_failure_ratio_python">
 <a href="#max_failure_ratio_python" style="color: inherit; text-decoration: inherit;">max_<wbr>failure_<wbr>ratio</a>
@@ -6336,9 +5703,7 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The failure rate to tolerate during an update as `float`. **Important:** the `float`need to be wrapped in a `string` to avoid internal
-casting and precision errors.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitor_python">
 <a href="#monitor_python" style="color: inherit; text-decoration: inherit;">monitor</a>
@@ -6346,8 +5711,7 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Duration after each task update to monitor for failure `(ns|us|ms|s|m|h)`
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="order_python">
 <a href="#order_python" style="color: inherit; text-decoration: inherit;">order</a>
@@ -6355,8 +5719,7 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Update order either 'stop-first' or 'start-first'.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parallelism_python">
 <a href="#parallelism_python" style="color: inherit; text-decoration: inherit;">parallelism</a>
@@ -6364,8 +5727,7 @@ casting and precision errors.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum number of tasks to be updated in one iteration simultaneously (0 to update all at once).
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

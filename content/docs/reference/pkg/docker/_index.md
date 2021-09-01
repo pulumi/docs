@@ -32,6 +32,7 @@ A Pulumi package for interacting with Docker in Pulumi programs
     <li><a href="getnetwork" title="GetNetwork"><span class="symbol function"></span>GetNetwork</a></li>
     <li><a href="getplugin" title="GetPlugin"><span class="symbol function"></span>GetPlugin</a></li>
     <li><a href="getregistryimage" title="GetRegistryImage"><span class="symbol function"></span>GetRegistryImage</a></li>
+    <li><a href="getremoteimage" title="GetRemoteImage"><span class="symbol function"></span>GetRemoteImage</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -43,6 +44,6 @@ A Pulumi package for interacting with Docker in Pulumi programs
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`docker` Terraform Provider](https://github.com/terraform-providers/terraform-provider-docker).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>3.0.0</dd>
+	<dd>3.1.0</dd>
 </dl>
 
