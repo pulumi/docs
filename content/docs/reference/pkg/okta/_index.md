@@ -74,6 +74,6 @@ A Pulumi package for creating and managing okta resources.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`okta` Terraform Provider](https://github.com/okta/terraform-provider-okta).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>3.1.1</dd>
+	<dd>3.1.2</dd>
 </dl>
 
