@@ -28,26 +28,26 @@
     }
 
     &.note-info {
-        @apply border-blue-100;
+        @apply border-blue-600;
 
         .note-heading {
-            @apply bg-blue-100 text-blue-900;
+            @apply bg-blue-600 text-white;
         }
     }
 
     &.note-warning {
-        @apply border-orange-100;
+        @apply border-fuchsia-600;
 
         .note-heading {
-            @apply bg-orange-100 text-orange-900;
+            @apply bg-fuchsia-600 text-white;
         }
     }
 
     &.note-deprecated {
-        @apply border-orange-100;
+        @apply border-fuchsia-600;
 
         .note-heading {
-            @apply bg-orange-100 text-orange-900;
+            @apply bg-fuchsia-600 text-white;
         }
     }
 }
