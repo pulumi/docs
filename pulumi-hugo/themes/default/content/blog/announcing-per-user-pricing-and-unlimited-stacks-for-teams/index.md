@@ -1,16 +1,19 @@
 ---
 title: "Announcing Per User Pricing and Unlimited Stacks for Teams"
 date: "2019-04-19"
+draft: false
 meta_desc: "Today we are announcing Pulumi's new pricing tier, with three paid editions: Team Starter Edition, Team Pro Edition, and Enterprise Edition."
 authors: ["joe-duffy"]
 tags:
   - features
 ---
 
-{{% notes %}}
-We have updated our pricing structure in response to user feedback and the information
-in this blog post is no longer accurate. Please visit our [Pricing Page]({{< relref "/pricing" >}})
-for the most up-to-date information about pricing.
+{{% notes type="warning" %}}
+This blog post is outdated and no longer accurate.
+We have updated our pricing structure in response to user feedback.
+Learn all about it in our new blog post: [Announcing New Usage-Based Pricing For Your Whole Team]({{< relref "/blog/announcing-new-usage-based-pricing-for-your-whole-team" >}}).
+Or visit our [Pricing Page]({{< relref "/pricing" >}})
+for more details about pricing.
 {{% /notes %}}
 
 Since launching last year, thousands of users and hundreds of
