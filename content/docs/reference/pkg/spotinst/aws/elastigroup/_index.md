@@ -218,6 +218,7 @@ const default_elastigroup = new spotinst.aws.Elastigroup("default-elastigroup", 
                 <span class="nx">min_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
                 <span class="nx">minimum_instance_lifetime</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
                 <span class="nx">multai_target_sets</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupMultaiTargetSetArgs]]</span> = None<span class="p">,</span>
+                <span class="nx">multiple_metrics</span><span class="p">:</span> <span class="nx">Optional[ElastigroupMultipleMetricsArgs]</span> = None<span class="p">,</span>
                 <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                 <span class="nx">network_interfaces</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupNetworkInterfaceArgs]]</span> = None<span class="p">,</span>
                 <span class="nx">ondemand_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
@@ -784,6 +785,14 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
     </dt>
     <dd>{{% md %}}Set of targets to register.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="multiplemetrics_csharp">
+<a href="#multiplemetrics_csharp" style="color: inherit; text-decoration: inherit;">Multiple<wbr>Metrics</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#elastigroupmultiplemetrics">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Elastigroup<wbr>Multiple<wbr>Metrics<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1465,6 +1474,14 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
     <dd>{{% md %}}Set of targets to register.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="multiplemetrics_go">
+<a href="#multiplemetrics_go" style="color: inherit; text-decoration: inherit;">Multiple<wbr>Metrics</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#elastigroupmultiplemetrics">Elastigroup<wbr>Multiple<wbr>Metrics<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -2144,6 +2161,14 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
     </dt>
     <dd>{{% md %}}Set of targets to register.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="multiplemetrics_nodejs">
+<a href="#multiplemetrics_nodejs" style="color: inherit; text-decoration: inherit;">multiple<wbr>Metrics</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#elastigroupmultiplemetrics">Elastigroup<wbr>Multiple<wbr>Metrics<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2825,6 +2850,14 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
     <dd>{{% md %}}Set of targets to register.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="multiple_metrics_python">
+<a href="#multiple_metrics_python" style="color: inherit; text-decoration: inherit;">multiple_<wbr>metrics</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#elastigroupmultiplemetrics">Elastigroup<wbr>Multiple<wbr>Metrics<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
@@ -3211,6 +3244,7 @@ Get an existing Elastigroup resource's state with the given name, ID, and option
         <span class="nx">min_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">minimum_instance_lifetime</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">multai_target_sets</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupMultaiTargetSetArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">multiple_metrics</span><span class="p">:</span> <span class="nx">Optional[ElastigroupMultipleMetricsArgs]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">network_interfaces</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupNetworkInterfaceArgs]]</span> = None<span class="p">,</span>
         <span class="nx">ondemand_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
@@ -3732,6 +3766,14 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
     </dt>
     <dd>{{% md %}}Set of targets to register.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_multiplemetrics_csharp">
+<a href="#state_multiplemetrics_csharp" style="color: inherit; text-decoration: inherit;">Multiple<wbr>Metrics</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#elastigroupmultiplemetrics">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Elastigroup<wbr>Multiple<wbr>Metrics<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -4413,6 +4455,14 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
     <dd>{{% md %}}Set of targets to register.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_multiplemetrics_go">
+<a href="#state_multiplemetrics_go" style="color: inherit; text-decoration: inherit;">Multiple<wbr>Metrics</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#elastigroupmultiplemetrics">Elastigroup<wbr>Multiple<wbr>Metrics<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -5093,6 +5143,14 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
     <dd>{{% md %}}Set of targets to register.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_multiplemetrics_nodejs">
+<a href="#state_multiplemetrics_nodejs" style="color: inherit; text-decoration: inherit;">multiple<wbr>Metrics</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#elastigroupmultiplemetrics">Elastigroup<wbr>Multiple<wbr>Metrics<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
@@ -5772,6 +5830,14 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
     </dt>
     <dd>{{% md %}}Set of targets to register.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_multiple_metrics_python">
+<a href="#state_multiple_metrics_python" style="color: inherit; text-decoration: inherit;">multiple_<wbr>metrics</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#elastigroupmultiplemetrics">Elastigroup<wbr>Multiple<wbr>Metrics<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -10705,6 +10771,554 @@ Usage:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="elastigroupmultiplemetrics">Elastigroup<wbr>Multiple<wbr>Metrics</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="expressions_csharp">
+<a href="#expressions_csharp" style="color: inherit; text-decoration: inherit;">Expressions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#elastigroupmultiplemetricsexpression">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Elastigroup<wbr>Multiple<wbr>Metrics<wbr>Expression&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Array of objects (Expression config)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="metrics_csharp">
+<a href="#metrics_csharp" style="color: inherit; text-decoration: inherit;">Metrics</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#elastigroupmultiplemetricsmetric">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Elastigroup<wbr>Multiple<wbr>Metrics<wbr>Metric&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Array of objects (Metric config)
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="expressions_go">
+<a href="#expressions_go" style="color: inherit; text-decoration: inherit;">Expressions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#elastigroupmultiplemetricsexpression">[]Elastigroup<wbr>Multiple<wbr>Metrics<wbr>Expression</a></span>
+    </dt>
+    <dd>{{% md %}}Array of objects (Expression config)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="metrics_go">
+<a href="#metrics_go" style="color: inherit; text-decoration: inherit;">Metrics</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#elastigroupmultiplemetricsmetric">[]Elastigroup<wbr>Multiple<wbr>Metrics<wbr>Metric</a></span>
+    </dt>
+    <dd>{{% md %}}Array of objects (Metric config)
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="expressions_nodejs">
+<a href="#expressions_nodejs" style="color: inherit; text-decoration: inherit;">expressions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#elastigroupmultiplemetricsexpression">Elastigroup<wbr>Multiple<wbr>Metrics<wbr>Expression[]</a></span>
+    </dt>
+    <dd>{{% md %}}Array of objects (Expression config)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="metrics_nodejs">
+<a href="#metrics_nodejs" style="color: inherit; text-decoration: inherit;">metrics</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#elastigroupmultiplemetricsmetric">Elastigroup<wbr>Multiple<wbr>Metrics<wbr>Metric[]</a></span>
+    </dt>
+    <dd>{{% md %}}Array of objects (Metric config)
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="expressions_python">
+<a href="#expressions_python" style="color: inherit; text-decoration: inherit;">expressions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#elastigroupmultiplemetricsexpression">Sequence[Elastigroup<wbr>Multiple<wbr>Metrics<wbr>Expression]</a></span>
+    </dt>
+    <dd>{{% md %}}Array of objects (Expression config)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="metrics_python">
+<a href="#metrics_python" style="color: inherit; text-decoration: inherit;">metrics</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#elastigroupmultiplemetricsmetric">Sequence[Elastigroup<wbr>Multiple<wbr>Metrics<wbr>Metric]</a></span>
+    </dt>
+    <dd>{{% md %}}Array of objects (Metric config)
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="elastigroupmultiplemetricsexpression">Elastigroup<wbr>Multiple<wbr>Metrics<wbr>Expression</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="expression_csharp">
+<a href="#expression_csharp" style="color: inherit; text-decoration: inherit;">Expression</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An expression consisting of the metric names listed in the 'metrics' array.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The record set name.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="expression_go">
+<a href="#expression_go" style="color: inherit; text-decoration: inherit;">Expression</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An expression consisting of the metric names listed in the 'metrics' array.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The record set name.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="expression_nodejs">
+<a href="#expression_nodejs" style="color: inherit; text-decoration: inherit;">expression</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An expression consisting of the metric names listed in the 'metrics' array.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The record set name.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="expression_python">
+<a href="#expression_python" style="color: inherit; text-decoration: inherit;">expression</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}An expression consisting of the metric names listed in the 'metrics' array.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The record set name.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="elastigroupmultiplemetricsmetric">Elastigroup<wbr>Multiple<wbr>Metrics<wbr>Metric</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="metricname_csharp">
+<a href="#metricname_csharp" style="color: inherit; text-decoration: inherit;">Metric<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the metric, with or without spaces.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The record set name.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="namespace_csharp">
+<a href="#namespace_csharp" style="color: inherit; text-decoration: inherit;">Namespace</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The namespace for the alarm's associated metric.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dimensions_csharp">
+<a href="#dimensions_csharp" style="color: inherit; text-decoration: inherit;">Dimensions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#elastigroupmultiplemetricsmetricdimension">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Elastigroup<wbr>Multiple<wbr>Metrics<wbr>Metric<wbr>Dimension&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A list of dimensions describing qualities of the metric.
+*`name` - (Required) the dimension name.
+*`value` - (Optional) the dimension value.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="extendedstatistic_csharp">
+<a href="#extendedstatistic_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Statistic</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Percentile statistic. Valid values: `"p0.1"` - `"p100"`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="statistic_csharp">
+<a href="#statistic_csharp" style="color: inherit; text-decoration: inherit;">Statistic</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The metric statistics to return. For information about specific statistics go to [Statistics](http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/index.html?CHAP_TerminologyandKeyConcepts.html#Statistic) in the Amazon CloudWatch Developer Guide.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="unit_csharp">
+<a href="#unit_csharp" style="color: inherit; text-decoration: inherit;">Unit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The unit for the alarm's associated metric. Valid values: `"percent`, `"seconds"`, `"microseconds"`, `"milliseconds"`, `"bytes"`, `"kilobytes"`, `"megabytes"`, `"gigabytes"`, `"terabytes"`, `"bits"`, `"kilobits"`, `"megabits"`, `"gigabits"`, `"terabits"`, `"count"`, `"bytes/second"`, `"kilobytes/second"`, `"megabytes/second"`, `"gigabytes/second"`, `"terabytes/second"`, `"bits/second"`, `"kilobits/second"`, `"megabits/second"`, `"gigabits/second"`, `"terabits/second"`, `"count/second"`, `"none"`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="metricname_go">
+<a href="#metricname_go" style="color: inherit; text-decoration: inherit;">Metric<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the metric, with or without spaces.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The record set name.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="namespace_go">
+<a href="#namespace_go" style="color: inherit; text-decoration: inherit;">Namespace</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The namespace for the alarm's associated metric.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dimensions_go">
+<a href="#dimensions_go" style="color: inherit; text-decoration: inherit;">Dimensions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#elastigroupmultiplemetricsmetricdimension">[]Elastigroup<wbr>Multiple<wbr>Metrics<wbr>Metric<wbr>Dimension</a></span>
+    </dt>
+    <dd>{{% md %}}A list of dimensions describing qualities of the metric.
+*`name` - (Required) the dimension name.
+*`value` - (Optional) the dimension value.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="extendedstatistic_go">
+<a href="#extendedstatistic_go" style="color: inherit; text-decoration: inherit;">Extended<wbr>Statistic</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Percentile statistic. Valid values: `"p0.1"` - `"p100"`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="statistic_go">
+<a href="#statistic_go" style="color: inherit; text-decoration: inherit;">Statistic</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The metric statistics to return. For information about specific statistics go to [Statistics](http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/index.html?CHAP_TerminologyandKeyConcepts.html#Statistic) in the Amazon CloudWatch Developer Guide.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="unit_go">
+<a href="#unit_go" style="color: inherit; text-decoration: inherit;">Unit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The unit for the alarm's associated metric. Valid values: `"percent`, `"seconds"`, `"microseconds"`, `"milliseconds"`, `"bytes"`, `"kilobytes"`, `"megabytes"`, `"gigabytes"`, `"terabytes"`, `"bits"`, `"kilobits"`, `"megabits"`, `"gigabits"`, `"terabits"`, `"count"`, `"bytes/second"`, `"kilobytes/second"`, `"megabytes/second"`, `"gigabytes/second"`, `"terabytes/second"`, `"bits/second"`, `"kilobits/second"`, `"megabits/second"`, `"gigabits/second"`, `"terabits/second"`, `"count/second"`, `"none"`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="metricname_nodejs">
+<a href="#metricname_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the metric, with or without spaces.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The record set name.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="namespace_nodejs">
+<a href="#namespace_nodejs" style="color: inherit; text-decoration: inherit;">namespace</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The namespace for the alarm's associated metric.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dimensions_nodejs">
+<a href="#dimensions_nodejs" style="color: inherit; text-decoration: inherit;">dimensions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#elastigroupmultiplemetricsmetricdimension">Elastigroup<wbr>Multiple<wbr>Metrics<wbr>Metric<wbr>Dimension[]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of dimensions describing qualities of the metric.
+*`name` - (Required) the dimension name.
+*`value` - (Optional) the dimension value.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="extendedstatistic_nodejs">
+<a href="#extendedstatistic_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Statistic</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Percentile statistic. Valid values: `"p0.1"` - `"p100"`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="statistic_nodejs">
+<a href="#statistic_nodejs" style="color: inherit; text-decoration: inherit;">statistic</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The metric statistics to return. For information about specific statistics go to [Statistics](http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/index.html?CHAP_TerminologyandKeyConcepts.html#Statistic) in the Amazon CloudWatch Developer Guide.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="unit_nodejs">
+<a href="#unit_nodejs" style="color: inherit; text-decoration: inherit;">unit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The unit for the alarm's associated metric. Valid values: `"percent`, `"seconds"`, `"microseconds"`, `"milliseconds"`, `"bytes"`, `"kilobytes"`, `"megabytes"`, `"gigabytes"`, `"terabytes"`, `"bits"`, `"kilobits"`, `"megabits"`, `"gigabits"`, `"terabits"`, `"count"`, `"bytes/second"`, `"kilobytes/second"`, `"megabytes/second"`, `"gigabytes/second"`, `"terabytes/second"`, `"bits/second"`, `"kilobits/second"`, `"megabits/second"`, `"gigabits/second"`, `"terabits/second"`, `"count/second"`, `"none"`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="metric_name_python">
+<a href="#metric_name_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the metric, with or without spaces.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The record set name.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="namespace_python">
+<a href="#namespace_python" style="color: inherit; text-decoration: inherit;">namespace</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The namespace for the alarm's associated metric.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dimensions_python">
+<a href="#dimensions_python" style="color: inherit; text-decoration: inherit;">dimensions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#elastigroupmultiplemetricsmetricdimension">Sequence[Elastigroup<wbr>Multiple<wbr>Metrics<wbr>Metric<wbr>Dimension]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of dimensions describing qualities of the metric.
+*`name` - (Required) the dimension name.
+*`value` - (Optional) the dimension value.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="extended_statistic_python">
+<a href="#extended_statistic_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>statistic</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Percentile statistic. Valid values: `"p0.1"` - `"p100"`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="statistic_python">
+<a href="#statistic_python" style="color: inherit; text-decoration: inherit;">statistic</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The metric statistics to return. For information about specific statistics go to [Statistics](http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/index.html?CHAP_TerminologyandKeyConcepts.html#Statistic) in the Amazon CloudWatch Developer Guide.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="unit_python">
+<a href="#unit_python" style="color: inherit; text-decoration: inherit;">unit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The unit for the alarm's associated metric. Valid values: `"percent`, `"seconds"`, `"microseconds"`, `"milliseconds"`, `"bytes"`, `"kilobytes"`, `"megabytes"`, `"gigabytes"`, `"terabytes"`, `"bits"`, `"kilobits"`, `"megabits"`, `"gigabits"`, `"terabits"`, `"count"`, `"bytes/second"`, `"kilobytes/second"`, `"megabytes/second"`, `"gigabytes/second"`, `"terabytes/second"`, `"bits/second"`, `"kilobits/second"`, `"megabits/second"`, `"gigabits/second"`, `"terabits/second"`, `"count/second"`, `"none"`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="elastigroupmultiplemetricsmetricdimension">Elastigroup<wbr>Multiple<wbr>Metrics<wbr>Metric<wbr>Dimension</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The record set name.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The dimension value.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The record set name.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The dimension value.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The record set name.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The dimension value.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The record set name.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The dimension value.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="elastigroupnetworkinterface">Elastigroup<wbr>Network<wbr>Interface</h4>
 
 {{% choosable language csharp %}}
@@ -11293,15 +11907,6 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the policy.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="threshold_csharp">
-<a href="#threshold_csharp" style="color: inherit; text-decoration: inherit;">Threshold</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">double</span>
-    </dt>
-    <dd>{{% md %}}The value against which the specified statistic is compared.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actiontype_csharp">
@@ -11310,7 +11915,7 @@ Usage:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of action to perform for scaling. Valid values: `"adjustment"`, `"percentageAdjustment"`, `"setMaxTarget"`, `"setMinTarget"`, `"updateCapacity"`.
+    <dd>{{% md %}}The type of action to perform for scaling. Valid values: `"adjustment"`, `"percentageAdjustment"`, `"setMaxTarget"`, `"setMinTarget"`, `"updateCapacity"`. If a `step_adjustment` object is defined, then it cannot be specified.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="adjustment_csharp">
@@ -11382,7 +11987,7 @@ Usage:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}. The number of the desired target (and minimum) capacity
+    <dd>{{% md %}}The desired target capacity of a group. Required if using `"setMinTarget"` as action type
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minimum_csharp">
@@ -11430,6 +12035,14 @@ Usage:
     <dd>{{% md %}}The metric statistics to return. For information about specific statistics go to [Statistics](http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/index.html?CHAP_TerminologyandKeyConcepts.html#Statistic) in the Amazon CloudWatch Developer Guide.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="stepadjustments_csharp">
+<a href="#stepadjustments_csharp" style="color: inherit; text-decoration: inherit;">Step<wbr>Adjustments</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#elastigroupscalingdownpolicystepadjustment">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Elastigroup<wbr>Scaling<wbr>Down<wbr>Policy<wbr>Step<wbr>Adjustment&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="target_csharp">
 <a href="#target_csharp" style="color: inherit; text-decoration: inherit;">Target</a>
 </span>
@@ -11437,6 +12050,15 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The target number of instances to have in the group.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="threshold_csharp">
+<a href="#threshold_csharp" style="color: inherit; text-decoration: inherit;">Threshold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">double</span>
+    </dt>
+    <dd>{{% md %}}The value against which the specified statistic is compared in order to determine if a step should be applied.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="unit_csharp">
@@ -11477,15 +12099,6 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the policy.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="threshold_go">
-<a href="#threshold_go" style="color: inherit; text-decoration: inherit;">Threshold</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float64</span>
-    </dt>
-    <dd>{{% md %}}The value against which the specified statistic is compared.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actiontype_go">
@@ -11494,7 +12107,7 @@ Usage:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of action to perform for scaling. Valid values: `"adjustment"`, `"percentageAdjustment"`, `"setMaxTarget"`, `"setMinTarget"`, `"updateCapacity"`.
+    <dd>{{% md %}}The type of action to perform for scaling. Valid values: `"adjustment"`, `"percentageAdjustment"`, `"setMaxTarget"`, `"setMinTarget"`, `"updateCapacity"`. If a `step_adjustment` object is defined, then it cannot be specified.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="adjustment_go">
@@ -11566,7 +12179,7 @@ Usage:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}. The number of the desired target (and minimum) capacity
+    <dd>{{% md %}}The desired target capacity of a group. Required if using `"setMinTarget"` as action type
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minimum_go">
@@ -11614,6 +12227,14 @@ Usage:
     <dd>{{% md %}}The metric statistics to return. For information about specific statistics go to [Statistics](http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/index.html?CHAP_TerminologyandKeyConcepts.html#Statistic) in the Amazon CloudWatch Developer Guide.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="stepadjustments_go">
+<a href="#stepadjustments_go" style="color: inherit; text-decoration: inherit;">Step<wbr>Adjustments</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#elastigroupscalingdownpolicystepadjustment">[]Elastigroup<wbr>Scaling<wbr>Down<wbr>Policy<wbr>Step<wbr>Adjustment</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="target_go">
 <a href="#target_go" style="color: inherit; text-decoration: inherit;">Target</a>
 </span>
@@ -11621,6 +12242,15 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The target number of instances to have in the group.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="threshold_go">
+<a href="#threshold_go" style="color: inherit; text-decoration: inherit;">Threshold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float64</span>
+    </dt>
+    <dd>{{% md %}}The value against which the specified statistic is compared in order to determine if a step should be applied.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="unit_go">
@@ -11661,15 +12291,6 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the policy.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="threshold_nodejs">
-<a href="#threshold_nodejs" style="color: inherit; text-decoration: inherit;">threshold</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}The value against which the specified statistic is compared.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actiontype_nodejs">
@@ -11678,7 +12299,7 @@ Usage:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of action to perform for scaling. Valid values: `"adjustment"`, `"percentageAdjustment"`, `"setMaxTarget"`, `"setMinTarget"`, `"updateCapacity"`.
+    <dd>{{% md %}}The type of action to perform for scaling. Valid values: `"adjustment"`, `"percentageAdjustment"`, `"setMaxTarget"`, `"setMinTarget"`, `"updateCapacity"`. If a `step_adjustment` object is defined, then it cannot be specified.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="adjustment_nodejs">
@@ -11750,7 +12371,7 @@ Usage:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}. The number of the desired target (and minimum) capacity
+    <dd>{{% md %}}The desired target capacity of a group. Required if using `"setMinTarget"` as action type
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minimum_nodejs">
@@ -11798,6 +12419,14 @@ Usage:
     <dd>{{% md %}}The metric statistics to return. For information about specific statistics go to [Statistics](http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/index.html?CHAP_TerminologyandKeyConcepts.html#Statistic) in the Amazon CloudWatch Developer Guide.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="stepadjustments_nodejs">
+<a href="#stepadjustments_nodejs" style="color: inherit; text-decoration: inherit;">step<wbr>Adjustments</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#elastigroupscalingdownpolicystepadjustment">Elastigroup<wbr>Scaling<wbr>Down<wbr>Policy<wbr>Step<wbr>Adjustment[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="target_nodejs">
 <a href="#target_nodejs" style="color: inherit; text-decoration: inherit;">target</a>
 </span>
@@ -11805,6 +12434,15 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The target number of instances to have in the group.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="threshold_nodejs">
+<a href="#threshold_nodejs" style="color: inherit; text-decoration: inherit;">threshold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The value against which the specified statistic is compared in order to determine if a step should be applied.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="unit_nodejs">
@@ -11845,15 +12483,6 @@ Usage:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the policy.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="threshold_python">
-<a href="#threshold_python" style="color: inherit; text-decoration: inherit;">threshold</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The value against which the specified statistic is compared.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="action_type_python">
@@ -11862,7 +12491,7 @@ Usage:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of action to perform for scaling. Valid values: `"adjustment"`, `"percentageAdjustment"`, `"setMaxTarget"`, `"setMinTarget"`, `"updateCapacity"`.
+    <dd>{{% md %}}The type of action to perform for scaling. Valid values: `"adjustment"`, `"percentageAdjustment"`, `"setMaxTarget"`, `"setMinTarget"`, `"updateCapacity"`. If a `step_adjustment` object is defined, then it cannot be specified.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="adjustment_python">
@@ -11934,7 +12563,7 @@ Usage:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}. The number of the desired target (and minimum) capacity
+    <dd>{{% md %}}The desired target capacity of a group. Required if using `"setMinTarget"` as action type
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minimum_python">
@@ -11982,6 +12611,14 @@ Usage:
     <dd>{{% md %}}The metric statistics to return. For information about specific statistics go to [Statistics](http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/index.html?CHAP_TerminologyandKeyConcepts.html#Statistic) in the Amazon CloudWatch Developer Guide.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="step_adjustments_python">
+<a href="#step_adjustments_python" style="color: inherit; text-decoration: inherit;">step_<wbr>adjustments</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#elastigroupscalingdownpolicystepadjustment">Sequence[Elastigroup<wbr>Scaling<wbr>Down<wbr>Policy<wbr>Step<wbr>Adjustment]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="target_python">
 <a href="#target_python" style="color: inherit; text-decoration: inherit;">target</a>
 </span>
@@ -11989,6 +12626,15 @@ Usage:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The target number of instances to have in the group.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="threshold_python">
+<a href="#threshold_python" style="color: inherit; text-decoration: inherit;">threshold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}The value against which the specified statistic is compared in order to determine if a step should be applied.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="unit_python">
@@ -12088,6 +12734,366 @@ Usage:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The dimension value.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="elastigroupscalingdownpolicystepadjustment">Elastigroup<wbr>Scaling<wbr>Down<wbr>Policy<wbr>Step<wbr>Adjustment</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="action_csharp">
+<a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#elastigroupscalingdownpolicystepadjustmentaction">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Elastigroup<wbr>Scaling<wbr>Down<wbr>Policy<wbr>Step<wbr>Adjustment<wbr>Action</a></span>
+    </dt>
+    <dd>{{% md %}}Action to take. Valid values: `REPLACE_SERVER`, `RESTART_SERVER`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="threshold_csharp">
+<a href="#threshold_csharp" style="color: inherit; text-decoration: inherit;">Threshold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The value against which the specified statistic is compared. If a `step_adjustment` object is defined, then it cannot be specified.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="action_go">
+<a href="#action_go" style="color: inherit; text-decoration: inherit;">Action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#elastigroupscalingdownpolicystepadjustmentaction">Elastigroup<wbr>Scaling<wbr>Down<wbr>Policy<wbr>Step<wbr>Adjustment<wbr>Action</a></span>
+    </dt>
+    <dd>{{% md %}}Action to take. Valid values: `REPLACE_SERVER`, `RESTART_SERVER`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="threshold_go">
+<a href="#threshold_go" style="color: inherit; text-decoration: inherit;">Threshold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The value against which the specified statistic is compared. If a `step_adjustment` object is defined, then it cannot be specified.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="action_nodejs">
+<a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#elastigroupscalingdownpolicystepadjustmentaction">Elastigroup<wbr>Scaling<wbr>Down<wbr>Policy<wbr>Step<wbr>Adjustment<wbr>Action</a></span>
+    </dt>
+    <dd>{{% md %}}Action to take. Valid values: `REPLACE_SERVER`, `RESTART_SERVER`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="threshold_nodejs">
+<a href="#threshold_nodejs" style="color: inherit; text-decoration: inherit;">threshold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The value against which the specified statistic is compared. If a `step_adjustment` object is defined, then it cannot be specified.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="action_python">
+<a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#elastigroupscalingdownpolicystepadjustmentaction">Elastigroup<wbr>Scaling<wbr>Down<wbr>Policy<wbr>Step<wbr>Adjustment<wbr>Action</a></span>
+    </dt>
+    <dd>{{% md %}}Action to take. Valid values: `REPLACE_SERVER`, `RESTART_SERVER`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="threshold_python">
+<a href="#threshold_python" style="color: inherit; text-decoration: inherit;">threshold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The value against which the specified statistic is compared. If a `step_adjustment` object is defined, then it cannot be specified.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="elastigroupscalingdownpolicystepadjustmentaction">Elastigroup<wbr>Scaling<wbr>Down<wbr>Policy<wbr>Step<wbr>Adjustment<wbr>Action</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}String, Action type. Supported action types: `pause`, `resume`, `recycle`, `deallocate`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="adjustment_csharp">
+<a href="#adjustment_csharp" style="color: inherit; text-decoration: inherit;">Adjustment</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The number of instances to add or remove.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maxtargetcapacity_csharp">
+<a href="#maxtargetcapacity_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Target<wbr>Capacity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The desired target capacity of a group. Required if using `"setMaxTarget"` as action type
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maximum_csharp">
+<a href="#maximum_csharp" style="color: inherit; text-decoration: inherit;">Maximum</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The upper limit number of instances that you can scale up to. Required if using `"updateCapacity"` as action type and neither `"target"` nor `"minimum"` are not defined.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="mintargetcapacity_csharp">
+<a href="#mintargetcapacity_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Target<wbr>Capacity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The desired target capacity of a group. Required if using `"setMinTarget"` as action type
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="minimum_csharp">
+<a href="#minimum_csharp" style="color: inherit; text-decoration: inherit;">Minimum</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The lower limit number of instances that you can scale down to. Required if using `"updateCapacity"` as action type and neither `"target"` nor `"maximum"` are not defined.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="target_csharp">
+<a href="#target_csharp" style="color: inherit; text-decoration: inherit;">Target</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The desired number of instances. Required if using `"updateCapacity"` as action type and neither `"minimum"` nor `"maximum"` are not defined.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}String, Action type. Supported action types: `pause`, `resume`, `recycle`, `deallocate`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="adjustment_go">
+<a href="#adjustment_go" style="color: inherit; text-decoration: inherit;">Adjustment</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The number of instances to add or remove.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maxtargetcapacity_go">
+<a href="#maxtargetcapacity_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Target<wbr>Capacity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The desired target capacity of a group. Required if using `"setMaxTarget"` as action type
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maximum_go">
+<a href="#maximum_go" style="color: inherit; text-decoration: inherit;">Maximum</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The upper limit number of instances that you can scale up to. Required if using `"updateCapacity"` as action type and neither `"target"` nor `"minimum"` are not defined.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="mintargetcapacity_go">
+<a href="#mintargetcapacity_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Target<wbr>Capacity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The desired target capacity of a group. Required if using `"setMinTarget"` as action type
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="minimum_go">
+<a href="#minimum_go" style="color: inherit; text-decoration: inherit;">Minimum</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The lower limit number of instances that you can scale down to. Required if using `"updateCapacity"` as action type and neither `"target"` nor `"maximum"` are not defined.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="target_go">
+<a href="#target_go" style="color: inherit; text-decoration: inherit;">Target</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The desired number of instances. Required if using `"updateCapacity"` as action type and neither `"minimum"` nor `"maximum"` are not defined.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}String, Action type. Supported action types: `pause`, `resume`, `recycle`, `deallocate`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="adjustment_nodejs">
+<a href="#adjustment_nodejs" style="color: inherit; text-decoration: inherit;">adjustment</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The number of instances to add or remove.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maxtargetcapacity_nodejs">
+<a href="#maxtargetcapacity_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Target<wbr>Capacity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The desired target capacity of a group. Required if using `"setMaxTarget"` as action type
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maximum_nodejs">
+<a href="#maximum_nodejs" style="color: inherit; text-decoration: inherit;">maximum</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The upper limit number of instances that you can scale up to. Required if using `"updateCapacity"` as action type and neither `"target"` nor `"minimum"` are not defined.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="mintargetcapacity_nodejs">
+<a href="#mintargetcapacity_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Target<wbr>Capacity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The desired target capacity of a group. Required if using `"setMinTarget"` as action type
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="minimum_nodejs">
+<a href="#minimum_nodejs" style="color: inherit; text-decoration: inherit;">minimum</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The lower limit number of instances that you can scale down to. Required if using `"updateCapacity"` as action type and neither `"target"` nor `"maximum"` are not defined.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="target_nodejs">
+<a href="#target_nodejs" style="color: inherit; text-decoration: inherit;">target</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The desired number of instances. Required if using `"updateCapacity"` as action type and neither `"minimum"` nor `"maximum"` are not defined.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}String, Action type. Supported action types: `pause`, `resume`, `recycle`, `deallocate`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="adjustment_python">
+<a href="#adjustment_python" style="color: inherit; text-decoration: inherit;">adjustment</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The number of instances to add or remove.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="max_target_capacity_python">
+<a href="#max_target_capacity_python" style="color: inherit; text-decoration: inherit;">max_<wbr>target_<wbr>capacity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The desired target capacity of a group. Required if using `"setMaxTarget"` as action type
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maximum_python">
+<a href="#maximum_python" style="color: inherit; text-decoration: inherit;">maximum</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The upper limit number of instances that you can scale up to. Required if using `"updateCapacity"` as action type and neither `"target"` nor `"minimum"` are not defined.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="min_target_capacity_python">
+<a href="#min_target_capacity_python" style="color: inherit; text-decoration: inherit;">min_<wbr>target_<wbr>capacity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The desired target capacity of a group. Required if using `"setMinTarget"` as action type
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="minimum_python">
+<a href="#minimum_python" style="color: inherit; text-decoration: inherit;">minimum</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The lower limit number of instances that you can scale down to. Required if using `"updateCapacity"` as action type and neither `"target"` nor `"maximum"` are not defined.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="target_python">
+<a href="#target_python" style="color: inherit; text-decoration: inherit;">target</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The desired number of instances. Required if using `"updateCapacity"` as action type and neither `"minimum"` nor `"maximum"` are not defined.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -12715,15 +13721,6 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the policy.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="threshold_csharp">
-<a href="#threshold_csharp" style="color: inherit; text-decoration: inherit;">Threshold</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">double</span>
-    </dt>
-    <dd>{{% md %}}The value against which the specified statistic is compared.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actiontype_csharp">
@@ -12732,7 +13729,7 @@ Usage:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of action to perform for scaling. Valid values: `"adjustment"`, `"percentageAdjustment"`, `"setMaxTarget"`, `"setMinTarget"`, `"updateCapacity"`.
+    <dd>{{% md %}}The type of action to perform for scaling. Valid values: `"adjustment"`, `"percentageAdjustment"`, `"setMaxTarget"`, `"setMinTarget"`, `"updateCapacity"`. If a `step_adjustment` object is defined, then it cannot be specified.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="adjustment_csharp">
@@ -12786,7 +13783,7 @@ Usage:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}. The number of the desired target (and maximum) capacity
+    <dd>{{% md %}}The desired target capacity of a group. Required if using `"setMaxTarget"` as action type
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maximum_csharp">
@@ -12852,6 +13849,14 @@ Usage:
     <dd>{{% md %}}The metric statistics to return. For information about specific statistics go to [Statistics](http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/index.html?CHAP_TerminologyandKeyConcepts.html#Statistic) in the Amazon CloudWatch Developer Guide.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="stepadjustments_csharp">
+<a href="#stepadjustments_csharp" style="color: inherit; text-decoration: inherit;">Step<wbr>Adjustments</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#elastigroupscalinguppolicystepadjustment">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Elastigroup<wbr>Scaling<wbr>Up<wbr>Policy<wbr>Step<wbr>Adjustment&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="target_csharp">
 <a href="#target_csharp" style="color: inherit; text-decoration: inherit;">Target</a>
 </span>
@@ -12859,6 +13864,15 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The target number of instances to have in the group.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="threshold_csharp">
+<a href="#threshold_csharp" style="color: inherit; text-decoration: inherit;">Threshold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">double</span>
+    </dt>
+    <dd>{{% md %}}The value against which the specified statistic is compared in order to determine if a step should be applied.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="unit_csharp">
@@ -12899,15 +13913,6 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the policy.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="threshold_go">
-<a href="#threshold_go" style="color: inherit; text-decoration: inherit;">Threshold</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float64</span>
-    </dt>
-    <dd>{{% md %}}The value against which the specified statistic is compared.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actiontype_go">
@@ -12916,7 +13921,7 @@ Usage:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of action to perform for scaling. Valid values: `"adjustment"`, `"percentageAdjustment"`, `"setMaxTarget"`, `"setMinTarget"`, `"updateCapacity"`.
+    <dd>{{% md %}}The type of action to perform for scaling. Valid values: `"adjustment"`, `"percentageAdjustment"`, `"setMaxTarget"`, `"setMinTarget"`, `"updateCapacity"`. If a `step_adjustment` object is defined, then it cannot be specified.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="adjustment_go">
@@ -12970,7 +13975,7 @@ Usage:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}. The number of the desired target (and maximum) capacity
+    <dd>{{% md %}}The desired target capacity of a group. Required if using `"setMaxTarget"` as action type
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maximum_go">
@@ -13036,6 +14041,14 @@ Usage:
     <dd>{{% md %}}The metric statistics to return. For information about specific statistics go to [Statistics](http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/index.html?CHAP_TerminologyandKeyConcepts.html#Statistic) in the Amazon CloudWatch Developer Guide.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="stepadjustments_go">
+<a href="#stepadjustments_go" style="color: inherit; text-decoration: inherit;">Step<wbr>Adjustments</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#elastigroupscalinguppolicystepadjustment">[]Elastigroup<wbr>Scaling<wbr>Up<wbr>Policy<wbr>Step<wbr>Adjustment</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="target_go">
 <a href="#target_go" style="color: inherit; text-decoration: inherit;">Target</a>
 </span>
@@ -13043,6 +14056,15 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The target number of instances to have in the group.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="threshold_go">
+<a href="#threshold_go" style="color: inherit; text-decoration: inherit;">Threshold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float64</span>
+    </dt>
+    <dd>{{% md %}}The value against which the specified statistic is compared in order to determine if a step should be applied.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="unit_go">
@@ -13083,15 +14105,6 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the policy.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="threshold_nodejs">
-<a href="#threshold_nodejs" style="color: inherit; text-decoration: inherit;">threshold</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}The value against which the specified statistic is compared.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actiontype_nodejs">
@@ -13100,7 +14113,7 @@ Usage:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of action to perform for scaling. Valid values: `"adjustment"`, `"percentageAdjustment"`, `"setMaxTarget"`, `"setMinTarget"`, `"updateCapacity"`.
+    <dd>{{% md %}}The type of action to perform for scaling. Valid values: `"adjustment"`, `"percentageAdjustment"`, `"setMaxTarget"`, `"setMinTarget"`, `"updateCapacity"`. If a `step_adjustment` object is defined, then it cannot be specified.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="adjustment_nodejs">
@@ -13154,7 +14167,7 @@ Usage:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}. The number of the desired target (and maximum) capacity
+    <dd>{{% md %}}The desired target capacity of a group. Required if using `"setMaxTarget"` as action type
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maximum_nodejs">
@@ -13220,6 +14233,14 @@ Usage:
     <dd>{{% md %}}The metric statistics to return. For information about specific statistics go to [Statistics](http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/index.html?CHAP_TerminologyandKeyConcepts.html#Statistic) in the Amazon CloudWatch Developer Guide.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="stepadjustments_nodejs">
+<a href="#stepadjustments_nodejs" style="color: inherit; text-decoration: inherit;">step<wbr>Adjustments</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#elastigroupscalinguppolicystepadjustment">Elastigroup<wbr>Scaling<wbr>Up<wbr>Policy<wbr>Step<wbr>Adjustment[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="target_nodejs">
 <a href="#target_nodejs" style="color: inherit; text-decoration: inherit;">target</a>
 </span>
@@ -13227,6 +14248,15 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The target number of instances to have in the group.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="threshold_nodejs">
+<a href="#threshold_nodejs" style="color: inherit; text-decoration: inherit;">threshold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The value against which the specified statistic is compared in order to determine if a step should be applied.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="unit_nodejs">
@@ -13267,15 +14297,6 @@ Usage:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the policy.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="threshold_python">
-<a href="#threshold_python" style="color: inherit; text-decoration: inherit;">threshold</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The value against which the specified statistic is compared.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="action_type_python">
@@ -13284,7 +14305,7 @@ Usage:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of action to perform for scaling. Valid values: `"adjustment"`, `"percentageAdjustment"`, `"setMaxTarget"`, `"setMinTarget"`, `"updateCapacity"`.
+    <dd>{{% md %}}The type of action to perform for scaling. Valid values: `"adjustment"`, `"percentageAdjustment"`, `"setMaxTarget"`, `"setMinTarget"`, `"updateCapacity"`. If a `step_adjustment` object is defined, then it cannot be specified.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="adjustment_python">
@@ -13338,7 +14359,7 @@ Usage:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}. The number of the desired target (and maximum) capacity
+    <dd>{{% md %}}The desired target capacity of a group. Required if using `"setMaxTarget"` as action type
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maximum_python">
@@ -13404,6 +14425,14 @@ Usage:
     <dd>{{% md %}}The metric statistics to return. For information about specific statistics go to [Statistics](http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/index.html?CHAP_TerminologyandKeyConcepts.html#Statistic) in the Amazon CloudWatch Developer Guide.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="step_adjustments_python">
+<a href="#step_adjustments_python" style="color: inherit; text-decoration: inherit;">step_<wbr>adjustments</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#elastigroupscalinguppolicystepadjustment">Sequence[Elastigroup<wbr>Scaling<wbr>Up<wbr>Policy<wbr>Step<wbr>Adjustment]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="target_python">
 <a href="#target_python" style="color: inherit; text-decoration: inherit;">target</a>
 </span>
@@ -13411,6 +14440,15 @@ Usage:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The target number of instances to have in the group.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="threshold_python">
+<a href="#threshold_python" style="color: inherit; text-decoration: inherit;">threshold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}The value against which the specified statistic is compared in order to determine if a step should be applied.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="unit_python">
@@ -13510,6 +14548,366 @@ Usage:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The dimension value.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="elastigroupscalinguppolicystepadjustment">Elastigroup<wbr>Scaling<wbr>Up<wbr>Policy<wbr>Step<wbr>Adjustment</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="action_csharp">
+<a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#elastigroupscalinguppolicystepadjustmentaction">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Elastigroup<wbr>Scaling<wbr>Up<wbr>Policy<wbr>Step<wbr>Adjustment<wbr>Action</a></span>
+    </dt>
+    <dd>{{% md %}}Action to take. Valid values: `REPLACE_SERVER`, `RESTART_SERVER`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="threshold_csharp">
+<a href="#threshold_csharp" style="color: inherit; text-decoration: inherit;">Threshold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The value against which the specified statistic is compared. If a `step_adjustment` object is defined, then it cannot be specified.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="action_go">
+<a href="#action_go" style="color: inherit; text-decoration: inherit;">Action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#elastigroupscalinguppolicystepadjustmentaction">Elastigroup<wbr>Scaling<wbr>Up<wbr>Policy<wbr>Step<wbr>Adjustment<wbr>Action</a></span>
+    </dt>
+    <dd>{{% md %}}Action to take. Valid values: `REPLACE_SERVER`, `RESTART_SERVER`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="threshold_go">
+<a href="#threshold_go" style="color: inherit; text-decoration: inherit;">Threshold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The value against which the specified statistic is compared. If a `step_adjustment` object is defined, then it cannot be specified.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="action_nodejs">
+<a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#elastigroupscalinguppolicystepadjustmentaction">Elastigroup<wbr>Scaling<wbr>Up<wbr>Policy<wbr>Step<wbr>Adjustment<wbr>Action</a></span>
+    </dt>
+    <dd>{{% md %}}Action to take. Valid values: `REPLACE_SERVER`, `RESTART_SERVER`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="threshold_nodejs">
+<a href="#threshold_nodejs" style="color: inherit; text-decoration: inherit;">threshold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The value against which the specified statistic is compared. If a `step_adjustment` object is defined, then it cannot be specified.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="action_python">
+<a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#elastigroupscalinguppolicystepadjustmentaction">Elastigroup<wbr>Scaling<wbr>Up<wbr>Policy<wbr>Step<wbr>Adjustment<wbr>Action</a></span>
+    </dt>
+    <dd>{{% md %}}Action to take. Valid values: `REPLACE_SERVER`, `RESTART_SERVER`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="threshold_python">
+<a href="#threshold_python" style="color: inherit; text-decoration: inherit;">threshold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The value against which the specified statistic is compared. If a `step_adjustment` object is defined, then it cannot be specified.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="elastigroupscalinguppolicystepadjustmentaction">Elastigroup<wbr>Scaling<wbr>Up<wbr>Policy<wbr>Step<wbr>Adjustment<wbr>Action</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}String, Action type. Supported action types: `pause`, `resume`, `recycle`, `deallocate`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="adjustment_csharp">
+<a href="#adjustment_csharp" style="color: inherit; text-decoration: inherit;">Adjustment</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The number of instances to add or remove.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maxtargetcapacity_csharp">
+<a href="#maxtargetcapacity_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Target<wbr>Capacity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The desired target capacity of a group. Required if using `"setMaxTarget"` as action type
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maximum_csharp">
+<a href="#maximum_csharp" style="color: inherit; text-decoration: inherit;">Maximum</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The upper limit number of instances that you can scale up to. Required if using `"updateCapacity"` as action type and neither `"target"` nor `"minimum"` are not defined.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="mintargetcapacity_csharp">
+<a href="#mintargetcapacity_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Target<wbr>Capacity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The desired target capacity of a group. Required if using `"setMinTarget"` as action type
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="minimum_csharp">
+<a href="#minimum_csharp" style="color: inherit; text-decoration: inherit;">Minimum</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The lower limit number of instances that you can scale down to. Required if using `"updateCapacity"` as action type and neither `"target"` nor `"maximum"` are not defined.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="target_csharp">
+<a href="#target_csharp" style="color: inherit; text-decoration: inherit;">Target</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The desired number of instances. Required if using `"updateCapacity"` as action type and neither `"minimum"` nor `"maximum"` are not defined.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}String, Action type. Supported action types: `pause`, `resume`, `recycle`, `deallocate`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="adjustment_go">
+<a href="#adjustment_go" style="color: inherit; text-decoration: inherit;">Adjustment</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The number of instances to add or remove.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maxtargetcapacity_go">
+<a href="#maxtargetcapacity_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Target<wbr>Capacity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The desired target capacity of a group. Required if using `"setMaxTarget"` as action type
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maximum_go">
+<a href="#maximum_go" style="color: inherit; text-decoration: inherit;">Maximum</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The upper limit number of instances that you can scale up to. Required if using `"updateCapacity"` as action type and neither `"target"` nor `"minimum"` are not defined.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="mintargetcapacity_go">
+<a href="#mintargetcapacity_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Target<wbr>Capacity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The desired target capacity of a group. Required if using `"setMinTarget"` as action type
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="minimum_go">
+<a href="#minimum_go" style="color: inherit; text-decoration: inherit;">Minimum</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The lower limit number of instances that you can scale down to. Required if using `"updateCapacity"` as action type and neither `"target"` nor `"maximum"` are not defined.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="target_go">
+<a href="#target_go" style="color: inherit; text-decoration: inherit;">Target</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The desired number of instances. Required if using `"updateCapacity"` as action type and neither `"minimum"` nor `"maximum"` are not defined.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}String, Action type. Supported action types: `pause`, `resume`, `recycle`, `deallocate`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="adjustment_nodejs">
+<a href="#adjustment_nodejs" style="color: inherit; text-decoration: inherit;">adjustment</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The number of instances to add or remove.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maxtargetcapacity_nodejs">
+<a href="#maxtargetcapacity_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Target<wbr>Capacity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The desired target capacity of a group. Required if using `"setMaxTarget"` as action type
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maximum_nodejs">
+<a href="#maximum_nodejs" style="color: inherit; text-decoration: inherit;">maximum</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The upper limit number of instances that you can scale up to. Required if using `"updateCapacity"` as action type and neither `"target"` nor `"minimum"` are not defined.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="mintargetcapacity_nodejs">
+<a href="#mintargetcapacity_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Target<wbr>Capacity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The desired target capacity of a group. Required if using `"setMinTarget"` as action type
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="minimum_nodejs">
+<a href="#minimum_nodejs" style="color: inherit; text-decoration: inherit;">minimum</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The lower limit number of instances that you can scale down to. Required if using `"updateCapacity"` as action type and neither `"target"` nor `"maximum"` are not defined.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="target_nodejs">
+<a href="#target_nodejs" style="color: inherit; text-decoration: inherit;">target</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The desired number of instances. Required if using `"updateCapacity"` as action type and neither `"minimum"` nor `"maximum"` are not defined.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}String, Action type. Supported action types: `pause`, `resume`, `recycle`, `deallocate`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="adjustment_python">
+<a href="#adjustment_python" style="color: inherit; text-decoration: inherit;">adjustment</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The number of instances to add or remove.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="max_target_capacity_python">
+<a href="#max_target_capacity_python" style="color: inherit; text-decoration: inherit;">max_<wbr>target_<wbr>capacity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The desired target capacity of a group. Required if using `"setMaxTarget"` as action type
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maximum_python">
+<a href="#maximum_python" style="color: inherit; text-decoration: inherit;">maximum</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The upper limit number of instances that you can scale up to. Required if using `"updateCapacity"` as action type and neither `"target"` nor `"minimum"` are not defined.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="min_target_capacity_python">
+<a href="#min_target_capacity_python" style="color: inherit; text-decoration: inherit;">min_<wbr>target_<wbr>capacity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The desired target capacity of a group. Required if using `"setMinTarget"` as action type
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="minimum_python">
+<a href="#minimum_python" style="color: inherit; text-decoration: inherit;">minimum</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The lower limit number of instances that you can scale down to. Required if using `"updateCapacity"` as action type and neither `"target"` nor `"maximum"` are not defined.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="target_python">
+<a href="#target_python" style="color: inherit; text-decoration: inherit;">target</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The desired number of instances. Required if using `"updateCapacity"` as action type and neither `"minimum"` nor `"maximum"` are not defined.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

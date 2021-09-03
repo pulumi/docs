@@ -11,43 +11,6 @@ meta_desc: "Documentation for the spotinst.aws.ManagedInstance resource with exa
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Provides a Spotinst AWS ManagedInstance resource.
-## Managed Instance Action
-
-* `managed_instance_action` - (Optional)
-    * `type` - (Required) String, Action type. Supported action types: `pause`, `resume`, `recycle`.
-
-Usage:
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-```
-```python
-import pulumi
-```
-```csharp
-using Pulumi;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-    }
-
-}
-```
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		return nil
-	})
-}
-```
 
 
 {{% examples %}}
@@ -437,8 +400,7 @@ The ManagedInstance resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Determine the way we attach the data volumes to the data devices. Valid values: `"reattach"`, `"onLaunch"`.
-Default: `"onLaunch"`.
+    <dd>{{% md %}}Determine the way we attach the data volumes to the data devices. Valid values: `"reattach"`, `"onLaunch"`. Default: `"onLaunch"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cpucredits_csharp">
@@ -520,8 +482,7 @@ Default: false
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The service to use for the health check. Valid values: `"EC2"`, `"ELB"`, `"TARGET_GROUP"`, `"MULTAI_TARGET_SET"`.
-Default: `"EC2"`.
+    <dd>{{% md %}}The service to use for the health check. Valid values: `"EC2"`, `"ELB"`, `"TARGET_GROUP"`, `"MULTAI_TARGET_SET"`. Default: `"EC2"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iaminstanceprofile_csharp">
@@ -557,8 +518,7 @@ Default: `"EC2"`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Set lifecycle, valid values: `"spot"`, `"on_demand"`.
-Default `"spot"`.
+    <dd>{{% md %}}Set lifecycle, valid values: `"spot"`, `"on_demand"`. Default `"spot"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loadbalancers_csharp">
@@ -618,8 +578,7 @@ Default `"spot"`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Select a prediction strategy. Valid values: `"balanced"`, `"costOriented"`, `"availabilityOriented"`, `"cheapest"`.
-Default: `"availabilityOriented"`.
+    <dd>{{% md %}}Select a prediction strategy. Valid values: `"balanced"`, `"costOriented"`, `"availabilityOriented"`, `"cheapest"`. Default: `"availabilityOriented"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="persistprivateip_csharp">
@@ -753,8 +712,7 @@ Default: default
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}In case of any available Reserved Instances, Managed Instance will utilize them before purchasing Spot instances.
-Default: `"false"`.
+    <dd>{{% md %}}In case of any available Reserved Instances, Managed Instance will utilize them before purchasing Spot instances. Default: `"false"`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -838,8 +796,7 @@ Default: `"false"`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Determine the way we attach the data volumes to the data devices. Valid values: `"reattach"`, `"onLaunch"`.
-Default: `"onLaunch"`.
+    <dd>{{% md %}}Determine the way we attach the data volumes to the data devices. Valid values: `"reattach"`, `"onLaunch"`. Default: `"onLaunch"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cpucredits_go">
@@ -921,8 +878,7 @@ Default: false
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The service to use for the health check. Valid values: `"EC2"`, `"ELB"`, `"TARGET_GROUP"`, `"MULTAI_TARGET_SET"`.
-Default: `"EC2"`.
+    <dd>{{% md %}}The service to use for the health check. Valid values: `"EC2"`, `"ELB"`, `"TARGET_GROUP"`, `"MULTAI_TARGET_SET"`. Default: `"EC2"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iaminstanceprofile_go">
@@ -958,8 +914,7 @@ Default: `"EC2"`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Set lifecycle, valid values: `"spot"`, `"on_demand"`.
-Default `"spot"`.
+    <dd>{{% md %}}Set lifecycle, valid values: `"spot"`, `"on_demand"`. Default `"spot"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loadbalancers_go">
@@ -1019,8 +974,7 @@ Default `"spot"`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Select a prediction strategy. Valid values: `"balanced"`, `"costOriented"`, `"availabilityOriented"`, `"cheapest"`.
-Default: `"availabilityOriented"`.
+    <dd>{{% md %}}Select a prediction strategy. Valid values: `"balanced"`, `"costOriented"`, `"availabilityOriented"`, `"cheapest"`. Default: `"availabilityOriented"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="persistprivateip_go">
@@ -1154,8 +1108,7 @@ Default: default
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}In case of any available Reserved Instances, Managed Instance will utilize them before purchasing Spot instances.
-Default: `"false"`.
+    <dd>{{% md %}}In case of any available Reserved Instances, Managed Instance will utilize them before purchasing Spot instances. Default: `"false"`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1239,8 +1192,7 @@ Default: `"false"`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Determine the way we attach the data volumes to the data devices. Valid values: `"reattach"`, `"onLaunch"`.
-Default: `"onLaunch"`.
+    <dd>{{% md %}}Determine the way we attach the data volumes to the data devices. Valid values: `"reattach"`, `"onLaunch"`. Default: `"onLaunch"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cpucredits_nodejs">
@@ -1322,8 +1274,7 @@ Default: false
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The service to use for the health check. Valid values: `"EC2"`, `"ELB"`, `"TARGET_GROUP"`, `"MULTAI_TARGET_SET"`.
-Default: `"EC2"`.
+    <dd>{{% md %}}The service to use for the health check. Valid values: `"EC2"`, `"ELB"`, `"TARGET_GROUP"`, `"MULTAI_TARGET_SET"`. Default: `"EC2"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iaminstanceprofile_nodejs">
@@ -1359,8 +1310,7 @@ Default: `"EC2"`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Set lifecycle, valid values: `"spot"`, `"on_demand"`.
-Default `"spot"`.
+    <dd>{{% md %}}Set lifecycle, valid values: `"spot"`, `"on_demand"`. Default `"spot"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loadbalancers_nodejs">
@@ -1420,8 +1370,7 @@ Default `"spot"`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Select a prediction strategy. Valid values: `"balanced"`, `"costOriented"`, `"availabilityOriented"`, `"cheapest"`.
-Default: `"availabilityOriented"`.
+    <dd>{{% md %}}Select a prediction strategy. Valid values: `"balanced"`, `"costOriented"`, `"availabilityOriented"`, `"cheapest"`. Default: `"availabilityOriented"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="persistprivateip_nodejs">
@@ -1555,8 +1504,7 @@ Default: default
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}In case of any available Reserved Instances, Managed Instance will utilize them before purchasing Spot instances.
-Default: `"false"`.
+    <dd>{{% md %}}In case of any available Reserved Instances, Managed Instance will utilize them before purchasing Spot instances. Default: `"false"`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1640,8 +1588,7 @@ Default: `"false"`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Determine the way we attach the data volumes to the data devices. Valid values: `"reattach"`, `"onLaunch"`.
-Default: `"onLaunch"`.
+    <dd>{{% md %}}Determine the way we attach the data volumes to the data devices. Valid values: `"reattach"`, `"onLaunch"`. Default: `"onLaunch"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cpu_credits_python">
@@ -1723,8 +1670,7 @@ Default: false
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The service to use for the health check. Valid values: `"EC2"`, `"ELB"`, `"TARGET_GROUP"`, `"MULTAI_TARGET_SET"`.
-Default: `"EC2"`.
+    <dd>{{% md %}}The service to use for the health check. Valid values: `"EC2"`, `"ELB"`, `"TARGET_GROUP"`, `"MULTAI_TARGET_SET"`. Default: `"EC2"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iam_instance_profile_python">
@@ -1760,8 +1706,7 @@ Default: `"EC2"`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Set lifecycle, valid values: `"spot"`, `"on_demand"`.
-Default `"spot"`.
+    <dd>{{% md %}}Set lifecycle, valid values: `"spot"`, `"on_demand"`. Default `"spot"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="load_balancers_python">
@@ -1821,8 +1766,7 @@ Default `"spot"`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Select a prediction strategy. Valid values: `"balanced"`, `"costOriented"`, `"availabilityOriented"`, `"cheapest"`.
-Default: `"availabilityOriented"`.
+    <dd>{{% md %}}Select a prediction strategy. Valid values: `"balanced"`, `"costOriented"`, `"availabilityOriented"`, `"cheapest"`. Default: `"availabilityOriented"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="persist_private_ip_python">
@@ -1956,8 +1900,7 @@ Default: default
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}In case of any available Reserved Instances, Managed Instance will utilize them before purchasing Spot instances.
-Default: `"false"`.
+    <dd>{{% md %}}In case of any available Reserved Instances, Managed Instance will utilize them before purchasing Spot instances. Default: `"false"`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2212,8 +2155,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Determine the way we attach the data volumes to the data devices. Valid values: `"reattach"`, `"onLaunch"`.
-Default: `"onLaunch"`.
+    <dd>{{% md %}}Determine the way we attach the data volumes to the data devices. Valid values: `"reattach"`, `"onLaunch"`. Default: `"onLaunch"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cpucredits_csharp">
@@ -2295,8 +2237,7 @@ Default: false
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The service to use for the health check. Valid values: `"EC2"`, `"ELB"`, `"TARGET_GROUP"`, `"MULTAI_TARGET_SET"`.
-Default: `"EC2"`.
+    <dd>{{% md %}}The service to use for the health check. Valid values: `"EC2"`, `"ELB"`, `"TARGET_GROUP"`, `"MULTAI_TARGET_SET"`. Default: `"EC2"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_iaminstanceprofile_csharp">
@@ -2350,8 +2291,7 @@ Default: `"EC2"`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Set lifecycle, valid values: `"spot"`, `"on_demand"`.
-Default `"spot"`.
+    <dd>{{% md %}}Set lifecycle, valid values: `"spot"`, `"on_demand"`. Default `"spot"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loadbalancers_csharp">
@@ -2411,8 +2351,7 @@ Default `"spot"`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Select a prediction strategy. Valid values: `"balanced"`, `"costOriented"`, `"availabilityOriented"`, `"cheapest"`.
-Default: `"availabilityOriented"`.
+    <dd>{{% md %}}Select a prediction strategy. Valid values: `"balanced"`, `"costOriented"`, `"availabilityOriented"`, `"cheapest"`. Default: `"availabilityOriented"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_persistblockdevices_csharp">
@@ -2573,8 +2512,7 @@ Default: default
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}In case of any available Reserved Instances, Managed Instance will utilize them before purchasing Spot instances.
-Default: `"false"`.
+    <dd>{{% md %}}In case of any available Reserved Instances, Managed Instance will utilize them before purchasing Spot instances. Default: `"false"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpcid_csharp">
@@ -2613,8 +2551,7 @@ Default: `"false"`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Determine the way we attach the data volumes to the data devices. Valid values: `"reattach"`, `"onLaunch"`.
-Default: `"onLaunch"`.
+    <dd>{{% md %}}Determine the way we attach the data volumes to the data devices. Valid values: `"reattach"`, `"onLaunch"`. Default: `"onLaunch"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cpucredits_go">
@@ -2696,8 +2633,7 @@ Default: false
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The service to use for the health check. Valid values: `"EC2"`, `"ELB"`, `"TARGET_GROUP"`, `"MULTAI_TARGET_SET"`.
-Default: `"EC2"`.
+    <dd>{{% md %}}The service to use for the health check. Valid values: `"EC2"`, `"ELB"`, `"TARGET_GROUP"`, `"MULTAI_TARGET_SET"`. Default: `"EC2"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_iaminstanceprofile_go">
@@ -2751,8 +2687,7 @@ Default: `"EC2"`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Set lifecycle, valid values: `"spot"`, `"on_demand"`.
-Default `"spot"`.
+    <dd>{{% md %}}Set lifecycle, valid values: `"spot"`, `"on_demand"`. Default `"spot"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loadbalancers_go">
@@ -2812,8 +2747,7 @@ Default `"spot"`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Select a prediction strategy. Valid values: `"balanced"`, `"costOriented"`, `"availabilityOriented"`, `"cheapest"`.
-Default: `"availabilityOriented"`.
+    <dd>{{% md %}}Select a prediction strategy. Valid values: `"balanced"`, `"costOriented"`, `"availabilityOriented"`, `"cheapest"`. Default: `"availabilityOriented"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_persistblockdevices_go">
@@ -2974,8 +2908,7 @@ Default: default
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}In case of any available Reserved Instances, Managed Instance will utilize them before purchasing Spot instances.
-Default: `"false"`.
+    <dd>{{% md %}}In case of any available Reserved Instances, Managed Instance will utilize them before purchasing Spot instances. Default: `"false"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpcid_go">
@@ -3014,8 +2947,7 @@ Default: `"false"`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Determine the way we attach the data volumes to the data devices. Valid values: `"reattach"`, `"onLaunch"`.
-Default: `"onLaunch"`.
+    <dd>{{% md %}}Determine the way we attach the data volumes to the data devices. Valid values: `"reattach"`, `"onLaunch"`. Default: `"onLaunch"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cpucredits_nodejs">
@@ -3097,8 +3029,7 @@ Default: false
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The service to use for the health check. Valid values: `"EC2"`, `"ELB"`, `"TARGET_GROUP"`, `"MULTAI_TARGET_SET"`.
-Default: `"EC2"`.
+    <dd>{{% md %}}The service to use for the health check. Valid values: `"EC2"`, `"ELB"`, `"TARGET_GROUP"`, `"MULTAI_TARGET_SET"`. Default: `"EC2"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_iaminstanceprofile_nodejs">
@@ -3152,8 +3083,7 @@ Default: `"EC2"`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Set lifecycle, valid values: `"spot"`, `"on_demand"`.
-Default `"spot"`.
+    <dd>{{% md %}}Set lifecycle, valid values: `"spot"`, `"on_demand"`. Default `"spot"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loadbalancers_nodejs">
@@ -3213,8 +3143,7 @@ Default `"spot"`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Select a prediction strategy. Valid values: `"balanced"`, `"costOriented"`, `"availabilityOriented"`, `"cheapest"`.
-Default: `"availabilityOriented"`.
+    <dd>{{% md %}}Select a prediction strategy. Valid values: `"balanced"`, `"costOriented"`, `"availabilityOriented"`, `"cheapest"`. Default: `"availabilityOriented"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_persistblockdevices_nodejs">
@@ -3375,8 +3304,7 @@ Default: default
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}In case of any available Reserved Instances, Managed Instance will utilize them before purchasing Spot instances.
-Default: `"false"`.
+    <dd>{{% md %}}In case of any available Reserved Instances, Managed Instance will utilize them before purchasing Spot instances. Default: `"false"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpcid_nodejs">
@@ -3415,8 +3343,7 @@ Default: `"false"`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Determine the way we attach the data volumes to the data devices. Valid values: `"reattach"`, `"onLaunch"`.
-Default: `"onLaunch"`.
+    <dd>{{% md %}}Determine the way we attach the data volumes to the data devices. Valid values: `"reattach"`, `"onLaunch"`. Default: `"onLaunch"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cpu_credits_python">
@@ -3498,8 +3425,7 @@ Default: false
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The service to use for the health check. Valid values: `"EC2"`, `"ELB"`, `"TARGET_GROUP"`, `"MULTAI_TARGET_SET"`.
-Default: `"EC2"`.
+    <dd>{{% md %}}The service to use for the health check. Valid values: `"EC2"`, `"ELB"`, `"TARGET_GROUP"`, `"MULTAI_TARGET_SET"`. Default: `"EC2"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_iam_instance_profile_python">
@@ -3553,8 +3479,7 @@ Default: `"EC2"`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Set lifecycle, valid values: `"spot"`, `"on_demand"`.
-Default `"spot"`.
+    <dd>{{% md %}}Set lifecycle, valid values: `"spot"`, `"on_demand"`. Default `"spot"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_load_balancers_python">
@@ -3614,8 +3539,7 @@ Default `"spot"`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Select a prediction strategy. Valid values: `"balanced"`, `"costOriented"`, `"availabilityOriented"`, `"cheapest"`.
-Default: `"availabilityOriented"`.
+    <dd>{{% md %}}Select a prediction strategy. Valid values: `"balanced"`, `"costOriented"`, `"availabilityOriented"`, `"cheapest"`. Default: `"availabilityOriented"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_persist_block_devices_python">
@@ -3776,8 +3700,7 @@ Default: default
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}In case of any available Reserved Instances, Managed Instance will utilize them before purchasing Spot instances.
-Default: `"false"`.
+    <dd>{{% md %}}In case of any available Reserved Instances, Managed Instance will utilize them before purchasing Spot instances. Default: `"false"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpc_id_python">
@@ -3818,7 +3741,8 @@ Default: `"false"`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedinstanceblockdevicemappingebs">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Managed<wbr>Instance<wbr>Block<wbr>Device<wbr>Mapping<wbr>Ebs</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Object
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -3839,7 +3763,8 @@ Default: `"false"`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedinstanceblockdevicemappingebs">Managed<wbr>Instance<wbr>Block<wbr>Device<wbr>Mapping<wbr>Ebs</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Object
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -3860,7 +3785,8 @@ Default: `"false"`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedinstanceblockdevicemappingebs">Managed<wbr>Instance<wbr>Block<wbr>Device<wbr>Mapping<wbr>Ebs</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Object
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -3881,7 +3807,8 @@ Default: `"false"`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedinstanceblockdevicemappingebs">Managed<wbr>Instance<wbr>Block<wbr>Device<wbr>Mapping<wbr>Ebs</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Object
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="managedinstanceblockdevicemappingebs">Managed<wbr>Instance<wbr>Block<wbr>Device<wbr>Mapping<wbr>Ebs</h4>
@@ -3913,7 +3840,7 @@ Default: `"false"`.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The amount of data transferred to or from a storage device per second. Valid only if `volume_type` is set to `"gp3"`.
+    <dd>{{% md %}}The throughput that the volume supports, in MiB/s. Minimum value of 125. Maximum value of 1000. Valid only if `volume_type` is set to `"gp3"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumesize_csharp">
@@ -3922,7 +3849,7 @@ Default: `"false"`.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The size of the volume in gigabytes.
+    <dd>{{% md %}}The size of the volume, in GiBs.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumetype_csharp">
@@ -3962,7 +3889,7 @@ Default: `"false"`.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The amount of data transferred to or from a storage device per second. Valid only if `volume_type` is set to `"gp3"`.
+    <dd>{{% md %}}The throughput that the volume supports, in MiB/s. Minimum value of 125. Maximum value of 1000. Valid only if `volume_type` is set to `"gp3"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumesize_go">
@@ -3971,7 +3898,7 @@ Default: `"false"`.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The size of the volume in gigabytes.
+    <dd>{{% md %}}The size of the volume, in GiBs.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumetype_go">
@@ -4011,7 +3938,7 @@ Default: `"false"`.
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The amount of data transferred to or from a storage device per second. Valid only if `volume_type` is set to `"gp3"`.
+    <dd>{{% md %}}The throughput that the volume supports, in MiB/s. Minimum value of 125. Maximum value of 1000. Valid only if `volume_type` is set to `"gp3"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumesize_nodejs">
@@ -4020,7 +3947,7 @@ Default: `"false"`.
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The size of the volume in gigabytes.
+    <dd>{{% md %}}The size of the volume, in GiBs.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumetype_nodejs">
@@ -4060,7 +3987,7 @@ Default: `"false"`.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The amount of data transferred to or from a storage device per second. Valid only if `volume_type` is set to `"gp3"`.
+    <dd>{{% md %}}The throughput that the volume supports, in MiB/s. Minimum value of 125. Maximum value of 1000. Valid only if `volume_type` is set to `"gp3"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volume_size_python">
@@ -4069,7 +3996,7 @@ Default: `"false"`.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The size of the volume in gigabytes.
+    <dd>{{% md %}}The size of the volume, in GiBs.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volume_type_python">
@@ -4435,7 +4362,7 @@ Default: `"false"`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource type. Valid Values: CLASSIC, TARGET_GROUP, MULTAI_TARGET_SET.
+    <dd>{{% md %}}String, Action type. Supported action types: `pause`, `resume`, `recycle`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="arn_csharp">
@@ -4462,7 +4389,8 @@ Default: `"false"`.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}"AZ Awareness" will ensure that instances within the same AZ are using the corresponding MLB runtime instance in the same AZ. This feature reduces multi-zone data transfer fees.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="balancerid_csharp">
 <a href="#balancerid_csharp" style="color: inherit; text-decoration: inherit;">Balancer<wbr>Id</a>
@@ -4470,8 +4398,7 @@ Default: `"false"`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Multai load balancer ID.
-Default: lb-123456
+    <dd>{{% md %}}The Multai load balancer ID. Example: lb-123456
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
@@ -4489,8 +4416,7 @@ Default: lb-123456
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Multai load target set ID.
-Default: ts-123456
+    <dd>{{% md %}}The Multai load target set ID. Example: ts-123456
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -4503,7 +4429,7 @@ Default: ts-123456
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource type. Valid Values: CLASSIC, TARGET_GROUP, MULTAI_TARGET_SET.
+    <dd>{{% md %}}String, Action type. Supported action types: `pause`, `resume`, `recycle`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="arn_go">
@@ -4530,7 +4456,8 @@ Default: ts-123456
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}"AZ Awareness" will ensure that instances within the same AZ are using the corresponding MLB runtime instance in the same AZ. This feature reduces multi-zone data transfer fees.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="balancerid_go">
 <a href="#balancerid_go" style="color: inherit; text-decoration: inherit;">Balancer<wbr>Id</a>
@@ -4538,8 +4465,7 @@ Default: ts-123456
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Multai load balancer ID.
-Default: lb-123456
+    <dd>{{% md %}}The Multai load balancer ID. Example: lb-123456
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
@@ -4557,8 +4483,7 @@ Default: lb-123456
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Multai load target set ID.
-Default: ts-123456
+    <dd>{{% md %}}The Multai load target set ID. Example: ts-123456
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -4571,7 +4496,7 @@ Default: ts-123456
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource type. Valid Values: CLASSIC, TARGET_GROUP, MULTAI_TARGET_SET.
+    <dd>{{% md %}}String, Action type. Supported action types: `pause`, `resume`, `recycle`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="arn_nodejs">
@@ -4598,7 +4523,8 @@ Default: ts-123456
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}"AZ Awareness" will ensure that instances within the same AZ are using the corresponding MLB runtime instance in the same AZ. This feature reduces multi-zone data transfer fees.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="balancerid_nodejs">
 <a href="#balancerid_nodejs" style="color: inherit; text-decoration: inherit;">balancer<wbr>Id</a>
@@ -4606,8 +4532,7 @@ Default: ts-123456
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Multai load balancer ID.
-Default: lb-123456
+    <dd>{{% md %}}The Multai load balancer ID. Example: lb-123456
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
@@ -4625,8 +4550,7 @@ Default: lb-123456
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Multai load target set ID.
-Default: ts-123456
+    <dd>{{% md %}}The Multai load target set ID. Example: ts-123456
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -4639,7 +4563,7 @@ Default: ts-123456
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource type. Valid Values: CLASSIC, TARGET_GROUP, MULTAI_TARGET_SET.
+    <dd>{{% md %}}String, Action type. Supported action types: `pause`, `resume`, `recycle`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="arn_python">
@@ -4666,7 +4590,8 @@ Default: ts-123456
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}"AZ Awareness" will ensure that instances within the same AZ are using the corresponding MLB runtime instance in the same AZ. This feature reduces multi-zone data transfer fees.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="balancer_id_python">
 <a href="#balancer_id_python" style="color: inherit; text-decoration: inherit;">balancer_<wbr>id</a>
@@ -4674,8 +4599,7 @@ Default: ts-123456
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Multai load balancer ID.
-Default: lb-123456
+    <dd>{{% md %}}The Multai load balancer ID. Example: lb-123456
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
@@ -4693,8 +4617,7 @@ Default: lb-123456
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Multai load target set ID.
-Default: ts-123456
+    <dd>{{% md %}}The Multai load target set ID. Example: ts-123456
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -4709,7 +4632,7 @@ Default: ts-123456
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource type. Valid Values: CLASSIC, TARGET_GROUP, MULTAI_TARGET_SET.
+    <dd>{{% md %}}String, Action type. Supported action types: `pause`, `resume`, `recycle`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -4722,7 +4645,7 @@ Default: ts-123456
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource type. Valid Values: CLASSIC, TARGET_GROUP, MULTAI_TARGET_SET.
+    <dd>{{% md %}}String, Action type. Supported action types: `pause`, `resume`, `recycle`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -4735,7 +4658,7 @@ Default: ts-123456
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource type. Valid Values: CLASSIC, TARGET_GROUP, MULTAI_TARGET_SET.
+    <dd>{{% md %}}String, Action type. Supported action types: `pause`, `resume`, `recycle`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -4748,7 +4671,7 @@ Default: ts-123456
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource type. Valid Values: CLASSIC, TARGET_GROUP, MULTAI_TARGET_SET.
+    <dd>{{% md %}}String, Action type. Supported action types: `pause`, `resume`, `recycle`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -4772,8 +4695,7 @@ Default: ts-123456
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether to assign an IPv6 address. Amazon EC2 chooses the IPv6 addresses from the range of the subnet.
-Default: false
+    <dd>{{% md %}}Indicates whether to assign an IPv6 address. Amazon EC2 chooses the IPv6 addresses from the range of the subnet. Default: `false`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="associatepublicipaddress_csharp">
@@ -4804,8 +4726,7 @@ Default: false
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether to assign an IPv6 address. Amazon EC2 chooses the IPv6 addresses from the range of the subnet.
-Default: false
+    <dd>{{% md %}}Indicates whether to assign an IPv6 address. Amazon EC2 chooses the IPv6 addresses from the range of the subnet. Default: `false`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="associatepublicipaddress_go">
@@ -4836,8 +4757,7 @@ Default: false
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Indicates whether to assign an IPv6 address. Amazon EC2 chooses the IPv6 addresses from the range of the subnet.
-Default: false
+    <dd>{{% md %}}Indicates whether to assign an IPv6 address. Amazon EC2 chooses the IPv6 addresses from the range of the subnet. Default: `false`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="associatepublicipaddress_nodejs">
@@ -4868,8 +4788,7 @@ Default: false
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether to assign an IPv6 address. Amazon EC2 chooses the IPv6 addresses from the range of the subnet.
-Default: false
+    <dd>{{% md %}}Indicates whether to assign an IPv6 address. Amazon EC2 chooses the IPv6 addresses from the range of the subnet. Default: `false`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="associate_public_ip_address_python">
@@ -5055,8 +4974,7 @@ Default: false
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Valid values: `"always"`, `"never"`, `"timeWindow"`.
-Default `"never"`.
+    <dd>{{% md %}}Valid values: `"always"`, `"never"`, `"timeWindow"`. Default `"never"`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -5069,8 +4987,7 @@ Default `"never"`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Valid values: `"always"`, `"never"`, `"timeWindow"`.
-Default `"never"`.
+    <dd>{{% md %}}Valid values: `"always"`, `"never"`, `"timeWindow"`. Default `"never"`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -5083,8 +5000,7 @@ Default `"never"`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Valid values: `"always"`, `"never"`, `"timeWindow"`.
-Default `"never"`.
+    <dd>{{% md %}}Valid values: `"always"`, `"never"`, `"timeWindow"`. Default `"never"`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -5097,8 +5013,7 @@ Default `"never"`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Valid values: `"always"`, `"never"`, `"timeWindow"`.
-Default `"never"`.
+    <dd>{{% md %}}Valid values: `"always"`, `"never"`, `"timeWindow"`. Default `"never"`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -5113,7 +5028,7 @@ Default `"never"`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The task type to run. Valid values: "pause", "resume", "recycle".
+    <dd>{{% md %}}The task type to run. Valid values: `"pause"`, `"resume"`, `"recycle"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cronexpression_csharp">
@@ -5122,8 +5037,8 @@ Default `"never"`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A valid cron expression. For example: " * * * * * ". The cron is running in UTC time zone and is in Unix cron format Cron Expression Validator Script. Only one of ‘frequency’ or ‘cronExpression’ should be used at a time.
-Example: 0 1 * * *
+    <dd>{{% md %}}A valid cron expression. The cron is running in UTC time zone and is in Unix cron format Cron Expression Validator Script. Only one of ‘frequency’ or ‘cronExpression’ should be used at a time.
+Example: `"0 1 * * *"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="frequency_csharp">
@@ -5151,7 +5066,7 @@ Example: 0 1 * * *
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}DATETIME in ISO-8601 format. Sets a start time for scheduled actions. If "frequency" or "cronExpression" are not used - the task will run only once at the start time and will then be deleted from the instance configuration.
-Example: 2019-05-23T10:55:09Z
+Example: `"2019-05-23T10:55:09Z"`
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -5164,7 +5079,7 @@ Example: 2019-05-23T10:55:09Z
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The task type to run. Valid values: "pause", "resume", "recycle".
+    <dd>{{% md %}}The task type to run. Valid values: `"pause"`, `"resume"`, `"recycle"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cronexpression_go">
@@ -5173,8 +5088,8 @@ Example: 2019-05-23T10:55:09Z
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A valid cron expression. For example: " * * * * * ". The cron is running in UTC time zone and is in Unix cron format Cron Expression Validator Script. Only one of ‘frequency’ or ‘cronExpression’ should be used at a time.
-Example: 0 1 * * *
+    <dd>{{% md %}}A valid cron expression. The cron is running in UTC time zone and is in Unix cron format Cron Expression Validator Script. Only one of ‘frequency’ or ‘cronExpression’ should be used at a time.
+Example: `"0 1 * * *"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="frequency_go">
@@ -5202,7 +5117,7 @@ Example: 0 1 * * *
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}DATETIME in ISO-8601 format. Sets a start time for scheduled actions. If "frequency" or "cronExpression" are not used - the task will run only once at the start time and will then be deleted from the instance configuration.
-Example: 2019-05-23T10:55:09Z
+Example: `"2019-05-23T10:55:09Z"`
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -5215,7 +5130,7 @@ Example: 2019-05-23T10:55:09Z
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The task type to run. Valid values: "pause", "resume", "recycle".
+    <dd>{{% md %}}The task type to run. Valid values: `"pause"`, `"resume"`, `"recycle"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cronexpression_nodejs">
@@ -5224,8 +5139,8 @@ Example: 2019-05-23T10:55:09Z
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A valid cron expression. For example: " * * * * * ". The cron is running in UTC time zone and is in Unix cron format Cron Expression Validator Script. Only one of ‘frequency’ or ‘cronExpression’ should be used at a time.
-Example: 0 1 * * *
+    <dd>{{% md %}}A valid cron expression. The cron is running in UTC time zone and is in Unix cron format Cron Expression Validator Script. Only one of ‘frequency’ or ‘cronExpression’ should be used at a time.
+Example: `"0 1 * * *"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="frequency_nodejs">
@@ -5253,7 +5168,7 @@ Example: 0 1 * * *
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}DATETIME in ISO-8601 format. Sets a start time for scheduled actions. If "frequency" or "cronExpression" are not used - the task will run only once at the start time and will then be deleted from the instance configuration.
-Example: 2019-05-23T10:55:09Z
+Example: `"2019-05-23T10:55:09Z"`
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -5266,7 +5181,7 @@ Example: 2019-05-23T10:55:09Z
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The task type to run. Valid values: "pause", "resume", "recycle".
+    <dd>{{% md %}}The task type to run. Valid values: `"pause"`, `"resume"`, `"recycle"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cron_expression_python">
@@ -5275,8 +5190,8 @@ Example: 2019-05-23T10:55:09Z
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A valid cron expression. For example: " * * * * * ". The cron is running in UTC time zone and is in Unix cron format Cron Expression Validator Script. Only one of ‘frequency’ or ‘cronExpression’ should be used at a time.
-Example: 0 1 * * *
+    <dd>{{% md %}}A valid cron expression. The cron is running in UTC time zone and is in Unix cron format Cron Expression Validator Script. Only one of ‘frequency’ or ‘cronExpression’ should be used at a time.
+Example: `"0 1 * * *"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="frequency_python">
@@ -5304,7 +5219,7 @@ Example: 0 1 * * *
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}DATETIME in ISO-8601 format. Sets a start time for scheduled actions. If "frequency" or "cronExpression" are not used - the task will run only once at the start time and will then be deleted from the instance configuration.
-Example: 2019-05-23T10:55:09Z
+Example: `"2019-05-23T10:55:09Z"`
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
