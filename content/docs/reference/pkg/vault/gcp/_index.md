@@ -15,6 +15,7 @@ Explore the resources and functions of the vault.gcp module.
     <li><a href="authbackendrole" title="AuthBackendRole"><span class="symbol resource"></span>AuthBackendRole</a></li>
     <li><a href="secretbackend" title="SecretBackend"><span class="symbol resource"></span>SecretBackend</a></li>
     <li><a href="secretroleset" title="SecretRoleset"><span class="symbol resource"></span>SecretRoleset</a></li>
+    <li><a href="secretstaticaccount" title="SecretStaticAccount"><span class="symbol resource"></span>SecretStaticAccount</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
@@ -31,6 +32,6 @@ Explore the resources and functions of the vault.gcp module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`vault` Terraform Provider](https://github.com/hashicorp/terraform-provider-vault).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.3.0</dd>
+	<dd>4.4.0</dd>
 </dl>
 

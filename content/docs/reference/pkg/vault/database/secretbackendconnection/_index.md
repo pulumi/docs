@@ -2981,6 +2981,24 @@ maintain.
     </dt>
     <dd>{{% md %}}The maximum number of open connections to
 use.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tlsca_csharp">
+<a href="#tlsca_csharp" style="color: inherit; text-decoration: inherit;">Tls<wbr>Ca</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}x509 CA file for validating the certificate presented by the MySQL server. Must be PEM encoded.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tlscertificatekey_csharp">
+<a href="#tlscertificatekey_csharp" style="color: inherit; text-decoration: inherit;">Tls<wbr>Certificate<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}x509 certificate for connecting to the database. This must be a PEM encoded version of the private key and the certificate combined.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3027,6 +3045,24 @@ maintain.
     </dt>
     <dd>{{% md %}}The maximum number of open connections to
 use.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tlsca_go">
+<a href="#tlsca_go" style="color: inherit; text-decoration: inherit;">Tls<wbr>Ca</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}x509 CA file for validating the certificate presented by the MySQL server. Must be PEM encoded.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tlscertificatekey_go">
+<a href="#tlscertificatekey_go" style="color: inherit; text-decoration: inherit;">Tls<wbr>Certificate<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}x509 certificate for connecting to the database. This must be a PEM encoded version of the private key and the certificate combined.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3073,6 +3109,24 @@ maintain.
     </dt>
     <dd>{{% md %}}The maximum number of open connections to
 use.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tlsca_nodejs">
+<a href="#tlsca_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Ca</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}x509 CA file for validating the certificate presented by the MySQL server. Must be PEM encoded.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tlscertificatekey_nodejs">
+<a href="#tlscertificatekey_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Certificate<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}x509 certificate for connecting to the database. This must be a PEM encoded version of the private key and the certificate combined.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3119,6 +3173,24 @@ maintain.
     </dt>
     <dd>{{% md %}}The maximum number of open connections to
 use.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tls_ca_python">
+<a href="#tls_ca_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>ca</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}x509 CA file for validating the certificate presented by the MySQL server. Must be PEM encoded.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tls_certificate_key_python">
+<a href="#tls_certificate_key_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>certificate_<wbr>key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}x509 certificate for connecting to the database. This must be a PEM encoded version of the private key and the certificate combined.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
