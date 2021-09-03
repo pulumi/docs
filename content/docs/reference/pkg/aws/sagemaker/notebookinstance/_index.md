@@ -280,6 +280,7 @@ const ni = new aws.sagemaker.NotebookInstance("ni", {
                      <span class="nx">kms_key_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                      <span class="nx">lifecycle_config_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                      <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                     <span class="nx">platform_identifier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                      <span class="nx">role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                      <span class="nx">root_access</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                      <span class="nx">security_groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
@@ -488,6 +489,15 @@ These can be either the names of Git repositories stored as resources in your ac
     <dd>{{% md %}}The name of the notebook instance (must be unique).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="platformidentifier_csharp">
+<a href="#platformidentifier_csharp" style="color: inherit; text-decoration: inherit;">Platform<wbr>Identifier</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The platform identifier of the notebook instance runtime environment. This value can be either `notebook-al1-v1` or `notebook-al2-v1`, depending on which version of Amazon Linux you require.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="rootaccess_csharp">
 <a href="#rootaccess_csharp" style="color: inherit; text-decoration: inherit;">Root<wbr>Access</a>
 </span>
@@ -608,6 +618,15 @@ These can be either the names of Git repositories stored as resources in your ac
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the notebook instance (must be unique).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="platformidentifier_go">
+<a href="#platformidentifier_go" style="color: inherit; text-decoration: inherit;">Platform<wbr>Identifier</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The platform identifier of the notebook instance runtime environment. This value can be either `notebook-al1-v1` or `notebook-al2-v1`, depending on which version of Amazon Linux you require.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rootaccess_go">
@@ -732,6 +751,15 @@ These can be either the names of Git repositories stored as resources in your ac
     <dd>{{% md %}}The name of the notebook instance (must be unique).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="platformidentifier_nodejs">
+<a href="#platformidentifier_nodejs" style="color: inherit; text-decoration: inherit;">platform<wbr>Identifier</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The platform identifier of the notebook instance runtime environment. This value can be either `notebook-al1-v1` or `notebook-al2-v1`, depending on which version of Amazon Linux you require.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="rootaccess_nodejs">
 <a href="#rootaccess_nodejs" style="color: inherit; text-decoration: inherit;">root<wbr>Access</a>
 </span>
@@ -852,6 +880,15 @@ These can be either the names of Git repositories stored as resources in your ac
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the notebook instance (must be unique).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="platform_identifier_python">
+<a href="#platform_identifier_python" style="color: inherit; text-decoration: inherit;">platform_<wbr>identifier</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The platform identifier of the notebook instance runtime environment. This value can be either `notebook-al1-v1` or `notebook-al2-v1`, depending on which version of Amazon Linux you require.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="root_access_python">
@@ -1124,6 +1161,7 @@ Get an existing NotebookInstance resource's state with the given name, ID, and o
         <span class="nx">lifecycle_config_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">network_interface_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">platform_identifier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">root_access</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">security_groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
@@ -1326,6 +1364,15 @@ These can be either the names of Git repositories stored as resources in your ac
     <dd>{{% md %}}The network interface ID that Amazon SageMaker created at the time of creating the instance. Only available when setting `subnet_id`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_platformidentifier_csharp">
+<a href="#state_platformidentifier_csharp" style="color: inherit; text-decoration: inherit;">Platform<wbr>Identifier</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The platform identifier of the notebook instance runtime environment. This value can be either `notebook-al1-v1` or `notebook-al2-v1`, depending on which version of Amazon Linux you require.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_rolearn_csharp">
 <a href="#state_rolearn_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Arn</a>
 </span>
@@ -1482,6 +1529,15 @@ These can be either the names of Git repositories stored as resources in your ac
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The network interface ID that Amazon SageMaker created at the time of creating the instance. Only available when setting `subnet_id`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_platformidentifier_go">
+<a href="#state_platformidentifier_go" style="color: inherit; text-decoration: inherit;">Platform<wbr>Identifier</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The platform identifier of the notebook instance runtime environment. This value can be either `notebook-al1-v1` or `notebook-al2-v1`, depending on which version of Amazon Linux you require.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rolearn_go">
@@ -1642,6 +1698,15 @@ These can be either the names of Git repositories stored as resources in your ac
     <dd>{{% md %}}The network interface ID that Amazon SageMaker created at the time of creating the instance. Only available when setting `subnet_id`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_platformidentifier_nodejs">
+<a href="#state_platformidentifier_nodejs" style="color: inherit; text-decoration: inherit;">platform<wbr>Identifier</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The platform identifier of the notebook instance runtime environment. This value can be either `notebook-al1-v1` or `notebook-al2-v1`, depending on which version of Amazon Linux you require.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_rolearn_nodejs">
 <a href="#state_rolearn_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Arn</a>
 </span>
@@ -1798,6 +1863,15 @@ These can be either the names of Git repositories stored as resources in your ac
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The network interface ID that Amazon SageMaker created at the time of creating the instance. Only available when setting `subnet_id`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_platform_identifier_python">
+<a href="#state_platform_identifier_python" style="color: inherit; text-decoration: inherit;">platform_<wbr>identifier</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The platform identifier of the notebook instance runtime environment. This value can be either `notebook-al1-v1` or `notebook-al2-v1`, depending on which version of Amazon Linux you require.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_role_arn_python">

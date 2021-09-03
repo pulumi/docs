@@ -1589,6 +1589,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Amazon Resource Name (ARN) of cluster
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="clusternodes_csharp">
+<a href="#clusternodes_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Nodes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterclusternode">List&lt;Cluster<wbr>Cluster<wbr>Node&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The nodes in the cluster. Cluster node blocks are documented below
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="dnsname_csharp">
 <a href="#dnsname_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Name</a>
 </span>
@@ -1612,7 +1621,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1626,6 +1635,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of cluster
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="clusternodes_go">
+<a href="#clusternodes_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Nodes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterclusternode">[]Cluster<wbr>Cluster<wbr>Node</a></span>
+    </dt>
+    <dd>{{% md %}}The nodes in the cluster. Cluster node blocks are documented below
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dnsname_go">
@@ -1651,7 +1669,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1665,6 +1683,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of cluster
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="clusternodes_nodejs">
+<a href="#clusternodes_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Nodes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterclusternode">Cluster<wbr>Cluster<wbr>Node[]</a></span>
+    </dt>
+    <dd>{{% md %}}The nodes in the cluster. Cluster node blocks are documented below
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dnsname_nodejs">
@@ -1690,7 +1717,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1704,6 +1731,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of cluster
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="cluster_nodes_python">
+<a href="#cluster_nodes_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>nodes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterclusternode">Sequence[Cluster<wbr>Cluster<wbr>Node]</a></span>
+    </dt>
+    <dd>{{% md %}}The nodes in the cluster. Cluster node blocks are documented below
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dns_name_python">
@@ -1729,7 +1765,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1754,6 +1790,7 @@ Get an existing Cluster resource's state with the given name, ID, and optional e
         <span class="nx">automated_snapshot_retention_period</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">availability_zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">cluster_identifier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">cluster_nodes</span><span class="p">:</span> <span class="nx">Optional[Sequence[ClusterClusterNodeArgs]]</span> = None<span class="p">,</span>
         <span class="nx">cluster_parameter_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">cluster_public_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">cluster_revision_number</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -1942,6 +1979,15 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The Cluster Identifier. Must be a lower case
 string.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_clusternodes_csharp">
+<a href="#state_clusternodes_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Nodes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterclusternode">List&lt;Cluster<wbr>Cluster<wbr>Node<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The nodes in the cluster. Cluster node blocks are documented below
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clusterparametergroupname_csharp">
@@ -2226,7 +2272,7 @@ Format: ddd:hh24:mi-ddd:hh24:mi
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpcsecuritygroupids_csharp">
@@ -2286,6 +2332,15 @@ Format: ddd:hh24:mi-ddd:hh24:mi
     </dt>
     <dd>{{% md %}}The Cluster Identifier. Must be a lower case
 string.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_clusternodes_go">
+<a href="#state_clusternodes_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Nodes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterclusternode">[]Cluster<wbr>Cluster<wbr>Node<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The nodes in the cluster. Cluster node blocks are documented below
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clusterparametergroupname_go">
@@ -2570,7 +2625,7 @@ Format: ddd:hh24:mi-ddd:hh24:mi
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpcsecuritygroupids_go">
@@ -2630,6 +2685,15 @@ Format: ddd:hh24:mi-ddd:hh24:mi
     </dt>
     <dd>{{% md %}}The Cluster Identifier. Must be a lower case
 string.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_clusternodes_nodejs">
+<a href="#state_clusternodes_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Nodes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterclusternode">Cluster<wbr>Cluster<wbr>Node<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}The nodes in the cluster. Cluster node blocks are documented below
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clusterparametergroupname_nodejs">
@@ -2914,7 +2978,7 @@ Format: ddd:hh24:mi-ddd:hh24:mi
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpcsecuritygroupids_nodejs">
@@ -2974,6 +3038,15 @@ Format: ddd:hh24:mi-ddd:hh24:mi
     </dt>
     <dd>{{% md %}}The Cluster Identifier. Must be a lower case
 string.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_cluster_nodes_python">
+<a href="#state_cluster_nodes_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>nodes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterclusternode">Sequence[Cluster<wbr>Cluster<wbr>Node<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}The nodes in the cluster. Cluster node blocks are documented below
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cluster_parameter_group_name_python">
@@ -3258,7 +3331,7 @@ Format: ddd:hh24:mi-ddd:hh24:mi
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpc_security_group_ids_python">
@@ -3279,6 +3352,132 @@ Format: ddd:hh24:mi-ddd:hh24:mi
 ## Supporting Types
 
 
+
+<h4 id="clusterclusternode">Cluster<wbr>Cluster<wbr>Node</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="noderole_csharp">
+<a href="#noderole_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Role</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Whether the node is a leader node or a compute node
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="privateipaddress_csharp">
+<a href="#privateipaddress_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Ip<wbr>Address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The private IP address of a node within a cluster
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="publicipaddress_csharp">
+<a href="#publicipaddress_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Ip<wbr>Address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The public IP address of a node within a cluster
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="noderole_go">
+<a href="#noderole_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Role</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Whether the node is a leader node or a compute node
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="privateipaddress_go">
+<a href="#privateipaddress_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Ip<wbr>Address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The private IP address of a node within a cluster
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="publicipaddress_go">
+<a href="#publicipaddress_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Ip<wbr>Address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The public IP address of a node within a cluster
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="noderole_nodejs">
+<a href="#noderole_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Role</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Whether the node is a leader node or a compute node
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="privateipaddress_nodejs">
+<a href="#privateipaddress_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Ip<wbr>Address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The private IP address of a node within a cluster
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="publicipaddress_nodejs">
+<a href="#publicipaddress_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Ip<wbr>Address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The public IP address of a node within a cluster
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="node_role_python">
+<a href="#node_role_python" style="color: inherit; text-decoration: inherit;">node_<wbr>role</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Whether the node is a leader node or a compute node
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="private_ip_address_python">
+<a href="#private_ip_address_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ip_<wbr>address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The private IP address of a node within a cluster
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="public_ip_address_python">
+<a href="#public_ip_address_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip_<wbr>address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The public IP address of a node within a cluster
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
 
 <h4 id="clusterlogging">Cluster<wbr>Logging</h4>
 
