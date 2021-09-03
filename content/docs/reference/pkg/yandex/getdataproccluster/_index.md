@@ -289,6 +289,14 @@ The following output properties are available:
     <dd>{{% md %}}The Data Proc cluster creation timestamp.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="deletionprotection_csharp">
+<a href="#deletionprotection_csharp" style="color: inherit; text-decoration: inherit;">Deletion<wbr>Protection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
 </span>
@@ -415,6 +423,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The Data Proc cluster creation timestamp.
 {{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="deletionprotection_go">
+<a href="#deletionprotection_go" style="color: inherit; text-decoration: inherit;">Deletion<wbr>Protection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -543,6 +559,14 @@ The following output properties are available:
     <dd>{{% md %}}The Data Proc cluster creation timestamp.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="deletionprotection_nodejs">
+<a href="#deletionprotection_nodejs" style="color: inherit; text-decoration: inherit;">deletion<wbr>Protection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
@@ -669,6 +693,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The Data Proc cluster creation timestamp.
 {{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="deletion_protection_python">
+<a href="#deletion_protection_python" style="color: inherit; text-decoration: inherit;">deletion_<wbr>protection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>

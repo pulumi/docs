@@ -467,6 +467,7 @@ const fooDataprocCluster = new yandex.DataprocCluster("fooDataprocCluster", {
                     <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
                     <span class="nx">bucket</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                     <span class="nx">cluster_config</span><span class="p">:</span> <span class="nx">Optional[DataprocClusterClusterConfigArgs]</span> = None<span class="p">,</span>
+                    <span class="nx">deletion_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                     <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                     <span class="nx">folder_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                     <span class="nx">host_group_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
@@ -632,6 +633,15 @@ The DataprocCluster resource accepts the following [input]({{< relref "/docs/int
     <dd>{{% md %}}Name of the Object Storage bucket to use for Data Proc jobs. Data Proc Agent saves output of job driver's process to specified bucket. In order for this to work service account (specified by the `service_account_id` argument) should be given permission to create objects within this bucket.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="deletionprotection_csharp">
+<a href="#deletionprotection_csharp" style="color: inherit; text-decoration: inherit;">Deletion<wbr>Protection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Inhibits deletion of the cluster.  Can be either `true` or `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
 </span>
@@ -733,6 +743,15 @@ The DataprocCluster resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Object Storage bucket to use for Data Proc jobs. Data Proc Agent saves output of job driver's process to specified bucket. In order for this to work service account (specified by the `service_account_id` argument) should be given permission to create objects within this bucket.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="deletionprotection_go">
+<a href="#deletionprotection_go" style="color: inherit; text-decoration: inherit;">Deletion<wbr>Protection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Inhibits deletion of the cluster.  Can be either `true` or `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
@@ -838,6 +857,15 @@ The DataprocCluster resource accepts the following [input]({{< relref "/docs/int
     <dd>{{% md %}}Name of the Object Storage bucket to use for Data Proc jobs. Data Proc Agent saves output of job driver's process to specified bucket. In order for this to work service account (specified by the `service_account_id` argument) should be given permission to create objects within this bucket.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="deletionprotection_nodejs">
+<a href="#deletionprotection_nodejs" style="color: inherit; text-decoration: inherit;">deletion<wbr>Protection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Inhibits deletion of the cluster.  Can be either `true` or `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
@@ -939,6 +967,15 @@ The DataprocCluster resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the Object Storage bucket to use for Data Proc jobs. Data Proc Agent saves output of job driver's process to specified bucket. In order for this to work service account (specified by the `service_account_id` argument) should be given permission to create objects within this bucket.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="deletion_protection_python">
+<a href="#deletion_protection_python" style="color: inherit; text-decoration: inherit;">deletion_<wbr>protection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Inhibits deletion of the cluster.  Can be either `true` or `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
@@ -1128,6 +1165,7 @@ Get an existing DataprocCluster resource's state with the given name, ID, and op
         <span class="nx">bucket</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">cluster_config</span><span class="p">:</span> <span class="nx">Optional[DataprocClusterClusterConfigArgs]</span> = None<span class="p">,</span>
         <span class="nx">created_at</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">deletion_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">folder_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">host_group_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
@@ -1277,6 +1315,15 @@ The following state arguments are supported:
 * `cluster_config.0.subcluster_spec.X.id` - (Computed) ID of the subcluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_deletionprotection_csharp">
+<a href="#state_deletionprotection_csharp" style="color: inherit; text-decoration: inherit;">Deletion<wbr>Protection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Inhibits deletion of the cluster.  Can be either `true` or `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
 </span>
@@ -1388,6 +1435,15 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}(Computed) The Data Proc cluster creation timestamp.
 * `cluster_config.0.subcluster_spec.X.id` - (Computed) ID of the subcluster.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_deletionprotection_go">
+<a href="#state_deletionprotection_go" style="color: inherit; text-decoration: inherit;">Deletion<wbr>Protection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Inhibits deletion of the cluster.  Can be either `true` or `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
@@ -1503,6 +1559,15 @@ The following state arguments are supported:
 * `cluster_config.0.subcluster_spec.X.id` - (Computed) ID of the subcluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_deletionprotection_nodejs">
+<a href="#state_deletionprotection_nodejs" style="color: inherit; text-decoration: inherit;">deletion<wbr>Protection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Inhibits deletion of the cluster.  Can be either `true` or `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
@@ -1614,6 +1679,15 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}(Computed) The Data Proc cluster creation timestamp.
 * `cluster_config.0.subcluster_spec.X.id` - (Computed) ID of the subcluster.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_deletion_protection_python">
+<a href="#state_deletion_protection_python" style="color: inherit; text-decoration: inherit;">deletion_<wbr>protection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Inhibits deletion of the cluster.  Can be either `true` or `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">

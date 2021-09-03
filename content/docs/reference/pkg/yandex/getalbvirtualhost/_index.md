@@ -36,7 +36,8 @@ class MyStack : Stack
     {
         var my_vh_data = Output.Create(Yandex.GetAlbVirtualHost.InvokeAsync(new Yandex.GetAlbVirtualHostArgs
         {
-            VirtualHostId = yandex_alb_virtual_host.My_vh.Id,
+            Name = yandex_alb_virtual_host.My_vh.Name,
+            HttpRouterId = yandex_alb_virtual_host.My_router.Id,
         }));
     }
 
@@ -59,9 +60,11 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		opt0 := yandex_alb_virtual_host.My - vh.Id
+		opt0 := yandex_alb_virtual_host.My - vh.Name
+		opt1 := yandex_alb_virtual_host.My - router.Id
 		_, err := yandex.LookupAlbVirtualHost(ctx, &yandex.LookupAlbVirtualHostArgs{
-			VirtualHostId: &opt0,
+			Name:         &opt0,
+			HttpRouterId: &opt1,
 		}, nil)
 		if err != nil {
 			return err
@@ -81,7 +84,8 @@ func main() {
 import pulumi
 import pulumi_yandex as yandex
 
-my_vh_data = yandex.get_alb_virtual_host(virtual_host_id=yandex_alb_virtual_host["my-vh"]["id"])
+my_vh_data = yandex.get_alb_virtual_host(name=yandex_alb_virtual_host["my-vh"]["name"],
+    http_router_id=yandex_alb_virtual_host["my-router"]["id"])
 ```
 
 
@@ -96,7 +100,8 @@ import * as pulumi from "@pulumi/pulumi";
 import * as yandex from "@pulumi/yandex";
 
 const my-vh-data = yandex.getAlbVirtualHost({
-    virtualHostId: yandex_alb_virtual_host["my-vh"].id,
+    name: yandex_alb_virtual_host["my-vh"].name,
+    httpRouterId: yandex_alb_virtual_host["my-router"].id,
 });
 ```
 
@@ -176,7 +181,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of a specific Virtual Host.
+    <dd>{{% md %}}The ID of a specific Virtual Host. Virtual Host ID is concatenation of HTTP Router ID
+and Virtual Host name with `/` symbol between them. For Example, "http_router_id/vhost_name".
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -207,7 +213,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of a specific Virtual Host.
+    <dd>{{% md %}}The ID of a specific Virtual Host. Virtual Host ID is concatenation of HTTP Router ID
+and Virtual Host name with `/` symbol between them. For Example, "http_router_id/vhost_name".
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -238,7 +245,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of a specific Virtual Host.
+    <dd>{{% md %}}The ID of a specific Virtual Host. Virtual Host ID is concatenation of HTTP Router ID
+and Virtual Host name with `/` symbol between them. For Example, "http_router_id/vhost_name".
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -269,7 +277,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ID of a specific Virtual Host.
+    <dd>{{% md %}}The ID of a specific Virtual Host. Virtual Host ID is concatenation of HTTP Router ID
+and Virtual Host name with `/` symbol between them. For Example, "http_router_id/vhost_name".
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

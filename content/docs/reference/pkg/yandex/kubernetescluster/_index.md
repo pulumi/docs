@@ -63,7 +63,7 @@ class MyStack : Stack
                 {
                     yandex_vpc_security_group.Security_group_name.Id,
                 },
-                Version = "1.15",
+                Version = "1.17",
                 Zonal = new Yandex.Inputs.KubernetesClusterMasterZonalArgs
                 {
                     SubnetId = yandex_vpc_subnet.Subnet_resource_name.Id,
@@ -181,7 +181,7 @@ zonal_cluster_resource_name = yandex.KubernetesCluster("zonalClusterResourceName
         },
         public_ip=True,
         security_group_ids=[yandex_vpc_security_group["security_group_name"]["id"]],
-        version="1.15",
+        version="1.17",
         zonal=yandex.KubernetesClusterMasterZonalArgs(
             subnet_id=yandex_vpc_subnet["subnet_resource_name"]["id"],
             zone=yandex_vpc_subnet["subnet_resource_name"]["zone"],
@@ -224,7 +224,7 @@ const zonalClusterResourceName = new yandex.KubernetesCluster("zonal_cluster_res
         },
         publicIp: true,
         securityGroupIds: [yandex_vpc_security_group_security_group_name.id],
-        version: "1.15",
+        version: "1.17",
         zonal: {
             subnetId: yandex_vpc_subnet_subnet_resource_name.id,
             zone: yandex_vpc_subnet_subnet_resource_name.zone,

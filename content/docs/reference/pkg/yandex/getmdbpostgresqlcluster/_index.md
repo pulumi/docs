@@ -12,6 +12,7 @@ meta_desc: "Documentation for the yandex.getMdbPostgresqlCluster function with e
 
 Get information about a Yandex Managed PostgreSQL cluster. For more information, see
 [the official documentation](https://cloud.yandex.com/docs/managed-postgresql/).
+[How to connect to the DB](https://cloud.yandex.com/en-ru/docs/managed-postgresql/quickstart#connect). To connect, use port 6432. The port number is not configurable.
 
 
 {{% examples %}}
@@ -131,6 +132,7 @@ export const fqdn = foo.hosts[0].fqdn;
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_mdb_postgresql_cluster(</span><span class="nx">cluster_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                               <span class="nx">deletion_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                                <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                                <span class="nx">folder_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                                <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -168,6 +170,14 @@ The following arguments are supported:
     </dt>
     <dd>{{% md %}}The ID of the PostgreSQL cluster.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="deletionprotection_csharp">
+<a href="#deletionprotection_csharp" style="color: inherit; text-decoration: inherit;">Deletion<wbr>Protection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -209,6 +219,14 @@ The following arguments are supported:
     <dd>{{% md %}}The ID of the PostgreSQL cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="deletionprotection_go">
+<a href="#deletionprotection_go" style="color: inherit; text-decoration: inherit;">Deletion<wbr>Protection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
 </span>
@@ -249,6 +267,14 @@ The following arguments are supported:
     <dd>{{% md %}}The ID of the PostgreSQL cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="deletionprotection_nodejs">
+<a href="#deletionprotection_nodejs" style="color: inherit; text-decoration: inherit;">deletion<wbr>Protection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
@@ -288,6 +314,14 @@ The following arguments are supported:
     </dt>
     <dd>{{% md %}}The ID of the PostgreSQL cluster.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="deletion_protection_python">
+<a href="#deletion_protection_python" style="color: inherit; text-decoration: inherit;">deletion_<wbr>protection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -363,6 +397,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}A database of the PostgreSQL cluster. The structure is documented below.
 {{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="deletionprotection_csharp">
+<a href="#deletionprotection_csharp" style="color: inherit; text-decoration: inherit;">Deletion<wbr>Protection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="environment_csharp">
 <a href="#environment_csharp" style="color: inherit; text-decoration: inherit;">Environment</a>
@@ -519,6 +561,14 @@ The following output properties are available:
     <dd>{{% md %}}A database of the PostgreSQL cluster. The structure is documented below.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="deletionprotection_go">
+<a href="#deletionprotection_go" style="color: inherit; text-decoration: inherit;">Deletion<wbr>Protection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="environment_go">
 <a href="#environment_go" style="color: inherit; text-decoration: inherit;">Environment</a>
 </span>
@@ -674,6 +724,14 @@ The following output properties are available:
     <dd>{{% md %}}A database of the PostgreSQL cluster. The structure is documented below.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="deletionprotection_nodejs">
+<a href="#deletionprotection_nodejs" style="color: inherit; text-decoration: inherit;">deletion<wbr>Protection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="environment_nodejs">
 <a href="#environment_nodejs" style="color: inherit; text-decoration: inherit;">environment</a>
 </span>
@@ -828,6 +886,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}A database of the PostgreSQL cluster. The structure is documented below.
 {{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="deletion_protection_python">
+<a href="#deletion_protection_python" style="color: inherit; text-decoration: inherit;">deletion_<wbr>protection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="environment_python">
 <a href="#environment_python" style="color: inherit; text-decoration: inherit;">environment</a>
