@@ -393,7 +393,7 @@ The AuthBackend resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Provider specific handling configuration
+    <dd>{{% md %}}Provider specific handling configuration. All values may be strings, and the provider will convert to the appropriate type when configuring Vault.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tune_csharp">
@@ -531,7 +531,7 @@ The AuthBackend resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Provider specific handling configuration
+    <dd>{{% md %}}Provider specific handling configuration. All values may be strings, and the provider will convert to the appropriate type when configuring Vault.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tune_go">
@@ -669,7 +669,7 @@ The AuthBackend resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Provider specific handling configuration
+    <dd>{{% md %}}Provider specific handling configuration. All values may be strings, and the provider will convert to the appropriate type when configuring Vault.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tune_nodejs">
@@ -807,7 +807,7 @@ The AuthBackend resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Provider specific handling configuration
+    <dd>{{% md %}}Provider specific handling configuration. All values may be strings, and the provider will convert to the appropriate type when configuring Vault.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tune_python">
@@ -1186,7 +1186,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Provider specific handling configuration
+    <dd>{{% md %}}Provider specific handling configuration. All values may be strings, and the provider will convert to the appropriate type when configuring Vault.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tune_csharp">
@@ -1333,7 +1333,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Provider specific handling configuration
+    <dd>{{% md %}}Provider specific handling configuration. All values may be strings, and the provider will convert to the appropriate type when configuring Vault.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tune_go">
@@ -1480,7 +1480,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Provider specific handling configuration
+    <dd>{{% md %}}Provider specific handling configuration. All values may be strings, and the provider will convert to the appropriate type when configuring Vault.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tune_nodejs">
@@ -1627,7 +1627,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Provider specific handling configuration
+    <dd>{{% md %}}Provider specific handling configuration. All values may be strings, and the provider will convert to the appropriate type when configuring Vault.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tune_python">

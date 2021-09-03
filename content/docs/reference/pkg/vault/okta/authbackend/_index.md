@@ -13,7 +13,6 @@ meta_desc: "Documentation for the vault.okta.AuthBackend resource with examples,
 Provides a resource for managing an
 [Okta auth backend within Vault](https://www.vaultproject.io/docs/auth/okta.html).
 
-
 {{% examples %}}
 
 ## Example Usage
@@ -1609,6 +1608,16 @@ See below for more details.
     <dd>{{% md %}}List of Vault policies to associate with this user
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
+## Import
+
+
+Okta authentication backends can be imported using its `path`, e.g.
+
+```sh
+ $ pulumi import vault:okta/authBackend:AuthBackend example okta
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>
