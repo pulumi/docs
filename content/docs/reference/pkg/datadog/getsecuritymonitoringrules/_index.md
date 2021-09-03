@@ -658,6 +658,22 @@ The following output properties are available:
     <dd>{{% md %}}Whether the rule is enabled.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="filters_csharp">
+<a href="#filters_csharp" style="color: inherit; text-decoration: inherit;">Filters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getsecuritymonitoringrulesrulefilter">List&lt;Get<wbr>Security<wbr>Monitoring<wbr>Rules<wbr>Rule<wbr>Filter&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="hasextendedtitle_csharp">
+<a href="#hasextendedtitle_csharp" style="color: inherit; text-decoration: inherit;">Has<wbr>Extended<wbr>Title</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="options_csharp">
 <a href="#options_csharp" style="color: inherit; text-decoration: inherit;">Options</a>
 </span>
@@ -724,6 +740,22 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Whether the rule is enabled.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="filters_go">
+<a href="#filters_go" style="color: inherit; text-decoration: inherit;">Filters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getsecuritymonitoringrulesrulefilter">[]Get<wbr>Security<wbr>Monitoring<wbr>Rules<wbr>Rule<wbr>Filter</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="hasextendedtitle_go">
+<a href="#hasextendedtitle_go" style="color: inherit; text-decoration: inherit;">Has<wbr>Extended<wbr>Title</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="options_go">
 <a href="#options_go" style="color: inherit; text-decoration: inherit;">Options</a>
@@ -792,6 +824,22 @@ The following output properties are available:
     <dd>{{% md %}}Whether the rule is enabled.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="filters_nodejs">
+<a href="#filters_nodejs" style="color: inherit; text-decoration: inherit;">filters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getsecuritymonitoringrulesrulefilter">Get<wbr>Security<wbr>Monitoring<wbr>Rules<wbr>Rule<wbr>Filter[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="hasextendedtitle_nodejs">
+<a href="#hasextendedtitle_nodejs" style="color: inherit; text-decoration: inherit;">has<wbr>Extended<wbr>Title</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="options_nodejs">
 <a href="#options_nodejs" style="color: inherit; text-decoration: inherit;">options</a>
 </span>
@@ -858,6 +906,22 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Whether the rule is enabled.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="filters_python">
+<a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getsecuritymonitoringrulesrulefilter">Sequence[Get<wbr>Security<wbr>Monitoring<wbr>Rules<wbr>Rule<wbr>Filter]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="has_extended_title_python">
+<a href="#has_extended_title_python" style="color: inherit; text-decoration: inherit;">has_<wbr>extended_<wbr>title</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="options_python">
 <a href="#options_python" style="color: inherit; text-decoration: inherit;">options</a>
@@ -1026,6 +1090,90 @@ The following output properties are available:
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="getsecuritymonitoringrulesrulefilter">Get<wbr>Security<wbr>Monitoring<wbr>Rules<wbr>Rule<wbr>Filter</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="action_csharp">
+<a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="query_csharp">
+<a href="#query_csharp" style="color: inherit; text-decoration: inherit;">Query</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="action_go">
+<a href="#action_go" style="color: inherit; text-decoration: inherit;">Action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="query_go">
+<a href="#query_go" style="color: inherit; text-decoration: inherit;">Query</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="action_nodejs">
+<a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="query_nodejs">
+<a href="#query_nodejs" style="color: inherit; text-decoration: inherit;">query</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="action_python">
+<a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="query_python">
+<a href="#query_python" style="color: inherit; text-decoration: inherit;">query</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="getsecuritymonitoringrulesruleoptions">Get<wbr>Security<wbr>Monitoring<wbr>Rules<wbr>Rule<wbr>Options</h4>
 
 
@@ -1055,6 +1203,22 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="detectionmethod_csharp">
+<a href="#detectionmethod_csharp" style="color: inherit; text-decoration: inherit;">Detection<wbr>Method</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="newvalueoptions_csharp">
+<a href="#newvalueoptions_csharp" style="color: inherit; text-decoration: inherit;">New<wbr>Value<wbr>Options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getsecuritymonitoringrulesruleoptionsnewvalueoptions">Get<wbr>Security<wbr>Monitoring<wbr>Rules<wbr>Rule<wbr>Options<wbr>New<wbr>Value<wbr>Options</a></span>
+    </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1082,6 +1246,22 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="detectionmethod_go">
+<a href="#detectionmethod_go" style="color: inherit; text-decoration: inherit;">Detection<wbr>Method</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="newvalueoptions_go">
+<a href="#newvalueoptions_go" style="color: inherit; text-decoration: inherit;">New<wbr>Value<wbr>Options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getsecuritymonitoringrulesruleoptionsnewvalueoptions">Get<wbr>Security<wbr>Monitoring<wbr>Rules<wbr>Rule<wbr>Options<wbr>New<wbr>Value<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1111,6 +1291,22 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="detectionmethod_nodejs">
+<a href="#detectionmethod_nodejs" style="color: inherit; text-decoration: inherit;">detection<wbr>Method</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="newvalueoptions_nodejs">
+<a href="#newvalueoptions_nodejs" style="color: inherit; text-decoration: inherit;">new<wbr>Value<wbr>Options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getsecuritymonitoringrulesruleoptionsnewvalueoptions">Get<wbr>Security<wbr>Monitoring<wbr>Rules<wbr>Rule<wbr>Options<wbr>New<wbr>Value<wbr>Options</a></span>
+    </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1135,6 +1331,106 @@ The following output properties are available:
             title="Required">
         <span id="max_signal_duration_python">
 <a href="#max_signal_duration_python" style="color: inherit; text-decoration: inherit;">max_<wbr>signal_<wbr>duration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="detection_method_python">
+<a href="#detection_method_python" style="color: inherit; text-decoration: inherit;">detection_<wbr>method</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="new_value_options_python">
+<a href="#new_value_options_python" style="color: inherit; text-decoration: inherit;">new_<wbr>value_<wbr>options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getsecuritymonitoringrulesruleoptionsnewvalueoptions">Get<wbr>Security<wbr>Monitoring<wbr>Rules<wbr>Rule<wbr>Options<wbr>New<wbr>Value<wbr>Options</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="getsecuritymonitoringrulesruleoptionsnewvalueoptions">Get<wbr>Security<wbr>Monitoring<wbr>Rules<wbr>Rule<wbr>Options<wbr>New<wbr>Value<wbr>Options</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="forgetafter_csharp">
+<a href="#forgetafter_csharp" style="color: inherit; text-decoration: inherit;">Forget<wbr>After</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="learningduration_csharp">
+<a href="#learningduration_csharp" style="color: inherit; text-decoration: inherit;">Learning<wbr>Duration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="forgetafter_go">
+<a href="#forgetafter_go" style="color: inherit; text-decoration: inherit;">Forget<wbr>After</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="learningduration_go">
+<a href="#learningduration_go" style="color: inherit; text-decoration: inherit;">Learning<wbr>Duration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="forgetafter_nodejs">
+<a href="#forgetafter_nodejs" style="color: inherit; text-decoration: inherit;">forget<wbr>After</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="learningduration_nodejs">
+<a href="#learningduration_nodejs" style="color: inherit; text-decoration: inherit;">learning<wbr>Duration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="forget_after_python">
+<a href="#forget_after_python" style="color: inherit; text-decoration: inherit;">forget_<wbr>after</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="learning_duration_python">
+<a href="#learning_duration_python" style="color: inherit; text-decoration: inherit;">learning_<wbr>duration</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>

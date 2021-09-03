@@ -151,6 +151,7 @@ const testVariable = new datadog.SyntheticsGlobalVariable("test_variable", {
                              <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                              <span class="nx">parse_test_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                              <span class="nx">parse_test_options</span><span class="p">:</span> <span class="nx">Optional[SyntheticsGlobalVariableParseTestOptionsArgs]</span> = None<span class="p">,</span>
+                             <span class="nx">restricted_roles</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
                              <span class="nx">secure</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                              <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
                              <span class="nx">value</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
@@ -161,7 +162,7 @@ const testVariable = new datadog.SyntheticsGlobalVariable("test_variable", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSyntheticsGlobalVariable</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SyntheticsGlobalVariableArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SyntheticsGlobalVariable</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSyntheticsGlobalVariable</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SyntheticsGlobalVariableArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SyntheticsGlobalVariable</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -222,7 +223,7 @@ const testVariable = new datadog.SyntheticsGlobalVariable("test_variable", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
@@ -240,7 +241,7 @@ const testVariable = new datadog.SyntheticsGlobalVariable("test_variable", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
@@ -272,7 +273,7 @@ const testVariable = new datadog.SyntheticsGlobalVariable("test_variable", {
 
 ## SyntheticsGlobalVariable Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Architecture and Concepts docs.
 
 ### Inputs
 
@@ -328,13 +329,22 @@ The SyntheticsGlobalVariable resource accepts the following [input]({{< relref "
     <dd>{{% md %}}ID of the Synthetics test to use a source of the global variable value.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="restrictedroles_csharp">
+<a href="#restrictedroles_csharp" style="color: inherit; text-decoration: inherit;">Restricted<wbr>Roles</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of role identifiers to associate with the Synthetics global variable.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="secure_csharp">
 <a href="#secure_csharp" style="color: inherit; text-decoration: inherit;">Secure</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Sets the variable as secure. Defaults to `false`.
+    <dd>{{% md %}}If set to true, the value of the global variable is hidden. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
@@ -395,13 +405,22 @@ The SyntheticsGlobalVariable resource accepts the following [input]({{< relref "
     <dd>{{% md %}}ID of the Synthetics test to use a source of the global variable value.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="restrictedroles_go">
+<a href="#restrictedroles_go" style="color: inherit; text-decoration: inherit;">Restricted<wbr>Roles</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of role identifiers to associate with the Synthetics global variable.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="secure_go">
 <a href="#secure_go" style="color: inherit; text-decoration: inherit;">Secure</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Sets the variable as secure. Defaults to `false`.
+    <dd>{{% md %}}If set to true, the value of the global variable is hidden. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
@@ -462,13 +481,22 @@ The SyntheticsGlobalVariable resource accepts the following [input]({{< relref "
     <dd>{{% md %}}ID of the Synthetics test to use a source of the global variable value.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="restrictedroles_nodejs">
+<a href="#restrictedroles_nodejs" style="color: inherit; text-decoration: inherit;">restricted<wbr>Roles</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of role identifiers to associate with the Synthetics global variable.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="secure_nodejs">
 <a href="#secure_nodejs" style="color: inherit; text-decoration: inherit;">secure</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Sets the variable as secure. Defaults to `false`.
+    <dd>{{% md %}}If set to true, the value of the global variable is hidden. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
@@ -529,13 +557,22 @@ The SyntheticsGlobalVariable resource accepts the following [input]({{< relref "
     <dd>{{% md %}}ID of the Synthetics test to use a source of the global variable value.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="restricted_roles_python">
+<a href="#restricted_roles_python" style="color: inherit; text-decoration: inherit;">restricted_<wbr>roles</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of role identifiers to associate with the Synthetics global variable.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="secure_python">
 <a href="#secure_python" style="color: inherit; text-decoration: inherit;">secure</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Sets the variable as secure. Defaults to `false`.
+    <dd>{{% md %}}If set to true, the value of the global variable is hidden. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
@@ -623,13 +660,14 @@ Get an existing SyntheticsGlobalVariable resource's state with the given name, I
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">parse_test_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">parse_test_options</span><span class="p">:</span> <span class="nx">Optional[SyntheticsGlobalVariableParseTestOptionsArgs]</span> = None<span class="p">,</span>
+        <span class="nx">restricted_roles</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
         <span class="nx">secure</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
         <span class="nx">value</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> SyntheticsGlobalVariable</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSyntheticsGlobalVariable<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">SyntheticsGlobalVariableState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SyntheticsGlobalVariable</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSyntheticsGlobalVariable<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">SyntheticsGlobalVariableState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SyntheticsGlobalVariable</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -774,13 +812,22 @@ The following state arguments are supported:
     <dd>{{% md %}}ID of the Synthetics test to use a source of the global variable value.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_restrictedroles_csharp">
+<a href="#state_restrictedroles_csharp" style="color: inherit; text-decoration: inherit;">Restricted<wbr>Roles</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of role identifiers to associate with the Synthetics global variable.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_secure_csharp">
 <a href="#state_secure_csharp" style="color: inherit; text-decoration: inherit;">Secure</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Sets the variable as secure. Defaults to `false`.
+    <dd>{{% md %}}If set to true, the value of the global variable is hidden. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
@@ -841,13 +888,22 @@ The following state arguments are supported:
     <dd>{{% md %}}ID of the Synthetics test to use a source of the global variable value.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_restrictedroles_go">
+<a href="#state_restrictedroles_go" style="color: inherit; text-decoration: inherit;">Restricted<wbr>Roles</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of role identifiers to associate with the Synthetics global variable.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_secure_go">
 <a href="#state_secure_go" style="color: inherit; text-decoration: inherit;">Secure</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Sets the variable as secure. Defaults to `false`.
+    <dd>{{% md %}}If set to true, the value of the global variable is hidden. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
@@ -908,13 +964,22 @@ The following state arguments are supported:
     <dd>{{% md %}}ID of the Synthetics test to use a source of the global variable value.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_restrictedroles_nodejs">
+<a href="#state_restrictedroles_nodejs" style="color: inherit; text-decoration: inherit;">restricted<wbr>Roles</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of role identifiers to associate with the Synthetics global variable.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_secure_nodejs">
 <a href="#state_secure_nodejs" style="color: inherit; text-decoration: inherit;">secure</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Sets the variable as secure. Defaults to `false`.
+    <dd>{{% md %}}If set to true, the value of the global variable is hidden. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
@@ -975,13 +1040,22 @@ The following state arguments are supported:
     <dd>{{% md %}}ID of the Synthetics test to use a source of the global variable value.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_restricted_roles_python">
+<a href="#state_restricted_roles_python" style="color: inherit; text-decoration: inherit;">restricted_<wbr>roles</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of role identifiers to associate with the Synthetics global variable.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_secure_python">
 <a href="#state_secure_python" style="color: inherit; text-decoration: inherit;">secure</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Sets the variable as secure. Defaults to `false`.
+    <dd>{{% md %}}If set to true, the value of the global variable is hidden. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
