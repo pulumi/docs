@@ -28,6 +28,7 @@ Manages a Elasticsearch cluster within the Yandex.Cloud. For more information, s
 <span class="k">def </span><span class="nx">MdbElasticSearchCluster</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
                             <span class="nx">config</span><span class="p">:</span> <span class="nx">Optional[MdbElasticSearchClusterConfigArgs]</span> = None<span class="p">,</span>
+                            <span class="nx">deletion_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                             <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                             <span class="nx">environment</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                             <span class="nx">folder_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -193,6 +194,15 @@ The MdbElasticSearchCluster resource accepts the following [input]({{< relref "/
     <dd>{{% md %}}ID of the network, to which the Elasticsearch cluster belongs.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="deletionprotection_csharp">
+<a href="#deletionprotection_csharp" style="color: inherit; text-decoration: inherit;">Deletion<wbr>Protection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Inhibits deletion of the cluster.  Can be either `true` or `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
 </span>
@@ -285,6 +295,15 @@ The MdbElasticSearchCluster resource accepts the following [input]({{< relref "/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the network, to which the Elasticsearch cluster belongs.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="deletionprotection_go">
+<a href="#deletionprotection_go" style="color: inherit; text-decoration: inherit;">Deletion<wbr>Protection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Inhibits deletion of the cluster.  Can be either `true` or `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
@@ -381,6 +400,15 @@ The MdbElasticSearchCluster resource accepts the following [input]({{< relref "/
     <dd>{{% md %}}ID of the network, to which the Elasticsearch cluster belongs.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="deletionprotection_nodejs">
+<a href="#deletionprotection_nodejs" style="color: inherit; text-decoration: inherit;">deletion<wbr>Protection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Inhibits deletion of the cluster.  Can be either `true` or `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
@@ -473,6 +501,15 @@ The MdbElasticSearchCluster resource accepts the following [input]({{< relref "/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of the network, to which the Elasticsearch cluster belongs.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="deletion_protection_python">
+<a href="#deletion_protection_python" style="color: inherit; text-decoration: inherit;">deletion_<wbr>protection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Inhibits deletion of the cluster.  Can be either `true` or `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
@@ -728,6 +765,7 @@ Get an existing MdbElasticSearchCluster resource's state with the given name, ID
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
         <span class="nx">config</span><span class="p">:</span> <span class="nx">Optional[MdbElasticSearchClusterConfigArgs]</span> = None<span class="p">,</span>
         <span class="nx">created_at</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">deletion_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">environment</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">folder_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -869,6 +907,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Creation timestamp of the key.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_deletionprotection_csharp">
+<a href="#state_deletionprotection_csharp" style="color: inherit; text-decoration: inherit;">Deletion<wbr>Protection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Inhibits deletion of the cluster.  Can be either `true` or `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
 </span>
@@ -990,6 +1037,15 @@ For more information see `status` field of JSON representation in [the official 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation timestamp of the key.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_deletionprotection_go">
+<a href="#state_deletionprotection_go" style="color: inherit; text-decoration: inherit;">Deletion<wbr>Protection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Inhibits deletion of the cluster.  Can be either `true` or `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
@@ -1115,6 +1171,15 @@ For more information see `status` field of JSON representation in [the official 
     <dd>{{% md %}}Creation timestamp of the key.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_deletionprotection_nodejs">
+<a href="#state_deletionprotection_nodejs" style="color: inherit; text-decoration: inherit;">deletion<wbr>Protection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Inhibits deletion of the cluster.  Can be either `true` or `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
@@ -1236,6 +1301,15 @@ For more information see `status` field of JSON representation in [the official 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Creation timestamp of the key.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_deletion_protection_python">
+<a href="#state_deletion_protection_python" style="color: inherit; text-decoration: inherit;">deletion_<wbr>protection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Inhibits deletion of the cluster.  Can be either `true` or `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">

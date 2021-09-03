@@ -110,7 +110,7 @@ class MyStack : Stack
                     Size = 1,
                 },
             },
-            Version = "1.14",
+            Version = "1.17",
         });
     }
 
@@ -185,7 +185,7 @@ my_node_group = yandex.KubernetesNodeGroup("myNodeGroup",
             size=1,
         ),
     ),
-    version="1.14")
+    version="1.17")
 ```
 
 
@@ -250,7 +250,7 @@ const myNodeGroup = new yandex.KubernetesNodeGroup("my_node_group", {
             size: 1,
         },
     },
-    version: "1.14",
+    version: "1.17",
 });
 ```
 

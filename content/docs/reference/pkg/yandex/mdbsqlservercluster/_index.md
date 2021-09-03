@@ -607,6 +607,7 @@ const fooMdbSqlServerCluster = new yandex.MdbSqlServerCluster("fooMdbSqlServerCl
                         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
                         <span class="nx">backup_window_start</span><span class="p">:</span> <span class="nx">Optional[MdbSqlServerClusterBackupWindowStartArgs]</span> = None<span class="p">,</span>
                         <span class="nx">databases</span><span class="p">:</span> <span class="nx">Optional[Sequence[MdbSqlServerClusterDatabaseArgs]]</span> = None<span class="p">,</span>
+                        <span class="nx">deletion_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                         <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                         <span class="nx">environment</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                         <span class="nx">folder_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -820,6 +821,15 @@ The MdbSqlServerCluster resource accepts the following [input]({{< relref "/docs
     <dd>{{% md %}}Time to start the daily backup, in the UTC. The structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="deletionprotection_csharp">
+<a href="#deletionprotection_csharp" style="color: inherit; text-decoration: inherit;">Deletion<wbr>Protection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Inhibits deletion of the cluster.  Can be either `true` or `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
 </span>
@@ -949,6 +959,15 @@ is not provided, the default provider folder is used.
         <span class="property-type"><a href="#mdbsqlserverclusterbackupwindowstart">Mdb<wbr>Sql<wbr>Server<wbr>Cluster<wbr>Backup<wbr>Window<wbr>Start<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Time to start the daily backup, in the UTC. The structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="deletionprotection_go">
+<a href="#deletionprotection_go" style="color: inherit; text-decoration: inherit;">Deletion<wbr>Protection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Inhibits deletion of the cluster.  Can be either `true` or `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
@@ -1082,6 +1101,15 @@ is not provided, the default provider folder is used.
     <dd>{{% md %}}Time to start the daily backup, in the UTC. The structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="deletionprotection_nodejs">
+<a href="#deletionprotection_nodejs" style="color: inherit; text-decoration: inherit;">deletion<wbr>Protection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Inhibits deletion of the cluster.  Can be either `true` or `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
@@ -1211,6 +1239,15 @@ is not provided, the default provider folder is used.
         <span class="property-type"><a href="#mdbsqlserverclusterbackupwindowstart">Mdb<wbr>Sql<wbr>Server<wbr>Cluster<wbr>Backup<wbr>Window<wbr>Start<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Time to start the daily backup, in the UTC. The structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="deletion_protection_python">
+<a href="#deletion_protection_python" style="color: inherit; text-decoration: inherit;">deletion_<wbr>protection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Inhibits deletion of the cluster.  Can be either `true` or `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
@@ -1451,6 +1488,7 @@ Get an existing MdbSqlServerCluster resource's state with the given name, ID, an
         <span class="nx">backup_window_start</span><span class="p">:</span> <span class="nx">Optional[MdbSqlServerClusterBackupWindowStartArgs]</span> = None<span class="p">,</span>
         <span class="nx">created_at</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">databases</span><span class="p">:</span> <span class="nx">Optional[Sequence[MdbSqlServerClusterDatabaseArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">deletion_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">environment</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">folder_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -1602,6 +1640,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#mdbsqlserverclusterdatabase">List&lt;Mdb<wbr>Sql<wbr>Server<wbr>Cluster<wbr>Database<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A database of the SQLServer cluster. The structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_deletionprotection_csharp">
+<a href="#state_deletionprotection_csharp" style="color: inherit; text-decoration: inherit;">Deletion<wbr>Protection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Inhibits deletion of the cluster.  Can be either `true` or `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
@@ -1762,6 +1809,15 @@ is not provided, the default provider folder is used.
     <dd>{{% md %}}A database of the SQLServer cluster. The structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_deletionprotection_go">
+<a href="#state_deletionprotection_go" style="color: inherit; text-decoration: inherit;">Deletion<wbr>Protection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Inhibits deletion of the cluster.  Can be either `true` or `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
 </span>
@@ -1920,6 +1976,15 @@ is not provided, the default provider folder is used.
     <dd>{{% md %}}A database of the SQLServer cluster. The structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_deletionprotection_nodejs">
+<a href="#state_deletionprotection_nodejs" style="color: inherit; text-decoration: inherit;">deletion<wbr>Protection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Inhibits deletion of the cluster.  Can be either `true` or `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
@@ -2076,6 +2141,15 @@ is not provided, the default provider folder is used.
         <span class="property-type"><a href="#mdbsqlserverclusterdatabase">Sequence[Mdb<wbr>Sql<wbr>Server<wbr>Cluster<wbr>Database<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A database of the SQLServer cluster. The structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_deletion_protection_python">
+<a href="#state_deletion_protection_python" style="color: inherit; text-decoration: inherit;">deletion_<wbr>protection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Inhibits deletion of the cluster.  Can be either `true` or `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">

@@ -307,6 +307,7 @@ const fooMdbMongodbCluster = new yandex.MdbMongodbCluster("foo", {
                       <span class="nx">cluster_config</span><span class="p">:</span> <span class="nx">Optional[MdbMongodbClusterClusterConfigArgs]</span> = None<span class="p">,</span>
                       <span class="nx">cluster_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                       <span class="nx">databases</span><span class="p">:</span> <span class="nx">Optional[Sequence[MdbMongodbClusterDatabaseArgs]]</span> = None<span class="p">,</span>
+                      <span class="nx">deletion_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                       <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                       <span class="nx">environment</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                       <span class="nx">folder_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -519,6 +520,16 @@ The MdbMongodbCluster resource accepts the following [input]({{< relref "/docs/i
     <dd>{{% md %}}The ID of the cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="deletionprotection_csharp">
+<a href="#deletionprotection_csharp" style="color: inherit; text-decoration: inherit;">Deletion<wbr>Protection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Inhibits deletion of the cluster.  Can be either `true` or `false`.
+- - -
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
 </span>
@@ -647,6 +658,16 @@ is not provided, the default provider folder is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the cluster.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="deletionprotection_go">
+<a href="#deletionprotection_go" style="color: inherit; text-decoration: inherit;">Deletion<wbr>Protection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Inhibits deletion of the cluster.  Can be either `true` or `false`.
+- - -
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
@@ -779,6 +800,16 @@ is not provided, the default provider folder is used.
     <dd>{{% md %}}The ID of the cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="deletionprotection_nodejs">
+<a href="#deletionprotection_nodejs" style="color: inherit; text-decoration: inherit;">deletion<wbr>Protection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Inhibits deletion of the cluster.  Can be either `true` or `false`.
+- - -
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
@@ -907,6 +938,16 @@ is not provided, the default provider folder is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the cluster.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="deletion_protection_python">
+<a href="#deletion_protection_python" style="color: inherit; text-decoration: inherit;">deletion_<wbr>protection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Inhibits deletion of the cluster.  Can be either `true` or `false`.
+- - -
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
@@ -1187,6 +1228,7 @@ Get an existing MdbMongodbCluster resource's state with the given name, ID, and 
         <span class="nx">cluster_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">created_at</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">databases</span><span class="p">:</span> <span class="nx">Optional[Sequence[MdbMongodbClusterDatabaseArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">deletion_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">environment</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">folder_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -1347,6 +1389,16 @@ The following state arguments are supported:
         <span class="property-type"><a href="#mdbmongodbclusterdatabase">List&lt;Mdb<wbr>Mongodb<wbr>Cluster<wbr>Database<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A database of the MongoDB cluster. The structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_deletionprotection_csharp">
+<a href="#state_deletionprotection_csharp" style="color: inherit; text-decoration: inherit;">Deletion<wbr>Protection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Inhibits deletion of the cluster.  Can be either `true` or `false`.
+- - -
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
@@ -1516,6 +1568,16 @@ For more information see `status` field of JSON representation in [the official 
     <dd>{{% md %}}A database of the MongoDB cluster. The structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_deletionprotection_go">
+<a href="#state_deletionprotection_go" style="color: inherit; text-decoration: inherit;">Deletion<wbr>Protection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Inhibits deletion of the cluster.  Can be either `true` or `false`.
+- - -
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
 </span>
@@ -1683,6 +1745,16 @@ For more information see `status` field of JSON representation in [the official 
     <dd>{{% md %}}A database of the MongoDB cluster. The structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_deletionprotection_nodejs">
+<a href="#state_deletionprotection_nodejs" style="color: inherit; text-decoration: inherit;">deletion<wbr>Protection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Inhibits deletion of the cluster.  Can be either `true` or `false`.
+- - -
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
@@ -1848,6 +1920,16 @@ For more information see `status` field of JSON representation in [the official 
         <span class="property-type"><a href="#mdbmongodbclusterdatabase">Sequence[Mdb<wbr>Mongodb<wbr>Cluster<wbr>Database<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A database of the MongoDB cluster. The structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_deletion_protection_python">
+<a href="#state_deletion_protection_python" style="color: inherit; text-decoration: inherit;">deletion_<wbr>protection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Inhibits deletion of the cluster.  Can be either `true` or `false`.
+- - -
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">

@@ -124,6 +124,16 @@ class MyStack : Stack
             {
                 ErrorDocument = "error.html",
                 IndexDocument = "index.html",
+                RoutingRules = @"[{
+    ""Condition"": {
+        ""KeyPrefixEquals"": ""docs/""
+    },
+    ""Redirect"": {
+        ""ReplaceKeyPrefixWith"": ""documents/""
+    }
+}]
+
+",
             },
         });
     }
@@ -141,6 +151,8 @@ class MyStack : Stack
 package main
 
 import (
+	"fmt"
+
 	"github.com/pulumi/pulumi-yandex/sdk/go/yandex"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
@@ -153,6 +165,7 @@ func main() {
 			Website: &yandex.StorageBucketWebsiteArgs{
 				ErrorDocument: pulumi.String("error.html"),
 				IndexDocument: pulumi.String("index.html"),
+				RoutingRules:  pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v", "[{\n", "    \"Condition\": {\n", "        \"KeyPrefixEquals\": \"docs/\"\n", "    },\n", "    \"Redirect\": {\n", "        \"ReplaceKeyPrefixWith\": \"documents/\"\n", "    }\n", "}]\n", "\n")),
 			},
 		})
 		if err != nil {
@@ -179,6 +192,16 @@ test = yandex.StorageBucket("test",
     website=yandex.StorageBucketWebsiteArgs(
         error_document="error.html",
         index_document="index.html",
+        routing_rules="""[{
+    "Condition": {
+        "KeyPrefixEquals": "docs/"
+    },
+    "Redirect": {
+        "ReplaceKeyPrefixWith": "documents/"
+    }
+}]
+
+""",
     ))
 ```
 
@@ -199,6 +222,15 @@ const test = new yandex.StorageBucket("test", {
     website: {
         errorDocument: "error.html",
         indexDocument: "index.html",
+        routingRules: `[{
+    "Condition": {
+        "KeyPrefixEquals": "docs/"
+    },
+    "Redirect": {
+        "ReplaceKeyPrefixWith": "documents/"
+    }
+}]
+`,
     },
 });
 ```
@@ -4867,6 +4899,24 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Storage returns this index document when requests are made to the root domain or any of the subfolders.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="redirectallrequeststo_csharp">
+<a href="#redirectallrequeststo_csharp" style="color: inherit; text-decoration: inherit;">Redirect<wbr>All<wbr>Requests<wbr>To</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A hostname to redirect all website requests for this bucket to. Hostname can optionally be prefixed with a protocol (`http://` or `https://`) to use when redirecting requests. The default is the protocol that is used in the original request.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="routingrules_csharp">
+<a href="#routingrules_csharp" style="color: inherit; text-decoration: inherit;">Routing<wbr>Rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A json array containing [routing rules](https://cloud.yandex.ru/docs/storage/s3/api-ref/hosting/upload#request-scheme) describing redirect behavior and when redirects are applied.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -4889,6 +4939,24 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Storage returns this index document when requests are made to the root domain or any of the subfolders.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="redirectallrequeststo_go">
+<a href="#redirectallrequeststo_go" style="color: inherit; text-decoration: inherit;">Redirect<wbr>All<wbr>Requests<wbr>To</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A hostname to redirect all website requests for this bucket to. Hostname can optionally be prefixed with a protocol (`http://` or `https://`) to use when redirecting requests. The default is the protocol that is used in the original request.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="routingrules_go">
+<a href="#routingrules_go" style="color: inherit; text-decoration: inherit;">Routing<wbr>Rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A json array containing [routing rules](https://cloud.yandex.ru/docs/storage/s3/api-ref/hosting/upload#request-scheme) describing redirect behavior and when redirects are applied.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -4911,6 +4979,24 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Storage returns this index document when requests are made to the root domain or any of the subfolders.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="redirectallrequeststo_nodejs">
+<a href="#redirectallrequeststo_nodejs" style="color: inherit; text-decoration: inherit;">redirect<wbr>All<wbr>Requests<wbr>To</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A hostname to redirect all website requests for this bucket to. Hostname can optionally be prefixed with a protocol (`http://` or `https://`) to use when redirecting requests. The default is the protocol that is used in the original request.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="routingrules_nodejs">
+<a href="#routingrules_nodejs" style="color: inherit; text-decoration: inherit;">routing<wbr>Rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A json array containing [routing rules](https://cloud.yandex.ru/docs/storage/s3/api-ref/hosting/upload#request-scheme) describing redirect behavior and when redirects are applied.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -4933,6 +5019,24 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Storage returns this index document when requests are made to the root domain or any of the subfolders.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="redirect_all_requests_to_python">
+<a href="#redirect_all_requests_to_python" style="color: inherit; text-decoration: inherit;">redirect_<wbr>all_<wbr>requests_<wbr>to</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A hostname to redirect all website requests for this bucket to. Hostname can optionally be prefixed with a protocol (`http://` or `https://`) to use when redirecting requests. The default is the protocol that is used in the original request.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="routing_rules_python">
+<a href="#routing_rules_python" style="color: inherit; text-decoration: inherit;">routing_<wbr>rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A json array containing [routing rules](https://cloud.yandex.ru/docs/storage/s3/api-ref/hosting/upload#request-scheme) describing redirect behavior and when redirects are applied.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import

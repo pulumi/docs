@@ -61,6 +61,8 @@ A Pulumi package for creating and managing yandex cloud resources.
     <li><a href="mdbrediscluster" title="MdbRedisCluster"><span class="symbol resource"></span>MdbRedisCluster</a></li>
     <li><a href="mdbsqlservercluster" title="MdbSqlServerCluster"><span class="symbol resource"></span>MdbSqlServerCluster</a></li>
     <li><a href="messagequeue" title="MessageQueue"><span class="symbol resource"></span>MessageQueue</a></li>
+    <li><a href="organizationmanagerorganizationiambinding" title="OrganizationManagerOrganizationIamBinding"><span class="symbol resource"></span>OrganizationManagerOrganizationIamBinding</a></li>
+    <li><a href="organizationmanagerorganizationiammember" title="OrganizationManagerOrganizationIamMember"><span class="symbol resource"></span>OrganizationManagerOrganizationIamMember</a></li>
     <li><a href="provider" title="Provider"><span class="symbol resource"></span>Provider</a></li>
     <li><a href="resourcemanagercloudiambinding" title="ResourcemanagerCloudIamBinding"><span class="symbol resource"></span>ResourcemanagerCloudIamBinding</a></li>
     <li><a href="resourcemanagercloudiammember" title="ResourcemanagerCloudIamMember"><span class="symbol resource"></span>ResourcemanagerCloudIamMember</a></li>
@@ -144,6 +146,6 @@ A Pulumi package for creating and managing yandex cloud resources.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`yandex` Terraform Provider](https://github.com/yandex-cloud/terraform-provider-yandex).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>0.5.0</dd>
+	<dd>0.6.0</dd>
 </dl>
 
