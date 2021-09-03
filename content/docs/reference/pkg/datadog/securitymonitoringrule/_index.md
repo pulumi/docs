@@ -47,10 +47,12 @@ class MyStack : Stack
                 },
             },
             Enabled = true,
+            HasExtendedTitle = true,
             Message = "The rule has triggered.",
             Name = "My rule",
             Options = new Datadog.Inputs.SecurityMonitoringRuleOptionsArgs
             {
+                DetectionMethod = "threshold",
                 EvaluationWindow = 300,
                 KeepAlive = 600,
                 MaxSignalDuration = 900,
@@ -114,10 +116,12 @@ func main() {
 					Status: pulumi.String("high"),
 				},
 			},
-			Enabled: pulumi.Bool(true),
-			Message: pulumi.String("The rule has triggered."),
-			Name:    pulumi.String("My rule"),
+			Enabled:          pulumi.Bool(true),
+			HasExtendedTitle: pulumi.Bool(true),
+			Message:          pulumi.String("The rule has triggered."),
+			Name:             pulumi.String("My rule"),
 			Options: &datadog.SecurityMonitoringRuleOptionsArgs{
+				DetectionMethod:   pulumi.String("threshold"),
 				EvaluationWindow:  pulumi.Int(300),
 				KeepAlive:         pulumi.Int(600),
 				MaxSignalDuration: pulumi.Int(900),
@@ -169,9 +173,11 @@ myrule = datadog.SecurityMonitoringRule("myrule",
         status="high",
     )],
     enabled=True,
+    has_extended_title=True,
     message="The rule has triggered.",
     name="My rule",
     options=datadog.SecurityMonitoringRuleOptionsArgs(
+        detection_method="threshold",
         evaluation_window=300,
         keep_alive=600,
         max_signal_duration=900,
@@ -211,9 +217,11 @@ const myrule = new datadog.SecurityMonitoringRule("myrule", {
         status: "high",
     }],
     enabled: true,
+    hasExtendedTitle: true,
     message: "The rule has triggered.",
     name: "My rule",
     options: {
+        detectionMethod: "threshold",
         evaluationWindow: 300,
         keepAlive: 600,
         maxSignalDuration: 900,
@@ -262,6 +270,8 @@ const myrule = new datadog.SecurityMonitoringRule("myrule", {
                            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
                            <span class="nx">cases</span><span class="p">:</span> <span class="nx">Optional[Sequence[SecurityMonitoringRuleCaseArgs]]</span> = None<span class="p">,</span>
                            <span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                           <span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[Sequence[SecurityMonitoringRuleFilterArgs]]</span> = None<span class="p">,</span>
+                           <span class="nx">has_extended_title</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                            <span class="nx">message</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                            <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                            <span class="nx">options</span><span class="p">:</span> <span class="nx">Optional[SecurityMonitoringRuleOptionsArgs]</span> = None<span class="p">,</span>
@@ -274,7 +284,7 @@ const myrule = new datadog.SecurityMonitoringRule("myrule", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSecurityMonitoringRule</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SecurityMonitoringRuleArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SecurityMonitoringRule</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSecurityMonitoringRule</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SecurityMonitoringRuleArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SecurityMonitoringRule</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -335,7 +345,7 @@ const myrule = new datadog.SecurityMonitoringRule("myrule", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
@@ -353,7 +363,7 @@ const myrule = new datadog.SecurityMonitoringRule("myrule", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
@@ -385,7 +395,7 @@ const myrule = new datadog.SecurityMonitoringRule("myrule", {
 
 ## SecurityMonitoringRule Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Architecture and Concepts docs.
 
 ### Inputs
 
@@ -439,6 +449,24 @@ The SecurityMonitoringRule resource accepts the following [input]({{< relref "/d
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the rule is enabled.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="filters_csharp">
+<a href="#filters_csharp" style="color: inherit; text-decoration: inherit;">Filters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#securitymonitoringrulefilter">List&lt;Security<wbr>Monitoring<wbr>Rule<wbr>Filter<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Additional queries to filter matched events before they are processed.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="hasextendedtitle_csharp">
+<a href="#hasextendedtitle_csharp" style="color: inherit; text-decoration: inherit;">Has<wbr>Extended<wbr>Title</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the notifications include the triggering group-by values in their title.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="options_csharp">
@@ -508,6 +536,24 @@ The SecurityMonitoringRule resource accepts the following [input]({{< relref "/d
     <dd>{{% md %}}Whether the rule is enabled.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="filters_go">
+<a href="#filters_go" style="color: inherit; text-decoration: inherit;">Filters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#securitymonitoringrulefilter">[]Security<wbr>Monitoring<wbr>Rule<wbr>Filter<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Additional queries to filter matched events before they are processed.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="hasextendedtitle_go">
+<a href="#hasextendedtitle_go" style="color: inherit; text-decoration: inherit;">Has<wbr>Extended<wbr>Title</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the notifications include the triggering group-by values in their title.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="options_go">
 <a href="#options_go" style="color: inherit; text-decoration: inherit;">Options</a>
 </span>
@@ -575,6 +621,24 @@ The SecurityMonitoringRule resource accepts the following [input]({{< relref "/d
     <dd>{{% md %}}Whether the rule is enabled.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="filters_nodejs">
+<a href="#filters_nodejs" style="color: inherit; text-decoration: inherit;">filters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#securitymonitoringrulefilter">Security<wbr>Monitoring<wbr>Rule<wbr>Filter<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}Additional queries to filter matched events before they are processed.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="hasextendedtitle_nodejs">
+<a href="#hasextendedtitle_nodejs" style="color: inherit; text-decoration: inherit;">has<wbr>Extended<wbr>Title</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether the notifications include the triggering group-by values in their title.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="options_nodejs">
 <a href="#options_nodejs" style="color: inherit; text-decoration: inherit;">options</a>
 </span>
@@ -640,6 +704,24 @@ The SecurityMonitoringRule resource accepts the following [input]({{< relref "/d
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the rule is enabled.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="filters_python">
+<a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#securitymonitoringrulefilter">Sequence[Security<wbr>Monitoring<wbr>Rule<wbr>Filter<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}Additional queries to filter matched events before they are processed.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="has_extended_title_python">
+<a href="#has_extended_title_python" style="color: inherit; text-decoration: inherit;">has_<wbr>extended_<wbr>title</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the notifications include the triggering group-by values in their title.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="options_python">
@@ -734,6 +816,8 @@ Get an existing SecurityMonitoringRule resource's state with the given name, ID,
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
         <span class="nx">cases</span><span class="p">:</span> <span class="nx">Optional[Sequence[SecurityMonitoringRuleCaseArgs]]</span> = None<span class="p">,</span>
         <span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[Sequence[SecurityMonitoringRuleFilterArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">has_extended_title</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">message</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">options</span><span class="p">:</span> <span class="nx">Optional[SecurityMonitoringRuleOptionsArgs]</span> = None<span class="p">,</span>
@@ -742,7 +826,7 @@ Get an existing SecurityMonitoringRule resource's state with the given name, ID,
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSecurityMonitoringRule<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">SecurityMonitoringRuleState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SecurityMonitoringRule</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSecurityMonitoringRule<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">SecurityMonitoringRuleState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SecurityMonitoringRule</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -869,6 +953,24 @@ The following state arguments are supported:
     <dd>{{% md %}}Whether the rule is enabled.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_filters_csharp">
+<a href="#state_filters_csharp" style="color: inherit; text-decoration: inherit;">Filters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#securitymonitoringrulefilter">List&lt;Security<wbr>Monitoring<wbr>Rule<wbr>Filter<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Additional queries to filter matched events before they are processed.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_hasextendedtitle_csharp">
+<a href="#state_hasextendedtitle_csharp" style="color: inherit; text-decoration: inherit;">Has<wbr>Extended<wbr>Title</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the notifications include the triggering group-by values in their title.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_message_csharp">
 <a href="#state_message_csharp" style="color: inherit; text-decoration: inherit;">Message</a>
 </span>
@@ -934,6 +1036,24 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the rule is enabled.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_filters_go">
+<a href="#state_filters_go" style="color: inherit; text-decoration: inherit;">Filters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#securitymonitoringrulefilter">[]Security<wbr>Monitoring<wbr>Rule<wbr>Filter<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Additional queries to filter matched events before they are processed.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_hasextendedtitle_go">
+<a href="#state_hasextendedtitle_go" style="color: inherit; text-decoration: inherit;">Has<wbr>Extended<wbr>Title</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the notifications include the triggering group-by values in their title.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_message_go">
@@ -1003,6 +1123,24 @@ The following state arguments are supported:
     <dd>{{% md %}}Whether the rule is enabled.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_filters_nodejs">
+<a href="#state_filters_nodejs" style="color: inherit; text-decoration: inherit;">filters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#securitymonitoringrulefilter">Security<wbr>Monitoring<wbr>Rule<wbr>Filter<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}Additional queries to filter matched events before they are processed.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_hasextendedtitle_nodejs">
+<a href="#state_hasextendedtitle_nodejs" style="color: inherit; text-decoration: inherit;">has<wbr>Extended<wbr>Title</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether the notifications include the triggering group-by values in their title.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_message_nodejs">
 <a href="#state_message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
 </span>
@@ -1068,6 +1206,24 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the rule is enabled.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_filters_python">
+<a href="#state_filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#securitymonitoringrulefilter">Sequence[Security<wbr>Monitoring<wbr>Rule<wbr>Filter<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}Additional queries to filter matched events before they are processed.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_has_extended_title_python">
+<a href="#state_has_extended_title_python" style="color: inherit; text-decoration: inherit;">has_<wbr>extended_<wbr>title</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the notifications include the triggering group-by values in their title.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_message_python">
@@ -1287,6 +1443,96 @@ The following state arguments are supported:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="securitymonitoringrulefilter">Security<wbr>Monitoring<wbr>Rule<wbr>Filter</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="action_csharp">
+<a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of filtering action (require or suppress).
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="query_csharp">
+<a href="#query_csharp" style="color: inherit; text-decoration: inherit;">Query</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Query to run on logs.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="action_go">
+<a href="#action_go" style="color: inherit; text-decoration: inherit;">Action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of filtering action (require or suppress).
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="query_go">
+<a href="#query_go" style="color: inherit; text-decoration: inherit;">Query</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Query to run on logs.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="action_nodejs">
+<a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of filtering action (require or suppress).
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="query_nodejs">
+<a href="#query_nodejs" style="color: inherit; text-decoration: inherit;">query</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Query to run on logs.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="action_python">
+<a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The type of filtering action (require or suppress).
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="query_python">
+<a href="#query_python" style="color: inherit; text-decoration: inherit;">query</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Query to run on logs.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="securitymonitoringruleoptions">Security<wbr>Monitoring<wbr>Rule<wbr>Options</h4>
 
 {{% choosable language csharp %}}
@@ -1317,6 +1563,24 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}A signal will “close” regardless of the query being matched once the time exceeds the maximum duration. This time is calculated from the first seen timestamp.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="detectionmethod_csharp">
+<a href="#detectionmethod_csharp" style="color: inherit; text-decoration: inherit;">Detection<wbr>Method</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The detection method. Default to `threshold`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="newvalueoptions_csharp">
+<a href="#newvalueoptions_csharp" style="color: inherit; text-decoration: inherit;">New<wbr>Value<wbr>Options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#securitymonitoringruleoptionsnewvalueoptions">Security<wbr>Monitoring<wbr>Rule<wbr>Options<wbr>New<wbr>Value<wbr>Options</a></span>
+    </dt>
+    <dd>{{% md %}}Specific options for `new_value` detection method.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1348,6 +1612,24 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}A signal will “close” regardless of the query being matched once the time exceeds the maximum duration. This time is calculated from the first seen timestamp.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="detectionmethod_go">
+<a href="#detectionmethod_go" style="color: inherit; text-decoration: inherit;">Detection<wbr>Method</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The detection method. Default to `threshold`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="newvalueoptions_go">
+<a href="#newvalueoptions_go" style="color: inherit; text-decoration: inherit;">New<wbr>Value<wbr>Options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#securitymonitoringruleoptionsnewvalueoptions">Security<wbr>Monitoring<wbr>Rule<wbr>Options<wbr>New<wbr>Value<wbr>Options</a></span>
+    </dt>
+    <dd>{{% md %}}Specific options for `new_value` detection method.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1379,6 +1661,24 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}A signal will “close” regardless of the query being matched once the time exceeds the maximum duration. This time is calculated from the first seen timestamp.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="detectionmethod_nodejs">
+<a href="#detectionmethod_nodejs" style="color: inherit; text-decoration: inherit;">detection<wbr>Method</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The detection method. Default to `threshold`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="newvalueoptions_nodejs">
+<a href="#newvalueoptions_nodejs" style="color: inherit; text-decoration: inherit;">new<wbr>Value<wbr>Options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#securitymonitoringruleoptionsnewvalueoptions">Security<wbr>Monitoring<wbr>Rule<wbr>Options<wbr>New<wbr>Value<wbr>Options</a></span>
+    </dt>
+    <dd>{{% md %}}Specific options for `new_value` detection method.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1410,6 +1710,114 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}A signal will “close” regardless of the query being matched once the time exceeds the maximum duration. This time is calculated from the first seen timestamp.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="detection_method_python">
+<a href="#detection_method_python" style="color: inherit; text-decoration: inherit;">detection_<wbr>method</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The detection method. Default to `threshold`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="new_value_options_python">
+<a href="#new_value_options_python" style="color: inherit; text-decoration: inherit;">new_<wbr>value_<wbr>options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#securitymonitoringruleoptionsnewvalueoptions">Security<wbr>Monitoring<wbr>Rule<wbr>Options<wbr>New<wbr>Value<wbr>Options</a></span>
+    </dt>
+    <dd>{{% md %}}Specific options for `new_value` detection method.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="securitymonitoringruleoptionsnewvalueoptions">Security<wbr>Monitoring<wbr>Rule<wbr>Options<wbr>New<wbr>Value<wbr>Options</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="forgetafter_csharp">
+<a href="#forgetafter_csharp" style="color: inherit; text-decoration: inherit;">Forget<wbr>After</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The duration in days after which a learned value is forgotten.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="learningduration_csharp">
+<a href="#learningduration_csharp" style="color: inherit; text-decoration: inherit;">Learning<wbr>Duration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The duration in days during which values are learned, and after which signals will be generated for values that weren't learned. If set to 0, a signal will be generated for all new values after the first value is learned.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="forgetafter_go">
+<a href="#forgetafter_go" style="color: inherit; text-decoration: inherit;">Forget<wbr>After</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The duration in days after which a learned value is forgotten.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="learningduration_go">
+<a href="#learningduration_go" style="color: inherit; text-decoration: inherit;">Learning<wbr>Duration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The duration in days during which values are learned, and after which signals will be generated for values that weren't learned. If set to 0, a signal will be generated for all new values after the first value is learned.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="forgetafter_nodejs">
+<a href="#forgetafter_nodejs" style="color: inherit; text-decoration: inherit;">forget<wbr>After</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The duration in days after which a learned value is forgotten.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="learningduration_nodejs">
+<a href="#learningduration_nodejs" style="color: inherit; text-decoration: inherit;">learning<wbr>Duration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The duration in days during which values are learned, and after which signals will be generated for values that weren't learned. If set to 0, a signal will be generated for all new values after the first value is learned.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="forget_after_python">
+<a href="#forget_after_python" style="color: inherit; text-decoration: inherit;">forget_<wbr>after</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The duration in days after which a learned value is forgotten.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="learning_duration_python">
+<a href="#learning_duration_python" style="color: inherit; text-decoration: inherit;">learning_<wbr>duration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The duration in days during which values are learned, and after which signals will be generated for values that weren't learned. If set to 0, a signal will be generated for all new values after the first value is learned.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

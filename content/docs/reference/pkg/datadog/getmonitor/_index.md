@@ -392,6 +392,15 @@ The following output properties are available:
     <dd>{{% md %}}Name of the monitor
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="newgroupdelay_csharp">
+<a href="#newgroupdelay_csharp" style="color: inherit; text-decoration: inherit;">New<wbr>Group<wbr>Delay</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Time (in seconds) to skip evaluations for new groups.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="newhostdelay_csharp">
 <a href="#newhostdelay_csharp" style="color: inherit; text-decoration: inherit;">New<wbr>Host<wbr>Delay</a>
 </span>
@@ -454,6 +463,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Whether or not the monitor needs a full window of data before it is evaluated.
 {{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="restrictedroles_csharp">
+<a href="#restrictedroles_csharp" style="color: inherit; text-decoration: inherit;">Restricted<wbr>Roles</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -612,6 +629,15 @@ The following output properties are available:
     <dd>{{% md %}}Name of the monitor
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="newgroupdelay_go">
+<a href="#newgroupdelay_go" style="color: inherit; text-decoration: inherit;">New<wbr>Group<wbr>Delay</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Time (in seconds) to skip evaluations for new groups.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="newhostdelay_go">
 <a href="#newhostdelay_go" style="color: inherit; text-decoration: inherit;">New<wbr>Host<wbr>Delay</a>
 </span>
@@ -674,6 +700,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Whether or not the monitor needs a full window of data before it is evaluated.
 {{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="restrictedroles_go">
+<a href="#restrictedroles_go" style="color: inherit; text-decoration: inherit;">Restricted<wbr>Roles</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -832,6 +866,15 @@ The following output properties are available:
     <dd>{{% md %}}Name of the monitor
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="newgroupdelay_nodejs">
+<a href="#newgroupdelay_nodejs" style="color: inherit; text-decoration: inherit;">new<wbr>Group<wbr>Delay</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Time (in seconds) to skip evaluations for new groups.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="newhostdelay_nodejs">
 <a href="#newhostdelay_nodejs" style="color: inherit; text-decoration: inherit;">new<wbr>Host<wbr>Delay</a>
 </span>
@@ -894,6 +937,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Whether or not the monitor needs a full window of data before it is evaluated.
 {{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="restrictedroles_nodejs">
+<a href="#restrictedroles_nodejs" style="color: inherit; text-decoration: inherit;">restricted<wbr>Roles</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1052,6 +1103,15 @@ The following output properties are available:
     <dd>{{% md %}}Name of the monitor
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="new_group_delay_python">
+<a href="#new_group_delay_python" style="color: inherit; text-decoration: inherit;">new_<wbr>group_<wbr>delay</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Time (in seconds) to skip evaluations for new groups.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="new_host_delay_python">
 <a href="#new_host_delay_python" style="color: inherit; text-decoration: inherit;">new_<wbr>host_<wbr>delay</a>
 </span>
@@ -1114,6 +1174,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Whether or not the monitor needs a full window of data before it is evaluated.
 {{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="restricted_roles_python">
+<a href="#restricted_roles_python" style="color: inherit; text-decoration: inherit;">restricted_<wbr>roles</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>

@@ -12,6 +12,137 @@ meta_desc: "Documentation for the datadog.SyntheticsTest resource with examples,
 
 Provides a Datadog synthetics test resource. This can be used to create and manage Datadog synthetics test.
 
+#### *Warning*
+Starting from version 3.1.0+, the direct usage of global variables in the configuration is deprecated, in favor of
+local variables of type `global`. As an example, if you were previously using `{{ GLOBAL_VAR }}` directly in your
+configuration, add a `config_variable` of type `global` with the `id` matching the `id` of the global variable `GLOBAL_VAR`, which can be found in the Synthetics UI or from the output of the `datadog.SyntheticsGlobalVariable` resource. The name can be chosen freely.
+
+In practice, it means going from (simplified configuration):
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+```
+```python
+import pulumi
+```
+```csharp
+using Pulumi;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+    }
+
+}
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		return nil
+	})
+}
+```
+
+to
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+
+const config_variable = {
+    name: "LOCAL_VAR",
+    id: [your_global_variable_id],
+    type: "global",
+};
+```
+```python
+import pulumi
+
+config_variable = {
+    "name": "LOCAL_VAR",
+    "id": [your_global_variable_id],
+    "type": "global",
+}
+```
+```csharp
+using Pulumi;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var config_variable = 
+        {
+            { "name", "LOCAL_VAR" },
+            { "id", 
+            {
+                your_global_variable_id,
+            } },
+            { "type", "global" },
+        };
+    }
+
+}
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_ := map[string]interface{}{
+			"name": "LOCAL_VAR",
+			"id": []interface{}{
+				your_global_variable_id,
+			},
+			"type": "global",
+		}
+		return nil
+	})
+}
+```
+
+which you can now use in your request definition:
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+```
+```python
+import pulumi
+```
+```csharp
+using Pulumi;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+    }
+
+}
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		return nil
+	})
+}
+```
+
 {{% examples %}}
 
 ## Example Usage
@@ -24,21 +155,817 @@ Provides a Datadog synthetics test resource. This can be used to create and mana
 
 {{< example csharp >}}
 
-Coming soon!
+```csharp
+using Pulumi;
+using Datadog = Pulumi.Datadog;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        // Example Usage (Synthetics API test)
+        // Create a new Datadog Synthetics API/HTTP test on https://www.example.org
+        var testApi = new Datadog.SyntheticsTest("testApi", new Datadog.SyntheticsTestArgs
+        {
+            Assertions = 
+            {
+                new Datadog.Inputs.SyntheticsTestAssertionArgs
+                {
+                    Operator = "is",
+                    Target = "200",
+                    Type = "statusCode",
+                },
+            },
+            Locations = 
+            {
+                "aws:eu-central-1",
+            },
+            Message = "Notify @pagerduty",
+            Name = "An API test on example.org",
+            OptionsList = new Datadog.Inputs.SyntheticsTestOptionsListArgs
+            {
+                MonitorOptions = new Datadog.Inputs.SyntheticsTestOptionsListMonitorOptionsArgs
+                {
+                    RenotifyInterval = 100,
+                },
+                Retry = new Datadog.Inputs.SyntheticsTestOptionsListRetryArgs
+                {
+                    Count = 2,
+                    Interval = 300,
+                },
+                TickEvery = 900,
+            },
+            RequestDefinition = new Datadog.Inputs.SyntheticsTestRequestDefinitionArgs
+            {
+                Method = "GET",
+                Url = "https://www.example.org",
+            },
+            RequestHeaders = 
+            {
+                { "Authentication", "Token: 1234566789" },
+                { "Content-Type", "application/json" },
+            },
+            Status = "live",
+            Subtype = "http",
+            Tags = 
+            {
+                "foo:bar",
+                "foo",
+                "env:test",
+            },
+            Type = "api",
+        });
+        // Example Usage (Synthetics SSL test)
+        // Create a new Datadog Synthetics API/SSL test on example.org
+        var testSsl = new Datadog.SyntheticsTest("testSsl", new Datadog.SyntheticsTestArgs
+        {
+            Assertions = 
+            {
+                new Datadog.Inputs.SyntheticsTestAssertionArgs
+                {
+                    Operator = "isInMoreThan",
+                    Target = "30",
+                    Type = "certificate",
+                },
+            },
+            Locations = 
+            {
+                "aws:eu-central-1",
+            },
+            Message = "Notify @pagerduty",
+            Name = "An API test on example.org",
+            OptionsList = new Datadog.Inputs.SyntheticsTestOptionsListArgs
+            {
+                AcceptSelfSigned = true,
+                TickEvery = 900,
+            },
+            RequestDefinition = new Datadog.Inputs.SyntheticsTestRequestDefinitionArgs
+            {
+                Host = "example.org",
+                Port = 443,
+            },
+            Status = "live",
+            Subtype = "ssl",
+            Tags = 
+            {
+                "foo:bar",
+                "foo",
+                "env:test",
+            },
+            Type = "api",
+        });
+        // Example Usage (Synthetics TCP test)
+        // Create a new Datadog Synthetics API/TCP test on example.org
+        var testTcp = new Datadog.SyntheticsTest("testTcp", new Datadog.SyntheticsTestArgs
+        {
+            Assertions = 
+            {
+                new Datadog.Inputs.SyntheticsTestAssertionArgs
+                {
+                    Operator = "lessThan",
+                    Target = "2000",
+                    Type = "responseTime",
+                },
+            },
+            ConfigVariables = 
+            {
+                new Datadog.Inputs.SyntheticsTestConfigVariableArgs
+                {
+                    Id = "76636cd1-82e2-4aeb-9cfe-51366a8198a2",
+                    Name = "MY_GLOBAL_VAR",
+                    Type = "global",
+                },
+            },
+            Locations = 
+            {
+                "aws:eu-central-1",
+            },
+            Message = "Notify @pagerduty",
+            Name = "An API test on example.org",
+            OptionsList = new Datadog.Inputs.SyntheticsTestOptionsListArgs
+            {
+                TickEvery = 900,
+            },
+            RequestDefinition = new Datadog.Inputs.SyntheticsTestRequestDefinitionArgs
+            {
+                Host = "example.org",
+                Port = 443,
+            },
+            Status = "live",
+            Subtype = "tcp",
+            Tags = 
+            {
+                "foo:bar",
+                "foo",
+                "env:test",
+            },
+            Type = "api",
+        });
+        // Example Usage (Synthetics DNS test)
+        // Create a new Datadog Synthetics API/DNS test on example.org
+        var testDns = new Datadog.SyntheticsTest("testDns", new Datadog.SyntheticsTestArgs
+        {
+            Assertions = 
+            {
+                new Datadog.Inputs.SyntheticsTestAssertionArgs
+                {
+                    Operator = "is",
+                    Property = "A",
+                    Target = "0.0.0.0",
+                    Type = "recordSome",
+                },
+            },
+            Locations = 
+            {
+                "aws:eu-central-1",
+            },
+            Message = "Notify @pagerduty",
+            Name = "An API test on example.org",
+            OptionsList = new Datadog.Inputs.SyntheticsTestOptionsListArgs
+            {
+                TickEvery = 900,
+            },
+            RequestDefinition = new Datadog.Inputs.SyntheticsTestRequestDefinitionArgs
+            {
+                Host = "example.org",
+            },
+            Status = "live",
+            Subtype = "dns",
+            Tags = 
+            {
+                "foo:bar",
+                "foo",
+                "env:test",
+            },
+            Type = "api",
+        });
+        // Example Usage (Synthetics Multistep API test)
+        // Create a new Datadog Synthetics Multistep API test
+        var test = new Datadog.SyntheticsTest("test", new Datadog.SyntheticsTestArgs
+        {
+            ApiSteps = 
+            {
+                new Datadog.Inputs.SyntheticsTestApiStepArgs
+                {
+                    Assertions = 
+                    {
+                        new Datadog.Inputs.SyntheticsTestApiStepAssertionArgs
+                        {
+                            Operator = "is",
+                            Target = "200",
+                            Type = "statusCode",
+                        },
+                    },
+                    Name = "An API test on example.org",
+                    RequestDefinition = new Datadog.Inputs.SyntheticsTestApiStepRequestDefinitionArgs
+                    {
+                        Method = "GET",
+                        Url = "https://example.org",
+                    },
+                    RequestHeaders = 
+                    {
+                        { "Authentication", "Token: 1234566789" },
+                        { "Content-Type", "application/json" },
+                    },
+                    Subtype = "http",
+                },
+                new Datadog.Inputs.SyntheticsTestApiStepArgs
+                {
+                    Assertions = 
+                    {
+                        new Datadog.Inputs.SyntheticsTestApiStepAssertionArgs
+                        {
+                            Operator = "is",
+                            Target = "200",
+                            Type = "statusCode",
+                        },
+                    },
+                    Name = "An API test on example.org",
+                    RequestDefinition = new Datadog.Inputs.SyntheticsTestApiStepRequestDefinitionArgs
+                    {
+                        Method = "GET",
+                        Url = "http://example.org",
+                    },
+                    Subtype = "http",
+                },
+            },
+            Locations = 
+            {
+                "aws:eu-central-1",
+            },
+            Name = "Multistep API test",
+            OptionsList = new Datadog.Inputs.SyntheticsTestOptionsListArgs
+            {
+                AcceptSelfSigned = true,
+                TickEvery = 900,
+            },
+            Status = "live",
+            Subtype = "multi",
+            Type = "api",
+        });
+        // Example Usage (Synthetics Browser test)
+        // Support for Synthetics Browser test steps is limited (see below)
+        // Create a new Datadog Synthetics Browser test starting on https://www.example.org
+        var testBrowser = new Datadog.SyntheticsTest("testBrowser", new Datadog.SyntheticsTestArgs
+        {
+            BrowserSteps = 
+            {
+                new Datadog.Inputs.SyntheticsTestBrowserStepArgs
+                {
+                    Name = "Check current url",
+                    Params = new Datadog.Inputs.SyntheticsTestBrowserStepParamsArgs
+                    {
+                        Check = "contains",
+                        Value = "datadoghq",
+                    },
+                    Type = "assertCurrentUrl",
+                },
+            },
+            BrowserVariables = 
+            {
+                new Datadog.Inputs.SyntheticsTestBrowserVariableArgs
+                {
+                    Example = "597",
+                    Name = "MY_PATTERN_VAR",
+                    Pattern = "{{numeric(3)}}",
+                    Type = "text",
+                },
+                new Datadog.Inputs.SyntheticsTestBrowserVariableArgs
+                {
+                    Example = "jd8-afe-ydv.4546132139@synthetics.dtdg.co",
+                    Name = "MY_EMAIL_VAR",
+                    Pattern = "jd8-afe-ydv.{{ numeric(10) }}@synthetics.dtdg.co",
+                    Type = "email",
+                },
+                new Datadog.Inputs.SyntheticsTestBrowserVariableArgs
+                {
+                    Id = "76636cd1-82e2-4aeb-9cfe-51366a8198a2",
+                    Name = "MY_GLOBAL_VAR",
+                    Type = "global",
+                },
+            },
+            DeviceIds = 
+            {
+                "laptop_large",
+            },
+            Locations = 
+            {
+                "aws:eu-central-1",
+            },
+            Message = "Notify @qa",
+            Name = "A Browser test on example.org",
+            OptionsList = new Datadog.Inputs.SyntheticsTestOptionsListArgs
+            {
+                TickEvery = 3600,
+            },
+            RequestDefinition = new Datadog.Inputs.SyntheticsTestRequestDefinitionArgs
+            {
+                Method = "GET",
+                Url = "https://app.datadoghq.com",
+            },
+            Status = "paused",
+            Tags = {},
+            Type = "browser",
+        });
+    }
+
+}
+```
+
 
 {{< /example >}}
 
 
 {{< example go >}}
 
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-datadog/sdk/v4/go/datadog"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := datadog.NewSyntheticsTest(ctx, "testApi", &datadog.SyntheticsTestArgs{
+			Assertions: datadog.SyntheticsTestAssertionArray{
+				&datadog.SyntheticsTestAssertionArgs{
+					Operator: pulumi.String("is"),
+					Target:   pulumi.String("200"),
+					Type:     pulumi.String("statusCode"),
+				},
+			},
+			Locations: pulumi.StringArray{
+				pulumi.String("aws:eu-central-1"),
+			},
+			Message: pulumi.String("Notify @pagerduty"),
+			Name:    pulumi.String("An API test on example.org"),
+			OptionsList: &datadog.SyntheticsTestOptionsListArgs{
+				MonitorOptions: &datadog.SyntheticsTestOptionsListMonitorOptionsArgs{
+					RenotifyInterval: pulumi.Int(100),
+				},
+				Retry: &datadog.SyntheticsTestOptionsListRetryArgs{
+					Count:    pulumi.Int(2),
+					Interval: pulumi.Int(300),
+				},
+				TickEvery: pulumi.Int(900),
+			},
+			RequestDefinition: &datadog.SyntheticsTestRequestDefinitionArgs{
+				Method: pulumi.String("GET"),
+				Url:    pulumi.String("https://www.example.org"),
+			},
+			RequestHeaders: pulumi.StringMap{
+				"Authentication": pulumi.String("Token: 1234566789"),
+				"Content-Type":   pulumi.String("application/json"),
+			},
+			Status:  pulumi.String("live"),
+			Subtype: pulumi.String("http"),
+			Tags: pulumi.StringArray{
+				pulumi.String("foo:bar"),
+				pulumi.String("foo"),
+				pulumi.String("env:test"),
+			},
+			Type: pulumi.String("api"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = datadog.NewSyntheticsTest(ctx, "testSsl", &datadog.SyntheticsTestArgs{
+			Assertions: datadog.SyntheticsTestAssertionArray{
+				&datadog.SyntheticsTestAssertionArgs{
+					Operator: pulumi.String("isInMoreThan"),
+					Target:   pulumi.String("30"),
+					Type:     pulumi.String("certificate"),
+				},
+			},
+			Locations: pulumi.StringArray{
+				pulumi.String("aws:eu-central-1"),
+			},
+			Message: pulumi.String("Notify @pagerduty"),
+			Name:    pulumi.String("An API test on example.org"),
+			OptionsList: &datadog.SyntheticsTestOptionsListArgs{
+				AcceptSelfSigned: pulumi.Bool(true),
+				TickEvery:        pulumi.Int(900),
+			},
+			RequestDefinition: &datadog.SyntheticsTestRequestDefinitionArgs{
+				Host: pulumi.String("example.org"),
+				Port: pulumi.Int(443),
+			},
+			Status:  pulumi.String("live"),
+			Subtype: pulumi.String("ssl"),
+			Tags: pulumi.StringArray{
+				pulumi.String("foo:bar"),
+				pulumi.String("foo"),
+				pulumi.String("env:test"),
+			},
+			Type: pulumi.String("api"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = datadog.NewSyntheticsTest(ctx, "testTcp", &datadog.SyntheticsTestArgs{
+			Assertions: datadog.SyntheticsTestAssertionArray{
+				&datadog.SyntheticsTestAssertionArgs{
+					Operator: pulumi.String("lessThan"),
+					Target:   pulumi.String("2000"),
+					Type:     pulumi.String("responseTime"),
+				},
+			},
+			ConfigVariables: datadog.SyntheticsTestConfigVariableArray{
+				&datadog.SyntheticsTestConfigVariableArgs{
+					Id:   pulumi.String("76636cd1-82e2-4aeb-9cfe-51366a8198a2"),
+					Name: pulumi.String("MY_GLOBAL_VAR"),
+					Type: pulumi.String("global"),
+				},
+			},
+			Locations: pulumi.StringArray{
+				pulumi.String("aws:eu-central-1"),
+			},
+			Message: pulumi.String("Notify @pagerduty"),
+			Name:    pulumi.String("An API test on example.org"),
+			OptionsList: &datadog.SyntheticsTestOptionsListArgs{
+				TickEvery: pulumi.Int(900),
+			},
+			RequestDefinition: &datadog.SyntheticsTestRequestDefinitionArgs{
+				Host: pulumi.String("example.org"),
+				Port: pulumi.Int(443),
+			},
+			Status:  pulumi.String("live"),
+			Subtype: pulumi.String("tcp"),
+			Tags: pulumi.StringArray{
+				pulumi.String("foo:bar"),
+				pulumi.String("foo"),
+				pulumi.String("env:test"),
+			},
+			Type: pulumi.String("api"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = datadog.NewSyntheticsTest(ctx, "testDns", &datadog.SyntheticsTestArgs{
+			Assertions: datadog.SyntheticsTestAssertionArray{
+				&datadog.SyntheticsTestAssertionArgs{
+					Operator: pulumi.String("is"),
+					Property: pulumi.String("A"),
+					Target:   pulumi.String("0.0.0.0"),
+					Type:     pulumi.String("recordSome"),
+				},
+			},
+			Locations: pulumi.StringArray{
+				pulumi.String("aws:eu-central-1"),
+			},
+			Message: pulumi.String("Notify @pagerduty"),
+			Name:    pulumi.String("An API test on example.org"),
+			OptionsList: &datadog.SyntheticsTestOptionsListArgs{
+				TickEvery: pulumi.Int(900),
+			},
+			RequestDefinition: &datadog.SyntheticsTestRequestDefinitionArgs{
+				Host: pulumi.String("example.org"),
+			},
+			Status:  pulumi.String("live"),
+			Subtype: pulumi.String("dns"),
+			Tags: pulumi.StringArray{
+				pulumi.String("foo:bar"),
+				pulumi.String("foo"),
+				pulumi.String("env:test"),
+			},
+			Type: pulumi.String("api"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = datadog.NewSyntheticsTest(ctx, "test", &datadog.SyntheticsTestArgs{
+			ApiSteps: datadog.SyntheticsTestApiStepArray{
+				&datadog.SyntheticsTestApiStepArgs{
+					Assertions: datadog.SyntheticsTestApiStepAssertionArray{
+						&datadog.SyntheticsTestApiStepAssertionArgs{
+							Operator: pulumi.String("is"),
+							Target:   pulumi.String("200"),
+							Type:     pulumi.String("statusCode"),
+						},
+					},
+					Name: pulumi.String("An API test on example.org"),
+					RequestDefinition: &datadog.SyntheticsTestApiStepRequestDefinitionArgs{
+						Method: pulumi.String("GET"),
+						Url:    pulumi.String("https://example.org"),
+					},
+					RequestHeaders: pulumi.StringMap{
+						"Authentication": pulumi.String("Token: 1234566789"),
+						"Content-Type":   pulumi.String("application/json"),
+					},
+					Subtype: pulumi.String("http"),
+				},
+				&datadog.SyntheticsTestApiStepArgs{
+					Assertions: datadog.SyntheticsTestApiStepAssertionArray{
+						&datadog.SyntheticsTestApiStepAssertionArgs{
+							Operator: pulumi.String("is"),
+							Target:   pulumi.String("200"),
+							Type:     pulumi.String("statusCode"),
+						},
+					},
+					Name: pulumi.String("An API test on example.org"),
+					RequestDefinition: &datadog.SyntheticsTestApiStepRequestDefinitionArgs{
+						Method: pulumi.String("GET"),
+						Url:    pulumi.String("http://example.org"),
+					},
+					Subtype: pulumi.String("http"),
+				},
+			},
+			Locations: pulumi.StringArray{
+				pulumi.String("aws:eu-central-1"),
+			},
+			Name: pulumi.String("Multistep API test"),
+			OptionsList: &datadog.SyntheticsTestOptionsListArgs{
+				AcceptSelfSigned: pulumi.Bool(true),
+				TickEvery:        pulumi.Int(900),
+			},
+			Status:  pulumi.String("live"),
+			Subtype: pulumi.String("multi"),
+			Type:    pulumi.String("api"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = datadog.NewSyntheticsTest(ctx, "testBrowser", &datadog.SyntheticsTestArgs{
+			BrowserSteps: datadog.SyntheticsTestBrowserStepArray{
+				&datadog.SyntheticsTestBrowserStepArgs{
+					Name: pulumi.String("Check current url"),
+					Params: &datadog.SyntheticsTestBrowserStepParamsArgs{
+						Check: pulumi.String("contains"),
+						Value: pulumi.String("datadoghq"),
+					},
+					Type: pulumi.String("assertCurrentUrl"),
+				},
+			},
+			BrowserVariables: datadog.SyntheticsTestBrowserVariableArray{
+				&datadog.SyntheticsTestBrowserVariableArgs{
+					Example: pulumi.String("597"),
+					Name:    pulumi.String("MY_PATTERN_VAR"),
+					Pattern: pulumi.String("{{numeric(3)}}"),
+					Type:    pulumi.String("text"),
+				},
+				&datadog.SyntheticsTestBrowserVariableArgs{
+					Example: pulumi.String("jd8-afe-ydv.4546132139@synthetics.dtdg.co"),
+					Name:    pulumi.String("MY_EMAIL_VAR"),
+					Pattern: pulumi.String("jd8-afe-ydv.{{ numeric(10) }}@synthetics.dtdg.co"),
+					Type:    pulumi.String("email"),
+				},
+				&datadog.SyntheticsTestBrowserVariableArgs{
+					Id:   pulumi.String("76636cd1-82e2-4aeb-9cfe-51366a8198a2"),
+					Name: pulumi.String("MY_GLOBAL_VAR"),
+					Type: pulumi.String("global"),
+				},
+			},
+			DeviceIds: pulumi.StringArray{
+				pulumi.String("laptop_large"),
+			},
+			Locations: pulumi.StringArray{
+				pulumi.String("aws:eu-central-1"),
+			},
+			Message: pulumi.String("Notify @qa"),
+			Name:    pulumi.String("A Browser test on example.org"),
+			OptionsList: &datadog.SyntheticsTestOptionsListArgs{
+				TickEvery: pulumi.Int(3600),
+			},
+			RequestDefinition: &datadog.SyntheticsTestRequestDefinitionArgs{
+				Method: pulumi.String("GET"),
+				Url:    pulumi.String("https://app.datadoghq.com"),
+			},
+			Status: pulumi.String("paused"),
+			Tags:   []interface{}{},
+			Type:   pulumi.String("browser"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 
 {{< /example >}}
 
 
 {{< example python >}}
 
-Coming soon!
+```python
+import pulumi
+import pulumi_datadog as datadog
+
+# Example Usage (Synthetics API test)
+# Create a new Datadog Synthetics API/HTTP test on https://www.example.org
+test_api = datadog.SyntheticsTest("testApi",
+    assertions=[datadog.SyntheticsTestAssertionArgs(
+        operator="is",
+        target="200",
+        type="statusCode",
+    )],
+    locations=["aws:eu-central-1"],
+    message="Notify @pagerduty",
+    name="An API test on example.org",
+    options_list=datadog.SyntheticsTestOptionsListArgs(
+        monitor_options=datadog.SyntheticsTestOptionsListMonitorOptionsArgs(
+            renotify_interval=100,
+        ),
+        retry=datadog.SyntheticsTestOptionsListRetryArgs(
+            count=2,
+            interval=300,
+        ),
+        tick_every=900,
+    ),
+    request_definition=datadog.SyntheticsTestRequestDefinitionArgs(
+        method="GET",
+        url="https://www.example.org",
+    ),
+    request_headers={
+        "Authentication": "Token: 1234566789",
+        "Content-Type": "application/json",
+    },
+    status="live",
+    subtype="http",
+    tags=[
+        "foo:bar",
+        "foo",
+        "env:test",
+    ],
+    type="api")
+# Example Usage (Synthetics SSL test)
+# Create a new Datadog Synthetics API/SSL test on example.org
+test_ssl = datadog.SyntheticsTest("testSsl",
+    assertions=[datadog.SyntheticsTestAssertionArgs(
+        operator="isInMoreThan",
+        target="30",
+        type="certificate",
+    )],
+    locations=["aws:eu-central-1"],
+    message="Notify @pagerduty",
+    name="An API test on example.org",
+    options_list=datadog.SyntheticsTestOptionsListArgs(
+        accept_self_signed=True,
+        tick_every=900,
+    ),
+    request_definition=datadog.SyntheticsTestRequestDefinitionArgs(
+        host="example.org",
+        port=443,
+    ),
+    status="live",
+    subtype="ssl",
+    tags=[
+        "foo:bar",
+        "foo",
+        "env:test",
+    ],
+    type="api")
+# Example Usage (Synthetics TCP test)
+# Create a new Datadog Synthetics API/TCP test on example.org
+test_tcp = datadog.SyntheticsTest("testTcp",
+    assertions=[datadog.SyntheticsTestAssertionArgs(
+        operator="lessThan",
+        target="2000",
+        type="responseTime",
+    )],
+    config_variables=[datadog.SyntheticsTestConfigVariableArgs(
+        id="76636cd1-82e2-4aeb-9cfe-51366a8198a2",
+        name="MY_GLOBAL_VAR",
+        type="global",
+    )],
+    locations=["aws:eu-central-1"],
+    message="Notify @pagerduty",
+    name="An API test on example.org",
+    options_list=datadog.SyntheticsTestOptionsListArgs(
+        tick_every=900,
+    ),
+    request_definition=datadog.SyntheticsTestRequestDefinitionArgs(
+        host="example.org",
+        port=443,
+    ),
+    status="live",
+    subtype="tcp",
+    tags=[
+        "foo:bar",
+        "foo",
+        "env:test",
+    ],
+    type="api")
+# Example Usage (Synthetics DNS test)
+# Create a new Datadog Synthetics API/DNS test on example.org
+test_dns = datadog.SyntheticsTest("testDns",
+    assertions=[datadog.SyntheticsTestAssertionArgs(
+        operator="is",
+        property="A",
+        target="0.0.0.0",
+        type="recordSome",
+    )],
+    locations=["aws:eu-central-1"],
+    message="Notify @pagerduty",
+    name="An API test on example.org",
+    options_list=datadog.SyntheticsTestOptionsListArgs(
+        tick_every=900,
+    ),
+    request_definition=datadog.SyntheticsTestRequestDefinitionArgs(
+        host="example.org",
+    ),
+    status="live",
+    subtype="dns",
+    tags=[
+        "foo:bar",
+        "foo",
+        "env:test",
+    ],
+    type="api")
+# Example Usage (Synthetics Multistep API test)
+# Create a new Datadog Synthetics Multistep API test
+test = datadog.SyntheticsTest("test",
+    api_steps=[
+        datadog.SyntheticsTestApiStepArgs(
+            assertions=[datadog.SyntheticsTestApiStepAssertionArgs(
+                operator="is",
+                target="200",
+                type="statusCode",
+            )],
+            name="An API test on example.org",
+            request_definition={
+                "method": "GET",
+                "url": "https://example.org",
+            },
+            request_headers={
+                "Authentication": "Token: 1234566789",
+                "Content-Type": "application/json",
+            },
+            subtype="http",
+        ),
+        datadog.SyntheticsTestApiStepArgs(
+            assertions=[datadog.SyntheticsTestApiStepAssertionArgs(
+                operator="is",
+                target="200",
+                type="statusCode",
+            )],
+            name="An API test on example.org",
+            request_definition={
+                "method": "GET",
+                "url": "http://example.org",
+            },
+            subtype="http",
+        ),
+    ],
+    locations=["aws:eu-central-1"],
+    name="Multistep API test",
+    options_list=datadog.SyntheticsTestOptionsListArgs(
+        accept_self_signed=True,
+        tick_every=900,
+    ),
+    status="live",
+    subtype="multi",
+    type="api")
+# Example Usage (Synthetics Browser test)
+# Support for Synthetics Browser test steps is limited (see below)
+# Create a new Datadog Synthetics Browser test starting on https://www.example.org
+test_browser = datadog.SyntheticsTest("testBrowser",
+    browser_steps=[datadog.SyntheticsTestBrowserStepArgs(
+        name="Check current url",
+        params=datadog.SyntheticsTestBrowserStepParamsArgs(
+            check="contains",
+            value="datadoghq",
+        ),
+        type="assertCurrentUrl",
+    )],
+    browser_variables=[
+        datadog.SyntheticsTestBrowserVariableArgs(
+            example="597",
+            name="MY_PATTERN_VAR",
+            pattern="{{numeric(3)}}",
+            type="text",
+        ),
+        datadog.SyntheticsTestBrowserVariableArgs(
+            example="jd8-afe-ydv.4546132139@synthetics.dtdg.co",
+            name="MY_EMAIL_VAR",
+            pattern="jd8-afe-ydv.{{ numeric(10) }}@synthetics.dtdg.co",
+            type="email",
+        ),
+        datadog.SyntheticsTestBrowserVariableArgs(
+            id="76636cd1-82e2-4aeb-9cfe-51366a8198a2",
+            name="MY_GLOBAL_VAR",
+            type="global",
+        ),
+    ],
+    device_ids=["laptop_large"],
+    locations=["aws:eu-central-1"],
+    message="Notify @qa",
+    name="A Browser test on example.org",
+    options_list=datadog.SyntheticsTestOptionsListArgs(
+        tick_every=3600,
+    ),
+    request_definition=datadog.SyntheticsTestRequestDefinitionArgs(
+        method="GET",
+        url="https://app.datadoghq.com",
+    ),
+    status="paused",
+    tags=[],
+    type="browser")
+```
+
 
 {{< /example >}}
 
@@ -52,169 +979,219 @@ import * as datadog from "@pulumi/datadog";
 
 // Example Usage (Synthetics API test)
 // Create a new Datadog Synthetics API/HTTP test on https://www.example.org
-const testApi = new datadog.SyntheticsTest("testApi", {
-    type: "api",
-    subtype: "http",
+const testApi = new datadog.SyntheticsTest("test_api", {
+    assertions: [{
+        operator: "is",
+        target: "200",
+        type: "statusCode",
+    }],
+    locations: ["aws:eu-central-1"],
+    message: "Notify @pagerduty",
+    name: "An API test on example.org",
+    optionsList: {
+        monitorOptions: {
+            renotifyInterval: 100,
+        },
+        retry: {
+            count: 2,
+            interval: 300,
+        },
+        tickEvery: 900,
+    },
     requestDefinition: {
         method: "GET",
         url: "https://www.example.org",
     },
     requestHeaders: {
-        "Content-Type": "application/json",
         Authentication: "Token: 1234566789",
+        "Content-Type": "application/json",
     },
-    assertions: [{
-        type: "statusCode",
-        operator: "is",
-        target: "200",
-    }],
-    locations: ["aws:eu-central-1"],
-    optionsList: {
-        tickEvery: 900,
-        retry: {
-            count: 2,
-            interval: 300,
-        },
-        monitorOptions: {
-            renotifyInterval: 100,
-        },
-    },
-    name: "An API test on example.org",
-    message: "Notify @pagerduty",
+    status: "live",
+    subtype: "http",
     tags: [
         "foo:bar",
         "foo",
         "env:test",
     ],
-    status: "live",
+    type: "api",
 });
 // Example Usage (Synthetics SSL test)
 // Create a new Datadog Synthetics API/SSL test on example.org
-const testSsl = new datadog.SyntheticsTest("testSsl", {
-    type: "api",
-    subtype: "ssl",
+const testSsl = new datadog.SyntheticsTest("test_ssl", {
+    assertions: [{
+        operator: "isInMoreThan",
+        target: "30",
+        type: "certificate",
+    }],
+    locations: ["aws:eu-central-1"],
+    message: "Notify @pagerduty",
+    name: "An API test on example.org",
+    optionsList: {
+        acceptSelfSigned: true,
+        tickEvery: 900,
+    },
     requestDefinition: {
         host: "example.org",
         port: 443,
     },
-    assertions: [{
-        type: "certificate",
-        operator: "isInMoreThan",
-        target: 30,
-    }],
-    locations: ["aws:eu-central-1"],
-    optionsList: {
-        tickEvery: 900,
-        acceptSelfSigned: true,
-    },
-    name: "An API test on example.org",
-    message: "Notify @pagerduty",
+    status: "live",
+    subtype: "ssl",
     tags: [
         "foo:bar",
         "foo",
         "env:test",
     ],
-    status: "live",
+    type: "api",
 });
 // Example Usage (Synthetics TCP test)
 // Create a new Datadog Synthetics API/TCP test on example.org
-const testTcp = new datadog.SyntheticsTest("testTcp", {
-    type: "api",
-    subtype: "tcp",
+const testTcp = new datadog.SyntheticsTest("test_tcp", {
+    assertions: [{
+        operator: "lessThan",
+        target: "2000",
+        type: "responseTime",
+    }],
+    configVariables: [{
+        id: "76636cd1-82e2-4aeb-9cfe-51366a8198a2",
+        name: "MY_GLOBAL_VAR",
+        type: "global",
+    }],
+    locations: ["aws:eu-central-1"],
+    message: "Notify @pagerduty",
+    name: "An API test on example.org",
+    optionsList: {
+        tickEvery: 900,
+    },
     requestDefinition: {
         host: "example.org",
         port: 443,
     },
-    assertions: [{
-        type: "responseTime",
-        operator: "lessThan",
-        target: 2000,
-    }],
-    locations: ["aws:eu-central-1"],
-    optionsList: {
-        tickEvery: 900,
-    },
-    name: "An API test on example.org",
-    message: "Notify @pagerduty",
+    status: "live",
+    subtype: "tcp",
     tags: [
         "foo:bar",
         "foo",
         "env:test",
     ],
-    status: "live",
+    type: "api",
 });
 // Example Usage (Synthetics DNS test)
 // Create a new Datadog Synthetics API/DNS test on example.org
-const testDns = new datadog.SyntheticsTest("testDns", {
-    type: "api",
-    subtype: "dns",
-    requestDefinition: {
-        host: "example.org",
-    },
+const testDns = new datadog.SyntheticsTest("test_dns", {
     assertions: [{
-        type: "recordSome",
         operator: "is",
         property: "A",
         target: "0.0.0.0",
+        type: "recordSome",
     }],
     locations: ["aws:eu-central-1"],
+    message: "Notify @pagerduty",
+    name: "An API test on example.org",
     optionsList: {
         tickEvery: 900,
     },
-    name: "An API test on example.org",
-    message: "Notify @pagerduty",
+    requestDefinition: {
+        host: "example.org",
+    },
+    status: "live",
+    subtype: "dns",
     tags: [
         "foo:bar",
         "foo",
         "env:test",
     ],
+    type: "api",
+});
+// Example Usage (Synthetics Multistep API test)
+// Create a new Datadog Synthetics Multistep API test
+const test = new datadog.SyntheticsTest("test", {
+    apiSteps: [
+        {
+            assertions: [{
+                operator: "is",
+                target: "200",
+                type: "statusCode",
+            }],
+            name: "An API test on example.org",
+            requestDefinition: {
+                method: "GET",
+                url: "https://example.org",
+            },
+            requestHeaders: {
+                Authentication: "Token: 1234566789",
+                "Content-Type": "application/json",
+            },
+            subtype: "http",
+        },
+        {
+            assertions: [{
+                operator: "is",
+                target: "200",
+                type: "statusCode",
+            }],
+            name: "An API test on example.org",
+            requestDefinition: {
+                method: "GET",
+                url: "http://example.org",
+            },
+            subtype: "http",
+        },
+    ],
+    locations: ["aws:eu-central-1"],
+    name: "Multistep API test",
+    optionsList: {
+        acceptSelfSigned: true,
+        tickEvery: 900,
+    },
     status: "live",
+    subtype: "multi",
+    type: "api",
 });
 // Example Usage (Synthetics Browser test)
 // Support for Synthetics Browser test steps is limited (see below)
 // Create a new Datadog Synthetics Browser test starting on https://www.example.org
-const testBrowser = new datadog.SyntheticsTest("testBrowser", {
-    type: "browser",
+const testBrowser = new datadog.SyntheticsTest("test_browser", {
+    browserSteps: [{
+        name: "Check current url",
+        params: {
+            check: "contains",
+            value: "datadoghq",
+        },
+        type: "assertCurrentUrl",
+    }],
+    browserVariables: [
+        {
+            example: "597",
+            name: "MY_PATTERN_VAR",
+            pattern: "{{numeric(3)}}",
+            type: "text",
+        },
+        {
+            example: "jd8-afe-ydv.4546132139@synthetics.dtdg.co",
+            name: "MY_EMAIL_VAR",
+            pattern: "jd8-afe-ydv.{{ numeric(10) }}@synthetics.dtdg.co",
+            type: "email",
+        },
+        {
+            id: "76636cd1-82e2-4aeb-9cfe-51366a8198a2",
+            name: "MY_GLOBAL_VAR",
+            type: "global",
+        },
+    ],
+    deviceIds: ["laptop_large"],
+    locations: ["aws:eu-central-1"],
+    message: "Notify @qa",
+    name: "A Browser test on example.org",
+    optionsList: {
+        tickEvery: 3600,
+    },
     requestDefinition: {
         method: "GET",
         url: "https://app.datadoghq.com",
     },
-    deviceIds: ["laptop_large"],
-    locations: ["aws:eu-central-1"],
-    optionsList: {
-        tickEvery: 3600,
-    },
-    name: "A Browser test on example.org",
-    message: "Notify @qa",
-    tags: [],
     status: "paused",
-    step: [{
-        name: "Check current url",
-        type: "assertCurrentUrl",
-        params: JSON.stringify({
-            check: "contains",
-            value: "datadoghq",
-        }),
-    }],
-    variable: [
-        {
-            type: "text",
-            name: "MY_PATTERN_VAR",
-            pattern: "{{numeric(3)}}",
-            example: "597",
-        },
-        {
-            type: "email",
-            name: "MY_EMAIL_VAR",
-            pattern: "jd8-afe-ydv.{{ numeric(10) }}@synthetics.dtdg.co",
-            example: "jd8-afe-ydv.4546132139@synthetics.dtdg.co",
-        },
-        {
-            type: "global",
-            name: "MY_GLOBAL_VAR",
-            id: "76636cd1-82e2-4aeb-9cfe-51366a8198a2",
-        },
-    ],
+    tags: [],
+    type: "browser",
 });
 ```
 
@@ -269,7 +1246,7 @@ const testBrowser = new datadog.SyntheticsTest("testBrowser", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSyntheticsTest</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SyntheticsTestArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SyntheticsTest</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSyntheticsTest</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SyntheticsTestArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SyntheticsTest</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -330,7 +1307,7 @@ const testBrowser = new datadog.SyntheticsTest("testBrowser", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
@@ -348,7 +1325,7 @@ const testBrowser = new datadog.SyntheticsTest("testBrowser", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
@@ -380,7 +1357,7 @@ const testBrowser = new datadog.SyntheticsTest("testBrowser", {
 
 ## SyntheticsTest Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Architecture and Concepts docs.
 
 ### Inputs
 
@@ -478,7 +1455,7 @@ The SyntheticsTest resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Array with the different device IDs used to run the test (only for `browser` tests). Valid values are `laptop_large`, `tablet`, `mobile_small`, `chrome.laptop_large`, `chrome.tablet`, `chrome.mobile_small`, `firefox.laptop_large`, `firefox.tablet`, `firefox.mobile_small`.
+    <dd>{{% md %}}Array with the different device IDs used to run the test (only for `browser` tests). Valid values are `laptop_large`, `tablet`, `mobile_small`, `chrome.laptop_large`, `chrome.tablet`, `chrome.mobile_small`, `firefox.laptop_large`, `firefox.tablet`, `firefox.mobile_small`, `edge.laptop_large`, `edge.tablet`, `edge.mobile_small`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="message_csharp">
@@ -661,7 +1638,7 @@ The SyntheticsTest resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Array with the different device IDs used to run the test (only for `browser` tests). Valid values are `laptop_large`, `tablet`, `mobile_small`, `chrome.laptop_large`, `chrome.tablet`, `chrome.mobile_small`, `firefox.laptop_large`, `firefox.tablet`, `firefox.mobile_small`.
+    <dd>{{% md %}}Array with the different device IDs used to run the test (only for `browser` tests). Valid values are `laptop_large`, `tablet`, `mobile_small`, `chrome.laptop_large`, `chrome.tablet`, `chrome.mobile_small`, `firefox.laptop_large`, `firefox.tablet`, `firefox.mobile_small`, `edge.laptop_large`, `edge.tablet`, `edge.mobile_small`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="message_go">
@@ -844,7 +1821,7 @@ The SyntheticsTest resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Array with the different device IDs used to run the test (only for `browser` tests). Valid values are `laptop_large`, `tablet`, `mobile_small`, `chrome.laptop_large`, `chrome.tablet`, `chrome.mobile_small`, `firefox.laptop_large`, `firefox.tablet`, `firefox.mobile_small`.
+    <dd>{{% md %}}Array with the different device IDs used to run the test (only for `browser` tests). Valid values are `laptop_large`, `tablet`, `mobile_small`, `chrome.laptop_large`, `chrome.tablet`, `chrome.mobile_small`, `firefox.laptop_large`, `firefox.tablet`, `firefox.mobile_small`, `edge.laptop_large`, `edge.tablet`, `edge.mobile_small`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="message_nodejs">
@@ -1027,7 +2004,7 @@ The SyntheticsTest resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Array with the different device IDs used to run the test (only for `browser` tests). Valid values are `laptop_large`, `tablet`, `mobile_small`, `chrome.laptop_large`, `chrome.tablet`, `chrome.mobile_small`, `firefox.laptop_large`, `firefox.tablet`, `firefox.mobile_small`.
+    <dd>{{% md %}}Array with the different device IDs used to run the test (only for `browser` tests). Valid values are `laptop_large`, `tablet`, `mobile_small`, `chrome.laptop_large`, `chrome.tablet`, `chrome.mobile_small`, `firefox.laptop_large`, `firefox.tablet`, `firefox.mobile_small`, `edge.laptop_large`, `edge.tablet`, `edge.mobile_small`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="message_python">
@@ -1251,7 +2228,7 @@ Get an existing SyntheticsTest resource's state with the given name, ID, and opt
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSyntheticsTest<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">SyntheticsTestState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SyntheticsTest</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSyntheticsTest<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">SyntheticsTestState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SyntheticsTest</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -1411,7 +2388,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Array with the different device IDs used to run the test (only for `browser` tests). Valid values are `laptop_large`, `tablet`, `mobile_small`, `chrome.laptop_large`, `chrome.tablet`, `chrome.mobile_small`, `firefox.laptop_large`, `firefox.tablet`, `firefox.mobile_small`.
+    <dd>{{% md %}}Array with the different device IDs used to run the test (only for `browser` tests). Valid values are `laptop_large`, `tablet`, `mobile_small`, `chrome.laptop_large`, `chrome.tablet`, `chrome.mobile_small`, `firefox.laptop_large`, `firefox.tablet`, `firefox.mobile_small`, `edge.laptop_large`, `edge.tablet`, `edge.mobile_small`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_locations_csharp">
@@ -1603,7 +2580,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Array with the different device IDs used to run the test (only for `browser` tests). Valid values are `laptop_large`, `tablet`, `mobile_small`, `chrome.laptop_large`, `chrome.tablet`, `chrome.mobile_small`, `firefox.laptop_large`, `firefox.tablet`, `firefox.mobile_small`.
+    <dd>{{% md %}}Array with the different device IDs used to run the test (only for `browser` tests). Valid values are `laptop_large`, `tablet`, `mobile_small`, `chrome.laptop_large`, `chrome.tablet`, `chrome.mobile_small`, `firefox.laptop_large`, `firefox.tablet`, `firefox.mobile_small`, `edge.laptop_large`, `edge.tablet`, `edge.mobile_small`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_locations_go">
@@ -1795,7 +2772,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Array with the different device IDs used to run the test (only for `browser` tests). Valid values are `laptop_large`, `tablet`, `mobile_small`, `chrome.laptop_large`, `chrome.tablet`, `chrome.mobile_small`, `firefox.laptop_large`, `firefox.tablet`, `firefox.mobile_small`.
+    <dd>{{% md %}}Array with the different device IDs used to run the test (only for `browser` tests). Valid values are `laptop_large`, `tablet`, `mobile_small`, `chrome.laptop_large`, `chrome.tablet`, `chrome.mobile_small`, `firefox.laptop_large`, `firefox.tablet`, `firefox.mobile_small`, `edge.laptop_large`, `edge.tablet`, `edge.mobile_small`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_locations_nodejs">
@@ -1987,7 +2964,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Array with the different device IDs used to run the test (only for `browser` tests). Valid values are `laptop_large`, `tablet`, `mobile_small`, `chrome.laptop_large`, `chrome.tablet`, `chrome.mobile_small`, `firefox.laptop_large`, `firefox.tablet`, `firefox.mobile_small`.
+    <dd>{{% md %}}Array with the different device IDs used to run the test (only for `browser` tests). Valid values are `laptop_large`, `tablet`, `mobile_small`, `chrome.laptop_large`, `chrome.tablet`, `chrome.mobile_small`, `firefox.laptop_large`, `firefox.tablet`, `firefox.mobile_small`, `edge.laptop_large`, `edge.tablet`, `edge.mobile_small`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_locations_python">
@@ -3441,6 +4418,14 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="allowinsecure_csharp">
+<a href="#allowinsecure_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Insecure</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="body_csharp">
 <a href="#body_csharp" style="color: inherit; text-decoration: inherit;">Body</a>
 </span>
@@ -3543,6 +4528,14 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="allowinsecure_go">
+<a href="#allowinsecure_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Insecure</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="body_go">
 <a href="#body_go" style="color: inherit; text-decoration: inherit;">Body</a>
@@ -3647,6 +4640,14 @@ The following state arguments are supported:
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="allowinsecure_nodejs">
+<a href="#allowinsecure_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Insecure</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="body_nodejs">
 <a href="#body_nodejs" style="color: inherit; text-decoration: inherit;">body</a>
 </span>
@@ -3749,6 +4750,14 @@ The following state arguments are supported:
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="allow_insecure_python">
+<a href="#allow_insecure_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>insecure</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="body_python">
 <a href="#body_python" style="color: inherit; text-decoration: inherit;">body</a>
@@ -5483,7 +6492,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}How often the test should run (in seconds). Valid values are `30`, `60`, `300`, `900`, `1800`, `3600`, `21600`, `43200`, `86400`, `604800`.
+    <dd>{{% md %}}How often the test should run (in seconds).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="acceptselfsigned_csharp">
@@ -5583,7 +6592,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}How often the test should run (in seconds). Valid values are `30`, `60`, `300`, `900`, `1800`, `3600`, `21600`, `43200`, `86400`, `604800`.
+    <dd>{{% md %}}How often the test should run (in seconds).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="acceptselfsigned_go">
@@ -5683,7 +6692,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}How often the test should run (in seconds). Valid values are `30`, `60`, `300`, `900`, `1800`, `3600`, `21600`, `43200`, `86400`, `604800`.
+    <dd>{{% md %}}How often the test should run (in seconds).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="acceptselfsigned_nodejs">
@@ -5783,7 +6792,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}How often the test should run (in seconds). Valid values are `30`, `60`, `300`, `900`, `1800`, `3600`, `21600`, `43200`, `86400`, `604800`.
+    <dd>{{% md %}}How often the test should run (in seconds).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accept_self_signed_python">

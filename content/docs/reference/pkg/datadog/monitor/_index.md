@@ -214,6 +214,7 @@ const foo = new datadog.Monitor("foo", {
             <span class="nx">monitor_threshold_windows</span><span class="p">:</span> <span class="nx">Optional[MonitorMonitorThresholdWindowsArgs]</span> = None<span class="p">,</span>
             <span class="nx">monitor_thresholds</span><span class="p">:</span> <span class="nx">Optional[MonitorMonitorThresholdsArgs]</span> = None<span class="p">,</span>
             <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">new_group_delay</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
             <span class="nx">new_host_delay</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
             <span class="nx">no_data_timeframe</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
             <span class="nx">notify_audit</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
@@ -234,7 +235,7 @@ const foo = new datadog.Monitor("foo", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewMonitor</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">MonitorArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Monitor</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewMonitor</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">MonitorArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Monitor</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -295,7 +296,7 @@ const foo = new datadog.Monitor("foo", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
@@ -313,7 +314,7 @@ const foo = new datadog.Monitor("foo", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
@@ -345,7 +346,7 @@ const foo = new datadog.Monitor("foo", {
 
 ## Monitor Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Architecture and Concepts docs.
 
 ### Inputs
 
@@ -490,6 +491,17 @@ required for, anomaly monitors.
     <dd>{{% md %}}Alert thresholds of the monitor.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="newgroupdelay_csharp">
+<a href="#newgroupdelay_csharp" style="color: inherit; text-decoration: inherit;">New<wbr>Group<wbr>Delay</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Time (in seconds) to skip evaluations for new groups. `new_group_delay` overrides `new_host_delay` if it is set to a
+nonzero value. To disable group delay for monitors grouped by host, `new_host_delay` must be set to zero due to the
+default value of `300` for that field (`new_group_delay` defaults to zero, so setting it to zero is not required).
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="newhostdelay_csharp">
 <a href="#newhostdelay_csharp" style="color: inherit; text-decoration: inherit;">New<wbr>Host<wbr>Delay</a>
 </span>
@@ -497,8 +509,9 @@ required for, anomaly monitors.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Time (in seconds) to allow a host to boot and applications to fully start before starting the evaluation of monitor
-results. Should be a non negative integer. Defaults to `300`.
-{{% /md %}}</dd><dt class="property-optional"
+results. Should be a non-negative integer. Defaults to `300` (this default will be removed in a major version release
+and `new_host_delay` will be removed entirely in a subsequent major version release).
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Prefer using new_group_delay (except when setting `new_host_delay` to zero).{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="nodatatimeframe_csharp">
 <a href="#nodatatimeframe_csharp" style="color: inherit; text-decoration: inherit;">No<wbr>Data<wbr>Timeframe</a>
@@ -732,6 +745,17 @@ required for, anomaly monitors.
     <dd>{{% md %}}Alert thresholds of the monitor.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="newgroupdelay_go">
+<a href="#newgroupdelay_go" style="color: inherit; text-decoration: inherit;">New<wbr>Group<wbr>Delay</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Time (in seconds) to skip evaluations for new groups. `new_group_delay` overrides `new_host_delay` if it is set to a
+nonzero value. To disable group delay for monitors grouped by host, `new_host_delay` must be set to zero due to the
+default value of `300` for that field (`new_group_delay` defaults to zero, so setting it to zero is not required).
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="newhostdelay_go">
 <a href="#newhostdelay_go" style="color: inherit; text-decoration: inherit;">New<wbr>Host<wbr>Delay</a>
 </span>
@@ -739,8 +763,9 @@ required for, anomaly monitors.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Time (in seconds) to allow a host to boot and applications to fully start before starting the evaluation of monitor
-results. Should be a non negative integer. Defaults to `300`.
-{{% /md %}}</dd><dt class="property-optional"
+results. Should be a non-negative integer. Defaults to `300` (this default will be removed in a major version release
+and `new_host_delay` will be removed entirely in a subsequent major version release).
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Prefer using new_group_delay (except when setting `new_host_delay` to zero).{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="nodatatimeframe_go">
 <a href="#nodatatimeframe_go" style="color: inherit; text-decoration: inherit;">No<wbr>Data<wbr>Timeframe</a>
@@ -974,6 +999,17 @@ required for, anomaly monitors.
     <dd>{{% md %}}Alert thresholds of the monitor.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="newgroupdelay_nodejs">
+<a href="#newgroupdelay_nodejs" style="color: inherit; text-decoration: inherit;">new<wbr>Group<wbr>Delay</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Time (in seconds) to skip evaluations for new groups. `new_group_delay` overrides `new_host_delay` if it is set to a
+nonzero value. To disable group delay for monitors grouped by host, `new_host_delay` must be set to zero due to the
+default value of `300` for that field (`new_group_delay` defaults to zero, so setting it to zero is not required).
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="newhostdelay_nodejs">
 <a href="#newhostdelay_nodejs" style="color: inherit; text-decoration: inherit;">new<wbr>Host<wbr>Delay</a>
 </span>
@@ -981,8 +1017,9 @@ required for, anomaly monitors.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Time (in seconds) to allow a host to boot and applications to fully start before starting the evaluation of monitor
-results. Should be a non negative integer. Defaults to `300`.
-{{% /md %}}</dd><dt class="property-optional"
+results. Should be a non-negative integer. Defaults to `300` (this default will be removed in a major version release
+and `new_host_delay` will be removed entirely in a subsequent major version release).
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Prefer using new_group_delay (except when setting `new_host_delay` to zero).{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="nodatatimeframe_nodejs">
 <a href="#nodatatimeframe_nodejs" style="color: inherit; text-decoration: inherit;">no<wbr>Data<wbr>Timeframe</a>
@@ -1216,6 +1253,17 @@ required for, anomaly monitors.
     <dd>{{% md %}}Alert thresholds of the monitor.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="new_group_delay_python">
+<a href="#new_group_delay_python" style="color: inherit; text-decoration: inherit;">new_<wbr>group_<wbr>delay</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Time (in seconds) to skip evaluations for new groups. `new_group_delay` overrides `new_host_delay` if it is set to a
+nonzero value. To disable group delay for monitors grouped by host, `new_host_delay` must be set to zero due to the
+default value of `300` for that field (`new_group_delay` defaults to zero, so setting it to zero is not required).
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="new_host_delay_python">
 <a href="#new_host_delay_python" style="color: inherit; text-decoration: inherit;">new_<wbr>host_<wbr>delay</a>
 </span>
@@ -1223,8 +1271,9 @@ required for, anomaly monitors.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Time (in seconds) to allow a host to boot and applications to fully start before starting the evaluation of monitor
-results. Should be a non negative integer. Defaults to `300`.
-{{% /md %}}</dd><dt class="property-optional"
+results. Should be a non-negative integer. Defaults to `300` (this default will be removed in a major version release
+and `new_host_delay` will be removed entirely in a subsequent major version release).
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Prefer using new_group_delay (except when setting `new_host_delay` to zero).{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="no_data_timeframe_python">
 <a href="#no_data_timeframe_python" style="color: inherit; text-decoration: inherit;">no_<wbr>data_<wbr>timeframe</a>
@@ -1403,6 +1452,7 @@ Get an existing Monitor resource's state with the given name, ID, and optional e
         <span class="nx">monitor_threshold_windows</span><span class="p">:</span> <span class="nx">Optional[MonitorMonitorThresholdWindowsArgs]</span> = None<span class="p">,</span>
         <span class="nx">monitor_thresholds</span><span class="p">:</span> <span class="nx">Optional[MonitorMonitorThresholdsArgs]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">new_group_delay</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">new_host_delay</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">no_data_timeframe</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">notify_audit</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
@@ -1419,7 +1469,7 @@ Get an existing Monitor resource's state with the given name, ID, and optional e
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetMonitor<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">MonitorState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Monitor</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetMonitor<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">MonitorState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Monitor</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -1636,6 +1686,17 @@ required for, anomaly monitors.
     <dd>{{% md %}}Name of Datadog monitor.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_newgroupdelay_csharp">
+<a href="#state_newgroupdelay_csharp" style="color: inherit; text-decoration: inherit;">New<wbr>Group<wbr>Delay</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Time (in seconds) to skip evaluations for new groups. `new_group_delay` overrides `new_host_delay` if it is set to a
+nonzero value. To disable group delay for monitors grouped by host, `new_host_delay` must be set to zero due to the
+default value of `300` for that field (`new_group_delay` defaults to zero, so setting it to zero is not required).
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_newhostdelay_csharp">
 <a href="#state_newhostdelay_csharp" style="color: inherit; text-decoration: inherit;">New<wbr>Host<wbr>Delay</a>
 </span>
@@ -1643,8 +1704,9 @@ required for, anomaly monitors.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Time (in seconds) to allow a host to boot and applications to fully start before starting the evaluation of monitor
-results. Should be a non negative integer. Defaults to `300`.
-{{% /md %}}</dd><dt class="property-optional"
+results. Should be a non-negative integer. Defaults to `300` (this default will be removed in a major version release
+and `new_host_delay` will be removed entirely in a subsequent major version release).
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Prefer using new_group_delay (except when setting `new_host_delay` to zero).{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_nodatatimeframe_csharp">
 <a href="#state_nodatatimeframe_csharp" style="color: inherit; text-decoration: inherit;">No<wbr>Data<wbr>Timeframe</a>
@@ -1878,6 +1940,17 @@ required for, anomaly monitors.
     <dd>{{% md %}}Name of Datadog monitor.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_newgroupdelay_go">
+<a href="#state_newgroupdelay_go" style="color: inherit; text-decoration: inherit;">New<wbr>Group<wbr>Delay</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Time (in seconds) to skip evaluations for new groups. `new_group_delay` overrides `new_host_delay` if it is set to a
+nonzero value. To disable group delay for monitors grouped by host, `new_host_delay` must be set to zero due to the
+default value of `300` for that field (`new_group_delay` defaults to zero, so setting it to zero is not required).
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_newhostdelay_go">
 <a href="#state_newhostdelay_go" style="color: inherit; text-decoration: inherit;">New<wbr>Host<wbr>Delay</a>
 </span>
@@ -1885,8 +1958,9 @@ required for, anomaly monitors.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Time (in seconds) to allow a host to boot and applications to fully start before starting the evaluation of monitor
-results. Should be a non negative integer. Defaults to `300`.
-{{% /md %}}</dd><dt class="property-optional"
+results. Should be a non-negative integer. Defaults to `300` (this default will be removed in a major version release
+and `new_host_delay` will be removed entirely in a subsequent major version release).
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Prefer using new_group_delay (except when setting `new_host_delay` to zero).{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_nodatatimeframe_go">
 <a href="#state_nodatatimeframe_go" style="color: inherit; text-decoration: inherit;">No<wbr>Data<wbr>Timeframe</a>
@@ -2120,6 +2194,17 @@ required for, anomaly monitors.
     <dd>{{% md %}}Name of Datadog monitor.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_newgroupdelay_nodejs">
+<a href="#state_newgroupdelay_nodejs" style="color: inherit; text-decoration: inherit;">new<wbr>Group<wbr>Delay</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Time (in seconds) to skip evaluations for new groups. `new_group_delay` overrides `new_host_delay` if it is set to a
+nonzero value. To disable group delay for monitors grouped by host, `new_host_delay` must be set to zero due to the
+default value of `300` for that field (`new_group_delay` defaults to zero, so setting it to zero is not required).
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_newhostdelay_nodejs">
 <a href="#state_newhostdelay_nodejs" style="color: inherit; text-decoration: inherit;">new<wbr>Host<wbr>Delay</a>
 </span>
@@ -2127,8 +2212,9 @@ required for, anomaly monitors.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Time (in seconds) to allow a host to boot and applications to fully start before starting the evaluation of monitor
-results. Should be a non negative integer. Defaults to `300`.
-{{% /md %}}</dd><dt class="property-optional"
+results. Should be a non-negative integer. Defaults to `300` (this default will be removed in a major version release
+and `new_host_delay` will be removed entirely in a subsequent major version release).
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Prefer using new_group_delay (except when setting `new_host_delay` to zero).{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_nodatatimeframe_nodejs">
 <a href="#state_nodatatimeframe_nodejs" style="color: inherit; text-decoration: inherit;">no<wbr>Data<wbr>Timeframe</a>
@@ -2362,6 +2448,17 @@ required for, anomaly monitors.
     <dd>{{% md %}}Name of Datadog monitor.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_new_group_delay_python">
+<a href="#state_new_group_delay_python" style="color: inherit; text-decoration: inherit;">new_<wbr>group_<wbr>delay</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Time (in seconds) to skip evaluations for new groups. `new_group_delay` overrides `new_host_delay` if it is set to a
+nonzero value. To disable group delay for monitors grouped by host, `new_host_delay` must be set to zero due to the
+default value of `300` for that field (`new_group_delay` defaults to zero, so setting it to zero is not required).
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_new_host_delay_python">
 <a href="#state_new_host_delay_python" style="color: inherit; text-decoration: inherit;">new_<wbr>host_<wbr>delay</a>
 </span>
@@ -2369,8 +2466,9 @@ required for, anomaly monitors.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Time (in seconds) to allow a host to boot and applications to fully start before starting the evaluation of monitor
-results. Should be a non negative integer. Defaults to `300`.
-{{% /md %}}</dd><dt class="property-optional"
+results. Should be a non-negative integer. Defaults to `300` (this default will be removed in a major version release
+and `new_host_delay` will be removed entirely in a subsequent major version release).
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Prefer using new_group_delay (except when setting `new_host_delay` to zero).{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_no_data_timeframe_python">
 <a href="#state_no_data_timeframe_python" style="color: inherit; text-decoration: inherit;">no_<wbr>data_<wbr>timeframe</a>
