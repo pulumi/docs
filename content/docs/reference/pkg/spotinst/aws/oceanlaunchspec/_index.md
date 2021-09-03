@@ -50,7 +50,7 @@ class MyStack : Stack
             {
                 new SpotInst.Aws.Inputs.OceanLaunchSpecBlockDeviceMappingArgs
                 {
-                    DeviceName = "/dev/xvda1",
+                    DeviceName = "/dev/xvda",
                     Ebs = new SpotInst.Aws.Inputs.OceanLaunchSpecBlockDeviceMappingEbsArgs
                     {
                         DeleteOnTermination = true,
@@ -181,7 +181,7 @@ func main() {
 			},
 			BlockDeviceMappings: aws.OceanLaunchSpecBlockDeviceMappingArray{
 				&aws.OceanLaunchSpecBlockDeviceMappingArgs{
-					DeviceName: pulumi.String("/dev/xvda1"),
+					DeviceName: pulumi.String("/dev/xvda"),
 					Ebs: &aws.OceanLaunchSpecBlockDeviceMappingEbsArgs{
 						DeleteOnTermination: pulumi.Bool(true),
 						DynamicVolumeSize: &aws.OceanLaunchSpecBlockDeviceMappingEbsDynamicVolumeSizeArgs{
@@ -286,7 +286,7 @@ example = spotinst.aws.OceanLaunchSpec("example",
         num_of_units=5,
     )],
     block_device_mappings=[spotinst.aws.OceanLaunchSpecBlockDeviceMappingArgs(
-        device_name="/dev/xvda1",
+        device_name="/dev/xvda",
         ebs=spotinst.aws.OceanLaunchSpecBlockDeviceMappingEbsArgs(
             delete_on_termination=True,
             dynamic_volume_size=spotinst.aws.OceanLaunchSpecBlockDeviceMappingEbsDynamicVolumeSizeArgs(
@@ -368,7 +368,7 @@ const example = new spotinst.aws.OceanLaunchSpec("example", {
         numOfUnits: 5,
     }],
     blockDeviceMappings: [{
-        deviceName: "/dev/xvda1",
+        deviceName: "/dev/xvda",
         ebs: {
             deleteOnTermination: true,
             dynamicVolumeSize: {
@@ -2505,7 +2505,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}String. Set device name. (Example: `/dev/xvda1`).
+    <dd>{{% md %}}String. Set device name. (Example: `/dev/xvda`).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ebs_csharp">
@@ -2544,7 +2544,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}String. Set device name. (Example: `/dev/xvda1`).
+    <dd>{{% md %}}String. Set device name. (Example: `/dev/xvda`).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ebs_go">
@@ -2583,7 +2583,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}String. Set device name. (Example: `/dev/xvda1`).
+    <dd>{{% md %}}String. Set device name. (Example: `/dev/xvda`).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ebs_nodejs">
@@ -2622,7 +2622,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}String. Set device name. (Example: `/dev/xvda1`).
+    <dd>{{% md %}}String. Set device name. (Example: `/dev/xvda`).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ebs_python">
