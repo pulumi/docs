@@ -14,269 +14,6 @@ Manages a Backup Instance to back up PostgreSQL.
 
 > **Note**: Before using this resource, there are some prerequisite permissions for configure backup and restore. See more details from https://docs.microsoft.com/en-us/azure/backup/backup-azure-database-postgresql#prerequisite-permissions-for-configure-backup-and-restore.
 
-{{% examples %}}
-
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-
-
-
-
-{{< example csharp >}}
-
-```csharp
-using Pulumi;
-using Azure = Pulumi.Azure;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var rg = new Azure.Core.ResourceGroup("rg", new Azure.Core.ResourceGroupArgs
-        {
-            Location = "West Europe",
-        });
-        var exampleServer = new Azure.PostgreSql.Server("exampleServer", new Azure.PostgreSql.ServerArgs
-        {
-            Location = azurerm_resource_group.Example.Location,
-            ResourceGroupName = azurerm_resource_group.Example.Name,
-            SkuName = "B_Gen5_2",
-            StorageMb = 5120,
-            BackupRetentionDays = 7,
-            GeoRedundantBackupEnabled = false,
-            AutoGrowEnabled = true,
-            AdministratorLogin = "psqladminun",
-            AdministratorLoginPassword = "H@Sh1CoR3!",
-            Version = "9.5",
-            SslEnforcementEnabled = true,
-        });
-        var exampleDatabase = new Azure.PostgreSql.Database("exampleDatabase", new Azure.PostgreSql.DatabaseArgs
-        {
-            ResourceGroupName = azurerm_resource_group.Example.Name,
-            ServerName = exampleServer.Name,
-            Charset = "UTF8",
-            Collation = "English_United States.1252",
-        });
-        var exampleBackupVault = new Azure.DataProtection.BackupVault("exampleBackupVault", new Azure.DataProtection.BackupVaultArgs
-        {
-            ResourceGroupName = rg.Name,
-            Location = rg.Location,
-            DatastoreType = "VaultStore",
-            Redundancy = "LocallyRedundant",
-        });
-        var exampleBackupPolicyPostgresql = new Azure.DataProtection.BackupPolicyPostgresql("exampleBackupPolicyPostgresql", new Azure.DataProtection.BackupPolicyPostgresqlArgs
-        {
-            ResourceGroupName = rg.Name,
-            VaultName = exampleBackupVault.Name,
-            BackupRepeatingTimeIntervals = 
-            {
-                "R/2021-05-23T02:30:00+00:00/P1W",
-            },
-            DefaultRetentionDuration = "P4M",
-        });
-        var exampleBackupInstancePostgresql = new Azure.DataProtection.BackupInstancePostgresql("exampleBackupInstancePostgresql", new Azure.DataProtection.BackupInstancePostgresqlArgs
-        {
-            Location = rg.Location,
-            VaultId = exampleBackupVault.Id,
-            DatabaseId = exampleDatabase.Id,
-            BackupPolicyId = exampleBackupPolicyPostgresql.Id,
-        });
-    }
-
-}
-```
-
-
-{{< /example >}}
-
-
-{{< example go >}}
-
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/core"
-	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/dataprotection"
-	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/postgresql"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		rg, err := core.NewResourceGroup(ctx, "rg", &core.ResourceGroupArgs{
-			Location: pulumi.String("West Europe"),
-		})
-		if err != nil {
-			return err
-		}
-		exampleServer, err := postgresql.NewServer(ctx, "exampleServer", &postgresql.ServerArgs{
-			Location:                   pulumi.Any(azurerm_resource_group.Example.Location),
-			ResourceGroupName:          pulumi.Any(azurerm_resource_group.Example.Name),
-			SkuName:                    pulumi.String("B_Gen5_2"),
-			StorageMb:                  pulumi.Int(5120),
-			BackupRetentionDays:        pulumi.Int(7),
-			GeoRedundantBackupEnabled:  pulumi.Bool(false),
-			AutoGrowEnabled:            pulumi.Bool(true),
-			AdministratorLogin:         pulumi.String("psqladminun"),
-			AdministratorLoginPassword: pulumi.String("H@Sh1CoR3!"),
-			Version:                    pulumi.String("9.5"),
-			SslEnforcementEnabled:      pulumi.Bool(true),
-		})
-		if err != nil {
-			return err
-		}
-		exampleDatabase, err := postgresql.NewDatabase(ctx, "exampleDatabase", &postgresql.DatabaseArgs{
-			ResourceGroupName: pulumi.Any(azurerm_resource_group.Example.Name),
-			ServerName:        exampleServer.Name,
-			Charset:           pulumi.String("UTF8"),
-			Collation:         pulumi.String("English_United States.1252"),
-		})
-		if err != nil {
-			return err
-		}
-		exampleBackupVault, err := dataprotection.NewBackupVault(ctx, "exampleBackupVault", &dataprotection.BackupVaultArgs{
-			ResourceGroupName: rg.Name,
-			Location:          rg.Location,
-			DatastoreType:     pulumi.String("VaultStore"),
-			Redundancy:        pulumi.String("LocallyRedundant"),
-		})
-		if err != nil {
-			return err
-		}
-		exampleBackupPolicyPostgresql, err := dataprotection.NewBackupPolicyPostgresql(ctx, "exampleBackupPolicyPostgresql", &dataprotection.BackupPolicyPostgresqlArgs{
-			ResourceGroupName: rg.Name,
-			VaultName:         exampleBackupVault.Name,
-			BackupRepeatingTimeIntervals: pulumi.StringArray{
-				pulumi.String("R/2021-05-23T02:30:00+00:00/P1W"),
-			},
-			DefaultRetentionDuration: pulumi.String("P4M"),
-		})
-		if err != nil {
-			return err
-		}
-		_, err = dataprotection.NewBackupInstancePostgresql(ctx, "exampleBackupInstancePostgresql", &dataprotection.BackupInstancePostgresqlArgs{
-			Location:       rg.Location,
-			VaultId:        exampleBackupVault.ID(),
-			DatabaseId:     exampleDatabase.ID(),
-			BackupPolicyId: exampleBackupPolicyPostgresql.ID(),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-
-{{< /example >}}
-
-
-{{< example python >}}
-
-```python
-import pulumi
-import pulumi_azure as azure
-
-rg = azure.core.ResourceGroup("rg", location="West Europe")
-example_server = azure.postgresql.Server("exampleServer",
-    location=azurerm_resource_group["example"]["location"],
-    resource_group_name=azurerm_resource_group["example"]["name"],
-    sku_name="B_Gen5_2",
-    storage_mb=5120,
-    backup_retention_days=7,
-    geo_redundant_backup_enabled=False,
-    auto_grow_enabled=True,
-    administrator_login="psqladminun",
-    administrator_login_password="H@Sh1CoR3!",
-    version="9.5",
-    ssl_enforcement_enabled=True)
-example_database = azure.postgresql.Database("exampleDatabase",
-    resource_group_name=azurerm_resource_group["example"]["name"],
-    server_name=example_server.name,
-    charset="UTF8",
-    collation="English_United States.1252")
-example_backup_vault = azure.dataprotection.BackupVault("exampleBackupVault",
-    resource_group_name=rg.name,
-    location=rg.location,
-    datastore_type="VaultStore",
-    redundancy="LocallyRedundant")
-example_backup_policy_postgresql = azure.dataprotection.BackupPolicyPostgresql("exampleBackupPolicyPostgresql",
-    resource_group_name=rg.name,
-    vault_name=example_backup_vault.name,
-    backup_repeating_time_intervals=["R/2021-05-23T02:30:00+00:00/P1W"],
-    default_retention_duration="P4M")
-example_backup_instance_postgresql = azure.dataprotection.BackupInstancePostgresql("exampleBackupInstancePostgresql",
-    location=rg.location,
-    vault_id=example_backup_vault.id,
-    database_id=example_database.id,
-    backup_policy_id=example_backup_policy_postgresql.id)
-```
-
-
-{{< /example >}}
-
-
-{{< example typescript >}}
-
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure from "@pulumi/azure";
-
-const rg = new azure.core.ResourceGroup("rg", {location: "West Europe"});
-const exampleServer = new azure.postgresql.Server("exampleServer", {
-    location: azurerm_resource_group.example.location,
-    resourceGroupName: azurerm_resource_group.example.name,
-    skuName: "B_Gen5_2",
-    storageMb: 5120,
-    backupRetentionDays: 7,
-    geoRedundantBackupEnabled: false,
-    autoGrowEnabled: true,
-    administratorLogin: "psqladminun",
-    administratorLoginPassword: "H@Sh1CoR3!",
-    version: "9.5",
-    sslEnforcementEnabled: true,
-});
-const exampleDatabase = new azure.postgresql.Database("exampleDatabase", {
-    resourceGroupName: azurerm_resource_group.example.name,
-    serverName: exampleServer.name,
-    charset: "UTF8",
-    collation: "English_United States.1252",
-});
-const exampleBackupVault = new azure.dataprotection.BackupVault("exampleBackupVault", {
-    resourceGroupName: rg.name,
-    location: rg.location,
-    datastoreType: "VaultStore",
-    redundancy: "LocallyRedundant",
-});
-const exampleBackupPolicyPostgresql = new azure.dataprotection.BackupPolicyPostgresql("exampleBackupPolicyPostgresql", {
-    resourceGroupName: rg.name,
-    vaultName: exampleBackupVault.name,
-    backupRepeatingTimeIntervals: ["R/2021-05-23T02:30:00+00:00/P1W"],
-    defaultRetentionDuration: "P4M",
-});
-const exampleBackupInstancePostgresql = new azure.dataprotection.BackupInstancePostgresql("exampleBackupInstancePostgresql", {
-    location: rg.location,
-    vaultId: exampleBackupVault.id,
-    databaseId: exampleDatabase.id,
-    backupPolicyId: exampleBackupPolicyPostgresql.id,
-});
-```
-
-
-{{< /example >}}
-
-
-
-
-
-{{% /examples %}}
-
-
 
 
 ## Create a BackupInstancePostgresql Resource {#create}
@@ -292,6 +29,7 @@ const exampleBackupInstancePostgresql = new azure.dataprotection.BackupInstanceP
 <span class="k">def </span><span class="nx">BackupInstancePostgresql</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
                              <span class="nx">backup_policy_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                             <span class="nx">database_credential_key_vault_secret_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                              <span class="nx">database_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                              <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                              <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -452,6 +190,15 @@ The BackupInstancePostgresql resource accepts the following [input]({{< relref "
     <dd>{{% md %}}The ID of the Backup Vault within which the PostgreSQL Backup Instance should exist. Changing this forces a new Backup Instance PostgreSQL to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="databasecredentialkeyvaultsecretid_csharp">
+<a href="#databasecredentialkeyvaultsecretid_csharp" style="color: inherit; text-decoration: inherit;">Database<wbr>Credential<wbr>Key<wbr>Vault<wbr>Secret<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID or versionless ID of the key vault secret which stores the connection string of the database.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
 </span>
@@ -499,6 +246,15 @@ The BackupInstancePostgresql resource accepts the following [input]({{< relref "
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Backup Vault within which the PostgreSQL Backup Instance should exist. Changing this forces a new Backup Instance PostgreSQL to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="databasecredentialkeyvaultsecretid_go">
+<a href="#databasecredentialkeyvaultsecretid_go" style="color: inherit; text-decoration: inherit;">Database<wbr>Credential<wbr>Key<wbr>Vault<wbr>Secret<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID or versionless ID of the key vault secret which stores the connection string of the database.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
@@ -550,6 +306,15 @@ The BackupInstancePostgresql resource accepts the following [input]({{< relref "
     <dd>{{% md %}}The ID of the Backup Vault within which the PostgreSQL Backup Instance should exist. Changing this forces a new Backup Instance PostgreSQL to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="databasecredentialkeyvaultsecretid_nodejs">
+<a href="#databasecredentialkeyvaultsecretid_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Credential<wbr>Key<wbr>Vault<wbr>Secret<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID or versionless ID of the key vault secret which stores the connection string of the database.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
@@ -597,6 +362,15 @@ The BackupInstancePostgresql resource accepts the following [input]({{< relref "
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Backup Vault within which the PostgreSQL Backup Instance should exist. Changing this forces a new Backup Instance PostgreSQL to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="database_credential_key_vault_secret_id_python">
+<a href="#database_credential_key_vault_secret_id_python" style="color: inherit; text-decoration: inherit;">database_<wbr>credential_<wbr>key_<wbr>vault_<wbr>secret_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ID or versionless ID of the key vault secret which stores the connection string of the database.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
@@ -690,6 +464,7 @@ Get an existing BackupInstancePostgresql resource's state with the given name, I
         <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
         <span class="nx">backup_policy_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">database_credential_key_vault_secret_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">database_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -815,6 +590,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The ID of the Backup Policy.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_databasecredentialkeyvaultsecretid_csharp">
+<a href="#state_databasecredentialkeyvaultsecretid_csharp" style="color: inherit; text-decoration: inherit;">Database<wbr>Credential<wbr>Key<wbr>Vault<wbr>Secret<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID or versionless ID of the key vault secret which stores the connection string of the database.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_databaseid_csharp">
 <a href="#state_databaseid_csharp" style="color: inherit; text-decoration: inherit;">Database<wbr>Id</a>
 </span>
@@ -862,6 +646,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Backup Policy.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_databasecredentialkeyvaultsecretid_go">
+<a href="#state_databasecredentialkeyvaultsecretid_go" style="color: inherit; text-decoration: inherit;">Database<wbr>Credential<wbr>Key<wbr>Vault<wbr>Secret<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID or versionless ID of the key vault secret which stores the connection string of the database.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_databaseid_go">
@@ -913,6 +706,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The ID of the Backup Policy.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_databasecredentialkeyvaultsecretid_nodejs">
+<a href="#state_databasecredentialkeyvaultsecretid_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Credential<wbr>Key<wbr>Vault<wbr>Secret<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID or versionless ID of the key vault secret which stores the connection string of the database.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_databaseid_nodejs">
 <a href="#state_databaseid_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Id</a>
 </span>
@@ -960,6 +762,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Backup Policy.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_database_credential_key_vault_secret_id_python">
+<a href="#state_database_credential_key_vault_secret_id_python" style="color: inherit; text-decoration: inherit;">database_<wbr>credential_<wbr>key_<wbr>vault_<wbr>secret_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ID or versionless ID of the key vault secret which stores the connection string of the database.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_database_id_python">

@@ -309,6 +309,7 @@ export const appId = exampleInsights.appId;
              <span class="nx">daily_data_cap_in_gb</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">,</span>
              <span class="nx">daily_data_cap_notifications_disabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
              <span class="nx">disable_ip_masking</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+             <span class="nx">local_authentication_disabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
              <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -491,6 +492,15 @@ create the Application Insights component.
     <dd>{{% md %}}By default the real client ip is masked as `0.0.0.0` in the logs. Use this argument to disable masking and log the real client ip. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="localauthenticationdisabled_csharp">
+<a href="#localauthenticationdisabled_csharp" style="color: inherit; text-decoration: inherit;">Local<wbr>Authentication<wbr>Disabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Disable Non-Azure AD based Auth. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
 </span>
@@ -594,6 +604,15 @@ create the Application Insights component.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}By default the real client ip is masked as `0.0.0.0` in the logs. Use this argument to disable masking and log the real client ip. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="localauthenticationdisabled_go">
+<a href="#localauthenticationdisabled_go" style="color: inherit; text-decoration: inherit;">Local<wbr>Authentication<wbr>Disabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Disable Non-Azure AD based Auth. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
@@ -701,6 +720,15 @@ create the Application Insights component.
     <dd>{{% md %}}By default the real client ip is masked as `0.0.0.0` in the logs. Use this argument to disable masking and log the real client ip. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="localauthenticationdisabled_nodejs">
+<a href="#localauthenticationdisabled_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Authentication<wbr>Disabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Disable Non-Azure AD based Auth. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
@@ -804,6 +832,15 @@ create the Application Insights component.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}By default the real client ip is masked as `0.0.0.0` in the logs. Use this argument to disable masking and log the real client ip. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="local_authentication_disabled_python">
+<a href="#local_authentication_disabled_python" style="color: inherit; text-decoration: inherit;">local_<wbr>authentication_<wbr>disabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Disable Non-Azure AD based Auth. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
@@ -1048,6 +1085,7 @@ Get an existing Insights resource's state with the given name, ID, and optional 
         <span class="nx">daily_data_cap_notifications_disabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">disable_ip_masking</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">instrumentation_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">local_authentication_disabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -1230,6 +1268,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The Instrumentation Key for this Application Insights component. (Sensitive)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_localauthenticationdisabled_csharp">
+<a href="#state_localauthenticationdisabled_csharp" style="color: inherit; text-decoration: inherit;">Local<wbr>Authentication<wbr>Disabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Disable Non-Azure AD based Auth. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_location_csharp">
 <a href="#state_location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
 </span>
@@ -1360,6 +1407,15 @@ create the Application Insights component.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Instrumentation Key for this Application Insights component. (Sensitive)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_localauthenticationdisabled_go">
+<a href="#state_localauthenticationdisabled_go" style="color: inherit; text-decoration: inherit;">Local<wbr>Authentication<wbr>Disabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Disable Non-Azure AD based Auth. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_go">
@@ -1494,6 +1550,15 @@ create the Application Insights component.
     <dd>{{% md %}}The Instrumentation Key for this Application Insights component. (Sensitive)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_localauthenticationdisabled_nodejs">
+<a href="#state_localauthenticationdisabled_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Authentication<wbr>Disabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Disable Non-Azure AD based Auth. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_location_nodejs">
 <a href="#state_location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
@@ -1624,6 +1689,15 @@ create the Application Insights component.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Instrumentation Key for this Application Insights component. (Sensitive)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_local_authentication_disabled_python">
+<a href="#state_local_authentication_disabled_python" style="color: inherit; text-decoration: inherit;">local_<wbr>authentication_<wbr>disabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Disable Non-Azure AD based Auth. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_python">

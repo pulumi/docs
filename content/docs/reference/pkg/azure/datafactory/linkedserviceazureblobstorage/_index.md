@@ -158,6 +158,206 @@ const exampleLinkedServiceAzureBlobStorage = new azure.datafactory.LinkedService
 
 
 
+### With SAS Uri And SAS Token.
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var testResourceGroup = new Azure.Core.ResourceGroup("testResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West Europe",
+        });
+        var current = Output.Create(Azure.Core.GetClientConfig.InvokeAsync());
+        var testFactory = new Azure.DataFactory.Factory("testFactory", new Azure.DataFactory.FactoryArgs
+        {
+            Location = testResourceGroup.Location,
+            ResourceGroupName = testResourceGroup.Name,
+        });
+        var testKeyVault = new Azure.KeyVault.KeyVault("testKeyVault", new Azure.KeyVault.KeyVaultArgs
+        {
+            Location = testResourceGroup.Location,
+            ResourceGroupName = testResourceGroup.Name,
+            TenantId = current.Apply(current => current.TenantId),
+            SkuName = "standard",
+        });
+        var testLinkedServiceKeyVault = new Azure.DataFactory.LinkedServiceKeyVault("testLinkedServiceKeyVault", new Azure.DataFactory.LinkedServiceKeyVaultArgs
+        {
+            ResourceGroupName = testResourceGroup.Name,
+            DataFactoryName = testFactory.Name,
+            KeyVaultId = testKeyVault.Id,
+        });
+        var testLinkedServiceAzureBlobStorage = new Azure.DataFactory.LinkedServiceAzureBlobStorage("testLinkedServiceAzureBlobStorage", new Azure.DataFactory.LinkedServiceAzureBlobStorageArgs
+        {
+            ResourceGroupName = testResourceGroup.Name,
+            DataFactoryName = testFactory.Name,
+            SasUri = "https://storageaccountname.blob.core.windows.net",
+            KeyVaultSasToken = new Azure.DataFactory.Inputs.LinkedServiceAzureBlobStorageKeyVaultSasTokenArgs
+            {
+                LinkedServiceName = testLinkedServiceKeyVault.Name,
+                SecretName = "secret",
+            },
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/datafactory"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/keyvault"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		testResourceGroup, err := core.NewResourceGroup(ctx, "testResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West Europe"),
+		})
+		if err != nil {
+			return err
+		}
+		current, err := core.GetClientConfig(ctx, nil, nil)
+		if err != nil {
+			return err
+		}
+		testFactory, err := datafactory.NewFactory(ctx, "testFactory", &datafactory.FactoryArgs{
+			Location:          testResourceGroup.Location,
+			ResourceGroupName: testResourceGroup.Name,
+		})
+		if err != nil {
+			return err
+		}
+		testKeyVault, err := keyvault.NewKeyVault(ctx, "testKeyVault", &keyvault.KeyVaultArgs{
+			Location:          testResourceGroup.Location,
+			ResourceGroupName: testResourceGroup.Name,
+			TenantId:          pulumi.String(current.TenantId),
+			SkuName:           pulumi.String("standard"),
+		})
+		if err != nil {
+			return err
+		}
+		testLinkedServiceKeyVault, err := datafactory.NewLinkedServiceKeyVault(ctx, "testLinkedServiceKeyVault", &datafactory.LinkedServiceKeyVaultArgs{
+			ResourceGroupName: testResourceGroup.Name,
+			DataFactoryName:   testFactory.Name,
+			KeyVaultId:        testKeyVault.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = datafactory.NewLinkedServiceAzureBlobStorage(ctx, "testLinkedServiceAzureBlobStorage", &datafactory.LinkedServiceAzureBlobStorageArgs{
+			ResourceGroupName: testResourceGroup.Name,
+			DataFactoryName:   testFactory.Name,
+			SasUri:            pulumi.String("https://storageaccountname.blob.core.windows.net"),
+			KeyVaultSasToken: &datafactory.LinkedServiceAzureBlobStorageKeyVaultSasTokenArgs{
+				LinkedServiceName: testLinkedServiceKeyVault.Name,
+				SecretName:        pulumi.String("secret"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_azure as azure
+
+test_resource_group = azure.core.ResourceGroup("testResourceGroup", location="West Europe")
+current = azure.core.get_client_config()
+test_factory = azure.datafactory.Factory("testFactory",
+    location=test_resource_group.location,
+    resource_group_name=test_resource_group.name)
+test_key_vault = azure.keyvault.KeyVault("testKeyVault",
+    location=test_resource_group.location,
+    resource_group_name=test_resource_group.name,
+    tenant_id=current.tenant_id,
+    sku_name="standard")
+test_linked_service_key_vault = azure.datafactory.LinkedServiceKeyVault("testLinkedServiceKeyVault",
+    resource_group_name=test_resource_group.name,
+    data_factory_name=test_factory.name,
+    key_vault_id=test_key_vault.id)
+test_linked_service_azure_blob_storage = azure.datafactory.LinkedServiceAzureBlobStorage("testLinkedServiceAzureBlobStorage",
+    resource_group_name=test_resource_group.name,
+    data_factory_name=test_factory.name,
+    sas_uri="https://storageaccountname.blob.core.windows.net",
+    key_vault_sas_token=azure.datafactory.LinkedServiceAzureBlobStorageKeyVaultSasTokenArgs(
+        linked_service_name=test_linked_service_key_vault.name,
+        secret_name="secret",
+    ))
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const testResourceGroup = new azure.core.ResourceGroup("testResourceGroup", {location: "West Europe"});
+const current = azure.core.getClientConfig({});
+const testFactory = new azure.datafactory.Factory("testFactory", {
+    location: testResourceGroup.location,
+    resourceGroupName: testResourceGroup.name,
+});
+const testKeyVault = new azure.keyvault.KeyVault("testKeyVault", {
+    location: testResourceGroup.location,
+    resourceGroupName: testResourceGroup.name,
+    tenantId: current.then(current => current.tenantId),
+    skuName: "standard",
+});
+const testLinkedServiceKeyVault = new azure.datafactory.LinkedServiceKeyVault("testLinkedServiceKeyVault", {
+    resourceGroupName: testResourceGroup.name,
+    dataFactoryName: testFactory.name,
+    keyVaultId: testKeyVault.id,
+});
+const testLinkedServiceAzureBlobStorage = new azure.datafactory.LinkedServiceAzureBlobStorage("testLinkedServiceAzureBlobStorage", {
+    resourceGroupName: testResourceGroup.name,
+    dataFactoryName: testFactory.name,
+    sasUri: "https://storageaccountname.blob.core.windows.net",
+    keyVaultSasToken: {
+        linkedServiceName: testLinkedServiceKeyVault.name,
+        secretName: "secret",
+    },
+});
+```
+
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
 
@@ -182,6 +382,7 @@ const exampleLinkedServiceAzureBlobStorage = new azure.datafactory.LinkedService
                                   <span class="nx">data_factory_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                                   <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                                   <span class="nx">integration_runtime_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                  <span class="nx">key_vault_sas_token</span><span class="p">:</span> <span class="nx">Optional[LinkedServiceAzureBlobStorageKeyVaultSasTokenArgs]</span> = None<span class="p">,</span>
                                   <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                                   <span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
                                   <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -383,6 +584,15 @@ The LinkedServiceAzureBlobStorage resource accepts the following [input]({{< rel
     <dd>{{% md %}}The integration runtime reference to associate with the Data Factory Linked Service.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="keyvaultsastoken_csharp">
+<a href="#keyvaultsastoken_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Sas<wbr>Token</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#linkedserviceazureblobstoragekeyvaultsastoken">Linked<wbr>Service<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Key<wbr>Vault<wbr>Sas<wbr>Token<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `key_vault_sas_token` block as defined below. Use this argument to store SAS Token in an existing Key Vault. It needs an existing Key Vault Data Factory Linked Service. A `sas_uri` is required.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -520,6 +730,15 @@ The LinkedServiceAzureBlobStorage resource accepts the following [input]({{< rel
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The integration runtime reference to associate with the Data Factory Linked Service.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="keyvaultsastoken_go">
+<a href="#keyvaultsastoken_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Sas<wbr>Token</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#linkedserviceazureblobstoragekeyvaultsastoken">Linked<wbr>Service<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Key<wbr>Vault<wbr>Sas<wbr>Token<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `key_vault_sas_token` block as defined below. Use this argument to store SAS Token in an existing Key Vault. It needs an existing Key Vault Data Factory Linked Service. A `sas_uri` is required.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
@@ -661,6 +880,15 @@ The LinkedServiceAzureBlobStorage resource accepts the following [input]({{< rel
     <dd>{{% md %}}The integration runtime reference to associate with the Data Factory Linked Service.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="keyvaultsastoken_nodejs">
+<a href="#keyvaultsastoken_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault<wbr>Sas<wbr>Token</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#linkedserviceazureblobstoragekeyvaultsastoken">Linked<wbr>Service<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Key<wbr>Vault<wbr>Sas<wbr>Token<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `key_vault_sas_token` block as defined below. Use this argument to store SAS Token in an existing Key Vault. It needs an existing Key Vault Data Factory Linked Service. A `sas_uri` is required.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
@@ -798,6 +1026,15 @@ The LinkedServiceAzureBlobStorage resource accepts the following [input]({{< rel
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The integration runtime reference to associate with the Data Factory Linked Service.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="key_vault_sas_token_python">
+<a href="#key_vault_sas_token_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>sas_<wbr>token</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#linkedserviceazureblobstoragekeyvaultsastoken">Linked<wbr>Service<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Key<wbr>Vault<wbr>Sas<wbr>Token<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `key_vault_sas_token` block as defined below. Use this argument to store SAS Token in an existing Key Vault. It needs an existing Key Vault Data Factory Linked Service. A `sas_uri` is required.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
@@ -950,6 +1187,7 @@ Get an existing LinkedServiceAzureBlobStorage resource's state with the given na
         <span class="nx">data_factory_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">integration_runtime_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">key_vault_sas_token</span><span class="p">:</span> <span class="nx">Optional[LinkedServiceAzureBlobStorageKeyVaultSasTokenArgs]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
         <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -1125,6 +1363,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The integration runtime reference to associate with the Data Factory Linked Service.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_keyvaultsastoken_csharp">
+<a href="#state_keyvaultsastoken_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Sas<wbr>Token</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#linkedserviceazureblobstoragekeyvaultsastoken">Linked<wbr>Service<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Key<wbr>Vault<wbr>Sas<wbr>Token<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `key_vault_sas_token` block as defined below. Use this argument to store SAS Token in an existing Key Vault. It needs an existing Key Vault Data Factory Linked Service. A `sas_uri` is required.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -1262,6 +1509,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The integration runtime reference to associate with the Data Factory Linked Service.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_keyvaultsastoken_go">
+<a href="#state_keyvaultsastoken_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Sas<wbr>Token</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#linkedserviceazureblobstoragekeyvaultsastoken">Linked<wbr>Service<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Key<wbr>Vault<wbr>Sas<wbr>Token<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `key_vault_sas_token` block as defined below. Use this argument to store SAS Token in an existing Key Vault. It needs an existing Key Vault Data Factory Linked Service. A `sas_uri` is required.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
@@ -1403,6 +1659,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The integration runtime reference to associate with the Data Factory Linked Service.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_keyvaultsastoken_nodejs">
+<a href="#state_keyvaultsastoken_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault<wbr>Sas<wbr>Token</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#linkedserviceazureblobstoragekeyvaultsastoken">Linked<wbr>Service<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Key<wbr>Vault<wbr>Sas<wbr>Token<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `key_vault_sas_token` block as defined below. Use this argument to store SAS Token in an existing Key Vault. It needs an existing Key Vault Data Factory Linked Service. A `sas_uri` is required.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
@@ -1542,6 +1807,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The integration runtime reference to associate with the Data Factory Linked Service.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_key_vault_sas_token_python">
+<a href="#state_key_vault_sas_token_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>sas_<wbr>token</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#linkedserviceazureblobstoragekeyvaultsastoken">Linked<wbr>Service<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Key<wbr>Vault<wbr>Sas<wbr>Token<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `key_vault_sas_token` block as defined below. Use this argument to store SAS Token in an existing Key Vault. It needs an existing Key Vault Data Factory Linked Service. A `sas_uri` is required.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
@@ -1628,6 +1902,100 @@ The following state arguments are supported:
 
 
 
+
+## Supporting Types
+
+
+
+<h4 id="linkedserviceazureblobstoragekeyvaultsastoken">Linked<wbr>Service<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Key<wbr>Vault<wbr>Sas<wbr>Token</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="linkedservicename_csharp">
+<a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the name of an existing Key Vault Data Factory Linked Service.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="secretname_csharp">
+<a href="#secretname_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the secret name in Azure Key Vault that stores the sas token.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="linkedservicename_go">
+<a href="#linkedservicename_go" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the name of an existing Key Vault Data Factory Linked Service.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="secretname_go">
+<a href="#secretname_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the secret name in Azure Key Vault that stores the sas token.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="linkedservicename_nodejs">
+<a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the name of an existing Key Vault Data Factory Linked Service.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="secretname_nodejs">
+<a href="#secretname_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the secret name in Azure Key Vault that stores the sas token.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="linked_service_name_python">
+<a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the name of an existing Key Vault Data Factory Linked Service.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="secret_name_python">
+<a href="#secret_name_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the secret name in Azure Key Vault that stores the sas token.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
 ## Import
 
 

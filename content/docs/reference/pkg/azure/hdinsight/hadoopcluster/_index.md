@@ -340,6 +340,7 @@ const exampleHadoopCluster = new azure.hdinsight.HadoopCluster("exampleHadoopClu
                   <span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[HadoopClusterNetworkArgs]</span> = None<span class="p">,</span>
                   <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                   <span class="nx">roles</span><span class="p">:</span> <span class="nx">Optional[HadoopClusterRolesArgs]</span> = None<span class="p">,</span>
+                  <span class="nx">security_profile</span><span class="p">:</span> <span class="nx">Optional[HadoopClusterSecurityProfileArgs]</span> = None<span class="p">,</span>
                   <span class="nx">storage_account_gen2</span><span class="p">:</span> <span class="nx">Optional[HadoopClusterStorageAccountGen2Args]</span> = None<span class="p">,</span>
                   <span class="nx">storage_accounts</span><span class="p">:</span> <span class="nx">Optional[Sequence[HadoopClusterStorageAccountArgs]]</span> = None<span class="p">,</span>
                   <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
@@ -573,6 +574,15 @@ The HadoopCluster resource accepts the following [input]({{< relref "/docs/intro
     <dd>{{% md %}}A `network` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="securityprofile_csharp">
+<a href="#securityprofile_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Profile</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#hadoopclustersecurityprofile">Hadoop<wbr>Cluster<wbr>Security<wbr>Profile<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `security_profile` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="storageaccountgen2_csharp">
 <a href="#storageaccountgen2_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Gen2</a>
 </span>
@@ -709,6 +719,15 @@ The HadoopCluster resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type"><a href="#hadoopclusternetwork">Hadoop<wbr>Cluster<wbr>Network<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `network` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="securityprofile_go">
+<a href="#securityprofile_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Profile</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#hadoopclustersecurityprofile">Hadoop<wbr>Cluster<wbr>Security<wbr>Profile<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `security_profile` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageaccountgen2_go">
@@ -849,6 +868,15 @@ The HadoopCluster resource accepts the following [input]({{< relref "/docs/intro
     <dd>{{% md %}}A `network` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="securityprofile_nodejs">
+<a href="#securityprofile_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Profile</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#hadoopclustersecurityprofile">Hadoop<wbr>Cluster<wbr>Security<wbr>Profile<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `security_profile` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="storageaccountgen2_nodejs">
 <a href="#storageaccountgen2_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Gen2</a>
 </span>
@@ -985,6 +1013,15 @@ The HadoopCluster resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type"><a href="#hadoopclusternetwork">Hadoop<wbr>Cluster<wbr>Network<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `network` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="security_profile_python">
+<a href="#security_profile_python" style="color: inherit; text-decoration: inherit;">security_<wbr>profile</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#hadoopclustersecurityprofile">Hadoop<wbr>Cluster<wbr>Security<wbr>Profile<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `security_profile` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storage_account_gen2_python">
@@ -1177,6 +1214,7 @@ Get an existing HadoopCluster resource's state with the given name, ID, and opti
         <span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[HadoopClusterNetworkArgs]</span> = None<span class="p">,</span>
         <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">roles</span><span class="p">:</span> <span class="nx">Optional[HadoopClusterRolesArgs]</span> = None<span class="p">,</span>
+        <span class="nx">security_profile</span><span class="p">:</span> <span class="nx">Optional[HadoopClusterSecurityProfileArgs]</span> = None<span class="p">,</span>
         <span class="nx">ssh_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">storage_account_gen2</span><span class="p">:</span> <span class="nx">Optional[HadoopClusterStorageAccountGen2Args]</span> = None<span class="p">,</span>
         <span class="nx">storage_accounts</span><span class="p">:</span> <span class="nx">Optional[Sequence[HadoopClusterStorageAccountArgs]]</span> = None<span class="p">,</span>
@@ -1394,6 +1432,15 @@ The following state arguments are supported:
     <dd>{{% md %}}A `roles` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_securityprofile_csharp">
+<a href="#state_securityprofile_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Profile</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#hadoopclustersecurityprofile">Hadoop<wbr>Cluster<wbr>Security<wbr>Profile<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `security_profile` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_sshendpoint_csharp">
 <a href="#state_sshendpoint_csharp" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Endpoint</a>
 </span>
@@ -1548,6 +1595,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#hadoopclusterroles">Hadoop<wbr>Cluster<wbr>Roles<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `roles` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_securityprofile_go">
+<a href="#state_securityprofile_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Profile</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#hadoopclustersecurityprofile">Hadoop<wbr>Cluster<wbr>Security<wbr>Profile<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `security_profile` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sshendpoint_go">
@@ -1706,6 +1762,15 @@ The following state arguments are supported:
     <dd>{{% md %}}A `roles` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_securityprofile_nodejs">
+<a href="#state_securityprofile_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Profile</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#hadoopclustersecurityprofile">Hadoop<wbr>Cluster<wbr>Security<wbr>Profile<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `security_profile` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_sshendpoint_nodejs">
 <a href="#state_sshendpoint_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>Endpoint</a>
 </span>
@@ -1860,6 +1925,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#hadoopclusterroles">Hadoop<wbr>Cluster<wbr>Roles<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `roles` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_security_profile_python">
+<a href="#state_security_profile_python" style="color: inherit; text-decoration: inherit;">security_<wbr>profile</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#hadoopclustersecurityprofile">Hadoop<wbr>Cluster<wbr>Security<wbr>Profile<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `security_profile` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ssh_endpoint_python">
@@ -4478,6 +4552,276 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Virtual Network where the Zookeeper Nodes should be provisioned within. Changing this forces a new resource to be created.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="hadoopclustersecurityprofile">Hadoop<wbr>Cluster<wbr>Security<wbr>Profile</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="aaddsresourceid_csharp">
+<a href="#aaddsresourceid_csharp" style="color: inherit; text-decoration: inherit;">Aadds<wbr>Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource ID of the Azure Active Directory Domain Service. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="domainname_csharp">
+<a href="#domainname_csharp" style="color: inherit; text-decoration: inherit;">Domain<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the Azure Active Directory Domain. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="domainuserpassword_csharp">
+<a href="#domainuserpassword_csharp" style="color: inherit; text-decoration: inherit;">Domain<wbr>User<wbr>Password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The user password of the Azure Active Directory Domain. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="domainusername_csharp">
+<a href="#domainusername_csharp" style="color: inherit; text-decoration: inherit;">Domain<wbr>Username</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The username of the Azure Active Directory Domain. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="ldapsurls_csharp">
+<a href="#ldapsurls_csharp" style="color: inherit; text-decoration: inherit;">Ldaps<wbr>Urls</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of the LDAPS URLs to communicate with the Azure Active Directory. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="msiresourceid_csharp">
+<a href="#msiresourceid_csharp" style="color: inherit; text-decoration: inherit;">Msi<wbr>Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The User Assigned Identity for the HDInsight Cluster. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="clusterusersgroupdns_csharp">
+<a href="#clusterusersgroupdns_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Users<wbr>Group<wbr>Dns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of the distinguished names for the cluster user groups. Changing this forces a new resource to be created.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="aaddsresourceid_go">
+<a href="#aaddsresourceid_go" style="color: inherit; text-decoration: inherit;">Aadds<wbr>Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource ID of the Azure Active Directory Domain Service. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="domainname_go">
+<a href="#domainname_go" style="color: inherit; text-decoration: inherit;">Domain<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the Azure Active Directory Domain. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="domainuserpassword_go">
+<a href="#domainuserpassword_go" style="color: inherit; text-decoration: inherit;">Domain<wbr>User<wbr>Password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The user password of the Azure Active Directory Domain. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="domainusername_go">
+<a href="#domainusername_go" style="color: inherit; text-decoration: inherit;">Domain<wbr>Username</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The username of the Azure Active Directory Domain. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="ldapsurls_go">
+<a href="#ldapsurls_go" style="color: inherit; text-decoration: inherit;">Ldaps<wbr>Urls</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of the LDAPS URLs to communicate with the Azure Active Directory. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="msiresourceid_go">
+<a href="#msiresourceid_go" style="color: inherit; text-decoration: inherit;">Msi<wbr>Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The User Assigned Identity for the HDInsight Cluster. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="clusterusersgroupdns_go">
+<a href="#clusterusersgroupdns_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Users<wbr>Group<wbr>Dns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of the distinguished names for the cluster user groups. Changing this forces a new resource to be created.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="aaddsresourceid_nodejs">
+<a href="#aaddsresourceid_nodejs" style="color: inherit; text-decoration: inherit;">aadds<wbr>Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource ID of the Azure Active Directory Domain Service. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="domainname_nodejs">
+<a href="#domainname_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the Azure Active Directory Domain. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="domainuserpassword_nodejs">
+<a href="#domainuserpassword_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>User<wbr>Password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The user password of the Azure Active Directory Domain. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="domainusername_nodejs">
+<a href="#domainusername_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Username</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The username of the Azure Active Directory Domain. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="ldapsurls_nodejs">
+<a href="#ldapsurls_nodejs" style="color: inherit; text-decoration: inherit;">ldaps<wbr>Urls</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of the LDAPS URLs to communicate with the Azure Active Directory. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="msiresourceid_nodejs">
+<a href="#msiresourceid_nodejs" style="color: inherit; text-decoration: inherit;">msi<wbr>Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The User Assigned Identity for the HDInsight Cluster. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="clusterusersgroupdns_nodejs">
+<a href="#clusterusersgroupdns_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Users<wbr>Group<wbr>Dns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of the distinguished names for the cluster user groups. Changing this forces a new resource to be created.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="aadds_resource_id_python">
+<a href="#aadds_resource_id_python" style="color: inherit; text-decoration: inherit;">aadds_<wbr>resource_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The resource ID of the Azure Active Directory Domain Service. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="domain_name_python">
+<a href="#domain_name_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the Azure Active Directory Domain. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="domain_user_password_python">
+<a href="#domain_user_password_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>user_<wbr>password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The user password of the Azure Active Directory Domain. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="domain_username_python">
+<a href="#domain_username_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>username</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The username of the Azure Active Directory Domain. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="ldaps_urls_python">
+<a href="#ldaps_urls_python" style="color: inherit; text-decoration: inherit;">ldaps_<wbr>urls</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of the LDAPS URLs to communicate with the Azure Active Directory. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="msi_resource_id_python">
+<a href="#msi_resource_id_python" style="color: inherit; text-decoration: inherit;">msi_<wbr>resource_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The User Assigned Identity for the HDInsight Cluster. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="cluster_users_group_dns_python">
+<a href="#cluster_users_group_dns_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>users_<wbr>group_<wbr>dns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of the distinguished names for the cluster user groups. Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

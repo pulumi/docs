@@ -15,6 +15,8 @@ Explore the resources and functions of the azure.logicapps module.
     <li><a href="actionhttp" title="ActionHttp"><span class="symbol resource"></span>ActionHttp</a></li>
     <li><a href="integrationaccount" title="IntegrationAccount"><span class="symbol resource"></span>IntegrationAccount</a></li>
     <li><a href="integrationaccountcertificate" title="IntegrationAccountCertificate"><span class="symbol resource"></span>IntegrationAccountCertificate</a></li>
+    <li><a href="integrationaccountmap" title="IntegrationAccountMap"><span class="symbol resource"></span>IntegrationAccountMap</a></li>
+    <li><a href="integrationaccountpartner" title="IntegrationAccountPartner"><span class="symbol resource"></span>IntegrationAccountPartner</a></li>
     <li><a href="integrationaccountschema" title="IntegrationAccountSchema"><span class="symbol resource"></span>IntegrationAccountSchema</a></li>
     <li><a href="integrationaccountsession" title="IntegrationAccountSession"><span class="symbol resource"></span>IntegrationAccountSession</a></li>
     <li><a href="interationserviceenvironment" title="InterationServiceEnvironment"><span class="symbol resource"></span>InterationServiceEnvironment</a></li>
@@ -39,6 +41,6 @@ Explore the resources and functions of the azure.logicapps module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/hashicorp/terraform-provider-azurerm).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.16.0</dd>
+	<dd>4.17.0</dd>
 </dl>
 

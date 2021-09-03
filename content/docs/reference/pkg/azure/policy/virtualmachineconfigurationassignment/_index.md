@@ -1138,6 +1138,33 @@ The following state arguments are supported:
     <dd>{{% md %}}The name of the Guest Configuration that will be assigned in this Guest Configuration Assignment.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="assignmenttype_csharp">
+<a href="#assignmenttype_csharp" style="color: inherit; text-decoration: inherit;">Assignment<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The assignment type for the Guest Configuration Assignment. Possible values are `Audit`, `ApplyAndAutoCorrect`, `ApplyAndMonitor` and `DeployAndAutoCorrect`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="contenthash_csharp">
+<a href="#contenthash_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Hash</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The content hash for the Guest Configuration package.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="contenturi_csharp">
+<a href="#contenturi_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Uri</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The content URI where the Guest Configuration package is stored.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="parameters_csharp">
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
@@ -1167,6 +1194,33 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Guest Configuration that will be assigned in this Guest Configuration Assignment.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="assignmenttype_go">
+<a href="#assignmenttype_go" style="color: inherit; text-decoration: inherit;">Assignment<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The assignment type for the Guest Configuration Assignment. Possible values are `Audit`, `ApplyAndAutoCorrect`, `ApplyAndMonitor` and `DeployAndAutoCorrect`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="contenthash_go">
+<a href="#contenthash_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Hash</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The content hash for the Guest Configuration package.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="contenturi_go">
+<a href="#contenturi_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Uri</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The content URI where the Guest Configuration package is stored.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parameters_go">
@@ -1200,6 +1254,33 @@ The following state arguments are supported:
     <dd>{{% md %}}The name of the Guest Configuration that will be assigned in this Guest Configuration Assignment.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="assignmenttype_nodejs">
+<a href="#assignmenttype_nodejs" style="color: inherit; text-decoration: inherit;">assignment<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The assignment type for the Guest Configuration Assignment. Possible values are `Audit`, `ApplyAndAutoCorrect`, `ApplyAndMonitor` and `DeployAndAutoCorrect`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="contenthash_nodejs">
+<a href="#contenthash_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Hash</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The content hash for the Guest Configuration package.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="contenturi_nodejs">
+<a href="#contenturi_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Uri</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The content URI where the Guest Configuration package is stored.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="parameters_nodejs">
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
@@ -1229,6 +1310,33 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Guest Configuration that will be assigned in this Guest Configuration Assignment.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="assignment_type_python">
+<a href="#assignment_type_python" style="color: inherit; text-decoration: inherit;">assignment_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The assignment type for the Guest Configuration Assignment. Possible values are `Audit`, `ApplyAndAutoCorrect`, `ApplyAndMonitor` and `DeployAndAutoCorrect`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="content_hash_python">
+<a href="#content_hash_python" style="color: inherit; text-decoration: inherit;">content_<wbr>hash</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The content hash for the Guest Configuration package.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="content_uri_python">
+<a href="#content_uri_python" style="color: inherit; text-decoration: inherit;">content_<wbr>uri</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The content URI where the Guest Configuration package is stored.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parameters_python">
