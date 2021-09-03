@@ -55,10 +55,6 @@
         <div class="cloud-engineering-summit-speaker-wall">
             <script type="text/javascript" src="https://sessionize.com/api/v2/{{ .Params.sessionize_id }}/view/SpeakerWall"></script>
         </div>
-
-        <!--<div class="mt-10">
-            <a class="btn-secondary" href="{{ relref . "/cloud-engineering-summit/speakers" }}">View all speakers</a>
-        </div>-->
     </section>
 
     <section class="my-16 relative">
@@ -73,11 +69,6 @@
 
         <div class="container mx-auto">
             <h2 class="text-center">Summit Tracks</h2>
-
-            <!-- Commented out until talk names have been finalized. -->
-            <!--<div class="text-center my-12">
-                <a class="btn-secondary" href="{{ relref . "/cloud-engineering-summit/agenda" }}">Read the agenda</a>
-            </div>-->
 
             {{ range $item := .Params.tracks_outline }}
                 <div class="lg:flex my-16">
