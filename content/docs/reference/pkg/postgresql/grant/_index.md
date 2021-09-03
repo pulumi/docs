@@ -25,6 +25,10 @@ import * as postgresql from "@pulumi/postgresql";
 const readonlyTables = new postgresql.Grant("readonly_tables", {
     database: "test_db",
     objectType: "table",
+    objects: [
+        "table1",
+        "table2",
+    ],
     privileges: ["SELECT"],
     role: "test_role",
     schema: "public",
@@ -37,6 +41,10 @@ import pulumi_postgresql as postgresql
 readonly_tables = postgresql.Grant("readonlyTables",
     database="test_db",
     object_type="table",
+    objects=[
+        "table1",
+        "table2",
+    ],
     privileges=["SELECT"],
     role="test_role",
     schema="public")
@@ -53,6 +61,11 @@ class MyStack : Stack
         {
             Database = "test_db",
             ObjectType = "table",
+            Objects = 
+            {
+                "table1",
+                "table2",
+            },
             Privileges = 
             {
                 "SELECT",
@@ -77,6 +90,10 @@ func main() {
 		_, err := postgresql.NewGrant(ctx, "readonlyTables", &postgresql.GrantArgs{
 			Database:   pulumi.String("test_db"),
 			ObjectType: pulumi.String("table"),
+			Objects: pulumi.StringArray{
+				pulumi.String("table1"),
+				pulumi.String("table2"),
+			},
 			Privileges: pulumi.StringArray{
 				pulumi.String("SELECT"),
 			},
@@ -180,6 +197,7 @@ func main() {
           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
           <span class="nx">database</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
           <span class="nx">object_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">objects</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
           <span class="nx">privileges</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
           <span class="nx">role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
           <span class="nx">schema</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -302,7 +320,7 @@ func main() {
 
 ## Grant Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Architecture and Concepts docs.
 
 ### Inputs
 
@@ -328,7 +346,7 @@ The Grant resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The PostgreSQL object type to grant the privileges on (one of: database, schema, table, sequence,function).
+    <dd>{{% md %}}The PostgreSQL object type to grant the privileges on (one of: database, schema, table, sequence, function, foreign_data_wrapper, foreign_server).
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="privileges_csharp">
@@ -349,6 +367,15 @@ The Grant resource accepts the following [input]({{< relref "/docs/intro/concept
     <dd>{{% md %}}The name of the role to grant privileges on, Set it to "public" for all roles.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="objects_csharp">
+<a href="#objects_csharp" style="color: inherit; text-decoration: inherit;">Objects</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The objects upon which to grant the privileges. An empty list (the default) means to grant permissions on *all* objects of the specified type. You cannot specify this option if the `object_type` is `database` or `schema`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="schema_csharp">
 <a href="#schema_csharp" style="color: inherit; text-decoration: inherit;">Schema</a>
 </span>
@@ -364,7 +391,7 @@ The Grant resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Permit the grant recipient to grant it to others
+    <dd>{{% md %}}Whether the recipient of these privileges can grant the same privileges to others. Defaults to false.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -386,7 +413,7 @@ The Grant resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The PostgreSQL object type to grant the privileges on (one of: database, schema, table, sequence,function).
+    <dd>{{% md %}}The PostgreSQL object type to grant the privileges on (one of: database, schema, table, sequence, function, foreign_data_wrapper, foreign_server).
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="privileges_go">
@@ -407,6 +434,15 @@ The Grant resource accepts the following [input]({{< relref "/docs/intro/concept
     <dd>{{% md %}}The name of the role to grant privileges on, Set it to "public" for all roles.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="objects_go">
+<a href="#objects_go" style="color: inherit; text-decoration: inherit;">Objects</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The objects upon which to grant the privileges. An empty list (the default) means to grant permissions on *all* objects of the specified type. You cannot specify this option if the `object_type` is `database` or `schema`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="schema_go">
 <a href="#schema_go" style="color: inherit; text-decoration: inherit;">Schema</a>
 </span>
@@ -422,7 +458,7 @@ The Grant resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Permit the grant recipient to grant it to others
+    <dd>{{% md %}}Whether the recipient of these privileges can grant the same privileges to others. Defaults to false.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -444,7 +480,7 @@ The Grant resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The PostgreSQL object type to grant the privileges on (one of: database, schema, table, sequence,function).
+    <dd>{{% md %}}The PostgreSQL object type to grant the privileges on (one of: database, schema, table, sequence, function, foreign_data_wrapper, foreign_server).
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="privileges_nodejs">
@@ -465,6 +501,15 @@ The Grant resource accepts the following [input]({{< relref "/docs/intro/concept
     <dd>{{% md %}}The name of the role to grant privileges on, Set it to "public" for all roles.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="objects_nodejs">
+<a href="#objects_nodejs" style="color: inherit; text-decoration: inherit;">objects</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The objects upon which to grant the privileges. An empty list (the default) means to grant permissions on *all* objects of the specified type. You cannot specify this option if the `object_type` is `database` or `schema`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="schema_nodejs">
 <a href="#schema_nodejs" style="color: inherit; text-decoration: inherit;">schema</a>
 </span>
@@ -480,7 +525,7 @@ The Grant resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Permit the grant recipient to grant it to others
+    <dd>{{% md %}}Whether the recipient of these privileges can grant the same privileges to others. Defaults to false.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -502,7 +547,7 @@ The Grant resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The PostgreSQL object type to grant the privileges on (one of: database, schema, table, sequence,function).
+    <dd>{{% md %}}The PostgreSQL object type to grant the privileges on (one of: database, schema, table, sequence, function, foreign_data_wrapper, foreign_server).
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="privileges_python">
@@ -523,6 +568,15 @@ The Grant resource accepts the following [input]({{< relref "/docs/intro/concept
     <dd>{{% md %}}The name of the role to grant privileges on, Set it to "public" for all roles.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="objects_python">
+<a href="#objects_python" style="color: inherit; text-decoration: inherit;">objects</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}The objects upon which to grant the privileges. An empty list (the default) means to grant permissions on *all* objects of the specified type. You cannot specify this option if the `object_type` is `database` or `schema`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="schema_python">
 <a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
 </span>
@@ -538,7 +592,7 @@ The Grant resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Permit the grant recipient to grant it to others
+    <dd>{{% md %}}Whether the recipient of these privileges can grant the same privileges to others. Defaults to false.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -615,6 +669,7 @@ Get an existing Grant resource's state with the given name, ID, and optional ext
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
         <span class="nx">database</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">object_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">objects</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
         <span class="nx">privileges</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
         <span class="nx">role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">schema</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -746,7 +801,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The PostgreSQL object type to grant the privileges on (one of: database, schema, table, sequence,function).
+    <dd>{{% md %}}The PostgreSQL object type to grant the privileges on (one of: database, schema, table, sequence, function, foreign_data_wrapper, foreign_server).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_objects_csharp">
+<a href="#state_objects_csharp" style="color: inherit; text-decoration: inherit;">Objects</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The objects upon which to grant the privileges. An empty list (the default) means to grant permissions on *all* objects of the specified type. You cannot specify this option if the `object_type` is `database` or `schema`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privileges_csharp">
@@ -782,7 +846,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Permit the grant recipient to grant it to others
+    <dd>{{% md %}}Whether the recipient of these privileges can grant the same privileges to others. Defaults to false.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -804,7 +868,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The PostgreSQL object type to grant the privileges on (one of: database, schema, table, sequence,function).
+    <dd>{{% md %}}The PostgreSQL object type to grant the privileges on (one of: database, schema, table, sequence, function, foreign_data_wrapper, foreign_server).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_objects_go">
+<a href="#state_objects_go" style="color: inherit; text-decoration: inherit;">Objects</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The objects upon which to grant the privileges. An empty list (the default) means to grant permissions on *all* objects of the specified type. You cannot specify this option if the `object_type` is `database` or `schema`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privileges_go">
@@ -840,7 +913,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Permit the grant recipient to grant it to others
+    <dd>{{% md %}}Whether the recipient of these privileges can grant the same privileges to others. Defaults to false.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -862,7 +935,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The PostgreSQL object type to grant the privileges on (one of: database, schema, table, sequence,function).
+    <dd>{{% md %}}The PostgreSQL object type to grant the privileges on (one of: database, schema, table, sequence, function, foreign_data_wrapper, foreign_server).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_objects_nodejs">
+<a href="#state_objects_nodejs" style="color: inherit; text-decoration: inherit;">objects</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The objects upon which to grant the privileges. An empty list (the default) means to grant permissions on *all* objects of the specified type. You cannot specify this option if the `object_type` is `database` or `schema`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privileges_nodejs">
@@ -898,7 +980,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Permit the grant recipient to grant it to others
+    <dd>{{% md %}}Whether the recipient of these privileges can grant the same privileges to others. Defaults to false.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -920,7 +1002,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The PostgreSQL object type to grant the privileges on (one of: database, schema, table, sequence,function).
+    <dd>{{% md %}}The PostgreSQL object type to grant the privileges on (one of: database, schema, table, sequence, function, foreign_data_wrapper, foreign_server).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_objects_python">
+<a href="#state_objects_python" style="color: inherit; text-decoration: inherit;">objects</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}The objects upon which to grant the privileges. An empty list (the default) means to grant permissions on *all* objects of the specified type. You cannot specify this option if the `object_type` is `database` or `schema`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privileges_python">
@@ -956,7 +1047,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Permit the grant recipient to grant it to others
+    <dd>{{% md %}}Whether the recipient of these privileges can grant the same privileges to others. Defaults to false.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

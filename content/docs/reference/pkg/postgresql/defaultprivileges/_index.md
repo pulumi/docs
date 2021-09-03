@@ -233,7 +233,7 @@ func main() {
 
 ## DefaultPrivileges Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Architecture and Concepts docs.
 
 ### Inputs
 
@@ -277,7 +277,7 @@ The DefaultPrivileges resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The list of privileges to apply as default privileges.
+    <dd>{{% md %}}The list of privileges to apply as default privileges. An empty list could be provided to revoke all default privileges for this role.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="role_csharp">
@@ -344,7 +344,7 @@ The DefaultPrivileges resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The list of privileges to apply as default privileges.
+    <dd>{{% md %}}The list of privileges to apply as default privileges. An empty list could be provided to revoke all default privileges for this role.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="role_go">
@@ -411,7 +411,7 @@ The DefaultPrivileges resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The list of privileges to apply as default privileges.
+    <dd>{{% md %}}The list of privileges to apply as default privileges. An empty list could be provided to revoke all default privileges for this role.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="role_nodejs">
@@ -478,7 +478,7 @@ The DefaultPrivileges resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The list of privileges to apply as default privileges.
+    <dd>{{% md %}}The list of privileges to apply as default privileges. An empty list could be provided to revoke all default privileges for this role.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="role_python">
@@ -732,7 +732,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The list of privileges to apply as default privileges.
+    <dd>{{% md %}}The list of privileges to apply as default privileges. An empty list could be provided to revoke all default privileges for this role.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_role_csharp">
@@ -799,7 +799,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The list of privileges to apply as default privileges.
+    <dd>{{% md %}}The list of privileges to apply as default privileges. An empty list could be provided to revoke all default privileges for this role.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_role_go">
@@ -866,7 +866,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The list of privileges to apply as default privileges.
+    <dd>{{% md %}}The list of privileges to apply as default privileges. An empty list could be provided to revoke all default privileges for this role.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_role_nodejs">
@@ -933,7 +933,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The list of privileges to apply as default privileges.
+    <dd>{{% md %}}The list of privileges to apply as default privileges. An empty list could be provided to revoke all default privileges for this role.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_role_python">

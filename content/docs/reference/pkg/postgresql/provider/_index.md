@@ -163,7 +163,7 @@ construction to achieve fine-grained programmatic control over provider settings
 
 ## Provider Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Architecture and Concepts docs.
 
 ### Inputs
 
@@ -317,7 +317,7 @@ Refreshing state password from Postgres)
 <a href="#clientcert_go" style="color: inherit; text-decoration: inherit;">Clientcert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#providerclientcert">Provider<wbr>Clientcert</a></span>
+        <span class="property-type"><a href="#providerclientcert">Provider<wbr>Clientcert<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SSL client certificate if required by the database.
 {{% /md %}}</dd><dt class="property-optional"
