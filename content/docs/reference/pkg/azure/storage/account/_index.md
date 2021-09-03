@@ -5515,7 +5515,7 @@ for more information. Defaults to `true`.
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}A list of http headers that are allowed to be executed by the origin. Valid options are
+    <dd>{{% md %}}A list of http methods that are allowed to be executed by the origin. Valid options are
 `DELETE`, `GET`, `HEAD`, `MERGE`, `POST`, `OPTIONS`, `PUT` or `PATCH`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5565,7 +5565,7 @@ for more information. Defaults to `true`.
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}A list of http headers that are allowed to be executed by the origin. Valid options are
+    <dd>{{% md %}}A list of http methods that are allowed to be executed by the origin. Valid options are
 `DELETE`, `GET`, `HEAD`, `MERGE`, `POST`, `OPTIONS`, `PUT` or `PATCH`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5615,7 +5615,7 @@ for more information. Defaults to `true`.
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}A list of http headers that are allowed to be executed by the origin. Valid options are
+    <dd>{{% md %}}A list of http methods that are allowed to be executed by the origin. Valid options are
 `DELETE`, `GET`, `HEAD`, `MERGE`, `POST`, `OPTIONS`, `PUT` or `PATCH`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5665,7 +5665,7 @@ for more information. Defaults to `true`.
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}A list of http headers that are allowed to be executed by the origin. Valid options are
+    <dd>{{% md %}}A list of http methods that are allowed to be executed by the origin. Valid options are
 `DELETE`, `GET`, `HEAD`, `MERGE`, `POST`, `OPTIONS`, `PUT` or `PATCH`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6477,7 +6477,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}A list of http headers that are allowed to be executed by the origin. Valid options are
+    <dd>{{% md %}}A list of http methods that are allowed to be executed by the origin. Valid options are
 `DELETE`, `GET`, `HEAD`, `MERGE`, `POST`, `OPTIONS`, `PUT` or `PATCH`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6527,7 +6527,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}A list of http headers that are allowed to be executed by the origin. Valid options are
+    <dd>{{% md %}}A list of http methods that are allowed to be executed by the origin. Valid options are
 `DELETE`, `GET`, `HEAD`, `MERGE`, `POST`, `OPTIONS`, `PUT` or `PATCH`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6577,7 +6577,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}A list of http headers that are allowed to be executed by the origin. Valid options are
+    <dd>{{% md %}}A list of http methods that are allowed to be executed by the origin. Valid options are
 `DELETE`, `GET`, `HEAD`, `MERGE`, `POST`, `OPTIONS`, `PUT` or `PATCH`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6627,7 +6627,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}A list of http headers that are allowed to be executed by the origin. Valid options are
+    <dd>{{% md %}}A list of http methods that are allowed to be executed by the origin. Valid options are
 `DELETE`, `GET`, `HEAD`, `MERGE`, `POST`, `OPTIONS`, `PUT` or `PATCH`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7453,7 +7453,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}A list of http headers that are allowed to be executed by the origin. Valid options are
+    <dd>{{% md %}}A list of http methods that are allowed to be executed by the origin. Valid options are
 `DELETE`, `GET`, `HEAD`, `MERGE`, `POST`, `OPTIONS`, `PUT` or `PATCH`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7503,7 +7503,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}A list of http headers that are allowed to be executed by the origin. Valid options are
+    <dd>{{% md %}}A list of http methods that are allowed to be executed by the origin. Valid options are
 `DELETE`, `GET`, `HEAD`, `MERGE`, `POST`, `OPTIONS`, `PUT` or `PATCH`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7553,7 +7553,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}A list of http headers that are allowed to be executed by the origin. Valid options are
+    <dd>{{% md %}}A list of http methods that are allowed to be executed by the origin. Valid options are
 `DELETE`, `GET`, `HEAD`, `MERGE`, `POST`, `OPTIONS`, `PUT` or `PATCH`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7603,7 +7603,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}A list of http headers that are allowed to be executed by the origin. Valid options are
+    <dd>{{% md %}}A list of http methods that are allowed to be executed by the origin. Valid options are
 `DELETE`, `GET`, `HEAD`, `MERGE`, `POST`, `OPTIONS`, `PUT` or `PATCH`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">

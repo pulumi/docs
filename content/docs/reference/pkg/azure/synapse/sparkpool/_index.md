@@ -502,7 +502,7 @@ The SparkPool resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Apache Spark version. Possible values are `2.4` and `3.0`. Defaults to `2.4`.
+    <dd>{{% md %}}The Apache Spark version. Possible values are `2.4` and `3.1`. Defaults to `2.4`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
@@ -614,7 +614,7 @@ The SparkPool resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Apache Spark version. Possible values are `2.4` and `3.0`. Defaults to `2.4`.
+    <dd>{{% md %}}The Apache Spark version. Possible values are `2.4` and `3.1`. Defaults to `2.4`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
@@ -726,7 +726,7 @@ The SparkPool resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Apache Spark version. Possible values are `2.4` and `3.0`. Defaults to `2.4`.
+    <dd>{{% md %}}The Apache Spark version. Possible values are `2.4` and `3.1`. Defaults to `2.4`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
@@ -838,7 +838,7 @@ The SparkPool resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Apache Spark version. Possible values are `2.4` and `3.0`. Defaults to `2.4`.
+    <dd>{{% md %}}The Apache Spark version. Possible values are `2.4` and `3.1`. Defaults to `2.4`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
@@ -1133,7 +1133,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Apache Spark version. Possible values are `2.4` and `3.0`. Defaults to `2.4`.
+    <dd>{{% md %}}The Apache Spark version. Possible values are `2.4` and `3.1`. Defaults to `2.4`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_synapseworkspaceid_csharp">
@@ -1245,7 +1245,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Apache Spark version. Possible values are `2.4` and `3.0`. Defaults to `2.4`.
+    <dd>{{% md %}}The Apache Spark version. Possible values are `2.4` and `3.1`. Defaults to `2.4`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_synapseworkspaceid_go">
@@ -1357,7 +1357,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Apache Spark version. Possible values are `2.4` and `3.0`. Defaults to `2.4`.
+    <dd>{{% md %}}The Apache Spark version. Possible values are `2.4` and `3.1`. Defaults to `2.4`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_synapseworkspaceid_nodejs">
@@ -1469,7 +1469,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Apache Spark version. Possible values are `2.4` and `3.0`. Defaults to `2.4`.
+    <dd>{{% md %}}The Apache Spark version. Possible values are `2.4` and `3.1`. Defaults to `2.4`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_synapse_workspace_id_python">

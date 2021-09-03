@@ -30,6 +30,7 @@ Explore the resources and functions of the azure.cosmosdb module.
 <h2 id="functions">Functions</h2>
 <ul class="api">
     <li><a href="getaccount" title="GetAccount"><span class="symbol function"></span>GetAccount</a></li>
+    <li><a href="getmongodatabase" title="GetMongoDatabase"><span class="symbol function"></span>GetMongoDatabase</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -41,6 +42,6 @@ Explore the resources and functions of the azure.cosmosdb module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/hashicorp/terraform-provider-azurerm).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.16.0</dd>
+	<dd>4.17.0</dd>
 </dl>
 

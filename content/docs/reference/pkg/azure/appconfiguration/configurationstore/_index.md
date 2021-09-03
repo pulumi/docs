@@ -1306,7 +1306,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the identity type of the App Configuration. At this time the only allowed value is `SystemAssigned`.
+    <dd>{{% md %}}Specifies the type of Managed Service Identity that should be configured on this API Management Service. Possible values are `SystemAssigned`, `UserAssigned`, `SystemAssigned, UserAssigned` (to enable both).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identityids_csharp">
@@ -1315,7 +1315,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A list of IDs for User Assigned Managed Identity resources to be assigned.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="principalid_csharp">
 <a href="#principalid_csharp" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
@@ -1345,7 +1346,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the identity type of the App Configuration. At this time the only allowed value is `SystemAssigned`.
+    <dd>{{% md %}}Specifies the type of Managed Service Identity that should be configured on this API Management Service. Possible values are `SystemAssigned`, `UserAssigned`, `SystemAssigned, UserAssigned` (to enable both).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identityids_go">
@@ -1354,7 +1355,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A list of IDs for User Assigned Managed Identity resources to be assigned.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="principalid_go">
 <a href="#principalid_go" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
@@ -1384,7 +1386,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the identity type of the App Configuration. At this time the only allowed value is `SystemAssigned`.
+    <dd>{{% md %}}Specifies the type of Managed Service Identity that should be configured on this API Management Service. Possible values are `SystemAssigned`, `UserAssigned`, `SystemAssigned, UserAssigned` (to enable both).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identityids_nodejs">
@@ -1393,7 +1395,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A list of IDs for User Assigned Managed Identity resources to be assigned.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="principalid_nodejs">
 <a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
@@ -1423,7 +1426,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the identity type of the App Configuration. At this time the only allowed value is `SystemAssigned`.
+    <dd>{{% md %}}Specifies the type of Managed Service Identity that should be configured on this API Management Service. Possible values are `SystemAssigned`, `UserAssigned`, `SystemAssigned, UserAssigned` (to enable both).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identity_ids_python">
@@ -1432,7 +1435,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A list of IDs for User Assigned Managed Identity resources to be assigned.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="principal_id_python">
 <a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
