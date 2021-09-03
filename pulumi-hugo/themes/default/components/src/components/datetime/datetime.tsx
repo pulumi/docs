@@ -17,7 +17,7 @@ export class Datetime {
         const date = new Date(this.date);
 
         const options: Intl.DateTimeFormatOptions = {
-            timeZoneName: "short",
+            timeZoneName: "long",
             weekday: "short",
             year: "numeric",
             month: "long",

@@ -37,3 +37,29 @@
         }
     }
 }
+
+.cloud-engineering-summit-speaker-wall {
+    .sessionize-loader {
+        @apply hidden;
+    }
+
+    .sz-speakers--wall {
+        @apply flex flex-wrap list-none;
+
+        li {
+            @apply w-1/3;
+
+            img {
+                @apply rounded-full;
+            }
+        }
+    }
+}
+
+#sessionize.sessionize-wrapper .sz-speakers--wall {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-flow: row wrap;
+}
