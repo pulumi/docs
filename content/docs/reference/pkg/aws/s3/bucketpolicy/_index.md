@@ -64,7 +64,7 @@ class MyStack : Stack
                                  },
                                 { "Condition", new Dictionary<string, object?>
                                 {
-                                    { "IpAddress", new Dictionary<string, object?>
+                                    { "NotIpAddress", new Dictionary<string, object?>
                                     {
                                         { "aws:SourceIp", "8.8.8.8/32" },
                                     } },
@@ -124,7 +124,7 @@ func main() {
 								fmt.Sprintf("%v%v", bucketArn1, "/*"),
 							},
 							"Condition": map[string]interface{}{
-								"IpAddress": map[string]interface{}{
+								"NotIpAddress": map[string]interface{}{
 									"aws:SourceIp": "8.8.8.8/32",
 								},
 							},
@@ -173,7 +173,7 @@ bucket_policy = aws.s3.BucketPolicy("bucketPolicy",
                 f"{bucket_arn1}/*",
             ],
             "Condition": {
-                "IpAddress": {
+                "NotIpAddress": {
                     "aws:SourceIp": "8.8.8.8/32",
                 },
             },
@@ -208,7 +208,7 @@ const bucketPolicy = new aws.s3.BucketPolicy("bucketPolicy", {
                 `${bucketArn1}/*`,
             ],
             Condition: {
-                IpAddress: {
+                NotIpAddress: {
                     "aws:SourceIp": "8.8.8.8/32",
                 },
             },

@@ -491,7 +491,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}A list of security group IDs to associate with.
+    <dd>{{% md %}}A list of security group IDs to associate with. Conflicts with `network_interfaces.security_groups`
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -801,7 +801,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}A list of security group IDs to associate with.
+    <dd>{{% md %}}A list of security group IDs to associate with. Conflicts with `network_interfaces.security_groups`
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1111,7 +1111,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}A list of security group IDs to associate with.
+    <dd>{{% md %}}A list of security group IDs to associate with. Conflicts with `network_interfaces.security_groups`
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1421,7 +1421,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}A list of security group IDs to associate with.
+    <dd>{{% md %}}A list of security group IDs to associate with. Conflicts with `network_interfaces.security_groups`
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2082,7 +2082,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}A list of security group IDs to associate with.
+    <dd>{{% md %}}A list of security group IDs to associate with. Conflicts with `network_interfaces.security_groups`
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2419,7 +2419,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}A list of security group IDs to associate with.
+    <dd>{{% md %}}A list of security group IDs to associate with. Conflicts with `network_interfaces.security_groups`
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2756,7 +2756,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}A list of security group IDs to associate with.
+    <dd>{{% md %}}A list of security group IDs to associate with. Conflicts with `network_interfaces.security_groups`
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3093,7 +3093,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}A list of security group IDs to associate with.
+    <dd>{{% md %}}A list of security group IDs to associate with. Conflicts with `network_interfaces.security_groups`
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

@@ -533,6 +533,7 @@ const foo = new aws.route53.HealthCheck("foo", {
                 <span class="nx">regions</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
                 <span class="nx">request_interval</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
                 <span class="nx">resource_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">routing_control_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                 <span class="nx">search_string</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                 <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
                 <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
@@ -671,7 +672,7 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The protocol to use when performing health checks. Valid values are `HTTP`, `HTTPS`, `HTTP_STR_MATCH`, `HTTPS_STR_MATCH`, `TCP`, `CALCULATED` and `CLOUDWATCH_METRIC`.
+    <dd>{{% md %}}The protocol to use when performing health checks. Valid values are `HTTP`, `HTTPS`, `HTTP_STR_MATCH`, `HTTPS_STR_MATCH`, `TCP`, `CALCULATED`, `CLOUDWATCH_METRIC` and `RECOVERY_CONTROL`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="childhealththreshold_csharp">
@@ -831,6 +832,15 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
     <dd>{{% md %}}The path that you want Amazon Route 53 to request when performing health checks.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="routingcontrolarn_csharp">
+<a href="#routingcontrolarn_csharp" style="color: inherit; text-decoration: inherit;">Routing<wbr>Control<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) for the Route 53 Application Recovery Controller routing control. This is used when health check type is `RECOVERY_CONTROL`
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="searchstring_csharp">
 <a href="#searchstring_csharp" style="color: inherit; text-decoration: inherit;">Search<wbr>String</a>
 </span>
@@ -846,7 +856,7 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the health check. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+    <dd>{{% md %}}A map of tags to assign to the health check. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -859,7 +869,7 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The protocol to use when performing health checks. Valid values are `HTTP`, `HTTPS`, `HTTP_STR_MATCH`, `HTTPS_STR_MATCH`, `TCP`, `CALCULATED` and `CLOUDWATCH_METRIC`.
+    <dd>{{% md %}}The protocol to use when performing health checks. Valid values are `HTTP`, `HTTPS`, `HTTP_STR_MATCH`, `HTTPS_STR_MATCH`, `TCP`, `CALCULATED`, `CLOUDWATCH_METRIC` and `RECOVERY_CONTROL`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="childhealththreshold_go">
@@ -1019,6 +1029,15 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
     <dd>{{% md %}}The path that you want Amazon Route 53 to request when performing health checks.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="routingcontrolarn_go">
+<a href="#routingcontrolarn_go" style="color: inherit; text-decoration: inherit;">Routing<wbr>Control<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) for the Route 53 Application Recovery Controller routing control. This is used when health check type is `RECOVERY_CONTROL`
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="searchstring_go">
 <a href="#searchstring_go" style="color: inherit; text-decoration: inherit;">Search<wbr>String</a>
 </span>
@@ -1034,7 +1053,7 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the health check. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+    <dd>{{% md %}}A map of tags to assign to the health check. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1047,7 +1066,7 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The protocol to use when performing health checks. Valid values are `HTTP`, `HTTPS`, `HTTP_STR_MATCH`, `HTTPS_STR_MATCH`, `TCP`, `CALCULATED` and `CLOUDWATCH_METRIC`.
+    <dd>{{% md %}}The protocol to use when performing health checks. Valid values are `HTTP`, `HTTPS`, `HTTP_STR_MATCH`, `HTTPS_STR_MATCH`, `TCP`, `CALCULATED`, `CLOUDWATCH_METRIC` and `RECOVERY_CONTROL`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="childhealththreshold_nodejs">
@@ -1207,6 +1226,15 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
     <dd>{{% md %}}The path that you want Amazon Route 53 to request when performing health checks.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="routingcontrolarn_nodejs">
+<a href="#routingcontrolarn_nodejs" style="color: inherit; text-decoration: inherit;">routing<wbr>Control<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) for the Route 53 Application Recovery Controller routing control. This is used when health check type is `RECOVERY_CONTROL`
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="searchstring_nodejs">
 <a href="#searchstring_nodejs" style="color: inherit; text-decoration: inherit;">search<wbr>String</a>
 </span>
@@ -1222,7 +1250,7 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the health check. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+    <dd>{{% md %}}A map of tags to assign to the health check. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1235,7 +1263,7 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The protocol to use when performing health checks. Valid values are `HTTP`, `HTTPS`, `HTTP_STR_MATCH`, `HTTPS_STR_MATCH`, `TCP`, `CALCULATED` and `CLOUDWATCH_METRIC`.
+    <dd>{{% md %}}The protocol to use when performing health checks. Valid values are `HTTP`, `HTTPS`, `HTTP_STR_MATCH`, `HTTPS_STR_MATCH`, `TCP`, `CALCULATED`, `CLOUDWATCH_METRIC` and `RECOVERY_CONTROL`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="child_health_threshold_python">
@@ -1395,6 +1423,15 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
     <dd>{{% md %}}The path that you want Amazon Route 53 to request when performing health checks.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="routing_control_arn_python">
+<a href="#routing_control_arn_python" style="color: inherit; text-decoration: inherit;">routing_<wbr>control_<wbr>arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) for the Route 53 Application Recovery Controller routing control. This is used when health check type is `RECOVERY_CONTROL`
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="search_string_python">
 <a href="#search_string_python" style="color: inherit; text-decoration: inherit;">search_<wbr>string</a>
 </span>
@@ -1410,7 +1447,7 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the health check. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+    <dd>{{% md %}}A map of tags to assign to the health check. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1575,6 +1612,7 @@ Get an existing HealthCheck resource's state with the given name, ID, and option
         <span class="nx">regions</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
         <span class="nx">request_interval</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">resource_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">routing_control_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">search_string</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
         <span class="nx">tags_all</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
@@ -1857,6 +1895,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The path that you want Amazon Route 53 to request when performing health checks.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_routingcontrolarn_csharp">
+<a href="#state_routingcontrolarn_csharp" style="color: inherit; text-decoration: inherit;">Routing<wbr>Control<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) for the Route 53 Application Recovery Controller routing control. This is used when health check type is `RECOVERY_CONTROL`
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_searchstring_csharp">
 <a href="#state_searchstring_csharp" style="color: inherit; text-decoration: inherit;">Search<wbr>String</a>
 </span>
@@ -1872,7 +1919,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the health check. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+    <dd>{{% md %}}A map of tags to assign to the health check. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tagsall_csharp">
@@ -1890,7 +1937,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The protocol to use when performing health checks. Valid values are `HTTP`, `HTTPS`, `HTTP_STR_MATCH`, `HTTPS_STR_MATCH`, `TCP`, `CALCULATED` and `CLOUDWATCH_METRIC`.
+    <dd>{{% md %}}The protocol to use when performing health checks. Valid values are `HTTP`, `HTTPS`, `HTTP_STR_MATCH`, `HTTPS_STR_MATCH`, `TCP`, `CALCULATED`, `CLOUDWATCH_METRIC` and `RECOVERY_CONTROL`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2063,6 +2110,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The path that you want Amazon Route 53 to request when performing health checks.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_routingcontrolarn_go">
+<a href="#state_routingcontrolarn_go" style="color: inherit; text-decoration: inherit;">Routing<wbr>Control<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) for the Route 53 Application Recovery Controller routing control. This is used when health check type is `RECOVERY_CONTROL`
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_searchstring_go">
 <a href="#state_searchstring_go" style="color: inherit; text-decoration: inherit;">Search<wbr>String</a>
 </span>
@@ -2078,7 +2134,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the health check. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+    <dd>{{% md %}}A map of tags to assign to the health check. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tagsall_go">
@@ -2096,7 +2152,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The protocol to use when performing health checks. Valid values are `HTTP`, `HTTPS`, `HTTP_STR_MATCH`, `HTTPS_STR_MATCH`, `TCP`, `CALCULATED` and `CLOUDWATCH_METRIC`.
+    <dd>{{% md %}}The protocol to use when performing health checks. Valid values are `HTTP`, `HTTPS`, `HTTP_STR_MATCH`, `HTTPS_STR_MATCH`, `TCP`, `CALCULATED`, `CLOUDWATCH_METRIC` and `RECOVERY_CONTROL`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2269,6 +2325,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The path that you want Amazon Route 53 to request when performing health checks.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_routingcontrolarn_nodejs">
+<a href="#state_routingcontrolarn_nodejs" style="color: inherit; text-decoration: inherit;">routing<wbr>Control<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) for the Route 53 Application Recovery Controller routing control. This is used when health check type is `RECOVERY_CONTROL`
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_searchstring_nodejs">
 <a href="#state_searchstring_nodejs" style="color: inherit; text-decoration: inherit;">search<wbr>String</a>
 </span>
@@ -2284,7 +2349,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the health check. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+    <dd>{{% md %}}A map of tags to assign to the health check. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tagsall_nodejs">
@@ -2302,7 +2367,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The protocol to use when performing health checks. Valid values are `HTTP`, `HTTPS`, `HTTP_STR_MATCH`, `HTTPS_STR_MATCH`, `TCP`, `CALCULATED` and `CLOUDWATCH_METRIC`.
+    <dd>{{% md %}}The protocol to use when performing health checks. Valid values are `HTTP`, `HTTPS`, `HTTP_STR_MATCH`, `HTTPS_STR_MATCH`, `TCP`, `CALCULATED`, `CLOUDWATCH_METRIC` and `RECOVERY_CONTROL`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2475,6 +2540,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The path that you want Amazon Route 53 to request when performing health checks.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_routing_control_arn_python">
+<a href="#state_routing_control_arn_python" style="color: inherit; text-decoration: inherit;">routing_<wbr>control_<wbr>arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) for the Route 53 Application Recovery Controller routing control. This is used when health check type is `RECOVERY_CONTROL`
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_search_string_python">
 <a href="#state_search_string_python" style="color: inherit; text-decoration: inherit;">search_<wbr>string</a>
 </span>
@@ -2490,7 +2564,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the health check. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+    <dd>{{% md %}}A map of tags to assign to the health check. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_all_python">
@@ -2508,7 +2582,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The protocol to use when performing health checks. Valid values are `HTTP`, `HTTPS`, `HTTP_STR_MATCH`, `HTTPS_STR_MATCH`, `TCP`, `CALCULATED` and `CLOUDWATCH_METRIC`.
+    <dd>{{% md %}}The protocol to use when performing health checks. Valid values are `HTTP`, `HTTPS`, `HTTP_STR_MATCH`, `HTTPS_STR_MATCH`, `TCP`, `CALCULATED`, `CLOUDWATCH_METRIC` and `RECOVERY_CONTROL`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

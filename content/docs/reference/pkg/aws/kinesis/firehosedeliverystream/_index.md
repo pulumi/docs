@@ -252,7 +252,7 @@ const extendedS3Stream = new aws.kinesis.FirehoseDeliveryStream("extendedS3Strea
 
 
 
-### S3 Destination
+### S3 Destination (deprecated)
 
 
 {{< example csharp >}}

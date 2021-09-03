@@ -603,6 +603,15 @@ The following output properties are available:
     <dd>{{% md %}}The type of the Instance.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="ipv6addresses_csharp">
+<a href="#ipv6addresses_csharp" style="color: inherit; text-decoration: inherit;">Ipv6Addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The IPv6 addresses associated to the Instance, if applicable. **NOTE**: Unlike the IPv4 address, this doesn't change if you attach an EIP to the instance.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="keyname_csharp">
 <a href="#keyname_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Name</a>
 </span>
@@ -974,6 +983,15 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the Instance.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="ipv6addresses_go">
+<a href="#ipv6addresses_go" style="color: inherit; text-decoration: inherit;">Ipv6Addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The IPv6 addresses associated to the Instance, if applicable. **NOTE**: Unlike the IPv4 address, this doesn't change if you attach an EIP to the instance.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="keyname_go">
@@ -1349,6 +1367,15 @@ is only available if you've enabled DNS hostnames for your VPC.
     <dd>{{% md %}}The type of the Instance.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="ipv6addresses_nodejs">
+<a href="#ipv6addresses_nodejs" style="color: inherit; text-decoration: inherit;">ipv6Addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The IPv6 addresses associated to the Instance, if applicable. **NOTE**: Unlike the IPv4 address, this doesn't change if you attach an EIP to the instance.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="keyname_nodejs">
 <a href="#keyname_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Name</a>
 </span>
@@ -1720,6 +1747,15 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the Instance.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="ipv6_addresses_python">
+<a href="#ipv6_addresses_python" style="color: inherit; text-decoration: inherit;">ipv6_<wbr>addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}The IPv6 addresses associated to the Instance, if applicable. **NOTE**: Unlike the IPv4 address, this doesn't change if you attach an EIP to the instance.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="key_name_python">

@@ -215,6 +215,7 @@ const exampleService = new aws.servicediscovery.Service("exampleService", {
             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
             <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">dns_config</span><span class="p">:</span> <span class="nx">Optional[ServiceDnsConfigArgs]</span> = None<span class="p">,</span>
+            <span class="nx">force_destroy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
             <span class="nx">health_check_config</span><span class="p">:</span> <span class="nx">Optional[ServiceHealthCheckConfigArgs]</span> = None<span class="p">,</span>
             <span class="nx">health_check_custom_config</span><span class="p">:</span> <span class="nx">Optional[ServiceHealthCheckCustomConfigArgs]</span> = None<span class="p">,</span>
             <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -367,6 +368,15 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}A complex type that contains information about the resource record sets that you want Amazon Route 53 to create when you register an instance.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="forcedestroy_csharp">
+<a href="#forcedestroy_csharp" style="color: inherit; text-decoration: inherit;">Force<wbr>Destroy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}A boolean that indicates all instances should be deleted from the service so that the service can be destroyed without error. These instances are not recoverable.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="healthcheckconfig_csharp">
 <a href="#healthcheckconfig_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Config</a>
 </span>
@@ -432,6 +442,15 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#servicednsconfig">Service<wbr>Dns<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A complex type that contains information about the resource record sets that you want Amazon Route 53 to create when you register an instance.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="forcedestroy_go">
+<a href="#forcedestroy_go" style="color: inherit; text-decoration: inherit;">Force<wbr>Destroy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}A boolean that indicates all instances should be deleted from the service so that the service can be destroyed without error. These instances are not recoverable.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="healthcheckconfig_go">
@@ -501,6 +520,15 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}A complex type that contains information about the resource record sets that you want Amazon Route 53 to create when you register an instance.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="forcedestroy_nodejs">
+<a href="#forcedestroy_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Destroy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}A boolean that indicates all instances should be deleted from the service so that the service can be destroyed without error. These instances are not recoverable.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="healthcheckconfig_nodejs">
 <a href="#healthcheckconfig_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Check<wbr>Config</a>
 </span>
@@ -566,6 +594,15 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#servicednsconfig">Service<wbr>Dns<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A complex type that contains information about the resource record sets that you want Amazon Route 53 to create when you register an instance.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="force_destroy_python">
+<a href="#force_destroy_python" style="color: inherit; text-decoration: inherit;">force_<wbr>destroy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}A boolean that indicates all instances should be deleted from the service so that the service can be destroyed without error. These instances are not recoverable.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="health_check_config_python">
@@ -760,6 +797,7 @@ Get an existing Service resource's state with the given name, ID, and optional e
         <span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">dns_config</span><span class="p">:</span> <span class="nx">Optional[ServiceDnsConfigArgs]</span> = None<span class="p">,</span>
+        <span class="nx">force_destroy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">health_check_config</span><span class="p">:</span> <span class="nx">Optional[ServiceHealthCheckConfigArgs]</span> = None<span class="p">,</span>
         <span class="nx">health_check_custom_config</span><span class="p">:</span> <span class="nx">Optional[ServiceHealthCheckCustomConfigArgs]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -905,6 +943,15 @@ The following state arguments are supported:
     <dd>{{% md %}}A complex type that contains information about the resource record sets that you want Amazon Route 53 to create when you register an instance.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_forcedestroy_csharp">
+<a href="#state_forcedestroy_csharp" style="color: inherit; text-decoration: inherit;">Force<wbr>Destroy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}A boolean that indicates all instances should be deleted from the service so that the service can be destroyed without error. These instances are not recoverable.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_healthcheckconfig_csharp">
 <a href="#state_healthcheckconfig_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Config</a>
 </span>
@@ -988,6 +1035,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#servicednsconfig">Service<wbr>Dns<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A complex type that contains information about the resource record sets that you want Amazon Route 53 to create when you register an instance.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_forcedestroy_go">
+<a href="#state_forcedestroy_go" style="color: inherit; text-decoration: inherit;">Force<wbr>Destroy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}A boolean that indicates all instances should be deleted from the service so that the service can be destroyed without error. These instances are not recoverable.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_healthcheckconfig_go">
@@ -1075,6 +1131,15 @@ The following state arguments are supported:
     <dd>{{% md %}}A complex type that contains information about the resource record sets that you want Amazon Route 53 to create when you register an instance.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_forcedestroy_nodejs">
+<a href="#state_forcedestroy_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Destroy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}A boolean that indicates all instances should be deleted from the service so that the service can be destroyed without error. These instances are not recoverable.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_healthcheckconfig_nodejs">
 <a href="#state_healthcheckconfig_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Check<wbr>Config</a>
 </span>
@@ -1158,6 +1223,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#servicednsconfig">Service<wbr>Dns<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A complex type that contains information about the resource record sets that you want Amazon Route 53 to create when you register an instance.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_force_destroy_python">
+<a href="#state_force_destroy_python" style="color: inherit; text-decoration: inherit;">force_<wbr>destroy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}A boolean that indicates all instances should be deleted from the service so that the service can be destroyed without error. These instances are not recoverable.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_health_check_config_python">
