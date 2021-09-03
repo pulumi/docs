@@ -31,6 +31,8 @@ A Pulumi package for creating and managing consul resources.
     <li><a href="keys" title="Keys"><span class="symbol resource"></span>Keys</a></li>
     <li><a href="license" title="License"><span class="symbol resource"></span>License</a></li>
     <li><a href="namespace" title="Namespace"><span class="symbol resource"></span>Namespace</a></li>
+    <li><a href="namespacepolicyattachment" title="NamespacePolicyAttachment"><span class="symbol resource"></span>NamespacePolicyAttachment</a></li>
+    <li><a href="namespaceroleattachment" title="NamespaceRoleAttachment"><span class="symbol resource"></span>NamespaceRoleAttachment</a></li>
     <li><a href="networkarea" title="NetworkArea"><span class="symbol resource"></span>NetworkArea</a></li>
     <li><a href="node" title="Node"><span class="symbol resource"></span>Node</a></li>
     <li><a href="preparedquery" title="PreparedQuery"><span class="symbol resource"></span>PreparedQuery</a></li>
@@ -70,6 +72,6 @@ A Pulumi package for creating and managing consul resources.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`consul` Terraform Provider](https://github.com/hashicorp/terraform-provider-consul).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>3.2.0</dd>
+	<dd>3.3.0</dd>
 </dl>
 
