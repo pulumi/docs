@@ -149,7 +149,7 @@ meta_desc: "Documentation for the postgresql.Schema resource with examples, inpu
 
 ## Schema Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Architecture and Concepts docs.
 
 ### Inputs
 
@@ -270,7 +270,7 @@ database instance where it is configured.
 <a href="#policies_go" style="color: inherit; text-decoration: inherit;">Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#schemapolicy">[]Schema<wbr>Policy</a></span>
+        <span class="property-type"><a href="#schemapolicy">[]Schema<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Can be specified multiple times for each policy.  Each
 policy block supports fields documented below.
@@ -696,7 +696,7 @@ database instance where it is configured.
 <a href="#state_policies_go" style="color: inherit; text-decoration: inherit;">Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#schemapolicy">[]Schema<wbr>Policy</a></span>
+        <span class="property-type"><a href="#schemapolicy">[]Schema<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Can be specified multiple times for each policy.  Each
 policy block supports fields documented below.

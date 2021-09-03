@@ -76,6 +76,7 @@ func main() {
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Extension</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+              <span class="nx">create_cascade</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
               <span class="nx">database</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
               <span class="nx">drop_cascade</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
               <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -199,7 +200,7 @@ func main() {
 
 ## Extension Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Architecture and Concepts docs.
 
 ### Inputs
 
@@ -209,6 +210,15 @@ The Extension resource accepts the following [input]({{< relref "/docs/intro/con
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="createcascade_csharp">
+<a href="#createcascade_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Cascade</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}When true, will also create any extensions that this extension depends on that are not already installed. (Default: false)
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="database_csharp">
 <a href="#database_csharp" style="color: inherit; text-decoration: inherit;">Database</a>
@@ -259,6 +269,15 @@ The Extension resource accepts the following [input]({{< relref "/docs/intro/con
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="createcascade_go">
+<a href="#createcascade_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Cascade</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}When true, will also create any extensions that this extension depends on that are not already installed. (Default: false)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="database_go">
 <a href="#database_go" style="color: inherit; text-decoration: inherit;">Database</a>
 </span>
@@ -308,6 +327,15 @@ The Extension resource accepts the following [input]({{< relref "/docs/intro/con
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="createcascade_nodejs">
+<a href="#createcascade_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Cascade</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}When true, will also create any extensions that this extension depends on that are not already installed. (Default: false)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="database_nodejs">
 <a href="#database_nodejs" style="color: inherit; text-decoration: inherit;">database</a>
 </span>
@@ -356,6 +384,15 @@ The Extension resource accepts the following [input]({{< relref "/docs/intro/con
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="create_cascade_python">
+<a href="#create_cascade_python" style="color: inherit; text-decoration: inherit;">create_<wbr>cascade</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}When true, will also create any extensions that this extension depends on that are not already installed. (Default: false)
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="database_python">
 <a href="#database_python" style="color: inherit; text-decoration: inherit;">database</a>
@@ -474,6 +511,7 @@ Get an existing Extension resource's state with the given name, ID, and optional
 <span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">create_cascade</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">database</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">drop_cascade</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -591,6 +629,15 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="state_createcascade_csharp">
+<a href="#state_createcascade_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Cascade</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}When true, will also create any extensions that this extension depends on that are not already installed. (Default: false)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_database_csharp">
 <a href="#state_database_csharp" style="color: inherit; text-decoration: inherit;">Database</a>
 </span>
@@ -639,6 +686,15 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="state_createcascade_go">
+<a href="#state_createcascade_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Cascade</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}When true, will also create any extensions that this extension depends on that are not already installed. (Default: false)
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_database_go">
 <a href="#state_database_go" style="color: inherit; text-decoration: inherit;">Database</a>
@@ -689,6 +745,15 @@ The following state arguments are supported:
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="state_createcascade_nodejs">
+<a href="#state_createcascade_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Cascade</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}When true, will also create any extensions that this extension depends on that are not already installed. (Default: false)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_database_nodejs">
 <a href="#state_database_nodejs" style="color: inherit; text-decoration: inherit;">database</a>
 </span>
@@ -737,6 +802,15 @@ The following state arguments are supported:
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="state_create_cascade_python">
+<a href="#state_create_cascade_python" style="color: inherit; text-decoration: inherit;">create_<wbr>cascade</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}When true, will also create any extensions that this extension depends on that are not already installed. (Default: false)
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_database_python">
 <a href="#state_database_python" style="color: inherit; text-decoration: inherit;">database</a>

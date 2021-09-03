@@ -20,7 +20,9 @@ A Pulumi package for creating and managing postgresql cloud resources.
     <li><a href="extension" title="Extension"><span class="symbol resource"></span>Extension</a></li>
     <li><a href="grant" title="Grant"><span class="symbol resource"></span>Grant</a></li>
     <li><a href="grantrole" title="GrantRole"><span class="symbol resource"></span>GrantRole</a></li>
+    <li><a href="physicalreplicationslot" title="PhysicalReplicationSlot"><span class="symbol resource"></span>PhysicalReplicationSlot</a></li>
     <li><a href="provider" title="Provider"><span class="symbol resource"></span>Provider</a></li>
+    <li><a href="replicationslot" title="ReplicationSlot"><span class="symbol resource"></span>ReplicationSlot</a></li>
     <li><a href="role" title="Role"><span class="symbol resource"></span>Role</a></li>
     <li><a href="schema" title="Schema"><span class="symbol resource"></span>Schema</a></li>
 </ul>
@@ -34,6 +36,6 @@ A Pulumi package for creating and managing postgresql cloud resources.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`postgresql` Terraform Provider](https://github.com/cyrilgdn/terraform-provider-postgresql).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>3.1.0</dd>
+	<dd>3.2.0</dd>
 </dl>
 
