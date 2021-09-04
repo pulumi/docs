@@ -30,11 +30,17 @@ The provider type for the kubernetes package.
              <span class="nx">cluster</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">context</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">enable_dry_run</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+             <span class="nx">helm_driver</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">helm_plugins_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">helm_registry_config_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">helm_repository_cache</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">helm_repository_config_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">kubeconfig</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">namespace</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">render_yaml_to_directory</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">suppress_deprecation_warnings</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
-             <span class="nx">suppress_helm_hook_warnings</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span>
+             <span class="nx">suppress_helm_hook_warnings</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+             <span class="nx">suppress_helm_release_beta_warning</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Provider</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
              <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Optional[ProviderArgs]</a></span> = None<span class="p">,</span>
@@ -189,6 +195,46 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
     <dd>{{% md %}}BETA FEATURE - If present and set to true, enable server-side diff calculations.
 This feature is in developer preview, and is disabled by default. It can also be sourced from the following environment variable: `PULUMI_K8S_ENABLE_DRY_RUN`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="helmdriver_csharp">
+<a href="#helmdriver_csharp" style="color: inherit; text-decoration: inherit;">Helm<wbr>Driver</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}BETA FEATURE - Used for supporting Helm Release resource (Beta). The backend storage driver for Helm. Values are: configmap, secret, memory, sql. It can also be sourced from the following environment variable: `PULUMI_K8S_HELM_DRIVER`{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="helmpluginspath_csharp">
+<a href="#helmpluginspath_csharp" style="color: inherit; text-decoration: inherit;">Helm<wbr>Plugins<wbr>Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}BETA FEATURE - Used for supporting Helm Release resource (Beta). The path to the helm plugins directory. It can also be sourced from the following environment variable: `PULUMI_K8S_HELM_PLUGINS_PATH`{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="helmregistryconfigpath_csharp">
+<a href="#helmregistryconfigpath_csharp" style="color: inherit; text-decoration: inherit;">Helm<wbr>Registry<wbr>Config<wbr>Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}BETA FEATURE - Used for supporting Helm Release resource (Beta). The path to the registry config file. It can also be sourced from the following environment variable: `PULUMI_K8S_HELM_REGISTRY_CONFIG_PATH`{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="helmrepositorycache_csharp">
+<a href="#helmrepositorycache_csharp" style="color: inherit; text-decoration: inherit;">Helm<wbr>Repository<wbr>Cache</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}BETA FEATURE - Used for supporting Helm Release resource (Beta). The path to the file containing cached repository indexes. It can also be sourced from the following environment variable: `PULUMI_K8s_HELM_REPOSITORY_CACHE`{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="helmrepositoryconfigpath_csharp">
+<a href="#helmrepositoryconfigpath_csharp" style="color: inherit; text-decoration: inherit;">Helm<wbr>Repository<wbr>Config<wbr>Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}BETA FEATURE - Used for supporting Helm Release resource (Beta). The path to the file containing repository names and URLs. It can also be sourced from the following environment variable: `PULUMI_K8S_HELM_REPOSITORY_CONFIG_PATH`{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="kubeconfig_csharp">
 <a href="#kubeconfig_csharp" style="color: inherit; text-decoration: inherit;">Kube<wbr>Config</a>
 </span>
@@ -239,7 +285,15 @@ used in these resources will be rendered in plaintext to the resulting YAML.{{% 
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If present and set to true, suppress unsupported Helm hook warnings from the CLI. It can also be sourced from the following environment variable: `PULUMI_K8S_SUPPRESS_HELM_HOOK_WARNINGS`{{% /md %}}</dd></dl>
+    <dd>{{% md %}}If present and set to true, suppress unsupported Helm hook warnings from the CLI. It can also be sourced from the following environment variable: `PULUMI_K8S_SUPPRESS_HELM_HOOK_WARNINGS`{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="suppresshelmreleasebetawarning_csharp">
+<a href="#suppresshelmreleasebetawarning_csharp" style="color: inherit; text-decoration: inherit;">Suppress<wbr>Helm<wbr>Release<wbr>Beta<wbr>Warning</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}While Helm Release provider is in beta, by default 'pulumi up' will log a warning if the resource is used. If present and set to "true", this warning is omitted. It can also be sourced from the following environment variable: `PULUMI_K8S_SUPPRESS_HELM_RELEASE_BETA_WARNING`{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -269,6 +323,46 @@ used in these resources will be rendered in plaintext to the resulting YAML.{{% 
     </dt>
     <dd>{{% md %}}BETA FEATURE - If present and set to true, enable server-side diff calculations.
 This feature is in developer preview, and is disabled by default. It can also be sourced from the following environment variable: `PULUMI_K8S_ENABLE_DRY_RUN`{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="helmdriver_go">
+<a href="#helmdriver_go" style="color: inherit; text-decoration: inherit;">Helm<wbr>Driver</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}BETA FEATURE - Used for supporting Helm Release resource (Beta). The backend storage driver for Helm. Values are: configmap, secret, memory, sql. It can also be sourced from the following environment variable: `PULUMI_K8S_HELM_DRIVER`{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="helmpluginspath_go">
+<a href="#helmpluginspath_go" style="color: inherit; text-decoration: inherit;">Helm<wbr>Plugins<wbr>Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}BETA FEATURE - Used for supporting Helm Release resource (Beta). The path to the helm plugins directory. It can also be sourced from the following environment variable: `PULUMI_K8S_HELM_PLUGINS_PATH`{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="helmregistryconfigpath_go">
+<a href="#helmregistryconfigpath_go" style="color: inherit; text-decoration: inherit;">Helm<wbr>Registry<wbr>Config<wbr>Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}BETA FEATURE - Used for supporting Helm Release resource (Beta). The path to the registry config file. It can also be sourced from the following environment variable: `PULUMI_K8S_HELM_REGISTRY_CONFIG_PATH`{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="helmrepositorycache_go">
+<a href="#helmrepositorycache_go" style="color: inherit; text-decoration: inherit;">Helm<wbr>Repository<wbr>Cache</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}BETA FEATURE - Used for supporting Helm Release resource (Beta). The path to the file containing cached repository indexes. It can also be sourced from the following environment variable: `PULUMI_K8s_HELM_REPOSITORY_CACHE`{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="helmrepositoryconfigpath_go">
+<a href="#helmrepositoryconfigpath_go" style="color: inherit; text-decoration: inherit;">Helm<wbr>Repository<wbr>Config<wbr>Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}BETA FEATURE - Used for supporting Helm Release resource (Beta). The path to the file containing repository names and URLs. It can also be sourced from the following environment variable: `PULUMI_K8S_HELM_REPOSITORY_CONFIG_PATH`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kubeconfig_go">
 <a href="#kubeconfig_go" style="color: inherit; text-decoration: inherit;">Kubeconfig</a>
@@ -320,7 +414,15 @@ used in these resources will be rendered in plaintext to the resulting YAML.{{% 
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If present and set to true, suppress unsupported Helm hook warnings from the CLI. It can also be sourced from the following environment variable: `PULUMI_K8S_SUPPRESS_HELM_HOOK_WARNINGS`{{% /md %}}</dd></dl>
+    <dd>{{% md %}}If present and set to true, suppress unsupported Helm hook warnings from the CLI. It can also be sourced from the following environment variable: `PULUMI_K8S_SUPPRESS_HELM_HOOK_WARNINGS`{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="suppresshelmreleasebetawarning_go">
+<a href="#suppresshelmreleasebetawarning_go" style="color: inherit; text-decoration: inherit;">Suppress<wbr>Helm<wbr>Release<wbr>Beta<wbr>Warning</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}While Helm Release provider is in beta, by default 'pulumi up' will log a warning if the resource is used. If present and set to "true", this warning is omitted. It can also be sourced from the following environment variable: `PULUMI_K8S_SUPPRESS_HELM_RELEASE_BETA_WARNING`{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -350,6 +452,46 @@ used in these resources will be rendered in plaintext to the resulting YAML.{{% 
     </dt>
     <dd>{{% md %}}BETA FEATURE - If present and set to true, enable server-side diff calculations.
 This feature is in developer preview, and is disabled by default. It can also be sourced from the following environment variable: `PULUMI_K8S_ENABLE_DRY_RUN`{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="helmdriver_nodejs">
+<a href="#helmdriver_nodejs" style="color: inherit; text-decoration: inherit;">helm<wbr>Driver</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}BETA FEATURE - Used for supporting Helm Release resource (Beta). The backend storage driver for Helm. Values are: configmap, secret, memory, sql. It can also be sourced from the following environment variable: `PULUMI_K8S_HELM_DRIVER`{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="helmpluginspath_nodejs">
+<a href="#helmpluginspath_nodejs" style="color: inherit; text-decoration: inherit;">helm<wbr>Plugins<wbr>Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}BETA FEATURE - Used for supporting Helm Release resource (Beta). The path to the helm plugins directory. It can also be sourced from the following environment variable: `PULUMI_K8S_HELM_PLUGINS_PATH`{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="helmregistryconfigpath_nodejs">
+<a href="#helmregistryconfigpath_nodejs" style="color: inherit; text-decoration: inherit;">helm<wbr>Registry<wbr>Config<wbr>Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}BETA FEATURE - Used for supporting Helm Release resource (Beta). The path to the registry config file. It can also be sourced from the following environment variable: `PULUMI_K8S_HELM_REGISTRY_CONFIG_PATH`{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="helmrepositorycache_nodejs">
+<a href="#helmrepositorycache_nodejs" style="color: inherit; text-decoration: inherit;">helm<wbr>Repository<wbr>Cache</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}BETA FEATURE - Used for supporting Helm Release resource (Beta). The path to the file containing cached repository indexes. It can also be sourced from the following environment variable: `PULUMI_K8s_HELM_REPOSITORY_CACHE`{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="helmrepositoryconfigpath_nodejs">
+<a href="#helmrepositoryconfigpath_nodejs" style="color: inherit; text-decoration: inherit;">helm<wbr>Repository<wbr>Config<wbr>Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}BETA FEATURE - Used for supporting Helm Release resource (Beta). The path to the file containing repository names and URLs. It can also be sourced from the following environment variable: `PULUMI_K8S_HELM_REPOSITORY_CONFIG_PATH`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kubeconfig_nodejs">
 <a href="#kubeconfig_nodejs" style="color: inherit; text-decoration: inherit;">kubeconfig</a>
@@ -401,7 +543,15 @@ used in these resources will be rendered in plaintext to the resulting YAML.{{% 
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}If present and set to true, suppress unsupported Helm hook warnings from the CLI. It can also be sourced from the following environment variable: `PULUMI_K8S_SUPPRESS_HELM_HOOK_WARNINGS`{{% /md %}}</dd></dl>
+    <dd>{{% md %}}If present and set to true, suppress unsupported Helm hook warnings from the CLI. It can also be sourced from the following environment variable: `PULUMI_K8S_SUPPRESS_HELM_HOOK_WARNINGS`{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="suppresshelmreleasebetawarning_nodejs">
+<a href="#suppresshelmreleasebetawarning_nodejs" style="color: inherit; text-decoration: inherit;">suppress<wbr>Helm<wbr>Release<wbr>Beta<wbr>Warning</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}While Helm Release provider is in beta, by default 'pulumi up' will log a warning if the resource is used. If present and set to "true", this warning is omitted. It can also be sourced from the following environment variable: `PULUMI_K8S_SUPPRESS_HELM_RELEASE_BETA_WARNING`{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -431,6 +581,46 @@ used in these resources will be rendered in plaintext to the resulting YAML.{{% 
     </dt>
     <dd>{{% md %}}BETA FEATURE - If present and set to true, enable server-side diff calculations.
 This feature is in developer preview, and is disabled by default. It can also be sourced from the following environment variable: `PULUMI_K8S_ENABLE_DRY_RUN`{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="helm_driver_python">
+<a href="#helm_driver_python" style="color: inherit; text-decoration: inherit;">helm_<wbr>driver</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}BETA FEATURE - Used for supporting Helm Release resource (Beta). The backend storage driver for Helm. Values are: configmap, secret, memory, sql. It can also be sourced from the following environment variable: `PULUMI_K8S_HELM_DRIVER`{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="helm_plugins_path_python">
+<a href="#helm_plugins_path_python" style="color: inherit; text-decoration: inherit;">helm_<wbr>plugins_<wbr>path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}BETA FEATURE - Used for supporting Helm Release resource (Beta). The path to the helm plugins directory. It can also be sourced from the following environment variable: `PULUMI_K8S_HELM_PLUGINS_PATH`{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="helm_registry_config_path_python">
+<a href="#helm_registry_config_path_python" style="color: inherit; text-decoration: inherit;">helm_<wbr>registry_<wbr>config_<wbr>path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}BETA FEATURE - Used for supporting Helm Release resource (Beta). The path to the registry config file. It can also be sourced from the following environment variable: `PULUMI_K8S_HELM_REGISTRY_CONFIG_PATH`{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="helm_repository_cache_python">
+<a href="#helm_repository_cache_python" style="color: inherit; text-decoration: inherit;">helm_<wbr>repository_<wbr>cache</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}BETA FEATURE - Used for supporting Helm Release resource (Beta). The path to the file containing cached repository indexes. It can also be sourced from the following environment variable: `PULUMI_K8s_HELM_REPOSITORY_CACHE`{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="helm_repository_config_path_python">
+<a href="#helm_repository_config_path_python" style="color: inherit; text-decoration: inherit;">helm_<wbr>repository_<wbr>config_<wbr>path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}BETA FEATURE - Used for supporting Helm Release resource (Beta). The path to the file containing repository names and URLs. It can also be sourced from the following environment variable: `PULUMI_K8S_HELM_REPOSITORY_CONFIG_PATH`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kubeconfig_python">
 <a href="#kubeconfig_python" style="color: inherit; text-decoration: inherit;">kubeconfig</a>
@@ -482,7 +672,15 @@ used in these resources will be rendered in plaintext to the resulting YAML.{{% 
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If present and set to true, suppress unsupported Helm hook warnings from the CLI. It can also be sourced from the following environment variable: `PULUMI_K8S_SUPPRESS_HELM_HOOK_WARNINGS`{{% /md %}}</dd></dl>
+    <dd>{{% md %}}If present and set to true, suppress unsupported Helm hook warnings from the CLI. It can also be sourced from the following environment variable: `PULUMI_K8S_SUPPRESS_HELM_HOOK_WARNINGS`{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="suppress_helm_release_beta_warning_python">
+<a href="#suppress_helm_release_beta_warning_python" style="color: inherit; text-decoration: inherit;">suppress_<wbr>helm_<wbr>release_<wbr>beta_<wbr>warning</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}While Helm Release provider is in beta, by default 'pulumi up' will log a warning if the resource is used. If present and set to "true", this warning is omitted. It can also be sourced from the following environment variable: `PULUMI_K8S_SUPPRESS_HELM_RELEASE_BETA_WARNING`{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

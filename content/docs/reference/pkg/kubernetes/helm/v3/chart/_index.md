@@ -1,8 +1,8 @@
 
 ---
 title: "Chart"
-title_tag: "kubernetes.helm/v3.Chart"
-meta_desc: "Documentation for the kubernetes.helm/v3.Chart resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "kubernetes.helm.sh/v3.Chart"
+meta_desc: "Documentation for the kubernetes.helm.sh/v3.Chart resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -730,11 +730,9 @@ const nginxIngress = new k8s.helm.v3.Chart("nginx-ingress", {
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Chart</span><span class="p">(</span><span class="nx">config</span><span class="p">,</span>
-          <span class="nx">opts</span>=None<span class="p">)</span>
+<span class="k">def </span><span class="nx">Chart</span><span class="p">(</span><span class="p">)</span>
 <span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Chart</span><span class="p">(</span><span class="nx">config</span><span class="p">,</span>
-          <span class="nx">opts</span>=None<span class="p">)</span></code></pre></div>
+<span class="k">def </span><span class="nx">Chart</span><span class="p">(</span><span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -771,19 +769,7 @@ const nginxIngress = new k8s.helm.v3.Chart("nginx-ingress", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
-        <span>config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"></span>
-    </dt>
-    <dd></dd><dt
-        class="property-required" title="Required">
-        <span>opts</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"></span>
-    </dt>
-    <dd></dd></dl>
+<dl class="resources-properties"></dl>
 
 {{% /choosable %}}
 
@@ -1032,7 +1018,7 @@ Required if specifying `ChartOpts` for a remote chart.{{% /md %}}</dd><dt class=
 <a href="#fetchopts_nodejs" style="color: inherit; text-decoration: inherit;">fetch<wbr>Opts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fetchopts">Fetch<wbr>Opts<wbr>Args</a></span>
+        <span class="property-type"><a href="#fetchopts">helm.sh.v3.<wbr>Fetch<wbr>Opts<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Additional options to customize the fetching of the Helm chart.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
