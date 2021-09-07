@@ -46,14 +46,18 @@ A Pulumi package for creating and managing Cloudflare cloud resources.
     <li><a href="logpullretention" title="LogpullRetention"><span class="symbol resource"></span>LogpullRetention</a></li>
     <li><a href="logpushjob" title="LogpushJob"><span class="symbol resource"></span>LogpushJob</a></li>
     <li><a href="magicfirewallruleset" title="MagicFirewallRuleset"><span class="symbol resource"></span>MagicFirewallRuleset</a></li>
+    <li><a href="notificationpolicy" title="NotificationPolicy"><span class="symbol resource"></span>NotificationPolicy</a></li>
+    <li><a href="notificationpolicywebhooks" title="NotificationPolicyWebhooks"><span class="symbol resource"></span>NotificationPolicyWebhooks</a></li>
     <li><a href="origincacertificate" title="OriginCaCertificate"><span class="symbol resource"></span>OriginCaCertificate</a></li>
     <li><a href="pagerule" title="PageRule"><span class="symbol resource"></span>PageRule</a></li>
     <li><a href="provider" title="Provider"><span class="symbol resource"></span>Provider</a></li>
     <li><a href="ratelimit" title="RateLimit"><span class="symbol resource"></span>RateLimit</a></li>
     <li><a href="record" title="Record"><span class="symbol resource"></span>Record</a></li>
+    <li><a href="ruleset" title="Ruleset"><span class="symbol resource"></span>Ruleset</a></li>
     <li><a href="spectrumapplication" title="SpectrumApplication"><span class="symbol resource"></span>SpectrumApplication</a></li>
     <li><a href="staticroute" title="StaticRoute"><span class="symbol resource"></span>StaticRoute</a></li>
     <li><a href="teamslist" title="TeamsList"><span class="symbol resource"></span>TeamsList</a></li>
+    <li><a href="teamslocation" title="TeamsLocation"><span class="symbol resource"></span>TeamsLocation</a></li>
     <li><a href="wafgroup" title="WafGroup"><span class="symbol resource"></span>WafGroup</a></li>
     <li><a href="wafoverride" title="WafOverride"><span class="symbol resource"></span>WafOverride</a></li>
     <li><a href="wafpackage" title="WafPackage"><span class="symbol resource"></span>WafPackage</a></li>
@@ -74,6 +78,7 @@ A Pulumi package for creating and managing Cloudflare cloud resources.
 <ul class="api">
     <li><a href="getapitokenpermissiongroups" title="GetApiTokenPermissionGroups"><span class="symbol function"></span>GetApiTokenPermissionGroups</a></li>
     <li><a href="getipranges" title="GetIpRanges"><span class="symbol function"></span>GetIpRanges</a></li>
+    <li><a href="getorigincarootcertificate" title="GetOriginCaRootCertificate"><span class="symbol function"></span>GetOriginCaRootCertificate</a></li>
     <li><a href="getwafgroups" title="GetWafGroups"><span class="symbol function"></span>GetWafGroups</a></li>
     <li><a href="getwafpackages" title="GetWafPackages"><span class="symbol function"></span>GetWafPackages</a></li>
     <li><a href="getwafrules" title="GetWafRules"><span class="symbol function"></span>GetWafRules</a></li>
@@ -90,6 +95,6 @@ A Pulumi package for creating and managing Cloudflare cloud resources.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`cloudflare` Terraform Provider](https://github.com/cloudflare/terraform-provider-cloudflare).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>3.4.0</dd>
+	<dd>3.5.0</dd>
 </dl>
 

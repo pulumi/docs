@@ -146,6 +146,7 @@ const example = new cloudflare.WaitingRoom("example", {
                 <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                 <span class="nx">disable_session_renewal</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                 <span class="nx">host</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">json_response_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                 <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                 <span class="nx">new_users_per_minute</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
                 <span class="nx">path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -355,6 +356,15 @@ The WaitingRoom resource accepts the following [input]({{< relref "/docs/intro/c
     <dd>{{% md %}}Disables automatic renewal of session cookies. Default: false.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="jsonresponseenabled_csharp">
+<a href="#jsonresponseenabled_csharp" style="color: inherit; text-decoration: inherit;">Json<wbr>Response<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If true, requests to the waiting room with the header Accept: application/json will receive a JSON response object.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="path_csharp">
 <a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
 </span>
@@ -465,6 +475,15 @@ The WaitingRoom resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Disables automatic renewal of session cookies. Default: false.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="jsonresponseenabled_go">
+<a href="#jsonresponseenabled_go" style="color: inherit; text-decoration: inherit;">Json<wbr>Response<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If true, requests to the waiting room with the header Accept: application/json will receive a JSON response object.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_go">
@@ -579,6 +598,15 @@ The WaitingRoom resource accepts the following [input]({{< relref "/docs/intro/c
     <dd>{{% md %}}Disables automatic renewal of session cookies. Default: false.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="jsonresponseenabled_nodejs">
+<a href="#jsonresponseenabled_nodejs" style="color: inherit; text-decoration: inherit;">json<wbr>Response<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}If true, requests to the waiting room with the header Accept: application/json will receive a JSON response object.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="path_nodejs">
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
@@ -689,6 +717,15 @@ The WaitingRoom resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Disables automatic renewal of session cookies. Default: false.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="json_response_enabled_python">
+<a href="#json_response_enabled_python" style="color: inherit; text-decoration: inherit;">json_<wbr>response_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If true, requests to the waiting room with the header Accept: application/json will receive a JSON response object.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_python">
@@ -803,6 +840,7 @@ Get an existing WaitingRoom resource's state with the given name, ID, and option
         <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">disable_session_renewal</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">host</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">json_response_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">new_users_per_minute</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -959,6 +997,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Host name for which the waiting room will be applied (no wildcards).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_jsonresponseenabled_csharp">
+<a href="#state_jsonresponseenabled_csharp" style="color: inherit; text-decoration: inherit;">Json<wbr>Response<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If true, requests to the waiting room with the header Accept: application/json will receive a JSON response object.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -1069,6 +1116,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Host name for which the waiting room will be applied (no wildcards).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_jsonresponseenabled_go">
+<a href="#state_jsonresponseenabled_go" style="color: inherit; text-decoration: inherit;">Json<wbr>Response<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If true, requests to the waiting room with the header Accept: application/json will receive a JSON response object.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
@@ -1183,6 +1239,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Host name for which the waiting room will be applied (no wildcards).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_jsonresponseenabled_nodejs">
+<a href="#state_jsonresponseenabled_nodejs" style="color: inherit; text-decoration: inherit;">json<wbr>Response<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}If true, requests to the waiting room with the header Accept: application/json will receive a JSON response object.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
@@ -1293,6 +1358,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Host name for which the waiting room will be applied (no wildcards).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_json_response_enabled_python">
+<a href="#state_json_response_enabled_python" style="color: inherit; text-decoration: inherit;">json_<wbr>response_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If true, requests to the waiting room with the header Accept: application/json will receive a JSON response object.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
