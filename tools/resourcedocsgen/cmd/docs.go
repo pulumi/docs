@@ -74,6 +74,7 @@ func mergeOverlaySchemaSpec(mainSpec *pschema.PackageSpec, overlaySpec *pschema.
 			glog.Infoln(key, "was skipped because it was already in the main schema spec")
 			continue
 		}
+		glog.Infoln(key, "adding overlay type")
 		mainSpec.Types[key] = value
 	}
 	for key, value := range overlaySpec.Resources {
@@ -81,6 +82,7 @@ func mergeOverlaySchemaSpec(mainSpec *pschema.PackageSpec, overlaySpec *pschema.
 			glog.Infoln(key, "was skipped because it was already in the main schema spec")
 			continue
 		}
+		glog.Infoln(key, "adding overlay resource")
 		mainSpec.Resources[key] = value
 	}
 	for lang, overlayLanguageInfo := range overlaySpec.Language {
