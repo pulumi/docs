@@ -52,6 +52,10 @@
     <section id="speakers" class="container mx-auto text-center">
         <h1 class="m-0">Cloud Engineering Summit</h1>
         <h2 class="mt-0 mb-10">Featured Speakers</h2>
+        <div class="my-10">
+            <a class="btn-secondary" href="{{ relref . "/cloud-engineering-summit/sessions" }}">View the sessions</a>
+        </div>
+
         <div class="cloud-engineering-summit-speaker-wall">
             <script type="text/javascript" src="https://sessionize.com/api/v2/{{ .Params.sessionize_id }}/view/SpeakerWall"></script>
         </div>

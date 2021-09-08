@@ -1,0 +1,9 @@
+{{ define "hero" }}
+    {{ partial "hero" (dict "title" .Params.title )}}
+{{ end }}
+
+{{ define "main" }}
+    <section id="sessions" class="container mx-auto my-16 text-center">
+        <script type="text/javascript" src="https://sessionize.com/api/v2/{{ .Params.sessionize_id }}/view/Sessions"></script>
+    </section>
+{{ end }}
