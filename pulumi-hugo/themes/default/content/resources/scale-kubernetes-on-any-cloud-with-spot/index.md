@@ -1,7 +1,7 @@
 ---
 # Name of the webinar.
-title: "The Docker Show: Multi-language components with Pulumi"
-meta_desc: "In this episode Lee Zen will show you how Pulumi's multi-language components feature makes it easy to share infrastructure code across programming languages."
+title: "Provision, Manage & Scale Kubernetes On Any Cloud with Spot"
+meta_desc: "Learn how to enable K8s deployments that are automated, scalable, and cost-effective using Pulumi and Spot."
 
 # A featured webinar will display first in the list.
 featured: false
@@ -20,7 +20,7 @@ unlisted: false
 
 # Gated webinars will have a registration form and the user will need
 # to fill out the form before viewing.
-gated: true
+gated: false
 
 # The layout of the landing page.
 type: webinars
@@ -29,17 +29,17 @@ type: webinars
 # landing/registration page. If the webinar is external you will need
 # set the 'block_external_search_index' flag to true so Google does not index
 # the webinar page created.
-external: false
-block_external_search_index: false
+external: true
+block_external_search_index: true
 
 # The url slug for the webinar landing page. If this is an external
 # webinar, use the external URL as the value here.
-url_slug: "docker-show-multi-language-components"
+url_slug: "https://get.spot.io/lp/provision-manage-scalek8s"
 
 # The content of the hero section.
 hero:
     # The title text in the hero. This also serves as the pages H1.
-    title: "The Docker Show: Multi-language / Multi-cloud container components with Pulumi and Docker"
+    title: ""
     # The image the appears on the right hand side of the hero.
     image: "/icons/containers.svg"
 
@@ -52,38 +52,33 @@ hero:
 # Content for the left hand side section of the page.
 main:
     # Webinar title.
-    title: "The Docker Show: Multi-language / Multi-cloud container components with Pulumi and Docker"
+    title: ""
     # URL for embedding a URL for ungated webinars.
     youtube_url: ""
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2021-09-23T07:00:00-07:00
+    sortable_date: 2021-10-14T10:00:00-07:00
     # Duration of the webinar.
-    duration: "1 hour"
+    duration: "2 hours"
     # Datetime of the webinar.
     datetime: ""
     # Description of the webinar.
-    description: |
-        In this episode, Pulumi VP of Engineering, Lee Zen will show you how Pulumi's new multi-language components feature makes it easy to share infrastructure code across programming languages. We'll also show you how to deploy containerized apps across multiple clouds using Google Cloud Run and AWS App Runner.
+    description: ""
 
     # The webinar presenters
     presenters:
-        - name: Lee Zen
-          role: VP Engineering, Pulumi
-        - name: Peter Mckee
-          role: Head of Developer Relations, Docker
+        - name: ""
+          role: ""
 
     # A bullet point list containing what the user will learn during the webinar.
     learn:
-        - How to Get Started with Pulumi and Docker
-        - Automate Building and Deploying your Containers using Pulumi
-        - Deploying your Containers to AWS using Docker and Pulumi
-
-# This section contains the transcript for a video. It is optional.
-transcript: |
-    Here is where you would put the transcript for a recorded video.
+        - ""
 
 # The right hand side form section.
 form:
+    # GoToWebinar webinar key. This key allows us to register people for webinars via the
+    # HubSpot form.
+    gotowebinar_key: ""
+
     # HubSpot form id.
-    hubspot_form_id: 65c0e27b-7f95-4277-930b-ee4d09122a20
+    hubspot_form_id: ""
 ---

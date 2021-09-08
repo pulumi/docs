@@ -34,7 +34,7 @@ block_external_search_index: true
 
 # The url slug for the webinar landing page. If this is an external
 # webinar, use the external URL as the value here.
-url_slug: "https://www.developerweek.com/global/conference/cloud/"
+url_slug: "https://www.developerweek.com/global/conference/cloud/net-enterprise-developer-day-hosted-by-amazon-web-services/"
 
 # The content of the hero section.
 hero:

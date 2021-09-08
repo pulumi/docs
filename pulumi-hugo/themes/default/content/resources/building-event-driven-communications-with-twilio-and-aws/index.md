@@ -29,12 +29,12 @@ type: webinars
 # landing/registration page. If the webinar is external you will need
 # set the 'block_external_search_index' flag to true so Google does not index
 # the webinar page created.
-external: false
-block_external_search_index: false
+external: true
+block_external_search_index: true
 
 # The url slug for the webinar landing page. If this is an external
 # webinar, use the external URL as the value here.
-url_slug: "building-event-driven-communications-with-twilio-and-aws"
+url_slug: "https://ahoy.twilio.com/devgen_webinar_workflows_NAMER-1"
 
 # The content of the hero section.
 hero:
