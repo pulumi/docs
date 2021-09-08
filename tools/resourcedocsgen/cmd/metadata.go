@@ -82,7 +82,7 @@ func packageMetadataCmd() *cobra.Command {
 		Short: "Generate package metadata only",
 		RunE: func(cmd *cobra.Command, args []string) error {
 			status := pkg.PackageStatusGA
-			if strings.HasPrefix(mainSpec.Description, "v0.") {
+			if strings.HasPrefix(version, "v0.") {
 				status = pkg.PackageStatusPublicPreview
 			}
 
