@@ -1,0 +1,11 @@
+id = "phillip-edwards"
+name = "Phillip Edwards"
+title = "Customer Engineer"
+company = "Pulumi"
+weight = 1
+
+status = "active"
+
+[social]
+github = "phillipedwards"
+linkedin = "edwardsphillip"
