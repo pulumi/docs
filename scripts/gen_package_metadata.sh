@@ -15,6 +15,21 @@ VERSION=${3:-}
 
 TOOL_RESDOCGEN="./tools/resourcedocsgen/"
 
+if [ -z "${METADATA_OUT_DIR:-}" ]; then
+  echo "Specify an out dir for the metadata files. Usage is gen_package_metadata.sh <METADATA_OUT_DIR> <REPO_OVERRIDE> <VERSION>."
+  exit 1
+fi
+
+if [ -z "${REPO_OVERRIDE:-}" ]; then
+  echo "Specify the repo name. Usage is gen_package_metadata.sh <METADATA_OUT_DIR> <REPO_OVERRIDE> <VERSION>."
+  exit 1
+fi
+
+if [ -z "${VERSION:-}" ]; then
+  echo "Specify the package version. Usage is gen_package_metadata.sh <METADATA_OUT_DIR> <REPO_OVERRIDE> <VERSION>."
+  exit 1
+fi
+
 # If the script is invoked without any arguments, then the script
 # will generate metadata for these packages.
 DEFAULT_PKGS=(
