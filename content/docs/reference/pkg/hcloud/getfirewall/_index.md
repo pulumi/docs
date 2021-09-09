@@ -93,7 +93,8 @@ func main() {
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_firewall(</span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_firewall(</span><span class="nx">apply_tos</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetFirewallApplyTo]]</span> = None<span class="p">,</span>
+                 <span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
                  <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">,</span>
                  <span class="nx">most_recent</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                  <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -125,6 +126,15 @@ The following arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="applytos_csharp">
+<a href="#applytos_csharp" style="color: inherit; text-decoration: inherit;">Apply<wbr>Tos</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getfirewallapplyto">List&lt;Pulumi.<wbr>HCloud.<wbr>Inputs.<wbr>Get<wbr>Firewall<wbr>Apply<wbr>To&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration of the Applied Resources
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
@@ -149,7 +159,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Return most recent firewall if multiple are found.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -182,6 +193,15 @@ The following arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="applytos_go">
+<a href="#applytos_go" style="color: inherit; text-decoration: inherit;">Apply<wbr>Tos</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getfirewallapplyto">[]Get<wbr>Firewall<wbr>Apply<wbr>To</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration of the Applied Resources
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
@@ -206,7 +226,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Return most recent firewall if multiple are found.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -239,6 +260,15 @@ The following arguments are supported:
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="applytos_nodejs">
+<a href="#applytos_nodejs" style="color: inherit; text-decoration: inherit;">apply<wbr>Tos</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getfirewallapplyto">Get<wbr>Firewall<wbr>Apply<wbr>To[]</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration of the Applied Resources
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
@@ -263,7 +293,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Return most recent firewall if multiple are found.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -296,6 +327,15 @@ The following arguments are supported:
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="apply_tos_python">
+<a href="#apply_tos_python" style="color: inherit; text-decoration: inherit;">apply_<wbr>tos</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getfirewallapplyto">Sequence[Get<wbr>Firewall<wbr>Apply<wbr>To]</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration of the Applied Resources
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
@@ -320,7 +360,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Return most recent firewall if multiple are found.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -369,6 +410,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(string) Name of the Firewall.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="applytos_csharp">
+<a href="#applytos_csharp" style="color: inherit; text-decoration: inherit;">Apply<wbr>Tos</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getfirewallapplyto">List&lt;Pulumi.<wbr>HCloud.<wbr>Outputs.<wbr>Get<wbr>Firewall<wbr>Apply<wbr>To&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration of the Applied Resources
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
@@ -427,6 +477,15 @@ The following output properties are available:
     <dd>{{% md %}}(string) Name of the Firewall.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="applytos_go">
+<a href="#applytos_go" style="color: inherit; text-decoration: inherit;">Apply<wbr>Tos</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getfirewallapplyto">[]Get<wbr>Firewall<wbr>Apply<wbr>To</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration of the Applied Resources
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
@@ -481,6 +540,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(string) Name of the Firewall.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="applytos_nodejs">
+<a href="#applytos_nodejs" style="color: inherit; text-decoration: inherit;">apply<wbr>Tos</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getfirewallapplyto">Get<wbr>Firewall<wbr>Apply<wbr>To[]</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration of the Applied Resources
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
@@ -539,6 +607,15 @@ The following output properties are available:
     <dd>{{% md %}}(string) Name of the Firewall.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="apply_tos_python">
+<a href="#apply_tos_python" style="color: inherit; text-decoration: inherit;">apply_<wbr>tos</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getfirewallapplyto">Sequence[Get<wbr>Firewall<wbr>Apply<wbr>To]</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration of the Applied Resources
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
@@ -588,6 +665,102 @@ The following output properties are available:
 
 ## Supporting Types
 
+
+<h4 id="getfirewallapplyto">Get<wbr>Firewall<wbr>Apply<wbr>To</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="labelselector_csharp">
+<a href="#labelselector_csharp" style="color: inherit; text-decoration: inherit;">Label<wbr>Selector</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}(string) Label Selector to select servers the firewall is applied to. Empty if a server is directly
+referenced
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="server_csharp">
+<a href="#server_csharp" style="color: inherit; text-decoration: inherit;">Server</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}(int) ID of a server where the firewall is applied to. `0` if applied to a label_selector
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="labelselector_go">
+<a href="#labelselector_go" style="color: inherit; text-decoration: inherit;">Label<wbr>Selector</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}(string) Label Selector to select servers the firewall is applied to. Empty if a server is directly
+referenced
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="server_go">
+<a href="#server_go" style="color: inherit; text-decoration: inherit;">Server</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}(int) ID of a server where the firewall is applied to. `0` if applied to a label_selector
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="labelselector_nodejs">
+<a href="#labelselector_nodejs" style="color: inherit; text-decoration: inherit;">label<wbr>Selector</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}(string) Label Selector to select servers the firewall is applied to. Empty if a server is directly
+referenced
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="server_nodejs">
+<a href="#server_nodejs" style="color: inherit; text-decoration: inherit;">server</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}(int) ID of a server where the firewall is applied to. `0` if applied to a label_selector
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="label_selector_python">
+<a href="#label_selector_python" style="color: inherit; text-decoration: inherit;">label_<wbr>selector</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}(string) Label Selector to select servers the firewall is applied to. Empty if a server is directly
+referenced
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="server_python">
+<a href="#server_python" style="color: inherit; text-decoration: inherit;">server</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}(int) ID of a server where the firewall is applied to. `0` if applied to a label_selector
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
 
 <h4 id="getfirewallrule">Get<wbr>Firewall<wbr>Rule</h4>
 

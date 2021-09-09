@@ -168,6 +168,7 @@ const loadBalancer = new hcloud.LoadBalancer("loadBalancer", {
 <span class="k">def </span><span class="nx">LoadBalancer</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                  <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
                  <span class="nx">algorithm</span><span class="p">:</span> <span class="nx">Optional[LoadBalancerAlgorithmArgs]</span> = None<span class="p">,</span>
+                 <span class="nx">delete_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                  <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">,</span>
                  <span class="nx">load_balancer_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                  <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -321,6 +322,15 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
     <dd>{{% md %}}Configuration of the algorithm the Load Balancer use.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="deleteprotection_csharp">
+<a href="#deleteprotection_csharp" style="color: inherit; text-decoration: inherit;">Delete<wbr>Protection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable or disable delete protection.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="labels_csharp">
 <a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
 </span>
@@ -355,16 +365,15 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Network Zone of the Load Balancer. Require when no location is set.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="targets_csharp">
 <a href="#targets_csharp" style="color: inherit; text-decoration: inherit;">Targets</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#loadbalancertarget">List&lt;Pulumi.<wbr>HCloud.<wbr>Inputs.<wbr>Load<wbr>Balancer<wbr>Target<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of targets of the Load Balancer.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use hcloud_load_balancer_target resource instead. This allows the full control over the selected targets.{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -386,6 +395,15 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#loadbalanceralgorithm">Load<wbr>Balancer<wbr>Algorithm<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration of the algorithm the Load Balancer use.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="deleteprotection_go">
+<a href="#deleteprotection_go" style="color: inherit; text-decoration: inherit;">Delete<wbr>Protection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable or disable delete protection.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_go">
@@ -422,16 +440,15 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Network Zone of the Load Balancer. Require when no location is set.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="targets_go">
 <a href="#targets_go" style="color: inherit; text-decoration: inherit;">Targets</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#loadbalancertarget">[]Load<wbr>Balancer<wbr>Target<wbr>Type<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}List of targets of the Load Balancer.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use hcloud_load_balancer_target resource instead. This allows the full control over the selected targets.{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -453,6 +470,15 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#loadbalanceralgorithm">Load<wbr>Balancer<wbr>Algorithm<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration of the algorithm the Load Balancer use.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="deleteprotection_nodejs">
+<a href="#deleteprotection_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>Protection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Enable or disable delete protection.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_nodejs">
@@ -489,16 +515,15 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Network Zone of the Load Balancer. Require when no location is set.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="targets_nodejs">
 <a href="#targets_nodejs" style="color: inherit; text-decoration: inherit;">targets</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#loadbalancertarget">Load<wbr>Balancer<wbr>Target<wbr>Args[]</a></span>
     </dt>
-    <dd>{{% md %}}List of targets of the Load Balancer.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use hcloud_load_balancer_target resource instead. This allows the full control over the selected targets.{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -520,6 +545,15 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#loadbalanceralgorithm">Load<wbr>Balancer<wbr>Algorithm<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration of the algorithm the Load Balancer use.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="delete_protection_python">
+<a href="#delete_protection_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>protection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable or disable delete protection.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_python">
@@ -556,16 +590,15 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Network Zone of the Load Balancer. Require when no location is set.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="targets_python">
 <a href="#targets_python" style="color: inherit; text-decoration: inherit;">targets</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#loadbalancertarget">Sequence[Load<wbr>Balancer<wbr>Target<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}List of targets of the Load Balancer.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use hcloud_load_balancer_target resource instead. This allows the full control over the selected targets.{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 
@@ -776,6 +809,7 @@ Get an existing LoadBalancer resource's state with the given name, ID, and optio
         <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
         <span class="nx">algorithm</span><span class="p">:</span> <span class="nx">Optional[LoadBalancerAlgorithmArgs]</span> = None<span class="p">,</span>
+        <span class="nx">delete_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">ipv4</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">ipv6</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">,</span>
@@ -907,6 +941,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Configuration of the algorithm the Load Balancer use.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_deleteprotection_csharp">
+<a href="#state_deleteprotection_csharp" style="color: inherit; text-decoration: inherit;">Delete<wbr>Protection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable or disable delete protection.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_ipv4_csharp">
 <a href="#state_ipv4_csharp" style="color: inherit; text-decoration: inherit;">Ipv4</a>
 </span>
@@ -984,16 +1027,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Network Zone of the Load Balancer. Require when no location is set.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_targets_csharp">
 <a href="#state_targets_csharp" style="color: inherit; text-decoration: inherit;">Targets</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#loadbalancertarget">List&lt;Pulumi.<wbr>HCloud.<wbr>Inputs.<wbr>Load<wbr>Balancer<wbr>Target<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of targets of the Load Balancer.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use hcloud_load_balancer_target resource instead. This allows the full control over the selected targets.{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1006,6 +1048,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#loadbalanceralgorithm">Load<wbr>Balancer<wbr>Algorithm<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration of the algorithm the Load Balancer use.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_deleteprotection_go">
+<a href="#state_deleteprotection_go" style="color: inherit; text-decoration: inherit;">Delete<wbr>Protection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable or disable delete protection.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipv4_go">
@@ -1085,16 +1136,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Network Zone of the Load Balancer. Require when no location is set.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_targets_go">
 <a href="#state_targets_go" style="color: inherit; text-decoration: inherit;">Targets</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#loadbalancertarget">[]Load<wbr>Balancer<wbr>Target<wbr>Type<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}List of targets of the Load Balancer.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use hcloud_load_balancer_target resource instead. This allows the full control over the selected targets.{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1107,6 +1157,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#loadbalanceralgorithm">Load<wbr>Balancer<wbr>Algorithm<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration of the algorithm the Load Balancer use.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_deleteprotection_nodejs">
+<a href="#state_deleteprotection_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>Protection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Enable or disable delete protection.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipv4_nodejs">
@@ -1186,16 +1245,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Network Zone of the Load Balancer. Require when no location is set.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_targets_nodejs">
 <a href="#state_targets_nodejs" style="color: inherit; text-decoration: inherit;">targets</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#loadbalancertarget">Load<wbr>Balancer<wbr>Target<wbr>Args[]</a></span>
     </dt>
-    <dd>{{% md %}}List of targets of the Load Balancer.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use hcloud_load_balancer_target resource instead. This allows the full control over the selected targets.{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1208,6 +1266,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#loadbalanceralgorithm">Load<wbr>Balancer<wbr>Algorithm<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration of the algorithm the Load Balancer use.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_delete_protection_python">
+<a href="#state_delete_protection_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>protection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable or disable delete protection.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipv4_python">
@@ -1287,16 +1354,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Network Zone of the Load Balancer. Require when no location is set.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_targets_python">
 <a href="#state_targets_python" style="color: inherit; text-decoration: inherit;">targets</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#loadbalancertarget">Sequence[Load<wbr>Balancer<wbr>Target<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}List of targets of the Load Balancer.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use hcloud_load_balancer_target resource instead. This allows the full control over the selected targets.{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 
@@ -1373,7 +1439,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of the target. `server`
+    <dd>{{% md %}}Type of the Load Balancer Algorithm. `round_robin` or `least_connections`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serverid_csharp">
@@ -1382,8 +1448,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}ID of the server which should be a target for this Load Balancer. Required if `type` is `server`
-{{% /md %}}</dd><dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="useprivateip_csharp">
 <a href="#useprivateip_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Private<wbr>Ip</a>
@@ -1403,7 +1468,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of the target. `server`
+    <dd>{{% md %}}Type of the Load Balancer Algorithm. `round_robin` or `least_connections`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serverid_go">
@@ -1412,8 +1477,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}ID of the server which should be a target for this Load Balancer. Required if `type` is `server`
-{{% /md %}}</dd><dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="useprivateip_go">
 <a href="#useprivateip_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Private<wbr>Ip</a>
@@ -1433,7 +1497,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of the target. `server`
+    <dd>{{% md %}}Type of the Load Balancer Algorithm. `round_robin` or `least_connections`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serverid_nodejs">
@@ -1442,8 +1506,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}ID of the server which should be a target for this Load Balancer. Required if `type` is `server`
-{{% /md %}}</dd><dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="useprivateip_nodejs">
 <a href="#useprivateip_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Private<wbr>Ip</a>
@@ -1463,7 +1526,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Type of the target. `server`
+    <dd>{{% md %}}Type of the Load Balancer Algorithm. `round_robin` or `least_connections`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="server_id_python">
@@ -1472,8 +1535,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}ID of the server which should be a target for this Load Balancer. Required if `type` is `server`
-{{% /md %}}</dd><dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="use_private_ip_python">
 <a href="#use_private_ip_python" style="color: inherit; text-decoration: inherit;">use_<wbr>private_<wbr>ip</a>

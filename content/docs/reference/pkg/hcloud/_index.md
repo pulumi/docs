@@ -41,22 +41,31 @@ A Pulumi package for creating and managing hcloud cloud resources.
 <h2 id="functions">Functions</h2>
 <ul class="api">
     <li><a href="getcertificate" title="GetCertificate"><span class="symbol function"></span>GetCertificate</a></li>
+    <li><a href="getcertificates" title="GetCertificates"><span class="symbol function"></span>GetCertificates</a></li>
     <li><a href="getdatacenter" title="GetDatacenter"><span class="symbol function"></span>GetDatacenter</a></li>
     <li><a href="getdatacenters" title="GetDatacenters"><span class="symbol function"></span>GetDatacenters</a></li>
     <li><a href="getfirewall" title="GetFirewall"><span class="symbol function"></span>GetFirewall</a></li>
+    <li><a href="getfirewalls" title="GetFirewalls"><span class="symbol function"></span>GetFirewalls</a></li>
     <li><a href="getfloatingip" title="GetFloatingIp"><span class="symbol function"></span>GetFloatingIp</a></li>
+    <li><a href="getfloatingips" title="GetFloatingIps"><span class="symbol function"></span>GetFloatingIps</a></li>
     <li><a href="getimage" title="GetImage"><span class="symbol function"></span>GetImage</a></li>
+    <li><a href="getimages" title="GetImages"><span class="symbol function"></span>GetImages</a></li>
     <li><a href="getloadbalancer" title="GetLoadBalancer"><span class="symbol function"></span>GetLoadBalancer</a></li>
+    <li><a href="getloadbalancers" title="GetLoadBalancers"><span class="symbol function"></span>GetLoadBalancers</a></li>
     <li><a href="getlocation" title="GetLocation"><span class="symbol function"></span>GetLocation</a></li>
     <li><a href="getlocations" title="GetLocations"><span class="symbol function"></span>GetLocations</a></li>
     <li><a href="getnetwork" title="GetNetwork"><span class="symbol function"></span>GetNetwork</a></li>
+    <li><a href="getnetworks" title="GetNetworks"><span class="symbol function"></span>GetNetworks</a></li>
     <li><a href="getplacementgroup" title="GetPlacementGroup"><span class="symbol function"></span>GetPlacementGroup</a></li>
+    <li><a href="getplacementgroups" title="GetPlacementGroups"><span class="symbol function"></span>GetPlacementGroups</a></li>
     <li><a href="getserver" title="GetServer"><span class="symbol function"></span>GetServer</a></li>
     <li><a href="getservertype" title="GetServerType"><span class="symbol function"></span>GetServerType</a></li>
     <li><a href="getservertypes" title="GetServerTypes"><span class="symbol function"></span>GetServerTypes</a></li>
+    <li><a href="getservers" title="GetServers"><span class="symbol function"></span>GetServers</a></li>
     <li><a href="getsshkey" title="GetSshKey"><span class="symbol function"></span>GetSshKey</a></li>
     <li><a href="getsshkeys" title="GetSshKeys"><span class="symbol function"></span>GetSshKeys</a></li>
     <li><a href="getvolume" title="GetVolume"><span class="symbol function"></span>GetVolume</a></li>
+    <li><a href="getvolumes" title="GetVolumes"><span class="symbol function"></span>GetVolumes</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -68,6 +77,6 @@ A Pulumi package for creating and managing hcloud cloud resources.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`hcloud` Terraform Provider](https://github.com/hetznercloud/terraform-provider-hcloud).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>1.4.0</dd>
+	<dd>1.5.0</dd>
 </dl>
 

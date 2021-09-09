@@ -154,6 +154,7 @@ const master = new hcloud.Volume("master", {
 <span class="k">def </span><span class="nx">Volume</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
            <span class="nx">automount</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+           <span class="nx">delete_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
            <span class="nx">format</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
            <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">,</span>
            <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -307,6 +308,15 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
     <dd>{{% md %}}Automount the volume upon attaching it (server_id must be provided).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="deleteprotection_csharp">
+<a href="#deleteprotection_csharp" style="color: inherit; text-decoration: inherit;">Delete<wbr>Protection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable or disable delete protection.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="format_csharp">
 <a href="#format_csharp" style="color: inherit; text-decoration: inherit;">Format</a>
 </span>
@@ -322,7 +332,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}User-defined labels (key-value pairs).
+    <dd>{{% md %}}(map) User-defined labels (key-value pairs).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
@@ -374,6 +384,15 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
     <dd>{{% md %}}Automount the volume upon attaching it (server_id must be provided).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="deleteprotection_go">
+<a href="#deleteprotection_go" style="color: inherit; text-decoration: inherit;">Delete<wbr>Protection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable or disable delete protection.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="format_go">
 <a href="#format_go" style="color: inherit; text-decoration: inherit;">Format</a>
 </span>
@@ -389,7 +408,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}User-defined labels (key-value pairs).
+    <dd>{{% md %}}(map) User-defined labels (key-value pairs).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
@@ -441,6 +460,15 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
     <dd>{{% md %}}Automount the volume upon attaching it (server_id must be provided).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="deleteprotection_nodejs">
+<a href="#deleteprotection_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>Protection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Enable or disable delete protection.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="format_nodejs">
 <a href="#format_nodejs" style="color: inherit; text-decoration: inherit;">format</a>
 </span>
@@ -456,7 +484,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}User-defined labels (key-value pairs).
+    <dd>{{% md %}}(map) User-defined labels (key-value pairs).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
@@ -508,6 +536,15 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
     <dd>{{% md %}}Automount the volume upon attaching it (server_id must be provided).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="delete_protection_python">
+<a href="#delete_protection_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>protection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable or disable delete protection.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="format_python">
 <a href="#format_python" style="color: inherit; text-decoration: inherit;">format</a>
 </span>
@@ -523,7 +560,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
-    <dd>{{% md %}}User-defined labels (key-value pairs).
+    <dd>{{% md %}}(map) User-defined labels (key-value pairs).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
@@ -578,7 +615,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Device path on the file system for the Volume.
+    <dd>{{% md %}}(string) Device path on the file system for the Volume.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -599,7 +636,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Device path on the file system for the Volume.
+    <dd>{{% md %}}(string) Device path on the file system for the Volume.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -620,7 +657,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Device path on the file system for the Volume.
+    <dd>{{% md %}}(string) Device path on the file system for the Volume.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -641,7 +678,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Device path on the file system for the Volume.
+    <dd>{{% md %}}(string) Device path on the file system for the Volume.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -662,6 +699,7 @@ Get an existing Volume resource's state with the given name, ID, and optional ex
         <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
         <span class="nx">automount</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">delete_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">format</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">,</span>
         <span class="nx">linux_device</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -790,6 +828,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Automount the volume upon attaching it (server_id must be provided).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_deleteprotection_csharp">
+<a href="#state_deleteprotection_csharp" style="color: inherit; text-decoration: inherit;">Delete<wbr>Protection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable or disable delete protection.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_format_csharp">
 <a href="#state_format_csharp" style="color: inherit; text-decoration: inherit;">Format</a>
 </span>
@@ -805,7 +852,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}User-defined labels (key-value pairs).
+    <dd>{{% md %}}(map) User-defined labels (key-value pairs).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_linuxdevice_csharp">
@@ -814,7 +861,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Device path on the file system for the Volume.
+    <dd>{{% md %}}(string) Device path on the file system for the Volume.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_csharp">
@@ -866,6 +913,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Automount the volume upon attaching it (server_id must be provided).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_deleteprotection_go">
+<a href="#state_deleteprotection_go" style="color: inherit; text-decoration: inherit;">Delete<wbr>Protection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable or disable delete protection.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_format_go">
 <a href="#state_format_go" style="color: inherit; text-decoration: inherit;">Format</a>
 </span>
@@ -881,7 +937,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}User-defined labels (key-value pairs).
+    <dd>{{% md %}}(map) User-defined labels (key-value pairs).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_linuxdevice_go">
@@ -890,7 +946,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Device path on the file system for the Volume.
+    <dd>{{% md %}}(string) Device path on the file system for the Volume.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_go">
@@ -942,6 +998,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Automount the volume upon attaching it (server_id must be provided).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_deleteprotection_nodejs">
+<a href="#state_deleteprotection_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>Protection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Enable or disable delete protection.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_format_nodejs">
 <a href="#state_format_nodejs" style="color: inherit; text-decoration: inherit;">format</a>
 </span>
@@ -957,7 +1022,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}User-defined labels (key-value pairs).
+    <dd>{{% md %}}(map) User-defined labels (key-value pairs).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_linuxdevice_nodejs">
@@ -966,7 +1031,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Device path on the file system for the Volume.
+    <dd>{{% md %}}(string) Device path on the file system for the Volume.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_nodejs">
@@ -1018,6 +1083,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Automount the volume upon attaching it (server_id must be provided).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_delete_protection_python">
+<a href="#state_delete_protection_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>protection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable or disable delete protection.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_format_python">
 <a href="#state_format_python" style="color: inherit; text-decoration: inherit;">format</a>
 </span>
@@ -1033,7 +1107,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
-    <dd>{{% md %}}User-defined labels (key-value pairs).
+    <dd>{{% md %}}(map) User-defined labels (key-value pairs).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_linux_device_python">
@@ -1042,7 +1116,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Device path on the file system for the Volume.
+    <dd>{{% md %}}(string) Device path on the file system for the Volume.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_python">
