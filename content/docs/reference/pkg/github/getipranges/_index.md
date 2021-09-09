@@ -150,10 +150,60 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
+    <dd>{{% md %}}An array of IP addresses in CIDR format specifying the addresses that incoming requests from GitHub actions will originate from.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="actionsipv4s_csharp">
+<a href="#actionsipv4s_csharp" style="color: inherit; text-decoration: inherit;">Actions<wbr>Ipv4s</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="actionsipv6s_csharp">
+<a href="#actionsipv6s_csharp" style="color: inherit; text-decoration: inherit;">Actions<wbr>Ipv6s</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="dependabotipv4s_csharp">
+<a href="#dependabotipv4s_csharp" style="color: inherit; text-decoration: inherit;">Dependabot<wbr>Ipv4s</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="dependabotipv6s_csharp">
+<a href="#dependabotipv6s_csharp" style="color: inherit; text-decoration: inherit;">Dependabot<wbr>Ipv6s</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dependabots_csharp">
 <a href="#dependabots_csharp" style="color: inherit; text-decoration: inherit;">Dependabots</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}An array of IP addresses in CIDR format specifying the A records for dependabot.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="gitipv4s_csharp">
+<a href="#gitipv4s_csharp" style="color: inherit; text-decoration: inherit;">Git<wbr>Ipv4s</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="gitipv6s_csharp">
+<a href="#gitipv6s_csharp" style="color: inherit; text-decoration: inherit;">Git<wbr>Ipv6s</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
@@ -178,6 +228,22 @@ The following output properties are available:
     <dd>{{% md %}}An Array of IP addresses in CIDR format specifying the addresses that incoming service hooks will originate from.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="hooksipv4s_csharp">
+<a href="#hooksipv4s_csharp" style="color: inherit; text-decoration: inherit;">Hooks<wbr>Ipv4s</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="hooksipv6s_csharp">
+<a href="#hooksipv6s_csharp" style="color: inherit; text-decoration: inherit;">Hooks<wbr>Ipv6s</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
@@ -186,6 +252,22 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="importeripv4s_csharp">
+<a href="#importeripv4s_csharp" style="color: inherit; text-decoration: inherit;">Importer<wbr>Ipv4s</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="importeripv6s_csharp">
+<a href="#importeripv6s_csharp" style="color: inherit; text-decoration: inherit;">Importer<wbr>Ipv6s</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="importers_csharp">
 <a href="#importers_csharp" style="color: inherit; text-decoration: inherit;">Importers</a>
@@ -203,7 +285,23 @@ The following output properties are available:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}An Array of IP addresses in CIDR format specifying the A records for GitHub Pages.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="pagesipv4s_csharp">
+<a href="#pagesipv4s_csharp" style="color: inherit; text-decoration: inherit;">Pages<wbr>Ipv4s</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="pagesipv6s_csharp">
+<a href="#pagesipv6s_csharp" style="color: inherit; text-decoration: inherit;">Pages<wbr>Ipv6s</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -215,10 +313,60 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
+    <dd>{{% md %}}An array of IP addresses in CIDR format specifying the addresses that incoming requests from GitHub actions will originate from.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="actionsipv4s_go">
+<a href="#actionsipv4s_go" style="color: inherit; text-decoration: inherit;">Actions<wbr>Ipv4s</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="actionsipv6s_go">
+<a href="#actionsipv6s_go" style="color: inherit; text-decoration: inherit;">Actions<wbr>Ipv6s</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="dependabotipv4s_go">
+<a href="#dependabotipv4s_go" style="color: inherit; text-decoration: inherit;">Dependabot<wbr>Ipv4s</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="dependabotipv6s_go">
+<a href="#dependabotipv6s_go" style="color: inherit; text-decoration: inherit;">Dependabot<wbr>Ipv6s</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dependabots_go">
 <a href="#dependabots_go" style="color: inherit; text-decoration: inherit;">Dependabots</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}An array of IP addresses in CIDR format specifying the A records for dependabot.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="gitipv4s_go">
+<a href="#gitipv4s_go" style="color: inherit; text-decoration: inherit;">Git<wbr>Ipv4s</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="gitipv6s_go">
+<a href="#gitipv6s_go" style="color: inherit; text-decoration: inherit;">Git<wbr>Ipv6s</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
@@ -243,6 +391,22 @@ The following output properties are available:
     <dd>{{% md %}}An Array of IP addresses in CIDR format specifying the addresses that incoming service hooks will originate from.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="hooksipv4s_go">
+<a href="#hooksipv4s_go" style="color: inherit; text-decoration: inherit;">Hooks<wbr>Ipv4s</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="hooksipv6s_go">
+<a href="#hooksipv6s_go" style="color: inherit; text-decoration: inherit;">Hooks<wbr>Ipv6s</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
@@ -251,6 +415,22 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="importeripv4s_go">
+<a href="#importeripv4s_go" style="color: inherit; text-decoration: inherit;">Importer<wbr>Ipv4s</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="importeripv6s_go">
+<a href="#importeripv6s_go" style="color: inherit; text-decoration: inherit;">Importer<wbr>Ipv6s</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="importers_go">
 <a href="#importers_go" style="color: inherit; text-decoration: inherit;">Importers</a>
@@ -268,7 +448,23 @@ The following output properties are available:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}An Array of IP addresses in CIDR format specifying the A records for GitHub Pages.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="pagesipv4s_go">
+<a href="#pagesipv4s_go" style="color: inherit; text-decoration: inherit;">Pages<wbr>Ipv4s</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="pagesipv6s_go">
+<a href="#pagesipv6s_go" style="color: inherit; text-decoration: inherit;">Pages<wbr>Ipv6s</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -280,10 +476,60 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
+    <dd>{{% md %}}An array of IP addresses in CIDR format specifying the addresses that incoming requests from GitHub actions will originate from.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="actionsipv4s_nodejs">
+<a href="#actionsipv4s_nodejs" style="color: inherit; text-decoration: inherit;">actions<wbr>Ipv4s</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="actionsipv6s_nodejs">
+<a href="#actionsipv6s_nodejs" style="color: inherit; text-decoration: inherit;">actions<wbr>Ipv6s</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="dependabotipv4s_nodejs">
+<a href="#dependabotipv4s_nodejs" style="color: inherit; text-decoration: inherit;">dependabot<wbr>Ipv4s</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="dependabotipv6s_nodejs">
+<a href="#dependabotipv6s_nodejs" style="color: inherit; text-decoration: inherit;">dependabot<wbr>Ipv6s</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dependabots_nodejs">
 <a href="#dependabots_nodejs" style="color: inherit; text-decoration: inherit;">dependabots</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}An array of IP addresses in CIDR format specifying the A records for dependabot.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="gitipv4s_nodejs">
+<a href="#gitipv4s_nodejs" style="color: inherit; text-decoration: inherit;">git<wbr>Ipv4s</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="gitipv6s_nodejs">
+<a href="#gitipv6s_nodejs" style="color: inherit; text-decoration: inherit;">git<wbr>Ipv6s</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
@@ -308,6 +554,22 @@ The following output properties are available:
     <dd>{{% md %}}An Array of IP addresses in CIDR format specifying the addresses that incoming service hooks will originate from.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="hooksipv4s_nodejs">
+<a href="#hooksipv4s_nodejs" style="color: inherit; text-decoration: inherit;">hooks<wbr>Ipv4s</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="hooksipv6s_nodejs">
+<a href="#hooksipv6s_nodejs" style="color: inherit; text-decoration: inherit;">hooks<wbr>Ipv6s</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
@@ -316,6 +578,22 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="importeripv4s_nodejs">
+<a href="#importeripv4s_nodejs" style="color: inherit; text-decoration: inherit;">importer<wbr>Ipv4s</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="importeripv6s_nodejs">
+<a href="#importeripv6s_nodejs" style="color: inherit; text-decoration: inherit;">importer<wbr>Ipv6s</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="importers_nodejs">
 <a href="#importers_nodejs" style="color: inherit; text-decoration: inherit;">importers</a>
@@ -333,7 +611,23 @@ The following output properties are available:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}An Array of IP addresses in CIDR format specifying the A records for GitHub Pages.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="pagesipv4s_nodejs">
+<a href="#pagesipv4s_nodejs" style="color: inherit; text-decoration: inherit;">pages<wbr>Ipv4s</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="pagesipv6s_nodejs">
+<a href="#pagesipv6s_nodejs" style="color: inherit; text-decoration: inherit;">pages<wbr>Ipv6s</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -345,10 +639,60 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
+    <dd>{{% md %}}An array of IP addresses in CIDR format specifying the addresses that incoming requests from GitHub actions will originate from.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="actions_ipv4s_python">
+<a href="#actions_ipv4s_python" style="color: inherit; text-decoration: inherit;">actions_<wbr>ipv4s</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="actions_ipv6s_python">
+<a href="#actions_ipv6s_python" style="color: inherit; text-decoration: inherit;">actions_<wbr>ipv6s</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="dependabot_ipv4s_python">
+<a href="#dependabot_ipv4s_python" style="color: inherit; text-decoration: inherit;">dependabot_<wbr>ipv4s</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="dependabot_ipv6s_python">
+<a href="#dependabot_ipv6s_python" style="color: inherit; text-decoration: inherit;">dependabot_<wbr>ipv6s</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dependabots_python">
 <a href="#dependabots_python" style="color: inherit; text-decoration: inherit;">dependabots</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}An array of IP addresses in CIDR format specifying the A records for dependabot.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="git_ipv4s_python">
+<a href="#git_ipv4s_python" style="color: inherit; text-decoration: inherit;">git_<wbr>ipv4s</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="git_ipv6s_python">
+<a href="#git_ipv6s_python" style="color: inherit; text-decoration: inherit;">git_<wbr>ipv6s</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
@@ -373,6 +717,22 @@ The following output properties are available:
     <dd>{{% md %}}An Array of IP addresses in CIDR format specifying the addresses that incoming service hooks will originate from.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="hooks_ipv4s_python">
+<a href="#hooks_ipv4s_python" style="color: inherit; text-decoration: inherit;">hooks_<wbr>ipv4s</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="hooks_ipv6s_python">
+<a href="#hooks_ipv6s_python" style="color: inherit; text-decoration: inherit;">hooks_<wbr>ipv6s</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
@@ -381,6 +741,22 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="importer_ipv4s_python">
+<a href="#importer_ipv4s_python" style="color: inherit; text-decoration: inherit;">importer_<wbr>ipv4s</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="importer_ipv6s_python">
+<a href="#importer_ipv6s_python" style="color: inherit; text-decoration: inherit;">importer_<wbr>ipv6s</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="importers_python">
 <a href="#importers_python" style="color: inherit; text-decoration: inherit;">importers</a>
@@ -398,7 +774,23 @@ The following output properties are available:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}An Array of IP addresses in CIDR format specifying the A records for GitHub Pages.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="pages_ipv4s_python">
+<a href="#pages_ipv4s_python" style="color: inherit; text-decoration: inherit;">pages_<wbr>ipv4s</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="pages_ipv6s_python">
+<a href="#pages_ipv6s_python" style="color: inherit; text-decoration: inherit;">pages_<wbr>ipv6s</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
