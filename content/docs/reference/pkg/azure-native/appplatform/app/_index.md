@@ -44,13 +44,13 @@ class MyStack : Stack
                 HttpsOnly = false,
                 PersistentDisk = new AzureNative.AppPlatform.Inputs.PersistentDiskArgs
                 {
-                    MountPath = "mypersistentdisk",
+                    MountPath = "/mypersistentdisk",
                     SizeInGB = 2,
                 },
                 Public = true,
                 TemporaryDisk = new AzureNative.AppPlatform.Inputs.TemporaryDiskArgs
                 {
-                    MountPath = "mytemporarydisk",
+                    MountPath = "/mytemporarydisk",
                     SizeInGB = 2,
                 },
             },
@@ -88,12 +88,12 @@ func main() {
 				Fqdn:                 pulumi.String("myapp.mydomain.com"),
 				HttpsOnly:            pulumi.Bool(false),
 				PersistentDisk: &appplatform.PersistentDiskArgs{
-					MountPath: pulumi.String("mypersistentdisk"),
+					MountPath: pulumi.String("/mypersistentdisk"),
 					SizeInGB:  pulumi.Int(2),
 				},
 				Public: pulumi.Bool(true),
 				TemporaryDisk: &appplatform.TemporaryDiskArgs{
-					MountPath: pulumi.String("mytemporarydisk"),
+					MountPath: pulumi.String("/mytemporarydisk"),
 					SizeInGB:  pulumi.Int(2),
 				},
 			},
@@ -128,12 +128,12 @@ app = azure_native.appplatform.App("app",
         fqdn="myapp.mydomain.com",
         https_only=False,
         persistent_disk=azure_native.appplatform.PersistentDiskArgs(
-            mount_path="mypersistentdisk",
+            mount_path="/mypersistentdisk",
             size_in_gb=2,
         ),
         public=True,
         temporary_disk=azure_native.appplatform.TemporaryDiskArgs(
-            mount_path="mytemporarydisk",
+            mount_path="/mytemporarydisk",
             size_in_gb=2,
         ),
     ),
@@ -161,12 +161,12 @@ const app = new azure_native.appplatform.App("app", {
         fqdn: "myapp.mydomain.com",
         httpsOnly: false,
         persistentDisk: {
-            mountPath: "mypersistentdisk",
+            mountPath: "/mypersistentdisk",
             sizeInGB: 2,
         },
         "public": true,
         temporaryDisk: {
-            mountPath: "mytemporarydisk",
+            mountPath: "/mytemporarydisk",
             sizeInGB: 2,
         },
     },

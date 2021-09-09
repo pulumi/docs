@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-native.aadiam.PrivateLinkForAzureAd reso
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 PrivateLink Policy configuration object.
-API Version: 2020-03-01-preview.
+API Version: 2020-03-01.
 
 {{% examples %}}
 

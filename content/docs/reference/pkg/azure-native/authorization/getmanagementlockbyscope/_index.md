@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-native.authorization.getManagementLockBy
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The lock information.
-API Version: 2016-09-01.
+API Version: 2017-04-01.
 
 
 

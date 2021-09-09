@@ -365,7 +365,7 @@ const dataset = new azure_native.datafactory.Dataset("dataset", {
             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
             <span class="nx">dataset_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">factory_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-            <span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[Union[AmazonMWSObjectDatasetArgs, AmazonRdsForOracleTableDatasetArgs, AmazonRedshiftTableDatasetArgs, AmazonS3DatasetArgs, AvroDatasetArgs, AzureBlobDatasetArgs, AzureBlobFSDatasetArgs, AzureDataExplorerTableDatasetArgs, AzureDataLakeStoreDatasetArgs, AzureDatabricksDeltaLakeDatasetArgs, AzureMariaDBTableDatasetArgs, AzureMySqlTableDatasetArgs, AzurePostgreSqlTableDatasetArgs, AzureSearchIndexDatasetArgs, AzureSqlDWTableDatasetArgs, AzureSqlMITableDatasetArgs, AzureSqlTableDatasetArgs, AzureTableDatasetArgs, BinaryDatasetArgs, CassandraTableDatasetArgs, CommonDataServiceForAppsEntityDatasetArgs, ConcurObjectDatasetArgs, CosmosDbMongoDbApiCollectionDatasetArgs, CosmosDbSqlApiCollectionDatasetArgs, CouchbaseTableDatasetArgs, CustomDatasetArgs, Db2TableDatasetArgs, DelimitedTextDatasetArgs, DocumentDbCollectionDatasetArgs, DrillTableDatasetArgs, DynamicsAXResourceDatasetArgs, DynamicsCrmEntityDatasetArgs, DynamicsEntityDatasetArgs, EloquaObjectDatasetArgs, ExcelDatasetArgs, FileShareDatasetArgs, GoogleAdWordsObjectDatasetArgs, GoogleBigQueryObjectDatasetArgs, GreenplumTableDatasetArgs, HBaseObjectDatasetArgs, HiveObjectDatasetArgs, HttpDatasetArgs, HubspotObjectDatasetArgs, ImpalaObjectDatasetArgs, InformixTableDatasetArgs, JiraObjectDatasetArgs, JsonDatasetArgs, MagentoObjectDatasetArgs, MariaDBTableDatasetArgs, MarketoObjectDatasetArgs, MicrosoftAccessTableDatasetArgs, MongoDbAtlasCollectionDatasetArgs, MongoDbCollectionDatasetArgs, MongoDbV2CollectionDatasetArgs, MySqlTableDatasetArgs, NetezzaTableDatasetArgs, ODataResourceDatasetArgs, OdbcTableDatasetArgs, Office365DatasetArgs, OracleServiceCloudObjectDatasetArgs, OracleTableDatasetArgs, OrcDatasetArgs, ParquetDatasetArgs, PaypalObjectDatasetArgs, PhoenixObjectDatasetArgs, PostgreSqlTableDatasetArgs, PrestoObjectDatasetArgs, QuickBooksObjectDatasetArgs, RelationalTableDatasetArgs, ResponsysObjectDatasetArgs, RestResourceDatasetArgs, SalesforceMarketingCloudObjectDatasetArgs, SalesforceObjectDatasetArgs, SalesforceServiceCloudObjectDatasetArgs, SapBwCubeDatasetArgs, SapCloudForCustomerResourceDatasetArgs, SapEccResourceDatasetArgs, SapHanaTableDatasetArgs, SapOpenHubTableDatasetArgs, SapTableResourceDatasetArgs, ServiceNowObjectDatasetArgs, SharePointOnlineListResourceDatasetArgs, ShopifyObjectDatasetArgs, SnowflakeDatasetArgs, SparkObjectDatasetArgs, SqlServerTableDatasetArgs, SquareObjectDatasetArgs, SybaseTableDatasetArgs, TeradataTableDatasetArgs, VerticaTableDatasetArgs, WebTableDatasetArgs, XeroObjectDatasetArgs, XmlDatasetArgs, ZohoObjectDatasetArgs]]</span> = None<span class="p">,</span>
+            <span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[Union[AmazonMWSObjectDatasetArgs, AmazonRdsForOracleTableDatasetArgs, AmazonRdsForSqlServerTableDatasetArgs, AmazonRedshiftTableDatasetArgs, AmazonS3DatasetArgs, AvroDatasetArgs, AzureBlobDatasetArgs, AzureBlobFSDatasetArgs, AzureDataExplorerTableDatasetArgs, AzureDataLakeStoreDatasetArgs, AzureDatabricksDeltaLakeDatasetArgs, AzureMariaDBTableDatasetArgs, AzureMySqlTableDatasetArgs, AzurePostgreSqlTableDatasetArgs, AzureSearchIndexDatasetArgs, AzureSqlDWTableDatasetArgs, AzureSqlMITableDatasetArgs, AzureSqlTableDatasetArgs, AzureTableDatasetArgs, BinaryDatasetArgs, CassandraTableDatasetArgs, CommonDataServiceForAppsEntityDatasetArgs, ConcurObjectDatasetArgs, CosmosDbMongoDbApiCollectionDatasetArgs, CosmosDbSqlApiCollectionDatasetArgs, CouchbaseTableDatasetArgs, CustomDatasetArgs, Db2TableDatasetArgs, DelimitedTextDatasetArgs, DocumentDbCollectionDatasetArgs, DrillTableDatasetArgs, DynamicsAXResourceDatasetArgs, DynamicsCrmEntityDatasetArgs, DynamicsEntityDatasetArgs, EloquaObjectDatasetArgs, ExcelDatasetArgs, FileShareDatasetArgs, GoogleAdWordsObjectDatasetArgs, GoogleBigQueryObjectDatasetArgs, GreenplumTableDatasetArgs, HBaseObjectDatasetArgs, HiveObjectDatasetArgs, HttpDatasetArgs, HubspotObjectDatasetArgs, ImpalaObjectDatasetArgs, InformixTableDatasetArgs, JiraObjectDatasetArgs, JsonDatasetArgs, MagentoObjectDatasetArgs, MariaDBTableDatasetArgs, MarketoObjectDatasetArgs, MicrosoftAccessTableDatasetArgs, MongoDbAtlasCollectionDatasetArgs, MongoDbCollectionDatasetArgs, MongoDbV2CollectionDatasetArgs, MySqlTableDatasetArgs, NetezzaTableDatasetArgs, ODataResourceDatasetArgs, OdbcTableDatasetArgs, Office365DatasetArgs, OracleServiceCloudObjectDatasetArgs, OracleTableDatasetArgs, OrcDatasetArgs, ParquetDatasetArgs, PaypalObjectDatasetArgs, PhoenixObjectDatasetArgs, PostgreSqlTableDatasetArgs, PrestoObjectDatasetArgs, QuickBooksObjectDatasetArgs, RelationalTableDatasetArgs, ResponsysObjectDatasetArgs, RestResourceDatasetArgs, SalesforceMarketingCloudObjectDatasetArgs, SalesforceObjectDatasetArgs, SalesforceServiceCloudObjectDatasetArgs, SapBwCubeDatasetArgs, SapCloudForCustomerResourceDatasetArgs, SapEccResourceDatasetArgs, SapHanaTableDatasetArgs, SapOpenHubTableDatasetArgs, SapTableResourceDatasetArgs, ServiceNowObjectDatasetArgs, SharePointOnlineListResourceDatasetArgs, ShopifyObjectDatasetArgs, SnowflakeDatasetArgs, SparkObjectDatasetArgs, SqlServerTableDatasetArgs, SquareObjectDatasetArgs, SybaseTableDatasetArgs, TeradataTableDatasetArgs, VerticaTableDatasetArgs, WebTableDatasetArgs, XeroObjectDatasetArgs, XmlDatasetArgs, ZohoObjectDatasetArgs]]</span> = None<span class="p">,</span>
             <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Dataset</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
@@ -508,7 +508,7 @@ The Dataset resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazonmwsobjectdataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>MWSObject<wbr>Dataset<wbr>Args</a> | <a href="#amazonrdsfororacletabledataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>Rds<wbr>For<wbr>Oracle<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#amazonredshifttabledataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>Redshift<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#amazons3dataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Dataset<wbr>Args</a> | <a href="#avrodataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Avro<wbr>Dataset<wbr>Args</a> | <a href="#azureblobdataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Dataset<wbr>Args</a> | <a href="#azureblobfsdataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSDataset<wbr>Args</a> | <a href="#azuredataexplorertabledataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Explorer<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#azuredatalakestoredataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Dataset<wbr>Args</a> | <a href="#azuredatabricksdeltalakedataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Databricks<wbr>Delta<wbr>Lake<wbr>Dataset<wbr>Args</a> | <a href="#azuremariadbtabledataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Maria<wbr>DBTable<wbr>Dataset<wbr>Args</a> | <a href="#azuremysqltabledataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>My<wbr>Sql<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#azurepostgresqltabledataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Postgre<wbr>Sql<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#azuresearchindexdataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Search<wbr>Index<wbr>Dataset<wbr>Args</a> | <a href="#azuresqldwtabledataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Sql<wbr>DWTable<wbr>Dataset<wbr>Args</a> | <a href="#azuresqlmitabledataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Sql<wbr>MITable<wbr>Dataset<wbr>Args</a> | <a href="#azuresqltabledataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Sql<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#azuretabledataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#binarydataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Binary<wbr>Dataset<wbr>Args</a> | <a href="#cassandratabledataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Cassandra<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#commondataserviceforappsentitydataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Common<wbr>Data<wbr>Service<wbr>For<wbr>Apps<wbr>Entity<wbr>Dataset<wbr>Args</a> | <a href="#concurobjectdataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Concur<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#cosmosdbmongodbapicollectiondataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Cosmos<wbr>Db<wbr>Mongo<wbr>Db<wbr>Api<wbr>Collection<wbr>Dataset<wbr>Args</a> | <a href="#cosmosdbsqlapicollectiondataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Cosmos<wbr>Db<wbr>Sql<wbr>Api<wbr>Collection<wbr>Dataset<wbr>Args</a> | <a href="#couchbasetabledataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Couchbase<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#customdataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Custom<wbr>Dataset<wbr>Args</a> | <a href="#db2tabledataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Db2Table<wbr>Dataset<wbr>Args</a> | <a href="#delimitedtextdataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Delimited<wbr>Text<wbr>Dataset<wbr>Args</a> | <a href="#documentdbcollectiondataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Document<wbr>Db<wbr>Collection<wbr>Dataset<wbr>Args</a> | <a href="#drilltabledataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Drill<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#dynamicsaxresourcedataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dynamics<wbr>AXResource<wbr>Dataset<wbr>Args</a> | <a href="#dynamicscrmentitydataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dynamics<wbr>Crm<wbr>Entity<wbr>Dataset<wbr>Args</a> | <a href="#dynamicsentitydataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dynamics<wbr>Entity<wbr>Dataset<wbr>Args</a> | <a href="#eloquaobjectdataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Eloqua<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#exceldataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Excel<wbr>Dataset<wbr>Args</a> | <a href="#filesharedataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>File<wbr>Share<wbr>Dataset<wbr>Args</a> | <a href="#googleadwordsobjectdataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Google<wbr>Ad<wbr>Words<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#googlebigqueryobjectdataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Google<wbr>Big<wbr>Query<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#greenplumtabledataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Greenplum<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#hbaseobjectdataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>HBase<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#hiveobjectdataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Hive<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#httpdataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Http<wbr>Dataset<wbr>Args</a> | <a href="#hubspotobjectdataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Hubspot<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#impalaobjectdataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Impala<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#informixtabledataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Informix<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#jiraobjectdataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Jira<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#jsondataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Json<wbr>Dataset<wbr>Args</a> | <a href="#magentoobjectdataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Magento<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#mariadbtabledataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Maria<wbr>DBTable<wbr>Dataset<wbr>Args</a> | <a href="#marketoobjectdataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Marketo<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#microsoftaccesstabledataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Microsoft<wbr>Access<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#mongodbatlascollectiondataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Mongo<wbr>Db<wbr>Atlas<wbr>Collection<wbr>Dataset<wbr>Args</a> | <a href="#mongodbcollectiondataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Mongo<wbr>Db<wbr>Collection<wbr>Dataset<wbr>Args</a> | <a href="#mongodbv2collectiondataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Mongo<wbr>Db<wbr>V2Collection<wbr>Dataset<wbr>Args</a> | <a href="#mysqltabledataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>My<wbr>Sql<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#netezzatabledataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Netezza<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#odataresourcedataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>OData<wbr>Resource<wbr>Dataset<wbr>Args</a> | <a href="#odbctabledataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Odbc<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#office365dataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Office365Dataset<wbr>Args</a> | <a href="#oracleservicecloudobjectdataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Oracle<wbr>Service<wbr>Cloud<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#oracletabledataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Oracle<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#orcdataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Orc<wbr>Dataset<wbr>Args</a> | <a href="#parquetdataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parquet<wbr>Dataset<wbr>Args</a> | <a href="#paypalobjectdataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Paypal<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#phoenixobjectdataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Phoenix<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#postgresqltabledataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Postgre<wbr>Sql<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#prestoobjectdataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Presto<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#quickbooksobjectdataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Quick<wbr>Books<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#relationaltabledataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Relational<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#responsysobjectdataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Responsys<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#restresourcedataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Rest<wbr>Resource<wbr>Dataset<wbr>Args</a> | <a href="#salesforcemarketingcloudobjectdataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Salesforce<wbr>Marketing<wbr>Cloud<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#salesforceobjectdataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Salesforce<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#salesforceservicecloudobjectdataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Salesforce<wbr>Service<wbr>Cloud<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#sapbwcubedataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sap<wbr>Bw<wbr>Cube<wbr>Dataset<wbr>Args</a> | <a href="#sapcloudforcustomerresourcedataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sap<wbr>Cloud<wbr>For<wbr>Customer<wbr>Resource<wbr>Dataset<wbr>Args</a> | <a href="#sapeccresourcedataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sap<wbr>Ecc<wbr>Resource<wbr>Dataset<wbr>Args</a> | <a href="#saphanatabledataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sap<wbr>Hana<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#sapopenhubtabledataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sap<wbr>Open<wbr>Hub<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#saptableresourcedataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sap<wbr>Table<wbr>Resource<wbr>Dataset<wbr>Args</a> | <a href="#servicenowobjectdataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Service<wbr>Now<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#sharepointonlinelistresourcedataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Share<wbr>Point<wbr>Online<wbr>List<wbr>Resource<wbr>Dataset<wbr>Args</a> | <a href="#shopifyobjectdataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Shopify<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#snowflakedataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Snowflake<wbr>Dataset<wbr>Args</a> | <a href="#sparkobjectdataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Spark<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#sqlservertabledataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sql<wbr>Server<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#squareobjectdataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Square<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#sybasetabledataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sybase<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#teradatatabledataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Teradata<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#verticatabledataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Vertica<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#webtabledataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Web<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#xeroobjectdataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Xero<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#xmldataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Xml<wbr>Dataset<wbr>Args</a> | <a href="#zohoobjectdataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Zoho<wbr>Object<wbr>Dataset<wbr>Args</a></span>
+        <span class="property-type"><a href="#amazonmwsobjectdataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>MWSObject<wbr>Dataset<wbr>Args</a> | <a href="#amazonrdsfororacletabledataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>Rds<wbr>For<wbr>Oracle<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#amazonrdsforsqlservertabledataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>Rds<wbr>For<wbr>Sql<wbr>Server<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#amazonredshifttabledataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>Redshift<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#amazons3dataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Dataset<wbr>Args</a> | <a href="#avrodataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Avro<wbr>Dataset<wbr>Args</a> | <a href="#azureblobdataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Dataset<wbr>Args</a> | <a href="#azureblobfsdataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSDataset<wbr>Args</a> | <a href="#azuredataexplorertabledataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Explorer<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#azuredatalakestoredataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Dataset<wbr>Args</a> | <a href="#azuredatabricksdeltalakedataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Databricks<wbr>Delta<wbr>Lake<wbr>Dataset<wbr>Args</a> | <a href="#azuremariadbtabledataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Maria<wbr>DBTable<wbr>Dataset<wbr>Args</a> | <a href="#azuremysqltabledataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>My<wbr>Sql<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#azurepostgresqltabledataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Postgre<wbr>Sql<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#azuresearchindexdataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Search<wbr>Index<wbr>Dataset<wbr>Args</a> | <a href="#azuresqldwtabledataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Sql<wbr>DWTable<wbr>Dataset<wbr>Args</a> | <a href="#azuresqlmitabledataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Sql<wbr>MITable<wbr>Dataset<wbr>Args</a> | <a href="#azuresqltabledataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Sql<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#azuretabledataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#binarydataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Binary<wbr>Dataset<wbr>Args</a> | <a href="#cassandratabledataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Cassandra<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#commondataserviceforappsentitydataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Common<wbr>Data<wbr>Service<wbr>For<wbr>Apps<wbr>Entity<wbr>Dataset<wbr>Args</a> | <a href="#concurobjectdataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Concur<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#cosmosdbmongodbapicollectiondataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Cosmos<wbr>Db<wbr>Mongo<wbr>Db<wbr>Api<wbr>Collection<wbr>Dataset<wbr>Args</a> | <a href="#cosmosdbsqlapicollectiondataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Cosmos<wbr>Db<wbr>Sql<wbr>Api<wbr>Collection<wbr>Dataset<wbr>Args</a> | <a href="#couchbasetabledataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Couchbase<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#customdataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Custom<wbr>Dataset<wbr>Args</a> | <a href="#db2tabledataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Db2Table<wbr>Dataset<wbr>Args</a> | <a href="#delimitedtextdataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Delimited<wbr>Text<wbr>Dataset<wbr>Args</a> | <a href="#documentdbcollectiondataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Document<wbr>Db<wbr>Collection<wbr>Dataset<wbr>Args</a> | <a href="#drilltabledataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Drill<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#dynamicsaxresourcedataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dynamics<wbr>AXResource<wbr>Dataset<wbr>Args</a> | <a href="#dynamicscrmentitydataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dynamics<wbr>Crm<wbr>Entity<wbr>Dataset<wbr>Args</a> | <a href="#dynamicsentitydataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dynamics<wbr>Entity<wbr>Dataset<wbr>Args</a> | <a href="#eloquaobjectdataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Eloqua<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#exceldataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Excel<wbr>Dataset<wbr>Args</a> | <a href="#filesharedataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>File<wbr>Share<wbr>Dataset<wbr>Args</a> | <a href="#googleadwordsobjectdataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Google<wbr>Ad<wbr>Words<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#googlebigqueryobjectdataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Google<wbr>Big<wbr>Query<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#greenplumtabledataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Greenplum<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#hbaseobjectdataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>HBase<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#hiveobjectdataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Hive<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#httpdataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Http<wbr>Dataset<wbr>Args</a> | <a href="#hubspotobjectdataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Hubspot<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#impalaobjectdataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Impala<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#informixtabledataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Informix<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#jiraobjectdataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Jira<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#jsondataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Json<wbr>Dataset<wbr>Args</a> | <a href="#magentoobjectdataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Magento<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#mariadbtabledataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Maria<wbr>DBTable<wbr>Dataset<wbr>Args</a> | <a href="#marketoobjectdataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Marketo<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#microsoftaccesstabledataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Microsoft<wbr>Access<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#mongodbatlascollectiondataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Mongo<wbr>Db<wbr>Atlas<wbr>Collection<wbr>Dataset<wbr>Args</a> | <a href="#mongodbcollectiondataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Mongo<wbr>Db<wbr>Collection<wbr>Dataset<wbr>Args</a> | <a href="#mongodbv2collectiondataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Mongo<wbr>Db<wbr>V2Collection<wbr>Dataset<wbr>Args</a> | <a href="#mysqltabledataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>My<wbr>Sql<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#netezzatabledataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Netezza<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#odataresourcedataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>OData<wbr>Resource<wbr>Dataset<wbr>Args</a> | <a href="#odbctabledataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Odbc<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#office365dataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Office365Dataset<wbr>Args</a> | <a href="#oracleservicecloudobjectdataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Oracle<wbr>Service<wbr>Cloud<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#oracletabledataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Oracle<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#orcdataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Orc<wbr>Dataset<wbr>Args</a> | <a href="#parquetdataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parquet<wbr>Dataset<wbr>Args</a> | <a href="#paypalobjectdataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Paypal<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#phoenixobjectdataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Phoenix<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#postgresqltabledataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Postgre<wbr>Sql<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#prestoobjectdataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Presto<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#quickbooksobjectdataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Quick<wbr>Books<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#relationaltabledataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Relational<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#responsysobjectdataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Responsys<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#restresourcedataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Rest<wbr>Resource<wbr>Dataset<wbr>Args</a> | <a href="#salesforcemarketingcloudobjectdataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Salesforce<wbr>Marketing<wbr>Cloud<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#salesforceobjectdataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Salesforce<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#salesforceservicecloudobjectdataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Salesforce<wbr>Service<wbr>Cloud<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#sapbwcubedataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sap<wbr>Bw<wbr>Cube<wbr>Dataset<wbr>Args</a> | <a href="#sapcloudforcustomerresourcedataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sap<wbr>Cloud<wbr>For<wbr>Customer<wbr>Resource<wbr>Dataset<wbr>Args</a> | <a href="#sapeccresourcedataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sap<wbr>Ecc<wbr>Resource<wbr>Dataset<wbr>Args</a> | <a href="#saphanatabledataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sap<wbr>Hana<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#sapopenhubtabledataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sap<wbr>Open<wbr>Hub<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#saptableresourcedataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sap<wbr>Table<wbr>Resource<wbr>Dataset<wbr>Args</a> | <a href="#servicenowobjectdataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Service<wbr>Now<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#sharepointonlinelistresourcedataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Share<wbr>Point<wbr>Online<wbr>List<wbr>Resource<wbr>Dataset<wbr>Args</a> | <a href="#shopifyobjectdataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Shopify<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#snowflakedataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Snowflake<wbr>Dataset<wbr>Args</a> | <a href="#sparkobjectdataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Spark<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#sqlservertabledataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sql<wbr>Server<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#squareobjectdataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Square<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#sybasetabledataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sybase<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#teradatatabledataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Teradata<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#verticatabledataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Vertica<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#webtabledataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Web<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#xeroobjectdataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Xero<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#xmldataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Xml<wbr>Dataset<wbr>Args</a> | <a href="#zohoobjectdataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Zoho<wbr>Object<wbr>Dataset<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Dataset properties.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -544,7 +544,7 @@ The Dataset resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazonmwsobjectdataset">Amazon<wbr>MWSObject<wbr>Dataset<wbr>Args</a> | <a href="#amazonrdsfororacletabledataset">Amazon<wbr>Rds<wbr>For<wbr>Oracle<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#amazonredshifttabledataset">Amazon<wbr>Redshift<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#amazons3dataset">Amazon<wbr>S3Dataset<wbr>Args</a> | <a href="#avrodataset">Avro<wbr>Dataset<wbr>Args</a> | <a href="#azureblobdataset">Azure<wbr>Blob<wbr>Dataset<wbr>Args</a> | <a href="#azureblobfsdataset">Azure<wbr>Blob<wbr>FSDataset<wbr>Args</a> | <a href="#azuredataexplorertabledataset">Azure<wbr>Data<wbr>Explorer<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#azuredatalakestoredataset">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Dataset<wbr>Args</a> | <a href="#azuredatabricksdeltalakedataset">Azure<wbr>Databricks<wbr>Delta<wbr>Lake<wbr>Dataset<wbr>Args</a> | <a href="#azuremariadbtabledataset">Azure<wbr>Maria<wbr>DBTable<wbr>Dataset<wbr>Args</a> | <a href="#azuremysqltabledataset">Azure<wbr>My<wbr>Sql<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#azurepostgresqltabledataset">Azure<wbr>Postgre<wbr>Sql<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#azuresearchindexdataset">Azure<wbr>Search<wbr>Index<wbr>Dataset<wbr>Args</a> | <a href="#azuresqldwtabledataset">Azure<wbr>Sql<wbr>DWTable<wbr>Dataset<wbr>Args</a> | <a href="#azuresqlmitabledataset">Azure<wbr>Sql<wbr>MITable<wbr>Dataset<wbr>Args</a> | <a href="#azuresqltabledataset">Azure<wbr>Sql<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#azuretabledataset">Azure<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#binarydataset">Binary<wbr>Dataset<wbr>Args</a> | <a href="#cassandratabledataset">Cassandra<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#commondataserviceforappsentitydataset">Common<wbr>Data<wbr>Service<wbr>For<wbr>Apps<wbr>Entity<wbr>Dataset<wbr>Args</a> | <a href="#concurobjectdataset">Concur<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#cosmosdbmongodbapicollectiondataset">Cosmos<wbr>Db<wbr>Mongo<wbr>Db<wbr>Api<wbr>Collection<wbr>Dataset<wbr>Args</a> | <a href="#cosmosdbsqlapicollectiondataset">Cosmos<wbr>Db<wbr>Sql<wbr>Api<wbr>Collection<wbr>Dataset<wbr>Args</a> | <a href="#couchbasetabledataset">Couchbase<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#customdataset">Custom<wbr>Dataset<wbr>Args</a> | <a href="#db2tabledataset">Db2Table<wbr>Dataset<wbr>Args</a> | <a href="#delimitedtextdataset">Delimited<wbr>Text<wbr>Dataset<wbr>Args</a> | <a href="#documentdbcollectiondataset">Document<wbr>Db<wbr>Collection<wbr>Dataset<wbr>Args</a> | <a href="#drilltabledataset">Drill<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#dynamicsaxresourcedataset">Dynamics<wbr>AXResource<wbr>Dataset<wbr>Args</a> | <a href="#dynamicscrmentitydataset">Dynamics<wbr>Crm<wbr>Entity<wbr>Dataset<wbr>Args</a> | <a href="#dynamicsentitydataset">Dynamics<wbr>Entity<wbr>Dataset<wbr>Args</a> | <a href="#eloquaobjectdataset">Eloqua<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#exceldataset">Excel<wbr>Dataset<wbr>Args</a> | <a href="#filesharedataset">File<wbr>Share<wbr>Dataset<wbr>Args</a> | <a href="#googleadwordsobjectdataset">Google<wbr>Ad<wbr>Words<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#googlebigqueryobjectdataset">Google<wbr>Big<wbr>Query<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#greenplumtabledataset">Greenplum<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#hbaseobjectdataset">HBase<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#hiveobjectdataset">Hive<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#httpdataset">Http<wbr>Dataset<wbr>Args</a> | <a href="#hubspotobjectdataset">Hubspot<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#impalaobjectdataset">Impala<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#informixtabledataset">Informix<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#jiraobjectdataset">Jira<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#jsondataset">Json<wbr>Dataset<wbr>Args</a> | <a href="#magentoobjectdataset">Magento<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#mariadbtabledataset">Maria<wbr>DBTable<wbr>Dataset<wbr>Args</a> | <a href="#marketoobjectdataset">Marketo<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#microsoftaccesstabledataset">Microsoft<wbr>Access<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#mongodbatlascollectiondataset">Mongo<wbr>Db<wbr>Atlas<wbr>Collection<wbr>Dataset<wbr>Args</a> | <a href="#mongodbcollectiondataset">Mongo<wbr>Db<wbr>Collection<wbr>Dataset<wbr>Args</a> | <a href="#mongodbv2collectiondataset">Mongo<wbr>Db<wbr>V2Collection<wbr>Dataset<wbr>Args</a> | <a href="#mysqltabledataset">My<wbr>Sql<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#netezzatabledataset">Netezza<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#odataresourcedataset">OData<wbr>Resource<wbr>Dataset<wbr>Args</a> | <a href="#odbctabledataset">Odbc<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#office365dataset">Office365Dataset<wbr>Args</a> | <a href="#oracleservicecloudobjectdataset">Oracle<wbr>Service<wbr>Cloud<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#oracletabledataset">Oracle<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#orcdataset">Orc<wbr>Dataset<wbr>Args</a> | <a href="#parquetdataset">Parquet<wbr>Dataset<wbr>Args</a> | <a href="#paypalobjectdataset">Paypal<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#phoenixobjectdataset">Phoenix<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#postgresqltabledataset">Postgre<wbr>Sql<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#prestoobjectdataset">Presto<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#quickbooksobjectdataset">Quick<wbr>Books<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#relationaltabledataset">Relational<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#responsysobjectdataset">Responsys<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#restresourcedataset">Rest<wbr>Resource<wbr>Dataset<wbr>Args</a> | <a href="#salesforcemarketingcloudobjectdataset">Salesforce<wbr>Marketing<wbr>Cloud<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#salesforceobjectdataset">Salesforce<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#salesforceservicecloudobjectdataset">Salesforce<wbr>Service<wbr>Cloud<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#sapbwcubedataset">Sap<wbr>Bw<wbr>Cube<wbr>Dataset<wbr>Args</a> | <a href="#sapcloudforcustomerresourcedataset">Sap<wbr>Cloud<wbr>For<wbr>Customer<wbr>Resource<wbr>Dataset<wbr>Args</a> | <a href="#sapeccresourcedataset">Sap<wbr>Ecc<wbr>Resource<wbr>Dataset<wbr>Args</a> | <a href="#saphanatabledataset">Sap<wbr>Hana<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#sapopenhubtabledataset">Sap<wbr>Open<wbr>Hub<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#saptableresourcedataset">Sap<wbr>Table<wbr>Resource<wbr>Dataset<wbr>Args</a> | <a href="#servicenowobjectdataset">Service<wbr>Now<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#sharepointonlinelistresourcedataset">Share<wbr>Point<wbr>Online<wbr>List<wbr>Resource<wbr>Dataset<wbr>Args</a> | <a href="#shopifyobjectdataset">Shopify<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#snowflakedataset">Snowflake<wbr>Dataset<wbr>Args</a> | <a href="#sparkobjectdataset">Spark<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#sqlservertabledataset">Sql<wbr>Server<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#squareobjectdataset">Square<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#sybasetabledataset">Sybase<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#teradatatabledataset">Teradata<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#verticatabledataset">Vertica<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#webtabledataset">Web<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#xeroobjectdataset">Xero<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#xmldataset">Xml<wbr>Dataset<wbr>Args</a> | <a href="#zohoobjectdataset">Zoho<wbr>Object<wbr>Dataset<wbr>Args</a></span>
+        <span class="property-type"><a href="#amazonmwsobjectdataset">Amazon<wbr>MWSObject<wbr>Dataset<wbr>Args</a> | <a href="#amazonrdsfororacletabledataset">Amazon<wbr>Rds<wbr>For<wbr>Oracle<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#amazonrdsforsqlservertabledataset">Amazon<wbr>Rds<wbr>For<wbr>Sql<wbr>Server<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#amazonredshifttabledataset">Amazon<wbr>Redshift<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#amazons3dataset">Amazon<wbr>S3Dataset<wbr>Args</a> | <a href="#avrodataset">Avro<wbr>Dataset<wbr>Args</a> | <a href="#azureblobdataset">Azure<wbr>Blob<wbr>Dataset<wbr>Args</a> | <a href="#azureblobfsdataset">Azure<wbr>Blob<wbr>FSDataset<wbr>Args</a> | <a href="#azuredataexplorertabledataset">Azure<wbr>Data<wbr>Explorer<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#azuredatalakestoredataset">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Dataset<wbr>Args</a> | <a href="#azuredatabricksdeltalakedataset">Azure<wbr>Databricks<wbr>Delta<wbr>Lake<wbr>Dataset<wbr>Args</a> | <a href="#azuremariadbtabledataset">Azure<wbr>Maria<wbr>DBTable<wbr>Dataset<wbr>Args</a> | <a href="#azuremysqltabledataset">Azure<wbr>My<wbr>Sql<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#azurepostgresqltabledataset">Azure<wbr>Postgre<wbr>Sql<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#azuresearchindexdataset">Azure<wbr>Search<wbr>Index<wbr>Dataset<wbr>Args</a> | <a href="#azuresqldwtabledataset">Azure<wbr>Sql<wbr>DWTable<wbr>Dataset<wbr>Args</a> | <a href="#azuresqlmitabledataset">Azure<wbr>Sql<wbr>MITable<wbr>Dataset<wbr>Args</a> | <a href="#azuresqltabledataset">Azure<wbr>Sql<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#azuretabledataset">Azure<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#binarydataset">Binary<wbr>Dataset<wbr>Args</a> | <a href="#cassandratabledataset">Cassandra<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#commondataserviceforappsentitydataset">Common<wbr>Data<wbr>Service<wbr>For<wbr>Apps<wbr>Entity<wbr>Dataset<wbr>Args</a> | <a href="#concurobjectdataset">Concur<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#cosmosdbmongodbapicollectiondataset">Cosmos<wbr>Db<wbr>Mongo<wbr>Db<wbr>Api<wbr>Collection<wbr>Dataset<wbr>Args</a> | <a href="#cosmosdbsqlapicollectiondataset">Cosmos<wbr>Db<wbr>Sql<wbr>Api<wbr>Collection<wbr>Dataset<wbr>Args</a> | <a href="#couchbasetabledataset">Couchbase<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#customdataset">Custom<wbr>Dataset<wbr>Args</a> | <a href="#db2tabledataset">Db2Table<wbr>Dataset<wbr>Args</a> | <a href="#delimitedtextdataset">Delimited<wbr>Text<wbr>Dataset<wbr>Args</a> | <a href="#documentdbcollectiondataset">Document<wbr>Db<wbr>Collection<wbr>Dataset<wbr>Args</a> | <a href="#drilltabledataset">Drill<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#dynamicsaxresourcedataset">Dynamics<wbr>AXResource<wbr>Dataset<wbr>Args</a> | <a href="#dynamicscrmentitydataset">Dynamics<wbr>Crm<wbr>Entity<wbr>Dataset<wbr>Args</a> | <a href="#dynamicsentitydataset">Dynamics<wbr>Entity<wbr>Dataset<wbr>Args</a> | <a href="#eloquaobjectdataset">Eloqua<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#exceldataset">Excel<wbr>Dataset<wbr>Args</a> | <a href="#filesharedataset">File<wbr>Share<wbr>Dataset<wbr>Args</a> | <a href="#googleadwordsobjectdataset">Google<wbr>Ad<wbr>Words<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#googlebigqueryobjectdataset">Google<wbr>Big<wbr>Query<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#greenplumtabledataset">Greenplum<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#hbaseobjectdataset">HBase<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#hiveobjectdataset">Hive<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#httpdataset">Http<wbr>Dataset<wbr>Args</a> | <a href="#hubspotobjectdataset">Hubspot<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#impalaobjectdataset">Impala<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#informixtabledataset">Informix<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#jiraobjectdataset">Jira<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#jsondataset">Json<wbr>Dataset<wbr>Args</a> | <a href="#magentoobjectdataset">Magento<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#mariadbtabledataset">Maria<wbr>DBTable<wbr>Dataset<wbr>Args</a> | <a href="#marketoobjectdataset">Marketo<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#microsoftaccesstabledataset">Microsoft<wbr>Access<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#mongodbatlascollectiondataset">Mongo<wbr>Db<wbr>Atlas<wbr>Collection<wbr>Dataset<wbr>Args</a> | <a href="#mongodbcollectiondataset">Mongo<wbr>Db<wbr>Collection<wbr>Dataset<wbr>Args</a> | <a href="#mongodbv2collectiondataset">Mongo<wbr>Db<wbr>V2Collection<wbr>Dataset<wbr>Args</a> | <a href="#mysqltabledataset">My<wbr>Sql<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#netezzatabledataset">Netezza<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#odataresourcedataset">OData<wbr>Resource<wbr>Dataset<wbr>Args</a> | <a href="#odbctabledataset">Odbc<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#office365dataset">Office365Dataset<wbr>Args</a> | <a href="#oracleservicecloudobjectdataset">Oracle<wbr>Service<wbr>Cloud<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#oracletabledataset">Oracle<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#orcdataset">Orc<wbr>Dataset<wbr>Args</a> | <a href="#parquetdataset">Parquet<wbr>Dataset<wbr>Args</a> | <a href="#paypalobjectdataset">Paypal<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#phoenixobjectdataset">Phoenix<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#postgresqltabledataset">Postgre<wbr>Sql<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#prestoobjectdataset">Presto<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#quickbooksobjectdataset">Quick<wbr>Books<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#relationaltabledataset">Relational<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#responsysobjectdataset">Responsys<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#restresourcedataset">Rest<wbr>Resource<wbr>Dataset<wbr>Args</a> | <a href="#salesforcemarketingcloudobjectdataset">Salesforce<wbr>Marketing<wbr>Cloud<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#salesforceobjectdataset">Salesforce<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#salesforceservicecloudobjectdataset">Salesforce<wbr>Service<wbr>Cloud<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#sapbwcubedataset">Sap<wbr>Bw<wbr>Cube<wbr>Dataset<wbr>Args</a> | <a href="#sapcloudforcustomerresourcedataset">Sap<wbr>Cloud<wbr>For<wbr>Customer<wbr>Resource<wbr>Dataset<wbr>Args</a> | <a href="#sapeccresourcedataset">Sap<wbr>Ecc<wbr>Resource<wbr>Dataset<wbr>Args</a> | <a href="#saphanatabledataset">Sap<wbr>Hana<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#sapopenhubtabledataset">Sap<wbr>Open<wbr>Hub<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#saptableresourcedataset">Sap<wbr>Table<wbr>Resource<wbr>Dataset<wbr>Args</a> | <a href="#servicenowobjectdataset">Service<wbr>Now<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#sharepointonlinelistresourcedataset">Share<wbr>Point<wbr>Online<wbr>List<wbr>Resource<wbr>Dataset<wbr>Args</a> | <a href="#shopifyobjectdataset">Shopify<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#snowflakedataset">Snowflake<wbr>Dataset<wbr>Args</a> | <a href="#sparkobjectdataset">Spark<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#sqlservertabledataset">Sql<wbr>Server<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#squareobjectdataset">Square<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#sybasetabledataset">Sybase<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#teradatatabledataset">Teradata<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#verticatabledataset">Vertica<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#webtabledataset">Web<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#xeroobjectdataset">Xero<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#xmldataset">Xml<wbr>Dataset<wbr>Args</a> | <a href="#zohoobjectdataset">Zoho<wbr>Object<wbr>Dataset<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Dataset properties.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -580,7 +580,7 @@ The Dataset resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazonmwsobjectdataset">Amazon<wbr>MWSObject<wbr>Dataset<wbr>Args</a> | <a href="#amazonrdsfororacletabledataset">Amazon<wbr>Rds<wbr>For<wbr>Oracle<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#amazonredshifttabledataset">Amazon<wbr>Redshift<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#amazons3dataset">Amazon<wbr>S3Dataset<wbr>Args</a> | <a href="#avrodataset">Avro<wbr>Dataset<wbr>Args</a> | <a href="#azureblobdataset">Azure<wbr>Blob<wbr>Dataset<wbr>Args</a> | <a href="#azureblobfsdataset">Azure<wbr>Blob<wbr>FSDataset<wbr>Args</a> | <a href="#azuredataexplorertabledataset">Azure<wbr>Data<wbr>Explorer<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#azuredatalakestoredataset">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Dataset<wbr>Args</a> | <a href="#azuredatabricksdeltalakedataset">Azure<wbr>Databricks<wbr>Delta<wbr>Lake<wbr>Dataset<wbr>Args</a> | <a href="#azuremariadbtabledataset">Azure<wbr>Maria<wbr>DBTable<wbr>Dataset<wbr>Args</a> | <a href="#azuremysqltabledataset">Azure<wbr>My<wbr>Sql<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#azurepostgresqltabledataset">Azure<wbr>Postgre<wbr>Sql<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#azuresearchindexdataset">Azure<wbr>Search<wbr>Index<wbr>Dataset<wbr>Args</a> | <a href="#azuresqldwtabledataset">Azure<wbr>Sql<wbr>DWTable<wbr>Dataset<wbr>Args</a> | <a href="#azuresqlmitabledataset">Azure<wbr>Sql<wbr>MITable<wbr>Dataset<wbr>Args</a> | <a href="#azuresqltabledataset">Azure<wbr>Sql<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#azuretabledataset">Azure<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#binarydataset">Binary<wbr>Dataset<wbr>Args</a> | <a href="#cassandratabledataset">Cassandra<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#commondataserviceforappsentitydataset">Common<wbr>Data<wbr>Service<wbr>For<wbr>Apps<wbr>Entity<wbr>Dataset<wbr>Args</a> | <a href="#concurobjectdataset">Concur<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#cosmosdbmongodbapicollectiondataset">Cosmos<wbr>Db<wbr>Mongo<wbr>Db<wbr>Api<wbr>Collection<wbr>Dataset<wbr>Args</a> | <a href="#cosmosdbsqlapicollectiondataset">Cosmos<wbr>Db<wbr>Sql<wbr>Api<wbr>Collection<wbr>Dataset<wbr>Args</a> | <a href="#couchbasetabledataset">Couchbase<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#customdataset">Custom<wbr>Dataset<wbr>Args</a> | <a href="#db2tabledataset">Db2Table<wbr>Dataset<wbr>Args</a> | <a href="#delimitedtextdataset">Delimited<wbr>Text<wbr>Dataset<wbr>Args</a> | <a href="#documentdbcollectiondataset">Document<wbr>Db<wbr>Collection<wbr>Dataset<wbr>Args</a> | <a href="#drilltabledataset">Drill<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#dynamicsaxresourcedataset">Dynamics<wbr>AXResource<wbr>Dataset<wbr>Args</a> | <a href="#dynamicscrmentitydataset">Dynamics<wbr>Crm<wbr>Entity<wbr>Dataset<wbr>Args</a> | <a href="#dynamicsentitydataset">Dynamics<wbr>Entity<wbr>Dataset<wbr>Args</a> | <a href="#eloquaobjectdataset">Eloqua<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#exceldataset">Excel<wbr>Dataset<wbr>Args</a> | <a href="#filesharedataset">File<wbr>Share<wbr>Dataset<wbr>Args</a> | <a href="#googleadwordsobjectdataset">Google<wbr>Ad<wbr>Words<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#googlebigqueryobjectdataset">Google<wbr>Big<wbr>Query<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#greenplumtabledataset">Greenplum<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#hbaseobjectdataset">HBase<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#hiveobjectdataset">Hive<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#httpdataset">Http<wbr>Dataset<wbr>Args</a> | <a href="#hubspotobjectdataset">Hubspot<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#impalaobjectdataset">Impala<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#informixtabledataset">Informix<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#jiraobjectdataset">Jira<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#jsondataset">Json<wbr>Dataset<wbr>Args</a> | <a href="#magentoobjectdataset">Magento<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#mariadbtabledataset">Maria<wbr>DBTable<wbr>Dataset<wbr>Args</a> | <a href="#marketoobjectdataset">Marketo<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#microsoftaccesstabledataset">Microsoft<wbr>Access<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#mongodbatlascollectiondataset">Mongo<wbr>Db<wbr>Atlas<wbr>Collection<wbr>Dataset<wbr>Args</a> | <a href="#mongodbcollectiondataset">Mongo<wbr>Db<wbr>Collection<wbr>Dataset<wbr>Args</a> | <a href="#mongodbv2collectiondataset">Mongo<wbr>Db<wbr>V2Collection<wbr>Dataset<wbr>Args</a> | <a href="#mysqltabledataset">My<wbr>Sql<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#netezzatabledataset">Netezza<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#odataresourcedataset">OData<wbr>Resource<wbr>Dataset<wbr>Args</a> | <a href="#odbctabledataset">Odbc<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#office365dataset">Office365Dataset<wbr>Args</a> | <a href="#oracleservicecloudobjectdataset">Oracle<wbr>Service<wbr>Cloud<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#oracletabledataset">Oracle<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#orcdataset">Orc<wbr>Dataset<wbr>Args</a> | <a href="#parquetdataset">Parquet<wbr>Dataset<wbr>Args</a> | <a href="#paypalobjectdataset">Paypal<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#phoenixobjectdataset">Phoenix<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#postgresqltabledataset">Postgre<wbr>Sql<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#prestoobjectdataset">Presto<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#quickbooksobjectdataset">Quick<wbr>Books<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#relationaltabledataset">Relational<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#responsysobjectdataset">Responsys<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#restresourcedataset">Rest<wbr>Resource<wbr>Dataset<wbr>Args</a> | <a href="#salesforcemarketingcloudobjectdataset">Salesforce<wbr>Marketing<wbr>Cloud<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#salesforceobjectdataset">Salesforce<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#salesforceservicecloudobjectdataset">Salesforce<wbr>Service<wbr>Cloud<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#sapbwcubedataset">Sap<wbr>Bw<wbr>Cube<wbr>Dataset<wbr>Args</a> | <a href="#sapcloudforcustomerresourcedataset">Sap<wbr>Cloud<wbr>For<wbr>Customer<wbr>Resource<wbr>Dataset<wbr>Args</a> | <a href="#sapeccresourcedataset">Sap<wbr>Ecc<wbr>Resource<wbr>Dataset<wbr>Args</a> | <a href="#saphanatabledataset">Sap<wbr>Hana<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#sapopenhubtabledataset">Sap<wbr>Open<wbr>Hub<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#saptableresourcedataset">Sap<wbr>Table<wbr>Resource<wbr>Dataset<wbr>Args</a> | <a href="#servicenowobjectdataset">Service<wbr>Now<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#sharepointonlinelistresourcedataset">Share<wbr>Point<wbr>Online<wbr>List<wbr>Resource<wbr>Dataset<wbr>Args</a> | <a href="#shopifyobjectdataset">Shopify<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#snowflakedataset">Snowflake<wbr>Dataset<wbr>Args</a> | <a href="#sparkobjectdataset">Spark<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#sqlservertabledataset">Sql<wbr>Server<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#squareobjectdataset">Square<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#sybasetabledataset">Sybase<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#teradatatabledataset">Teradata<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#verticatabledataset">Vertica<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#webtabledataset">Web<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#xeroobjectdataset">Xero<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#xmldataset">Xml<wbr>Dataset<wbr>Args</a> | <a href="#zohoobjectdataset">Zoho<wbr>Object<wbr>Dataset<wbr>Args</a></span>
+        <span class="property-type"><a href="#amazonmwsobjectdataset">Amazon<wbr>MWSObject<wbr>Dataset<wbr>Args</a> | <a href="#amazonrdsfororacletabledataset">Amazon<wbr>Rds<wbr>For<wbr>Oracle<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#amazonrdsforsqlservertabledataset">Amazon<wbr>Rds<wbr>For<wbr>Sql<wbr>Server<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#amazonredshifttabledataset">Amazon<wbr>Redshift<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#amazons3dataset">Amazon<wbr>S3Dataset<wbr>Args</a> | <a href="#avrodataset">Avro<wbr>Dataset<wbr>Args</a> | <a href="#azureblobdataset">Azure<wbr>Blob<wbr>Dataset<wbr>Args</a> | <a href="#azureblobfsdataset">Azure<wbr>Blob<wbr>FSDataset<wbr>Args</a> | <a href="#azuredataexplorertabledataset">Azure<wbr>Data<wbr>Explorer<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#azuredatalakestoredataset">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Dataset<wbr>Args</a> | <a href="#azuredatabricksdeltalakedataset">Azure<wbr>Databricks<wbr>Delta<wbr>Lake<wbr>Dataset<wbr>Args</a> | <a href="#azuremariadbtabledataset">Azure<wbr>Maria<wbr>DBTable<wbr>Dataset<wbr>Args</a> | <a href="#azuremysqltabledataset">Azure<wbr>My<wbr>Sql<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#azurepostgresqltabledataset">Azure<wbr>Postgre<wbr>Sql<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#azuresearchindexdataset">Azure<wbr>Search<wbr>Index<wbr>Dataset<wbr>Args</a> | <a href="#azuresqldwtabledataset">Azure<wbr>Sql<wbr>DWTable<wbr>Dataset<wbr>Args</a> | <a href="#azuresqlmitabledataset">Azure<wbr>Sql<wbr>MITable<wbr>Dataset<wbr>Args</a> | <a href="#azuresqltabledataset">Azure<wbr>Sql<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#azuretabledataset">Azure<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#binarydataset">Binary<wbr>Dataset<wbr>Args</a> | <a href="#cassandratabledataset">Cassandra<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#commondataserviceforappsentitydataset">Common<wbr>Data<wbr>Service<wbr>For<wbr>Apps<wbr>Entity<wbr>Dataset<wbr>Args</a> | <a href="#concurobjectdataset">Concur<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#cosmosdbmongodbapicollectiondataset">Cosmos<wbr>Db<wbr>Mongo<wbr>Db<wbr>Api<wbr>Collection<wbr>Dataset<wbr>Args</a> | <a href="#cosmosdbsqlapicollectiondataset">Cosmos<wbr>Db<wbr>Sql<wbr>Api<wbr>Collection<wbr>Dataset<wbr>Args</a> | <a href="#couchbasetabledataset">Couchbase<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#customdataset">Custom<wbr>Dataset<wbr>Args</a> | <a href="#db2tabledataset">Db2Table<wbr>Dataset<wbr>Args</a> | <a href="#delimitedtextdataset">Delimited<wbr>Text<wbr>Dataset<wbr>Args</a> | <a href="#documentdbcollectiondataset">Document<wbr>Db<wbr>Collection<wbr>Dataset<wbr>Args</a> | <a href="#drilltabledataset">Drill<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#dynamicsaxresourcedataset">Dynamics<wbr>AXResource<wbr>Dataset<wbr>Args</a> | <a href="#dynamicscrmentitydataset">Dynamics<wbr>Crm<wbr>Entity<wbr>Dataset<wbr>Args</a> | <a href="#dynamicsentitydataset">Dynamics<wbr>Entity<wbr>Dataset<wbr>Args</a> | <a href="#eloquaobjectdataset">Eloqua<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#exceldataset">Excel<wbr>Dataset<wbr>Args</a> | <a href="#filesharedataset">File<wbr>Share<wbr>Dataset<wbr>Args</a> | <a href="#googleadwordsobjectdataset">Google<wbr>Ad<wbr>Words<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#googlebigqueryobjectdataset">Google<wbr>Big<wbr>Query<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#greenplumtabledataset">Greenplum<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#hbaseobjectdataset">HBase<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#hiveobjectdataset">Hive<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#httpdataset">Http<wbr>Dataset<wbr>Args</a> | <a href="#hubspotobjectdataset">Hubspot<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#impalaobjectdataset">Impala<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#informixtabledataset">Informix<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#jiraobjectdataset">Jira<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#jsondataset">Json<wbr>Dataset<wbr>Args</a> | <a href="#magentoobjectdataset">Magento<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#mariadbtabledataset">Maria<wbr>DBTable<wbr>Dataset<wbr>Args</a> | <a href="#marketoobjectdataset">Marketo<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#microsoftaccesstabledataset">Microsoft<wbr>Access<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#mongodbatlascollectiondataset">Mongo<wbr>Db<wbr>Atlas<wbr>Collection<wbr>Dataset<wbr>Args</a> | <a href="#mongodbcollectiondataset">Mongo<wbr>Db<wbr>Collection<wbr>Dataset<wbr>Args</a> | <a href="#mongodbv2collectiondataset">Mongo<wbr>Db<wbr>V2Collection<wbr>Dataset<wbr>Args</a> | <a href="#mysqltabledataset">My<wbr>Sql<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#netezzatabledataset">Netezza<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#odataresourcedataset">OData<wbr>Resource<wbr>Dataset<wbr>Args</a> | <a href="#odbctabledataset">Odbc<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#office365dataset">Office365Dataset<wbr>Args</a> | <a href="#oracleservicecloudobjectdataset">Oracle<wbr>Service<wbr>Cloud<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#oracletabledataset">Oracle<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#orcdataset">Orc<wbr>Dataset<wbr>Args</a> | <a href="#parquetdataset">Parquet<wbr>Dataset<wbr>Args</a> | <a href="#paypalobjectdataset">Paypal<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#phoenixobjectdataset">Phoenix<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#postgresqltabledataset">Postgre<wbr>Sql<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#prestoobjectdataset">Presto<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#quickbooksobjectdataset">Quick<wbr>Books<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#relationaltabledataset">Relational<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#responsysobjectdataset">Responsys<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#restresourcedataset">Rest<wbr>Resource<wbr>Dataset<wbr>Args</a> | <a href="#salesforcemarketingcloudobjectdataset">Salesforce<wbr>Marketing<wbr>Cloud<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#salesforceobjectdataset">Salesforce<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#salesforceservicecloudobjectdataset">Salesforce<wbr>Service<wbr>Cloud<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#sapbwcubedataset">Sap<wbr>Bw<wbr>Cube<wbr>Dataset<wbr>Args</a> | <a href="#sapcloudforcustomerresourcedataset">Sap<wbr>Cloud<wbr>For<wbr>Customer<wbr>Resource<wbr>Dataset<wbr>Args</a> | <a href="#sapeccresourcedataset">Sap<wbr>Ecc<wbr>Resource<wbr>Dataset<wbr>Args</a> | <a href="#saphanatabledataset">Sap<wbr>Hana<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#sapopenhubtabledataset">Sap<wbr>Open<wbr>Hub<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#saptableresourcedataset">Sap<wbr>Table<wbr>Resource<wbr>Dataset<wbr>Args</a> | <a href="#servicenowobjectdataset">Service<wbr>Now<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#sharepointonlinelistresourcedataset">Share<wbr>Point<wbr>Online<wbr>List<wbr>Resource<wbr>Dataset<wbr>Args</a> | <a href="#shopifyobjectdataset">Shopify<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#snowflakedataset">Snowflake<wbr>Dataset<wbr>Args</a> | <a href="#sparkobjectdataset">Spark<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#sqlservertabledataset">Sql<wbr>Server<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#squareobjectdataset">Square<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#sybasetabledataset">Sybase<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#teradatatabledataset">Teradata<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#verticatabledataset">Vertica<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#webtabledataset">Web<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#xeroobjectdataset">Xero<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#xmldataset">Xml<wbr>Dataset<wbr>Args</a> | <a href="#zohoobjectdataset">Zoho<wbr>Object<wbr>Dataset<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Dataset properties.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -616,7 +616,7 @@ The Dataset resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazonmwsobjectdataset">Amazon<wbr>MWSObject<wbr>Dataset<wbr>Args</a> | <a href="#amazonrdsfororacletabledataset">Amazon<wbr>Rds<wbr>For<wbr>Oracle<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#amazonredshifttabledataset">Amazon<wbr>Redshift<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#amazons3dataset">Amazon<wbr>S3Dataset<wbr>Args</a> | <a href="#avrodataset">Avro<wbr>Dataset<wbr>Args</a> | <a href="#azureblobdataset">Azure<wbr>Blob<wbr>Dataset<wbr>Args</a> | <a href="#azureblobfsdataset">Azure<wbr>Blob<wbr>FSDataset<wbr>Args</a> | <a href="#azuredataexplorertabledataset">Azure<wbr>Data<wbr>Explorer<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#azuredatalakestoredataset">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Dataset<wbr>Args</a> | <a href="#azuredatabricksdeltalakedataset">Azure<wbr>Databricks<wbr>Delta<wbr>Lake<wbr>Dataset<wbr>Args</a> | <a href="#azuremariadbtabledataset">Azure<wbr>Maria<wbr>DBTable<wbr>Dataset<wbr>Args</a> | <a href="#azuremysqltabledataset">Azure<wbr>My<wbr>Sql<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#azurepostgresqltabledataset">Azure<wbr>Postgre<wbr>Sql<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#azuresearchindexdataset">Azure<wbr>Search<wbr>Index<wbr>Dataset<wbr>Args</a> | <a href="#azuresqldwtabledataset">Azure<wbr>Sql<wbr>DWTable<wbr>Dataset<wbr>Args</a> | <a href="#azuresqlmitabledataset">Azure<wbr>Sql<wbr>MITable<wbr>Dataset<wbr>Args</a> | <a href="#azuresqltabledataset">Azure<wbr>Sql<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#azuretabledataset">Azure<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#binarydataset">Binary<wbr>Dataset<wbr>Args</a> | <a href="#cassandratabledataset">Cassandra<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#commondataserviceforappsentitydataset">Common<wbr>Data<wbr>Service<wbr>For<wbr>Apps<wbr>Entity<wbr>Dataset<wbr>Args</a> | <a href="#concurobjectdataset">Concur<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#cosmosdbmongodbapicollectiondataset">Cosmos<wbr>Db<wbr>Mongo<wbr>Db<wbr>Api<wbr>Collection<wbr>Dataset<wbr>Args</a> | <a href="#cosmosdbsqlapicollectiondataset">Cosmos<wbr>Db<wbr>Sql<wbr>Api<wbr>Collection<wbr>Dataset<wbr>Args</a> | <a href="#couchbasetabledataset">Couchbase<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#customdataset">Custom<wbr>Dataset<wbr>Args</a> | <a href="#db2tabledataset">Db2Table<wbr>Dataset<wbr>Args</a> | <a href="#delimitedtextdataset">Delimited<wbr>Text<wbr>Dataset<wbr>Args</a> | <a href="#documentdbcollectiondataset">Document<wbr>Db<wbr>Collection<wbr>Dataset<wbr>Args</a> | <a href="#drilltabledataset">Drill<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#dynamicsaxresourcedataset">Dynamics<wbr>AXResource<wbr>Dataset<wbr>Args</a> | <a href="#dynamicscrmentitydataset">Dynamics<wbr>Crm<wbr>Entity<wbr>Dataset<wbr>Args</a> | <a href="#dynamicsentitydataset">Dynamics<wbr>Entity<wbr>Dataset<wbr>Args</a> | <a href="#eloquaobjectdataset">Eloqua<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#exceldataset">Excel<wbr>Dataset<wbr>Args</a> | <a href="#filesharedataset">File<wbr>Share<wbr>Dataset<wbr>Args</a> | <a href="#googleadwordsobjectdataset">Google<wbr>Ad<wbr>Words<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#googlebigqueryobjectdataset">Google<wbr>Big<wbr>Query<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#greenplumtabledataset">Greenplum<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#hbaseobjectdataset">HBase<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#hiveobjectdataset">Hive<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#httpdataset">Http<wbr>Dataset<wbr>Args</a> | <a href="#hubspotobjectdataset">Hubspot<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#impalaobjectdataset">Impala<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#informixtabledataset">Informix<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#jiraobjectdataset">Jira<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#jsondataset">Json<wbr>Dataset<wbr>Args</a> | <a href="#magentoobjectdataset">Magento<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#mariadbtabledataset">Maria<wbr>DBTable<wbr>Dataset<wbr>Args</a> | <a href="#marketoobjectdataset">Marketo<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#microsoftaccesstabledataset">Microsoft<wbr>Access<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#mongodbatlascollectiondataset">Mongo<wbr>Db<wbr>Atlas<wbr>Collection<wbr>Dataset<wbr>Args</a> | <a href="#mongodbcollectiondataset">Mongo<wbr>Db<wbr>Collection<wbr>Dataset<wbr>Args</a> | <a href="#mongodbv2collectiondataset">Mongo<wbr>Db<wbr>V2Collection<wbr>Dataset<wbr>Args</a> | <a href="#mysqltabledataset">My<wbr>Sql<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#netezzatabledataset">Netezza<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#odataresourcedataset">OData<wbr>Resource<wbr>Dataset<wbr>Args</a> | <a href="#odbctabledataset">Odbc<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#office365dataset">Office365Dataset<wbr>Args</a> | <a href="#oracleservicecloudobjectdataset">Oracle<wbr>Service<wbr>Cloud<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#oracletabledataset">Oracle<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#orcdataset">Orc<wbr>Dataset<wbr>Args</a> | <a href="#parquetdataset">Parquet<wbr>Dataset<wbr>Args</a> | <a href="#paypalobjectdataset">Paypal<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#phoenixobjectdataset">Phoenix<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#postgresqltabledataset">Postgre<wbr>Sql<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#prestoobjectdataset">Presto<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#quickbooksobjectdataset">Quick<wbr>Books<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#relationaltabledataset">Relational<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#responsysobjectdataset">Responsys<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#restresourcedataset">Rest<wbr>Resource<wbr>Dataset<wbr>Args</a> | <a href="#salesforcemarketingcloudobjectdataset">Salesforce<wbr>Marketing<wbr>Cloud<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#salesforceobjectdataset">Salesforce<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#salesforceservicecloudobjectdataset">Salesforce<wbr>Service<wbr>Cloud<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#sapbwcubedataset">Sap<wbr>Bw<wbr>Cube<wbr>Dataset<wbr>Args</a> | <a href="#sapcloudforcustomerresourcedataset">Sap<wbr>Cloud<wbr>For<wbr>Customer<wbr>Resource<wbr>Dataset<wbr>Args</a> | <a href="#sapeccresourcedataset">Sap<wbr>Ecc<wbr>Resource<wbr>Dataset<wbr>Args</a> | <a href="#saphanatabledataset">Sap<wbr>Hana<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#sapopenhubtabledataset">Sap<wbr>Open<wbr>Hub<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#saptableresourcedataset">Sap<wbr>Table<wbr>Resource<wbr>Dataset<wbr>Args</a> | <a href="#servicenowobjectdataset">Service<wbr>Now<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#sharepointonlinelistresourcedataset">Share<wbr>Point<wbr>Online<wbr>List<wbr>Resource<wbr>Dataset<wbr>Args</a> | <a href="#shopifyobjectdataset">Shopify<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#snowflakedataset">Snowflake<wbr>Dataset<wbr>Args</a> | <a href="#sparkobjectdataset">Spark<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#sqlservertabledataset">Sql<wbr>Server<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#squareobjectdataset">Square<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#sybasetabledataset">Sybase<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#teradatatabledataset">Teradata<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#verticatabledataset">Vertica<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#webtabledataset">Web<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#xeroobjectdataset">Xero<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#xmldataset">Xml<wbr>Dataset<wbr>Args</a> | <a href="#zohoobjectdataset">Zoho<wbr>Object<wbr>Dataset<wbr>Args</a></span>
+        <span class="property-type"><a href="#amazonmwsobjectdataset">Amazon<wbr>MWSObject<wbr>Dataset<wbr>Args</a> | <a href="#amazonrdsfororacletabledataset">Amazon<wbr>Rds<wbr>For<wbr>Oracle<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#amazonrdsforsqlservertabledataset">Amazon<wbr>Rds<wbr>For<wbr>Sql<wbr>Server<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#amazonredshifttabledataset">Amazon<wbr>Redshift<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#amazons3dataset">Amazon<wbr>S3Dataset<wbr>Args</a> | <a href="#avrodataset">Avro<wbr>Dataset<wbr>Args</a> | <a href="#azureblobdataset">Azure<wbr>Blob<wbr>Dataset<wbr>Args</a> | <a href="#azureblobfsdataset">Azure<wbr>Blob<wbr>FSDataset<wbr>Args</a> | <a href="#azuredataexplorertabledataset">Azure<wbr>Data<wbr>Explorer<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#azuredatalakestoredataset">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Dataset<wbr>Args</a> | <a href="#azuredatabricksdeltalakedataset">Azure<wbr>Databricks<wbr>Delta<wbr>Lake<wbr>Dataset<wbr>Args</a> | <a href="#azuremariadbtabledataset">Azure<wbr>Maria<wbr>DBTable<wbr>Dataset<wbr>Args</a> | <a href="#azuremysqltabledataset">Azure<wbr>My<wbr>Sql<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#azurepostgresqltabledataset">Azure<wbr>Postgre<wbr>Sql<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#azuresearchindexdataset">Azure<wbr>Search<wbr>Index<wbr>Dataset<wbr>Args</a> | <a href="#azuresqldwtabledataset">Azure<wbr>Sql<wbr>DWTable<wbr>Dataset<wbr>Args</a> | <a href="#azuresqlmitabledataset">Azure<wbr>Sql<wbr>MITable<wbr>Dataset<wbr>Args</a> | <a href="#azuresqltabledataset">Azure<wbr>Sql<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#azuretabledataset">Azure<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#binarydataset">Binary<wbr>Dataset<wbr>Args</a> | <a href="#cassandratabledataset">Cassandra<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#commondataserviceforappsentitydataset">Common<wbr>Data<wbr>Service<wbr>For<wbr>Apps<wbr>Entity<wbr>Dataset<wbr>Args</a> | <a href="#concurobjectdataset">Concur<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#cosmosdbmongodbapicollectiondataset">Cosmos<wbr>Db<wbr>Mongo<wbr>Db<wbr>Api<wbr>Collection<wbr>Dataset<wbr>Args</a> | <a href="#cosmosdbsqlapicollectiondataset">Cosmos<wbr>Db<wbr>Sql<wbr>Api<wbr>Collection<wbr>Dataset<wbr>Args</a> | <a href="#couchbasetabledataset">Couchbase<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#customdataset">Custom<wbr>Dataset<wbr>Args</a> | <a href="#db2tabledataset">Db2Table<wbr>Dataset<wbr>Args</a> | <a href="#delimitedtextdataset">Delimited<wbr>Text<wbr>Dataset<wbr>Args</a> | <a href="#documentdbcollectiondataset">Document<wbr>Db<wbr>Collection<wbr>Dataset<wbr>Args</a> | <a href="#drilltabledataset">Drill<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#dynamicsaxresourcedataset">Dynamics<wbr>AXResource<wbr>Dataset<wbr>Args</a> | <a href="#dynamicscrmentitydataset">Dynamics<wbr>Crm<wbr>Entity<wbr>Dataset<wbr>Args</a> | <a href="#dynamicsentitydataset">Dynamics<wbr>Entity<wbr>Dataset<wbr>Args</a> | <a href="#eloquaobjectdataset">Eloqua<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#exceldataset">Excel<wbr>Dataset<wbr>Args</a> | <a href="#filesharedataset">File<wbr>Share<wbr>Dataset<wbr>Args</a> | <a href="#googleadwordsobjectdataset">Google<wbr>Ad<wbr>Words<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#googlebigqueryobjectdataset">Google<wbr>Big<wbr>Query<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#greenplumtabledataset">Greenplum<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#hbaseobjectdataset">HBase<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#hiveobjectdataset">Hive<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#httpdataset">Http<wbr>Dataset<wbr>Args</a> | <a href="#hubspotobjectdataset">Hubspot<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#impalaobjectdataset">Impala<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#informixtabledataset">Informix<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#jiraobjectdataset">Jira<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#jsondataset">Json<wbr>Dataset<wbr>Args</a> | <a href="#magentoobjectdataset">Magento<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#mariadbtabledataset">Maria<wbr>DBTable<wbr>Dataset<wbr>Args</a> | <a href="#marketoobjectdataset">Marketo<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#microsoftaccesstabledataset">Microsoft<wbr>Access<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#mongodbatlascollectiondataset">Mongo<wbr>Db<wbr>Atlas<wbr>Collection<wbr>Dataset<wbr>Args</a> | <a href="#mongodbcollectiondataset">Mongo<wbr>Db<wbr>Collection<wbr>Dataset<wbr>Args</a> | <a href="#mongodbv2collectiondataset">Mongo<wbr>Db<wbr>V2Collection<wbr>Dataset<wbr>Args</a> | <a href="#mysqltabledataset">My<wbr>Sql<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#netezzatabledataset">Netezza<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#odataresourcedataset">OData<wbr>Resource<wbr>Dataset<wbr>Args</a> | <a href="#odbctabledataset">Odbc<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#office365dataset">Office365Dataset<wbr>Args</a> | <a href="#oracleservicecloudobjectdataset">Oracle<wbr>Service<wbr>Cloud<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#oracletabledataset">Oracle<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#orcdataset">Orc<wbr>Dataset<wbr>Args</a> | <a href="#parquetdataset">Parquet<wbr>Dataset<wbr>Args</a> | <a href="#paypalobjectdataset">Paypal<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#phoenixobjectdataset">Phoenix<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#postgresqltabledataset">Postgre<wbr>Sql<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#prestoobjectdataset">Presto<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#quickbooksobjectdataset">Quick<wbr>Books<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#relationaltabledataset">Relational<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#responsysobjectdataset">Responsys<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#restresourcedataset">Rest<wbr>Resource<wbr>Dataset<wbr>Args</a> | <a href="#salesforcemarketingcloudobjectdataset">Salesforce<wbr>Marketing<wbr>Cloud<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#salesforceobjectdataset">Salesforce<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#salesforceservicecloudobjectdataset">Salesforce<wbr>Service<wbr>Cloud<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#sapbwcubedataset">Sap<wbr>Bw<wbr>Cube<wbr>Dataset<wbr>Args</a> | <a href="#sapcloudforcustomerresourcedataset">Sap<wbr>Cloud<wbr>For<wbr>Customer<wbr>Resource<wbr>Dataset<wbr>Args</a> | <a href="#sapeccresourcedataset">Sap<wbr>Ecc<wbr>Resource<wbr>Dataset<wbr>Args</a> | <a href="#saphanatabledataset">Sap<wbr>Hana<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#sapopenhubtabledataset">Sap<wbr>Open<wbr>Hub<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#saptableresourcedataset">Sap<wbr>Table<wbr>Resource<wbr>Dataset<wbr>Args</a> | <a href="#servicenowobjectdataset">Service<wbr>Now<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#sharepointonlinelistresourcedataset">Share<wbr>Point<wbr>Online<wbr>List<wbr>Resource<wbr>Dataset<wbr>Args</a> | <a href="#shopifyobjectdataset">Shopify<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#snowflakedataset">Snowflake<wbr>Dataset<wbr>Args</a> | <a href="#sparkobjectdataset">Spark<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#sqlservertabledataset">Sql<wbr>Server<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#squareobjectdataset">Square<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#sybasetabledataset">Sybase<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#teradatatabledataset">Teradata<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#verticatabledataset">Vertica<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#webtabledataset">Web<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#xeroobjectdataset">Xero<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#xmldataset">Xml<wbr>Dataset<wbr>Args</a> | <a href="#zohoobjectdataset">Zoho<wbr>Object<wbr>Dataset<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Dataset properties.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1892,6 +1892,554 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">Any</span>
     </dt>
     <dd>{{% md %}}The table name of the AmazonRdsForOracle database. Type: string (or Expression with resultType string).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="amazonrdsforsqlservertabledataset">Amazon<wbr>Rds<wbr>For<wbr>Sql<wbr>Server<wbr>Table<wbr>Dataset</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="linkedservicename_csharp">
+<a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#linkedservicereference">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference</a></span>
+    </dt>
+    <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="annotations_csharp">
+<a href="#annotations_csharp" style="color: inherit; text-decoration: inherit;">Annotations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;object&gt;</span>
+    </dt>
+    <dd>{{% md %}}List of tags that can be used for describing the Dataset.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Dataset description.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="folder_csharp">
+<a href="#folder_csharp" style="color: inherit; text-decoration: inherit;">Folder</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasetfolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Folder</a></span>
+    </dt>
+    <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="parameters_csharp">
+<a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification&gt;</span>
+    </dt>
+    <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="schema_csharp">
+<a href="#schema_csharp" style="color: inherit; text-decoration: inherit;">Schema</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="structure_csharp">
+<a href="#structure_csharp" style="color: inherit; text-decoration: inherit;">Structure</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="table_csharp">
+<a href="#table_csharp" style="color: inherit; text-decoration: inherit;">Table</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}The table name of the SQL Server dataset. Type: string (or Expression with resultType string).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="linkedservicename_go">
+<a href="#linkedservicename_go" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference</a></span>
+    </dt>
+    <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="annotations_go">
+<a href="#annotations_go" style="color: inherit; text-decoration: inherit;">Annotations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]interface{}</span>
+    </dt>
+    <dd>{{% md %}}List of tags that can be used for describing the Dataset.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Dataset description.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="folder_go">
+<a href="#folder_go" style="color: inherit; text-decoration: inherit;">Folder</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder</a></span>
+    </dt>
+    <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="parameters_go">
+<a href="#parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]Parameter<wbr>Specification</span>
+    </dt>
+    <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="schema_go">
+<a href="#schema_go" style="color: inherit; text-decoration: inherit;">Schema</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="structure_go">
+<a href="#structure_go" style="color: inherit; text-decoration: inherit;">Structure</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="table_go">
+<a href="#table_go" style="color: inherit; text-decoration: inherit;">Table</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}The table name of the SQL Server dataset. Type: string (or Expression with resultType string).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="linkedservicename_nodejs">
+<a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference</a></span>
+    </dt>
+    <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="annotations_nodejs">
+<a href="#annotations_nodejs" style="color: inherit; text-decoration: inherit;">annotations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any[]</span>
+    </dt>
+    <dd>{{% md %}}List of tags that can be used for describing the Dataset.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Dataset description.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="folder_nodejs">
+<a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder</a></span>
+    </dt>
+    <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="parameters_nodejs">
+<a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification}</span>
+    </dt>
+    <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="schema_nodejs">
+<a href="#schema_nodejs" style="color: inherit; text-decoration: inherit;">schema</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="structure_nodejs">
+<a href="#structure_nodejs" style="color: inherit; text-decoration: inherit;">structure</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="table_nodejs">
+<a href="#table_nodejs" style="color: inherit; text-decoration: inherit;">table</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}The table name of the SQL Server dataset. Type: string (or Expression with resultType string).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="linked_service_name_python">
+<a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference</a></span>
+    </dt>
+    <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="annotations_python">
+<a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[Any]</span>
+    </dt>
+    <dd>{{% md %}}List of tags that can be used for describing the Dataset.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Dataset description.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="folder_python">
+<a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder</a></span>
+    </dt>
+    <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="parameters_python">
+<a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification]</span>
+    </dt>
+    <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="schema_python">
+<a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="structure_python">
+<a href="#structure_python" style="color: inherit; text-decoration: inherit;">structure</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="table_python">
+<a href="#table_python" style="color: inherit; text-decoration: inherit;">table</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}The table name of the SQL Server dataset. Type: string (or Expression with resultType string).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="amazonrdsforsqlservertabledatasetresponse">Amazon<wbr>Rds<wbr>For<wbr>Sql<wbr>Server<wbr>Table<wbr>Dataset<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="linkedservicename_csharp">
+<a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="annotations_csharp">
+<a href="#annotations_csharp" style="color: inherit; text-decoration: inherit;">Annotations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;object&gt;</span>
+    </dt>
+    <dd>{{% md %}}List of tags that can be used for describing the Dataset.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Dataset description.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="folder_csharp">
+<a href="#folder_csharp" style="color: inherit; text-decoration: inherit;">Folder</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder</a></span>
+    </dt>
+    <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="parameters_csharp">
+<a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
+    </dt>
+    <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="schema_csharp">
+<a href="#schema_csharp" style="color: inherit; text-decoration: inherit;">Schema</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="structure_csharp">
+<a href="#structure_csharp" style="color: inherit; text-decoration: inherit;">Structure</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="table_csharp">
+<a href="#table_csharp" style="color: inherit; text-decoration: inherit;">Table</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}The table name of the SQL Server dataset. Type: string (or Expression with resultType string).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="linkedservicename_go">
+<a href="#linkedservicename_go" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="annotations_go">
+<a href="#annotations_go" style="color: inherit; text-decoration: inherit;">Annotations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]interface{}</span>
+    </dt>
+    <dd>{{% md %}}List of tags that can be used for describing the Dataset.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Dataset description.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="folder_go">
+<a href="#folder_go" style="color: inherit; text-decoration: inherit;">Folder</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+    </dt>
+    <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="parameters_go">
+<a href="#parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]Parameter<wbr>Specification<wbr>Response</span>
+    </dt>
+    <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="schema_go">
+<a href="#schema_go" style="color: inherit; text-decoration: inherit;">Schema</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="structure_go">
+<a href="#structure_go" style="color: inherit; text-decoration: inherit;">Structure</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="table_go">
+<a href="#table_go" style="color: inherit; text-decoration: inherit;">Table</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}The table name of the SQL Server dataset. Type: string (or Expression with resultType string).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="linkedservicename_nodejs">
+<a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="annotations_nodejs">
+<a href="#annotations_nodejs" style="color: inherit; text-decoration: inherit;">annotations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any[]</span>
+    </dt>
+    <dd>{{% md %}}List of tags that can be used for describing the Dataset.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Dataset description.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="folder_nodejs">
+<a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+    </dt>
+    <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="parameters_nodejs">
+<a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response}</span>
+    </dt>
+    <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="schema_nodejs">
+<a href="#schema_nodejs" style="color: inherit; text-decoration: inherit;">schema</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="structure_nodejs">
+<a href="#structure_nodejs" style="color: inherit; text-decoration: inherit;">structure</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="table_nodejs">
+<a href="#table_nodejs" style="color: inherit; text-decoration: inherit;">table</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}The table name of the SQL Server dataset. Type: string (or Expression with resultType string).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="linked_service_name_python">
+<a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="annotations_python">
+<a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[Any]</span>
+    </dt>
+    <dd>{{% md %}}List of tags that can be used for describing the Dataset.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Dataset description.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="folder_python">
+<a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+    </dt>
+    <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="parameters_python">
+<a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
+    </dt>
+    <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="schema_python">
+<a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="structure_python">
+<a href="#structure_python" style="color: inherit; text-decoration: inherit;">structure</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="table_python">
+<a href="#table_python" style="color: inherit; text-decoration: inherit;">table</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}The table name of the SQL Server dataset. Type: string (or Expression with resultType string).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="amazonredshifttabledataset">Amazon<wbr>Redshift<wbr>Table<wbr>Dataset</h4>

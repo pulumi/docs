@@ -243,21 +243,21 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Resource name of the attached database configuration in the follower cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="clusterresourceid_csharp">
-<a href="#clusterresourceid_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Resource<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource id of the cluster that follows a database owned by this cluster.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="databasename_csharp">
 <a href="#databasename_csharp" style="color: inherit; text-decoration: inherit;">Database<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The database name owned by this cluster that was followed. * in case following all databases.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The database name owned by this cluster that was followed. * in case following all databases.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="kustopoolresourceid_csharp">
+<a href="#kustopoolresourceid_csharp" style="color: inherit; text-decoration: inherit;">Kusto<wbr>Pool<wbr>Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource id of the cluster that follows a database owned by this cluster.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -271,21 +271,21 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Resource name of the attached database configuration in the follower cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="clusterresourceid_go">
-<a href="#clusterresourceid_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Resource<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource id of the cluster that follows a database owned by this cluster.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="databasename_go">
 <a href="#databasename_go" style="color: inherit; text-decoration: inherit;">Database<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The database name owned by this cluster that was followed. * in case following all databases.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The database name owned by this cluster that was followed. * in case following all databases.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="kustopoolresourceid_go">
+<a href="#kustopoolresourceid_go" style="color: inherit; text-decoration: inherit;">Kusto<wbr>Pool<wbr>Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource id of the cluster that follows a database owned by this cluster.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -299,21 +299,21 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Resource name of the attached database configuration in the follower cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="clusterresourceid_nodejs">
-<a href="#clusterresourceid_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Resource<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource id of the cluster that follows a database owned by this cluster.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="databasename_nodejs">
 <a href="#databasename_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The database name owned by this cluster that was followed. * in case following all databases.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The database name owned by this cluster that was followed. * in case following all databases.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="kustopoolresourceid_nodejs">
+<a href="#kustopoolresourceid_nodejs" style="color: inherit; text-decoration: inherit;">kusto<wbr>Pool<wbr>Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource id of the cluster that follows a database owned by this cluster.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -327,21 +327,21 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Resource name of the attached database configuration in the follower cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="cluster_resource_id_python">
-<a href="#cluster_resource_id_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>resource_<wbr>id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource id of the cluster that follows a database owned by this cluster.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="database_name_python">
 <a href="#database_name_python" style="color: inherit; text-decoration: inherit;">database_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The database name owned by this cluster that was followed. * in case following all databases.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The database name owned by this cluster that was followed. * in case following all databases.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="kusto_pool_resource_id_python">
+<a href="#kusto_pool_resource_id_python" style="color: inherit; text-decoration: inherit;">kusto_<wbr>pool_<wbr>resource_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Resource id of the cluster that follows a database owned by this cluster.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

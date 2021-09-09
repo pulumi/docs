@@ -17,6 +17,7 @@ Explore the resources and functions of the azure-native.redhatopenshift module.
 <h2 id="functions">Functions</h2>
 <ul class="api">
     <li><a href="getopenshiftcluster" title="GetOpenShiftCluster"><span class="symbol function"></span>GetOpenShiftCluster</a></li>
+    <li><a href="listopenshiftclusteradmincredentials" title="ListOpenShiftClusterAdminCredentials"><span class="symbol function"></span>ListOpenShiftClusterAdminCredentials</a></li>
     <li><a href="listopenshiftclustercredentials" title="ListOpenShiftClusterCredentials"><span class="symbol function"></span>ListOpenShiftClusterCredentials</a></li>
 </ul>
 
@@ -27,6 +28,6 @@ Explore the resources and functions of the azure-native.redhatopenshift module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.24.0</dd>
+	<dd>1.26.0</dd>
 </dl>
 

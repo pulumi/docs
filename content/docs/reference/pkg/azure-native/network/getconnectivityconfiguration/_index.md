@@ -265,13 +265,13 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}A friendly name for the resource.{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="hubid_csharp">
-<a href="#hubid_csharp" style="color: inherit; text-decoration: inherit;">Hub<wbr>Id</a>
+        <span id="hubs_csharp">
+<a href="#hubs_csharp" style="color: inherit; text-decoration: inherit;">Hubs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#hubresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Outputs.<wbr>Hub<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The hub vnet Id.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}List of hubItems{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="isglobal_csharp">
 <a href="#isglobal_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Global</a>
@@ -373,13 +373,13 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}A friendly name for the resource.{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="hubid_go">
-<a href="#hubid_go" style="color: inherit; text-decoration: inherit;">Hub<wbr>Id</a>
+        <span id="hubs_go">
+<a href="#hubs_go" style="color: inherit; text-decoration: inherit;">Hubs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#hubresponse">[]Hub<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The hub vnet Id.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}List of hubItems{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="isglobal_go">
 <a href="#isglobal_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Global</a>
@@ -481,13 +481,13 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}A friendly name for the resource.{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="hubid_nodejs">
-<a href="#hubid_nodejs" style="color: inherit; text-decoration: inherit;">hub<wbr>Id</a>
+        <span id="hubs_nodejs">
+<a href="#hubs_nodejs" style="color: inherit; text-decoration: inherit;">hubs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#hubresponse">Hub<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The hub vnet Id.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}List of hubItems{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="isglobal_nodejs">
 <a href="#isglobal_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Global</a>
@@ -589,13 +589,13 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}A friendly name for the resource.{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="hub_id_python">
-<a href="#hub_id_python" style="color: inherit; text-decoration: inherit;">hub_<wbr>id</a>
+        <span id="hubs_python">
+<a href="#hubs_python" style="color: inherit; text-decoration: inherit;">hubs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#hubresponse">Sequence[Hub<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}The hub vnet Id.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}List of hubItems{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="is_global_python">
 <a href="#is_global_python" style="color: inherit; text-decoration: inherit;">is_<wbr>global</a>
@@ -758,6 +758,90 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Flag if need to use hub gateway.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="hubresponse">Hub<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="resourceid_csharp">
+<a href="#resourceid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="resourcetype_csharp">
+<a href="#resourcetype_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource Type.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="resourceid_go">
+<a href="#resourceid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="resourcetype_go">
+<a href="#resourcetype_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource Type.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="resourceid_nodejs">
+<a href="#resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="resourcetype_nodejs">
+<a href="#resourcetype_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource Type.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="resource_id_python">
+<a href="#resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="resource_type_python">
+<a href="#resource_type_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Resource Type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="systemdataresponse">System<wbr>Data<wbr>Response</h4>

@@ -1,8 +1,8 @@
 
 ---
-title: "getAttachedDatabaseConfiguration"
-title_tag: "azure-native.synapse.getAttachedDatabaseConfiguration"
-meta_desc: "Documentation for the azure-native.synapse.getAttachedDatabaseConfiguration function with examples, input properties, output properties, and supporting types."
+title: "getKustoPoolAttachedDatabaseConfiguration"
+title_tag: "azure-native.synapse.getKustoPoolAttachedDatabaseConfiguration"
+meta_desc: "Documentation for the azure-native.synapse.getKustoPoolAttachedDatabaseConfiguration function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -16,36 +16,36 @@ API Version: 2021-06-01-preview.
 
 
 
-## Using getAttachedDatabaseConfiguration {#using}
+## Using getKustoPoolAttachedDatabaseConfiguration {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getAttachedDatabaseConfiguration<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetAttachedDatabaseConfigurationArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetAttachedDatabaseConfigurationResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getKustoPoolAttachedDatabaseConfiguration<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetKustoPoolAttachedDatabaseConfigurationArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetKustoPoolAttachedDatabaseConfigurationResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_attached_database_configuration(</span><span class="nx">attached_database_configuration_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                                        <span class="nx">kusto_pool_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                                        <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                                        <span class="nx">workspace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                                        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetAttachedDatabaseConfigurationResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_kusto_pool_attached_database_configuration(</span><span class="nx">attached_database_configuration_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                                   <span class="nx">kusto_pool_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                                   <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                                   <span class="nx">workspace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                                   <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetKustoPoolAttachedDatabaseConfigurationResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupAttachedDatabaseConfiguration<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupAttachedDatabaseConfigurationArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupAttachedDatabaseConfigurationResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupKustoPoolAttachedDatabaseConfiguration<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupKustoPoolAttachedDatabaseConfigurationArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupKustoPoolAttachedDatabaseConfigurationResult</a></span>, error)</span></code></pre></div>
 
-> Note: This function is named `LookupAttachedDatabaseConfiguration` in the Go SDK.
+> Note: This function is named `LookupKustoPoolAttachedDatabaseConfiguration` in the Go SDK.
 
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetAttachedDatabaseConfiguration </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetAttachedDatabaseConfigurationResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetAttachedDatabaseConfigurationArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetKustoPoolAttachedDatabaseConfiguration </span><span class="p">{</span><span class="k">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetKustoPoolAttachedDatabaseConfigurationResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetKustoPoolAttachedDatabaseConfigurationArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -201,7 +201,7 @@ The following arguments are supported:
 
 
 
-## getAttachedDatabaseConfiguration Result {#result}
+## getKustoPoolAttachedDatabaseConfiguration Result {#result}
 
 The following output properties are available:
 
@@ -217,14 +217,6 @@ The following output properties are available:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The list of databases from the clusterResourceId which are currently attached to the kusto pool.{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="clusterresourceid_csharp">
-<a href="#clusterresourceid_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Resource<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The resource id of the kusto pool where the databases you would like to attach reside.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="databasename_csharp">
 <a href="#databasename_csharp" style="color: inherit; text-decoration: inherit;">Database<wbr>Name</a>
@@ -249,6 +241,14 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="kustopoolresourceid_csharp">
+<a href="#kustopoolresourceid_csharp" style="color: inherit; text-decoration: inherit;">Kusto<wbr>Pool<wbr>Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource id of the kusto pool where the databases you would like to attach reside.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -310,14 +310,6 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The list of databases from the clusterResourceId which are currently attached to the kusto pool.{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="clusterresourceid_go">
-<a href="#clusterresourceid_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Resource<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The resource id of the kusto pool where the databases you would like to attach reside.{{% /md %}}</dd><dt class="property-"
-            title="">
         <span id="databasename_go">
 <a href="#databasename_go" style="color: inherit; text-decoration: inherit;">Database<wbr>Name</a>
 </span>
@@ -341,6 +333,14 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="kustopoolresourceid_go">
+<a href="#kustopoolresourceid_go" style="color: inherit; text-decoration: inherit;">Kusto<wbr>Pool<wbr>Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource id of the kusto pool where the databases you would like to attach reside.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -402,14 +402,6 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The list of databases from the clusterResourceId which are currently attached to the kusto pool.{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="clusterresourceid_nodejs">
-<a href="#clusterresourceid_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Resource<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The resource id of the kusto pool where the databases you would like to attach reside.{{% /md %}}</dd><dt class="property-"
-            title="">
         <span id="databasename_nodejs">
 <a href="#databasename_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Name</a>
 </span>
@@ -433,6 +425,14 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="kustopoolresourceid_nodejs">
+<a href="#kustopoolresourceid_nodejs" style="color: inherit; text-decoration: inherit;">kusto<wbr>Pool<wbr>Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource id of the kusto pool where the databases you would like to attach reside.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -494,14 +494,6 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The list of databases from the clusterResourceId which are currently attached to the kusto pool.{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="cluster_resource_id_python">
-<a href="#cluster_resource_id_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>resource_<wbr>id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The resource id of the kusto pool where the databases you would like to attach reside.{{% /md %}}</dd><dt class="property-"
-            title="">
         <span id="database_name_python">
 <a href="#database_name_python" style="color: inherit; text-decoration: inherit;">database_<wbr>name</a>
 </span>
@@ -525,6 +517,14 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="kusto_pool_resource_id_python">
+<a href="#kusto_pool_resource_id_python" style="color: inherit; text-decoration: inherit;">kusto_<wbr>pool_<wbr>resource_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The resource id of the kusto pool where the databases you would like to attach reside.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>

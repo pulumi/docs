@@ -21,6 +21,8 @@ Explore the resources and functions of the azure-native.kusto module.
     <li><a href="eventhubconnection" title="EventHubConnection"><span class="symbol resource"></span>EventHubConnection</a></li>
     <li><a href="eventhubdataconnection" title="EventHubDataConnection"><span class="symbol resource"></span>EventHubDataConnection</a></li>
     <li><a href="iothubdataconnection" title="IotHubDataConnection"><span class="symbol resource"></span>IotHubDataConnection</a></li>
+    <li><a href="managedprivateendpoint" title="ManagedPrivateEndpoint"><span class="symbol resource"></span>ManagedPrivateEndpoint</a></li>
+    <li><a href="privateendpointconnection" title="PrivateEndpointConnection"><span class="symbol resource"></span>PrivateEndpointConnection</a></li>
     <li><a href="readonlyfollowingdatabase" title="ReadOnlyFollowingDatabase"><span class="symbol resource"></span>ReadOnlyFollowingDatabase</a></li>
     <li><a href="readwritedatabase" title="ReadWriteDatabase"><span class="symbol resource"></span>ReadWriteDatabase</a></li>
     <li><a href="script" title="Script"><span class="symbol resource"></span>Script</a></li>
@@ -38,6 +40,8 @@ Explore the resources and functions of the azure-native.kusto module.
     <li><a href="geteventhubconnection" title="GetEventHubConnection"><span class="symbol function"></span>GetEventHubConnection</a></li>
     <li><a href="geteventhubdataconnection" title="GetEventHubDataConnection"><span class="symbol function"></span>GetEventHubDataConnection</a></li>
     <li><a href="getiothubdataconnection" title="GetIotHubDataConnection"><span class="symbol function"></span>GetIotHubDataConnection</a></li>
+    <li><a href="getmanagedprivateendpoint" title="GetManagedPrivateEndpoint"><span class="symbol function"></span>GetManagedPrivateEndpoint</a></li>
+    <li><a href="getprivateendpointconnection" title="GetPrivateEndpointConnection"><span class="symbol function"></span>GetPrivateEndpointConnection</a></li>
     <li><a href="getreadonlyfollowingdatabase" title="GetReadOnlyFollowingDatabase"><span class="symbol function"></span>GetReadOnlyFollowingDatabase</a></li>
     <li><a href="getreadwritedatabase" title="GetReadWriteDatabase"><span class="symbol function"></span>GetReadWriteDatabase</a></li>
     <li><a href="getscript" title="GetScript"><span class="symbol function"></span>GetScript</a></li>
@@ -53,6 +57,6 @@ Explore the resources and functions of the azure-native.kusto module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.24.0</dd>
+	<dd>1.26.0</dd>
 </dl>
 

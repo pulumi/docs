@@ -111,7 +111,7 @@ func main() {
 					OdataType: pulumi.String("#Microsoft.Media.MediaGraphAssetSink"),
 				},
 			},
-			Sources: []media.MediaGraphRtspSourceArgs{
+			Sources: media.MediaGraphRtspSourceArray{
 				&media.MediaGraphRtspSourceArgs{
 					Endpoint: &media.MediaGraphClearEndpointArgs{
 						Credentials: &media.MediaGraphUsernamePasswordCredentialsArgs{

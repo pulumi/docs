@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-native.authorization.ManagementLockAtRes
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The lock information.
-API Version: 2016-09-01.
+API Version: 2017-04-01.
 
 {{% examples %}}
 
@@ -856,7 +856,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-native:authorization:ManagementLockAtResourceLevel testlock /providers/Microsoft.Authorization/locks/testlock 
+$ pulumi import azure-native:authorization:ManagementLockAtResourceLevel testlock /subscriptions/subscriptionId/resourceGroups/resourcegroupname/providers/Microsoft.Authorization/locks/testlock 
 ```
 
 

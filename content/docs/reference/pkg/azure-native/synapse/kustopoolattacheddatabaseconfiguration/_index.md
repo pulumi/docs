@@ -1,8 +1,8 @@
 
 ---
-title: "AttachedDatabaseConfiguration"
-title_tag: "azure-native.synapse.AttachedDatabaseConfiguration"
-meta_desc: "Documentation for the azure-native.synapse.AttachedDatabaseConfiguration resource with examples, input properties, output properties, lookup functions, and supporting types."
+title: "KustoPoolAttachedDatabaseConfiguration"
+title_tag: "azure-native.synapse.KustoPoolAttachedDatabaseConfiguration"
+meta_desc: "Documentation for the azure-native.synapse.KustoPoolAttachedDatabaseConfiguration resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -33,13 +33,13 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var attachedDatabaseConfiguration = new AzureNative.Synapse.AttachedDatabaseConfiguration("attachedDatabaseConfiguration", new AzureNative.Synapse.AttachedDatabaseConfigurationArgs
+        var kustoPoolAttachedDatabaseConfiguration = new AzureNative.Synapse.KustoPoolAttachedDatabaseConfiguration("kustoPoolAttachedDatabaseConfiguration", new AzureNative.Synapse.KustoPoolAttachedDatabaseConfigurationArgs
         {
             AttachedDatabaseConfigurationName = "attachedDatabaseConfigurations1",
-            ClusterResourceId = "/subscriptions/12345678-1234-1234-1234-123456789098/resourceGroups/kustorptest/providers/Microsoft.Synapse/Workspaces/kustorptest/KustoPools/kustoclusterrptest4",
             DatabaseName = "kustodatabase",
             DefaultPrincipalsModificationKind = "Union",
             KustoPoolName = "kustoclusterrptest4",
+            KustoPoolResourceId = "/subscriptions/12345678-1234-1234-1234-123456789098/resourceGroups/kustorptest/providers/Microsoft.Synapse/Workspaces/kustorptest/KustoPools/kustoclusterrptest4",
             Location = "westus",
             ResourceGroupName = "kustorptest",
             TableLevelSharingProperties = new AzureNative.Synapse.Inputs.TableLevelSharingPropertiesArgs
@@ -94,12 +94,12 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := synapse.NewAttachedDatabaseConfiguration(ctx, "attachedDatabaseConfiguration", &synapse.AttachedDatabaseConfigurationArgs{
+		_, err := synapse.NewKustoPoolAttachedDatabaseConfiguration(ctx, "kustoPoolAttachedDatabaseConfiguration", &synapse.KustoPoolAttachedDatabaseConfigurationArgs{
 			AttachedDatabaseConfigurationName: pulumi.String("attachedDatabaseConfigurations1"),
-			ClusterResourceId:                 pulumi.String("/subscriptions/12345678-1234-1234-1234-123456789098/resourceGroups/kustorptest/providers/Microsoft.Synapse/Workspaces/kustorptest/KustoPools/kustoclusterrptest4"),
 			DatabaseName:                      pulumi.String("kustodatabase"),
 			DefaultPrincipalsModificationKind: pulumi.String("Union"),
 			KustoPoolName:                     pulumi.String("kustoclusterrptest4"),
+			KustoPoolResourceId:               pulumi.String("/subscriptions/12345678-1234-1234-1234-123456789098/resourceGroups/kustorptest/providers/Microsoft.Synapse/Workspaces/kustorptest/KustoPools/kustoclusterrptest4"),
 			Location:                          pulumi.String("westus"),
 			ResourceGroupName:                 pulumi.String("kustorptest"),
 			TableLevelSharingProperties: &synapse.TableLevelSharingPropertiesArgs{
@@ -144,12 +144,12 @@ func main() {
 import pulumi
 import pulumi_azure_native as azure_native
 
-attached_database_configuration = azure_native.synapse.AttachedDatabaseConfiguration("attachedDatabaseConfiguration",
+kusto_pool_attached_database_configuration = azure_native.synapse.KustoPoolAttachedDatabaseConfiguration("kustoPoolAttachedDatabaseConfiguration",
     attached_database_configuration_name="attachedDatabaseConfigurations1",
-    cluster_resource_id="/subscriptions/12345678-1234-1234-1234-123456789098/resourceGroups/kustorptest/providers/Microsoft.Synapse/Workspaces/kustorptest/KustoPools/kustoclusterrptest4",
     database_name="kustodatabase",
     default_principals_modification_kind="Union",
     kusto_pool_name="kustoclusterrptest4",
+    kusto_pool_resource_id="/subscriptions/12345678-1234-1234-1234-123456789098/resourceGroups/kustorptest/providers/Microsoft.Synapse/Workspaces/kustorptest/KustoPools/kustoclusterrptest4",
     location="westus",
     resource_group_name="kustorptest",
     table_level_sharing_properties=azure_native.synapse.TableLevelSharingPropertiesArgs(
@@ -175,12 +175,12 @@ attached_database_configuration = azure_native.synapse.AttachedDatabaseConfigura
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_native from "@pulumi/azure-native";
 
-const attachedDatabaseConfiguration = new azure_native.synapse.AttachedDatabaseConfiguration("attachedDatabaseConfiguration", {
+const kustoPoolAttachedDatabaseConfiguration = new azure_native.synapse.KustoPoolAttachedDatabaseConfiguration("kustoPoolAttachedDatabaseConfiguration", {
     attachedDatabaseConfigurationName: "attachedDatabaseConfigurations1",
-    clusterResourceId: "/subscriptions/12345678-1234-1234-1234-123456789098/resourceGroups/kustorptest/providers/Microsoft.Synapse/Workspaces/kustorptest/KustoPools/kustoclusterrptest4",
     databaseName: "kustodatabase",
     defaultPrincipalsModificationKind: "Union",
     kustoPoolName: "kustoclusterrptest4",
+    kustoPoolResourceId: "/subscriptions/12345678-1234-1234-1234-123456789098/resourceGroups/kustorptest/providers/Microsoft.Synapse/Workspaces/kustorptest/KustoPools/kustoclusterrptest4",
     location: "westus",
     resourceGroupName: "kustorptest",
     tableLevelSharingProperties: {
@@ -208,39 +208,39 @@ const attachedDatabaseConfiguration = new azure_native.synapse.AttachedDatabaseC
 
 
 
-## Create a AttachedDatabaseConfiguration Resource {#create}
+## Create a KustoPoolAttachedDatabaseConfiguration Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">AttachedDatabaseConfiguration</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AttachedDatabaseConfigurationArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">KustoPoolAttachedDatabaseConfiguration</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">KustoPoolAttachedDatabaseConfigurationArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">AttachedDatabaseConfiguration</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                                  <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                                  <span class="nx">attached_database_configuration_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                                  <span class="nx">cluster_resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                                  <span class="nx">database_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                                  <span class="nx">default_principals_modification_kind</span><span class="p">:</span> <span class="nx">Optional[Union[str, DefaultPrincipalsModificationKind]]</span> = None<span class="p">,</span>
-                                  <span class="nx">kusto_pool_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                                  <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                                  <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                                  <span class="nx">table_level_sharing_properties</span><span class="p">:</span> <span class="nx">Optional[TableLevelSharingPropertiesArgs]</span> = None<span class="p">,</span>
-                                  <span class="nx">workspace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class="k">def </span><span class="nx">KustoPoolAttachedDatabaseConfiguration</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                                           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                                           <span class="nx">attached_database_configuration_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                           <span class="nx">database_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                           <span class="nx">default_principals_modification_kind</span><span class="p">:</span> <span class="nx">Optional[Union[str, DefaultPrincipalsModificationKind]]</span> = None<span class="p">,</span>
+                                           <span class="nx">kusto_pool_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                           <span class="nx">kusto_pool_resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                           <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                           <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                           <span class="nx">table_level_sharing_properties</span><span class="p">:</span> <span class="nx">Optional[TableLevelSharingPropertiesArgs]</span> = None<span class="p">,</span>
+                                           <span class="nx">workspace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">AttachedDatabaseConfiguration</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                                  <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AttachedDatabaseConfigurationArgs</a></span><span class="p">,</span>
-                                  <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<span class="k">def </span><span class="nx">KustoPoolAttachedDatabaseConfiguration</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                                           <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">KustoPoolAttachedDatabaseConfigurationArgs</a></span><span class="p">,</span>
+                                           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAttachedDatabaseConfiguration</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AttachedDatabaseConfigurationArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AttachedDatabaseConfiguration</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewKustoPoolAttachedDatabaseConfiguration</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">KustoPoolAttachedDatabaseConfigurationArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">KustoPoolAttachedDatabaseConfiguration</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">AttachedDatabaseConfiguration</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">AttachedDatabaseConfigurationArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">KustoPoolAttachedDatabaseConfiguration</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">KustoPoolAttachedDatabaseConfigurationArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -255,7 +255,7 @@ const attachedDatabaseConfiguration = new azure_native.synapse.AttachedDatabaseC
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">AttachedDatabaseConfigurationArgs</a></span>
+        <span class="property-type"><a href="#inputs">KustoPoolAttachedDatabaseConfigurationArgs</a></span>
     </dt>
     <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
@@ -279,7 +279,7 @@ const attachedDatabaseConfiguration = new azure_native.synapse.AttachedDatabaseC
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">AttachedDatabaseConfigurationArgs</a></span>
+        <span class="property-type"><a href="#inputs">KustoPoolAttachedDatabaseConfigurationArgs</a></span>
     </dt>
     <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
@@ -309,7 +309,7 @@ const attachedDatabaseConfiguration = new azure_native.synapse.AttachedDatabaseC
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">AttachedDatabaseConfigurationArgs</a></span>
+        <span class="property-type"><a href="#inputs">KustoPoolAttachedDatabaseConfigurationArgs</a></span>
     </dt>
     <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
@@ -333,7 +333,7 @@ const attachedDatabaseConfiguration = new azure_native.synapse.AttachedDatabaseC
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">AttachedDatabaseConfigurationArgs</a></span>
+        <span class="property-type"><a href="#inputs">KustoPoolAttachedDatabaseConfigurationArgs</a></span>
     </dt>
     <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
@@ -345,26 +345,18 @@ const attachedDatabaseConfiguration = new azure_native.synapse.AttachedDatabaseC
 
 {{% /choosable %}}
 
-## AttachedDatabaseConfiguration Resource Properties {#properties}
+## KustoPoolAttachedDatabaseConfiguration Resource Properties {#properties}
 
 To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Architecture and Concepts docs.
 
 ### Inputs
 
-The AttachedDatabaseConfiguration resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
+The KustoPoolAttachedDatabaseConfiguration resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="clusterresourceid_csharp">
-<a href="#clusterresourceid_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Resource<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The resource id of the kusto pool where the databases you would like to attach reside.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="databasename_csharp">
 <a href="#databasename_csharp" style="color: inherit; text-decoration: inherit;">Database<wbr>Name</a>
@@ -389,6 +381,14 @@ The AttachedDatabaseConfiguration resource accepts the following [input]({{< rel
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Kusto pool.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="kustopoolresourceid_csharp">
+<a href="#kustopoolresourceid_csharp" style="color: inherit; text-decoration: inherit;">Kusto<wbr>Pool<wbr>Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource id of the kusto pool where the databases you would like to attach reside.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -434,14 +434,6 @@ The AttachedDatabaseConfiguration resource accepts the following [input]({{< rel
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="clusterresourceid_go">
-<a href="#clusterresourceid_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Resource<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The resource id of the kusto pool where the databases you would like to attach reside.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="databasename_go">
 <a href="#databasename_go" style="color: inherit; text-decoration: inherit;">Database<wbr>Name</a>
 </span>
@@ -465,6 +457,14 @@ The AttachedDatabaseConfiguration resource accepts the following [input]({{< rel
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Kusto pool.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="kustopoolresourceid_go">
+<a href="#kustopoolresourceid_go" style="color: inherit; text-decoration: inherit;">Kusto<wbr>Pool<wbr>Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource id of the kusto pool where the databases you would like to attach reside.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -510,14 +510,6 @@ The AttachedDatabaseConfiguration resource accepts the following [input]({{< rel
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="clusterresourceid_nodejs">
-<a href="#clusterresourceid_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Resource<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The resource id of the kusto pool where the databases you would like to attach reside.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="databasename_nodejs">
 <a href="#databasename_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Name</a>
 </span>
@@ -541,6 +533,14 @@ The AttachedDatabaseConfiguration resource accepts the following [input]({{< rel
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Kusto pool.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="kustopoolresourceid_nodejs">
+<a href="#kustopoolresourceid_nodejs" style="color: inherit; text-decoration: inherit;">kusto<wbr>Pool<wbr>Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource id of the kusto pool where the databases you would like to attach reside.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -586,14 +586,6 @@ The AttachedDatabaseConfiguration resource accepts the following [input]({{< rel
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="cluster_resource_id_python">
-<a href="#cluster_resource_id_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>resource_<wbr>id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The resource id of the kusto pool where the databases you would like to attach reside.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="database_name_python">
 <a href="#database_name_python" style="color: inherit; text-decoration: inherit;">database_<wbr>name</a>
 </span>
@@ -617,6 +609,14 @@ The AttachedDatabaseConfiguration resource accepts the following [input]({{< rel
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Kusto pool.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="kusto_pool_resource_id_python">
+<a href="#kusto_pool_resource_id_python" style="color: inherit; text-decoration: inherit;">kusto_<wbr>pool_<wbr>resource_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The resource id of the kusto pool where the databases you would like to attach reside.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -662,7 +662,7 @@ The AttachedDatabaseConfiguration resource accepts the following [input]({{< rel
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. Additionally, the AttachedDatabaseConfiguration resource produces the following output properties:
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the KustoPoolAttachedDatabaseConfiguration resource produces the following output properties:
 
 
 
@@ -1549,7 +1549,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-native:synapse:AttachedDatabaseConfiguration KustoClusterRPTest4/attachedDatabaseConfigurations1 /subscriptions/12345678-1234-1234-1234-123456789098/resourceGroups/kustorptest/providers/Microsoft.Synapse/Workspaces/kustorptest/KustoPools/kustoclusterrptest4/attachedDatabaseConfigurations/attachedDatabaseConfigurations1 
+$ pulumi import azure-native:synapse:KustoPoolAttachedDatabaseConfiguration KustoClusterRPTest4/attachedDatabaseConfigurations1 /subscriptions/12345678-1234-1234-1234-123456789098/resourceGroups/kustorptest/providers/Microsoft.Synapse/Workspaces/kustorptest/KustoPools/kustoclusterrptest4/attachedDatabaseConfigurations/attachedDatabaseConfigurations1 
 ```
 
 

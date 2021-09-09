@@ -364,13 +364,13 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}A friendly name for the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="hubid_csharp">
-<a href="#hubid_csharp" style="color: inherit; text-decoration: inherit;">Hub<wbr>Id</a>
+        <span id="hubs_csharp">
+<a href="#hubs_csharp" style="color: inherit; text-decoration: inherit;">Hubs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#hubresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Hub<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The hub vnet Id.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}List of hubItems{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -464,13 +464,13 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}A friendly name for the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="hubid_go">
-<a href="#hubid_go" style="color: inherit; text-decoration: inherit;">Hub<wbr>Id</a>
+        <span id="hubs_go">
+<a href="#hubs_go" style="color: inherit; text-decoration: inherit;">Hubs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#hubresponse">[]Hub<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The hub vnet Id.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}List of hubItems{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -564,13 +564,13 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}A friendly name for the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="hubid_nodejs">
-<a href="#hubid_nodejs" style="color: inherit; text-decoration: inherit;">hub<wbr>Id</a>
+        <span id="hubs_nodejs">
+<a href="#hubs_nodejs" style="color: inherit; text-decoration: inherit;">hubs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#hubresponse">Hub<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The hub vnet Id.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}List of hubItems{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -664,13 +664,13 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}A friendly name for the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="hub_id_python">
-<a href="#hub_id_python" style="color: inherit; text-decoration: inherit;">hub_<wbr>id</a>
+        <span id="hubs_python">
+<a href="#hubs_python" style="color: inherit; text-decoration: inherit;">hubs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#hubresponse">Sequence[Hub<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}The hub vnet Id.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}List of hubItems{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1096,81 +1096,133 @@ The following output properties are available:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="subnetid_csharp">
-<a href="#subnetid_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
+        <span id="resourceid_csharp">
+<a href="#resourceid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Subnet Id.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="vnetid_csharp">
-<a href="#vnetid_csharp" style="color: inherit; text-decoration: inherit;">Vnet<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Vnet Id.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Resource Id.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="subnetid_go">
-<a href="#subnetid_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
+        <span id="resourceid_go">
+<a href="#resourceid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Subnet Id.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="vnetid_go">
-<a href="#vnetid_go" style="color: inherit; text-decoration: inherit;">Vnet<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Vnet Id.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Resource Id.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="subnetid_nodejs">
-<a href="#subnetid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Id</a>
+        <span id="resourceid_nodejs">
+<a href="#resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Subnet Id.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="vnetid_nodejs">
-<a href="#vnetid_nodejs" style="color: inherit; text-decoration: inherit;">vnet<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Vnet Id.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Resource Id.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="subnet_id_python">
-<a href="#subnet_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>id</a>
+        <span id="resource_id_python">
+<a href="#resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Subnet Id.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Resource Id.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="hubresponse">Hub<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="vnet_id_python">
-<a href="#vnet_id_python" style="color: inherit; text-decoration: inherit;">vnet_<wbr>id</a>
+        <span id="resourceid_csharp">
+<a href="#resourceid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="resourcetype_csharp">
+<a href="#resourcetype_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource Type.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="resourceid_go">
+<a href="#resourceid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="resourcetype_go">
+<a href="#resourcetype_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource Type.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="resourceid_nodejs">
+<a href="#resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="resourcetype_nodejs">
+<a href="#resourcetype_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource Type.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="resource_id_python">
+<a href="#resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Vnet Id.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="resource_type_python">
+<a href="#resource_type_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Resource Type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
