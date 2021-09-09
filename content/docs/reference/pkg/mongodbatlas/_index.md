@@ -16,6 +16,7 @@ A Pulumi package for creating and managing mongodbatlas cloud resources.
 <ul class="api">
     <li><a href="alertconfiguration" title="AlertConfiguration"><span class="symbol resource"></span>AlertConfiguration</a></li>
     <li><a href="auditing" title="Auditing"><span class="symbol resource"></span>Auditing</a></li>
+    <li><a href="cloudbackupschedule" title="CloudBackupSchedule"><span class="symbol resource"></span>CloudBackupSchedule</a></li>
     <li><a href="cloudprovideraccess" title="CloudProviderAccess"><span class="symbol resource"></span>CloudProviderAccess</a></li>
     <li><a href="cloudprovideraccessauthorization" title="CloudProviderAccessAuthorization"><span class="symbol resource"></span>CloudProviderAccessAuthorization</a></li>
     <li><a href="cloudprovideraccesssetup" title="CloudProviderAccessSetup"><span class="symbol resource"></span>CloudProviderAccessSetup</a></li>
@@ -25,23 +26,24 @@ A Pulumi package for creating and managing mongodbatlas cloud resources.
     <li><a href="cluster" title="Cluster"><span class="symbol resource"></span>Cluster</a></li>
     <li><a href="customdbrole" title="CustomDbRole"><span class="symbol resource"></span>CustomDbRole</a></li>
     <li><a href="customdnsconfigurationclusteraws" title="CustomDnsConfigurationClusterAws"><span class="symbol resource"></span>CustomDnsConfigurationClusterAws</a></li>
+    <li><a href="datalake" title="DataLake"><span class="symbol resource"></span>DataLake</a></li>
     <li><a href="databaseuser" title="DatabaseUser"><span class="symbol resource"></span>DatabaseUser</a></li>
     <li><a href="encryptionatrest" title="EncryptionAtRest"><span class="symbol resource"></span>EncryptionAtRest</a></li>
+    <li><a href="eventtrigger" title="EventTrigger"><span class="symbol resource"></span>EventTrigger</a></li>
     <li><a href="globalclusterconfig" title="GlobalClusterConfig"><span class="symbol resource"></span>GlobalClusterConfig</a></li>
     <li><a href="ldapconfiguration" title="LdapConfiguration"><span class="symbol resource"></span>LdapConfiguration</a></li>
     <li><a href="ldapverify" title="LdapVerify"><span class="symbol resource"></span>LdapVerify</a></li>
     <li><a href="maintenancewindow" title="MaintenanceWindow"><span class="symbol resource"></span>MaintenanceWindow</a></li>
     <li><a href="networkcontainer" title="NetworkContainer"><span class="symbol resource"></span>NetworkContainer</a></li>
     <li><a href="networkpeering" title="NetworkPeering"><span class="symbol resource"></span>NetworkPeering</a></li>
-    <li><a href="privateendpoint" title="PrivateEndpoint"><span class="symbol resource"></span>PrivateEndpoint</a></li>
-    <li><a href="privateendpointinterfacelink" title="PrivateEndpointInterfaceLink"><span class="symbol resource"></span>PrivateEndpointInterfaceLink</a></li>
+    <li><a href="onlinearchive" title="OnlineArchive"><span class="symbol resource"></span>OnlineArchive</a></li>
     <li><a href="privateipmode" title="PrivateIpMode"><span class="symbol resource"></span>PrivateIpMode</a></li>
     <li><a href="privatelinkendpoint" title="PrivateLinkEndpoint"><span class="symbol resource"></span>PrivateLinkEndpoint</a></li>
     <li><a href="privatelinkendpointservice" title="PrivateLinkEndpointService"><span class="symbol resource"></span>PrivateLinkEndpointService</a></li>
     <li><a href="project" title="Project"><span class="symbol resource"></span>Project</a></li>
     <li><a href="projectipaccesslist" title="ProjectIpAccessList"><span class="symbol resource"></span>ProjectIpAccessList</a></li>
-    <li><a href="projectipwhitelist" title="ProjectIpWhitelist"><span class="symbol resource"></span>ProjectIpWhitelist</a></li>
     <li><a href="provider" title="Provider"><span class="symbol resource"></span>Provider</a></li>
+    <li><a href="searchindex" title="SearchIndex"><span class="symbol resource"></span>SearchIndex</a></li>
     <li><a href="team" title="Team"><span class="symbol resource"></span>Team</a></li>
     <li><a href="teams" title="Teams"><span class="symbol resource"></span>Teams</a></li>
     <li><a href="thirdpartyintegration" title="ThirdPartyIntegration"><span class="symbol resource"></span>ThirdPartyIntegration</a></li>
@@ -53,6 +55,7 @@ A Pulumi package for creating and managing mongodbatlas cloud resources.
     <li><a href="get509authenticationdatabaseuser" title="Get509AuthenticationDatabaseUser"><span class="symbol function"></span>Get509AuthenticationDatabaseUser</a></li>
     <li><a href="getalertconfiguration" title="GetAlertConfiguration"><span class="symbol function"></span>GetAlertConfiguration</a></li>
     <li><a href="getauditing" title="GetAuditing"><span class="symbol function"></span>GetAuditing</a></li>
+    <li><a href="getcloudbackupschedule" title="GetCloudBackupSchedule"><span class="symbol function"></span>GetCloudBackupSchedule</a></li>
     <li><a href="getcloudprovideraccess" title="GetCloudProviderAccess"><span class="symbol function"></span>GetCloudProviderAccess</a></li>
     <li><a href="getcloudprovideraccesssetup" title="GetCloudProviderAccessSetup"><span class="symbol function"></span>GetCloudProviderAccessSetup</a></li>
     <li><a href="getcloudprovidersnapshot" title="GetCloudProviderSnapshot"><span class="symbol function"></span>GetCloudProviderSnapshot</a></li>
@@ -65,8 +68,12 @@ A Pulumi package for creating and managing mongodbatlas cloud resources.
     <li><a href="getcustomdbrole" title="GetCustomDbRole"><span class="symbol function"></span>GetCustomDbRole</a></li>
     <li><a href="getcustomdbroles" title="GetCustomDbRoles"><span class="symbol function"></span>GetCustomDbRoles</a></li>
     <li><a href="getcustomdnsconfigurationclusteraws" title="GetCustomDnsConfigurationClusterAws"><span class="symbol function"></span>GetCustomDnsConfigurationClusterAws</a></li>
+    <li><a href="getdatalake" title="GetDataLake"><span class="symbol function"></span>GetDataLake</a></li>
+    <li><a href="getdatalakes" title="GetDataLakes"><span class="symbol function"></span>GetDataLakes</a></li>
     <li><a href="getdatabaseuser" title="GetDatabaseUser"><span class="symbol function"></span>GetDatabaseUser</a></li>
     <li><a href="getdatabaseusers" title="GetDatabaseUsers"><span class="symbol function"></span>GetDatabaseUsers</a></li>
+    <li><a href="geteventtrigger" title="GetEventTrigger"><span class="symbol function"></span>GetEventTrigger</a></li>
+    <li><a href="geteventtriggers" title="GetEventTriggers"><span class="symbol function"></span>GetEventTriggers</a></li>
     <li><a href="getglobalclusterconfig" title="GetGlobalClusterConfig"><span class="symbol function"></span>GetGlobalClusterConfig</a></li>
     <li><a href="getldapconfiguration" title="GetLdapConfiguration"><span class="symbol function"></span>GetLdapConfiguration</a></li>
     <li><a href="getldapverify" title="GetLdapVerify"><span class="symbol function"></span>GetLdapVerify</a></li>
@@ -75,14 +82,15 @@ A Pulumi package for creating and managing mongodbatlas cloud resources.
     <li><a href="getnetworkcontainers" title="GetNetworkContainers"><span class="symbol function"></span>GetNetworkContainers</a></li>
     <li><a href="getnetworkpeering" title="GetNetworkPeering"><span class="symbol function"></span>GetNetworkPeering</a></li>
     <li><a href="getnetworkpeerings" title="GetNetworkPeerings"><span class="symbol function"></span>GetNetworkPeerings</a></li>
-    <li><a href="getprivateendpoint" title="GetPrivateEndpoint"><span class="symbol function"></span>GetPrivateEndpoint</a></li>
-    <li><a href="getprivateendpointinterfacelink" title="GetPrivateEndpointInterfaceLink"><span class="symbol function"></span>GetPrivateEndpointInterfaceLink</a></li>
+    <li><a href="getonlinearchive" title="GetOnlineArchive"><span class="symbol function"></span>GetOnlineArchive</a></li>
+    <li><a href="getonlinearchives" title="GetOnlineArchives"><span class="symbol function"></span>GetOnlineArchives</a></li>
     <li><a href="getprivatelinkendpoint" title="GetPrivateLinkEndpoint"><span class="symbol function"></span>GetPrivateLinkEndpoint</a></li>
     <li><a href="getprivatelinkendpointservice" title="GetPrivateLinkEndpointService"><span class="symbol function"></span>GetPrivateLinkEndpointService</a></li>
     <li><a href="getproject" title="GetProject"><span class="symbol function"></span>GetProject</a></li>
     <li><a href="getprojectipaccesslist" title="GetProjectIpAccessList"><span class="symbol function"></span>GetProjectIpAccessList</a></li>
-    <li><a href="getprojectipwhitelist" title="GetProjectIpWhitelist"><span class="symbol function"></span>GetProjectIpWhitelist</a></li>
     <li><a href="getprojects" title="GetProjects"><span class="symbol function"></span>GetProjects</a></li>
+    <li><a href="getsearchindex" title="GetSearchIndex"><span class="symbol function"></span>GetSearchIndex</a></li>
+    <li><a href="getsearchindexes" title="GetSearchIndexes"><span class="symbol function"></span>GetSearchIndexes</a></li>
     <li><a href="getteam" title="GetTeam"><span class="symbol function"></span>GetTeam</a></li>
     <li><a href="getteams" title="GetTeams"><span class="symbol function"></span>GetTeams</a></li>
     <li><a href="getthirdpartyintegration" title="GetThirdPartyIntegration"><span class="symbol function"></span>GetThirdPartyIntegration</a></li>
@@ -98,6 +106,6 @@ A Pulumi package for creating and managing mongodbatlas cloud resources.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`mongodbatlas` Terraform Provider](https://github.com/mongodb/terraform-provider-mongodbatlas).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>2.1.1</dd>
+	<dd>3.0.0</dd>
 </dl>
 
