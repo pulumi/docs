@@ -49,7 +49,7 @@ class MyStack : Stack
             },
             ResourceGroupName = "securityalert-4799",
             RetentionDays = 6,
-            SecurityAlertPolicyName = "default",
+            SecurityAlertPolicyName = "Default",
             ServerName = "securityalert-6440",
             State = "Enabled",
             StorageAccountAccessKey = "sdlfkjabc+sdlfkjsdlkfsjdfLDKFTERLKFDFKLjsdfksjdflsdkfD2342309432849328476458/3RSD==",
@@ -92,7 +92,7 @@ database_security_alert_policy = azure_native.sql.DatabaseSecurityAlertPolicy("d
     ],
     resource_group_name="securityalert-4799",
     retention_days=6,
-    security_alert_policy_name="default",
+    security_alert_policy_name="Default",
     server_name="securityalert-6440",
     state="Enabled",
     storage_account_access_key="sdlfkjabc+sdlfkjsdlkfsjdfLDKFTERLKFDFKLjsdfksjdflsdkfD2342309432849328476458/3RSD==",
@@ -124,7 +124,7 @@ const databaseSecurityAlertPolicy = new azure_native.sql.DatabaseSecurityAlertPo
     ],
     resourceGroupName: "securityalert-4799",
     retentionDays: 6,
-    securityAlertPolicyName: "default",
+    securityAlertPolicyName: "Default",
     serverName: "securityalert-6440",
     state: "Enabled",
     storageAccountAccessKey: "sdlfkjabc+sdlfkjsdlkfsjdfLDKFTERLKFDFKLjsdfksjdflsdkfD2342309432849328476458/3RSD==",
@@ -156,7 +156,7 @@ class MyStack : Stack
         {
             DatabaseName = "testdb",
             ResourceGroupName = "securityalert-4799",
-            SecurityAlertPolicyName = "default",
+            SecurityAlertPolicyName = "Default",
             ServerName = "securityalert-6440",
             State = "Enabled",
         });
@@ -187,7 +187,7 @@ import pulumi_azure_native as azure_native
 database_security_alert_policy = azure_native.sql.DatabaseSecurityAlertPolicy("databaseSecurityAlertPolicy",
     database_name="testdb",
     resource_group_name="securityalert-4799",
-    security_alert_policy_name="default",
+    security_alert_policy_name="Default",
     server_name="securityalert-6440",
     state="Enabled")
 
@@ -207,7 +207,7 @@ import * as azure_native from "@pulumi/azure-native";
 const databaseSecurityAlertPolicy = new azure_native.sql.DatabaseSecurityAlertPolicy("databaseSecurityAlertPolicy", {
     databaseName: "testdb",
     resourceGroupName: "securityalert-4799",
-    securityAlertPolicyName: "default",
+    securityAlertPolicyName: "Default",
     serverName: "securityalert-6440",
     state: "Enabled",
 });

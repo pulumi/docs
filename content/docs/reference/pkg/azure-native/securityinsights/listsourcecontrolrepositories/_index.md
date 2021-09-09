@@ -283,8 +283,8 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The name of the repository.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="repourl_csharp">
-<a href="#repourl_csharp" style="color: inherit; text-decoration: inherit;">Repo<wbr>Url</a>
+        <span id="url_csharp">
+<a href="#url_csharp" style="color: inherit; text-decoration: inherit;">Url</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -311,8 +311,8 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The name of the repository.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="repourl_go">
-<a href="#repourl_go" style="color: inherit; text-decoration: inherit;">Repo<wbr>Url</a>
+        <span id="url_go">
+<a href="#url_go" style="color: inherit; text-decoration: inherit;">Url</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -339,8 +339,8 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The name of the repository.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="repourl_nodejs">
-<a href="#repourl_nodejs" style="color: inherit; text-decoration: inherit;">repo<wbr>Url</a>
+        <span id="url_nodejs">
+<a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -367,8 +367,8 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The name of the repository.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="repo_url_python">
-<a href="#repo_url_python" style="color: inherit; text-decoration: inherit;">repo_<wbr>url</a>
+        <span id="url_python">
+<a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>

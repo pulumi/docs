@@ -549,15 +549,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_csharp">
-<a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The configuration settings of the allowed list of audiences from which to validate the JWT token.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -569,15 +561,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_go">
-<a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The configuration settings of the allowed list of audiences from which to validate the JWT token.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -589,15 +573,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_nodejs">
-<a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The configuration settings of the allowed list of audiences from which to validate the JWT token.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -609,45 +585,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_python">
-<a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The configuration settings of the allowed list of audiences from which to validate the JWT token.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="allowedaudiencesvalidationresponse">Allowed<wbr>Audiences<wbr>Validation<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_csharp">
-<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_csharp">
-<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_csharp">
-<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowedaudiences_csharp">
 <a href="#allowedaudiences_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Audiences</a>
@@ -655,43 +599,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_csharp">
-<a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The configuration settings of the allowed list of audiences from which to validate the JWT token.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_go">
-<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_go">
-<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_go">
-<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowedaudiences_go">
 <a href="#allowedaudiences_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Audiences</a>
@@ -699,43 +611,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_go">
-<a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The configuration settings of the allowed list of audiences from which to validate the JWT token.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_nodejs">
-<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_nodejs">
-<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_nodejs">
-<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowedaudiences_nodejs">
 <a href="#allowedaudiences_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Audiences</a>
@@ -743,43 +623,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_nodejs">
-<a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The configuration settings of the allowed list of audiences from which to validate the JWT token.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_python">
-<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_python">
-<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_python">
-<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowed_audiences_python">
 <a href="#allowed_audiences_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>audiences</a>
@@ -787,15 +635,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_python">
-<a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The configuration settings of the allowed list of audiences from which to validate the JWT token.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="appregistration">App<wbr>Registration</h4>
@@ -817,15 +657,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The app setting name that contains the app secret.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_csharp">
-<a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The app setting name that contains the app secret.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -845,15 +677,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The app setting name that contains the app secret.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_go">
-<a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The app setting name that contains the app secret.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -873,15 +697,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The app setting name that contains the app secret.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_nodejs">
-<a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The app setting name that contains the app secret.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -901,45 +717,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The app setting name that contains the app secret.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_python">
-<a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The app setting name that contains the app secret.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="appregistrationresponse">App<wbr>Registration<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_csharp">
-<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_csharp">
-<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_csharp">
-<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="appid_csharp">
 <a href="#appid_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Id</a>
@@ -955,43 +739,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The app setting name that contains the app secret.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_csharp">
-<a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The app setting name that contains the app secret.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_go">
-<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_go">
-<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_go">
-<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="appid_go">
 <a href="#appid_go" style="color: inherit; text-decoration: inherit;">App<wbr>Id</a>
@@ -1007,43 +759,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The app setting name that contains the app secret.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_go">
-<a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The app setting name that contains the app secret.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_nodejs">
-<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_nodejs">
-<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_nodejs">
-<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="appid_nodejs">
 <a href="#appid_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Id</a>
@@ -1059,43 +779,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The app setting name that contains the app secret.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_nodejs">
-<a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The app setting name that contains the app secret.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_python">
-<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_python">
-<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_python">
-<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="app_id_python">
 <a href="#app_id_python" style="color: inherit; text-decoration: inherit;">app_<wbr>id</a>
@@ -1111,15 +799,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The app setting name that contains the app secret.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_python">
-<a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The app setting name that contains the app secret.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="apple">Apple</h4>
@@ -1134,14 +814,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}<code>false</code> if the Apple provider should not be enabled despite the set registration; otherwise, <code>true</code>.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_csharp">
-<a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="login_csharp">
 <a href="#login_csharp" style="color: inherit; text-decoration: inherit;">Login</a>
@@ -1171,14 +843,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}<code>false</code> if the Apple provider should not be enabled despite the set registration; otherwise, <code>true</code>.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="kind_go">
-<a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="login_go">
 <a href="#login_go" style="color: inherit; text-decoration: inherit;">Login</a>
 </span>
@@ -1207,14 +871,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}<code>false</code> if the Apple provider should not be enabled despite the set registration; otherwise, <code>true</code>.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="kind_nodejs">
-<a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="login_nodejs">
 <a href="#login_nodejs" style="color: inherit; text-decoration: inherit;">login</a>
 </span>
@@ -1242,14 +898,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}<code>false</code> if the Apple provider should not be enabled despite the set registration; otherwise, <code>true</code>.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_python">
-<a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="login_python">
 <a href="#login_python" style="color: inherit; text-decoration: inherit;">login</a>
@@ -1287,15 +935,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The app setting name that contains the client secret.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_csharp">
-<a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The app setting name that contains the client secret.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1315,15 +955,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The app setting name that contains the client secret.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_go">
-<a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The app setting name that contains the client secret.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1343,15 +975,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The app setting name that contains the client secret.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_nodejs">
-<a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The app setting name that contains the client secret.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1371,45 +995,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The app setting name that contains the client secret.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_python">
-<a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The app setting name that contains the client secret.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="appleregistrationresponse">Apple<wbr>Registration<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_csharp">
-<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_csharp">
-<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_csharp">
-<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="clientid_csharp">
 <a href="#clientid_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
@@ -1425,43 +1017,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The app setting name that contains the client secret.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_csharp">
-<a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The app setting name that contains the client secret.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_go">
-<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_go">
-<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_go">
-<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="clientid_go">
 <a href="#clientid_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
@@ -1477,43 +1037,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The app setting name that contains the client secret.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_go">
-<a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The app setting name that contains the client secret.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_nodejs">
-<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_nodejs">
-<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_nodejs">
-<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="clientid_nodejs">
 <a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
@@ -1529,43 +1057,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The app setting name that contains the client secret.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_nodejs">
-<a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The app setting name that contains the client secret.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_python">
-<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_python">
-<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_python">
-<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="client_id_python">
 <a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
@@ -1581,45 +1077,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The app setting name that contains the client secret.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_python">
-<a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The app setting name that contains the client secret.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="appleresponse">Apple<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_csharp">
-<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_csharp">
-<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_csharp">
-<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -1628,14 +1092,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}<code>false</code> if the Apple provider should not be enabled despite the set registration; otherwise, <code>true</code>.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_csharp">
-<a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="login_csharp">
 <a href="#login_csharp" style="color: inherit; text-decoration: inherit;">Login</a>
@@ -1655,31 +1111,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_go">
-<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_go">
-<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_go">
-<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -1688,14 +1120,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}<code>false</code> if the Apple provider should not be enabled despite the set registration; otherwise, <code>true</code>.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_go">
-<a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="login_go">
 <a href="#login_go" style="color: inherit; text-decoration: inherit;">Login</a>
@@ -1715,31 +1139,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_nodejs">
-<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_nodejs">
-<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_nodejs">
-<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -1748,14 +1148,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}<code>false</code> if the Apple provider should not be enabled despite the set registration; otherwise, <code>true</code>.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_nodejs">
-<a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="login_nodejs">
 <a href="#login_nodejs" style="color: inherit; text-decoration: inherit;">login</a>
@@ -1775,31 +1167,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_python">
-<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_python">
-<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_python">
-<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -1808,14 +1176,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}<code>false</code> if the Apple provider should not be enabled despite the set registration; otherwise, <code>true</code>.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_python">
-<a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="login_python">
 <a href="#login_python" style="color: inherit; text-decoration: inherit;">login</a>
@@ -1856,14 +1216,6 @@ If the path is relative, base will the site's root directory.{{% /md %}}</dd><dt
     </dt>
     <dd>{{% md %}}<code>true</code> if the Authentication / Authorization feature is enabled for the current app; otherwise, <code>false</code>.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="kind_csharp">
-<a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="runtimeversion_csharp">
 <a href="#runtimeversion_csharp" style="color: inherit; text-decoration: inherit;">Runtime<wbr>Version</a>
 </span>
@@ -1893,14 +1245,6 @@ If the path is relative, base will the site's root directory.{{% /md %}}</dd><dt
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}<code>true</code> if the Authentication / Authorization feature is enabled for the current app; otherwise, <code>false</code>.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_go">
-<a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="runtimeversion_go">
 <a href="#runtimeversion_go" style="color: inherit; text-decoration: inherit;">Runtime<wbr>Version</a>
@@ -1932,14 +1276,6 @@ If the path is relative, base will the site's root directory.{{% /md %}}</dd><dt
     </dt>
     <dd>{{% md %}}<code>true</code> if the Authentication / Authorization feature is enabled for the current app; otherwise, <code>false</code>.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="kind_nodejs">
-<a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="runtimeversion_nodejs">
 <a href="#runtimeversion_nodejs" style="color: inherit; text-decoration: inherit;">runtime<wbr>Version</a>
 </span>
@@ -1970,14 +1306,6 @@ If the path is relative, base will the site's root directory.{{% /md %}}</dd><dt
     </dt>
     <dd>{{% md %}}<code>true</code> if the Authentication / Authorization feature is enabled for the current app; otherwise, <code>false</code>.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="kind_python">
-<a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="runtime_version_python">
 <a href="#runtime_version_python" style="color: inherit; text-decoration: inherit;">runtime_<wbr>version</a>
 </span>
@@ -1991,31 +1319,7 @@ The setting in this value can control the behavior of certain features in the Au
 <h4 id="authplatformresponse">Auth<wbr>Platform<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_csharp">
-<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_csharp">
-<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_csharp">
-<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="configfilepath_csharp">
 <a href="#configfilepath_csharp" style="color: inherit; text-decoration: inherit;">Config<wbr>File<wbr>Path</a>
@@ -2034,14 +1338,6 @@ If the path is relative, base will the site's root directory.{{% /md %}}</dd><dt
     </dt>
     <dd>{{% md %}}<code>true</code> if the Authentication / Authorization feature is enabled for the current app; otherwise, <code>false</code>.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="kind_csharp">
-<a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="runtimeversion_csharp">
 <a href="#runtimeversion_csharp" style="color: inherit; text-decoration: inherit;">Runtime<wbr>Version</a>
 </span>
@@ -2053,31 +1349,7 @@ The setting in this value can control the behavior of certain features in the Au
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_go">
-<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_go">
-<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_go">
-<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="configfilepath_go">
 <a href="#configfilepath_go" style="color: inherit; text-decoration: inherit;">Config<wbr>File<wbr>Path</a>
@@ -2096,14 +1368,6 @@ If the path is relative, base will the site's root directory.{{% /md %}}</dd><dt
     </dt>
     <dd>{{% md %}}<code>true</code> if the Authentication / Authorization feature is enabled for the current app; otherwise, <code>false</code>.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="kind_go">
-<a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="runtimeversion_go">
 <a href="#runtimeversion_go" style="color: inherit; text-decoration: inherit;">Runtime<wbr>Version</a>
 </span>
@@ -2115,31 +1379,7 @@ The setting in this value can control the behavior of certain features in the Au
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_nodejs">
-<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_nodejs">
-<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_nodejs">
-<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="configfilepath_nodejs">
 <a href="#configfilepath_nodejs" style="color: inherit; text-decoration: inherit;">config<wbr>File<wbr>Path</a>
@@ -2158,14 +1398,6 @@ If the path is relative, base will the site's root directory.{{% /md %}}</dd><dt
     </dt>
     <dd>{{% md %}}<code>true</code> if the Authentication / Authorization feature is enabled for the current app; otherwise, <code>false</code>.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="kind_nodejs">
-<a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="runtimeversion_nodejs">
 <a href="#runtimeversion_nodejs" style="color: inherit; text-decoration: inherit;">runtime<wbr>Version</a>
 </span>
@@ -2177,31 +1409,7 @@ The setting in this value can control the behavior of certain features in the Au
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_python">
-<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_python">
-<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_python">
-<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="config_file_path_python">
 <a href="#config_file_path_python" style="color: inherit; text-decoration: inherit;">config_<wbr>file_<wbr>path</a>
@@ -2219,14 +1427,6 @@ If the path is relative, base will the site's root directory.{{% /md %}}</dd><dt
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}<code>true</code> if the Authentication / Authorization feature is enabled for the current app; otherwise, <code>false</code>.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_python">
-<a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="runtime_version_python">
 <a href="#runtime_version_python" style="color: inherit; text-decoration: inherit;">runtime_<wbr>version</a>
@@ -2260,14 +1460,6 @@ The setting in this value can control the behavior of certain features in the Au
     <dd>{{% md %}}Gets a value indicating whether the Azure AD configuration was auto-provisioned using 1st party tooling.
 This is an internal flag primarily intended to support the Azure Management Portal. Users should not
 read or write to this property.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_csharp">
-<a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="login_csharp">
 <a href="#login_csharp" style="color: inherit; text-decoration: inherit;">Login</a>
@@ -2315,14 +1507,6 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
 This is an internal flag primarily intended to support the Azure Management Portal. Users should not
 read or write to this property.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="kind_go">
-<a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="login_go">
 <a href="#login_go" style="color: inherit; text-decoration: inherit;">Login</a>
 </span>
@@ -2369,14 +1553,6 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
 This is an internal flag primarily intended to support the Azure Management Portal. Users should not
 read or write to this property.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="kind_nodejs">
-<a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="login_nodejs">
 <a href="#login_nodejs" style="color: inherit; text-decoration: inherit;">login</a>
 </span>
@@ -2422,14 +1598,6 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
     <dd>{{% md %}}Gets a value indicating whether the Azure AD configuration was auto-provisioned using 1st party tooling.
 This is an internal flag primarily intended to support the Azure Management Portal. Users should not
 read or write to this property.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_python">
-<a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="login_python">
 <a href="#login_python" style="color: inherit; text-decoration: inherit;">login</a>
@@ -2467,15 +1635,7 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_csharp">
-<a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}<code>true</code> if the www-authenticate provider should be omitted from the request; otherwise, <code>false</code>.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loginparameters_csharp">
 <a href="#loginparameters_csharp" style="color: inherit; text-decoration: inherit;">Login<wbr>Parameters</a>
@@ -2496,15 +1656,7 @@ a user logs in. Each parameter must be in the form "key=value".{{% /md %}}</dd><
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_go">
-<a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}<code>true</code> if the www-authenticate provider should be omitted from the request; otherwise, <code>false</code>.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loginparameters_go">
 <a href="#loginparameters_go" style="color: inherit; text-decoration: inherit;">Login<wbr>Parameters</a>
@@ -2525,15 +1677,7 @@ a user logs in. Each parameter must be in the form "key=value".{{% /md %}}</dd><
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_nodejs">
-<a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}<code>true</code> if the www-authenticate provider should be omitted from the request; otherwise, <code>false</code>.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loginparameters_nodejs">
 <a href="#loginparameters_nodejs" style="color: inherit; text-decoration: inherit;">login<wbr>Parameters</a>
@@ -2554,15 +1698,7 @@ a user logs in. Each parameter must be in the form "key=value".{{% /md %}}</dd><
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_python">
-<a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}<code>true</code> if the www-authenticate provider should be omitted from the request; otherwise, <code>false</code>.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="login_parameters_python">
 <a href="#login_parameters_python" style="color: inherit; text-decoration: inherit;">login_<wbr>parameters</a>
@@ -2577,31 +1713,7 @@ a user logs in. Each parameter must be in the form "key=value".{{% /md %}}</dd><
 <h4 id="azureactivedirectoryloginresponse">Azure<wbr>Active<wbr>Directory<wbr>Login<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_csharp">
-<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_csharp">
-<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_csharp">
-<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="disablewwwauthenticate_csharp">
 <a href="#disablewwwauthenticate_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>WWWAuthenticate</a>
@@ -2609,15 +1721,7 @@ a user logs in. Each parameter must be in the form "key=value".{{% /md %}}</dd><
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_csharp">
-<a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}<code>true</code> if the www-authenticate provider should be omitted from the request; otherwise, <code>false</code>.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loginparameters_csharp">
 <a href="#loginparameters_csharp" style="color: inherit; text-decoration: inherit;">Login<wbr>Parameters</a>
@@ -2630,31 +1734,7 @@ a user logs in. Each parameter must be in the form "key=value".{{% /md %}}</dd><
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_go">
-<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_go">
-<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_go">
-<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="disablewwwauthenticate_go">
 <a href="#disablewwwauthenticate_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>WWWAuthenticate</a>
@@ -2662,15 +1742,7 @@ a user logs in. Each parameter must be in the form "key=value".{{% /md %}}</dd><
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_go">
-<a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}<code>true</code> if the www-authenticate provider should be omitted from the request; otherwise, <code>false</code>.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loginparameters_go">
 <a href="#loginparameters_go" style="color: inherit; text-decoration: inherit;">Login<wbr>Parameters</a>
@@ -2683,31 +1755,7 @@ a user logs in. Each parameter must be in the form "key=value".{{% /md %}}</dd><
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_nodejs">
-<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_nodejs">
-<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_nodejs">
-<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="disablewwwauthenticate_nodejs">
 <a href="#disablewwwauthenticate_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>WWWAuthenticate</a>
@@ -2715,15 +1763,7 @@ a user logs in. Each parameter must be in the form "key=value".{{% /md %}}</dd><
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_nodejs">
-<a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}<code>true</code> if the www-authenticate provider should be omitted from the request; otherwise, <code>false</code>.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loginparameters_nodejs">
 <a href="#loginparameters_nodejs" style="color: inherit; text-decoration: inherit;">login<wbr>Parameters</a>
@@ -2736,31 +1776,7 @@ a user logs in. Each parameter must be in the form "key=value".{{% /md %}}</dd><
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_python">
-<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_python">
-<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_python">
-<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="disable_www_authenticate_python">
 <a href="#disable_www_authenticate_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>www_<wbr>authenticate</a>
@@ -2768,15 +1784,7 @@ a user logs in. Each parameter must be in the form "key=value".{{% /md %}}</dd><
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_python">
-<a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}<code>true</code> if the www-authenticate provider should be omitted from the request; otherwise, <code>false</code>.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="login_parameters_python">
 <a href="#login_parameters_python" style="color: inherit; text-decoration: inherit;">login_<wbr>parameters</a>
@@ -2804,6 +1812,24 @@ This setting is required for enabling OpenID Connection authentication with Azur
 other 3rd party OpenID Connect providers.
 More information on OpenID Connect: http://openid.net/specs/openid-connect-core-1_0.html{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="clientsecretcertificateissuer_csharp">
+<a href="#clientsecretcertificateissuer_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Secret<wbr>Certificate<wbr>Issuer</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An alternative to the client secret thumbprint, that is the issuer of a certificate used for signing purposes. This property acts as
+a replacement for the Client Secret Certificate Thumbprint. It is also optional.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="clientsecretcertificatesubjectalternativename_csharp">
+<a href="#clientsecretcertificatesubjectalternativename_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Secret<wbr>Certificate<wbr>Subject<wbr>Alternative<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An alternative to the client secret thumbprint, that is the subject alternative name of a certificate used for signing purposes. This property acts as
+a replacement for the Client Secret Certificate Thumbprint. It is also optional.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="clientsecretcertificatethumbprint_csharp">
 <a href="#clientsecretcertificatethumbprint_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Secret<wbr>Certificate<wbr>Thumbprint</a>
 </span>
@@ -2820,14 +1846,6 @@ a replacement for the Client Secret. It is also optional.{{% /md %}}</dd><dt cla
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The app setting name that contains the client secret of the relying party application.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_csharp">
-<a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="openidissuer_csharp">
 <a href="#openidissuer_csharp" style="color: inherit; text-decoration: inherit;">Open<wbr>Id<wbr>Issuer</a>
@@ -2855,6 +1873,24 @@ This setting is required for enabling OpenID Connection authentication with Azur
 other 3rd party OpenID Connect providers.
 More information on OpenID Connect: http://openid.net/specs/openid-connect-core-1_0.html{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="clientsecretcertificateissuer_go">
+<a href="#clientsecretcertificateissuer_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Secret<wbr>Certificate<wbr>Issuer</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An alternative to the client secret thumbprint, that is the issuer of a certificate used for signing purposes. This property acts as
+a replacement for the Client Secret Certificate Thumbprint. It is also optional.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="clientsecretcertificatesubjectalternativename_go">
+<a href="#clientsecretcertificatesubjectalternativename_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Secret<wbr>Certificate<wbr>Subject<wbr>Alternative<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An alternative to the client secret thumbprint, that is the subject alternative name of a certificate used for signing purposes. This property acts as
+a replacement for the Client Secret Certificate Thumbprint. It is also optional.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="clientsecretcertificatethumbprint_go">
 <a href="#clientsecretcertificatethumbprint_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Secret<wbr>Certificate<wbr>Thumbprint</a>
 </span>
@@ -2871,14 +1907,6 @@ a replacement for the Client Secret. It is also optional.{{% /md %}}</dd><dt cla
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The app setting name that contains the client secret of the relying party application.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_go">
-<a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="openidissuer_go">
 <a href="#openidissuer_go" style="color: inherit; text-decoration: inherit;">Open<wbr>Id<wbr>Issuer</a>
@@ -2906,6 +1934,24 @@ This setting is required for enabling OpenID Connection authentication with Azur
 other 3rd party OpenID Connect providers.
 More information on OpenID Connect: http://openid.net/specs/openid-connect-core-1_0.html{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="clientsecretcertificateissuer_nodejs">
+<a href="#clientsecretcertificateissuer_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Secret<wbr>Certificate<wbr>Issuer</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An alternative to the client secret thumbprint, that is the issuer of a certificate used for signing purposes. This property acts as
+a replacement for the Client Secret Certificate Thumbprint. It is also optional.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="clientsecretcertificatesubjectalternativename_nodejs">
+<a href="#clientsecretcertificatesubjectalternativename_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Secret<wbr>Certificate<wbr>Subject<wbr>Alternative<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An alternative to the client secret thumbprint, that is the subject alternative name of a certificate used for signing purposes. This property acts as
+a replacement for the Client Secret Certificate Thumbprint. It is also optional.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="clientsecretcertificatethumbprint_nodejs">
 <a href="#clientsecretcertificatethumbprint_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Secret<wbr>Certificate<wbr>Thumbprint</a>
 </span>
@@ -2922,14 +1968,6 @@ a replacement for the Client Secret. It is also optional.{{% /md %}}</dd><dt cla
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The app setting name that contains the client secret of the relying party application.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_nodejs">
-<a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="openidissuer_nodejs">
 <a href="#openidissuer_nodejs" style="color: inherit; text-decoration: inherit;">open<wbr>Id<wbr>Issuer</a>
@@ -2957,6 +1995,24 @@ This setting is required for enabling OpenID Connection authentication with Azur
 other 3rd party OpenID Connect providers.
 More information on OpenID Connect: http://openid.net/specs/openid-connect-core-1_0.html{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="client_secret_certificate_issuer_python">
+<a href="#client_secret_certificate_issuer_python" style="color: inherit; text-decoration: inherit;">client_<wbr>secret_<wbr>certificate_<wbr>issuer</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}An alternative to the client secret thumbprint, that is the issuer of a certificate used for signing purposes. This property acts as
+a replacement for the Client Secret Certificate Thumbprint. It is also optional.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="client_secret_certificate_subject_alternative_name_python">
+<a href="#client_secret_certificate_subject_alternative_name_python" style="color: inherit; text-decoration: inherit;">client_<wbr>secret_<wbr>certificate_<wbr>subject_<wbr>alternative_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}An alternative to the client secret thumbprint, that is the subject alternative name of a certificate used for signing purposes. This property acts as
+a replacement for the Client Secret Certificate Thumbprint. It is also optional.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="client_secret_certificate_thumbprint_python">
 <a href="#client_secret_certificate_thumbprint_python" style="color: inherit; text-decoration: inherit;">client_<wbr>secret_<wbr>certificate_<wbr>thumbprint</a>
 </span>
@@ -2973,14 +2029,6 @@ a replacement for the Client Secret. It is also optional.{{% /md %}}</dd><dt cla
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The app setting name that contains the client secret of the relying party application.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_python">
-<a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="open_id_issuer_python">
 <a href="#open_id_issuer_python" style="color: inherit; text-decoration: inherit;">open_<wbr>id_<wbr>issuer</a>
@@ -2997,31 +2045,7 @@ More information on OpenID Connect Discovery: http://openid.net/specs/openid-con
 <h4 id="azureactivedirectoryregistrationresponse">Azure<wbr>Active<wbr>Directory<wbr>Registration<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_csharp">
-<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_csharp">
-<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_csharp">
-<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="clientid_csharp">
 <a href="#clientid_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
@@ -3033,6 +2057,24 @@ More information on OpenID Connect Discovery: http://openid.net/specs/openid-con
 This setting is required for enabling OpenID Connection authentication with Azure Active Directory or 
 other 3rd party OpenID Connect providers.
 More information on OpenID Connect: http://openid.net/specs/openid-connect-core-1_0.html{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="clientsecretcertificateissuer_csharp">
+<a href="#clientsecretcertificateissuer_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Secret<wbr>Certificate<wbr>Issuer</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An alternative to the client secret thumbprint, that is the issuer of a certificate used for signing purposes. This property acts as
+a replacement for the Client Secret Certificate Thumbprint. It is also optional.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="clientsecretcertificatesubjectalternativename_csharp">
+<a href="#clientsecretcertificatesubjectalternativename_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Secret<wbr>Certificate<wbr>Subject<wbr>Alternative<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An alternative to the client secret thumbprint, that is the subject alternative name of a certificate used for signing purposes. This property acts as
+a replacement for the Client Secret Certificate Thumbprint. It is also optional.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientsecretcertificatethumbprint_csharp">
 <a href="#clientsecretcertificatethumbprint_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Secret<wbr>Certificate<wbr>Thumbprint</a>
@@ -3051,14 +2093,6 @@ a replacement for the Client Secret. It is also optional.{{% /md %}}</dd><dt cla
     </dt>
     <dd>{{% md %}}The app setting name that contains the client secret of the relying party application.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="kind_csharp">
-<a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="openidissuer_csharp">
 <a href="#openidissuer_csharp" style="color: inherit; text-decoration: inherit;">Open<wbr>Id<wbr>Issuer</a>
 </span>
@@ -3072,31 +2106,7 @@ More information on OpenID Connect Discovery: http://openid.net/specs/openid-con
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_go">
-<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_go">
-<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_go">
-<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="clientid_go">
 <a href="#clientid_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
@@ -3108,6 +2118,24 @@ More information on OpenID Connect Discovery: http://openid.net/specs/openid-con
 This setting is required for enabling OpenID Connection authentication with Azure Active Directory or 
 other 3rd party OpenID Connect providers.
 More information on OpenID Connect: http://openid.net/specs/openid-connect-core-1_0.html{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="clientsecretcertificateissuer_go">
+<a href="#clientsecretcertificateissuer_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Secret<wbr>Certificate<wbr>Issuer</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An alternative to the client secret thumbprint, that is the issuer of a certificate used for signing purposes. This property acts as
+a replacement for the Client Secret Certificate Thumbprint. It is also optional.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="clientsecretcertificatesubjectalternativename_go">
+<a href="#clientsecretcertificatesubjectalternativename_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Secret<wbr>Certificate<wbr>Subject<wbr>Alternative<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An alternative to the client secret thumbprint, that is the subject alternative name of a certificate used for signing purposes. This property acts as
+a replacement for the Client Secret Certificate Thumbprint. It is also optional.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientsecretcertificatethumbprint_go">
 <a href="#clientsecretcertificatethumbprint_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Secret<wbr>Certificate<wbr>Thumbprint</a>
@@ -3126,14 +2154,6 @@ a replacement for the Client Secret. It is also optional.{{% /md %}}</dd><dt cla
     </dt>
     <dd>{{% md %}}The app setting name that contains the client secret of the relying party application.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="kind_go">
-<a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="openidissuer_go">
 <a href="#openidissuer_go" style="color: inherit; text-decoration: inherit;">Open<wbr>Id<wbr>Issuer</a>
 </span>
@@ -3147,31 +2167,7 @@ More information on OpenID Connect Discovery: http://openid.net/specs/openid-con
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_nodejs">
-<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_nodejs">
-<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_nodejs">
-<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="clientid_nodejs">
 <a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
@@ -3183,6 +2179,24 @@ More information on OpenID Connect Discovery: http://openid.net/specs/openid-con
 This setting is required for enabling OpenID Connection authentication with Azure Active Directory or 
 other 3rd party OpenID Connect providers.
 More information on OpenID Connect: http://openid.net/specs/openid-connect-core-1_0.html{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="clientsecretcertificateissuer_nodejs">
+<a href="#clientsecretcertificateissuer_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Secret<wbr>Certificate<wbr>Issuer</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An alternative to the client secret thumbprint, that is the issuer of a certificate used for signing purposes. This property acts as
+a replacement for the Client Secret Certificate Thumbprint. It is also optional.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="clientsecretcertificatesubjectalternativename_nodejs">
+<a href="#clientsecretcertificatesubjectalternativename_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Secret<wbr>Certificate<wbr>Subject<wbr>Alternative<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An alternative to the client secret thumbprint, that is the subject alternative name of a certificate used for signing purposes. This property acts as
+a replacement for the Client Secret Certificate Thumbprint. It is also optional.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientsecretcertificatethumbprint_nodejs">
 <a href="#clientsecretcertificatethumbprint_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Secret<wbr>Certificate<wbr>Thumbprint</a>
@@ -3201,14 +2215,6 @@ a replacement for the Client Secret. It is also optional.{{% /md %}}</dd><dt cla
     </dt>
     <dd>{{% md %}}The app setting name that contains the client secret of the relying party application.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="kind_nodejs">
-<a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="openidissuer_nodejs">
 <a href="#openidissuer_nodejs" style="color: inherit; text-decoration: inherit;">open<wbr>Id<wbr>Issuer</a>
 </span>
@@ -3222,31 +2228,7 @@ More information on OpenID Connect Discovery: http://openid.net/specs/openid-con
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_python">
-<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_python">
-<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_python">
-<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="client_id_python">
 <a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
@@ -3258,6 +2240,24 @@ More information on OpenID Connect Discovery: http://openid.net/specs/openid-con
 This setting is required for enabling OpenID Connection authentication with Azure Active Directory or 
 other 3rd party OpenID Connect providers.
 More information on OpenID Connect: http://openid.net/specs/openid-connect-core-1_0.html{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="client_secret_certificate_issuer_python">
+<a href="#client_secret_certificate_issuer_python" style="color: inherit; text-decoration: inherit;">client_<wbr>secret_<wbr>certificate_<wbr>issuer</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}An alternative to the client secret thumbprint, that is the issuer of a certificate used for signing purposes. This property acts as
+a replacement for the Client Secret Certificate Thumbprint. It is also optional.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="client_secret_certificate_subject_alternative_name_python">
+<a href="#client_secret_certificate_subject_alternative_name_python" style="color: inherit; text-decoration: inherit;">client_<wbr>secret_<wbr>certificate_<wbr>subject_<wbr>alternative_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}An alternative to the client secret thumbprint, that is the subject alternative name of a certificate used for signing purposes. This property acts as
+a replacement for the Client Secret Certificate Thumbprint. It is also optional.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="client_secret_certificate_thumbprint_python">
 <a href="#client_secret_certificate_thumbprint_python" style="color: inherit; text-decoration: inherit;">client_<wbr>secret_<wbr>certificate_<wbr>thumbprint</a>
@@ -3276,14 +2276,6 @@ a replacement for the Client Secret. It is also optional.{{% /md %}}</dd><dt cla
     </dt>
     <dd>{{% md %}}The app setting name that contains the client secret of the relying party application.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="kind_python">
-<a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="open_id_issuer_python">
 <a href="#open_id_issuer_python" style="color: inherit; text-decoration: inherit;">open_<wbr>id_<wbr>issuer</a>
 </span>
@@ -3299,31 +2291,7 @@ More information on OpenID Connect Discovery: http://openid.net/specs/openid-con
 <h4 id="azureactivedirectoryresponse">Azure<wbr>Active<wbr>Directory<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_csharp">
-<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_csharp">
-<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_csharp">
-<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -3342,14 +2310,6 @@ More information on OpenID Connect Discovery: http://openid.net/specs/openid-con
     <dd>{{% md %}}Gets a value indicating whether the Azure AD configuration was auto-provisioned using 1st party tooling.
 This is an internal flag primarily intended to support the Azure Management Portal. Users should not
 read or write to this property.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_csharp">
-<a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="login_csharp">
 <a href="#login_csharp" style="color: inherit; text-decoration: inherit;">Login</a>
@@ -3377,31 +2337,7 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_go">
-<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_go">
-<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_go">
-<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -3420,14 +2356,6 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
     <dd>{{% md %}}Gets a value indicating whether the Azure AD configuration was auto-provisioned using 1st party tooling.
 This is an internal flag primarily intended to support the Azure Management Portal. Users should not
 read or write to this property.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_go">
-<a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="login_go">
 <a href="#login_go" style="color: inherit; text-decoration: inherit;">Login</a>
@@ -3455,31 +2383,7 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_nodejs">
-<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_nodejs">
-<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_nodejs">
-<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -3498,14 +2402,6 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
     <dd>{{% md %}}Gets a value indicating whether the Azure AD configuration was auto-provisioned using 1st party tooling.
 This is an internal flag primarily intended to support the Azure Management Portal. Users should not
 read or write to this property.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_nodejs">
-<a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="login_nodejs">
 <a href="#login_nodejs" style="color: inherit; text-decoration: inherit;">login</a>
@@ -3533,31 +2429,7 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_python">
-<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_python">
-<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_python">
-<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -3576,14 +2448,6 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
     <dd>{{% md %}}Gets a value indicating whether the Azure AD configuration was auto-provisioned using 1st party tooling.
 This is an internal flag primarily intended to support the Azure Management Portal. Users should not
 read or write to this property.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_python">
-<a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="login_python">
 <a href="#login_python" style="color: inherit; text-decoration: inherit;">login</a>
@@ -3629,15 +2493,7 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jwtclaimchecks">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Jwt<wbr>Claim<wbr>Checks</a></span>
     </dt>
-    <dd>{{% md %}}The configuration settings of the checks that should be made while validating the JWT Claims.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_csharp">
-<a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The configuration settings of the checks that should be made while validating the JWT Claims.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -3657,15 +2513,7 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jwtclaimchecks">Jwt<wbr>Claim<wbr>Checks</a></span>
     </dt>
-    <dd>{{% md %}}The configuration settings of the checks that should be made while validating the JWT Claims.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_go">
-<a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The configuration settings of the checks that should be made while validating the JWT Claims.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -3685,15 +2533,7 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jwtclaimchecks">Jwt<wbr>Claim<wbr>Checks</a></span>
     </dt>
-    <dd>{{% md %}}The configuration settings of the checks that should be made while validating the JWT Claims.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_nodejs">
-<a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The configuration settings of the checks that should be made while validating the JWT Claims.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -3713,45 +2553,13 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jwtclaimchecks">Jwt<wbr>Claim<wbr>Checks</a></span>
     </dt>
-    <dd>{{% md %}}The configuration settings of the checks that should be made while validating the JWT Claims.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_python">
-<a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The configuration settings of the checks that should be made while validating the JWT Claims.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="azureactivedirectoryvalidationresponse">Azure<wbr>Active<wbr>Directory<wbr>Validation<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_csharp">
-<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_csharp">
-<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_csharp">
-<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowedaudiences_csharp">
 <a href="#allowedaudiences_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Audiences</a>
@@ -3767,43 +2575,11 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jwtclaimchecksresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Jwt<wbr>Claim<wbr>Checks<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The configuration settings of the checks that should be made while validating the JWT Claims.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_csharp">
-<a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The configuration settings of the checks that should be made while validating the JWT Claims.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_go">
-<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_go">
-<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_go">
-<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowedaudiences_go">
 <a href="#allowedaudiences_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Audiences</a>
@@ -3819,43 +2595,11 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jwtclaimchecksresponse">Jwt<wbr>Claim<wbr>Checks<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The configuration settings of the checks that should be made while validating the JWT Claims.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_go">
-<a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The configuration settings of the checks that should be made while validating the JWT Claims.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_nodejs">
-<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_nodejs">
-<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_nodejs">
-<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowedaudiences_nodejs">
 <a href="#allowedaudiences_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Audiences</a>
@@ -3871,43 +2615,11 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jwtclaimchecksresponse">Jwt<wbr>Claim<wbr>Checks<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The configuration settings of the checks that should be made while validating the JWT Claims.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_nodejs">
-<a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The configuration settings of the checks that should be made while validating the JWT Claims.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_python">
-<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_python">
-<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_python">
-<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowed_audiences_python">
 <a href="#allowed_audiences_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>audiences</a>
@@ -3923,15 +2635,7 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jwtclaimchecksresponse">Jwt<wbr>Claim<wbr>Checks<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The configuration settings of the checks that should be made while validating the JWT Claims.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_python">
-<a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The configuration settings of the checks that should be made while validating the JWT Claims.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="azurestaticwebapps">Azure<wbr>Static<wbr>Web<wbr>Apps</h4>
@@ -3946,14 +2650,6 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}<code>false</code> if the Azure Static Web Apps provider should not be enabled despite the set registration; otherwise, <code>true</code>.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_csharp">
-<a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="registration_csharp">
 <a href="#registration_csharp" style="color: inherit; text-decoration: inherit;">Registration</a>
@@ -3975,14 +2671,6 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
     </dt>
     <dd>{{% md %}}<code>false</code> if the Azure Static Web Apps provider should not be enabled despite the set registration; otherwise, <code>true</code>.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="kind_go">
-<a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="registration_go">
 <a href="#registration_go" style="color: inherit; text-decoration: inherit;">Registration</a>
 </span>
@@ -4003,14 +2691,6 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
     </dt>
     <dd>{{% md %}}<code>false</code> if the Azure Static Web Apps provider should not be enabled despite the set registration; otherwise, <code>true</code>.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="kind_nodejs">
-<a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="registration_nodejs">
 <a href="#registration_nodejs" style="color: inherit; text-decoration: inherit;">registration</a>
 </span>
@@ -4030,14 +2710,6 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}<code>false</code> if the Azure Static Web Apps provider should not be enabled despite the set registration; otherwise, <code>true</code>.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_python">
-<a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="registration_python">
 <a href="#registration_python" style="color: inherit; text-decoration: inherit;">registration</a>
@@ -4059,15 +2731,7 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Client ID of the app used for login.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_csharp">
-<a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The Client ID of the app used for login.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -4079,15 +2743,7 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Client ID of the app used for login.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_go">
-<a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The Client ID of the app used for login.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -4099,15 +2755,7 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Client ID of the app used for login.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_nodejs">
-<a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The Client ID of the app used for login.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -4119,45 +2767,13 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Client ID of the app used for login.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_python">
-<a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The Client ID of the app used for login.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="azurestaticwebappsregistrationresponse">Azure<wbr>Static<wbr>Web<wbr>Apps<wbr>Registration<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_csharp">
-<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_csharp">
-<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_csharp">
-<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="clientid_csharp">
 <a href="#clientid_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
@@ -4165,43 +2781,11 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Client ID of the app used for login.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_csharp">
-<a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The Client ID of the app used for login.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_go">
-<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_go">
-<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_go">
-<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="clientid_go">
 <a href="#clientid_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
@@ -4209,43 +2793,11 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Client ID of the app used for login.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_go">
-<a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The Client ID of the app used for login.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_nodejs">
-<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_nodejs">
-<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_nodejs">
-<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="clientid_nodejs">
 <a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
@@ -4253,43 +2805,11 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Client ID of the app used for login.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_nodejs">
-<a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The Client ID of the app used for login.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_python">
-<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_python">
-<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_python">
-<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="client_id_python">
 <a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
@@ -4297,45 +2817,13 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Client ID of the app used for login.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_python">
-<a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The Client ID of the app used for login.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="azurestaticwebappsresponse">Azure<wbr>Static<wbr>Web<wbr>Apps<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_csharp">
-<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_csharp">
-<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_csharp">
-<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -4344,14 +2832,6 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}<code>false</code> if the Azure Static Web Apps provider should not be enabled despite the set registration; otherwise, <code>true</code>.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_csharp">
-<a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="registration_csharp">
 <a href="#registration_csharp" style="color: inherit; text-decoration: inherit;">Registration</a>
@@ -4363,31 +2843,7 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_go">
-<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_go">
-<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_go">
-<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -4396,14 +2852,6 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}<code>false</code> if the Azure Static Web Apps provider should not be enabled despite the set registration; otherwise, <code>true</code>.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_go">
-<a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="registration_go">
 <a href="#registration_go" style="color: inherit; text-decoration: inherit;">Registration</a>
@@ -4415,31 +2863,7 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_nodejs">
-<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_nodejs">
-<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_nodejs">
-<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -4448,14 +2872,6 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}<code>false</code> if the Azure Static Web Apps provider should not be enabled despite the set registration; otherwise, <code>true</code>.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_nodejs">
-<a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="registration_nodejs">
 <a href="#registration_nodejs" style="color: inherit; text-decoration: inherit;">registration</a>
@@ -4467,31 +2883,7 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_python">
-<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_python">
-<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_python">
-<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -4500,14 +2892,6 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}<code>false</code> if the Azure Static Web Apps provider should not be enabled despite the set registration; otherwise, <code>true</code>.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_python">
-<a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="registration_python">
 <a href="#registration_python" style="color: inherit; text-decoration: inherit;">registration</a>
@@ -4523,14 +2907,6 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="kind_csharp">
-<a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="sasurlsettingname_csharp">
 <a href="#sasurlsettingname_csharp" style="color: inherit; text-decoration: inherit;">Sas<wbr>Url<wbr>Setting<wbr>Name</a>
 </span>
@@ -4542,14 +2918,6 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="kind_go">
-<a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sasurlsettingname_go">
 <a href="#sasurlsettingname_go" style="color: inherit; text-decoration: inherit;">Sas<wbr>Url<wbr>Setting<wbr>Name</a>
@@ -4563,14 +2931,6 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="kind_nodejs">
-<a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="sasurlsettingname_nodejs">
 <a href="#sasurlsettingname_nodejs" style="color: inherit; text-decoration: inherit;">sas<wbr>Url<wbr>Setting<wbr>Name</a>
 </span>
@@ -4582,14 +2942,6 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="kind_python">
-<a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sas_url_setting_name_python">
 <a href="#sas_url_setting_name_python" style="color: inherit; text-decoration: inherit;">sas_<wbr>url_<wbr>setting_<wbr>name</a>
@@ -4603,39 +2955,7 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
 <h4 id="blobstoragetokenstoreresponse">Blob<wbr>Storage<wbr>Token<wbr>Store<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_csharp">
-<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_csharp">
-<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_csharp">
-<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_csharp">
-<a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="sasurlsettingname_csharp">
 <a href="#sasurlsettingname_csharp" style="color: inherit; text-decoration: inherit;">Sas<wbr>Url<wbr>Setting<wbr>Name</a>
@@ -4647,39 +2967,7 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_go">
-<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_go">
-<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_go">
-<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_go">
-<a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="sasurlsettingname_go">
 <a href="#sasurlsettingname_go" style="color: inherit; text-decoration: inherit;">Sas<wbr>Url<wbr>Setting<wbr>Name</a>
@@ -4691,39 +2979,7 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_nodejs">
-<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_nodejs">
-<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_nodejs">
-<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_nodejs">
-<a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="sasurlsettingname_nodejs">
 <a href="#sasurlsettingname_nodejs" style="color: inherit; text-decoration: inherit;">sas<wbr>Url<wbr>Setting<wbr>Name</a>
@@ -4735,39 +2991,7 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_python">
-<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_python">
-<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_python">
-<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_python">
-<a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="sas_url_setting_name_python">
 <a href="#sas_url_setting_name_python" style="color: inherit; text-decoration: inherit;">sas_<wbr>url_<wbr>setting_<wbr>name</a>
@@ -4819,15 +3043,7 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The app setting name that contains the client secret.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_csharp">
-<a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The app setting name that contains the client secret.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -4847,15 +3063,7 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The app setting name that contains the client secret.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_go">
-<a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The app setting name that contains the client secret.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -4875,15 +3083,7 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The app setting name that contains the client secret.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_nodejs">
-<a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The app setting name that contains the client secret.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -4903,45 +3103,13 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The app setting name that contains the client secret.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_python">
-<a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The app setting name that contains the client secret.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="clientregistrationresponse">Client<wbr>Registration<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_csharp">
-<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_csharp">
-<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_csharp">
-<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="clientid_csharp">
 <a href="#clientid_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
@@ -4957,43 +3125,11 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The app setting name that contains the client secret.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_csharp">
-<a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The app setting name that contains the client secret.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_go">
-<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_go">
-<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_go">
-<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="clientid_go">
 <a href="#clientid_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
@@ -5009,43 +3145,11 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The app setting name that contains the client secret.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_go">
-<a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The app setting name that contains the client secret.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_nodejs">
-<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_nodejs">
-<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_nodejs">
-<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="clientid_nodejs">
 <a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
@@ -5061,43 +3165,11 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The app setting name that contains the client secret.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_nodejs">
-<a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The app setting name that contains the client secret.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_python">
-<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_python">
-<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_python">
-<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="client_id_python">
 <a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
@@ -5113,15 +3185,7 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The app setting name that contains the client secret.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_python">
-<a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The app setting name that contains the client secret.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="cookieexpiration">Cookie<wbr>Expiration</h4>
@@ -5136,14 +3200,6 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
         <span class="property-type"><a href="#cookieexpirationconvention">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Cookie<wbr>Expiration<wbr>Convention</a></span>
     </dt>
     <dd>{{% md %}}The convention used when determining the session cookie's expiration.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_csharp">
-<a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timetoexpiration_csharp">
 <a href="#timetoexpiration_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>To<wbr>Expiration</a>
@@ -5165,14 +3221,6 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
     </dt>
     <dd>{{% md %}}The convention used when determining the session cookie's expiration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="kind_go">
-<a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="timetoexpiration_go">
 <a href="#timetoexpiration_go" style="color: inherit; text-decoration: inherit;">Time<wbr>To<wbr>Expiration</a>
 </span>
@@ -5193,14 +3241,6 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
     </dt>
     <dd>{{% md %}}The convention used when determining the session cookie's expiration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="kind_nodejs">
-<a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="timetoexpiration_nodejs">
 <a href="#timetoexpiration_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>To<wbr>Expiration</a>
 </span>
@@ -5220,14 +3260,6 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
         <span class="property-type"><a href="#cookieexpirationconvention">Cookie<wbr>Expiration<wbr>Convention</a></span>
     </dt>
     <dd>{{% md %}}The convention used when determining the session cookie's expiration.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_python">
-<a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="time_to_expiration_python">
 <a href="#time_to_expiration_python" style="color: inherit; text-decoration: inherit;">time_<wbr>to_<wbr>expiration</a>
@@ -5267,31 +3299,7 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
 <h4 id="cookieexpirationresponse">Cookie<wbr>Expiration<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_csharp">
-<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_csharp">
-<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_csharp">
-<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="convention_csharp">
 <a href="#convention_csharp" style="color: inherit; text-decoration: inherit;">Convention</a>
@@ -5300,14 +3308,6 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The convention used when determining the session cookie's expiration.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_csharp">
-<a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timetoexpiration_csharp">
 <a href="#timetoexpiration_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>To<wbr>Expiration</a>
@@ -5319,31 +3319,7 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_go">
-<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_go">
-<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_go">
-<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="convention_go">
 <a href="#convention_go" style="color: inherit; text-decoration: inherit;">Convention</a>
@@ -5352,14 +3328,6 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The convention used when determining the session cookie's expiration.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_go">
-<a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timetoexpiration_go">
 <a href="#timetoexpiration_go" style="color: inherit; text-decoration: inherit;">Time<wbr>To<wbr>Expiration</a>
@@ -5371,31 +3339,7 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_nodejs">
-<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_nodejs">
-<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_nodejs">
-<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="convention_nodejs">
 <a href="#convention_nodejs" style="color: inherit; text-decoration: inherit;">convention</a>
@@ -5404,14 +3348,6 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The convention used when determining the session cookie's expiration.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_nodejs">
-<a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timetoexpiration_nodejs">
 <a href="#timetoexpiration_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>To<wbr>Expiration</a>
@@ -5423,31 +3359,7 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_python">
-<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_python">
-<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_python">
-<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="convention_python">
 <a href="#convention_python" style="color: inherit; text-decoration: inherit;">convention</a>
@@ -5456,14 +3368,6 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The convention used when determining the session cookie's expiration.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_python">
-<a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="time_to_expiration_python">
 <a href="#time_to_expiration_python" style="color: inherit; text-decoration: inherit;">time_<wbr>to_<wbr>expiration</a>
@@ -5486,14 +3390,6 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}<code>false</code> if the custom Open ID provider provider should not be enabled; otherwise, <code>true</code>.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_csharp">
-<a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="login_csharp">
 <a href="#login_csharp" style="color: inherit; text-decoration: inherit;">Login</a>
@@ -5523,14 +3419,6 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
     </dt>
     <dd>{{% md %}}<code>false</code> if the custom Open ID provider provider should not be enabled; otherwise, <code>true</code>.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="kind_go">
-<a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="login_go">
 <a href="#login_go" style="color: inherit; text-decoration: inherit;">Login</a>
 </span>
@@ -5559,14 +3447,6 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
     </dt>
     <dd>{{% md %}}<code>false</code> if the custom Open ID provider provider should not be enabled; otherwise, <code>true</code>.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="kind_nodejs">
-<a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="login_nodejs">
 <a href="#login_nodejs" style="color: inherit; text-decoration: inherit;">login</a>
 </span>
@@ -5594,14 +3474,6 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}<code>false</code> if the custom Open ID provider provider should not be enabled; otherwise, <code>true</code>.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_python">
-<a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="login_python">
 <a href="#login_python" style="color: inherit; text-decoration: inherit;">login</a>
@@ -5623,31 +3495,7 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
 <h4 id="customopenidconnectproviderresponse">Custom<wbr>Open<wbr>Id<wbr>Connect<wbr>Provider<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_csharp">
-<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_csharp">
-<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_csharp">
-<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -5656,14 +3504,6 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}<code>false</code> if the custom Open ID provider provider should not be enabled; otherwise, <code>true</code>.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_csharp">
-<a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="login_csharp">
 <a href="#login_csharp" style="color: inherit; text-decoration: inherit;">Login</a>
@@ -5683,31 +3523,7 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_go">
-<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_go">
-<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_go">
-<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -5716,14 +3532,6 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}<code>false</code> if the custom Open ID provider provider should not be enabled; otherwise, <code>true</code>.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_go">
-<a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="login_go">
 <a href="#login_go" style="color: inherit; text-decoration: inherit;">Login</a>
@@ -5743,31 +3551,7 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_nodejs">
-<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_nodejs">
-<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_nodejs">
-<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -5776,14 +3560,6 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}<code>false</code> if the custom Open ID provider provider should not be enabled; otherwise, <code>true</code>.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_nodejs">
-<a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="login_nodejs">
 <a href="#login_nodejs" style="color: inherit; text-decoration: inherit;">login</a>
@@ -5803,31 +3579,7 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_python">
-<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_python">
-<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_python">
-<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -5836,14 +3588,6 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}<code>false</code> if the custom Open ID provider provider should not be enabled; otherwise, <code>true</code>.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_python">
-<a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="login_python">
 <a href="#login_python" style="color: inherit; text-decoration: inherit;">login</a>
@@ -5883,14 +3627,6 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
     </dt>
     <dd>{{% md %}}The version of the Facebook api to be used while logging in.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="kind_csharp">
-<a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="login_csharp">
 <a href="#login_csharp" style="color: inherit; text-decoration: inherit;">Login</a>
 </span>
@@ -5927,14 +3663,6 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
     </dt>
     <dd>{{% md %}}The version of the Facebook api to be used while logging in.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="kind_go">
-<a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="login_go">
 <a href="#login_go" style="color: inherit; text-decoration: inherit;">Login</a>
 </span>
@@ -5971,14 +3699,6 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
     </dt>
     <dd>{{% md %}}The version of the Facebook api to be used while logging in.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="kind_nodejs">
-<a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="login_nodejs">
 <a href="#login_nodejs" style="color: inherit; text-decoration: inherit;">login</a>
 </span>
@@ -6014,14 +3734,6 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The version of the Facebook api to be used while logging in.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_python">
-<a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="login_python">
 <a href="#login_python" style="color: inherit; text-decoration: inherit;">login</a>
@@ -6043,31 +3755,7 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
 <h4 id="facebookresponse">Facebook<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_csharp">
-<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_csharp">
-<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_csharp">
-<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -6084,14 +3772,6 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of the Facebook api to be used while logging in.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_csharp">
-<a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="login_csharp">
 <a href="#login_csharp" style="color: inherit; text-decoration: inherit;">Login</a>
@@ -6111,31 +3791,7 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_go">
-<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_go">
-<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_go">
-<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -6152,14 +3808,6 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of the Facebook api to be used while logging in.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_go">
-<a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="login_go">
 <a href="#login_go" style="color: inherit; text-decoration: inherit;">Login</a>
@@ -6179,31 +3827,7 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_nodejs">
-<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_nodejs">
-<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_nodejs">
-<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -6220,14 +3844,6 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of the Facebook api to be used while logging in.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_nodejs">
-<a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="login_nodejs">
 <a href="#login_nodejs" style="color: inherit; text-decoration: inherit;">login</a>
@@ -6247,31 +3863,7 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_python">
-<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_python">
-<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_python">
-<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -6288,14 +3880,6 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The version of the Facebook api to be used while logging in.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_python">
-<a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="login_python">
 <a href="#login_python" style="color: inherit; text-decoration: inherit;">login</a>
@@ -6325,15 +3909,7 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The directory in which the tokens will be stored.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_csharp">
-<a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The directory in which the tokens will be stored.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -6345,15 +3921,7 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The directory in which the tokens will be stored.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_go">
-<a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The directory in which the tokens will be stored.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -6365,15 +3933,7 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The directory in which the tokens will be stored.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_nodejs">
-<a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The directory in which the tokens will be stored.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -6385,45 +3945,13 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The directory in which the tokens will be stored.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_python">
-<a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The directory in which the tokens will be stored.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="filesystemtokenstoreresponse">File<wbr>System<wbr>Token<wbr>Store<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_csharp">
-<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_csharp">
-<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_csharp">
-<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="directory_csharp">
 <a href="#directory_csharp" style="color: inherit; text-decoration: inherit;">Directory</a>
@@ -6431,43 +3959,11 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The directory in which the tokens will be stored.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_csharp">
-<a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The directory in which the tokens will be stored.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_go">
-<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_go">
-<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_go">
-<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="directory_go">
 <a href="#directory_go" style="color: inherit; text-decoration: inherit;">Directory</a>
@@ -6475,43 +3971,11 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The directory in which the tokens will be stored.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_go">
-<a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The directory in which the tokens will be stored.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_nodejs">
-<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_nodejs">
-<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_nodejs">
-<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="directory_nodejs">
 <a href="#directory_nodejs" style="color: inherit; text-decoration: inherit;">directory</a>
@@ -6519,43 +3983,11 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The directory in which the tokens will be stored.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_nodejs">
-<a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The directory in which the tokens will be stored.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_python">
-<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_python">
-<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_python">
-<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="directory_python">
 <a href="#directory_python" style="color: inherit; text-decoration: inherit;">directory</a>
@@ -6563,15 +3995,7 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The directory in which the tokens will be stored.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_python">
-<a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The directory in which the tokens will be stored.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="forwardproxy">Forward<wbr>Proxy</h4>
@@ -6601,15 +4025,7 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the header containing the scheme of the request.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_csharp">
-<a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The name of the header containing the scheme of the request.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -6637,15 +4053,7 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the header containing the scheme of the request.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_go">
-<a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The name of the header containing the scheme of the request.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -6673,15 +4081,7 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the header containing the scheme of the request.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_nodejs">
-<a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The name of the header containing the scheme of the request.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -6709,15 +4109,7 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the header containing the scheme of the request.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_python">
-<a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The name of the header containing the scheme of the request.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="forwardproxyconvention">Forward<wbr>Proxy<wbr>Convention</h4>
@@ -6753,31 +4145,7 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
 <h4 id="forwardproxyresponse">Forward<wbr>Proxy<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_csharp">
-<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_csharp">
-<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_csharp">
-<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="convention_csharp">
 <a href="#convention_csharp" style="color: inherit; text-decoration: inherit;">Convention</a>
@@ -6801,43 +4169,11 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the header containing the scheme of the request.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_csharp">
-<a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The name of the header containing the scheme of the request.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_go">
-<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_go">
-<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_go">
-<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="convention_go">
 <a href="#convention_go" style="color: inherit; text-decoration: inherit;">Convention</a>
@@ -6861,43 +4197,11 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the header containing the scheme of the request.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_go">
-<a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The name of the header containing the scheme of the request.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_nodejs">
-<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_nodejs">
-<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_nodejs">
-<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="convention_nodejs">
 <a href="#convention_nodejs" style="color: inherit; text-decoration: inherit;">convention</a>
@@ -6921,43 +4225,11 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the header containing the scheme of the request.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_nodejs">
-<a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The name of the header containing the scheme of the request.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_python">
-<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_python">
-<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_python">
-<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="convention_python">
 <a href="#convention_python" style="color: inherit; text-decoration: inherit;">convention</a>
@@ -6981,15 +4253,7 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the header containing the scheme of the request.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_python">
-<a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The name of the header containing the scheme of the request.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="github">Git<wbr>Hub</h4>
@@ -7004,14 +4268,6 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}<code>false</code> if the GitHub provider should not be enabled despite the set registration; otherwise, <code>true</code>.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_csharp">
-<a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="login_csharp">
 <a href="#login_csharp" style="color: inherit; text-decoration: inherit;">Login</a>
@@ -7041,14 +4297,6 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
     </dt>
     <dd>{{% md %}}<code>false</code> if the GitHub provider should not be enabled despite the set registration; otherwise, <code>true</code>.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="kind_go">
-<a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="login_go">
 <a href="#login_go" style="color: inherit; text-decoration: inherit;">Login</a>
 </span>
@@ -7077,14 +4325,6 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
     </dt>
     <dd>{{% md %}}<code>false</code> if the GitHub provider should not be enabled despite the set registration; otherwise, <code>true</code>.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="kind_nodejs">
-<a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="login_nodejs">
 <a href="#login_nodejs" style="color: inherit; text-decoration: inherit;">login</a>
 </span>
@@ -7112,14 +4352,6 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}<code>false</code> if the GitHub provider should not be enabled despite the set registration; otherwise, <code>true</code>.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_python">
-<a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="login_python">
 <a href="#login_python" style="color: inherit; text-decoration: inherit;">login</a>
@@ -7141,31 +4373,7 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
 <h4 id="githubresponse">Git<wbr>Hub<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_csharp">
-<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_csharp">
-<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_csharp">
-<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -7174,14 +4382,6 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}<code>false</code> if the GitHub provider should not be enabled despite the set registration; otherwise, <code>true</code>.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_csharp">
-<a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="login_csharp">
 <a href="#login_csharp" style="color: inherit; text-decoration: inherit;">Login</a>
@@ -7201,31 +4401,7 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_go">
-<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_go">
-<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_go">
-<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -7234,14 +4410,6 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}<code>false</code> if the GitHub provider should not be enabled despite the set registration; otherwise, <code>true</code>.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_go">
-<a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="login_go">
 <a href="#login_go" style="color: inherit; text-decoration: inherit;">Login</a>
@@ -7261,31 +4429,7 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_nodejs">
-<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_nodejs">
-<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_nodejs">
-<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -7294,14 +4438,6 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}<code>false</code> if the GitHub provider should not be enabled despite the set registration; otherwise, <code>true</code>.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_nodejs">
-<a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="login_nodejs">
 <a href="#login_nodejs" style="color: inherit; text-decoration: inherit;">login</a>
@@ -7321,31 +4457,7 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_python">
-<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_python">
-<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_python">
-<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -7354,14 +4466,6 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}<code>false</code> if the GitHub provider should not be enabled despite the set registration; otherwise, <code>true</code>.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_python">
-<a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="login_python">
 <a href="#login_python" style="color: inherit; text-decoration: inherit;">login</a>
@@ -7392,14 +4496,6 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The paths for which unauthenticated flow would not be redirected to the login page.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_csharp">
-<a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redirecttoprovider_csharp">
 <a href="#redirecttoprovider_csharp" style="color: inherit; text-decoration: inherit;">Redirect<wbr>To<wbr>Provider</a>
@@ -7439,14 +4535,6 @@ action is set to "RedirectToLoginPage".{{% /md %}}</dd><dt class="property-optio
     </dt>
     <dd>{{% md %}}The paths for which unauthenticated flow would not be redirected to the login page.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="kind_go">
-<a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="redirecttoprovider_go">
 <a href="#redirecttoprovider_go" style="color: inherit; text-decoration: inherit;">Redirect<wbr>To<wbr>Provider</a>
 </span>
@@ -7485,14 +4573,6 @@ action is set to "RedirectToLoginPage".{{% /md %}}</dd><dt class="property-optio
     </dt>
     <dd>{{% md %}}The paths for which unauthenticated flow would not be redirected to the login page.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="kind_nodejs">
-<a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="redirecttoprovider_nodejs">
 <a href="#redirecttoprovider_nodejs" style="color: inherit; text-decoration: inherit;">redirect<wbr>To<wbr>Provider</a>
 </span>
@@ -7530,14 +4610,6 @@ action is set to "RedirectToLoginPage".{{% /md %}}</dd><dt class="property-optio
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The paths for which unauthenticated flow would not be redirected to the login page.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_python">
-<a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redirect_to_provider_python">
 <a href="#redirect_to_provider_python" style="color: inherit; text-decoration: inherit;">redirect_<wbr>to_<wbr>provider</a>
@@ -7569,31 +4641,7 @@ action is set to "RedirectToLoginPage".{{% /md %}}</dd><dt class="property-optio
 <h4 id="globalvalidationresponse">Global<wbr>Validation<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_csharp">
-<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_csharp">
-<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_csharp">
-<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="excludedpaths_csharp">
 <a href="#excludedpaths_csharp" style="color: inherit; text-decoration: inherit;">Excluded<wbr>Paths</a>
@@ -7602,14 +4650,6 @@ action is set to "RedirectToLoginPage".{{% /md %}}</dd><dt class="property-optio
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The paths for which unauthenticated flow would not be redirected to the login page.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_csharp">
-<a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redirecttoprovider_csharp">
 <a href="#redirecttoprovider_csharp" style="color: inherit; text-decoration: inherit;">Redirect<wbr>To<wbr>Provider</a>
@@ -7639,31 +4679,7 @@ action is set to "RedirectToLoginPage".{{% /md %}}</dd><dt class="property-optio
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_go">
-<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_go">
-<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_go">
-<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="excludedpaths_go">
 <a href="#excludedpaths_go" style="color: inherit; text-decoration: inherit;">Excluded<wbr>Paths</a>
@@ -7672,14 +4688,6 @@ action is set to "RedirectToLoginPage".{{% /md %}}</dd><dt class="property-optio
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The paths for which unauthenticated flow would not be redirected to the login page.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_go">
-<a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redirecttoprovider_go">
 <a href="#redirecttoprovider_go" style="color: inherit; text-decoration: inherit;">Redirect<wbr>To<wbr>Provider</a>
@@ -7709,31 +4717,7 @@ action is set to "RedirectToLoginPage".{{% /md %}}</dd><dt class="property-optio
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_nodejs">
-<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_nodejs">
-<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_nodejs">
-<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="excludedpaths_nodejs">
 <a href="#excludedpaths_nodejs" style="color: inherit; text-decoration: inherit;">excluded<wbr>Paths</a>
@@ -7742,14 +4726,6 @@ action is set to "RedirectToLoginPage".{{% /md %}}</dd><dt class="property-optio
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The paths for which unauthenticated flow would not be redirected to the login page.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_nodejs">
-<a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redirecttoprovider_nodejs">
 <a href="#redirecttoprovider_nodejs" style="color: inherit; text-decoration: inherit;">redirect<wbr>To<wbr>Provider</a>
@@ -7779,31 +4755,7 @@ action is set to "RedirectToLoginPage".{{% /md %}}</dd><dt class="property-optio
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_python">
-<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_python">
-<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_python">
-<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="excluded_paths_python">
 <a href="#excluded_paths_python" style="color: inherit; text-decoration: inherit;">excluded_<wbr>paths</a>
@@ -7812,14 +4764,6 @@ action is set to "RedirectToLoginPage".{{% /md %}}</dd><dt class="property-optio
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The paths for which unauthenticated flow would not be redirected to the login page.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_python">
-<a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redirect_to_provider_python">
 <a href="#redirect_to_provider_python" style="color: inherit; text-decoration: inherit;">redirect_<wbr>to_<wbr>provider</a>
@@ -7861,14 +4805,6 @@ action is set to "RedirectToLoginPage".{{% /md %}}</dd><dt class="property-optio
     </dt>
     <dd>{{% md %}}<code>false</code> if the Google provider should not be enabled despite the set registration; otherwise, <code>true</code>.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="kind_csharp">
-<a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="login_csharp">
 <a href="#login_csharp" style="color: inherit; text-decoration: inherit;">Login</a>
 </span>
@@ -7905,14 +4841,6 @@ action is set to "RedirectToLoginPage".{{% /md %}}</dd><dt class="property-optio
     </dt>
     <dd>{{% md %}}<code>false</code> if the Google provider should not be enabled despite the set registration; otherwise, <code>true</code>.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="kind_go">
-<a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="login_go">
 <a href="#login_go" style="color: inherit; text-decoration: inherit;">Login</a>
 </span>
@@ -7949,14 +4877,6 @@ action is set to "RedirectToLoginPage".{{% /md %}}</dd><dt class="property-optio
     </dt>
     <dd>{{% md %}}<code>false</code> if the Google provider should not be enabled despite the set registration; otherwise, <code>true</code>.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="kind_nodejs">
-<a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="login_nodejs">
 <a href="#login_nodejs" style="color: inherit; text-decoration: inherit;">login</a>
 </span>
@@ -7992,14 +4912,6 @@ action is set to "RedirectToLoginPage".{{% /md %}}</dd><dt class="property-optio
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}<code>false</code> if the Google provider should not be enabled despite the set registration; otherwise, <code>true</code>.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_python">
-<a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="login_python">
 <a href="#login_python" style="color: inherit; text-decoration: inherit;">login</a>
@@ -8029,31 +4941,7 @@ action is set to "RedirectToLoginPage".{{% /md %}}</dd><dt class="property-optio
 <h4 id="googleresponse">Google<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_csharp">
-<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_csharp">
-<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_csharp">
-<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -8062,14 +4950,6 @@ action is set to "RedirectToLoginPage".{{% /md %}}</dd><dt class="property-optio
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}<code>false</code> if the Google provider should not be enabled despite the set registration; otherwise, <code>true</code>.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_csharp">
-<a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="login_csharp">
 <a href="#login_csharp" style="color: inherit; text-decoration: inherit;">Login</a>
@@ -8097,31 +4977,7 @@ action is set to "RedirectToLoginPage".{{% /md %}}</dd><dt class="property-optio
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_go">
-<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_go">
-<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_go">
-<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -8130,14 +4986,6 @@ action is set to "RedirectToLoginPage".{{% /md %}}</dd><dt class="property-optio
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}<code>false</code> if the Google provider should not be enabled despite the set registration; otherwise, <code>true</code>.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_go">
-<a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="login_go">
 <a href="#login_go" style="color: inherit; text-decoration: inherit;">Login</a>
@@ -8165,31 +5013,7 @@ action is set to "RedirectToLoginPage".{{% /md %}}</dd><dt class="property-optio
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_nodejs">
-<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_nodejs">
-<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_nodejs">
-<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -8198,14 +5022,6 @@ action is set to "RedirectToLoginPage".{{% /md %}}</dd><dt class="property-optio
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}<code>false</code> if the Google provider should not be enabled despite the set registration; otherwise, <code>true</code>.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_nodejs">
-<a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="login_nodejs">
 <a href="#login_nodejs" style="color: inherit; text-decoration: inherit;">login</a>
@@ -8233,31 +5049,7 @@ action is set to "RedirectToLoginPage".{{% /md %}}</dd><dt class="property-optio
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_python">
-<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_python">
-<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_python">
-<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -8266,14 +5058,6 @@ action is set to "RedirectToLoginPage".{{% /md %}}</dd><dt class="property-optio
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}<code>false</code> if the Google provider should not be enabled despite the set registration; otherwise, <code>true</code>.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_python">
-<a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="login_python">
 <a href="#login_python" style="color: inherit; text-decoration: inherit;">login</a>
@@ -8313,14 +5097,6 @@ action is set to "RedirectToLoginPage".{{% /md %}}</dd><dt class="property-optio
     </dt>
     <dd>{{% md %}}The configuration settings of a forward proxy used to make the requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="kind_csharp">
-<a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="requirehttps_csharp">
 <a href="#requirehttps_csharp" style="color: inherit; text-decoration: inherit;">Require<wbr>Https</a>
 </span>
@@ -8349,14 +5125,6 @@ action is set to "RedirectToLoginPage".{{% /md %}}</dd><dt class="property-optio
     </dt>
     <dd>{{% md %}}The configuration settings of a forward proxy used to make the requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="kind_go">
-<a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="requirehttps_go">
 <a href="#requirehttps_go" style="color: inherit; text-decoration: inherit;">Require<wbr>Https</a>
 </span>
@@ -8385,14 +5153,6 @@ action is set to "RedirectToLoginPage".{{% /md %}}</dd><dt class="property-optio
     </dt>
     <dd>{{% md %}}The configuration settings of a forward proxy used to make the requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="kind_nodejs">
-<a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="requirehttps_nodejs">
 <a href="#requirehttps_nodejs" style="color: inherit; text-decoration: inherit;">require<wbr>Https</a>
 </span>
@@ -8420,14 +5180,6 @@ action is set to "RedirectToLoginPage".{{% /md %}}</dd><dt class="property-optio
         <span class="property-type"><a href="#forwardproxy">Forward<wbr>Proxy</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of a forward proxy used to make the requests.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_python">
-<a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="require_https_python">
 <a href="#require_https_python" style="color: inherit; text-decoration: inherit;">require_<wbr>https</a>
@@ -8449,31 +5201,7 @@ action is set to "RedirectToLoginPage".{{% /md %}}</dd><dt class="property-optio
 <h4 id="httpsettingsresponse">Http<wbr>Settings<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_csharp">
-<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_csharp">
-<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_csharp">
-<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="forwardproxy_csharp">
 <a href="#forwardproxy_csharp" style="color: inherit; text-decoration: inherit;">Forward<wbr>Proxy</a>
@@ -8482,14 +5210,6 @@ action is set to "RedirectToLoginPage".{{% /md %}}</dd><dt class="property-optio
         <span class="property-type"><a href="#forwardproxyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Forward<wbr>Proxy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of a forward proxy used to make the requests.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_csharp">
-<a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requirehttps_csharp">
 <a href="#requirehttps_csharp" style="color: inherit; text-decoration: inherit;">Require<wbr>Https</a>
@@ -8509,31 +5229,7 @@ action is set to "RedirectToLoginPage".{{% /md %}}</dd><dt class="property-optio
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_go">
-<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_go">
-<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_go">
-<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="forwardproxy_go">
 <a href="#forwardproxy_go" style="color: inherit; text-decoration: inherit;">Forward<wbr>Proxy</a>
@@ -8542,14 +5238,6 @@ action is set to "RedirectToLoginPage".{{% /md %}}</dd><dt class="property-optio
         <span class="property-type"><a href="#forwardproxyresponse">Forward<wbr>Proxy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of a forward proxy used to make the requests.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_go">
-<a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requirehttps_go">
 <a href="#requirehttps_go" style="color: inherit; text-decoration: inherit;">Require<wbr>Https</a>
@@ -8569,31 +5257,7 @@ action is set to "RedirectToLoginPage".{{% /md %}}</dd><dt class="property-optio
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_nodejs">
-<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_nodejs">
-<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_nodejs">
-<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="forwardproxy_nodejs">
 <a href="#forwardproxy_nodejs" style="color: inherit; text-decoration: inherit;">forward<wbr>Proxy</a>
@@ -8602,14 +5266,6 @@ action is set to "RedirectToLoginPage".{{% /md %}}</dd><dt class="property-optio
         <span class="property-type"><a href="#forwardproxyresponse">Forward<wbr>Proxy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of a forward proxy used to make the requests.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_nodejs">
-<a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requirehttps_nodejs">
 <a href="#requirehttps_nodejs" style="color: inherit; text-decoration: inherit;">require<wbr>Https</a>
@@ -8629,31 +5285,7 @@ action is set to "RedirectToLoginPage".{{% /md %}}</dd><dt class="property-optio
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_python">
-<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_python">
-<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_python">
-<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="forward_proxy_python">
 <a href="#forward_proxy_python" style="color: inherit; text-decoration: inherit;">forward_<wbr>proxy</a>
@@ -8662,14 +5294,6 @@ action is set to "RedirectToLoginPage".{{% /md %}}</dd><dt class="property-optio
         <span class="property-type"><a href="#forwardproxyresponse">Forward<wbr>Proxy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of a forward proxy used to make the requests.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_python">
-<a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="require_https_python">
 <a href="#require_https_python" style="color: inherit; text-decoration: inherit;">require_<wbr>https</a>
@@ -8699,15 +5323,7 @@ action is set to "RedirectToLoginPage".{{% /md %}}</dd><dt class="property-optio
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The prefix that should precede all the authentication/authorization paths.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_csharp">
-<a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The prefix that should precede all the authentication/authorization paths.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -8719,15 +5335,7 @@ action is set to "RedirectToLoginPage".{{% /md %}}</dd><dt class="property-optio
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The prefix that should precede all the authentication/authorization paths.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_go">
-<a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The prefix that should precede all the authentication/authorization paths.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -8739,15 +5347,7 @@ action is set to "RedirectToLoginPage".{{% /md %}}</dd><dt class="property-optio
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The prefix that should precede all the authentication/authorization paths.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_nodejs">
-<a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The prefix that should precede all the authentication/authorization paths.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -8759,45 +5359,13 @@ action is set to "RedirectToLoginPage".{{% /md %}}</dd><dt class="property-optio
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The prefix that should precede all the authentication/authorization paths.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_python">
-<a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The prefix that should precede all the authentication/authorization paths.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="httpsettingsroutesresponse">Http<wbr>Settings<wbr>Routes<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_csharp">
-<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_csharp">
-<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_csharp">
-<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="apiprefix_csharp">
 <a href="#apiprefix_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Prefix</a>
@@ -8805,43 +5373,11 @@ action is set to "RedirectToLoginPage".{{% /md %}}</dd><dt class="property-optio
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The prefix that should precede all the authentication/authorization paths.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_csharp">
-<a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The prefix that should precede all the authentication/authorization paths.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_go">
-<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_go">
-<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_go">
-<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="apiprefix_go">
 <a href="#apiprefix_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Prefix</a>
@@ -8849,43 +5385,11 @@ action is set to "RedirectToLoginPage".{{% /md %}}</dd><dt class="property-optio
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The prefix that should precede all the authentication/authorization paths.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_go">
-<a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The prefix that should precede all the authentication/authorization paths.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_nodejs">
-<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_nodejs">
-<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_nodejs">
-<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="apiprefix_nodejs">
 <a href="#apiprefix_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Prefix</a>
@@ -8893,43 +5397,11 @@ action is set to "RedirectToLoginPage".{{% /md %}}</dd><dt class="property-optio
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The prefix that should precede all the authentication/authorization paths.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_nodejs">
-<a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The prefix that should precede all the authentication/authorization paths.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_python">
-<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_python">
-<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_python">
-<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="api_prefix_python">
 <a href="#api_prefix_python" style="color: inherit; text-decoration: inherit;">api_<wbr>prefix</a>
@@ -8937,15 +5409,7 @@ action is set to "RedirectToLoginPage".{{% /md %}}</dd><dt class="property-optio
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The prefix that should precede all the authentication/authorization paths.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_python">
-<a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The prefix that should precede all the authentication/authorization paths.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="identityproviders">Identity<wbr>Providers</h4>
@@ -9009,14 +5473,6 @@ configuration settings of the custom Open ID Connect provider.{{% /md %}}</dd><d
         <span class="property-type"><a href="#google">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Google</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the Google provider.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_csharp">
-<a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="legacymicrosoftaccount_csharp">
 <a href="#legacymicrosoftaccount_csharp" style="color: inherit; text-decoration: inherit;">Legacy<wbr>Microsoft<wbr>Account</a>
@@ -9095,14 +5551,6 @@ configuration settings of the custom Open ID Connect provider.{{% /md %}}</dd><d
     </dt>
     <dd>{{% md %}}The configuration settings of the Google provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="kind_go">
-<a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="legacymicrosoftaccount_go">
 <a href="#legacymicrosoftaccount_go" style="color: inherit; text-decoration: inherit;">Legacy<wbr>Microsoft<wbr>Account</a>
 </span>
@@ -9179,14 +5627,6 @@ configuration settings of the custom Open ID Connect provider.{{% /md %}}</dd><d
         <span class="property-type"><a href="#google">Google</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the Google provider.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_nodejs">
-<a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="legacymicrosoftaccount_nodejs">
 <a href="#legacymicrosoftaccount_nodejs" style="color: inherit; text-decoration: inherit;">legacy<wbr>Microsoft<wbr>Account</a>
@@ -9265,14 +5705,6 @@ configuration settings of the custom Open ID Connect provider.{{% /md %}}</dd><d
     </dt>
     <dd>{{% md %}}The configuration settings of the Google provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="kind_python">
-<a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="legacy_microsoft_account_python">
 <a href="#legacy_microsoft_account_python" style="color: inherit; text-decoration: inherit;">legacy_<wbr>microsoft_<wbr>account</a>
 </span>
@@ -9293,31 +5725,7 @@ configuration settings of the custom Open ID Connect provider.{{% /md %}}</dd><d
 <h4 id="identityprovidersresponse">Identity<wbr>Providers<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_csharp">
-<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_csharp">
-<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_csharp">
-<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="apple_csharp">
 <a href="#apple_csharp" style="color: inherit; text-decoration: inherit;">Apple</a>
@@ -9376,14 +5784,6 @@ configuration settings of the custom Open ID Connect provider.{{% /md %}}</dd><d
     </dt>
     <dd>{{% md %}}The configuration settings of the Google provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="kind_csharp">
-<a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="legacymicrosoftaccount_csharp">
 <a href="#legacymicrosoftaccount_csharp" style="color: inherit; text-decoration: inherit;">Legacy<wbr>Microsoft<wbr>Account</a>
 </span>
@@ -9402,31 +5802,7 @@ configuration settings of the custom Open ID Connect provider.{{% /md %}}</dd><d
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_go">
-<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_go">
-<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_go">
-<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="apple_go">
 <a href="#apple_go" style="color: inherit; text-decoration: inherit;">Apple</a>
@@ -9485,14 +5861,6 @@ configuration settings of the custom Open ID Connect provider.{{% /md %}}</dd><d
     </dt>
     <dd>{{% md %}}The configuration settings of the Google provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="kind_go">
-<a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="legacymicrosoftaccount_go">
 <a href="#legacymicrosoftaccount_go" style="color: inherit; text-decoration: inherit;">Legacy<wbr>Microsoft<wbr>Account</a>
 </span>
@@ -9511,31 +5879,7 @@ configuration settings of the custom Open ID Connect provider.{{% /md %}}</dd><d
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_nodejs">
-<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_nodejs">
-<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_nodejs">
-<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="apple_nodejs">
 <a href="#apple_nodejs" style="color: inherit; text-decoration: inherit;">apple</a>
@@ -9594,14 +5938,6 @@ configuration settings of the custom Open ID Connect provider.{{% /md %}}</dd><d
     </dt>
     <dd>{{% md %}}The configuration settings of the Google provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="kind_nodejs">
-<a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="legacymicrosoftaccount_nodejs">
 <a href="#legacymicrosoftaccount_nodejs" style="color: inherit; text-decoration: inherit;">legacy<wbr>Microsoft<wbr>Account</a>
 </span>
@@ -9620,31 +5956,7 @@ configuration settings of the custom Open ID Connect provider.{{% /md %}}</dd><d
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_python">
-<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_python">
-<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_python">
-<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="apple_python">
 <a href="#apple_python" style="color: inherit; text-decoration: inherit;">apple</a>
@@ -9703,14 +6015,6 @@ configuration settings of the custom Open ID Connect provider.{{% /md %}}</dd><d
     </dt>
     <dd>{{% md %}}The configuration settings of the Google provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="kind_python">
-<a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="legacy_microsoft_account_python">
 <a href="#legacy_microsoft_account_python" style="color: inherit; text-decoration: inherit;">legacy_<wbr>microsoft_<wbr>account</a>
 </span>
@@ -9747,15 +6051,7 @@ configuration settings of the custom Open ID Connect provider.{{% /md %}}</dd><d
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The list of the allowed groups.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_csharp">
-<a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The list of the allowed groups.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -9775,15 +6071,7 @@ configuration settings of the custom Open ID Connect provider.{{% /md %}}</dd><d
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The list of the allowed groups.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_go">
-<a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The list of the allowed groups.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -9803,15 +6091,7 @@ configuration settings of the custom Open ID Connect provider.{{% /md %}}</dd><d
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The list of the allowed groups.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_nodejs">
-<a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The list of the allowed groups.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -9831,45 +6111,13 @@ configuration settings of the custom Open ID Connect provider.{{% /md %}}</dd><d
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The list of the allowed groups.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_python">
-<a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The list of the allowed groups.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="jwtclaimchecksresponse">Jwt<wbr>Claim<wbr>Checks<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_csharp">
-<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_csharp">
-<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_csharp">
-<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowedclientapplications_csharp">
 <a href="#allowedclientapplications_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Client<wbr>Applications</a>
@@ -9885,43 +6133,11 @@ configuration settings of the custom Open ID Connect provider.{{% /md %}}</dd><d
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The list of the allowed groups.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_csharp">
-<a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The list of the allowed groups.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_go">
-<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_go">
-<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_go">
-<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowedclientapplications_go">
 <a href="#allowedclientapplications_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Client<wbr>Applications</a>
@@ -9937,43 +6153,11 @@ configuration settings of the custom Open ID Connect provider.{{% /md %}}</dd><d
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The list of the allowed groups.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_go">
-<a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The list of the allowed groups.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_nodejs">
-<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_nodejs">
-<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_nodejs">
-<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowedclientapplications_nodejs">
 <a href="#allowedclientapplications_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Client<wbr>Applications</a>
@@ -9989,43 +6173,11 @@ configuration settings of the custom Open ID Connect provider.{{% /md %}}</dd><d
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The list of the allowed groups.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_nodejs">
-<a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The list of the allowed groups.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_python">
-<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_python">
-<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_python">
-<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowed_client_applications_python">
 <a href="#allowed_client_applications_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>client_<wbr>applications</a>
@@ -10041,15 +6193,7 @@ configuration settings of the custom Open ID Connect provider.{{% /md %}}</dd><d
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The list of the allowed groups.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_python">
-<a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The list of the allowed groups.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="legacymicrosoftaccount">Legacy<wbr>Microsoft<wbr>Account</h4>
@@ -10064,14 +6208,6 @@ configuration settings of the custom Open ID Connect provider.{{% /md %}}</dd><d
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}<code>false</code> if the legacy Microsoft Account provider should not be enabled despite the set registration; otherwise, <code>true</code>.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_csharp">
-<a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="login_csharp">
 <a href="#login_csharp" style="color: inherit; text-decoration: inherit;">Login</a>
@@ -10109,14 +6245,6 @@ configuration settings of the custom Open ID Connect provider.{{% /md %}}</dd><d
     </dt>
     <dd>{{% md %}}<code>false</code> if the legacy Microsoft Account provider should not be enabled despite the set registration; otherwise, <code>true</code>.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="kind_go">
-<a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="login_go">
 <a href="#login_go" style="color: inherit; text-decoration: inherit;">Login</a>
 </span>
@@ -10153,14 +6281,6 @@ configuration settings of the custom Open ID Connect provider.{{% /md %}}</dd><d
     </dt>
     <dd>{{% md %}}<code>false</code> if the legacy Microsoft Account provider should not be enabled despite the set registration; otherwise, <code>true</code>.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="kind_nodejs">
-<a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="login_nodejs">
 <a href="#login_nodejs" style="color: inherit; text-decoration: inherit;">login</a>
 </span>
@@ -10196,14 +6316,6 @@ configuration settings of the custom Open ID Connect provider.{{% /md %}}</dd><d
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}<code>false</code> if the legacy Microsoft Account provider should not be enabled despite the set registration; otherwise, <code>true</code>.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_python">
-<a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="login_python">
 <a href="#login_python" style="color: inherit; text-decoration: inherit;">login</a>
@@ -10233,31 +6345,7 @@ configuration settings of the custom Open ID Connect provider.{{% /md %}}</dd><d
 <h4 id="legacymicrosoftaccountresponse">Legacy<wbr>Microsoft<wbr>Account<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_csharp">
-<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_csharp">
-<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_csharp">
-<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -10266,14 +6354,6 @@ configuration settings of the custom Open ID Connect provider.{{% /md %}}</dd><d
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}<code>false</code> if the legacy Microsoft Account provider should not be enabled despite the set registration; otherwise, <code>true</code>.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_csharp">
-<a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="login_csharp">
 <a href="#login_csharp" style="color: inherit; text-decoration: inherit;">Login</a>
@@ -10301,31 +6381,7 @@ configuration settings of the custom Open ID Connect provider.{{% /md %}}</dd><d
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_go">
-<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_go">
-<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_go">
-<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -10334,14 +6390,6 @@ configuration settings of the custom Open ID Connect provider.{{% /md %}}</dd><d
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}<code>false</code> if the legacy Microsoft Account provider should not be enabled despite the set registration; otherwise, <code>true</code>.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_go">
-<a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="login_go">
 <a href="#login_go" style="color: inherit; text-decoration: inherit;">Login</a>
@@ -10369,31 +6417,7 @@ configuration settings of the custom Open ID Connect provider.{{% /md %}}</dd><d
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_nodejs">
-<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_nodejs">
-<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_nodejs">
-<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -10402,14 +6426,6 @@ configuration settings of the custom Open ID Connect provider.{{% /md %}}</dd><d
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}<code>false</code> if the legacy Microsoft Account provider should not be enabled despite the set registration; otherwise, <code>true</code>.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_nodejs">
-<a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="login_nodejs">
 <a href="#login_nodejs" style="color: inherit; text-decoration: inherit;">login</a>
@@ -10437,31 +6453,7 @@ configuration settings of the custom Open ID Connect provider.{{% /md %}}</dd><d
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_python">
-<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_python">
-<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_python">
-<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -10470,14 +6462,6 @@ configuration settings of the custom Open ID Connect provider.{{% /md %}}</dd><d
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}<code>false</code> if the legacy Microsoft Account provider should not be enabled despite the set registration; otherwise, <code>true</code>.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_python">
-<a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="login_python">
 <a href="#login_python" style="color: inherit; text-decoration: inherit;">login</a>
@@ -10526,14 +6510,6 @@ Note that URLs within the current domain are always implicitly allowed.{{% /md %
         <span class="property-type"><a href="#cookieexpiration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Cookie<wbr>Expiration</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the session cookie's expiration.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_csharp">
-<a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nonce_csharp">
 <a href="#nonce_csharp" style="color: inherit; text-decoration: inherit;">Nonce</a>
@@ -10589,14 +6565,6 @@ Note that URLs within the current domain are always implicitly allowed.{{% /md %
     </dt>
     <dd>{{% md %}}The configuration settings of the session cookie's expiration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="kind_go">
-<a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="nonce_go">
 <a href="#nonce_go" style="color: inherit; text-decoration: inherit;">Nonce</a>
 </span>
@@ -10651,14 +6619,6 @@ Note that URLs within the current domain are always implicitly allowed.{{% /md %
     </dt>
     <dd>{{% md %}}The configuration settings of the session cookie's expiration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="kind_nodejs">
-<a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="nonce_nodejs">
 <a href="#nonce_nodejs" style="color: inherit; text-decoration: inherit;">nonce</a>
 </span>
@@ -10712,14 +6672,6 @@ Note that URLs within the current domain are always implicitly allowed.{{% /md %
         <span class="property-type"><a href="#cookieexpiration">Cookie<wbr>Expiration</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the session cookie's expiration.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_python">
-<a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nonce_python">
 <a href="#nonce_python" style="color: inherit; text-decoration: inherit;">nonce</a>
@@ -10757,31 +6709,7 @@ Note that URLs within the current domain are always implicitly allowed.{{% /md %
 <h4 id="loginresponse">Login<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_csharp">
-<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_csharp">
-<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_csharp">
-<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowedexternalredirecturls_csharp">
 <a href="#allowedexternalredirecturls_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>External<wbr>Redirect<wbr>Urls</a>
@@ -10800,14 +6728,6 @@ Note that URLs within the current domain are always implicitly allowed.{{% /md %
         <span class="property-type"><a href="#cookieexpirationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Cookie<wbr>Expiration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the session cookie's expiration.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_csharp">
-<a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nonce_csharp">
 <a href="#nonce_csharp" style="color: inherit; text-decoration: inherit;">Nonce</a>
@@ -10843,31 +6763,7 @@ Note that URLs within the current domain are always implicitly allowed.{{% /md %
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_go">
-<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_go">
-<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_go">
-<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowedexternalredirecturls_go">
 <a href="#allowedexternalredirecturls_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>External<wbr>Redirect<wbr>Urls</a>
@@ -10886,14 +6782,6 @@ Note that URLs within the current domain are always implicitly allowed.{{% /md %
         <span class="property-type"><a href="#cookieexpirationresponse">Cookie<wbr>Expiration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the session cookie's expiration.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_go">
-<a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nonce_go">
 <a href="#nonce_go" style="color: inherit; text-decoration: inherit;">Nonce</a>
@@ -10929,31 +6817,7 @@ Note that URLs within the current domain are always implicitly allowed.{{% /md %
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_nodejs">
-<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_nodejs">
-<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_nodejs">
-<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowedexternalredirecturls_nodejs">
 <a href="#allowedexternalredirecturls_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>External<wbr>Redirect<wbr>Urls</a>
@@ -10972,14 +6836,6 @@ Note that URLs within the current domain are always implicitly allowed.{{% /md %
         <span class="property-type"><a href="#cookieexpirationresponse">Cookie<wbr>Expiration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the session cookie's expiration.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_nodejs">
-<a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nonce_nodejs">
 <a href="#nonce_nodejs" style="color: inherit; text-decoration: inherit;">nonce</a>
@@ -11015,31 +6871,7 @@ Note that URLs within the current domain are always implicitly allowed.{{% /md %
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_python">
-<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_python">
-<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_python">
-<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowed_external_redirect_urls_python">
 <a href="#allowed_external_redirect_urls_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>external_<wbr>redirect_<wbr>urls</a>
@@ -11058,14 +6890,6 @@ Note that URLs within the current domain are always implicitly allowed.{{% /md %
         <span class="property-type"><a href="#cookieexpirationresponse">Cookie<wbr>Expiration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the session cookie's expiration.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_python">
-<a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nonce_python">
 <a href="#nonce_python" style="color: inherit; text-decoration: inherit;">nonce</a>
@@ -11105,14 +6929,6 @@ Note that URLs within the current domain are always implicitly allowed.{{% /md %
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="kind_csharp">
-<a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="logoutendpoint_csharp">
 <a href="#logoutendpoint_csharp" style="color: inherit; text-decoration: inherit;">Logout<wbr>Endpoint</a>
 </span>
@@ -11124,14 +6940,6 @@ Note that URLs within the current domain are always implicitly allowed.{{% /md %
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="kind_go">
-<a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logoutendpoint_go">
 <a href="#logoutendpoint_go" style="color: inherit; text-decoration: inherit;">Logout<wbr>Endpoint</a>
@@ -11145,14 +6953,6 @@ Note that URLs within the current domain are always implicitly allowed.{{% /md %
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="kind_nodejs">
-<a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="logoutendpoint_nodejs">
 <a href="#logoutendpoint_nodejs" style="color: inherit; text-decoration: inherit;">logout<wbr>Endpoint</a>
 </span>
@@ -11164,14 +6964,6 @@ Note that URLs within the current domain are always implicitly allowed.{{% /md %
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="kind_python">
-<a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logout_endpoint_python">
 <a href="#logout_endpoint_python" style="color: inherit; text-decoration: inherit;">logout_<wbr>endpoint</a>
@@ -11185,39 +6977,7 @@ Note that URLs within the current domain are always implicitly allowed.{{% /md %
 <h4 id="loginroutesresponse">Login<wbr>Routes<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_csharp">
-<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_csharp">
-<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_csharp">
-<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_csharp">
-<a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="logoutendpoint_csharp">
 <a href="#logoutendpoint_csharp" style="color: inherit; text-decoration: inherit;">Logout<wbr>Endpoint</a>
@@ -11229,39 +6989,7 @@ Note that URLs within the current domain are always implicitly allowed.{{% /md %
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_go">
-<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_go">
-<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_go">
-<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_go">
-<a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="logoutendpoint_go">
 <a href="#logoutendpoint_go" style="color: inherit; text-decoration: inherit;">Logout<wbr>Endpoint</a>
@@ -11273,39 +7001,7 @@ Note that URLs within the current domain are always implicitly allowed.{{% /md %
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_nodejs">
-<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_nodejs">
-<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_nodejs">
-<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_nodejs">
-<a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="logoutendpoint_nodejs">
 <a href="#logoutendpoint_nodejs" style="color: inherit; text-decoration: inherit;">logout<wbr>Endpoint</a>
@@ -11317,39 +7013,7 @@ Note that URLs within the current domain are always implicitly allowed.{{% /md %
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_python">
-<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_python">
-<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_python">
-<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_python">
-<a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="logout_endpoint_python">
 <a href="#logout_endpoint_python" style="color: inherit; text-decoration: inherit;">logout_<wbr>endpoint</a>
@@ -11365,14 +7029,6 @@ Note that URLs within the current domain are always implicitly allowed.{{% /md %
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="kind_csharp">
-<a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="scopes_csharp">
 <a href="#scopes_csharp" style="color: inherit; text-decoration: inherit;">Scopes</a>
 </span>
@@ -11384,14 +7040,6 @@ Note that URLs within the current domain are always implicitly allowed.{{% /md %
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="kind_go">
-<a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scopes_go">
 <a href="#scopes_go" style="color: inherit; text-decoration: inherit;">Scopes</a>
@@ -11405,14 +7053,6 @@ Note that URLs within the current domain are always implicitly allowed.{{% /md %
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="kind_nodejs">
-<a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="scopes_nodejs">
 <a href="#scopes_nodejs" style="color: inherit; text-decoration: inherit;">scopes</a>
 </span>
@@ -11424,14 +7064,6 @@ Note that URLs within the current domain are always implicitly allowed.{{% /md %
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="kind_python">
-<a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scopes_python">
 <a href="#scopes_python" style="color: inherit; text-decoration: inherit;">scopes</a>
@@ -11445,39 +7077,7 @@ Note that URLs within the current domain are always implicitly allowed.{{% /md %
 <h4 id="loginscopesresponse">Login<wbr>Scopes<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_csharp">
-<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_csharp">
-<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_csharp">
-<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_csharp">
-<a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="scopes_csharp">
 <a href="#scopes_csharp" style="color: inherit; text-decoration: inherit;">Scopes</a>
@@ -11489,39 +7089,7 @@ Note that URLs within the current domain are always implicitly allowed.{{% /md %
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_go">
-<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_go">
-<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_go">
-<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_go">
-<a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="scopes_go">
 <a href="#scopes_go" style="color: inherit; text-decoration: inherit;">Scopes</a>
@@ -11533,39 +7101,7 @@ Note that URLs within the current domain are always implicitly allowed.{{% /md %
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_nodejs">
-<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_nodejs">
-<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_nodejs">
-<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_nodejs">
-<a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="scopes_nodejs">
 <a href="#scopes_nodejs" style="color: inherit; text-decoration: inherit;">scopes</a>
@@ -11577,39 +7113,7 @@ Note that URLs within the current domain are always implicitly allowed.{{% /md %
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_python">
-<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_python">
-<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_python">
-<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_python">
-<a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="scopes_python">
 <a href="#scopes_python" style="color: inherit; text-decoration: inherit;">scopes</a>
@@ -11624,14 +7128,6 @@ Note that URLs within the current domain are always implicitly allowed.{{% /md %
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="kind_csharp">
-<a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nonceexpirationinterval_csharp">
 <a href="#nonceexpirationinterval_csharp" style="color: inherit; text-decoration: inherit;">Nonce<wbr>Expiration<wbr>Interval</a>
@@ -11653,14 +7149,6 @@ Note that URLs within the current domain are always implicitly allowed.{{% /md %
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="kind_go">
-<a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="nonceexpirationinterval_go">
 <a href="#nonceexpirationinterval_go" style="color: inherit; text-decoration: inherit;">Nonce<wbr>Expiration<wbr>Interval</a>
 </span>
@@ -11681,14 +7169,6 @@ Note that URLs within the current domain are always implicitly allowed.{{% /md %
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="kind_nodejs">
-<a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="nonceexpirationinterval_nodejs">
 <a href="#nonceexpirationinterval_nodejs" style="color: inherit; text-decoration: inherit;">nonce<wbr>Expiration<wbr>Interval</a>
 </span>
@@ -11708,14 +7188,6 @@ Note that URLs within the current domain are always implicitly allowed.{{% /md %
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="kind_python">
-<a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nonce_expiration_interval_python">
 <a href="#nonce_expiration_interval_python" style="color: inherit; text-decoration: inherit;">nonce_<wbr>expiration_<wbr>interval</a>
@@ -11737,39 +7209,7 @@ Note that URLs within the current domain are always implicitly allowed.{{% /md %
 <h4 id="nonceresponse">Nonce<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_csharp">
-<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_csharp">
-<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_csharp">
-<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_csharp">
-<a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="nonceexpirationinterval_csharp">
 <a href="#nonceexpirationinterval_csharp" style="color: inherit; text-decoration: inherit;">Nonce<wbr>Expiration<wbr>Interval</a>
@@ -11789,39 +7229,7 @@ Note that URLs within the current domain are always implicitly allowed.{{% /md %
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_go">
-<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_go">
-<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_go">
-<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_go">
-<a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="nonceexpirationinterval_go">
 <a href="#nonceexpirationinterval_go" style="color: inherit; text-decoration: inherit;">Nonce<wbr>Expiration<wbr>Interval</a>
@@ -11841,39 +7249,7 @@ Note that URLs within the current domain are always implicitly allowed.{{% /md %
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_nodejs">
-<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_nodejs">
-<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_nodejs">
-<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_nodejs">
-<a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="nonceexpirationinterval_nodejs">
 <a href="#nonceexpirationinterval_nodejs" style="color: inherit; text-decoration: inherit;">nonce<wbr>Expiration<wbr>Interval</a>
@@ -11893,39 +7269,7 @@ Note that URLs within the current domain are always implicitly allowed.{{% /md %
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_python">
-<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_python">
-<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_python">
-<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_python">
-<a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="nonce_expiration_interval_python">
 <a href="#nonce_expiration_interval_python" style="color: inherit; text-decoration: inherit;">nonce_<wbr>expiration_<wbr>interval</a>
@@ -11957,14 +7301,6 @@ Note that URLs within the current domain are always implicitly allowed.{{% /md %
     </dt>
     <dd>{{% md %}}The app setting that contains the client secret for the custom Open ID Connect provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="kind_csharp">
-<a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="method_csharp">
 <a href="#method_csharp" style="color: inherit; text-decoration: inherit;">Method</a>
 </span>
@@ -11985,14 +7321,6 @@ Note that URLs within the current domain are always implicitly allowed.{{% /md %
     </dt>
     <dd>{{% md %}}The app setting that contains the client secret for the custom Open ID Connect provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="kind_go">
-<a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="method_go">
 <a href="#method_go" style="color: inherit; text-decoration: inherit;">Method</a>
 </span>
@@ -12013,14 +7341,6 @@ Note that URLs within the current domain are always implicitly allowed.{{% /md %
     </dt>
     <dd>{{% md %}}The app setting that contains the client secret for the custom Open ID Connect provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="kind_nodejs">
-<a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="method_nodejs">
 <a href="#method_nodejs" style="color: inherit; text-decoration: inherit;">method</a>
 </span>
@@ -12040,14 +7360,6 @@ Note that URLs within the current domain are always implicitly allowed.{{% /md %
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The app setting that contains the client secret for the custom Open ID Connect provider.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_python">
-<a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="method_python">
 <a href="#method_python" style="color: inherit; text-decoration: inherit;">method</a>
@@ -12061,31 +7373,7 @@ Note that URLs within the current domain are always implicitly allowed.{{% /md %
 <h4 id="openidconnectclientcredentialresponse">Open<wbr>Id<wbr>Connect<wbr>Client<wbr>Credential<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_csharp">
-<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_csharp">
-<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_csharp">
-<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="clientsecretsettingname_csharp">
 <a href="#clientsecretsettingname_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Secret<wbr>Setting<wbr>Name</a>
@@ -12094,14 +7382,6 @@ Note that URLs within the current domain are always implicitly allowed.{{% /md %
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The app setting that contains the client secret for the custom Open ID Connect provider.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_csharp">
-<a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="method_csharp">
 <a href="#method_csharp" style="color: inherit; text-decoration: inherit;">Method</a>
@@ -12113,31 +7393,7 @@ Note that URLs within the current domain are always implicitly allowed.{{% /md %
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_go">
-<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_go">
-<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_go">
-<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="clientsecretsettingname_go">
 <a href="#clientsecretsettingname_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Secret<wbr>Setting<wbr>Name</a>
@@ -12146,14 +7402,6 @@ Note that URLs within the current domain are always implicitly allowed.{{% /md %
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The app setting that contains the client secret for the custom Open ID Connect provider.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_go">
-<a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="method_go">
 <a href="#method_go" style="color: inherit; text-decoration: inherit;">Method</a>
@@ -12165,31 +7413,7 @@ Note that URLs within the current domain are always implicitly allowed.{{% /md %
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_nodejs">
-<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_nodejs">
-<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_nodejs">
-<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="clientsecretsettingname_nodejs">
 <a href="#clientsecretsettingname_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Secret<wbr>Setting<wbr>Name</a>
@@ -12198,14 +7422,6 @@ Note that URLs within the current domain are always implicitly allowed.{{% /md %
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The app setting that contains the client secret for the custom Open ID Connect provider.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_nodejs">
-<a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="method_nodejs">
 <a href="#method_nodejs" style="color: inherit; text-decoration: inherit;">method</a>
@@ -12217,31 +7433,7 @@ Note that URLs within the current domain are always implicitly allowed.{{% /md %
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_python">
-<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_python">
-<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_python">
-<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="client_secret_setting_name_python">
 <a href="#client_secret_setting_name_python" style="color: inherit; text-decoration: inherit;">client_<wbr>secret_<wbr>setting_<wbr>name</a>
@@ -12250,14 +7442,6 @@ Note that URLs within the current domain are always implicitly allowed.{{% /md %
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The app setting that contains the client secret for the custom Open ID Connect provider.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_python">
-<a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="method_python">
 <a href="#method_python" style="color: inherit; text-decoration: inherit;">method</a>
@@ -12297,14 +7481,6 @@ Note that URLs within the current domain are always implicitly allowed.{{% /md %
     </dt>
     <dd>{{% md %}}The endpoint that issues the token.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="kind_csharp">
-<a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="tokenendpoint_csharp">
 <a href="#tokenendpoint_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Endpoint</a>
 </span>
@@ -12348,14 +7524,6 @@ Note that URLs within the current domain are always implicitly allowed.{{% /md %
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint that issues the token.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_go">
-<a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tokenendpoint_go">
 <a href="#tokenendpoint_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Endpoint</a>
@@ -12401,14 +7569,6 @@ Note that URLs within the current domain are always implicitly allowed.{{% /md %
     </dt>
     <dd>{{% md %}}The endpoint that issues the token.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="kind_nodejs">
-<a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="tokenendpoint_nodejs">
 <a href="#tokenendpoint_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Endpoint</a>
 </span>
@@ -12453,14 +7613,6 @@ Note that URLs within the current domain are always implicitly allowed.{{% /md %
     </dt>
     <dd>{{% md %}}The endpoint that issues the token.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="kind_python">
-<a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="token_endpoint_python">
 <a href="#token_endpoint_python" style="color: inherit; text-decoration: inherit;">token_<wbr>endpoint</a>
 </span>
@@ -12481,31 +7633,7 @@ Note that URLs within the current domain are always implicitly allowed.{{% /md %
 <h4 id="openidconnectconfigresponse">Open<wbr>Id<wbr>Connect<wbr>Config<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_csharp">
-<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_csharp">
-<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_csharp">
-<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="authorizationendpoint_csharp">
 <a href="#authorizationendpoint_csharp" style="color: inherit; text-decoration: inherit;">Authorization<wbr>Endpoint</a>
@@ -12531,14 +7659,6 @@ Note that URLs within the current domain are always implicitly allowed.{{% /md %
     </dt>
     <dd>{{% md %}}The endpoint that issues the token.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="kind_csharp">
-<a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="tokenendpoint_csharp">
 <a href="#tokenendpoint_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Endpoint</a>
 </span>
@@ -12557,31 +7677,7 @@ Note that URLs within the current domain are always implicitly allowed.{{% /md %
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_go">
-<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_go">
-<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_go">
-<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="authorizationendpoint_go">
 <a href="#authorizationendpoint_go" style="color: inherit; text-decoration: inherit;">Authorization<wbr>Endpoint</a>
@@ -12607,14 +7703,6 @@ Note that URLs within the current domain are always implicitly allowed.{{% /md %
     </dt>
     <dd>{{% md %}}The endpoint that issues the token.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="kind_go">
-<a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="tokenendpoint_go">
 <a href="#tokenendpoint_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Endpoint</a>
 </span>
@@ -12633,31 +7721,7 @@ Note that URLs within the current domain are always implicitly allowed.{{% /md %
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_nodejs">
-<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_nodejs">
-<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_nodejs">
-<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="authorizationendpoint_nodejs">
 <a href="#authorizationendpoint_nodejs" style="color: inherit; text-decoration: inherit;">authorization<wbr>Endpoint</a>
@@ -12683,14 +7747,6 @@ Note that URLs within the current domain are always implicitly allowed.{{% /md %
     </dt>
     <dd>{{% md %}}The endpoint that issues the token.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="kind_nodejs">
-<a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="tokenendpoint_nodejs">
 <a href="#tokenendpoint_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Endpoint</a>
 </span>
@@ -12709,31 +7765,7 @@ Note that URLs within the current domain are always implicitly allowed.{{% /md %
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_python">
-<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_python">
-<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_python">
-<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="authorization_endpoint_python">
 <a href="#authorization_endpoint_python" style="color: inherit; text-decoration: inherit;">authorization_<wbr>endpoint</a>
@@ -12759,14 +7791,6 @@ Note that URLs within the current domain are always implicitly allowed.{{% /md %
     </dt>
     <dd>{{% md %}}The endpoint that issues the token.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="kind_python">
-<a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="token_endpoint_python">
 <a href="#token_endpoint_python" style="color: inherit; text-decoration: inherit;">token_<wbr>endpoint</a>
 </span>
@@ -12789,14 +7813,6 @@ Note that URLs within the current domain are always implicitly allowed.{{% /md %
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="kind_csharp">
-<a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="nameclaimtype_csharp">
 <a href="#nameclaimtype_csharp" style="color: inherit; text-decoration: inherit;">Name<wbr>Claim<wbr>Type</a>
 </span>
@@ -12816,14 +7832,6 @@ Note that URLs within the current domain are always implicitly allowed.{{% /md %
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="kind_go">
-<a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nameclaimtype_go">
 <a href="#nameclaimtype_go" style="color: inherit; text-decoration: inherit;">Name<wbr>Claim<wbr>Type</a>
@@ -12845,14 +7853,6 @@ Note that URLs within the current domain are always implicitly allowed.{{% /md %
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="kind_nodejs">
-<a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="nameclaimtype_nodejs">
 <a href="#nameclaimtype_nodejs" style="color: inherit; text-decoration: inherit;">name<wbr>Claim<wbr>Type</a>
 </span>
@@ -12872,14 +7872,6 @@ Note that URLs within the current domain are always implicitly allowed.{{% /md %
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="kind_python">
-<a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_claim_type_python">
 <a href="#name_claim_type_python" style="color: inherit; text-decoration: inherit;">name_<wbr>claim_<wbr>type</a>
@@ -12901,39 +7893,7 @@ Note that URLs within the current domain are always implicitly allowed.{{% /md %
 <h4 id="openidconnectloginresponse">Open<wbr>Id<wbr>Connect<wbr>Login<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_csharp">
-<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_csharp">
-<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_csharp">
-<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_csharp">
-<a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="nameclaimtype_csharp">
 <a href="#nameclaimtype_csharp" style="color: inherit; text-decoration: inherit;">Name<wbr>Claim<wbr>Type</a>
@@ -12953,39 +7913,7 @@ Note that URLs within the current domain are always implicitly allowed.{{% /md %
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_go">
-<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_go">
-<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_go">
-<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_go">
-<a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="nameclaimtype_go">
 <a href="#nameclaimtype_go" style="color: inherit; text-decoration: inherit;">Name<wbr>Claim<wbr>Type</a>
@@ -13005,39 +7933,7 @@ Note that URLs within the current domain are always implicitly allowed.{{% /md %
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_nodejs">
-<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_nodejs">
-<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_nodejs">
-<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_nodejs">
-<a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="nameclaimtype_nodejs">
 <a href="#nameclaimtype_nodejs" style="color: inherit; text-decoration: inherit;">name<wbr>Claim<wbr>Type</a>
@@ -13057,39 +7953,7 @@ Note that URLs within the current domain are always implicitly allowed.{{% /md %
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_python">
-<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_python">
-<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_python">
-<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_python">
-<a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_claim_type_python">
 <a href="#name_claim_type_python" style="color: inherit; text-decoration: inherit;">name_<wbr>claim_<wbr>type</a>
@@ -13129,14 +7993,6 @@ Note that URLs within the current domain are always implicitly allowed.{{% /md %
     </dt>
     <dd>{{% md %}}The client id of the custom Open ID Connect provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="kind_csharp">
-<a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="openidconnectconfiguration_csharp">
 <a href="#openidconnectconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Open<wbr>Id<wbr>Connect<wbr>Configuration</a>
 </span>
@@ -13165,14 +8021,6 @@ Note that URLs within the current domain are always implicitly allowed.{{% /md %
     </dt>
     <dd>{{% md %}}The client id of the custom Open ID Connect provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="kind_go">
-<a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="openidconnectconfiguration_go">
 <a href="#openidconnectconfiguration_go" style="color: inherit; text-decoration: inherit;">Open<wbr>Id<wbr>Connect<wbr>Configuration</a>
 </span>
@@ -13200,14 +8048,6 @@ Note that URLs within the current domain are always implicitly allowed.{{% /md %
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The client id of the custom Open ID Connect provider.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_nodejs">
-<a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="openidconnectconfiguration_nodejs">
 <a href="#openidconnectconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">open<wbr>Id<wbr>Connect<wbr>Configuration</a>
@@ -13237,14 +8077,6 @@ Note that URLs within the current domain are always implicitly allowed.{{% /md %
     </dt>
     <dd>{{% md %}}The client id of the custom Open ID Connect provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="kind_python">
-<a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="open_id_connect_configuration_python">
 <a href="#open_id_connect_configuration_python" style="color: inherit; text-decoration: inherit;">open_<wbr>id_<wbr>connect_<wbr>configuration</a>
 </span>
@@ -13257,31 +8089,7 @@ Note that URLs within the current domain are always implicitly allowed.{{% /md %
 <h4 id="openidconnectregistrationresponse">Open<wbr>Id<wbr>Connect<wbr>Registration<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_csharp">
-<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_csharp">
-<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_csharp">
-<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="clientcredential_csharp">
 <a href="#clientcredential_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Credential</a>
@@ -13299,14 +8107,6 @@ Note that URLs within the current domain are always implicitly allowed.{{% /md %
     </dt>
     <dd>{{% md %}}The client id of the custom Open ID Connect provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="kind_csharp">
-<a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="openidconnectconfiguration_csharp">
 <a href="#openidconnectconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Open<wbr>Id<wbr>Connect<wbr>Configuration</a>
 </span>
@@ -13317,31 +8117,7 @@ Note that URLs within the current domain are always implicitly allowed.{{% /md %
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_go">
-<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_go">
-<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_go">
-<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="clientcredential_go">
 <a href="#clientcredential_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Credential</a>
@@ -13359,14 +8135,6 @@ Note that URLs within the current domain are always implicitly allowed.{{% /md %
     </dt>
     <dd>{{% md %}}The client id of the custom Open ID Connect provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="kind_go">
-<a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="openidconnectconfiguration_go">
 <a href="#openidconnectconfiguration_go" style="color: inherit; text-decoration: inherit;">Open<wbr>Id<wbr>Connect<wbr>Configuration</a>
 </span>
@@ -13377,31 +8145,7 @@ Note that URLs within the current domain are always implicitly allowed.{{% /md %
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_nodejs">
-<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_nodejs">
-<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_nodejs">
-<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="clientcredential_nodejs">
 <a href="#clientcredential_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Credential</a>
@@ -13419,14 +8163,6 @@ Note that URLs within the current domain are always implicitly allowed.{{% /md %
     </dt>
     <dd>{{% md %}}The client id of the custom Open ID Connect provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="kind_nodejs">
-<a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="openidconnectconfiguration_nodejs">
 <a href="#openidconnectconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">open<wbr>Id<wbr>Connect<wbr>Configuration</a>
 </span>
@@ -13437,31 +8173,7 @@ Note that URLs within the current domain are always implicitly allowed.{{% /md %
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_python">
-<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_python">
-<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_python">
-<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="client_credential_python">
 <a href="#client_credential_python" style="color: inherit; text-decoration: inherit;">client_<wbr>credential</a>
@@ -13478,14 +8190,6 @@ Note that URLs within the current domain are always implicitly allowed.{{% /md %
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The client id of the custom Open ID Connect provider.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_python">
-<a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="open_id_connect_configuration_python">
 <a href="#open_id_connect_configuration_python" style="color: inherit; text-decoration: inherit;">open_<wbr>id_<wbr>connect_<wbr>configuration</a>
@@ -13526,14 +8230,6 @@ Note that URLs within the current domain are always implicitly allowed.{{% /md %
     </dt>
     <dd>{{% md %}}The configuration settings of the storage of the tokens if a file system is used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="kind_csharp">
-<a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="tokenrefreshextensionhours_csharp">
 <a href="#tokenrefreshextensionhours_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Refresh<wbr>Extension<wbr>Hours</a>
 </span>
@@ -13571,14 +8267,6 @@ call the token refresh API. The default is 72 hours.{{% /md %}}</dd></dl>
         <span class="property-type"><a href="#filesystemtokenstore">File<wbr>System<wbr>Token<wbr>Store</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the storage of the tokens if a file system is used.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_go">
-<a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tokenrefreshextensionhours_go">
 <a href="#tokenrefreshextensionhours_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Refresh<wbr>Extension<wbr>Hours</a>
@@ -13618,14 +8306,6 @@ call the token refresh API. The default is 72 hours.{{% /md %}}</dd></dl>
     </dt>
     <dd>{{% md %}}The configuration settings of the storage of the tokens if a file system is used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="kind_nodejs">
-<a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="tokenrefreshextensionhours_nodejs">
 <a href="#tokenrefreshextensionhours_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Refresh<wbr>Extension<wbr>Hours</a>
 </span>
@@ -13664,14 +8344,6 @@ call the token refresh API. The default is 72 hours.{{% /md %}}</dd></dl>
     </dt>
     <dd>{{% md %}}The configuration settings of the storage of the tokens if a file system is used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="kind_python">
-<a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="token_refresh_extension_hours_python">
 <a href="#token_refresh_extension_hours_python" style="color: inherit; text-decoration: inherit;">token_<wbr>refresh_<wbr>extension_<wbr>hours</a>
 </span>
@@ -13685,31 +8357,7 @@ call the token refresh API. The default is 72 hours.{{% /md %}}</dd></dl>
 <h4 id="tokenstoreresponse">Token<wbr>Store<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_csharp">
-<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_csharp">
-<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_csharp">
-<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="azureblobstorage_csharp">
 <a href="#azureblobstorage_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Blob<wbr>Storage</a>
@@ -13736,14 +8384,6 @@ call the token refresh API. The default is 72 hours.{{% /md %}}</dd></dl>
     </dt>
     <dd>{{% md %}}The configuration settings of the storage of the tokens if a file system is used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="kind_csharp">
-<a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="tokenrefreshextensionhours_csharp">
 <a href="#tokenrefreshextensionhours_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Refresh<wbr>Extension<wbr>Hours</a>
 </span>
@@ -13755,31 +8395,7 @@ call the token refresh API. The default is 72 hours.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_go">
-<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_go">
-<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_go">
-<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="azureblobstorage_go">
 <a href="#azureblobstorage_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Blob<wbr>Storage</a>
@@ -13806,14 +8422,6 @@ call the token refresh API. The default is 72 hours.{{% /md %}}</dd></dl>
     </dt>
     <dd>{{% md %}}The configuration settings of the storage of the tokens if a file system is used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="kind_go">
-<a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="tokenrefreshextensionhours_go">
 <a href="#tokenrefreshextensionhours_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Refresh<wbr>Extension<wbr>Hours</a>
 </span>
@@ -13825,31 +8433,7 @@ call the token refresh API. The default is 72 hours.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_nodejs">
-<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_nodejs">
-<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_nodejs">
-<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="azureblobstorage_nodejs">
 <a href="#azureblobstorage_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Blob<wbr>Storage</a>
@@ -13876,14 +8460,6 @@ call the token refresh API. The default is 72 hours.{{% /md %}}</dd></dl>
     </dt>
     <dd>{{% md %}}The configuration settings of the storage of the tokens if a file system is used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="kind_nodejs">
-<a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="tokenrefreshextensionhours_nodejs">
 <a href="#tokenrefreshextensionhours_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Refresh<wbr>Extension<wbr>Hours</a>
 </span>
@@ -13895,31 +8471,7 @@ call the token refresh API. The default is 72 hours.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_python">
-<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_python">
-<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_python">
-<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="azure_blob_storage_python">
 <a href="#azure_blob_storage_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>blob_<wbr>storage</a>
@@ -13946,14 +8498,6 @@ call the token refresh API. The default is 72 hours.{{% /md %}}</dd></dl>
     </dt>
     <dd>{{% md %}}The configuration settings of the storage of the tokens if a file system is used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="kind_python">
-<a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="token_refresh_extension_hours_python">
 <a href="#token_refresh_extension_hours_python" style="color: inherit; text-decoration: inherit;">token_<wbr>refresh_<wbr>extension_<wbr>hours</a>
 </span>
@@ -13977,14 +8521,6 @@ call the token refresh API. The default is 72 hours.{{% /md %}}</dd></dl>
     </dt>
     <dd>{{% md %}}<code>false</code> if the Twitter provider should not be enabled despite the set registration; otherwise, <code>true</code>.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="kind_csharp">
-<a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="registration_csharp">
 <a href="#registration_csharp" style="color: inherit; text-decoration: inherit;">Registration</a>
 </span>
@@ -14004,14 +8540,6 @@ call the token refresh API. The default is 72 hours.{{% /md %}}</dd></dl>
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}<code>false</code> if the Twitter provider should not be enabled despite the set registration; otherwise, <code>true</code>.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_go">
-<a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="registration_go">
 <a href="#registration_go" style="color: inherit; text-decoration: inherit;">Registration</a>
@@ -14033,14 +8561,6 @@ call the token refresh API. The default is 72 hours.{{% /md %}}</dd></dl>
     </dt>
     <dd>{{% md %}}<code>false</code> if the Twitter provider should not be enabled despite the set registration; otherwise, <code>true</code>.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="kind_nodejs">
-<a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="registration_nodejs">
 <a href="#registration_nodejs" style="color: inherit; text-decoration: inherit;">registration</a>
 </span>
@@ -14060,14 +8580,6 @@ call the token refresh API. The default is 72 hours.{{% /md %}}</dd></dl>
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}<code>false</code> if the Twitter provider should not be enabled despite the set registration; otherwise, <code>true</code>.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_python">
-<a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="registration_python">
 <a href="#registration_python" style="color: inherit; text-decoration: inherit;">registration</a>
@@ -14100,15 +8612,7 @@ Twitter Sign-In documentation: https://dev.twitter.com/web/sign-in{{% /md %}}</d
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The app setting name that contains the OAuth 1.0a consumer secret of the Twitter
-application used for sign-in.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_csharp">
-<a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd></dl>
+application used for sign-in.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -14131,15 +8635,7 @@ Twitter Sign-In documentation: https://dev.twitter.com/web/sign-in{{% /md %}}</d
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The app setting name that contains the OAuth 1.0a consumer secret of the Twitter
-application used for sign-in.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_go">
-<a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd></dl>
+application used for sign-in.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -14162,15 +8658,7 @@ Twitter Sign-In documentation: https://dev.twitter.com/web/sign-in{{% /md %}}</d
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The app setting name that contains the OAuth 1.0a consumer secret of the Twitter
-application used for sign-in.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_nodejs">
-<a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd></dl>
+application used for sign-in.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -14193,45 +8681,13 @@ Twitter Sign-In documentation: https://dev.twitter.com/web/sign-in{{% /md %}}</d
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The app setting name that contains the OAuth 1.0a consumer secret of the Twitter
-application used for sign-in.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_python">
-<a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd></dl>
+application used for sign-in.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="twitterregistrationresponse">Twitter<wbr>Registration<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_csharp">
-<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_csharp">
-<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_csharp">
-<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="consumerkey_csharp">
 <a href="#consumerkey_csharp" style="color: inherit; text-decoration: inherit;">Consumer<wbr>Key</a>
@@ -14250,43 +8706,11 @@ Twitter Sign-In documentation: https://dev.twitter.com/web/sign-in{{% /md %}}</d
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The app setting name that contains the OAuth 1.0a consumer secret of the Twitter
-application used for sign-in.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_csharp">
-<a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd></dl>
+application used for sign-in.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_go">
-<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_go">
-<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_go">
-<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="consumerkey_go">
 <a href="#consumerkey_go" style="color: inherit; text-decoration: inherit;">Consumer<wbr>Key</a>
@@ -14305,43 +8729,11 @@ Twitter Sign-In documentation: https://dev.twitter.com/web/sign-in{{% /md %}}</d
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The app setting name that contains the OAuth 1.0a consumer secret of the Twitter
-application used for sign-in.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_go">
-<a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd></dl>
+application used for sign-in.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_nodejs">
-<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_nodejs">
-<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_nodejs">
-<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="consumerkey_nodejs">
 <a href="#consumerkey_nodejs" style="color: inherit; text-decoration: inherit;">consumer<wbr>Key</a>
@@ -14360,43 +8752,11 @@ Twitter Sign-In documentation: https://dev.twitter.com/web/sign-in{{% /md %}}</d
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The app setting name that contains the OAuth 1.0a consumer secret of the Twitter
-application used for sign-in.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_nodejs">
-<a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd></dl>
+application used for sign-in.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_python">
-<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_python">
-<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_python">
-<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="consumer_key_python">
 <a href="#consumer_key_python" style="color: inherit; text-decoration: inherit;">consumer_<wbr>key</a>
@@ -14415,45 +8775,13 @@ Twitter Sign-In documentation: https://dev.twitter.com/web/sign-in{{% /md %}}</d
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The app setting name that contains the OAuth 1.0a consumer secret of the Twitter
-application used for sign-in.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_python">
-<a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd></dl>
+application used for sign-in.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="twitterresponse">Twitter<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_csharp">
-<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_csharp">
-<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_csharp">
-<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -14462,14 +8790,6 @@ application used for sign-in.{{% /md %}}</dd><dt class="property-optional"
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}<code>false</code> if the Twitter provider should not be enabled despite the set registration; otherwise, <code>true</code>.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_csharp">
-<a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="registration_csharp">
 <a href="#registration_csharp" style="color: inherit; text-decoration: inherit;">Registration</a>
@@ -14481,31 +8801,7 @@ application used for sign-in.{{% /md %}}</dd><dt class="property-optional"
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_go">
-<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_go">
-<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_go">
-<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -14514,14 +8810,6 @@ application used for sign-in.{{% /md %}}</dd><dt class="property-optional"
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}<code>false</code> if the Twitter provider should not be enabled despite the set registration; otherwise, <code>true</code>.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_go">
-<a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="registration_go">
 <a href="#registration_go" style="color: inherit; text-decoration: inherit;">Registration</a>
@@ -14533,31 +8821,7 @@ application used for sign-in.{{% /md %}}</dd><dt class="property-optional"
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_nodejs">
-<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_nodejs">
-<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_nodejs">
-<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -14566,14 +8830,6 @@ application used for sign-in.{{% /md %}}</dd><dt class="property-optional"
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}<code>false</code> if the Twitter provider should not be enabled despite the set registration; otherwise, <code>true</code>.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_nodejs">
-<a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="registration_nodejs">
 <a href="#registration_nodejs" style="color: inherit; text-decoration: inherit;">registration</a>
@@ -14585,31 +8841,7 @@ application used for sign-in.{{% /md %}}</dd><dt class="property-optional"
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_python">
-<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_python">
-<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_python">
-<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -14618,14 +8850,6 @@ application used for sign-in.{{% /md %}}</dd><dt class="property-optional"
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}<code>false</code> if the Twitter provider should not be enabled despite the set registration; otherwise, <code>true</code>.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kind_python">
-<a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="registration_python">
 <a href="#registration_python" style="color: inherit; text-decoration: inherit;">registration</a>

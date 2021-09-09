@@ -3085,7 +3085,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routefilterruletype_go" style="color: inherit; text-decoration: inherit;">Route<wbr>Filter<wbr>Rule<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#routefilterruletype">Route<wbr>Filter<wbr>Rule<wbr>Type<wbr>Enum</a></span>
+        <span class="property-type">string | <a href="#routefilterruletype">Route<wbr>Filter<wbr>Rule<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The rule type of the rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

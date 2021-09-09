@@ -12,6 +12,7 @@ Explore the resources and functions of the azure-native.security module.
 <h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="adaptiveapplicationcontrol" title="AdaptiveApplicationControl"><span class="symbol resource"></span>AdaptiveApplicationControl</a></li>
+    <li><a href="advancedthreatprotection" title="AdvancedThreatProtection"><span class="symbol resource"></span>AdvancedThreatProtection</a></li>
     <li><a href="alertssuppressionrule" title="AlertsSuppressionRule"><span class="symbol resource"></span>AlertsSuppressionRule</a></li>
     <li><a href="assessment" title="Assessment"><span class="symbol resource"></span>Assessment</a></li>
     <li><a href="assessmentmetadatainsubscription" title="AssessmentMetadataInSubscription"><span class="symbol resource"></span>AssessmentMetadataInSubscription</a></li>
@@ -30,6 +31,7 @@ Explore the resources and functions of the azure-native.security module.
 <h2 id="functions">Functions</h2>
 <ul class="api">
     <li><a href="getadaptiveapplicationcontrol" title="GetAdaptiveApplicationControl"><span class="symbol function"></span>GetAdaptiveApplicationControl</a></li>
+    <li><a href="getadvancedthreatprotection" title="GetAdvancedThreatProtection"><span class="symbol function"></span>GetAdvancedThreatProtection</a></li>
     <li><a href="getalertssuppressionrule" title="GetAlertsSuppressionRule"><span class="symbol function"></span>GetAlertsSuppressionRule</a></li>
     <li><a href="getassessment" title="GetAssessment"><span class="symbol function"></span>GetAssessment</a></li>
     <li><a href="getassessmentmetadatainsubscription" title="GetAssessmentMetadataInSubscription"><span class="symbol function"></span>GetAssessmentMetadataInSubscription</a></li>
@@ -54,6 +56,6 @@ Explore the resources and functions of the azure-native.security module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.24.0</dd>
+	<dd>1.26.0</dd>
 </dl>
 

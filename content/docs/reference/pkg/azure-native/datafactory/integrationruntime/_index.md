@@ -2415,6 +2415,106 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The SAS token of the Azure blob container.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="integrationruntimecustomervirtualnetwork">Integration<wbr>Runtime<wbr>Customer<wbr>Virtual<wbr>Network</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="subnetid_csharp">
+<a href="#subnetid_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of subnet to which Azure-SSIS integration runtime will join.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="subnetid_go">
+<a href="#subnetid_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of subnet to which Azure-SSIS integration runtime will join.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="subnetid_nodejs">
+<a href="#subnetid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of subnet to which Azure-SSIS integration runtime will join.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="subnet_id_python">
+<a href="#subnet_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ID of subnet to which Azure-SSIS integration runtime will join.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="integrationruntimecustomervirtualnetworkresponse">Integration<wbr>Runtime<wbr>Customer<wbr>Virtual<wbr>Network<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="subnetid_csharp">
+<a href="#subnetid_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of subnet to which Azure-SSIS integration runtime will join.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="subnetid_go">
+<a href="#subnetid_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of subnet to which Azure-SSIS integration runtime will join.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="subnetid_nodejs">
+<a href="#subnetid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of subnet to which Azure-SSIS integration runtime will join.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="subnet_id_python">
+<a href="#subnet_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ID of subnet to which Azure-SSIS integration runtime will join.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="integrationruntimedataflowproperties">Integration<wbr>Runtime<wbr>Data<wbr>Flow<wbr>Properties</h4>
 
 {{% choosable language csharp %}}
@@ -4684,6 +4784,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The compute resource for managed integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="customervirtualnetwork_csharp">
+<a href="#customervirtualnetwork_csharp" style="color: inherit; text-decoration: inherit;">Customer<wbr>Virtual<wbr>Network</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#integrationruntimecustomervirtualnetwork">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Customer<wbr>Virtual<wbr>Network</a></span>
+    </dt>
+    <dd>{{% md %}}The name of virtual network to which Azure-SSIS integration runtime will join{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
 </span>
@@ -4719,6 +4827,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#integrationruntimecomputeproperties">Integration<wbr>Runtime<wbr>Compute<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The compute resource for managed integration runtime.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="customervirtualnetwork_go">
+<a href="#customervirtualnetwork_go" style="color: inherit; text-decoration: inherit;">Customer<wbr>Virtual<wbr>Network</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#integrationruntimecustomervirtualnetwork">Integration<wbr>Runtime<wbr>Customer<wbr>Virtual<wbr>Network</a></span>
+    </dt>
+    <dd>{{% md %}}The name of virtual network to which Azure-SSIS integration runtime will join{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -4756,6 +4872,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The compute resource for managed integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="customervirtualnetwork_nodejs">
+<a href="#customervirtualnetwork_nodejs" style="color: inherit; text-decoration: inherit;">customer<wbr>Virtual<wbr>Network</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#integrationruntimecustomervirtualnetwork">Integration<wbr>Runtime<wbr>Customer<wbr>Virtual<wbr>Network</a></span>
+    </dt>
+    <dd>{{% md %}}The name of virtual network to which Azure-SSIS integration runtime will join{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
@@ -4791,6 +4915,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#integrationruntimecomputeproperties">Integration<wbr>Runtime<wbr>Compute<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The compute resource for managed integration runtime.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="customer_virtual_network_python">
+<a href="#customer_virtual_network_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>virtual_<wbr>network</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#integrationruntimecustomervirtualnetwork">Integration<wbr>Runtime<wbr>Customer<wbr>Virtual<wbr>Network</a></span>
+    </dt>
+    <dd>{{% md %}}The name of virtual network to which Azure-SSIS integration runtime will join{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -4838,6 +4970,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The compute resource for managed integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="customervirtualnetwork_csharp">
+<a href="#customervirtualnetwork_csharp" style="color: inherit; text-decoration: inherit;">Customer<wbr>Virtual<wbr>Network</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#integrationruntimecustomervirtualnetworkresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Customer<wbr>Virtual<wbr>Network<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The name of virtual network to which Azure-SSIS integration runtime will join{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
 </span>
@@ -4881,6 +5021,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#integrationruntimecomputepropertiesresponse">Integration<wbr>Runtime<wbr>Compute<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The compute resource for managed integration runtime.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="customervirtualnetwork_go">
+<a href="#customervirtualnetwork_go" style="color: inherit; text-decoration: inherit;">Customer<wbr>Virtual<wbr>Network</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#integrationruntimecustomervirtualnetworkresponse">Integration<wbr>Runtime<wbr>Customer<wbr>Virtual<wbr>Network<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The name of virtual network to which Azure-SSIS integration runtime will join{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -4926,6 +5074,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The compute resource for managed integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="customervirtualnetwork_nodejs">
+<a href="#customervirtualnetwork_nodejs" style="color: inherit; text-decoration: inherit;">customer<wbr>Virtual<wbr>Network</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#integrationruntimecustomervirtualnetworkresponse">Integration<wbr>Runtime<wbr>Customer<wbr>Virtual<wbr>Network<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The name of virtual network to which Azure-SSIS integration runtime will join{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
@@ -4969,6 +5125,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#integrationruntimecomputepropertiesresponse">Integration<wbr>Runtime<wbr>Compute<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The compute resource for managed integration runtime.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="customer_virtual_network_python">
+<a href="#customer_virtual_network_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>virtual_<wbr>network</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#integrationruntimecustomervirtualnetworkresponse">Integration<wbr>Runtime<wbr>Customer<wbr>Virtual<wbr>Network<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The name of virtual network to which Azure-SSIS integration runtime will join{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>

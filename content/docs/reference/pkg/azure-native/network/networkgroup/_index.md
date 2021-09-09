@@ -42,8 +42,7 @@ class MyStack : Stack
             {
                 new AzureNative.Network.Inputs.GroupMembersItemArgs
                 {
-                    SubnetId = "",
-                    VnetId = "/subscriptions/subscriptionC/resourceGroup/rg1/providers/Microsoft.Network/virtualnetworks/vnet1",
+                    ResourceId = "/subscriptions/subscriptionC/resourceGroup/rg1/providers/Microsoft.Network/virtualnetworks/vnet1",
                 },
             },
             MemberType = "VirtualNetwork",
@@ -80,8 +79,7 @@ func main() {
 			DisplayName:           pulumi.String("My Network Group"),
 			GroupMembers: []network.GroupMembersItemArgs{
 				&network.GroupMembersItemArgs{
-					SubnetId: pulumi.String(""),
-					VnetId:   pulumi.String("/subscriptions/subscriptionC/resourceGroup/rg1/providers/Microsoft.Network/virtualnetworks/vnet1"),
+					ResourceId: pulumi.String("/subscriptions/subscriptionC/resourceGroup/rg1/providers/Microsoft.Network/virtualnetworks/vnet1"),
 				},
 			},
 			MemberType:         pulumi.String("VirtualNetwork"),
@@ -114,8 +112,7 @@ network_group = azure_native.network.NetworkGroup("networkGroup",
     description="A sample group",
     display_name="My Network Group",
     group_members=[azure_native.network.GroupMembersItemArgs(
-        subnet_id="",
-        vnet_id="/subscriptions/subscriptionC/resourceGroup/rg1/providers/Microsoft.Network/virtualnetworks/vnet1",
+        resource_id="/subscriptions/subscriptionC/resourceGroup/rg1/providers/Microsoft.Network/virtualnetworks/vnet1",
     )],
     member_type="VirtualNetwork",
     network_group_name="TestNetworkGroup",
@@ -140,8 +137,7 @@ const networkGroup = new azure_native.network.NetworkGroup("networkGroup", {
     description: "A sample group",
     displayName: "My Network Group",
     groupMembers: [{
-        subnetId: "",
-        vnetId: "/subscriptions/subscriptionC/resourceGroup/rg1/providers/Microsoft.Network/virtualnetworks/vnet1",
+        resourceId: "/subscriptions/subscriptionC/resourceGroup/rg1/providers/Microsoft.Network/virtualnetworks/vnet1",
     }],
     memberType: "VirtualNetwork",
     networkGroupName: "TestNetworkGroup",
@@ -179,7 +175,7 @@ const networkGroup = new azure_native.network.NetworkGroup("networkGroup", {
                  <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                  <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                  <span class="nx">group_members</span><span class="p">:</span> <span class="nx">Optional[Sequence[GroupMembersItemArgs]]</span> = None<span class="p">,</span>
-                 <span class="nx">member_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, MemberType]]</span> = None<span class="p">,</span>
+                 <span class="nx">member_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                  <span class="nx">network_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                  <span class="nx">network_manager_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                  <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
@@ -364,7 +360,7 @@ The NetworkGroup resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#membertype_csharp" style="color: inherit; text-decoration: inherit;">Member<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#membertype">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Member<wbr>Type</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Group member type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -432,7 +428,7 @@ The NetworkGroup resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#membertype_go" style="color: inherit; text-decoration: inherit;">Member<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#membertype">Member<wbr>Type</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Group member type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -500,7 +496,7 @@ The NetworkGroup resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#membertype_nodejs" style="color: inherit; text-decoration: inherit;">member<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#membertype">Member<wbr>Type</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Group member type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -568,7 +564,7 @@ The NetworkGroup resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#member_type_python" style="color: inherit; text-decoration: inherit;">member_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#membertype">Member<wbr>Type</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Group member type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -811,81 +807,49 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="subnetid_csharp">
-<a href="#subnetid_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
+        <span id="resourceid_csharp">
+<a href="#resourceid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Subnet Id.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="vnetid_csharp">
-<a href="#vnetid_csharp" style="color: inherit; text-decoration: inherit;">Vnet<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Vnet Id.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Resource Id.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="subnetid_go">
-<a href="#subnetid_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
+        <span id="resourceid_go">
+<a href="#resourceid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Subnet Id.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="vnetid_go">
-<a href="#vnetid_go" style="color: inherit; text-decoration: inherit;">Vnet<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Vnet Id.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Resource Id.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="subnetid_nodejs">
-<a href="#subnetid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Id</a>
+        <span id="resourceid_nodejs">
+<a href="#resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Subnet Id.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="vnetid_nodejs">
-<a href="#vnetid_nodejs" style="color: inherit; text-decoration: inherit;">vnet<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Vnet Id.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Resource Id.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="subnet_id_python">
-<a href="#subnet_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>id</a>
+        <span id="resource_id_python">
+<a href="#resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Subnet Id.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="vnet_id_python">
-<a href="#vnet_id_python" style="color: inherit; text-decoration: inherit;">vnet_<wbr>id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Vnet Id.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Resource Id.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="groupmembersitemresponse">Group<wbr>Members<wbr>Item<wbr>Response</h4>
@@ -893,107 +857,49 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="subnetid_csharp">
-<a href="#subnetid_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
+        <span id="resourceid_csharp">
+<a href="#resourceid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Subnet Id.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="vnetid_csharp">
-<a href="#vnetid_csharp" style="color: inherit; text-decoration: inherit;">Vnet<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Vnet Id.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Resource Id.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="subnetid_go">
-<a href="#subnetid_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
+        <span id="resourceid_go">
+<a href="#resourceid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Subnet Id.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="vnetid_go">
-<a href="#vnetid_go" style="color: inherit; text-decoration: inherit;">Vnet<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Vnet Id.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Resource Id.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="subnetid_nodejs">
-<a href="#subnetid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Id</a>
+        <span id="resourceid_nodejs">
+<a href="#resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Subnet Id.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="vnetid_nodejs">
-<a href="#vnetid_nodejs" style="color: inherit; text-decoration: inherit;">vnet<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Vnet Id.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Resource Id.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="subnet_id_python">
-<a href="#subnet_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>id</a>
+        <span id="resource_id_python">
+<a href="#resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Subnet Id.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="vnet_id_python">
-<a href="#vnet_id_python" style="color: inherit; text-decoration: inherit;">vnet_<wbr>id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Vnet Id.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="membertype">Member<wbr>Type</h4>
-
-{{% choosable language csharp %}}
-<dl class="tabular"><dt>Virtual<wbr>Network</dt>
-    <dd>VirtualNetwork</dd><dt>Subnet</dt>
-    <dd>Subnet</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="tabular"><dt>Member<wbr>Type<wbr>Virtual<wbr>Network</dt>
-    <dd>VirtualNetwork</dd><dt>Member<wbr>Type<wbr>Subnet</dt>
-    <dd>Subnet</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="tabular"><dt>Virtual<wbr>Network</dt>
-    <dd>VirtualNetwork</dd><dt>Subnet</dt>
-    <dd>Subnet</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="tabular"><dt>VIRTUAL_NETWORK</dt>
-    <dd>VirtualNetwork</dd><dt>SUBNET</dt>
-    <dd>Subnet</dd></dl>
+    <dd>{{% md %}}Resource Id.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="systemdataresponse">System<wbr>Data<wbr>Response</h4>

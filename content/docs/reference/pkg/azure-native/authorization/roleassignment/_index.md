@@ -1061,56 +1061,32 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <dl class="tabular"><dt>User</dt>
     <dd>User</dd><dt>Group</dt>
     <dd>Group</dd><dt>Service<wbr>Principal</dt>
-    <dd>ServicePrincipal</dd><dt>Unknown</dt>
-    <dd>Unknown</dd><dt>Directory<wbr>Role<wbr>Template</dt>
-    <dd>DirectoryRoleTemplate</dd><dt>Foreign<wbr>Group</dt>
-    <dd>ForeignGroup</dd><dt>Application</dt>
-    <dd>Application</dd><dt>MSI</dt>
-    <dd>MSI</dd><dt>Directory<wbr>Object<wbr>Or<wbr>Group</dt>
-    <dd>DirectoryObjectOrGroup</dd><dt>Everyone</dt>
-    <dd>Everyone</dd></dl>
+    <dd>ServicePrincipal</dd><dt>Foreign<wbr>Group</dt>
+    <dd>ForeignGroup</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
 <dl class="tabular"><dt>Principal<wbr>Type<wbr>User</dt>
     <dd>User</dd><dt>Principal<wbr>Type<wbr>Group</dt>
     <dd>Group</dd><dt>Principal<wbr>Type<wbr>Service<wbr>Principal</dt>
-    <dd>ServicePrincipal</dd><dt>Principal<wbr>Type<wbr>Unknown</dt>
-    <dd>Unknown</dd><dt>Principal<wbr>Type<wbr>Directory<wbr>Role<wbr>Template</dt>
-    <dd>DirectoryRoleTemplate</dd><dt>Principal<wbr>Type<wbr>Foreign<wbr>Group</dt>
-    <dd>ForeignGroup</dd><dt>Principal<wbr>Type<wbr>Application</dt>
-    <dd>Application</dd><dt>Principal<wbr>Type<wbr>MSI</dt>
-    <dd>MSI</dd><dt>Principal<wbr>Type<wbr>Directory<wbr>Object<wbr>Or<wbr>Group</dt>
-    <dd>DirectoryObjectOrGroup</dd><dt>Principal<wbr>Type<wbr>Everyone</dt>
-    <dd>Everyone</dd></dl>
+    <dd>ServicePrincipal</dd><dt>Principal<wbr>Type<wbr>Foreign<wbr>Group</dt>
+    <dd>ForeignGroup</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
 <dl class="tabular"><dt>User</dt>
     <dd>User</dd><dt>Group</dt>
     <dd>Group</dd><dt>Service<wbr>Principal</dt>
-    <dd>ServicePrincipal</dd><dt>Unknown</dt>
-    <dd>Unknown</dd><dt>Directory<wbr>Role<wbr>Template</dt>
-    <dd>DirectoryRoleTemplate</dd><dt>Foreign<wbr>Group</dt>
-    <dd>ForeignGroup</dd><dt>Application</dt>
-    <dd>Application</dd><dt>MSI</dt>
-    <dd>MSI</dd><dt>Directory<wbr>Object<wbr>Or<wbr>Group</dt>
-    <dd>DirectoryObjectOrGroup</dd><dt>Everyone</dt>
-    <dd>Everyone</dd></dl>
+    <dd>ServicePrincipal</dd><dt>Foreign<wbr>Group</dt>
+    <dd>ForeignGroup</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="tabular"><dt>USER</dt>
     <dd>User</dd><dt>GROUP</dt>
     <dd>Group</dd><dt>SERVICE_PRINCIPAL</dt>
-    <dd>ServicePrincipal</dd><dt>UNKNOWN</dt>
-    <dd>Unknown</dd><dt>DIRECTORY_ROLE_TEMPLATE</dt>
-    <dd>DirectoryRoleTemplate</dd><dt>FOREIGN_GROUP</dt>
-    <dd>ForeignGroup</dd><dt>APPLICATION</dt>
-    <dd>Application</dd><dt>MSI</dt>
-    <dd>MSI</dd><dt>DIRECTORY_OBJECT_OR_GROUP</dt>
-    <dd>DirectoryObjectOrGroup</dd><dt>EVERYONE</dt>
-    <dd>Everyone</dd></dl>
+    <dd>ServicePrincipal</dd><dt>FOREIGN_GROUP</dt>
+    <dd>ForeignGroup</dd></dl>
 {{% /choosable %}}
 ## Import
 

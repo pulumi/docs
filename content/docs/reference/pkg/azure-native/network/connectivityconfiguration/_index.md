@@ -41,7 +41,7 @@ class MyStack : Stack
                 {
                     GroupConnectivity = "None",
                     IsGlobal = "False",
-                    NetworkGroupId = "subscriptions/subscriptionA/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkManagers/testNetworkManager/networkManagerGroups/group1",
+                    NetworkGroupId = "subscriptions/subscriptionA/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkManagers/testNetworkManager/networkGroups/group1",
                     UseHubGateway = "True",
                 },
             },
@@ -50,7 +50,14 @@ class MyStack : Stack
             DeleteExistingPeering = "True",
             Description = "Sample Configuration",
             DisplayName = "myTestConnectivityConfig",
-            HubId = "subscriptions/subscriptionA/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/myTestConnectivityConfig",
+            Hubs = 
+            {
+                new AzureNative.Network.Inputs.HubArgs
+                {
+                    ResourceId = "subscriptions/subscriptionA/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/myTestConnectivityConfig",
+                    ResourceType = "Microsoft.Network/virtualNetworks",
+                },
+            },
             IsGlobal = "True",
             NetworkManagerName = "testNetworkManager",
             ResourceGroupName = "myResourceGroup",
@@ -83,7 +90,7 @@ func main() {
 				&network.ConnectivityGroupItemArgs{
 					GroupConnectivity: pulumi.String("None"),
 					IsGlobal:          pulumi.String("False"),
-					NetworkGroupId:    pulumi.String("subscriptions/subscriptionA/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkManagers/testNetworkManager/networkManagerGroups/group1"),
+					NetworkGroupId:    pulumi.String("subscriptions/subscriptionA/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkManagers/testNetworkManager/networkGroups/group1"),
 					UseHubGateway:     pulumi.String("True"),
 				},
 			},
@@ -92,10 +99,15 @@ func main() {
 			DeleteExistingPeering: pulumi.String("True"),
 			Description:           pulumi.String("Sample Configuration"),
 			DisplayName:           pulumi.String("myTestConnectivityConfig"),
-			HubId:                 pulumi.String("subscriptions/subscriptionA/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/myTestConnectivityConfig"),
-			IsGlobal:              pulumi.String("True"),
-			NetworkManagerName:    pulumi.String("testNetworkManager"),
-			ResourceGroupName:     pulumi.String("myResourceGroup"),
+			Hubs: []network.HubArgs{
+				&network.HubArgs{
+					ResourceId:   pulumi.String("subscriptions/subscriptionA/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/myTestConnectivityConfig"),
+					ResourceType: pulumi.String("Microsoft.Network/virtualNetworks"),
+				},
+			},
+			IsGlobal:           pulumi.String("True"),
+			NetworkManagerName: pulumi.String("testNetworkManager"),
+			ResourceGroupName:  pulumi.String("myResourceGroup"),
 		})
 		if err != nil {
 			return err
@@ -121,7 +133,7 @@ connectivity_configuration = azure_native.network.ConnectivityConfiguration("con
     applies_to_groups=[azure_native.network.ConnectivityGroupItemArgs(
         group_connectivity="None",
         is_global="False",
-        network_group_id="subscriptions/subscriptionA/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkManagers/testNetworkManager/networkManagerGroups/group1",
+        network_group_id="subscriptions/subscriptionA/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkManagers/testNetworkManager/networkGroups/group1",
         use_hub_gateway="True",
     )],
     configuration_name="myTestConnectivityConfig",
@@ -129,7 +141,10 @@ connectivity_configuration = azure_native.network.ConnectivityConfiguration("con
     delete_existing_peering="True",
     description="Sample Configuration",
     display_name="myTestConnectivityConfig",
-    hub_id="subscriptions/subscriptionA/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/myTestConnectivityConfig",
+    hubs=[azure_native.network.HubArgs(
+        resource_id="subscriptions/subscriptionA/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/myTestConnectivityConfig",
+        resource_type="Microsoft.Network/virtualNetworks",
+    )],
     is_global="True",
     network_manager_name="testNetworkManager",
     resource_group_name="myResourceGroup")
@@ -151,7 +166,7 @@ const connectivityConfiguration = new azure_native.network.ConnectivityConfigura
     appliesToGroups: [{
         groupConnectivity: "None",
         isGlobal: "False",
-        networkGroupId: "subscriptions/subscriptionA/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkManagers/testNetworkManager/networkManagerGroups/group1",
+        networkGroupId: "subscriptions/subscriptionA/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkManagers/testNetworkManager/networkGroups/group1",
         useHubGateway: "True",
     }],
     configurationName: "myTestConnectivityConfig",
@@ -159,7 +174,10 @@ const connectivityConfiguration = new azure_native.network.ConnectivityConfigura
     deleteExistingPeering: "True",
     description: "Sample Configuration",
     displayName: "myTestConnectivityConfig",
-    hubId: "subscriptions/subscriptionA/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/myTestConnectivityConfig",
+    hubs: [{
+        resourceId: "subscriptions/subscriptionA/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/myTestConnectivityConfig",
+        resourceType: "Microsoft.Network/virtualNetworks",
+    }],
     isGlobal: "True",
     networkManagerName: "testNetworkManager",
     resourceGroupName: "myResourceGroup",
@@ -197,7 +215,7 @@ const connectivityConfiguration = new azure_native.network.ConnectivityConfigura
                               <span class="nx">delete_existing_peering</span><span class="p">:</span> <span class="nx">Optional[Union[str, DeleteExistingPeering]]</span> = None<span class="p">,</span>
                               <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                               <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                              <span class="nx">hub_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                              <span class="nx">hubs</span><span class="p">:</span> <span class="nx">Optional[Sequence[HubArgs]]</span> = None<span class="p">,</span>
                               <span class="nx">is_global</span><span class="p">:</span> <span class="nx">Optional[Union[str, IsGlobal]]</span> = None<span class="p">,</span>
                               <span class="nx">network_manager_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                               <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
@@ -394,13 +412,13 @@ The ConnectivityConfiguration resource accepts the following [input]({{< relref 
     </dt>
     <dd>{{% md %}}A friendly name for the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="hubid_csharp">
-<a href="#hubid_csharp" style="color: inherit; text-decoration: inherit;">Hub<wbr>Id</a>
+        <span id="hubs_csharp">
+<a href="#hubs_csharp" style="color: inherit; text-decoration: inherit;">Hubs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#hub">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Hub<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The hub vnet Id.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}List of hubItems{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isglobal_csharp">
 <a href="#isglobal_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Global</a>
@@ -478,13 +496,13 @@ The ConnectivityConfiguration resource accepts the following [input]({{< relref 
     </dt>
     <dd>{{% md %}}A friendly name for the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="hubid_go">
-<a href="#hubid_go" style="color: inherit; text-decoration: inherit;">Hub<wbr>Id</a>
+        <span id="hubs_go">
+<a href="#hubs_go" style="color: inherit; text-decoration: inherit;">Hubs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#hub">[]Hub<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The hub vnet Id.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}List of hubItems{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isglobal_go">
 <a href="#isglobal_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Global</a>
@@ -562,13 +580,13 @@ The ConnectivityConfiguration resource accepts the following [input]({{< relref 
     </dt>
     <dd>{{% md %}}A friendly name for the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="hubid_nodejs">
-<a href="#hubid_nodejs" style="color: inherit; text-decoration: inherit;">hub<wbr>Id</a>
+        <span id="hubs_nodejs">
+<a href="#hubs_nodejs" style="color: inherit; text-decoration: inherit;">hubs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#hub">Hub<wbr>Args[]</a></span>
     </dt>
-    <dd>{{% md %}}The hub vnet Id.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}List of hubItems{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isglobal_nodejs">
 <a href="#isglobal_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Global</a>
@@ -646,13 +664,13 @@ The ConnectivityConfiguration resource accepts the following [input]({{< relref 
     </dt>
     <dd>{{% md %}}A friendly name for the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="hub_id_python">
-<a href="#hub_id_python" style="color: inherit; text-decoration: inherit;">hub_<wbr>id</a>
+        <span id="hubs_python">
+<a href="#hubs_python" style="color: inherit; text-decoration: inherit;">hubs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#hub">Sequence[Hub<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The hub vnet Id.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}List of hubItems{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="is_global_python">
 <a href="#is_global_python" style="color: inherit; text-decoration: inherit;">is_<wbr>global</a>
@@ -1256,6 +1274,170 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <dl class="tabular"><dt>NONE</dt>
     <dd>None</dd><dt>DIRECTLY_CONNECTED</dt>
     <dd>DirectlyConnected</dd></dl>
+{{% /choosable %}}
+
+<h4 id="hub">Hub</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="resourceid_csharp">
+<a href="#resourceid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="resourcetype_csharp">
+<a href="#resourcetype_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource Type.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="resourceid_go">
+<a href="#resourceid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="resourcetype_go">
+<a href="#resourcetype_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource Type.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="resourceid_nodejs">
+<a href="#resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="resourcetype_nodejs">
+<a href="#resourcetype_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource Type.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="resource_id_python">
+<a href="#resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="resource_type_python">
+<a href="#resource_type_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Resource Type.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="hubresponse">Hub<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="resourceid_csharp">
+<a href="#resourceid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="resourcetype_csharp">
+<a href="#resourcetype_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource Type.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="resourceid_go">
+<a href="#resourceid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="resourcetype_go">
+<a href="#resourcetype_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource Type.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="resourceid_nodejs">
+<a href="#resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="resourcetype_nodejs">
+<a href="#resourcetype_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource Type.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="resource_id_python">
+<a href="#resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="resource_type_python">
+<a href="#resource_type_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Resource Type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="isglobal">Is<wbr>Global</h4>
