@@ -58,7 +58,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := okta.LookupBehaviour(ctx, &okta.LookupBehaviourArgs{
+		_, err := okta.LookupBehaviour(ctx, &GetBehaviourArgs{
 			Label: "New City",
 		}, nil)
 		if err != nil {
@@ -95,7 +95,7 @@ import * as okta from "@pulumi/okta";
 
 const example = pulumi.output(okta.getBehaviour({
     label: "New City",
-}, { async: true }));
+}));
 ```
 
 

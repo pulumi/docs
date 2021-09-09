@@ -96,7 +96,7 @@ import * as okta from "@pulumi/okta";
 
 const example = pulumi.output(okta.idp.getSocial({
     name: "My Facebook IdP",
-}, { async: true }));
+}));
 ```
 
 

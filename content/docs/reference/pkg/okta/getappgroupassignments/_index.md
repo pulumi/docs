@@ -58,7 +58,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := okta.LookupAppGroupAssignments(ctx, &okta.LookupAppGroupAssignmentsArgs{
+		_, err := okta.LookupAppGroupAssignments(ctx, &GetAppGroupAssignmentsArgs{
 			Id: okta_app_oauth.Test.Id,
 		}, nil)
 		if err != nil {

@@ -95,7 +95,7 @@ import * as okta from "@pulumi/okta";
 
 const test = pulumi.output(okta.auth.getServerScopes({
     authServerId: "default",
-}, { async: true }));
+}));
 ```
 
 

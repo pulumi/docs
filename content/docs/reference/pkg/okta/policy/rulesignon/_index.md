@@ -136,7 +136,106 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-okta/sdk/v3/go/okta"
+	"github.com/pulumi/pulumi-okta/sdk/v3/go/okta/policy"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := policy.NewSignon(ctx, "test", &policy.SignonArgs{
+			Status:      pulumi.String("ACTIVE"),
+			Description: pulumi.String("Example Policy"),
+		})
+		if err != nil {
+			return err
+		}
+		opt0 := "New City"
+		newCity, err := okta.LookupBehaviour(ctx, &GetBehaviourArgs{
+			Name: &opt0,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		_, err = policy.NewRuleSignon(ctx, "example", &policy.RuleSignonArgs{
+			Access:            pulumi.String("CHALLENGE"),
+			Authtype:          pulumi.String("RADIUS"),
+			NetworkConnection: pulumi.String("ANYWHERE"),
+			PolicyId:          pulumi.Any(okta_policy_signon.Example.Id),
+			Status:            pulumi.String("ACTIVE"),
+			RiscLevel:         pulumi.String("HIGH"),
+			Behaviors: pulumi.StringArray{
+				pulumi.String(newCity.Id),
+			},
+			FactorSequences: policy.RuleSignonFactorSequenceArray{
+				&policy.RuleSignonFactorSequenceArgs{
+					PrimaryCriteriaFactorType: pulumi.String("token:hotp"),
+					PrimaryCriteriaProvider:   pulumi.String("CUSTOM"),
+					SecondaryCriterias: policy.RuleSignonFactorSequenceSecondaryCriteriaArray{
+						&policy.RuleSignonFactorSequenceSecondaryCriteriaArgs{
+							FactorType: pulumi.String("token:software:totp"),
+							Provider:   pulumi.String("OKTA"),
+						},
+						&policy.RuleSignonFactorSequenceSecondaryCriteriaArgs{
+							FactorType: pulumi.String("push"),
+							Provider:   pulumi.String("OKTA"),
+						},
+						&policy.RuleSignonFactorSequenceSecondaryCriteriaArgs{
+							FactorType: pulumi.String("password"),
+							Provider:   pulumi.String("OKTA"),
+						},
+						&policy.RuleSignonFactorSequenceSecondaryCriteriaArgs{
+							FactorType: pulumi.String("question"),
+							Provider:   pulumi.String("OKTA"),
+						},
+						&policy.RuleSignonFactorSequenceSecondaryCriteriaArgs{
+							FactorType: pulumi.String("sms"),
+							Provider:   pulumi.String("OKTA"),
+						},
+						&policy.RuleSignonFactorSequenceSecondaryCriteriaArgs{
+							FactorType: pulumi.String("token:software:totp"),
+							Provider:   pulumi.String("GOOGLE"),
+						},
+						&policy.RuleSignonFactorSequenceSecondaryCriteriaArgs{
+							FactorType: pulumi.String("email"),
+							Provider:   pulumi.String("OKTA"),
+						},
+						&policy.RuleSignonFactorSequenceSecondaryCriteriaArgs{
+							FactorType: pulumi.String("call"),
+							Provider:   pulumi.String("OKTA"),
+						},
+						&policy.RuleSignonFactorSequenceSecondaryCriteriaArgs{
+							FactorType: pulumi.String("webauthn"),
+							Provider:   pulumi.String("FIDO"),
+						},
+						&policy.RuleSignonFactorSequenceSecondaryCriteriaArgs{
+							FactorType: pulumi.String("token"),
+							Provider:   pulumi.String("RSA"),
+						},
+						&policy.RuleSignonFactorSequenceSecondaryCriteriaArgs{
+							FactorType: pulumi.String("token"),
+							Provider:   pulumi.String("SYMANTEC"),
+						},
+					},
+				},
+				&policy.RuleSignonFactorSequenceArgs{
+					PrimaryCriteriaFactorType: pulumi.String("token:software:totp"),
+					PrimaryCriteriaProvider:   pulumi.String("OKTA"),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 
 {{< /example >}}
 

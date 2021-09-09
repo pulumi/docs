@@ -77,12 +77,12 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := okta.NewTemplateSms(ctx, "example", &okta.TemplateSmsArgs{
 			Template: pulumi.String(fmt.Sprintf("%v%v%v%v", "Your ", org.Name, " code is: ", code)),
-			Translations: okta.TemplateSmsTranslationArray{
-				&okta.TemplateSmsTranslationArgs{
+			Translations: TemplateSmsTranslationArray{
+				&TemplateSmsTranslationArgs{
 					Language: pulumi.String("en"),
 					Template: pulumi.String(fmt.Sprintf("%v%v%v%v", "Your ", org.Name, " code is: ", code)),
 				},
-				&okta.TemplateSmsTranslationArgs{
+				&TemplateSmsTranslationArgs{
 					Language: pulumi.String("es"),
 					Template: pulumi.String(fmt.Sprintf("%v%v%v%v%v", "Tu código de ", org.Name, " es: ", code, ".")),
 				},

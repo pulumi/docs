@@ -53,7 +53,7 @@ class MyStack : Stack
         var exampleUserFactorQuestion = new Okta.UserFactorQuestion("exampleUserFactorQuestion", new Okta.UserFactorQuestionArgs
         {
             UserId = exampleUser.Id,
-            Key = exampleUserSecurityQuestions.Apply(exampleUserSecurityQuestions => exampleUserSecurityQuestions.Questions[0].Key),
+            Key = exampleUserSecurityQuestions.Apply(exampleUserSecurityQuestions => exampleUserSecurityQuestions.Questions?[0]?.Key),
             Answer = "meatball",
         }, new CustomResourceOptions
         {
@@ -103,7 +103,7 @@ func main() {
 		}
 		_, err = okta.NewUserFactorQuestion(ctx, "exampleUserFactorQuestion", &okta.UserFactorQuestionArgs{
 			UserId: exampleUser.ID(),
-			Key: exampleUserSecurityQuestions.ApplyT(func(exampleUserSecurityQuestions okta.GetUserSecurityQuestionsResult) (string, error) {
+			Key: exampleUserSecurityQuestions.ApplyT(func(exampleUserSecurityQuestions GetUserSecurityQuestionsResult) (string, error) {
 				return exampleUserSecurityQuestions.Questions[0].Key, nil
 			}).(pulumi.StringOutput),
 			Answer: pulumi.String("meatball"),
@@ -170,7 +170,7 @@ const exampleFactor = new okta.factor.Factor("exampleFactor", {
 });
 const exampleUserFactorQuestion = new okta.UserFactorQuestion("exampleUserFactorQuestion", {
     userId: exampleUser.id,
-    key: exampleUserSecurityQuestions.questions[0].key,
+    key: exampleUserSecurityQuestions.apply(exampleUserSecurityQuestions => exampleUserSecurityQuestions.questions?[0]?.key),
     answer: "meatball",
 }, {
     dependsOn: [exampleFactor],

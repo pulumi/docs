@@ -30,6 +30,7 @@ meta_desc: "Documentation for the okta.deprecated.ThreeFieldApp resource with ex
                   <span class="nx">admin_note</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                   <span class="nx">auto_submit_toolbar</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                   <span class="nx">button_selector</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                  <span class="nx">credentials_scheme</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                   <span class="nx">enduser_note</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                   <span class="nx">extra_field_selector</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                   <span class="nx">extra_field_value</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -39,6 +40,9 @@ meta_desc: "Documentation for the okta.deprecated.ThreeFieldApp resource with ex
                   <span class="nx">label</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                   <span class="nx">logo</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                   <span class="nx">password_selector</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                  <span class="nx">reveal_password</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                  <span class="nx">shared_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                  <span class="nx">shared_username</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                   <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                   <span class="nx">url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                   <span class="nx">url_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -275,6 +279,15 @@ The ThreeFieldApp resource accepts the following [input]({{< relref "/docs/intro
     <dd>{{% md %}}Display auto submit toolbar
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="credentialsscheme_csharp">
+<a href="#credentialsscheme_csharp" style="color: inherit; text-decoration: inherit;">Credentials<wbr>Scheme</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Application credentials scheme
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="endusernote_csharp">
 <a href="#endusernote_csharp" style="color: inherit; text-decoration: inherit;">Enduser<wbr>Note</a>
 </span>
@@ -318,6 +331,33 @@ The ThreeFieldApp resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Logo of the application.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="revealpassword_csharp">
+<a href="#revealpassword_csharp" style="color: inherit; text-decoration: inherit;">Reveal<wbr>Password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Allow user to reveal password
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sharedpassword_csharp">
+<a href="#sharedpassword_csharp" style="color: inherit; text-decoration: inherit;">Shared<wbr>Password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Shared password, required for certain schemes.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sharedusername_csharp">
+<a href="#sharedusername_csharp" style="color: inherit; text-decoration: inherit;">Shared<wbr>Username</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Shared username, required for certain schemes.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_csharp">
@@ -477,6 +517,15 @@ The ThreeFieldApp resource accepts the following [input]({{< relref "/docs/intro
     <dd>{{% md %}}Display auto submit toolbar
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="credentialsscheme_go">
+<a href="#credentialsscheme_go" style="color: inherit; text-decoration: inherit;">Credentials<wbr>Scheme</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Application credentials scheme
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="endusernote_go">
 <a href="#endusernote_go" style="color: inherit; text-decoration: inherit;">Enduser<wbr>Note</a>
 </span>
@@ -520,6 +569,33 @@ The ThreeFieldApp resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Logo of the application.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="revealpassword_go">
+<a href="#revealpassword_go" style="color: inherit; text-decoration: inherit;">Reveal<wbr>Password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Allow user to reveal password
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sharedpassword_go">
+<a href="#sharedpassword_go" style="color: inherit; text-decoration: inherit;">Shared<wbr>Password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Shared password, required for certain schemes.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sharedusername_go">
+<a href="#sharedusername_go" style="color: inherit; text-decoration: inherit;">Shared<wbr>Username</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Shared username, required for certain schemes.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_go">
@@ -679,6 +755,15 @@ The ThreeFieldApp resource accepts the following [input]({{< relref "/docs/intro
     <dd>{{% md %}}Display auto submit toolbar
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="credentialsscheme_nodejs">
+<a href="#credentialsscheme_nodejs" style="color: inherit; text-decoration: inherit;">credentials<wbr>Scheme</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Application credentials scheme
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="endusernote_nodejs">
 <a href="#endusernote_nodejs" style="color: inherit; text-decoration: inherit;">enduser<wbr>Note</a>
 </span>
@@ -722,6 +807,33 @@ The ThreeFieldApp resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Logo of the application.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="revealpassword_nodejs">
+<a href="#revealpassword_nodejs" style="color: inherit; text-decoration: inherit;">reveal<wbr>Password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Allow user to reveal password
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sharedpassword_nodejs">
+<a href="#sharedpassword_nodejs" style="color: inherit; text-decoration: inherit;">shared<wbr>Password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Shared password, required for certain schemes.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sharedusername_nodejs">
+<a href="#sharedusername_nodejs" style="color: inherit; text-decoration: inherit;">shared<wbr>Username</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Shared username, required for certain schemes.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_nodejs">
@@ -881,6 +993,15 @@ The ThreeFieldApp resource accepts the following [input]({{< relref "/docs/intro
     <dd>{{% md %}}Display auto submit toolbar
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="credentials_scheme_python">
+<a href="#credentials_scheme_python" style="color: inherit; text-decoration: inherit;">credentials_<wbr>scheme</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Application credentials scheme
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="enduser_note_python">
 <a href="#enduser_note_python" style="color: inherit; text-decoration: inherit;">enduser_<wbr>note</a>
 </span>
@@ -924,6 +1045,33 @@ The ThreeFieldApp resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Logo of the application.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="reveal_password_python">
+<a href="#reveal_password_python" style="color: inherit; text-decoration: inherit;">reveal_<wbr>password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Allow user to reveal password
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="shared_password_python">
+<a href="#shared_password_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Shared password, required for certain schemes.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="shared_username_python">
+<a href="#shared_username_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>username</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Shared username, required for certain schemes.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_python">
@@ -1165,6 +1313,7 @@ Get an existing ThreeFieldApp resource's state with the given name, ID, and opti
         <span class="nx">admin_note</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">auto_submit_toolbar</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">button_selector</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">credentials_scheme</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">enduser_note</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">extra_field_selector</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">extra_field_value</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -1176,6 +1325,9 @@ Get an existing ThreeFieldApp resource's state with the given name, ID, and opti
         <span class="nx">logo_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">password_selector</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">reveal_password</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">shared_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">shared_username</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">sign_on_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -1342,6 +1494,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Login button field CSS selector
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_credentialsscheme_csharp">
+<a href="#state_credentialsscheme_csharp" style="color: inherit; text-decoration: inherit;">Credentials<wbr>Scheme</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Application credentials scheme
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_endusernote_csharp">
 <a href="#state_endusernote_csharp" style="color: inherit; text-decoration: inherit;">Enduser<wbr>Note</a>
 </span>
@@ -1439,6 +1600,33 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Login password field CSS selector
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_revealpassword_csharp">
+<a href="#state_revealpassword_csharp" style="color: inherit; text-decoration: inherit;">Reveal<wbr>Password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Allow user to reveal password
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_sharedpassword_csharp">
+<a href="#state_sharedpassword_csharp" style="color: inherit; text-decoration: inherit;">Shared<wbr>Password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Shared password, required for certain schemes.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_sharedusername_csharp">
+<a href="#state_sharedusername_csharp" style="color: inherit; text-decoration: inherit;">Shared<wbr>Username</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Shared username, required for certain schemes.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_signonmode_csharp">
@@ -1571,6 +1759,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Login button field CSS selector
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_credentialsscheme_go">
+<a href="#state_credentialsscheme_go" style="color: inherit; text-decoration: inherit;">Credentials<wbr>Scheme</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Application credentials scheme
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_endusernote_go">
 <a href="#state_endusernote_go" style="color: inherit; text-decoration: inherit;">Enduser<wbr>Note</a>
 </span>
@@ -1668,6 +1865,33 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Login password field CSS selector
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_revealpassword_go">
+<a href="#state_revealpassword_go" style="color: inherit; text-decoration: inherit;">Reveal<wbr>Password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Allow user to reveal password
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_sharedpassword_go">
+<a href="#state_sharedpassword_go" style="color: inherit; text-decoration: inherit;">Shared<wbr>Password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Shared password, required for certain schemes.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_sharedusername_go">
+<a href="#state_sharedusername_go" style="color: inherit; text-decoration: inherit;">Shared<wbr>Username</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Shared username, required for certain schemes.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_signonmode_go">
@@ -1800,6 +2024,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Login button field CSS selector
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_credentialsscheme_nodejs">
+<a href="#state_credentialsscheme_nodejs" style="color: inherit; text-decoration: inherit;">credentials<wbr>Scheme</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Application credentials scheme
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_endusernote_nodejs">
 <a href="#state_endusernote_nodejs" style="color: inherit; text-decoration: inherit;">enduser<wbr>Note</a>
 </span>
@@ -1897,6 +2130,33 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Login password field CSS selector
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_revealpassword_nodejs">
+<a href="#state_revealpassword_nodejs" style="color: inherit; text-decoration: inherit;">reveal<wbr>Password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Allow user to reveal password
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_sharedpassword_nodejs">
+<a href="#state_sharedpassword_nodejs" style="color: inherit; text-decoration: inherit;">shared<wbr>Password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Shared password, required for certain schemes.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_sharedusername_nodejs">
+<a href="#state_sharedusername_nodejs" style="color: inherit; text-decoration: inherit;">shared<wbr>Username</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Shared username, required for certain schemes.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_signonmode_nodejs">
@@ -2029,6 +2289,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Login button field CSS selector
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_credentials_scheme_python">
+<a href="#state_credentials_scheme_python" style="color: inherit; text-decoration: inherit;">credentials_<wbr>scheme</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Application credentials scheme
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_enduser_note_python">
 <a href="#state_enduser_note_python" style="color: inherit; text-decoration: inherit;">enduser_<wbr>note</a>
 </span>
@@ -2126,6 +2395,33 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Login password field CSS selector
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_reveal_password_python">
+<a href="#state_reveal_password_python" style="color: inherit; text-decoration: inherit;">reveal_<wbr>password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Allow user to reveal password
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_shared_password_python">
+<a href="#state_shared_password_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Shared password, required for certain schemes.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_shared_username_python">
+<a href="#state_shared_username_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>username</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Shared username, required for certain schemes.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sign_on_mode_python">

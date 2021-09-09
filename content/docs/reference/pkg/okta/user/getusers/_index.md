@@ -117,7 +117,7 @@ const example = pulumi.output(okta.user.getUsers({
         name: "profile.company",
         value: "Articulate",
     }],
-}, { async: true }));
+}));
 ```
 
 

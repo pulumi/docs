@@ -167,7 +167,7 @@ example = okta.profile.Mapping("example",
 import * as pulumi from "@pulumi/pulumi";
 import * as okta from "@pulumi/okta";
 
-const user = pulumi.output(okta.user.getUserProfileMappingSource({ async: true }));
+const user = pulumi.output(okta.user.getUserProfileMappingSource());
 const example = new okta.profile.Mapping("example", {
     deleteWhenAbsent: true,
     mappings: [

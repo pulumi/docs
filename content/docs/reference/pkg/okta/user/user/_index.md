@@ -268,6 +268,7 @@ const example = new okta.user.User("example", {
          <span class="nx">nick_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
          <span class="nx">organization</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
          <span class="nx">password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+         <span class="nx">password_hash</span><span class="p">:</span> <span class="nx">Optional[UserPasswordHashArgs]</span> = None<span class="p">,</span>
          <span class="nx">postal_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
          <span class="nx">preferred_language</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
          <span class="nx">primary_phone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -628,6 +629,15 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
     <dd>{{% md %}}User password.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="passwordhash_csharp">
+<a href="#passwordhash_csharp" style="color: inherit; text-decoration: inherit;">Password<wbr>Hash</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#userpasswordhash">User<wbr>Password<wbr>Hash<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a hashed password to import into Okta.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="postaladdress_csharp">
 <a href="#postaladdress_csharp" style="color: inherit; text-decoration: inherit;">Postal<wbr>Address</a>
 </span>
@@ -973,6 +983,15 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User password.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="passwordhash_go">
+<a href="#passwordhash_go" style="color: inherit; text-decoration: inherit;">Password<wbr>Hash</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#userpasswordhash">User<wbr>Password<wbr>Hash<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a hashed password to import into Okta.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="postaladdress_go">
@@ -1322,6 +1341,15 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
     <dd>{{% md %}}User password.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="passwordhash_nodejs">
+<a href="#passwordhash_nodejs" style="color: inherit; text-decoration: inherit;">password<wbr>Hash</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#userpasswordhash">User<wbr>Password<wbr>Hash<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a hashed password to import into Okta.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="postaladdress_nodejs">
 <a href="#postaladdress_nodejs" style="color: inherit; text-decoration: inherit;">postal<wbr>Address</a>
 </span>
@@ -1669,6 +1697,15 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
     <dd>{{% md %}}User password.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="password_hash_python">
+<a href="#password_hash_python" style="color: inherit; text-decoration: inherit;">password_<wbr>hash</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#userpasswordhash">User<wbr>Password<wbr>Hash<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a hashed password to import into Okta.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="postal_address_python">
 <a href="#postal_address_python" style="color: inherit; text-decoration: inherit;">postal_<wbr>address</a>
 </span>
@@ -1927,6 +1964,7 @@ Get an existing User resource's state with the given name, ID, and optional extr
         <span class="nx">nick_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">organization</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">password_hash</span><span class="p">:</span> <span class="nx">Optional[UserPasswordHashArgs]</span> = None<span class="p">,</span>
         <span class="nx">postal_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">preferred_language</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">primary_phone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -2269,6 +2307,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User password.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_passwordhash_csharp">
+<a href="#state_passwordhash_csharp" style="color: inherit; text-decoration: inherit;">Password<wbr>Hash</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#userpasswordhash">User<wbr>Password<wbr>Hash<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a hashed password to import into Okta.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_postaladdress_csharp">
@@ -2627,6 +2674,15 @@ The following state arguments are supported:
     <dd>{{% md %}}User password.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_passwordhash_go">
+<a href="#state_passwordhash_go" style="color: inherit; text-decoration: inherit;">Password<wbr>Hash</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#userpasswordhash">User<wbr>Password<wbr>Hash<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a hashed password to import into Okta.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_postaladdress_go">
 <a href="#state_postaladdress_go" style="color: inherit; text-decoration: inherit;">Postal<wbr>Address</a>
 </span>
@@ -2981,6 +3037,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User password.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_passwordhash_nodejs">
+<a href="#state_passwordhash_nodejs" style="color: inherit; text-decoration: inherit;">password<wbr>Hash</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#userpasswordhash">User<wbr>Password<wbr>Hash<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a hashed password to import into Okta.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_postaladdress_nodejs">
@@ -3339,6 +3404,15 @@ The following state arguments are supported:
     <dd>{{% md %}}User password.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_password_hash_python">
+<a href="#state_password_hash_python" style="color: inherit; text-decoration: inherit;">password_<wbr>hash</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#userpasswordhash">User<wbr>Password<wbr>Hash<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a hashed password to import into Okta.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_postal_address_python">
 <a href="#state_postal_address_python" style="color: inherit; text-decoration: inherit;">postal_<wbr>address</a>
 </span>
@@ -3479,6 +3553,220 @@ The following state arguments are supported:
 
 
 
+
+## Supporting Types
+
+
+
+<h4 id="userpasswordhash">User<wbr>Password<wbr>Hash</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="algorithm_csharp">
+<a href="#algorithm_csharp" style="color: inherit; text-decoration: inherit;">Algorithm</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}. 
+This is the Base64 encoded value of the SHA-512/SHA-256/SHA-1/MD5 digest that was computed by either pre-fixing or post-fixing
+the salt to the password, depending on the saltOrder. If a salt was not used in the source system, then this should just be
+the Base64 encoded value of the password's SHA-512/SHA-256/SHA-1/MD5 digest. For BCRYPT, This is the actual radix64-encoded hashed password.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="salt_csharp">
+<a href="#salt_csharp" style="color: inherit; text-decoration: inherit;">Salt</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Only required for salted hashes. For BCRYPT, this specifies the radix64-encoded salt used to generate 
+the hash, which must be 22 characters long. For other salted hashes, this specifies the base64-encoded salt used to generate the hash.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="saltorder_csharp">
+<a href="#saltorder_csharp" style="color: inherit; text-decoration: inherit;">Salt<wbr>Order</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether salt was pre- or postfixed to the password before hashing. Only required for salted algorithms.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="workfactor_csharp">
+<a href="#workfactor_csharp" style="color: inherit; text-decoration: inherit;">Work<wbr>Factor</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Governs the strength of the hash and the time required to compute it. Only required for BCRYPT algorithm. Minimum value is 1, and maximum is 20.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="algorithm_go">
+<a href="#algorithm_go" style="color: inherit; text-decoration: inherit;">Algorithm</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}. 
+This is the Base64 encoded value of the SHA-512/SHA-256/SHA-1/MD5 digest that was computed by either pre-fixing or post-fixing
+the salt to the password, depending on the saltOrder. If a salt was not used in the source system, then this should just be
+the Base64 encoded value of the password's SHA-512/SHA-256/SHA-1/MD5 digest. For BCRYPT, This is the actual radix64-encoded hashed password.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="salt_go">
+<a href="#salt_go" style="color: inherit; text-decoration: inherit;">Salt</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Only required for salted hashes. For BCRYPT, this specifies the radix64-encoded salt used to generate 
+the hash, which must be 22 characters long. For other salted hashes, this specifies the base64-encoded salt used to generate the hash.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="saltorder_go">
+<a href="#saltorder_go" style="color: inherit; text-decoration: inherit;">Salt<wbr>Order</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether salt was pre- or postfixed to the password before hashing. Only required for salted algorithms.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="workfactor_go">
+<a href="#workfactor_go" style="color: inherit; text-decoration: inherit;">Work<wbr>Factor</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Governs the strength of the hash and the time required to compute it. Only required for BCRYPT algorithm. Minimum value is 1, and maximum is 20.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="algorithm_nodejs">
+<a href="#algorithm_nodejs" style="color: inherit; text-decoration: inherit;">algorithm</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}. 
+This is the Base64 encoded value of the SHA-512/SHA-256/SHA-1/MD5 digest that was computed by either pre-fixing or post-fixing
+the salt to the password, depending on the saltOrder. If a salt was not used in the source system, then this should just be
+the Base64 encoded value of the password's SHA-512/SHA-256/SHA-1/MD5 digest. For BCRYPT, This is the actual radix64-encoded hashed password.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="salt_nodejs">
+<a href="#salt_nodejs" style="color: inherit; text-decoration: inherit;">salt</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Only required for salted hashes. For BCRYPT, this specifies the radix64-encoded salt used to generate 
+the hash, which must be 22 characters long. For other salted hashes, this specifies the base64-encoded salt used to generate the hash.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="saltorder_nodejs">
+<a href="#saltorder_nodejs" style="color: inherit; text-decoration: inherit;">salt<wbr>Order</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether salt was pre- or postfixed to the password before hashing. Only required for salted algorithms.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="workfactor_nodejs">
+<a href="#workfactor_nodejs" style="color: inherit; text-decoration: inherit;">work<wbr>Factor</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Governs the strength of the hash and the time required to compute it. Only required for BCRYPT algorithm. Minimum value is 1, and maximum is 20.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="algorithm_python">
+<a href="#algorithm_python" style="color: inherit; text-decoration: inherit;">algorithm</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}. 
+This is the Base64 encoded value of the SHA-512/SHA-256/SHA-1/MD5 digest that was computed by either pre-fixing or post-fixing
+the salt to the password, depending on the saltOrder. If a salt was not used in the source system, then this should just be
+the Base64 encoded value of the password's SHA-512/SHA-256/SHA-1/MD5 digest. For BCRYPT, This is the actual radix64-encoded hashed password.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="salt_python">
+<a href="#salt_python" style="color: inherit; text-decoration: inherit;">salt</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Only required for salted hashes. For BCRYPT, this specifies the radix64-encoded salt used to generate 
+the hash, which must be 22 characters long. For other salted hashes, this specifies the base64-encoded salt used to generate the hash.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="salt_order_python">
+<a href="#salt_order_python" style="color: inherit; text-decoration: inherit;">salt_<wbr>order</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether salt was pre- or postfixed to the password before hashing. Only required for salted algorithms.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="work_factor_python">
+<a href="#work_factor_python" style="color: inherit; text-decoration: inherit;">work_<wbr>factor</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Governs the strength of the hash and the time required to compute it. Only required for BCRYPT algorithm. Minimum value is 1, and maximum is 20.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
 ## Import
 
 

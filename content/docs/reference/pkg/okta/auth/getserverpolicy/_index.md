@@ -99,7 +99,7 @@ import * as okta from "@pulumi/okta";
 const example = pulumi.output(okta.auth.getServerPolicy({
     authServerId: "<auth server id>",
     name: "staff",
-}, { async: true }));
+}));
 ```
 
 
