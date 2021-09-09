@@ -176,6 +176,7 @@ const node1 = new hcloud.Server("node1", {
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Firewall</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+             <span class="nx">apply_tos</span><span class="p">:</span> <span class="nx">Optional[Sequence[FirewallApplyToArgs]]</span> = None<span class="p">,</span>
              <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">,</span>
              <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[FirewallRuleArgs]]</span> = None<span class="p">)</span>
@@ -308,6 +309,15 @@ The Firewall resource accepts the following [input]({{< relref "/docs/intro/conc
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="applytos_csharp">
+<a href="#applytos_csharp" style="color: inherit; text-decoration: inherit;">Apply<wbr>Tos</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewallapplyto">List&lt;Pulumi.<wbr>HCloud.<wbr>Inputs.<wbr>Firewall<wbr>Apply<wbr>To<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Resources the firewall should be assigned to
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="labels_csharp">
 <a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
 </span>
@@ -338,6 +348,15 @@ The Firewall resource accepts the following [input]({{< relref "/docs/intro/conc
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="applytos_go">
+<a href="#applytos_go" style="color: inherit; text-decoration: inherit;">Apply<wbr>Tos</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewallapplyto">[]Firewall<wbr>Apply<wbr>To<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Resources the firewall should be assigned to
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_go">
 <a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -370,6 +389,15 @@ The Firewall resource accepts the following [input]({{< relref "/docs/intro/conc
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="applytos_nodejs">
+<a href="#applytos_nodejs" style="color: inherit; text-decoration: inherit;">apply<wbr>Tos</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewallapplyto">Firewall<wbr>Apply<wbr>To<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}Resources the firewall should be assigned to
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="labels_nodejs">
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
@@ -400,6 +428,15 @@ The Firewall resource accepts the following [input]({{< relref "/docs/intro/conc
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="apply_tos_python">
+<a href="#apply_tos_python" style="color: inherit; text-decoration: inherit;">apply_<wbr>tos</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewallapplyto">Sequence[Firewall<wbr>Apply<wbr>To<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}Resources the firewall should be assigned to
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_python">
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -500,6 +537,7 @@ Get an existing Firewall resource's state with the given name, ID, and optional 
 <span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">apply_tos</span><span class="p">:</span> <span class="nx">Optional[Sequence[FirewallApplyToArgs]]</span> = None<span class="p">,</span>
         <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[FirewallRuleArgs]]</span> = None<span class="p">) -&gt;</span> Firewall</code></pre></div>
@@ -615,6 +653,15 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="state_applytos_csharp">
+<a href="#state_applytos_csharp" style="color: inherit; text-decoration: inherit;">Apply<wbr>Tos</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewallapplyto">List&lt;Pulumi.<wbr>HCloud.<wbr>Inputs.<wbr>Firewall<wbr>Apply<wbr>To<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Resources the firewall should be assigned to
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_labels_csharp">
 <a href="#state_labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
 </span>
@@ -645,6 +692,15 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="state_applytos_go">
+<a href="#state_applytos_go" style="color: inherit; text-decoration: inherit;">Apply<wbr>Tos</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewallapplyto">[]Firewall<wbr>Apply<wbr>To<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Resources the firewall should be assigned to
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_go">
 <a href="#state_labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -677,6 +733,15 @@ The following state arguments are supported:
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="state_applytos_nodejs">
+<a href="#state_applytos_nodejs" style="color: inherit; text-decoration: inherit;">apply<wbr>Tos</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewallapplyto">Firewall<wbr>Apply<wbr>To<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}Resources the firewall should be assigned to
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_labels_nodejs">
 <a href="#state_labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
@@ -707,6 +772,15 @@ The following state arguments are supported:
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="state_apply_tos_python">
+<a href="#state_apply_tos_python" style="color: inherit; text-decoration: inherit;">apply_<wbr>tos</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewallapplyto">Sequence[Firewall<wbr>Apply<wbr>To<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}Resources the firewall should be assigned to
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_python">
 <a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -744,6 +818,104 @@ The following state arguments are supported:
 ## Supporting Types
 
 
+
+<h4 id="firewallapplyto">Firewall<wbr>Apply<wbr>To</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="labelselector_csharp">
+<a href="#labelselector_csharp" style="color: inherit; text-decoration: inherit;">Label<wbr>Selector</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Label Selector to select servers the firewall should be applied to (only one
+of `server` and `label_selector`can be applied in one block)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="server_csharp">
+<a href="#server_csharp" style="color: inherit; text-decoration: inherit;">Server</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}ID of the server you want to apply the firewall to (only one of `server`
+and `label_selector`can be applied in one block)
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="labelselector_go">
+<a href="#labelselector_go" style="color: inherit; text-decoration: inherit;">Label<wbr>Selector</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Label Selector to select servers the firewall should be applied to (only one
+of `server` and `label_selector`can be applied in one block)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="server_go">
+<a href="#server_go" style="color: inherit; text-decoration: inherit;">Server</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}ID of the server you want to apply the firewall to (only one of `server`
+and `label_selector`can be applied in one block)
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="labelselector_nodejs">
+<a href="#labelselector_nodejs" style="color: inherit; text-decoration: inherit;">label<wbr>Selector</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Label Selector to select servers the firewall should be applied to (only one
+of `server` and `label_selector`can be applied in one block)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="server_nodejs">
+<a href="#server_nodejs" style="color: inherit; text-decoration: inherit;">server</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}ID of the server you want to apply the firewall to (only one of `server`
+and `label_selector`can be applied in one block)
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="label_selector_python">
+<a href="#label_selector_python" style="color: inherit; text-decoration: inherit;">label_<wbr>selector</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Label Selector to select servers the firewall should be applied to (only one
+of `server` and `label_selector`can be applied in one block)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="server_python">
+<a href="#server_python" style="color: inherit; text-decoration: inherit;">server</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}ID of the server you want to apply the firewall to (only one of `server`
+and `label_selector`can be applied in one block)
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
 
 <h4 id="firewallrule">Firewall<wbr>Rule</h4>
 
@@ -783,7 +955,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}(Required, List) List of CIDRs that are allowed within this Firewall Rule (when `direction` is `out`)
+    <dd>{{% md %}}(Required, List) List of CIDRs that are allowed within this Firewall Rule (when `direction`
+is `out`)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_csharp">
@@ -792,7 +965,9 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Port of the Firewall Rule. Required when `protocol` is `tcp` or `udp`. You can use `any` to allow all ports for the specific protocol. Port ranges are also possible: `80-85` allows all ports between 80 and 85.
+    <dd>{{% md %}}Port of the Firewall Rule. Required when `protocol` is `tcp` or `udp`. You can use `any`
+to allow all ports for the specific protocol. Port ranges are also possible: `80-85` allows all ports between 80 and
+85.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourceips_csharp">
@@ -841,7 +1016,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}(Required, List) List of CIDRs that are allowed within this Firewall Rule (when `direction` is `out`)
+    <dd>{{% md %}}(Required, List) List of CIDRs that are allowed within this Firewall Rule (when `direction`
+is `out`)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_go">
@@ -850,7 +1026,9 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Port of the Firewall Rule. Required when `protocol` is `tcp` or `udp`. You can use `any` to allow all ports for the specific protocol. Port ranges are also possible: `80-85` allows all ports between 80 and 85.
+    <dd>{{% md %}}Port of the Firewall Rule. Required when `protocol` is `tcp` or `udp`. You can use `any`
+to allow all ports for the specific protocol. Port ranges are also possible: `80-85` allows all ports between 80 and
+85.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourceips_go">
@@ -899,7 +1077,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}(Required, List) List of CIDRs that are allowed within this Firewall Rule (when `direction` is `out`)
+    <dd>{{% md %}}(Required, List) List of CIDRs that are allowed within this Firewall Rule (when `direction`
+is `out`)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_nodejs">
@@ -908,7 +1087,9 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Port of the Firewall Rule. Required when `protocol` is `tcp` or `udp`. You can use `any` to allow all ports for the specific protocol. Port ranges are also possible: `80-85` allows all ports between 80 and 85.
+    <dd>{{% md %}}Port of the Firewall Rule. Required when `protocol` is `tcp` or `udp`. You can use `any`
+to allow all ports for the specific protocol. Port ranges are also possible: `80-85` allows all ports between 80 and
+85.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourceips_nodejs">
@@ -957,7 +1138,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}(Required, List) List of CIDRs that are allowed within this Firewall Rule (when `direction` is `out`)
+    <dd>{{% md %}}(Required, List) List of CIDRs that are allowed within this Firewall Rule (when `direction`
+is `out`)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_python">
@@ -966,7 +1148,9 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Port of the Firewall Rule. Required when `protocol` is `tcp` or `udp`. You can use `any` to allow all ports for the specific protocol. Port ranges are also possible: `80-85` allows all ports between 80 and 85.
+    <dd>{{% md %}}Port of the Firewall Rule. Required when `protocol` is `tcp` or `udp`. You can use `any`
+to allow all ports for the specific protocol. Port ranges are also possible: `80-85` allows all ports between 80 and
+85.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_ips_python">

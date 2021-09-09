@@ -28,7 +28,7 @@ meta_desc: "Documentation for the hcloud.getVolume function with examples, input
                <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                <span class="nx">selector</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-               <span class="nx">server</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">server_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
                <span class="nx">with_selector</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                <span class="nx">with_statuses</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetVolumeResult</code></pre></div>
@@ -72,7 +72,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(string) The location name.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -91,13 +92,14 @@ The following arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use the with_selector property instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
-        <span id="server_csharp">
-<a href="#server_csharp" style="color: inherit; text-decoration: inherit;">Server</a>
+        <span id="serverid_csharp">
+<a href="#serverid_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional, int) Server ID the volume is attached to
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="withselector_csharp">
 <a href="#withselector_csharp" style="color: inherit; text-decoration: inherit;">With<wbr>Selector</a>
@@ -136,7 +138,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(string) The location name.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -155,13 +158,14 @@ The following arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use the with_selector property instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
-        <span id="server_go">
-<a href="#server_go" style="color: inherit; text-decoration: inherit;">Server</a>
+        <span id="serverid_go">
+<a href="#serverid_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional, int) Server ID the volume is attached to
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="withselector_go">
 <a href="#withselector_go" style="color: inherit; text-decoration: inherit;">With<wbr>Selector</a>
@@ -200,7 +204,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(string) The location name.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -219,13 +224,14 @@ The following arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use the with_selector property instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
-        <span id="server_nodejs">
-<a href="#server_nodejs" style="color: inherit; text-decoration: inherit;">server</a>
+        <span id="serverid_nodejs">
+<a href="#serverid_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional, int) Server ID the volume is attached to
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="withselector_nodejs">
 <a href="#withselector_nodejs" style="color: inherit; text-decoration: inherit;">with<wbr>Selector</a>
@@ -264,7 +270,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(string) The location name.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -283,13 +290,14 @@ The following arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use the with_selector property instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
-        <span id="server_python">
-<a href="#server_python" style="color: inherit; text-decoration: inherit;">server</a>
+        <span id="server_id_python">
+<a href="#server_id_python" style="color: inherit; text-decoration: inherit;">server_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional, int) Server ID the volume is attached to
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="with_selector_python">
 <a href="#with_selector_python" style="color: inherit; text-decoration: inherit;">with_<wbr>selector</a>
@@ -322,13 +330,22 @@ The following output properties are available:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-"
             title="">
+        <span id="deleteprotection_csharp">
+<a href="#deleteprotection_csharp" style="color: inherit; text-decoration: inherit;">Delete<wbr>Protection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}(boolean) Whether delete protection is enabled.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Unique ID of the volume.
+    <dd>{{% md %}}(int) Unique ID of the volume.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="labels_csharp">
@@ -337,7 +354,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}(map) User-defined labels (key-value pairs).
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="linuxdevice_csharp">
 <a href="#linuxdevice_csharp" style="color: inherit; text-decoration: inherit;">Linux<wbr>Device</a>
@@ -345,7 +363,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}(string) Device path on the file system for the Volume.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -353,7 +372,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the volume.
+    <dd>{{% md %}}(string) Name of the volume.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="size_csharp">
@@ -362,7 +381,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Size of the volume.
+    <dd>{{% md %}}(int) Size of the volume.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_csharp">
@@ -371,7 +390,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property- property-deprecated"
+    <dd>{{% md %}}(string) The location name.
+{{% /md %}}</dd><dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="selector_csharp">
 <a href="#selector_csharp" style="color: inherit; text-decoration: inherit;">Selector</a>
@@ -381,13 +401,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use the with_selector property instead.{{% /md %}}</p></dd><dt class="property-"
             title="">
-        <span id="server_csharp">
-<a href="#server_csharp" style="color: inherit; text-decoration: inherit;">Server</a>
+        <span id="serverid_csharp">
+<a href="#serverid_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}(Optional, int) Server ID the volume is attached to
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="withselector_csharp">
 <a href="#withselector_csharp" style="color: inherit; text-decoration: inherit;">With<wbr>Selector</a>
@@ -409,13 +430,22 @@ The following output properties are available:
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-"
             title="">
+        <span id="deleteprotection_go">
+<a href="#deleteprotection_go" style="color: inherit; text-decoration: inherit;">Delete<wbr>Protection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}(boolean) Whether delete protection is enabled.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Unique ID of the volume.
+    <dd>{{% md %}}(int) Unique ID of the volume.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="labels_go">
@@ -424,7 +454,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}(map) User-defined labels (key-value pairs).
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="linuxdevice_go">
 <a href="#linuxdevice_go" style="color: inherit; text-decoration: inherit;">Linux<wbr>Device</a>
@@ -432,7 +463,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}(string) Device path on the file system for the Volume.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -440,7 +472,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the volume.
+    <dd>{{% md %}}(string) Name of the volume.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="size_go">
@@ -449,7 +481,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Size of the volume.
+    <dd>{{% md %}}(int) Size of the volume.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_go">
@@ -458,7 +490,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property- property-deprecated"
+    <dd>{{% md %}}(string) The location name.
+{{% /md %}}</dd><dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="selector_go">
 <a href="#selector_go" style="color: inherit; text-decoration: inherit;">Selector</a>
@@ -468,13 +501,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use the with_selector property instead.{{% /md %}}</p></dd><dt class="property-"
             title="">
-        <span id="server_go">
-<a href="#server_go" style="color: inherit; text-decoration: inherit;">Server</a>
+        <span id="serverid_go">
+<a href="#serverid_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}(Optional, int) Server ID the volume is attached to
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="withselector_go">
 <a href="#withselector_go" style="color: inherit; text-decoration: inherit;">With<wbr>Selector</a>
@@ -496,13 +530,22 @@ The following output properties are available:
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-"
             title="">
+        <span id="deleteprotection_nodejs">
+<a href="#deleteprotection_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>Protection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}(boolean) Whether delete protection is enabled.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Unique ID of the volume.
+    <dd>{{% md %}}(int) Unique ID of the volume.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="labels_nodejs">
@@ -511,7 +554,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}(map) User-defined labels (key-value pairs).
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="linuxdevice_nodejs">
 <a href="#linuxdevice_nodejs" style="color: inherit; text-decoration: inherit;">linux<wbr>Device</a>
@@ -519,7 +563,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}(string) Device path on the file system for the Volume.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -527,7 +572,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the volume.
+    <dd>{{% md %}}(string) Name of the volume.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="size_nodejs">
@@ -536,7 +581,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Size of the volume.
+    <dd>{{% md %}}(int) Size of the volume.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_nodejs">
@@ -545,7 +590,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property- property-deprecated"
+    <dd>{{% md %}}(string) The location name.
+{{% /md %}}</dd><dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="selector_nodejs">
 <a href="#selector_nodejs" style="color: inherit; text-decoration: inherit;">selector</a>
@@ -555,13 +601,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use the with_selector property instead.{{% /md %}}</p></dd><dt class="property-"
             title="">
-        <span id="server_nodejs">
-<a href="#server_nodejs" style="color: inherit; text-decoration: inherit;">server</a>
+        <span id="serverid_nodejs">
+<a href="#serverid_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}(Optional, int) Server ID the volume is attached to
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="withselector_nodejs">
 <a href="#withselector_nodejs" style="color: inherit; text-decoration: inherit;">with<wbr>Selector</a>
@@ -583,13 +630,22 @@ The following output properties are available:
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-"
             title="">
+        <span id="delete_protection_python">
+<a href="#delete_protection_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>protection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}(boolean) Whether delete protection is enabled.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Unique ID of the volume.
+    <dd>{{% md %}}(int) Unique ID of the volume.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="labels_python">
@@ -598,7 +654,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}(map) User-defined labels (key-value pairs).
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="linux_device_python">
 <a href="#linux_device_python" style="color: inherit; text-decoration: inherit;">linux_<wbr>device</a>
@@ -606,7 +663,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}(string) Device path on the file system for the Volume.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -614,7 +672,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the volume.
+    <dd>{{% md %}}(string) Name of the volume.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="size_python">
@@ -623,7 +681,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Size of the volume.
+    <dd>{{% md %}}(int) Size of the volume.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_python">
@@ -632,7 +690,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property- property-deprecated"
+    <dd>{{% md %}}(string) The location name.
+{{% /md %}}</dd><dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="selector_python">
 <a href="#selector_python" style="color: inherit; text-decoration: inherit;">selector</a>
@@ -642,13 +701,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use the with_selector property instead.{{% /md %}}</p></dd><dt class="property-"
             title="">
-        <span id="server_python">
-<a href="#server_python" style="color: inherit; text-decoration: inherit;">server</a>
+        <span id="server_id_python">
+<a href="#server_id_python" style="color: inherit; text-decoration: inherit;">server_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}(Optional, int) Server ID the volume is attached to
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="with_selector_python">
 <a href="#with_selector_python" style="color: inherit; text-decoration: inherit;">with_<wbr>selector</a>

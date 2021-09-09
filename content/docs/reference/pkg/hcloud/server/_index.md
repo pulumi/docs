@@ -35,6 +35,7 @@ Servers can be imported using the server `id`
            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
            <span class="nx">backups</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
            <span class="nx">datacenter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+           <span class="nx">delete_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
            <span class="nx">firewall_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[int]]</span> = None<span class="p">,</span>
            <span class="nx">image</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
            <span class="nx">iso</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -44,6 +45,7 @@ Servers can be imported using the server `id`
            <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
            <span class="nx">networks</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServerNetworkArgs]]</span> = None<span class="p">,</span>
            <span class="nx">placement_group_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+           <span class="nx">rebuild_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
            <span class="nx">rescue</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
            <span class="nx">server_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
            <span class="nx">ssh_keys</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
@@ -213,6 +215,15 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
     <dd>{{% md %}}The datacenter name to create the server in.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="deleteprotection_csharp">
+<a href="#deleteprotection_csharp" style="color: inherit; text-decoration: inherit;">Delete<wbr>Protection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable or disable delete protection (Needs to be the same as `rebuild_protection`).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="firewallids_csharp">
 <a href="#firewallids_csharp" style="color: inherit; text-decoration: inherit;">Firewall<wbr>Ids</a>
 </span>
@@ -285,6 +296,15 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
     <dd>{{% md %}}Placement Group ID the server added to on creation.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="rebuildprotection_csharp">
+<a href="#rebuildprotection_csharp" style="color: inherit; text-decoration: inherit;">Rebuild<wbr>Protection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable or disable rebuild protection (Needs to be the same as `delete_protection`).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="rescue_csharp">
 <a href="#rescue_csharp" style="color: inherit; text-decoration: inherit;">Rescue</a>
 </span>
@@ -350,6 +370,15 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The datacenter name to create the server in.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="deleteprotection_go">
+<a href="#deleteprotection_go" style="color: inherit; text-decoration: inherit;">Delete<wbr>Protection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable or disable delete protection (Needs to be the same as `rebuild_protection`).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="firewallids_go">
@@ -424,6 +453,15 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
     <dd>{{% md %}}Placement Group ID the server added to on creation.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="rebuildprotection_go">
+<a href="#rebuildprotection_go" style="color: inherit; text-decoration: inherit;">Rebuild<wbr>Protection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable or disable rebuild protection (Needs to be the same as `delete_protection`).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="rescue_go">
 <a href="#rescue_go" style="color: inherit; text-decoration: inherit;">Rescue</a>
 </span>
@@ -489,6 +527,15 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The datacenter name to create the server in.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="deleteprotection_nodejs">
+<a href="#deleteprotection_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>Protection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Enable or disable delete protection (Needs to be the same as `rebuild_protection`).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="firewallids_nodejs">
@@ -563,6 +610,15 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
     <dd>{{% md %}}Placement Group ID the server added to on creation.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="rebuildprotection_nodejs">
+<a href="#rebuildprotection_nodejs" style="color: inherit; text-decoration: inherit;">rebuild<wbr>Protection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Enable or disable rebuild protection (Needs to be the same as `delete_protection`).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="rescue_nodejs">
 <a href="#rescue_nodejs" style="color: inherit; text-decoration: inherit;">rescue</a>
 </span>
@@ -628,6 +684,15 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The datacenter name to create the server in.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="delete_protection_python">
+<a href="#delete_protection_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>protection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable or disable delete protection (Needs to be the same as `rebuild_protection`).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="firewall_ids_python">
@@ -700,6 +765,15 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Placement Group ID the server added to on creation.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="rebuild_protection_python">
+<a href="#rebuild_protection_python" style="color: inherit; text-decoration: inherit;">rebuild_<wbr>protection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable or disable rebuild protection (Needs to be the same as `delete_protection`).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rescue_python">
@@ -984,6 +1058,7 @@ Get an existing Server resource's state with the given name, ID, and optional ex
         <span class="nx">backup_window</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">backups</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">datacenter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">delete_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">firewall_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[int]]</span> = None<span class="p">,</span>
         <span class="nx">image</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">ipv4_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -996,6 +1071,7 @@ Get an existing Server resource's state with the given name, ID, and optional ex
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">networks</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServerNetworkArgs]]</span> = None<span class="p">,</span>
         <span class="nx">placement_group_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+        <span class="nx">rebuild_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">rescue</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">server_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">ssh_keys</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
@@ -1140,6 +1216,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The datacenter name to create the server in.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_deleteprotection_csharp">
+<a href="#state_deleteprotection_csharp" style="color: inherit; text-decoration: inherit;">Delete<wbr>Protection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable or disable delete protection (Needs to be the same as `rebuild_protection`).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_firewallids_csharp">
 <a href="#state_firewallids_csharp" style="color: inherit; text-decoration: inherit;">Firewall<wbr>Ids</a>
 </span>
@@ -1248,6 +1333,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Placement Group ID the server added to on creation.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_rebuildprotection_csharp">
+<a href="#state_rebuildprotection_csharp" style="color: inherit; text-decoration: inherit;">Rebuild<wbr>Protection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable or disable rebuild protection (Needs to be the same as `delete_protection`).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_rescue_csharp">
 <a href="#state_rescue_csharp" style="color: inherit; text-decoration: inherit;">Rescue</a>
 </span>
@@ -1322,6 +1416,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The datacenter name to create the server in.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_deleteprotection_go">
+<a href="#state_deleteprotection_go" style="color: inherit; text-decoration: inherit;">Delete<wbr>Protection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable or disable delete protection (Needs to be the same as `rebuild_protection`).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_firewallids_go">
@@ -1432,6 +1535,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Placement Group ID the server added to on creation.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_rebuildprotection_go">
+<a href="#state_rebuildprotection_go" style="color: inherit; text-decoration: inherit;">Rebuild<wbr>Protection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable or disable rebuild protection (Needs to be the same as `delete_protection`).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_rescue_go">
 <a href="#state_rescue_go" style="color: inherit; text-decoration: inherit;">Rescue</a>
 </span>
@@ -1506,6 +1618,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The datacenter name to create the server in.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_deleteprotection_nodejs">
+<a href="#state_deleteprotection_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>Protection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Enable or disable delete protection (Needs to be the same as `rebuild_protection`).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_firewallids_nodejs">
@@ -1616,6 +1737,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Placement Group ID the server added to on creation.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_rebuildprotection_nodejs">
+<a href="#state_rebuildprotection_nodejs" style="color: inherit; text-decoration: inherit;">rebuild<wbr>Protection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Enable or disable rebuild protection (Needs to be the same as `delete_protection`).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_rescue_nodejs">
 <a href="#state_rescue_nodejs" style="color: inherit; text-decoration: inherit;">rescue</a>
 </span>
@@ -1690,6 +1820,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The datacenter name to create the server in.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_delete_protection_python">
+<a href="#state_delete_protection_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>protection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable or disable delete protection (Needs to be the same as `rebuild_protection`).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_firewall_ids_python">
@@ -1798,6 +1937,15 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Placement Group ID the server added to on creation.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_rebuild_protection_python">
+<a href="#state_rebuild_protection_python" style="color: inherit; text-decoration: inherit;">rebuild_<wbr>protection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable or disable rebuild protection (Needs to be the same as `delete_protection`).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rescue_python">

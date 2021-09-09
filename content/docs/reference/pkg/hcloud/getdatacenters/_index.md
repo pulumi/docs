@@ -148,8 +148,8 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
+<dl class="resources-properties"><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="datacenterids_csharp">
 <a href="#datacenterids_csharp" style="color: inherit; text-decoration: inherit;">Datacenter<wbr>Ids</a>
 </span>
@@ -157,12 +157,12 @@ The following arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}(list) List of unique datacenter identifiers.
-{{% /md %}}</dd></dl>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use datacenters list instead{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
+<dl class="resources-properties"><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="datacenterids_go">
 <a href="#datacenterids_go" style="color: inherit; text-decoration: inherit;">Datacenter<wbr>Ids</a>
 </span>
@@ -170,12 +170,12 @@ The following arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}(list) List of unique datacenter identifiers.
-{{% /md %}}</dd></dl>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use datacenters list instead{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
+<dl class="resources-properties"><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="datacenterids_nodejs">
 <a href="#datacenterids_nodejs" style="color: inherit; text-decoration: inherit;">datacenter<wbr>Ids</a>
 </span>
@@ -183,12 +183,12 @@ The following arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}(list) List of unique datacenter identifiers.
-{{% /md %}}</dd></dl>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use datacenters list instead{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
+<dl class="resources-properties"><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="datacenter_ids_python">
 <a href="#datacenter_ids_python" style="color: inherit; text-decoration: inherit;">datacenter_<wbr>ids</a>
 </span>
@@ -196,7 +196,7 @@ The following arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}(list) List of unique datacenter identifiers.
-{{% /md %}}</dd></dl>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use datacenters list instead{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 
@@ -211,6 +211,15 @@ The following output properties are available:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-"
             title="">
+        <span id="datacenters_csharp">
+<a href="#datacenters_csharp" style="color: inherit; text-decoration: inherit;">Datacenters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getdatacentersdatacenter">List&lt;Pulumi.<wbr>HCloud.<wbr>Outputs.<wbr>Get<wbr>Datacenters<wbr>Datacenter&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}(list) List of all datacenters. See `data.hcloud_datacenter` for schema.
+{{% /md %}}</dd><dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="descriptions_csharp">
 <a href="#descriptions_csharp" style="color: inherit; text-decoration: inherit;">Descriptions</a>
 </span>
@@ -218,7 +227,7 @@ The following output properties are available:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}(list) List of all datacenter descriptions.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use datacenters list instead{{% /md %}}</p></dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -227,8 +236,8 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd><dt class="property-"
-            title="">
+{{% /md %}}</dd><dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="names_csharp">
 <a href="#names_csharp" style="color: inherit; text-decoration: inherit;">Names</a>
 </span>
@@ -236,8 +245,8 @@ The following output properties are available:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}(list) List of datacenter names.
-{{% /md %}}</dd><dt class="property-"
-            title="">
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use datacenters list instead{{% /md %}}</p></dd><dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="datacenterids_csharp">
 <a href="#datacenterids_csharp" style="color: inherit; text-decoration: inherit;">Datacenter<wbr>Ids</a>
 </span>
@@ -245,12 +254,21 @@ The following output properties are available:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}(list) List of unique datacenter identifiers.
-{{% /md %}}</dd></dl>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use datacenters list instead{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-"
             title="">
+        <span id="datacenters_go">
+<a href="#datacenters_go" style="color: inherit; text-decoration: inherit;">Datacenters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getdatacentersdatacenter">[]Get<wbr>Datacenters<wbr>Datacenter</a></span>
+    </dt>
+    <dd>{{% md %}}(list) List of all datacenters. See `data.hcloud_datacenter` for schema.
+{{% /md %}}</dd><dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="descriptions_go">
 <a href="#descriptions_go" style="color: inherit; text-decoration: inherit;">Descriptions</a>
 </span>
@@ -258,7 +276,7 @@ The following output properties are available:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}(list) List of all datacenter descriptions.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use datacenters list instead{{% /md %}}</p></dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -267,8 +285,8 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd><dt class="property-"
-            title="">
+{{% /md %}}</dd><dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="names_go">
 <a href="#names_go" style="color: inherit; text-decoration: inherit;">Names</a>
 </span>
@@ -276,8 +294,8 @@ The following output properties are available:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}(list) List of datacenter names.
-{{% /md %}}</dd><dt class="property-"
-            title="">
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use datacenters list instead{{% /md %}}</p></dd><dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="datacenterids_go">
 <a href="#datacenterids_go" style="color: inherit; text-decoration: inherit;">Datacenter<wbr>Ids</a>
 </span>
@@ -285,12 +303,21 @@ The following output properties are available:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}(list) List of unique datacenter identifiers.
-{{% /md %}}</dd></dl>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use datacenters list instead{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-"
             title="">
+        <span id="datacenters_nodejs">
+<a href="#datacenters_nodejs" style="color: inherit; text-decoration: inherit;">datacenters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getdatacentersdatacenter">Get<wbr>Datacenters<wbr>Datacenter[]</a></span>
+    </dt>
+    <dd>{{% md %}}(list) List of all datacenters. See `data.hcloud_datacenter` for schema.
+{{% /md %}}</dd><dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="descriptions_nodejs">
 <a href="#descriptions_nodejs" style="color: inherit; text-decoration: inherit;">descriptions</a>
 </span>
@@ -298,7 +325,7 @@ The following output properties are available:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}(list) List of all datacenter descriptions.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use datacenters list instead{{% /md %}}</p></dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -307,8 +334,8 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd><dt class="property-"
-            title="">
+{{% /md %}}</dd><dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="names_nodejs">
 <a href="#names_nodejs" style="color: inherit; text-decoration: inherit;">names</a>
 </span>
@@ -316,8 +343,8 @@ The following output properties are available:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}(list) List of datacenter names.
-{{% /md %}}</dd><dt class="property-"
-            title="">
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use datacenters list instead{{% /md %}}</p></dd><dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="datacenterids_nodejs">
 <a href="#datacenterids_nodejs" style="color: inherit; text-decoration: inherit;">datacenter<wbr>Ids</a>
 </span>
@@ -325,12 +352,21 @@ The following output properties are available:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}(list) List of unique datacenter identifiers.
-{{% /md %}}</dd></dl>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use datacenters list instead{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-"
             title="">
+        <span id="datacenters_python">
+<a href="#datacenters_python" style="color: inherit; text-decoration: inherit;">datacenters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getdatacentersdatacenter">Sequence[Get<wbr>Datacenters<wbr>Datacenter]</a></span>
+    </dt>
+    <dd>{{% md %}}(list) List of all datacenters. See `data.hcloud_datacenter` for schema.
+{{% /md %}}</dd><dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="descriptions_python">
 <a href="#descriptions_python" style="color: inherit; text-decoration: inherit;">descriptions</a>
 </span>
@@ -338,7 +374,7 @@ The following output properties are available:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}(list) List of all datacenter descriptions.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use datacenters list instead{{% /md %}}</p></dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -347,8 +383,8 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd><dt class="property-"
-            title="">
+{{% /md %}}</dd><dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="names_python">
 <a href="#names_python" style="color: inherit; text-decoration: inherit;">names</a>
 </span>
@@ -356,8 +392,8 @@ The following output properties are available:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}(list) List of datacenter names.
-{{% /md %}}</dd><dt class="property-"
-            title="">
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use datacenters list instead{{% /md %}}</p></dd><dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="datacenter_ids_python">
 <a href="#datacenter_ids_python" style="color: inherit; text-decoration: inherit;">datacenter_<wbr>ids</a>
 </span>
@@ -365,7 +401,225 @@ The following output properties are available:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}(list) List of unique datacenter identifiers.
-{{% /md %}}</dd></dl>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use datacenters list instead{{% /md %}}</p></dd></dl>
+{{% /choosable %}}
+
+
+
+
+## Supporting Types
+
+
+<h4 id="getdatacentersdatacenter">Get<wbr>Datacenters<wbr>Datacenter</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="availableservertypeids_csharp">
+<a href="#availableservertypeids_csharp" style="color: inherit; text-decoration: inherit;">Available<wbr>Server<wbr>Type<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;int&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="supportedservertypeids_csharp">
+<a href="#supportedservertypeids_csharp" style="color: inherit; text-decoration: inherit;">Supported<wbr>Server<wbr>Type<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;int&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="availableservertypeids_go">
+<a href="#availableservertypeids_go" style="color: inherit; text-decoration: inherit;">Available<wbr>Server<wbr>Type<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="supportedservertypeids_go">
+<a href="#supportedservertypeids_go" style="color: inherit; text-decoration: inherit;">Supported<wbr>Server<wbr>Type<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="availableservertypeids_nodejs">
+<a href="#availableservertypeids_nodejs" style="color: inherit; text-decoration: inherit;">available<wbr>Server<wbr>Type<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="supportedservertypeids_nodejs">
+<a href="#supportedservertypeids_nodejs" style="color: inherit; text-decoration: inherit;">supported<wbr>Server<wbr>Type<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="available_server_type_ids_python">
+<a href="#available_server_type_ids_python" style="color: inherit; text-decoration: inherit;">available_<wbr>server_<wbr>type_<wbr>ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[int]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="supported_server_type_ids_python">
+<a href="#supported_server_type_ids_python" style="color: inherit; text-decoration: inherit;">supported_<wbr>server_<wbr>type_<wbr>ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[int]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
