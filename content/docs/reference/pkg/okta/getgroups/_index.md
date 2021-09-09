@@ -59,7 +59,7 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		opt0 := "Engineering - "
-		_, err := okta.GetGroups(ctx, &okta.GetGroupsArgs{
+		_, err := okta.GetGroups(ctx, &GetGroupsArgs{
 			Q: &opt0,
 		}, nil)
 		if err != nil {
@@ -96,7 +96,7 @@ import * as okta from "@pulumi/okta";
 
 const example = pulumi.output(okta.getGroups({
     q: "Engineering - ",
-}, { async: true }));
+}));
 ```
 
 

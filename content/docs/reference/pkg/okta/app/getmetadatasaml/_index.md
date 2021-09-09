@@ -100,7 +100,7 @@ import * as okta from "@pulumi/okta";
 const example = pulumi.output(okta.app.getMetadataSaml({
     appId: "<app id>",
     keyId: "<cert key id>",
-}, { async: true }));
+}));
 ```
 
 

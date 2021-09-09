@@ -58,7 +58,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := okta.GetAppUserAssignments(ctx, &okta.GetAppUserAssignmentsArgs{
+		_, err := okta.GetAppUserAssignments(ctx, &GetAppUserAssignmentsArgs{
 			Id: okta_app_oauth.Test.Id,
 		}, nil)
 		if err != nil {

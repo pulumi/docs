@@ -484,7 +484,7 @@ The SecurePasswordStore resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Allow user to reveal password.
+    <dd>{{% md %}}Allow user to reveal password. It can not be set to `true` if `credentials_scheme` is `"ADMIN_SETS_CREDENTIALS"`, `"SHARED_USERNAME_AND_PASSWORD"` or `"EXTERNAL_PASSWORD_SYNC"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sharedpassword_csharp">
@@ -742,7 +742,7 @@ The SecurePasswordStore resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Allow user to reveal password.
+    <dd>{{% md %}}Allow user to reveal password. It can not be set to `true` if `credentials_scheme` is `"ADMIN_SETS_CREDENTIALS"`, `"SHARED_USERNAME_AND_PASSWORD"` or `"EXTERNAL_PASSWORD_SYNC"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sharedpassword_go">
@@ -1000,7 +1000,7 @@ The SecurePasswordStore resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Allow user to reveal password.
+    <dd>{{% md %}}Allow user to reveal password. It can not be set to `true` if `credentials_scheme` is `"ADMIN_SETS_CREDENTIALS"`, `"SHARED_USERNAME_AND_PASSWORD"` or `"EXTERNAL_PASSWORD_SYNC"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sharedpassword_nodejs">
@@ -1258,7 +1258,7 @@ The SecurePasswordStore resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Allow user to reveal password.
+    <dd>{{% md %}}Allow user to reveal password. It can not be set to `true` if `credentials_scheme` is `"ADMIN_SETS_CREDENTIALS"`, `"SHARED_USERNAME_AND_PASSWORD"` or `"EXTERNAL_PASSWORD_SYNC"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shared_password_python">
@@ -1835,7 +1835,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Allow user to reveal password.
+    <dd>{{% md %}}Allow user to reveal password. It can not be set to `true` if `credentials_scheme` is `"ADMIN_SETS_CREDENTIALS"`, `"SHARED_USERNAME_AND_PASSWORD"` or `"EXTERNAL_PASSWORD_SYNC"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sharedpassword_csharp">
@@ -2120,7 +2120,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Allow user to reveal password.
+    <dd>{{% md %}}Allow user to reveal password. It can not be set to `true` if `credentials_scheme` is `"ADMIN_SETS_CREDENTIALS"`, `"SHARED_USERNAME_AND_PASSWORD"` or `"EXTERNAL_PASSWORD_SYNC"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sharedpassword_go">
@@ -2405,7 +2405,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Allow user to reveal password.
+    <dd>{{% md %}}Allow user to reveal password. It can not be set to `true` if `credentials_scheme` is `"ADMIN_SETS_CREDENTIALS"`, `"SHARED_USERNAME_AND_PASSWORD"` or `"EXTERNAL_PASSWORD_SYNC"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sharedpassword_nodejs">
@@ -2690,7 +2690,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Allow user to reveal password.
+    <dd>{{% md %}}Allow user to reveal password. It can not be set to `true` if `credentials_scheme` is `"ADMIN_SETS_CREDENTIALS"`, `"SHARED_USERNAME_AND_PASSWORD"` or `"EXTERNAL_PASSWORD_SYNC"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_shared_password_python">

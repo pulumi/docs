@@ -88,7 +88,7 @@ example = okta.user.get_user_profile_mapping_source()
 import * as pulumi from "@pulumi/pulumi";
 import * as okta from "@pulumi/okta";
 
-const example = pulumi.output(okta.user.getUserProfileMappingSource({ async: true }));
+const example = pulumi.output(okta.user.getUserProfileMappingSource());
 ```
 
 

@@ -96,7 +96,7 @@ import * as okta from "@pulumi/okta";
 
 const example = pulumi.output(okta.group.getGroup({
     name: "Example App",
-}, { async: true }));
+}));
 ```
 
 

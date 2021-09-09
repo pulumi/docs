@@ -89,7 +89,7 @@ example = okta.group.get_everyone_group()
 import * as pulumi from "@pulumi/pulumi";
 import * as okta from "@pulumi/okta";
 
-const example = pulumi.output(okta.group.getEveryoneGroup({ async: true }));
+const example = pulumi.output(okta.group.getEveryoneGroup());
 ```
 
 

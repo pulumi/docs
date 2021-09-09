@@ -99,7 +99,7 @@ import * as okta from "@pulumi/okta";
 const example = pulumi.output(okta.policy.getPolicy({
     name: "Password Policy Example",
     type: "PASSWORD",
-}, { async: true }));
+}));
 ```
 
 

@@ -96,7 +96,7 @@ import * as okta from "@pulumi/okta";
 
 const test = pulumi.output(okta.app.getOauth({
     label: "Example App",
-}, { async: true }));
+}));
 ```
 
 

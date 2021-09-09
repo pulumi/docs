@@ -55,7 +55,32 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-okta/sdk/v3/go/okta/policy"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := policy.NewPassword(ctx, "example", &policy.PasswordArgs{
+			Description: pulumi.String("Example"),
+			GroupsIncludeds: pulumi.StringArray{
+				pulumi.Any(data.Okta_group.Everyone.Id),
+			},
+			PasswordHistoryCount: pulumi.Int(4),
+			Status:               pulumi.String("ACTIVE"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 
 {{< /example >}}
 

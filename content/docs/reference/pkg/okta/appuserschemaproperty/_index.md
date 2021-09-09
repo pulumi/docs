@@ -161,7 +161,6 @@ const example = new okta.AppUserSchemaProperty("example", {
                           <span class="nx">max_length</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
                           <span class="nx">min_length</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
                           <span class="nx">one_ofs</span><span class="p">:</span> <span class="nx">Optional[Sequence[AppUserSchemaPropertyOneOfArgs]]</span> = None<span class="p">,</span>
-                          <span class="nx">pattern</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                           <span class="nx">permissions</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                           <span class="nx">required</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                           <span class="nx">scope</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -434,15 +433,6 @@ The AppUserSchemaProperty resource accepts the following [input]({{< relref "/do
     <dd>{{% md %}}Array of maps containing a mapping for display name to enum value.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="pattern_csharp">
-<a href="#pattern_csharp" style="color: inherit; text-decoration: inherit;">Pattern</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The validation pattern to use for the subschema. Must be in form of '.+', or '[<pattern>]+' if present.'
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="permissions_csharp">
 <a href="#permissions_csharp" style="color: inherit; text-decoration: inherit;">Permissions</a>
 </span>
@@ -634,15 +624,6 @@ The AppUserSchemaProperty resource accepts the following [input]({{< relref "/do
         <span class="property-type"><a href="#appuserschemapropertyoneof">[]App<wbr>User<wbr>Schema<wbr>Property<wbr>One<wbr>Of<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Array of maps containing a mapping for display name to enum value.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="pattern_go">
-<a href="#pattern_go" style="color: inherit; text-decoration: inherit;">Pattern</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The validation pattern to use for the subschema. Must be in form of '.+', or '[<pattern>]+' if present.'
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="permissions_go">
@@ -838,15 +819,6 @@ The AppUserSchemaProperty resource accepts the following [input]({{< relref "/do
     <dd>{{% md %}}Array of maps containing a mapping for display name to enum value.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="pattern_nodejs">
-<a href="#pattern_nodejs" style="color: inherit; text-decoration: inherit;">pattern</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The validation pattern to use for the subschema. Must be in form of '.+', or '[<pattern>]+' if present.'
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="permissions_nodejs">
 <a href="#permissions_nodejs" style="color: inherit; text-decoration: inherit;">permissions</a>
 </span>
@@ -1040,15 +1012,6 @@ The AppUserSchemaProperty resource accepts the following [input]({{< relref "/do
     <dd>{{% md %}}Array of maps containing a mapping for display name to enum value.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="pattern_python">
-<a href="#pattern_python" style="color: inherit; text-decoration: inherit;">pattern</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The validation pattern to use for the subschema. Must be in form of '.+', or '[<pattern>]+' if present.'
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="permissions_python">
 <a href="#permissions_python" style="color: inherit; text-decoration: inherit;">permissions</a>
 </span>
@@ -1188,7 +1151,6 @@ Get an existing AppUserSchemaProperty resource's state with the given name, ID, 
         <span class="nx">max_length</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">min_length</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">one_ofs</span><span class="p">:</span> <span class="nx">Optional[Sequence[AppUserSchemaPropertyOneOfArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">pattern</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">permissions</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">required</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">scope</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -1426,15 +1388,6 @@ The following state arguments are supported:
     <dd>{{% md %}}Array of maps containing a mapping for display name to enum value.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="state_pattern_csharp">
-<a href="#state_pattern_csharp" style="color: inherit; text-decoration: inherit;">Pattern</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The validation pattern to use for the subschema. Must be in form of '.+', or '[<pattern>]+' if present.'
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="state_permissions_csharp">
 <a href="#state_permissions_csharp" style="color: inherit; text-decoration: inherit;">Permissions</a>
 </span>
@@ -1626,15 +1579,6 @@ The following state arguments are supported:
         <span class="property-type"><a href="#appuserschemapropertyoneof">[]App<wbr>User<wbr>Schema<wbr>Property<wbr>One<wbr>Of<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Array of maps containing a mapping for display name to enum value.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="state_pattern_go">
-<a href="#state_pattern_go" style="color: inherit; text-decoration: inherit;">Pattern</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The validation pattern to use for the subschema. Must be in form of '.+', or '[<pattern>]+' if present.'
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_permissions_go">
@@ -1830,15 +1774,6 @@ The following state arguments are supported:
     <dd>{{% md %}}Array of maps containing a mapping for display name to enum value.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="state_pattern_nodejs">
-<a href="#state_pattern_nodejs" style="color: inherit; text-decoration: inherit;">pattern</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The validation pattern to use for the subschema. Must be in form of '.+', or '[<pattern>]+' if present.'
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="state_permissions_nodejs">
 <a href="#state_permissions_nodejs" style="color: inherit; text-decoration: inherit;">permissions</a>
 </span>
@@ -2030,15 +1965,6 @@ The following state arguments are supported:
         <span class="property-type"><a href="#appuserschemapropertyoneof">Sequence[App<wbr>User<wbr>Schema<wbr>Property<wbr>One<wbr>Of<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Array of maps containing a mapping for display name to enum value.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="state_pattern_python">
-<a href="#state_pattern_python" style="color: inherit; text-decoration: inherit;">pattern</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The validation pattern to use for the subschema. Must be in form of '.+', or '[<pattern>]+' if present.'
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_permissions_python">

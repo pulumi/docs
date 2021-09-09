@@ -59,7 +59,7 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		opt0 := "New"
-		_, err := okta.GetBehaviours(ctx, &okta.GetBehavioursArgs{
+		_, err := okta.GetBehaviours(ctx, &GetBehavioursArgs{
 			Q: &opt0,
 		}, nil)
 		if err != nil {
@@ -96,7 +96,7 @@ import * as okta from "@pulumi/okta";
 
 const example = pulumi.output(okta.getBehaviours({
     q: "New",
-}, { async: true }));
+}));
 ```
 
 
