@@ -553,7 +553,7 @@ The following output properties are available:
 <a href="#results_go" style="color: inherit; text-decoration: inherit;">Results</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getrepositorypullrequestsresult">[]Get<wbr>Repository<wbr>Pull<wbr>Requests<wbr>Result<wbr>Type</a></span>
+        <span class="property-type"><a href="#getrepositorypullrequestsresult">[]Get<wbr>Repository<wbr>Pull<wbr>Requests<wbr>Result</a></span>
     </dt>
     <dd>{{% md %}}Collection of Pull Requests matching the filters. Each of the results conforms to the following scheme:
 {{% /md %}}</dd><dt class="property-"
