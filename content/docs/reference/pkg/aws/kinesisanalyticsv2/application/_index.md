@@ -4132,7 +4132,7 @@ The following state arguments are supported:
 <a href="#input_go" style="color: inherit; text-decoration: inherit;">Input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinput">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinput">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The input stream used by the application.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4141,7 +4141,7 @@ The following state arguments are supported:
 <a href="#outputs_go" style="color: inherit; text-decoration: inherit;">Outputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationoutput">[]Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Output</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationoutput">[]Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Output<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The destination streams used by the application.
 {{% /md %}}</dd><dt class="property-optional"
