@@ -97,9 +97,9 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := cdn.NewRule(ctx, "rule", &cdn.RuleArgs{
 			Actions: pulumi.AnyArray{
-				&cdn.DeliveryRuleResponseHeaderActionArgs{
-					Name: pulumi.String("ModifyResponseHeader"),
-					Parameters: &cdn.HeaderActionParametersArgs{
+				cdn.DeliveryRuleResponseHeaderAction{
+					Name: "ModifyResponseHeader",
+					Parameters: cdn.HeaderActionParameters{
 						HeaderAction: "Overwrite",
 						HeaderName:   "X-CDN",
 						OdataType:    "#Microsoft.Azure.Cdn.Models.DeliveryRuleHeaderActionParameters",
@@ -108,9 +108,9 @@ func main() {
 				},
 			},
 			Conditions: pulumi.AnyArray{
-				&cdn.DeliveryRuleRequestMethodConditionArgs{
-					Name: pulumi.String("RequestMethod"),
-					Parameters: &cdn.RequestMethodMatchConditionParametersArgs{
+				cdn.DeliveryRuleRequestMethodCondition{
+					Name: "RequestMethod",
+					Parameters: cdn.RequestMethodMatchConditionParameters{
 						MatchValues: []string{
 							"GET",
 						},

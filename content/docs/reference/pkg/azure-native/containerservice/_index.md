@@ -16,6 +16,7 @@ Explore the resources and functions of the azure-native.containerservice module.
     <li><a href="managedcluster" title="ManagedCluster"><span class="symbol resource"></span>ManagedCluster</a></li>
     <li><a href="openshiftmanagedcluster" title="OpenShiftManagedCluster"><span class="symbol resource"></span>OpenShiftManagedCluster</a></li>
     <li><a href="privateendpointconnection" title="PrivateEndpointConnection"><span class="symbol resource"></span>PrivateEndpointConnection</a></li>
+    <li><a href="snapshot" title="Snapshot"><span class="symbol resource"></span>Snapshot</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
@@ -25,6 +26,7 @@ Explore the resources and functions of the azure-native.containerservice module.
     <li><a href="getmanagedcluster" title="GetManagedCluster"><span class="symbol function"></span>GetManagedCluster</a></li>
     <li><a href="getopenshiftmanagedcluster" title="GetOpenShiftManagedCluster"><span class="symbol function"></span>GetOpenShiftManagedCluster</a></li>
     <li><a href="getprivateendpointconnection" title="GetPrivateEndpointConnection"><span class="symbol function"></span>GetPrivateEndpointConnection</a></li>
+    <li><a href="getsnapshot" title="GetSnapshot"><span class="symbol function"></span>GetSnapshot</a></li>
     <li><a href="listmanagedclusteraccessprofile" title="ListManagedClusterAccessProfile"><span class="symbol function"></span>ListManagedClusterAccessProfile</a></li>
     <li><a href="listmanagedclusteradmincredentials" title="ListManagedClusterAdminCredentials"><span class="symbol function"></span>ListManagedClusterAdminCredentials</a></li>
     <li><a href="listmanagedclustermonitoringusercredentials" title="ListManagedClusterMonitoringUserCredentials"><span class="symbol function"></span>ListManagedClusterMonitoringUserCredentials</a></li>
@@ -38,6 +40,6 @@ Explore the resources and functions of the azure-native.containerservice module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.26.0</dd>
+	<dd>1.27.0</dd>
 </dl>
 

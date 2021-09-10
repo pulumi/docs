@@ -753,7 +753,85 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewGalleryImageVersion(ctx, "galleryImageVersion", &compute.GalleryImageVersionArgs{
+			GalleryImageName:        pulumi.String("myGalleryImageName"),
+			GalleryImageVersionName: pulumi.String("1.0.0"),
+			GalleryName:             pulumi.String("myGalleryName"),
+			Location:                pulumi.String("West US"),
+			PublishingProfile: &compute.GalleryImageVersionPublishingProfileArgs{
+				TargetRegions: compute.TargetRegionArray{
+					&compute.TargetRegionArgs{
+						Encryption: &compute.EncryptionImagesArgs{
+							DataDiskImages: compute.DataDiskImageEncryptionArray{
+								&compute.DataDiskImageEncryptionArgs{
+									DiskEncryptionSetId: pulumi.String("/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myWestUSDiskEncryptionSet"),
+									Lun:                 pulumi.Int(1),
+								},
+							},
+							OsDiskImage: &compute.OSDiskImageEncryptionArgs{
+								DiskEncryptionSetId: pulumi.String("/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myWestUSDiskEncryptionSet"),
+							},
+						},
+						Name:                 pulumi.String("West US"),
+						RegionalReplicaCount: pulumi.Int(1),
+					},
+					&compute.TargetRegionArgs{
+						Encryption: &compute.EncryptionImagesArgs{
+							DataDiskImages: compute.DataDiskImageEncryptionArray{
+								&compute.DataDiskImageEncryptionArgs{
+									DiskEncryptionSetId: pulumi.String("/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myEastUSDiskEncryptionSet"),
+									Lun:                 pulumi.Int(1),
+								},
+							},
+							OsDiskImage: &compute.OSDiskImageEncryptionArgs{
+								DiskEncryptionSetId: pulumi.String("/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myEastUSDiskEncryptionSet"),
+							},
+						},
+						Name:                 pulumi.String("East US"),
+						RegionalReplicaCount: pulumi.Int(2),
+						StorageAccountType:   pulumi.String("Standard_ZRS"),
+					},
+				},
+			},
+			ResourceGroupName: pulumi.String("myResourceGroup"),
+			StorageProfile: &compute.GalleryImageVersionStorageProfileArgs{
+				DataDiskImages: compute.GalleryDataDiskImageArray{
+					&compute.GalleryDataDiskImageArgs{
+						HostCaching: "None",
+						Lun:         pulumi.Int(1),
+						Source: &compute.GalleryArtifactVersionSourceArgs{
+							Id: pulumi.String("/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Compute/disks/{dataDiskName}"),
+						},
+					},
+				},
+				OsDiskImage: &compute.GalleryOSDiskImageArgs{
+					HostCaching: "ReadOnly",
+					Source: &compute.GalleryArtifactVersionSourceArgs{
+						Id: pulumi.String("/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Compute/snapshots/{osSnapshotName}"),
+					},
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -1298,7 +1376,76 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewGalleryImageVersion(ctx, "galleryImageVersion", &compute.GalleryImageVersionArgs{
+			GalleryImageName:        pulumi.String("myGalleryImageName"),
+			GalleryImageVersionName: pulumi.String("1.0.0"),
+			GalleryName:             pulumi.String("myGalleryName"),
+			Location:                pulumi.String("West US"),
+			PublishingProfile: &compute.GalleryImageVersionPublishingProfileArgs{
+				TargetRegions: compute.TargetRegionArray{
+					&compute.TargetRegionArgs{
+						Encryption: &compute.EncryptionImagesArgs{
+							DataDiskImages: compute.DataDiskImageEncryptionArray{
+								&compute.DataDiskImageEncryptionArgs{
+									DiskEncryptionSetId: pulumi.String("/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myOtherDiskEncryptionSet"),
+									Lun:                 pulumi.Int(1),
+								},
+							},
+							OsDiskImage: &compute.OSDiskImageEncryptionArgs{
+								DiskEncryptionSetId: pulumi.String("/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myDiskEncryptionSet"),
+							},
+						},
+						Name:                 pulumi.String("West US"),
+						RegionalReplicaCount: pulumi.Int(1),
+					},
+					&compute.TargetRegionArgs{
+						Name:                 pulumi.String("East US"),
+						RegionalReplicaCount: pulumi.Int(2),
+						StorageAccountType:   pulumi.String("Standard_ZRS"),
+					},
+				},
+			},
+			ResourceGroupName: pulumi.String("myResourceGroup"),
+			StorageProfile: &compute.GalleryImageVersionStorageProfileArgs{
+				DataDiskImages: compute.GalleryDataDiskImageArray{
+					&compute.GalleryDataDiskImageArgs{
+						HostCaching: "None",
+						Lun:         pulumi.Int(1),
+						Source: &compute.GalleryArtifactVersionSourceArgs{
+							Id:  pulumi.String("/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Storage/storageAccounts/{storageAccount}"),
+							Uri: pulumi.String("https://gallerysourcencus.blob.core.windows.net/myvhds/Windows-Server-2012-R2-20171216-en.us-128GB.vhd"),
+						},
+					},
+				},
+				OsDiskImage: &compute.GalleryOSDiskImageArgs{
+					HostCaching: "ReadOnly",
+					Source: &compute.GalleryArtifactVersionSourceArgs{
+						Id:  pulumi.String("/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Storage/storageAccounts/{storageAccount}"),
+						Uri: pulumi.String("https://gallerysourcencus.blob.core.windows.net/myvhds/Windows-Server-2012-R2-20171216-en.us-128GB.vhd"),
+					},
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 

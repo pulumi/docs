@@ -73,9 +73,9 @@ func main() {
 		_, err := recoveryservices.NewProtectionContainer(ctx, "protectionContainer", &recoveryservices.ProtectionContainerArgs{
 			ContainerName: pulumi.String("VMAppContainer;Compute;testRG;testSQL"),
 			FabricName:    pulumi.String("Azure"),
-			Properties: &recoveryservices.AzureVMAppContainerProtectionContainerArgs{
+			Properties: recoveryservices.AzureVMAppContainerProtectionContainer{
 				BackupManagementType: "AzureWorkload",
-				ContainerType:        pulumi.String("VMAppContainer"),
+				ContainerType:        "VMAppContainer",
 				FriendlyName:         "testSQL",
 				SourceResourceId:     "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/testRG/providers/Microsoft.Compute/virtualMachines/testSQL",
 			},

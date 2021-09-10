@@ -57,36 +57,7 @@ class MyStack : Stack
 
 {{< example go >}}
 
-
-```go
-package main
-
-import (
-	documentdb "github.com/pulumi/pulumi-azure-native/sdk/go/azure/documentdb"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := documentdb.NewService(ctx, "service", &documentdb.ServiceArgs{
-			AccountName: pulumi.String("ddb1"),
-			Properties: pulumi.Any{
-				InstanceCount: pulumi.Int(1),
-				InstanceSize:  pulumi.String("Cosmos.D4s"),
-				ServiceType:   pulumi.String("DataTransfer"),
-			},
-			ResourceGroupName: pulumi.String("rg1"),
-			ServiceName:       pulumi.String("DataTransfer"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
+Coming soon!
 
 {{< /example >}}
 
@@ -177,36 +148,7 @@ class MyStack : Stack
 
 {{< example go >}}
 
-
-```go
-package main
-
-import (
-	documentdb "github.com/pulumi/pulumi-azure-native/sdk/go/azure/documentdb"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := documentdb.NewService(ctx, "service", &documentdb.ServiceArgs{
-			AccountName: pulumi.String("ddb1"),
-			Properties: pulumi.Any{
-				InstanceCount: pulumi.Int(1),
-				InstanceSize:  pulumi.String("Cosmos.D4s"),
-				ServiceType:   pulumi.String("SqlDedicatedGateway"),
-			},
-			ResourceGroupName: pulumi.String("rg1"),
-			ServiceName:       pulumi.String("SqlDedicatedGateway"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
+Coming soon!
 
 {{< /example >}}
 

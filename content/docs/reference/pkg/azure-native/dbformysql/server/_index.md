@@ -81,8 +81,8 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := dbformysql.NewServer(ctx, "server", &dbformysql.ServerArgs{
 			Location: pulumi.String("brazilsouth"),
-			Properties: &dbformysql.ServerPropertiesForRestoreArgs{
-				CreateMode:         pulumi.String("PointInTimeRestore"),
+			Properties: dbformysql.ServerPropertiesForRestore{
+				CreateMode:         "PointInTimeRestore",
 				RestorePointInTime: "2017-12-14T00:00:37.467Z",
 				SourceServerId:     "/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/SourceResourceGroup/providers/Microsoft.DBforMySQL/servers/sourceserver",
 			},
@@ -246,12 +246,12 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := dbformysql.NewServer(ctx, "server", &dbformysql.ServerArgs{
 			Location: pulumi.String("westus"),
-			Properties: &dbformysql.ServerPropertiesForDefaultCreateArgs{
+			Properties: dbformysql.ServerPropertiesForDefaultCreate{
 				AdministratorLogin:         "cloudsa",
 				AdministratorLoginPassword: "<administratorLoginPassword>",
-				CreateMode:                 pulumi.String("Default"),
+				CreateMode:                 "Default",
 				SslEnforcement:             "Enabled",
-				StorageProfile: &dbformysql.StorageProfileArgs{
+				StorageProfile: dbformysql.StorageProfile{
 					BackupRetentionDays: 7,
 					GeoRedundantBackup:  "Enabled",
 					StorageMB:           128000,
@@ -410,8 +410,8 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := dbformysql.NewServer(ctx, "server", &dbformysql.ServerArgs{
 			Location: pulumi.String("westus"),
-			Properties: &dbformysql.ServerPropertiesForReplicaArgs{
-				CreateMode:     pulumi.String("Replica"),
+			Properties: dbformysql.ServerPropertiesForReplica{
+				CreateMode:     "Replica",
 				SourceServerId: "/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/MasterResourceGroup/providers/Microsoft.DBforMySQL/servers/masterserver",
 			},
 			ResourceGroupName: pulumi.String("TargetResourceGroup"),
@@ -537,8 +537,8 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := dbformysql.NewServer(ctx, "server", &dbformysql.ServerArgs{
 			Location: pulumi.String("westus"),
-			Properties: &dbformysql.ServerPropertiesForGeoRestoreArgs{
-				CreateMode:     pulumi.String("GeoRestore"),
+			Properties: dbformysql.ServerPropertiesForGeoRestore{
+				CreateMode:     "GeoRestore",
 				SourceServerId: "/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/SourceResourceGroup/providers/Microsoft.DBforMySQL/servers/sourceserver",
 			},
 			ResourceGroupName: pulumi.String("TargetResourceGroup"),

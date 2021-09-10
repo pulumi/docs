@@ -70,9 +70,9 @@ func main() {
 		_, err := datafactory.NewIntegrationRuntime(ctx, "integrationRuntime", &datafactory.IntegrationRuntimeArgs{
 			FactoryName:            pulumi.String("exampleFactoryName"),
 			IntegrationRuntimeName: pulumi.String("exampleIntegrationRuntime"),
-			Properties: &datafactory.SelfHostedIntegrationRuntimeArgs{
+			Properties: datafactory.SelfHostedIntegrationRuntime{
 				Description: "A selfhosted integration runtime",
-				Type:        pulumi.String("SelfHosted"),
+				Type:        "SelfHosted",
 			},
 			ResourceGroupName: pulumi.String("exampleResourceGroup"),
 		})

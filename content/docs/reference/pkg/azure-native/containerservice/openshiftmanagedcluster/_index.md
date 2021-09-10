@@ -115,83 +115,7 @@ class MyStack : Stack
 
 {{< example go >}}
 
-
-```go
-package main
-
-import (
-	containerservice "github.com/pulumi/pulumi-azure-native/sdk/go/azure/containerservice"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := containerservice.NewOpenShiftManagedCluster(ctx, "openShiftManagedCluster", &containerservice.OpenShiftManagedClusterArgs{
-			AgentPoolProfiles: []containerservice.OpenShiftManagedClusterAgentPoolProfileArgs{
-				&containerservice.OpenShiftManagedClusterAgentPoolProfileArgs{
-					Count:      pulumi.Int(2),
-					Name:       pulumi.String("infra"),
-					OsType:     pulumi.String("Linux"),
-					Role:       pulumi.String("infra"),
-					SubnetCidr: pulumi.String("10.0.0.0/24"),
-					VmSize:     pulumi.String("Standard_D4s_v3"),
-				},
-				&containerservice.OpenShiftManagedClusterAgentPoolProfileArgs{
-					Count:      pulumi.Int(4),
-					Name:       pulumi.String("compute"),
-					OsType:     pulumi.String("Linux"),
-					Role:       pulumi.String("compute"),
-					SubnetCidr: pulumi.String("10.0.0.0/24"),
-					VmSize:     pulumi.String("Standard_D4s_v3"),
-				},
-			},
-			AuthProfile: &containerservice.OpenShiftManagedClusterAuthProfileArgs{
-				IdentityProviders: containerservice.OpenShiftManagedClusterIdentityProviderArray{
-					&containerservice.OpenShiftManagedClusterIdentityProviderArgs{
-						Name: pulumi.String("Azure AD"),
-						Provider: &containerservice.OpenShiftManagedClusterAADIdentityProviderArgs{
-							ClientId:             pulumi.String("clientId"),
-							CustomerAdminGroupId: pulumi.String("customerAdminGroupId"),
-							Kind:                 pulumi.String("AADIdentityProvider"),
-							Secret:               pulumi.String("secret"),
-							TenantId:             pulumi.String("tenantId"),
-						},
-					},
-				},
-			},
-			Location: pulumi.String("location1"),
-			MasterPoolProfile: &containerservice.OpenShiftManagedClusterMasterPoolProfileArgs{
-				Count:      pulumi.Int(3),
-				Name:       pulumi.String("master"),
-				OsType:     pulumi.String("Linux"),
-				SubnetCidr: pulumi.String("10.0.0.0/24"),
-				VmSize:     pulumi.String("Standard_D4s_v3"),
-			},
-			NetworkProfile: &containerservice.NetworkProfileArgs{
-				VnetCidr: pulumi.String("10.0.0.0/8"),
-			},
-			OpenShiftVersion:  pulumi.String("v3.11"),
-			ResourceGroupName: pulumi.String("rg1"),
-			ResourceName:      pulumi.String("clustername1"),
-			RouterProfiles: []containerservice.OpenShiftRouterProfileArgs{
-				&containerservice.OpenShiftRouterProfileArgs{
-					Name: pulumi.String("default"),
-				},
-			},
-			Tags: pulumi.StringMap{
-				"archv2": pulumi.String(""),
-				"tier":   pulumi.String("production"),
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
+Coming soon!
 
 {{< /example >}}
 
@@ -225,13 +149,13 @@ open_shift_managed_cluster = azure_native.containerservice.OpenShiftManagedClust
     auth_profile=azure_native.containerservice.OpenShiftManagedClusterAuthProfileArgs(
         identity_providers=[azure_native.containerservice.OpenShiftManagedClusterIdentityProviderArgs(
             name="Azure AD",
-            provider=azure_native.containerservice.OpenShiftManagedClusterAADIdentityProviderArgs(
-                client_id="clientId",
-                customer_admin_group_id="customerAdminGroupId",
-                kind="AADIdentityProvider",
-                secret="secret",
-                tenant_id="tenantId",
-            ),
+            provider={
+                "clientId": "clientId",
+                "customerAdminGroupId": "customerAdminGroupId",
+                "kind": "AADIdentityProvider",
+                "secret": "secret",
+                "tenantId": "tenantId",
+            },
         )],
     ),
     location="location1",

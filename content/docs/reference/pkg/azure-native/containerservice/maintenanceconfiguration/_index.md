@@ -673,7 +673,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The UTC timestamp of resource creation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdby_csharp">
 <a href="#createdby_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
@@ -725,7 +725,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The UTC timestamp of resource creation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdby_go">
 <a href="#createdby_go" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
@@ -777,7 +777,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The UTC timestamp of resource creation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdby_nodejs">
 <a href="#createdby_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By</a>
@@ -829,7 +829,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The UTC timestamp of resource creation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="created_by_python">
 <a href="#created_by_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by</a>

@@ -75,9 +75,9 @@ func main() {
 		_, err := botservice.NewChannel(ctx, "channel", &botservice.ChannelArgs{
 			ChannelName: pulumi.String("AlexaChannel"),
 			Location:    pulumi.String("global"),
-			Properties: &botservice.AlexaChannelArgs{
-				ChannelName: pulumi.String("AlexaChannel"),
-				Properties: &botservice.AlexaChannelPropertiesArgs{
+			Properties: botservice.AlexaChannel{
+				ChannelName: "AlexaChannel",
+				Properties: botservice.AlexaChannelProperties{
 					AlexaSkillId: "XAlexaSkillIdX",
 					IsEnabled:    true,
 				},
@@ -209,9 +209,9 @@ func main() {
 		_, err := botservice.NewChannel(ctx, "channel", &botservice.ChannelArgs{
 			ChannelName: pulumi.String("EmailChannel"),
 			Location:    pulumi.String("global"),
-			Properties: &botservice.EmailChannelArgs{
-				ChannelName: pulumi.String("EmailChannel"),
-				Properties: &botservice.EmailChannelPropertiesArgs{
+			Properties: botservice.EmailChannel{
+				ChannelName: "EmailChannel",
+				Properties: botservice.EmailChannelProperties{
 					EmailAddress: "a@b.com",
 					IsEnabled:    true,
 					Password:     "pwd",
@@ -346,9 +346,9 @@ func main() {
 		_, err := botservice.NewChannel(ctx, "channel", &botservice.ChannelArgs{
 			ChannelName: pulumi.String("DirectLineSpeechChannel"),
 			Location:    pulumi.String("global"),
-			Properties: &botservice.DirectLineSpeechChannelArgs{
-				ChannelName: pulumi.String("DirectLineSpeechChannel"),
-				Properties: &botservice.DirectLineSpeechChannelPropertiesArgs{
+			Properties: botservice.DirectLineSpeechChannel{
+				ChannelName: "DirectLineSpeechChannel",
+				Properties: botservice.DirectLineSpeechChannelProperties{
 					CognitiveServiceRegion:          "XcognitiveServiceRegionX",
 					CognitiveServiceSubscriptionKey: "XcognitiveServiceSubscriptionKeyX",
 					IsEnabled:                       true,
@@ -488,11 +488,11 @@ func main() {
 		_, err := botservice.NewChannel(ctx, "channel", &botservice.ChannelArgs{
 			ChannelName: pulumi.String("LineChannel"),
 			Location:    pulumi.String("global"),
-			Properties: &botservice.LineChannelArgs{
-				ChannelName: pulumi.String("LineChannel"),
-				Properties: &botservice.LineChannelPropertiesArgs{
-					LineRegistrations: []botservice.LineRegistrationArgs{
-						&botservice.LineRegistrationArgs{
+			Properties: botservice.LineChannel{
+				ChannelName: "LineChannel",
+				Properties: botservice.LineChannelProperties{
+					LineRegistrations: []botservice.LineRegistration{
+						botservice.LineRegistration{
 							ChannelAccessToken: "channelAccessToken",
 							ChannelSecret:      "channelSecret",
 						},

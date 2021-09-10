@@ -56,7 +56,35 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	servicebus "github.com/pulumi/pulumi-azure-native/sdk/go/azure/servicebus"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := servicebus.NewNamespaceAuthorizationRule(ctx, "namespaceAuthorizationRule", &servicebus.NamespaceAuthorizationRuleArgs{
+			AuthorizationRuleName: pulumi.String("sdk-AuthRules-1788"),
+			NamespaceName:         pulumi.String("sdk-Namespace-6914"),
+			ResourceGroupName:     pulumi.String("ArunMonocle"),
+			Rights: servicebus.AccessRightsArray{
+				"Listen",
+				"Send",
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 

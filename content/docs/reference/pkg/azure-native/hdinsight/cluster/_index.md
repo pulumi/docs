@@ -182,7 +182,133 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	hdinsight "github.com/pulumi/pulumi-azure-native/sdk/go/azure/hdinsight"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := hdinsight.NewCluster(ctx, "cluster", &hdinsight.ClusterArgs{
+			ClusterName: pulumi.String("cluster1"),
+			Properties: &hdinsight.ClusterCreatePropertiesArgs{
+				ClusterDefinition: &hdinsight.ClusterDefinitionArgs{
+					ComponentVersion: pulumi.StringMap{
+						"Hadoop": pulumi.String("2.7"),
+					},
+					Configurations: pulumi.Any{
+						Gateway: map[string]interface{}{
+							"restAuthCredential.isEnabled": true,
+							"restAuthCredential.password":  "**********",
+							"restAuthCredential.username":  "admin",
+						},
+					},
+					Kind: pulumi.String("hadoop"),
+				},
+				ClusterVersion: pulumi.String("3.6"),
+				ComputeProfile: &hdinsight.ComputeProfileArgs{
+					Roles: hdinsight.RoleArray{
+						&hdinsight.RoleArgs{
+							AutoscaleConfiguration: &hdinsight.AutoscaleArgs{
+								Recurrence: &hdinsight.AutoscaleRecurrenceArgs{
+									Schedule: hdinsight.AutoscaleScheduleArray{
+										&hdinsight.AutoscaleScheduleArgs{
+											Days: hdinsight.DaysOfWeekArray{
+												"Monday",
+												"Tuesday",
+												"Wednesday",
+												"Thursday",
+												"Friday",
+											},
+											TimeAndCapacity: &hdinsight.AutoscaleTimeAndCapacityArgs{
+												MaxInstanceCount: pulumi.Int(3),
+												MinInstanceCount: pulumi.Int(3),
+												Time:             pulumi.String("09:00"),
+											},
+										},
+										&hdinsight.AutoscaleScheduleArgs{
+											Days: hdinsight.DaysOfWeekArray{
+												"Monday",
+												"Tuesday",
+												"Wednesday",
+												"Thursday",
+												"Friday",
+											},
+											TimeAndCapacity: &hdinsight.AutoscaleTimeAndCapacityArgs{
+												MaxInstanceCount: pulumi.Int(6),
+												MinInstanceCount: pulumi.Int(6),
+												Time:             pulumi.String("18:00"),
+											},
+										},
+										&hdinsight.AutoscaleScheduleArgs{
+											Days: hdinsight.DaysOfWeekArray{
+												"Saturday",
+												"Sunday",
+											},
+											TimeAndCapacity: &hdinsight.AutoscaleTimeAndCapacityArgs{
+												MaxInstanceCount: pulumi.Int(2),
+												MinInstanceCount: pulumi.Int(2),
+												Time:             pulumi.String("09:00"),
+											},
+										},
+										&hdinsight.AutoscaleScheduleArgs{
+											Days: hdinsight.DaysOfWeekArray{
+												"Saturday",
+												"Sunday",
+											},
+											TimeAndCapacity: &hdinsight.AutoscaleTimeAndCapacityArgs{
+												MaxInstanceCount: pulumi.Int(4),
+												MinInstanceCount: pulumi.Int(4),
+												Time:             pulumi.String("18:00"),
+											},
+										},
+									},
+									TimeZone: pulumi.String("China Standard Time"),
+								},
+							},
+							HardwareProfile: &hdinsight.HardwareProfileArgs{
+								VmSize: pulumi.String("Standard_D4_V2"),
+							},
+							Name: pulumi.String("workernode"),
+							OsProfile: &hdinsight.OsProfileArgs{
+								LinuxOperatingSystemProfile: &hdinsight.LinuxOperatingSystemProfileArgs{
+									Password: pulumi.String("**********"),
+									Username: pulumi.String("sshuser"),
+								},
+							},
+							ScriptActions:       hdinsight.ScriptActionArray{},
+							TargetInstanceCount: pulumi.Int(4),
+						},
+					},
+				},
+				OsType: "Linux",
+				StorageProfile: &hdinsight.StorageProfileArgs{
+					Storageaccounts: hdinsight.StorageAccountArray{
+						&hdinsight.StorageAccountArgs{
+							Container: pulumi.String("hdinsight-autoscale-tes-2019-06-18t05-49-16-591z"),
+							IsDefault: pulumi.Bool(true),
+							Key:       pulumi.String("storagekey"),
+							Name:      pulumi.String("mystorage.blob.core.windows.net"),
+						},
+					},
+				},
+				Tier: "Standard",
+			},
+			ResourceGroupName: pulumi.String("rg1"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -548,7 +674,104 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	hdinsight "github.com/pulumi/pulumi-azure-native/sdk/go/azure/hdinsight"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := hdinsight.NewCluster(ctx, "cluster", &hdinsight.ClusterArgs{
+			ClusterName: pulumi.String("cluster1"),
+			Properties: &hdinsight.ClusterCreatePropertiesArgs{
+				ClusterDefinition: &hdinsight.ClusterDefinitionArgs{
+					Configurations: pulumi.Any{
+						Gateway: map[string]interface{}{
+							"restAuthCredential.isEnabled": "true",
+							"restAuthCredential.password":  "**********",
+							"restAuthCredential.username":  "admin",
+						},
+					},
+					Kind: pulumi.String("Hadoop"),
+				},
+				ClusterVersion: pulumi.String("3.6"),
+				ComputeProfile: &hdinsight.ComputeProfileArgs{
+					Roles: hdinsight.RoleArray{
+						&hdinsight.RoleArgs{
+							HardwareProfile: &hdinsight.HardwareProfileArgs{
+								VmSize: pulumi.String("Standard_D3_V2"),
+							},
+							MinInstanceCount: pulumi.Int(1),
+							Name:             pulumi.String("headnode"),
+							OsProfile: &hdinsight.OsProfileArgs{
+								LinuxOperatingSystemProfile: &hdinsight.LinuxOperatingSystemProfileArgs{
+									Password: pulumi.String("**********"),
+									Username: pulumi.String("sshuser"),
+								},
+							},
+							TargetInstanceCount: pulumi.Int(2),
+						},
+						&hdinsight.RoleArgs{
+							HardwareProfile: &hdinsight.HardwareProfileArgs{
+								VmSize: pulumi.String("Standard_D3_V2"),
+							},
+							MinInstanceCount: pulumi.Int(1),
+							Name:             pulumi.String("workernode"),
+							OsProfile: &hdinsight.OsProfileArgs{
+								LinuxOperatingSystemProfile: &hdinsight.LinuxOperatingSystemProfileArgs{
+									Password: pulumi.String("**********"),
+									Username: pulumi.String("sshuser"),
+								},
+							},
+							TargetInstanceCount: pulumi.Int(4),
+						},
+						&hdinsight.RoleArgs{
+							HardwareProfile: &hdinsight.HardwareProfileArgs{
+								VmSize: pulumi.String("Small"),
+							},
+							MinInstanceCount: pulumi.Int(1),
+							Name:             pulumi.String("zookeepernode"),
+							OsProfile: &hdinsight.OsProfileArgs{
+								LinuxOperatingSystemProfile: &hdinsight.LinuxOperatingSystemProfileArgs{
+									Password: pulumi.String("**********"),
+									Username: pulumi.String("sshuser"),
+								},
+							},
+							TargetInstanceCount: pulumi.Int(3),
+						},
+					},
+				},
+				OsType: "Linux",
+				StorageProfile: &hdinsight.StorageProfileArgs{
+					Storageaccounts: hdinsight.StorageAccountArray{
+						&hdinsight.StorageAccountArgs{
+							FileSystem: pulumi.String("default"),
+							IsDefault:  pulumi.Bool(true),
+							Key:        pulumi.String("storagekey"),
+							Name:       pulumi.String("mystorage.dfs.core.windows.net"),
+						},
+					},
+				},
+				Tier: "Standard",
+			},
+			ResourceGroupName: pulumi.String("rg1"),
+			Tags: pulumi.StringMap{
+				"key1": pulumi.String("val1"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -860,7 +1083,104 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	hdinsight "github.com/pulumi/pulumi-azure-native/sdk/go/azure/hdinsight"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := hdinsight.NewCluster(ctx, "cluster", &hdinsight.ClusterArgs{
+			ClusterName: pulumi.String("cluster1"),
+			Properties: &hdinsight.ClusterCreatePropertiesArgs{
+				ClusterDefinition: &hdinsight.ClusterDefinitionArgs{
+					Configurations: pulumi.Any{
+						Gateway: map[string]interface{}{
+							"restAuthCredential.isEnabled": "true",
+							"restAuthCredential.password":  "**********",
+							"restAuthCredential.username":  "admin",
+						},
+					},
+					Kind: pulumi.String("Hadoop"),
+				},
+				ClusterVersion: pulumi.String("3.5"),
+				ComputeProfile: &hdinsight.ComputeProfileArgs{
+					Roles: hdinsight.RoleArray{
+						&hdinsight.RoleArgs{
+							HardwareProfile: &hdinsight.HardwareProfileArgs{
+								VmSize: pulumi.String("Standard_D3_V2"),
+							},
+							MinInstanceCount: pulumi.Int(1),
+							Name:             pulumi.String("headnode"),
+							OsProfile: &hdinsight.OsProfileArgs{
+								LinuxOperatingSystemProfile: &hdinsight.LinuxOperatingSystemProfileArgs{
+									Password: pulumi.String("**********"),
+									Username: pulumi.String("sshuser"),
+								},
+							},
+							TargetInstanceCount: pulumi.Int(2),
+						},
+						&hdinsight.RoleArgs{
+							HardwareProfile: &hdinsight.HardwareProfileArgs{
+								VmSize: pulumi.String("Standard_D3_V2"),
+							},
+							MinInstanceCount: pulumi.Int(1),
+							Name:             pulumi.String("workernode"),
+							OsProfile: &hdinsight.OsProfileArgs{
+								LinuxOperatingSystemProfile: &hdinsight.LinuxOperatingSystemProfileArgs{
+									Password: pulumi.String("**********"),
+									Username: pulumi.String("sshuser"),
+								},
+							},
+							TargetInstanceCount: pulumi.Int(4),
+						},
+						&hdinsight.RoleArgs{
+							HardwareProfile: &hdinsight.HardwareProfileArgs{
+								VmSize: pulumi.String("Small"),
+							},
+							MinInstanceCount: pulumi.Int(1),
+							Name:             pulumi.String("zookeepernode"),
+							OsProfile: &hdinsight.OsProfileArgs{
+								LinuxOperatingSystemProfile: &hdinsight.LinuxOperatingSystemProfileArgs{
+									Password: pulumi.String("**********"),
+									Username: pulumi.String("sshuser"),
+								},
+							},
+							TargetInstanceCount: pulumi.Int(3),
+						},
+					},
+				},
+				OsType: "Linux",
+				StorageProfile: &hdinsight.StorageProfileArgs{
+					Storageaccounts: hdinsight.StorageAccountArray{
+						&hdinsight.StorageAccountArgs{
+							Container: pulumi.String("containername"),
+							IsDefault: pulumi.Bool(true),
+							Key:       pulumi.String("storagekey"),
+							Name:      pulumi.String("mystorage.blob.core.windows.net"),
+						},
+					},
+				},
+				Tier: "Standard",
+			},
+			ResourceGroupName: pulumi.String("rg1"),
+			Tags: pulumi.StringMap{
+				"key1": pulumi.String("val1"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -1181,7 +1501,110 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	hdinsight "github.com/pulumi/pulumi-azure-native/sdk/go/azure/hdinsight"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := hdinsight.NewCluster(ctx, "cluster", &hdinsight.ClusterArgs{
+			ClusterName: pulumi.String("cluster1"),
+			Properties: &hdinsight.ClusterCreatePropertiesArgs{
+				ClusterDefinition: &hdinsight.ClusterDefinitionArgs{
+					Configurations: pulumi.Any{
+						Gateway: map[string]interface{}{
+							"restAuthCredential.isEnabled": true,
+							"restAuthCredential.password":  "**********",
+							"restAuthCredential.username":  "admin",
+						},
+					},
+					Kind: pulumi.String("Hadoop"),
+				},
+				ClusterVersion: pulumi.String("3.5"),
+				ComputeProfile: &hdinsight.ComputeProfileArgs{
+					Roles: hdinsight.RoleArray{
+						&hdinsight.RoleArgs{
+							HardwareProfile: &hdinsight.HardwareProfileArgs{
+								VmSize: pulumi.String("Standard_D3_V2"),
+							},
+							MinInstanceCount: pulumi.Int(1),
+							Name:             pulumi.String("headnode"),
+							OsProfile: &hdinsight.OsProfileArgs{
+								LinuxOperatingSystemProfile: &hdinsight.LinuxOperatingSystemProfileArgs{
+									SshProfile: &hdinsight.SshProfileArgs{
+										PublicKeys: hdinsight.SshPublicKeyArray{
+											&hdinsight.SshPublicKeyArgs{
+												CertificateData: pulumi.String("**********"),
+											},
+										},
+									},
+									Username: pulumi.String("sshuser"),
+								},
+							},
+							TargetInstanceCount: pulumi.Int(2),
+						},
+						&hdinsight.RoleArgs{
+							HardwareProfile: &hdinsight.HardwareProfileArgs{
+								VmSize: pulumi.String("Standard_D3_V2"),
+							},
+							MinInstanceCount: pulumi.Int(1),
+							Name:             pulumi.String("workernode"),
+							OsProfile: &hdinsight.OsProfileArgs{
+								LinuxOperatingSystemProfile: &hdinsight.LinuxOperatingSystemProfileArgs{
+									Password: pulumi.String("**********"),
+									Username: pulumi.String("sshuser"),
+								},
+							},
+							TargetInstanceCount: pulumi.Int(4),
+						},
+						&hdinsight.RoleArgs{
+							HardwareProfile: &hdinsight.HardwareProfileArgs{
+								VmSize: pulumi.String("Small"),
+							},
+							MinInstanceCount: pulumi.Int(1),
+							Name:             pulumi.String("zookeepernode"),
+							OsProfile: &hdinsight.OsProfileArgs{
+								LinuxOperatingSystemProfile: &hdinsight.LinuxOperatingSystemProfileArgs{
+									Password: pulumi.String("**********"),
+									Username: pulumi.String("sshuser"),
+								},
+							},
+							TargetInstanceCount: pulumi.Int(3),
+						},
+					},
+				},
+				OsType: "Linux",
+				StorageProfile: &hdinsight.StorageProfileArgs{
+					Storageaccounts: hdinsight.StorageAccountArray{
+						&hdinsight.StorageAccountArgs{
+							Container: pulumi.String("containername"),
+							IsDefault: pulumi.Bool(true),
+							Key:       pulumi.String("storagekey"),
+							Name:      pulumi.String("mystorage.blob.core.windows.net"),
+						},
+					},
+				},
+				Tier: "Standard",
+			},
+			ResourceGroupName: pulumi.String("rg1"),
+			Tags: pulumi.StringMap{
+				"key1": pulumi.String("val1"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -1530,7 +1953,125 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	hdinsight "github.com/pulumi/pulumi-azure-native/sdk/go/azure/hdinsight"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := hdinsight.NewCluster(ctx, "cluster", &hdinsight.ClusterArgs{
+			ClusterName: pulumi.String("cluster1"),
+			Properties: &hdinsight.ClusterCreatePropertiesArgs{
+				ClusterDefinition: &hdinsight.ClusterDefinitionArgs{
+					ComponentVersion: pulumi.StringMap{
+						"Kafka": pulumi.String("2.1"),
+					},
+					Configurations: pulumi.Any{
+						Gateway: map[string]interface{}{
+							"restAuthCredential.isEnabled": true,
+							"restAuthCredential.password":  "**********",
+							"restAuthCredential.username":  "admin",
+						},
+					},
+					Kind: pulumi.String("kafka"),
+				},
+				ClusterVersion: pulumi.String("4.0"),
+				ComputeProfile: &hdinsight.ComputeProfileArgs{
+					Roles: hdinsight.RoleArray{
+						&hdinsight.RoleArgs{
+							HardwareProfile: &hdinsight.HardwareProfileArgs{
+								VmSize: pulumi.String("Large"),
+							},
+							Name: pulumi.String("headnode"),
+							OsProfile: &hdinsight.OsProfileArgs{
+								LinuxOperatingSystemProfile: &hdinsight.LinuxOperatingSystemProfileArgs{
+									Password: pulumi.String("**********"),
+									Username: pulumi.String("sshuser"),
+								},
+							},
+							TargetInstanceCount: pulumi.Int(2),
+						},
+						&hdinsight.RoleArgs{
+							DataDisksGroups: hdinsight.DataDisksGroupsArray{
+								&hdinsight.DataDisksGroupsArgs{
+									DisksPerNode: pulumi.Int(8),
+								},
+							},
+							HardwareProfile: &hdinsight.HardwareProfileArgs{
+								VmSize: pulumi.String("Large"),
+							},
+							Name: pulumi.String("workernode"),
+							OsProfile: &hdinsight.OsProfileArgs{
+								LinuxOperatingSystemProfile: &hdinsight.LinuxOperatingSystemProfileArgs{
+									Password: pulumi.String("**********"),
+									Username: pulumi.String("sshuser"),
+								},
+							},
+							TargetInstanceCount: pulumi.Int(3),
+						},
+						&hdinsight.RoleArgs{
+							HardwareProfile: &hdinsight.HardwareProfileArgs{
+								VmSize: pulumi.String("Small"),
+							},
+							Name: pulumi.String("zookeepernode"),
+							OsProfile: &hdinsight.OsProfileArgs{
+								LinuxOperatingSystemProfile: &hdinsight.LinuxOperatingSystemProfileArgs{
+									Password: pulumi.String("**********"),
+									Username: pulumi.String("sshuser"),
+								},
+							},
+							TargetInstanceCount: pulumi.Int(3),
+						},
+						&hdinsight.RoleArgs{
+							HardwareProfile: &hdinsight.HardwareProfileArgs{
+								VmSize: pulumi.String("Standard_D4_v2"),
+							},
+							Name: pulumi.String("kafkamanagementnode"),
+							OsProfile: &hdinsight.OsProfileArgs{
+								LinuxOperatingSystemProfile: &hdinsight.LinuxOperatingSystemProfileArgs{
+									Password: pulumi.String("**********"),
+									Username: pulumi.String("kafkauser"),
+								},
+							},
+							TargetInstanceCount: pulumi.Int(2),
+						},
+					},
+				},
+				KafkaRestProperties: &hdinsight.KafkaRestPropertiesArgs{
+					ClientGroupInfo: &hdinsight.ClientGroupInfoArgs{
+						GroupId:   pulumi.String("00000000-0000-0000-0000-111111111111"),
+						GroupName: pulumi.String("Kafka security group name"),
+					},
+				},
+				OsType: "Linux",
+				StorageProfile: &hdinsight.StorageProfileArgs{
+					Storageaccounts: hdinsight.StorageAccountArray{
+						&hdinsight.StorageAccountArgs{
+							Container: pulumi.String("containername"),
+							IsDefault: pulumi.Bool(true),
+							Key:       pulumi.String("storagekey"),
+							Name:      pulumi.String("mystorage.blob.core.windows.net"),
+						},
+					},
+				},
+				Tier: "Standard",
+			},
+			ResourceGroupName: pulumi.String("rg1"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -1944,7 +2485,153 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	hdinsight "github.com/pulumi/pulumi-azure-native/sdk/go/azure/hdinsight"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := hdinsight.NewCluster(ctx, "cluster", &hdinsight.ClusterArgs{
+			ClusterName: pulumi.String("cluster1"),
+			Properties: &hdinsight.ClusterCreatePropertiesArgs{
+				ClusterDefinition: &hdinsight.ClusterDefinitionArgs{
+					Configurations: pulumi.Any{
+						Gateway: map[string]interface{}{
+							"restAuthCredential.isEnabled": true,
+							"restAuthCredential.password":  "**********",
+							"restAuthCredential.username":  "admin",
+						},
+					},
+					Kind: pulumi.String("Hadoop"),
+				},
+				ClusterVersion: pulumi.String("3.5"),
+				ComputeProfile: &hdinsight.ComputeProfileArgs{
+					Roles: hdinsight.RoleArray{
+						&hdinsight.RoleArgs{
+							HardwareProfile: &hdinsight.HardwareProfileArgs{
+								VmSize: pulumi.String("Standard_D3_V2"),
+							},
+							MinInstanceCount: pulumi.Int(1),
+							Name:             pulumi.String("headnode"),
+							OsProfile: &hdinsight.OsProfileArgs{
+								LinuxOperatingSystemProfile: &hdinsight.LinuxOperatingSystemProfileArgs{
+									Password: pulumi.String("**********"),
+									SshProfile: &hdinsight.SshProfileArgs{
+										PublicKeys: hdinsight.SshPublicKeyArray{
+											&hdinsight.SshPublicKeyArgs{
+												CertificateData: pulumi.String("**********"),
+											},
+										},
+									},
+									Username: pulumi.String("sshuser"),
+								},
+							},
+							ScriptActions:       hdinsight.ScriptActionArray{},
+							TargetInstanceCount: pulumi.Int(2),
+							VirtualNetworkProfile: &hdinsight.VirtualNetworkProfileArgs{
+								Id:     pulumi.String("/subscriptions/subId/resourceGroups/rg/providers/Microsoft.Network/virtualNetworks/vnetname"),
+								Subnet: pulumi.String("/subscriptions/subId/resourceGroups/rg/providers/Microsoft.Network/virtualNetworks/vnetname/subnets/vnetsubnet"),
+							},
+						},
+						&hdinsight.RoleArgs{
+							HardwareProfile: &hdinsight.HardwareProfileArgs{
+								VmSize: pulumi.String("Standard_D3_V2"),
+							},
+							MinInstanceCount: pulumi.Int(1),
+							Name:             pulumi.String("workernode"),
+							OsProfile: &hdinsight.OsProfileArgs{
+								LinuxOperatingSystemProfile: &hdinsight.LinuxOperatingSystemProfileArgs{
+									Password: pulumi.String("**********"),
+									SshProfile: &hdinsight.SshProfileArgs{
+										PublicKeys: hdinsight.SshPublicKeyArray{
+											&hdinsight.SshPublicKeyArgs{
+												CertificateData: pulumi.String("**********"),
+											},
+										},
+									},
+									Username: pulumi.String("sshuser"),
+								},
+							},
+							ScriptActions:       hdinsight.ScriptActionArray{},
+							TargetInstanceCount: pulumi.Int(4),
+							VirtualNetworkProfile: &hdinsight.VirtualNetworkProfileArgs{
+								Id:     pulumi.String("/subscriptions/subId/resourceGroups/rg/providers/Microsoft.Network/virtualNetworks/vnetname"),
+								Subnet: pulumi.String("/subscriptions/subId/resourceGroups/rg/providers/Microsoft.Network/virtualNetworks/vnetname/subnets/vnetsubnet"),
+							},
+						},
+						&hdinsight.RoleArgs{
+							HardwareProfile: &hdinsight.HardwareProfileArgs{
+								VmSize: pulumi.String("Small"),
+							},
+							MinInstanceCount: pulumi.Int(1),
+							Name:             pulumi.String("zookeepernode"),
+							OsProfile: &hdinsight.OsProfileArgs{
+								LinuxOperatingSystemProfile: &hdinsight.LinuxOperatingSystemProfileArgs{
+									Password: pulumi.String("**********"),
+									SshProfile: &hdinsight.SshProfileArgs{
+										PublicKeys: hdinsight.SshPublicKeyArray{
+											&hdinsight.SshPublicKeyArgs{
+												CertificateData: pulumi.String("**********"),
+											},
+										},
+									},
+									Username: pulumi.String("sshuser"),
+								},
+							},
+							ScriptActions:       hdinsight.ScriptActionArray{},
+							TargetInstanceCount: pulumi.Int(3),
+							VirtualNetworkProfile: &hdinsight.VirtualNetworkProfileArgs{
+								Id:     pulumi.String("/subscriptions/subId/resourceGroups/rg/providers/Microsoft.Network/virtualNetworks/vnetname"),
+								Subnet: pulumi.String("/subscriptions/subId/resourceGroups/rg/providers/Microsoft.Network/virtualNetworks/vnetname/subnets/vnetsubnet"),
+							},
+						},
+					},
+				},
+				OsType: "Linux",
+				SecurityProfile: &hdinsight.SecurityProfileArgs{
+					ClusterUsersGroupDNs: pulumi.StringArray{
+						pulumi.String("hdiusers"),
+					},
+					DirectoryType:      "ActiveDirectory",
+					Domain:             pulumi.String("DomainName"),
+					DomainUserPassword: pulumi.String("**********"),
+					DomainUsername:     pulumi.String("DomainUsername"),
+					LdapsUrls: pulumi.StringArray{
+						pulumi.String("ldaps://10.10.0.4:636"),
+					},
+					OrganizationalUnitDN: pulumi.String("OU=Hadoop,DC=hdinsight,DC=test"),
+				},
+				StorageProfile: &hdinsight.StorageProfileArgs{
+					Storageaccounts: hdinsight.StorageAccountArray{
+						&hdinsight.StorageAccountArgs{
+							Container: pulumi.String("containername"),
+							IsDefault: pulumi.Bool(true),
+							Key:       pulumi.String("storage account key"),
+							Name:      pulumi.String("mystorage.blob.core.windows.net"),
+						},
+					},
+				},
+				Tier: "Premium",
+			},
+			ResourceGroupName: pulumi.String("rg1"),
+			Tags: pulumi.StringMap{
+				"key1": pulumi.String("val1"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -2320,7 +3007,93 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	hdinsight "github.com/pulumi/pulumi-azure-native/sdk/go/azure/hdinsight"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := hdinsight.NewCluster(ctx, "cluster", &hdinsight.ClusterArgs{
+			ClusterName: pulumi.String("cluster1"),
+			Properties: &hdinsight.ClusterCreatePropertiesArgs{
+				ClusterDefinition: &hdinsight.ClusterDefinitionArgs{
+					ComponentVersion: pulumi.StringMap{
+						"Spark": pulumi.String("2.0"),
+					},
+					Configurations: pulumi.Any{
+						Gateway: map[string]interface{}{
+							"restAuthCredential.isEnabled": true,
+							"restAuthCredential.password":  "**********",
+							"restAuthCredential.username":  "admin",
+						},
+					},
+					Kind: pulumi.String("Spark"),
+				},
+				ClusterVersion: pulumi.String("3.5"),
+				ComputeProfile: &hdinsight.ComputeProfileArgs{
+					Roles: hdinsight.RoleArray{
+						&hdinsight.RoleArgs{
+							HardwareProfile: &hdinsight.HardwareProfileArgs{
+								VmSize: pulumi.String("Standard_D12_V2"),
+							},
+							MinInstanceCount: pulumi.Int(1),
+							Name:             pulumi.String("headnode"),
+							OsProfile: &hdinsight.OsProfileArgs{
+								LinuxOperatingSystemProfile: &hdinsight.LinuxOperatingSystemProfileArgs{
+									Password: pulumi.String("**********"),
+									Username: pulumi.String("sshuser"),
+								},
+							},
+							TargetInstanceCount: pulumi.Int(2),
+						},
+						&hdinsight.RoleArgs{
+							HardwareProfile: &hdinsight.HardwareProfileArgs{
+								VmSize: pulumi.String("Standard_D4_V2"),
+							},
+							MinInstanceCount: pulumi.Int(1),
+							Name:             pulumi.String("workernode"),
+							OsProfile: &hdinsight.OsProfileArgs{
+								LinuxOperatingSystemProfile: &hdinsight.LinuxOperatingSystemProfileArgs{
+									Password: pulumi.String("**********"),
+									Username: pulumi.String("sshuser"),
+								},
+							},
+							TargetInstanceCount: pulumi.Int(4),
+						},
+					},
+				},
+				OsType: "Linux",
+				StorageProfile: &hdinsight.StorageProfileArgs{
+					Storageaccounts: hdinsight.StorageAccountArray{
+						&hdinsight.StorageAccountArgs{
+							Container: pulumi.String("containername"),
+							IsDefault: pulumi.Bool(true),
+							Key:       pulumi.String("storageapikey*"),
+							Name:      pulumi.String("mystorage.blob.core.windows.net"),
+						},
+					},
+				},
+				Tier: "Standard",
+			},
+			ResourceGroupName: pulumi.String("rg1"),
+			Tags: pulumi.StringMap{
+				"key1": pulumi.String("val1"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -2604,7 +3377,99 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	hdinsight "github.com/pulumi/pulumi-azure-native/sdk/go/azure/hdinsight"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := hdinsight.NewCluster(ctx, "cluster", &hdinsight.ClusterArgs{
+			ClusterName: pulumi.String("cluster1"),
+			Properties: &hdinsight.ClusterCreatePropertiesArgs{
+				ClusterDefinition: &hdinsight.ClusterDefinitionArgs{
+					Configurations: pulumi.Any{
+						Gateway: map[string]interface{}{
+							"restAuthCredential.isEnabled": true,
+							"restAuthCredential.password":  "**********",
+							"restAuthCredential.username":  "admin",
+						},
+					},
+					Kind: pulumi.String("Hadoop"),
+				},
+				ClusterVersion: pulumi.String("3.6"),
+				ComputeProfile: &hdinsight.ComputeProfileArgs{
+					Roles: hdinsight.RoleArray{
+						&hdinsight.RoleArgs{
+							HardwareProfile: &hdinsight.HardwareProfileArgs{
+								VmSize: pulumi.String("Large"),
+							},
+							Name: pulumi.String("headnode"),
+							OsProfile: &hdinsight.OsProfileArgs{
+								LinuxOperatingSystemProfile: &hdinsight.LinuxOperatingSystemProfileArgs{
+									Password: pulumi.String("**********"),
+									Username: pulumi.String("sshuser"),
+								},
+							},
+							TargetInstanceCount: pulumi.Int(2),
+						},
+						&hdinsight.RoleArgs{
+							HardwareProfile: &hdinsight.HardwareProfileArgs{
+								VmSize: pulumi.String("Large"),
+							},
+							Name: pulumi.String("workernode"),
+							OsProfile: &hdinsight.OsProfileArgs{
+								LinuxOperatingSystemProfile: &hdinsight.LinuxOperatingSystemProfileArgs{
+									Password: pulumi.String("**********"),
+									Username: pulumi.String("sshuser"),
+								},
+							},
+							TargetInstanceCount: pulumi.Int(3),
+						},
+						&hdinsight.RoleArgs{
+							HardwareProfile: &hdinsight.HardwareProfileArgs{
+								VmSize: pulumi.String("Small"),
+							},
+							Name: pulumi.String("zookeepernode"),
+							OsProfile: &hdinsight.OsProfileArgs{
+								LinuxOperatingSystemProfile: &hdinsight.LinuxOperatingSystemProfileArgs{
+									Password: pulumi.String("**********"),
+									Username: pulumi.String("sshuser"),
+								},
+							},
+							TargetInstanceCount: pulumi.Int(3),
+						},
+					},
+				},
+				MinSupportedTlsVersion: pulumi.String("1.2"),
+				OsType:                 "Linux",
+				StorageProfile: &hdinsight.StorageProfileArgs{
+					Storageaccounts: hdinsight.StorageAccountArray{
+						&hdinsight.StorageAccountArgs{
+							Container: pulumi.String("default8525"),
+							IsDefault: pulumi.Bool(true),
+							Key:       pulumi.String("storagekey"),
+							Name:      pulumi.String("mystorage.blob.core.windows.net"),
+						},
+					},
+				},
+				Tier: "Standard",
+			},
+			ResourceGroupName: pulumi.String("rg1"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -2905,7 +3770,101 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	hdinsight "github.com/pulumi/pulumi-azure-native/sdk/go/azure/hdinsight"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := hdinsight.NewCluster(ctx, "cluster", &hdinsight.ClusterArgs{
+			ClusterName: pulumi.String("cluster1"),
+			Properties: &hdinsight.ClusterCreatePropertiesArgs{
+				ClusterDefinition: &hdinsight.ClusterDefinitionArgs{
+					Configurations: pulumi.Any{
+						Gateway: map[string]interface{}{
+							"restAuthCredential.isEnabled": true,
+							"restAuthCredential.password":  "**********",
+							"restAuthCredential.username":  "admin",
+						},
+					},
+					Kind: pulumi.String("hadoop"),
+				},
+				ClusterVersion: pulumi.String("3.6"),
+				ComputeIsolationProperties: &hdinsight.ComputeIsolationPropertiesArgs{
+					EnableComputeIsolation: pulumi.Bool(true),
+				},
+				ComputeProfile: &hdinsight.ComputeProfileArgs{
+					Roles: hdinsight.RoleArray{
+						&hdinsight.RoleArgs{
+							HardwareProfile: &hdinsight.HardwareProfileArgs{
+								VmSize: pulumi.String("standard_d3"),
+							},
+							Name: pulumi.String("headnode"),
+							OsProfile: &hdinsight.OsProfileArgs{
+								LinuxOperatingSystemProfile: &hdinsight.LinuxOperatingSystemProfileArgs{
+									Password: pulumi.String("**********"),
+									SshProfile: &hdinsight.SshProfileArgs{
+										PublicKeys: hdinsight.SshPublicKeyArray{
+											&hdinsight.SshPublicKeyArgs{
+												CertificateData: pulumi.String("**********"),
+											},
+										},
+									},
+									Username: pulumi.String("sshuser"),
+								},
+							},
+							TargetInstanceCount: pulumi.Int(2),
+						},
+						&hdinsight.RoleArgs{
+							HardwareProfile: &hdinsight.HardwareProfileArgs{
+								VmSize: pulumi.String("standard_d3"),
+							},
+							Name: pulumi.String("workernode"),
+							OsProfile: &hdinsight.OsProfileArgs{
+								LinuxOperatingSystemProfile: &hdinsight.LinuxOperatingSystemProfileArgs{
+									Password: pulumi.String("**********"),
+									SshProfile: &hdinsight.SshProfileArgs{
+										PublicKeys: hdinsight.SshPublicKeyArray{
+											&hdinsight.SshPublicKeyArgs{
+												CertificateData: pulumi.String("**********"),
+											},
+										},
+									},
+									Username: pulumi.String("sshuser"),
+								},
+							},
+							TargetInstanceCount: pulumi.Int(2),
+						},
+					},
+				},
+				OsType: "Linux",
+				StorageProfile: &hdinsight.StorageProfileArgs{
+					Storageaccounts: hdinsight.StorageAccountArray{
+						&hdinsight.StorageAccountArgs{
+							Container: pulumi.String("containername"),
+							IsDefault: pulumi.Bool(true),
+							Key:       pulumi.String("storage account key"),
+							Name:      pulumi.String("mystorage"),
+						},
+					},
+				},
+			},
+			ResourceGroupName: pulumi.String("rg1"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -3200,7 +4159,101 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	hdinsight "github.com/pulumi/pulumi-azure-native/sdk/go/azure/hdinsight"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := hdinsight.NewCluster(ctx, "cluster", &hdinsight.ClusterArgs{
+			ClusterName: pulumi.String("cluster1"),
+			Properties: &hdinsight.ClusterCreatePropertiesArgs{
+				ClusterDefinition: &hdinsight.ClusterDefinitionArgs{
+					Configurations: pulumi.Any{
+						Gateway: map[string]interface{}{
+							"restAuthCredential.isEnabled": true,
+							"restAuthCredential.password":  "**********",
+							"restAuthCredential.username":  "admin",
+						},
+					},
+					Kind: pulumi.String("Hadoop"),
+				},
+				ClusterVersion: pulumi.String("3.6"),
+				ComputeProfile: &hdinsight.ComputeProfileArgs{
+					Roles: hdinsight.RoleArray{
+						&hdinsight.RoleArgs{
+							HardwareProfile: &hdinsight.HardwareProfileArgs{
+								VmSize: pulumi.String("Standard_DS14_v2"),
+							},
+							Name: pulumi.String("headnode"),
+							OsProfile: &hdinsight.OsProfileArgs{
+								LinuxOperatingSystemProfile: &hdinsight.LinuxOperatingSystemProfileArgs{
+									Password: pulumi.String("**********"),
+									Username: pulumi.String("sshuser"),
+								},
+							},
+							TargetInstanceCount: pulumi.Int(2),
+						},
+						&hdinsight.RoleArgs{
+							HardwareProfile: &hdinsight.HardwareProfileArgs{
+								VmSize: pulumi.String("Standard_DS14_v2"),
+							},
+							Name: pulumi.String("workernode"),
+							OsProfile: &hdinsight.OsProfileArgs{
+								LinuxOperatingSystemProfile: &hdinsight.LinuxOperatingSystemProfileArgs{
+									Password: pulumi.String("**********"),
+									Username: pulumi.String("sshuser"),
+								},
+							},
+							TargetInstanceCount: pulumi.Int(3),
+						},
+						&hdinsight.RoleArgs{
+							HardwareProfile: &hdinsight.HardwareProfileArgs{
+								VmSize: pulumi.String("Standard_DS14_v2"),
+							},
+							Name: pulumi.String("zookeepernode"),
+							OsProfile: &hdinsight.OsProfileArgs{
+								LinuxOperatingSystemProfile: &hdinsight.LinuxOperatingSystemProfileArgs{
+									Password: pulumi.String("**********"),
+									Username: pulumi.String("sshuser"),
+								},
+							},
+							TargetInstanceCount: pulumi.Int(3),
+						},
+					},
+				},
+				DiskEncryptionProperties: &hdinsight.DiskEncryptionPropertiesArgs{
+					EncryptionAtHost: pulumi.Bool(true),
+				},
+				OsType: "Linux",
+				StorageProfile: &hdinsight.StorageProfileArgs{
+					Storageaccounts: hdinsight.StorageAccountArray{
+						&hdinsight.StorageAccountArgs{
+							Container: pulumi.String("default8525"),
+							IsDefault: pulumi.Bool(true),
+							Key:       pulumi.String("storagekey"),
+							Name:      pulumi.String("mystorage.blob.core.windows.net"),
+						},
+					},
+				},
+				Tier: "Standard",
+			},
+			ResourceGroupName: pulumi.String("rg1"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -3503,7 +4556,101 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	hdinsight "github.com/pulumi/pulumi-azure-native/sdk/go/azure/hdinsight"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := hdinsight.NewCluster(ctx, "cluster", &hdinsight.ClusterArgs{
+			ClusterName: pulumi.String("cluster1"),
+			Properties: &hdinsight.ClusterCreatePropertiesArgs{
+				ClusterDefinition: &hdinsight.ClusterDefinitionArgs{
+					Configurations: pulumi.Any{
+						Gateway: map[string]interface{}{
+							"restAuthCredential.isEnabled": true,
+							"restAuthCredential.password":  "**********",
+							"restAuthCredential.username":  "admin",
+						},
+					},
+					Kind: pulumi.String("Hadoop"),
+				},
+				ClusterVersion: pulumi.String("3.6"),
+				ComputeProfile: &hdinsight.ComputeProfileArgs{
+					Roles: hdinsight.RoleArray{
+						&hdinsight.RoleArgs{
+							HardwareProfile: &hdinsight.HardwareProfileArgs{
+								VmSize: pulumi.String("Large"),
+							},
+							Name: pulumi.String("headnode"),
+							OsProfile: &hdinsight.OsProfileArgs{
+								LinuxOperatingSystemProfile: &hdinsight.LinuxOperatingSystemProfileArgs{
+									Password: pulumi.String("**********"),
+									Username: pulumi.String("sshuser"),
+								},
+							},
+							TargetInstanceCount: pulumi.Int(2),
+						},
+						&hdinsight.RoleArgs{
+							HardwareProfile: &hdinsight.HardwareProfileArgs{
+								VmSize: pulumi.String("Large"),
+							},
+							Name: pulumi.String("workernode"),
+							OsProfile: &hdinsight.OsProfileArgs{
+								LinuxOperatingSystemProfile: &hdinsight.LinuxOperatingSystemProfileArgs{
+									Password: pulumi.String("**********"),
+									Username: pulumi.String("sshuser"),
+								},
+							},
+							TargetInstanceCount: pulumi.Int(3),
+						},
+						&hdinsight.RoleArgs{
+							HardwareProfile: &hdinsight.HardwareProfileArgs{
+								VmSize: pulumi.String("Small"),
+							},
+							Name: pulumi.String("zookeepernode"),
+							OsProfile: &hdinsight.OsProfileArgs{
+								LinuxOperatingSystemProfile: &hdinsight.LinuxOperatingSystemProfileArgs{
+									Password: pulumi.String("**********"),
+									Username: pulumi.String("sshuser"),
+								},
+							},
+							TargetInstanceCount: pulumi.Int(3),
+						},
+					},
+				},
+				EncryptionInTransitProperties: &hdinsight.EncryptionInTransitPropertiesArgs{
+					IsEncryptionInTransitEnabled: pulumi.Bool(true),
+				},
+				OsType: "Linux",
+				StorageProfile: &hdinsight.StorageProfileArgs{
+					Storageaccounts: hdinsight.StorageAccountArray{
+						&hdinsight.StorageAccountArgs{
+							Container: pulumi.String("default8525"),
+							IsDefault: pulumi.Bool(true),
+							Key:       pulumi.String("storagekey"),
+							Name:      pulumi.String("mystorage.blob.core.windows.net"),
+						},
+					},
+				},
+				Tier: "Standard",
+			},
+			ResourceGroupName: pulumi.String("rg1"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -3819,7 +4966,110 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	hdinsight "github.com/pulumi/pulumi-azure-native/sdk/go/azure/hdinsight"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := hdinsight.NewCluster(ctx, "cluster", &hdinsight.ClusterArgs{
+			ClusterName: pulumi.String("cluster1"),
+			Properties: &hdinsight.ClusterCreatePropertiesArgs{
+				ClusterDefinition: &hdinsight.ClusterDefinitionArgs{
+					Configurations: pulumi.Any{
+						Gateway: map[string]interface{}{
+							"restAuthCredential.isEnabled": true,
+							"restAuthCredential.password":  "**********",
+							"restAuthCredential.username":  "admin",
+						},
+					},
+					Kind: pulumi.String("hadoop"),
+				},
+				ClusterVersion: pulumi.String("3.6"),
+				ComputeProfile: &hdinsight.ComputeProfileArgs{
+					Roles: hdinsight.RoleArray{
+						&hdinsight.RoleArgs{
+							HardwareProfile: &hdinsight.HardwareProfileArgs{
+								VmSize: pulumi.String("standard_d3"),
+							},
+							Name: pulumi.String("headnode"),
+							OsProfile: &hdinsight.OsProfileArgs{
+								LinuxOperatingSystemProfile: &hdinsight.LinuxOperatingSystemProfileArgs{
+									Password: pulumi.String("**********"),
+									SshProfile: &hdinsight.SshProfileArgs{
+										PublicKeys: hdinsight.SshPublicKeyArray{
+											&hdinsight.SshPublicKeyArgs{
+												CertificateData: pulumi.String("**********"),
+											},
+										},
+									},
+									Username: pulumi.String("sshuser"),
+								},
+							},
+							TargetInstanceCount: pulumi.Int(2),
+							VirtualNetworkProfile: &hdinsight.VirtualNetworkProfileArgs{
+								Id:     pulumi.String("/subscriptions/subId/resourceGroups/rg/providers/Microsoft.Network/virtualNetworks/vnetname"),
+								Subnet: pulumi.String("/subscriptions/subId/resourceGroups/rg/providers/Microsoft.Network/virtualNetworks/vnetname/subnets/vnetsubnet"),
+							},
+						},
+						&hdinsight.RoleArgs{
+							HardwareProfile: &hdinsight.HardwareProfileArgs{
+								VmSize: pulumi.String("standard_d3"),
+							},
+							Name: pulumi.String("workernode"),
+							OsProfile: &hdinsight.OsProfileArgs{
+								LinuxOperatingSystemProfile: &hdinsight.LinuxOperatingSystemProfileArgs{
+									Password: pulumi.String("**********"),
+									SshProfile: &hdinsight.SshProfileArgs{
+										PublicKeys: hdinsight.SshPublicKeyArray{
+											&hdinsight.SshPublicKeyArgs{
+												CertificateData: pulumi.String("**********"),
+											},
+										},
+									},
+									Username: pulumi.String("sshuser"),
+								},
+							},
+							TargetInstanceCount: pulumi.Int(2),
+							VirtualNetworkProfile: &hdinsight.VirtualNetworkProfileArgs{
+								Id:     pulumi.String("/subscriptions/subId/resourceGroups/rg/providers/Microsoft.Network/virtualNetworks/vnetname"),
+								Subnet: pulumi.String("/subscriptions/subId/resourceGroups/rg/providers/Microsoft.Network/virtualNetworks/vnetname/subnets/vnetsubnet"),
+							},
+						},
+					},
+				},
+				NetworkProperties: &hdinsight.NetworkPropertiesArgs{
+					PrivateLink:                pulumi.String("Enabled"),
+					ResourceProviderConnection: pulumi.String("Outbound"),
+				},
+				OsType: "Linux",
+				StorageProfile: &hdinsight.StorageProfileArgs{
+					Storageaccounts: hdinsight.StorageAccountArray{
+						&hdinsight.StorageAccountArgs{
+							Container: pulumi.String("containername"),
+							IsDefault: pulumi.Bool(true),
+							Key:       pulumi.String("storage account key"),
+							Name:      pulumi.String("mystorage"),
+						},
+					},
+				},
+			},
+			ResourceGroupName: pulumi.String("rg1"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 

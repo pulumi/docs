@@ -72,9 +72,9 @@ func main() {
 		_, err := recoveryservices.NewProtectionIntent(ctx, "protectionIntent", &recoveryservices.ProtectionIntentArgs{
 			FabricName:       pulumi.String("Azure"),
 			IntentObjectName: pulumi.String("vm;iaasvmcontainerv2;chamsrgtest;chamscandel"),
-			Properties: &recoveryservices.AzureResourceProtectionIntentArgs{
+			Properties: recoveryservices.AzureResourceProtectionIntent{
 				PolicyId:                 "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myRG/providers/Microsoft.RecoveryServices/vaults/myVault/backupPolicies/myPolicy",
-				ProtectionIntentItemType: pulumi.String("AzureResourceItem"),
+				ProtectionIntentItemType: "AzureResourceItem",
 				SourceResourceId:         "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/chamsrgtest/providers/Microsoft.Compute/virtualMachines/chamscandel",
 			},
 			ResourceGroupName: pulumi.String("myRG"),

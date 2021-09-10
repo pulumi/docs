@@ -94,28 +94,28 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := datafactory.NewTrigger(ctx, "trigger", &datafactory.TriggerArgs{
 			FactoryName: pulumi.String("exampleFactoryName"),
-			Properties: &datafactory.ScheduleTriggerArgs{
-				Pipelines: []datafactory.TriggerPipelineReferenceArgs{
-					&datafactory.TriggerPipelineReferenceArgs{
+			Properties: datafactory.ScheduleTrigger{
+				Pipelines: []datafactory.TriggerPipelineReference{
+					datafactory.TriggerPipelineReference{
 						Parameters: map[string]interface{}{
 							"OutputBlobNameList": []string{
 								"exampleoutput.csv",
 							},
 						},
-						PipelineReference: &datafactory.PipelineReferenceArgs{
+						PipelineReference: datafactory.PipelineReference{
 							ReferenceName: "examplePipeline",
 							Type:          "PipelineReference",
 						},
 					},
 				},
-				Recurrence: &datafactory.ScheduleTriggerRecurrenceArgs{
+				Recurrence: datafactory.ScheduleTriggerRecurrence{
 					EndTime:   "2018-06-16T00:55:13.8441801Z",
 					Frequency: "Minute",
 					Interval:  4,
 					StartTime: "2018-06-16T00:39:13.8441801Z",
 					TimeZone:  "UTC",
 				},
-				Type: pulumi.String("ScheduleTrigger"),
+				Type: "ScheduleTrigger",
 			},
 			ResourceGroupName: pulumi.String("exampleResourceGroup"),
 			TriggerName:       pulumi.String("exampleTrigger"),
@@ -285,29 +285,29 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := datafactory.NewTrigger(ctx, "trigger", &datafactory.TriggerArgs{
 			FactoryName: pulumi.String("exampleFactoryName"),
-			Properties: &datafactory.ScheduleTriggerArgs{
+			Properties: datafactory.ScheduleTrigger{
 				Description: "Example description",
-				Pipelines: []datafactory.TriggerPipelineReferenceArgs{
-					&datafactory.TriggerPipelineReferenceArgs{
+				Pipelines: []datafactory.TriggerPipelineReference{
+					datafactory.TriggerPipelineReference{
 						Parameters: map[string]interface{}{
 							"OutputBlobNameList": []string{
 								"exampleoutput.csv",
 							},
 						},
-						PipelineReference: &datafactory.PipelineReferenceArgs{
+						PipelineReference: datafactory.PipelineReference{
 							ReferenceName: "examplePipeline",
 							Type:          "PipelineReference",
 						},
 					},
 				},
-				Recurrence: &datafactory.ScheduleTriggerRecurrenceArgs{
+				Recurrence: datafactory.ScheduleTriggerRecurrence{
 					EndTime:   "2018-06-16T00:55:14.905167Z",
 					Frequency: "Minute",
 					Interval:  4,
 					StartTime: "2018-06-16T00:39:14.905167Z",
 					TimeZone:  "UTC",
 				},
-				Type: pulumi.String("ScheduleTrigger"),
+				Type: "ScheduleTrigger",
 			},
 			ResourceGroupName: pulumi.String("exampleResourceGroup"),
 			TriggerName:       pulumi.String("exampleTrigger"),

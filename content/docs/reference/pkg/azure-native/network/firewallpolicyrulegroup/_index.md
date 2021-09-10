@@ -50,26 +50,26 @@ class MyStack : Stack
                     Name = "Example-Filter-Rule",
                     RuleConditions = 
                     {
-                        
+                        new AzureNative.Network.Inputs.NetworkRuleConditionArgs
                         {
-                            { "destinationAddresses", 
+                            DestinationAddresses = 
                             {
                                 "*",
-                            } },
-                            { "destinationPorts", 
+                            },
+                            DestinationPorts = 
                             {
                                 "*",
-                            } },
-                            { "ipProtocols", 
+                            },
+                            IpProtocols = 
                             {
                                 "TCP",
-                            } },
-                            { "name", "network-condition1" },
-                            { "ruleConditionType", "NetworkRuleCondition" },
-                            { "sourceAddresses", 
+                            },
+                            Name = "network-condition1",
+                            RuleConditionType = "NetworkRuleCondition",
+                            SourceAddresses = 
                             {
                                 "10.1.25.0/24",
-                            } },
+                            },
                         },
                     },
                     RuleType = "FirewallPolicyFilterRule",
@@ -88,7 +88,59 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := network.NewFirewallPolicyRuleGroup(ctx, "firewallPolicyRuleGroup", &network.FirewallPolicyRuleGroupArgs{
+			FirewallPolicyName: pulumi.String("firewallPolicy"),
+			Priority:           pulumi.Int(110),
+			ResourceGroupName:  pulumi.String("rg1"),
+			RuleGroupName:      pulumi.String("ruleGroup1"),
+			Rules: pulumi.AnyArray{
+				network.FirewallPolicyFilterRule{
+					Action: network.FirewallPolicyFilterRuleAction{
+						Type: "Deny",
+					},
+					Name: "Example-Filter-Rule",
+					RuleConditions: []interface{}{
+						network.NetworkRuleCondition{
+							DestinationAddresses: []string{
+								"*",
+							},
+							DestinationPorts: []string{
+								"*",
+							},
+							IpProtocols: []string{
+								"TCP",
+							},
+							Name:              "network-condition1",
+							RuleConditionType: "NetworkRuleCondition",
+							SourceAddresses: []string{
+								"10.1.25.0/24",
+							},
+						},
+					},
+					RuleType: "FirewallPolicyFilterRule",
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -110,14 +162,14 @@ firewall_policy_rule_group = azure_native.network.FirewallPolicyRuleGroup("firew
             type="Deny",
         ),
         name="Example-Filter-Rule",
-        rule_conditions=[{
-            "destinationAddresses": ["*"],
-            "destinationPorts": ["*"],
-            "ipProtocols": ["TCP"],
-            "name": "network-condition1",
-            "ruleConditionType": "NetworkRuleCondition",
-            "sourceAddresses": ["10.1.25.0/24"],
-        }],
+        rule_conditions=[azure_native.network.NetworkRuleConditionArgs(
+            destination_addresses=["*"],
+            destination_ports=["*"],
+            ip_protocols=["TCP"],
+            name="network-condition1",
+            rule_condition_type="NetworkRuleCondition",
+            source_addresses=["10.1.25.0/24"],
+        )],
         rule_type="FirewallPolicyFilterRule",
     )])
 
@@ -194,26 +246,26 @@ class MyStack : Stack
                     Name = "Example-Filter-Rule",
                     RuleConditions = 
                     {
-                        
+                        new AzureNative.Network.Inputs.NetworkRuleConditionArgs
                         {
-                            { "destinationIpGroups", 
+                            DestinationIpGroups = 
                             {
                                 "/subscriptions/subid/providers/Microsoft.Network/resourceGroup/rg1/ipGroups/ipGroups2",
-                            } },
-                            { "destinationPorts", 
+                            },
+                            DestinationPorts = 
                             {
                                 "*",
-                            } },
-                            { "ipProtocols", 
+                            },
+                            IpProtocols = 
                             {
                                 "TCP",
-                            } },
-                            { "name", "network-condition1" },
-                            { "ruleConditionType", "NetworkRuleCondition" },
-                            { "sourceIpGroups", 
+                            },
+                            Name = "network-condition1",
+                            RuleConditionType = "NetworkRuleCondition",
+                            SourceIpGroups = 
                             {
                                 "/subscriptions/subid/providers/Microsoft.Network/resourceGroup/rg1/ipGroups/ipGroups1",
-                            } },
+                            },
                         },
                     },
                     RuleType = "FirewallPolicyFilterRule",
@@ -232,7 +284,59 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := network.NewFirewallPolicyRuleGroup(ctx, "firewallPolicyRuleGroup", &network.FirewallPolicyRuleGroupArgs{
+			FirewallPolicyName: pulumi.String("firewallPolicy"),
+			Priority:           pulumi.Int(110),
+			ResourceGroupName:  pulumi.String("rg1"),
+			RuleGroupName:      pulumi.String("ruleGroup1"),
+			Rules: pulumi.AnyArray{
+				network.FirewallPolicyFilterRule{
+					Action: network.FirewallPolicyFilterRuleAction{
+						Type: "Deny",
+					},
+					Name: "Example-Filter-Rule",
+					RuleConditions: []interface{}{
+						network.NetworkRuleCondition{
+							DestinationIpGroups: []string{
+								"/subscriptions/subid/providers/Microsoft.Network/resourceGroup/rg1/ipGroups/ipGroups2",
+							},
+							DestinationPorts: []string{
+								"*",
+							},
+							IpProtocols: []string{
+								"TCP",
+							},
+							Name:              "network-condition1",
+							RuleConditionType: "NetworkRuleCondition",
+							SourceIpGroups: []string{
+								"/subscriptions/subid/providers/Microsoft.Network/resourceGroup/rg1/ipGroups/ipGroups1",
+							},
+						},
+					},
+					RuleType: "FirewallPolicyFilterRule",
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -254,14 +358,14 @@ firewall_policy_rule_group = azure_native.network.FirewallPolicyRuleGroup("firew
             type="Deny",
         ),
         name="Example-Filter-Rule",
-        rule_conditions=[{
-            "destinationIpGroups": ["/subscriptions/subid/providers/Microsoft.Network/resourceGroup/rg1/ipGroups/ipGroups2"],
-            "destinationPorts": ["*"],
-            "ipProtocols": ["TCP"],
-            "name": "network-condition1",
-            "ruleConditionType": "NetworkRuleCondition",
-            "sourceIpGroups": ["/subscriptions/subid/providers/Microsoft.Network/resourceGroup/rg1/ipGroups/ipGroups1"],
-        }],
+        rule_conditions=[azure_native.network.NetworkRuleConditionArgs(
+            destination_ip_groups=["/subscriptions/subid/providers/Microsoft.Network/resourceGroup/rg1/ipGroups/ipGroups2"],
+            destination_ports=["*"],
+            ip_protocols=["TCP"],
+            name="network-condition1",
+            rule_condition_type="NetworkRuleCondition",
+            source_ip_groups=["/subscriptions/subid/providers/Microsoft.Network/resourceGroup/rg1/ipGroups/ipGroups1"],
+        )],
         rule_type="FirewallPolicyFilterRule",
     )])
 

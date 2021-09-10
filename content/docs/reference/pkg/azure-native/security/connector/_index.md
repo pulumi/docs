@@ -83,8 +83,8 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := security.NewConnector(ctx, "connector", &security.ConnectorArgs{
-			AuthenticationDetails: &security.AwAssumeRoleAuthenticationDetailsPropertiesArgs{
-				AuthenticationType: pulumi.String("awsAssumeRole"),
+			AuthenticationDetails: security.AwAssumeRoleAuthenticationDetailsProperties{
+				AuthenticationType: "awsAssumeRole",
 				AwsAssumeRoleArn:   "arn:aws:iam::81231569658:role/AscConnector",
 				AwsExternalId:      "20ff7fc3-e762-44dd-bd96-b71116dcdc23",
 			},
@@ -250,8 +250,8 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := security.NewConnector(ctx, "connector", &security.ConnectorArgs{
-			AuthenticationDetails: &security.AwsCredsAuthenticationDetailsPropertiesArgs{
-				AuthenticationType: pulumi.String("awsCreds"),
+			AuthenticationDetails: security.AwsCredsAuthenticationDetailsProperties{
+				AuthenticationType: "awsCreds",
 				AwsAccessKeyId:     "AKIARPZCNODDNAEQFSOE",
 				AwsSecretAccessKey: "<awsSecretAccessKey>",
 			},
@@ -444,10 +444,10 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := security.NewConnector(ctx, "connector", &security.ConnectorArgs{
-			AuthenticationDetails: &security.GcpCredentialsDetailsPropertiesArgs{
+			AuthenticationDetails: security.GcpCredentialsDetailsProperties{
 				AuthProviderX509CertUrl: "https://www.googleapis.com/oauth2/v1/certs",
 				AuthUri:                 "https://accounts.google.com/o/oauth2/auth",
-				AuthenticationType:      pulumi.String("gcpCredentials"),
+				AuthenticationType:      "gcpCredentials",
 				ClientEmail:             "asc-135@asc-project-1234.iam.gserviceaccount.com",
 				ClientId:                "105889053725632919854",
 				ClientX509CertUrl:       fmt.Sprintf("%v%v%v", "https://www.googleapis.com/robot/v1/metadata/x509/asc-135", "%", "40asc-project-1234.iam.gserviceaccount.com"),

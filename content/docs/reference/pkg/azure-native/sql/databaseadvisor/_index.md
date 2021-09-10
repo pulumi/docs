@@ -53,7 +53,33 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	sql "github.com/pulumi/pulumi-azure-native/sdk/go/azure/sql"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := sql.NewDatabaseAdvisor(ctx, "databaseAdvisor", &sql.DatabaseAdvisorArgs{
+			AdvisorName:       pulumi.String("CreateIndex"),
+			AutoExecuteStatus: "Disabled",
+			DatabaseName:      pulumi.String("IndexAdvisor_test_3"),
+			ResourceGroupName: pulumi.String("workloadinsight-demos"),
+			ServerName:        pulumi.String("misosisvr"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 

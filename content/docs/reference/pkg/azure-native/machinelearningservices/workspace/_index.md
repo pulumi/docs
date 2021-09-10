@@ -96,7 +96,68 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	machinelearningservices "github.com/pulumi/pulumi-azure-native/sdk/go/azure/machinelearningservices"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := machinelearningservices.NewWorkspace(ctx, "workspace", &machinelearningservices.WorkspaceArgs{
+			ApplicationInsights: pulumi.String("/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/microsoft.insights/components/testinsights"),
+			ContainerRegistry:   pulumi.String("/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/Microsoft.ContainerRegistry/registries/testRegistry"),
+			Description:         pulumi.String("test description"),
+			Encryption: &machinelearningservices.EncryptionPropertyArgs{
+				Identity: &machinelearningservices.IdentityForCmkArgs{
+					UserAssignedIdentity: pulumi.String("/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/Microsoft.ManagedIdentity/userAssignedIdentities/testuai"),
+				},
+				KeyVaultProperties: &machinelearningservices.KeyVaultPropertiesArgs{
+					IdentityClientId: pulumi.String(""),
+					KeyIdentifier:    pulumi.String("https://testkv.vault.azure.net/keys/testkey/aabbccddee112233445566778899aabb"),
+					KeyVaultArmId:    pulumi.String("/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/Microsoft.KeyVault/vaults/testkv"),
+				},
+				Status: pulumi.String("Enabled"),
+			},
+			FriendlyName: pulumi.String("HelloName"),
+			HbiWorkspace: pulumi.Bool(false),
+			Identity: &machinelearningservices.IdentityArgs{
+				Type: "SystemAssigned,UserAssigned",
+				UserAssignedIdentities: pulumi.AnyMap{
+					"/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/Microsoft.ManagedIdentity/userAssignedIdentities/testuai": nil,
+				},
+			},
+			KeyVault:          pulumi.String("/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/Microsoft.KeyVault/vaults/testkv"),
+			Location:          pulumi.String("eastus2euap"),
+			ResourceGroupName: pulumi.String("workspace-1234"),
+			SharedPrivateLinkResources: []machinelearningservices.SharedPrivateLinkResourceArgs{
+				&machinelearningservices.SharedPrivateLinkResourceArgs{
+					GroupId:               pulumi.String("Sql"),
+					Name:                  pulumi.String("testdbresource"),
+					PrivateLinkResourceId: pulumi.String("/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/Microsoft.DocumentDB/databaseAccounts/testdbresource/privateLinkResources/Sql"),
+					RequestMessage:        pulumi.String("Please approve"),
+					Status:                pulumi.String("Approved"),
+				},
+			},
+			Sku: &machinelearningservices.SkuArgs{
+				Name: pulumi.String("Basic"),
+				Tier: pulumi.String("Basic"),
+			},
+			StorageAccount: pulumi.String("/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/accountcrud-1234/providers/Microsoft.Storage/storageAccounts/testStorageAccount"),
+			WorkspaceName:  pulumi.String("testworkspace"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 

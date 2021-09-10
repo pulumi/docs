@@ -52,10 +52,10 @@ class MyStack : Stack
                         Audience = "urn:audience",
                         Issuer = "urn:issuer",
                         OdataType = "#Microsoft.Media.ContentKeyPolicyTokenRestriction",
-                        PrimaryVerificationKey = 
+                        PrimaryVerificationKey = new AzureNative.Media.Inputs.ContentKeyPolicySymmetricTokenKeyArgs
                         {
-                            { "keyValue", "AAAAAAAAAAAAAAAAAAAAAA==" },
-                            { "odataType", "#Microsoft.Media.ContentKeyPolicySymmetricTokenKey" },
+                            KeyValue = "AAAAAAAAAAAAAAAAAAAAAA==",
+                            OdataType = "#Microsoft.Media.ContentKeyPolicySymmetricTokenKey",
                         },
                         RestrictionTokenType = "Swt",
                     },
@@ -75,7 +75,50 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	media "github.com/pulumi/pulumi-azure-native/sdk/go/azure/media"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := media.NewContentKeyPolicy(ctx, "contentKeyPolicy", &media.ContentKeyPolicyArgs{
+			AccountName:          pulumi.String("contosomedia"),
+			ContentKeyPolicyName: pulumi.String("PolicyWithClearKeyOptionAndSwtTokenRestriction"),
+			Description:          pulumi.String("ArmPolicyDescription"),
+			Options: []media.ContentKeyPolicyOptionArgs{
+				&media.ContentKeyPolicyOptionArgs{
+					Configuration: media.ContentKeyPolicyClearKeyConfiguration{
+						OdataType: "#Microsoft.Media.ContentKeyPolicyClearKeyConfiguration",
+					},
+					Name: pulumi.String("ClearKeyOption"),
+					Restriction: media.ContentKeyPolicyTokenRestriction{
+						Audience:  "urn:audience",
+						Issuer:    "urn:issuer",
+						OdataType: "#Microsoft.Media.ContentKeyPolicyTokenRestriction",
+						PrimaryVerificationKey: media.ContentKeyPolicySymmetricTokenKey{
+							KeyValue:  "AAAAAAAAAAAAAAAAAAAAAA==",
+							OdataType: "#Microsoft.Media.ContentKeyPolicySymmetricTokenKey",
+						},
+						RestrictionTokenType: "Swt",
+					},
+				},
+			},
+			ResourceGroupName: pulumi.String("contoso"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -100,10 +143,10 @@ content_key_policy = azure_native.media.ContentKeyPolicy("contentKeyPolicy",
             audience="urn:audience",
             issuer="urn:issuer",
             odata_type="#Microsoft.Media.ContentKeyPolicyTokenRestriction",
-            primary_verification_key={
-                "keyValue": "AAAAAAAAAAAAAAAAAAAAAA==",
-                "odataType": "#Microsoft.Media.ContentKeyPolicySymmetricTokenKey",
-            },
+            primary_verification_key=azure_native.media.ContentKeyPolicySymmetricTokenKeyArgs(
+                key_value="AAAAAAAAAAAAAAAAAAAAAA==",
+                odata_type="#Microsoft.Media.ContentKeyPolicySymmetricTokenKey",
+            ),
             restriction_token_type="Swt",
         ),
     )],
@@ -183,9 +226,9 @@ class MyStack : Stack
                             {
                                 AllowTestDevices = true,
                                 BeginDate = "2017-10-16T18:22:53.46Z",
-                                ContentKeyLocation = 
+                                ContentKeyLocation = new AzureNative.Media.Inputs.ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeaderArgs
                                 {
-                                    { "odataType", "#Microsoft.Media.ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeader" },
+                                    OdataType = "#Microsoft.Media.ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeader",
                                 },
                                 ContentType = "UltraVioletDownload",
                                 LicenseType = "Persistent",
@@ -222,7 +265,61 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	media "github.com/pulumi/pulumi-azure-native/sdk/go/azure/media"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := media.NewContentKeyPolicy(ctx, "contentKeyPolicy", &media.ContentKeyPolicyArgs{
+			AccountName:          pulumi.String("contosomedia"),
+			ContentKeyPolicyName: pulumi.String("PolicyWithPlayReadyOptionAndOpenRestriction"),
+			Description:          pulumi.String("ArmPolicyDescription"),
+			Options: []media.ContentKeyPolicyOptionArgs{
+				&media.ContentKeyPolicyOptionArgs{
+					Configuration: media.ContentKeyPolicyPlayReadyConfiguration{
+						Licenses: []media.ContentKeyPolicyPlayReadyLicense{
+							media.ContentKeyPolicyPlayReadyLicense{
+								AllowTestDevices: true,
+								BeginDate:        "2017-10-16T18:22:53.46Z",
+								ContentKeyLocation: media.ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeader{
+									OdataType: "#Microsoft.Media.ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeader",
+								},
+								ContentType: "UltraVioletDownload",
+								LicenseType: "Persistent",
+								PlayRight: media.ContentKeyPolicyPlayReadyPlayRight{
+									AllowPassingVideoContentToUnknownOutput:            "NotAllowed",
+									DigitalVideoOnlyContentRestriction:                 false,
+									ImageConstraintForAnalogComponentVideoRestriction:  true,
+									ImageConstraintForAnalogComputerMonitorRestriction: false,
+									ScmsRestriction: 2,
+								},
+							},
+						},
+						OdataType: "#Microsoft.Media.ContentKeyPolicyPlayReadyConfiguration",
+					},
+					Name: pulumi.String("ArmPolicyOptionName"),
+					Restriction: media.ContentKeyPolicyOpenRestriction{
+						OdataType: "#Microsoft.Media.ContentKeyPolicyOpenRestriction",
+					},
+				},
+			},
+			ResourceGroupName: pulumi.String("contoso"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -243,9 +340,9 @@ content_key_policy = azure_native.media.ContentKeyPolicy("contentKeyPolicy",
             licenses=[azure_native.media.ContentKeyPolicyPlayReadyLicenseArgs(
                 allow_test_devices=True,
                 begin_date="2017-10-16T18:22:53.46Z",
-                content_key_location={
-                    "odataType": "#Microsoft.Media.ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeader",
-                },
+                content_key_location=azure_native.media.ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeaderArgs(
+                    odata_type="#Microsoft.Media.ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeader",
+                ),
                 content_type="UltraVioletDownload",
                 license_type="Persistent",
                 play_right=azure_native.media.ContentKeyPolicyPlayReadyPlayRightArgs(
@@ -350,20 +447,20 @@ class MyStack : Stack
                     {
                         AlternateVerificationKeys = 
                         {
-                            
+                            new AzureNative.Media.Inputs.ContentKeyPolicySymmetricTokenKeyArgs
                             {
-                                { "keyValue", "AAAAAAAAAAAAAAAAAAAAAA==" },
-                                { "odataType", "#Microsoft.Media.ContentKeyPolicySymmetricTokenKey" },
+                                KeyValue = "AAAAAAAAAAAAAAAAAAAAAA==",
+                                OdataType = "#Microsoft.Media.ContentKeyPolicySymmetricTokenKey",
                             },
                         },
                         Audience = "urn:audience",
                         Issuer = "urn:issuer",
                         OdataType = "#Microsoft.Media.ContentKeyPolicyTokenRestriction",
-                        PrimaryVerificationKey = 
+                        PrimaryVerificationKey = new AzureNative.Media.Inputs.ContentKeyPolicyRsaTokenKeyArgs
                         {
-                            { "exponent", "AQAB" },
-                            { "modulus", "AQAD" },
-                            { "odataType", "#Microsoft.Media.ContentKeyPolicyRsaTokenKey" },
+                            Exponent = "AQAB",
+                            Modulus = "AQAD",
+                            OdataType = "#Microsoft.Media.ContentKeyPolicyRsaTokenKey",
                         },
                         RestrictionTokenType = "Jwt",
                     },
@@ -383,7 +480,58 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	media "github.com/pulumi/pulumi-azure-native/sdk/go/azure/media"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := media.NewContentKeyPolicy(ctx, "contentKeyPolicy", &media.ContentKeyPolicyArgs{
+			AccountName:          pulumi.String("contosomedia"),
+			ContentKeyPolicyName: pulumi.String("PolicyWithWidevineOptionAndJwtTokenRestriction"),
+			Description:          pulumi.String("ArmPolicyDescription"),
+			Options: []media.ContentKeyPolicyOptionArgs{
+				&media.ContentKeyPolicyOptionArgs{
+					Configuration: media.ContentKeyPolicyWidevineConfiguration{
+						OdataType:        "#Microsoft.Media.ContentKeyPolicyWidevineConfiguration",
+						WidevineTemplate: "{\"allowed_track_types\":\"SD_HD\",\"content_key_specs\":[{\"track_type\":\"SD\",\"security_level\":1,\"required_output_protection\":{\"hdcp\":\"HDCP_V2\"}}],\"policy_overrides\":{\"can_play\":true,\"can_persist\":true,\"can_renew\":false}}",
+					},
+					Name: pulumi.String("widevineoption"),
+					Restriction: media.ContentKeyPolicyTokenRestriction{
+						AlternateVerificationKeys: []interface{}{
+							media.ContentKeyPolicySymmetricTokenKey{
+								KeyValue:  "AAAAAAAAAAAAAAAAAAAAAA==",
+								OdataType: "#Microsoft.Media.ContentKeyPolicySymmetricTokenKey",
+							},
+						},
+						Audience:  "urn:audience",
+						Issuer:    "urn:issuer",
+						OdataType: "#Microsoft.Media.ContentKeyPolicyTokenRestriction",
+						PrimaryVerificationKey: media.ContentKeyPolicyRsaTokenKey{
+							Exponent:  "AQAB",
+							Modulus:   "AQAD",
+							OdataType: "#Microsoft.Media.ContentKeyPolicyRsaTokenKey",
+						},
+						RestrictionTokenType: "Jwt",
+					},
+				},
+			},
+			ResourceGroupName: pulumi.String("contoso"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -406,18 +554,18 @@ content_key_policy = azure_native.media.ContentKeyPolicy("contentKeyPolicy",
         ),
         name="widevineoption",
         restriction=azure_native.media.ContentKeyPolicyTokenRestrictionArgs(
-            alternate_verification_keys=[{
-                "keyValue": "AAAAAAAAAAAAAAAAAAAAAA==",
-                "odataType": "#Microsoft.Media.ContentKeyPolicySymmetricTokenKey",
-            }],
+            alternate_verification_keys=[azure_native.media.ContentKeyPolicySymmetricTokenKeyArgs(
+                key_value="AAAAAAAAAAAAAAAAAAAAAA==",
+                odata_type="#Microsoft.Media.ContentKeyPolicySymmetricTokenKey",
+            )],
             audience="urn:audience",
             issuer="urn:issuer",
             odata_type="#Microsoft.Media.ContentKeyPolicyTokenRestriction",
-            primary_verification_key={
-                "exponent": "AQAB",
-                "modulus": "AQAD",
-                "odataType": "#Microsoft.Media.ContentKeyPolicyRsaTokenKey",
-            },
+            primary_verification_key=azure_native.media.ContentKeyPolicyRsaTokenKeyArgs(
+                exponent="AQAB",
+                modulus="AQAD",
+                odata_type="#Microsoft.Media.ContentKeyPolicyRsaTokenKey",
+            ),
             restriction_token_type="Jwt",
         ),
     )],
@@ -505,10 +653,10 @@ class MyStack : Stack
                         Audience = "urn:audience",
                         Issuer = "urn:issuer",
                         OdataType = "#Microsoft.Media.ContentKeyPolicyTokenRestriction",
-                        PrimaryVerificationKey = 
+                        PrimaryVerificationKey = new AzureNative.Media.Inputs.ContentKeyPolicySymmetricTokenKeyArgs
                         {
-                            { "keyValue", "AAAAAAAAAAAAAAAAAAAAAA==" },
-                            { "odataType", "#Microsoft.Media.ContentKeyPolicySymmetricTokenKey" },
+                            KeyValue = "AAAAAAAAAAAAAAAAAAAAAA==",
+                            OdataType = "#Microsoft.Media.ContentKeyPolicySymmetricTokenKey",
                         },
                         RestrictionTokenType = "Swt",
                     },
@@ -541,7 +689,60 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	media "github.com/pulumi/pulumi-azure-native/sdk/go/azure/media"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := media.NewContentKeyPolicy(ctx, "contentKeyPolicy", &media.ContentKeyPolicyArgs{
+			AccountName:          pulumi.String("contosomedia"),
+			ContentKeyPolicyName: pulumi.String("PolicyCreatedWithMultipleOptions"),
+			Description:          pulumi.String("ArmPolicyDescription"),
+			Options: []media.ContentKeyPolicyOptionArgs{
+				&media.ContentKeyPolicyOptionArgs{
+					Configuration: media.ContentKeyPolicyClearKeyConfiguration{
+						OdataType: "#Microsoft.Media.ContentKeyPolicyClearKeyConfiguration",
+					},
+					Name: pulumi.String("ClearKeyOption"),
+					Restriction: media.ContentKeyPolicyTokenRestriction{
+						Audience:  "urn:audience",
+						Issuer:    "urn:issuer",
+						OdataType: "#Microsoft.Media.ContentKeyPolicyTokenRestriction",
+						PrimaryVerificationKey: media.ContentKeyPolicySymmetricTokenKey{
+							KeyValue:  "AAAAAAAAAAAAAAAAAAAAAA==",
+							OdataType: "#Microsoft.Media.ContentKeyPolicySymmetricTokenKey",
+						},
+						RestrictionTokenType: "Swt",
+					},
+				},
+				&media.ContentKeyPolicyOptionArgs{
+					Configuration: media.ContentKeyPolicyWidevineConfiguration{
+						OdataType:        "#Microsoft.Media.ContentKeyPolicyWidevineConfiguration",
+						WidevineTemplate: "{\"allowed_track_types\":\"SD_HD\",\"content_key_specs\":[{\"track_type\":\"SD\",\"security_level\":1,\"required_output_protection\":{\"hdcp\":\"HDCP_V2\"}}],\"policy_overrides\":{\"can_play\":true,\"can_persist\":true,\"can_renew\":false}}",
+					},
+					Name: pulumi.String("widevineoption"),
+					Restriction: media.ContentKeyPolicyOpenRestriction{
+						OdataType: "#Microsoft.Media.ContentKeyPolicyOpenRestriction",
+					},
+				},
+			},
+			ResourceGroupName: pulumi.String("contoso"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -567,10 +768,10 @@ content_key_policy = azure_native.media.ContentKeyPolicy("contentKeyPolicy",
                 audience="urn:audience",
                 issuer="urn:issuer",
                 odata_type="#Microsoft.Media.ContentKeyPolicyTokenRestriction",
-                primary_verification_key={
-                    "keyValue": "AAAAAAAAAAAAAAAAAAAAAA==",
-                    "odataType": "#Microsoft.Media.ContentKeyPolicySymmetricTokenKey",
-                },
+                primary_verification_key=azure_native.media.ContentKeyPolicySymmetricTokenKeyArgs(
+                    key_value="AAAAAAAAAAAAAAAAAAAAAA==",
+                    odata_type="#Microsoft.Media.ContentKeyPolicySymmetricTokenKey",
+                ),
                 restriction_token_type="Swt",
             ),
         ),

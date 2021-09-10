@@ -82,7 +82,55 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := network.NewNetworkVirtualAppliance(ctx, "networkVirtualAppliance", &network.NetworkVirtualApplianceArgs{
+			BootStrapConfigurationBlobs: pulumi.StringArray{
+				pulumi.String("https://csrncvhdstorage1.blob.core.windows.net/csrncvhdstoragecont/csrbootstrapconfig"),
+			},
+			CloudInitConfigurationBlobs: pulumi.StringArray{
+				pulumi.String("https://csrncvhdstorage1.blob.core.windows.net/csrncvhdstoragecont/csrcloudinitconfig"),
+			},
+			Identity: &network.ManagedServiceIdentityArgs{
+				Type: "UserAssigned",
+				UserAssignedIdentities: pulumi.AnyMap{
+					"/subscriptions/subid/resourcegroups/rg1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity1": nil,
+				},
+			},
+			Location:                    pulumi.String("West US"),
+			NetworkVirtualApplianceName: pulumi.String("nva"),
+			NvaSku: &network.VirtualApplianceSkuPropertiesArgs{
+				BundledScaleUnit:   pulumi.String("1"),
+				MarketPlaceVersion: pulumi.String("12.1"),
+				Vendor:             pulumi.String("Cisco SDWAN"),
+			},
+			ResourceGroupName: pulumi.String("rg1"),
+			Tags: pulumi.StringMap{
+				"key1": pulumi.String("value1"),
+			},
+			VirtualApplianceAsn: pulumi.Float64(10000),
+			VirtualHub: &network.SubResourceArgs{
+				Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/hub1"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 

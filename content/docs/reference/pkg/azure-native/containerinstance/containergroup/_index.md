@@ -178,7 +178,130 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	containerinstance "github.com/pulumi/pulumi-azure-native/sdk/go/azure/containerinstance"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := containerinstance.NewContainerGroup(ctx, "containerGroup", &containerinstance.ContainerGroupArgs{
+			ContainerGroupName: pulumi.String("demo1"),
+			Containers: containerinstance.ContainerArray{
+				&containerinstance.ContainerArgs{
+					Command:              pulumi.StringArray{},
+					EnvironmentVariables: containerinstance.EnvironmentVariableArray{},
+					Image:                pulumi.String("nginx"),
+					Name:                 pulumi.String("demo1"),
+					Ports: containerinstance.ContainerPortArray{
+						&containerinstance.ContainerPortArgs{
+							Port: pulumi.Int(80),
+						},
+					},
+					Resources: &containerinstance.ResourceRequirementsArgs{
+						Requests: &containerinstance.ResourceRequestsArgs{
+							Cpu: pulumi.Float64(1),
+							Gpu: &containerinstance.GpuResourceArgs{
+								Count: pulumi.Int(1),
+								Sku:   pulumi.String("K80"),
+							},
+							MemoryInGB: pulumi.Float64(1.5),
+						},
+					},
+					VolumeMounts: containerinstance.VolumeMountArray{
+						&containerinstance.VolumeMountArgs{
+							MountPath: pulumi.String("/mnt/volume1"),
+							Name:      pulumi.String("volume1"),
+							ReadOnly:  pulumi.Bool(false),
+						},
+						&containerinstance.VolumeMountArgs{
+							MountPath: pulumi.String("/mnt/volume2"),
+							Name:      pulumi.String("volume2"),
+							ReadOnly:  pulumi.Bool(false),
+						},
+						&containerinstance.VolumeMountArgs{
+							MountPath: pulumi.String("/mnt/volume3"),
+							Name:      pulumi.String("volume3"),
+							ReadOnly:  pulumi.Bool(true),
+						},
+					},
+				},
+			},
+			Diagnostics: &containerinstance.ContainerGroupDiagnosticsArgs{
+				LogAnalytics: &containerinstance.LogAnalyticsArgs{
+					LogType: pulumi.String("ContainerInsights"),
+					Metadata: pulumi.StringMap{
+						"test-key": pulumi.String("test-metadata-value"),
+					},
+					WorkspaceId:  pulumi.String("workspaceid"),
+					WorkspaceKey: pulumi.String("workspaceKey"),
+				},
+			},
+			DnsConfig: &containerinstance.DnsConfigurationArgs{
+				NameServers: pulumi.StringArray{
+					pulumi.String("1.1.1.1"),
+				},
+				Options:       pulumi.String("ndots:2"),
+				SearchDomains: pulumi.String("cluster.local svc.cluster.local"),
+			},
+			Identity: &containerinstance.ContainerGroupIdentityArgs{
+				Type: "SystemAssigned, UserAssigned",
+				UserAssignedIdentities: pulumi.AnyMap{
+					"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity-name": nil,
+				},
+			},
+			ImageRegistryCredentials: containerinstance.ImageRegistryCredentialArray{},
+			IpAddress: &containerinstance.IpAddressArgs{
+				DnsNameLabel: pulumi.String("dnsnamelabel1"),
+				Ports: []containerinstance.PortArgs{
+					&containerinstance.PortArgs{
+						Port:     pulumi.Int(80),
+						Protocol: pulumi.String("TCP"),
+					},
+				},
+				Type: pulumi.String("Public"),
+			},
+			Location: pulumi.String("west us"),
+			NetworkProfile: &containerinstance.ContainerGroupNetworkProfileArgs{
+				Id: pulumi.String("test-network-profile-id"),
+			},
+			OsType:            pulumi.String("Linux"),
+			ResourceGroupName: pulumi.String("demo"),
+			Volumes: []containerinstance.VolumeArgs{
+				&containerinstance.VolumeArgs{
+					AzureFile: &containerinstance.AzureFileVolumeArgs{
+						ShareName:          pulumi.String("shareName"),
+						StorageAccountKey:  pulumi.String("accountKey"),
+						StorageAccountName: pulumi.String("accountName"),
+					},
+					Name: pulumi.String("volume1"),
+				},
+				&containerinstance.VolumeArgs{
+					EmptyDir: nil,
+					Name:     pulumi.String("volume2"),
+				},
+				&containerinstance.VolumeArgs{
+					Name: pulumi.String("volume3"),
+					Secret: pulumi.StringMap{
+						"secretKey1": pulumi.String("SecretValue1InBase64"),
+						"secretKey2": pulumi.String("SecretValue2InBase64"),
+					},
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 

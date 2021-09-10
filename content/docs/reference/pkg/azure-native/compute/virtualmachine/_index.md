@@ -100,7 +100,69 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewVirtualMachine(ctx, "virtualMachine", &compute.VirtualMachineArgs{
+			HardwareProfile: &compute.HardwareProfileArgs{
+				VmSize: pulumi.String("Standard_D2s_v3"),
+			},
+			Location: pulumi.String("westus"),
+			NetworkProfile: &compute.NetworkProfileArgs{
+				NetworkInterfaces: compute.NetworkInterfaceReferenceArray{
+					&compute.NetworkInterfaceReferenceArgs{
+						Id:      pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}"),
+						Primary: pulumi.Bool(true),
+					},
+				},
+			},
+			OsProfile: &compute.OSProfileArgs{
+				AdminPassword: pulumi.String("{your-password}"),
+				AdminUsername: pulumi.String("{your-username}"),
+				ComputerName:  pulumi.String("myVM"),
+				LinuxConfiguration: &compute.LinuxConfigurationArgs{
+					PatchSettings: &compute.LinuxPatchSettingsArgs{
+						AssessmentMode: pulumi.String("ImageDefault"),
+					},
+					ProvisionVMAgent: pulumi.Bool(true),
+				},
+			},
+			ResourceGroupName: pulumi.String("myResourceGroup"),
+			StorageProfile: &compute.StorageProfileArgs{
+				ImageReference: &compute.ImageReferenceArgs{
+					Offer:     pulumi.String("UbuntuServer"),
+					Publisher: pulumi.String("Canonical"),
+					Sku:       pulumi.String("16.04-LTS"),
+					Version:   pulumi.String("latest"),
+				},
+				OsDisk: &compute.OSDiskArgs{
+					Caching:      "ReadWrite",
+					CreateOption: pulumi.String("FromImage"),
+					ManagedDisk: &compute.ManagedDiskParametersArgs{
+						StorageAccountType: pulumi.String("Premium_LRS"),
+					},
+					Name: pulumi.String("myVMosdisk"),
+				},
+			},
+			VmName: pulumi.String("myVM"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -296,7 +358,69 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewVirtualMachine(ctx, "virtualMachine", &compute.VirtualMachineArgs{
+			HardwareProfile: &compute.HardwareProfileArgs{
+				VmSize: pulumi.String("Standard_D2s_v3"),
+			},
+			Location: pulumi.String("westus"),
+			NetworkProfile: &compute.NetworkProfileArgs{
+				NetworkInterfaces: compute.NetworkInterfaceReferenceArray{
+					&compute.NetworkInterfaceReferenceArgs{
+						Id:      pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}"),
+						Primary: pulumi.Bool(true),
+					},
+				},
+			},
+			OsProfile: &compute.OSProfileArgs{
+				AdminPassword: pulumi.String("{your-password}"),
+				AdminUsername: pulumi.String("{your-username}"),
+				ComputerName:  pulumi.String("myVM"),
+				LinuxConfiguration: &compute.LinuxConfigurationArgs{
+					PatchSettings: &compute.LinuxPatchSettingsArgs{
+						PatchMode: pulumi.String("ImageDefault"),
+					},
+					ProvisionVMAgent: pulumi.Bool(true),
+				},
+			},
+			ResourceGroupName: pulumi.String("myResourceGroup"),
+			StorageProfile: &compute.StorageProfileArgs{
+				ImageReference: &compute.ImageReferenceArgs{
+					Offer:     pulumi.String("UbuntuServer"),
+					Publisher: pulumi.String("Canonical"),
+					Sku:       pulumi.String("16.04-LTS"),
+					Version:   pulumi.String("latest"),
+				},
+				OsDisk: &compute.OSDiskArgs{
+					Caching:      "ReadWrite",
+					CreateOption: pulumi.String("FromImage"),
+					ManagedDisk: &compute.ManagedDiskParametersArgs{
+						StorageAccountType: pulumi.String("Premium_LRS"),
+					},
+					Name: pulumi.String("myVMosdisk"),
+				},
+			},
+			VmName: pulumi.String("myVM"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -493,7 +617,70 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewVirtualMachine(ctx, "virtualMachine", &compute.VirtualMachineArgs{
+			HardwareProfile: &compute.HardwareProfileArgs{
+				VmSize: pulumi.String("Standard_D2s_v3"),
+			},
+			Location: pulumi.String("westus"),
+			NetworkProfile: &compute.NetworkProfileArgs{
+				NetworkInterfaces: compute.NetworkInterfaceReferenceArray{
+					&compute.NetworkInterfaceReferenceArgs{
+						Id:      pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}"),
+						Primary: pulumi.Bool(true),
+					},
+				},
+			},
+			OsProfile: &compute.OSProfileArgs{
+				AdminPassword: pulumi.String("{your-password}"),
+				AdminUsername: pulumi.String("{your-username}"),
+				ComputerName:  pulumi.String("myVM"),
+				LinuxConfiguration: &compute.LinuxConfigurationArgs{
+					PatchSettings: &compute.LinuxPatchSettingsArgs{
+						AssessmentMode: pulumi.String("AutomaticByPlatform"),
+						PatchMode:      pulumi.String("AutomaticByPlatform"),
+					},
+					ProvisionVMAgent: pulumi.Bool(true),
+				},
+			},
+			ResourceGroupName: pulumi.String("myResourceGroup"),
+			StorageProfile: &compute.StorageProfileArgs{
+				ImageReference: &compute.ImageReferenceArgs{
+					Offer:     pulumi.String("UbuntuServer"),
+					Publisher: pulumi.String("Canonical"),
+					Sku:       pulumi.String("16.04-LTS"),
+					Version:   pulumi.String("latest"),
+				},
+				OsDisk: &compute.OSDiskArgs{
+					Caching:      "ReadWrite",
+					CreateOption: pulumi.String("FromImage"),
+					ManagedDisk: &compute.ManagedDiskParametersArgs{
+						StorageAccountType: pulumi.String("Premium_LRS"),
+					},
+					Name: pulumi.String("myVMosdisk"),
+				},
+			},
+			VmName: pulumi.String("myVM"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -692,7 +879,70 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewVirtualMachine(ctx, "virtualMachine", &compute.VirtualMachineArgs{
+			HardwareProfile: &compute.HardwareProfileArgs{
+				VmSize: pulumi.String("Standard_D2s_v3"),
+			},
+			Location: pulumi.String("westus"),
+			NetworkProfile: &compute.NetworkProfileArgs{
+				NetworkInterfaces: compute.NetworkInterfaceReferenceArray{
+					&compute.NetworkInterfaceReferenceArgs{
+						Id:      pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}"),
+						Primary: pulumi.Bool(true),
+					},
+				},
+			},
+			OsProfile: &compute.OSProfileArgs{
+				AdminPassword: pulumi.String("{your-password}"),
+				AdminUsername: pulumi.String("{your-username}"),
+				ComputerName:  pulumi.String("myVM"),
+			},
+			ResourceGroupName: pulumi.String("myResourceGroup"),
+			SecurityProfile: &compute.SecurityProfileArgs{
+				SecurityType: pulumi.String("TrustedLaunch"),
+				UefiSettings: &compute.UefiSettingsArgs{
+					SecureBootEnabled: pulumi.Bool(true),
+					VTpmEnabled:       pulumi.Bool(true),
+				},
+			},
+			StorageProfile: &compute.StorageProfileArgs{
+				ImageReference: &compute.ImageReferenceArgs{
+					Offer:     pulumi.String("windowsserver-gen2preview-preview"),
+					Publisher: pulumi.String("MicrosoftWindowsServer"),
+					Sku:       pulumi.String("windows10-tvm"),
+					Version:   pulumi.String("18363.592.2001092016"),
+				},
+				OsDisk: &compute.OSDiskArgs{
+					Caching:      "ReadOnly",
+					CreateOption: pulumi.String("FromImage"),
+					ManagedDisk: &compute.ManagedDiskParametersArgs{
+						StorageAccountType: pulumi.String("StandardSSD_LRS"),
+					},
+					Name: pulumi.String("myVMosdisk"),
+				},
+			},
+			VmName: pulumi.String("myVM"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -891,7 +1141,70 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewVirtualMachine(ctx, "virtualMachine", &compute.VirtualMachineArgs{
+			DiagnosticsProfile: &compute.DiagnosticsProfileArgs{
+				BootDiagnostics: &compute.BootDiagnosticsArgs{
+					Enabled:    pulumi.Bool(true),
+					StorageUri: pulumi.String("http://{existing-storage-account-name}.blob.core.windows.net"),
+				},
+			},
+			HardwareProfile: &compute.HardwareProfileArgs{
+				VmSize: pulumi.String("Standard_D1_v2"),
+			},
+			Location: pulumi.String("westus"),
+			NetworkProfile: &compute.NetworkProfileArgs{
+				NetworkInterfaces: compute.NetworkInterfaceReferenceArray{
+					&compute.NetworkInterfaceReferenceArgs{
+						Id:      pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}"),
+						Primary: pulumi.Bool(true),
+					},
+				},
+			},
+			OsProfile: &compute.OSProfileArgs{
+				AdminPassword: pulumi.String("{your-password}"),
+				AdminUsername: pulumi.String("{your-username}"),
+				ComputerName:  pulumi.String("{vm-name}"),
+			},
+			ResourceGroupName: pulumi.String("myResourceGroup"),
+			StorageProfile: &compute.StorageProfileArgs{
+				ImageReference: &compute.ImageReferenceArgs{
+					Offer:     pulumi.String("WindowsServer"),
+					Publisher: pulumi.String("MicrosoftWindowsServer"),
+					Sku:       pulumi.String("2016-Datacenter"),
+					Version:   pulumi.String("latest"),
+				},
+				OsDisk: &compute.OSDiskArgs{
+					Caching:      "ReadWrite",
+					CreateOption: pulumi.String("FromImage"),
+					ManagedDisk: &compute.ManagedDiskParametersArgs{
+						StorageAccountType: pulumi.String("Standard_LRS"),
+					},
+					Name: pulumi.String("vmOSdisk"),
+				},
+			},
+			UserData: pulumi.String("RXhhbXBsZSBVc2VyRGF0YQ=="),
+			VmName:   pulumi.String("{vm-name}"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -1102,7 +1415,80 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewVirtualMachine(ctx, "virtualMachine", &compute.VirtualMachineArgs{
+			HardwareProfile: &compute.HardwareProfileArgs{
+				VmSize: pulumi.String("Standard_D1_v2"),
+			},
+			Location: pulumi.String("westus"),
+			NetworkProfile: &compute.NetworkProfileArgs{
+				NetworkApiVersion: pulumi.String("2020-11-01"),
+				NetworkInterfaceConfigurations: compute.VirtualMachineNetworkInterfaceConfigurationArray{
+					&compute.VirtualMachineNetworkInterfaceConfigurationArgs{
+						DeleteOption: pulumi.String("Delete"),
+						IpConfigurations: compute.VirtualMachineNetworkInterfaceIPConfigurationArray{
+							&compute.VirtualMachineNetworkInterfaceIPConfigurationArgs{
+								Name:    pulumi.String("{ip-config-name}"),
+								Primary: pulumi.Bool(true),
+								PublicIPAddressConfiguration: &compute.VirtualMachinePublicIPAddressConfigurationArgs{
+									DeleteOption:             pulumi.String("Detach"),
+									Name:                     pulumi.String("{publicIP-config-name}"),
+									PublicIPAllocationMethod: pulumi.String("Static"),
+									Sku: &compute.PublicIPAddressSkuArgs{
+										Name: pulumi.String("Basic"),
+										Tier: pulumi.String("Global"),
+									},
+								},
+							},
+						},
+						Name:    pulumi.String("{nic-config-name}"),
+						Primary: pulumi.Bool(true),
+					},
+				},
+			},
+			OsProfile: &compute.OSProfileArgs{
+				AdminPassword: pulumi.String("{your-password}"),
+				AdminUsername: pulumi.String("{your-username}"),
+				ComputerName:  pulumi.String("myVM"),
+			},
+			ResourceGroupName: pulumi.String("myResourceGroup"),
+			StorageProfile: &compute.StorageProfileArgs{
+				ImageReference: &compute.ImageReferenceArgs{
+					Offer:     pulumi.String("WindowsServer"),
+					Publisher: pulumi.String("MicrosoftWindowsServer"),
+					Sku:       pulumi.String("2016-Datacenter"),
+					Version:   pulumi.String("latest"),
+				},
+				OsDisk: &compute.OSDiskArgs{
+					Caching:      "ReadWrite",
+					CreateOption: pulumi.String("FromImage"),
+					ManagedDisk: &compute.ManagedDiskParametersArgs{
+						StorageAccountType: pulumi.String("Standard_LRS"),
+					},
+					Name: pulumi.String("myVMosdisk"),
+				},
+			},
+			VmName: pulumi.String("myVM"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -1317,7 +1703,70 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewVirtualMachine(ctx, "virtualMachine", &compute.VirtualMachineArgs{
+			HardwareProfile: &compute.HardwareProfileArgs{
+				VmSize: pulumi.String("Standard_D1_v2"),
+			},
+			Location: pulumi.String("westus"),
+			NetworkProfile: &compute.NetworkProfileArgs{
+				NetworkInterfaces: compute.NetworkInterfaceReferenceArray{
+					&compute.NetworkInterfaceReferenceArgs{
+						Id:      pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}"),
+						Primary: pulumi.Bool(true),
+					},
+				},
+			},
+			OsProfile: &compute.OSProfileArgs{
+				AdminPassword: pulumi.String("{your-password}"),
+				AdminUsername: pulumi.String("{your-username}"),
+				ComputerName:  pulumi.String("myVM"),
+				WindowsConfiguration: &compute.WindowsConfigurationArgs{
+					EnableAutomaticUpdates: pulumi.Bool(true),
+					PatchSettings: &compute.PatchSettingsArgs{
+						AssessmentMode: pulumi.String("ImageDefault"),
+					},
+					ProvisionVMAgent: pulumi.Bool(true),
+				},
+			},
+			ResourceGroupName: pulumi.String("myResourceGroup"),
+			StorageProfile: &compute.StorageProfileArgs{
+				ImageReference: &compute.ImageReferenceArgs{
+					Offer:     pulumi.String("WindowsServer"),
+					Publisher: pulumi.String("MicrosoftWindowsServer"),
+					Sku:       pulumi.String("2016-Datacenter"),
+					Version:   pulumi.String("latest"),
+				},
+				OsDisk: &compute.OSDiskArgs{
+					Caching:      "ReadWrite",
+					CreateOption: pulumi.String("FromImage"),
+					ManagedDisk: &compute.ManagedDiskParametersArgs{
+						StorageAccountType: pulumi.String("Premium_LRS"),
+					},
+					Name: pulumi.String("myVMosdisk"),
+				},
+			},
+			VmName: pulumi.String("myVM"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -1516,7 +1965,70 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewVirtualMachine(ctx, "virtualMachine", &compute.VirtualMachineArgs{
+			HardwareProfile: &compute.HardwareProfileArgs{
+				VmSize: pulumi.String("Standard_D1_v2"),
+			},
+			Location: pulumi.String("westus"),
+			NetworkProfile: &compute.NetworkProfileArgs{
+				NetworkInterfaces: compute.NetworkInterfaceReferenceArray{
+					&compute.NetworkInterfaceReferenceArgs{
+						Id:      pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/nsgExistingNic"),
+						Primary: pulumi.Bool(true),
+					},
+				},
+			},
+			OsProfile: &compute.OSProfileArgs{
+				AdminPassword: pulumi.String("{your-password}"),
+				AdminUsername: pulumi.String("{your-username}"),
+				ComputerName:  pulumi.String("myVM"),
+				WindowsConfiguration: &compute.WindowsConfigurationArgs{
+					EnableAutomaticUpdates: pulumi.Bool(true),
+					PatchSettings: &compute.PatchSettingsArgs{
+						PatchMode: pulumi.String("AutomaticByOS"),
+					},
+					ProvisionVMAgent: pulumi.Bool(true),
+				},
+			},
+			ResourceGroupName: pulumi.String("myResourceGroup"),
+			StorageProfile: &compute.StorageProfileArgs{
+				ImageReference: &compute.ImageReferenceArgs{
+					Offer:     pulumi.String("WindowsServer"),
+					Publisher: pulumi.String("MicrosoftWindowsServer"),
+					Sku:       pulumi.String("2016-Datacenter"),
+					Version:   pulumi.String("latest"),
+				},
+				OsDisk: &compute.OSDiskArgs{
+					Caching:      "ReadWrite",
+					CreateOption: pulumi.String("FromImage"),
+					ManagedDisk: &compute.ManagedDiskParametersArgs{
+						StorageAccountType: pulumi.String("Premium_LRS"),
+					},
+					Name: pulumi.String("myVMosdisk"),
+				},
+			},
+			VmName: pulumi.String("myVM"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -1716,7 +2228,71 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewVirtualMachine(ctx, "virtualMachine", &compute.VirtualMachineArgs{
+			HardwareProfile: &compute.HardwareProfileArgs{
+				VmSize: pulumi.String("Standard_D1_v2"),
+			},
+			Location: pulumi.String("westus"),
+			NetworkProfile: &compute.NetworkProfileArgs{
+				NetworkInterfaces: compute.NetworkInterfaceReferenceArray{
+					&compute.NetworkInterfaceReferenceArgs{
+						Id:      pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}"),
+						Primary: pulumi.Bool(true),
+					},
+				},
+			},
+			OsProfile: &compute.OSProfileArgs{
+				AdminPassword: pulumi.String("{your-password}"),
+				AdminUsername: pulumi.String("{your-username}"),
+				ComputerName:  pulumi.String("myVM"),
+				WindowsConfiguration: &compute.WindowsConfigurationArgs{
+					EnableAutomaticUpdates: pulumi.Bool(true),
+					PatchSettings: &compute.PatchSettingsArgs{
+						EnableHotpatching: pulumi.Bool(true),
+						PatchMode:         pulumi.String("AutomaticByPlatform"),
+					},
+					ProvisionVMAgent: pulumi.Bool(true),
+				},
+			},
+			ResourceGroupName: pulumi.String("myResourceGroup"),
+			StorageProfile: &compute.StorageProfileArgs{
+				ImageReference: &compute.ImageReferenceArgs{
+					Offer:     pulumi.String("WindowsServer"),
+					Publisher: pulumi.String("MicrosoftWindowsServer"),
+					Sku:       pulumi.String("2016-Datacenter"),
+					Version:   pulumi.String("latest"),
+				},
+				OsDisk: &compute.OSDiskArgs{
+					Caching:      "ReadWrite",
+					CreateOption: pulumi.String("FromImage"),
+					ManagedDisk: &compute.ManagedDiskParametersArgs{
+						StorageAccountType: pulumi.String("Premium_LRS"),
+					},
+					Name: pulumi.String("myVMosdisk"),
+				},
+			},
+			VmName: pulumi.String("myVM"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -1917,7 +2493,70 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewVirtualMachine(ctx, "virtualMachine", &compute.VirtualMachineArgs{
+			HardwareProfile: &compute.HardwareProfileArgs{
+				VmSize: pulumi.String("Standard_D1_v2"),
+			},
+			Location: pulumi.String("westus"),
+			NetworkProfile: &compute.NetworkProfileArgs{
+				NetworkInterfaces: compute.NetworkInterfaceReferenceArray{
+					&compute.NetworkInterfaceReferenceArgs{
+						Id:      pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}"),
+						Primary: pulumi.Bool(true),
+					},
+				},
+			},
+			OsProfile: &compute.OSProfileArgs{
+				AdminPassword: pulumi.String("{your-password}"),
+				AdminUsername: pulumi.String("{your-username}"),
+				ComputerName:  pulumi.String("myVM"),
+				WindowsConfiguration: &compute.WindowsConfigurationArgs{
+					EnableAutomaticUpdates: pulumi.Bool(true),
+					PatchSettings: &compute.PatchSettingsArgs{
+						PatchMode: pulumi.String("Manual"),
+					},
+					ProvisionVMAgent: pulumi.Bool(true),
+				},
+			},
+			ResourceGroupName: pulumi.String("myResourceGroup"),
+			StorageProfile: &compute.StorageProfileArgs{
+				ImageReference: &compute.ImageReferenceArgs{
+					Offer:     pulumi.String("WindowsServer"),
+					Publisher: pulumi.String("MicrosoftWindowsServer"),
+					Sku:       pulumi.String("2016-Datacenter"),
+					Version:   pulumi.String("latest"),
+				},
+				OsDisk: &compute.OSDiskArgs{
+					Caching:      "ReadWrite",
+					CreateOption: pulumi.String("FromImage"),
+					ManagedDisk: &compute.ManagedDiskParametersArgs{
+						StorageAccountType: pulumi.String("Premium_LRS"),
+					},
+					Name: pulumi.String("myVMosdisk"),
+				},
+			},
+			VmName: pulumi.String("myVM"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -2117,7 +2756,71 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewVirtualMachine(ctx, "virtualMachine", &compute.VirtualMachineArgs{
+			HardwareProfile: &compute.HardwareProfileArgs{
+				VmSize: pulumi.String("Standard_D1_v2"),
+			},
+			Location: pulumi.String("westus"),
+			NetworkProfile: &compute.NetworkProfileArgs{
+				NetworkInterfaces: compute.NetworkInterfaceReferenceArray{
+					&compute.NetworkInterfaceReferenceArgs{
+						Id:      pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}"),
+						Primary: pulumi.Bool(true),
+					},
+				},
+			},
+			OsProfile: &compute.OSProfileArgs{
+				AdminPassword: pulumi.String("{your-password}"),
+				AdminUsername: pulumi.String("{your-username}"),
+				ComputerName:  pulumi.String("myVM"),
+				WindowsConfiguration: &compute.WindowsConfigurationArgs{
+					EnableAutomaticUpdates: pulumi.Bool(true),
+					PatchSettings: &compute.PatchSettingsArgs{
+						AssessmentMode: pulumi.String("AutomaticByPlatform"),
+						PatchMode:      pulumi.String("AutomaticByPlatform"),
+					},
+					ProvisionVMAgent: pulumi.Bool(true),
+				},
+			},
+			ResourceGroupName: pulumi.String("myResourceGroup"),
+			StorageProfile: &compute.StorageProfileArgs{
+				ImageReference: &compute.ImageReferenceArgs{
+					Offer:     pulumi.String("WindowsServer"),
+					Publisher: pulumi.String("MicrosoftWindowsServer"),
+					Sku:       pulumi.String("2016-Datacenter"),
+					Version:   pulumi.String("latest"),
+				},
+				OsDisk: &compute.OSDiskArgs{
+					Caching:      "ReadWrite",
+					CreateOption: pulumi.String("FromImage"),
+					ManagedDisk: &compute.ManagedDiskParametersArgs{
+						StorageAccountType: pulumi.String("Premium_LRS"),
+					},
+					Name: pulumi.String("myVMosdisk"),
+				},
+			},
+			VmName: pulumi.String("myVM"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -2307,7 +3010,61 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewVirtualMachine(ctx, "virtualMachine", &compute.VirtualMachineArgs{
+			HardwareProfile: &compute.HardwareProfileArgs{
+				VmSize: pulumi.String("Standard_D1_v2"),
+			},
+			Location: pulumi.String("westus"),
+			NetworkProfile: &compute.NetworkProfileArgs{
+				NetworkInterfaces: compute.NetworkInterfaceReferenceArray{
+					&compute.NetworkInterfaceReferenceArgs{
+						Id:      pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}"),
+						Primary: pulumi.Bool(true),
+					},
+				},
+			},
+			OsProfile: &compute.OSProfileArgs{
+				AdminPassword: pulumi.String("{your-password}"),
+				AdminUsername: pulumi.String("{your-username}"),
+				ComputerName:  pulumi.String("myVM"),
+			},
+			ResourceGroupName: pulumi.String("myResourceGroup"),
+			StorageProfile: &compute.StorageProfileArgs{
+				OsDisk: &compute.OSDiskArgs{
+					Caching:      "ReadWrite",
+					CreateOption: pulumi.String("FromImage"),
+					Image: &compute.VirtualHardDiskArgs{
+						Uri: pulumi.String("http://{existing-storage-account-name}.blob.core.windows.net/{existing-container-name}/{existing-generalized-os-image-blob-name}.vhd"),
+					},
+					Name:   pulumi.String("myVMosdisk"),
+					OsType: "Windows",
+					Vhd: &compute.VirtualHardDiskArgs{
+						Uri: pulumi.String("http://{existing-storage-account-name}.blob.core.windows.net/{existing-container-name}/myDisk.vhd"),
+					},
+				},
+			},
+			VmName: pulumi.String("{vm-name}"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -2502,7 +3259,81 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewVirtualMachine(ctx, "virtualMachine", &compute.VirtualMachineArgs{
+			HardwareProfile: &compute.HardwareProfileArgs{
+				VmSize: pulumi.String("Standard_D2_v2"),
+			},
+			Location: pulumi.String("westus"),
+			NetworkProfile: &compute.NetworkProfileArgs{
+				NetworkInterfaces: compute.NetworkInterfaceReferenceArray{
+					&compute.NetworkInterfaceReferenceArgs{
+						Id:      pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}"),
+						Primary: pulumi.Bool(true),
+					},
+				},
+			},
+			OsProfile: &compute.OSProfileArgs{
+				AdminPassword: pulumi.String("{your-password}"),
+				AdminUsername: pulumi.String("{your-username}"),
+				ComputerName:  pulumi.String("myVM"),
+			},
+			ResourceGroupName: pulumi.String("myResourceGroup"),
+			StorageProfile: &compute.StorageProfileArgs{
+				DataDisks: compute.DataDiskArray{
+					&compute.DataDiskArgs{
+						CreateOption: pulumi.String("Empty"),
+						DiskSizeGB:   pulumi.Int(1023),
+						Lun:          pulumi.Int(0),
+						Vhd: &compute.VirtualHardDiskArgs{
+							Uri: pulumi.String("http://{existing-storage-account-name}.blob.core.windows.net/{existing-container-name}/myDisk0.vhd"),
+						},
+					},
+					&compute.DataDiskArgs{
+						CreateOption: pulumi.String("Empty"),
+						DiskSizeGB:   pulumi.Int(1023),
+						Lun:          pulumi.Int(1),
+						Vhd: &compute.VirtualHardDiskArgs{
+							Uri: pulumi.String("http://{existing-storage-account-name}.blob.core.windows.net/{existing-container-name}/myDisk1.vhd"),
+						},
+					},
+				},
+				ImageReference: &compute.ImageReferenceArgs{
+					Offer:     pulumi.String("WindowsServer"),
+					Publisher: pulumi.String("MicrosoftWindowsServer"),
+					Sku:       pulumi.String("2016-Datacenter"),
+					Version:   pulumi.String("latest"),
+				},
+				OsDisk: &compute.OSDiskArgs{
+					Caching:      "ReadWrite",
+					CreateOption: pulumi.String("FromImage"),
+					Name:         pulumi.String("myVMosdisk"),
+					Vhd: &compute.VirtualHardDiskArgs{
+						Uri: pulumi.String("http://{existing-storage-account-name}.blob.core.windows.net/{existing-container-name}/myDisk.vhd"),
+					},
+				},
+			},
+			VmName: pulumi.String("{vm-name}"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -2711,7 +3542,60 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewVirtualMachine(ctx, "virtualMachine", &compute.VirtualMachineArgs{
+			HardwareProfile: &compute.HardwareProfileArgs{
+				VmSize: pulumi.String("Standard_D1_v2"),
+			},
+			Location: pulumi.String("westus"),
+			NetworkProfile: &compute.NetworkProfileArgs{
+				NetworkInterfaces: compute.NetworkInterfaceReferenceArray{
+					&compute.NetworkInterfaceReferenceArgs{
+						Id:      pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}"),
+						Primary: pulumi.Bool(true),
+					},
+				},
+			},
+			OsProfile: &compute.OSProfileArgs{
+				AdminPassword: pulumi.String("{your-password}"),
+				AdminUsername: pulumi.String("{your-username}"),
+				ComputerName:  pulumi.String("myVM"),
+			},
+			ResourceGroupName: pulumi.String("myResourceGroup"),
+			StorageProfile: &compute.StorageProfileArgs{
+				ImageReference: &compute.ImageReferenceArgs{
+					Id: pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/images/{existing-custom-image-name}"),
+				},
+				OsDisk: &compute.OSDiskArgs{
+					Caching:      "ReadWrite",
+					CreateOption: pulumi.String("FromImage"),
+					ManagedDisk: &compute.ManagedDiskParametersArgs{
+						StorageAccountType: pulumi.String("Standard_LRS"),
+					},
+					Name: pulumi.String("myVMosdisk"),
+				},
+			},
+			VmName: pulumi.String("myVM"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -2878,7 +3762,60 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewVirtualMachine(ctx, "virtualMachine", &compute.VirtualMachineArgs{
+			HardwareProfile: &compute.HardwareProfileArgs{
+				VmSize: pulumi.String("Standard_D1_v2"),
+			},
+			Location: pulumi.String("westus"),
+			NetworkProfile: &compute.NetworkProfileArgs{
+				NetworkInterfaces: compute.NetworkInterfaceReferenceArray{
+					&compute.NetworkInterfaceReferenceArgs{
+						Id:      pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}"),
+						Primary: pulumi.Bool(true),
+					},
+				},
+			},
+			OsProfile: &compute.OSProfileArgs{
+				AdminPassword: pulumi.String("{your-password}"),
+				AdminUsername: pulumi.String("{your-username}"),
+				ComputerName:  pulumi.String("myVM"),
+			},
+			ResourceGroupName: pulumi.String("myResourceGroup"),
+			StorageProfile: &compute.StorageProfileArgs{
+				ImageReference: &compute.ImageReferenceArgs{
+					Id: pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/galleries/mySharedGallery/images/mySharedImage"),
+				},
+				OsDisk: &compute.OSDiskArgs{
+					Caching:      "ReadWrite",
+					CreateOption: pulumi.String("FromImage"),
+					ManagedDisk: &compute.ManagedDiskParametersArgs{
+						StorageAccountType: pulumi.String("Standard_LRS"),
+					},
+					Name: pulumi.String("myVMosdisk"),
+				},
+			},
+			VmName: pulumi.String("myVM"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -3039,7 +3976,55 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewVirtualMachine(ctx, "virtualMachine", &compute.VirtualMachineArgs{
+			HardwareProfile: &compute.HardwareProfileArgs{
+				VmSize: pulumi.String("Standard_D1_v2"),
+			},
+			Location: pulumi.String("westus"),
+			NetworkProfile: &compute.NetworkProfileArgs{
+				NetworkInterfaces: compute.NetworkInterfaceReferenceArray{
+					&compute.NetworkInterfaceReferenceArgs{
+						Id:      pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}"),
+						Primary: pulumi.Bool(true),
+					},
+				},
+			},
+			ResourceGroupName: pulumi.String("myResourceGroup"),
+			StorageProfile: &compute.StorageProfileArgs{
+				ImageReference: &compute.ImageReferenceArgs{
+					Id: pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/galleries/mySharedGallery/images/mySharedImage"),
+				},
+				OsDisk: &compute.OSDiskArgs{
+					Caching:      "ReadWrite",
+					CreateOption: pulumi.String("FromImage"),
+					ManagedDisk: &compute.ManagedDiskParametersArgs{
+						StorageAccountType: pulumi.String("Standard_LRS"),
+					},
+					Name: pulumi.String("myVMosdisk"),
+				},
+			},
+			VmName: pulumi.String("myVM"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -3204,7 +4189,67 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewVirtualMachine(ctx, "virtualMachine", &compute.VirtualMachineArgs{
+			HardwareProfile: &compute.HardwareProfileArgs{
+				VmSize: pulumi.String("Standard_D1_v2"),
+			},
+			Location: pulumi.String("westus"),
+			NetworkProfile: &compute.NetworkProfileArgs{
+				NetworkInterfaces: compute.NetworkInterfaceReferenceArray{
+					&compute.NetworkInterfaceReferenceArgs{
+						Id:      pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}"),
+						Primary: pulumi.Bool(true),
+					},
+				},
+			},
+			OsProfile: &compute.OSProfileArgs{
+				AdminPassword: pulumi.String("{your-password}"),
+				AdminUsername: pulumi.String("{your-username}"),
+				ComputerName:  pulumi.String("myVM"),
+			},
+			PlatformFaultDomain: pulumi.Int(1),
+			ResourceGroupName:   pulumi.String("myResourceGroup"),
+			StorageProfile: &compute.StorageProfileArgs{
+				ImageReference: &compute.ImageReferenceArgs{
+					Offer:     pulumi.String("WindowsServer"),
+					Publisher: pulumi.String("MicrosoftWindowsServer"),
+					Sku:       pulumi.String("2016-Datacenter"),
+					Version:   pulumi.String("latest"),
+				},
+				OsDisk: &compute.OSDiskArgs{
+					Caching:      "ReadWrite",
+					CreateOption: pulumi.String("FromImage"),
+					ManagedDisk: &compute.ManagedDiskParametersArgs{
+						StorageAccountType: pulumi.String("Standard_LRS"),
+					},
+					Name: pulumi.String("myVMosdisk"),
+				},
+			},
+			VirtualMachineScaleSet: &compute.SubResourceArgs{
+				Id: pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/virtualMachineScaleSets/{existing-flex-vmss-name-with-platformFaultDomainCount-greater-than-1}"),
+			},
+			VmName: pulumi.String("myVM"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -3392,7 +4437,66 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewVirtualMachine(ctx, "virtualMachine", &compute.VirtualMachineArgs{
+			AvailabilitySet: &compute.SubResourceArgs{
+				Id: pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/availabilitySets/{existing-availability-set-name}"),
+			},
+			HardwareProfile: &compute.HardwareProfileArgs{
+				VmSize: pulumi.String("Standard_D1_v2"),
+			},
+			Location: pulumi.String("westus"),
+			NetworkProfile: &compute.NetworkProfileArgs{
+				NetworkInterfaces: compute.NetworkInterfaceReferenceArray{
+					&compute.NetworkInterfaceReferenceArgs{
+						Id:      pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}"),
+						Primary: pulumi.Bool(true),
+					},
+				},
+			},
+			OsProfile: &compute.OSProfileArgs{
+				AdminPassword: pulumi.String("{your-password}"),
+				AdminUsername: pulumi.String("{your-username}"),
+				ComputerName:  pulumi.String("myVM"),
+			},
+			ResourceGroupName: pulumi.String("myResourceGroup"),
+			StorageProfile: &compute.StorageProfileArgs{
+				ImageReference: &compute.ImageReferenceArgs{
+					Offer:     pulumi.String("WindowsServer"),
+					Publisher: pulumi.String("MicrosoftWindowsServer"),
+					Sku:       pulumi.String("2016-Datacenter"),
+					Version:   pulumi.String("latest"),
+				},
+				OsDisk: &compute.OSDiskArgs{
+					Caching:      "ReadWrite",
+					CreateOption: pulumi.String("FromImage"),
+					ManagedDisk: &compute.ManagedDiskParametersArgs{
+						StorageAccountType: pulumi.String("Standard_LRS"),
+					},
+					Name: pulumi.String("myVMosdisk"),
+				},
+			},
+			VmName: pulumi.String("myVM"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -3609,7 +4713,90 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewVirtualMachine(ctx, "virtualMachine", &compute.VirtualMachineArgs{
+			HardwareProfile: &compute.HardwareProfileArgs{
+				VmSize: pulumi.String("Standard_D1_v2"),
+			},
+			Location: pulumi.String("westus"),
+			NetworkProfile: &compute.NetworkProfileArgs{
+				NetworkInterfaces: compute.NetworkInterfaceReferenceArray{
+					&compute.NetworkInterfaceReferenceArgs{
+						Id:      pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}"),
+						Primary: pulumi.Bool(true),
+					},
+				},
+			},
+			OsProfile: &compute.OSProfileArgs{
+				AdminPassword: pulumi.String("{your-password}"),
+				AdminUsername: pulumi.String("{your-username}"),
+				ComputerName:  pulumi.String("myVM"),
+			},
+			ResourceGroupName: pulumi.String("myResourceGroup"),
+			StorageProfile: &compute.StorageProfileArgs{
+				DataDisks: compute.DataDiskArray{
+					&compute.DataDiskArgs{
+						Caching:      "ReadWrite",
+						CreateOption: pulumi.String("Empty"),
+						DiskSizeGB:   pulumi.Int(1023),
+						Lun:          pulumi.Int(0),
+						ManagedDisk: &compute.ManagedDiskParametersArgs{
+							DiskEncryptionSet: &compute.DiskEncryptionSetParametersArgs{
+								Id: pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSets/{existing-diskEncryptionSet-name}"),
+							},
+							StorageAccountType: pulumi.String("Standard_LRS"),
+						},
+					},
+					&compute.DataDiskArgs{
+						Caching:      "ReadWrite",
+						CreateOption: pulumi.String("Attach"),
+						DiskSizeGB:   pulumi.Int(1023),
+						Lun:          pulumi.Int(1),
+						ManagedDisk: &compute.ManagedDiskParametersArgs{
+							DiskEncryptionSet: &compute.DiskEncryptionSetParametersArgs{
+								Id: pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSets/{existing-diskEncryptionSet-name}"),
+							},
+							Id:                 pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/{existing-managed-disk-name}"),
+							StorageAccountType: pulumi.String("Standard_LRS"),
+						},
+					},
+				},
+				ImageReference: &compute.ImageReferenceArgs{
+					Id: pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/images/{existing-custom-image-name}"),
+				},
+				OsDisk: &compute.OSDiskArgs{
+					Caching:      "ReadWrite",
+					CreateOption: pulumi.String("FromImage"),
+					ManagedDisk: &compute.ManagedDiskParametersArgs{
+						DiskEncryptionSet: &compute.DiskEncryptionSetParametersArgs{
+							Id: pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSets/{existing-diskEncryptionSet-name}"),
+						},
+						StorageAccountType: pulumi.String("Standard_LRS"),
+					},
+					Name: pulumi.String("myVMosdisk"),
+				},
+			},
+			VmName: pulumi.String("myVM"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -3849,7 +5036,71 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewVirtualMachine(ctx, "virtualMachine", &compute.VirtualMachineArgs{
+			HardwareProfile: &compute.HardwareProfileArgs{
+				VmSize: pulumi.String("Standard_DS1_v2"),
+			},
+			Location: pulumi.String("westus"),
+			NetworkProfile: &compute.NetworkProfileArgs{
+				NetworkInterfaces: compute.NetworkInterfaceReferenceArray{
+					&compute.NetworkInterfaceReferenceArgs{
+						Id:      pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}"),
+						Primary: pulumi.Bool(true),
+					},
+				},
+			},
+			OsProfile: &compute.OSProfileArgs{
+				AdminPassword: pulumi.String("{your-password}"),
+				AdminUsername: pulumi.String("{your-username}"),
+				ComputerName:  pulumi.String("myVM"),
+			},
+			Plan: &compute.PlanArgs{
+				Name:      pulumi.String("windows2016"),
+				Product:   pulumi.String("windows-data-science-vm"),
+				Publisher: pulumi.String("microsoft-ads"),
+			},
+			ResourceGroupName: pulumi.String("myResourceGroup"),
+			SecurityProfile: &compute.SecurityProfileArgs{
+				EncryptionAtHost: pulumi.Bool(true),
+			},
+			StorageProfile: &compute.StorageProfileArgs{
+				ImageReference: &compute.ImageReferenceArgs{
+					Offer:     pulumi.String("windows-data-science-vm"),
+					Publisher: pulumi.String("microsoft-ads"),
+					Sku:       pulumi.String("windows2016"),
+					Version:   pulumi.String("latest"),
+				},
+				OsDisk: &compute.OSDiskArgs{
+					Caching:      "ReadOnly",
+					CreateOption: pulumi.String("FromImage"),
+					ManagedDisk: &compute.ManagedDiskParametersArgs{
+						StorageAccountType: pulumi.String("Standard_LRS"),
+					},
+					Name: pulumi.String("myVMosdisk"),
+				},
+			},
+			VmName: pulumi.String("myVM"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -4057,7 +5308,75 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewVirtualMachine(ctx, "virtualMachine", &compute.VirtualMachineArgs{
+			DiagnosticsProfile: &compute.DiagnosticsProfileArgs{
+				BootDiagnostics: &compute.BootDiagnosticsArgs{
+					Enabled:    pulumi.Bool(true),
+					StorageUri: pulumi.String("http://{existing-storage-account-name}.blob.core.windows.net"),
+				},
+			},
+			HardwareProfile: &compute.HardwareProfileArgs{
+				VmSize: pulumi.String("Standard_D1_v2"),
+			},
+			Location: pulumi.String("westus"),
+			NetworkProfile: &compute.NetworkProfileArgs{
+				NetworkInterfaces: compute.NetworkInterfaceReferenceArray{
+					&compute.NetworkInterfaceReferenceArgs{
+						Id:      pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}"),
+						Primary: pulumi.Bool(true),
+					},
+				},
+			},
+			OsProfile: &compute.OSProfileArgs{
+				AdminPassword: pulumi.String("{your-password}"),
+				AdminUsername: pulumi.String("{your-username}"),
+				ComputerName:  pulumi.String("myVM"),
+			},
+			ResourceGroupName: pulumi.String("myResourceGroup"),
+			ScheduledEventsProfile: &compute.ScheduledEventsProfileArgs{
+				TerminateNotificationProfile: &compute.TerminateNotificationProfileArgs{
+					Enable:           pulumi.Bool(true),
+					NotBeforeTimeout: pulumi.String("PT10M"),
+				},
+			},
+			StorageProfile: &compute.StorageProfileArgs{
+				ImageReference: &compute.ImageReferenceArgs{
+					Offer:     pulumi.String("WindowsServer"),
+					Publisher: pulumi.String("MicrosoftWindowsServer"),
+					Sku:       pulumi.String("2016-Datacenter"),
+					Version:   pulumi.String("latest"),
+				},
+				OsDisk: &compute.OSDiskArgs{
+					Caching:      "ReadWrite",
+					CreateOption: pulumi.String("FromImage"),
+					ManagedDisk: &compute.ManagedDiskParametersArgs{
+						StorageAccountType: pulumi.String("Standard_LRS"),
+					},
+					Name: pulumi.String("myVMosdisk"),
+				},
+			},
+			VmName: pulumi.String("myVM"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -4263,7 +5582,68 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewVirtualMachine(ctx, "virtualMachine", &compute.VirtualMachineArgs{
+			HardwareProfile: &compute.HardwareProfileArgs{
+				VmSize: pulumi.String("Standard_D1_v2"),
+			},
+			Location: pulumi.String("westus"),
+			NetworkProfile: &compute.NetworkProfileArgs{
+				NetworkInterfaces: compute.NetworkInterfaceReferenceArray{
+					&compute.NetworkInterfaceReferenceArgs{
+						Id:      pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}"),
+						Primary: pulumi.Bool(true),
+					},
+				},
+			},
+			OsProfile: &compute.OSProfileArgs{
+				AdminPassword: pulumi.String("{your-password}"),
+				AdminUsername: pulumi.String("{your-username}"),
+				ComputerName:  pulumi.String("myVM"),
+			},
+			Plan: &compute.PlanArgs{
+				Name:      pulumi.String("windows2016"),
+				Product:   pulumi.String("windows-data-science-vm"),
+				Publisher: pulumi.String("microsoft-ads"),
+			},
+			ResourceGroupName: pulumi.String("myResourceGroup"),
+			StorageProfile: &compute.StorageProfileArgs{
+				ImageReference: &compute.ImageReferenceArgs{
+					Offer:     pulumi.String("windows-data-science-vm"),
+					Publisher: pulumi.String("microsoft-ads"),
+					Sku:       pulumi.String("windows2016"),
+					Version:   pulumi.String("latest"),
+				},
+				OsDisk: &compute.OSDiskArgs{
+					Caching:      "ReadWrite",
+					CreateOption: pulumi.String("FromImage"),
+					ManagedDisk: &compute.ManagedDiskParametersArgs{
+						StorageAccountType: pulumi.String("Standard_LRS"),
+					},
+					Name: pulumi.String("myVMosdisk"),
+				},
+			},
+			VmName: pulumi.String("myVM"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -4458,7 +5838,70 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewVirtualMachine(ctx, "virtualMachine", &compute.VirtualMachineArgs{
+			DiagnosticsProfile: &compute.DiagnosticsProfileArgs{
+				BootDiagnostics: &compute.BootDiagnosticsArgs{
+					Enabled:    pulumi.Bool(true),
+					StorageUri: pulumi.String("http://{existing-storage-account-name}.blob.core.windows.net"),
+				},
+			},
+			ExtensionsTimeBudget: pulumi.String("PT30M"),
+			HardwareProfile: &compute.HardwareProfileArgs{
+				VmSize: pulumi.String("Standard_D1_v2"),
+			},
+			Location: pulumi.String("westus"),
+			NetworkProfile: &compute.NetworkProfileArgs{
+				NetworkInterfaces: compute.NetworkInterfaceReferenceArray{
+					&compute.NetworkInterfaceReferenceArgs{
+						Id:      pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}"),
+						Primary: pulumi.Bool(true),
+					},
+				},
+			},
+			OsProfile: &compute.OSProfileArgs{
+				AdminPassword: pulumi.String("{your-password}"),
+				AdminUsername: pulumi.String("{your-username}"),
+				ComputerName:  pulumi.String("myVM"),
+			},
+			ResourceGroupName: pulumi.String("myResourceGroup"),
+			StorageProfile: &compute.StorageProfileArgs{
+				ImageReference: &compute.ImageReferenceArgs{
+					Offer:     pulumi.String("WindowsServer"),
+					Publisher: pulumi.String("MicrosoftWindowsServer"),
+					Sku:       pulumi.String("2016-Datacenter"),
+					Version:   pulumi.String("latest"),
+				},
+				OsDisk: &compute.OSDiskArgs{
+					Caching:      "ReadWrite",
+					CreateOption: pulumi.String("FromImage"),
+					ManagedDisk: &compute.ManagedDiskParametersArgs{
+						StorageAccountType: pulumi.String("Standard_LRS"),
+					},
+					Name: pulumi.String("myVMosdisk"),
+				},
+			},
+			VmName: pulumi.String("myVM"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -4656,7 +6099,69 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewVirtualMachine(ctx, "virtualMachine", &compute.VirtualMachineArgs{
+			DiagnosticsProfile: &compute.DiagnosticsProfileArgs{
+				BootDiagnostics: &compute.BootDiagnosticsArgs{
+					Enabled:    pulumi.Bool(true),
+					StorageUri: pulumi.String("http://{existing-storage-account-name}.blob.core.windows.net"),
+				},
+			},
+			HardwareProfile: &compute.HardwareProfileArgs{
+				VmSize: pulumi.String("Standard_D1_v2"),
+			},
+			Location: pulumi.String("westus"),
+			NetworkProfile: &compute.NetworkProfileArgs{
+				NetworkInterfaces: compute.NetworkInterfaceReferenceArray{
+					&compute.NetworkInterfaceReferenceArgs{
+						Id:      pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}"),
+						Primary: pulumi.Bool(true),
+					},
+				},
+			},
+			OsProfile: &compute.OSProfileArgs{
+				AdminPassword: pulumi.String("{your-password}"),
+				AdminUsername: pulumi.String("{your-username}"),
+				ComputerName:  pulumi.String("myVM"),
+			},
+			ResourceGroupName: pulumi.String("myResourceGroup"),
+			StorageProfile: &compute.StorageProfileArgs{
+				ImageReference: &compute.ImageReferenceArgs{
+					Offer:     pulumi.String("WindowsServer"),
+					Publisher: pulumi.String("MicrosoftWindowsServer"),
+					Sku:       pulumi.String("2016-Datacenter"),
+					Version:   pulumi.String("latest"),
+				},
+				OsDisk: &compute.OSDiskArgs{
+					Caching:      "ReadWrite",
+					CreateOption: pulumi.String("FromImage"),
+					ManagedDisk: &compute.ManagedDiskParametersArgs{
+						StorageAccountType: pulumi.String("Standard_LRS"),
+					},
+					Name: pulumi.String("myVMosdisk"),
+				},
+			},
+			VmName: pulumi.String("myVM"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -4859,7 +6364,75 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewVirtualMachine(ctx, "virtualMachine", &compute.VirtualMachineArgs{
+			HardwareProfile: &compute.HardwareProfileArgs{
+				VmSize: pulumi.String("Standard_D2_v2"),
+			},
+			Location: pulumi.String("westus"),
+			NetworkProfile: &compute.NetworkProfileArgs{
+				NetworkInterfaces: compute.NetworkInterfaceReferenceArray{
+					&compute.NetworkInterfaceReferenceArgs{
+						Id:      pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}"),
+						Primary: pulumi.Bool(true),
+					},
+				},
+			},
+			OsProfile: &compute.OSProfileArgs{
+				AdminPassword: pulumi.String("{your-password}"),
+				AdminUsername: pulumi.String("{your-username}"),
+				ComputerName:  pulumi.String("myVM"),
+			},
+			ResourceGroupName: pulumi.String("myResourceGroup"),
+			StorageProfile: &compute.StorageProfileArgs{
+				DataDisks: compute.DataDiskArray{
+					&compute.DataDiskArgs{
+						CreateOption: pulumi.String("Empty"),
+						DiskSizeGB:   pulumi.Int(1023),
+						Lun:          pulumi.Int(0),
+					},
+					&compute.DataDiskArgs{
+						CreateOption: pulumi.String("Empty"),
+						DiskSizeGB:   pulumi.Int(1023),
+						Lun:          pulumi.Int(1),
+					},
+				},
+				ImageReference: &compute.ImageReferenceArgs{
+					Offer:     pulumi.String("WindowsServer"),
+					Publisher: pulumi.String("MicrosoftWindowsServer"),
+					Sku:       pulumi.String("2016-Datacenter"),
+					Version:   pulumi.String("latest"),
+				},
+				OsDisk: &compute.OSDiskArgs{
+					Caching:      "ReadWrite",
+					CreateOption: pulumi.String("FromImage"),
+					ManagedDisk: &compute.ManagedDiskParametersArgs{
+						StorageAccountType: pulumi.String("Standard_LRS"),
+					},
+					Name: pulumi.String("myVMosdisk"),
+				},
+			},
+			VmName: pulumi.String("myVM"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -5070,7 +6643,72 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewVirtualMachine(ctx, "virtualMachine", &compute.VirtualMachineArgs{
+			HardwareProfile: &compute.HardwareProfileArgs{
+				VmSize: pulumi.String("Standard_DS1_v2"),
+			},
+			Location: pulumi.String("westus"),
+			NetworkProfile: &compute.NetworkProfileArgs{
+				NetworkInterfaces: compute.NetworkInterfaceReferenceArray{
+					&compute.NetworkInterfaceReferenceArgs{
+						Id:      pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}"),
+						Primary: pulumi.Bool(true),
+					},
+				},
+			},
+			OsProfile: &compute.OSProfileArgs{
+				AdminPassword: pulumi.String("{your-password}"),
+				AdminUsername: pulumi.String("{your-username}"),
+				ComputerName:  pulumi.String("myVM"),
+			},
+			Plan: &compute.PlanArgs{
+				Name:      pulumi.String("windows2016"),
+				Product:   pulumi.String("windows-data-science-vm"),
+				Publisher: pulumi.String("microsoft-ads"),
+			},
+			ResourceGroupName: pulumi.String("myResourceGroup"),
+			StorageProfile: &compute.StorageProfileArgs{
+				ImageReference: &compute.ImageReferenceArgs{
+					Offer:     pulumi.String("windows-data-science-vm"),
+					Publisher: pulumi.String("microsoft-ads"),
+					Sku:       pulumi.String("windows2016"),
+					Version:   pulumi.String("latest"),
+				},
+				OsDisk: &compute.OSDiskArgs{
+					Caching:      "ReadOnly",
+					CreateOption: pulumi.String("FromImage"),
+					DiffDiskSettings: &compute.DiffDiskSettingsArgs{
+						Option:    pulumi.String("Local"),
+						Placement: pulumi.String("CacheDisk"),
+					},
+					ManagedDisk: &compute.ManagedDiskParametersArgs{
+						StorageAccountType: pulumi.String("Standard_LRS"),
+					},
+					Name: pulumi.String("myVMosdisk"),
+				},
+			},
+			VmName: pulumi.String("myVM"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -5275,7 +6913,72 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewVirtualMachine(ctx, "virtualMachine", &compute.VirtualMachineArgs{
+			HardwareProfile: &compute.HardwareProfileArgs{
+				VmSize: pulumi.String("Standard_DS1_v2"),
+			},
+			Location: pulumi.String("westus"),
+			NetworkProfile: &compute.NetworkProfileArgs{
+				NetworkInterfaces: compute.NetworkInterfaceReferenceArray{
+					&compute.NetworkInterfaceReferenceArgs{
+						Id:      pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}"),
+						Primary: pulumi.Bool(true),
+					},
+				},
+			},
+			OsProfile: &compute.OSProfileArgs{
+				AdminPassword: pulumi.String("{your-password}"),
+				AdminUsername: pulumi.String("{your-username}"),
+				ComputerName:  pulumi.String("myVM"),
+			},
+			Plan: &compute.PlanArgs{
+				Name:      pulumi.String("windows2016"),
+				Product:   pulumi.String("windows-data-science-vm"),
+				Publisher: pulumi.String("microsoft-ads"),
+			},
+			ResourceGroupName: pulumi.String("myResourceGroup"),
+			StorageProfile: &compute.StorageProfileArgs{
+				ImageReference: &compute.ImageReferenceArgs{
+					Offer:     pulumi.String("windows-data-science-vm"),
+					Publisher: pulumi.String("microsoft-ads"),
+					Sku:       pulumi.String("windows2016"),
+					Version:   pulumi.String("latest"),
+				},
+				OsDisk: &compute.OSDiskArgs{
+					Caching:      "ReadOnly",
+					CreateOption: pulumi.String("FromImage"),
+					DiffDiskSettings: &compute.DiffDiskSettingsArgs{
+						Option:    pulumi.String("Local"),
+						Placement: pulumi.String("ResourceDisk"),
+					},
+					ManagedDisk: &compute.ManagedDiskParametersArgs{
+						StorageAccountType: pulumi.String("Standard_LRS"),
+					},
+					Name: pulumi.String("myVMosdisk"),
+				},
+			},
+			VmName: pulumi.String("myVM"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -5479,7 +7182,71 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewVirtualMachine(ctx, "virtualMachine", &compute.VirtualMachineArgs{
+			HardwareProfile: &compute.HardwareProfileArgs{
+				VmSize: pulumi.String("Standard_DS1_v2"),
+			},
+			Location: pulumi.String("westus"),
+			NetworkProfile: &compute.NetworkProfileArgs{
+				NetworkInterfaces: compute.NetworkInterfaceReferenceArray{
+					&compute.NetworkInterfaceReferenceArgs{
+						Id:      pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}"),
+						Primary: pulumi.Bool(true),
+					},
+				},
+			},
+			OsProfile: &compute.OSProfileArgs{
+				AdminPassword: pulumi.String("{your-password}"),
+				AdminUsername: pulumi.String("{your-username}"),
+				ComputerName:  pulumi.String("myVM"),
+			},
+			Plan: &compute.PlanArgs{
+				Name:      pulumi.String("windows2016"),
+				Product:   pulumi.String("windows-data-science-vm"),
+				Publisher: pulumi.String("microsoft-ads"),
+			},
+			ResourceGroupName: pulumi.String("myResourceGroup"),
+			StorageProfile: &compute.StorageProfileArgs{
+				ImageReference: &compute.ImageReferenceArgs{
+					Offer:     pulumi.String("windows-data-science-vm"),
+					Publisher: pulumi.String("microsoft-ads"),
+					Sku:       pulumi.String("windows2016"),
+					Version:   pulumi.String("latest"),
+				},
+				OsDisk: &compute.OSDiskArgs{
+					Caching:      "ReadOnly",
+					CreateOption: pulumi.String("FromImage"),
+					DiffDiskSettings: &compute.DiffDiskSettingsArgs{
+						Option: pulumi.String("Local"),
+					},
+					ManagedDisk: &compute.ManagedDiskParametersArgs{
+						StorageAccountType: pulumi.String("Standard_LRS"),
+					},
+					Name: pulumi.String("myVMosdisk"),
+				},
+			},
+			VmName: pulumi.String("myVM"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -5678,7 +7445,68 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewVirtualMachine(ctx, "virtualMachine", &compute.VirtualMachineArgs{
+			DiagnosticsProfile: &compute.DiagnosticsProfileArgs{
+				BootDiagnostics: &compute.BootDiagnosticsArgs{
+					Enabled: pulumi.Bool(true),
+				},
+			},
+			HardwareProfile: &compute.HardwareProfileArgs{
+				VmSize: pulumi.String("Standard_D1_v2"),
+			},
+			Location: pulumi.String("westus"),
+			NetworkProfile: &compute.NetworkProfileArgs{
+				NetworkInterfaces: compute.NetworkInterfaceReferenceArray{
+					&compute.NetworkInterfaceReferenceArgs{
+						Id:      pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}"),
+						Primary: pulumi.Bool(true),
+					},
+				},
+			},
+			OsProfile: &compute.OSProfileArgs{
+				AdminPassword: pulumi.String("{your-password}"),
+				AdminUsername: pulumi.String("{your-username}"),
+				ComputerName:  pulumi.String("myVM"),
+			},
+			ResourceGroupName: pulumi.String("myResourceGroup"),
+			StorageProfile: &compute.StorageProfileArgs{
+				ImageReference: &compute.ImageReferenceArgs{
+					Offer:     pulumi.String("WindowsServer"),
+					Publisher: pulumi.String("MicrosoftWindowsServer"),
+					Sku:       pulumi.String("2016-Datacenter"),
+					Version:   pulumi.String("latest"),
+				},
+				OsDisk: &compute.OSDiskArgs{
+					Caching:      "ReadWrite",
+					CreateOption: pulumi.String("FromImage"),
+					ManagedDisk: &compute.ManagedDiskParametersArgs{
+						StorageAccountType: pulumi.String("Standard_LRS"),
+					},
+					Name: pulumi.String("myVMosdisk"),
+				},
+			},
+			VmName: pulumi.String("myVM"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -5864,7 +7692,63 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewVirtualMachine(ctx, "virtualMachine", &compute.VirtualMachineArgs{
+			HardwareProfile: &compute.HardwareProfileArgs{
+				VmSize: pulumi.String("Standard_D1_v2"),
+			},
+			Location: pulumi.String("westus"),
+			NetworkProfile: &compute.NetworkProfileArgs{
+				NetworkInterfaces: compute.NetworkInterfaceReferenceArray{
+					&compute.NetworkInterfaceReferenceArgs{
+						Id:      pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}"),
+						Primary: pulumi.Bool(true),
+					},
+				},
+			},
+			OsProfile: &compute.OSProfileArgs{
+				AdminPassword: pulumi.String("{your-password}"),
+				AdminUsername: pulumi.String("{your-username}"),
+				ComputerName:  pulumi.String("myVM"),
+			},
+			ResourceGroupName: pulumi.String("myResourceGroup"),
+			StorageProfile: &compute.StorageProfileArgs{
+				ImageReference: &compute.ImageReferenceArgs{
+					Offer:     pulumi.String("WindowsServer"),
+					Publisher: pulumi.String("MicrosoftWindowsServer"),
+					Sku:       pulumi.String("2016-Datacenter"),
+					Version:   pulumi.String("latest"),
+				},
+				OsDisk: &compute.OSDiskArgs{
+					Caching:      "ReadWrite",
+					CreateOption: pulumi.String("FromImage"),
+					ManagedDisk: &compute.ManagedDiskParametersArgs{
+						StorageAccountType: pulumi.String("Standard_LRS"),
+					},
+					Name: pulumi.String("myVMosdisk"),
+				},
+			},
+			VmName: pulumi.String("myVM"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -6040,7 +7924,63 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewVirtualMachine(ctx, "virtualMachine", &compute.VirtualMachineArgs{
+			HardwareProfile: &compute.HardwareProfileArgs{
+				VmSize: pulumi.String("Standard_D1_v2"),
+			},
+			Location: pulumi.String("westus"),
+			NetworkProfile: &compute.NetworkProfileArgs{
+				NetworkInterfaces: compute.NetworkInterfaceReferenceArray{
+					&compute.NetworkInterfaceReferenceArgs{
+						Id:      pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}"),
+						Primary: pulumi.Bool(true),
+					},
+				},
+			},
+			OsProfile: &compute.OSProfileArgs{
+				AdminPassword: pulumi.String("{your-password}"),
+				AdminUsername: pulumi.String("{your-username}"),
+				ComputerName:  pulumi.String("myVM"),
+			},
+			ResourceGroupName: pulumi.String("myResourceGroup"),
+			StorageProfile: &compute.StorageProfileArgs{
+				ImageReference: &compute.ImageReferenceArgs{
+					Offer:     pulumi.String("WindowsServer"),
+					Publisher: pulumi.String("MicrosoftWindowsServer"),
+					Sku:       pulumi.String("2016-Datacenter"),
+					Version:   pulumi.String("latest"),
+				},
+				OsDisk: &compute.OSDiskArgs{
+					Caching:      "ReadWrite",
+					CreateOption: pulumi.String("FromImage"),
+					ManagedDisk: &compute.ManagedDiskParametersArgs{
+						StorageAccountType: pulumi.String("Premium_LRS"),
+					},
+					Name: pulumi.String("myVMosdisk"),
+				},
+			},
+			VmName: pulumi.String("myVM"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -6230,7 +8170,73 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewVirtualMachine(ctx, "virtualMachine", &compute.VirtualMachineArgs{
+			HardwareProfile: &compute.HardwareProfileArgs{
+				VmSize: pulumi.String("Standard_D1_v2"),
+			},
+			Location: pulumi.String("westus"),
+			NetworkProfile: &compute.NetworkProfileArgs{
+				NetworkInterfaces: compute.NetworkInterfaceReferenceArray{
+					&compute.NetworkInterfaceReferenceArgs{
+						Id:      pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}"),
+						Primary: pulumi.Bool(true),
+					},
+				},
+			},
+			OsProfile: &compute.OSProfileArgs{
+				AdminUsername: pulumi.String("{your-username}"),
+				ComputerName:  pulumi.String("myVM"),
+				LinuxConfiguration: &compute.LinuxConfigurationArgs{
+					DisablePasswordAuthentication: pulumi.Bool(true),
+					Ssh: &compute.SshConfigurationArgs{
+						PublicKeys: compute.SshPublicKeyArray{
+							&compute.SshPublicKeyArgs{
+								KeyData: pulumi.String("ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCeClRAk2ipUs/l5voIsDC5q9RI+YSRd1Bvd/O+axgY4WiBzG+4FwJWZm/mLLe5DoOdHQwmU2FrKXZSW4w2sYE70KeWnrFViCOX5MTVvJgPE8ClugNl8RWth/tU849DvM9sT7vFgfVSHcAS2yDRyDlueii+8nF2ym8XWAPltFVCyLHRsyBp5YPqK8JFYIa1eybKsY3hEAxRCA+/7bq8et+Gj3coOsuRmrehav7rE6N12Pb80I6ofa6SM5XNYq4Xk0iYNx7R3kdz0Jj9XgZYWjAHjJmT0gTRoOnt6upOuxK7xI/ykWrllgpXrCPu3Ymz+c+ujaqcxDopnAl2lmf69/J1"),
+								Path:    pulumi.String("/home/{your-username}/.ssh/authorized_keys"),
+							},
+						},
+					},
+				},
+			},
+			ResourceGroupName: pulumi.String("myResourceGroup"),
+			StorageProfile: &compute.StorageProfileArgs{
+				ImageReference: &compute.ImageReferenceArgs{
+					Offer:     pulumi.String("{image_offer}"),
+					Publisher: pulumi.String("{image_publisher}"),
+					Sku:       pulumi.String("{image_sku}"),
+					Version:   pulumi.String("latest"),
+				},
+				OsDisk: &compute.OSDiskArgs{
+					Caching:      "ReadWrite",
+					CreateOption: pulumi.String("FromImage"),
+					ManagedDisk: &compute.ManagedDiskParametersArgs{
+						StorageAccountType: pulumi.String("Standard_LRS"),
+					},
+					Name: pulumi.String("myVMosdisk"),
+				},
+			},
+			VmName: pulumi.String("myVM"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
