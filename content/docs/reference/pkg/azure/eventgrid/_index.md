@@ -22,6 +22,7 @@ Explore the resources and functions of the azure.eventgrid module.
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
+    <li><a href="getdomain" title="GetDomain"><span class="symbol function"></span>GetDomain</a></li>
     <li><a href="getdomaintopic" title="GetDomainTopic"><span class="symbol function"></span>GetDomainTopic</a></li>
     <li><a href="gettopic" title="GetTopic"><span class="symbol function"></span>GetTopic</a></li>
 </ul>
@@ -35,6 +36,6 @@ Explore the resources and functions of the azure.eventgrid module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/hashicorp/terraform-provider-azurerm).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.17.0</dd>
+	<dd>4.18.0</dd>
 </dl>
 

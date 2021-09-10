@@ -152,6 +152,7 @@ const exampleDomain = new azure.eventgrid.Domain("exampleDomain", {
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Domain</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+           <span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[DomainIdentityArgs]</span> = None<span class="p">,</span>
            <span class="nx">inbound_ip_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[DomainInboundIpRuleArgs]]</span> = None<span class="p">,</span>
            <span class="nx">input_mapping_default_values</span><span class="p">:</span> <span class="nx">Optional[DomainInputMappingDefaultValuesArgs]</span> = None<span class="p">,</span>
            <span class="nx">input_mapping_fields</span><span class="p">:</span> <span class="nx">Optional[DomainInputMappingFieldsArgs]</span> = None<span class="p">,</span>
@@ -299,6 +300,15 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
     <dd>{{% md %}}The name of the resource group in which the EventGrid Domain exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="identity_csharp">
+<a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#domainidentity">Domain<wbr>Identity<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `identity` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="inboundiprules_csharp">
 <a href="#inboundiprules_csharp" style="color: inherit; text-decoration: inherit;">Inbound<wbr>Ip<wbr>Rules</a>
 </span>
@@ -382,6 +392,15 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which the EventGrid Domain exists. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="identity_go">
+<a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#domainidentity">Domain<wbr>Identity<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `identity` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="inboundiprules_go">
@@ -469,6 +488,15 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
     <dd>{{% md %}}The name of the resource group in which the EventGrid Domain exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="identity_nodejs">
+<a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#domainidentity">Domain<wbr>Identity<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `identity` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="inboundiprules_nodejs">
 <a href="#inboundiprules_nodejs" style="color: inherit; text-decoration: inherit;">inbound<wbr>Ip<wbr>Rules</a>
 </span>
@@ -552,6 +580,15 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which the EventGrid Domain exists. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="identity_python">
+<a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#domainidentity">Domain<wbr>Identity<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `identity` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="inbound_ip_rules_python">
@@ -807,6 +844,7 @@ Get an existing Domain resource's state with the given name, ID, and optional ex
         <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
         <span class="nx">endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[DomainIdentityArgs]</span> = None<span class="p">,</span>
         <span class="nx">inbound_ip_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[DomainInboundIpRuleArgs]]</span> = None<span class="p">,</span>
         <span class="nx">input_mapping_default_values</span><span class="p">:</span> <span class="nx">Optional[DomainInputMappingDefaultValuesArgs]</span> = None<span class="p">,</span>
         <span class="nx">input_mapping_fields</span><span class="p">:</span> <span class="nx">Optional[DomainInputMappingFieldsArgs]</span> = None<span class="p">,</span>
@@ -939,6 +977,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The Endpoint associated with the EventGrid Domain.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_identity_csharp">
+<a href="#state_identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#domainidentity">Domain<wbr>Identity<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `identity` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_inboundiprules_csharp">
 <a href="#state_inboundiprules_csharp" style="color: inherit; text-decoration: inherit;">Inbound<wbr>Ip<wbr>Rules</a>
 </span>
@@ -1049,6 +1096,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Endpoint associated with the EventGrid Domain.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_identity_go">
+<a href="#state_identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#domainidentity">Domain<wbr>Identity<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `identity` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_inboundiprules_go">
@@ -1163,6 +1219,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The Endpoint associated with the EventGrid Domain.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_identity_nodejs">
+<a href="#state_identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#domainidentity">Domain<wbr>Identity<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `identity` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_inboundiprules_nodejs">
 <a href="#state_inboundiprules_nodejs" style="color: inherit; text-decoration: inherit;">inbound<wbr>Ip<wbr>Rules</a>
 </span>
@@ -1275,6 +1340,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The Endpoint associated with the EventGrid Domain.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_identity_python">
+<a href="#state_identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#domainidentity">Domain<wbr>Identity<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `identity` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_inbound_ip_rules_python">
 <a href="#state_inbound_ip_rules_python" style="color: inherit; text-decoration: inherit;">inbound_<wbr>ip_<wbr>rules</a>
 </span>
@@ -1383,6 +1457,168 @@ The following state arguments are supported:
 ## Supporting Types
 
 
+
+<h4 id="domainidentity">Domain<wbr>Identity</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the identity type of Event Grid Domain. Possible values are `SystemAssigned` (where Azure will generate a Principal for you) or `UserAssigned` where you can specify the User Assigned Managed Identity IDs in the `identity_ids` field.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="identityids_csharp">
+<a href="#identityids_csharp" style="color: inherit; text-decoration: inherit;">Identity<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Specifies a list of user managed identity ids to be assigned. Required if `type` is `UserAssigned`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="principalid_csharp">
+<a href="#principalid_csharp" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the Principal ID of the System Assigned Managed Service Identity that is configured on this Event Grid Domain.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tenantid_csharp">
+<a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the Tenant ID of the System Assigned Managed Service Identity that is configured on this Event Grid Domain.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the identity type of Event Grid Domain. Possible values are `SystemAssigned` (where Azure will generate a Principal for you) or `UserAssigned` where you can specify the User Assigned Managed Identity IDs in the `identity_ids` field.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="identityids_go">
+<a href="#identityids_go" style="color: inherit; text-decoration: inherit;">Identity<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}Specifies a list of user managed identity ids to be assigned. Required if `type` is `UserAssigned`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="principalid_go">
+<a href="#principalid_go" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the Principal ID of the System Assigned Managed Service Identity that is configured on this Event Grid Domain.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tenantid_go">
+<a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the Tenant ID of the System Assigned Managed Service Identity that is configured on this Event Grid Domain.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the identity type of Event Grid Domain. Possible values are `SystemAssigned` (where Azure will generate a Principal for you) or `UserAssigned` where you can specify the User Assigned Managed Identity IDs in the `identity_ids` field.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="identityids_nodejs">
+<a href="#identityids_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}Specifies a list of user managed identity ids to be assigned. Required if `type` is `UserAssigned`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="principalid_nodejs">
+<a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the Principal ID of the System Assigned Managed Service Identity that is configured on this Event Grid Domain.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tenantid_nodejs">
+<a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the Tenant ID of the System Assigned Managed Service Identity that is configured on this Event Grid Domain.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the identity type of Event Grid Domain. Possible values are `SystemAssigned` (where Azure will generate a Principal for you) or `UserAssigned` where you can specify the User Assigned Managed Identity IDs in the `identity_ids` field.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="identity_ids_python">
+<a href="#identity_ids_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}Specifies a list of user managed identity ids to be assigned. Required if `type` is `UserAssigned`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="principal_id_python">
+<a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the Principal ID of the System Assigned Managed Service Identity that is configured on this Event Grid Domain.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tenant_id_python">
+<a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the Tenant ID of the System Assigned Managed Service Identity that is configured on this Event Grid Domain.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
 
 <h4 id="domaininboundiprule">Domain<wbr>Inbound<wbr>Ip<wbr>Rule</h4>
 

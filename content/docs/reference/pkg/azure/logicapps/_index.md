@@ -14,6 +14,9 @@ Explore the resources and functions of the azure.logicapps module.
     <li><a href="actioncustom" title="ActionCustom"><span class="symbol resource"></span>ActionCustom</a></li>
     <li><a href="actionhttp" title="ActionHttp"><span class="symbol resource"></span>ActionHttp</a></li>
     <li><a href="integrationaccount" title="IntegrationAccount"><span class="symbol resource"></span>IntegrationAccount</a></li>
+    <li><a href="integrationaccountagreement" title="IntegrationAccountAgreement"><span class="symbol resource"></span>IntegrationAccountAgreement</a></li>
+    <li><a href="integrationaccountassembly" title="IntegrationAccountAssembly"><span class="symbol resource"></span>IntegrationAccountAssembly</a></li>
+    <li><a href="integrationaccountbatchconfiguration" title="IntegrationAccountBatchConfiguration"><span class="symbol resource"></span>IntegrationAccountBatchConfiguration</a></li>
     <li><a href="integrationaccountcertificate" title="IntegrationAccountCertificate"><span class="symbol resource"></span>IntegrationAccountCertificate</a></li>
     <li><a href="integrationaccountmap" title="IntegrationAccountMap"><span class="symbol resource"></span>IntegrationAccountMap</a></li>
     <li><a href="integrationaccountpartner" title="IntegrationAccountPartner"><span class="symbol resource"></span>IntegrationAccountPartner</a></li>
@@ -41,6 +44,6 @@ Explore the resources and functions of the azure.logicapps module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/hashicorp/terraform-provider-azurerm).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.17.0</dd>
+	<dd>4.18.0</dd>
 </dl>
 

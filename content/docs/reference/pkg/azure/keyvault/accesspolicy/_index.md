@@ -402,7 +402,7 @@ to be created.
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}List of secret permissions, must be one or more from the following: `Backup`, `Delete`, `get`, `list`, `purge`, `recover`, `restore` and `set`.
+    <dd>{{% md %}}List of secret permissions, must be one or more from the following: `Backup`, `Delete`, `Get`, `List`, `Purge`, `Recover`, `Restore` and `Set`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storagepermissions_csharp">
@@ -484,7 +484,7 @@ to be created.
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}List of secret permissions, must be one or more from the following: `Backup`, `Delete`, `get`, `list`, `purge`, `recover`, `restore` and `set`.
+    <dd>{{% md %}}List of secret permissions, must be one or more from the following: `Backup`, `Delete`, `Get`, `List`, `Purge`, `Recover`, `Restore` and `Set`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storagepermissions_go">
@@ -566,7 +566,7 @@ to be created.
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}List of secret permissions, must be one or more from the following: `Backup`, `Delete`, `get`, `list`, `purge`, `recover`, `restore` and `set`.
+    <dd>{{% md %}}List of secret permissions, must be one or more from the following: `Backup`, `Delete`, `Get`, `List`, `Purge`, `Recover`, `Restore` and `Set`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storagepermissions_nodejs">
@@ -648,7 +648,7 @@ to be created.
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}List of secret permissions, must be one or more from the following: `Backup`, `Delete`, `get`, `list`, `purge`, `recover`, `restore` and `set`.
+    <dd>{{% md %}}List of secret permissions, must be one or more from the following: `Backup`, `Delete`, `Get`, `List`, `Purge`, `Recover`, `Restore` and `Set`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storage_permissions_python">
@@ -907,7 +907,7 @@ to be created.
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}List of secret permissions, must be one or more from the following: `Backup`, `Delete`, `get`, `list`, `purge`, `recover`, `restore` and `set`.
+    <dd>{{% md %}}List of secret permissions, must be one or more from the following: `Backup`, `Delete`, `Get`, `List`, `Purge`, `Recover`, `Restore` and `Set`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_storagepermissions_csharp">
@@ -989,7 +989,7 @@ to be created.
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}List of secret permissions, must be one or more from the following: `Backup`, `Delete`, `get`, `list`, `purge`, `recover`, `restore` and `set`.
+    <dd>{{% md %}}List of secret permissions, must be one or more from the following: `Backup`, `Delete`, `Get`, `List`, `Purge`, `Recover`, `Restore` and `Set`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_storagepermissions_go">
@@ -1071,7 +1071,7 @@ to be created.
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}List of secret permissions, must be one or more from the following: `Backup`, `Delete`, `get`, `list`, `purge`, `recover`, `restore` and `set`.
+    <dd>{{% md %}}List of secret permissions, must be one or more from the following: `Backup`, `Delete`, `Get`, `List`, `Purge`, `Recover`, `Restore` and `Set`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_storagepermissions_nodejs">
@@ -1153,7 +1153,7 @@ to be created.
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}List of secret permissions, must be one or more from the following: `Backup`, `Delete`, `get`, `list`, `purge`, `recover`, `restore` and `set`.
+    <dd>{{% md %}}List of secret permissions, must be one or more from the following: `Backup`, `Delete`, `Get`, `List`, `Purge`, `Recover`, `Restore` and `Set`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_storage_permissions_python">

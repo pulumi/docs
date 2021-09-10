@@ -239,6 +239,8 @@ const exampleSystemTopicEventSubscription = new azure.eventgrid.SystemTopicEvent
                                  <span class="nx">advanced_filter</span><span class="p">:</span> <span class="nx">Optional[SystemTopicEventSubscriptionAdvancedFilterArgs]</span> = None<span class="p">,</span>
                                  <span class="nx">advanced_filtering_on_arrays_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                                  <span class="nx">azure_function_endpoint</span><span class="p">:</span> <span class="nx">Optional[SystemTopicEventSubscriptionAzureFunctionEndpointArgs]</span> = None<span class="p">,</span>
+                                 <span class="nx">dead_letter_identity</span><span class="p">:</span> <span class="nx">Optional[SystemTopicEventSubscriptionDeadLetterIdentityArgs]</span> = None<span class="p">,</span>
+                                 <span class="nx">delivery_identity</span><span class="p">:</span> <span class="nx">Optional[SystemTopicEventSubscriptionDeliveryIdentityArgs]</span> = None<span class="p">,</span>
                                  <span class="nx">event_delivery_schema</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                                  <span class="nx">eventhub_endpoint_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                                  <span class="nx">expiration_time_utc</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -429,6 +431,24 @@ The SystemTopicEventSubscription resource accepts the following [input]({{< relr
     <dd>{{% md %}}An `azure_function_endpoint` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="deadletteridentity_csharp">
+<a href="#deadletteridentity_csharp" style="color: inherit; text-decoration: inherit;">Dead<wbr>Letter<wbr>Identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#systemtopiceventsubscriptiondeadletteridentity">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Dead<wbr>Letter<wbr>Identity<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `dead_letter_identity` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="deliveryidentity_csharp">
+<a href="#deliveryidentity_csharp" style="color: inherit; text-decoration: inherit;">Delivery<wbr>Identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#systemtopiceventsubscriptiondeliveryidentity">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Delivery<wbr>Identity<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `delivery_identity` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="eventdeliveryschema_csharp">
 <a href="#eventdeliveryschema_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Delivery<wbr>Schema</a>
 </span>
@@ -602,6 +622,24 @@ The SystemTopicEventSubscription resource accepts the following [input]({{< relr
         <span class="property-type"><a href="#systemtopiceventsubscriptionazurefunctionendpoint">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Azure<wbr>Function<wbr>Endpoint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `azure_function_endpoint` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="deadletteridentity_go">
+<a href="#deadletteridentity_go" style="color: inherit; text-decoration: inherit;">Dead<wbr>Letter<wbr>Identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#systemtopiceventsubscriptiondeadletteridentity">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Dead<wbr>Letter<wbr>Identity<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `dead_letter_identity` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="deliveryidentity_go">
+<a href="#deliveryidentity_go" style="color: inherit; text-decoration: inherit;">Delivery<wbr>Identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#systemtopiceventsubscriptiondeliveryidentity">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Delivery<wbr>Identity<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `delivery_identity` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="eventdeliveryschema_go">
@@ -779,6 +817,24 @@ The SystemTopicEventSubscription resource accepts the following [input]({{< relr
     <dd>{{% md %}}An `azure_function_endpoint` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="deadletteridentity_nodejs">
+<a href="#deadletteridentity_nodejs" style="color: inherit; text-decoration: inherit;">dead<wbr>Letter<wbr>Identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#systemtopiceventsubscriptiondeadletteridentity">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Dead<wbr>Letter<wbr>Identity<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `dead_letter_identity` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="deliveryidentity_nodejs">
+<a href="#deliveryidentity_nodejs" style="color: inherit; text-decoration: inherit;">delivery<wbr>Identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#systemtopiceventsubscriptiondeliveryidentity">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Delivery<wbr>Identity<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `delivery_identity` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="eventdeliveryschema_nodejs">
 <a href="#eventdeliveryschema_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Delivery<wbr>Schema</a>
 </span>
@@ -952,6 +1008,24 @@ The SystemTopicEventSubscription resource accepts the following [input]({{< relr
         <span class="property-type"><a href="#systemtopiceventsubscriptionazurefunctionendpoint">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Azure<wbr>Function<wbr>Endpoint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `azure_function_endpoint` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dead_letter_identity_python">
+<a href="#dead_letter_identity_python" style="color: inherit; text-decoration: inherit;">dead_<wbr>letter_<wbr>identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#systemtopiceventsubscriptiondeadletteridentity">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Dead<wbr>Letter<wbr>Identity<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `dead_letter_identity` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="delivery_identity_python">
+<a href="#delivery_identity_python" style="color: inherit; text-decoration: inherit;">delivery_<wbr>identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#systemtopiceventsubscriptiondeliveryidentity">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Delivery<wbr>Identity<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `delivery_identity` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="event_delivery_schema_python">
@@ -1155,6 +1229,8 @@ Get an existing SystemTopicEventSubscription resource's state with the given nam
         <span class="nx">advanced_filter</span><span class="p">:</span> <span class="nx">Optional[SystemTopicEventSubscriptionAdvancedFilterArgs]</span> = None<span class="p">,</span>
         <span class="nx">advanced_filtering_on_arrays_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">azure_function_endpoint</span><span class="p">:</span> <span class="nx">Optional[SystemTopicEventSubscriptionAzureFunctionEndpointArgs]</span> = None<span class="p">,</span>
+        <span class="nx">dead_letter_identity</span><span class="p">:</span> <span class="nx">Optional[SystemTopicEventSubscriptionDeadLetterIdentityArgs]</span> = None<span class="p">,</span>
+        <span class="nx">delivery_identity</span><span class="p">:</span> <span class="nx">Optional[SystemTopicEventSubscriptionDeliveryIdentityArgs]</span> = None<span class="p">,</span>
         <span class="nx">event_delivery_schema</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">eventhub_endpoint_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">expiration_time_utc</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -1308,6 +1384,24 @@ The following state arguments are supported:
         <span class="property-type"><a href="#systemtopiceventsubscriptionazurefunctionendpoint">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Azure<wbr>Function<wbr>Endpoint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `azure_function_endpoint` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_deadletteridentity_csharp">
+<a href="#state_deadletteridentity_csharp" style="color: inherit; text-decoration: inherit;">Dead<wbr>Letter<wbr>Identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#systemtopiceventsubscriptiondeadletteridentity">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Dead<wbr>Letter<wbr>Identity<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `dead_letter_identity` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_deliveryidentity_csharp">
+<a href="#state_deliveryidentity_csharp" style="color: inherit; text-decoration: inherit;">Delivery<wbr>Identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#systemtopiceventsubscriptiondeliveryidentity">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Delivery<wbr>Identity<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `delivery_identity` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_eventdeliveryschema_csharp">
@@ -1485,6 +1579,24 @@ The following state arguments are supported:
     <dd>{{% md %}}An `azure_function_endpoint` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_deadletteridentity_go">
+<a href="#state_deadletteridentity_go" style="color: inherit; text-decoration: inherit;">Dead<wbr>Letter<wbr>Identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#systemtopiceventsubscriptiondeadletteridentity">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Dead<wbr>Letter<wbr>Identity<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `dead_letter_identity` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_deliveryidentity_go">
+<a href="#state_deliveryidentity_go" style="color: inherit; text-decoration: inherit;">Delivery<wbr>Identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#systemtopiceventsubscriptiondeliveryidentity">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Delivery<wbr>Identity<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `delivery_identity` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_eventdeliveryschema_go">
 <a href="#state_eventdeliveryschema_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Delivery<wbr>Schema</a>
 </span>
@@ -1660,6 +1772,24 @@ The following state arguments are supported:
     <dd>{{% md %}}An `azure_function_endpoint` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_deadletteridentity_nodejs">
+<a href="#state_deadletteridentity_nodejs" style="color: inherit; text-decoration: inherit;">dead<wbr>Letter<wbr>Identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#systemtopiceventsubscriptiondeadletteridentity">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Dead<wbr>Letter<wbr>Identity<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `dead_letter_identity` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_deliveryidentity_nodejs">
+<a href="#state_deliveryidentity_nodejs" style="color: inherit; text-decoration: inherit;">delivery<wbr>Identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#systemtopiceventsubscriptiondeliveryidentity">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Delivery<wbr>Identity<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `delivery_identity` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_eventdeliveryschema_nodejs">
 <a href="#state_eventdeliveryschema_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Delivery<wbr>Schema</a>
 </span>
@@ -1833,6 +1963,24 @@ The following state arguments are supported:
         <span class="property-type"><a href="#systemtopiceventsubscriptionazurefunctionendpoint">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Azure<wbr>Function<wbr>Endpoint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `azure_function_endpoint` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_dead_letter_identity_python">
+<a href="#state_dead_letter_identity_python" style="color: inherit; text-decoration: inherit;">dead_<wbr>letter_<wbr>identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#systemtopiceventsubscriptiondeadletteridentity">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Dead<wbr>Letter<wbr>Identity<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `dead_letter_identity` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_delivery_identity_python">
+<a href="#state_delivery_identity_python" style="color: inherit; text-decoration: inherit;">delivery_<wbr>identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#systemtopiceventsubscriptiondeliveryidentity">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Delivery<wbr>Identity<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `delivery_identity` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_event_delivery_schema_python">
@@ -4452,6 +4600,114 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Preferred batch size in Kilobytes.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="systemtopiceventsubscriptiondeadletteridentity">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Dead<wbr>Letter<wbr>Identity</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the type of Managed Service Identity that is used for dead lettering. Allowed value is `SystemAssigned`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the type of Managed Service Identity that is used for dead lettering. Allowed value is `SystemAssigned`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the type of Managed Service Identity that is used for dead lettering. Allowed value is `SystemAssigned`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the type of Managed Service Identity that is used for dead lettering. Allowed value is `SystemAssigned`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="systemtopiceventsubscriptiondeliveryidentity">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Delivery<wbr>Identity</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the type of Managed Service Identity that is used for event delivery. Allowed value is `SystemAssigned`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the type of Managed Service Identity that is used for event delivery. Allowed value is `SystemAssigned`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the type of Managed Service Identity that is used for event delivery. Allowed value is `SystemAssigned`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the type of Managed Service Identity that is used for event delivery. Allowed value is `SystemAssigned`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

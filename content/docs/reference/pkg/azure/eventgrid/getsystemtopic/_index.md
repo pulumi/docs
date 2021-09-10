@@ -189,6 +189,7 @@ const exampleSystemTopic = new azure.eventgrid.SystemTopic("exampleSystemTopic",
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">GetSystemTopic</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                    <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                   <span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[GetSystemTopicIdentityArgs]</span> = None<span class="p">,</span>
                    <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                    <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                    <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -352,6 +353,15 @@ The GetSystemTopic resource accepts the following [input]({{< relref "/docs/intr
 , `Microsoft.ContainerRegistry.Registries`, `Microsoft.Devices.IoTHubs`, `Microsoft.EventGrid.Domains`, `Microsoft.EventGrid.Topics`, `Microsoft.Eventhub.Namespaces`, `Microsoft.KeyVault.vaults`, `Microsoft.MachineLearningServices.Workspaces`, `Microsoft.Maps.Accounts`, `Microsoft.Media.MediaServices`, `Microsoft.Resources.ResourceGroups`, `Microsoft.Resources.Subscriptions`, `Microsoft.ServiceBus.Namespaces`, `Microsoft.SignalRService.SignalR`, `Microsoft.Storage.StorageAccounts`, `Microsoft.Web.ServerFarms` and `Microsoft.Web.Sites`. Changing this forces a new Event Grid System Topic to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="identity_csharp">
+<a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getsystemtopicidentity">Get<wbr>System<wbr>Topic<wbr>Identity<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `identity` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
 </span>
@@ -409,6 +419,15 @@ The GetSystemTopic resource accepts the following [input]({{< relref "/docs/intr
     </dt>
     <dd>{{% md %}}The Topic Type of the Event Grid System Topic. Possible values are: `Microsoft.AppConfiguration.ConfigurationStores`, `Microsoft.Communication.CommunicationServices`
 , `Microsoft.ContainerRegistry.Registries`, `Microsoft.Devices.IoTHubs`, `Microsoft.EventGrid.Domains`, `Microsoft.EventGrid.Topics`, `Microsoft.Eventhub.Namespaces`, `Microsoft.KeyVault.vaults`, `Microsoft.MachineLearningServices.Workspaces`, `Microsoft.Maps.Accounts`, `Microsoft.Media.MediaServices`, `Microsoft.Resources.ResourceGroups`, `Microsoft.Resources.Subscriptions`, `Microsoft.ServiceBus.Namespaces`, `Microsoft.SignalRService.SignalR`, `Microsoft.Storage.StorageAccounts`, `Microsoft.Web.ServerFarms` and `Microsoft.Web.Sites`. Changing this forces a new Event Grid System Topic to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="identity_go">
+<a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getsystemtopicidentity">Get<wbr>System<wbr>Topic<wbr>Identity<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `identity` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
@@ -470,6 +489,15 @@ The GetSystemTopic resource accepts the following [input]({{< relref "/docs/intr
 , `Microsoft.ContainerRegistry.Registries`, `Microsoft.Devices.IoTHubs`, `Microsoft.EventGrid.Domains`, `Microsoft.EventGrid.Topics`, `Microsoft.Eventhub.Namespaces`, `Microsoft.KeyVault.vaults`, `Microsoft.MachineLearningServices.Workspaces`, `Microsoft.Maps.Accounts`, `Microsoft.Media.MediaServices`, `Microsoft.Resources.ResourceGroups`, `Microsoft.Resources.Subscriptions`, `Microsoft.ServiceBus.Namespaces`, `Microsoft.SignalRService.SignalR`, `Microsoft.Storage.StorageAccounts`, `Microsoft.Web.ServerFarms` and `Microsoft.Web.Sites`. Changing this forces a new Event Grid System Topic to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="identity_nodejs">
+<a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getsystemtopicidentity">Get<wbr>System<wbr>Topic<wbr>Identity<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `identity` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
@@ -527,6 +555,15 @@ The GetSystemTopic resource accepts the following [input]({{< relref "/docs/intr
     </dt>
     <dd>{{% md %}}The Topic Type of the Event Grid System Topic. Possible values are: `Microsoft.AppConfiguration.ConfigurationStores`, `Microsoft.Communication.CommunicationServices`
 , `Microsoft.ContainerRegistry.Registries`, `Microsoft.Devices.IoTHubs`, `Microsoft.EventGrid.Domains`, `Microsoft.EventGrid.Topics`, `Microsoft.Eventhub.Namespaces`, `Microsoft.KeyVault.vaults`, `Microsoft.MachineLearningServices.Workspaces`, `Microsoft.Maps.Accounts`, `Microsoft.Media.MediaServices`, `Microsoft.Resources.ResourceGroups`, `Microsoft.Resources.Subscriptions`, `Microsoft.ServiceBus.Namespaces`, `Microsoft.SignalRService.SignalR`, `Microsoft.Storage.StorageAccounts`, `Microsoft.Web.ServerFarms` and `Microsoft.Web.Sites`. Changing this forces a new Event Grid System Topic to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="identity_python">
+<a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getsystemtopicidentity">Get<wbr>System<wbr>Topic<wbr>Identity<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `identity` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
@@ -664,6 +701,7 @@ Get an existing GetSystemTopic resource's state with the given name, ID, and opt
 <span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[GetSystemTopicIdentityArgs]</span> = None<span class="p">,</span>
         <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">metric_arm_resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -783,6 +821,15 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="state_identity_csharp">
+<a href="#state_identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getsystemtopicidentity">Get<wbr>System<wbr>Topic<wbr>Identity<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `identity` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_location_csharp">
 <a href="#state_location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
 </span>
@@ -850,6 +897,15 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="state_identity_go">
+<a href="#state_identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getsystemtopicidentity">Get<wbr>System<wbr>Topic<wbr>Identity<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `identity` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_go">
 <a href="#state_location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -919,6 +975,15 @@ The following state arguments are supported:
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="state_identity_nodejs">
+<a href="#state_identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getsystemtopicidentity">Get<wbr>System<wbr>Topic<wbr>Identity<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `identity` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_location_nodejs">
 <a href="#state_location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
@@ -986,6 +1051,15 @@ The following state arguments are supported:
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="state_identity_python">
+<a href="#state_identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getsystemtopicidentity">Get<wbr>System<wbr>Topic<wbr>Identity<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `identity` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_python">
 <a href="#state_location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -1056,6 +1130,172 @@ The following state arguments are supported:
 
 
 
+
+## Supporting Types
+
+
+
+<h4 id="getsystemtopicidentity">Get<wbr>System<wbr>Topic<wbr>Identity</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the identity type of Event Grid System Topic. Possible values are `SystemAssigned` (where Azure will generate a Principal for you) or `UserAssigned` where you can specify the User Assigned Managed Identity IDs in the `identity_ids` field.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="identityids_csharp">
+<a href="#identityids_csharp" style="color: inherit; text-decoration: inherit;">Identity<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Specifies a list of user managed identity ids to be assigned. Required if `type` is `UserAssigned`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="principalid_csharp">
+<a href="#principalid_csharp" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the Principal ID of the System Assigned Managed Service Identity that is configured on this Event Grid System Topic.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tenantid_csharp">
+<a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the Tenant ID of the System Assigned Managed Service Identity that is configured on this Event Grid System Topic.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the identity type of Event Grid System Topic. Possible values are `SystemAssigned` (where Azure will generate a Principal for you) or `UserAssigned` where you can specify the User Assigned Managed Identity IDs in the `identity_ids` field.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="identityids_go">
+<a href="#identityids_go" style="color: inherit; text-decoration: inherit;">Identity<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}Specifies a list of user managed identity ids to be assigned. Required if `type` is `UserAssigned`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="principalid_go">
+<a href="#principalid_go" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the Principal ID of the System Assigned Managed Service Identity that is configured on this Event Grid System Topic.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tenantid_go">
+<a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the Tenant ID of the System Assigned Managed Service Identity that is configured on this Event Grid System Topic.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the identity type of Event Grid System Topic. Possible values are `SystemAssigned` (where Azure will generate a Principal for you) or `UserAssigned` where you can specify the User Assigned Managed Identity IDs in the `identity_ids` field.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="identityids_nodejs">
+<a href="#identityids_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}Specifies a list of user managed identity ids to be assigned. Required if `type` is `UserAssigned`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="principalid_nodejs">
+<a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the Principal ID of the System Assigned Managed Service Identity that is configured on this Event Grid System Topic.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tenantid_nodejs">
+<a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the Tenant ID of the System Assigned Managed Service Identity that is configured on this Event Grid System Topic.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the identity type of Event Grid System Topic. Possible values are `SystemAssigned` (where Azure will generate a Principal for you) or `UserAssigned` where you can specify the User Assigned Managed Identity IDs in the `identity_ids` field.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="identity_ids_python">
+<a href="#identity_ids_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}Specifies a list of user managed identity ids to be assigned. Required if `type` is `UserAssigned`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="principal_id_python">
+<a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the Principal ID of the System Assigned Managed Service Identity that is configured on this Event Grid System Topic.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tenant_id_python">
+<a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the Tenant ID of the System Assigned Managed Service Identity that is configured on this Event Grid System Topic.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
 ## Import
 
 

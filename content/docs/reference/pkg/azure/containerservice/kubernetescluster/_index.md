@@ -5112,6 +5112,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The type of disk which should be used for the Operating System. Possible values are `Ephemeral` and `Managed`. Defaults to `Managed`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="ossku_csharp">
+<a href="#ossku_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Sku</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}OsSKU to be used to specify Linux OSType. Not applicable to Windows OSType. Possible values include: `Ubuntu`, `CBLMariner`. Defaults to `Ubuntu`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="podsubnetid_csharp">
 <a href="#podsubnetid_csharp" style="color: inherit; text-decoration: inherit;">Pod<wbr>Subnet<wbr>Id</a>
 </span>
@@ -5364,6 +5373,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of disk which should be used for the Operating System. Possible values are `Ephemeral` and `Managed`. Defaults to `Managed`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ossku_go">
+<a href="#ossku_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Sku</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}OsSKU to be used to specify Linux OSType. Not applicable to Windows OSType. Possible values include: `Ubuntu`, `CBLMariner`. Defaults to `Ubuntu`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="podsubnetid_go">
@@ -5620,6 +5638,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The type of disk which should be used for the Operating System. Possible values are `Ephemeral` and `Managed`. Defaults to `Managed`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="ossku_nodejs">
+<a href="#ossku_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Sku</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}OsSKU to be used to specify Linux OSType. Not applicable to Windows OSType. Possible values include: `Ubuntu`, `CBLMariner`. Defaults to `Ubuntu`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="podsubnetid_nodejs">
 <a href="#podsubnetid_nodejs" style="color: inherit; text-decoration: inherit;">pod<wbr>Subnet<wbr>Id</a>
 </span>
@@ -5872,6 +5899,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of disk which should be used for the Operating System. Possible values are `Ephemeral` and `Managed`. Defaults to `Managed`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="os_sku_python">
+<a href="#os_sku_python" style="color: inherit; text-decoration: inherit;">os_<wbr>sku</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}OsSKU to be used to specify Linux OSType. Not applicable to Windows OSType. Possible values include: `Ubuntu`, `CBLMariner`. Defaults to `Ubuntu`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pod_subnet_id_python">

@@ -55,6 +55,7 @@ Kubernetes Cluster Node Pools can be imported using the `resource id`, e.g.
                               <span class="nx">orchestrator_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                               <span class="nx">os_disk_size_gb</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
                               <span class="nx">os_disk_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                              <span class="nx">os_sku</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                               <span class="nx">os_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                               <span class="nx">pod_subnet_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                               <span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -401,6 +402,15 @@ The KubernetesClusterNodePool resource accepts the following [input]({{< relref 
     <dd>{{% md %}}The type of disk which should be used for the Operating System. Possible values are `Ephemeral` and `Managed`. Defaults to `Managed`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="ossku_csharp">
+<a href="#ossku_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Sku</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}OsSKU to be used to specify Linux OSType. Not applicable to Windows OSType. Possible values include: `Ubuntu`, `CBLMariner`. Defaults to `Ubuntu`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="ostype_csharp">
 <a href="#ostype_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
 </span>
@@ -691,6 +701,15 @@ The KubernetesClusterNodePool resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of disk which should be used for the Operating System. Possible values are `Ephemeral` and `Managed`. Defaults to `Managed`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ossku_go">
+<a href="#ossku_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Sku</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}OsSKU to be used to specify Linux OSType. Not applicable to Windows OSType. Possible values include: `Ubuntu`, `CBLMariner`. Defaults to `Ubuntu`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ostype_go">
@@ -985,6 +1004,15 @@ The KubernetesClusterNodePool resource accepts the following [input]({{< relref 
     <dd>{{% md %}}The type of disk which should be used for the Operating System. Possible values are `Ephemeral` and `Managed`. Defaults to `Managed`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="ossku_nodejs">
+<a href="#ossku_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Sku</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}OsSKU to be used to specify Linux OSType. Not applicable to Windows OSType. Possible values include: `Ubuntu`, `CBLMariner`. Defaults to `Ubuntu`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="ostype_nodejs">
 <a href="#ostype_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Type</a>
 </span>
@@ -1277,6 +1305,15 @@ The KubernetesClusterNodePool resource accepts the following [input]({{< relref 
     <dd>{{% md %}}The type of disk which should be used for the Operating System. Possible values are `Ephemeral` and `Managed`. Defaults to `Managed`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="os_sku_python">
+<a href="#os_sku_python" style="color: inherit; text-decoration: inherit;">os_<wbr>sku</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}OsSKU to be used to specify Linux OSType. Not applicable to Windows OSType. Possible values include: `Ubuntu`, `CBLMariner`. Defaults to `Ubuntu`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="os_type_python">
 <a href="#os_type_python" style="color: inherit; text-decoration: inherit;">os_<wbr>type</a>
 </span>
@@ -1452,6 +1489,7 @@ Get an existing KubernetesClusterNodePool resource's state with the given name, 
         <span class="nx">orchestrator_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">os_disk_size_gb</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">os_disk_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">os_sku</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">os_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">pod_subnet_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -1772,6 +1810,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The type of disk which should be used for the Operating System. Possible values are `Ephemeral` and `Managed`. Defaults to `Managed`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_ossku_csharp">
+<a href="#state_ossku_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Sku</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}OsSKU to be used to specify Linux OSType. Not applicable to Windows OSType. Possible values include: `Ubuntu`, `CBLMariner`. Defaults to `Ubuntu`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_ostype_csharp">
 <a href="#state_ostype_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
 </span>
@@ -2062,6 +2109,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of disk which should be used for the Operating System. Possible values are `Ephemeral` and `Managed`. Defaults to `Managed`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_ossku_go">
+<a href="#state_ossku_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Sku</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}OsSKU to be used to specify Linux OSType. Not applicable to Windows OSType. Possible values include: `Ubuntu`, `CBLMariner`. Defaults to `Ubuntu`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ostype_go">
@@ -2356,6 +2412,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The type of disk which should be used for the Operating System. Possible values are `Ephemeral` and `Managed`. Defaults to `Managed`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_ossku_nodejs">
+<a href="#state_ossku_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Sku</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}OsSKU to be used to specify Linux OSType. Not applicable to Windows OSType. Possible values include: `Ubuntu`, `CBLMariner`. Defaults to `Ubuntu`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_ostype_nodejs">
 <a href="#state_ostype_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Type</a>
 </span>
@@ -2646,6 +2711,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of disk which should be used for the Operating System. Possible values are `Ephemeral` and `Managed`. Defaults to `Managed`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_os_sku_python">
+<a href="#state_os_sku_python" style="color: inherit; text-decoration: inherit;">os_<wbr>sku</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}OsSKU to be used to specify Linux OSType. Not applicable to Windows OSType. Possible values include: `Ubuntu`, `CBLMariner`. Defaults to `Ubuntu`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_os_type_python">

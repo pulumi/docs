@@ -251,6 +251,8 @@ const exampleOutputBlob = new azure.streamanalytics.OutputBlob("exampleOutputBlo
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">OutputBlob</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+               <span class="nx">batch_max_wait_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">batch_min_rows</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">,</span>
                <span class="nx">date_format</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                <span class="nx">path_pattern</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -471,6 +473,24 @@ The OutputBlob resource accepts the following [input]({{< relref "/docs/intro/co
     <dd>{{% md %}}The time format. Wherever `{time}` appears in `path_pattern`, the value of this property is used as the time format instead.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="batchmaxwaittime_csharp">
+<a href="#batchmaxwaittime_csharp" style="color: inherit; text-decoration: inherit;">Batch<wbr>Max<wbr>Wait<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The maximum wait time per batch in `hh:mm:ss` e.g. `00:02:00` for two minutes.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="batchminrows_csharp">
+<a href="#batchminrows_csharp" style="color: inherit; text-decoration: inherit;">Batch<wbr>Min<wbr>Rows</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">double</span>
+    </dt>
+    <dd>{{% md %}}The minimum number of rows per batch (must be between `0` and `10000`).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -563,6 +583,24 @@ The OutputBlob resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time format. Wherever `{time}` appears in `path_pattern`, the value of this property is used as the time format instead.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="batchmaxwaittime_go">
+<a href="#batchmaxwaittime_go" style="color: inherit; text-decoration: inherit;">Batch<wbr>Max<wbr>Wait<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The maximum wait time per batch in `hh:mm:ss` e.g. `00:02:00` for two minutes.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="batchminrows_go">
+<a href="#batchminrows_go" style="color: inherit; text-decoration: inherit;">Batch<wbr>Min<wbr>Rows</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float64</span>
+    </dt>
+    <dd>{{% md %}}The minimum number of rows per batch (must be between `0` and `10000`).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
@@ -659,6 +697,24 @@ The OutputBlob resource accepts the following [input]({{< relref "/docs/intro/co
     <dd>{{% md %}}The time format. Wherever `{time}` appears in `path_pattern`, the value of this property is used as the time format instead.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="batchmaxwaittime_nodejs">
+<a href="#batchmaxwaittime_nodejs" style="color: inherit; text-decoration: inherit;">batch<wbr>Max<wbr>Wait<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The maximum wait time per batch in `hh:mm:ss` e.g. `00:02:00` for two minutes.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="batchminrows_nodejs">
+<a href="#batchminrows_nodejs" style="color: inherit; text-decoration: inherit;">batch<wbr>Min<wbr>Rows</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The minimum number of rows per batch (must be between `0` and `10000`).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
@@ -753,6 +809,24 @@ The OutputBlob resource accepts the following [input]({{< relref "/docs/intro/co
     <dd>{{% md %}}The time format. Wherever `{time}` appears in `path_pattern`, the value of this property is used as the time format instead.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="batch_max_wait_time_python">
+<a href="#batch_max_wait_time_python" style="color: inherit; text-decoration: inherit;">batch_<wbr>max_<wbr>wait_<wbr>time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The maximum wait time per batch in `hh:mm:ss` e.g. `00:02:00` for two minutes.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="batch_min_rows_python">
+<a href="#batch_min_rows_python" style="color: inherit; text-decoration: inherit;">batch_<wbr>min_<wbr>rows</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}The minimum number of rows per batch (must be between `0` and `10000`).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
@@ -834,6 +908,8 @@ Get an existing OutputBlob resource's state with the given name, ID, and optiona
 <span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">batch_max_wait_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">batch_min_rows</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">,</span>
         <span class="nx">date_format</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">path_pattern</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -956,6 +1032,24 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="state_batchmaxwaittime_csharp">
+<a href="#state_batchmaxwaittime_csharp" style="color: inherit; text-decoration: inherit;">Batch<wbr>Max<wbr>Wait<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The maximum wait time per batch in `hh:mm:ss` e.g. `00:02:00` for two minutes.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_batchminrows_csharp">
+<a href="#state_batchminrows_csharp" style="color: inherit; text-decoration: inherit;">Batch<wbr>Min<wbr>Rows</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">double</span>
+    </dt>
+    <dd>{{% md %}}The minimum number of rows per batch (must be between `0` and `10000`).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_dateformat_csharp">
 <a href="#state_dateformat_csharp" style="color: inherit; text-decoration: inherit;">Date<wbr>Format</a>
 </span>
@@ -1049,6 +1143,24 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="state_batchmaxwaittime_go">
+<a href="#state_batchmaxwaittime_go" style="color: inherit; text-decoration: inherit;">Batch<wbr>Max<wbr>Wait<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The maximum wait time per batch in `hh:mm:ss` e.g. `00:02:00` for two minutes.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_batchminrows_go">
+<a href="#state_batchminrows_go" style="color: inherit; text-decoration: inherit;">Batch<wbr>Min<wbr>Rows</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float64</span>
+    </dt>
+    <dd>{{% md %}}The minimum number of rows per batch (must be between `0` and `10000`).
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dateformat_go">
 <a href="#state_dateformat_go" style="color: inherit; text-decoration: inherit;">Date<wbr>Format</a>
@@ -1144,6 +1256,24 @@ The following state arguments are supported:
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="state_batchmaxwaittime_nodejs">
+<a href="#state_batchmaxwaittime_nodejs" style="color: inherit; text-decoration: inherit;">batch<wbr>Max<wbr>Wait<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The maximum wait time per batch in `hh:mm:ss` e.g. `00:02:00` for two minutes.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_batchminrows_nodejs">
+<a href="#state_batchminrows_nodejs" style="color: inherit; text-decoration: inherit;">batch<wbr>Min<wbr>Rows</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The minimum number of rows per batch (must be between `0` and `10000`).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_dateformat_nodejs">
 <a href="#state_dateformat_nodejs" style="color: inherit; text-decoration: inherit;">date<wbr>Format</a>
 </span>
@@ -1237,6 +1367,24 @@ The following state arguments are supported:
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="state_batch_max_wait_time_python">
+<a href="#state_batch_max_wait_time_python" style="color: inherit; text-decoration: inherit;">batch_<wbr>max_<wbr>wait_<wbr>time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The maximum wait time per batch in `hh:mm:ss` e.g. `00:02:00` for two minutes.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_batch_min_rows_python">
+<a href="#state_batch_min_rows_python" style="color: inherit; text-decoration: inherit;">batch_<wbr>min_<wbr>rows</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}The minimum number of rows per batch (must be between `0` and `10000`).
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_date_format_python">
 <a href="#state_date_format_python" style="color: inherit; text-decoration: inherit;">date_<wbr>format</a>
@@ -1349,7 +1497,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The serialization format used for outgoing data streams. Possible values are `Avro`, `Csv` and `Json`.
+    <dd>{{% md %}}The serialization format used for outgoing data streams. Possible values are `Avro`, `Csv`, `Json` and `Parquet`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encoding_csharp">
@@ -1389,7 +1537,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The serialization format used for outgoing data streams. Possible values are `Avro`, `Csv` and `Json`.
+    <dd>{{% md %}}The serialization format used for outgoing data streams. Possible values are `Avro`, `Csv`, `Json` and `Parquet`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encoding_go">
@@ -1429,7 +1577,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The serialization format used for outgoing data streams. Possible values are `Avro`, `Csv` and `Json`.
+    <dd>{{% md %}}The serialization format used for outgoing data streams. Possible values are `Avro`, `Csv`, `Json` and `Parquet`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encoding_nodejs">
@@ -1469,7 +1617,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The serialization format used for outgoing data streams. Possible values are `Avro`, `Csv` and `Json`.
+    <dd>{{% md %}}The serialization format used for outgoing data streams. Possible values are `Avro`, `Csv`, `Json` and `Parquet`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encoding_python">

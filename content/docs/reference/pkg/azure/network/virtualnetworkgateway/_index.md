@@ -2701,8 +2701,6 @@ in CIDR notation.
     </dt>
     <dd>{{% md %}}The client id of the Azure VPN application.
 See [Create an Active Directory (AD) tenant for P2S OpenVPN protocol connections](https://docs.microsoft.com/en-gb/azure/vpn-gateway/openvpn-azure-ad-tenant-multi-app) for values
-This setting is incompatible with the use of
-`root_certificate` and `revoked_certificate`, `radius_server_address`, and `radius_server_secret`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="aadissuer_csharp">
@@ -2712,8 +2710,6 @@ This setting is incompatible with the use of
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The STS url for your tenant
-This setting is incompatible with the use of
-`root_certificate` and `revoked_certificate`, `radius_server_address`, and `radius_server_secret`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="aadtenant_csharp">
@@ -2723,8 +2719,6 @@ This setting is incompatible with the use of
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}AzureAD Tenant URL
-This setting is incompatible with the use of
-`root_certificate` and `revoked_certificate`, `radius_server_address`, and `radius_server_secret`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="radiusserveraddress_csharp">
@@ -2734,8 +2728,6 @@ This setting is incompatible with the use of
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The address of the Radius server.
-This setting is incompatible with the use of
-`aad_tenant`, `aad_audience`, `aad_issuer`, `root_certificate` and `revoked_certificate`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="radiusserversecret_csharp">
@@ -2745,8 +2737,6 @@ This setting is incompatible with the use of
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secret used by the Radius server.
-This setting is incompatible with the use of
-`aad_tenant`, `aad_audience`, `aad_issuer`, `root_certificate` and `revoked_certificate`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="revokedcertificates_csharp">
@@ -2757,8 +2747,6 @@ This setting is incompatible with the use of
     </dt>
     <dd>{{% md %}}One or more `revoked_certificate` blocks which
 are defined below.
-This setting is incompatible with the use of
-`aad_tenant`, `aad_audience`, `aad_issuer`, `radius_server_address`, and `radius_server_secret`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rootcertificates_csharp">
@@ -2770,8 +2758,16 @@ This setting is incompatible with the use of
     <dd>{{% md %}}One or more `root_certificate` blocks which are
 defined below. These root certificates are used to sign the client certificate
 used by the VPN clients to connect to the gateway.
-This setting is incompatible with the use of
-`aad_tenant`, `aad_audience`, `aad_issuer`, `radius_server_address`, and `radius_server_secret`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="vpnauthtypes_csharp">
+<a href="#vpnauthtypes_csharp" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Auth<wbr>Types</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}List of the vpn authentication types for the virtual network gateway.
+The supported values are `AAD`, `Radius` and `Certificate`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpnclientprotocols_csharp">
@@ -2809,8 +2805,6 @@ in CIDR notation.
     </dt>
     <dd>{{% md %}}The client id of the Azure VPN application.
 See [Create an Active Directory (AD) tenant for P2S OpenVPN protocol connections](https://docs.microsoft.com/en-gb/azure/vpn-gateway/openvpn-azure-ad-tenant-multi-app) for values
-This setting is incompatible with the use of
-`root_certificate` and `revoked_certificate`, `radius_server_address`, and `radius_server_secret`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="aadissuer_go">
@@ -2820,8 +2814,6 @@ This setting is incompatible with the use of
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The STS url for your tenant
-This setting is incompatible with the use of
-`root_certificate` and `revoked_certificate`, `radius_server_address`, and `radius_server_secret`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="aadtenant_go">
@@ -2831,8 +2823,6 @@ This setting is incompatible with the use of
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}AzureAD Tenant URL
-This setting is incompatible with the use of
-`root_certificate` and `revoked_certificate`, `radius_server_address`, and `radius_server_secret`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="radiusserveraddress_go">
@@ -2842,8 +2832,6 @@ This setting is incompatible with the use of
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The address of the Radius server.
-This setting is incompatible with the use of
-`aad_tenant`, `aad_audience`, `aad_issuer`, `root_certificate` and `revoked_certificate`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="radiusserversecret_go">
@@ -2853,8 +2841,6 @@ This setting is incompatible with the use of
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secret used by the Radius server.
-This setting is incompatible with the use of
-`aad_tenant`, `aad_audience`, `aad_issuer`, `root_certificate` and `revoked_certificate`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="revokedcertificates_go">
@@ -2865,8 +2851,6 @@ This setting is incompatible with the use of
     </dt>
     <dd>{{% md %}}One or more `revoked_certificate` blocks which
 are defined below.
-This setting is incompatible with the use of
-`aad_tenant`, `aad_audience`, `aad_issuer`, `radius_server_address`, and `radius_server_secret`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rootcertificates_go">
@@ -2878,8 +2862,16 @@ This setting is incompatible with the use of
     <dd>{{% md %}}One or more `root_certificate` blocks which are
 defined below. These root certificates are used to sign the client certificate
 used by the VPN clients to connect to the gateway.
-This setting is incompatible with the use of
-`aad_tenant`, `aad_audience`, `aad_issuer`, `radius_server_address`, and `radius_server_secret`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="vpnauthtypes_go">
+<a href="#vpnauthtypes_go" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Auth<wbr>Types</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}List of the vpn authentication types for the virtual network gateway.
+The supported values are `AAD`, `Radius` and `Certificate`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpnclientprotocols_go">
@@ -2917,8 +2909,6 @@ in CIDR notation.
     </dt>
     <dd>{{% md %}}The client id of the Azure VPN application.
 See [Create an Active Directory (AD) tenant for P2S OpenVPN protocol connections](https://docs.microsoft.com/en-gb/azure/vpn-gateway/openvpn-azure-ad-tenant-multi-app) for values
-This setting is incompatible with the use of
-`root_certificate` and `revoked_certificate`, `radius_server_address`, and `radius_server_secret`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="aadissuer_nodejs">
@@ -2928,8 +2918,6 @@ This setting is incompatible with the use of
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The STS url for your tenant
-This setting is incompatible with the use of
-`root_certificate` and `revoked_certificate`, `radius_server_address`, and `radius_server_secret`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="aadtenant_nodejs">
@@ -2939,8 +2927,6 @@ This setting is incompatible with the use of
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}AzureAD Tenant URL
-This setting is incompatible with the use of
-`root_certificate` and `revoked_certificate`, `radius_server_address`, and `radius_server_secret`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="radiusserveraddress_nodejs">
@@ -2950,8 +2936,6 @@ This setting is incompatible with the use of
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The address of the Radius server.
-This setting is incompatible with the use of
-`aad_tenant`, `aad_audience`, `aad_issuer`, `root_certificate` and `revoked_certificate`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="radiusserversecret_nodejs">
@@ -2961,8 +2945,6 @@ This setting is incompatible with the use of
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secret used by the Radius server.
-This setting is incompatible with the use of
-`aad_tenant`, `aad_audience`, `aad_issuer`, `root_certificate` and `revoked_certificate`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="revokedcertificates_nodejs">
@@ -2973,8 +2955,6 @@ This setting is incompatible with the use of
     </dt>
     <dd>{{% md %}}One or more `revoked_certificate` blocks which
 are defined below.
-This setting is incompatible with the use of
-`aad_tenant`, `aad_audience`, `aad_issuer`, `radius_server_address`, and `radius_server_secret`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rootcertificates_nodejs">
@@ -2986,8 +2966,16 @@ This setting is incompatible with the use of
     <dd>{{% md %}}One or more `root_certificate` blocks which are
 defined below. These root certificates are used to sign the client certificate
 used by the VPN clients to connect to the gateway.
-This setting is incompatible with the use of
-`aad_tenant`, `aad_audience`, `aad_issuer`, `radius_server_address`, and `radius_server_secret`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="vpnauthtypes_nodejs">
+<a href="#vpnauthtypes_nodejs" style="color: inherit; text-decoration: inherit;">vpn<wbr>Auth<wbr>Types</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}List of the vpn authentication types for the virtual network gateway.
+The supported values are `AAD`, `Radius` and `Certificate`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpnclientprotocols_nodejs">
@@ -3025,8 +3013,6 @@ in CIDR notation.
     </dt>
     <dd>{{% md %}}The client id of the Azure VPN application.
 See [Create an Active Directory (AD) tenant for P2S OpenVPN protocol connections](https://docs.microsoft.com/en-gb/azure/vpn-gateway/openvpn-azure-ad-tenant-multi-app) for values
-This setting is incompatible with the use of
-`root_certificate` and `revoked_certificate`, `radius_server_address`, and `radius_server_secret`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="aad_issuer_python">
@@ -3036,8 +3022,6 @@ This setting is incompatible with the use of
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The STS url for your tenant
-This setting is incompatible with the use of
-`root_certificate` and `revoked_certificate`, `radius_server_address`, and `radius_server_secret`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="aad_tenant_python">
@@ -3047,8 +3031,6 @@ This setting is incompatible with the use of
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}AzureAD Tenant URL
-This setting is incompatible with the use of
-`root_certificate` and `revoked_certificate`, `radius_server_address`, and `radius_server_secret`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="radius_server_address_python">
@@ -3058,8 +3040,6 @@ This setting is incompatible with the use of
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The address of the Radius server.
-This setting is incompatible with the use of
-`aad_tenant`, `aad_audience`, `aad_issuer`, `root_certificate` and `revoked_certificate`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="radius_server_secret_python">
@@ -3069,8 +3049,6 @@ This setting is incompatible with the use of
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The secret used by the Radius server.
-This setting is incompatible with the use of
-`aad_tenant`, `aad_audience`, `aad_issuer`, `root_certificate` and `revoked_certificate`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="revoked_certificates_python">
@@ -3081,8 +3059,6 @@ This setting is incompatible with the use of
     </dt>
     <dd>{{% md %}}One or more `revoked_certificate` blocks which
 are defined below.
-This setting is incompatible with the use of
-`aad_tenant`, `aad_audience`, `aad_issuer`, `radius_server_address`, and `radius_server_secret`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="root_certificates_python">
@@ -3094,8 +3070,16 @@ This setting is incompatible with the use of
     <dd>{{% md %}}One or more `root_certificate` blocks which are
 defined below. These root certificates are used to sign the client certificate
 used by the VPN clients to connect to the gateway.
-This setting is incompatible with the use of
-`aad_tenant`, `aad_audience`, `aad_issuer`, `radius_server_address`, and `radius_server_secret`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="vpn_auth_types_python">
+<a href="#vpn_auth_types_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>auth_<wbr>types</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}List of the vpn authentication types for the virtual network gateway.
+The supported values are `AAD`, `Radius` and `Certificate`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpn_client_protocols_python">

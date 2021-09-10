@@ -301,6 +301,7 @@ const db = new azure.cosmosdb.Account("db", {
             <span class="nx">is_virtual_network_filter_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
             <span class="nx">key_vault_key_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">local_authentication_disabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
             <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">mongo_server_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -593,6 +594,15 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}Specifies the Kind of CosmosDB to create - possible values are `GlobalDocumentDB` and `MongoDB`. Defaults to `GlobalDocumentDB`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="localauthenticationdisabled_csharp">
+<a href="#localauthenticationdisabled_csharp" style="color: inherit; text-decoration: inherit;">Local<wbr>Authentication<wbr>Disabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Disable local authentication and ensure only MSI and AAD can be used exclusively for authentication. Defaults to `false`. Can be set only when using the SQL API.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
 </span>
@@ -820,6 +830,15 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Kind of CosmosDB to create - possible values are `GlobalDocumentDB` and `MongoDB`. Defaults to `GlobalDocumentDB`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="localauthenticationdisabled_go">
+<a href="#localauthenticationdisabled_go" style="color: inherit; text-decoration: inherit;">Local<wbr>Authentication<wbr>Disabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Disable local authentication and ensure only MSI and AAD can be used exclusively for authentication. Defaults to `false`. Can be set only when using the SQL API.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
@@ -1051,6 +1070,15 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}Specifies the Kind of CosmosDB to create - possible values are `GlobalDocumentDB` and `MongoDB`. Defaults to `GlobalDocumentDB`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="localauthenticationdisabled_nodejs">
+<a href="#localauthenticationdisabled_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Authentication<wbr>Disabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Disable local authentication and ensure only MSI and AAD can be used exclusively for authentication. Defaults to `false`. Can be set only when using the SQL API.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
@@ -1278,6 +1306,15 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the Kind of CosmosDB to create - possible values are `GlobalDocumentDB` and `MongoDB`. Defaults to `GlobalDocumentDB`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="local_authentication_disabled_python">
+<a href="#local_authentication_disabled_python" style="color: inherit; text-decoration: inherit;">local_<wbr>authentication_<wbr>disabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Disable local authentication and ensure only MSI and AAD can be used exclusively for authentication. Defaults to `false`. Can be set only when using the SQL API.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
@@ -1857,6 +1894,7 @@ Get an existing Account resource's state with the given name, ID, and optional e
         <span class="nx">is_virtual_network_filter_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">key_vault_key_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">local_authentication_disabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">mongo_server_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -2140,6 +2178,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Kind of CosmosDB to create - possible values are `GlobalDocumentDB` and `MongoDB`. Defaults to `GlobalDocumentDB`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_localauthenticationdisabled_csharp">
+<a href="#state_localauthenticationdisabled_csharp" style="color: inherit; text-decoration: inherit;">Local<wbr>Authentication<wbr>Disabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Disable local authentication and ensure only MSI and AAD can be used exclusively for authentication. Defaults to `false`. Can be set only when using the SQL API.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_csharp">
@@ -2475,6 +2522,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Specifies the Kind of CosmosDB to create - possible values are `GlobalDocumentDB` and `MongoDB`. Defaults to `GlobalDocumentDB`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_localauthenticationdisabled_go">
+<a href="#state_localauthenticationdisabled_go" style="color: inherit; text-decoration: inherit;">Local<wbr>Authentication<wbr>Disabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Disable local authentication and ensure only MSI and AAD can be used exclusively for authentication. Defaults to `false`. Can be set only when using the SQL API.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_location_go">
 <a href="#state_location_go" style="color: inherit; text-decoration: inherit;">Location</a>
 </span>
@@ -2808,6 +2864,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Specifies the Kind of CosmosDB to create - possible values are `GlobalDocumentDB` and `MongoDB`. Defaults to `GlobalDocumentDB`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_localauthenticationdisabled_nodejs">
+<a href="#state_localauthenticationdisabled_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Authentication<wbr>Disabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Disable local authentication and ensure only MSI and AAD can be used exclusively for authentication. Defaults to `false`. Can be set only when using the SQL API.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_location_nodejs">
 <a href="#state_location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
@@ -3139,6 +3204,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the Kind of CosmosDB to create - possible values are `GlobalDocumentDB` and `MongoDB`. Defaults to `GlobalDocumentDB`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_local_authentication_disabled_python">
+<a href="#state_local_authentication_disabled_python" style="color: inherit; text-decoration: inherit;">local_<wbr>authentication_<wbr>disabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Disable local authentication and ensure only MSI and AAD can be used exclusively for authentication. Defaults to `false`. Can be set only when using the SQL API.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_python">

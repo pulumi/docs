@@ -328,7 +328,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Raw Kubernetes config for the admin account to be used by [kubectl](https://kubernetes.io/docs/reference/kubectl/overview/) and other compatible tools. This is only available when Role Based Access Control with Azure Active Directory is enabled.
+    <dd>{{% md %}}Raw Kubernetes config for the admin account to be used by [kubectl](https://kubernetes.io/docs/reference/kubectl/overview/) and other compatible tools. This is only available when Role Based Access Control with Azure Active Directory is enabled and local accounts are not disabled.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kubeadminconfigs_csharp">
@@ -337,7 +337,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getkubernetesclusterkubeadminconfig">List&lt;Get<wbr>Kubernetes<wbr>Cluster<wbr>Kube<wbr>Admin<wbr>Config&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A `kube_admin_config` block as defined below. This is only available when Role Based Access Control with Azure Active Directory is enabled.
+    <dd>{{% md %}}A `kube_admin_config` block as defined below. This is only available when Role Based Access Control with Azure Active Directory is enabled and local accounts are not disabled.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kubeconfigraw_csharp">
@@ -573,7 +573,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Raw Kubernetes config for the admin account to be used by [kubectl](https://kubernetes.io/docs/reference/kubectl/overview/) and other compatible tools. This is only available when Role Based Access Control with Azure Active Directory is enabled.
+    <dd>{{% md %}}Raw Kubernetes config for the admin account to be used by [kubectl](https://kubernetes.io/docs/reference/kubectl/overview/) and other compatible tools. This is only available when Role Based Access Control with Azure Active Directory is enabled and local accounts are not disabled.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kubeadminconfigs_go">
@@ -582,7 +582,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getkubernetesclusterkubeadminconfig">[]Get<wbr>Kubernetes<wbr>Cluster<wbr>Kube<wbr>Admin<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}A `kube_admin_config` block as defined below. This is only available when Role Based Access Control with Azure Active Directory is enabled.
+    <dd>{{% md %}}A `kube_admin_config` block as defined below. This is only available when Role Based Access Control with Azure Active Directory is enabled and local accounts are not disabled.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kubeconfigraw_go">
@@ -818,7 +818,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Raw Kubernetes config for the admin account to be used by [kubectl](https://kubernetes.io/docs/reference/kubectl/overview/) and other compatible tools. This is only available when Role Based Access Control with Azure Active Directory is enabled.
+    <dd>{{% md %}}Raw Kubernetes config for the admin account to be used by [kubectl](https://kubernetes.io/docs/reference/kubectl/overview/) and other compatible tools. This is only available when Role Based Access Control with Azure Active Directory is enabled and local accounts are not disabled.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kubeadminconfigs_nodejs">
@@ -827,7 +827,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getkubernetesclusterkubeadminconfig">Get<wbr>Kubernetes<wbr>Cluster<wbr>Kube<wbr>Admin<wbr>Config[]</a></span>
     </dt>
-    <dd>{{% md %}}A `kube_admin_config` block as defined below. This is only available when Role Based Access Control with Azure Active Directory is enabled.
+    <dd>{{% md %}}A `kube_admin_config` block as defined below. This is only available when Role Based Access Control with Azure Active Directory is enabled and local accounts are not disabled.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kubeconfigraw_nodejs">
@@ -1063,7 +1063,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Raw Kubernetes config for the admin account to be used by [kubectl](https://kubernetes.io/docs/reference/kubectl/overview/) and other compatible tools. This is only available when Role Based Access Control with Azure Active Directory is enabled.
+    <dd>{{% md %}}Raw Kubernetes config for the admin account to be used by [kubectl](https://kubernetes.io/docs/reference/kubectl/overview/) and other compatible tools. This is only available when Role Based Access Control with Azure Active Directory is enabled and local accounts are not disabled.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kube_admin_configs_python">
@@ -1072,7 +1072,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getkubernetesclusterkubeadminconfig">Sequence[Get<wbr>Kubernetes<wbr>Cluster<wbr>Kube<wbr>Admin<wbr>Config]</a></span>
     </dt>
-    <dd>{{% md %}}A `kube_admin_config` block as defined below. This is only available when Role Based Access Control with Azure Active Directory is enabled.
+    <dd>{{% md %}}A `kube_admin_config` block as defined below. This is only available when Role Based Access Control with Azure Active Directory is enabled and local accounts are not disabled.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kube_config_raw_python">

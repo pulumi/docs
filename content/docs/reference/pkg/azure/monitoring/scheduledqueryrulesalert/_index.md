@@ -1670,7 +1670,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Evaluation operation for rule - 'Equal', 'GreaterThan' or 'LessThan'.
+    <dd>{{% md %}}Evaluation operation for rule - 'GreaterThan', GreaterThanOrEqual', 'LessThan', or 'LessThanOrEqual'.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="threshold_csharp">
@@ -1701,7 +1701,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Evaluation operation for rule - 'Equal', 'GreaterThan' or 'LessThan'.
+    <dd>{{% md %}}Evaluation operation for rule - 'GreaterThan', GreaterThanOrEqual', 'LessThan', or 'LessThanOrEqual'.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="threshold_go">
@@ -1732,7 +1732,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Evaluation operation for rule - 'Equal', 'GreaterThan' or 'LessThan'.
+    <dd>{{% md %}}Evaluation operation for rule - 'GreaterThan', GreaterThanOrEqual', 'LessThan', or 'LessThanOrEqual'.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="threshold_nodejs">
@@ -1763,7 +1763,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Evaluation operation for rule - 'Equal', 'GreaterThan' or 'LessThan'.
+    <dd>{{% md %}}Evaluation operation for rule - 'GreaterThan', GreaterThanOrEqual', 'LessThan', or 'LessThanOrEqual'.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="threshold_python">
@@ -1814,7 +1814,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Evaluation operation for rule - 'Equal', 'GreaterThan' or 'LessThan'.
+    <dd>{{% md %}}Evaluation operation for rule - 'Equal', 'GreaterThan', GreaterThanOrEqual', 'LessThan', or 'LessThanOrEqual'.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="threshold_csharp">
@@ -1854,7 +1854,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Evaluation operation for rule - 'Equal', 'GreaterThan' or 'LessThan'.
+    <dd>{{% md %}}Evaluation operation for rule - 'Equal', 'GreaterThan', GreaterThanOrEqual', 'LessThan', or 'LessThanOrEqual'.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="threshold_go">
@@ -1894,7 +1894,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Evaluation operation for rule - 'Equal', 'GreaterThan' or 'LessThan'.
+    <dd>{{% md %}}Evaluation operation for rule - 'Equal', 'GreaterThan', GreaterThanOrEqual', 'LessThan', or 'LessThanOrEqual'.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="threshold_nodejs">
@@ -1934,7 +1934,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Evaluation operation for rule - 'Equal', 'GreaterThan' or 'LessThan'.
+    <dd>{{% md %}}Evaluation operation for rule - 'Equal', 'GreaterThan', GreaterThanOrEqual', 'LessThan', or 'LessThanOrEqual'.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="threshold_python">
