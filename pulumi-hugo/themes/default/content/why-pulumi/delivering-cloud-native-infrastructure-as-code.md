@@ -298,7 +298,7 @@ By using Pulumi, Learning Machine were able to reduce 25,000 LoC of ad-hoc scrip
 
 **The rapid pace of evolution of the cloud, combined with the shift to ephemeral infrastructure, and the connection of application code and infrastructure code, demands a different view of cloud development and devops.**
 
-Pulumi provides a platform to deliver cloud native infrastructure as code for any technology, any cloud, and any language:
+Pulumi provides a platform to deliver cloud native [infrastructure as code]({{< relref "/what-is/what-is-infrastructure-as-code" >}}) for any technology, any cloud, and any language:
 
 * Making multi-cloud, multi-technology targeting a reality with a consistent programming model in familiar languages.
 * Using the existing power of familiar programming languages to cloud native infrastructure and application delivery for huge productivity and collaboration gains.

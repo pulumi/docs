@@ -57,7 +57,7 @@ main:
     datetime: "JUNE 17th, 2021"
     # Description of the webinar.
     description: |
-        One of the great benefits of adopting Infrastructure as Code is that you can drastically reduce the amount of repetition when declaring your infrastructure. Using familiar languages like Python means you can use functions, loops and object oriented programming paradigms to reduce the boilerplate.
+        One of the great benefits of adopting [Infrastructure as Code](/what-is/what-is-infrastructure-as-code/) is that you can drastically reduce the amount of repetition when declaring your infrastructure. Using familiar languages like Python means you can use functions, loops and object oriented programming paradigms to reduce the boilerplate.
 
         In this workshop, we’ll guide you through an example of building a reusable Pulumi component for a hypothetical “production ready application” in Python and help you understand how to build reusable abstractions for your infrastructure as code workflow.
 

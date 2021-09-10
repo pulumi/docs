@@ -20,7 +20,7 @@ The topic of refactoring is a broad topic covering many different techniques. Ma
 
 ## Infrastructure is different
 
-A major difference between refactoring application and infrastructure code is that resources, such as databases persist. Typically, if you change the name, type, or parent path of a resource, it is deleted and a new resource is created. Other infrastructure as code solutions tie a file or module to a resource's identity. An advantage of Pulumi is that moving a resource across file boundaries does not recreate the resource because a resource’s identity is based on its object ID, irrespective of its file location.
+A major difference between refactoring application and infrastructure code is that resources, such as databases persist. Typically, if you change the name, type, or parent path of a resource, it is deleted and a new resource is created. Other [infrastructure as code]({{< relref "/what-is/what-is-infrastructure-as-code" >}}) solutions tie a file or module to a resource's identity. An advantage of Pulumi is that moving a resource across file boundaries does not recreate the resource because a resource’s identity is based on its object ID, irrespective of its file location.
 
 In cases where an object’s ID changes -- due to a rename, reparenting to a new component, or otherwise -- Pulumi provides [aliases]({{< relref "/docs/intro/concepts/resources#aliases" >}}). An `Alias` accepts a list of identifiers that can include old `Alias` objects or old resource URNs. When a resource is annotated with an alias, Pulumi can connect the old to the new object state, and the resource can be updated in place.
 

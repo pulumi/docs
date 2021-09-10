@@ -24,7 +24,7 @@ main:
   duration: 2 1/2 hours
   datetime: Thu Oct 29, 2020 AT 07:00AM PT
   description: >-
-    Want to learn how to use the only Infrastructure as Code (IaC) tool that
+    Want to learn how to use the only [Infrastructure as Code](/what-is/what-is-infrastructure-as-code/) (IaC) tool that
     supports 100% of Azure capabilities?
 
 

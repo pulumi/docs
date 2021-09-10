@@ -9,7 +9,7 @@ authors:
 tags:
     - ".NET"
 ---
-With the release of [Pulumi for .NET preview]({{< relref "/blog/pulumi-dotnet-core" >}}), we've open the doors to infrastructure as code to even more developers and operators. Millions of .NET developers can now use their favorite languages and open source ecosystems to build modern, cloud native applications. We've added support for C#, F#, and Visual Basic. Because .NET Core is available on Windows, Linux, and macOS, you have a choice of platforms to use.
+With the release of [Pulumi for .NET preview]({{< relref "/blog/pulumi-dotnet-core" >}}), we've open the doors to [infrastructure as code]({{< relref "/what-is/what-is-infrastructure-as-code" >}}) to even more developers and operators. Millions of .NET developers can now use their favorite languages and open source ecosystems to build modern, cloud native applications. We've added support for C#, F#, and Visual Basic. Because .NET Core is available on Windows, Linux, and macOS, you have a choice of platforms to use.
 
 You can create cloud resources by writing Microsoft .NET Core programs to build and deploy cloud resources to a wide variety of clouds, including Azure, AWS, GCP and more.  On Azure, you can manage resources like AKS Clusters, Functions, Azure App Services, Virtual Machines, Cosmos DBs, KeyVaults, and much, much more. Let's take a first look at Pulumi for .NET by deploying an application on Azure.
 

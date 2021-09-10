@@ -11,7 +11,7 @@ meta_image: "InfraTesting.png"
 Some parts of this blog post are out-of-date. Please refer to our [Testing Guide]({{< relref "/docs/guides/testing" >}}) for the updated overview and tutorials.
 {{% /notes %}}
 
-Using Pulumi and general purpose languages for infrastructure as code
+Using Pulumi and general purpose languages for [infrastructure as code]({{< relref "/what-is/what-is-infrastructure-as-code" >}})
 comes with many benefits: leveraging existing skills and knowledge,
 eliminating boilerplate through abstraction, and using the same
 ecosystem of tools like IDEs and linters that your team already knows
