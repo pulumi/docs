@@ -73,9 +73,9 @@ func main() {
 		_, err := recoveryservices.NewProtectedItem(ctx, "protectedItem", &recoveryservices.ProtectedItemArgs{
 			ContainerName: pulumi.String("IaasVMContainer;iaasvmcontainerv2;netsdktestrg;netvmtestv2vm1"),
 			FabricName:    pulumi.String("Azure"),
-			Properties: &recoveryservices.AzureIaaSComputeVMProtectedItemArgs{
+			Properties: recoveryservices.AzureIaaSComputeVMProtectedItem{
 				PolicyId:          "/Subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/SwaggerTestRg/providers/Microsoft.RecoveryServices/vaults/NetSDKTestRsVault/backupPolicies/DefaultPolicy",
-				ProtectedItemType: pulumi.String("Microsoft.Compute/virtualMachines"),
+				ProtectedItemType: "Microsoft.Compute/virtualMachines",
 				SourceResourceId:  "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/netsdktestrg/providers/Microsoft.Compute/virtualMachines/netvmtestv2vm1",
 			},
 			ProtectedItemName: pulumi.String("VM;iaasvmcontainerv2;netsdktestrg;netvmtestv2vm1"),
@@ -201,8 +201,8 @@ func main() {
 		_, err := recoveryservices.NewProtectedItem(ctx, "protectedItem", &recoveryservices.ProtectedItemArgs{
 			ContainerName: pulumi.String("IaasVMContainer;iaasvmcontainerv2;netsdktestrg;netvmtestv2vm1"),
 			FabricName:    pulumi.String("Azure"),
-			Properties: &recoveryservices.AzureIaaSComputeVMProtectedItemArgs{
-				ProtectedItemType: pulumi.String("Microsoft.Compute/virtualMachines"),
+			Properties: recoveryservices.AzureIaaSComputeVMProtectedItem{
+				ProtectedItemType: "Microsoft.Compute/virtualMachines",
 				ProtectionState:   "ProtectionStopped",
 				SourceResourceId:  "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/netsdktestrg/providers/Microsoft.Compute/virtualMachines/netvmtestv2vm1",
 			},

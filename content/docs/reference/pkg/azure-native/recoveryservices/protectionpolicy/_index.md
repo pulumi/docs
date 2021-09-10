@@ -39,9 +39,9 @@ class MyStack : Stack
             Properties = new AzureNative.RecoveryServices.Inputs.AzureIaaSVMProtectionPolicyArgs
             {
                 BackupManagementType = "AzureIaasVM",
-                RetentionPolicy = 
+                RetentionPolicy = new AzureNative.RecoveryServices.Inputs.LongTermRetentionPolicyArgs
                 {
-                    { "monthlySchedule", new AzureNative.RecoveryServices.Inputs.MonthlyRetentionScheduleArgs
+                    MonthlySchedule = new AzureNative.RecoveryServices.Inputs.MonthlyRetentionScheduleArgs
                     {
                         RetentionDuration = new AzureNative.RecoveryServices.Inputs.RetentionDurationArgs
                         {
@@ -66,9 +66,9 @@ class MyStack : Stack
                         {
                             "2018-01-24T10:00:00Z",
                         },
-                    } },
-                    { "retentionPolicyType", "LongTermRetentionPolicy" },
-                    { "weeklySchedule", new AzureNative.RecoveryServices.Inputs.WeeklyRetentionScheduleArgs
+                    },
+                    RetentionPolicyType = "LongTermRetentionPolicy",
+                    WeeklySchedule = new AzureNative.RecoveryServices.Inputs.WeeklyRetentionScheduleArgs
                     {
                         DaysOfTheWeek = 
                         {
@@ -85,8 +85,8 @@ class MyStack : Stack
                         {
                             "2018-01-24T10:00:00Z",
                         },
-                    } },
-                    { "yearlySchedule", new AzureNative.RecoveryServices.Inputs.YearlyRetentionScheduleArgs
+                    },
+                    YearlySchedule = new AzureNative.RecoveryServices.Inputs.YearlyRetentionScheduleArgs
                     {
                         MonthsOfYear = 
                         {
@@ -115,22 +115,22 @@ class MyStack : Stack
                         {
                             "2018-01-24T10:00:00Z",
                         },
-                    } },
+                    },
                 },
-                SchedulePolicy = 
+                SchedulePolicy = new AzureNative.RecoveryServices.Inputs.SimpleSchedulePolicyArgs
                 {
-                    { "schedulePolicyType", "SimpleSchedulePolicy" },
-                    { "scheduleRunDays", 
+                    SchedulePolicyType = "SimpleSchedulePolicy",
+                    ScheduleRunDays = 
                     {
                         "Monday",
                         "Wednesday",
                         "Thursday",
-                    } },
-                    { "scheduleRunFrequency", "Weekly" },
-                    { "scheduleRunTimes", 
+                    },
+                    ScheduleRunFrequency = "Weekly",
+                    ScheduleRunTimes = 
                     {
                         "2018-01-24T10:00:00Z",
-                    } },
+                    },
                 },
                 TimeZone = "Pacific Standard Time",
             },
@@ -149,7 +149,107 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	recoveryservices "github.com/pulumi/pulumi-azure-native/sdk/go/azure/recoveryservices"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := recoveryservices.NewProtectionPolicy(ctx, "protectionPolicy", &recoveryservices.ProtectionPolicyArgs{
+			PolicyName: pulumi.String("testPolicy1"),
+			Properties: recoveryservices.AzureIaaSVMProtectionPolicy{
+				BackupManagementType: "AzureIaasVM",
+				RetentionPolicy: recoveryservices.LongTermRetentionPolicy{
+					MonthlySchedule: recoveryservices.MonthlyRetentionSchedule{
+						RetentionDuration: recoveryservices.RetentionDuration{
+							Count:        2,
+							DurationType: "Months",
+						},
+						RetentionScheduleFormatType: "Weekly",
+						RetentionScheduleWeekly: recoveryservices.WeeklyRetentionFormat{
+							DaysOfTheWeek: []string{
+								"Wednesday",
+								"Thursday",
+							},
+							WeeksOfTheMonth: []string{
+								"First",
+								"Third",
+							},
+						},
+						RetentionTimes: []string{
+							"2018-01-24T10:00:00Z",
+						},
+					},
+					RetentionPolicyType: "LongTermRetentionPolicy",
+					WeeklySchedule: recoveryservices.WeeklyRetentionSchedule{
+						DaysOfTheWeek: []string{
+							"Monday",
+							"Wednesday",
+							"Thursday",
+						},
+						RetentionDuration: recoveryservices.RetentionDuration{
+							Count:        1,
+							DurationType: "Weeks",
+						},
+						RetentionTimes: []string{
+							"2018-01-24T10:00:00Z",
+						},
+					},
+					YearlySchedule: recoveryservices.YearlyRetentionSchedule{
+						MonthsOfYear: []string{
+							"February",
+							"November",
+						},
+						RetentionDuration: recoveryservices.RetentionDuration{
+							Count:        4,
+							DurationType: "Years",
+						},
+						RetentionScheduleFormatType: "Weekly",
+						RetentionScheduleWeekly: recoveryservices.WeeklyRetentionFormat{
+							DaysOfTheWeek: []string{
+								"Monday",
+								"Thursday",
+							},
+							WeeksOfTheMonth: []string{
+								"Fourth",
+							},
+						},
+						RetentionTimes: []string{
+							"2018-01-24T10:00:00Z",
+						},
+					},
+				},
+				SchedulePolicy: recoveryservices.SimpleSchedulePolicy{
+					SchedulePolicyType: "SimpleSchedulePolicy",
+					ScheduleRunDays: []string{
+						"Monday",
+						"Wednesday",
+						"Thursday",
+					},
+					ScheduleRunFrequency: "Weekly",
+					ScheduleRunTimes: []string{
+						"2018-01-24T10:00:00Z",
+					},
+				},
+				TimeZone: "Pacific Standard Time",
+			},
+			ResourceGroupName: pulumi.String("SwaggerTestRg"),
+			VaultName:         pulumi.String("NetSDKTestRsVault"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -165,8 +265,8 @@ protection_policy = azure_native.recoveryservices.ProtectionPolicy("protectionPo
     policy_name="testPolicy1",
     properties=azure_native.recoveryservices.AzureIaaSVMProtectionPolicyArgs(
         backup_management_type="AzureIaasVM",
-        retention_policy={
-            "monthlySchedule": azure_native.recoveryservices.MonthlyRetentionScheduleArgs(
+        retention_policy=azure_native.recoveryservices.LongTermRetentionPolicyArgs(
+            monthly_schedule=azure_native.recoveryservices.MonthlyRetentionScheduleArgs(
                 retention_duration=azure_native.recoveryservices.RetentionDurationArgs(
                     count=2,
                     duration_type="Months",
@@ -184,8 +284,8 @@ protection_policy = azure_native.recoveryservices.ProtectionPolicy("protectionPo
                 ),
                 retention_times=["2018-01-24T10:00:00Z"],
             ),
-            "retentionPolicyType": "LongTermRetentionPolicy",
-            "weeklySchedule": azure_native.recoveryservices.WeeklyRetentionScheduleArgs(
+            retention_policy_type="LongTermRetentionPolicy",
+            weekly_schedule=azure_native.recoveryservices.WeeklyRetentionScheduleArgs(
                 days_of_the_week=[
                     "Monday",
                     "Wednesday",
@@ -197,7 +297,7 @@ protection_policy = azure_native.recoveryservices.ProtectionPolicy("protectionPo
                 ),
                 retention_times=["2018-01-24T10:00:00Z"],
             ),
-            "yearlySchedule": azure_native.recoveryservices.YearlyRetentionScheduleArgs(
+            yearly_schedule=azure_native.recoveryservices.YearlyRetentionScheduleArgs(
                 months_of_year=[
                     "February",
                     "November",
@@ -216,17 +316,17 @@ protection_policy = azure_native.recoveryservices.ProtectionPolicy("protectionPo
                 ),
                 retention_times=["2018-01-24T10:00:00Z"],
             ),
-        },
-        schedule_policy={
-            "schedulePolicyType": "SimpleSchedulePolicy",
-            "scheduleRunDays": [
+        ),
+        schedule_policy=azure_native.recoveryservices.SimpleSchedulePolicyArgs(
+            schedule_policy_type="SimpleSchedulePolicy",
+            schedule_run_days=[
                 "Monday",
                 "Wednesday",
                 "Thursday",
             ],
-            "scheduleRunFrequency": "Weekly",
-            "scheduleRunTimes": ["2018-01-24T10:00:00Z"],
-        },
+            schedule_run_frequency="Weekly",
+            schedule_run_times=["2018-01-24T10:00:00Z"],
+        ),
         time_zone="Pacific Standard Time",
     ),
     resource_group_name="SwaggerTestRg",
@@ -354,9 +454,9 @@ class MyStack : Stack
                     new AzureNative.RecoveryServices.Inputs.SubProtectionPolicyArgs
                     {
                         PolicyType = "Full",
-                        RetentionPolicy = 
+                        RetentionPolicy = new AzureNative.RecoveryServices.Inputs.LongTermRetentionPolicyArgs
                         {
-                            { "monthlySchedule", new AzureNative.RecoveryServices.Inputs.MonthlyRetentionScheduleArgs
+                            MonthlySchedule = new AzureNative.RecoveryServices.Inputs.MonthlyRetentionScheduleArgs
                             {
                                 RetentionDuration = new AzureNative.RecoveryServices.Inputs.RetentionDurationArgs
                                 {
@@ -379,9 +479,9 @@ class MyStack : Stack
                                 {
                                     "2018-01-24T10:00:00Z",
                                 },
-                            } },
-                            { "retentionPolicyType", "LongTermRetentionPolicy" },
-                            { "weeklySchedule", new AzureNative.RecoveryServices.Inputs.WeeklyRetentionScheduleArgs
+                            },
+                            RetentionPolicyType = "LongTermRetentionPolicy",
+                            WeeklySchedule = new AzureNative.RecoveryServices.Inputs.WeeklyRetentionScheduleArgs
                             {
                                 DaysOfTheWeek = 
                                 {
@@ -397,8 +497,8 @@ class MyStack : Stack
                                 {
                                     "2018-01-24T10:00:00Z",
                                 },
-                            } },
-                            { "yearlySchedule", new AzureNative.RecoveryServices.Inputs.YearlyRetentionScheduleArgs
+                            },
+                            YearlySchedule = new AzureNative.RecoveryServices.Inputs.YearlyRetentionScheduleArgs
                             {
                                 MonthsOfYear = 
                                 {
@@ -427,65 +527,65 @@ class MyStack : Stack
                                 {
                                     "2018-01-24T10:00:00Z",
                                 },
-                            } },
+                            },
                         },
-                        SchedulePolicy = 
+                        SchedulePolicy = new AzureNative.RecoveryServices.Inputs.SimpleSchedulePolicyArgs
                         {
-                            { "schedulePolicyType", "SimpleSchedulePolicy" },
-                            { "scheduleRunDays", 
+                            SchedulePolicyType = "SimpleSchedulePolicy",
+                            ScheduleRunDays = 
                             {
                                 "Sunday",
                                 "Tuesday",
-                            } },
-                            { "scheduleRunFrequency", "Weekly" },
-                            { "scheduleRunTimes", 
+                            },
+                            ScheduleRunFrequency = "Weekly",
+                            ScheduleRunTimes = 
                             {
                                 "2018-01-24T10:00:00Z",
-                            } },
+                            },
                         },
                     },
                     new AzureNative.RecoveryServices.Inputs.SubProtectionPolicyArgs
                     {
                         PolicyType = "Differential",
-                        RetentionPolicy = 
+                        RetentionPolicy = new AzureNative.RecoveryServices.Inputs.SimpleRetentionPolicyArgs
                         {
-                            { "retentionDuration", new AzureNative.RecoveryServices.Inputs.RetentionDurationArgs
+                            RetentionDuration = new AzureNative.RecoveryServices.Inputs.RetentionDurationArgs
                             {
                                 Count = 8,
                                 DurationType = "Days",
-                            } },
-                            { "retentionPolicyType", "SimpleRetentionPolicy" },
+                            },
+                            RetentionPolicyType = "SimpleRetentionPolicy",
                         },
-                        SchedulePolicy = 
+                        SchedulePolicy = new AzureNative.RecoveryServices.Inputs.SimpleSchedulePolicyArgs
                         {
-                            { "schedulePolicyType", "SimpleSchedulePolicy" },
-                            { "scheduleRunDays", 
+                            SchedulePolicyType = "SimpleSchedulePolicy",
+                            ScheduleRunDays = 
                             {
                                 "Friday",
-                            } },
-                            { "scheduleRunFrequency", "Weekly" },
-                            { "scheduleRunTimes", 
+                            },
+                            ScheduleRunFrequency = "Weekly",
+                            ScheduleRunTimes = 
                             {
                                 "2018-01-24T10:00:00Z",
-                            } },
+                            },
                         },
                     },
                     new AzureNative.RecoveryServices.Inputs.SubProtectionPolicyArgs
                     {
                         PolicyType = "Log",
-                        RetentionPolicy = 
+                        RetentionPolicy = new AzureNative.RecoveryServices.Inputs.SimpleRetentionPolicyArgs
                         {
-                            { "retentionDuration", new AzureNative.RecoveryServices.Inputs.RetentionDurationArgs
+                            RetentionDuration = new AzureNative.RecoveryServices.Inputs.RetentionDurationArgs
                             {
                                 Count = 7,
                                 DurationType = "Days",
-                            } },
-                            { "retentionPolicyType", "SimpleRetentionPolicy" },
+                            },
+                            RetentionPolicyType = "SimpleRetentionPolicy",
                         },
-                        SchedulePolicy = 
+                        SchedulePolicy = new AzureNative.RecoveryServices.Inputs.LogSchedulePolicyArgs
                         {
-                            { "scheduleFrequencyInMins", 60 },
-                            { "schedulePolicyType", "LogSchedulePolicy" },
+                            ScheduleFrequencyInMins = 60,
+                            SchedulePolicyType = "LogSchedulePolicy",
                         },
                     },
                 },
@@ -506,7 +606,146 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	recoveryservices "github.com/pulumi/pulumi-azure-native/sdk/go/azure/recoveryservices"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := recoveryservices.NewProtectionPolicy(ctx, "protectionPolicy", &recoveryservices.ProtectionPolicyArgs{
+			PolicyName: pulumi.String("testPolicy1"),
+			Properties: recoveryservices.AzureVmWorkloadProtectionPolicy{
+				BackupManagementType: "AzureWorkload",
+				Settings: recoveryservices.Settings{
+					Issqlcompression: false,
+					TimeZone:         "Pacific Standard Time",
+				},
+				SubProtectionPolicy: []recoveryservices.SubProtectionPolicy{
+					recoveryservices.SubProtectionPolicy{
+						PolicyType: "Full",
+						RetentionPolicy: recoveryservices.LongTermRetentionPolicy{
+							MonthlySchedule: recoveryservices.MonthlyRetentionSchedule{
+								RetentionDuration: recoveryservices.RetentionDuration{
+									Count:        1,
+									DurationType: "Months",
+								},
+								RetentionScheduleFormatType: "Weekly",
+								RetentionScheduleWeekly: recoveryservices.WeeklyRetentionFormat{
+									DaysOfTheWeek: []string{
+										"Sunday",
+									},
+									WeeksOfTheMonth: []string{
+										"Second",
+									},
+								},
+								RetentionTimes: []string{
+									"2018-01-24T10:00:00Z",
+								},
+							},
+							RetentionPolicyType: "LongTermRetentionPolicy",
+							WeeklySchedule: recoveryservices.WeeklyRetentionSchedule{
+								DaysOfTheWeek: []string{
+									"Sunday",
+									"Tuesday",
+								},
+								RetentionDuration: recoveryservices.RetentionDuration{
+									Count:        2,
+									DurationType: "Weeks",
+								},
+								RetentionTimes: []string{
+									"2018-01-24T10:00:00Z",
+								},
+							},
+							YearlySchedule: recoveryservices.YearlyRetentionSchedule{
+								MonthsOfYear: []string{
+									"January",
+									"June",
+									"December",
+								},
+								RetentionDuration: recoveryservices.RetentionDuration{
+									Count:        1,
+									DurationType: "Years",
+								},
+								RetentionScheduleFormatType: "Weekly",
+								RetentionScheduleWeekly: recoveryservices.WeeklyRetentionFormat{
+									DaysOfTheWeek: []string{
+										"Sunday",
+									},
+									WeeksOfTheMonth: []string{
+										"Last",
+									},
+								},
+								RetentionTimes: []string{
+									"2018-01-24T10:00:00Z",
+								},
+							},
+						},
+						SchedulePolicy: recoveryservices.SimpleSchedulePolicy{
+							SchedulePolicyType: "SimpleSchedulePolicy",
+							ScheduleRunDays: []string{
+								"Sunday",
+								"Tuesday",
+							},
+							ScheduleRunFrequency: "Weekly",
+							ScheduleRunTimes: []string{
+								"2018-01-24T10:00:00Z",
+							},
+						},
+					},
+					recoveryservices.SubProtectionPolicy{
+						PolicyType: "Differential",
+						RetentionPolicy: recoveryservices.SimpleRetentionPolicy{
+							RetentionDuration: recoveryservices.RetentionDuration{
+								Count:        8,
+								DurationType: "Days",
+							},
+							RetentionPolicyType: "SimpleRetentionPolicy",
+						},
+						SchedulePolicy: recoveryservices.SimpleSchedulePolicy{
+							SchedulePolicyType: "SimpleSchedulePolicy",
+							ScheduleRunDays: []string{
+								"Friday",
+							},
+							ScheduleRunFrequency: "Weekly",
+							ScheduleRunTimes: []string{
+								"2018-01-24T10:00:00Z",
+							},
+						},
+					},
+					recoveryservices.SubProtectionPolicy{
+						PolicyType: "Log",
+						RetentionPolicy: recoveryservices.SimpleRetentionPolicy{
+							RetentionDuration: recoveryservices.RetentionDuration{
+								Count:        7,
+								DurationType: "Days",
+							},
+							RetentionPolicyType: "SimpleRetentionPolicy",
+						},
+						SchedulePolicy: recoveryservices.LogSchedulePolicy{
+							ScheduleFrequencyInMins: 60,
+							SchedulePolicyType:      "LogSchedulePolicy",
+						},
+					},
+				},
+				WorkLoadType: "SQLDataBase",
+			},
+			ResourceGroupName: pulumi.String("SwaggerTestRg"),
+			VaultName:         pulumi.String("NetSDKTestRsVault"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -529,8 +768,8 @@ protection_policy = azure_native.recoveryservices.ProtectionPolicy("protectionPo
         sub_protection_policy=[
             azure_native.recoveryservices.SubProtectionPolicyArgs(
                 policy_type="Full",
-                retention_policy={
-                    "monthlySchedule": azure_native.recoveryservices.MonthlyRetentionScheduleArgs(
+                retention_policy=azure_native.recoveryservices.LongTermRetentionPolicyArgs(
+                    monthly_schedule=azure_native.recoveryservices.MonthlyRetentionScheduleArgs(
                         retention_duration=azure_native.recoveryservices.RetentionDurationArgs(
                             count=1,
                             duration_type="Months",
@@ -542,8 +781,8 @@ protection_policy = azure_native.recoveryservices.ProtectionPolicy("protectionPo
                         ),
                         retention_times=["2018-01-24T10:00:00Z"],
                     ),
-                    "retentionPolicyType": "LongTermRetentionPolicy",
-                    "weeklySchedule": azure_native.recoveryservices.WeeklyRetentionScheduleArgs(
+                    retention_policy_type="LongTermRetentionPolicy",
+                    weekly_schedule=azure_native.recoveryservices.WeeklyRetentionScheduleArgs(
                         days_of_the_week=[
                             "Sunday",
                             "Tuesday",
@@ -554,7 +793,7 @@ protection_policy = azure_native.recoveryservices.ProtectionPolicy("protectionPo
                         ),
                         retention_times=["2018-01-24T10:00:00Z"],
                     ),
-                    "yearlySchedule": azure_native.recoveryservices.YearlyRetentionScheduleArgs(
+                    yearly_schedule=azure_native.recoveryservices.YearlyRetentionScheduleArgs(
                         months_of_year=[
                             "January",
                             "June",
@@ -571,46 +810,46 @@ protection_policy = azure_native.recoveryservices.ProtectionPolicy("protectionPo
                         ),
                         retention_times=["2018-01-24T10:00:00Z"],
                     ),
-                },
-                schedule_policy={
-                    "schedulePolicyType": "SimpleSchedulePolicy",
-                    "scheduleRunDays": [
+                ),
+                schedule_policy=azure_native.recoveryservices.SimpleSchedulePolicyArgs(
+                    schedule_policy_type="SimpleSchedulePolicy",
+                    schedule_run_days=[
                         "Sunday",
                         "Tuesday",
                     ],
-                    "scheduleRunFrequency": "Weekly",
-                    "scheduleRunTimes": ["2018-01-24T10:00:00Z"],
-                },
+                    schedule_run_frequency="Weekly",
+                    schedule_run_times=["2018-01-24T10:00:00Z"],
+                ),
             ),
             azure_native.recoveryservices.SubProtectionPolicyArgs(
                 policy_type="Differential",
-                retention_policy={
-                    "retentionDuration": azure_native.recoveryservices.RetentionDurationArgs(
+                retention_policy=azure_native.recoveryservices.SimpleRetentionPolicyArgs(
+                    retention_duration=azure_native.recoveryservices.RetentionDurationArgs(
                         count=8,
                         duration_type="Days",
                     ),
-                    "retentionPolicyType": "SimpleRetentionPolicy",
-                },
-                schedule_policy={
-                    "schedulePolicyType": "SimpleSchedulePolicy",
-                    "scheduleRunDays": ["Friday"],
-                    "scheduleRunFrequency": "Weekly",
-                    "scheduleRunTimes": ["2018-01-24T10:00:00Z"],
-                },
+                    retention_policy_type="SimpleRetentionPolicy",
+                ),
+                schedule_policy=azure_native.recoveryservices.SimpleSchedulePolicyArgs(
+                    schedule_policy_type="SimpleSchedulePolicy",
+                    schedule_run_days=["Friday"],
+                    schedule_run_frequency="Weekly",
+                    schedule_run_times=["2018-01-24T10:00:00Z"],
+                ),
             ),
             azure_native.recoveryservices.SubProtectionPolicyArgs(
                 policy_type="Log",
-                retention_policy={
-                    "retentionDuration": azure_native.recoveryservices.RetentionDurationArgs(
+                retention_policy=azure_native.recoveryservices.SimpleRetentionPolicyArgs(
+                    retention_duration=azure_native.recoveryservices.RetentionDurationArgs(
                         count=7,
                         duration_type="Days",
                     ),
-                    "retentionPolicyType": "SimpleRetentionPolicy",
-                },
-                schedule_policy={
-                    "scheduleFrequencyInMins": 60,
-                    "schedulePolicyType": "LogSchedulePolicy",
-                },
+                    retention_policy_type="SimpleRetentionPolicy",
+                ),
+                schedule_policy=azure_native.recoveryservices.LogSchedulePolicyArgs(
+                    schedule_frequency_in_mins=60,
+                    schedule_policy_type="LogSchedulePolicy",
+                ),
             ),
         ],
         work_load_type="SQLDataBase",
@@ -759,9 +998,9 @@ class MyStack : Stack
             Properties = new AzureNative.RecoveryServices.Inputs.AzureIaaSVMProtectionPolicyArgs
             {
                 BackupManagementType = "AzureIaasVM",
-                RetentionPolicy = 
+                RetentionPolicy = new AzureNative.RecoveryServices.Inputs.LongTermRetentionPolicyArgs
                 {
-                    { "dailySchedule", new AzureNative.RecoveryServices.Inputs.DailyRetentionScheduleArgs
+                    DailySchedule = new AzureNative.RecoveryServices.Inputs.DailyRetentionScheduleArgs
                     {
                         RetentionDuration = new AzureNative.RecoveryServices.Inputs.RetentionDurationArgs
                         {
@@ -772,17 +1011,17 @@ class MyStack : Stack
                         {
                             "2018-01-24T02:00:00Z",
                         },
-                    } },
-                    { "retentionPolicyType", "LongTermRetentionPolicy" },
+                    },
+                    RetentionPolicyType = "LongTermRetentionPolicy",
                 },
-                SchedulePolicy = 
+                SchedulePolicy = new AzureNative.RecoveryServices.Inputs.SimpleSchedulePolicyArgs
                 {
-                    { "schedulePolicyType", "SimpleSchedulePolicy" },
-                    { "scheduleRunFrequency", "Daily" },
-                    { "scheduleRunTimes", 
+                    SchedulePolicyType = "SimpleSchedulePolicy",
+                    ScheduleRunFrequency = "Daily",
+                    ScheduleRunTimes = 
                     {
                         "2018-01-24T02:00:00Z",
-                    } },
+                    },
                 },
                 TimeZone = "Pacific Standard Time",
             },
@@ -801,7 +1040,54 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	recoveryservices "github.com/pulumi/pulumi-azure-native/sdk/go/azure/recoveryservices"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := recoveryservices.NewProtectionPolicy(ctx, "protectionPolicy", &recoveryservices.ProtectionPolicyArgs{
+			PolicyName: pulumi.String("testPolicy1"),
+			Properties: recoveryservices.AzureIaaSVMProtectionPolicy{
+				BackupManagementType: "AzureIaasVM",
+				RetentionPolicy: recoveryservices.LongTermRetentionPolicy{
+					DailySchedule: recoveryservices.DailyRetentionSchedule{
+						RetentionDuration: recoveryservices.RetentionDuration{
+							Count:        1,
+							DurationType: "Days",
+						},
+						RetentionTimes: []string{
+							"2018-01-24T02:00:00Z",
+						},
+					},
+					RetentionPolicyType: "LongTermRetentionPolicy",
+				},
+				SchedulePolicy: recoveryservices.SimpleSchedulePolicy{
+					SchedulePolicyType:   "SimpleSchedulePolicy",
+					ScheduleRunFrequency: "Daily",
+					ScheduleRunTimes: []string{
+						"2018-01-24T02:00:00Z",
+					},
+				},
+				TimeZone: "Pacific Standard Time",
+			},
+			ResourceGroupName: pulumi.String("SwaggerTestRg"),
+			VaultName:         pulumi.String("NetSDKTestRsVault"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -817,21 +1103,21 @@ protection_policy = azure_native.recoveryservices.ProtectionPolicy("protectionPo
     policy_name="testPolicy1",
     properties=azure_native.recoveryservices.AzureIaaSVMProtectionPolicyArgs(
         backup_management_type="AzureIaasVM",
-        retention_policy={
-            "dailySchedule": azure_native.recoveryservices.DailyRetentionScheduleArgs(
+        retention_policy=azure_native.recoveryservices.LongTermRetentionPolicyArgs(
+            daily_schedule=azure_native.recoveryservices.DailyRetentionScheduleArgs(
                 retention_duration=azure_native.recoveryservices.RetentionDurationArgs(
                     count=1,
                     duration_type="Days",
                 ),
                 retention_times=["2018-01-24T02:00:00Z"],
             ),
-            "retentionPolicyType": "LongTermRetentionPolicy",
-        },
-        schedule_policy={
-            "schedulePolicyType": "SimpleSchedulePolicy",
-            "scheduleRunFrequency": "Daily",
-            "scheduleRunTimes": ["2018-01-24T02:00:00Z"],
-        },
+            retention_policy_type="LongTermRetentionPolicy",
+        ),
+        schedule_policy=azure_native.recoveryservices.SimpleSchedulePolicyArgs(
+            schedule_policy_type="SimpleSchedulePolicy",
+            schedule_run_frequency="Daily",
+            schedule_run_times=["2018-01-24T02:00:00Z"],
+        ),
         time_zone="Pacific Standard Time",
     ),
     resource_group_name="SwaggerTestRg",

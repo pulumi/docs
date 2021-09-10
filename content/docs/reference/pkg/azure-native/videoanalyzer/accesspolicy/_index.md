@@ -97,68 +97,7 @@ class MyStack : Stack
 
 {{< example go >}}
 
-
-```go
-package main
-
-import (
-	videoanalyzer "github.com/pulumi/pulumi-azure-native/sdk/go/azure/videoanalyzer"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := videoanalyzer.NewAccessPolicy(ctx, "accessPolicy", &videoanalyzer.AccessPolicyArgs{
-			AccessPolicyName: pulumi.String("accessPolicyName1"),
-			AccountName:      pulumi.String("testaccount2"),
-			Authentication: &videoanalyzer.JwtAuthenticationArgs{
-				Audiences: pulumi.StringArray{
-					pulumi.String("audience1"),
-				},
-				Claims: videoanalyzer.TokenClaimArray{
-					&videoanalyzer.TokenClaimArgs{
-						Name:  pulumi.String("claimname1"),
-						Value: pulumi.String("claimvalue1"),
-					},
-					&videoanalyzer.TokenClaimArgs{
-						Name:  pulumi.String("claimname2"),
-						Value: pulumi.String("claimvalue2"),
-					},
-				},
-				Issuers: pulumi.StringArray{
-					pulumi.String("issuer1"),
-					pulumi.String("issuer2"),
-				},
-				Keys: pulumi.AnyArray{
-					&videoanalyzer.RsaTokenKeyArgs{
-						Alg:  "RS256",
-						E:    "ZLFzZTY0IQ==",
-						Kid:  "123",
-						N:    "YmFzZTY0IQ==",
-						Type: pulumi.String("#Microsoft.VideoAnalyzer.RsaTokenKey"),
-					},
-					&videoanalyzer.EccTokenKeyArgs{
-						Alg:  "ES256",
-						Kid:  "124",
-						Type: pulumi.String("#Microsoft.VideoAnalyzer.EccTokenKey"),
-						X:    "XX==",
-						Y:    "YY==",
-					},
-				},
-				Type: pulumi.String("#Microsoft.VideoAnalyzer.JwtAuthentication"),
-			},
-			ResourceGroupName: pulumi.String("testrg"),
-			Role:              pulumi.String("Reader"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
+Coming soon!
 
 {{< /example >}}
 
@@ -173,9 +112,9 @@ import pulumi_azure_native as azure_native
 access_policy = azure_native.videoanalyzer.AccessPolicy("accessPolicy",
     access_policy_name="accessPolicyName1",
     account_name="testaccount2",
-    authentication=azure_native.videoanalyzer.JwtAuthenticationArgs(
-        audiences=["audience1"],
-        claims=[
+    authentication={
+        "audiences": ["audience1"],
+        "claims": [
             azure_native.videoanalyzer.TokenClaimArgs(
                 name="claimname1",
                 value="claimvalue1",
@@ -185,11 +124,11 @@ access_policy = azure_native.videoanalyzer.AccessPolicy("accessPolicy",
                 value="claimvalue2",
             ),
         ],
-        issuers=[
+        "issuers": [
             "issuer1",
             "issuer2",
         ],
-        keys=[
+        "keys": [
             azure_native.videoanalyzer.RsaTokenKeyArgs(
                 alg="RS256",
                 e="ZLFzZTY0IQ==",
@@ -205,8 +144,8 @@ access_policy = azure_native.videoanalyzer.AccessPolicy("accessPolicy",
                 y="YY==",
             ),
         ],
-        type="#Microsoft.VideoAnalyzer.JwtAuthentication",
-    ),
+        "type": "#Microsoft.VideoAnalyzer.JwtAuthentication",
+    },
     resource_group_name="testrg",
     role="Reader")
 

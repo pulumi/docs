@@ -93,7 +93,64 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	cdn "github.com/pulumi/pulumi-azure-native/sdk/go/azure/cdn"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := cdn.NewRoute(ctx, "route", &cdn.RouteArgs{
+			CompressionSettings: cdn.CompressionSettingsArray{
+				ContentTypesToCompress: cdn.CompressionSettingsArgs{
+					"text/html",
+					"application/octet-stream",
+				},
+				IsCompressionEnabled: true,
+			},
+			CustomDomains: []cdn.ResourceReferenceArgs{
+				&cdn.ResourceReferenceArgs{
+					Id: pulumi.String("/subscriptions/subid/resourceGroups/RG/providers/Microsoft.Cdn/profiles/profile1/customDomains/domain1"),
+				},
+			},
+			EnabledState:        pulumi.String("Enabled"),
+			EndpointName:        pulumi.String("endpoint1"),
+			ForwardingProtocol:  pulumi.String("MatchRequest"),
+			HttpsRedirect:       pulumi.String("Enabled"),
+			LinkToDefaultDomain: pulumi.String("Enabled"),
+			OriginGroup: &cdn.ResourceReferenceArgs{
+				Id: pulumi.String("/subscriptions/subid/resourceGroups/RG/providers/Microsoft.Cdn/profiles/profile1/originGroups/originGroup1"),
+			},
+			PatternsToMatch: pulumi.StringArray{
+				pulumi.String("/*"),
+			},
+			ProfileName:                pulumi.String("profile1"),
+			QueryStringCachingBehavior: "IgnoreQueryString",
+			ResourceGroupName:          pulumi.String("RG"),
+			RouteName:                  pulumi.String("route1"),
+			RuleSets: []cdn.ResourceReferenceArgs{
+				&cdn.ResourceReferenceArgs{
+					Id: pulumi.String("/subscriptions/subid/resourceGroups/RG/providers/Microsoft.Cdn/profiles/profile1/ruleSets/ruleSet1"),
+				},
+			},
+			SupportedProtocols: pulumi.StringArray{
+				pulumi.String("Https"),
+				pulumi.String("Http"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 

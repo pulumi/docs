@@ -59,7 +59,37 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	search "github.com/pulumi/pulumi-azure-native/sdk/go/azure/search"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := search.NewPrivateEndpointConnection(ctx, "privateEndpointConnection", &search.PrivateEndpointConnectionArgs{
+			PrivateEndpointConnectionName: pulumi.String("testEndpoint.50bf4fbe-d7c1-4b48-a642-4f5892642546"),
+			Properties: &search.PrivateEndpointConnectionPropertiesArgs{
+				PrivateLinkServiceConnectionState: &search.PrivateEndpointConnectionPropertiesPrivateLinkServiceConnectionStateArgs{
+					Description: pulumi.String("Rejected for some reason"),
+					Status:      "Rejected",
+				},
+			},
+			ResourceGroupName: pulumi.String("rg1"),
+			SearchServiceName: pulumi.String("mysearchservice"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 

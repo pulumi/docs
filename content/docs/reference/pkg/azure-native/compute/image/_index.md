@@ -64,7 +64,41 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewImage(ctx, "image", &compute.ImageArgs{
+			ImageName:         pulumi.String("myImage"),
+			Location:          pulumi.String("West US"),
+			ResourceGroupName: pulumi.String("myResourceGroup"),
+			StorageProfile: &compute.ImageStorageProfileArgs{
+				OsDisk: &compute.ImageOSDiskArgs{
+					BlobUri: pulumi.String("https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd"),
+					DiskEncryptionSet: &compute.DiskEncryptionSetParametersArgs{
+						Id: pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSets/{existing-diskEncryptionSet-name}"),
+					},
+					OsState: "Generalized",
+					OsType:  "Linux",
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -169,7 +203,39 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewImage(ctx, "image", &compute.ImageArgs{
+			ImageName:         pulumi.String("myImage"),
+			Location:          pulumi.String("West US"),
+			ResourceGroupName: pulumi.String("myResourceGroup"),
+			StorageProfile: &compute.ImageStorageProfileArgs{
+				OsDisk: &compute.ImageOSDiskArgs{
+					BlobUri: pulumi.String("https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd"),
+					OsState: "Generalized",
+					OsType:  "Linux",
+				},
+				ZoneResilient: pulumi.Bool(true),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -276,7 +342,43 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewImage(ctx, "image", &compute.ImageArgs{
+			ImageName:         pulumi.String("myImage"),
+			Location:          pulumi.String("West US"),
+			ResourceGroupName: pulumi.String("myResourceGroup"),
+			StorageProfile: &compute.ImageStorageProfileArgs{
+				OsDisk: &compute.ImageOSDiskArgs{
+					DiskEncryptionSet: &compute.DiskEncryptionSetParametersArgs{
+						Id: pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSets/{existing-diskEncryptionSet-name}"),
+					},
+					ManagedDisk: &compute.SubResourceArgs{
+						Id: pulumi.String("subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/myManagedDisk"),
+					},
+					OsState: "Generalized",
+					OsType:  "Linux",
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -388,7 +490,41 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewImage(ctx, "image", &compute.ImageArgs{
+			ImageName:         pulumi.String("myImage"),
+			Location:          pulumi.String("West US"),
+			ResourceGroupName: pulumi.String("myResourceGroup"),
+			StorageProfile: &compute.ImageStorageProfileArgs{
+				OsDisk: &compute.ImageOSDiskArgs{
+					ManagedDisk: &compute.SubResourceArgs{
+						Id: pulumi.String("subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/myManagedDisk"),
+					},
+					OsState: "Generalized",
+					OsType:  "Linux",
+				},
+				ZoneResilient: pulumi.Bool(true),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -499,7 +635,43 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewImage(ctx, "image", &compute.ImageArgs{
+			ImageName:         pulumi.String("myImage"),
+			Location:          pulumi.String("West US"),
+			ResourceGroupName: pulumi.String("myResourceGroup"),
+			StorageProfile: &compute.ImageStorageProfileArgs{
+				OsDisk: &compute.ImageOSDiskArgs{
+					DiskEncryptionSet: &compute.DiskEncryptionSetParametersArgs{
+						Id: pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSets/{existing-diskEncryptionSet-name}"),
+					},
+					OsState: "Generalized",
+					OsType:  "Linux",
+					Snapshot: &compute.SubResourceArgs{
+						Id: pulumi.String("subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot"),
+					},
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -611,7 +783,41 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewImage(ctx, "image", &compute.ImageArgs{
+			ImageName:         pulumi.String("myImage"),
+			Location:          pulumi.String("West US"),
+			ResourceGroupName: pulumi.String("myResourceGroup"),
+			StorageProfile: &compute.ImageStorageProfileArgs{
+				OsDisk: &compute.ImageOSDiskArgs{
+					OsState: "Generalized",
+					OsType:  "Linux",
+					Snapshot: &compute.SubResourceArgs{
+						Id: pulumi.String("subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot"),
+					},
+				},
+				ZoneResilient: pulumi.Bool(false),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -836,7 +1042,45 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewImage(ctx, "image", &compute.ImageArgs{
+			ImageName:         pulumi.String("myImage"),
+			Location:          pulumi.String("West US"),
+			ResourceGroupName: pulumi.String("myResourceGroup"),
+			StorageProfile: &compute.ImageStorageProfileArgs{
+				DataDisks: compute.ImageDataDiskArray{
+					&compute.ImageDataDiskArgs{
+						BlobUri: pulumi.String("https://mystorageaccount.blob.core.windows.net/dataimages/dataimage.vhd"),
+						Lun:     pulumi.Int(1),
+					},
+				},
+				OsDisk: &compute.ImageOSDiskArgs{
+					BlobUri: pulumi.String("https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd"),
+					OsState: "Generalized",
+					OsType:  "Linux",
+				},
+				ZoneResilient: pulumi.Bool(false),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -959,7 +1203,49 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewImage(ctx, "image", &compute.ImageArgs{
+			ImageName:         pulumi.String("myImage"),
+			Location:          pulumi.String("West US"),
+			ResourceGroupName: pulumi.String("myResourceGroup"),
+			StorageProfile: &compute.ImageStorageProfileArgs{
+				DataDisks: compute.ImageDataDiskArray{
+					&compute.ImageDataDiskArgs{
+						Lun: pulumi.Int(1),
+						ManagedDisk: &compute.SubResourceArgs{
+							Id: pulumi.String("subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/myManagedDisk2"),
+						},
+					},
+				},
+				OsDisk: &compute.ImageOSDiskArgs{
+					ManagedDisk: &compute.SubResourceArgs{
+						Id: pulumi.String("subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/myManagedDisk"),
+					},
+					OsState: "Generalized",
+					OsType:  "Linux",
+				},
+				ZoneResilient: pulumi.Bool(false),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -1090,7 +1376,49 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewImage(ctx, "image", &compute.ImageArgs{
+			ImageName:         pulumi.String("myImage"),
+			Location:          pulumi.String("West US"),
+			ResourceGroupName: pulumi.String("myResourceGroup"),
+			StorageProfile: &compute.ImageStorageProfileArgs{
+				DataDisks: compute.ImageDataDiskArray{
+					&compute.ImageDataDiskArgs{
+						Lun: pulumi.Int(1),
+						Snapshot: &compute.SubResourceArgs{
+							Id: pulumi.String("subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot2"),
+						},
+					},
+				},
+				OsDisk: &compute.ImageOSDiskArgs{
+					OsState: "Generalized",
+					OsType:  "Linux",
+					Snapshot: &compute.SubResourceArgs{
+						Id: pulumi.String("subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot"),
+					},
+				},
+				ZoneResilient: pulumi.Bool(true),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 

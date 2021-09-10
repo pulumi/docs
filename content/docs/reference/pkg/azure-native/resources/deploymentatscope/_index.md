@@ -65,7 +65,42 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	resources "github.com/pulumi/pulumi-azure-native/sdk/go/azure/resources"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := resources.NewDeploymentAtScope(ctx, "deploymentAtScope", &resources.DeploymentAtScopeArgs{
+			DeploymentName: pulumi.String("my-deployment"),
+			Location:       pulumi.String("eastus"),
+			Properties: &resources.DeploymentPropertiesArgs{
+				Mode:       "Incremental",
+				Parameters: nil,
+				TemplateLink: &resources.TemplateLinkArgs{
+					Uri: pulumi.String("https://example.com/exampleTemplate.json"),
+				},
+			},
+			Scope: pulumi.String("providers/Microsoft.Management/managementGroups/my-management-group-id"),
+			Tags: pulumi.StringMap{
+				"tagKey1": pulumi.String("tag-value-1"),
+				"tagKey2": pulumi.String("tag-value-2"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 

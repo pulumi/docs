@@ -57,7 +57,37 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewGalleryApplication(ctx, "galleryApplication", &compute.GalleryApplicationArgs{
+			Description:            pulumi.String("This is the gallery application description."),
+			Eula:                   pulumi.String("This is the gallery application EULA."),
+			GalleryApplicationName: pulumi.String("myGalleryApplicationName"),
+			GalleryName:            pulumi.String("myGalleryName"),
+			Location:               pulumi.String("West US"),
+			PrivacyStatementUri:    pulumi.String("myPrivacyStatementUri}"),
+			ReleaseNoteUri:         pulumi.String("myReleaseNoteUri"),
+			ResourceGroupName:      pulumi.String("myResourceGroup"),
+			SupportedOSType:        "Windows",
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 

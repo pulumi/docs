@@ -73,7 +73,49 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	apimanagement "github.com/pulumi/pulumi-azure-native/sdk/go/azure/apimanagement"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := apimanagement.NewApi(ctx, "api", &apimanagement.ApiArgs{
+			ApiId: pulumi.String("tempgroup"),
+			AuthenticationSettings: &apimanagement.AuthenticationSettingsContractArgs{
+				OAuth2: &apimanagement.OAuth2AuthenticationSettingsContractArgs{
+					AuthorizationServerId: pulumi.String("authorizationServerId2283"),
+					Scope:                 pulumi.String("oauth2scope2580"),
+				},
+			},
+			Description: pulumi.String("apidescription5200"),
+			DisplayName: pulumi.String("apiname1463"),
+			Path:        pulumi.String("newapiPath"),
+			Protocols: []apimanagement.Protocol{
+				"https",
+				"http",
+			},
+			ResourceGroupName: pulumi.String("rg1"),
+			ServiceName:       pulumi.String("apimService1"),
+			ServiceUrl:        pulumi.String("http://newechoapi.cloudapp.net/api"),
+			SubscriptionKeyParameterNames: &apimanagement.SubscriptionKeyParameterNamesContractArgs{
+				Header: pulumi.String("header4520"),
+				Query:  pulumi.String("query3037"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -196,7 +238,42 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	apimanagement "github.com/pulumi/pulumi-azure-native/sdk/go/azure/apimanagement"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := apimanagement.NewApi(ctx, "api", &apimanagement.ApiArgs{
+			ApiId:       pulumi.String("echo-api2"),
+			Description: pulumi.String("Copy of Existing Echo Api including Operations."),
+			DisplayName: pulumi.String("Echo API2"),
+			IsCurrent:   pulumi.Bool(true),
+			Path:        pulumi.String("echo2"),
+			Protocols: []apimanagement.Protocol{
+				"http",
+				"https",
+			},
+			ResourceGroupName:    pulumi.String("rg1"),
+			ServiceName:          pulumi.String("apimService1"),
+			ServiceUrl:           pulumi.String("http://echoapi.cloudapp.net/api"),
+			SourceApiId:          pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/apis/58a4aeac497000007d040001"),
+			SubscriptionRequired: pulumi.Bool(true),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -307,7 +384,44 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	apimanagement "github.com/pulumi/pulumi-azure-native/sdk/go/azure/apimanagement"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := apimanagement.NewApi(ctx, "api", &apimanagement.ApiArgs{
+			ApiId:           pulumi.String("echoapiv3"),
+			ApiVersion:      pulumi.String("v4"),
+			ApiVersionSetId: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/apiVersionSets/aa9c59e6-c0cd-4258-9356-9ca7d2f0b458"),
+			Description:     pulumi.String("Create Echo API into a new Version using Existing Version Set and Copy all Operations."),
+			DisplayName:     pulumi.String("Echo API2"),
+			IsCurrent:       pulumi.Bool(true),
+			Path:            pulumi.String("echo2"),
+			Protocols: []apimanagement.Protocol{
+				"http",
+				"https",
+			},
+			ResourceGroupName:    pulumi.String("rg1"),
+			ServiceName:          pulumi.String("apimService1"),
+			ServiceUrl:           pulumi.String("http://echoapi.cloudapp.net/api"),
+			SourceApiId:          pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/apis/echoPath"),
+			SubscriptionRequired: pulumi.Bool(true),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -995,7 +1109,50 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	apimanagement "github.com/pulumi/pulumi-azure-native/sdk/go/azure/apimanagement"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := apimanagement.NewApi(ctx, "api", &apimanagement.ApiArgs{
+			ApiId: pulumi.String("tempgroup"),
+			AuthenticationSettings: &apimanagement.AuthenticationSettingsContractArgs{
+				Openid: &apimanagement.OpenIdAuthenticationSettingsContractArgs{
+					BearerTokenSendingMethods: pulumi.StringArray{
+						pulumi.String("authorizationHeader"),
+					},
+					OpenidProviderId: pulumi.String("testopenid"),
+				},
+			},
+			Description: pulumi.String("This is a sample server Petstore server.  You can find out more about Swagger at [http://swagger.io](http://swagger.io) or on [irc.freenode.net, #swagger](http://swagger.io/irc/).  For this sample, you can use the api key `special-key` to test the authorization filters."),
+			DisplayName: pulumi.String("Swagger Petstore"),
+			Path:        pulumi.String("petstore"),
+			Protocols: []apimanagement.Protocol{
+				"https",
+			},
+			ResourceGroupName: pulumi.String("rg1"),
+			ServiceName:       pulumi.String("apimService1"),
+			ServiceUrl:        pulumi.String("http://petstore.swagger.io/v2"),
+			SubscriptionKeyParameterNames: &apimanagement.SubscriptionKeyParameterNamesContractArgs{
+				Header: pulumi.String("Ocp-Apim-Subscription-Key"),
+				Query:  pulumi.String("subscription-key"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 

@@ -94,8 +94,8 @@ func main() {
 			Properties: &machinelearningservices.EnvironmentSpecificationVersionArgs{
 				CondaFile:   pulumi.String("channels:\n- defaults\ndependencies:\n- python=3.7.7\nname: my-env"),
 				Description: pulumi.String("string"),
-				Docker: &machinelearningservices.DockerBuildArgs{
-					DockerSpecificationType: pulumi.String("Build"),
+				Docker: machinelearningservices.DockerBuild{
+					DockerSpecificationType: "Build",
 					Dockerfile:              "FROM myimage",
 				},
 				Properties: pulumi.StringMap{

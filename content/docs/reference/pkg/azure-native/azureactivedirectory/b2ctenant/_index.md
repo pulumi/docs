@@ -60,7 +60,39 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	azureactivedirectory "github.com/pulumi/pulumi-azure-native/sdk/go/azure/azureactivedirectory"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := azureactivedirectory.NewB2CTenant(ctx, "b2cTenant", &azureactivedirectory.B2CTenantArgs{
+			Location: pulumi.String("United States"),
+			Properties: &azureactivedirectory.CreateTenantRequestBodyPropertiesArgs{
+				CountryCode: pulumi.String("US"),
+				DisplayName: pulumi.String("Contoso"),
+			},
+			ResourceGroupName: pulumi.String("contosoResourceGroup"),
+			ResourceName:      pulumi.String("contoso.onmicrosoft.com"),
+			Sku: &azureactivedirectory.B2CResourceSKUArgs{
+				Name: "Standard",
+				Tier: "A0",
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 

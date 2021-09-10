@@ -74,8 +74,8 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := eventgrid.NewSystemTopicEventSubscription(ctx, "systemTopicEventSubscription", &eventgrid.SystemTopicEventSubscriptionArgs{
-			Destination: &eventgrid.WebHookEventSubscriptionDestinationArgs{
-				EndpointType: pulumi.String("WebHook"),
+			Destination: eventgrid.WebHookEventSubscriptionDestination{
+				EndpointType: "WebHook",
 				EndpointUrl:  "https://requestb.in/15ksip71",
 			},
 			EventSubscriptionName: pulumi.String("exampleEventSubscriptionName1"),

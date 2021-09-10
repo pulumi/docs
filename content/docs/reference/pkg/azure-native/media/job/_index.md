@@ -70,46 +70,7 @@ class MyStack : Stack
 
 {{< example go >}}
 
-
-```go
-package main
-
-import (
-	media "github.com/pulumi/pulumi-azure-native/sdk/go/azure/media"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := media.NewJob(ctx, "job", &media.JobArgs{
-			AccountName: pulumi.String("contosomedia"),
-			CorrelationData: pulumi.StringMap{
-				"Key 2": pulumi.String("Value 2"),
-				"key1":  pulumi.String("value1"),
-			},
-			Input: &media.JobInputAssetArgs{
-				AssetName: "job1-InputAsset",
-				OdataType: pulumi.String("#Microsoft.Media.JobInputAsset"),
-			},
-			JobName: pulumi.String("job1"),
-			Outputs: media.JobOutputAssetArray{
-				&media.JobOutputAssetArgs{
-					AssetName: pulumi.String("job1-OutputAsset"),
-					OdataType: pulumi.String("#Microsoft.Media.JobOutputAsset"),
-				},
-			},
-			ResourceGroupName: pulumi.String("contosoresources"),
-			TransformName:     pulumi.String("exampleTransform"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
+Coming soon!
 
 {{< /example >}}
 
@@ -132,10 +93,10 @@ job = azure_native.media.Job("job",
         odata_type="#Microsoft.Media.JobInputAsset",
     ),
     job_name="job1",
-    outputs=[azure_native.media.JobOutputAssetArgs(
-        asset_name="job1-OutputAsset",
-        odata_type="#Microsoft.Media.JobOutputAsset",
-    )],
+    outputs=[{
+        "assetName": "job1-OutputAsset",
+        "odataType": "#Microsoft.Media.JobOutputAsset",
+    }],
     resource_group_name="contosoresources",
     transform_name="exampleTransform")
 

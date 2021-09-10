@@ -91,21 +91,21 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := avs.NewScriptExecution(ctx, "scriptExecution", &avs.ScriptExecutionArgs{
 			HiddenParameters: pulumi.AnyArray{
-				&avs.ScriptSecureStringExecutionParameterArgs{
+				avs.ScriptSecureStringExecutionParameter{
 					Name:        "Password",
 					SecureValue: "PlaceholderPassword",
-					Type:        pulumi.String("SecureValue"),
+					Type:        "SecureValue",
 				},
 			},
 			Parameters: pulumi.AnyArray{
-				&avs.ScriptStringExecutionParameterArgs{
+				avs.ScriptStringExecutionParameter{
 					Name:  "DomainName",
-					Type:  pulumi.String("Value"),
+					Type:  "Value",
 					Value: "placeholderDomain.local",
 				},
-				&avs.ScriptStringExecutionParameterArgs{
+				avs.ScriptStringExecutionParameter{
 					Name:  "BaseUserDN",
-					Type:  pulumi.String("Value"),
+					Type:  "Value",
 					Value: "DC=placeholder, DC=placeholder",
 				},
 			},

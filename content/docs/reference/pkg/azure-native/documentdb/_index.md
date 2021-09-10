@@ -15,7 +15,9 @@ Explore the resources and functions of the azure-native.documentdb module.
     <li><a href="cassandradatacenter" title="CassandraDataCenter"><span class="symbol resource"></span>CassandraDataCenter</a></li>
     <li><a href="cassandraresourcecassandrakeyspace" title="CassandraResourceCassandraKeyspace"><span class="symbol resource"></span>CassandraResourceCassandraKeyspace</a></li>
     <li><a href="cassandraresourcecassandratable" title="CassandraResourceCassandraTable"><span class="symbol resource"></span>CassandraResourceCassandraTable</a></li>
+    <li><a href="cassandraresourcecassandraview" title="CassandraResourceCassandraView"><span class="symbol resource"></span>CassandraResourceCassandraView</a></li>
     <li><a href="databaseaccount" title="DatabaseAccount"><span class="symbol resource"></span>DatabaseAccount</a></li>
+    <li><a href="graphresourcegraph" title="GraphResourceGraph"><span class="symbol resource"></span>GraphResourceGraph</a></li>
     <li><a href="gremlinresourcegremlindatabase" title="GremlinResourceGremlinDatabase"><span class="symbol resource"></span>GremlinResourceGremlinDatabase</a></li>
     <li><a href="gremlinresourcegremlingraph" title="GremlinResourceGremlinGraph"><span class="symbol resource"></span>GremlinResourceGremlinGraph</a></li>
     <li><a href="mongodbresourcemongodbcollection" title="MongoDBResourceMongoDBCollection"><span class="symbol resource"></span>MongoDBResourceMongoDBCollection</a></li>
@@ -39,7 +41,9 @@ Explore the resources and functions of the azure-native.documentdb module.
     <li><a href="getcassandradatacenter" title="GetCassandraDataCenter"><span class="symbol function"></span>GetCassandraDataCenter</a></li>
     <li><a href="getcassandraresourcecassandrakeyspace" title="GetCassandraResourceCassandraKeyspace"><span class="symbol function"></span>GetCassandraResourceCassandraKeyspace</a></li>
     <li><a href="getcassandraresourcecassandratable" title="GetCassandraResourceCassandraTable"><span class="symbol function"></span>GetCassandraResourceCassandraTable</a></li>
+    <li><a href="getcassandraresourcecassandraview" title="GetCassandraResourceCassandraView"><span class="symbol function"></span>GetCassandraResourceCassandraView</a></li>
     <li><a href="getdatabaseaccount" title="GetDatabaseAccount"><span class="symbol function"></span>GetDatabaseAccount</a></li>
+    <li><a href="getgraphresourcegraph" title="GetGraphResourceGraph"><span class="symbol function"></span>GetGraphResourceGraph</a></li>
     <li><a href="getgremlinresourcegremlindatabase" title="GetGremlinResourceGremlinDatabase"><span class="symbol function"></span>GetGremlinResourceGremlinDatabase</a></li>
     <li><a href="getgremlinresourcegremlingraph" title="GetGremlinResourceGremlinGraph"><span class="symbol function"></span>GetGremlinResourceGremlinGraph</a></li>
     <li><a href="getmongodbresourcemongodbcollection" title="GetMongoDBResourceMongoDBCollection"><span class="symbol function"></span>GetMongoDBResourceMongoDBCollection</a></li>
@@ -67,6 +71,6 @@ Explore the resources and functions of the azure-native.documentdb module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.26.0</dd>
+	<dd>1.27.0</dd>
 </dl>
 

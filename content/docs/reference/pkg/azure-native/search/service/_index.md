@@ -62,7 +62,40 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	search "github.com/pulumi/pulumi-azure-native/sdk/go/azure/search"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := search.NewService(ctx, "service", &search.ServiceArgs{
+			HostingMode:       "default",
+			Location:          pulumi.String("westus"),
+			PartitionCount:    pulumi.Int(1),
+			ReplicaCount:      pulumi.Int(3),
+			ResourceGroupName: pulumi.String("rg1"),
+			SearchServiceName: pulumi.String("mysearchservice"),
+			Sku: &search.SkuArgs{
+				Name: "standard",
+			},
+			Tags: pulumi.StringMap{
+				"app-name": pulumi.String("My e-commerce app"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -167,7 +200,41 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	search "github.com/pulumi/pulumi-azure-native/sdk/go/azure/search"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := search.NewService(ctx, "service", &search.ServiceArgs{
+			HostingMode:         "default",
+			Location:            pulumi.String("westus"),
+			PartitionCount:      pulumi.Int(1),
+			PublicNetworkAccess: "disabled",
+			ReplicaCount:        pulumi.Int(3),
+			ResourceGroupName:   pulumi.String("rg1"),
+			SearchServiceName:   pulumi.String("mysearchservice"),
+			Sku: &search.SkuArgs{
+				Name: "standard",
+			},
+			Tags: pulumi.StringMap{
+				"app-name": pulumi.String("My e-commerce app"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -287,7 +354,50 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	search "github.com/pulumi/pulumi-azure-native/sdk/go/azure/search"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := search.NewService(ctx, "service", &search.ServiceArgs{
+			HostingMode: "default",
+			Location:    pulumi.String("westus"),
+			NetworkRuleSet: &search.NetworkRuleSetArgs{
+				IpRules: search.IpRuleArray{
+					&search.IpRuleArgs{
+						Value: pulumi.String("123.4.5.6"),
+					},
+					&search.IpRuleArgs{
+						Value: pulumi.String("123.4.6.0/18"),
+					},
+				},
+			},
+			PartitionCount:    pulumi.Int(1),
+			ReplicaCount:      pulumi.Int(1),
+			ResourceGroupName: pulumi.String("rg1"),
+			SearchServiceName: pulumi.String("mysearchservice"),
+			Sku: &search.SkuArgs{
+				Name: "standard",
+			},
+			Tags: pulumi.StringMap{
+				"app-name": pulumi.String("My e-commerce app"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -415,7 +525,43 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	search "github.com/pulumi/pulumi-azure-native/sdk/go/azure/search"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := search.NewService(ctx, "service", &search.ServiceArgs{
+			HostingMode: "default",
+			Identity: &search.IdentityArgs{
+				Type: "SystemAssigned",
+			},
+			Location:          pulumi.String("westus"),
+			PartitionCount:    pulumi.Int(1),
+			ReplicaCount:      pulumi.Int(3),
+			ResourceGroupName: pulumi.String("rg1"),
+			SearchServiceName: pulumi.String("mysearchservice"),
+			Sku: &search.SkuArgs{
+				Name: "standard",
+			},
+			Tags: pulumi.StringMap{
+				"app-name": pulumi.String("My e-commerce app"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 

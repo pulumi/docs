@@ -181,9 +181,9 @@ func main() {
 				ErrorThreshold: pulumi.Int(0),
 				LoggingLevel:   pulumi.String("Info"),
 				MiniBatchSize:  pulumi.Float64(0),
-				Model: &machinelearningservices.IdAssetReferenceArgs{
+				Model: machinelearningservices.IdAssetReference{
 					AssetId:       "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace/models/testmodel/versions/1",
-					ReferenceType: pulumi.String("Id"),
+					ReferenceType: "Id",
 				},
 				OutputConfiguration: &machinelearningservices.BatchOutputConfigurationArgs{
 					AppendRowFileName: pulumi.String("string"),

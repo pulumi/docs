@@ -83,7 +83,57 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	customerinsights "github.com/pulumi/pulumi-azure-native/sdk/go/azure/customerinsights"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := customerinsights.NewKpi(ctx, "kpi", &customerinsights.KpiArgs{
+			Aliases: []customerinsights.KpiAliasArgs{
+				&customerinsights.KpiAliasArgs{
+					AliasName:  pulumi.String("alias"),
+					Expression: pulumi.String("Id+4"),
+				},
+			},
+			CalculationWindow: "Day",
+			Description: pulumi.StringMap{
+				"en-us": pulumi.String("Kpi Description"),
+			},
+			DisplayName: pulumi.StringMap{
+				"en-us": pulumi.String("Kpi DisplayName"),
+			},
+			EntityType:     "Profile",
+			EntityTypeName: pulumi.String("testProfile2327128"),
+			Expression:     pulumi.String("SavingAccountBalance"),
+			Function:       "Sum",
+			GroupBy: pulumi.StringArray{
+				pulumi.String("SavingAccountBalance"),
+			},
+			HubName:           pulumi.String("sdkTestHub"),
+			KpiName:           pulumi.String("kpiTest45453647"),
+			ResourceGroupName: pulumi.String("TestHubRG"),
+			ThresHolds: &customerinsights.KpiThresholdsArgs{
+				IncreasingKpi: pulumi.Bool(true),
+				LowerLimit:    pulumi.Float64(5),
+				UpperLimit:    pulumi.Float64(50),
+			},
+			Unit: pulumi.String("unit"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 

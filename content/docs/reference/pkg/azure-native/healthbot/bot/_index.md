@@ -55,7 +55,34 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	healthbot "github.com/pulumi/pulumi-azure-native/sdk/go/azure/healthbot"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := healthbot.NewBot(ctx, "bot", &healthbot.BotArgs{
+			BotName:           pulumi.String("samplebotname"),
+			Location:          pulumi.String("East US"),
+			ResourceGroupName: pulumi.String("healthbotClient"),
+			Sku: &healthbot.SkuArgs{
+				Name: "F0",
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 

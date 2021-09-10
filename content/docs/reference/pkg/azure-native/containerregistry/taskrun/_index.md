@@ -81,16 +81,16 @@ func main() {
 			ForceUpdateTag:    pulumi.String("test"),
 			RegistryName:      pulumi.String("myRegistry"),
 			ResourceGroupName: pulumi.String("myResourceGroup"),
-			RunRequest: &containerregistry.EncodedTaskRunRequestArgs{
+			RunRequest: containerregistry.EncodedTaskRunRequest{
 				Credentials:          nil,
 				EncodedTaskContent:   "c3RlcHM6IAogIC0gY21kOiB7eyAuVmFsdWVzLmNvbW1hbmQgfX0K",
 				EncodedValuesContent: "Y29tbWFuZDogYmFzaCBlY2hvIHt7LlJ1bi5SZWdpc3RyeX19Cg==",
-				Platform: &containerregistry.PlatformPropertiesArgs{
+				Platform: containerregistry.PlatformProperties{
 					Architecture: "amd64",
 					Os:           "Linux",
 				},
-				Type:   pulumi.String("EncodedTaskRunRequest"),
-				Values: []containerregistry.SetValueArgs{},
+				Type:   "EncodedTaskRunRequest",
+				Values: []containerregistry.SetValue{},
 			},
 			TaskRunName: pulumi.String("myRun"),
 		})
