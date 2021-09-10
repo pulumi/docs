@@ -2996,7 +2996,8 @@ Either of the following is supported: `SampleCount`, `Average`, `Sum`, `Minimum`
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The ID of the account where the metrics are located, if this is a cross-account alarm.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expression_csharp">
 <a href="#expression_csharp" style="color: inherit; text-decoration: inherit;">Expression</a>
@@ -3053,7 +3054,8 @@ Either of the following is supported: `SampleCount`, `Average`, `Sum`, `Minimum`
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The ID of the account where the metrics are located, if this is a cross-account alarm.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expression_go">
 <a href="#expression_go" style="color: inherit; text-decoration: inherit;">Expression</a>
@@ -3110,7 +3112,8 @@ Either of the following is supported: `SampleCount`, `Average`, `Sum`, `Minimum`
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The ID of the account where the metrics are located, if this is a cross-account alarm.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expression_nodejs">
 <a href="#expression_nodejs" style="color: inherit; text-decoration: inherit;">expression</a>
@@ -3167,7 +3170,8 @@ Either of the following is supported: `SampleCount`, `Average`, `Sum`, `Minimum`
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The ID of the account where the metrics are located, if this is a cross-account alarm.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expression_python">
 <a href="#expression_python" style="color: inherit; text-decoration: inherit;">expression</a>
@@ -3237,7 +3241,7 @@ See docs for [supported metrics](https://docs.aws.amazon.com/AmazonCloudWatch/la
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The statistic to apply to this metric.
-Either of the following is supported: `SampleCount`, `Average`, `Sum`, `Minimum`, `Maximum`
+See docs for [supported statistics](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/Statistics-definitions.html).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dimensions_csharp">
@@ -3298,7 +3302,7 @@ See docs for [supported metrics](https://docs.aws.amazon.com/AmazonCloudWatch/la
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The statistic to apply to this metric.
-Either of the following is supported: `SampleCount`, `Average`, `Sum`, `Minimum`, `Maximum`
+See docs for [supported statistics](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/Statistics-definitions.html).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dimensions_go">
@@ -3359,7 +3363,7 @@ See docs for [supported metrics](https://docs.aws.amazon.com/AmazonCloudWatch/la
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The statistic to apply to this metric.
-Either of the following is supported: `SampleCount`, `Average`, `Sum`, `Minimum`, `Maximum`
+See docs for [supported statistics](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/Statistics-definitions.html).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dimensions_nodejs">
@@ -3420,7 +3424,7 @@ See docs for [supported metrics](https://docs.aws.amazon.com/AmazonCloudWatch/la
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The statistic to apply to this metric.
-Either of the following is supported: `SampleCount`, `Average`, `Sum`, `Minimum`, `Maximum`
+See docs for [supported statistics](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/Statistics-definitions.html).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dimensions_python">

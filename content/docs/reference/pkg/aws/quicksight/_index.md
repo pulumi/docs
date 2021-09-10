@@ -12,6 +12,7 @@ Explore the resources and functions of the aws.quicksight module.
 <h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="group" title="Group"><span class="symbol resource"></span>Group</a></li>
+    <li><a href="groupmembership" title="GroupMembership"><span class="symbol resource"></span>GroupMembership</a></li>
     <li><a href="user" title="User"><span class="symbol resource"></span>User</a></li>
 </ul>
 
@@ -24,6 +25,6 @@ Explore the resources and functions of the aws.quicksight module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.19.0</dd>
+	<dd>4.20.0</dd>
 </dl>
 

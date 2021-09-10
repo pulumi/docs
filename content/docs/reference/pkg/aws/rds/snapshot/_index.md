@@ -596,7 +596,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vpcid_csharp">
@@ -605,7 +605,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the storage type associated with DB snapshot.
+    <dd>{{% md %}}Provides the VPC ID associated with the DB snapshot.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -768,7 +768,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vpcid_go">
@@ -777,7 +777,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the storage type associated with DB snapshot.
+    <dd>{{% md %}}Provides the VPC ID associated with the DB snapshot.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -940,7 +940,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vpcid_nodejs">
@@ -949,7 +949,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the storage type associated with DB snapshot.
+    <dd>{{% md %}}Provides the VPC ID associated with the DB snapshot.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1112,7 +1112,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vpc_id_python">
@@ -1121,7 +1121,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the storage type associated with DB snapshot.
+    <dd>{{% md %}}Provides the VPC ID associated with the DB snapshot.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1449,7 +1449,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpcid_csharp">
@@ -1458,7 +1458,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the storage type associated with DB snapshot.
+    <dd>{{% md %}}Provides the VPC ID associated with the DB snapshot.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1640,7 +1640,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpcid_go">
@@ -1649,7 +1649,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the storage type associated with DB snapshot.
+    <dd>{{% md %}}Provides the VPC ID associated with the DB snapshot.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1831,7 +1831,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpcid_nodejs">
@@ -1840,7 +1840,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the storage type associated with DB snapshot.
+    <dd>{{% md %}}Provides the VPC ID associated with the DB snapshot.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2022,7 +2022,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpc_id_python">
@@ -2031,7 +2031,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the storage type associated with DB snapshot.
+    <dd>{{% md %}}Provides the VPC ID associated with the DB snapshot.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
