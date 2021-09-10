@@ -266,6 +266,7 @@ const example_asymmetric_sign_key = new gcp.kms.CryptoKey("example-asymmetric-si
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">CryptoKey</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+              <span class="nx">destroy_scheduled_duration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
               <span class="nx">key_ring</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
               <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
               <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -412,6 +413,16 @@ The CryptoKey resource accepts the following [input]({{< relref "/docs/intro/con
 Format: `'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}'`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="destroyscheduledduration_csharp">
+<a href="#destroyscheduledduration_csharp" style="color: inherit; text-decoration: inherit;">Destroy<wbr>Scheduled<wbr>Duration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The period of time that versions of this key spend in the DESTROY_SCHEDULED state before transitioning to DESTROYED.
+If not specified at creation time, the default duration is 24 hours.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="labels_csharp">
 <a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
 </span>
@@ -487,6 +498,16 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The KeyRing that this key belongs to.
 Format: `'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}'`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="destroyscheduledduration_go">
+<a href="#destroyscheduledduration_go" style="color: inherit; text-decoration: inherit;">Destroy<wbr>Scheduled<wbr>Duration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The period of time that versions of this key spend in the DESTROY_SCHEDULED state before transitioning to DESTROYED.
+If not specified at creation time, the default duration is 24 hours.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_go">
@@ -566,6 +587,16 @@ Structure is documented below.
 Format: `'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}'`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="destroyscheduledduration_nodejs">
+<a href="#destroyscheduledduration_nodejs" style="color: inherit; text-decoration: inherit;">destroy<wbr>Scheduled<wbr>Duration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The period of time that versions of this key spend in the DESTROY_SCHEDULED state before transitioning to DESTROYED.
+If not specified at creation time, the default duration is 24 hours.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="labels_nodejs">
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
@@ -641,6 +672,16 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The KeyRing that this key belongs to.
 Format: `'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}'`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="destroy_scheduled_duration_python">
+<a href="#destroy_scheduled_duration_python" style="color: inherit; text-decoration: inherit;">destroy_<wbr>scheduled_<wbr>duration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The period of time that versions of this key spend in the DESTROY_SCHEDULED state before transitioning to DESTROYED.
+If not specified at creation time, the default duration is 24 hours.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_python">
@@ -814,6 +855,7 @@ Get an existing CryptoKey resource's state with the given name, ID, and optional
 <span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">destroy_scheduled_duration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">key_ring</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -934,6 +976,16 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="state_destroyscheduledduration_csharp">
+<a href="#state_destroyscheduledduration_csharp" style="color: inherit; text-decoration: inherit;">Destroy<wbr>Scheduled<wbr>Duration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The period of time that versions of this key spend in the DESTROY_SCHEDULED state before transitioning to DESTROYED.
+If not specified at creation time, the default duration is 24 hours.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_keyring_csharp">
 <a href="#state_keyring_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Ring</a>
 </span>
@@ -1019,6 +1071,16 @@ Structure is documented below.
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="state_destroyscheduledduration_go">
+<a href="#state_destroyscheduledduration_go" style="color: inherit; text-decoration: inherit;">Destroy<wbr>Scheduled<wbr>Duration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The period of time that versions of this key spend in the DESTROY_SCHEDULED state before transitioning to DESTROYED.
+If not specified at creation time, the default duration is 24 hours.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_keyring_go">
 <a href="#state_keyring_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Ring</a>
@@ -1106,6 +1168,16 @@ Structure is documented below.
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="state_destroyscheduledduration_nodejs">
+<a href="#state_destroyscheduledduration_nodejs" style="color: inherit; text-decoration: inherit;">destroy<wbr>Scheduled<wbr>Duration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The period of time that versions of this key spend in the DESTROY_SCHEDULED state before transitioning to DESTROYED.
+If not specified at creation time, the default duration is 24 hours.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_keyring_nodejs">
 <a href="#state_keyring_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Ring</a>
 </span>
@@ -1191,6 +1263,16 @@ Structure is documented below.
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="state_destroy_scheduled_duration_python">
+<a href="#state_destroy_scheduled_duration_python" style="color: inherit; text-decoration: inherit;">destroy_<wbr>scheduled_<wbr>duration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The period of time that versions of this key spend in the DESTROY_SCHEDULED state before transitioning to DESTROYED.
+If not specified at creation time, the default duration is 24 hours.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_key_ring_python">
 <a href="#state_key_ring_python" style="color: inherit; text-decoration: inherit;">key_<wbr>ring</a>

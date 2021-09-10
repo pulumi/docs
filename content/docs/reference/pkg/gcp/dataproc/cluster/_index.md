@@ -1464,7 +1464,6 @@ Structure defined below.
     </dt>
     <dd>{{% md %}}The config settings for port access on the cluster.
 Structure defined below.
-- - -
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gceclusterconfig_csharp">
@@ -1505,6 +1504,17 @@ Structure defined below.
     </dt>
     <dd>{{% md %}}The Google Compute Engine config settings for the master instances
 in a cluster.. Structure defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="metastoreconfig_csharp">
+<a href="#metastoreconfig_csharp" style="color: inherit; text-decoration: inherit;">Metastore<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterclusterconfigmetastoreconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Metastore<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}The config setting for metastore service with the cluster.
+Structure defined below.
+- - -
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preemptibleworkerconfig_csharp">
@@ -1617,7 +1627,6 @@ Structure defined below.
     </dt>
     <dd>{{% md %}}The config settings for port access on the cluster.
 Structure defined below.
-- - -
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gceclusterconfig_go">
@@ -1658,6 +1667,17 @@ Structure defined below.
     </dt>
     <dd>{{% md %}}The Google Compute Engine config settings for the master instances
 in a cluster.. Structure defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="metastoreconfig_go">
+<a href="#metastoreconfig_go" style="color: inherit; text-decoration: inherit;">Metastore<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterclusterconfigmetastoreconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Metastore<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}The config setting for metastore service with the cluster.
+Structure defined below.
+- - -
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preemptibleworkerconfig_go">
@@ -1770,7 +1790,6 @@ Structure defined below.
     </dt>
     <dd>{{% md %}}The config settings for port access on the cluster.
 Structure defined below.
-- - -
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gceclusterconfig_nodejs">
@@ -1811,6 +1830,17 @@ Structure defined below.
     </dt>
     <dd>{{% md %}}The Google Compute Engine config settings for the master instances
 in a cluster.. Structure defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="metastoreconfig_nodejs">
+<a href="#metastoreconfig_nodejs" style="color: inherit; text-decoration: inherit;">metastore<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterclusterconfigmetastoreconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Metastore<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}The config setting for metastore service with the cluster.
+Structure defined below.
+- - -
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preemptibleworkerconfig_nodejs">
@@ -1923,7 +1953,6 @@ Structure defined below.
     </dt>
     <dd>{{% md %}}The config settings for port access on the cluster.
 Structure defined below.
-- - -
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gce_cluster_config_python">
@@ -1964,6 +1993,17 @@ Structure defined below.
     </dt>
     <dd>{{% md %}}The Google Compute Engine config settings for the master instances
 in a cluster.. Structure defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="metastore_config_python">
+<a href="#metastore_config_python" style="color: inherit; text-decoration: inherit;">metastore_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterclusterconfigmetastoreconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Metastore<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}The config setting for metastore service with the cluster.
+Structure defined below.
+- - -
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preemptible_worker_config_python">
@@ -3548,6 +3588,60 @@ One of `"pd-ssd"` or `"pd-standard"`. Defaults to `"pd-standard"`.
     </dt>
     <dd>{{% md %}}The amount of local SSD disks that will be
 attached to each preemptible worker node. Defaults to 0.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="clusterclusterconfigmetastoreconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Metastore<wbr>Config</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="dataprocmetastoreservice_csharp">
+<a href="#dataprocmetastoreservice_csharp" style="color: inherit; text-decoration: inherit;">Dataproc<wbr>Metastore<wbr>Service</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource name of an existing Dataproc Metastore service.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="dataprocmetastoreservice_go">
+<a href="#dataprocmetastoreservice_go" style="color: inherit; text-decoration: inherit;">Dataproc<wbr>Metastore<wbr>Service</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource name of an existing Dataproc Metastore service.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="dataprocmetastoreservice_nodejs">
+<a href="#dataprocmetastoreservice_nodejs" style="color: inherit; text-decoration: inherit;">dataproc<wbr>Metastore<wbr>Service</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource name of an existing Dataproc Metastore service.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="dataproc_metastore_service_python">
+<a href="#dataproc_metastore_service_python" style="color: inherit; text-decoration: inherit;">dataproc_<wbr>metastore_<wbr>service</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Resource name of an existing Dataproc Metastore service.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

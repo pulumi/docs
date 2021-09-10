@@ -22,6 +22,454 @@ A Certificate corresponds to a signed X.509 certificate issued by a Certificate.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
+### Privateca Certificate With Template
+
+
+{{< example csharp >}}
+
+```csharp
+using System.IO;
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var template = new Gcp.CertificateAuthority.CertificateTemplate("template", new Gcp.CertificateAuthority.CertificateTemplateArgs
+        {
+            Location = "us-central1",
+            Description = "An updated sample certificate template",
+            IdentityConstraints = new Gcp.CertificateAuthority.Inputs.CertificateTemplateIdentityConstraintsArgs
+            {
+                AllowSubjectAltNamesPassthrough = true,
+                AllowSubjectPassthrough = true,
+                CelExpression = new Gcp.CertificateAuthority.Inputs.CertificateTemplateIdentityConstraintsCelExpressionArgs
+                {
+                    Description = "Always true",
+                    Expression = "true",
+                    Location = "any.file.anywhere",
+                    Title = "Sample expression",
+                },
+            },
+            PassthroughExtensions = new Gcp.CertificateAuthority.Inputs.CertificateTemplatePassthroughExtensionsArgs
+            {
+                AdditionalExtensions = 
+                {
+                    new Gcp.CertificateAuthority.Inputs.CertificateTemplatePassthroughExtensionsAdditionalExtensionArgs
+                    {
+                        ObjectIdPaths = 
+                        {
+                            1,
+                            6,
+                        },
+                    },
+                },
+                KnownExtensions = 
+                {
+                    "EXTENDED_KEY_USAGE",
+                },
+            },
+            PredefinedValues = new Gcp.CertificateAuthority.Inputs.CertificateTemplatePredefinedValuesArgs
+            {
+                AdditionalExtensions = 
+                {
+                    new Gcp.CertificateAuthority.Inputs.CertificateTemplatePredefinedValuesAdditionalExtensionArgs
+                    {
+                        ObjectId = new Gcp.CertificateAuthority.Inputs.CertificateTemplatePredefinedValuesAdditionalExtensionObjectIdArgs
+                        {
+                            ObjectIdPaths = 
+                            {
+                                1,
+                                6,
+                            },
+                        },
+                        Value = "c3RyaW5nCg==",
+                        Critical = true,
+                    },
+                },
+                AiaOcspServers = 
+                {
+                    "string",
+                },
+                CaOptions = new Gcp.CertificateAuthority.Inputs.CertificateTemplatePredefinedValuesCaOptionsArgs
+                {
+                    IsCa = false,
+                    MaxIssuerPathLength = 6,
+                },
+                KeyUsage = new Gcp.CertificateAuthority.Inputs.CertificateTemplatePredefinedValuesKeyUsageArgs
+                {
+                    BaseKeyUsage = new Gcp.CertificateAuthority.Inputs.CertificateTemplatePredefinedValuesKeyUsageBaseKeyUsageArgs
+                    {
+                        CertSign = false,
+                        ContentCommitment = true,
+                        CrlSign = false,
+                        DataEncipherment = true,
+                        DecipherOnly = true,
+                        DigitalSignature = true,
+                        EncipherOnly = true,
+                        KeyAgreement = true,
+                        KeyEncipherment = true,
+                    },
+                    ExtendedKeyUsage = new Gcp.CertificateAuthority.Inputs.CertificateTemplatePredefinedValuesKeyUsageExtendedKeyUsageArgs
+                    {
+                        ClientAuth = true,
+                        CodeSigning = true,
+                        EmailProtection = true,
+                        OcspSigning = true,
+                        ServerAuth = true,
+                        TimeStamping = true,
+                    },
+                    UnknownExtendedKeyUsages = 
+                    {
+                        new Gcp.CertificateAuthority.Inputs.CertificateTemplatePredefinedValuesKeyUsageUnknownExtendedKeyUsageArgs
+                        {
+                            ObjectIdPaths = 
+                            {
+                                1,
+                                6,
+                            },
+                        },
+                    },
+                },
+                PolicyIds = 
+                {
+                    new Gcp.CertificateAuthority.Inputs.CertificateTemplatePredefinedValuesPolicyIdArgs
+                    {
+                        ObjectIdPaths = 
+                        {
+                            1,
+                            6,
+                        },
+                    },
+                },
+            },
+        });
+        var test_ca = new Gcp.CertificateAuthority.Authority("test-ca", new Gcp.CertificateAuthority.AuthorityArgs
+        {
+            Pool = "",
+            CertificateAuthorityId = "my-certificate-authority",
+            Location = "us-central1",
+            Config = new Gcp.CertificateAuthority.Inputs.AuthorityConfigArgs
+            {
+                SubjectConfig = new Gcp.CertificateAuthority.Inputs.AuthorityConfigSubjectConfigArgs
+                {
+                    Subject = new Gcp.CertificateAuthority.Inputs.AuthorityConfigSubjectConfigSubjectArgs
+                    {
+                        Organization = "HashiCorp",
+                        CommonName = "my-certificate-authority",
+                    },
+                    SubjectAltName = new Gcp.CertificateAuthority.Inputs.AuthorityConfigSubjectConfigSubjectAltNameArgs
+                    {
+                        DnsNames = 
+                        {
+                            "hashicorp.com",
+                        },
+                    },
+                },
+                X509Config = new Gcp.CertificateAuthority.Inputs.AuthorityConfigX509ConfigArgs
+                {
+                    CaOptions = new Gcp.CertificateAuthority.Inputs.AuthorityConfigX509ConfigCaOptionsArgs
+                    {
+                        IsCa = true,
+                    },
+                    KeyUsage = new Gcp.CertificateAuthority.Inputs.AuthorityConfigX509ConfigKeyUsageArgs
+                    {
+                        BaseKeyUsage = new Gcp.CertificateAuthority.Inputs.AuthorityConfigX509ConfigKeyUsageBaseKeyUsageArgs
+                        {
+                            CertSign = true,
+                            CrlSign = true,
+                        },
+                        ExtendedKeyUsage = new Gcp.CertificateAuthority.Inputs.AuthorityConfigX509ConfigKeyUsageExtendedKeyUsageArgs
+                        {
+                            ServerAuth = false,
+                        },
+                    },
+                },
+            },
+            KeySpec = new Gcp.CertificateAuthority.Inputs.AuthorityKeySpecArgs
+            {
+                Algorithm = "RSA_PKCS1_4096_SHA256",
+            },
+        });
+        var @default = new Gcp.CertificateAuthority.Certificate("default", new Gcp.CertificateAuthority.CertificateArgs
+        {
+            Pool = "",
+            Location = "us-central1",
+            CertificateAuthority = test_ca.CertificateAuthorityId,
+            Lifetime = "860s",
+            PemCsr = File.ReadAllText("test-fixtures/rsa_csr.pem"),
+            CertificateTemplate = template.Id,
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+Coming soon!
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+template = gcp.certificateauthority.CertificateTemplate("template",
+    location="us-central1",
+    description="An updated sample certificate template",
+    identity_constraints=gcp.certificateauthority.CertificateTemplateIdentityConstraintsArgs(
+        allow_subject_alt_names_passthrough=True,
+        allow_subject_passthrough=True,
+        cel_expression=gcp.certificateauthority.CertificateTemplateIdentityConstraintsCelExpressionArgs(
+            description="Always true",
+            expression="true",
+            location="any.file.anywhere",
+            title="Sample expression",
+        ),
+    ),
+    passthrough_extensions=gcp.certificateauthority.CertificateTemplatePassthroughExtensionsArgs(
+        additional_extensions=[gcp.certificateauthority.CertificateTemplatePassthroughExtensionsAdditionalExtensionArgs(
+            object_id_paths=[
+                1,
+                6,
+            ],
+        )],
+        known_extensions=["EXTENDED_KEY_USAGE"],
+    ),
+    predefined_values=gcp.certificateauthority.CertificateTemplatePredefinedValuesArgs(
+        additional_extensions=[gcp.certificateauthority.CertificateTemplatePredefinedValuesAdditionalExtensionArgs(
+            object_id=gcp.certificateauthority.CertificateTemplatePredefinedValuesAdditionalExtensionObjectIdArgs(
+                object_id_paths=[
+                    1,
+                    6,
+                ],
+            ),
+            value="c3RyaW5nCg==",
+            critical=True,
+        )],
+        aia_ocsp_servers=["string"],
+        ca_options=gcp.certificateauthority.CertificateTemplatePredefinedValuesCaOptionsArgs(
+            is_ca=False,
+            max_issuer_path_length=6,
+        ),
+        key_usage=gcp.certificateauthority.CertificateTemplatePredefinedValuesKeyUsageArgs(
+            base_key_usage=gcp.certificateauthority.CertificateTemplatePredefinedValuesKeyUsageBaseKeyUsageArgs(
+                cert_sign=False,
+                content_commitment=True,
+                crl_sign=False,
+                data_encipherment=True,
+                decipher_only=True,
+                digital_signature=True,
+                encipher_only=True,
+                key_agreement=True,
+                key_encipherment=True,
+            ),
+            extended_key_usage=gcp.certificateauthority.CertificateTemplatePredefinedValuesKeyUsageExtendedKeyUsageArgs(
+                client_auth=True,
+                code_signing=True,
+                email_protection=True,
+                ocsp_signing=True,
+                server_auth=True,
+                time_stamping=True,
+            ),
+            unknown_extended_key_usages=[gcp.certificateauthority.CertificateTemplatePredefinedValuesKeyUsageUnknownExtendedKeyUsageArgs(
+                object_id_paths=[
+                    1,
+                    6,
+                ],
+            )],
+        ),
+        policy_ids=[gcp.certificateauthority.CertificateTemplatePredefinedValuesPolicyIdArgs(
+            object_id_paths=[
+                1,
+                6,
+            ],
+        )],
+    ))
+test_ca = gcp.certificateauthority.Authority("test-ca",
+    pool="",
+    certificate_authority_id="my-certificate-authority",
+    location="us-central1",
+    config=gcp.certificateauthority.AuthorityConfigArgs(
+        subject_config=gcp.certificateauthority.AuthorityConfigSubjectConfigArgs(
+            subject=gcp.certificateauthority.AuthorityConfigSubjectConfigSubjectArgs(
+                organization="HashiCorp",
+                common_name="my-certificate-authority",
+            ),
+            subject_alt_name=gcp.certificateauthority.AuthorityConfigSubjectConfigSubjectAltNameArgs(
+                dns_names=["hashicorp.com"],
+            ),
+        ),
+        x509_config=gcp.certificateauthority.AuthorityConfigX509ConfigArgs(
+            ca_options=gcp.certificateauthority.AuthorityConfigX509ConfigCaOptionsArgs(
+                is_ca=True,
+            ),
+            key_usage=gcp.certificateauthority.AuthorityConfigX509ConfigKeyUsageArgs(
+                base_key_usage=gcp.certificateauthority.AuthorityConfigX509ConfigKeyUsageBaseKeyUsageArgs(
+                    cert_sign=True,
+                    crl_sign=True,
+                ),
+                extended_key_usage=gcp.certificateauthority.AuthorityConfigX509ConfigKeyUsageExtendedKeyUsageArgs(
+                    server_auth=False,
+                ),
+            ),
+        ),
+    ),
+    key_spec=gcp.certificateauthority.AuthorityKeySpecArgs(
+        algorithm="RSA_PKCS1_4096_SHA256",
+    ))
+default = gcp.certificateauthority.Certificate("default",
+    pool="",
+    location="us-central1",
+    certificate_authority=test_ca.certificate_authority_id,
+    lifetime="860s",
+    pem_csr=(lambda path: open(path).read())("test-fixtures/rsa_csr.pem"),
+    certificate_template=template.id)
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+import * from "fs";
+
+const template = new gcp.certificateauthority.CertificateTemplate("template", {
+    location: "us-central1",
+    description: "An updated sample certificate template",
+    identityConstraints: {
+        allowSubjectAltNamesPassthrough: true,
+        allowSubjectPassthrough: true,
+        celExpression: {
+            description: "Always true",
+            expression: "true",
+            location: "any.file.anywhere",
+            title: "Sample expression",
+        },
+    },
+    passthroughExtensions: {
+        additionalExtensions: [{
+            objectIdPaths: [
+                1,
+                6,
+            ],
+        }],
+        knownExtensions: ["EXTENDED_KEY_USAGE"],
+    },
+    predefinedValues: {
+        additionalExtensions: [{
+            objectId: {
+                objectIdPaths: [
+                    1,
+                    6,
+                ],
+            },
+            value: "c3RyaW5nCg==",
+            critical: true,
+        }],
+        aiaOcspServers: ["string"],
+        caOptions: {
+            isCa: false,
+            maxIssuerPathLength: 6,
+        },
+        keyUsage: {
+            baseKeyUsage: {
+                certSign: false,
+                contentCommitment: true,
+                crlSign: false,
+                dataEncipherment: true,
+                decipherOnly: true,
+                digitalSignature: true,
+                encipherOnly: true,
+                keyAgreement: true,
+                keyEncipherment: true,
+            },
+            extendedKeyUsage: {
+                clientAuth: true,
+                codeSigning: true,
+                emailProtection: true,
+                ocspSigning: true,
+                serverAuth: true,
+                timeStamping: true,
+            },
+            unknownExtendedKeyUsages: [{
+                objectIdPaths: [
+                    1,
+                    6,
+                ],
+            }],
+        },
+        policyIds: [{
+            objectIdPaths: [
+                1,
+                6,
+            ],
+        }],
+    },
+});
+const test_ca = new gcp.certificateauthority.Authority("test-ca", {
+    pool: "",
+    certificateAuthorityId: "my-certificate-authority",
+    location: "us-central1",
+    config: {
+        subjectConfig: {
+            subject: {
+                organization: "HashiCorp",
+                commonName: "my-certificate-authority",
+            },
+            subjectAltName: {
+                dnsNames: ["hashicorp.com"],
+            },
+        },
+        x509Config: {
+            caOptions: {
+                isCa: true,
+            },
+            keyUsage: {
+                baseKeyUsage: {
+                    certSign: true,
+                    crlSign: true,
+                },
+                extendedKeyUsage: {
+                    serverAuth: false,
+                },
+            },
+        },
+    },
+    keySpec: {
+        algorithm: "RSA_PKCS1_4096_SHA256",
+    },
+});
+const _default = new gcp.certificateauthority.Certificate("default", {
+    pool: "",
+    location: "us-central1",
+    certificateAuthority: test_ca.certificateAuthorityId,
+    lifetime: "860s",
+    pemCsr: fs.readFileSync("test-fixtures/rsa_csr.pem"),
+    certificateTemplate: template.id,
+});
+```
+
+
+{{< /example >}}
+
+
+
+
 ### Privateca Certificate Csr
 
 
@@ -232,6 +680,7 @@ const _default = new gcp.certificateauthority.Certificate("default", {
 <span class="k">def </span><span class="nx">Certificate</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
                 <span class="nx">certificate_authority</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">certificate_template</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                 <span class="nx">config</span><span class="p">:</span> <span class="nx">Optional[CertificateConfigArgs]</span> = None<span class="p">,</span>
                 <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
                 <span class="nx">lifetime</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -397,6 +846,19 @@ running `gcloud privateca locations list`.
     <dd>{{% md %}}Certificate Authority name.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="certificatetemplate_csharp">
+<a href="#certificatetemplate_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Template</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource name for a CertificateTemplate used to issue this certificate,
+in the format `projects/*/locations/*/certificateTemplates/*`. If this is specified,
+the caller must have the necessary permission to use this template. If this is
+omitted, no template will be used. This template must be in the same location
+as the Certificate.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="config_csharp">
 <a href="#config_csharp" style="color: inherit; text-decoration: inherit;">Config</a>
 </span>
@@ -485,6 +947,19 @@ running `gcloud privateca locations list`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Certificate Authority name.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="certificatetemplate_go">
+<a href="#certificatetemplate_go" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Template</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource name for a CertificateTemplate used to issue this certificate,
+in the format `projects/*/locations/*/certificateTemplates/*`. If this is specified,
+the caller must have the necessary permission to use this template. If this is
+omitted, no template will be used. This template must be in the same location
+as the Certificate.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="config_go">
@@ -577,6 +1052,19 @@ running `gcloud privateca locations list`.
     <dd>{{% md %}}Certificate Authority name.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="certificatetemplate_nodejs">
+<a href="#certificatetemplate_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Template</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource name for a CertificateTemplate used to issue this certificate,
+in the format `projects/*/locations/*/certificateTemplates/*`. If this is specified,
+the caller must have the necessary permission to use this template. If this is
+omitted, no template will be used. This template must be in the same location
+as the Certificate.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="config_nodejs">
 <a href="#config_nodejs" style="color: inherit; text-decoration: inherit;">config</a>
 </span>
@@ -665,6 +1153,19 @@ running `gcloud privateca locations list`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Certificate Authority name.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="certificate_template_python">
+<a href="#certificate_template_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>template</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The resource name for a CertificateTemplate used to issue this certificate,
+in the format `projects/*/locations/*/certificateTemplates/*`. If this is specified,
+the caller must have the necessary permission to use this template. If this is
+omitted, no template will be used. This template must be in the same location
+as the Certificate.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="config_python">
@@ -1023,6 +1524,7 @@ Get an existing Certificate resource's state with the given name, ID, and option
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
         <span class="nx">certificate_authority</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">certificate_descriptions</span><span class="p">:</span> <span class="nx">Optional[Sequence[CertificateCertificateDescriptionArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">certificate_template</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">config</span><span class="p">:</span> <span class="nx">Optional[CertificateConfigArgs]</span> = None<span class="p">,</span>
         <span class="nx">create_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
@@ -1165,6 +1667,19 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Output only. Details regarding the revocation of this Certificate. This Certificate is considered revoked if and only if
 this field is present.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_certificatetemplate_csharp">
+<a href="#state_certificatetemplate_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Template</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource name for a CertificateTemplate used to issue this certificate,
+in the format `projects/*/locations/*/certificateTemplates/*`. If this is specified,
+the caller must have the necessary permission to use this template. If this is
+omitted, no template will be used. This template must be in the same location
+as the Certificate.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_config_csharp">
@@ -1313,6 +1828,19 @@ this field is present.
 this field is present.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_certificatetemplate_go">
+<a href="#state_certificatetemplate_go" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Template</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource name for a CertificateTemplate used to issue this certificate,
+in the format `projects/*/locations/*/certificateTemplates/*`. If this is specified,
+the caller must have the necessary permission to use this template. If this is
+omitted, no template will be used. This template must be in the same location
+as the Certificate.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_config_go">
 <a href="#state_config_go" style="color: inherit; text-decoration: inherit;">Config</a>
 </span>
@@ -1459,6 +1987,19 @@ this field is present.
 this field is present.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_certificatetemplate_nodejs">
+<a href="#state_certificatetemplate_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Template</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource name for a CertificateTemplate used to issue this certificate,
+in the format `projects/*/locations/*/certificateTemplates/*`. If this is specified,
+the caller must have the necessary permission to use this template. If this is
+omitted, no template will be used. This template must be in the same location
+as the Certificate.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_config_nodejs">
 <a href="#state_config_nodejs" style="color: inherit; text-decoration: inherit;">config</a>
 </span>
@@ -1603,6 +2144,19 @@ this field is present.
     </dt>
     <dd>{{% md %}}Output only. Details regarding the revocation of this Certificate. This Certificate is considered revoked if and only if
 this field is present.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_certificate_template_python">
+<a href="#state_certificate_template_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>template</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The resource name for a CertificateTemplate used to issue this certificate,
+in the format `projects/*/locations/*/certificateTemplates/*`. If this is specified,
+the caller must have the necessary permission to use this template. If this is
+omitted, no template will be used. This template must be in the same location
+as the Certificate.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_config_python">

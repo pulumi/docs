@@ -266,6 +266,7 @@ const peer = new gcp.compute.RouterPeer("peer", {
                <span class="nx">advertised_route_priority</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
                <span class="nx">enable</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                <span class="nx">interface</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                <span class="nx">peer_asn</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
                <span class="nx">peer_ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -501,6 +502,16 @@ If set to true, the peer connection can be established with routing information.
 The default is true.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="ipaddress_csharp">
+<a href="#ipaddress_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}IP address of the interface inside Google Cloud Platform.
+Only IPv4 is supported.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -637,6 +648,16 @@ length, the routes with the lowest priority value win.
 with the peer is terminated and all associated routing information is removed.
 If set to true, the peer connection can be established with routing information.
 The default is true.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ipaddress_go">
+<a href="#ipaddress_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}IP address of the interface inside Google Cloud Platform.
+Only IPv4 is supported.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
@@ -777,6 +798,16 @@ If set to true, the peer connection can be established with routing information.
 The default is true.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="ipaddress_nodejs">
+<a href="#ipaddress_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}IP address of the interface inside Google Cloud Platform.
+Only IPv4 is supported.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
@@ -915,6 +946,16 @@ If set to true, the peer connection can be established with routing information.
 The default is true.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="ip_address_python">
+<a href="#ip_address_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}IP address of the interface inside Google Cloud Platform.
+Only IPv4 is supported.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
@@ -968,15 +1009,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="ipaddress_csharp">
-<a href="#ipaddress_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}IP address of the interface inside Google Cloud Platform. Only IPv4 is supported.
-{{% /md %}}</dd><dt class="property-"
-            title="">
         <span id="managementtype_csharp">
 <a href="#managementtype_csharp" style="color: inherit; text-decoration: inherit;">Management<wbr>Type</a>
 </span>
@@ -1000,15 +1032,6 @@ of BGP peer when the PARTNER InterconnectAttachment is created, updated, or dele
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="ipaddress_go">
-<a href="#ipaddress_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}IP address of the interface inside Google Cloud Platform. Only IPv4 is supported.
-{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="managementtype_go">
 <a href="#managementtype_go" style="color: inherit; text-decoration: inherit;">Management<wbr>Type</a>
@@ -1034,15 +1057,6 @@ of BGP peer when the PARTNER InterconnectAttachment is created, updated, or dele
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="ipaddress_nodejs">
-<a href="#ipaddress_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Address</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}IP address of the interface inside Google Cloud Platform. Only IPv4 is supported.
-{{% /md %}}</dd><dt class="property-"
-            title="">
         <span id="managementtype_nodejs">
 <a href="#managementtype_nodejs" style="color: inherit; text-decoration: inherit;">management<wbr>Type</a>
 </span>
@@ -1066,15 +1080,6 @@ of BGP peer when the PARTNER InterconnectAttachment is created, updated, or dele
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="ip_address_python">
-<a href="#ip_address_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>address</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}IP address of the interface inside Google Cloud Platform. Only IPv4 is supported.
-{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="management_type_python">
 <a href="#management_type_python" style="color: inherit; text-decoration: inherit;">management_<wbr>type</a>
@@ -1308,7 +1313,8 @@ The default is true.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}IP address of the interface inside Google Cloud Platform. Only IPv4 is supported.
+    <dd>{{% md %}}IP address of the interface inside Google Cloud Platform.
+Only IPv4 is supported.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_managementtype_csharp">
@@ -1467,7 +1473,8 @@ The default is true.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}IP address of the interface inside Google Cloud Platform. Only IPv4 is supported.
+    <dd>{{% md %}}IP address of the interface inside Google Cloud Platform.
+Only IPv4 is supported.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_managementtype_go">
@@ -1626,7 +1633,8 @@ The default is true.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}IP address of the interface inside Google Cloud Platform. Only IPv4 is supported.
+    <dd>{{% md %}}IP address of the interface inside Google Cloud Platform.
+Only IPv4 is supported.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_managementtype_nodejs">
@@ -1785,7 +1793,8 @@ The default is true.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}IP address of the interface inside Google Cloud Platform. Only IPv4 is supported.
+    <dd>{{% md %}}IP address of the interface inside Google Cloud Platform.
+Only IPv4 is supported.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_management_type_python">

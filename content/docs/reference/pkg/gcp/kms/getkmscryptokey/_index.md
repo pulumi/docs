@@ -278,6 +278,14 @@ The following output properties are available:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-"
             title="">
+        <span id="destroyscheduledduration_csharp">
+<a href="#destroyscheduledduration_csharp" style="color: inherit; text-decoration: inherit;">Destroy<wbr>Scheduled<wbr>Duration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
@@ -359,6 +367,14 @@ of a decimal number with up to 9 fractional digits, followed by the letter s (se
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-"
+            title="">
+        <span id="destroyscheduledduration_go">
+<a href="#destroyscheduledduration_go" style="color: inherit; text-decoration: inherit;">Destroy<wbr>Scheduled<wbr>Duration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -442,6 +458,14 @@ of a decimal number with up to 9 fractional digits, followed by the letter s (se
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-"
             title="">
+        <span id="destroyscheduledduration_nodejs">
+<a href="#destroyscheduledduration_nodejs" style="color: inherit; text-decoration: inherit;">destroy<wbr>Scheduled<wbr>Duration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
@@ -523,6 +547,14 @@ of a decimal number with up to 9 fractional digits, followed by the letter s (se
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-"
+            title="">
+        <span id="destroy_scheduled_duration_python">
+<a href="#destroy_scheduled_duration_python" style="color: inherit; text-decoration: inherit;">destroy_<wbr>scheduled_<wbr>duration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
