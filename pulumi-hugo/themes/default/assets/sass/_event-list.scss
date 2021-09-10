@@ -11,7 +11,7 @@
         }
     }
 
-    @each $filter-name in "all", "featured", "upcoming", "videos", "pulumitv" {
+    @each $filter-name in "all" "featured" "upcoming" "videos" "pulumitv" "whitepaper" {
         ##{$filter-name}:target {
             @if $filter-name != "all" {
                 ~ .event-list-filter li[data-filter-name="all"] a {
