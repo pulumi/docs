@@ -1439,15 +1439,24 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this rule.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="protocols_csharp">
-<a href="#protocols_csharp" style="color: inherit; text-decoration: inherit;">Protocols</a>
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyrulecollectiongroupapplicationrulecollectionruleprotocol">List&lt;Firewall<wbr>Policy<wbr>Rule<wbr>Collection<wbr>Group<wbr>Application<wbr>Rule<wbr>Collection<wbr>Rule<wbr>Protocol&gt;</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies a list of network protocols this rule applies to. Possible values are `TCP`, `UDP`.
+    <dd>{{% md %}}The description which should be used for this rule.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="destinationaddresses_csharp">
+<a href="#destinationaddresses_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Specifies a list of destination IP addresses (including CIDR and `*`) or Service Tags.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="destinationfqdntags_csharp">
@@ -1468,6 +1477,24 @@ The following state arguments are supported:
     <dd>{{% md %}}Specifies a list of destination FQDNs.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="destinationurls_csharp">
+<a href="#destinationurls_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Urls</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Specifies a list of destination URLs for which policy should hold. Needs Premium SKU for Firewall Policy. Conflicts with `destination_fqdns`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="protocols_csharp">
+<a href="#protocols_csharp" style="color: inherit; text-decoration: inherit;">Protocols</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewallpolicyrulecollectiongroupapplicationrulecollectionruleprotocol">List&lt;Firewall<wbr>Policy<wbr>Rule<wbr>Collection<wbr>Group<wbr>Application<wbr>Rule<wbr>Collection<wbr>Rule<wbr>Protocol&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a list of network protocols this rule applies to. Possible values are `TCP`, `UDP`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="sourceaddresses_csharp">
 <a href="#sourceaddresses_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Addresses</a>
 </span>
@@ -1484,6 +1511,24 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Specifies a list of source IP groups.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="terminatetls_csharp">
+<a href="#terminatetls_csharp" style="color: inherit; text-decoration: inherit;">Terminate<wbr>Tls</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Boolean specifying if TLS shall be terminated (true) or not (false). Needs Premium SKU for Firewall Policy.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="webcategories_csharp">
+<a href="#webcategories_csharp" style="color: inherit; text-decoration: inherit;">Web<wbr>Categories</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Specifies a list of web categories to which access is denied or allowed depending on the value of `action` above. Needs Premium SKU for Firewall Policy.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1497,15 +1542,24 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this rule.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="protocols_go">
-<a href="#protocols_go" style="color: inherit; text-decoration: inherit;">Protocols</a>
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyrulecollectiongroupapplicationrulecollectionruleprotocol">[]Firewall<wbr>Policy<wbr>Rule<wbr>Collection<wbr>Group<wbr>Application<wbr>Rule<wbr>Collection<wbr>Rule<wbr>Protocol</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies a list of network protocols this rule applies to. Possible values are `TCP`, `UDP`.
+    <dd>{{% md %}}The description which should be used for this rule.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="destinationaddresses_go">
+<a href="#destinationaddresses_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}Specifies a list of destination IP addresses (including CIDR and `*`) or Service Tags.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="destinationfqdntags_go">
@@ -1526,6 +1580,24 @@ The following state arguments are supported:
     <dd>{{% md %}}Specifies a list of destination FQDNs.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="destinationurls_go">
+<a href="#destinationurls_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Urls</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}Specifies a list of destination URLs for which policy should hold. Needs Premium SKU for Firewall Policy. Conflicts with `destination_fqdns`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="protocols_go">
+<a href="#protocols_go" style="color: inherit; text-decoration: inherit;">Protocols</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewallpolicyrulecollectiongroupapplicationrulecollectionruleprotocol">[]Firewall<wbr>Policy<wbr>Rule<wbr>Collection<wbr>Group<wbr>Application<wbr>Rule<wbr>Collection<wbr>Rule<wbr>Protocol</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a list of network protocols this rule applies to. Possible values are `TCP`, `UDP`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="sourceaddresses_go">
 <a href="#sourceaddresses_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Addresses</a>
 </span>
@@ -1542,6 +1614,24 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Specifies a list of source IP groups.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="terminatetls_go">
+<a href="#terminatetls_go" style="color: inherit; text-decoration: inherit;">Terminate<wbr>Tls</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Boolean specifying if TLS shall be terminated (true) or not (false). Needs Premium SKU for Firewall Policy.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="webcategories_go">
+<a href="#webcategories_go" style="color: inherit; text-decoration: inherit;">Web<wbr>Categories</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}Specifies a list of web categories to which access is denied or allowed depending on the value of `action` above. Needs Premium SKU for Firewall Policy.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1555,15 +1645,24 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this rule.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="protocols_nodejs">
-<a href="#protocols_nodejs" style="color: inherit; text-decoration: inherit;">protocols</a>
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyrulecollectiongroupapplicationrulecollectionruleprotocol">Firewall<wbr>Policy<wbr>Rule<wbr>Collection<wbr>Group<wbr>Application<wbr>Rule<wbr>Collection<wbr>Rule<wbr>Protocol[]</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies a list of network protocols this rule applies to. Possible values are `TCP`, `UDP`.
+    <dd>{{% md %}}The description which should be used for this rule.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="destinationaddresses_nodejs">
+<a href="#destinationaddresses_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}Specifies a list of destination IP addresses (including CIDR and `*`) or Service Tags.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="destinationfqdntags_nodejs">
@@ -1584,6 +1683,24 @@ The following state arguments are supported:
     <dd>{{% md %}}Specifies a list of destination FQDNs.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="destinationurls_nodejs">
+<a href="#destinationurls_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Urls</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}Specifies a list of destination URLs for which policy should hold. Needs Premium SKU for Firewall Policy. Conflicts with `destination_fqdns`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="protocols_nodejs">
+<a href="#protocols_nodejs" style="color: inherit; text-decoration: inherit;">protocols</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewallpolicyrulecollectiongroupapplicationrulecollectionruleprotocol">Firewall<wbr>Policy<wbr>Rule<wbr>Collection<wbr>Group<wbr>Application<wbr>Rule<wbr>Collection<wbr>Rule<wbr>Protocol[]</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a list of network protocols this rule applies to. Possible values are `TCP`, `UDP`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="sourceaddresses_nodejs">
 <a href="#sourceaddresses_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Addresses</a>
 </span>
@@ -1600,6 +1717,24 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies a list of source IP groups.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="terminatetls_nodejs">
+<a href="#terminatetls_nodejs" style="color: inherit; text-decoration: inherit;">terminate<wbr>Tls</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Boolean specifying if TLS shall be terminated (true) or not (false). Needs Premium SKU for Firewall Policy.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="webcategories_nodejs">
+<a href="#webcategories_nodejs" style="color: inherit; text-decoration: inherit;">web<wbr>Categories</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}Specifies a list of web categories to which access is denied or allowed depending on the value of `action` above. Needs Premium SKU for Firewall Policy.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1613,15 +1748,24 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this rule.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="protocols_python">
-<a href="#protocols_python" style="color: inherit; text-decoration: inherit;">protocols</a>
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyrulecollectiongroupapplicationrulecollectionruleprotocol">Sequence[Firewall<wbr>Policy<wbr>Rule<wbr>Collection<wbr>Group<wbr>Application<wbr>Rule<wbr>Collection<wbr>Rule<wbr>Protocol]</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies a list of network protocols this rule applies to. Possible values are `TCP`, `UDP`.
+    <dd>{{% md %}}The description which should be used for this rule.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="destination_addresses_python">
+<a href="#destination_addresses_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}Specifies a list of destination IP addresses (including CIDR and `*`) or Service Tags.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="destination_fqdn_tags_python">
@@ -1642,6 +1786,24 @@ The following state arguments are supported:
     <dd>{{% md %}}Specifies a list of destination FQDNs.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="destination_urls_python">
+<a href="#destination_urls_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>urls</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}Specifies a list of destination URLs for which policy should hold. Needs Premium SKU for Firewall Policy. Conflicts with `destination_fqdns`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="protocols_python">
+<a href="#protocols_python" style="color: inherit; text-decoration: inherit;">protocols</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewallpolicyrulecollectiongroupapplicationrulecollectionruleprotocol">Sequence[Firewall<wbr>Policy<wbr>Rule<wbr>Collection<wbr>Group<wbr>Application<wbr>Rule<wbr>Collection<wbr>Rule<wbr>Protocol]</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a list of network protocols this rule applies to. Possible values are `TCP`, `UDP`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="source_addresses_python">
 <a href="#source_addresses_python" style="color: inherit; text-decoration: inherit;">source_<wbr>addresses</a>
 </span>
@@ -1658,6 +1820,24 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies a list of source IP groups.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="terminate_tls_python">
+<a href="#terminate_tls_python" style="color: inherit; text-decoration: inherit;">terminate_<wbr>tls</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Boolean specifying if TLS shall be terminated (true) or not (false). Needs Premium SKU for Firewall Policy.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="web_categories_python">
+<a href="#web_categories_python" style="color: inherit; text-decoration: inherit;">web_<wbr>categories</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}Specifies a list of web categories to which access is denied or allowed depending on the value of `action` above. Needs Premium SKU for Firewall Policy.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

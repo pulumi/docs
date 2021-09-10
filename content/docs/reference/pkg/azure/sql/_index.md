@@ -16,6 +16,8 @@ Explore the resources and functions of the azure.sql module.
     <li><a href="elasticpool" title="ElasticPool"><span class="symbol resource"></span>ElasticPool</a></li>
     <li><a href="failovergroup" title="FailoverGroup"><span class="symbol resource"></span>FailoverGroup</a></li>
     <li><a href="firewallrule" title="FirewallRule"><span class="symbol resource"></span>FirewallRule</a></li>
+    <li><a href="manageddatabase" title="ManagedDatabase"><span class="symbol resource"></span>ManagedDatabase</a></li>
+    <li><a href="managedinstance" title="ManagedInstance"><span class="symbol resource"></span>ManagedInstance</a></li>
     <li><a href="sqlserver" title="SqlServer"><span class="symbol resource"></span>SqlServer</a></li>
     <li><a href="virtualnetworkrule" title="VirtualNetworkRule"><span class="symbol resource"></span>VirtualNetworkRule</a></li>
 </ul>
@@ -35,6 +37,6 @@ Explore the resources and functions of the azure.sql module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/hashicorp/terraform-provider-azurerm).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.17.0</dd>
+	<dd>4.18.0</dd>
 </dl>
 

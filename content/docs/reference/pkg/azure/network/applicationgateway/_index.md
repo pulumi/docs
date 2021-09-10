@@ -498,7 +498,9 @@ const network = new azure.network.ApplicationGateway("network", {
                        <span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[ApplicationGatewaySkuArgs]</span> = None<span class="p">,</span>
                        <span class="nx">ssl_certificates</span><span class="p">:</span> <span class="nx">Optional[Sequence[ApplicationGatewaySslCertificateArgs]]</span> = None<span class="p">,</span>
                        <span class="nx">ssl_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[ApplicationGatewaySslPolicyArgs]]</span> = None<span class="p">,</span>
+                       <span class="nx">ssl_profiles</span><span class="p">:</span> <span class="nx">Optional[Sequence[ApplicationGatewaySslProfileArgs]]</span> = None<span class="p">,</span>
                        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+                       <span class="nx">trusted_client_certificates</span><span class="p">:</span> <span class="nx">Optional[Sequence[ApplicationGatewayTrustedClientCertificateArgs]]</span> = None<span class="p">,</span>
                        <span class="nx">trusted_root_certificates</span><span class="p">:</span> <span class="nx">Optional[Sequence[ApplicationGatewayTrustedRootCertificateArgs]]</span> = None<span class="p">,</span>
                        <span class="nx">url_path_maps</span><span class="p">:</span> <span class="nx">Optional[Sequence[ApplicationGatewayUrlPathMapArgs]]</span> = None<span class="p">,</span>
                        <span class="nx">waf_configuration</span><span class="p">:</span> <span class="nx">Optional[ApplicationGatewayWafConfigurationArgs]</span> = None<span class="p">,</span>
@@ -830,6 +832,15 @@ The ApplicationGateway resource accepts the following [input]({{< relref "/docs/
     <dd>{{% md %}}a `ssl policy` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="sslprofiles_csharp">
+<a href="#sslprofiles_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Profiles</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#applicationgatewaysslprofile">List&lt;Application<wbr>Gateway<wbr>Ssl<wbr>Profile<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `ssl_profile` blocks as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
@@ -837,6 +848,15 @@ The ApplicationGateway resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="trustedclientcertificates_csharp">
+<a href="#trustedclientcertificates_csharp" style="color: inherit; text-decoration: inherit;">Trusted<wbr>Client<wbr>Certificates</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#applicationgatewaytrustedclientcertificate">List&lt;Application<wbr>Gateway<wbr>Trusted<wbr>Client<wbr>Certificate<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `trusted_client_certificate` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="trustedrootcertificates_csharp">
@@ -1077,6 +1097,15 @@ The ApplicationGateway resource accepts the following [input]({{< relref "/docs/
     <dd>{{% md %}}a `ssl policy` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="sslprofiles_go">
+<a href="#sslprofiles_go" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Profiles</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#applicationgatewaysslprofile">[]Application<wbr>Gateway<wbr>Ssl<wbr>Profile<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `ssl_profile` blocks as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
@@ -1084,6 +1113,15 @@ The ApplicationGateway resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="trustedclientcertificates_go">
+<a href="#trustedclientcertificates_go" style="color: inherit; text-decoration: inherit;">Trusted<wbr>Client<wbr>Certificates</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#applicationgatewaytrustedclientcertificate">[]Application<wbr>Gateway<wbr>Trusted<wbr>Client<wbr>Certificate<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `trusted_client_certificate` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="trustedrootcertificates_go">
@@ -1324,6 +1362,15 @@ The ApplicationGateway resource accepts the following [input]({{< relref "/docs/
     <dd>{{% md %}}a `ssl policy` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="sslprofiles_nodejs">
+<a href="#sslprofiles_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Profiles</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#applicationgatewaysslprofile">Application<wbr>Gateway<wbr>Ssl<wbr>Profile<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `ssl_profile` blocks as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
@@ -1331,6 +1378,15 @@ The ApplicationGateway resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="trustedclientcertificates_nodejs">
+<a href="#trustedclientcertificates_nodejs" style="color: inherit; text-decoration: inherit;">trusted<wbr>Client<wbr>Certificates</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#applicationgatewaytrustedclientcertificate">Application<wbr>Gateway<wbr>Trusted<wbr>Client<wbr>Certificate<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `trusted_client_certificate` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="trustedrootcertificates_nodejs">
@@ -1571,6 +1627,15 @@ The ApplicationGateway resource accepts the following [input]({{< relref "/docs/
     <dd>{{% md %}}a `ssl policy` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="ssl_profiles_python">
+<a href="#ssl_profiles_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>profiles</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#applicationgatewaysslprofile">Sequence[Application<wbr>Gateway<wbr>Ssl<wbr>Profile<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `ssl_profile` blocks as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
@@ -1578,6 +1643,15 @@ The ApplicationGateway resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="trusted_client_certificates_python">
+<a href="#trusted_client_certificates_python" style="color: inherit; text-decoration: inherit;">trusted_<wbr>client_<wbr>certificates</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#applicationgatewaytrustedclientcertificate">Sequence[Application<wbr>Gateway<wbr>Trusted<wbr>Client<wbr>Certificate<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `trusted_client_certificate` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="trusted_root_certificates_python">
@@ -1710,7 +1784,9 @@ Get an existing ApplicationGateway resource's state with the given name, ID, and
         <span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[ApplicationGatewaySkuArgs]</span> = None<span class="p">,</span>
         <span class="nx">ssl_certificates</span><span class="p">:</span> <span class="nx">Optional[Sequence[ApplicationGatewaySslCertificateArgs]]</span> = None<span class="p">,</span>
         <span class="nx">ssl_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[ApplicationGatewaySslPolicyArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">ssl_profiles</span><span class="p">:</span> <span class="nx">Optional[Sequence[ApplicationGatewaySslProfileArgs]]</span> = None<span class="p">,</span>
         <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+        <span class="nx">trusted_client_certificates</span><span class="p">:</span> <span class="nx">Optional[Sequence[ApplicationGatewayTrustedClientCertificateArgs]]</span> = None<span class="p">,</span>
         <span class="nx">trusted_root_certificates</span><span class="p">:</span> <span class="nx">Optional[Sequence[ApplicationGatewayTrustedRootCertificateArgs]]</span> = None<span class="p">,</span>
         <span class="nx">url_path_maps</span><span class="p">:</span> <span class="nx">Optional[Sequence[ApplicationGatewayUrlPathMapArgs]]</span> = None<span class="p">,</span>
         <span class="nx">waf_configuration</span><span class="p">:</span> <span class="nx">Optional[ApplicationGatewayWafConfigurationArgs]</span> = None<span class="p">,</span>
@@ -2025,6 +2101,15 @@ The following state arguments are supported:
     <dd>{{% md %}}a `ssl policy` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_sslprofiles_csharp">
+<a href="#state_sslprofiles_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Profiles</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#applicationgatewaysslprofile">List&lt;Application<wbr>Gateway<wbr>Ssl<wbr>Profile<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `ssl_profile` blocks as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
@@ -2032,6 +2117,15 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_trustedclientcertificates_csharp">
+<a href="#state_trustedclientcertificates_csharp" style="color: inherit; text-decoration: inherit;">Trusted<wbr>Client<wbr>Certificates</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#applicationgatewaytrustedclientcertificate">List&lt;Application<wbr>Gateway<wbr>Trusted<wbr>Client<wbr>Certificate<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `trusted_client_certificate` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_trustedrootcertificates_csharp">
@@ -2272,6 +2366,15 @@ The following state arguments are supported:
     <dd>{{% md %}}a `ssl policy` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_sslprofiles_go">
+<a href="#state_sslprofiles_go" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Profiles</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#applicationgatewaysslprofile">[]Application<wbr>Gateway<wbr>Ssl<wbr>Profile<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `ssl_profile` blocks as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
@@ -2279,6 +2382,15 @@ The following state arguments are supported:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_trustedclientcertificates_go">
+<a href="#state_trustedclientcertificates_go" style="color: inherit; text-decoration: inherit;">Trusted<wbr>Client<wbr>Certificates</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#applicationgatewaytrustedclientcertificate">[]Application<wbr>Gateway<wbr>Trusted<wbr>Client<wbr>Certificate<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `trusted_client_certificate` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_trustedrootcertificates_go">
@@ -2519,6 +2631,15 @@ The following state arguments are supported:
     <dd>{{% md %}}a `ssl policy` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_sslprofiles_nodejs">
+<a href="#state_sslprofiles_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Profiles</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#applicationgatewaysslprofile">Application<wbr>Gateway<wbr>Ssl<wbr>Profile<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `ssl_profile` blocks as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
@@ -2526,6 +2647,15 @@ The following state arguments are supported:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_trustedclientcertificates_nodejs">
+<a href="#state_trustedclientcertificates_nodejs" style="color: inherit; text-decoration: inherit;">trusted<wbr>Client<wbr>Certificates</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#applicationgatewaytrustedclientcertificate">Application<wbr>Gateway<wbr>Trusted<wbr>Client<wbr>Certificate<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `trusted_client_certificate` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_trustedrootcertificates_nodejs">
@@ -2766,6 +2896,15 @@ The following state arguments are supported:
     <dd>{{% md %}}a `ssl policy` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_ssl_profiles_python">
+<a href="#state_ssl_profiles_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>profiles</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#applicationgatewaysslprofile">Sequence[Application<wbr>Gateway<wbr>Ssl<wbr>Profile<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `ssl_profile` blocks as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
@@ -2773,6 +2912,15 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_trusted_client_certificates_python">
+<a href="#state_trusted_client_certificates_python" style="color: inherit; text-decoration: inherit;">trusted_<wbr>client_<wbr>certificates</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#applicationgatewaytrustedclientcertificate">Sequence[Application<wbr>Gateway<wbr>Trusted<wbr>Client<wbr>Certificate<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `trusted_client_certificate` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_trusted_root_certificates_python">
@@ -4605,7 +4753,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the Web Application Firewall Policy which should be used as a HTTP Listener.
+    <dd>{{% md %}}The ID of the Web Application Firewall Policy which should be used for this HTTP Listener.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="frontendipconfigurationid_csharp">
@@ -4678,6 +4826,24 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the associated SSL Certificate which should be used for this HTTP Listener.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sslprofileid_csharp">
+<a href="#sslprofileid_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Profile<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the associated SSL Certificate.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sslprofilename_csharp">
+<a href="#sslprofilename_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Profile<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the associated SSL Profile which should be used for this HTTP Listener.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -4735,7 +4901,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the Web Application Firewall Policy which should be used as a HTTP Listener.
+    <dd>{{% md %}}The ID of the Web Application Firewall Policy which should be used for this HTTP Listener.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="frontendipconfigurationid_go">
@@ -4808,6 +4974,24 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the associated SSL Certificate which should be used for this HTTP Listener.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sslprofileid_go">
+<a href="#sslprofileid_go" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Profile<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the associated SSL Certificate.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sslprofilename_go">
+<a href="#sslprofilename_go" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Profile<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the associated SSL Profile which should be used for this HTTP Listener.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -4865,7 +5049,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the Web Application Firewall Policy which should be used as a HTTP Listener.
+    <dd>{{% md %}}The ID of the Web Application Firewall Policy which should be used for this HTTP Listener.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="frontendipconfigurationid_nodejs">
@@ -4938,6 +5122,24 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the associated SSL Certificate which should be used for this HTTP Listener.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sslprofileid_nodejs">
+<a href="#sslprofileid_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Profile<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the associated SSL Certificate.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sslprofilename_nodejs">
+<a href="#sslprofilename_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Profile<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the associated SSL Profile which should be used for this HTTP Listener.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -4995,7 +5197,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ID of the Web Application Firewall Policy which should be used as a HTTP Listener.
+    <dd>{{% md %}}The ID of the Web Application Firewall Policy which should be used for this HTTP Listener.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="frontend_ip_configuration_id_python">
@@ -5068,6 +5270,24 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the associated SSL Certificate which should be used for this HTTP Listener.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ssl_profile_id_python">
+<a href="#ssl_profile_id_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>profile_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ID of the associated SSL Certificate.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ssl_profile_name_python">
+<a href="#ssl_profile_name_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>profile_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the associated SSL Profile which should be used for this HTTP Listener.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -8074,6 +8294,532 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Type of the Policy. Possible values are `Predefined` and `Custom`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="applicationgatewaysslprofile">Application<wbr>Gateway<wbr>Ssl<wbr>Profile</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the SSL Profile that is unique within this Application Gateway.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Rewrite Rule Set
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sslpolicies_csharp">
+<a href="#sslpolicies_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Policies</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#applicationgatewaysslprofilesslpolicy">List&lt;Application<wbr>Gateway<wbr>Ssl<wbr>Profile<wbr>Ssl<wbr>Policy&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}a `ssl policy` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="trustedclientcertificatenames_csharp">
+<a href="#trustedclientcertificatenames_csharp" style="color: inherit; text-decoration: inherit;">Trusted<wbr>Client<wbr>Certificate<wbr>Names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The name of the Trusted Client Certificate that will be used to authenticate requests from clients.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="verifyclientcertissuerdn_csharp">
+<a href="#verifyclientcertissuerdn_csharp" style="color: inherit; text-decoration: inherit;">Verify<wbr>Client<wbr>Cert<wbr>Issuer<wbr>Dn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Should client certificate issuer DN be verified?  Defaults to `false`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the SSL Profile that is unique within this Application Gateway.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Rewrite Rule Set
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sslpolicies_go">
+<a href="#sslpolicies_go" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Policies</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#applicationgatewaysslprofilesslpolicy">[]Application<wbr>Gateway<wbr>Ssl<wbr>Profile<wbr>Ssl<wbr>Policy</a></span>
+    </dt>
+    <dd>{{% md %}}a `ssl policy` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="trustedclientcertificatenames_go">
+<a href="#trustedclientcertificatenames_go" style="color: inherit; text-decoration: inherit;">Trusted<wbr>Client<wbr>Certificate<wbr>Names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The name of the Trusted Client Certificate that will be used to authenticate requests from clients.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="verifyclientcertissuerdn_go">
+<a href="#verifyclientcertissuerdn_go" style="color: inherit; text-decoration: inherit;">Verify<wbr>Client<wbr>Cert<wbr>Issuer<wbr>Dn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Should client certificate issuer DN be verified?  Defaults to `false`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the SSL Profile that is unique within this Application Gateway.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Rewrite Rule Set
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sslpolicies_nodejs">
+<a href="#sslpolicies_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Policies</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#applicationgatewaysslprofilesslpolicy">Application<wbr>Gateway<wbr>Ssl<wbr>Profile<wbr>Ssl<wbr>Policy[]</a></span>
+    </dt>
+    <dd>{{% md %}}a `ssl policy` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="trustedclientcertificatenames_nodejs">
+<a href="#trustedclientcertificatenames_nodejs" style="color: inherit; text-decoration: inherit;">trusted<wbr>Client<wbr>Certificate<wbr>Names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The name of the Trusted Client Certificate that will be used to authenticate requests from clients.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="verifyclientcertissuerdn_nodejs">
+<a href="#verifyclientcertissuerdn_nodejs" style="color: inherit; text-decoration: inherit;">verify<wbr>Client<wbr>Cert<wbr>Issuer<wbr>Dn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Should client certificate issuer DN be verified?  Defaults to `false`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the SSL Profile that is unique within this Application Gateway.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Rewrite Rule Set
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ssl_policies_python">
+<a href="#ssl_policies_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>policies</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#applicationgatewaysslprofilesslpolicy">Sequence[Application<wbr>Gateway<wbr>Ssl<wbr>Profile<wbr>Ssl<wbr>Policy]</a></span>
+    </dt>
+    <dd>{{% md %}}a `ssl policy` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="trusted_client_certificate_names_python">
+<a href="#trusted_client_certificate_names_python" style="color: inherit; text-decoration: inherit;">trusted_<wbr>client_<wbr>certificate_<wbr>names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}The name of the Trusted Client Certificate that will be used to authenticate requests from clients.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="verify_client_cert_issuer_dn_python">
+<a href="#verify_client_cert_issuer_dn_python" style="color: inherit; text-decoration: inherit;">verify_<wbr>client_<wbr>cert_<wbr>issuer_<wbr>dn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Should client certificate issuer DN be verified?  Defaults to `false`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="applicationgatewaysslprofilesslpolicy">Application<wbr>Gateway<wbr>Ssl<wbr>Profile<wbr>Ssl<wbr>Policy</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="ciphersuites_csharp">
+<a href="#ciphersuites_csharp" style="color: inherit; text-decoration: inherit;">Cipher<wbr>Suites</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A List of accepted cipher suites. Possible values are: `TLS_DHE_DSS_WITH_AES_128_CBC_SHA`, `TLS_DHE_DSS_WITH_AES_128_CBC_SHA256`, `TLS_DHE_DSS_WITH_AES_256_CBC_SHA`, `TLS_DHE_DSS_WITH_AES_256_CBC_SHA256`, `TLS_DHE_RSA_WITH_AES_128_CBC_SHA`, `TLS_DHE_RSA_WITH_AES_128_GCM_SHA256`, `TLS_DHE_RSA_WITH_AES_256_CBC_SHA`, `TLS_DHE_RSA_WITH_AES_256_GCM_SHA384`, `TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA`, `TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256`, `TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256`, `TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA`, `TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384`, `TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384`, `TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA`, `TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256`, `TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA`, `TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384`, `TLS_RSA_WITH_3DES_EDE_CBC_SHA`, `TLS_RSA_WITH_AES_128_CBC_SHA`, `TLS_RSA_WITH_AES_128_CBC_SHA256`, `TLS_RSA_WITH_AES_128_GCM_SHA256`, `TLS_RSA_WITH_AES_256_CBC_SHA`, `TLS_RSA_WITH_AES_256_CBC_SHA256` and `TLS_RSA_WITH_AES_256_GCM_SHA384`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disabledprotocols_csharp">
+<a href="#disabledprotocols_csharp" style="color: inherit; text-decoration: inherit;">Disabled<wbr>Protocols</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of SSL Protocols which should be disabled on this Application Gateway. Possible values are `TLSv1_0`, `TLSv1_1` and `TLSv1_2`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="minprotocolversion_csharp">
+<a href="#minprotocolversion_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Protocol<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The minimal TLS version. Possible values are `TLSv1_0`, `TLSv1_1` and `TLSv1_2`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="policyname_csharp">
+<a href="#policyname_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Name of the Policy e.g AppGwSslPolicy20170401S. Required if `policy_type` is set to `Predefined`. Possible values can change over time and
+are published here https://docs.microsoft.com/en-us/azure/application-gateway/application-gateway-ssl-policy-overview. Not compatible with `disabled_protocols`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="policytype_csharp">
+<a href="#policytype_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Type of the Policy. Possible values are `Predefined` and `Custom`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="ciphersuites_go">
+<a href="#ciphersuites_go" style="color: inherit; text-decoration: inherit;">Cipher<wbr>Suites</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A List of accepted cipher suites. Possible values are: `TLS_DHE_DSS_WITH_AES_128_CBC_SHA`, `TLS_DHE_DSS_WITH_AES_128_CBC_SHA256`, `TLS_DHE_DSS_WITH_AES_256_CBC_SHA`, `TLS_DHE_DSS_WITH_AES_256_CBC_SHA256`, `TLS_DHE_RSA_WITH_AES_128_CBC_SHA`, `TLS_DHE_RSA_WITH_AES_128_GCM_SHA256`, `TLS_DHE_RSA_WITH_AES_256_CBC_SHA`, `TLS_DHE_RSA_WITH_AES_256_GCM_SHA384`, `TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA`, `TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256`, `TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256`, `TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA`, `TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384`, `TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384`, `TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA`, `TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256`, `TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA`, `TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384`, `TLS_RSA_WITH_3DES_EDE_CBC_SHA`, `TLS_RSA_WITH_AES_128_CBC_SHA`, `TLS_RSA_WITH_AES_128_CBC_SHA256`, `TLS_RSA_WITH_AES_128_GCM_SHA256`, `TLS_RSA_WITH_AES_256_CBC_SHA`, `TLS_RSA_WITH_AES_256_CBC_SHA256` and `TLS_RSA_WITH_AES_256_GCM_SHA384`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disabledprotocols_go">
+<a href="#disabledprotocols_go" style="color: inherit; text-decoration: inherit;">Disabled<wbr>Protocols</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of SSL Protocols which should be disabled on this Application Gateway. Possible values are `TLSv1_0`, `TLSv1_1` and `TLSv1_2`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="minprotocolversion_go">
+<a href="#minprotocolversion_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Protocol<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The minimal TLS version. Possible values are `TLSv1_0`, `TLSv1_1` and `TLSv1_2`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="policyname_go">
+<a href="#policyname_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Name of the Policy e.g AppGwSslPolicy20170401S. Required if `policy_type` is set to `Predefined`. Possible values can change over time and
+are published here https://docs.microsoft.com/en-us/azure/application-gateway/application-gateway-ssl-policy-overview. Not compatible with `disabled_protocols`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="policytype_go">
+<a href="#policytype_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Type of the Policy. Possible values are `Predefined` and `Custom`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="ciphersuites_nodejs">
+<a href="#ciphersuites_nodejs" style="color: inherit; text-decoration: inherit;">cipher<wbr>Suites</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A List of accepted cipher suites. Possible values are: `TLS_DHE_DSS_WITH_AES_128_CBC_SHA`, `TLS_DHE_DSS_WITH_AES_128_CBC_SHA256`, `TLS_DHE_DSS_WITH_AES_256_CBC_SHA`, `TLS_DHE_DSS_WITH_AES_256_CBC_SHA256`, `TLS_DHE_RSA_WITH_AES_128_CBC_SHA`, `TLS_DHE_RSA_WITH_AES_128_GCM_SHA256`, `TLS_DHE_RSA_WITH_AES_256_CBC_SHA`, `TLS_DHE_RSA_WITH_AES_256_GCM_SHA384`, `TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA`, `TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256`, `TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256`, `TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA`, `TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384`, `TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384`, `TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA`, `TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256`, `TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA`, `TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384`, `TLS_RSA_WITH_3DES_EDE_CBC_SHA`, `TLS_RSA_WITH_AES_128_CBC_SHA`, `TLS_RSA_WITH_AES_128_CBC_SHA256`, `TLS_RSA_WITH_AES_128_GCM_SHA256`, `TLS_RSA_WITH_AES_256_CBC_SHA`, `TLS_RSA_WITH_AES_256_CBC_SHA256` and `TLS_RSA_WITH_AES_256_GCM_SHA384`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disabledprotocols_nodejs">
+<a href="#disabledprotocols_nodejs" style="color: inherit; text-decoration: inherit;">disabled<wbr>Protocols</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of SSL Protocols which should be disabled on this Application Gateway. Possible values are `TLSv1_0`, `TLSv1_1` and `TLSv1_2`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="minprotocolversion_nodejs">
+<a href="#minprotocolversion_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Protocol<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The minimal TLS version. Possible values are `TLSv1_0`, `TLSv1_1` and `TLSv1_2`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="policyname_nodejs">
+<a href="#policyname_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Name of the Policy e.g AppGwSslPolicy20170401S. Required if `policy_type` is set to `Predefined`. Possible values can change over time and
+are published here https://docs.microsoft.com/en-us/azure/application-gateway/application-gateway-ssl-policy-overview. Not compatible with `disabled_protocols`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="policytype_nodejs">
+<a href="#policytype_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Type of the Policy. Possible values are `Predefined` and `Custom`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="cipher_suites_python">
+<a href="#cipher_suites_python" style="color: inherit; text-decoration: inherit;">cipher_<wbr>suites</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A List of accepted cipher suites. Possible values are: `TLS_DHE_DSS_WITH_AES_128_CBC_SHA`, `TLS_DHE_DSS_WITH_AES_128_CBC_SHA256`, `TLS_DHE_DSS_WITH_AES_256_CBC_SHA`, `TLS_DHE_DSS_WITH_AES_256_CBC_SHA256`, `TLS_DHE_RSA_WITH_AES_128_CBC_SHA`, `TLS_DHE_RSA_WITH_AES_128_GCM_SHA256`, `TLS_DHE_RSA_WITH_AES_256_CBC_SHA`, `TLS_DHE_RSA_WITH_AES_256_GCM_SHA384`, `TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA`, `TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256`, `TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256`, `TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA`, `TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384`, `TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384`, `TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA`, `TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256`, `TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA`, `TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384`, `TLS_RSA_WITH_3DES_EDE_CBC_SHA`, `TLS_RSA_WITH_AES_128_CBC_SHA`, `TLS_RSA_WITH_AES_128_CBC_SHA256`, `TLS_RSA_WITH_AES_128_GCM_SHA256`, `TLS_RSA_WITH_AES_256_CBC_SHA`, `TLS_RSA_WITH_AES_256_CBC_SHA256` and `TLS_RSA_WITH_AES_256_GCM_SHA384`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disabled_protocols_python">
+<a href="#disabled_protocols_python" style="color: inherit; text-decoration: inherit;">disabled_<wbr>protocols</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of SSL Protocols which should be disabled on this Application Gateway. Possible values are `TLSv1_0`, `TLSv1_1` and `TLSv1_2`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="min_protocol_version_python">
+<a href="#min_protocol_version_python" style="color: inherit; text-decoration: inherit;">min_<wbr>protocol_<wbr>version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The minimal TLS version. Possible values are `TLSv1_0`, `TLSv1_1` and `TLSv1_2`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="policy_name_python">
+<a href="#policy_name_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Name of the Policy e.g AppGwSslPolicy20170401S. Required if `policy_type` is set to `Predefined`. Possible values can change over time and
+are published here https://docs.microsoft.com/en-us/azure/application-gateway/application-gateway-ssl-policy-overview. Not compatible with `disabled_protocols`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="policy_type_python">
+<a href="#policy_type_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Type of the Policy. Possible values are `Predefined` and `Custom`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="applicationgatewaytrustedclientcertificate">Application<wbr>Gateway<wbr>Trusted<wbr>Client<wbr>Certificate</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="data_csharp">
+<a href="#data_csharp" style="color: inherit; text-decoration: inherit;">Data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The base-64 encoded certificate.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the Trusted Client Certificate that is unique within this Application Gateway.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Rewrite Rule Set
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="data_go">
+<a href="#data_go" style="color: inherit; text-decoration: inherit;">Data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The base-64 encoded certificate.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the Trusted Client Certificate that is unique within this Application Gateway.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Rewrite Rule Set
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="data_nodejs">
+<a href="#data_nodejs" style="color: inherit; text-decoration: inherit;">data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The base-64 encoded certificate.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the Trusted Client Certificate that is unique within this Application Gateway.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Rewrite Rule Set
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="data_python">
+<a href="#data_python" style="color: inherit; text-decoration: inherit;">data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The base-64 encoded certificate.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the Trusted Client Certificate that is unique within this Application Gateway.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Rewrite Rule Set
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

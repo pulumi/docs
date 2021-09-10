@@ -2978,25 +2978,7 @@ The following state arguments are supported:
 <h4 id="integrationruntimessisvnetintegration">Integration<wbr>Runtime<wbr>Ssis<wbr>Vnet<wbr>Integration</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="subnetname_csharp">
-<a href="#subnetname_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the subnet to which the nodes of the Azure-SSIS Integration Runtime will be added.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="vnetid_csharp">
-<a href="#vnetid_csharp" style="color: inherit; text-decoration: inherit;">Vnet<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}ID of the virtual network to which the nodes of the Azure-SSIS Integration Runtime will be added.
-{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="publicips_csharp">
 <a href="#publicips_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Ips</a>
@@ -3005,29 +2987,38 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Static public IP addresses for the Azure-SSIS Integration Runtime. The size must be 2.
-{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="subnetname_go">
-<a href="#subnetname_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Name</a>
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="subnetid_csharp">
+<a href="#subnetid_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}id of the subnet to which the nodes of the Azure-SSIS Integration Runtime will be added.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="subnetname_csharp">
+<a href="#subnetname_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the subnet to which the nodes of the Azure-SSIS Integration Runtime will be added.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="vnetid_go">
-<a href="#vnetid_go" style="color: inherit; text-decoration: inherit;">Vnet<wbr>Id</a>
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="vnetid_csharp">
+<a href="#vnetid_csharp" style="color: inherit; text-decoration: inherit;">Vnet<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the virtual network to which the nodes of the Azure-SSIS Integration Runtime will be added.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="publicips_go">
 <a href="#publicips_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Ips</a>
@@ -3036,29 +3027,38 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Static public IP addresses for the Azure-SSIS Integration Runtime. The size must be 2.
-{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="subnetname_nodejs">
-<a href="#subnetname_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Name</a>
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="subnetid_go">
+<a href="#subnetid_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}id of the subnet to which the nodes of the Azure-SSIS Integration Runtime will be added.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="subnetname_go">
+<a href="#subnetname_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the subnet to which the nodes of the Azure-SSIS Integration Runtime will be added.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="vnetid_nodejs">
-<a href="#vnetid_nodejs" style="color: inherit; text-decoration: inherit;">vnet<wbr>Id</a>
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="vnetid_go">
+<a href="#vnetid_go" style="color: inherit; text-decoration: inherit;">Vnet<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the virtual network to which the nodes of the Azure-SSIS Integration Runtime will be added.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="publicips_nodejs">
 <a href="#publicips_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Ips</a>
@@ -3067,29 +3067,38 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Static public IP addresses for the Azure-SSIS Integration Runtime. The size must be 2.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="subnetid_nodejs">
+<a href="#subnetid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}id of the subnet to which the nodes of the Azure-SSIS Integration Runtime will be added.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="subnetname_nodejs">
+<a href="#subnetname_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the subnet to which the nodes of the Azure-SSIS Integration Runtime will be added.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="vnetid_nodejs">
+<a href="#vnetid_nodejs" style="color: inherit; text-decoration: inherit;">vnet<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ID of the virtual network to which the nodes of the Azure-SSIS Integration Runtime will be added.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="subnet_name_python">
-<a href="#subnet_name_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Name of the subnet to which the nodes of the Azure-SSIS Integration Runtime will be added.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="vnet_id_python">
-<a href="#vnet_id_python" style="color: inherit; text-decoration: inherit;">vnet_<wbr>id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}ID of the virtual network to which the nodes of the Azure-SSIS Integration Runtime will be added.
-{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="public_ips_python">
 <a href="#public_ips_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ips</a>
@@ -3098,6 +3107,33 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Static public IP addresses for the Azure-SSIS Integration Runtime. The size must be 2.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="subnet_id_python">
+<a href="#subnet_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}id of the subnet to which the nodes of the Azure-SSIS Integration Runtime will be added.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="subnet_name_python">
+<a href="#subnet_name_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Name of the subnet to which the nodes of the Azure-SSIS Integration Runtime will be added.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="vnet_id_python">
+<a href="#vnet_id_python" style="color: inherit; text-decoration: inherit;">vnet_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}ID of the virtual network to which the nodes of the Azure-SSIS Integration Runtime will be added.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import

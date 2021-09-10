@@ -191,6 +191,7 @@ const testTriggerSchedule = new azure.datafactory.TriggerSchedule("testTriggerSc
                     <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
                     <span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
                     <span class="nx">data_factory_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                    <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                     <span class="nx">end_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                     <span class="nx">frequency</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                     <span class="nx">interval</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
@@ -198,6 +199,7 @@ const testTriggerSchedule = new azure.datafactory.TriggerSchedule("testTriggerSc
                     <span class="nx">pipeline_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                     <span class="nx">pipeline_parameters</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
                     <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                    <span class="nx">schedule</span><span class="p">:</span> <span class="nx">Optional[TriggerScheduleScheduleArgs]</span> = None<span class="p">,</span>
                     <span class="nx">start_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">TriggerSchedule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
@@ -364,6 +366,15 @@ The TriggerSchedule resource accepts the following [input]({{< relref "/docs/int
     <dd>{{% md %}}List of tags that can be used for describing the Data Factory Schedule Trigger.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Schedule Trigger's description.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="endtime_csharp">
 <a href="#endtime_csharp" style="color: inherit; text-decoration: inherit;">End<wbr>Time</a>
 </span>
@@ -379,7 +390,7 @@ The TriggerSchedule resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The trigger freqency. Valid values include `Minute`, `Hour`, `Day`, `Week`, `Month`. Defaults to `Minute`.
+    <dd>{{% md %}}The trigger frequency. Valid values include `Minute`, `Hour`, `Day`, `Week`, `Month`. Defaults to `Minute`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="interval_csharp">
@@ -407,6 +418,15 @@ The TriggerSchedule resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}The pipeline parameters that the trigger will act upon.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="schedule_csharp">
+<a href="#schedule_csharp" style="color: inherit; text-decoration: inherit;">Schedule</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#triggerscheduleschedule">Trigger<wbr>Schedule<wbr>Schedule<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `schedule` block as defined below, which further specifies the recurrence schedule for the trigger. A schedule is capable of limiting or increasing the number of trigger executions specified by the `frequency` and `interval` properties.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="starttime_csharp">
@@ -458,6 +478,15 @@ The TriggerSchedule resource accepts the following [input]({{< relref "/docs/int
     <dd>{{% md %}}List of tags that can be used for describing the Data Factory Schedule Trigger.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Schedule Trigger's description.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="endtime_go">
 <a href="#endtime_go" style="color: inherit; text-decoration: inherit;">End<wbr>Time</a>
 </span>
@@ -473,7 +502,7 @@ The TriggerSchedule resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The trigger freqency. Valid values include `Minute`, `Hour`, `Day`, `Week`, `Month`. Defaults to `Minute`.
+    <dd>{{% md %}}The trigger frequency. Valid values include `Minute`, `Hour`, `Day`, `Week`, `Month`. Defaults to `Minute`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="interval_go">
@@ -501,6 +530,15 @@ The TriggerSchedule resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}The pipeline parameters that the trigger will act upon.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="schedule_go">
+<a href="#schedule_go" style="color: inherit; text-decoration: inherit;">Schedule</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#triggerscheduleschedule">Trigger<wbr>Schedule<wbr>Schedule<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `schedule` block as defined below, which further specifies the recurrence schedule for the trigger. A schedule is capable of limiting or increasing the number of trigger executions specified by the `frequency` and `interval` properties.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="starttime_go">
@@ -552,6 +590,15 @@ The TriggerSchedule resource accepts the following [input]({{< relref "/docs/int
     <dd>{{% md %}}List of tags that can be used for describing the Data Factory Schedule Trigger.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Schedule Trigger's description.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="endtime_nodejs">
 <a href="#endtime_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Time</a>
 </span>
@@ -567,7 +614,7 @@ The TriggerSchedule resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The trigger freqency. Valid values include `Minute`, `Hour`, `Day`, `Week`, `Month`. Defaults to `Minute`.
+    <dd>{{% md %}}The trigger frequency. Valid values include `Minute`, `Hour`, `Day`, `Week`, `Month`. Defaults to `Minute`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="interval_nodejs">
@@ -595,6 +642,15 @@ The TriggerSchedule resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The pipeline parameters that the trigger will act upon.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="schedule_nodejs">
+<a href="#schedule_nodejs" style="color: inherit; text-decoration: inherit;">schedule</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#triggerscheduleschedule">Trigger<wbr>Schedule<wbr>Schedule<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `schedule` block as defined below, which further specifies the recurrence schedule for the trigger. A schedule is capable of limiting or increasing the number of trigger executions specified by the `frequency` and `interval` properties.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="starttime_nodejs">
@@ -646,6 +702,15 @@ The TriggerSchedule resource accepts the following [input]({{< relref "/docs/int
     <dd>{{% md %}}List of tags that can be used for describing the Data Factory Schedule Trigger.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Schedule Trigger's description.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="end_time_python">
 <a href="#end_time_python" style="color: inherit; text-decoration: inherit;">end_<wbr>time</a>
 </span>
@@ -661,7 +726,7 @@ The TriggerSchedule resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The trigger freqency. Valid values include `Minute`, `Hour`, `Day`, `Week`, `Month`. Defaults to `Minute`.
+    <dd>{{% md %}}The trigger frequency. Valid values include `Minute`, `Hour`, `Day`, `Week`, `Month`. Defaults to `Minute`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="interval_python">
@@ -689,6 +754,15 @@ The TriggerSchedule resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The pipeline parameters that the trigger will act upon.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="schedule_python">
+<a href="#schedule_python" style="color: inherit; text-decoration: inherit;">schedule</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#triggerscheduleschedule">Trigger<wbr>Schedule<wbr>Schedule<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `schedule` block as defined below, which further specifies the recurrence schedule for the trigger. A schedule is capable of limiting or increasing the number of trigger executions specified by the `frequency` and `interval` properties.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="start_time_python">
@@ -774,6 +848,7 @@ Get an existing TriggerSchedule resource's state with the given name, ID, and op
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
         <span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
         <span class="nx">data_factory_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">end_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">frequency</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">interval</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
@@ -781,6 +856,7 @@ Get an existing TriggerSchedule resource's state with the given name, ID, and op
         <span class="nx">pipeline_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">pipeline_parameters</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
         <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">schedule</span><span class="p">:</span> <span class="nx">Optional[TriggerScheduleScheduleArgs]</span> = None<span class="p">,</span>
         <span class="nx">start_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> TriggerSchedule</code></pre></div>
 {{% /choosable %}}
 
@@ -912,6 +988,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The Data Factory name in which to associate the Schedule Trigger with. Changing this forces a new resource.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_description_csharp">
+<a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Schedule Trigger's description.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_endtime_csharp">
 <a href="#state_endtime_csharp" style="color: inherit; text-decoration: inherit;">End<wbr>Time</a>
 </span>
@@ -927,7 +1012,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The trigger freqency. Valid values include `Minute`, `Hour`, `Day`, `Week`, `Month`. Defaults to `Minute`.
+    <dd>{{% md %}}The trigger frequency. Valid values include `Minute`, `Hour`, `Day`, `Week`, `Month`. Defaults to `Minute`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_interval_csharp">
@@ -975,6 +1060,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The name of the resource group in which to create the Data Factory Schedule Trigger. Changing this forces a new resource
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_schedule_csharp">
+<a href="#state_schedule_csharp" style="color: inherit; text-decoration: inherit;">Schedule</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#triggerscheduleschedule">Trigger<wbr>Schedule<wbr>Schedule<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `schedule` block as defined below, which further specifies the recurrence schedule for the trigger. A schedule is capable of limiting or increasing the number of trigger executions specified by the `frequency` and `interval` properties.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_starttime_csharp">
 <a href="#state_starttime_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
 </span>
@@ -1006,6 +1100,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The Data Factory name in which to associate the Schedule Trigger with. Changing this forces a new resource.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_description_go">
+<a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Schedule Trigger's description.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_endtime_go">
 <a href="#state_endtime_go" style="color: inherit; text-decoration: inherit;">End<wbr>Time</a>
 </span>
@@ -1021,7 +1124,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The trigger freqency. Valid values include `Minute`, `Hour`, `Day`, `Week`, `Month`. Defaults to `Minute`.
+    <dd>{{% md %}}The trigger frequency. Valid values include `Minute`, `Hour`, `Day`, `Week`, `Month`. Defaults to `Minute`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_interval_go">
@@ -1069,6 +1172,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The name of the resource group in which to create the Data Factory Schedule Trigger. Changing this forces a new resource
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_schedule_go">
+<a href="#state_schedule_go" style="color: inherit; text-decoration: inherit;">Schedule</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#triggerscheduleschedule">Trigger<wbr>Schedule<wbr>Schedule<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `schedule` block as defined below, which further specifies the recurrence schedule for the trigger. A schedule is capable of limiting or increasing the number of trigger executions specified by the `frequency` and `interval` properties.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_starttime_go">
 <a href="#state_starttime_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
 </span>
@@ -1100,6 +1212,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The Data Factory name in which to associate the Schedule Trigger with. Changing this forces a new resource.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_description_nodejs">
+<a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Schedule Trigger's description.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_endtime_nodejs">
 <a href="#state_endtime_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Time</a>
 </span>
@@ -1115,7 +1236,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The trigger freqency. Valid values include `Minute`, `Hour`, `Day`, `Week`, `Month`. Defaults to `Minute`.
+    <dd>{{% md %}}The trigger frequency. Valid values include `Minute`, `Hour`, `Day`, `Week`, `Month`. Defaults to `Minute`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_interval_nodejs">
@@ -1163,6 +1284,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The name of the resource group in which to create the Data Factory Schedule Trigger. Changing this forces a new resource
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_schedule_nodejs">
+<a href="#state_schedule_nodejs" style="color: inherit; text-decoration: inherit;">schedule</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#triggerscheduleschedule">Trigger<wbr>Schedule<wbr>Schedule<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `schedule` block as defined below, which further specifies the recurrence schedule for the trigger. A schedule is capable of limiting or increasing the number of trigger executions specified by the `frequency` and `interval` properties.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_starttime_nodejs">
 <a href="#state_starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
 </span>
@@ -1194,6 +1324,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The Data Factory name in which to associate the Schedule Trigger with. Changing this forces a new resource.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_description_python">
+<a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Schedule Trigger's description.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_end_time_python">
 <a href="#state_end_time_python" style="color: inherit; text-decoration: inherit;">end_<wbr>time</a>
 </span>
@@ -1209,7 +1348,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The trigger freqency. Valid values include `Minute`, `Hour`, `Day`, `Week`, `Month`. Defaults to `Minute`.
+    <dd>{{% md %}}The trigger frequency. Valid values include `Minute`, `Hour`, `Day`, `Week`, `Month`. Defaults to `Minute`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_interval_python">
@@ -1257,6 +1396,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The name of the resource group in which to create the Data Factory Schedule Trigger. Changing this forces a new resource
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_schedule_python">
+<a href="#state_schedule_python" style="color: inherit; text-decoration: inherit;">schedule</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#triggerscheduleschedule">Trigger<wbr>Schedule<wbr>Schedule<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `schedule` block as defined below, which further specifies the recurrence schedule for the trigger. A schedule is capable of limiting or increasing the number of trigger executions specified by the `frequency` and `interval` properties.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_start_time_python">
 <a href="#state_start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
 </span>
@@ -1271,6 +1419,298 @@ The following state arguments are supported:
 
 
 
+
+## Supporting Types
+
+
+
+<h4 id="triggerscheduleschedule">Trigger<wbr>Schedule<wbr>Schedule</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="daysofmonths_csharp">
+<a href="#daysofmonths_csharp" style="color: inherit; text-decoration: inherit;">Days<wbr>Of<wbr>Months</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;int&gt;</span>
+    </dt>
+    <dd>{{% md %}}Day(s) of the month on which the trigger is scheduled. This value can be specified with a monthly frequency only.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="daysofweeks_csharp">
+<a href="#daysofweeks_csharp" style="color: inherit; text-decoration: inherit;">Days<wbr>Of<wbr>Weeks</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Days of the week on which the trigger is scheduled. This value can be specified only with a weekly frequency.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="hours_csharp">
+<a href="#hours_csharp" style="color: inherit; text-decoration: inherit;">Hours</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;int&gt;</span>
+    </dt>
+    <dd>{{% md %}}Hours of the day on which the trigger is scheduled.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="minutes_csharp">
+<a href="#minutes_csharp" style="color: inherit; text-decoration: inherit;">Minutes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;int&gt;</span>
+    </dt>
+    <dd>{{% md %}}Minutes of the hour on which the trigger is scheduled.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="monthlies_csharp">
+<a href="#monthlies_csharp" style="color: inherit; text-decoration: inherit;">Monthlies</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#triggerscheduleschedulemonthly">List&lt;Trigger<wbr>Schedule<wbr>Schedule<wbr>Monthly&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A `monthly` block as documented below, which specifies the days of the month on which the trigger is scheduled. The value can be specified only with a monthly frequency.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="daysofmonths_go">
+<a href="#daysofmonths_go" style="color: inherit; text-decoration: inherit;">Days<wbr>Of<wbr>Months</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]int</span>
+    </dt>
+    <dd>{{% md %}}Day(s) of the month on which the trigger is scheduled. This value can be specified with a monthly frequency only.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="daysofweeks_go">
+<a href="#daysofweeks_go" style="color: inherit; text-decoration: inherit;">Days<wbr>Of<wbr>Weeks</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}Days of the week on which the trigger is scheduled. This value can be specified only with a weekly frequency.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="hours_go">
+<a href="#hours_go" style="color: inherit; text-decoration: inherit;">Hours</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]int</span>
+    </dt>
+    <dd>{{% md %}}Hours of the day on which the trigger is scheduled.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="minutes_go">
+<a href="#minutes_go" style="color: inherit; text-decoration: inherit;">Minutes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]int</span>
+    </dt>
+    <dd>{{% md %}}Minutes of the hour on which the trigger is scheduled.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="monthlies_go">
+<a href="#monthlies_go" style="color: inherit; text-decoration: inherit;">Monthlies</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#triggerscheduleschedulemonthly">[]Trigger<wbr>Schedule<wbr>Schedule<wbr>Monthly</a></span>
+    </dt>
+    <dd>{{% md %}}A `monthly` block as documented below, which specifies the days of the month on which the trigger is scheduled. The value can be specified only with a monthly frequency.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="daysofmonths_nodejs">
+<a href="#daysofmonths_nodejs" style="color: inherit; text-decoration: inherit;">days<wbr>Of<wbr>Months</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number[]</span>
+    </dt>
+    <dd>{{% md %}}Day(s) of the month on which the trigger is scheduled. This value can be specified with a monthly frequency only.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="daysofweeks_nodejs">
+<a href="#daysofweeks_nodejs" style="color: inherit; text-decoration: inherit;">days<wbr>Of<wbr>Weeks</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}Days of the week on which the trigger is scheduled. This value can be specified only with a weekly frequency.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="hours_nodejs">
+<a href="#hours_nodejs" style="color: inherit; text-decoration: inherit;">hours</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number[]</span>
+    </dt>
+    <dd>{{% md %}}Hours of the day on which the trigger is scheduled.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="minutes_nodejs">
+<a href="#minutes_nodejs" style="color: inherit; text-decoration: inherit;">minutes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number[]</span>
+    </dt>
+    <dd>{{% md %}}Minutes of the hour on which the trigger is scheduled.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="monthlies_nodejs">
+<a href="#monthlies_nodejs" style="color: inherit; text-decoration: inherit;">monthlies</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#triggerscheduleschedulemonthly">Trigger<wbr>Schedule<wbr>Schedule<wbr>Monthly[]</a></span>
+    </dt>
+    <dd>{{% md %}}A `monthly` block as documented below, which specifies the days of the month on which the trigger is scheduled. The value can be specified only with a monthly frequency.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="days_of_months_python">
+<a href="#days_of_months_python" style="color: inherit; text-decoration: inherit;">days_<wbr>of_<wbr>months</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[int]</span>
+    </dt>
+    <dd>{{% md %}}Day(s) of the month on which the trigger is scheduled. This value can be specified with a monthly frequency only.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="days_of_weeks_python">
+<a href="#days_of_weeks_python" style="color: inherit; text-decoration: inherit;">days_<wbr>of_<wbr>weeks</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}Days of the week on which the trigger is scheduled. This value can be specified only with a weekly frequency.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="hours_python">
+<a href="#hours_python" style="color: inherit; text-decoration: inherit;">hours</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[int]</span>
+    </dt>
+    <dd>{{% md %}}Hours of the day on which the trigger is scheduled.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="minutes_python">
+<a href="#minutes_python" style="color: inherit; text-decoration: inherit;">minutes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[int]</span>
+    </dt>
+    <dd>{{% md %}}Minutes of the hour on which the trigger is scheduled.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="monthlies_python">
+<a href="#monthlies_python" style="color: inherit; text-decoration: inherit;">monthlies</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#triggerscheduleschedulemonthly">Sequence[Trigger<wbr>Schedule<wbr>Schedule<wbr>Monthly]</a></span>
+    </dt>
+    <dd>{{% md %}}A `monthly` block as documented below, which specifies the days of the month on which the trigger is scheduled. The value can be specified only with a monthly frequency.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="triggerscheduleschedulemonthly">Trigger<wbr>Schedule<wbr>Schedule<wbr>Monthly</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="weekday_csharp">
+<a href="#weekday_csharp" style="color: inherit; text-decoration: inherit;">Weekday</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The day of the week on which the trigger runs. For example, a `monthly` property with a `weekday` value of `Sunday` means every Sunday of the month.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="week_csharp">
+<a href="#week_csharp" style="color: inherit; text-decoration: inherit;">Week</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The occurrence of the specified day during the month. For example, a `monthly` property with `weekday` and `week` values of `Sunday, -1` means the last Sunday of the month.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="weekday_go">
+<a href="#weekday_go" style="color: inherit; text-decoration: inherit;">Weekday</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The day of the week on which the trigger runs. For example, a `monthly` property with a `weekday` value of `Sunday` means every Sunday of the month.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="week_go">
+<a href="#week_go" style="color: inherit; text-decoration: inherit;">Week</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The occurrence of the specified day during the month. For example, a `monthly` property with `weekday` and `week` values of `Sunday, -1` means the last Sunday of the month.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="weekday_nodejs">
+<a href="#weekday_nodejs" style="color: inherit; text-decoration: inherit;">weekday</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The day of the week on which the trigger runs. For example, a `monthly` property with a `weekday` value of `Sunday` means every Sunday of the month.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="week_nodejs">
+<a href="#week_nodejs" style="color: inherit; text-decoration: inherit;">week</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The occurrence of the specified day during the month. For example, a `monthly` property with `weekday` and `week` values of `Sunday, -1` means the last Sunday of the month.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="weekday_python">
+<a href="#weekday_python" style="color: inherit; text-decoration: inherit;">weekday</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The day of the week on which the trigger runs. For example, a `monthly` property with a `weekday` value of `Sunday` means every Sunday of the month.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="week_python">
+<a href="#week_python" style="color: inherit; text-decoration: inherit;">week</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The occurrence of the specified day during the month. For example, a `monthly` property with `weekday` and `week` values of `Sunday, -1` means the last Sunday of the month.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
 ## Import
 
 

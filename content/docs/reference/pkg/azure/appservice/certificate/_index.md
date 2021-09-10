@@ -26,6 +26,7 @@ Manages an App Service certificate.
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Certificate</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                <span class="nx">app_service_plan_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                 <span class="nx">hosting_environment_profile_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                 <span class="nx">key_vault_secret_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                 <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -172,14 +173,23 @@ The Certificate resource accepts the following [input]({{< relref "/docs/intro/c
     <dd>{{% md %}}The name of the resource group in which to create the certificate. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="appserviceplanid_csharp">
+<a href="#appserviceplanid_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Service<wbr>Plan<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the associated App Service plan. Must be specified when the certificate is used inside an App Service Environment hosted App Service. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="hostingenvironmentprofileid_csharp">
 <a href="#hostingenvironmentprofileid_csharp" style="color: inherit; text-decoration: inherit;">Hosting<wbr>Environment<wbr>Profile<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Must be specified when the certificate is for an App Service Environment hosted App Service. Changing this forces a new resource to be created.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The ID of the the App Service Environment where the certificate is in use.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been deprecated and replaced with `app_service_plan_id`{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="keyvaultsecretid_csharp">
 <a href="#keyvaultsecretid_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Secret<wbr>Id</a>
@@ -247,14 +257,23 @@ The Certificate resource accepts the following [input]({{< relref "/docs/intro/c
     <dd>{{% md %}}The name of the resource group in which to create the certificate. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="appserviceplanid_go">
+<a href="#appserviceplanid_go" style="color: inherit; text-decoration: inherit;">App<wbr>Service<wbr>Plan<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the associated App Service plan. Must be specified when the certificate is used inside an App Service Environment hosted App Service. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="hostingenvironmentprofileid_go">
 <a href="#hostingenvironmentprofileid_go" style="color: inherit; text-decoration: inherit;">Hosting<wbr>Environment<wbr>Profile<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Must be specified when the certificate is for an App Service Environment hosted App Service. Changing this forces a new resource to be created.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The ID of the the App Service Environment where the certificate is in use.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been deprecated and replaced with `app_service_plan_id`{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="keyvaultsecretid_go">
 <a href="#keyvaultsecretid_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Secret<wbr>Id</a>
@@ -322,14 +341,23 @@ The Certificate resource accepts the following [input]({{< relref "/docs/intro/c
     <dd>{{% md %}}The name of the resource group in which to create the certificate. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="appserviceplanid_nodejs">
+<a href="#appserviceplanid_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Service<wbr>Plan<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the associated App Service plan. Must be specified when the certificate is used inside an App Service Environment hosted App Service. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="hostingenvironmentprofileid_nodejs">
 <a href="#hostingenvironmentprofileid_nodejs" style="color: inherit; text-decoration: inherit;">hosting<wbr>Environment<wbr>Profile<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Must be specified when the certificate is for an App Service Environment hosted App Service. Changing this forces a new resource to be created.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The ID of the the App Service Environment where the certificate is in use.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been deprecated and replaced with `app_service_plan_id`{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="keyvaultsecretid_nodejs">
 <a href="#keyvaultsecretid_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault<wbr>Secret<wbr>Id</a>
@@ -397,14 +425,23 @@ The Certificate resource accepts the following [input]({{< relref "/docs/intro/c
     <dd>{{% md %}}The name of the resource group in which to create the certificate. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="app_service_plan_id_python">
+<a href="#app_service_plan_id_python" style="color: inherit; text-decoration: inherit;">app_<wbr>service_<wbr>plan_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ID of the associated App Service plan. Must be specified when the certificate is used inside an App Service Environment hosted App Service. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="hosting_environment_profile_id_python">
 <a href="#hosting_environment_profile_id_python" style="color: inherit; text-decoration: inherit;">hosting_<wbr>environment_<wbr>profile_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Must be specified when the certificate is for an App Service Environment hosted App Service. Changing this forces a new resource to be created.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The ID of the the App Service Environment where the certificate is in use.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been deprecated and replaced with `app_service_plan_id`{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="key_vault_secret_id_python">
 <a href="#key_vault_secret_id_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>secret_<wbr>id</a>
@@ -783,6 +820,7 @@ Get an existing Certificate resource's state with the given name, ID, and option
 <span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">app_service_plan_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">expiration_date</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">friendly_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">host_names</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
@@ -910,6 +948,15 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="state_appserviceplanid_csharp">
+<a href="#state_appserviceplanid_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Service<wbr>Plan<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the associated App Service plan. Must be specified when the certificate is used inside an App Service Environment hosted App Service. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_expirationdate_csharp">
 <a href="#state_expirationdate_csharp" style="color: inherit; text-decoration: inherit;">Expiration<wbr>Date</a>
 </span>
@@ -935,16 +982,16 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of host names the certificate applies to.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_hostingenvironmentprofileid_csharp">
 <a href="#state_hostingenvironmentprofileid_csharp" style="color: inherit; text-decoration: inherit;">Hosting<wbr>Environment<wbr>Profile<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Must be specified when the certificate is for an App Service Environment hosted App Service. Changing this forces a new resource to be created.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The ID of the the App Service Environment where the certificate is in use.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been deprecated and replaced with `app_service_plan_id`{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_issuedate_csharp">
 <a href="#state_issuedate_csharp" style="color: inherit; text-decoration: inherit;">Issue<wbr>Date</a>
@@ -1048,6 +1095,15 @@ The following state arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="state_appserviceplanid_go">
+<a href="#state_appserviceplanid_go" style="color: inherit; text-decoration: inherit;">App<wbr>Service<wbr>Plan<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the associated App Service plan. Must be specified when the certificate is used inside an App Service Environment hosted App Service. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_expirationdate_go">
 <a href="#state_expirationdate_go" style="color: inherit; text-decoration: inherit;">Expiration<wbr>Date</a>
 </span>
@@ -1073,16 +1129,16 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of host names the certificate applies to.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_hostingenvironmentprofileid_go">
 <a href="#state_hostingenvironmentprofileid_go" style="color: inherit; text-decoration: inherit;">Hosting<wbr>Environment<wbr>Profile<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Must be specified when the certificate is for an App Service Environment hosted App Service. Changing this forces a new resource to be created.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The ID of the the App Service Environment where the certificate is in use.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been deprecated and replaced with `app_service_plan_id`{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_issuedate_go">
 <a href="#state_issuedate_go" style="color: inherit; text-decoration: inherit;">Issue<wbr>Date</a>
@@ -1186,6 +1242,15 @@ The following state arguments are supported:
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="state_appserviceplanid_nodejs">
+<a href="#state_appserviceplanid_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Service<wbr>Plan<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the associated App Service plan. Must be specified when the certificate is used inside an App Service Environment hosted App Service. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_expirationdate_nodejs">
 <a href="#state_expirationdate_nodejs" style="color: inherit; text-decoration: inherit;">expiration<wbr>Date</a>
 </span>
@@ -1211,16 +1276,16 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of host names the certificate applies to.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_hostingenvironmentprofileid_nodejs">
 <a href="#state_hostingenvironmentprofileid_nodejs" style="color: inherit; text-decoration: inherit;">hosting<wbr>Environment<wbr>Profile<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Must be specified when the certificate is for an App Service Environment hosted App Service. Changing this forces a new resource to be created.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The ID of the the App Service Environment where the certificate is in use.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been deprecated and replaced with `app_service_plan_id`{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_issuedate_nodejs">
 <a href="#state_issuedate_nodejs" style="color: inherit; text-decoration: inherit;">issue<wbr>Date</a>
@@ -1324,6 +1389,15 @@ The following state arguments are supported:
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="state_app_service_plan_id_python">
+<a href="#state_app_service_plan_id_python" style="color: inherit; text-decoration: inherit;">app_<wbr>service_<wbr>plan_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ID of the associated App Service plan. Must be specified when the certificate is used inside an App Service Environment hosted App Service. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_expiration_date_python">
 <a href="#state_expiration_date_python" style="color: inherit; text-decoration: inherit;">expiration_<wbr>date</a>
 </span>
@@ -1349,16 +1423,16 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of host names the certificate applies to.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_hosting_environment_profile_id_python">
 <a href="#state_hosting_environment_profile_id_python" style="color: inherit; text-decoration: inherit;">hosting_<wbr>environment_<wbr>profile_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Must be specified when the certificate is for an App Service Environment hosted App Service. Changing this forces a new resource to be created.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The ID of the the App Service Environment where the certificate is in use.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been deprecated and replaced with `app_service_plan_id`{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_issue_date_python">
 <a href="#state_issue_date_python" style="color: inherit; text-decoration: inherit;">issue_<wbr>date</a>

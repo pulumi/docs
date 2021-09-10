@@ -162,6 +162,7 @@ const exampleIntegrationRuntimeRule = new azure.datafactory.IntegrationRuntimeRu
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">IntegrationRuntimeRule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                           <span class="nx">cleanup_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                            <span class="nx">compute_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                            <span class="nx">core_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
                            <span class="nx">data_factory_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -318,6 +319,15 @@ The IntegrationRuntimeRule resource accepts the following [input]({{< relref "/d
     <dd>{{% md %}}The name of the resource group in which to create the Managed Integration Runtime. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="cleanupenabled_csharp">
+<a href="#cleanupenabled_csharp" style="color: inherit; text-decoration: inherit;">Cleanup<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Cluster will not be recycled and it will be used in next data flow activity run until TTL (time to live) is reached if this is set as `false`. Default is `true`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="computetype_csharp">
 <a href="#computetype_csharp" style="color: inherit; text-decoration: inherit;">Compute<wbr>Type</a>
 </span>
@@ -401,6 +411,15 @@ The IntegrationRuntimeRule resource accepts the following [input]({{< relref "/d
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the Managed Integration Runtime. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="cleanupenabled_go">
+<a href="#cleanupenabled_go" style="color: inherit; text-decoration: inherit;">Cleanup<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Cluster will not be recycled and it will be used in next data flow activity run until TTL (time to live) is reached if this is set as `false`. Default is `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="computetype_go">
@@ -488,6 +507,15 @@ The IntegrationRuntimeRule resource accepts the following [input]({{< relref "/d
     <dd>{{% md %}}The name of the resource group in which to create the Managed Integration Runtime. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="cleanupenabled_nodejs">
+<a href="#cleanupenabled_nodejs" style="color: inherit; text-decoration: inherit;">cleanup<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Cluster will not be recycled and it will be used in next data flow activity run until TTL (time to live) is reached if this is set as `false`. Default is `true`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="computetype_nodejs">
 <a href="#computetype_nodejs" style="color: inherit; text-decoration: inherit;">compute<wbr>Type</a>
 </span>
@@ -571,6 +599,15 @@ The IntegrationRuntimeRule resource accepts the following [input]({{< relref "/d
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the Managed Integration Runtime. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="cleanup_enabled_python">
+<a href="#cleanup_enabled_python" style="color: inherit; text-decoration: inherit;">cleanup_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Cluster will not be recycled and it will be used in next data flow activity run until TTL (time to live) is reached if this is set as `false`. Default is `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="compute_type_python">
@@ -708,6 +745,7 @@ Get an existing IntegrationRuntimeRule resource's state with the given name, ID,
 <span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">cleanup_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">compute_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">core_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">data_factory_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -829,6 +867,15 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="state_cleanupenabled_csharp">
+<a href="#state_cleanupenabled_csharp" style="color: inherit; text-decoration: inherit;">Cleanup<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Cluster will not be recycled and it will be used in next data flow activity run until TTL (time to live) is reached if this is set as `false`. Default is `true`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_computetype_csharp">
 <a href="#state_computetype_csharp" style="color: inherit; text-decoration: inherit;">Compute<wbr>Type</a>
 </span>
@@ -913,6 +960,15 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="state_cleanupenabled_go">
+<a href="#state_cleanupenabled_go" style="color: inherit; text-decoration: inherit;">Cleanup<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Cluster will not be recycled and it will be used in next data flow activity run until TTL (time to live) is reached if this is set as `false`. Default is `true`.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_computetype_go">
 <a href="#state_computetype_go" style="color: inherit; text-decoration: inherit;">Compute<wbr>Type</a>
@@ -999,6 +1055,15 @@ The following state arguments are supported:
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="state_cleanupenabled_nodejs">
+<a href="#state_cleanupenabled_nodejs" style="color: inherit; text-decoration: inherit;">cleanup<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Cluster will not be recycled and it will be used in next data flow activity run until TTL (time to live) is reached if this is set as `false`. Default is `true`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_computetype_nodejs">
 <a href="#state_computetype_nodejs" style="color: inherit; text-decoration: inherit;">compute<wbr>Type</a>
 </span>
@@ -1083,6 +1148,15 @@ The following state arguments are supported:
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="state_cleanup_enabled_python">
+<a href="#state_cleanup_enabled_python" style="color: inherit; text-decoration: inherit;">cleanup_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Cluster will not be recycled and it will be used in next data flow activity run until TTL (time to live) is reached if this is set as `false`. Default is `true`.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_compute_type_python">
 <a href="#state_compute_type_python" style="color: inherit; text-decoration: inherit;">compute_<wbr>type</a>
