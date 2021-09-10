@@ -18,6 +18,8 @@ The following API permissions are required in order to use this resource.
 
 When authenticated with a service principal, this resource requires one of the following application roles: `Application.ReadWrite.All` or `Directory.ReadWrite.All`
 
+It is not currently possible to manage service principals whilst having only the `Application.ReadWrite.OwnedBy` role granted.
+
 When authenticated with a user principal, this resource requires one of the following directory roles: `Application Administrator` or `Global Administrator`
 
 {{% examples %}}
@@ -205,6 +207,7 @@ const exampleServicePrincipal = new azuread.ServicePrincipal("exampleServicePrin
                      <span class="nx">notification_email_addresses</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
                      <span class="nx">owners</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
                      <span class="nx">preferred_single_sign_on_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                     <span class="nx">saml_single_sign_on</span><span class="p">:</span> <span class="nx">Optional[ServicePrincipalSamlSingleSignOnArgs]</span> = None<span class="p">,</span>
                      <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
                      <span class="nx">use_existing</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
@@ -426,6 +429,15 @@ The ServicePrincipal resource accepts the following [input]({{< relref "/docs/in
     <dd>{{% md %}}The single sign-on mode configured for this application. Azure AD uses the preferred single sign-on mode to launch the application from Microsoft 365 or the Azure AD My Apps. Supported values are `oidc`, `password`, `saml` or `notSupported`. Omit this property or specify a blank string to unset.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="samlsinglesignon_csharp">
+<a href="#samlsinglesignon_csharp" style="color: inherit; text-decoration: inherit;">Saml<wbr>Single<wbr>Sign<wbr>On</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceprincipalsamlsinglesignon">Pulumi.<wbr>Azure<wbr>AD.<wbr>Inputs.<wbr>Service<wbr>Principal<wbr>Saml<wbr>Single<wbr>Sign<wbr>On<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `saml_single_sign_on` block as documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
@@ -536,6 +548,15 @@ The ServicePrincipal resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The single sign-on mode configured for this application. Azure AD uses the preferred single sign-on mode to launch the application from Microsoft 365 or the Azure AD My Apps. Supported values are `oidc`, `password`, `saml` or `notSupported`. Omit this property or specify a blank string to unset.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="samlsinglesignon_go">
+<a href="#samlsinglesignon_go" style="color: inherit; text-decoration: inherit;">Saml<wbr>Single<wbr>Sign<wbr>On</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceprincipalsamlsinglesignon">Service<wbr>Principal<wbr>Saml<wbr>Single<wbr>Sign<wbr>On<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `saml_single_sign_on` block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
@@ -650,6 +671,15 @@ The ServicePrincipal resource accepts the following [input]({{< relref "/docs/in
     <dd>{{% md %}}The single sign-on mode configured for this application. Azure AD uses the preferred single sign-on mode to launch the application from Microsoft 365 or the Azure AD My Apps. Supported values are `oidc`, `password`, `saml` or `notSupported`. Omit this property or specify a blank string to unset.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="samlsinglesignon_nodejs">
+<a href="#samlsinglesignon_nodejs" style="color: inherit; text-decoration: inherit;">saml<wbr>Single<wbr>Sign<wbr>On</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceprincipalsamlsinglesignon">Service<wbr>Principal<wbr>Saml<wbr>Single<wbr>Sign<wbr>On<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `saml_single_sign_on` block as documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
@@ -760,6 +790,15 @@ The ServicePrincipal resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The single sign-on mode configured for this application. Azure AD uses the preferred single sign-on mode to launch the application from Microsoft 365 or the Azure AD My Apps. Supported values are `oidc`, `password`, `saml` or `notSupported`. Omit this property or specify a blank string to unset.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="saml_single_sign_on_python">
+<a href="#saml_single_sign_on_python" style="color: inherit; text-decoration: inherit;">saml_<wbr>single_<wbr>sign_<wbr>on</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceprincipalsamlsinglesignon">Service<wbr>Principal<wbr>Saml<wbr>Single<wbr>Sign<wbr>On<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `saml_single_sign_on` block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
@@ -1377,6 +1416,7 @@ Get an existing ServicePrincipal resource's state with the given name, ID, and o
         <span class="nx">preferred_single_sign_on_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">redirect_uris</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
         <span class="nx">saml_metadata_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">saml_single_sign_on</span><span class="p">:</span> <span class="nx">Optional[ServicePrincipalSamlSingleSignOnArgs]</span> = None<span class="p">,</span>
         <span class="nx">service_principal_names</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
         <span class="nx">sign_in_audience</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
@@ -1683,6 +1723,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The URL where the service exposes SAML metadata for federation.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_samlsinglesignon_csharp">
+<a href="#state_samlsinglesignon_csharp" style="color: inherit; text-decoration: inherit;">Saml<wbr>Single<wbr>Sign<wbr>On</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceprincipalsamlsinglesignon">Pulumi.<wbr>Azure<wbr>AD.<wbr>Inputs.<wbr>Service<wbr>Principal<wbr>Saml<wbr>Single<wbr>Sign<wbr>On<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `saml_single_sign_on` block as documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_serviceprincipalnames_csharp">
 <a href="#state_serviceprincipalnames_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Names</a>
 </span>
@@ -1919,6 +1968,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL where the service exposes SAML metadata for federation.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_samlsinglesignon_go">
+<a href="#state_samlsinglesignon_go" style="color: inherit; text-decoration: inherit;">Saml<wbr>Single<wbr>Sign<wbr>On</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceprincipalsamlsinglesignon">Service<wbr>Principal<wbr>Saml<wbr>Single<wbr>Sign<wbr>On<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `saml_single_sign_on` block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceprincipalnames_go">
@@ -2159,6 +2217,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The URL where the service exposes SAML metadata for federation.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_samlsinglesignon_nodejs">
+<a href="#state_samlsinglesignon_nodejs" style="color: inherit; text-decoration: inherit;">saml<wbr>Single<wbr>Sign<wbr>On</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceprincipalsamlsinglesignon">Service<wbr>Principal<wbr>Saml<wbr>Single<wbr>Sign<wbr>On<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `saml_single_sign_on` block as documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_serviceprincipalnames_nodejs">
 <a href="#state_serviceprincipalnames_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Principal<wbr>Names</a>
 </span>
@@ -2395,6 +2462,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL where the service exposes SAML metadata for federation.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_saml_single_sign_on_python">
+<a href="#state_saml_single_sign_on_python" style="color: inherit; text-decoration: inherit;">saml_<wbr>single_<wbr>sign_<wbr>on</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceprincipalsamlsinglesignon">Service<wbr>Principal<wbr>Saml<wbr>Single<wbr>Sign<wbr>On<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `saml_single_sign_on` block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_service_principal_names_python">
@@ -2989,6 +3065,60 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value that is used for the `scp` claim in OAuth 2.0 access tokens.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="serviceprincipalsamlsinglesignon">Service<wbr>Principal<wbr>Saml<wbr>Single<wbr>Sign<wbr>On</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="relaystate_csharp">
+<a href="#relaystate_csharp" style="color: inherit; text-decoration: inherit;">Relay<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The relative URI the service provider would redirect to after completion of the single sign-on flow.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="relaystate_go">
+<a href="#relaystate_go" style="color: inherit; text-decoration: inherit;">Relay<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The relative URI the service provider would redirect to after completion of the single sign-on flow.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="relaystate_nodejs">
+<a href="#relaystate_nodejs" style="color: inherit; text-decoration: inherit;">relay<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The relative URI the service provider would redirect to after completion of the single sign-on flow.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="relay_state_python">
+<a href="#relay_state_python" style="color: inherit; text-decoration: inherit;">relay_<wbr>state</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The relative URI the service provider would redirect to after completion of the single sign-on flow.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import

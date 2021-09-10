@@ -298,7 +298,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}- Whether or not the service principal account is enabled.
+    <dd>{{% md %}}Whether or not the service principal account is enabled.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="alternativenames_csharp">
@@ -481,6 +481,15 @@ The following output properties are available:
     <dd>{{% md %}}The URL where the service exposes SAML metadata for federation.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="samlsinglesignons_csharp">
+<a href="#samlsinglesignons_csharp" style="color: inherit; text-decoration: inherit;">Saml<wbr>Single<wbr>Sign<wbr>Ons</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getserviceprincipalsamlsinglesignon">List&lt;Pulumi.<wbr>Azure<wbr>AD.<wbr>Outputs.<wbr>Get<wbr>Service<wbr>Principal<wbr>Saml<wbr>Single<wbr>Sign<wbr>On&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A `saml_single_sign_on` block as documented below.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="serviceprincipalnames_csharp">
 <a href="#serviceprincipalnames_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Names</a>
 </span>
@@ -527,7 +536,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}- Whether or not the service principal account is enabled.
+    <dd>{{% md %}}Whether or not the service principal account is enabled.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="alternativenames_go">
@@ -710,6 +719,15 @@ The following output properties are available:
     <dd>{{% md %}}The URL where the service exposes SAML metadata for federation.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="samlsinglesignons_go">
+<a href="#samlsinglesignons_go" style="color: inherit; text-decoration: inherit;">Saml<wbr>Single<wbr>Sign<wbr>Ons</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getserviceprincipalsamlsinglesignon">[]Get<wbr>Service<wbr>Principal<wbr>Saml<wbr>Single<wbr>Sign<wbr>On</a></span>
+    </dt>
+    <dd>{{% md %}}A `saml_single_sign_on` block as documented below.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="serviceprincipalnames_go">
 <a href="#serviceprincipalnames_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Names</a>
 </span>
@@ -756,7 +774,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}- Whether or not the service principal account is enabled.
+    <dd>{{% md %}}Whether or not the service principal account is enabled.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="alternativenames_nodejs">
@@ -939,6 +957,15 @@ The following output properties are available:
     <dd>{{% md %}}The URL where the service exposes SAML metadata for federation.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="samlsinglesignons_nodejs">
+<a href="#samlsinglesignons_nodejs" style="color: inherit; text-decoration: inherit;">saml<wbr>Single<wbr>Sign<wbr>Ons</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getserviceprincipalsamlsinglesignon">Get<wbr>Service<wbr>Principal<wbr>Saml<wbr>Single<wbr>Sign<wbr>On[]</a></span>
+    </dt>
+    <dd>{{% md %}}A `saml_single_sign_on` block as documented below.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="serviceprincipalnames_nodejs">
 <a href="#serviceprincipalnames_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Principal<wbr>Names</a>
 </span>
@@ -985,7 +1012,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}- Whether or not the service principal account is enabled.
+    <dd>{{% md %}}Whether or not the service principal account is enabled.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="alternative_names_python">
@@ -1166,6 +1193,15 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL where the service exposes SAML metadata for federation.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="saml_single_sign_ons_python">
+<a href="#saml_single_sign_ons_python" style="color: inherit; text-decoration: inherit;">saml_<wbr>single_<wbr>sign_<wbr>ons</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getserviceprincipalsamlsinglesignon">Sequence[Get<wbr>Service<wbr>Principal<wbr>Saml<wbr>Single<wbr>Sign<wbr>On]</a></span>
+    </dt>
+    <dd>{{% md %}}A `saml_single_sign_on` block as documented below.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="service_principal_names_python">
@@ -1752,6 +1788,62 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value that is used for the `scp` claim in OAuth 2.0 access tokens.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="getserviceprincipalsamlsinglesignon">Get<wbr>Service<wbr>Principal<wbr>Saml<wbr>Single<wbr>Sign<wbr>On</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="relaystate_csharp">
+<a href="#relaystate_csharp" style="color: inherit; text-decoration: inherit;">Relay<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The relative URI the service provider would redirect to after completion of the single sign-on flow.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="relaystate_go">
+<a href="#relaystate_go" style="color: inherit; text-decoration: inherit;">Relay<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The relative URI the service provider would redirect to after completion of the single sign-on flow.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="relaystate_nodejs">
+<a href="#relaystate_nodejs" style="color: inherit; text-decoration: inherit;">relay<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The relative URI the service provider would redirect to after completion of the single sign-on flow.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="relay_state_python">
+<a href="#relay_state_python" style="color: inherit; text-decoration: inherit;">relay_<wbr>state</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The relative URI the service provider would redirect to after completion of the single sign-on flow.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

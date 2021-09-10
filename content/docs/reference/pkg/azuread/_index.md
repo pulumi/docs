@@ -18,8 +18,11 @@ A Pulumi package for creating and managing azuread cloud resources.
     <li><a href="applicationcertificate" title="ApplicationCertificate"><span class="symbol resource"></span>ApplicationCertificate</a></li>
     <li><a href="applicationpassword" title="ApplicationPassword"><span class="symbol resource"></span>ApplicationPassword</a></li>
     <li><a href="applicationpreauthorized" title="ApplicationPreAuthorized"><span class="symbol resource"></span>ApplicationPreAuthorized</a></li>
+    <li><a href="conditionalaccesspolicy" title="ConditionalAccessPolicy"><span class="symbol resource"></span>ConditionalAccessPolicy</a></li>
     <li><a href="group" title="Group"><span class="symbol resource"></span>Group</a></li>
     <li><a href="groupmember" title="GroupMember"><span class="symbol resource"></span>GroupMember</a></li>
+    <li><a href="invitation" title="Invitation"><span class="symbol resource"></span>Invitation</a></li>
+    <li><a href="namedlocation" title="NamedLocation"><span class="symbol resource"></span>NamedLocation</a></li>
     <li><a href="provider" title="Provider"><span class="symbol resource"></span>Provider</a></li>
     <li><a href="serviceprincipal" title="ServicePrincipal"><span class="symbol resource"></span>ServicePrincipal</a></li>
     <li><a href="serviceprincipalcertificate" title="ServicePrincipalCertificate"><span class="symbol resource"></span>ServicePrincipalCertificate</a></li>
@@ -31,11 +34,13 @@ A Pulumi package for creating and managing azuread cloud resources.
 <ul class="api">
     <li><a href="getapplication" title="GetApplication"><span class="symbol function"></span>GetApplication</a></li>
     <li><a href="getapplicationpublishedappids" title="GetApplicationPublishedAppIds"><span class="symbol function"></span>GetApplicationPublishedAppIds</a></li>
+    <li><a href="getapplicationtemplate" title="GetApplicationTemplate"><span class="symbol function"></span>GetApplicationTemplate</a></li>
     <li><a href="getclientconfig" title="GetClientConfig"><span class="symbol function"></span>GetClientConfig</a></li>
     <li><a href="getdomains" title="GetDomains"><span class="symbol function"></span>GetDomains</a></li>
     <li><a href="getgroup" title="GetGroup"><span class="symbol function"></span>GetGroup</a></li>
     <li><a href="getgroups" title="GetGroups"><span class="symbol function"></span>GetGroups</a></li>
     <li><a href="getserviceprincipal" title="GetServicePrincipal"><span class="symbol function"></span>GetServicePrincipal</a></li>
+    <li><a href="getserviceprincipals" title="GetServicePrincipals"><span class="symbol function"></span>GetServicePrincipals</a></li>
     <li><a href="getuser" title="GetUser"><span class="symbol function"></span>GetUser</a></li>
     <li><a href="getusers" title="GetUsers"><span class="symbol function"></span>GetUsers</a></li>
 </ul>
@@ -49,6 +54,6 @@ A Pulumi package for creating and managing azuread cloud resources.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`azuread` Terraform Provider](https://github.com/hashicorp/terraform-provider-azuread).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>5.0.0</dd>
+	<dd>5.2.0</dd>
 </dl>
 

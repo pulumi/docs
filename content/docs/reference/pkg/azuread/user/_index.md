@@ -150,6 +150,8 @@ const example = new azuread.User("example", {
          <span class="nx">consent_provided_for_minor</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
          <span class="nx">country</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
          <span class="nx">department</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+         <span class="nx">disable_password_expiration</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+         <span class="nx">disable_strong_password</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
          <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
          <span class="nx">employee_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
          <span class="nx">fax_number</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -388,6 +390,24 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name for the department in which the user works.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablepasswordexpiration_csharp">
+<a href="#disablepasswordexpiration_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Password<wbr>Expiration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the users password is exempt from expiring. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablestrongpassword_csharp">
+<a href="#disablestrongpassword_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Strong<wbr>Password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the user is allowed weaker passwords than the default policy to be specified. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="employeeid_csharp">
@@ -655,6 +675,24 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
     <dd>{{% md %}}The name for the department in which the user works.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablepasswordexpiration_go">
+<a href="#disablepasswordexpiration_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Password<wbr>Expiration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the users password is exempt from expiring. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablestrongpassword_go">
+<a href="#disablestrongpassword_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Strong<wbr>Password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the user is allowed weaker passwords than the default policy to be specified. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="employeeid_go">
 <a href="#employeeid_go" style="color: inherit; text-decoration: inherit;">Employee<wbr>Id</a>
 </span>
@@ -920,6 +958,24 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
     <dd>{{% md %}}The name for the department in which the user works.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablepasswordexpiration_nodejs">
+<a href="#disablepasswordexpiration_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Password<wbr>Expiration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether the users password is exempt from expiring. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablestrongpassword_nodejs">
+<a href="#disablestrongpassword_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Strong<wbr>Password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether the user is allowed weaker passwords than the default policy to be specified. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="employeeid_nodejs">
 <a href="#employeeid_nodejs" style="color: inherit; text-decoration: inherit;">employee<wbr>Id</a>
 </span>
@@ -1183,6 +1239,24 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name for the department in which the user works.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disable_password_expiration_python">
+<a href="#disable_password_expiration_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>password_<wbr>expiration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the users password is exempt from expiring. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disable_strong_password_python">
+<a href="#disable_strong_password_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>strong_<wbr>password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the user is allowed weaker passwords than the default policy to be specified. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="employee_id_python">
@@ -1906,6 +1980,8 @@ Get an existing User resource's state with the given name, ID, and optional extr
         <span class="nx">country</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">creation_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">department</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">disable_password_expiration</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">disable_strong_password</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">employee_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">external_user_state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -2138,6 +2214,24 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name for the department in which the user works.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_disablepasswordexpiration_csharp">
+<a href="#state_disablepasswordexpiration_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Password<wbr>Expiration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the users password is exempt from expiring. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_disablestrongpassword_csharp">
+<a href="#state_disablestrongpassword_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Strong<wbr>Password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the user is allowed weaker passwords than the default policy to be specified. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_displayname_csharp">
@@ -2522,6 +2616,24 @@ The following state arguments are supported:
     <dd>{{% md %}}The name for the department in which the user works.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_disablepasswordexpiration_go">
+<a href="#state_disablepasswordexpiration_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Password<wbr>Expiration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the users password is exempt from expiring. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_disablestrongpassword_go">
+<a href="#state_disablestrongpassword_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Strong<wbr>Password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the user is allowed weaker passwords than the default policy to be specified. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_displayname_go">
 <a href="#state_displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
 </span>
@@ -2904,6 +3016,24 @@ The following state arguments are supported:
     <dd>{{% md %}}The name for the department in which the user works.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_disablepasswordexpiration_nodejs">
+<a href="#state_disablepasswordexpiration_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Password<wbr>Expiration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether the users password is exempt from expiring. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_disablestrongpassword_nodejs">
+<a href="#state_disablestrongpassword_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Strong<wbr>Password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether the user is allowed weaker passwords than the default policy to be specified. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_displayname_nodejs">
 <a href="#state_displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
@@ -3284,6 +3414,24 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name for the department in which the user works.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_disable_password_expiration_python">
+<a href="#state_disable_password_expiration_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>password_<wbr>expiration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the users password is exempt from expiring. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_disable_strong_password_python">
+<a href="#state_disable_strong_password_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>strong_<wbr>password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the user is allowed weaker passwords than the default policy to be specified. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_display_name_python">
