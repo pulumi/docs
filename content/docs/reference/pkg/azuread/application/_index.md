@@ -51,6 +51,7 @@ Applications can be imported using their object ID, e.g.
                 <span class="nx">sign_in_audience</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                 <span class="nx">single_page_application</span><span class="p">:</span> <span class="nx">Optional[ApplicationSinglePageApplicationArgs]</span> = None<span class="p">,</span>
                 <span class="nx">support_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">template_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                 <span class="nx">terms_of_service_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                 <span class="nx">web</span><span class="p">:</span> <span class="nx">Optional[ApplicationWebArgs]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
@@ -344,6 +345,15 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
     <dd>{{% md %}}URL of the application's support page.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="templateid_csharp">
+<a href="#templateid_csharp" style="color: inherit; text-decoration: inherit;">Template<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Unique ID for a templated application in the Azure AD App Gallery, from which to create the application. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="termsofserviceurl_csharp">
 <a href="#termsofserviceurl_csharp" style="color: inherit; text-decoration: inherit;">Terms<wbr>Of<wbr>Service<wbr>Url</a>
 </span>
@@ -526,6 +536,15 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL of the application's support page.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="templateid_go">
+<a href="#templateid_go" style="color: inherit; text-decoration: inherit;">Template<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Unique ID for a templated application in the Azure AD App Gallery, from which to create the application. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="termsofserviceurl_go">
@@ -712,6 +731,15 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
     <dd>{{% md %}}URL of the application's support page.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="templateid_nodejs">
+<a href="#templateid_nodejs" style="color: inherit; text-decoration: inherit;">template<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Unique ID for a templated application in the Azure AD App Gallery, from which to create the application. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="termsofserviceurl_nodejs">
 <a href="#termsofserviceurl_nodejs" style="color: inherit; text-decoration: inherit;">terms<wbr>Of<wbr>Service<wbr>Url</a>
 </span>
@@ -894,6 +922,15 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URL of the application's support page.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="template_id_python">
+<a href="#template_id_python" style="color: inherit; text-decoration: inherit;">template_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Unique ID for a templated application in the Azure AD App Gallery, from which to create the application. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="terms_of_service_url_python">
@@ -1263,6 +1300,7 @@ Get an existing Application resource's state with the given name, ID, and option
         <span class="nx">sign_in_audience</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">single_page_application</span><span class="p">:</span> <span class="nx">Optional[ApplicationSinglePageApplicationArgs]</span> = None<span class="p">,</span>
         <span class="nx">support_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">template_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">terms_of_service_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">web</span><span class="p">:</span> <span class="nx">Optional[ApplicationWebArgs]</span> = None<span class="p">) -&gt;</span> Application</code></pre></div>
 {{% /choosable %}}
@@ -1602,6 +1640,15 @@ The following state arguments are supported:
     <dd>{{% md %}}URL of the application's support page.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_templateid_csharp">
+<a href="#state_templateid_csharp" style="color: inherit; text-decoration: inherit;">Template<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Unique ID for a templated application in the Azure AD App Gallery, from which to create the application. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_termsofserviceurl_csharp">
 <a href="#state_termsofserviceurl_csharp" style="color: inherit; text-decoration: inherit;">Terms<wbr>Of<wbr>Service<wbr>Url</a>
 </span>
@@ -1847,6 +1894,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL of the application's support page.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_templateid_go">
+<a href="#state_templateid_go" style="color: inherit; text-decoration: inherit;">Template<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Unique ID for a templated application in the Azure AD App Gallery, from which to create the application. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_termsofserviceurl_go">
@@ -2096,6 +2152,15 @@ The following state arguments are supported:
     <dd>{{% md %}}URL of the application's support page.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_templateid_nodejs">
+<a href="#state_templateid_nodejs" style="color: inherit; text-decoration: inherit;">template<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Unique ID for a templated application in the Azure AD App Gallery, from which to create the application. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_termsofserviceurl_nodejs">
 <a href="#state_termsofserviceurl_nodejs" style="color: inherit; text-decoration: inherit;">terms<wbr>Of<wbr>Service<wbr>Url</a>
 </span>
@@ -2341,6 +2406,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URL of the application's support page.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_template_id_python">
+<a href="#state_template_id_python" style="color: inherit; text-decoration: inherit;">template_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Unique ID for a templated application in the Azure AD App Gallery, from which to create the application. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_terms_of_service_url_python">

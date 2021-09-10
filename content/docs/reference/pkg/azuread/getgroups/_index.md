@@ -106,7 +106,6 @@ groups = azuread.get_groups(display_names=[
 
 {{< example typescript >}}
 
-
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azuread from "@pulumi/azuread";
@@ -144,6 +143,7 @@ const groups = pulumi.output(azuread.getGroups({
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_groups(</span><span class="nx">display_names</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
                <span class="nx">object_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+               <span class="nx">return_all</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetGroupsResult</code></pre></div>
 {{% /choosable %}}
 
@@ -186,6 +186,15 @@ The following arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The object IDs of the groups.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="returnall_csharp">
+<a href="#returnall_csharp" style="color: inherit; text-decoration: inherit;">Return<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}A flag to denote if all groups should be fetched and returned.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -208,6 +217,15 @@ The following arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The object IDs of the groups.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="returnall_go">
+<a href="#returnall_go" style="color: inherit; text-decoration: inherit;">Return<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}A flag to denote if all groups should be fetched and returned.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -230,6 +248,15 @@ The following arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The object IDs of the groups.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="returnall_nodejs">
+<a href="#returnall_nodejs" style="color: inherit; text-decoration: inherit;">return<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}A flag to denote if all groups should be fetched and returned.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -252,6 +279,15 @@ The following arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The object IDs of the groups.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="return_all_python">
+<a href="#return_all_python" style="color: inherit; text-decoration: inherit;">return_<wbr>all</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}A flag to denote if all groups should be fetched and returned.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -292,7 +328,15 @@ The following output properties are available:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The object IDs of the groups.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="returnall_csharp">
+<a href="#returnall_csharp" style="color: inherit; text-decoration: inherit;">Return<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -323,7 +367,15 @@ The following output properties are available:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The object IDs of the groups.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="returnall_go">
+<a href="#returnall_go" style="color: inherit; text-decoration: inherit;">Return<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -354,7 +406,15 @@ The following output properties are available:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The object IDs of the groups.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="returnall_nodejs">
+<a href="#returnall_nodejs" style="color: inherit; text-decoration: inherit;">return<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -385,7 +445,15 @@ The following output properties are available:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The object IDs of the groups.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="return_all_python">
+<a href="#return_all_python" style="color: inherit; text-decoration: inherit;">return_<wbr>all</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
