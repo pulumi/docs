@@ -39,11 +39,6 @@ class MyStack : Stack
             Location = "West US 2",
             ManagedResourceGroupName = "custom-rgname",
             ResourceGroupName = "SampleResourceGroup",
-            Sku = new AzureNative.Purview.Inputs.AccountSkuArgs
-            {
-                Capacity = 4,
-                Name = "Standard",
-            },
         });
     }
 
@@ -73,10 +68,6 @@ func main() {
 			Location:                 pulumi.String("West US 2"),
 			ManagedResourceGroupName: pulumi.String("custom-rgname"),
 			ResourceGroupName:        pulumi.String("SampleResourceGroup"),
-			Sku: &purview.AccountSkuArgs{
-				Capacity: pulumi.Int(4),
-				Name:     pulumi.String("Standard"),
-			},
 		})
 		if err != nil {
 			return err
@@ -102,11 +93,7 @@ account = azure_native.purview.Account("account",
     account_name="account1",
     location="West US 2",
     managed_resource_group_name="custom-rgname",
-    resource_group_name="SampleResourceGroup",
-    sku=azure_native.purview.AccountSkuArgs(
-        capacity=4,
-        name="Standard",
-    ))
+    resource_group_name="SampleResourceGroup")
 
 ```
 
@@ -126,10 +113,6 @@ const account = new azure_native.purview.Account("account", {
     location: "West US 2",
     managedResourceGroupName: "custom-rgname",
     resourceGroupName: "SampleResourceGroup",
-    sku: {
-        capacity: 4,
-        name: "Standard",
-    },
 });
 
 ```
@@ -164,7 +147,6 @@ const account = new azure_native.purview.Account("account", {
             <span class="nx">managed_resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">public_network_access</span><span class="p">:</span> <span class="nx">Optional[Union[str, PublicNetworkAccess]]</span> = None<span class="p">,</span>
             <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-            <span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[AccountSkuArgs]</span> = None<span class="p">,</span>
             <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Account</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
@@ -343,14 +325,6 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
     </dt>
     <dd>{{% md %}}Gets or sets the public network access.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="sku_csharp">
-<a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountsku">Pulumi.<wbr>Azure<wbr>Native.<wbr>Purview.<wbr>Inputs.<wbr>Account<wbr>Sku<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}Gets or sets the Sku.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
@@ -410,14 +384,6 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string | <a href="#publicnetworkaccess">Public<wbr>Network<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the public network access.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="sku_go">
-<a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountsku">Account<wbr>Sku<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}Gets or sets the Sku.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -479,14 +445,6 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
     </dt>
     <dd>{{% md %}}Gets or sets the public network access.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="sku_nodejs">
-<a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountsku">Account<wbr>Sku<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}Gets or sets the Sku.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
@@ -546,14 +504,6 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">str | <a href="#publicnetworkaccess">Public<wbr>Network<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the public network access.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="sku_python">
-<a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountsku">Account<wbr>Sku<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}Gets or sets the Sku.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -653,6 +603,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the state of the provisioning.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="sku_csharp">
+<a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accountresponsesku">Pulumi.<wbr>Azure<wbr>Native.<wbr>Purview.<wbr>Outputs.<wbr>Account<wbr>Response<wbr>Sku</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the Sku.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="systemdata_csharp">
 <a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
@@ -763,6 +721,14 @@ External cloud identifier used as part of scanning configuration.{{% /md %}}</dd
     </dt>
     <dd>{{% md %}}Gets or sets the state of the provisioning.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="sku_go">
+<a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accountresponsesku">Account<wbr>Response<wbr>Sku</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the Sku.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="systemdata_go">
 <a href="#systemdata_go" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
 </span>
@@ -872,6 +838,14 @@ External cloud identifier used as part of scanning configuration.{{% /md %}}</dd
     </dt>
     <dd>{{% md %}}Gets or sets the state of the provisioning.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="sku_nodejs">
+<a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accountresponsesku">Account<wbr>Response<wbr>Sku</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the Sku.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="systemdata_nodejs">
 <a href="#systemdata_nodejs" style="color: inherit; text-decoration: inherit;">system<wbr>Data</a>
 </span>
@@ -980,6 +954,14 @@ External cloud identifier used as part of scanning configuration.{{% /md %}}</dd
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets the state of the provisioning.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="sku_python">
+<a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accountresponsesku">Account<wbr>Response<wbr>Sku</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the Sku.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="system_data_python">
 <a href="#system_data_python" style="color: inherit; text-decoration: inherit;">system_<wbr>data</a>
@@ -1455,7 +1437,7 @@ External cloud identifier used as part of scanning configuration.{{% /md %}}</dd
     <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
-<h4 id="accountsku">Account<wbr>Sku</h4>
+<h4 id="accountresponsesku">Account<wbr>Response<wbr>Sku</h4>
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
@@ -1466,89 +1448,7 @@ External cloud identifier used as part of scanning configuration.{{% /md %}}</dd
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the sku capacity. Possible values include: 4, 16{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="name_csharp">
-<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#name">Pulumi.<wbr>Azure<wbr>Native.<wbr>Purview.<wbr>Name</a></span>
-    </dt>
-    <dd>{{% md %}}Gets or sets the sku name.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="capacity_go">
-<a href="#capacity_go" style="color: inherit; text-decoration: inherit;">Capacity</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Gets or sets the sku capacity. Possible values include: 4, 16{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="name_go">
-<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#name">Name</a></span>
-    </dt>
-    <dd>{{% md %}}Gets or sets the sku name.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="capacity_nodejs">
-<a href="#capacity_nodejs" style="color: inherit; text-decoration: inherit;">capacity</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}Gets or sets the sku capacity. Possible values include: 4, 16{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="name_nodejs">
-<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#name">Name</a></span>
-    </dt>
-    <dd>{{% md %}}Gets or sets the sku name.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="capacity_python">
-<a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Gets or sets the sku capacity. Possible values include: 4, 16{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="name_python">
-<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#name">Name</a></span>
-    </dt>
-    <dd>{{% md %}}Gets or sets the sku name.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="accountskuresponse">Account<wbr>Sku<wbr>Response</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="capacity_csharp">
-<a href="#capacity_csharp" style="color: inherit; text-decoration: inherit;">Capacity</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Gets or sets the sku capacity. Possible values include: 4, 16{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the sku capacity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1568,7 +1468,7 @@ External cloud identifier used as part of scanning configuration.{{% /md %}}</dd
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the sku capacity. Possible values include: 4, 16{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the sku capacity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1588,7 +1488,7 @@ External cloud identifier used as part of scanning configuration.{{% /md %}}</dd
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the sku capacity. Possible values include: 4, 16{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the sku capacity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1608,7 +1508,7 @@ External cloud identifier used as part of scanning configuration.{{% /md %}}</dd
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the sku capacity. Possible values include: 4, 16{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the sku capacity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1835,28 +1735,6 @@ Configured in AWS to allow use of the role arn used for scanning{{% /md %}}</dd>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Identity Type{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="name">Name</h4>
-
-{{% choosable language csharp %}}
-<dl class="tabular"><dt>Standard</dt>
-    <dd>Standard</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="tabular"><dt>Name<wbr>Standard</dt>
-    <dd>Standard</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="tabular"><dt>Standard</dt>
-    <dd>Standard</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="tabular"><dt>STANDARD</dt>
-    <dd>Standard</dd></dl>
 {{% /choosable %}}
 
 <h4 id="privateendpointconnectionresponse">Private<wbr>Endpoint<wbr>Connection<wbr>Response</h4>

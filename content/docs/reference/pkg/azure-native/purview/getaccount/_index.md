@@ -224,6 +224,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Gets or sets the state of the provisioning.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="sku_csharp">
+<a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accountresponsesku">Pulumi.<wbr>Azure<wbr>Native.<wbr>Purview.<wbr>Outputs.<wbr>Account<wbr>Response<wbr>Sku</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the Sku.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="systemdata_csharp">
 <a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
 </span>
@@ -280,14 +288,6 @@ External cloud identifier used as part of scanning configuration.{{% /md %}}</dd
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the public network access.{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="sku_csharp">
-<a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountskuresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Purview.<wbr>Outputs.<wbr>Account<wbr>Sku<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Gets or sets the Sku.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -381,6 +381,14 @@ External cloud identifier used as part of scanning configuration.{{% /md %}}</dd
     </dt>
     <dd>{{% md %}}Gets or sets the state of the provisioning.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="sku_go">
+<a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accountresponsesku">Account<wbr>Response<wbr>Sku</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the Sku.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="systemdata_go">
 <a href="#systemdata_go" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
 </span>
@@ -437,14 +445,6 @@ External cloud identifier used as part of scanning configuration.{{% /md %}}</dd
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the public network access.{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="sku_go">
-<a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountskuresponse">Account<wbr>Sku<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Gets or sets the Sku.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -538,6 +538,14 @@ External cloud identifier used as part of scanning configuration.{{% /md %}}</dd
     </dt>
     <dd>{{% md %}}Gets or sets the state of the provisioning.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="sku_nodejs">
+<a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accountresponsesku">Account<wbr>Response<wbr>Sku</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the Sku.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="systemdata_nodejs">
 <a href="#systemdata_nodejs" style="color: inherit; text-decoration: inherit;">system<wbr>Data</a>
 </span>
@@ -594,14 +602,6 @@ External cloud identifier used as part of scanning configuration.{{% /md %}}</dd
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the public network access.{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="sku_nodejs">
-<a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountskuresponse">Account<wbr>Sku<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Gets or sets the Sku.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -695,6 +695,14 @@ External cloud identifier used as part of scanning configuration.{{% /md %}}</dd
     </dt>
     <dd>{{% md %}}Gets or sets the state of the provisioning.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="sku_python">
+<a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accountresponsesku">Account<wbr>Response<wbr>Sku</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the Sku.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="system_data_python">
 <a href="#system_data_python" style="color: inherit; text-decoration: inherit;">system_<wbr>data</a>
 </span>
@@ -751,14 +759,6 @@ External cloud identifier used as part of scanning configuration.{{% /md %}}</dd
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets the public network access.{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="sku_python">
-<a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountskuresponse">Account<wbr>Sku<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Gets or sets the Sku.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1219,7 +1219,7 @@ External cloud identifier used as part of scanning configuration.{{% /md %}}</dd
     <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
-<h4 id="accountskuresponse">Account<wbr>Sku<wbr>Response</h4>
+<h4 id="accountresponsesku">Account<wbr>Response<wbr>Sku</h4>
 
 
 
@@ -1232,7 +1232,7 @@ External cloud identifier used as part of scanning configuration.{{% /md %}}</dd
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the sku capacity. Possible values include: 4, 16{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the sku capacity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1252,7 +1252,7 @@ External cloud identifier used as part of scanning configuration.{{% /md %}}</dd
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the sku capacity. Possible values include: 4, 16{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the sku capacity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1272,7 +1272,7 @@ External cloud identifier used as part of scanning configuration.{{% /md %}}</dd
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the sku capacity. Possible values include: 4, 16{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the sku capacity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1292,7 +1292,7 @@ External cloud identifier used as part of scanning configuration.{{% /md %}}</dd
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the sku capacity. Possible values include: 4, 16{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the sku capacity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
