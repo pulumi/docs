@@ -17,6 +17,7 @@ Explore the resources and functions of the azure-native.kubernetes module.
 <h2 id="functions">Functions</h2>
 <ul class="api">
     <li><a href="getconnectedcluster" title="GetConnectedCluster"><span class="symbol function"></span>GetConnectedCluster</a></li>
+    <li><a href="listconnectedclusterusercredential" title="ListConnectedClusterUserCredential"><span class="symbol function"></span>ListConnectedClusterUserCredential</a></li>
     <li><a href="listconnectedclusterusercredentials" title="ListConnectedClusterUserCredentials"><span class="symbol function"></span>ListConnectedClusterUserCredentials</a></li>
 </ul>
 
@@ -27,6 +28,6 @@ Explore the resources and functions of the azure-native.kubernetes module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.27.0</dd>
+	<dd>1.28.0</dd>
 </dl>
 
