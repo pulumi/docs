@@ -2,4 +2,4 @@ module github.com/pulumi/pulumi-docs
 
 go 1.16
 
-require github.com/pulumi/pulumi-hugo/themes/default v0.0.0-20210914144843-4bd62d8373db
+require github.com/pulumi/pulumi-hugo/themes/default v0.0.0-20210914170817-189aeb50a290
