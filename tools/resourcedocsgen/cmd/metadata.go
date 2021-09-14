@@ -102,6 +102,7 @@ func packageMetadataCmd() *cobra.Command {
 				Featured:      featured,
 				Native:        mainSpec.Attribution == "",
 				Version:       version,
+				Logo:          fmt.Sprintf("/logos/pkg/%s.svg", mainSpec.Name),
 			}
 			b, err := yaml.Marshal(pm)
 			if err != nil {

@@ -31,6 +31,7 @@ type PackageMeta struct {
 	// Title is the package's display-friendly name.
 	Title       string `yaml:"title"`
 	Description string `yaml:"description"`
+	Logo        string `yaml:"logo"`
 
 	UpdatedOn     int64           `yaml:"updated_on"`
 	Publisher     string          `yaml:"publisher"`
