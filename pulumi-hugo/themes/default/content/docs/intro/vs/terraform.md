@@ -7,7 +7,8 @@ menu:
     parent: vs
     weight: 1
 
-aliases: ["/docs/reference/vs/terraform/"]
+aliases:
+- /docs/reference/vs/terraform/
 ---
 
 Terraform and Pulumi hold a lot of similarities, but they differ in a few key ways. This page helps provide a rundown of the differences. First, Pulumi is like Terraform, in that you create, deploy, and manage [infrastructure as code]({{< relref "/what-is/what-is-infrastructure-as-code" >}}) on any cloud. But where

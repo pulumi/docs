@@ -1,12 +1,13 @@
 ---
-title: "Other AWS Services"
+title: AWS Index of Services
 meta_desc: Pulumi Crosswalk for AWS supports all AWS services. This page provides a complete list of supported services.
 menu:
   userguides:
     parent: crosswalk-aws
     weight: 11
-
-aliases: ["/docs/reference/crosswalk/aws/other/"]
+aliases:
+- /docs/reference/crosswalk/aws/other/
+- /docs/guides/crosswalk/aws/other/
 ---
 
 <a href="{{< relref "./" >}}">

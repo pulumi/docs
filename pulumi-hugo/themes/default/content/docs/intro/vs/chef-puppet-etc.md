@@ -7,8 +7,9 @@ menu:
   intro:
     parent: vs
     weight: 7
-
-aliases: ["/docs/reference/vs/chef_puppet_etc/"]
+aliases:
+- /docs/reference/vs/chef_puppet_etc/
+- /docs/intro/vs/chef_puppet_etc/
 ---
 
 Chef, Puppet, Ansible, and Salt are all popular _configuration management tools_. These tools help you install and

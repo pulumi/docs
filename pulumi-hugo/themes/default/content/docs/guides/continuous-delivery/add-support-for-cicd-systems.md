@@ -1,20 +1,20 @@
 ---
-title: Other
-meta_desc: This page walks-through how you can modify the Pulumi CLI to support your own
-           CI system or perhaps even update an existing one.
+title: Add Support for CI/CD Systems
+meta_desc: This guide walks you through how you can configure your CI/CD environment manually
+           to surface data in the Pulumi Console.
 menu:
     userguides:
         parent: cont_delivery
         weight: 2
-
 aliases:
 - /docs/reference/cd-supporting-new-ci/
 - /docs/console/continuous-delivery/other/
+- /docs/guides/continuous-delivery/other/
 ---
 
-If Pulumi doesn't already support your CI/CD system, this guide
-walks you though how to create a new CI/CD system for surfacing
-data in the Pulumi Console.
+If the Pulumi CLI doesn't automatically detect your CI/CD system, this guide
+walks you through how you can configure your CI/CD environment manually
+to surface data in the Pulumi Console.
 
 ## Overview
 

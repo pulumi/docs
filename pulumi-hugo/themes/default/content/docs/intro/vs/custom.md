@@ -8,7 +8,8 @@ menu:
     parent: vs
     weight: 8
 
-aliases: ["/docs/reference/vs/custom/"]
+aliases:
+- /docs/reference/vs/custom/
 ---
 
 Many organizations start out by manually managing their infrastructure. This often begins by pointing and clicking in

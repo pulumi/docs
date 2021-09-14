@@ -93,7 +93,7 @@ relevant User Guides to get started:
 
 Pulumi supports the entirety of the AWS platform. If your favorite service isn't listed above, check out:
 
-* [Other AWS Services]({{< relref "other" >}})
+* [AWS Index of Services]({{< relref "aws-index-of-services" >}})
 
 ## Frequently Asked Questions (FAQ)
 

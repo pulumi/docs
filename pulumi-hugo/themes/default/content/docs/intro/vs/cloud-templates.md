@@ -6,8 +6,9 @@ menu:
   intro:
     parent: vs
     weight: 2
-
-aliases: ["/docs/reference/vs/cloud_templates/"]
+aliases:
+- /docs/reference/vs/cloud_templates/
+- /docs/intro/vs/cloud_templates/
 ---
 
 All major cloud providers offer their own form of infrastructure-as-"code" solution, typically by way of JSON or
