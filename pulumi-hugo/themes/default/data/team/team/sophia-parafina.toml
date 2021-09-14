@@ -1,11 +1,7 @@
 id = "sophia-parafina"
 name = "Sophia Parafina"
-title = "Technical Marketing Manager"
-company = "Pulumi"
-weight = 1
 
-status = "active"
-role = "developer-advocate"
+status = "inactive"
 
 [social]
 github = "spara"
