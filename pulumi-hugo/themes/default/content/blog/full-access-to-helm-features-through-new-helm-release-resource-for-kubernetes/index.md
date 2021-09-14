@@ -1,7 +1,7 @@
 ---
 title: Full Access to Helm Features with new Helm Release Resource
 h1: "Full Access to Helm Features with new Helm Release Resource for Kubernetes"
-date: "2021-09-13"
+date: "2021-09-14"
 meta_desc: "The Helm Release resource adds native support for Helm, enabling full access to Helm features for Kubernetes users."
 meta_image: "k8s-helm-release.png"
 authors: ["vivek-lakshmanan"]
@@ -25,7 +25,7 @@ The existing [Helm Chart]({{< relref "/docs/reference/pkg/kubernetes/helm/v3/cha
 
 ## How is Helm Release resource different?
 
-Pulumi's Helm Chart integration was implemented as a [Component Resource]({{< relref "/docs/intro/concepts/resources/#components" >}}) which effectively extracts the corresponding Kubernetes resources' manifests from the chart and installs them as if they were individually specified in the Pulumi user program. This allowed users to install community developed Helm charts, while providing fine-grained control over the respective Kubernetes resources installed in the process. For instance, the installed resources are subject to all policies specified through Policy-as-Code policy packs registered with Pulumi. Other users have used Pulumi's powerful transformation support to manipulate Helm charts to fit their desired needs before installing them in their environment.
+Pulumi's Helm Chart integration was implemented as a [Component Resource]({{< relref "/docs/intro/concepts/resources#components" >}}) which effectively extracts the corresponding Kubernetes resources' manifests from the chart and installs them as if they were individually specified in the Pulumi user program. This allowed users to install community developed Helm charts, while providing fine-grained control over the respective Kubernetes resources installed in the process. For instance, the installed resources are subject to all policies specified through Policy-as-Code policy packs registered with Pulumi. Other users have used Pulumi's powerful transformation support to manipulate Helm charts to fit their desired needs before installing them in their environment.
 
 In contrast, the new Helm Release resource uses the Helm SDK, bringing the full feature set of Helm directly to Pulumi users. This provides the following advantages:
 
