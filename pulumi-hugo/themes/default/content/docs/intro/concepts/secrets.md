@@ -429,7 +429,7 @@ For example, this configures a stack to use a GCP KMS key `payroll` in project `
 
 ```bash
 $ pulumi stack init my-stack \
-    --secrets-provider="gcpkms://projects//locations/us-west1/keyRings/acmecorpsec/cryptoKeys/payroll"
+    --secrets-provider="gcpkms://projects/acmecorpsec/locations/us-west1/keyRings/prod/cryptoKeys/payroll"
 ```
 
 This provider will use your Google Cloud Application Default Credentials. If you've previously configured the `gcloud` CLI, the same credentials will be used for authentication. For alternative configuration mechanisms, refer to [Authenticating as a service account](https://cloud.google.com/docs/authentication/production).
