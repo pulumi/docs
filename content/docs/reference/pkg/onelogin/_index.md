@@ -44,6 +44,6 @@ A Pulumi package for creating and managing onelogin cloud resources.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`onelogin` Terraform Provider](https://github.com/terraform-providers/terraform-provider-onelogin).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>0.0.10</dd>
+	<dd>0.0.11</dd>
 </dl>
 
