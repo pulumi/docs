@@ -465,7 +465,7 @@ be specified multiple times. Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instanceadvancedmachinefeatures">Instance<wbr>Advanced<wbr>Machine<wbr>Features<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Controls for advanced machine-related behavior features.
+    <dd>{{% md %}}Configure Nested Virtualisation and Simultaneous Hyper Threading  on this VM.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowstoppingforupdate_csharp">
@@ -768,7 +768,7 @@ be specified multiple times. Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instanceadvancedmachinefeatures">Instance<wbr>Advanced<wbr>Machine<wbr>Features<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Controls for advanced machine-related behavior features.
+    <dd>{{% md %}}Configure Nested Virtualisation and Simultaneous Hyper Threading  on this VM.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowstoppingforupdate_go">
@@ -1071,7 +1071,7 @@ be specified multiple times. Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instanceadvancedmachinefeatures">Instance<wbr>Advanced<wbr>Machine<wbr>Features<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Controls for advanced machine-related behavior features.
+    <dd>{{% md %}}Configure Nested Virtualisation and Simultaneous Hyper Threading  on this VM.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowstoppingforupdate_nodejs">
@@ -1374,7 +1374,7 @@ be specified multiple times. Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instanceadvancedmachinefeatures">Instance<wbr>Advanced<wbr>Machine<wbr>Features<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Controls for advanced machine-related behavior features.
+    <dd>{{% md %}}Configure Nested Virtualisation and Simultaneous Hyper Threading  on this VM.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allow_stopping_for_update_python">
@@ -2116,7 +2116,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instanceadvancedmachinefeatures">Instance<wbr>Advanced<wbr>Machine<wbr>Features<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Controls for advanced machine-related behavior features.
+    <dd>{{% md %}}Configure Nested Virtualisation and Simultaneous Hyper Threading  on this VM.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allowstoppingforupdate_csharp">
@@ -2482,7 +2482,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instanceadvancedmachinefeatures">Instance<wbr>Advanced<wbr>Machine<wbr>Features<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Controls for advanced machine-related behavior features.
+    <dd>{{% md %}}Configure Nested Virtualisation and Simultaneous Hyper Threading  on this VM.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allowstoppingforupdate_go">
@@ -2848,7 +2848,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instanceadvancedmachinefeatures">Instance<wbr>Advanced<wbr>Machine<wbr>Features<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Controls for advanced machine-related behavior features.
+    <dd>{{% md %}}Configure Nested Virtualisation and Simultaneous Hyper Threading  on this VM.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allowstoppingforupdate_nodejs">
@@ -3214,7 +3214,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instanceadvancedmachinefeatures">Instance<wbr>Advanced<wbr>Machine<wbr>Features<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Controls for advanced machine-related behavior features.
+    <dd>{{% md %}}Configure Nested Virtualisation and Simultaneous Hyper Threading  on this VM.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allow_stopping_for_update_python">

@@ -40,8 +40,9 @@ const owner = gcp.organizations.getIAMPolicy({
         members: ["user:jane@example.com"],
     }],
 });
-const dataset = new gcp.bigquery.DatasetIamPolicy("dataset", {
-    datasetId: "your-dataset-id",
+const datasetDataset = new gcp.bigquery.Dataset("datasetDataset", {datasetId: "example_dataset"});
+const datasetDatasetIamPolicy = new gcp.bigquery.DatasetIamPolicy("datasetDatasetIamPolicy", {
+    datasetId: datasetDataset.datasetId,
     policyData: owner.then(owner => owner.policyData),
 });
 ```
@@ -53,8 +54,9 @@ owner = gcp.organizations.get_iam_policy(bindings=[gcp.organizations.GetIAMPolic
     role="roles/bigquery.dataOwner",
     members=["user:jane@example.com"],
 )])
-dataset = gcp.bigquery.DatasetIamPolicy("dataset",
-    dataset_id="your-dataset-id",
+dataset_dataset = gcp.bigquery.Dataset("datasetDataset", dataset_id="example_dataset")
+dataset_dataset_iam_policy = gcp.bigquery.DatasetIamPolicy("datasetDatasetIamPolicy",
+    dataset_id=dataset_dataset.dataset_id,
     policy_data=owner.policy_data)
 ```
 ```csharp
@@ -79,9 +81,13 @@ class MyStack : Stack
                 },
             },
         }));
-        var dataset = new Gcp.BigQuery.DatasetIamPolicy("dataset", new Gcp.BigQuery.DatasetIamPolicyArgs
+        var datasetDataset = new Gcp.BigQuery.Dataset("datasetDataset", new Gcp.BigQuery.DatasetArgs
         {
-            DatasetId = "your-dataset-id",
+            DatasetId = "example_dataset",
+        });
+        var datasetDatasetIamPolicy = new Gcp.BigQuery.DatasetIamPolicy("datasetDatasetIamPolicy", new Gcp.BigQuery.DatasetIamPolicyArgs
+        {
+            DatasetId = datasetDataset.DatasetId,
             PolicyData = owner.Apply(owner => owner.PolicyData),
         });
     }
@@ -112,8 +118,14 @@ func main() {
 		if err != nil {
 			return err
 		}
-		_, err = bigquery.NewDatasetIamPolicy(ctx, "dataset", &bigquery.DatasetIamPolicyArgs{
-			DatasetId:  pulumi.String("your-dataset-id"),
+		datasetDataset, err := bigquery.NewDataset(ctx, "datasetDataset", &bigquery.DatasetArgs{
+			DatasetId: pulumi.String("example_dataset"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = bigquery.NewDatasetIamPolicy(ctx, "datasetDatasetIamPolicy", &bigquery.DatasetIamPolicyArgs{
+			DatasetId:  datasetDataset.DatasetId,
 			PolicyData: pulumi.String(owner.PolicyData),
 		})
 		if err != nil {
@@ -130,20 +142,22 @@ func main() {
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
+const dataset = new gcp.bigquery.Dataset("dataset", {datasetId: "example_dataset"});
 const reader = new gcp.bigquery.DatasetIamBinding("reader", {
-    datasetId: "your-dataset-id",
-    members: ["user:jane@example.com"],
+    datasetId: dataset.datasetId,
     role: "roles/bigquery.dataViewer",
+    members: ["user:jane@example.com"],
 });
 ```
 ```python
 import pulumi
 import pulumi_gcp as gcp
 
+dataset = gcp.bigquery.Dataset("dataset", dataset_id="example_dataset")
 reader = gcp.bigquery.DatasetIamBinding("reader",
-    dataset_id="your-dataset-id",
-    members=["user:jane@example.com"],
-    role="roles/bigquery.dataViewer")
+    dataset_id=dataset.dataset_id,
+    role="roles/bigquery.dataViewer",
+    members=["user:jane@example.com"])
 ```
 ```csharp
 using Pulumi;
@@ -153,14 +167,18 @@ class MyStack : Stack
 {
     public MyStack()
     {
+        var dataset = new Gcp.BigQuery.Dataset("dataset", new Gcp.BigQuery.DatasetArgs
+        {
+            DatasetId = "example_dataset",
+        });
         var reader = new Gcp.BigQuery.DatasetIamBinding("reader", new Gcp.BigQuery.DatasetIamBindingArgs
         {
-            DatasetId = "your-dataset-id",
+            DatasetId = dataset.DatasetId,
+            Role = "roles/bigquery.dataViewer",
             Members = 
             {
                 "user:jane@example.com",
             },
-            Role = "roles/bigquery.dataViewer",
         });
     }
 
@@ -176,12 +194,18 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := bigquery.NewDatasetIamBinding(ctx, "reader", &bigquery.DatasetIamBindingArgs{
-			DatasetId: pulumi.String("your-dataset-id"),
+		dataset, err := bigquery.NewDataset(ctx, "dataset", &bigquery.DatasetArgs{
+			DatasetId: pulumi.String("example_dataset"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = bigquery.NewDatasetIamBinding(ctx, "reader", &bigquery.DatasetIamBindingArgs{
+			DatasetId: dataset.DatasetId,
+			Role:      pulumi.String("roles/bigquery.dataViewer"),
 			Members: pulumi.StringArray{
 				pulumi.String("user:jane@example.com"),
 			},
-			Role: pulumi.String("roles/bigquery.dataViewer"),
 		})
 		if err != nil {
 			return err
@@ -197,20 +221,22 @@ func main() {
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
+const dataset = new gcp.bigquery.Dataset("dataset", {datasetId: "example_dataset"});
 const editor = new gcp.bigquery.DatasetIamMember("editor", {
-    datasetId: "your-dataset-id",
-    member: "user:jane@example.com",
+    datasetId: dataset.datasetId,
     role: "roles/bigquery.dataEditor",
+    member: "user:jane@example.com",
 });
 ```
 ```python
 import pulumi
 import pulumi_gcp as gcp
 
+dataset = gcp.bigquery.Dataset("dataset", dataset_id="example_dataset")
 editor = gcp.bigquery.DatasetIamMember("editor",
-    dataset_id="your-dataset-id",
-    member="user:jane@example.com",
-    role="roles/bigquery.dataEditor")
+    dataset_id=dataset.dataset_id,
+    role="roles/bigquery.dataEditor",
+    member="user:jane@example.com")
 ```
 ```csharp
 using Pulumi;
@@ -220,11 +246,15 @@ class MyStack : Stack
 {
     public MyStack()
     {
+        var dataset = new Gcp.BigQuery.Dataset("dataset", new Gcp.BigQuery.DatasetArgs
+        {
+            DatasetId = "example_dataset",
+        });
         var editor = new Gcp.BigQuery.DatasetIamMember("editor", new Gcp.BigQuery.DatasetIamMemberArgs
         {
-            DatasetId = "your-dataset-id",
-            Member = "user:jane@example.com",
+            DatasetId = dataset.DatasetId,
             Role = "roles/bigquery.dataEditor",
+            Member = "user:jane@example.com",
         });
     }
 
@@ -240,10 +270,16 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := bigquery.NewDatasetIamMember(ctx, "editor", &bigquery.DatasetIamMemberArgs{
-			DatasetId: pulumi.String("your-dataset-id"),
-			Member:    pulumi.String("user:jane@example.com"),
+		dataset, err := bigquery.NewDataset(ctx, "dataset", &bigquery.DatasetArgs{
+			DatasetId: pulumi.String("example_dataset"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = bigquery.NewDatasetIamMember(ctx, "editor", &bigquery.DatasetIamMemberArgs{
+			DatasetId: dataset.DatasetId,
 			Role:      pulumi.String("roles/bigquery.dataEditor"),
+			Member:    pulumi.String("user:jane@example.com"),
 		})
 		if err != nil {
 			return err

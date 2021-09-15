@@ -20,6 +20,7 @@ Explore the resources and functions of the gcp.secretmanager module.
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
+    <li><a href="getsecret" title="GetSecret"><span class="symbol function"></span>GetSecret</a></li>
     <li><a href="getsecretversion" title="GetSecretVersion"><span class="symbol function"></span>GetSecretVersion</a></li>
 </ul>
 
@@ -32,6 +33,6 @@ Explore the resources and functions of the gcp.secretmanager module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>5.18.0</dd>
+	<dd>5.20.0</dd>
 </dl>
 

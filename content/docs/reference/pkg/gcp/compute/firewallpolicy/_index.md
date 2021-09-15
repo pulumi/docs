@@ -403,7 +403,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Creation timestamp in RFC3339 text format.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="fingerprint_csharp">
 <a href="#fingerprint_csharp" style="color: inherit; text-decoration: inherit;">Fingerprint</a>
@@ -411,7 +412,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Fingerprint of the resource. This field is used internally during updates of this resource.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="firewallpolicyid_csharp">
 <a href="#firewallpolicyid_csharp" style="color: inherit; text-decoration: inherit;">Firewall<wbr>Policy<wbr>Id</a>
@@ -419,7 +421,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The unique identifier for the resource. This identifier is defined by the server.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -435,7 +438,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Name of the resource. It is a numeric ID allocated by GCP which uniquely identifies the Firewall Policy.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ruletuplecount_csharp">
 <a href="#ruletuplecount_csharp" style="color: inherit; text-decoration: inherit;">Rule<wbr>Tuple<wbr>Count</a>
@@ -443,7 +447,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Total count of all firewall policy rule tuples. A firewall policy can not exceed a set number of tuples.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="selflink_csharp">
 <a href="#selflink_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -451,7 +456,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Server-defined URL for the resource.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="selflinkwithid_csharp">
 <a href="#selflinkwithid_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Link<wbr>With<wbr>Id</a>
@@ -459,7 +465,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Server-defined URL for this resource with the resource id.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -471,7 +478,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Creation timestamp in RFC3339 text format.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="fingerprint_go">
 <a href="#fingerprint_go" style="color: inherit; text-decoration: inherit;">Fingerprint</a>
@@ -479,7 +487,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Fingerprint of the resource. This field is used internally during updates of this resource.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="firewallpolicyid_go">
 <a href="#firewallpolicyid_go" style="color: inherit; text-decoration: inherit;">Firewall<wbr>Policy<wbr>Id</a>
@@ -487,7 +496,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The unique identifier for the resource. This identifier is defined by the server.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -503,7 +513,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Name of the resource. It is a numeric ID allocated by GCP which uniquely identifies the Firewall Policy.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ruletuplecount_go">
 <a href="#ruletuplecount_go" style="color: inherit; text-decoration: inherit;">Rule<wbr>Tuple<wbr>Count</a>
@@ -511,7 +522,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Total count of all firewall policy rule tuples. A firewall policy can not exceed a set number of tuples.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="selflink_go">
 <a href="#selflink_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -519,7 +531,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Server-defined URL for the resource.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="selflinkwithid_go">
 <a href="#selflinkwithid_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Link<wbr>With<wbr>Id</a>
@@ -527,7 +540,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Server-defined URL for this resource with the resource id.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -539,7 +553,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Creation timestamp in RFC3339 text format.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="fingerprint_nodejs">
 <a href="#fingerprint_nodejs" style="color: inherit; text-decoration: inherit;">fingerprint</a>
@@ -547,7 +562,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Fingerprint of the resource. This field is used internally during updates of this resource.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="firewallpolicyid_nodejs">
 <a href="#firewallpolicyid_nodejs" style="color: inherit; text-decoration: inherit;">firewall<wbr>Policy<wbr>Id</a>
@@ -555,7 +571,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The unique identifier for the resource. This identifier is defined by the server.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -571,7 +588,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Name of the resource. It is a numeric ID allocated by GCP which uniquely identifies the Firewall Policy.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ruletuplecount_nodejs">
 <a href="#ruletuplecount_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Tuple<wbr>Count</a>
@@ -579,7 +597,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Total count of all firewall policy rule tuples. A firewall policy can not exceed a set number of tuples.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="selflink_nodejs">
 <a href="#selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
@@ -587,7 +606,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Server-defined URL for the resource.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="selflinkwithid_nodejs">
 <a href="#selflinkwithid_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link<wbr>With<wbr>Id</a>
@@ -595,7 +615,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Server-defined URL for this resource with the resource id.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -607,7 +628,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Creation timestamp in RFC3339 text format.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="fingerprint_python">
 <a href="#fingerprint_python" style="color: inherit; text-decoration: inherit;">fingerprint</a>
@@ -615,7 +637,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Fingerprint of the resource. This field is used internally during updates of this resource.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="firewall_policy_id_python">
 <a href="#firewall_policy_id_python" style="color: inherit; text-decoration: inherit;">firewall_<wbr>policy_<wbr>id</a>
@@ -623,7 +646,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The unique identifier for the resource. This identifier is defined by the server.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -639,7 +663,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Name of the resource. It is a numeric ID allocated by GCP which uniquely identifies the Firewall Policy.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="rule_tuple_count_python">
 <a href="#rule_tuple_count_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>tuple_<wbr>count</a>
@@ -647,7 +672,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Total count of all firewall policy rule tuples. A firewall policy can not exceed a set number of tuples.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="self_link_python">
 <a href="#self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
@@ -655,7 +681,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Server-defined URL for the resource.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="self_link_with_id_python">
 <a href="#self_link_with_id_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link_<wbr>with_<wbr>id</a>
@@ -663,7 +690,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Server-defined URL for this resource with the resource id.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -810,7 +838,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Creation timestamp in RFC3339 text format.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -827,7 +856,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Fingerprint of the resource. This field is used internally during updates of this resource.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_firewallpolicyid_csharp">
 <a href="#state_firewallpolicyid_csharp" style="color: inherit; text-decoration: inherit;">Firewall<wbr>Policy<wbr>Id</a>
@@ -835,7 +865,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The unique identifier for the resource. This identifier is defined by the server.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -843,7 +874,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Name of the resource. It is a numeric ID allocated by GCP which uniquely identifies the Firewall Policy.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_parent_csharp">
 <a href="#state_parent_csharp" style="color: inherit; text-decoration: inherit;">Parent</a>
@@ -860,7 +892,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Total count of all firewall policy rule tuples. A firewall policy can not exceed a set number of tuples.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_selflink_csharp">
 <a href="#state_selflink_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -868,7 +901,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Server-defined URL for the resource.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_selflinkwithid_csharp">
 <a href="#state_selflinkwithid_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Link<wbr>With<wbr>Id</a>
@@ -876,7 +910,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Server-defined URL for this resource with the resource id.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_shortname_csharp">
 <a href="#state_shortname_csharp" style="color: inherit; text-decoration: inherit;">Short<wbr>Name</a>
@@ -897,7 +932,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Creation timestamp in RFC3339 text format.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -914,7 +950,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Fingerprint of the resource. This field is used internally during updates of this resource.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_firewallpolicyid_go">
 <a href="#state_firewallpolicyid_go" style="color: inherit; text-decoration: inherit;">Firewall<wbr>Policy<wbr>Id</a>
@@ -922,7 +959,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The unique identifier for the resource. This identifier is defined by the server.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -930,7 +968,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Name of the resource. It is a numeric ID allocated by GCP which uniquely identifies the Firewall Policy.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_parent_go">
 <a href="#state_parent_go" style="color: inherit; text-decoration: inherit;">Parent</a>
@@ -947,7 +986,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Total count of all firewall policy rule tuples. A firewall policy can not exceed a set number of tuples.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_selflink_go">
 <a href="#state_selflink_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -955,7 +995,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Server-defined URL for the resource.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_selflinkwithid_go">
 <a href="#state_selflinkwithid_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Link<wbr>With<wbr>Id</a>
@@ -963,7 +1004,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Server-defined URL for this resource with the resource id.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_shortname_go">
 <a href="#state_shortname_go" style="color: inherit; text-decoration: inherit;">Short<wbr>Name</a>
@@ -984,7 +1026,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Creation timestamp in RFC3339 text format.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1001,7 +1044,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Fingerprint of the resource. This field is used internally during updates of this resource.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_firewallpolicyid_nodejs">
 <a href="#state_firewallpolicyid_nodejs" style="color: inherit; text-decoration: inherit;">firewall<wbr>Policy<wbr>Id</a>
@@ -1009,7 +1053,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The unique identifier for the resource. This identifier is defined by the server.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1017,7 +1062,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Name of the resource. It is a numeric ID allocated by GCP which uniquely identifies the Firewall Policy.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_parent_nodejs">
 <a href="#state_parent_nodejs" style="color: inherit; text-decoration: inherit;">parent</a>
@@ -1034,7 +1080,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Total count of all firewall policy rule tuples. A firewall policy can not exceed a set number of tuples.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_selflink_nodejs">
 <a href="#state_selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
@@ -1042,7 +1089,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Server-defined URL for the resource.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_selflinkwithid_nodejs">
 <a href="#state_selflinkwithid_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link<wbr>With<wbr>Id</a>
@@ -1050,7 +1098,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Server-defined URL for this resource with the resource id.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_shortname_nodejs">
 <a href="#state_shortname_nodejs" style="color: inherit; text-decoration: inherit;">short<wbr>Name</a>
@@ -1071,7 +1120,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Creation timestamp in RFC3339 text format.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1088,7 +1138,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Fingerprint of the resource. This field is used internally during updates of this resource.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_firewall_policy_id_python">
 <a href="#state_firewall_policy_id_python" style="color: inherit; text-decoration: inherit;">firewall_<wbr>policy_<wbr>id</a>
@@ -1096,7 +1147,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The unique identifier for the resource. This identifier is defined by the server.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1104,7 +1156,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Name of the resource. It is a numeric ID allocated by GCP which uniquely identifies the Firewall Policy.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_parent_python">
 <a href="#state_parent_python" style="color: inherit; text-decoration: inherit;">parent</a>
@@ -1121,7 +1174,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Total count of all firewall policy rule tuples. A firewall policy can not exceed a set number of tuples.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_self_link_python">
 <a href="#state_self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
@@ -1129,7 +1183,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Server-defined URL for the resource.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_self_link_with_id_python">
 <a href="#state_self_link_with_id_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link_<wbr>with_<wbr>id</a>
@@ -1137,7 +1192,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Server-defined URL for this resource with the resource id.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_short_name_python">
 <a href="#state_short_name_python" style="color: inherit; text-decoration: inherit;">short_<wbr>name</a>

@@ -760,7 +760,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Type of the resource. Always `compute#firewallPolicyRule` for firewall policy rules
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ruletuplecount_csharp">
 <a href="#ruletuplecount_csharp" style="color: inherit; text-decoration: inherit;">Rule<wbr>Tuple<wbr>Count</a>
@@ -768,7 +769,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Calculation of the complexity of a single firewall policy rule.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -788,7 +790,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Type of the resource. Always `compute#firewallPolicyRule` for firewall policy rules
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ruletuplecount_go">
 <a href="#ruletuplecount_go" style="color: inherit; text-decoration: inherit;">Rule<wbr>Tuple<wbr>Count</a>
@@ -796,7 +799,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Calculation of the complexity of a single firewall policy rule.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -816,7 +820,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Type of the resource. Always `compute#firewallPolicyRule` for firewall policy rules
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ruletuplecount_nodejs">
 <a href="#ruletuplecount_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Tuple<wbr>Count</a>
@@ -824,7 +829,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Calculation of the complexity of a single firewall policy rule.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -844,7 +850,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Type of the resource. Always `compute#firewallPolicyRule` for firewall policy rules
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="rule_tuple_count_python">
 <a href="#rule_tuple_count_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>tuple_<wbr>count</a>
@@ -852,7 +859,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Calculation of the complexity of a single firewall policy rule.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1055,7 +1063,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Type of the resource. Always `compute#firewallPolicyRule` for firewall policy rules
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_match_csharp">
 <a href="#state_match_csharp" style="color: inherit; text-decoration: inherit;">Match</a>
@@ -1081,7 +1090,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Calculation of the complexity of a single firewall policy rule.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targetresources_csharp">
 <a href="#state_targetresources_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Resources</a>
@@ -1165,7 +1175,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Type of the resource. Always `compute#firewallPolicyRule` for firewall policy rules
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_match_go">
 <a href="#state_match_go" style="color: inherit; text-decoration: inherit;">Match</a>
@@ -1191,7 +1202,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Calculation of the complexity of a single firewall policy rule.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targetresources_go">
 <a href="#state_targetresources_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Resources</a>
@@ -1275,7 +1287,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Type of the resource. Always `compute#firewallPolicyRule` for firewall policy rules
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_match_nodejs">
 <a href="#state_match_nodejs" style="color: inherit; text-decoration: inherit;">match</a>
@@ -1301,7 +1314,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Calculation of the complexity of a single firewall policy rule.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targetresources_nodejs">
 <a href="#state_targetresources_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Resources</a>
@@ -1385,7 +1399,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Type of the resource. Always `compute#firewallPolicyRule` for firewall policy rules
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_match_python">
 <a href="#state_match_python" style="color: inherit; text-decoration: inherit;">match</a>
@@ -1411,7 +1426,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Calculation of the complexity of a single firewall policy rule.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_target_resources_python">
 <a href="#state_target_resources_python" style="color: inherit; text-decoration: inherit;">target_<wbr>resources</a>

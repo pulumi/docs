@@ -214,6 +214,7 @@ class MyStack : Stack
                     {
                         "MODE_IPV4",
                     },
+                    ConnectMode = "DIRECT_PEERING",
                 },
             },
         }, new CustomResourceOptions
@@ -272,6 +273,7 @@ func main() {
 					Modes: pulumi.StringArray{
 						pulumi.String("MODE_IPV4"),
 					},
+					ConnectMode: pulumi.String("DIRECT_PEERING"),
 				},
 			},
 		}, pulumi.Provider(google_beta))
@@ -317,6 +319,7 @@ instance = gcp.filestore.Instance("instance",
     networks=[gcp.filestore.InstanceNetworkArgs(
         network="default",
         modes=["MODE_IPV4"],
+        connect_mode="DIRECT_PEERING",
     )],
     opts=pulumi.ResourceOptions(provider=google_beta))
 ```
@@ -356,6 +359,7 @@ const instance = new gcp.filestore.Instance("instance", {
     networks: [{
         network: "default",
         modes: ["MODE_IPV4"],
+        connectMode: "DIRECT_PEERING",
     }],
 }, {
     provider: google_beta,
@@ -1925,6 +1929,14 @@ Each value may be one of `ADDRESS_MODE_UNSPECIFIED`, `MODE_IPV4`, and `MODE_IPV6
 instance is connected.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="connectmode_csharp">
+<a href="#connectmode_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="ipaddresses_csharp">
 <a href="#ipaddresses_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Addresses</a>
 </span>
@@ -1969,6 +1981,14 @@ Each value may be one of `ADDRESS_MODE_UNSPECIFIED`, `MODE_IPV4`, and `MODE_IPV6
     <dd>{{% md %}}The name of the GCE VPC network to which the
 instance is connected.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="connectmode_go">
+<a href="#connectmode_go" style="color: inherit; text-decoration: inherit;">Connect<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipaddresses_go">
 <a href="#ipaddresses_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Addresses</a>
@@ -2015,6 +2035,14 @@ Each value may be one of `ADDRESS_MODE_UNSPECIFIED`, `MODE_IPV4`, and `MODE_IPV6
 instance is connected.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="connectmode_nodejs">
+<a href="#connectmode_nodejs" style="color: inherit; text-decoration: inherit;">connect<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="ipaddresses_nodejs">
 <a href="#ipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Addresses</a>
 </span>
@@ -2059,6 +2087,14 @@ Each value may be one of `ADDRESS_MODE_UNSPECIFIED`, `MODE_IPV4`, and `MODE_IPV6
     <dd>{{% md %}}The name of the GCE VPC network to which the
 instance is connected.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="connect_mode_python">
+<a href="#connect_mode_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ip_addresses_python">
 <a href="#ip_addresses_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>addresses</a>

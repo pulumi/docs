@@ -258,14 +258,14 @@ class MyStack : Stack
         {
             Router = router1.Name,
             Region = "us-central1",
-            IpRange = "169.254.1.1/30",
+            IpRange = "169.254.1.2/30",
             VpnTunnel = tunnel2.Name,
         });
         var router1Peer2 = new Gcp.Compute.RouterPeer("router1Peer2", new Gcp.Compute.RouterPeerArgs
         {
             Router = router1.Name,
             Region = "us-central1",
-            PeerIpAddress = "169.254.1.2",
+            PeerIpAddress = "169.254.1.1",
             PeerAsn = 64515,
             AdvertisedRoutePriority = 100,
             Interface = router1Interface2.Name,
@@ -274,14 +274,14 @@ class MyStack : Stack
         {
             Router = router2.Name,
             Region = "us-central1",
-            IpRange = "169.254.0.1/30",
+            IpRange = "169.254.0.2/30",
             VpnTunnel = tunnel3.Name,
         });
         var router2Peer1 = new Gcp.Compute.RouterPeer("router2Peer1", new Gcp.Compute.RouterPeerArgs
         {
             Router = router2.Name,
             Region = "us-central1",
-            PeerIpAddress = "169.254.0.2",
+            PeerIpAddress = "169.254.0.1",
             PeerAsn = 64514,
             AdvertisedRoutePriority = 100,
             Interface = router2Interface1.Name,
@@ -468,7 +468,7 @@ func main() {
 		router1Interface2, err := compute.NewRouterInterface(ctx, "router1Interface2", &compute.RouterInterfaceArgs{
 			Router:    router1.Name,
 			Region:    pulumi.String("us-central1"),
-			IpRange:   pulumi.String("169.254.1.1/30"),
+			IpRange:   pulumi.String("169.254.1.2/30"),
 			VpnTunnel: tunnel2.Name,
 		})
 		if err != nil {
@@ -477,7 +477,7 @@ func main() {
 		_, err = compute.NewRouterPeer(ctx, "router1Peer2", &compute.RouterPeerArgs{
 			Router:                  router1.Name,
 			Region:                  pulumi.String("us-central1"),
-			PeerIpAddress:           pulumi.String("169.254.1.2"),
+			PeerIpAddress:           pulumi.String("169.254.1.1"),
 			PeerAsn:                 pulumi.Int(64515),
 			AdvertisedRoutePriority: pulumi.Int(100),
 			Interface:               router1Interface2.Name,
@@ -488,7 +488,7 @@ func main() {
 		router2Interface1, err := compute.NewRouterInterface(ctx, "router2Interface1", &compute.RouterInterfaceArgs{
 			Router:    router2.Name,
 			Region:    pulumi.String("us-central1"),
-			IpRange:   pulumi.String("169.254.0.1/30"),
+			IpRange:   pulumi.String("169.254.0.2/30"),
 			VpnTunnel: tunnel3.Name,
 		})
 		if err != nil {
@@ -497,7 +497,7 @@ func main() {
 		_, err = compute.NewRouterPeer(ctx, "router2Peer1", &compute.RouterPeerArgs{
 			Router:                  router2.Name,
 			Region:                  pulumi.String("us-central1"),
-			PeerIpAddress:           pulumi.String("169.254.0.2"),
+			PeerIpAddress:           pulumi.String("169.254.0.1"),
 			PeerAsn:                 pulumi.Int(64514),
 			AdvertisedRoutePriority: pulumi.Int(100),
 			Interface:               router2Interface1.Name,
@@ -621,24 +621,24 @@ router1_peer1 = gcp.compute.RouterPeer("router1Peer1",
 router1_interface2 = gcp.compute.RouterInterface("router1Interface2",
     router=router1.name,
     region="us-central1",
-    ip_range="169.254.1.1/30",
+    ip_range="169.254.1.2/30",
     vpn_tunnel=tunnel2.name)
 router1_peer2 = gcp.compute.RouterPeer("router1Peer2",
     router=router1.name,
     region="us-central1",
-    peer_ip_address="169.254.1.2",
+    peer_ip_address="169.254.1.1",
     peer_asn=64515,
     advertised_route_priority=100,
     interface=router1_interface2.name)
 router2_interface1 = gcp.compute.RouterInterface("router2Interface1",
     router=router2.name,
     region="us-central1",
-    ip_range="169.254.0.1/30",
+    ip_range="169.254.0.2/30",
     vpn_tunnel=tunnel3.name)
 router2_peer1 = gcp.compute.RouterPeer("router2Peer1",
     router=router2.name,
     region="us-central1",
-    peer_ip_address="169.254.0.2",
+    peer_ip_address="169.254.0.1",
     peer_asn=64514,
     advertised_route_priority=100,
     interface=router2_interface1.name)
@@ -764,13 +764,13 @@ const router1Peer1 = new gcp.compute.RouterPeer("router1Peer1", {
 const router1Interface2 = new gcp.compute.RouterInterface("router1Interface2", {
     router: router1.name,
     region: "us-central1",
-    ipRange: "169.254.1.1/30",
+    ipRange: "169.254.1.2/30",
     vpnTunnel: tunnel2.name,
 });
 const router1Peer2 = new gcp.compute.RouterPeer("router1Peer2", {
     router: router1.name,
     region: "us-central1",
-    peerIpAddress: "169.254.1.2",
+    peerIpAddress: "169.254.1.1",
     peerAsn: 64515,
     advertisedRoutePriority: 100,
     "interface": router1Interface2.name,
@@ -778,13 +778,13 @@ const router1Peer2 = new gcp.compute.RouterPeer("router1Peer2", {
 const router2Interface1 = new gcp.compute.RouterInterface("router2Interface1", {
     router: router2.name,
     region: "us-central1",
-    ipRange: "169.254.0.1/30",
+    ipRange: "169.254.0.2/30",
     vpnTunnel: tunnel3.name,
 });
 const router2Peer1 = new gcp.compute.RouterPeer("router2Peer1", {
     router: router2.name,
     region: "us-central1",
-    peerIpAddress: "169.254.0.2",
+    peerIpAddress: "169.254.0.1",
     peerAsn: 64514,
     advertisedRoutePriority: 100,
     "interface": router2Interface1.name,
