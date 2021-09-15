@@ -397,17 +397,16 @@ If you do not provide an encryption key when creating the disk, then
 the disk will be encrypted using an automatically generated key and
 you do not need to provide a key to use the disk later.
 Structure is documented below.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="interface_csharp">
 <a href="#interface_csharp" style="color: inherit; text-decoration: inherit;">Interface</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI. Default
-value: "SCSI" Possible values: ["SCSI", "NVME"]
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is no longer in use, disk interfaces will be automatically determined on attachment. To resolve this issue, remove this field from your config.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="labels_csharp">
 <a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -556,17 +555,16 @@ If you do not provide an encryption key when creating the disk, then
 the disk will be encrypted using an automatically generated key and
 you do not need to provide a key to use the disk later.
 Structure is documented below.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="interface_go">
 <a href="#interface_go" style="color: inherit; text-decoration: inherit;">Interface</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI. Default
-value: "SCSI" Possible values: ["SCSI", "NVME"]
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is no longer in use, disk interfaces will be automatically determined on attachment. To resolve this issue, remove this field from your config.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="labels_go">
 <a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -715,17 +713,16 @@ If you do not provide an encryption key when creating the disk, then
 the disk will be encrypted using an automatically generated key and
 you do not need to provide a key to use the disk later.
 Structure is documented below.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="interface_nodejs">
 <a href="#interface_nodejs" style="color: inherit; text-decoration: inherit;">interface</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI. Default
-value: "SCSI" Possible values: ["SCSI", "NVME"]
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is no longer in use, disk interfaces will be automatically determined on attachment. To resolve this issue, remove this field from your config.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="labels_nodejs">
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -874,17 +871,16 @@ If you do not provide an encryption key when creating the disk, then
 the disk will be encrypted using an automatically generated key and
 you do not need to provide a key to use the disk later.
 Structure is documented below.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="interface_python">
 <a href="#interface_python" style="color: inherit; text-decoration: inherit;">interface</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI. Default
-value: "SCSI" Possible values: ["SCSI", "NVME"]
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is no longer in use, disk interfaces will be automatically determined on attachment. To resolve this issue, remove this field from your config.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="labels_python">
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -1493,17 +1489,16 @@ If you do not provide an encryption key when creating the disk, then
 the disk will be encrypted using an automatically generated key and
 you do not need to provide a key to use the disk later.
 Structure is documented below.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_interface_csharp">
 <a href="#state_interface_csharp" style="color: inherit; text-decoration: inherit;">Interface</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI. Default
-value: "SCSI" Possible values: ["SCSI", "NVME"]
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is no longer in use, disk interfaces will be automatically determined on attachment. To resolve this issue, remove this field from your config.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_labelfingerprint_csharp">
 <a href="#state_labelfingerprint_csharp" style="color: inherit; text-decoration: inherit;">Label<wbr>Fingerprint</a>
@@ -1717,17 +1712,16 @@ If you do not provide an encryption key when creating the disk, then
 the disk will be encrypted using an automatically generated key and
 you do not need to provide a key to use the disk later.
 Structure is documented below.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_interface_go">
 <a href="#state_interface_go" style="color: inherit; text-decoration: inherit;">Interface</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI. Default
-value: "SCSI" Possible values: ["SCSI", "NVME"]
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is no longer in use, disk interfaces will be automatically determined on attachment. To resolve this issue, remove this field from your config.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_labelfingerprint_go">
 <a href="#state_labelfingerprint_go" style="color: inherit; text-decoration: inherit;">Label<wbr>Fingerprint</a>
@@ -1941,17 +1935,16 @@ If you do not provide an encryption key when creating the disk, then
 the disk will be encrypted using an automatically generated key and
 you do not need to provide a key to use the disk later.
 Structure is documented below.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_interface_nodejs">
 <a href="#state_interface_nodejs" style="color: inherit; text-decoration: inherit;">interface</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI. Default
-value: "SCSI" Possible values: ["SCSI", "NVME"]
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is no longer in use, disk interfaces will be automatically determined on attachment. To resolve this issue, remove this field from your config.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_labelfingerprint_nodejs">
 <a href="#state_labelfingerprint_nodejs" style="color: inherit; text-decoration: inherit;">label<wbr>Fingerprint</a>
@@ -2165,17 +2158,16 @@ If you do not provide an encryption key when creating the disk, then
 the disk will be encrypted using an automatically generated key and
 you do not need to provide a key to use the disk later.
 Structure is documented below.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_interface_python">
 <a href="#state_interface_python" style="color: inherit; text-decoration: inherit;">interface</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI. Default
-value: "SCSI" Possible values: ["SCSI", "NVME"]
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is no longer in use, disk interfaces will be automatically determined on attachment. To resolve this issue, remove this field from your config.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_label_fingerprint_python">
 <a href="#state_label_fingerprint_python" style="color: inherit; text-decoration: inherit;">label_<wbr>fingerprint</a>

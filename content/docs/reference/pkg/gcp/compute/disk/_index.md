@@ -359,8 +359,8 @@ images names must include the family name. If they don't, use the
 [gcp.compute.Image data source](https://www.terraform.io/docs/providers/google/d/compute_image.html).
 For instance, the image `centos-6-v20180104` includes its family name `centos-6`.
 These images can be referred by family name here.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="interface_csharp">
 <a href="#interface_csharp" style="color: inherit; text-decoration: inherit;">Interface</a>
 </span>
@@ -368,9 +368,7 @@ These images can be referred by family name here.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI.
-Default value is `SCSI`.
-Possible values are `SCSI` and `NVME`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is no longer in use, disk interfaces will be automatically determined on attachment. To resolve this issue, remove this field from your config.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="labels_csharp">
 <a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -575,8 +573,8 @@ images names must include the family name. If they don't, use the
 [gcp.compute.Image data source](https://www.terraform.io/docs/providers/google/d/compute_image.html).
 For instance, the image `centos-6-v20180104` includes its family name `centos-6`.
 These images can be referred by family name here.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="interface_go">
 <a href="#interface_go" style="color: inherit; text-decoration: inherit;">Interface</a>
 </span>
@@ -584,9 +582,7 @@ These images can be referred by family name here.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI.
-Default value is `SCSI`.
-Possible values are `SCSI` and `NVME`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is no longer in use, disk interfaces will be automatically determined on attachment. To resolve this issue, remove this field from your config.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="labels_go">
 <a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -791,8 +787,8 @@ images names must include the family name. If they don't, use the
 [gcp.compute.Image data source](https://www.terraform.io/docs/providers/google/d/compute_image.html).
 For instance, the image `centos-6-v20180104` includes its family name `centos-6`.
 These images can be referred by family name here.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="interface_nodejs">
 <a href="#interface_nodejs" style="color: inherit; text-decoration: inherit;">interface</a>
 </span>
@@ -800,9 +796,7 @@ These images can be referred by family name here.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI.
-Default value is `SCSI`.
-Possible values are `SCSI` and `NVME`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is no longer in use, disk interfaces will be automatically determined on attachment. To resolve this issue, remove this field from your config.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="labels_nodejs">
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -1007,8 +1001,8 @@ images names must include the family name. If they don't, use the
 [gcp.compute.Image data source](https://www.terraform.io/docs/providers/google/d/compute_image.html).
 For instance, the image `centos-6-v20180104` includes its family name `centos-6`.
 These images can be referred by family name here.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="interface_python">
 <a href="#interface_python" style="color: inherit; text-decoration: inherit;">interface</a>
 </span>
@@ -1016,9 +1010,7 @@ These images can be referred by family name here.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI.
-Default value is `SCSI`.
-Possible values are `SCSI` and `NVME`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is no longer in use, disk interfaces will be automatically determined on attachment. To resolve this issue, remove this field from your config.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="labels_python">
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -1741,8 +1733,8 @@ images names must include the family name. If they don't, use the
 [gcp.compute.Image data source](https://www.terraform.io/docs/providers/google/d/compute_image.html).
 For instance, the image `centos-6-v20180104` includes its family name `centos-6`.
 These images can be referred by family name here.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_interface_csharp">
 <a href="#state_interface_csharp" style="color: inherit; text-decoration: inherit;">Interface</a>
 </span>
@@ -1750,9 +1742,7 @@ These images can be referred by family name here.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI.
-Default value is `SCSI`.
-Possible values are `SCSI` and `NVME`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is no longer in use, disk interfaces will be automatically determined on attachment. To resolve this issue, remove this field from your config.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_labelfingerprint_csharp">
 <a href="#state_labelfingerprint_csharp" style="color: inherit; text-decoration: inherit;">Label<wbr>Fingerprint</a>
@@ -2033,8 +2023,8 @@ images names must include the family name. If they don't, use the
 [gcp.compute.Image data source](https://www.terraform.io/docs/providers/google/d/compute_image.html).
 For instance, the image `centos-6-v20180104` includes its family name `centos-6`.
 These images can be referred by family name here.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_interface_go">
 <a href="#state_interface_go" style="color: inherit; text-decoration: inherit;">Interface</a>
 </span>
@@ -2042,9 +2032,7 @@ These images can be referred by family name here.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI.
-Default value is `SCSI`.
-Possible values are `SCSI` and `NVME`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is no longer in use, disk interfaces will be automatically determined on attachment. To resolve this issue, remove this field from your config.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_labelfingerprint_go">
 <a href="#state_labelfingerprint_go" style="color: inherit; text-decoration: inherit;">Label<wbr>Fingerprint</a>
@@ -2325,8 +2313,8 @@ images names must include the family name. If they don't, use the
 [gcp.compute.Image data source](https://www.terraform.io/docs/providers/google/d/compute_image.html).
 For instance, the image `centos-6-v20180104` includes its family name `centos-6`.
 These images can be referred by family name here.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_interface_nodejs">
 <a href="#state_interface_nodejs" style="color: inherit; text-decoration: inherit;">interface</a>
 </span>
@@ -2334,9 +2322,7 @@ These images can be referred by family name here.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI.
-Default value is `SCSI`.
-Possible values are `SCSI` and `NVME`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is no longer in use, disk interfaces will be automatically determined on attachment. To resolve this issue, remove this field from your config.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_labelfingerprint_nodejs">
 <a href="#state_labelfingerprint_nodejs" style="color: inherit; text-decoration: inherit;">label<wbr>Fingerprint</a>
@@ -2617,8 +2603,8 @@ images names must include the family name. If they don't, use the
 [gcp.compute.Image data source](https://www.terraform.io/docs/providers/google/d/compute_image.html).
 For instance, the image `centos-6-v20180104` includes its family name `centos-6`.
 These images can be referred by family name here.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_interface_python">
 <a href="#state_interface_python" style="color: inherit; text-decoration: inherit;">interface</a>
 </span>
@@ -2626,9 +2612,7 @@ These images can be referred by family name here.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI.
-Default value is `SCSI`.
-Possible values are `SCSI` and `NVME`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is no longer in use, disk interfaces will be automatically determined on attachment. To resolve this issue, remove this field from your config.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_label_fingerprint_python">
 <a href="#state_label_fingerprint_python" style="color: inherit; text-decoration: inherit;">label_<wbr>fingerprint</a>

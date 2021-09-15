@@ -107,7 +107,7 @@ func main() {
 				LinearBuckets: &logging.MetricBucketOptionsLinearBucketsArgs{
 					NumFiniteBuckets: pulumi.Int(3),
 					Offset:           pulumi.Float64(1),
-					Width:            pulumi.Int(1),
+					Width:            pulumi.Float64(1),
 				},
 			},
 			Filter: pulumi.String("resource.type=gae_app AND severity>=ERROR"),
@@ -1944,7 +1944,7 @@ Structure is documented below.
 <a href="#width_csharp" style="color: inherit; text-decoration: inherit;">Width</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Must be greater than 0.
 {{% /md %}}</dd></dl>
@@ -1975,7 +1975,7 @@ Structure is documented below.
 <a href="#width_go" style="color: inherit; text-decoration: inherit;">Width</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Must be greater than 0.
 {{% /md %}}</dd></dl>
@@ -2037,7 +2037,7 @@ Structure is documented below.
 <a href="#width_python" style="color: inherit; text-decoration: inherit;">width</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Must be greater than 0.
 {{% /md %}}</dd></dl>

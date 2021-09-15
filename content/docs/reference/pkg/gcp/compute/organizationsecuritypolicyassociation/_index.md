@@ -678,10 +678,6 @@ OrganizationSecurityPolicyAssociation can be imported using any of these accepte
  $ pulumi import gcp:compute/organizationSecurityPolicyAssociation:OrganizationSecurityPolicyAssociation default {{policy_id}}/association/{{name}}
 ```
 
-```sh
- $ pulumi import gcp:compute/organizationSecurityPolicyAssociation:OrganizationSecurityPolicyAssociation default {{policy_id}}/{{name}}
-```
-
 
 
 

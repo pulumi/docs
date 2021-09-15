@@ -1621,10 +1621,6 @@ OrganizationSecurityPolicyRule can be imported using any of these accepted forma
  $ pulumi import gcp:compute/organizationSecurityPolicyRule:OrganizationSecurityPolicyRule default {{policy_id}}/priority/{{priority}}
 ```
 
-```sh
- $ pulumi import gcp:compute/organizationSecurityPolicyRule:OrganizationSecurityPolicyRule default {{policy_id}}/{{priority}}
-```
-
 
 
 
