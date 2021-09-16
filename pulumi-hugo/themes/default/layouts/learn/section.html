@@ -8,34 +8,38 @@
     <div class="p-0">
         <div class="pt-8 pb-64 mx-4 md:mx-0">
             <section id="modules">
-                <div class="container mx-auto flex flex-col md:flex-row justify-center md:pt-24">
-                    {{ range sort $modules ".Params.index" }}
-                        <div class="md:w-1/3 flex flex-col rounded shadow-2xl">
-                            <div>
-                                {{ if .Params.meta_image }}
-                                    <a class="block" href="{{ .RelPermalink }}">
-                                        <img
-                                            class="rounded-t border-b border-gray-300"
-                                            src="{{ (.Resources.GetMatch .Params.meta_image).RelPermalink }}"
-                                        alt="{{ .Title }}">
-                                    </a>
-                                {{ end }}
-                            </div>
-                            <div class="py-4 md:px-6 bg-white rounded-b">
-                                <h2>
-                                    <a href="{{ .RelPermalink }}" class="text-blue-700 hover:text-blue-600 transition-all">
-                                        {{ .Title }}
-                                    </a>
-                                </h2>
-                                <p class="text-gray-800 my-4">
-                                    {{ .Description }}
-                                </p>
-                                <div class="my-6">
-                                    {{ partial "learn/summary" (dict "module" .) }}
+                <div class="container mx-auto lg:pt-4">
+                    <div class="md:flex md:flex-wrap">
+                        {{ range sort $modules ".Params.index" }}
+                            <div class="md:px-4 md:w-1/2 lg:w-1/3 xl:w-1/4">
+                                <div class="flex flex-col rounded-xl shadow-xl mb-8 border border-gray-200">
+                                    <div>
+                                        {{ if .Params.meta_image }}
+                                            <a class="block" href="{{ .RelPermalink }}">
+                                                <img
+                                                    class="rounded-t"
+                                                    src="{{ (.Resources.GetMatch .Params.meta_image).RelPermalink }}"
+                                                alt="{{ .Title }}">
+                                            </a>
+                                        {{ end }}
+                                    </div>
+                                    <div class="py-8 px-4 bg-white rounded-b">
+                                        <h2>
+                                            <a href="{{ .RelPermalink }}" class="text-blue-700 hover:text-blue-600 transition-all">
+                                                {{ .Title }}
+                                            </a>
+                                        </h2>
+                                        <p class="text-gray-800 my-4">
+                                            {{ .Description }}
+                                        </p>
+                                        <div class="my-6">
+                                            {{ partial "learn/summary" (dict "module" .) }}
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    {{ end }}
+                        {{ end }}
+                    </div>
                 </div>
             </section>
         </div>
