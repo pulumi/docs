@@ -116,4 +116,4 @@ The following packages are available in packager managers:
 * Go: [`github.com/pulumi/pulumi-cloudamqp/sdk/v3/go/cloudamqp`](https://github.com/pulumi/pulumi-cloudamqp)
 * .NET: [`Pulumi.Cloudamqp`](https://www.nuget.org/packages/Pulumi.Cloudamqp)
 
-The Fastly provider is open source and available in the [pulumi/pulumi-cloudamqp](https://github.com/pulumi/pulumi-cloudamqp) repo.
+The CloudAMQP provider is open source and available in the [pulumi/pulumi-cloudamqp](https://github.com/pulumi/pulumi-cloudamqp) repo.
