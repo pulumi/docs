@@ -1,8 +1,14 @@
 [[releases]]
-date = "24th June 2021"
-title = "Fenergo Adopts Pulumi Cloud Engineering Platform to Accelerate Innovation Using The Modern Cloud"
-summary = "Financial services lifecycle management software leader adopted cloud engineering to successfully transition from building on-premise software to delivering modern cloud applications"
-url = "https://info.pulumi.com/press-release/fenergo-adopts-pulumi"
+date = "3rd August 2021"
+title = "SANS Institute Selects Pulumi Cloud Engineering Platform to Radically Simplify and Automate Cloud Application and Infrastructure Delivery"
+summary = "Cybersecurity training and certification leader leverages cloud engineering best practices to increase deployment velocity by 3X"
+url = "https://info.pulumi.com/press-release/sans-institute-selects-pulumi"
+
+[[releases]]
+date = "15th July 2021"
+title = "Atlassian Makes Cloud Infrastructure Radically Simpler for its Bitbucket Developers with Pulumi Cloud Engineering Platform"
+summary = "Pulumi enables Atlassian Bitbucket team to streamline infrastructure management and provide self-service infrastructure, increasing developers’ productivity and reducing maintenance time by 50%"
+url = "https://info.pulumi.com/press-release/atlassian-simplifies-infrastructure-with-pulumi"
 
 [[releases]]
 date = "20th April 2021"
