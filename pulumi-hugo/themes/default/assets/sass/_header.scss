@@ -63,7 +63,7 @@
     }
 
     .cta-container {
-        @apply hidden;
+        @apply hidden z-10;
 
         @screen lg {
             @apply flex items-center justify-end;
