@@ -686,6 +686,209 @@ const example = new aws.networkfirewall.RuleGroup("example", {
 
 
 
+### Stateful Inspection from rule group specifications using rule variables and Suricata format rules
+
+
+{{< example csharp >}}
+
+```csharp
+using System.IO;
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.NetworkFirewall.RuleGroup("example", new Aws.NetworkFirewall.RuleGroupArgs
+        {
+            Capacity = 100,
+            Type = "STATEFUL",
+            RuleGroup = new Aws.NetworkFirewall.Inputs.RuleGroupRuleGroupArgs
+            {
+                RuleVariables = new Aws.NetworkFirewall.Inputs.RuleGroupRuleGroupRuleVariablesArgs
+                {
+                    IpSets = 
+                    {
+                        new Aws.NetworkFirewall.Inputs.RuleGroupRuleGroupRuleVariablesIpSetArgs
+                        {
+                            Key = "WEBSERVERS_HOSTS",
+                            IpSet = new Aws.NetworkFirewall.Inputs.RuleGroupRuleGroupRuleVariablesIpSetIpSetArgs
+                            {
+                                Definitions = 
+                                {
+                                    "10.0.0.0/16",
+                                    "10.0.1.0/24",
+                                    "192.168.0.0/16",
+                                },
+                            },
+                        },
+                        new Aws.NetworkFirewall.Inputs.RuleGroupRuleGroupRuleVariablesIpSetArgs
+                        {
+                            Key = "EXTERNAL_HOST",
+                            IpSet = new Aws.NetworkFirewall.Inputs.RuleGroupRuleGroupRuleVariablesIpSetIpSetArgs
+                            {
+                                Definitions = 
+                                {
+                                    "1.2.3.4/32",
+                                },
+                            },
+                        },
+                    },
+                    PortSets = 
+                    {
+                        new Aws.NetworkFirewall.Inputs.RuleGroupRuleGroupRuleVariablesPortSetArgs
+                        {
+                            Key = "HTTP_PORTS",
+                            PortSet = new Aws.NetworkFirewall.Inputs.RuleGroupRuleGroupRuleVariablesPortSetPortSetArgs
+                            {
+                                Definitions = 
+                                {
+                                    "443",
+                                    "80",
+                                },
+                            },
+                        },
+                    },
+                },
+                RulesSource = new Aws.NetworkFirewall.Inputs.RuleGroupRuleGroupRulesSourceArgs
+                {
+                    RulesString = File.ReadAllText("suricata_rules_file"),
+                },
+            },
+            Tags = 
+            {
+                { "Tag1", "Value1" },
+                { "Tag2", "Value2" },
+            },
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+Coming soon!
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.networkfirewall.RuleGroup("example",
+    capacity=100,
+    type="STATEFUL",
+    rule_group=aws.networkfirewall.RuleGroupRuleGroupArgs(
+        rule_variables=aws.networkfirewall.RuleGroupRuleGroupRuleVariablesArgs(
+            ip_sets=[
+                aws.networkfirewall.RuleGroupRuleGroupRuleVariablesIpSetArgs(
+                    key="WEBSERVERS_HOSTS",
+                    ip_set=aws.networkfirewall.RuleGroupRuleGroupRuleVariablesIpSetIpSetArgs(
+                        definitions=[
+                            "10.0.0.0/16",
+                            "10.0.1.0/24",
+                            "192.168.0.0/16",
+                        ],
+                    ),
+                ),
+                aws.networkfirewall.RuleGroupRuleGroupRuleVariablesIpSetArgs(
+                    key="EXTERNAL_HOST",
+                    ip_set=aws.networkfirewall.RuleGroupRuleGroupRuleVariablesIpSetIpSetArgs(
+                        definitions=["1.2.3.4/32"],
+                    ),
+                ),
+            ],
+            port_sets=[aws.networkfirewall.RuleGroupRuleGroupRuleVariablesPortSetArgs(
+                key="HTTP_PORTS",
+                port_set=aws.networkfirewall.RuleGroupRuleGroupRuleVariablesPortSetPortSetArgs(
+                    definitions=[
+                        "443",
+                        "80",
+                    ],
+                ),
+            )],
+        ),
+        rules_source=aws.networkfirewall.RuleGroupRuleGroupRulesSourceArgs(
+            rules_string=(lambda path: open(path).read())("suricata_rules_file"),
+        ),
+    ),
+    tags={
+        "Tag1": "Value1",
+        "Tag2": "Value2",
+    })
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+import * from "fs";
+
+const example = new aws.networkfirewall.RuleGroup("example", {
+    capacity: 100,
+    type: "STATEFUL",
+    ruleGroup: {
+        ruleVariables: {
+            ipSets: [
+                {
+                    key: "WEBSERVERS_HOSTS",
+                    ipSet: {
+                        definitions: [
+                            "10.0.0.0/16",
+                            "10.0.1.0/24",
+                            "192.168.0.0/16",
+                        ],
+                    },
+                },
+                {
+                    key: "EXTERNAL_HOST",
+                    ipSet: {
+                        definitions: ["1.2.3.4/32"],
+                    },
+                },
+            ],
+            portSets: [{
+                key: "HTTP_PORTS",
+                portSet: {
+                    definitions: [
+                        "443",
+                        "80",
+                    ],
+                },
+            }],
+        },
+        rulesSource: {
+            rulesString: fs.readFileSync("suricata_rules_file"),
+        },
+    },
+    tags: {
+        Tag1: "Value1",
+        Tag2: "Value2",
+    },
+});
+```
+
+
+{{< /example >}}
+
+
+
+
 ### Stateless Inspection with a Custom Action
 
 

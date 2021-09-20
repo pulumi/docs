@@ -276,6 +276,145 @@ const examplePolicy = new aws.iam.Policy("examplePolicy", {
 
 
 
+### Example Assume-Role Policy with Multiple Principals
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var eventStreamBucketRoleAssumeRolePolicy = Output.Create(Aws.Iam.GetPolicyDocument.InvokeAsync(new Aws.Iam.GetPolicyDocumentArgs
+        {
+            Statements = 
+            {
+                new Aws.Iam.Inputs.GetPolicyDocumentStatementArgs
+                {
+                    Actions = 
+                    {
+                        "sts:AssumeRole",
+                    },
+                    Principals = 
+                    {
+                        new Aws.Iam.Inputs.GetPolicyDocumentStatementPrincipalArgs
+                        {
+                            Type = "Service",
+                            Identifiers = 
+                            {
+                                "firehose.amazonaws.com",
+                            },
+                        },
+                        new Aws.Iam.Inputs.GetPolicyDocumentStatementPrincipalArgs
+                        {
+                            Type = "AWS",
+                            Identifiers = 
+                            {
+                                @var.Trusted_role_arn,
+                            },
+                        },
+                        new Aws.Iam.Inputs.GetPolicyDocumentStatementPrincipalArgs
+                        {
+                            Type = "Federated",
+                            Identifiers = 
+                            {
+                                $"arn:aws:iam::{@var.Account_id}:saml-provider/{@var.Provider_name}",
+                                "cognito-identity.amazonaws.com",
+                            },
+                        },
+                    },
+                },
+            },
+        }));
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+Coming soon!
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_aws as aws
+
+event_stream_bucket_role_assume_role_policy = aws.iam.get_policy_document(statements=[aws.iam.GetPolicyDocumentStatementArgs(
+    actions=["sts:AssumeRole"],
+    principals=[
+        aws.iam.GetPolicyDocumentStatementPrincipalArgs(
+            type="Service",
+            identifiers=["firehose.amazonaws.com"],
+        ),
+        aws.iam.GetPolicyDocumentStatementPrincipalArgs(
+            type="AWS",
+            identifiers=[var["trusted_role_arn"]],
+        ),
+        aws.iam.GetPolicyDocumentStatementPrincipalArgs(
+            type="Federated",
+            identifiers=[
+                f"arn:aws:iam::{var['account_id']}:saml-provider/{var['provider_name']}",
+                "cognito-identity.amazonaws.com",
+            ],
+        ),
+    ],
+)])
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const eventStreamBucketRoleAssumeRolePolicy = aws.iam.getPolicyDocument({
+    statements: [{
+        actions: ["sts:AssumeRole"],
+        principals: [
+            {
+                type: "Service",
+                identifiers: ["firehose.amazonaws.com"],
+            },
+            {
+                type: "AWS",
+                identifiers: [_var.trusted_role_arn],
+            },
+            {
+                type: "Federated",
+                identifiers: [
+                    `arn:aws:iam::${_var.account_id}:saml-provider/${_var.provider_name}`,
+                    "cognito-identity.amazonaws.com",
+                ],
+            },
+        ],
+    }],
+});
+```
+
+
+{{< /example >}}
+
+
+
+
 ### Example Using A Source Document
 
 
@@ -866,6 +1005,453 @@ const override = aws.iam.getPolicyDocument({
 const politik = Promise.all([source, override]).then(([source, override]) => aws.iam.getPolicyDocument({
     sourceJson: source.json,
     overrideJson: override.json,
+}));
+```
+
+
+{{< /example >}}
+
+
+
+
+### Example of Merging Source Documents
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var sourceOne = Output.Create(Aws.Iam.GetPolicyDocument.InvokeAsync(new Aws.Iam.GetPolicyDocumentArgs
+        {
+            Statements = 
+            {
+                new Aws.Iam.Inputs.GetPolicyDocumentStatementArgs
+                {
+                    Actions = 
+                    {
+                        "ec2:*",
+                    },
+                    Resources = 
+                    {
+                        "*",
+                    },
+                },
+                new Aws.Iam.Inputs.GetPolicyDocumentStatementArgs
+                {
+                    Sid = "UniqueSidOne",
+                    Actions = 
+                    {
+                        "s3:*",
+                    },
+                    Resources = 
+                    {
+                        "*",
+                    },
+                },
+            },
+        }));
+        var sourceTwo = Output.Create(Aws.Iam.GetPolicyDocument.InvokeAsync(new Aws.Iam.GetPolicyDocumentArgs
+        {
+            Statements = 
+            {
+                new Aws.Iam.Inputs.GetPolicyDocumentStatementArgs
+                {
+                    Sid = "UniqueSidTwo",
+                    Actions = 
+                    {
+                        "iam:*",
+                    },
+                    Resources = 
+                    {
+                        "*",
+                    },
+                },
+                new Aws.Iam.Inputs.GetPolicyDocumentStatementArgs
+                {
+                    Actions = 
+                    {
+                        "lambda:*",
+                    },
+                    Resources = 
+                    {
+                        "*",
+                    },
+                },
+            },
+        }));
+        var combined = Output.Tuple(sourceOne, sourceTwo).Apply(values =>
+        {
+            var sourceOne = values.Item1;
+            var sourceTwo = values.Item2;
+            return Output.Create(Aws.Iam.GetPolicyDocument.InvokeAsync(new Aws.Iam.GetPolicyDocumentArgs
+            {
+                SourcePolicyDocuments = 
+                {
+                    sourceOne.Json,
+                    sourceTwo.Json,
+                },
+            }));
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_aws as aws
+
+source_one = aws.iam.get_policy_document(statements=[
+    aws.iam.GetPolicyDocumentStatementArgs(
+        actions=["ec2:*"],
+        resources=["*"],
+    ),
+    aws.iam.GetPolicyDocumentStatementArgs(
+        sid="UniqueSidOne",
+        actions=["s3:*"],
+        resources=["*"],
+    ),
+])
+source_two = aws.iam.get_policy_document(statements=[
+    aws.iam.GetPolicyDocumentStatementArgs(
+        sid="UniqueSidTwo",
+        actions=["iam:*"],
+        resources=["*"],
+    ),
+    aws.iam.GetPolicyDocumentStatementArgs(
+        actions=["lambda:*"],
+        resources=["*"],
+    ),
+])
+combined = aws.iam.get_policy_document(source_policy_documents=[
+    source_one.json,
+    source_two.json,
+])
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const sourceOne = aws.iam.getPolicyDocument({
+    statements: [
+        {
+            actions: ["ec2:*"],
+            resources: ["*"],
+        },
+        {
+            sid: "UniqueSidOne",
+            actions: ["s3:*"],
+            resources: ["*"],
+        },
+    ],
+});
+const sourceTwo = aws.iam.getPolicyDocument({
+    statements: [
+        {
+            sid: "UniqueSidTwo",
+            actions: ["iam:*"],
+            resources: ["*"],
+        },
+        {
+            actions: ["lambda:*"],
+            resources: ["*"],
+        },
+    ],
+});
+const combined = Promise.all([sourceOne, sourceTwo]).then(([sourceOne, sourceTwo]) => aws.iam.getPolicyDocument({
+    sourcePolicyDocuments: [
+        sourceOne.json,
+        sourceTwo.json,
+    ],
+}));
+```
+
+
+{{< /example >}}
+
+
+
+
+### Example of Merging Override Documents
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var policyOne = Output.Create(Aws.Iam.GetPolicyDocument.InvokeAsync(new Aws.Iam.GetPolicyDocumentArgs
+        {
+            Statements = 
+            {
+                new Aws.Iam.Inputs.GetPolicyDocumentStatementArgs
+                {
+                    Sid = "OverridePlaceHolderOne",
+                    Effect = "Allow",
+                    Actions = 
+                    {
+                        "s3:*",
+                    },
+                    Resources = 
+                    {
+                        "*",
+                    },
+                },
+            },
+        }));
+        var policyTwo = Output.Create(Aws.Iam.GetPolicyDocument.InvokeAsync(new Aws.Iam.GetPolicyDocumentArgs
+        {
+            Statements = 
+            {
+                new Aws.Iam.Inputs.GetPolicyDocumentStatementArgs
+                {
+                    Effect = "Allow",
+                    Actions = 
+                    {
+                        "ec2:*",
+                    },
+                    Resources = 
+                    {
+                        "*",
+                    },
+                },
+                new Aws.Iam.Inputs.GetPolicyDocumentStatementArgs
+                {
+                    Sid = "OverridePlaceHolderTwo",
+                    Effect = "Allow",
+                    Actions = 
+                    {
+                        "iam:*",
+                    },
+                    Resources = 
+                    {
+                        "*",
+                    },
+                },
+            },
+        }));
+        var policyThree = Output.Create(Aws.Iam.GetPolicyDocument.InvokeAsync(new Aws.Iam.GetPolicyDocumentArgs
+        {
+            Statements = 
+            {
+                new Aws.Iam.Inputs.GetPolicyDocumentStatementArgs
+                {
+                    Sid = "OverridePlaceHolderOne",
+                    Effect = "Deny",
+                    Actions = 
+                    {
+                        "logs:*",
+                    },
+                    Resources = 
+                    {
+                        "*",
+                    },
+                },
+            },
+        }));
+        var combined = Output.Tuple(policyOne, policyTwo, policyThree).Apply(values =>
+        {
+            var policyOne = values.Item1;
+            var policyTwo = values.Item2;
+            var policyThree = values.Item3;
+            return Output.Create(Aws.Iam.GetPolicyDocument.InvokeAsync(new Aws.Iam.GetPolicyDocumentArgs
+            {
+                OverridePolicyDocuments = 
+                {
+                    policyOne.Json,
+                    policyTwo.Json,
+                    policyThree.Json,
+                },
+                Statements = 
+                {
+                    new Aws.Iam.Inputs.GetPolicyDocumentStatementArgs
+                    {
+                        Sid = "OverridePlaceHolderTwo",
+                        Effect = "Deny",
+                        Actions = 
+                        {
+                            "*",
+                        },
+                        Resources = 
+                        {
+                            "*",
+                        },
+                    },
+                },
+            }));
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_aws as aws
+
+policy_one = aws.iam.get_policy_document(statements=[aws.iam.GetPolicyDocumentStatementArgs(
+    sid="OverridePlaceHolderOne",
+    effect="Allow",
+    actions=["s3:*"],
+    resources=["*"],
+)])
+policy_two = aws.iam.get_policy_document(statements=[
+    aws.iam.GetPolicyDocumentStatementArgs(
+        effect="Allow",
+        actions=["ec2:*"],
+        resources=["*"],
+    ),
+    aws.iam.GetPolicyDocumentStatementArgs(
+        sid="OverridePlaceHolderTwo",
+        effect="Allow",
+        actions=["iam:*"],
+        resources=["*"],
+    ),
+])
+policy_three = aws.iam.get_policy_document(statements=[aws.iam.GetPolicyDocumentStatementArgs(
+    sid="OverridePlaceHolderOne",
+    effect="Deny",
+    actions=["logs:*"],
+    resources=["*"],
+)])
+combined = aws.iam.get_policy_document(override_policy_documents=[
+        policy_one.json,
+        policy_two.json,
+        policy_three.json,
+    ],
+    statements=[aws.iam.GetPolicyDocumentStatementArgs(
+        sid="OverridePlaceHolderTwo",
+        effect="Deny",
+        actions=["*"],
+        resources=["*"],
+    )])
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const policyOne = aws.iam.getPolicyDocument({
+    statements: [{
+        sid: "OverridePlaceHolderOne",
+        effect: "Allow",
+        actions: ["s3:*"],
+        resources: ["*"],
+    }],
+});
+const policyTwo = aws.iam.getPolicyDocument({
+    statements: [
+        {
+            effect: "Allow",
+            actions: ["ec2:*"],
+            resources: ["*"],
+        },
+        {
+            sid: "OverridePlaceHolderTwo",
+            effect: "Allow",
+            actions: ["iam:*"],
+            resources: ["*"],
+        },
+    ],
+});
+const policyThree = aws.iam.getPolicyDocument({
+    statements: [{
+        sid: "OverridePlaceHolderOne",
+        effect: "Deny",
+        actions: ["logs:*"],
+        resources: ["*"],
+    }],
+});
+const combined = Promise.all([policyOne, policyTwo, policyThree]).then(([policyOne, policyTwo, policyThree]) => aws.iam.getPolicyDocument({
+    overridePolicyDocuments: [
+        policyOne.json,
+        policyTwo.json,
+        policyThree.json,
+    ],
+    statements: [{
+        sid: "OverridePlaceHolderTwo",
+        effect: "Deny",
+        actions: ["*"],
+        resources: ["*"],
+    }],
 }));
 ```
 

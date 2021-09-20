@@ -12,6 +12,467 @@ meta_desc: "Documentation for the aws.mwaa.Environment resource with examples, i
 
 Creates a MWAA Environment resource.
 
+{{% examples %}}
+
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+
+### Basic Usage
+
+
+{{< example csharp >}}
+
+```csharp
+using System.Linq;
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.Mwaa.Environment("example", new Aws.Mwaa.EnvironmentArgs
+        {
+            DagS3Path = "dags/",
+            ExecutionRoleArn = aws_iam_role.Example.Arn,
+            NetworkConfiguration = new Aws.Mwaa.Inputs.EnvironmentNetworkConfigurationArgs
+            {
+                SecurityGroupIds = 
+                {
+                    aws_security_group.Example.Id,
+                },
+                SubnetIds = aws_subnet.Private.Select(__item => __item.Id).ToList(),
+            },
+            SourceBucketArn = aws_s3_bucket.Example.Arn,
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+Coming soon!
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.mwaa.Environment("example",
+    dag_s3_path="dags/",
+    execution_role_arn=aws_iam_role["example"]["arn"],
+    network_configuration=aws.mwaa.EnvironmentNetworkConfigurationArgs(
+        security_group_ids=[aws_security_group["example"]["id"]],
+        subnet_ids=[__item["id"] for __item in aws_subnet["private"]],
+    ),
+    source_bucket_arn=aws_s3_bucket["example"]["arn"])
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const example = new aws.mwaa.Environment("example", {
+    dagS3Path: "dags/",
+    executionRoleArn: aws_iam_role.example.arn,
+    networkConfiguration: {
+        securityGroupIds: [aws_security_group.example.id],
+        subnetIds: aws_subnet["private"].map(__item => __item.id),
+    },
+    sourceBucketArn: aws_s3_bucket.example.arn,
+});
+```
+
+
+{{< /example >}}
+
+
+
+
+### Example with Airflow configuration options
+
+
+{{< example csharp >}}
+
+```csharp
+using System.Linq;
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.Mwaa.Environment("example", new Aws.Mwaa.EnvironmentArgs
+        {
+            AirflowConfigurationOptions = 
+            {
+                { "core.default_task_retries", "16" },
+                { "core.parallelism", "1" },
+            },
+            DagS3Path = "dags/",
+            ExecutionRoleArn = aws_iam_role.Example.Arn,
+            NetworkConfiguration = new Aws.Mwaa.Inputs.EnvironmentNetworkConfigurationArgs
+            {
+                SecurityGroupIds = 
+                {
+                    aws_security_group.Example.Id,
+                },
+                SubnetIds = aws_subnet.Private.Select(__item => __item.Id).ToList(),
+            },
+            SourceBucketArn = aws_s3_bucket.Example.Arn,
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+Coming soon!
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.mwaa.Environment("example",
+    airflow_configuration_options={
+        "core.default_task_retries": "16",
+        "core.parallelism": "1",
+    },
+    dag_s3_path="dags/",
+    execution_role_arn=aws_iam_role["example"]["arn"],
+    network_configuration=aws.mwaa.EnvironmentNetworkConfigurationArgs(
+        security_group_ids=[aws_security_group["example"]["id"]],
+        subnet_ids=[__item["id"] for __item in aws_subnet["private"]],
+    ),
+    source_bucket_arn=aws_s3_bucket["example"]["arn"])
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const example = new aws.mwaa.Environment("example", {
+    airflowConfigurationOptions: {
+        "core.default_task_retries": 16,
+        "core.parallelism": 1,
+    },
+    dagS3Path: "dags/",
+    executionRoleArn: aws_iam_role.example.arn,
+    networkConfiguration: {
+        securityGroupIds: [aws_security_group.example.id],
+        subnetIds: aws_subnet["private"].map(__item => __item.id),
+    },
+    sourceBucketArn: aws_s3_bucket.example.arn,
+});
+```
+
+
+{{< /example >}}
+
+
+
+
+### Example with logging configurations
+
+
+{{< example csharp >}}
+
+```csharp
+using System.Linq;
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.Mwaa.Environment("example", new Aws.Mwaa.EnvironmentArgs
+        {
+            DagS3Path = "dags/",
+            ExecutionRoleArn = aws_iam_role.Example.Arn,
+            LoggingConfiguration = new Aws.Mwaa.Inputs.EnvironmentLoggingConfigurationArgs
+            {
+                DagProcessingLogs = new Aws.Mwaa.Inputs.EnvironmentLoggingConfigurationDagProcessingLogsArgs
+                {
+                    Enabled = true,
+                    LogLevel = "DEBUG",
+                },
+                SchedulerLogs = new Aws.Mwaa.Inputs.EnvironmentLoggingConfigurationSchedulerLogsArgs
+                {
+                    Enabled = true,
+                    LogLevel = "INFO",
+                },
+                TaskLogs = new Aws.Mwaa.Inputs.EnvironmentLoggingConfigurationTaskLogsArgs
+                {
+                    Enabled = true,
+                    LogLevel = "WARNING",
+                },
+                WebserverLogs = new Aws.Mwaa.Inputs.EnvironmentLoggingConfigurationWebserverLogsArgs
+                {
+                    Enabled = true,
+                    LogLevel = "ERROR",
+                },
+                WorkerLogs = new Aws.Mwaa.Inputs.EnvironmentLoggingConfigurationWorkerLogsArgs
+                {
+                    Enabled = true,
+                    LogLevel = "CRITICAL",
+                },
+            },
+            NetworkConfiguration = new Aws.Mwaa.Inputs.EnvironmentNetworkConfigurationArgs
+            {
+                SecurityGroupIds = 
+                {
+                    aws_security_group.Example.Id,
+                },
+                SubnetIds = aws_subnet.Private.Select(__item => __item.Id).ToList(),
+            },
+            SourceBucketArn = aws_s3_bucket.Example.Arn,
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+Coming soon!
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.mwaa.Environment("example",
+    dag_s3_path="dags/",
+    execution_role_arn=aws_iam_role["example"]["arn"],
+    logging_configuration=aws.mwaa.EnvironmentLoggingConfigurationArgs(
+        dag_processing_logs=aws.mwaa.EnvironmentLoggingConfigurationDagProcessingLogsArgs(
+            enabled=True,
+            log_level="DEBUG",
+        ),
+        scheduler_logs=aws.mwaa.EnvironmentLoggingConfigurationSchedulerLogsArgs(
+            enabled=True,
+            log_level="INFO",
+        ),
+        task_logs=aws.mwaa.EnvironmentLoggingConfigurationTaskLogsArgs(
+            enabled=True,
+            log_level="WARNING",
+        ),
+        webserver_logs=aws.mwaa.EnvironmentLoggingConfigurationWebserverLogsArgs(
+            enabled=True,
+            log_level="ERROR",
+        ),
+        worker_logs=aws.mwaa.EnvironmentLoggingConfigurationWorkerLogsArgs(
+            enabled=True,
+            log_level="CRITICAL",
+        ),
+    ),
+    network_configuration=aws.mwaa.EnvironmentNetworkConfigurationArgs(
+        security_group_ids=[aws_security_group["example"]["id"]],
+        subnet_ids=[__item["id"] for __item in aws_subnet["private"]],
+    ),
+    source_bucket_arn=aws_s3_bucket["example"]["arn"])
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const example = new aws.mwaa.Environment("example", {
+    dagS3Path: "dags/",
+    executionRoleArn: aws_iam_role.example.arn,
+    loggingConfiguration: {
+        dagProcessingLogs: {
+            enabled: true,
+            logLevel: "DEBUG",
+        },
+        schedulerLogs: {
+            enabled: true,
+            logLevel: "INFO",
+        },
+        taskLogs: {
+            enabled: true,
+            logLevel: "WARNING",
+        },
+        webserverLogs: {
+            enabled: true,
+            logLevel: "ERROR",
+        },
+        workerLogs: {
+            enabled: true,
+            logLevel: "CRITICAL",
+        },
+    },
+    networkConfiguration: {
+        securityGroupIds: [aws_security_group.example.id],
+        subnetIds: aws_subnet["private"].map(__item => __item.id),
+    },
+    sourceBucketArn: aws_s3_bucket.example.arn,
+});
+```
+
+
+{{< /example >}}
+
+
+
+
+### Example with tags
+
+
+{{< example csharp >}}
+
+```csharp
+using System.Linq;
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.Mwaa.Environment("example", new Aws.Mwaa.EnvironmentArgs
+        {
+            DagS3Path = "dags/",
+            ExecutionRoleArn = aws_iam_role.Example.Arn,
+            NetworkConfiguration = new Aws.Mwaa.Inputs.EnvironmentNetworkConfigurationArgs
+            {
+                SecurityGroupIds = 
+                {
+                    aws_security_group.Example.Id,
+                },
+                SubnetIds = aws_subnet.Private.Select(__item => __item.Id).ToList(),
+            },
+            SourceBucketArn = aws_s3_bucket.Example.Arn,
+            Tags = 
+            {
+                { "Name", "example" },
+                { "Environment", "production" },
+            },
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+Coming soon!
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.mwaa.Environment("example",
+    dag_s3_path="dags/",
+    execution_role_arn=aws_iam_role["example"]["arn"],
+    network_configuration=aws.mwaa.EnvironmentNetworkConfigurationArgs(
+        security_group_ids=[aws_security_group["example"]["id"]],
+        subnet_ids=[__item["id"] for __item in aws_subnet["private"]],
+    ),
+    source_bucket_arn=aws_s3_bucket["example"]["arn"],
+    tags={
+        "Name": "example",
+        "Environment": "production",
+    })
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const example = new aws.mwaa.Environment("example", {
+    dagS3Path: "dags/",
+    executionRoleArn: aws_iam_role.example.arn,
+    networkConfiguration: {
+        securityGroupIds: [aws_security_group.example.id],
+        subnetIds: aws_subnet["private"].map(__item => __item.id),
+    },
+    sourceBucketArn: aws_s3_bucket.example.arn,
+    tags: {
+        Name: "example",
+        Environment: "production",
+    },
+});
+```
+
+
+{{< /example >}}
+
+
+
+
+
+{{% /examples %}}
+
+
 
 
 ## Create a Environment Resource {#create}

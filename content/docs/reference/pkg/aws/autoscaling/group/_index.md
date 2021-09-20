@@ -1643,7 +1643,7 @@ group names. Only valid for classic load balancers. For ALBs, use `target_group_
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum amount of time, in seconds, that an instance can be in service, values must be either equal to 0 or between 604800 and 31536000 seconds.
+    <dd>{{% md %}}The maximum amount of time, in seconds, that an instance can be in service, values must be either equal to 0 or between 86400 and 31536000 seconds.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metricsgranularity_csharp">
@@ -1673,7 +1673,7 @@ ELB only on creation. Updates will not wait on ELB instance number changes.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#groupmixedinstancespolicy">Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configuration block containing settings to define launch targets for Auto Scaling groups. Defined below.
+    <dd>{{% md %}}Configuration block containing settings to define launch targets for Auto Scaling groups. See Mixed Instances Policy below for more details.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
@@ -1983,7 +1983,7 @@ group names. Only valid for classic load balancers. For ALBs, use `target_group_
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum amount of time, in seconds, that an instance can be in service, values must be either equal to 0 or between 604800 and 31536000 seconds.
+    <dd>{{% md %}}The maximum amount of time, in seconds, that an instance can be in service, values must be either equal to 0 or between 86400 and 31536000 seconds.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metricsgranularity_go">
@@ -2013,7 +2013,7 @@ ELB only on creation. Updates will not wait on ELB instance number changes.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#groupmixedinstancespolicy">Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configuration block containing settings to define launch targets for Auto Scaling groups. Defined below.
+    <dd>{{% md %}}Configuration block containing settings to define launch targets for Auto Scaling groups. See Mixed Instances Policy below for more details.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
@@ -2323,7 +2323,7 @@ group names. Only valid for classic load balancers. For ALBs, use `target_group_
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The maximum amount of time, in seconds, that an instance can be in service, values must be either equal to 0 or between 604800 and 31536000 seconds.
+    <dd>{{% md %}}The maximum amount of time, in seconds, that an instance can be in service, values must be either equal to 0 or between 86400 and 31536000 seconds.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metricsgranularity_nodejs">
@@ -2353,7 +2353,7 @@ ELB only on creation. Updates will not wait on ELB instance number changes.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#groupmixedinstancespolicy">Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configuration block containing settings to define launch targets for Auto Scaling groups. Defined below.
+    <dd>{{% md %}}Configuration block containing settings to define launch targets for Auto Scaling groups. See Mixed Instances Policy below for more details.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
@@ -2663,7 +2663,7 @@ group names. Only valid for classic load balancers. For ALBs, use `target_group_
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum amount of time, in seconds, that an instance can be in service, values must be either equal to 0 or between 604800 and 31536000 seconds.
+    <dd>{{% md %}}The maximum amount of time, in seconds, that an instance can be in service, values must be either equal to 0 or between 86400 and 31536000 seconds.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metrics_granularity_python">
@@ -2693,7 +2693,7 @@ ELB only on creation. Updates will not wait on ELB instance number changes.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#groupmixedinstancespolicy">Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configuration block containing settings to define launch targets for Auto Scaling groups. Defined below.
+    <dd>{{% md %}}Configuration block containing settings to define launch targets for Auto Scaling groups. See Mixed Instances Policy below for more details.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
@@ -3245,7 +3245,7 @@ group names. Only valid for classic load balancers. For ALBs, use `target_group_
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum amount of time, in seconds, that an instance can be in service, values must be either equal to 0 or between 604800 and 31536000 seconds.
+    <dd>{{% md %}}The maximum amount of time, in seconds, that an instance can be in service, values must be either equal to 0 or between 86400 and 31536000 seconds.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxsize_csharp">
@@ -3293,7 +3293,7 @@ ELB only on creation. Updates will not wait on ELB instance number changes.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#groupmixedinstancespolicy">Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configuration block containing settings to define launch targets for Auto Scaling groups. Defined below.
+    <dd>{{% md %}}Configuration block containing settings to define launch targets for Auto Scaling groups. See Mixed Instances Policy below for more details.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
@@ -3594,7 +3594,7 @@ group names. Only valid for classic load balancers. For ALBs, use `target_group_
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum amount of time, in seconds, that an instance can be in service, values must be either equal to 0 or between 604800 and 31536000 seconds.
+    <dd>{{% md %}}The maximum amount of time, in seconds, that an instance can be in service, values must be either equal to 0 or between 86400 and 31536000 seconds.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxsize_go">
@@ -3642,7 +3642,7 @@ ELB only on creation. Updates will not wait on ELB instance number changes.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#groupmixedinstancespolicy">Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configuration block containing settings to define launch targets for Auto Scaling groups. Defined below.
+    <dd>{{% md %}}Configuration block containing settings to define launch targets for Auto Scaling groups. See Mixed Instances Policy below for more details.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
@@ -3943,7 +3943,7 @@ group names. Only valid for classic load balancers. For ALBs, use `target_group_
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The maximum amount of time, in seconds, that an instance can be in service, values must be either equal to 0 or between 604800 and 31536000 seconds.
+    <dd>{{% md %}}The maximum amount of time, in seconds, that an instance can be in service, values must be either equal to 0 or between 86400 and 31536000 seconds.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxsize_nodejs">
@@ -3991,7 +3991,7 @@ ELB only on creation. Updates will not wait on ELB instance number changes.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#groupmixedinstancespolicy">Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configuration block containing settings to define launch targets for Auto Scaling groups. Defined below.
+    <dd>{{% md %}}Configuration block containing settings to define launch targets for Auto Scaling groups. See Mixed Instances Policy below for more details.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
@@ -4292,7 +4292,7 @@ group names. Only valid for classic load balancers. For ALBs, use `target_group_
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum amount of time, in seconds, that an instance can be in service, values must be either equal to 0 or between 604800 and 31536000 seconds.
+    <dd>{{% md %}}The maximum amount of time, in seconds, that an instance can be in service, values must be either equal to 0 or between 86400 and 31536000 seconds.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_max_size_python">
@@ -4340,7 +4340,7 @@ ELB only on creation. Updates will not wait on ELB instance number changes.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#groupmixedinstancespolicy">Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configuration block containing settings to define launch targets for Auto Scaling groups. Defined below.
+    <dd>{{% md %}}Configuration block containing settings to define launch targets for Auto Scaling groups. See Mixed Instances Policy below for more details.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">

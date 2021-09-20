@@ -23,6 +23,9 @@ Explore the resources and functions of the aws.eks module.
     <li><a href="getaddon" title="GetAddon"><span class="symbol function"></span>GetAddon</a></li>
     <li><a href="getcluster" title="GetCluster"><span class="symbol function"></span>GetCluster</a></li>
     <li><a href="getclusterauth" title="GetClusterAuth"><span class="symbol function"></span>GetClusterAuth</a></li>
+    <li><a href="getclusters" title="GetClusters"><span class="symbol function"></span>GetClusters</a></li>
+    <li><a href="getnodegroup" title="GetNodeGroup"><span class="symbol function"></span>GetNodeGroup</a></li>
+    <li><a href="getnodegroups" title="GetNodeGroups"><span class="symbol function"></span>GetNodeGroups</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -34,6 +37,6 @@ Explore the resources and functions of the aws.eks module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.20.0</dd>
+	<dd>4.21.0</dd>
 </dl>
 

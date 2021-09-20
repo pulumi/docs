@@ -20,6 +20,74 @@ Get information about the organization that the user's account belongs to
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
+### List all account IDs for the organization
+
+
+{{< example csharp >}}
+
+```csharp
+using System.Linq;
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = Output.Create(Aws.Organizations.GetOrganization.InvokeAsync());
+        this.AccountIds = 
+        {
+            example.Apply(example => example.Accounts),
+        }.Select(__item => __item?.Id).ToList();
+    }
+
+    [Output("accountIds")]
+    public Output<string> AccountIds { get; set; }
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+Coming soon!
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.organizations.get_organization()
+pulumi.export("accountIds", [__item.id for __item in [example.accounts]])
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const example = aws.organizations.getOrganization({});
+export const accountIds = [example.then(example => example.accounts)].map(__item => __item?.id);
+```
+
+
+{{< /example >}}
+
+
+
+
 ### SNS topic that can be interacted by the organization only
 
 

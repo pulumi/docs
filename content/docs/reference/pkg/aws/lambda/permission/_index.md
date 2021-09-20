@@ -36,7 +36,7 @@ const loggingFunction = new aws.lambda.Function("loggingFunction", {
     code: new pulumi.asset.FileArchive("lamba_logging.zip"),
     handler: "exports.handler",
     role: defaultRole.arn,
-    runtime: "python2.7",
+    runtime: "python3.6",
 });
 const loggingPermission = new aws.lambda.Permission("loggingPermission", {
     action: "lambda:InvokeFunction",
@@ -75,7 +75,7 @@ logging_function = aws.lambda_.Function("loggingFunction",
     code=pulumi.FileArchive("lamba_logging.zip"),
     handler="exports.handler",
     role=default_role.arn,
-    runtime="python2.7")
+    runtime="python3.6")
 logging_permission = aws.lambda_.Permission("loggingPermission",
     action="lambda:InvokeFunction",
     function=logging_function.name,
@@ -120,7 +120,7 @@ class MyStack : Stack
             Code = new FileArchive("lamba_logging.zip"),
             Handler = "exports.handler",
             Role = defaultRole.Arn,
-            Runtime = "python2.7",
+            Runtime = "python3.6",
         });
         var loggingPermission = new Aws.Lambda.Permission("loggingPermission", new Aws.Lambda.PermissionArgs
         {
@@ -353,7 +353,7 @@ class MyStack : Stack
             Code = new FileArchive("lambdatest.zip"),
             Role = defaultRole.Arn,
             Handler = "exports.handler",
-            Runtime = "python2.7",
+            Runtime = "python3.6",
         });
         var withSns = new Aws.Lambda.Permission("withSns", new Aws.Lambda.PermissionArgs
         {
@@ -407,7 +407,7 @@ func = aws.lambda_.Function("func",
     code=pulumi.FileArchive("lambdatest.zip"),
     role=default_role.arn,
     handler="exports.handler",
-    runtime="python2.7")
+    runtime="python3.6")
 with_sns = aws.lambda_.Permission("withSns",
     action="lambda:InvokeFunction",
     function=func.name,
@@ -446,7 +446,7 @@ const func = new aws.lambda.Function("func", {
     code: new pulumi.asset.FileArchive("lambdatest.zip"),
     role: defaultRole.arn,
     handler: "exports.handler",
-    runtime: "python2.7",
+    runtime: "python3.6",
 });
 const withSns = new aws.lambda.Permission("withSns", {
     action: "lambda:InvokeFunction",
