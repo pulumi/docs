@@ -179,6 +179,7 @@ const example = new aws.ec2clientvpn.Endpoint("example", {
              <span class="nx">connection_log_options</span><span class="p">:</span> <span class="nx">Optional[EndpointConnectionLogOptionsArgs]</span> = None<span class="p">,</span>
              <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">dns_servers</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+             <span class="nx">self_service_portal</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">server_certificate_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">split_tunnel</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
              <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
@@ -366,6 +367,15 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
     <dd>{{% md %}}Information about the DNS servers to be used for DNS resolution. A Client VPN endpoint can have up to two DNS servers. If no DNS server is specified, the DNS address of the VPC that is to be associated with Client VPN endpoint is used as the DNS server.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="selfserviceportal_csharp">
+<a href="#selfserviceportal_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Service<wbr>Portal</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specify whether to enable the self-service portal for the Client VPN endpoint. Values can be `enabled` or `disabled`. Default value is `disabled`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="splittunnel_csharp">
 <a href="#splittunnel_csharp" style="color: inherit; text-decoration: inherit;">Split<wbr>Tunnel</a>
 </span>
@@ -448,6 +458,15 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Information about the DNS servers to be used for DNS resolution. A Client VPN endpoint can have up to two DNS servers. If no DNS server is specified, the DNS address of the VPC that is to be associated with Client VPN endpoint is used as the DNS server.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="selfserviceportal_go">
+<a href="#selfserviceportal_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Service<wbr>Portal</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specify whether to enable the self-service portal for the Client VPN endpoint. Values can be `enabled` or `disabled`. Default value is `disabled`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="splittunnel_go">
@@ -534,6 +553,15 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
     <dd>{{% md %}}Information about the DNS servers to be used for DNS resolution. A Client VPN endpoint can have up to two DNS servers. If no DNS server is specified, the DNS address of the VPC that is to be associated with Client VPN endpoint is used as the DNS server.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="selfserviceportal_nodejs">
+<a href="#selfserviceportal_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Service<wbr>Portal</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specify whether to enable the self-service portal for the Client VPN endpoint. Values can be `enabled` or `disabled`. Default value is `disabled`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="splittunnel_nodejs">
 <a href="#splittunnel_nodejs" style="color: inherit; text-decoration: inherit;">split<wbr>Tunnel</a>
 </span>
@@ -616,6 +644,15 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Information about the DNS servers to be used for DNS resolution. A Client VPN endpoint can have up to two DNS servers. If no DNS server is specified, the DNS address of the VPC that is to be associated with Client VPN endpoint is used as the DNS server.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="self_service_portal_python">
+<a href="#self_service_portal_python" style="color: inherit; text-decoration: inherit;">self_<wbr>service_<wbr>portal</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specify whether to enable the self-service portal for the Client VPN endpoint. Values can be `enabled` or `disabled`. Default value is `disabled`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="split_tunnel_python">
@@ -863,6 +900,7 @@ Get an existing Endpoint resource's state with the given name, ID, and optional 
         <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">dns_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">dns_servers</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+        <span class="nx">self_service_portal</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">server_certificate_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">split_tunnel</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -1044,6 +1082,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Information about the DNS servers to be used for DNS resolution. A Client VPN endpoint can have up to two DNS servers. If no DNS server is specified, the DNS address of the VPC that is to be associated with Client VPN endpoint is used as the DNS server.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_selfserviceportal_csharp">
+<a href="#state_selfserviceportal_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Service<wbr>Portal</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specify whether to enable the self-service portal for the Client VPN endpoint. Values can be `enabled` or `disabled`. Default value is `disabled`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_servercertificatearn_csharp">
 <a href="#state_servercertificatearn_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Certificate<wbr>Arn</a>
 </span>
@@ -1161,6 +1208,15 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Information about the DNS servers to be used for DNS resolution. A Client VPN endpoint can have up to two DNS servers. If no DNS server is specified, the DNS address of the VPC that is to be associated with Client VPN endpoint is used as the DNS server.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_selfserviceportal_go">
+<a href="#state_selfserviceportal_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Service<wbr>Portal</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specify whether to enable the self-service portal for the Client VPN endpoint. Values can be `enabled` or `disabled`. Default value is `disabled`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servercertificatearn_go">
@@ -1282,6 +1338,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Information about the DNS servers to be used for DNS resolution. A Client VPN endpoint can have up to two DNS servers. If no DNS server is specified, the DNS address of the VPC that is to be associated with Client VPN endpoint is used as the DNS server.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_selfserviceportal_nodejs">
+<a href="#state_selfserviceportal_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Service<wbr>Portal</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specify whether to enable the self-service portal for the Client VPN endpoint. Values can be `enabled` or `disabled`. Default value is `disabled`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_servercertificatearn_nodejs">
 <a href="#state_servercertificatearn_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Certificate<wbr>Arn</a>
 </span>
@@ -1401,6 +1466,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Information about the DNS servers to be used for DNS resolution. A Client VPN endpoint can have up to two DNS servers. If no DNS server is specified, the DNS address of the VPC that is to be associated with Client VPN endpoint is used as the DNS server.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_self_service_portal_python">
+<a href="#state_self_service_portal_python" style="color: inherit; text-decoration: inherit;">self_<wbr>service_<wbr>portal</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specify whether to enable the self-service portal for the Client VPN endpoint. Values can be `enabled` or `disabled`. Default value is `disabled`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_server_certificate_arn_python">
 <a href="#state_server_certificate_arn_python" style="color: inherit; text-decoration: inherit;">server_<wbr>certificate_<wbr>arn</a>
 </span>
@@ -1502,6 +1576,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the IAM SAML identity provider if type is `federated-authentication`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="selfservicesamlproviderarn_csharp">
+<a href="#selfservicesamlproviderarn_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Service<wbr>Saml<wbr>Provider<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the IAM SAML identity provider for the self service portal if type is `federated-authentication`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1542,6 +1625,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the IAM SAML identity provider if type is `federated-authentication`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="selfservicesamlproviderarn_go">
+<a href="#selfservicesamlproviderarn_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Service<wbr>Saml<wbr>Provider<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the IAM SAML identity provider for the self service portal if type is `federated-authentication`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1582,6 +1674,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the IAM SAML identity provider if type is `federated-authentication`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="selfservicesamlproviderarn_nodejs">
+<a href="#selfservicesamlproviderarn_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Service<wbr>Saml<wbr>Provider<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the IAM SAML identity provider for the self service portal if type is `federated-authentication`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1622,6 +1723,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the IAM SAML identity provider if type is `federated-authentication`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="self_service_saml_provider_arn_python">
+<a href="#self_service_saml_provider_arn_python" style="color: inherit; text-decoration: inherit;">self_<wbr>service_<wbr>saml_<wbr>provider_<wbr>arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the IAM SAML identity provider for the self service portal if type is `federated-authentication`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

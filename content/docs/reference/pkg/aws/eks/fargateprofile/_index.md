@@ -19,6 +19,91 @@ Manages an EKS Fargate Profile.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
+
+
+
+{{< example csharp >}}
+
+```csharp
+using System.Linq;
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.Eks.FargateProfile("example", new Aws.Eks.FargateProfileArgs
+        {
+            ClusterName = aws_eks_cluster.Example.Name,
+            PodExecutionRoleArn = aws_iam_role.Example.Arn,
+            SubnetIds = aws_subnet.Example.Select(__item => __item.Id).ToList(),
+            Selectors = 
+            {
+                new Aws.Eks.Inputs.FargateProfileSelectorArgs
+                {
+                    Namespace = "example",
+                },
+            },
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+Coming soon!
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.eks.FargateProfile("example",
+    cluster_name=aws_eks_cluster["example"]["name"],
+    pod_execution_role_arn=aws_iam_role["example"]["arn"],
+    subnet_ids=[__item["id"] for __item in aws_subnet["example"]],
+    selectors=[aws.eks.FargateProfileSelectorArgs(
+        namespace="example",
+    )])
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const example = new aws.eks.FargateProfile("example", {
+    clusterName: aws_eks_cluster.example.name,
+    podExecutionRoleArn: aws_iam_role.example.arn,
+    subnetIds: aws_subnet.example.map(__item => __item.id),
+    selectors: [{
+        namespace: "example",
+    }],
+});
+```
+
+
+{{< /example >}}
+
+
+
+
 ### Example IAM Role for EKS Fargate Profile
 
 

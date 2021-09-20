@@ -19,6 +19,123 @@ Manages an EKS Node Group, which can provision and optionally update an Auto Sca
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
+
+
+
+{{< example csharp >}}
+
+```csharp
+using System.Linq;
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.Eks.NodeGroup("example", new Aws.Eks.NodeGroupArgs
+        {
+            ClusterName = aws_eks_cluster.Example.Name,
+            NodeRoleArn = aws_iam_role.Example.Arn,
+            SubnetIds = aws_subnet.Example.Select(__item => __item.Id).ToList(),
+            ScalingConfig = new Aws.Eks.Inputs.NodeGroupScalingConfigArgs
+            {
+                DesiredSize = 1,
+                MaxSize = 1,
+                MinSize = 1,
+            },
+            UpdateConfig = new Aws.Eks.Inputs.NodeGroupUpdateConfigArgs
+            {
+                MaxUnavailable = 2,
+            },
+        }, new CustomResourceOptions
+        {
+            DependsOn = 
+            {
+                aws_iam_role_policy_attachment.Example_AmazonEKSWorkerNodePolicy,
+                aws_iam_role_policy_attachment.Example_AmazonEKS_CNI_Policy,
+                aws_iam_role_policy_attachment.Example_AmazonEC2ContainerRegistryReadOnly,
+            },
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+Coming soon!
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.eks.NodeGroup("example",
+    cluster_name=aws_eks_cluster["example"]["name"],
+    node_role_arn=aws_iam_role["example"]["arn"],
+    subnet_ids=[__item["id"] for __item in aws_subnet["example"]],
+    scaling_config=aws.eks.NodeGroupScalingConfigArgs(
+        desired_size=1,
+        max_size=1,
+        min_size=1,
+    ),
+    update_config=aws.eks.NodeGroupUpdateConfigArgs(
+        max_unavailable=2,
+    ),
+    opts=pulumi.ResourceOptions(depends_on=[
+            aws_iam_role_policy_attachment["example-AmazonEKSWorkerNodePolicy"],
+            aws_iam_role_policy_attachment["example-AmazonEKS_CNI_Policy"],
+            aws_iam_role_policy_attachment["example-AmazonEC2ContainerRegistryReadOnly"],
+        ]))
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const example = new aws.eks.NodeGroup("example", {
+    clusterName: aws_eks_cluster.example.name,
+    nodeRoleArn: aws_iam_role.example.arn,
+    subnetIds: aws_subnet.example.map(__item => __item.id),
+    scalingConfig: {
+        desiredSize: 1,
+        maxSize: 1,
+        minSize: 1,
+    },
+    updateConfig: {
+        maxUnavailable: 2,
+    },
+}, {
+    dependsOn: [
+        aws_iam_role_policy_attachment["example-AmazonEKSWorkerNodePolicy"],
+        aws_iam_role_policy_attachment["example-AmazonEKS_CNI_Policy"],
+        aws_iam_role_policy_attachment["example-AmazonEC2ContainerRegistryReadOnly"],
+    ],
+});
+```
+
+
+{{< /example >}}
+
+
+
+
 ### Ignoring Changes to Desired Size
 
 

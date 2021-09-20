@@ -471,6 +471,7 @@ const example = new aws.transfer.Server("example", {
 <span class="k">def </span><span class="nx">Server</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
            <span class="nx">certificate</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+           <span class="nx">directory_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
            <span class="nx">domain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
            <span class="nx">endpoint_details</span><span class="p">:</span> <span class="nx">Optional[ServerEndpointDetailsArgs]</span> = None<span class="p">,</span>
            <span class="nx">endpoint_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -621,6 +622,15 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the AWS Certificate Manager (ACM) certificate. This is required when `protocols` is set to `FTPS`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="directoryid_csharp">
+<a href="#directoryid_csharp" style="color: inherit; text-decoration: inherit;">Directory<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The directory service id of the directory service you want to connect to.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="domain_csharp">
 <a href="#domain_csharp" style="color: inherit; text-decoration: inherit;">Domain</a>
 </span>
@@ -742,6 +752,15 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the AWS Certificate Manager (ACM) certificate. This is required when `protocols` is set to `FTPS`
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="directoryid_go">
+<a href="#directoryid_go" style="color: inherit; text-decoration: inherit;">Directory<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The directory service id of the directory service you want to connect to.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="domain_go">
@@ -867,6 +886,15 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the AWS Certificate Manager (ACM) certificate. This is required when `protocols` is set to `FTPS`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="directoryid_nodejs">
+<a href="#directoryid_nodejs" style="color: inherit; text-decoration: inherit;">directory<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The directory service id of the directory service you want to connect to.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="domain_nodejs">
 <a href="#domain_nodejs" style="color: inherit; text-decoration: inherit;">domain</a>
 </span>
@@ -988,6 +1016,15 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the AWS Certificate Manager (ACM) certificate. This is required when `protocols` is set to `FTPS`
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="directory_id_python">
+<a href="#directory_id_python" style="color: inherit; text-decoration: inherit;">directory_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The directory service id of the directory service you want to connect to.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="domain_python">
@@ -1314,6 +1351,7 @@ Get an existing Server resource's state with the given name, ID, and optional ex
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
         <span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">certificate</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">directory_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">domain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">endpoint_details</span><span class="p">:</span> <span class="nx">Optional[ServerEndpointDetailsArgs]</span> = None<span class="p">,</span>
@@ -1457,6 +1495,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the AWS Certificate Manager (ACM) certificate. This is required when `protocols` is set to `FTPS`
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_directoryid_csharp">
+<a href="#state_directoryid_csharp" style="color: inherit; text-decoration: inherit;">Directory<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The directory service id of the directory service you want to connect to.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_domain_csharp">
@@ -1617,6 +1664,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the AWS Certificate Manager (ACM) certificate. This is required when `protocols` is set to `FTPS`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_directoryid_go">
+<a href="#state_directoryid_go" style="color: inherit; text-decoration: inherit;">Directory<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The directory service id of the directory service you want to connect to.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_domain_go">
 <a href="#state_domain_go" style="color: inherit; text-decoration: inherit;">Domain</a>
 </span>
@@ -1775,6 +1831,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the AWS Certificate Manager (ACM) certificate. This is required when `protocols` is set to `FTPS`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_directoryid_nodejs">
+<a href="#state_directoryid_nodejs" style="color: inherit; text-decoration: inherit;">directory<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The directory service id of the directory service you want to connect to.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_domain_nodejs">
 <a href="#state_domain_nodejs" style="color: inherit; text-decoration: inherit;">domain</a>
 </span>
@@ -1931,6 +1996,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the AWS Certificate Manager (ACM) certificate. This is required when `protocols` is set to `FTPS`
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_directory_id_python">
+<a href="#state_directory_id_python" style="color: inherit; text-decoration: inherit;">directory_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The directory service id of the directory service you want to connect to.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_domain_python">

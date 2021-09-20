@@ -250,7 +250,7 @@ const foobar = new aws.cloudtrail.Trail("foobar", {
 
 
 
-### Logging All Lambda Function Invocations
+### Logging All Lambda Function Invocations By Using Basic Event Selectors
 
 
 {{< example csharp >}}
@@ -398,7 +398,7 @@ const example = new aws.cloudtrail.Trail("example", {
 
 
 
-### Logging All S3 Bucket Object Events
+### Logging All S3 Bucket Object Events By Using Basic Event Selectors
 
 
 {{< example csharp >}}
@@ -546,7 +546,7 @@ const example = new aws.cloudtrail.Trail("example", {
 
 
 
-### Logging Individual S3 Bucket Events
+### Logging Individual S3 Bucket Events By Using Basic Event Selectors
 
 
 {{< example csharp >}}
@@ -692,6 +692,678 @@ const example = new aws.cloudtrail.Trail("example", {
             values: [important_bucket.then(important_bucket => `${important_bucket.arn}/`)],
         }],
     }],
+});
+```
+
+
+{{< /example >}}
+
+
+
+
+### Logging All S3 Bucket Object Events Except For Two S3 Buckets By Using Advanced Event Selectors
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var not_important_bucket_1 = Output.Create(Aws.S3.GetBucket.InvokeAsync(new Aws.S3.GetBucketArgs
+        {
+            Bucket = "not-important-bucket-1",
+        }));
+        var not_important_bucket_2 = Output.Create(Aws.S3.GetBucket.InvokeAsync(new Aws.S3.GetBucketArgs
+        {
+            Bucket = "not-important-bucket-2",
+        }));
+        var example = new Aws.CloudTrail.Trail("example", new Aws.CloudTrail.TrailArgs
+        {
+            AdvancedEventSelectors = 
+            {
+                new Aws.CloudTrail.Inputs.TrailAdvancedEventSelectorArgs
+                {
+                    FieldSelectors = 
+                    {
+                        new Aws.CloudTrail.Inputs.TrailAdvancedEventSelectorFieldSelectorArgs
+                        {
+                            Equals = 
+                            {
+                                "Data",
+                            },
+                            Field = "eventCategory",
+                        },
+                        new Aws.CloudTrail.Inputs.TrailAdvancedEventSelectorFieldSelectorArgs
+                        {
+                            Field = "resources.ARN",
+                            NotEquals = 
+                            {
+                                not_important_bucket_1.Apply(not_important_bucket_1 => $"{not_important_bucket_1.Arn}/"),
+                                not_important_bucket_2.Apply(not_important_bucket_2 => $"{not_important_bucket_2.Arn}/"),
+                            },
+                        },
+                        new Aws.CloudTrail.Inputs.TrailAdvancedEventSelectorFieldSelectorArgs
+                        {
+                            Equals = 
+                            {
+                                "AWS::S3::Object",
+                            },
+                            Field = "resources.type",
+                        },
+                    },
+                    Name = "Log all S3 buckets objects events except for two S3 buckets",
+                },
+                new Aws.CloudTrail.Inputs.TrailAdvancedEventSelectorArgs
+                {
+                    FieldSelectors = 
+                    {
+                        new Aws.CloudTrail.Inputs.TrailAdvancedEventSelectorFieldSelectorArgs
+                        {
+                            Equals = 
+                            {
+                                "Management",
+                            },
+                            Field = "eventCategory",
+                        },
+                    },
+                    Name = "Log readOnly and writeOnly management events",
+                },
+            },
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/cloudtrail"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/s3"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		not_important_bucket_1, err := s3.LookupBucket(ctx, &s3.LookupBucketArgs{
+			Bucket: "not-important-bucket-1",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		not_important_bucket_2, err := s3.LookupBucket(ctx, &s3.LookupBucketArgs{
+			Bucket: "not-important-bucket-2",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		_, err = cloudtrail.NewTrail(ctx, "example", &cloudtrail.TrailArgs{
+			AdvancedEventSelectors: cloudtrail.TrailAdvancedEventSelectorArray{
+				&cloudtrail.TrailAdvancedEventSelectorArgs{
+					FieldSelectors: cloudtrail.TrailAdvancedEventSelectorFieldSelectorArray{
+						&cloudtrail.TrailAdvancedEventSelectorFieldSelectorArgs{
+							Equals: pulumi.StringArray{
+								pulumi.String("Data"),
+							},
+							Field: pulumi.String("eventCategory"),
+						},
+						&cloudtrail.TrailAdvancedEventSelectorFieldSelectorArgs{
+							Field: pulumi.String("resources.ARN"),
+							NotEquals: pulumi.StringArray{
+								pulumi.String(fmt.Sprintf("%v%v", not_important_bucket_1.Arn, "/")),
+								pulumi.String(fmt.Sprintf("%v%v", not_important_bucket_2.Arn, "/")),
+							},
+						},
+						&cloudtrail.TrailAdvancedEventSelectorFieldSelectorArgs{
+							Equals: pulumi.StringArray{
+								pulumi.String("AWS::S3::Object"),
+							},
+							Field: pulumi.String("resources.type"),
+						},
+					},
+					Name: pulumi.String("Log all S3 buckets objects events except for two S3 buckets"),
+				},
+				&cloudtrail.TrailAdvancedEventSelectorArgs{
+					FieldSelectors: cloudtrail.TrailAdvancedEventSelectorFieldSelectorArray{
+						&cloudtrail.TrailAdvancedEventSelectorFieldSelectorArgs{
+							Equals: pulumi.StringArray{
+								pulumi.String("Management"),
+							},
+							Field: pulumi.String("eventCategory"),
+						},
+					},
+					Name: pulumi.String("Log readOnly and writeOnly management events"),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_aws as aws
+
+not_important_bucket_1 = aws.s3.get_bucket(bucket="not-important-bucket-1")
+not_important_bucket_2 = aws.s3.get_bucket(bucket="not-important-bucket-2")
+example = aws.cloudtrail.Trail("example", advanced_event_selectors=[
+    aws.cloudtrail.TrailAdvancedEventSelectorArgs(
+        field_selectors=[
+            aws.cloudtrail.TrailAdvancedEventSelectorFieldSelectorArgs(
+                equals=["Data"],
+                field="eventCategory",
+            ),
+            aws.cloudtrail.TrailAdvancedEventSelectorFieldSelectorArgs(
+                field="resources.ARN",
+                not_equals=[
+                    f"{not_important_bucket_1.arn}/",
+                    f"{not_important_bucket_2.arn}/",
+                ],
+            ),
+            aws.cloudtrail.TrailAdvancedEventSelectorFieldSelectorArgs(
+                equals=["AWS::S3::Object"],
+                field="resources.type",
+            ),
+        ],
+        name="Log all S3 buckets objects events except for two S3 buckets",
+    ),
+    aws.cloudtrail.TrailAdvancedEventSelectorArgs(
+        field_selectors=[aws.cloudtrail.TrailAdvancedEventSelectorFieldSelectorArgs(
+            equals=["Management"],
+            field="eventCategory",
+        )],
+        name="Log readOnly and writeOnly management events",
+    ),
+])
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const not_important_bucket_1 = pulumi.output(aws.s3.getBucket({
+    bucket: "not-important-bucket-1",
+}));
+const not_important_bucket_2 = pulumi.output(aws.s3.getBucket({
+    bucket: "not-important-bucket-2",
+}));
+const example = new aws.cloudtrail.Trail("example", {
+    advancedEventSelectors: [
+        {
+            fieldSelectors: [
+                {
+                    equals: ["Data"],
+                    field: "eventCategory",
+                },
+                {
+                    field: "resources.ARN",
+                    notEquals: [
+                        pulumi.interpolate`${not_important_bucket_1.arn}/`,
+                        pulumi.interpolate`${not_important_bucket_2.arn}/`,
+                    ],
+                },
+                {
+                    equals: ["AWS::S3::Object"],
+                    field: "resources.type",
+                },
+            ],
+            name: "Log all S3 buckets objects events except for two S3 buckets",
+        },
+        {
+            fieldSelectors: [{
+                equals: ["Management"],
+                field: "eventCategory",
+            }],
+            name: "Log readOnly and writeOnly management events",
+        },
+    ],
+});
+```
+
+
+{{< /example >}}
+
+
+
+
+### Logging Individual S3 Buckets And Specific Event Names By Using Advanced Event Selectors
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var important_bucket_1 = Output.Create(Aws.S3.GetBucket.InvokeAsync(new Aws.S3.GetBucketArgs
+        {
+            Bucket = "important-bucket-1",
+        }));
+        var important_bucket_2 = Output.Create(Aws.S3.GetBucket.InvokeAsync(new Aws.S3.GetBucketArgs
+        {
+            Bucket = "important-bucket-2",
+        }));
+        var important_bucket_3 = Output.Create(Aws.S3.GetBucket.InvokeAsync(new Aws.S3.GetBucketArgs
+        {
+            Bucket = "important-bucket-3",
+        }));
+        var example = new Aws.CloudTrail.Trail("example", new Aws.CloudTrail.TrailArgs
+        {
+            AdvancedEventSelectors = 
+            {
+                new Aws.CloudTrail.Inputs.TrailAdvancedEventSelectorArgs
+                {
+                    FieldSelectors = 
+                    {
+                        new Aws.CloudTrail.Inputs.TrailAdvancedEventSelectorFieldSelectorArgs
+                        {
+                            Equals = 
+                            {
+                                "Data",
+                            },
+                            Field = "eventCategory",
+                        },
+                        new Aws.CloudTrail.Inputs.TrailAdvancedEventSelectorFieldSelectorArgs
+                        {
+                            Equals = 
+                            {
+                                "PutObject",
+                                "DeleteObject",
+                            },
+                            Field = "eventName",
+                        },
+                        new Aws.CloudTrail.Inputs.TrailAdvancedEventSelectorFieldSelectorArgs
+                        {
+                            Equals = 
+                            {
+                                important_bucket_1.Apply(important_bucket_1 => $"{important_bucket_1.Arn}/"),
+                                important_bucket_2.Apply(important_bucket_2 => $"{important_bucket_2.Arn}/"),
+                            },
+                            Field = "resources.ARN",
+                        },
+                        new Aws.CloudTrail.Inputs.TrailAdvancedEventSelectorFieldSelectorArgs
+                        {
+                            Equals = 
+                            {
+                                "false",
+                            },
+                            Field = "readOnly",
+                        },
+                        new Aws.CloudTrail.Inputs.TrailAdvancedEventSelectorFieldSelectorArgs
+                        {
+                            Equals = 
+                            {
+                                "AWS::S3::Object",
+                            },
+                            Field = "resources.type",
+                        },
+                    },
+                    Name = "Log PutObject and DeleteObject events for two S3 buckets",
+                },
+                new Aws.CloudTrail.Inputs.TrailAdvancedEventSelectorArgs
+                {
+                    FieldSelectors = 
+                    {
+                        new Aws.CloudTrail.Inputs.TrailAdvancedEventSelectorFieldSelectorArgs
+                        {
+                            Equals = 
+                            {
+                                "Data",
+                            },
+                            Field = "eventCategory",
+                        },
+                        new Aws.CloudTrail.Inputs.TrailAdvancedEventSelectorFieldSelectorArgs
+                        {
+                            Field = "eventName",
+                            StartsWith = 
+                            {
+                                "Delete",
+                            },
+                        },
+                        new Aws.CloudTrail.Inputs.TrailAdvancedEventSelectorFieldSelectorArgs
+                        {
+                            Equals = 
+                            {
+                                important_bucket_3.Apply(important_bucket_3 => $"{important_bucket_3.Arn}/important-prefix"),
+                            },
+                            Field = "resources.ARN",
+                        },
+                        new Aws.CloudTrail.Inputs.TrailAdvancedEventSelectorFieldSelectorArgs
+                        {
+                            Equals = 
+                            {
+                                "false",
+                            },
+                            Field = "readOnly",
+                        },
+                        new Aws.CloudTrail.Inputs.TrailAdvancedEventSelectorFieldSelectorArgs
+                        {
+                            Equals = 
+                            {
+                                "AWS::S3::Object",
+                            },
+                            Field = "resources.type",
+                        },
+                    },
+                    Name = "Log Delete* events for one S3 bucket",
+                },
+            },
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/cloudtrail"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/s3"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		important_bucket_1, err := s3.LookupBucket(ctx, &s3.LookupBucketArgs{
+			Bucket: "important-bucket-1",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		important_bucket_2, err := s3.LookupBucket(ctx, &s3.LookupBucketArgs{
+			Bucket: "important-bucket-2",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		important_bucket_3, err := s3.LookupBucket(ctx, &s3.LookupBucketArgs{
+			Bucket: "important-bucket-3",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		_, err = cloudtrail.NewTrail(ctx, "example", &cloudtrail.TrailArgs{
+			AdvancedEventSelectors: cloudtrail.TrailAdvancedEventSelectorArray{
+				&cloudtrail.TrailAdvancedEventSelectorArgs{
+					FieldSelectors: cloudtrail.TrailAdvancedEventSelectorFieldSelectorArray{
+						&cloudtrail.TrailAdvancedEventSelectorFieldSelectorArgs{
+							Equals: pulumi.StringArray{
+								pulumi.String("Data"),
+							},
+							Field: pulumi.String("eventCategory"),
+						},
+						&cloudtrail.TrailAdvancedEventSelectorFieldSelectorArgs{
+							Equals: pulumi.StringArray{
+								pulumi.String("PutObject"),
+								pulumi.String("DeleteObject"),
+							},
+							Field: pulumi.String("eventName"),
+						},
+						&cloudtrail.TrailAdvancedEventSelectorFieldSelectorArgs{
+							Equals: pulumi.StringArray{
+								pulumi.String(fmt.Sprintf("%v%v", important_bucket_1.Arn, "/")),
+								pulumi.String(fmt.Sprintf("%v%v", important_bucket_2.Arn, "/")),
+							},
+							Field: pulumi.String("resources.ARN"),
+						},
+						&cloudtrail.TrailAdvancedEventSelectorFieldSelectorArgs{
+							Equals: pulumi.StringArray{
+								pulumi.String("false"),
+							},
+							Field: pulumi.String("readOnly"),
+						},
+						&cloudtrail.TrailAdvancedEventSelectorFieldSelectorArgs{
+							Equals: pulumi.StringArray{
+								pulumi.String("AWS::S3::Object"),
+							},
+							Field: pulumi.String("resources.type"),
+						},
+					},
+					Name: pulumi.String("Log PutObject and DeleteObject events for two S3 buckets"),
+				},
+				&cloudtrail.TrailAdvancedEventSelectorArgs{
+					FieldSelectors: cloudtrail.TrailAdvancedEventSelectorFieldSelectorArray{
+						&cloudtrail.TrailAdvancedEventSelectorFieldSelectorArgs{
+							Equals: pulumi.StringArray{
+								pulumi.String("Data"),
+							},
+							Field: pulumi.String("eventCategory"),
+						},
+						&cloudtrail.TrailAdvancedEventSelectorFieldSelectorArgs{
+							Field: pulumi.String("eventName"),
+							StartsWith: []string{
+								"Delete",
+							},
+						},
+						&cloudtrail.TrailAdvancedEventSelectorFieldSelectorArgs{
+							Equals: pulumi.StringArray{
+								pulumi.String(fmt.Sprintf("%v%v", important_bucket_3.Arn, "/important-prefix")),
+							},
+							Field: pulumi.String("resources.ARN"),
+						},
+						&cloudtrail.TrailAdvancedEventSelectorFieldSelectorArgs{
+							Equals: pulumi.StringArray{
+								pulumi.String("false"),
+							},
+							Field: pulumi.String("readOnly"),
+						},
+						&cloudtrail.TrailAdvancedEventSelectorFieldSelectorArgs{
+							Equals: pulumi.StringArray{
+								pulumi.String("AWS::S3::Object"),
+							},
+							Field: pulumi.String("resources.type"),
+						},
+					},
+					Name: pulumi.String("Log Delete* events for one S3 bucket"),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_aws as aws
+
+important_bucket_1 = aws.s3.get_bucket(bucket="important-bucket-1")
+important_bucket_2 = aws.s3.get_bucket(bucket="important-bucket-2")
+important_bucket_3 = aws.s3.get_bucket(bucket="important-bucket-3")
+example = aws.cloudtrail.Trail("example", advanced_event_selectors=[
+    aws.cloudtrail.TrailAdvancedEventSelectorArgs(
+        field_selectors=[
+            aws.cloudtrail.TrailAdvancedEventSelectorFieldSelectorArgs(
+                equals=["Data"],
+                field="eventCategory",
+            ),
+            aws.cloudtrail.TrailAdvancedEventSelectorFieldSelectorArgs(
+                equals=[
+                    "PutObject",
+                    "DeleteObject",
+                ],
+                field="eventName",
+            ),
+            aws.cloudtrail.TrailAdvancedEventSelectorFieldSelectorArgs(
+                equals=[
+                    f"{important_bucket_1.arn}/",
+                    f"{important_bucket_2.arn}/",
+                ],
+                field="resources.ARN",
+            ),
+            aws.cloudtrail.TrailAdvancedEventSelectorFieldSelectorArgs(
+                equals=["false"],
+                field="readOnly",
+            ),
+            aws.cloudtrail.TrailAdvancedEventSelectorFieldSelectorArgs(
+                equals=["AWS::S3::Object"],
+                field="resources.type",
+            ),
+        ],
+        name="Log PutObject and DeleteObject events for two S3 buckets",
+    ),
+    aws.cloudtrail.TrailAdvancedEventSelectorArgs(
+        field_selectors=[
+            aws.cloudtrail.TrailAdvancedEventSelectorFieldSelectorArgs(
+                equals=["Data"],
+                field="eventCategory",
+            ),
+            aws.cloudtrail.TrailAdvancedEventSelectorFieldSelectorArgs(
+                field="eventName",
+                starts_with=["Delete"],
+            ),
+            aws.cloudtrail.TrailAdvancedEventSelectorFieldSelectorArgs(
+                equals=[f"{important_bucket_3.arn}/important-prefix"],
+                field="resources.ARN",
+            ),
+            aws.cloudtrail.TrailAdvancedEventSelectorFieldSelectorArgs(
+                equals=["false"],
+                field="readOnly",
+            ),
+            aws.cloudtrail.TrailAdvancedEventSelectorFieldSelectorArgs(
+                equals=["AWS::S3::Object"],
+                field="resources.type",
+            ),
+        ],
+        name="Log Delete* events for one S3 bucket",
+    ),
+])
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const important_bucket_1 = pulumi.output(aws.s3.getBucket({
+    bucket: "important-bucket-1",
+}));
+const important_bucket_2 = pulumi.output(aws.s3.getBucket({
+    bucket: "important-bucket-2",
+}));
+const important_bucket_3 = pulumi.output(aws.s3.getBucket({
+    bucket: "important-bucket-3",
+}));
+const example = new aws.cloudtrail.Trail("example", {
+    advancedEventSelectors: [
+        {
+            fieldSelectors: [
+                {
+                    equals: ["Data"],
+                    field: "eventCategory",
+                },
+                {
+                    equals: [
+                        "PutObject",
+                        "DeleteObject",
+                    ],
+                    field: "eventName",
+                },
+                {
+                    //The trailing slash is intentional; do not exclude it.
+                    equals: [
+                        pulumi.interpolate`${important_bucket_1.arn}/`,
+                        pulumi.interpolate`${important_bucket_2.arn}/`,
+                    ],
+                    field: "resources.ARN",
+                },
+                {
+                    equals: ["false"],
+                    field: "readOnly",
+                },
+                {
+                    equals: ["AWS::S3::Object"],
+                    field: "resources.type",
+                },
+            ],
+            name: "Log PutObject and DeleteObject events for two S3 buckets",
+        },
+        {
+            fieldSelectors: [
+                {
+                    equals: ["Data"],
+                    field: "eventCategory",
+                },
+                {
+                    field: "eventName",
+                    startsWiths: ["Delete"],
+                },
+                {
+                    //The trailing slash is intentional; do not exclude it.
+                    equals: [pulumi.interpolate`${important_bucket_3.arn}/important-prefix`],
+                    field: "resources.ARN",
+                },
+                {
+                    equals: ["false"],
+                    field: "readOnly",
+                },
+                {
+                    equals: ["AWS::S3::Object"],
+                    field: "resources.type",
+                },
+            ],
+            name: "Log Delete* events for one S3 bucket",
+        },
+    ],
 });
 ```
 
@@ -964,6 +1636,7 @@ const exampleTrail = new aws.cloudtrail.Trail("exampleTrail", {
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Trail</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+          <span class="nx">advanced_event_selectors</span><span class="p">:</span> <span class="nx">Optional[Sequence[TrailAdvancedEventSelectorArgs]]</span> = None<span class="p">,</span>
           <span class="nx">cloud_watch_logs_group_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
           <span class="nx">cloud_watch_logs_role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
           <span class="nx">enable_log_file_validation</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
@@ -1117,6 +1790,15 @@ The Trail resource accepts the following [input]({{< relref "/docs/intro/concept
     <dd>{{% md %}}Name of the S3 bucket designated for publishing log files.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="advancedeventselectors_csharp">
+<a href="#advancedeventselectors_csharp" style="color: inherit; text-decoration: inherit;">Advanced<wbr>Event<wbr>Selectors</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#trailadvancedeventselector">List&lt;Trail<wbr>Advanced<wbr>Event<wbr>Selector<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies an advanced event selector for enabling data event logging. Fields documented below. Conflicts with `event_selector`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="cloudwatchlogsgrouparn_csharp">
 <a href="#cloudwatchlogsgrouparn_csharp" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Watch<wbr>Logs<wbr>Group<wbr>Arn</a>
 </span>
@@ -1159,7 +1841,7 @@ The Trail resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#traileventselector">List&lt;Trail<wbr>Event<wbr>Selector<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Configuration block of an event selector for enabling data event logging. See details below. Please note the [CloudTrail limits](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/WhatIsCloudTrail-Limits.html) when configuring these.
+    <dd>{{% md %}}Specifies an event selector for enabling data event logging. Fields documented below. Please note the [CloudTrail limits](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/WhatIsCloudTrail-Limits.html) when configuring these. Conflicts with `advanced_event_selector`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="includeglobalserviceevents_csharp">
@@ -1213,7 +1895,7 @@ The Trail resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the trail.
+    <dd>{{% md %}}Specifies the name of the advanced event selector.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="s3keyprefix_csharp">
@@ -1254,6 +1936,15 @@ The Trail resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the S3 bucket designated for publishing log files.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="advancedeventselectors_go">
+<a href="#advancedeventselectors_go" style="color: inherit; text-decoration: inherit;">Advanced<wbr>Event<wbr>Selectors</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#trailadvancedeventselector">[]Trail<wbr>Advanced<wbr>Event<wbr>Selector<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies an advanced event selector for enabling data event logging. Fields documented below. Conflicts with `event_selector`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloudwatchlogsgrouparn_go">
@@ -1298,7 +1989,7 @@ The Trail resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#traileventselector">[]Trail<wbr>Event<wbr>Selector<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configuration block of an event selector for enabling data event logging. See details below. Please note the [CloudTrail limits](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/WhatIsCloudTrail-Limits.html) when configuring these.
+    <dd>{{% md %}}Specifies an event selector for enabling data event logging. Fields documented below. Please note the [CloudTrail limits](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/WhatIsCloudTrail-Limits.html) when configuring these. Conflicts with `advanced_event_selector`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="includeglobalserviceevents_go">
@@ -1352,7 +2043,7 @@ The Trail resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the trail.
+    <dd>{{% md %}}Specifies the name of the advanced event selector.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="s3keyprefix_go">
@@ -1393,6 +2084,15 @@ The Trail resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the S3 bucket designated for publishing log files.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="advancedeventselectors_nodejs">
+<a href="#advancedeventselectors_nodejs" style="color: inherit; text-decoration: inherit;">advanced<wbr>Event<wbr>Selectors</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#trailadvancedeventselector">Trail<wbr>Advanced<wbr>Event<wbr>Selector<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies an advanced event selector for enabling data event logging. Fields documented below. Conflicts with `event_selector`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloudwatchlogsgrouparn_nodejs">
@@ -1437,7 +2137,7 @@ The Trail resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#traileventselector">Trail<wbr>Event<wbr>Selector<wbr>Args[]</a></span>
     </dt>
-    <dd>{{% md %}}Configuration block of an event selector for enabling data event logging. See details below. Please note the [CloudTrail limits](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/WhatIsCloudTrail-Limits.html) when configuring these.
+    <dd>{{% md %}}Specifies an event selector for enabling data event logging. Fields documented below. Please note the [CloudTrail limits](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/WhatIsCloudTrail-Limits.html) when configuring these. Conflicts with `advanced_event_selector`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="includeglobalserviceevents_nodejs">
@@ -1491,7 +2191,7 @@ The Trail resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the trail.
+    <dd>{{% md %}}Specifies the name of the advanced event selector.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="s3keyprefix_nodejs">
@@ -1532,6 +2232,15 @@ The Trail resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the S3 bucket designated for publishing log files.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="advanced_event_selectors_python">
+<a href="#advanced_event_selectors_python" style="color: inherit; text-decoration: inherit;">advanced_<wbr>event_<wbr>selectors</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#trailadvancedeventselector">Sequence[Trail<wbr>Advanced<wbr>Event<wbr>Selector<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies an advanced event selector for enabling data event logging. Fields documented below. Conflicts with `event_selector`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloud_watch_logs_group_arn_python">
@@ -1576,7 +2285,7 @@ The Trail resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#traileventselector">Sequence[Trail<wbr>Event<wbr>Selector<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Configuration block of an event selector for enabling data event logging. See details below. Please note the [CloudTrail limits](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/WhatIsCloudTrail-Limits.html) when configuring these.
+    <dd>{{% md %}}Specifies an event selector for enabling data event logging. Fields documented below. Please note the [CloudTrail limits](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/WhatIsCloudTrail-Limits.html) when configuring these. Conflicts with `advanced_event_selector`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="include_global_service_events_python">
@@ -1630,7 +2339,7 @@ The Trail resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the trail.
+    <dd>{{% md %}}Specifies the name of the advanced event selector.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="s3_key_prefix_python">
@@ -1840,6 +2549,7 @@ Get an existing Trail resource's state with the given name, ID, and optional ext
 <span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">advanced_event_selectors</span><span class="p">:</span> <span class="nx">Optional[Sequence[TrailAdvancedEventSelectorArgs]]</span> = None<span class="p">,</span>
         <span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">cloud_watch_logs_group_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">cloud_watch_logs_role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -1970,6 +2680,15 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="state_advancedeventselectors_csharp">
+<a href="#state_advancedeventselectors_csharp" style="color: inherit; text-decoration: inherit;">Advanced<wbr>Event<wbr>Selectors</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#trailadvancedeventselector">List&lt;Trail<wbr>Advanced<wbr>Event<wbr>Selector<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies an advanced event selector for enabling data event logging. Fields documented below. Conflicts with `event_selector`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_arn_csharp">
 <a href="#state_arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
 </span>
@@ -2021,7 +2740,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#traileventselector">List&lt;Trail<wbr>Event<wbr>Selector<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Configuration block of an event selector for enabling data event logging. See details below. Please note the [CloudTrail limits](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/WhatIsCloudTrail-Limits.html) when configuring these.
+    <dd>{{% md %}}Specifies an event selector for enabling data event logging. Fields documented below. Please note the [CloudTrail limits](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/WhatIsCloudTrail-Limits.html) when configuring these. Conflicts with `advanced_event_selector`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_homeregion_csharp">
@@ -2084,7 +2803,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the trail.
+    <dd>{{% md %}}Specifies the name of the advanced event selector.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_s3bucketname_csharp">
@@ -2135,6 +2854,15 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="state_advancedeventselectors_go">
+<a href="#state_advancedeventselectors_go" style="color: inherit; text-decoration: inherit;">Advanced<wbr>Event<wbr>Selectors</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#trailadvancedeventselector">[]Trail<wbr>Advanced<wbr>Event<wbr>Selector<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies an advanced event selector for enabling data event logging. Fields documented below. Conflicts with `event_selector`.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_arn_go">
 <a href="#state_arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -2187,7 +2915,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#traileventselector">[]Trail<wbr>Event<wbr>Selector<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configuration block of an event selector for enabling data event logging. See details below. Please note the [CloudTrail limits](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/WhatIsCloudTrail-Limits.html) when configuring these.
+    <dd>{{% md %}}Specifies an event selector for enabling data event logging. Fields documented below. Please note the [CloudTrail limits](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/WhatIsCloudTrail-Limits.html) when configuring these. Conflicts with `advanced_event_selector`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_homeregion_go">
@@ -2250,7 +2978,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the trail.
+    <dd>{{% md %}}Specifies the name of the advanced event selector.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_s3bucketname_go">
@@ -2301,6 +3029,15 @@ The following state arguments are supported:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="state_advancedeventselectors_nodejs">
+<a href="#state_advancedeventselectors_nodejs" style="color: inherit; text-decoration: inherit;">advanced<wbr>Event<wbr>Selectors</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#trailadvancedeventselector">Trail<wbr>Advanced<wbr>Event<wbr>Selector<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies an advanced event selector for enabling data event logging. Fields documented below. Conflicts with `event_selector`.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_arn_nodejs">
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -2353,7 +3090,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#traileventselector">Trail<wbr>Event<wbr>Selector<wbr>Args[]</a></span>
     </dt>
-    <dd>{{% md %}}Configuration block of an event selector for enabling data event logging. See details below. Please note the [CloudTrail limits](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/WhatIsCloudTrail-Limits.html) when configuring these.
+    <dd>{{% md %}}Specifies an event selector for enabling data event logging. Fields documented below. Please note the [CloudTrail limits](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/WhatIsCloudTrail-Limits.html) when configuring these. Conflicts with `advanced_event_selector`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_homeregion_nodejs">
@@ -2416,7 +3153,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the trail.
+    <dd>{{% md %}}Specifies the name of the advanced event selector.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_s3bucketname_nodejs">
@@ -2467,6 +3204,15 @@ The following state arguments are supported:
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="state_advanced_event_selectors_python">
+<a href="#state_advanced_event_selectors_python" style="color: inherit; text-decoration: inherit;">advanced_<wbr>event_<wbr>selectors</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#trailadvancedeventselector">Sequence[Trail<wbr>Advanced<wbr>Event<wbr>Selector<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies an advanced event selector for enabling data event logging. Fields documented below. Conflicts with `event_selector`.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_arn_python">
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -2519,7 +3265,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#traileventselector">Sequence[Trail<wbr>Event<wbr>Selector<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Configuration block of an event selector for enabling data event logging. See details below. Please note the [CloudTrail limits](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/WhatIsCloudTrail-Limits.html) when configuring these.
+    <dd>{{% md %}}Specifies an event selector for enabling data event logging. Fields documented below. Please note the [CloudTrail limits](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/WhatIsCloudTrail-Limits.html) when configuring these. Conflicts with `advanced_event_selector`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_home_region_python">
@@ -2582,7 +3328,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the trail.
+    <dd>{{% md %}}Specifies the name of the advanced event selector.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_s3_bucket_name_python">
@@ -2639,6 +3385,366 @@ The following state arguments are supported:
 ## Supporting Types
 
 
+
+<h4 id="trailadvancedeventselector">Trail<wbr>Advanced<wbr>Event<wbr>Selector</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="fieldselectors_csharp">
+<a href="#fieldselectors_csharp" style="color: inherit; text-decoration: inherit;">Field<wbr>Selectors</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#trailadvancedeventselectorfieldselector">List&lt;Trail<wbr>Advanced<wbr>Event<wbr>Selector<wbr>Field<wbr>Selector&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the selector statements in an advanced event selector. Fields documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the name of the advanced event selector.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="fieldselectors_go">
+<a href="#fieldselectors_go" style="color: inherit; text-decoration: inherit;">Field<wbr>Selectors</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#trailadvancedeventselectorfieldselector">[]Trail<wbr>Advanced<wbr>Event<wbr>Selector<wbr>Field<wbr>Selector</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the selector statements in an advanced event selector. Fields documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the name of the advanced event selector.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="fieldselectors_nodejs">
+<a href="#fieldselectors_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>Selectors</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#trailadvancedeventselectorfieldselector">Trail<wbr>Advanced<wbr>Event<wbr>Selector<wbr>Field<wbr>Selector[]</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the selector statements in an advanced event selector. Fields documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the name of the advanced event selector.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="field_selectors_python">
+<a href="#field_selectors_python" style="color: inherit; text-decoration: inherit;">field_<wbr>selectors</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#trailadvancedeventselectorfieldselector">Sequence[Trail<wbr>Advanced<wbr>Event<wbr>Selector<wbr>Field<wbr>Selector]</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the selector statements in an advanced event selector. Fields documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the name of the advanced event selector.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="trailadvancedeventselectorfieldselector">Trail<wbr>Advanced<wbr>Event<wbr>Selector<wbr>Field<wbr>Selector</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="field_csharp">
+<a href="#field_csharp" style="color: inherit; text-decoration: inherit;">Field</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies a field in an event record on which to filter events to be logged. You can specify only the following values: `readOnly`, `eventSource`, `eventName`, `eventCategory`, `resources.type`, `resources.ARN`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="endswiths_csharp">
+<a href="#endswiths_csharp" style="color: inherit; text-decoration: inherit;">Ends<wbr>Withs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of values that includes events that match the last few characters of the event record field specified as the value of `field`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="equals_csharp">
+<a href="#equals_csharp" style="color: inherit; text-decoration: inherit;">Equals</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of values that includes events that match the exact value of the event record field specified as the value of `field`. This is the only valid operator that you can use with the `readOnly`, `eventCategory`, and `resources.type` fields.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="notendswiths_csharp">
+<a href="#notendswiths_csharp" style="color: inherit; text-decoration: inherit;">Not<wbr>Ends<wbr>Withs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of values that excludes events that match the last few characters of the event record field specified as the value of `field`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="notequals_csharp">
+<a href="#notequals_csharp" style="color: inherit; text-decoration: inherit;">Not<wbr>Equals</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of values that excludes events that match the exact value of the event record field specified as the value of `field`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="notstartswiths_csharp">
+<a href="#notstartswiths_csharp" style="color: inherit; text-decoration: inherit;">Not<wbr>Starts<wbr>Withs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of values that excludes events that match the first few characters of the event record field specified as the value of `field`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="startswiths_csharp">
+<a href="#startswiths_csharp" style="color: inherit; text-decoration: inherit;">Starts<wbr>Withs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of values that includes events that match the first few characters of the event record field specified as the value of `field`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="field_go">
+<a href="#field_go" style="color: inherit; text-decoration: inherit;">Field</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies a field in an event record on which to filter events to be logged. You can specify only the following values: `readOnly`, `eventSource`, `eventName`, `eventCategory`, `resources.type`, `resources.ARN`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="endswiths_go">
+<a href="#endswiths_go" style="color: inherit; text-decoration: inherit;">Ends<wbr>Withs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of values that includes events that match the last few characters of the event record field specified as the value of `field`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="equals_go">
+<a href="#equals_go" style="color: inherit; text-decoration: inherit;">Equals</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of values that includes events that match the exact value of the event record field specified as the value of `field`. This is the only valid operator that you can use with the `readOnly`, `eventCategory`, and `resources.type` fields.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="notendswiths_go">
+<a href="#notendswiths_go" style="color: inherit; text-decoration: inherit;">Not<wbr>Ends<wbr>Withs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of values that excludes events that match the last few characters of the event record field specified as the value of `field`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="notequals_go">
+<a href="#notequals_go" style="color: inherit; text-decoration: inherit;">Not<wbr>Equals</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of values that excludes events that match the exact value of the event record field specified as the value of `field`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="notstartswiths_go">
+<a href="#notstartswiths_go" style="color: inherit; text-decoration: inherit;">Not<wbr>Starts<wbr>Withs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of values that excludes events that match the first few characters of the event record field specified as the value of `field`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="startswiths_go">
+<a href="#startswiths_go" style="color: inherit; text-decoration: inherit;">Starts<wbr>Withs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of values that includes events that match the first few characters of the event record field specified as the value of `field`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="field_nodejs">
+<a href="#field_nodejs" style="color: inherit; text-decoration: inherit;">field</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies a field in an event record on which to filter events to be logged. You can specify only the following values: `readOnly`, `eventSource`, `eventName`, `eventCategory`, `resources.type`, `resources.ARN`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="endswiths_nodejs">
+<a href="#endswiths_nodejs" style="color: inherit; text-decoration: inherit;">ends<wbr>Withs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of values that includes events that match the last few characters of the event record field specified as the value of `field`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="equals_nodejs">
+<a href="#equals_nodejs" style="color: inherit; text-decoration: inherit;">equals</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of values that includes events that match the exact value of the event record field specified as the value of `field`. This is the only valid operator that you can use with the `readOnly`, `eventCategory`, and `resources.type` fields.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="notendswiths_nodejs">
+<a href="#notendswiths_nodejs" style="color: inherit; text-decoration: inherit;">not<wbr>Ends<wbr>Withs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of values that excludes events that match the last few characters of the event record field specified as the value of `field`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="notequals_nodejs">
+<a href="#notequals_nodejs" style="color: inherit; text-decoration: inherit;">not<wbr>Equals</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of values that excludes events that match the exact value of the event record field specified as the value of `field`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="notstartswiths_nodejs">
+<a href="#notstartswiths_nodejs" style="color: inherit; text-decoration: inherit;">not<wbr>Starts<wbr>Withs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of values that excludes events that match the first few characters of the event record field specified as the value of `field`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="startswiths_nodejs">
+<a href="#startswiths_nodejs" style="color: inherit; text-decoration: inherit;">starts<wbr>Withs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of values that includes events that match the first few characters of the event record field specified as the value of `field`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="field_python">
+<a href="#field_python" style="color: inherit; text-decoration: inherit;">field</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies a field in an event record on which to filter events to be logged. You can specify only the following values: `readOnly`, `eventSource`, `eventName`, `eventCategory`, `resources.type`, `resources.ARN`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ends_withs_python">
+<a href="#ends_withs_python" style="color: inherit; text-decoration: inherit;">ends_<wbr>withs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of values that includes events that match the last few characters of the event record field specified as the value of `field`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="equals_python">
+<a href="#equals_python" style="color: inherit; text-decoration: inherit;">equals</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of values that includes events that match the exact value of the event record field specified as the value of `field`. This is the only valid operator that you can use with the `readOnly`, `eventCategory`, and `resources.type` fields.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="not_ends_withs_python">
+<a href="#not_ends_withs_python" style="color: inherit; text-decoration: inherit;">not_<wbr>ends_<wbr>withs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of values that excludes events that match the last few characters of the event record field specified as the value of `field`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="not_equals_python">
+<a href="#not_equals_python" style="color: inherit; text-decoration: inherit;">not_<wbr>equals</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of values that excludes events that match the exact value of the event record field specified as the value of `field`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="not_starts_withs_python">
+<a href="#not_starts_withs_python" style="color: inherit; text-decoration: inherit;">not_<wbr>starts_<wbr>withs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of values that excludes events that match the first few characters of the event record field specified as the value of `field`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="starts_withs_python">
+<a href="#starts_withs_python" style="color: inherit; text-decoration: inherit;">starts_<wbr>withs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of values that includes events that match the first few characters of the event record field specified as the value of `field`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
 
 <h4 id="traileventselector">Trail<wbr>Event<wbr>Selector</h4>
 

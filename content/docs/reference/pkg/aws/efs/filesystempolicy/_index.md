@@ -38,6 +38,7 @@ class MyStack : Stack
         var policy = new Aws.Efs.FileSystemPolicy("policy", new Aws.Efs.FileSystemPolicyArgs
         {
             FileSystemId = fs.Id,
+            BypassPolicyLockoutSafetyCheck = true,
             Policy = @$"{{
     ""Version"": ""2012-10-17"",
     ""Id"": ""ExamplePolicy01"",
@@ -91,8 +92,9 @@ func main() {
 			return err
 		}
 		_, err = efs.NewFileSystemPolicy(ctx, "policy", &efs.FileSystemPolicyArgs{
-			FileSystemId: fs.ID(),
-			Policy:       pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "    \"Version\": \"2012-10-17\",\n", "    \"Id\": \"ExamplePolicy01\",\n", "    \"Statement\": [\n", "        {\n", "            \"Sid\": \"ExampleStatement01\",\n", "            \"Effect\": \"Allow\",\n", "            \"Principal\": {\n", "                \"AWS\": \"*\"\n", "            },\n", "            \"Resource\": \"", aws_efs_file_system.Test.Arn, "\",\n", "            \"Action\": [\n", "                \"elasticfilesystem:ClientMount\",\n", "                \"elasticfilesystem:ClientWrite\"\n", "            ],\n", "            \"Condition\": {\n", "                \"Bool\": {\n", "                    \"aws:SecureTransport\": \"true\"\n", "                }\n", "            }\n", "        }\n", "    ]\n", "}\n")),
+			FileSystemId:                   fs.ID(),
+			BypassPolicyLockoutSafetyCheck: pulumi.Bool(true),
+			Policy:                         pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "    \"Version\": \"2012-10-17\",\n", "    \"Id\": \"ExamplePolicy01\",\n", "    \"Statement\": [\n", "        {\n", "            \"Sid\": \"ExampleStatement01\",\n", "            \"Effect\": \"Allow\",\n", "            \"Principal\": {\n", "                \"AWS\": \"*\"\n", "            },\n", "            \"Resource\": \"", aws_efs_file_system.Test.Arn, "\",\n", "            \"Action\": [\n", "                \"elasticfilesystem:ClientMount\",\n", "                \"elasticfilesystem:ClientWrite\"\n", "            ],\n", "            \"Condition\": {\n", "                \"Bool\": {\n", "                    \"aws:SecureTransport\": \"true\"\n", "                }\n", "            }\n", "        }\n", "    ]\n", "}\n")),
 		})
 		if err != nil {
 			return err
@@ -115,6 +117,7 @@ import pulumi_aws as aws
 fs = aws.efs.FileSystem("fs")
 policy = aws.efs.FileSystemPolicy("policy",
     file_system_id=fs.id,
+    bypass_policy_lockout_safety_check=True,
     policy=f"""{{
     "Version": "2012-10-17",
     "Id": "ExamplePolicy01",
@@ -155,6 +158,7 @@ import * as aws from "@pulumi/aws";
 const fs = new aws.efs.FileSystem("fs", {});
 const policy = new aws.efs.FileSystemPolicy("policy", {
     fileSystemId: fs.id,
+    bypassPolicyLockoutSafetyCheck: true,
     policy: `{
     "Version": "2012-10-17",
     "Id": "ExamplePolicy01",
@@ -206,6 +210,7 @@ const policy = new aws.efs.FileSystemPolicy("policy", {
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">FileSystemPolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                      <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                     <span class="nx">bypass_policy_lockout_safety_check</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                      <span class="nx">file_system_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                      <span class="nx">policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
@@ -353,6 +358,15 @@ The FileSystemPolicy resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The JSON formatted file system policy for the EFS file system. see [Docs](https://docs.aws.amazon.com/efs/latest/ug/access-control-overview.html#access-control-manage-access-intro-resource-policies) for more info.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="bypasspolicylockoutsafetycheck_csharp">
+<a href="#bypasspolicylockoutsafetycheck_csharp" style="color: inherit; text-decoration: inherit;">Bypass<wbr>Policy<wbr>Lockout<wbr>Safety<wbr>Check</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}A flag to indicate whether to bypass the `aws.efs.FileSystemPolicy` lockout safety check. The policy lockout safety check determines whether the policy in the request will prevent the principal making the request will be locked out from making future `PutFileSystemPolicy` requests on the file system. Set `bypass_policy_lockout_safety_check` to `true` only when you intend to prevent the principal that is making the request from making a subsequent `PutFileSystemPolicy` request on the file system. The default value is `false`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -375,6 +389,15 @@ The FileSystemPolicy resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The JSON formatted file system policy for the EFS file system. see [Docs](https://docs.aws.amazon.com/efs/latest/ug/access-control-overview.html#access-control-manage-access-intro-resource-policies) for more info.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="bypasspolicylockoutsafetycheck_go">
+<a href="#bypasspolicylockoutsafetycheck_go" style="color: inherit; text-decoration: inherit;">Bypass<wbr>Policy<wbr>Lockout<wbr>Safety<wbr>Check</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}A flag to indicate whether to bypass the `aws.efs.FileSystemPolicy` lockout safety check. The policy lockout safety check determines whether the policy in the request will prevent the principal making the request will be locked out from making future `PutFileSystemPolicy` requests on the file system. Set `bypass_policy_lockout_safety_check` to `true` only when you intend to prevent the principal that is making the request from making a subsequent `PutFileSystemPolicy` request on the file system. The default value is `false`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -397,6 +420,15 @@ The FileSystemPolicy resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The JSON formatted file system policy for the EFS file system. see [Docs](https://docs.aws.amazon.com/efs/latest/ug/access-control-overview.html#access-control-manage-access-intro-resource-policies) for more info.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="bypasspolicylockoutsafetycheck_nodejs">
+<a href="#bypasspolicylockoutsafetycheck_nodejs" style="color: inherit; text-decoration: inherit;">bypass<wbr>Policy<wbr>Lockout<wbr>Safety<wbr>Check</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}A flag to indicate whether to bypass the `aws.efs.FileSystemPolicy` lockout safety check. The policy lockout safety check determines whether the policy in the request will prevent the principal making the request will be locked out from making future `PutFileSystemPolicy` requests on the file system. Set `bypass_policy_lockout_safety_check` to `true` only when you intend to prevent the principal that is making the request from making a subsequent `PutFileSystemPolicy` request on the file system. The default value is `false`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -419,6 +451,15 @@ The FileSystemPolicy resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The JSON formatted file system policy for the EFS file system. see [Docs](https://docs.aws.amazon.com/efs/latest/ug/access-control-overview.html#access-control-manage-access-intro-resource-policies) for more info.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="bypass_policy_lockout_safety_check_python">
+<a href="#bypass_policy_lockout_safety_check_python" style="color: inherit; text-decoration: inherit;">bypass_<wbr>policy_<wbr>lockout_<wbr>safety_<wbr>check</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}A flag to indicate whether to bypass the `aws.efs.FileSystemPolicy` lockout safety check. The policy lockout safety check determines whether the policy in the request will prevent the principal making the request will be locked out from making future `PutFileSystemPolicy` requests on the file system. Set `bypass_policy_lockout_safety_check` to `true` only when you intend to prevent the principal that is making the request from making a subsequent `PutFileSystemPolicy` request on the file system. The default value is `false`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -493,6 +534,7 @@ Get an existing FileSystemPolicy resource's state with the given name, ID, and o
 <span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">bypass_policy_lockout_safety_check</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">file_system_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> FileSystemPolicy</code></pre></div>
 {{% /choosable %}}
@@ -607,6 +649,15 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="state_bypasspolicylockoutsafetycheck_csharp">
+<a href="#state_bypasspolicylockoutsafetycheck_csharp" style="color: inherit; text-decoration: inherit;">Bypass<wbr>Policy<wbr>Lockout<wbr>Safety<wbr>Check</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}A flag to indicate whether to bypass the `aws.efs.FileSystemPolicy` lockout safety check. The policy lockout safety check determines whether the policy in the request will prevent the principal making the request will be locked out from making future `PutFileSystemPolicy` requests on the file system. Set `bypass_policy_lockout_safety_check` to `true` only when you intend to prevent the principal that is making the request from making a subsequent `PutFileSystemPolicy` request on the file system. The default value is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_filesystemid_csharp">
 <a href="#state_filesystemid_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>System<wbr>Id</a>
 </span>
@@ -628,6 +679,15 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="state_bypasspolicylockoutsafetycheck_go">
+<a href="#state_bypasspolicylockoutsafetycheck_go" style="color: inherit; text-decoration: inherit;">Bypass<wbr>Policy<wbr>Lockout<wbr>Safety<wbr>Check</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}A flag to indicate whether to bypass the `aws.efs.FileSystemPolicy` lockout safety check. The policy lockout safety check determines whether the policy in the request will prevent the principal making the request will be locked out from making future `PutFileSystemPolicy` requests on the file system. Set `bypass_policy_lockout_safety_check` to `true` only when you intend to prevent the principal that is making the request from making a subsequent `PutFileSystemPolicy` request on the file system. The default value is `false`.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_filesystemid_go">
 <a href="#state_filesystemid_go" style="color: inherit; text-decoration: inherit;">File<wbr>System<wbr>Id</a>
@@ -651,6 +711,15 @@ The following state arguments are supported:
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="state_bypasspolicylockoutsafetycheck_nodejs">
+<a href="#state_bypasspolicylockoutsafetycheck_nodejs" style="color: inherit; text-decoration: inherit;">bypass<wbr>Policy<wbr>Lockout<wbr>Safety<wbr>Check</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}A flag to indicate whether to bypass the `aws.efs.FileSystemPolicy` lockout safety check. The policy lockout safety check determines whether the policy in the request will prevent the principal making the request will be locked out from making future `PutFileSystemPolicy` requests on the file system. Set `bypass_policy_lockout_safety_check` to `true` only when you intend to prevent the principal that is making the request from making a subsequent `PutFileSystemPolicy` request on the file system. The default value is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_filesystemid_nodejs">
 <a href="#state_filesystemid_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>System<wbr>Id</a>
 </span>
@@ -672,6 +741,15 @@ The following state arguments are supported:
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="state_bypass_policy_lockout_safety_check_python">
+<a href="#state_bypass_policy_lockout_safety_check_python" style="color: inherit; text-decoration: inherit;">bypass_<wbr>policy_<wbr>lockout_<wbr>safety_<wbr>check</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}A flag to indicate whether to bypass the `aws.efs.FileSystemPolicy` lockout safety check. The policy lockout safety check determines whether the policy in the request will prevent the principal making the request will be locked out from making future `PutFileSystemPolicy` requests on the file system. Set `bypass_policy_lockout_safety_check` to `true` only when you intend to prevent the principal that is making the request from making a subsequent `PutFileSystemPolicy` request on the file system. The default value is `false`.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_file_system_id_python">
 <a href="#state_file_system_id_python" style="color: inherit; text-decoration: inherit;">file_<wbr>system_<wbr>id</a>

@@ -49,7 +49,7 @@ class MyStack : Stack
                         {
                             BuildCommand = "python setup.py develop",
                             Port = "8000",
-                            Runtime = "python3",
+                            Runtime = "PYTHON_3",
                             StartCommand = "python runapp.py",
                         },
                         ConfigurationSource = "API",
@@ -99,7 +99,7 @@ func main() {
 						CodeConfigurationValues: &apprunner.ServiceSourceConfigurationCodeRepositoryCodeConfigurationCodeConfigurationValuesArgs{
 							BuildCommand: pulumi.String("python setup.py develop"),
 							Port:         pulumi.String("8000"),
-							Runtime:      pulumi.String("python3"),
+							Runtime:      pulumi.String("PYTHON_3"),
 							StartCommand: pulumi.String("python runapp.py"),
 						},
 						ConfigurationSource: pulumi.String("API"),
@@ -144,7 +144,7 @@ example = aws.apprunner.Service("example",
                 code_configuration_values=aws.apprunner.ServiceSourceConfigurationCodeRepositoryCodeConfigurationCodeConfigurationValuesArgs(
                     build_command="python setup.py develop",
                     port="8000",
-                    runtime="python3",
+                    runtime="PYTHON_3",
                     start_command="python runapp.py",
                 ),
                 configuration_source="API",
@@ -183,7 +183,7 @@ const example = new aws.apprunner.Service("example", {
                 codeConfigurationValues: {
                     buildCommand: "python setup.py develop",
                     port: "8000",
-                    runtime: "python3",
+                    runtime: "PYTHON_3",
                     startCommand: "python runapp.py",
                 },
                 configurationSource: "API",
@@ -2485,7 +2485,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A runtime environment type for building and running an App Runner service. Represents a programming language runtime. Valid values: `python3`, `nodejs12`.
+    <dd>{{% md %}}A runtime environment type for building and running an App Runner service. Represents a programming language runtime. Valid values: `PYTHON_3`, `NODEJS_12`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="buildcommand_csharp">
@@ -2534,7 +2534,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A runtime environment type for building and running an App Runner service. Represents a programming language runtime. Valid values: `python3`, `nodejs12`.
+    <dd>{{% md %}}A runtime environment type for building and running an App Runner service. Represents a programming language runtime. Valid values: `PYTHON_3`, `NODEJS_12`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="buildcommand_go">
@@ -2583,7 +2583,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A runtime environment type for building and running an App Runner service. Represents a programming language runtime. Valid values: `python3`, `nodejs12`.
+    <dd>{{% md %}}A runtime environment type for building and running an App Runner service. Represents a programming language runtime. Valid values: `PYTHON_3`, `NODEJS_12`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="buildcommand_nodejs">
@@ -2632,7 +2632,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A runtime environment type for building and running an App Runner service. Represents a programming language runtime. Valid values: `python3`, `nodejs12`.
+    <dd>{{% md %}}A runtime environment type for building and running an App Runner service. Represents a programming language runtime. Valid values: `PYTHON_3`, `NODEJS_12`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="build_command_python">

@@ -106,6 +106,14 @@ class MyStack : Stack
             {
                 "sg-12345678",
             },
+        }, new CustomResourceOptions
+        {
+            DependsOn = 
+            {
+                dms_access_for_endpoint_AmazonDMSRedshiftS3Role,
+                dms_cloudwatch_logs_role_AmazonDMSCloudWatchLogsRole,
+                dms_vpc_role_AmazonDMSVPCManagementRole,
+            },
         });
     }
 
@@ -208,7 +216,11 @@ func main() {
 			VpcSecurityGroupIds: pulumi.StringArray{
 				pulumi.String("sg-12345678"),
 			},
-		})
+		}, pulumi.DependsOn([]pulumi.Resource{
+			dms_access_for_endpoint_AmazonDMSRedshiftS3Role,
+			dms_cloudwatch_logs_role_AmazonDMSCloudWatchLogsRole,
+			dms_vpc_role_AmazonDMSVPCManagementRole,
+		}))
 		if err != nil {
 			return err
 		}
@@ -263,7 +275,12 @@ test = aws.dms.ReplicationInstance("test",
     tags={
         "Name": "test",
     },
-    vpc_security_group_ids=["sg-12345678"])
+    vpc_security_group_ids=["sg-12345678"],
+    opts=pulumi.ResourceOptions(depends_on=[
+            dms_access_for_endpoint__amazon_dms_redshift_s3_role,
+            dms_cloudwatch_logs_role__amazon_dms_cloud_watch_logs_role,
+            dms_vpc_role__amazon_dmsvpc_management_role,
+        ]))
 ```
 
 
@@ -319,6 +336,12 @@ const test = new aws.dms.ReplicationInstance("test", {
         Name: "test",
     },
     vpcSecurityGroupIds: ["sg-12345678"],
+}, {
+    dependsOn: [
+        dms_access_for_endpoint_AmazonDMSRedshiftS3Role,
+        dms_cloudwatch_logs_role_AmazonDMSCloudWatchLogsRole,
+        dms_vpc_role_AmazonDMSVPCManagementRole,
+    ],
 });
 ```
 

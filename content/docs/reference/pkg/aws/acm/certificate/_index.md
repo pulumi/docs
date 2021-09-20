@@ -305,6 +305,78 @@ const cert = new aws.acm.Certificate("cert", {
 
 
 
+### Referencing domain_validation_options With for_each Based Resources
+
+
+{{< example csharp >}}
+
+Coming soon!
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+Coming soon!
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = []
+for range in [{"key": k, "value": v} for [k, v] in enumerate({dvo.domainName: {
+    name: dvo.resourceRecordName,
+    record: dvo.resourceRecordValue,
+    type: dvo.resourceRecordType,
+} for dvo in aws_acm_certificate.example.domain_validation_options})]:
+    example.append(aws.route53.Record(f"example-{range['key']}",
+        allow_overwrite=True,
+        name=range["value"]["name"],
+        records=[range["value"]["record"]],
+        ttl=60,
+        type=range["value"]["type"],
+        zone_id=aws_route53_zone["example"]["zone_id"]))
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const example: aws.route53.Record[];
+for (const range of Object.entries(.reduce((__obj, dvo) => { ...__obj, [dvo.domainName]: {
+    name: dvo.resourceRecordName,
+    record: dvo.resourceRecordValue,
+    type: dvo.resourceRecordType,
+} })).map(([k, v]) => {key: k, value: v})) {
+    example.push(new aws.route53.Record(`example-${range.key}`, {
+        allowOverwrite: true,
+        name: range.value.name,
+        records: [range.value.record],
+        ttl: 60,
+        type: range.value.type,
+        zoneId: aws_route53_zone.example.zone_id,
+    }));
+}
+```
+
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
 

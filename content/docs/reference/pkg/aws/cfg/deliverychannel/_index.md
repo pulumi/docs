@@ -287,6 +287,7 @@ const rolePolicy = new aws.iam.RolePolicy("rolePolicy", {
                     <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                     <span class="nx">s3_bucket_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                     <span class="nx">s3_key_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                    <span class="nx">s3_kms_key_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                     <span class="nx">snapshot_delivery_properties</span><span class="p">:</span> <span class="nx">Optional[DeliveryChannelSnapshotDeliveryPropertiesArgs]</span> = None<span class="p">,</span>
                     <span class="nx">sns_topic_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
@@ -445,6 +446,15 @@ The DeliveryChannel resource accepts the following [input]({{< relref "/docs/int
     <dd>{{% md %}}The prefix for the specified S3 bucket.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="s3kmskeyarn_csharp">
+<a href="#s3kmskeyarn_csharp" style="color: inherit; text-decoration: inherit;">S3Kms<wbr>Key<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the AWS KMS key used to encrypt objects delivered by AWS Config. Must belong to the same Region as the destination S3 bucket.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="snapshotdeliveryproperties_csharp">
 <a href="#snapshotdeliveryproperties_csharp" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Delivery<wbr>Properties</a>
 </span>
@@ -492,6 +502,15 @@ The DeliveryChannel resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The prefix for the specified S3 bucket.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="s3kmskeyarn_go">
+<a href="#s3kmskeyarn_go" style="color: inherit; text-decoration: inherit;">S3Kms<wbr>Key<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the AWS KMS key used to encrypt objects delivered by AWS Config. Must belong to the same Region as the destination S3 bucket.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshotdeliveryproperties_go">
@@ -543,6 +562,15 @@ The DeliveryChannel resource accepts the following [input]({{< relref "/docs/int
     <dd>{{% md %}}The prefix for the specified S3 bucket.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="s3kmskeyarn_nodejs">
+<a href="#s3kmskeyarn_nodejs" style="color: inherit; text-decoration: inherit;">s3Kms<wbr>Key<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the AWS KMS key used to encrypt objects delivered by AWS Config. Must belong to the same Region as the destination S3 bucket.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="snapshotdeliveryproperties_nodejs">
 <a href="#snapshotdeliveryproperties_nodejs" style="color: inherit; text-decoration: inherit;">snapshot<wbr>Delivery<wbr>Properties</a>
 </span>
@@ -590,6 +618,15 @@ The DeliveryChannel resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The prefix for the specified S3 bucket.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="s3_kms_key_arn_python">
+<a href="#s3_kms_key_arn_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>kms_<wbr>key_<wbr>arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the AWS KMS key used to encrypt objects delivered by AWS Config. Must belong to the same Region as the destination S3 bucket.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshot_delivery_properties_python">
@@ -685,6 +722,7 @@ Get an existing DeliveryChannel resource's state with the given name, ID, and op
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">s3_bucket_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">s3_key_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">s3_kms_key_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">snapshot_delivery_properties</span><span class="p">:</span> <span class="nx">Optional[DeliveryChannelSnapshotDeliveryPropertiesArgs]</span> = None<span class="p">,</span>
         <span class="nx">sns_topic_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> DeliveryChannel</code></pre></div>
 {{% /choosable %}}
@@ -826,6 +864,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The prefix for the specified S3 bucket.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_s3kmskeyarn_csharp">
+<a href="#state_s3kmskeyarn_csharp" style="color: inherit; text-decoration: inherit;">S3Kms<wbr>Key<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the AWS KMS key used to encrypt objects delivered by AWS Config. Must belong to the same Region as the destination S3 bucket.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_snapshotdeliveryproperties_csharp">
 <a href="#state_snapshotdeliveryproperties_csharp" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Delivery<wbr>Properties</a>
 </span>
@@ -873,6 +920,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The prefix for the specified S3 bucket.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_s3kmskeyarn_go">
+<a href="#state_s3kmskeyarn_go" style="color: inherit; text-decoration: inherit;">S3Kms<wbr>Key<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the AWS KMS key used to encrypt objects delivered by AWS Config. Must belong to the same Region as the destination S3 bucket.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_snapshotdeliveryproperties_go">
@@ -924,6 +980,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The prefix for the specified S3 bucket.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_s3kmskeyarn_nodejs">
+<a href="#state_s3kmskeyarn_nodejs" style="color: inherit; text-decoration: inherit;">s3Kms<wbr>Key<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the AWS KMS key used to encrypt objects delivered by AWS Config. Must belong to the same Region as the destination S3 bucket.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_snapshotdeliveryproperties_nodejs">
 <a href="#state_snapshotdeliveryproperties_nodejs" style="color: inherit; text-decoration: inherit;">snapshot<wbr>Delivery<wbr>Properties</a>
 </span>
@@ -971,6 +1036,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The prefix for the specified S3 bucket.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_s3_kms_key_arn_python">
+<a href="#state_s3_kms_key_arn_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>kms_<wbr>key_<wbr>arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the AWS KMS key used to encrypt objects delivered by AWS Config. Must belong to the same Region as the destination S3 bucket.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_snapshot_delivery_properties_python">

@@ -161,6 +161,7 @@ const ec = new aws.sagemaker.EndpointConfiguration("ec", {
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">EndpointConfiguration</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                          <span class="nx">async_inference_config</span><span class="p">:</span> <span class="nx">Optional[EndpointConfigurationAsyncInferenceConfigArgs]</span> = None<span class="p">,</span>
                           <span class="nx">data_capture_config</span><span class="p">:</span> <span class="nx">Optional[EndpointConfigurationDataCaptureConfigArgs]</span> = None<span class="p">,</span>
                           <span class="nx">kms_key_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                           <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -304,6 +305,15 @@ The EndpointConfiguration resource accepts the following [input]({{< relref "/do
     <dd>{{% md %}}Fields are documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="asyncinferenceconfig_csharp">
+<a href="#asyncinferenceconfig_csharp" style="color: inherit; text-decoration: inherit;">Async<wbr>Inference<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#endpointconfigurationasyncinferenceconfig">Endpoint<wbr>Configuration<wbr>Async<wbr>Inference<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies configuration for how an endpoint performs asynchronous inference.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="datacaptureconfig_csharp">
 <a href="#datacaptureconfig_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Capture<wbr>Config</a>
 </span>
@@ -351,6 +361,15 @@ The EndpointConfiguration resource accepts the following [input]({{< relref "/do
         <span class="property-type"><a href="#endpointconfigurationproductionvariant">[]Endpoint<wbr>Configuration<wbr>Production<wbr>Variant<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Fields are documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="asyncinferenceconfig_go">
+<a href="#asyncinferenceconfig_go" style="color: inherit; text-decoration: inherit;">Async<wbr>Inference<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#endpointconfigurationasyncinferenceconfig">Endpoint<wbr>Configuration<wbr>Async<wbr>Inference<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies configuration for how an endpoint performs asynchronous inference.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datacaptureconfig_go">
@@ -402,6 +421,15 @@ The EndpointConfiguration resource accepts the following [input]({{< relref "/do
     <dd>{{% md %}}Fields are documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="asyncinferenceconfig_nodejs">
+<a href="#asyncinferenceconfig_nodejs" style="color: inherit; text-decoration: inherit;">async<wbr>Inference<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#endpointconfigurationasyncinferenceconfig">Endpoint<wbr>Configuration<wbr>Async<wbr>Inference<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies configuration for how an endpoint performs asynchronous inference.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="datacaptureconfig_nodejs">
 <a href="#datacaptureconfig_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Capture<wbr>Config</a>
 </span>
@@ -449,6 +477,15 @@ The EndpointConfiguration resource accepts the following [input]({{< relref "/do
         <span class="property-type"><a href="#endpointconfigurationproductionvariant">Sequence[Endpoint<wbr>Configuration<wbr>Production<wbr>Variant<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Fields are documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="async_inference_config_python">
+<a href="#async_inference_config_python" style="color: inherit; text-decoration: inherit;">async_<wbr>inference_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#endpointconfigurationasyncinferenceconfig">Endpoint<wbr>Configuration<wbr>Async<wbr>Inference<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies configuration for how an endpoint performs asynchronous inference.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="data_capture_config_python">
@@ -632,6 +669,7 @@ Get an existing EndpointConfiguration resource's state with the given name, ID, 
         <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
         <span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">async_inference_config</span><span class="p">:</span> <span class="nx">Optional[EndpointConfigurationAsyncInferenceConfigArgs]</span> = None<span class="p">,</span>
         <span class="nx">data_capture_config</span><span class="p">:</span> <span class="nx">Optional[EndpointConfigurationDataCaptureConfigArgs]</span> = None<span class="p">,</span>
         <span class="nx">kms_key_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -759,6 +797,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The Amazon Resource Name (ARN) assigned by AWS to this endpoint configuration.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_asyncinferenceconfig_csharp">
+<a href="#state_asyncinferenceconfig_csharp" style="color: inherit; text-decoration: inherit;">Async<wbr>Inference<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#endpointconfigurationasyncinferenceconfig">Endpoint<wbr>Configuration<wbr>Async<wbr>Inference<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies configuration for how an endpoint performs asynchronous inference.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_datacaptureconfig_csharp">
 <a href="#state_datacaptureconfig_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Capture<wbr>Config</a>
 </span>
@@ -824,6 +871,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) assigned by AWS to this endpoint configuration.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_asyncinferenceconfig_go">
+<a href="#state_asyncinferenceconfig_go" style="color: inherit; text-decoration: inherit;">Async<wbr>Inference<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#endpointconfigurationasyncinferenceconfig">Endpoint<wbr>Configuration<wbr>Async<wbr>Inference<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies configuration for how an endpoint performs asynchronous inference.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datacaptureconfig_go">
@@ -893,6 +949,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The Amazon Resource Name (ARN) assigned by AWS to this endpoint configuration.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_asyncinferenceconfig_nodejs">
+<a href="#state_asyncinferenceconfig_nodejs" style="color: inherit; text-decoration: inherit;">async<wbr>Inference<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#endpointconfigurationasyncinferenceconfig">Endpoint<wbr>Configuration<wbr>Async<wbr>Inference<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies configuration for how an endpoint performs asynchronous inference.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_datacaptureconfig_nodejs">
 <a href="#state_datacaptureconfig_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Capture<wbr>Config</a>
 </span>
@@ -960,6 +1025,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The Amazon Resource Name (ARN) assigned by AWS to this endpoint configuration.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_async_inference_config_python">
+<a href="#state_async_inference_config_python" style="color: inherit; text-decoration: inherit;">async_<wbr>inference_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#endpointconfigurationasyncinferenceconfig">Endpoint<wbr>Configuration<wbr>Async<wbr>Inference<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies configuration for how an endpoint performs asynchronous inference.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_data_capture_config_python">
 <a href="#state_data_capture_config_python" style="color: inherit; text-decoration: inherit;">data_<wbr>capture_<wbr>config</a>
 </span>
@@ -1024,6 +1098,366 @@ The following state arguments are supported:
 
 
 
+<h4 id="endpointconfigurationasyncinferenceconfig">Endpoint<wbr>Configuration<wbr>Async<wbr>Inference<wbr>Config</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="outputconfig_csharp">
+<a href="#outputconfig_csharp" style="color: inherit; text-decoration: inherit;">Output<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#endpointconfigurationasyncinferenceconfigoutputconfig">Endpoint<wbr>Configuration<wbr>Async<wbr>Inference<wbr>Config<wbr>Output<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the configuration for asynchronous inference invocation outputs.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="clientconfig_csharp">
+<a href="#clientconfig_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#endpointconfigurationasyncinferenceconfigclientconfig">Endpoint<wbr>Configuration<wbr>Async<wbr>Inference<wbr>Config<wbr>Client<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Configures the behavior of the client used by Amazon SageMaker to interact with the model container during asynchronous inference.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="outputconfig_go">
+<a href="#outputconfig_go" style="color: inherit; text-decoration: inherit;">Output<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#endpointconfigurationasyncinferenceconfigoutputconfig">Endpoint<wbr>Configuration<wbr>Async<wbr>Inference<wbr>Config<wbr>Output<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the configuration for asynchronous inference invocation outputs.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="clientconfig_go">
+<a href="#clientconfig_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#endpointconfigurationasyncinferenceconfigclientconfig">Endpoint<wbr>Configuration<wbr>Async<wbr>Inference<wbr>Config<wbr>Client<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Configures the behavior of the client used by Amazon SageMaker to interact with the model container during asynchronous inference.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="outputconfig_nodejs">
+<a href="#outputconfig_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#endpointconfigurationasyncinferenceconfigoutputconfig">Endpoint<wbr>Configuration<wbr>Async<wbr>Inference<wbr>Config<wbr>Output<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the configuration for asynchronous inference invocation outputs.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="clientconfig_nodejs">
+<a href="#clientconfig_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#endpointconfigurationasyncinferenceconfigclientconfig">Endpoint<wbr>Configuration<wbr>Async<wbr>Inference<wbr>Config<wbr>Client<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Configures the behavior of the client used by Amazon SageMaker to interact with the model container during asynchronous inference.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="output_config_python">
+<a href="#output_config_python" style="color: inherit; text-decoration: inherit;">output_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#endpointconfigurationasyncinferenceconfigoutputconfig">Endpoint<wbr>Configuration<wbr>Async<wbr>Inference<wbr>Config<wbr>Output<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the configuration for asynchronous inference invocation outputs.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="client_config_python">
+<a href="#client_config_python" style="color: inherit; text-decoration: inherit;">client_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#endpointconfigurationasyncinferenceconfigclientconfig">Endpoint<wbr>Configuration<wbr>Async<wbr>Inference<wbr>Config<wbr>Client<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Configures the behavior of the client used by Amazon SageMaker to interact with the model container during asynchronous inference.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="endpointconfigurationasyncinferenceconfigclientconfig">Endpoint<wbr>Configuration<wbr>Async<wbr>Inference<wbr>Config<wbr>Client<wbr>Config</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="maxconcurrentinvocationsperinstance_csharp">
+<a href="#maxconcurrentinvocationsperinstance_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Invocations<wbr>Per<wbr>Instance</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The maximum number of concurrent requests sent by the SageMaker client to the model container. If no value is provided, Amazon SageMaker will choose an optimal value for you.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="maxconcurrentinvocationsperinstance_go">
+<a href="#maxconcurrentinvocationsperinstance_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Invocations<wbr>Per<wbr>Instance</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The maximum number of concurrent requests sent by the SageMaker client to the model container. If no value is provided, Amazon SageMaker will choose an optimal value for you.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="maxconcurrentinvocationsperinstance_nodejs">
+<a href="#maxconcurrentinvocationsperinstance_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrent<wbr>Invocations<wbr>Per<wbr>Instance</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The maximum number of concurrent requests sent by the SageMaker client to the model container. If no value is provided, Amazon SageMaker will choose an optimal value for you.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="max_concurrent_invocations_per_instance_python">
+<a href="#max_concurrent_invocations_per_instance_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrent_<wbr>invocations_<wbr>per_<wbr>instance</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The maximum number of concurrent requests sent by the SageMaker client to the model container. If no value is provided, Amazon SageMaker will choose an optimal value for you.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="endpointconfigurationasyncinferenceconfigoutputconfig">Endpoint<wbr>Configuration<wbr>Async<wbr>Inference<wbr>Config<wbr>Output<wbr>Config</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="s3outputpath_csharp">
+<a href="#s3outputpath_csharp" style="color: inherit; text-decoration: inherit;">S3Output<wbr>Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Amazon S3 location to upload inference responses to.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="kmskeyid_csharp">
+<a href="#kmskeyid_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Web Services Key Management Service (Amazon Web Services KMS) key that Amazon SageMaker uses to encrypt the asynchronous inference output in Amazon S3.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="notificationconfig_csharp">
+<a href="#notificationconfig_csharp" style="color: inherit; text-decoration: inherit;">Notification<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#endpointconfigurationasyncinferenceconfigoutputconfignotificationconfig">Endpoint<wbr>Configuration<wbr>Async<wbr>Inference<wbr>Config<wbr>Output<wbr>Config<wbr>Notification<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the configuration for notifications of inference results for asynchronous inference.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="s3outputpath_go">
+<a href="#s3outputpath_go" style="color: inherit; text-decoration: inherit;">S3Output<wbr>Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Amazon S3 location to upload inference responses to.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="kmskeyid_go">
+<a href="#kmskeyid_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Web Services Key Management Service (Amazon Web Services KMS) key that Amazon SageMaker uses to encrypt the asynchronous inference output in Amazon S3.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="notificationconfig_go">
+<a href="#notificationconfig_go" style="color: inherit; text-decoration: inherit;">Notification<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#endpointconfigurationasyncinferenceconfigoutputconfignotificationconfig">Endpoint<wbr>Configuration<wbr>Async<wbr>Inference<wbr>Config<wbr>Output<wbr>Config<wbr>Notification<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the configuration for notifications of inference results for asynchronous inference.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="s3outputpath_nodejs">
+<a href="#s3outputpath_nodejs" style="color: inherit; text-decoration: inherit;">s3Output<wbr>Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Amazon S3 location to upload inference responses to.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="kmskeyid_nodejs">
+<a href="#kmskeyid_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Web Services Key Management Service (Amazon Web Services KMS) key that Amazon SageMaker uses to encrypt the asynchronous inference output in Amazon S3.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="notificationconfig_nodejs">
+<a href="#notificationconfig_nodejs" style="color: inherit; text-decoration: inherit;">notification<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#endpointconfigurationasyncinferenceconfigoutputconfignotificationconfig">Endpoint<wbr>Configuration<wbr>Async<wbr>Inference<wbr>Config<wbr>Output<wbr>Config<wbr>Notification<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the configuration for notifications of inference results for asynchronous inference.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="s3_output_path_python">
+<a href="#s3_output_path_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>output_<wbr>path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Amazon S3 location to upload inference responses to.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="kms_key_id_python">
+<a href="#kms_key_id_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Web Services Key Management Service (Amazon Web Services KMS) key that Amazon SageMaker uses to encrypt the asynchronous inference output in Amazon S3.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="notification_config_python">
+<a href="#notification_config_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#endpointconfigurationasyncinferenceconfigoutputconfignotificationconfig">Endpoint<wbr>Configuration<wbr>Async<wbr>Inference<wbr>Config<wbr>Output<wbr>Config<wbr>Notification<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the configuration for notifications of inference results for asynchronous inference.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="endpointconfigurationasyncinferenceconfigoutputconfignotificationconfig">Endpoint<wbr>Configuration<wbr>Async<wbr>Inference<wbr>Config<wbr>Output<wbr>Config<wbr>Notification<wbr>Config</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="errortopic_csharp">
+<a href="#errortopic_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Topic</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Amazon SNS topic to post a notification to when inference fails. If no topic is provided, no notification is sent on failure.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="successtopic_csharp">
+<a href="#successtopic_csharp" style="color: inherit; text-decoration: inherit;">Success<wbr>Topic</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Amazon SNS topic to post a notification to when inference completes successfully. If no topic is provided, no notification is sent on success.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="errortopic_go">
+<a href="#errortopic_go" style="color: inherit; text-decoration: inherit;">Error<wbr>Topic</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Amazon SNS topic to post a notification to when inference fails. If no topic is provided, no notification is sent on failure.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="successtopic_go">
+<a href="#successtopic_go" style="color: inherit; text-decoration: inherit;">Success<wbr>Topic</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Amazon SNS topic to post a notification to when inference completes successfully. If no topic is provided, no notification is sent on success.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="errortopic_nodejs">
+<a href="#errortopic_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Topic</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Amazon SNS topic to post a notification to when inference fails. If no topic is provided, no notification is sent on failure.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="successtopic_nodejs">
+<a href="#successtopic_nodejs" style="color: inherit; text-decoration: inherit;">success<wbr>Topic</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Amazon SNS topic to post a notification to when inference completes successfully. If no topic is provided, no notification is sent on success.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="error_topic_python">
+<a href="#error_topic_python" style="color: inherit; text-decoration: inherit;">error_<wbr>topic</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Amazon SNS topic to post a notification to when inference fails. If no topic is provided, no notification is sent on failure.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="success_topic_python">
+<a href="#success_topic_python" style="color: inherit; text-decoration: inherit;">success_<wbr>topic</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Amazon SNS topic to post a notification to when inference completes successfully. If no topic is provided, no notification is sent on success.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="endpointconfigurationdatacaptureconfig">Endpoint<wbr>Configuration<wbr>Data<wbr>Capture<wbr>Config</h4>
 
 {{% choosable language csharp %}}
@@ -1080,7 +1514,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Amazon Resource Name (ARN) of a AWS Key Management Service key that Amazon SageMaker uses to encrypt the captured data on Amazon S3.
+    <dd>{{% md %}}The Amazon Web Services Key Management Service (Amazon Web Services KMS) key that Amazon SageMaker uses to encrypt the asynchronous inference output in Amazon S3.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1138,7 +1572,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Amazon Resource Name (ARN) of a AWS Key Management Service key that Amazon SageMaker uses to encrypt the captured data on Amazon S3.
+    <dd>{{% md %}}The Amazon Web Services Key Management Service (Amazon Web Services KMS) key that Amazon SageMaker uses to encrypt the asynchronous inference output in Amazon S3.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1196,7 +1630,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Amazon Resource Name (ARN) of a AWS Key Management Service key that Amazon SageMaker uses to encrypt the captured data on Amazon S3.
+    <dd>{{% md %}}The Amazon Web Services Key Management Service (Amazon Web Services KMS) key that Amazon SageMaker uses to encrypt the asynchronous inference output in Amazon S3.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1254,7 +1688,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Amazon Resource Name (ARN) of a AWS Key Management Service key that Amazon SageMaker uses to encrypt the captured data on Amazon S3.
+    <dd>{{% md %}}The Amazon Web Services Key Management Service (Amazon Web Services KMS) key that Amazon SageMaker uses to encrypt the asynchronous inference output in Amazon S3.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
