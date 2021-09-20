@@ -16,7 +16,7 @@ Explore the resources and functions of the azure-native.extendedlocation module.
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getcustomlocation" title="GetcustomLocation"><span class="symbol function"></span>GetcustomLocation</a></li>
+    <li><a href="getcustomlocation" title="GetCustomLocation"><span class="symbol function"></span>GetCustomLocation</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -26,6 +26,6 @@ Explore the resources and functions of the azure-native.extendedlocation module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.28.0</dd>
+	<dd>1.29.0</dd>
 </dl>
 

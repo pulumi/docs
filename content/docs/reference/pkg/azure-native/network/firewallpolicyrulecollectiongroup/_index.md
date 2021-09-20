@@ -4489,7 +4489,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-native:network:FirewallPolicyRuleCollectionGroup firewallPolicy /subscriptions/e747cc13-97d4-4a79-b463-42d7f4e558f2/resourceGroups/rg1/providers/Microsoft.Network/firewallPolicies/firewallPolicy 
+$ pulumi import azure-native:network:FirewallPolicyRuleCollectionGroup ruleCollectionGroup1 /subscriptions/e747cc13-97d4-4a79-b463-42d7f4e558f2/resourceGroups/rg1/providers/Microsoft.Network/firewallPolicies/firewallPolicy/ruleCollectionGroups/ruleCollectionGroup1 
 ```
 
 

@@ -16,6 +16,8 @@ Explore the resources and functions of the azure-native.labservices module.
     <li><a href="galleryimage" title="GalleryImage"><span class="symbol resource"></span>GalleryImage</a></li>
     <li><a href="lab" title="Lab"><span class="symbol resource"></span>Lab</a></li>
     <li><a href="labaccount" title="LabAccount"><span class="symbol resource"></span>LabAccount</a></li>
+    <li><a href="labplan" title="LabPlan"><span class="symbol resource"></span>LabPlan</a></li>
+    <li><a href="schedule" title="Schedule"><span class="symbol resource"></span>Schedule</a></li>
     <li><a href="user" title="User"><span class="symbol resource"></span>User</a></li>
 </ul>
 
@@ -31,6 +33,8 @@ Explore the resources and functions of the azure-native.labservices module.
     <li><a href="getlab" title="GetLab"><span class="symbol function"></span>GetLab</a></li>
     <li><a href="getlabaccount" title="GetLabAccount"><span class="symbol function"></span>GetLabAccount</a></li>
     <li><a href="getlabaccountregionalavailability" title="GetLabAccountRegionalAvailability"><span class="symbol function"></span>GetLabAccountRegionalAvailability</a></li>
+    <li><a href="getlabplan" title="GetLabPlan"><span class="symbol function"></span>GetLabPlan</a></li>
+    <li><a href="getschedule" title="GetSchedule"><span class="symbol function"></span>GetSchedule</a></li>
     <li><a href="getuser" title="GetUser"><span class="symbol function"></span>GetUser</a></li>
     <li><a href="listglobaluserenvironments" title="ListGlobalUserEnvironments"><span class="symbol function"></span>ListGlobalUserEnvironments</a></li>
     <li><a href="listglobaluserlabs" title="ListGlobalUserLabs"><span class="symbol function"></span>ListGlobalUserLabs</a></li>
@@ -43,6 +47,6 @@ Explore the resources and functions of the azure-native.labservices module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.28.0</dd>
+	<dd>1.29.0</dd>
 </dl>
 
