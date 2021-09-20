@@ -110,7 +110,7 @@ Most Pulumi programs use the first option, but programs that need to do async wo
 
 ## TypeScript
 
-You can elect to write Pulumi programs in TypeScript to get additional verification and tooling benefits. As of version 0.15.0, Pulumi supports TypeScript natively so you don't need to explicitly run `tsc` on your program before running `pulumi`
+You can elect to write Pulumi programs in TypeScript to get additional verification and tooling benefits. Pulumi supports TypeScript natively so you don't need to explicitly run `tsc` on your program before running `pulumi`.
 
 If you would like full control of the TypeScript build process, you can compile ahead of time, and point your package.json main entry point at the compiled JavaScript instead. If you do this, you can disable the [automatic compilation of TypeScript files](#disabling-built-in-typescript-support).
 
@@ -181,14 +181,7 @@ Tools like VS Code will give you completion lists, live error reporting and inli
 
 ## Disabling built in TypeScript support
 
-When using the built in TypeScript support, Pulumi sets the following compiler settings, which may not be overridden:
-
-- target: "es6",
-- module: "commonjs",
-- moduleResolution: "node",
-- sourceMap: "true",
-
-If you need to change any of these settings, you can disable the built in TypeScript support by changing your the `runtime` setting in `Pulumi.yaml` to look like the following:
+You can disable the built in TypeScript support by changing the `runtime` setting in `Pulumi.yaml` to look like the following:
 
 ```yaml
 runtime:
