@@ -10,7 +10,7 @@ tags:
     - rest-api
 ---
 
-Pulumi was designed to be highly extensible platform from the outset. That includes core languages and cloud providers, of course, but our community is often using Pulumi as a central part of building and connecting their cloud engineering and automation systems, using features like the Automation API. Today we are happy to announce the next major step in enabling these kind of scenarios: the Pulumi REST API. This REST API offers functionality to manage projects and stacks, cloud resources, policies, and more. It has, in fact, been there all along, powering the Pulumi SDK, CLI, and Console behind the scenes, although we haven't fully documented or supported it until now. That changes today! We've already seen some amazing things built with this API and we're excited to see what you build with it too.
+Pulumi was designed to be highly extensible from the outset. That includes core languages and cloud providers, of course, but our community is often using Pulumi as a central part of building and connecting their cloud engineering and automation systems, using features like the Automation API. Today we are happy to announce the next major step in enabling these kind of scenarios: the Pulumi REST API. This REST API offers functionality to manage projects and stacks, cloud resources, policies, and more. It has, in fact, been there all along, powering the Pulumi SDK, CLI, and Console behind the scenes, although we haven't fully documented or supported it until now. That changes today! We've already seen some amazing things built with this API and we're excited to see what you build with it too.
 
 <!--more-->
 
@@ -127,7 +127,7 @@ for stack in $(
             # version '5.7', and error out so we can patch our instances!
             URN=$(echo $rds | jq -r '.urn')
             ENGINE=$(echo $rds | jq -r '.engine')
-            ENGINE_VERSION=$(echo $rds | jq -r '.engine_version')
+            ENGINE_VERSION=$(echo $rds | jq -r '.engineVersion')
             if [[ "$ENGINE"="mysql" && "$ENGINE_VERSION"="5.7" ]]; then
                 >&2 echo -e "error: vulnerable MySQL 5.7 RDS instance found:"
                 >&2 echo -e "    URN=$URN"
