@@ -204,16 +204,17 @@ A reference to a type.
 
 An object or resource property.
 
-| Property                                    | Type                                         | Required | Description                                                                                                                  |
-|---------------------------------------------|----------------------------------------------|----------|------------------------------------------------------------------------------------------------------------------------------|
-| All [`Type`](#type) properties, as well as: |                                              |          |                                                                                                                              |
-| `description`                               | `string`                                     | No       | Description is the description of the property, if any.                                                                      |
-| `const`                                     | `any`                                        | No       | Const is the constant value for the property, if any. The type of the value must be assignable to the type of the property.  |
-| `default`                                   | `any`                                        | No       | Default is the default value for the property, if any. The type of the value must be assignable to the type of the property. |
-| `defaultInfo`                               | `Default`                                    | No       | DefaultInfo contains additional information about the property's default value, if any.                                      |
-| `deprecationMessage`                        | `string`                                     | No       | DeprecationMessage indicates whether or not the property is deprecated.                                                      |
-| `language`                                  | [`map[PropertyLanguage]`](#propertylanguage) | No       | Language specifies additional language-specific data about the property.                                                     |
-| `secret`                                    | `boolean`                                    | No       | Secret specifies if the property is secret (default false).                                                                  |
+| Property                                    | Type                                         | Required | Description                                                                                                                   |
+|---------------------------------------------|----------------------------------------------|----------|-------------------------------------------------------------------------------------------------------------------------------|
+| All [`Type`](#type) properties, as well as: |                                              |          |                                                                                                                               |
+| `description`                               | `string`                                     | No       | Description is the description of the property, if any.                                                                       |
+| `const`                                     | `any`                                        | No       | Const is the constant value for the property, if any. The type of the value must be assignable to the type of the property.   |
+| `default`                                   | `any`                                        | No       | Default is the default value for the property, if any. The type of the value must be assignable to the type of the property.  |
+| `defaultInfo`                               | `Default`                                    | No       | DefaultInfo contains additional information about the property's default value, if any.                                       |
+| `deprecationMessage`                        | `string`                                     | No       | DeprecationMessage indicates whether or not the property is deprecated.                                                       |
+| `language`                                  | [`map[PropertyLanguage]`](#propertylanguage) | No       | Language specifies additional language-specific data about the property.                                                      |
+| `secret`                                    | `boolean`                                    | No       | Secret specifies if the property is secret (default false).                                                                   |
+| `replaceOnChanges`                          | `boolean`                                    | No       | ReplaceOnChanges specifies if the associated object should be updated with a replace operation instead of a update operation. |
 
 ### EnumValue
 
