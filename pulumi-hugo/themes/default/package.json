@@ -11,7 +11,7 @@
     "watch-css": "yarn run chokidar 'assets/sass/**/*.scss' -c \"yarn run --silent node-sass assets/sass/styles.scss | yarn run postcss --config assets/config --output ${CSS_BUNDLE}\"",
     "watch-js": "yarn run tsc --watch --preserveWatchOutput --outFile ${JS_BUNDLE}",
     "watch-components": "yarn --cwd components run start",
-    "build-css": "yarn run --silent node-sass assets/sass/styles.scss | yarn run postcss --config assets/config --output ${CSS_BUNDLE} --no-map",
+    "build-css": "yarn run --silent sass assets/sass/styles.scss | yarn run postcss --config assets/config --output ${CSS_BUNDLE} --no-map",
     "build-js": "yarn run tsc --outFile ${JS_BUNDLE}",
     "build-components": "yarn --cwd components run build"
   },
@@ -22,7 +22,7 @@
     "clipboard-polyfill": "^2.8.1",
     "concurrently": "^5.2.0",
     "cssnano": "^5.0.3",
-    "node-sass": "^4.14.1",
+    "sass": "^1.39.0",
     "postcss": "^8.2.15",
     "postcss-cli": "^8.3.1",
     "tailwindcss": "^2.1.2",

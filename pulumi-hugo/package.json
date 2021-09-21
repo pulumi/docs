@@ -8,6 +8,7 @@
   "dependencies": {
     "concurrently": "^6.0.0",
     "js-yaml": "^3.13.1",
-    "markdownlint": "^0.17.2"
+    "markdownlint": "^0.17.2",
+    "sass":"^1.39.2"
   }
 }
