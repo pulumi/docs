@@ -194,4 +194,17 @@ meta_desc: A list of different environment variables the Pulumi CLI supports.
         </p>
         <pre><code class="text-xs">PULUMI_AUTOMATION_API_SKIP_VERSION_CHECK=true</code></pre>
     </dd>
+    <dt>
+        <span class="font-mono">
+            NO_COLOR
+        </span>
+    </dt>
+    <dd>
+        <p>
+            The presence of this environment variable (regardless of its value) strips color ANSI codes from text
+            output to the terminal. See <a href="https://no-color.org/">https://no-color.org/</a> for more details.
+            When used with Automation API, this environment variable will strip color directives from the event logs.
+        </p>
+        <pre><code class="text-xs">NO_COLOR</code></pre>
+    </dd>
 </dl>
