@@ -4,6 +4,9 @@
 
 {{ define "main" }}
     <section id="sessions" class="container mx-auto my-16 text-center">
+        <div class="text-left mb-12">
+            <a class="text-blue-600 hover:underline" href="{{ relref . "/cloud-engineering-summit" }}">&#8592; Go back to the Cloud Engineering Summit home page</a>
+        </div>
         <script type="text/javascript" src="https://sessionize.com/api/v2/{{ .Params.sessionize_id }}/view/Sessions"></script>
     </section>
 {{ end }}
