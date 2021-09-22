@@ -93,7 +93,11 @@ generate_metadata() {
     go build -o "${HOME}/go/bin/resourcedocsgen" .
 
     featured=""
-    if [[ "${featured_packages[*]}" =~ ${provider} ]]; then
+    # The surrounding white-space is needed to ensure that we match the whole word.
+    # Disabling shellcheck for the right-side quotation since we want the surrounding
+    # white-spaces there too.
+    # shellcheck disable=SC2076
+    if [[ " ${featured_packages[*]} " =~ " ${provider} " ]]; then
         featured="--featured"
     fi
 

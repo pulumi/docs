@@ -79,7 +79,7 @@ if [ "$branch" = "master" ]; then
 fi
 
 for REPO in "${REPOS[@]}" ; do \
-#    ./scripts/gen_resource_docs.sh "${REPO}" true
+    ./scripts/gen_resource_docs.sh "${REPO}" true
 
     if [ -n "${PKG_METADATA_OUT_DIR:-}" ]; then
       ./scripts/gen_package_metadata.sh "${PKG_METADATA_OUT_DIR}" "${REPO}"
