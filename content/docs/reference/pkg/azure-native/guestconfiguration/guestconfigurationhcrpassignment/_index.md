@@ -2137,6 +2137,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Id of the latest report for the guest configuration assignment. {{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="parameterhash_csharp">
+<a href="#parameterhash_csharp" style="color: inherit; text-decoration: inherit;">Parameter<wbr>Hash</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}parameter hash for the guest configuration assignment. {{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
 </span>
@@ -2144,6 +2152,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provisioning state, which only appears in the response.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="resourcetype_csharp">
+<a href="#resourcetype_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of the resource - VMSS / VM{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetresourceid_csharp">
 <a href="#targetresourceid_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Resource<wbr>Id</a>
@@ -2175,7 +2191,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#assignmentreportresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Guest<wbr>Configuration.<wbr>Inputs.<wbr>Assignment<wbr>Report<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Last reported guest configuration assignment report.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Last reported guest configuration assignment report.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="vmssvmlist_csharp">
+<a href="#vmssvmlist_csharp" style="color: inherit; text-decoration: inherit;">Vmss<wbr>VMList</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#vmssvminforesponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Guest<wbr>Configuration.<wbr>Inputs.<wbr>VMSSVMInfo<wbr>Response&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The list of VM Compliance data for VMSS{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2213,6 +2237,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Id of the latest report for the guest configuration assignment. {{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="parameterhash_go">
+<a href="#parameterhash_go" style="color: inherit; text-decoration: inherit;">Parameter<wbr>Hash</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}parameter hash for the guest configuration assignment. {{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
 </span>
@@ -2220,6 +2252,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provisioning state, which only appears in the response.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="resourcetype_go">
+<a href="#resourcetype_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of the resource - VMSS / VM{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetresourceid_go">
 <a href="#targetresourceid_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Resource<wbr>Id</a>
@@ -2251,7 +2291,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#assignmentreportresponse">Assignment<wbr>Report<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Last reported guest configuration assignment report.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Last reported guest configuration assignment report.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="vmssvmlist_go">
+<a href="#vmssvmlist_go" style="color: inherit; text-decoration: inherit;">Vmss<wbr>VMList</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#vmssvminforesponse">[]VMSSVMInfo<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The list of VM Compliance data for VMSS{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2289,6 +2337,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Id of the latest report for the guest configuration assignment. {{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="parameterhash_nodejs">
+<a href="#parameterhash_nodejs" style="color: inherit; text-decoration: inherit;">parameter<wbr>Hash</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}parameter hash for the guest configuration assignment. {{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
 </span>
@@ -2296,6 +2352,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provisioning state, which only appears in the response.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="resourcetype_nodejs">
+<a href="#resourcetype_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of the resource - VMSS / VM{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetresourceid_nodejs">
 <a href="#targetresourceid_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Resource<wbr>Id</a>
@@ -2327,7 +2391,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#assignmentreportresponse">Assignment<wbr>Report<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Last reported guest configuration assignment report.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Last reported guest configuration assignment report.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="vmssvmlist_nodejs">
+<a href="#vmssvmlist_nodejs" style="color: inherit; text-decoration: inherit;">vmss<wbr>VMList</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#vmssvminforesponse">VMSSVMInfo<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}The list of VM Compliance data for VMSS{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -2365,6 +2437,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Id of the latest report for the guest configuration assignment. {{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="parameter_hash_python">
+<a href="#parameter_hash_python" style="color: inherit; text-decoration: inherit;">parameter_<wbr>hash</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}parameter hash for the guest configuration assignment. {{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
 </span>
@@ -2372,6 +2452,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provisioning state, which only appears in the response.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="resource_type_python">
+<a href="#resource_type_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Type of the resource - VMSS / VM{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="target_resource_id_python">
 <a href="#target_resource_id_python" style="color: inherit; text-decoration: inherit;">target_<wbr>resource_<wbr>id</a>
@@ -2403,7 +2491,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#assignmentreportresponse">Assignment<wbr>Report<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Last reported guest configuration assignment report.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Last reported guest configuration assignment report.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="vmss_vm_list_python">
+<a href="#vmss_vm_list_python" style="color: inherit; text-decoration: inherit;">vmss_<wbr>vm_<wbr>list</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#vmssvminforesponse">Sequence[VMSSVMInfo<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}The list of VM Compliance data for VMSS{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="guestconfigurationnavigation">Guest<wbr>Configuration<wbr>Navigation</h4>
@@ -2426,6 +2522,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#configurationparameter">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Guest<wbr>Configuration.<wbr>Inputs.<wbr>Configuration<wbr>Parameter&gt;</a></span>
     </dt>
     <dd>{{% md %}}The configuration parameters for the guest configuration.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="configurationprotectedparameter_csharp">
+<a href="#configurationprotectedparameter_csharp" style="color: inherit; text-decoration: inherit;">Configuration<wbr>Protected<wbr>Parameter</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#configurationparameter">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Guest<wbr>Configuration.<wbr>Inputs.<wbr>Configuration<wbr>Parameter&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The protected configuration parameters for the guest configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="configurationsetting_csharp">
 <a href="#configurationsetting_csharp" style="color: inherit; text-decoration: inherit;">Configuration<wbr>Setting</a>
@@ -2495,6 +2599,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The configuration parameters for the guest configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="configurationprotectedparameter_go">
+<a href="#configurationprotectedparameter_go" style="color: inherit; text-decoration: inherit;">Configuration<wbr>Protected<wbr>Parameter</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#configurationparameter">[]Configuration<wbr>Parameter</a></span>
+    </dt>
+    <dd>{{% md %}}The protected configuration parameters for the guest configuration.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="configurationsetting_go">
 <a href="#configurationsetting_go" style="color: inherit; text-decoration: inherit;">Configuration<wbr>Setting</a>
 </span>
@@ -2562,6 +2674,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#configurationparameter">Configuration<wbr>Parameter[]</a></span>
     </dt>
     <dd>{{% md %}}The configuration parameters for the guest configuration.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="configurationprotectedparameter_nodejs">
+<a href="#configurationprotectedparameter_nodejs" style="color: inherit; text-decoration: inherit;">configuration<wbr>Protected<wbr>Parameter</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#configurationparameter">Configuration<wbr>Parameter[]</a></span>
+    </dt>
+    <dd>{{% md %}}The protected configuration parameters for the guest configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="configurationsetting_nodejs">
 <a href="#configurationsetting_nodejs" style="color: inherit; text-decoration: inherit;">configuration<wbr>Setting</a>
@@ -2631,6 +2751,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The configuration parameters for the guest configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="configuration_protected_parameter_python">
+<a href="#configuration_protected_parameter_python" style="color: inherit; text-decoration: inherit;">configuration_<wbr>protected_<wbr>parameter</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#configurationparameter">Sequence[Configuration<wbr>Parameter]</a></span>
+    </dt>
+    <dd>{{% md %}}The protected configuration parameters for the guest configuration.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="configuration_setting_python">
 <a href="#configuration_setting_python" style="color: inherit; text-decoration: inherit;">configuration_<wbr>setting</a>
 </span>
@@ -2683,7 +2811,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="guestconfigurationnavigationresponse">Guest<wbr>Configuration<wbr>Navigation<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="contenttype_csharp">
+<a href="#contenttype_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the content type of the configuration. Possible values could be Builtin or Custom.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="assignmenttype_csharp">
 <a href="#assignmenttype_csharp" style="color: inherit; text-decoration: inherit;">Assignment<wbr>Type</a>
@@ -2700,6 +2836,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#configurationparameterresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Guest<wbr>Configuration.<wbr>Inputs.<wbr>Configuration<wbr>Parameter<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The configuration parameters for the guest configuration.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="configurationprotectedparameter_csharp">
+<a href="#configurationprotectedparameter_csharp" style="color: inherit; text-decoration: inherit;">Configuration<wbr>Protected<wbr>Parameter</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#configurationparameterresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Guest<wbr>Configuration.<wbr>Inputs.<wbr>Configuration<wbr>Parameter<wbr>Response&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The protected configuration parameters for the guest configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="configurationsetting_csharp">
 <a href="#configurationsetting_csharp" style="color: inherit; text-decoration: inherit;">Configuration<wbr>Setting</a>
@@ -2751,7 +2895,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="contenttype_go">
+<a href="#contenttype_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the content type of the configuration. Possible values could be Builtin or Custom.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="assignmenttype_go">
 <a href="#assignmenttype_go" style="color: inherit; text-decoration: inherit;">Assignment<wbr>Type</a>
@@ -2768,6 +2920,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#configurationparameterresponse">[]Configuration<wbr>Parameter<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration parameters for the guest configuration.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="configurationprotectedparameter_go">
+<a href="#configurationprotectedparameter_go" style="color: inherit; text-decoration: inherit;">Configuration<wbr>Protected<wbr>Parameter</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#configurationparameterresponse">[]Configuration<wbr>Parameter<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The protected configuration parameters for the guest configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="configurationsetting_go">
 <a href="#configurationsetting_go" style="color: inherit; text-decoration: inherit;">Configuration<wbr>Setting</a>
@@ -2819,7 +2979,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="contenttype_nodejs">
+<a href="#contenttype_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the content type of the configuration. Possible values could be Builtin or Custom.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="assignmenttype_nodejs">
 <a href="#assignmenttype_nodejs" style="color: inherit; text-decoration: inherit;">assignment<wbr>Type</a>
@@ -2836,6 +3004,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#configurationparameterresponse">Configuration<wbr>Parameter<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The configuration parameters for the guest configuration.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="configurationprotectedparameter_nodejs">
+<a href="#configurationprotectedparameter_nodejs" style="color: inherit; text-decoration: inherit;">configuration<wbr>Protected<wbr>Parameter</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#configurationparameterresponse">Configuration<wbr>Parameter<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}The protected configuration parameters for the guest configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="configurationsetting_nodejs">
 <a href="#configurationsetting_nodejs" style="color: inherit; text-decoration: inherit;">configuration<wbr>Setting</a>
@@ -2887,7 +3063,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="content_type_python">
+<a href="#content_type_python" style="color: inherit; text-decoration: inherit;">content_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the content type of the configuration. Possible values could be Builtin or Custom.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="assignment_type_python">
 <a href="#assignment_type_python" style="color: inherit; text-decoration: inherit;">assignment_<wbr>type</a>
@@ -2904,6 +3088,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#configurationparameterresponse">Sequence[Configuration<wbr>Parameter<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The configuration parameters for the guest configuration.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="configuration_protected_parameter_python">
+<a href="#configuration_protected_parameter_python" style="color: inherit; text-decoration: inherit;">configuration_<wbr>protected_<wbr>parameter</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#configurationparameterresponse">Sequence[Configuration<wbr>Parameter<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}The protected configuration parameters for the guest configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="configuration_setting_python">
 <a href="#configuration_setting_python" style="color: inherit; text-decoration: inherit;">configuration_<wbr>setting</a>
@@ -3056,6 +3248,184 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}UUID(Universally Unique Identifier) of the VM.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="vmssvminforesponse">VMSSVMInfo<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="compliancestatus_csharp">
+<a href="#compliancestatus_csharp" style="color: inherit; text-decoration: inherit;">Compliance<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A value indicating compliance status of the machine for the assigned guest configuration.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="lastcompliancechecked_csharp">
+<a href="#lastcompliancechecked_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Compliance<wbr>Checked</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Date and time when last compliance status was checked.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="latestreportid_csharp">
+<a href="#latestreportid_csharp" style="color: inherit; text-decoration: inherit;">Latest<wbr>Report<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Id of the latest report for the guest configuration assignment. {{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="vmid_csharp">
+<a href="#vmid_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}UUID of the VM.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="vmresourceid_csharp">
+<a href="#vmresourceid_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Azure resource Id of the VM.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="compliancestatus_go">
+<a href="#compliancestatus_go" style="color: inherit; text-decoration: inherit;">Compliance<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A value indicating compliance status of the machine for the assigned guest configuration.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="lastcompliancechecked_go">
+<a href="#lastcompliancechecked_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Compliance<wbr>Checked</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Date and time when last compliance status was checked.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="latestreportid_go">
+<a href="#latestreportid_go" style="color: inherit; text-decoration: inherit;">Latest<wbr>Report<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Id of the latest report for the guest configuration assignment. {{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="vmid_go">
+<a href="#vmid_go" style="color: inherit; text-decoration: inherit;">Vm<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}UUID of the VM.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="vmresourceid_go">
+<a href="#vmresourceid_go" style="color: inherit; text-decoration: inherit;">Vm<wbr>Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Azure resource Id of the VM.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="compliancestatus_nodejs">
+<a href="#compliancestatus_nodejs" style="color: inherit; text-decoration: inherit;">compliance<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A value indicating compliance status of the machine for the assigned guest configuration.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="lastcompliancechecked_nodejs">
+<a href="#lastcompliancechecked_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Compliance<wbr>Checked</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Date and time when last compliance status was checked.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="latestreportid_nodejs">
+<a href="#latestreportid_nodejs" style="color: inherit; text-decoration: inherit;">latest<wbr>Report<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Id of the latest report for the guest configuration assignment. {{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="vmid_nodejs">
+<a href="#vmid_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}UUID of the VM.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="vmresourceid_nodejs">
+<a href="#vmresourceid_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Azure resource Id of the VM.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="compliance_status_python">
+<a href="#compliance_status_python" style="color: inherit; text-decoration: inherit;">compliance_<wbr>status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A value indicating compliance status of the machine for the assigned guest configuration.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="last_compliance_checked_python">
+<a href="#last_compliance_checked_python" style="color: inherit; text-decoration: inherit;">last_<wbr>compliance_<wbr>checked</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Date and time when last compliance status was checked.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="latest_report_id_python">
+<a href="#latest_report_id_python" style="color: inherit; text-decoration: inherit;">latest_<wbr>report_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Id of the latest report for the guest configuration assignment. {{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="vm_id_python">
+<a href="#vm_id_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}UUID of the VM.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="vm_resource_id_python">
+<a href="#vm_resource_id_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>resource_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Azure resource Id of the VM.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

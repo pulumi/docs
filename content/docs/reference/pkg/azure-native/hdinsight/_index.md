@@ -13,6 +13,7 @@ Explore the resources and functions of the azure-native.hdinsight module.
 <ul class="api">
     <li><a href="application" title="Application"><span class="symbol resource"></span>Application</a></li>
     <li><a href="cluster" title="Cluster"><span class="symbol resource"></span>Cluster</a></li>
+    <li><a href="privateendpointconnection" title="PrivateEndpointConnection"><span class="symbol resource"></span>PrivateEndpointConnection</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
@@ -20,6 +21,7 @@ Explore the resources and functions of the azure-native.hdinsight module.
     <li><a href="getapplication" title="GetApplication"><span class="symbol function"></span>GetApplication</a></li>
     <li><a href="getcluster" title="GetCluster"><span class="symbol function"></span>GetCluster</a></li>
     <li><a href="getclustergatewaysettings" title="GetClusterGatewaySettings"><span class="symbol function"></span>GetClusterGatewaySettings</a></li>
+    <li><a href="getprivateendpointconnection" title="GetPrivateEndpointConnection"><span class="symbol function"></span>GetPrivateEndpointConnection</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -29,6 +31,6 @@ Explore the resources and functions of the azure-native.hdinsight module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.28.0</dd>
+	<dd>1.30.0</dd>
 </dl>
 

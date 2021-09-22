@@ -284,7 +284,7 @@ The following output properties are available:
 <a href="#redisconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Redis<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+        <span class="property-type"><a href="#rediscommonpropertiesresponseredisconfiguration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cache.<wbr>Outputs.<wbr>Redis<wbr>Common<wbr>Properties<wbr>Response<wbr>Redis<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}All Redis Settings. Few possible keys: rdb-backup-enabled,rdb-storage-connection-string,rdb-backup-frequency,maxmemory-delta,maxmemory-policy,notify-keyspace-events,maxmemory-samples,slowlog-log-slower-than,slowlog-max-len,list-max-ziplist-entries,list-max-ziplist-value,hash-max-ziplist-entries,hash-max-ziplist-value,set-max-intset-entries,zset-max-ziplist-entries,zset-max-ziplist-value etc.{{% /md %}}</dd><dt class="property-"
             title="">
@@ -488,7 +488,7 @@ The following output properties are available:
 <a href="#redisconfiguration_go" style="color: inherit; text-decoration: inherit;">Redis<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]string</span>
+        <span class="property-type"><a href="#rediscommonpropertiesresponseredisconfiguration">Redis<wbr>Common<wbr>Properties<wbr>Response<wbr>Redis<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}All Redis Settings. Few possible keys: rdb-backup-enabled,rdb-storage-connection-string,rdb-backup-frequency,maxmemory-delta,maxmemory-policy,notify-keyspace-events,maxmemory-samples,slowlog-log-slower-than,slowlog-max-len,list-max-ziplist-entries,list-max-ziplist-value,hash-max-ziplist-entries,hash-max-ziplist-value,set-max-intset-entries,zset-max-ziplist-entries,zset-max-ziplist-value etc.{{% /md %}}</dd><dt class="property-"
             title="">
@@ -692,7 +692,7 @@ The following output properties are available:
 <a href="#redisconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">redis<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type"><a href="#rediscommonpropertiesresponseredisconfiguration">Redis<wbr>Common<wbr>Properties<wbr>Response<wbr>Redis<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}All Redis Settings. Few possible keys: rdb-backup-enabled,rdb-storage-connection-string,rdb-backup-frequency,maxmemory-delta,maxmemory-policy,notify-keyspace-events,maxmemory-samples,slowlog-log-slower-than,slowlog-max-len,list-max-ziplist-entries,list-max-ziplist-value,hash-max-ziplist-entries,hash-max-ziplist-value,set-max-intset-entries,zset-max-ziplist-entries,zset-max-ziplist-value etc.{{% /md %}}</dd><dt class="property-"
             title="">
@@ -896,7 +896,7 @@ The following output properties are available:
 <a href="#redis_configuration_python" style="color: inherit; text-decoration: inherit;">redis_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type"><a href="#rediscommonpropertiesresponseredisconfiguration">Redis<wbr>Common<wbr>Properties<wbr>Response<wbr>Redis<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}All Redis Settings. Few possible keys: rdb-backup-enabled,rdb-storage-connection-string,rdb-backup-frequency,maxmemory-delta,maxmemory-policy,notify-keyspace-events,maxmemory-samples,slowlog-log-slower-than,slowlog-max-len,list-max-ziplist-entries,list-max-ziplist-value,hash-max-ziplist-entries,hash-max-ziplist-value,set-max-intset-entries,zset-max-ziplist-entries,zset-max-ziplist-value etc.{{% /md %}}</dd><dt class="property-"
             title="">
@@ -1425,6 +1425,378 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The current secondary key that clients can use to authenticate with Redis cache.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="rediscommonpropertiesresponseredisconfiguration">Redis<wbr>Common<wbr>Properties<wbr>Response<wbr>Redis<wbr>Configuration</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="maxclients_csharp">
+<a href="#maxclients_csharp" style="color: inherit; text-decoration: inherit;">Maxclients</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The max clients config{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="aofstorageconnectionstring0_csharp">
+<a href="#aofstorageconnectionstring0_csharp" style="color: inherit; text-decoration: inherit;">Aof<wbr>Storage<wbr>Connection<wbr>String0</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}First storage account connection string{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="aofstorageconnectionstring1_csharp">
+<a href="#aofstorageconnectionstring1_csharp" style="color: inherit; text-decoration: inherit;">Aof<wbr>Storage<wbr>Connection<wbr>String1</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Second storage account connection string{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maxfragmentationmemoryreserved_csharp">
+<a href="#maxfragmentationmemoryreserved_csharp" style="color: inherit; text-decoration: inherit;">Maxfragmentationmemory<wbr>Reserved</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Value in megabytes reserved for fragmentation per shard{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maxmemorydelta_csharp">
+<a href="#maxmemorydelta_csharp" style="color: inherit; text-decoration: inherit;">Maxmemory<wbr>Delta</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Value in megabytes reserved for non-cache usage per shard e.g. failover.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maxmemorypolicy_csharp">
+<a href="#maxmemorypolicy_csharp" style="color: inherit; text-decoration: inherit;">Maxmemory<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The eviction strategy used when your data won't fit within its memory limit.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maxmemoryreserved_csharp">
+<a href="#maxmemoryreserved_csharp" style="color: inherit; text-decoration: inherit;">Maxmemory<wbr>Reserved</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Value in megabytes reserved for non-cache usage per shard e.g. failover.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="rdbbackupenabled_csharp">
+<a href="#rdbbackupenabled_csharp" style="color: inherit; text-decoration: inherit;">Rdb<wbr>Backup<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the rdb backup is enabled{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="rdbbackupfrequency_csharp">
+<a href="#rdbbackupfrequency_csharp" style="color: inherit; text-decoration: inherit;">Rdb<wbr>Backup<wbr>Frequency</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the frequency for creating rdb backup{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="rdbbackupmaxsnapshotcount_csharp">
+<a href="#rdbbackupmaxsnapshotcount_csharp" style="color: inherit; text-decoration: inherit;">Rdb<wbr>Backup<wbr>Max<wbr>Snapshot<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the maximum number of snapshots for rdb backup{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="rdbstorageconnectionstring_csharp">
+<a href="#rdbstorageconnectionstring_csharp" style="color: inherit; text-decoration: inherit;">Rdb<wbr>Storage<wbr>Connection<wbr>String</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The storage account connection string for storing rdb file{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="maxclients_go">
+<a href="#maxclients_go" style="color: inherit; text-decoration: inherit;">Maxclients</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The max clients config{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="aofstorageconnectionstring0_go">
+<a href="#aofstorageconnectionstring0_go" style="color: inherit; text-decoration: inherit;">Aof<wbr>Storage<wbr>Connection<wbr>String0</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}First storage account connection string{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="aofstorageconnectionstring1_go">
+<a href="#aofstorageconnectionstring1_go" style="color: inherit; text-decoration: inherit;">Aof<wbr>Storage<wbr>Connection<wbr>String1</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Second storage account connection string{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maxfragmentationmemoryreserved_go">
+<a href="#maxfragmentationmemoryreserved_go" style="color: inherit; text-decoration: inherit;">Maxfragmentationmemory<wbr>Reserved</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Value in megabytes reserved for fragmentation per shard{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maxmemorydelta_go">
+<a href="#maxmemorydelta_go" style="color: inherit; text-decoration: inherit;">Maxmemory<wbr>Delta</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Value in megabytes reserved for non-cache usage per shard e.g. failover.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maxmemorypolicy_go">
+<a href="#maxmemorypolicy_go" style="color: inherit; text-decoration: inherit;">Maxmemory<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The eviction strategy used when your data won't fit within its memory limit.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maxmemoryreserved_go">
+<a href="#maxmemoryreserved_go" style="color: inherit; text-decoration: inherit;">Maxmemory<wbr>Reserved</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Value in megabytes reserved for non-cache usage per shard e.g. failover.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="rdbbackupenabled_go">
+<a href="#rdbbackupenabled_go" style="color: inherit; text-decoration: inherit;">Rdb<wbr>Backup<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the rdb backup is enabled{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="rdbbackupfrequency_go">
+<a href="#rdbbackupfrequency_go" style="color: inherit; text-decoration: inherit;">Rdb<wbr>Backup<wbr>Frequency</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the frequency for creating rdb backup{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="rdbbackupmaxsnapshotcount_go">
+<a href="#rdbbackupmaxsnapshotcount_go" style="color: inherit; text-decoration: inherit;">Rdb<wbr>Backup<wbr>Max<wbr>Snapshot<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the maximum number of snapshots for rdb backup{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="rdbstorageconnectionstring_go">
+<a href="#rdbstorageconnectionstring_go" style="color: inherit; text-decoration: inherit;">Rdb<wbr>Storage<wbr>Connection<wbr>String</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The storage account connection string for storing rdb file{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="maxclients_nodejs">
+<a href="#maxclients_nodejs" style="color: inherit; text-decoration: inherit;">maxclients</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The max clients config{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="aofstorageconnectionstring0_nodejs">
+<a href="#aofstorageconnectionstring0_nodejs" style="color: inherit; text-decoration: inherit;">aof<wbr>Storage<wbr>Connection<wbr>String0</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}First storage account connection string{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="aofstorageconnectionstring1_nodejs">
+<a href="#aofstorageconnectionstring1_nodejs" style="color: inherit; text-decoration: inherit;">aof<wbr>Storage<wbr>Connection<wbr>String1</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Second storage account connection string{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maxfragmentationmemoryreserved_nodejs">
+<a href="#maxfragmentationmemoryreserved_nodejs" style="color: inherit; text-decoration: inherit;">maxfragmentationmemory<wbr>Reserved</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Value in megabytes reserved for fragmentation per shard{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maxmemorydelta_nodejs">
+<a href="#maxmemorydelta_nodejs" style="color: inherit; text-decoration: inherit;">maxmemory<wbr>Delta</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Value in megabytes reserved for non-cache usage per shard e.g. failover.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maxmemorypolicy_nodejs">
+<a href="#maxmemorypolicy_nodejs" style="color: inherit; text-decoration: inherit;">maxmemory<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The eviction strategy used when your data won't fit within its memory limit.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maxmemoryreserved_nodejs">
+<a href="#maxmemoryreserved_nodejs" style="color: inherit; text-decoration: inherit;">maxmemory<wbr>Reserved</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Value in megabytes reserved for non-cache usage per shard e.g. failover.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="rdbbackupenabled_nodejs">
+<a href="#rdbbackupenabled_nodejs" style="color: inherit; text-decoration: inherit;">rdb<wbr>Backup<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the rdb backup is enabled{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="rdbbackupfrequency_nodejs">
+<a href="#rdbbackupfrequency_nodejs" style="color: inherit; text-decoration: inherit;">rdb<wbr>Backup<wbr>Frequency</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the frequency for creating rdb backup{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="rdbbackupmaxsnapshotcount_nodejs">
+<a href="#rdbbackupmaxsnapshotcount_nodejs" style="color: inherit; text-decoration: inherit;">rdb<wbr>Backup<wbr>Max<wbr>Snapshot<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the maximum number of snapshots for rdb backup{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="rdbstorageconnectionstring_nodejs">
+<a href="#rdbstorageconnectionstring_nodejs" style="color: inherit; text-decoration: inherit;">rdb<wbr>Storage<wbr>Connection<wbr>String</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The storage account connection string for storing rdb file{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="maxclients_python">
+<a href="#maxclients_python" style="color: inherit; text-decoration: inherit;">maxclients</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The max clients config{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="aof_storage_connection_string0_python">
+<a href="#aof_storage_connection_string0_python" style="color: inherit; text-decoration: inherit;">aof_<wbr>storage_<wbr>connection_<wbr>string0</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}First storage account connection string{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="aof_storage_connection_string1_python">
+<a href="#aof_storage_connection_string1_python" style="color: inherit; text-decoration: inherit;">aof_<wbr>storage_<wbr>connection_<wbr>string1</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Second storage account connection string{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maxfragmentationmemory_reserved_python">
+<a href="#maxfragmentationmemory_reserved_python" style="color: inherit; text-decoration: inherit;">maxfragmentationmemory_<wbr>reserved</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Value in megabytes reserved for fragmentation per shard{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maxmemory_delta_python">
+<a href="#maxmemory_delta_python" style="color: inherit; text-decoration: inherit;">maxmemory_<wbr>delta</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Value in megabytes reserved for non-cache usage per shard e.g. failover.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maxmemory_policy_python">
+<a href="#maxmemory_policy_python" style="color: inherit; text-decoration: inherit;">maxmemory_<wbr>policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The eviction strategy used when your data won't fit within its memory limit.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maxmemory_reserved_python">
+<a href="#maxmemory_reserved_python" style="color: inherit; text-decoration: inherit;">maxmemory_<wbr>reserved</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Value in megabytes reserved for non-cache usage per shard e.g. failover.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="rdb_backup_enabled_python">
+<a href="#rdb_backup_enabled_python" style="color: inherit; text-decoration: inherit;">rdb_<wbr>backup_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the rdb backup is enabled{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="rdb_backup_frequency_python">
+<a href="#rdb_backup_frequency_python" style="color: inherit; text-decoration: inherit;">rdb_<wbr>backup_<wbr>frequency</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the frequency for creating rdb backup{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="rdb_backup_max_snapshot_count_python">
+<a href="#rdb_backup_max_snapshot_count_python" style="color: inherit; text-decoration: inherit;">rdb_<wbr>backup_<wbr>max_<wbr>snapshot_<wbr>count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the maximum number of snapshots for rdb backup{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="rdb_storage_connection_string_python">
+<a href="#rdb_storage_connection_string_python" style="color: inherit; text-decoration: inherit;">rdb_<wbr>storage_<wbr>connection_<wbr>string</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The storage account connection string for storing rdb file{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="redisinstancedetailsresponse">Redis<wbr>Instance<wbr>Details<wbr>Response</h4>

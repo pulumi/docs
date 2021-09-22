@@ -951,8 +951,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}A system generated property that denotes the last updated timestamp of the resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+    <dd>{{% md %}}A system generated property that denotes the last updated timestamp of the resource.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="viewdefinition_csharp">
 <a href="#viewdefinition_csharp" style="color: inherit; text-decoration: inherit;">View<wbr>Definition</a>
 </span>
@@ -995,8 +995,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}A system generated property that denotes the last updated timestamp of the resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+    <dd>{{% md %}}A system generated property that denotes the last updated timestamp of the resource.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="viewdefinition_go">
 <a href="#viewdefinition_go" style="color: inherit; text-decoration: inherit;">View<wbr>Definition</a>
 </span>
@@ -1039,8 +1039,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}A system generated property that denotes the last updated timestamp of the resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+    <dd>{{% md %}}A system generated property that denotes the last updated timestamp of the resource.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="viewdefinition_nodejs">
 <a href="#viewdefinition_nodejs" style="color: inherit; text-decoration: inherit;">view<wbr>Definition</a>
 </span>
@@ -1083,8 +1083,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}A system generated property that denotes the last updated timestamp of the resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+    <dd>{{% md %}}A system generated property that denotes the last updated timestamp of the resource.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="view_definition_python">
 <a href="#view_definition_python" style="color: inherit; text-decoration: inherit;">view_<wbr>definition</a>
 </span>
@@ -1105,8 +1105,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the Cosmos DB Cassandra view{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+    <dd>{{% md %}}Name of the Cosmos DB Cassandra view{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="viewdefinition_csharp">
 <a href="#viewdefinition_csharp" style="color: inherit; text-decoration: inherit;">View<wbr>Definition</a>
 </span>
@@ -1125,8 +1125,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the Cosmos DB Cassandra view{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+    <dd>{{% md %}}Name of the Cosmos DB Cassandra view{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="viewdefinition_go">
 <a href="#viewdefinition_go" style="color: inherit; text-decoration: inherit;">View<wbr>Definition</a>
 </span>
@@ -1145,8 +1145,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the Cosmos DB Cassandra view{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+    <dd>{{% md %}}Name of the Cosmos DB Cassandra view{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="viewdefinition_nodejs">
 <a href="#viewdefinition_nodejs" style="color: inherit; text-decoration: inherit;">view<wbr>Definition</a>
 </span>
@@ -1165,8 +1165,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the Cosmos DB Cassandra view{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+    <dd>{{% md %}}Name of the Cosmos DB Cassandra view{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="view_definition_python">
 <a href="#view_definition_python" style="color: inherit; text-decoration: inherit;">view_<wbr>definition</a>
 </span>
