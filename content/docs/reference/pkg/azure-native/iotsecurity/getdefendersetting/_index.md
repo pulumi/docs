@@ -84,7 +84,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Size of the device quota (as a opposed to a Pay as You Go billing model). Value is required to be in multiples of 1000.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Size of the device quota. Value is required to be in multiples of 100.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="evaluationendtime_csharp">
 <a href="#evaluationendtime_csharp" style="color: inherit; text-decoration: inherit;">Evaluation<wbr>End<wbr>Time</a>
@@ -152,7 +152,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Size of the device quota (as a opposed to a Pay as You Go billing model). Value is required to be in multiples of 1000.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Size of the device quota. Value is required to be in multiples of 100.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="evaluationendtime_go">
 <a href="#evaluationendtime_go" style="color: inherit; text-decoration: inherit;">Evaluation<wbr>End<wbr>Time</a>
@@ -220,7 +220,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Size of the device quota (as a opposed to a Pay as You Go billing model). Value is required to be in multiples of 1000.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Size of the device quota. Value is required to be in multiples of 100.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="evaluationendtime_nodejs">
 <a href="#evaluationendtime_nodejs" style="color: inherit; text-decoration: inherit;">evaluation<wbr>End<wbr>Time</a>
@@ -288,7 +288,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Size of the device quota (as a opposed to a Pay as You Go billing model). Value is required to be in multiples of 1000.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Size of the device quota. Value is required to be in multiples of 100.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="evaluation_end_time_python">
 <a href="#evaluation_end_time_python" style="color: inherit; text-decoration: inherit;">evaluation_<wbr>end_<wbr>time</a>

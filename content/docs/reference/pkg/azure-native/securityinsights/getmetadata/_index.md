@@ -266,6 +266,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The creator of the content item.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="categories_csharp">
+<a href="#categories_csharp" style="color: inherit; text-decoration: inherit;">Categories</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#metadatacategoriesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Security<wbr>Insights.<wbr>Outputs.<wbr>Metadata<wbr>Categories<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Categories for the solution content item{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="contentid_csharp">
 <a href="#contentid_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Id</a>
 </span>
@@ -289,6 +297,30 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Etag of the azure resource{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="firstpublishdate_csharp">
+<a href="#firstpublishdate_csharp" style="color: inherit; text-decoration: inherit;">First<wbr>Publish<wbr>Date</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}first publish date solution content item{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="lastpublishdate_csharp">
+<a href="#lastpublishdate_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Publish<wbr>Date</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}last publish date for the solution content item{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="providers_csharp">
+<a href="#providers_csharp" style="color: inherit; text-decoration: inherit;">Providers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Providers for the solution content item{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="source_csharp">
 <a href="#source_csharp" style="color: inherit; text-decoration: inherit;">Source</a>
@@ -374,6 +406,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The creator of the content item.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="categories_go">
+<a href="#categories_go" style="color: inherit; text-decoration: inherit;">Categories</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#metadatacategoriesresponse">Metadata<wbr>Categories<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Categories for the solution content item{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="contentid_go">
 <a href="#contentid_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Id</a>
 </span>
@@ -397,6 +437,30 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Etag of the azure resource{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="firstpublishdate_go">
+<a href="#firstpublishdate_go" style="color: inherit; text-decoration: inherit;">First<wbr>Publish<wbr>Date</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}first publish date solution content item{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="lastpublishdate_go">
+<a href="#lastpublishdate_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Publish<wbr>Date</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}last publish date for the solution content item{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="providers_go">
+<a href="#providers_go" style="color: inherit; text-decoration: inherit;">Providers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}Providers for the solution content item{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="source_go">
 <a href="#source_go" style="color: inherit; text-decoration: inherit;">Source</a>
@@ -482,6 +546,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The creator of the content item.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="categories_nodejs">
+<a href="#categories_nodejs" style="color: inherit; text-decoration: inherit;">categories</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#metadatacategoriesresponse">Metadata<wbr>Categories<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Categories for the solution content item{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="contentid_nodejs">
 <a href="#contentid_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Id</a>
 </span>
@@ -505,6 +577,30 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Etag of the azure resource{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="firstpublishdate_nodejs">
+<a href="#firstpublishdate_nodejs" style="color: inherit; text-decoration: inherit;">first<wbr>Publish<wbr>Date</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}first publish date solution content item{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="lastpublishdate_nodejs">
+<a href="#lastpublishdate_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Publish<wbr>Date</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}last publish date for the solution content item{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="providers_nodejs">
+<a href="#providers_nodejs" style="color: inherit; text-decoration: inherit;">providers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}Providers for the solution content item{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="source_nodejs">
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
@@ -590,6 +686,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The creator of the content item.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="categories_python">
+<a href="#categories_python" style="color: inherit; text-decoration: inherit;">categories</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#metadatacategoriesresponse">Metadata<wbr>Categories<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Categories for the solution content item{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="content_id_python">
 <a href="#content_id_python" style="color: inherit; text-decoration: inherit;">content_<wbr>id</a>
 </span>
@@ -613,6 +717,30 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Etag of the azure resource{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="first_publish_date_python">
+<a href="#first_publish_date_python" style="color: inherit; text-decoration: inherit;">first_<wbr>publish_<wbr>date</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}first publish date solution content item{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="last_publish_date_python">
+<a href="#last_publish_date_python" style="color: inherit; text-decoration: inherit;">last_<wbr>publish_<wbr>date</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}last publish date for the solution content item{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="providers_python">
+<a href="#providers_python" style="color: inherit; text-decoration: inherit;">providers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}Providers for the solution content item{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="source_python">
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
@@ -759,6 +887,90 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the author. Company or person.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="metadatacategoriesresponse">Metadata<wbr>Categories<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="domains_csharp">
+<a href="#domains_csharp" style="color: inherit; text-decoration: inherit;">Domains</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}domain for the solution content item{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="verticals_csharp">
+<a href="#verticals_csharp" style="color: inherit; text-decoration: inherit;">Verticals</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Industry verticals for the solution content item{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="domains_go">
+<a href="#domains_go" style="color: inherit; text-decoration: inherit;">Domains</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}domain for the solution content item{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="verticals_go">
+<a href="#verticals_go" style="color: inherit; text-decoration: inherit;">Verticals</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}Industry verticals for the solution content item{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="domains_nodejs">
+<a href="#domains_nodejs" style="color: inherit; text-decoration: inherit;">domains</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}domain for the solution content item{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="verticals_nodejs">
+<a href="#verticals_nodejs" style="color: inherit; text-decoration: inherit;">verticals</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}Industry verticals for the solution content item{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="domains_python">
+<a href="#domains_python" style="color: inherit; text-decoration: inherit;">domains</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}domain for the solution content item{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="verticals_python">
+<a href="#verticals_python" style="color: inherit; text-decoration: inherit;">verticals</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}Industry verticals for the solution content item{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="metadatadependenciesresponse">Metadata<wbr>Dependencies<wbr>Response</h4>

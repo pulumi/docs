@@ -47,7 +47,7 @@ class MyStack : Stack
                     },
                 },
             },
-            AutoMitigate = false,
+            AutoMitigate = true,
             Criteria = new AzureNative.Insights.Inputs.MetricAlertMultipleResourceMultipleMetricCriteriaArgs
             {
                 AllOf = 
@@ -121,7 +121,7 @@ func main() {
 					},
 				},
 			},
-			AutoMitigate: pulumi.Bool(false),
+			AutoMitigate: pulumi.Bool(true),
 			Criteria: insights.MetricAlertMultipleResourceMultipleMetricCriteria{
 				AllOf: []interface{}{
 					insights.DynamicMetricCriteria{
@@ -185,7 +185,7 @@ metric_alert = azure_native.insights.MetricAlert("metricAlert",
             "key12": "value12",
         },
     )],
-    auto_mitigate=False,
+    auto_mitigate=True,
     criteria=azure_native.insights.MetricAlertMultipleResourceMultipleMetricCriteriaArgs(
         all_of=[azure_native.insights.DynamicMetricCriteriaArgs(
             alert_sensitivity="Medium",
@@ -240,7 +240,7 @@ const metricAlert = new azure_native.insights.MetricAlert("metricAlert", {
             key12: "value12",
         },
     }],
-    autoMitigate: false,
+    autoMitigate: true,
     criteria: {
         allOf: [{
             alertSensitivity: "Medium",
@@ -310,7 +310,7 @@ class MyStack : Stack
                     },
                 },
             },
-            AutoMitigate = false,
+            AutoMitigate = true,
             Criteria = new AzureNative.Insights.Inputs.MetricAlertMultipleResourceMultipleMetricCriteriaArgs
             {
                 AllOf = 
@@ -382,7 +382,7 @@ func main() {
 					},
 				},
 			},
-			AutoMitigate: pulumi.Bool(false),
+			AutoMitigate: pulumi.Bool(true),
 			Criteria: insights.MetricAlertMultipleResourceMultipleMetricCriteria{
 				AllOf: []interface{}{
 					insights.DynamicMetricCriteria{
@@ -444,7 +444,7 @@ metric_alert = azure_native.insights.MetricAlert("metricAlert",
             "key12": "value12",
         },
     )],
-    auto_mitigate=False,
+    auto_mitigate=True,
     criteria=azure_native.insights.MetricAlertMultipleResourceMultipleMetricCriteriaArgs(
         all_of=[azure_native.insights.DynamicMetricCriteriaArgs(
             alert_sensitivity="Medium",
@@ -495,7 +495,7 @@ const metricAlert = new azure_native.insights.MetricAlert("metricAlert", {
             key12: "value12",
         },
     }],
-    autoMitigate: false,
+    autoMitigate: true,
     criteria: {
         allOf: [{
             alertSensitivity: "Medium",
@@ -743,7 +743,7 @@ class MyStack : Stack
                     },
                 },
             },
-            AutoMitigate = false,
+            AutoMitigate = true,
             Criteria = new AzureNative.Insights.Inputs.MetricAlertMultipleResourceMultipleMetricCriteriaArgs
             {
                 AllOf = 
@@ -812,7 +812,7 @@ func main() {
 					},
 				},
 			},
-			AutoMitigate: pulumi.Bool(false),
+			AutoMitigate: pulumi.Bool(true),
 			Criteria: insights.MetricAlertMultipleResourceMultipleMetricCriteria{
 				AllOf: []interface{}{
 					insights.MetricCriteria{
@@ -872,7 +872,7 @@ metric_alert = azure_native.insights.MetricAlert("metricAlert",
             "key12": "value12",
         },
     )],
-    auto_mitigate=False,
+    auto_mitigate=True,
     criteria=azure_native.insights.MetricAlertMultipleResourceMultipleMetricCriteriaArgs(
         all_of=[azure_native.insights.MetricCriteriaArgs(
             criterion_type="StaticThresholdCriterion",
@@ -923,7 +923,7 @@ const metricAlert = new azure_native.insights.MetricAlert("metricAlert", {
             key12: "value12",
         },
     }],
-    autoMitigate: false,
+    autoMitigate: true,
     criteria: {
         allOf: [{
             criterionType: "StaticThresholdCriterion",
@@ -989,7 +989,7 @@ class MyStack : Stack
                     },
                 },
             },
-            AutoMitigate = false,
+            AutoMitigate = true,
             Criteria = new AzureNative.Insights.Inputs.MetricAlertSingleResourceMultipleMetricCriteriaArgs
             {
                 AllOf = 
@@ -1056,7 +1056,7 @@ func main() {
 					},
 				},
 			},
-			AutoMitigate: pulumi.Bool(false),
+			AutoMitigate: pulumi.Bool(true),
 			Criteria: insights.MetricAlertSingleResourceMultipleMetricCriteria{
 				AllOf: []insights.MetricCriteria{
 					insights.MetricCriteria{
@@ -1112,7 +1112,7 @@ metric_alert = azure_native.insights.MetricAlert("metricAlert",
             "key12": "value12",
         },
     )],
-    auto_mitigate=False,
+    auto_mitigate=True,
     criteria=azure_native.insights.MetricAlertSingleResourceMultipleMetricCriteriaArgs(
         all_of=[azure_native.insights.MetricCriteriaArgs(
             criterion_type="StaticThresholdCriterion",
@@ -1157,7 +1157,7 @@ const metricAlert = new azure_native.insights.MetricAlert("metricAlert", {
             key12: "value12",
         },
     }],
-    autoMitigate: false,
+    autoMitigate: true,
     criteria: {
         allOf: [{
             criterionType: "StaticThresholdCriterion",
@@ -1217,7 +1217,7 @@ class MyStack : Stack
                     },
                 },
             },
-            AutoMitigate = false,
+            AutoMitigate = true,
             Criteria = new AzureNative.Insights.Inputs.MetricAlertMultipleResourceMultipleMetricCriteriaArgs
             {
                 AllOf = 
@@ -1286,7 +1286,7 @@ func main() {
 					},
 				},
 			},
-			AutoMitigate: pulumi.Bool(false),
+			AutoMitigate: pulumi.Bool(true),
 			Criteria: insights.MetricAlertMultipleResourceMultipleMetricCriteria{
 				AllOf: []interface{}{
 					insights.MetricCriteria{
@@ -1346,7 +1346,7 @@ metric_alert = azure_native.insights.MetricAlert("metricAlert",
             "key12": "value12",
         },
     )],
-    auto_mitigate=False,
+    auto_mitigate=True,
     criteria=azure_native.insights.MetricAlertMultipleResourceMultipleMetricCriteriaArgs(
         all_of=[azure_native.insights.MetricCriteriaArgs(
             criterion_type="StaticThresholdCriterion",
@@ -1397,7 +1397,7 @@ const metricAlert = new azure_native.insights.MetricAlert("metricAlert", {
             key12: "value12",
         },
     }],
-    autoMitigate: false,
+    autoMitigate: true,
     criteria: {
         allOf: [{
             criterionType: "StaticThresholdCriterion",
@@ -1463,7 +1463,7 @@ class MyStack : Stack
                     },
                 },
             },
-            AutoMitigate = false,
+            AutoMitigate = true,
             Criteria = new AzureNative.Insights.Inputs.MetricAlertMultipleResourceMultipleMetricCriteriaArgs
             {
                 AllOf = 
@@ -1531,7 +1531,7 @@ func main() {
 					},
 				},
 			},
-			AutoMitigate: pulumi.Bool(false),
+			AutoMitigate: pulumi.Bool(true),
 			Criteria: insights.MetricAlertMultipleResourceMultipleMetricCriteria{
 				AllOf: []interface{}{
 					insights.MetricCriteria{
@@ -1590,7 +1590,7 @@ metric_alert = azure_native.insights.MetricAlert("metricAlert",
             "key12": "value12",
         },
     )],
-    auto_mitigate=False,
+    auto_mitigate=True,
     criteria=azure_native.insights.MetricAlertMultipleResourceMultipleMetricCriteriaArgs(
         all_of=[azure_native.insights.MetricCriteriaArgs(
             criterion_type="StaticThresholdCriterion",
@@ -1638,7 +1638,7 @@ const metricAlert = new azure_native.insights.MetricAlert("metricAlert", {
             key12: "value12",
         },
     }],
-    autoMitigate: false,
+    autoMitigate: true,
     criteria: {
         allOf: [{
             criterionType: "StaticThresholdCriterion",

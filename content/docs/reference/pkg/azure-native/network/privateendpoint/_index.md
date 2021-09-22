@@ -45,6 +45,7 @@ class MyStack : Stack
                     {
                         "groupIdFromResource",
                     },
+                    Name = "testPlc",
                     PrivateLinkServiceId = "/subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/privateLinkServices/testPls",
                     RequestMessage = "Please approve my connection.",
                 },
@@ -86,6 +87,7 @@ func main() {
 					GroupIds: pulumi.StringArray{
 						pulumi.String("groupIdFromResource"),
 					},
+					Name:                 pulumi.String("testPlc"),
 					PrivateLinkServiceId: pulumi.String("/subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/privateLinkServices/testPls"),
 					RequestMessage:       pulumi.String("Please approve my connection."),
 				},
@@ -120,6 +122,7 @@ private_endpoint = azure_native.network.PrivateEndpoint("privateEndpoint",
     private_endpoint_name="testPe",
     private_link_service_connections=[azure_native.network.PrivateLinkServiceConnectionArgs(
         group_ids=["groupIdFromResource"],
+        name="testPlc",
         private_link_service_id="/subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/privateLinkServices/testPls",
         request_message="Please approve my connection.",
     )],
@@ -146,6 +149,7 @@ const privateEndpoint = new azure_native.network.PrivateEndpoint("privateEndpoin
     privateEndpointName: "testPe",
     privateLinkServiceConnections: [{
         groupIds: ["groupIdFromResource"],
+        name: "testPlc",
         privateLinkServiceId: "/subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/privateLinkServices/testPls",
         requestMessage: "Please approve my connection.",
     }],
