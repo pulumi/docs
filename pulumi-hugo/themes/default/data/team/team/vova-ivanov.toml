@@ -1,8 +1,7 @@
 id = "vova-ivanov"
 name = "Vova Ivanov"
-title = "Software Engineer Intern"
 
-status = "active"
+status = "inactive"
 
 [social]
 github = "jetvova"
