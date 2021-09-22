@@ -74,7 +74,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := extendedlocation.NewcustomLocation(ctx, "customLocation", &extendedlocation.customLocationArgs{
+		_, err := extendedlocation.NewCustomLocation(ctx, "customLocation", &extendedlocation.CustomLocationArgs{
 			Authentication: &extendedlocation.CustomLocationPropertiesAuthenticationArgs{
 				Type:  pulumi.String("KubeConfig"),
 				Value: pulumi.String("<base64 KubeConfig>"),
@@ -1210,7 +1210,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-native:extendedlocation:customLocation customLocation01 /subscriptions/11111111-2222-3333-4444-555555555555/resourceGroups/testrg/providers/Microsoft.ExtendedLocation/customLocations/customLocation01 
+$ pulumi import azure-native:extendedlocation:CustomLocation customLocation01 /subscriptions/11111111-2222-3333-4444-555555555555/resourceGroups/testrg/providers/Microsoft.ExtendedLocation/customLocations/customLocation01 
 ```
 
 

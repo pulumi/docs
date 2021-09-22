@@ -294,7 +294,7 @@ The DefenderSetting resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Size of the device quota (as a opposed to a Pay as You Go billing model). Value is required to be in multiples of 1000.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Size of the device quota. Value is required to be in multiples of 100.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mdeintegration_csharp">
 <a href="#mdeintegration_csharp" style="color: inherit; text-decoration: inherit;">Mde<wbr>Integration</a>
@@ -330,7 +330,7 @@ The DefenderSetting resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Size of the device quota (as a opposed to a Pay as You Go billing model). Value is required to be in multiples of 1000.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Size of the device quota. Value is required to be in multiples of 100.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mdeintegration_go">
 <a href="#mdeintegration_go" style="color: inherit; text-decoration: inherit;">Mde<wbr>Integration</a>
@@ -366,7 +366,7 @@ The DefenderSetting resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Size of the device quota (as a opposed to a Pay as You Go billing model). Value is required to be in multiples of 1000.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Size of the device quota. Value is required to be in multiples of 100.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mdeintegration_nodejs">
 <a href="#mdeintegration_nodejs" style="color: inherit; text-decoration: inherit;">mde<wbr>Integration</a>
@@ -402,7 +402,7 @@ The DefenderSetting resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Size of the device quota (as a opposed to a Pay as You Go billing model). Value is required to be in multiples of 1000.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Size of the device quota. Value is required to be in multiples of 100.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mde_integration_python">
 <a href="#mde_integration_python" style="color: inherit; text-decoration: inherit;">mde_<wbr>integration</a>

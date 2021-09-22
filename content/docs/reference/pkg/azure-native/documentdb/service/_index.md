@@ -36,14 +36,11 @@ class MyStack : Stack
         var service = new AzureNative.DocumentDB.Service("service", new AzureNative.DocumentDB.ServiceArgs
         {
             AccountName = "ddb1",
-            Properties = 
-            {
-                { "instanceCount", 1 },
-                { "instanceSize", "Cosmos.D4s" },
-                { "serviceType", "DataTransfer" },
-            },
+            InstanceCount = 1,
+            InstanceSize = "Cosmos.D4s",
             ResourceGroupName = "rg1",
             ServiceName = "DataTransfer",
+            ServiceType = "DataTransfer",
         });
     }
 
@@ -57,7 +54,34 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	documentdb "github.com/pulumi/pulumi-azure-native/sdk/go/azure/documentdb"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := documentdb.NewService(ctx, "service", &documentdb.ServiceArgs{
+			AccountName:       pulumi.String("ddb1"),
+			InstanceCount:     pulumi.Int(1),
+			InstanceSize:      pulumi.String("Cosmos.D4s"),
+			ResourceGroupName: pulumi.String("rg1"),
+			ServiceName:       pulumi.String("DataTransfer"),
+			ServiceType:       pulumi.String("DataTransfer"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -71,13 +95,11 @@ import pulumi_azure_native as azure_native
 
 service = azure_native.documentdb.Service("service",
     account_name="ddb1",
-    properties={
-        "instanceCount": 1,
-        "instanceSize": "Cosmos.D4s",
-        "serviceType": "DataTransfer",
-    },
+    instance_count=1,
+    instance_size="Cosmos.D4s",
     resource_group_name="rg1",
-    service_name="DataTransfer")
+    service_name="DataTransfer",
+    service_type="DataTransfer")
 
 ```
 
@@ -94,13 +116,11 @@ import * as azure_native from "@pulumi/azure-native";
 
 const service = new azure_native.documentdb.Service("service", {
     accountName: "ddb1",
-    properties: {
-        instanceCount: 1,
-        instanceSize: "Cosmos.D4s",
-        serviceType: "DataTransfer",
-    },
+    instanceCount: 1,
+    instanceSize: "Cosmos.D4s",
     resourceGroupName: "rg1",
     serviceName: "DataTransfer",
+    serviceType: "DataTransfer",
 });
 
 ```
@@ -127,14 +147,11 @@ class MyStack : Stack
         var service = new AzureNative.DocumentDB.Service("service", new AzureNative.DocumentDB.ServiceArgs
         {
             AccountName = "ddb1",
-            Properties = 
-            {
-                { "instanceCount", 1 },
-                { "instanceSize", "Cosmos.D4s" },
-                { "serviceType", "SqlDedicatedGateway" },
-            },
+            InstanceCount = 1,
+            InstanceSize = "Cosmos.D4s",
             ResourceGroupName = "rg1",
             ServiceName = "SqlDedicatedGateway",
+            ServiceType = "SqlDedicatedGateway",
         });
     }
 
@@ -148,7 +165,34 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	documentdb "github.com/pulumi/pulumi-azure-native/sdk/go/azure/documentdb"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := documentdb.NewService(ctx, "service", &documentdb.ServiceArgs{
+			AccountName:       pulumi.String("ddb1"),
+			InstanceCount:     pulumi.Int(1),
+			InstanceSize:      pulumi.String("Cosmos.D4s"),
+			ResourceGroupName: pulumi.String("rg1"),
+			ServiceName:       pulumi.String("SqlDedicatedGateway"),
+			ServiceType:       pulumi.String("SqlDedicatedGateway"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -162,13 +206,11 @@ import pulumi_azure_native as azure_native
 
 service = azure_native.documentdb.Service("service",
     account_name="ddb1",
-    properties={
-        "instanceCount": 1,
-        "instanceSize": "Cosmos.D4s",
-        "serviceType": "SqlDedicatedGateway",
-    },
+    instance_count=1,
+    instance_size="Cosmos.D4s",
     resource_group_name="rg1",
-    service_name="SqlDedicatedGateway")
+    service_name="SqlDedicatedGateway",
+    service_type="SqlDedicatedGateway")
 
 ```
 
@@ -185,13 +227,11 @@ import * as azure_native from "@pulumi/azure-native";
 
 const service = new azure_native.documentdb.Service("service", {
     accountName: "ddb1",
-    properties: {
-        instanceCount: 1,
-        instanceSize: "Cosmos.D4s",
-        serviceType: "SqlDedicatedGateway",
-    },
+    instanceCount: 1,
+    instanceSize: "Cosmos.D4s",
     resourceGroupName: "rg1",
     serviceName: "SqlDedicatedGateway",
+    serviceType: "SqlDedicatedGateway",
 });
 
 ```
@@ -221,9 +261,11 @@ const service = new azure_native.documentdb.Service("service", {
 <span class="k">def </span><span class="nx">Service</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
             <span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-            <span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[Union[DataTransferServiceResourcePropertiesArgs, SqlDedicatedGatewayServiceResourcePropertiesArgs]]</span> = None<span class="p">,</span>
+            <span class="nx">instance_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+            <span class="nx">instance_size</span><span class="p">:</span> <span class="nx">Optional[Union[str, ServiceSize]]</span> = None<span class="p">,</span>
             <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-            <span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+            <span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">service_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, ServiceType]]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Service</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
             <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ServiceArgs</a></span><span class="p">,</span>
@@ -369,13 +411,21 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
     </dt>
     <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="properties_csharp">
-<a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
+        <span id="instancecount_csharp">
+<a href="#instancecount_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datatransferserviceresourceproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Data<wbr>Transfer<wbr>Service<wbr>Resource<wbr>Properties<wbr>Args</a> | <a href="#sqldedicatedgatewayserviceresourceproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Sql<wbr>Dedicated<wbr>Gateway<wbr>Service<wbr>Resource<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Services response resource.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Instance count for the service.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="instancesize_csharp">
+<a href="#instancesize_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#servicesize">Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Service<wbr>Size</a></span>
+    </dt>
+    <dd>{{% md %}}Instance type for the service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicename_csharp">
 <a href="#servicename_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
@@ -383,7 +433,15 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Cosmos DB service name.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Cosmos DB service name.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="servicetype_csharp">
+<a href="#servicetype_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#servicetype">Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Service<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}ServiceType for the service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -405,13 +463,21 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
     </dt>
     <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="properties_go">
-<a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
+        <span id="instancecount_go">
+<a href="#instancecount_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datatransferserviceresourceproperties">Data<wbr>Transfer<wbr>Service<wbr>Resource<wbr>Properties<wbr>Args</a> | <a href="#sqldedicatedgatewayserviceresourceproperties">Sql<wbr>Dedicated<wbr>Gateway<wbr>Service<wbr>Resource<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Services response resource.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Instance count for the service.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="instancesize_go">
+<a href="#instancesize_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#servicesize">Service<wbr>Size</a></span>
+    </dt>
+    <dd>{{% md %}}Instance type for the service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicename_go">
 <a href="#servicename_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
@@ -419,7 +485,15 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Cosmos DB service name.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Cosmos DB service name.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="servicetype_go">
+<a href="#servicetype_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#servicetype">Service<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}ServiceType for the service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -441,13 +515,21 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
     </dt>
     <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="properties_nodejs">
-<a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
+        <span id="instancecount_nodejs">
+<a href="#instancecount_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datatransferserviceresourceproperties">Data<wbr>Transfer<wbr>Service<wbr>Resource<wbr>Properties<wbr>Args</a> | <a href="#sqldedicatedgatewayserviceresourceproperties">Sql<wbr>Dedicated<wbr>Gateway<wbr>Service<wbr>Resource<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Services response resource.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Instance count for the service.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="instancesize_nodejs">
+<a href="#instancesize_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#servicesize">Service<wbr>Size</a></span>
+    </dt>
+    <dd>{{% md %}}Instance type for the service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicename_nodejs">
 <a href="#servicename_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Name</a>
@@ -455,7 +537,15 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Cosmos DB service name.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Cosmos DB service name.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="servicetype_nodejs">
+<a href="#servicetype_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#servicetype">Service<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}ServiceType for the service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -477,13 +567,21 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
     </dt>
     <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="properties_python">
-<a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
+        <span id="instance_count_python">
+<a href="#instance_count_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datatransferserviceresourceproperties">Data<wbr>Transfer<wbr>Service<wbr>Resource<wbr>Properties<wbr>Args</a> | <a href="#sqldedicatedgatewayserviceresourceproperties">Sql<wbr>Dedicated<wbr>Gateway<wbr>Service<wbr>Resource<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Services response resource.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Instance count for the service.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="instance_size_python">
+<a href="#instance_size_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str | <a href="#servicesize">Service<wbr>Size</a></span>
+    </dt>
+    <dd>{{% md %}}Instance type for the service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="service_name_python">
 <a href="#service_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>name</a>
@@ -491,7 +589,15 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Cosmos DB service name.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Cosmos DB service name.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="service_type_python">
+<a href="#service_type_python" style="color: inherit; text-decoration: inherit;">service_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str | <a href="#servicetype">Service<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}ServiceType for the service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -519,6 +625,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the database account.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="properties_csharp">
+<a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datatransferserviceresourcepropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Outputs.<wbr>Data<wbr>Transfer<wbr>Service<wbr>Resource<wbr>Properties<wbr>Response</a> | <a href="#sqldedicatedgatewayserviceresourcepropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Outputs.<wbr>Sql<wbr>Dedicated<wbr>Gateway<wbr>Service<wbr>Resource<wbr>Properties<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Services response resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -548,6 +662,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The name of the database account.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="properties_go">
+<a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datatransferserviceresourcepropertiesresponse">Data<wbr>Transfer<wbr>Service<wbr>Resource<wbr>Properties<wbr>Response</a> | <a href="#sqldedicatedgatewayserviceresourcepropertiesresponse">Sql<wbr>Dedicated<wbr>Gateway<wbr>Service<wbr>Resource<wbr>Properties<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Services response resource.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
@@ -576,6 +698,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The name of the database account.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="properties_nodejs">
+<a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datatransferserviceresourcepropertiesresponse">Data<wbr>Transfer<wbr>Service<wbr>Resource<wbr>Properties<wbr>Response</a> | <a href="#sqldedicatedgatewayserviceresourcepropertiesresponse">Sql<wbr>Dedicated<wbr>Gateway<wbr>Service<wbr>Resource<wbr>Properties<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Services response resource.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
@@ -603,6 +733,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the database account.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="properties_python">
+<a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datatransferserviceresourcepropertiesresponse">Data<wbr>Transfer<wbr>Service<wbr>Resource<wbr>Properties<wbr>Response</a> | <a href="#sqldedicatedgatewayserviceresourcepropertiesresponse">Sql<wbr>Dedicated<wbr>Gateway<wbr>Service<wbr>Resource<wbr>Properties<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Services response resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -735,88 +873,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Describes the status of a service.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="datatransferserviceresourceproperties">Data<wbr>Transfer<wbr>Service<wbr>Resource<wbr>Properties</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="instancecount_csharp">
-<a href="#instancecount_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Count</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Instance count for the service.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="instancesize_csharp">
-<a href="#instancesize_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Size</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#servicesize">Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Service<wbr>Size</a></span>
-    </dt>
-    <dd>{{% md %}}Instance type for the service.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="instancecount_go">
-<a href="#instancecount_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Count</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Instance count for the service.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="instancesize_go">
-<a href="#instancesize_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Size</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#servicesize">Service<wbr>Size</a></span>
-    </dt>
-    <dd>{{% md %}}Instance type for the service.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="instancecount_nodejs">
-<a href="#instancecount_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Count</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}Instance count for the service.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="instancesize_nodejs">
-<a href="#instancesize_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Size</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#servicesize">Service<wbr>Size</a></span>
-    </dt>
-    <dd>{{% md %}}Instance type for the service.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="instance_count_python">
-<a href="#instance_count_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>count</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Instance count for the service.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="instance_size_python">
-<a href="#instance_size_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>size</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#servicesize">Service<wbr>Size</a></span>
-    </dt>
-    <dd>{{% md %}}Instance type for the service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="datatransferserviceresourcepropertiesresponse">Data<wbr>Transfer<wbr>Service<wbr>Resource<wbr>Properties<wbr>Response</h4>
@@ -1027,6 +1083,32 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>Cosmos.D16s</dd></dl>
 {{% /choosable %}}
 
+<h4 id="servicetype">Service<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Sql<wbr>Dedicated<wbr>Gateway</dt>
+    <dd>SqlDedicatedGateway</dd><dt>Data<wbr>Transfer</dt>
+    <dd>DataTransfer</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Service<wbr>Type<wbr>Sql<wbr>Dedicated<wbr>Gateway</dt>
+    <dd>SqlDedicatedGateway</dd><dt>Service<wbr>Type<wbr>Data<wbr>Transfer</dt>
+    <dd>DataTransfer</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Sql<wbr>Dedicated<wbr>Gateway</dt>
+    <dd>SqlDedicatedGateway</dd><dt>Data<wbr>Transfer</dt>
+    <dd>DataTransfer</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>SQL_DEDICATED_GATEWAY</dt>
+    <dd>SqlDedicatedGateway</dd><dt>DATA_TRANSFER</dt>
+    <dd>DataTransfer</dd></dl>
+{{% /choosable %}}
+
 <h4 id="sqldedicatedgatewayregionalserviceresourceresponse">Sql<wbr>Dedicated<wbr>Gateway<wbr>Regional<wbr>Service<wbr>Resource<wbr>Response</h4>
 
 {{% choosable language csharp %}}
@@ -1171,120 +1253,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Describes the status of a service.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="sqldedicatedgatewayserviceresourceproperties">Sql<wbr>Dedicated<wbr>Gateway<wbr>Service<wbr>Resource<wbr>Properties</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="instancecount_csharp">
-<a href="#instancecount_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Count</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Instance count for the service.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="instancesize_csharp">
-<a href="#instancesize_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Size</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#servicesize">Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Service<wbr>Size</a></span>
-    </dt>
-    <dd>{{% md %}}Instance type for the service.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="sqldedicatedgatewayendpoint_csharp">
-<a href="#sqldedicatedgatewayendpoint_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Dedicated<wbr>Gateway<wbr>Endpoint</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}SqlDedicatedGateway endpoint for the service.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="instancecount_go">
-<a href="#instancecount_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Count</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Instance count for the service.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="instancesize_go">
-<a href="#instancesize_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Size</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#servicesize">Service<wbr>Size</a></span>
-    </dt>
-    <dd>{{% md %}}Instance type for the service.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="sqldedicatedgatewayendpoint_go">
-<a href="#sqldedicatedgatewayendpoint_go" style="color: inherit; text-decoration: inherit;">Sql<wbr>Dedicated<wbr>Gateway<wbr>Endpoint</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}SqlDedicatedGateway endpoint for the service.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="instancecount_nodejs">
-<a href="#instancecount_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Count</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}Instance count for the service.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="instancesize_nodejs">
-<a href="#instancesize_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Size</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#servicesize">Service<wbr>Size</a></span>
-    </dt>
-    <dd>{{% md %}}Instance type for the service.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="sqldedicatedgatewayendpoint_nodejs">
-<a href="#sqldedicatedgatewayendpoint_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Dedicated<wbr>Gateway<wbr>Endpoint</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}SqlDedicatedGateway endpoint for the service.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="instance_count_python">
-<a href="#instance_count_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>count</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Instance count for the service.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="instance_size_python">
-<a href="#instance_size_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>size</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#servicesize">Service<wbr>Size</a></span>
-    </dt>
-    <dd>{{% md %}}Instance type for the service.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="sql_dedicated_gateway_endpoint_python">
-<a href="#sql_dedicated_gateway_endpoint_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>dedicated_<wbr>gateway_<wbr>endpoint</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}SqlDedicatedGateway endpoint for the service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="sqldedicatedgatewayserviceresourcepropertiesresponse">Sql<wbr>Dedicated<wbr>Gateway<wbr>Service<wbr>Resource<wbr>Properties<wbr>Response</h4>
