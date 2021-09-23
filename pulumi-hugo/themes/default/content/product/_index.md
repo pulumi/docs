@@ -28,7 +28,7 @@ key_features:
               icon: global
               icon_color: yellow
               description: |
-                Access the full breadth of services in AWS, Azure, GCP, and [50+ providers](/docs/intro/cloud-providers/) through
+                Access the full breadth of services in AWS, Azure, GCP, and [50+ providers](/registry/packages/) through
                 a complete and consistent SDK interface.
 
             - title: Create reusable infrastructure

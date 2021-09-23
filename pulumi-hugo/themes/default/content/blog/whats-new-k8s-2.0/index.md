@@ -9,9 +9,9 @@ meta_image: pulumi_k8s.png
 
 We recently announced the 2.0 release of Pulumi which includes parity for
 [Node.js (JavaScript, TypeScript)]({{< relref "/docs/intro/languages/javascript" >}}), [Python]({{< relref "/docs/intro/languages/python" >}}), [.NET (C#, F#, etc)]({{< relref "/docs/intro/languages/dotnet" >}}) and [Go]({{< relref "/docs/intro/languages/go" >}}),
-and improvements to Kubernetes and dozens of other [supported cloud resource providers]({{< relref "/docs/intro/cloud-providers" >}}) and [packages]({{< relref "/docs/reference/pkg#package-documentation" >}}).
+and improvements to Kubernetes and dozens of other [supported cloud resource providers]({{< relref "/registry" >}}) and [packages]({{< relref "/docs/reference/pkg#package-documentation" >}}).
 
-[Kubernetes support]({{< relref "/docs/intro/cloud-providers/kubernetes" >}}) in Pulumi spans orchestration of clusters and application
+[Kubernetes support]({{< relref "/registry/packages/kubernetes" >}}) in Pulumi spans orchestration of clusters and application
 workloads. Clusters can be managed by cloud providers or self-managed.
 Workloads use the same [Kubernetes API](https://kubernetes.io/docs/reference/) to create and manage API resources in the
 supported Pulumi languages through packages directly generated from the [OpenAPI specification](https://github.com/kubernetes/kubernetes/tree/master/api/openapi-spec).
@@ -34,7 +34,7 @@ unify this resource management using a programming language of your choice.
 
 Some of the recent highlights for the [pulumi/kubernetes](https://github.com/pulumi/pulumi-kubernetes) package include:
 
-* Added [language support](https://www.pulumi.com/docs/intro/cloud-providers/kubernetes/#library-packages) for Go and .NET
+* Added [language support](https://www.pulumi.com/registry/packages/kubernetes/#library-packages) for Go and .NET
 
 ```go
 // Create an EKS cluster in Go.
@@ -133,7 +133,7 @@ As our community continues to grow, we’re committed to improving our Kubernete
 experience even further. You can help to shape this experience directly by
 providing feedback on [GitHub](https://github.com/pulumi/pulumi-kubernetes/). We love to hear from our users!
 
-Learn more about how [Pulumi works with Kubernetes](https://www.pulumi.com/docs/intro/cloud-providers/kubernetes/), and [Get Started](https://www.pulumi.com/docs/get-started/kubernetes/) if you're
+Learn more about how [Pulumi works with Kubernetes](https://www.pulumi.com/registry/packages/kubernetes/), and [Get Started](https://www.pulumi.com/docs/get-started/kubernetes/) if you're
 new.
 
 You can explore more content by checking out [PulumiTV on YouTube](http://youtube.com/pulumitv), work through

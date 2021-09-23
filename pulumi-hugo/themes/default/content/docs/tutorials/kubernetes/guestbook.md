@@ -35,7 +35,7 @@ The code for this tutorial is available on GitHub.
 You need to have the Pulumi CLI and a working Kubernetes cluster.
 
 1. [Install Pulumi]({{< relref "/docs/get-started/install" >}})
-2. [Connect Pulumi to a Kubernetes Cluster]({{< relref "/docs/intro/cloud-providers/kubernetes/setup" >}})
+2. [Connect Pulumi to a Kubernetes Cluster]({{< relref "/registry/packages/kubernetes/installation-configuration" >}})
 
 ## Running the Guestbook
 

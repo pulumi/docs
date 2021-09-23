@@ -650,7 +650,7 @@ containers, serverless, and Kubernetes across cloud providers and cloud native s
 Check out the [GitHub repo][pulumi-k8s-op] to experiment deploying the operator
 and some test Stacks.
 
-Learn more about how [Pulumi works with Kubernetes](https://www.pulumi.com/docs/intro/cloud-providers/kubernetes/), and [Get Started](https://www.pulumi.com/docs/get-started/kubernetes/) if you're new.
+Learn more about how [Pulumi works with Kubernetes](https://www.pulumi.com/registry/packages/kubernetes/), and [Get Started](https://www.pulumi.com/docs/get-started/kubernetes/) if you're new.
 
 You can help to shape this experience directly by
 providing feedback on [GitHub](https://github.com/pulumi/pulumi-kubernetes-operator/). We love to hear from our users!
@@ -665,4 +665,4 @@ with users and the Pulumi team.
 [p-examples]: https://github.com/pulumi/examples
 [stack]:{{< relref "/docs/intro/concepts/stack" >}}
 [pulumi-config]:{{< relref "/docs/intro/concepts/config" >}}
-[pulumi-providers]:{{< relref "/docs/intro/cloud-providers" >}}
+[pulumi-providers]:{{< relref "/registry" >}}

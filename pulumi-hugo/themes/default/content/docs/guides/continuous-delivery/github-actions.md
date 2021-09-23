@@ -356,10 +356,10 @@ GitHub Action to communicate with the Pulumi service on your behalf.
 Next, add secrets for your cloud credentials, just as you did `PULUMI_ACCESS_TOKEN` above,
 based on your provider of choice. For example:
 
-* `AWS_ACCESS_KEY_ID`, `AWS_REGION` and `AWS_SECRET_ACCESS_KEY` for [AWS]({{< relref "/docs/intro/cloud-providers/aws/setup" >}})
-* `ARM_CLIENT_ID`, `ARM_CLIENT_SECRET`, and `ARM_TENANT_ID` for [Azure]({{< relref "/docs/intro/cloud-providers/azure/setup" >}})
-* `GOOGLE_CREDENTIALS` for [GCP]({{< relref "/docs/intro/cloud-providers/gcp/setup" >}})
-* `KUBECONFIG` for [Kubernetes]({{< relref "/docs/intro/cloud-providers/kubernetes/setup" >}})
+* `AWS_ACCESS_KEY_ID`, `AWS_REGION` and `AWS_SECRET_ACCESS_KEY` for [AWS]({{< relref "/registry/packages/aws/installation-configuration" >}})
+* `ARM_CLIENT_ID`, `ARM_CLIENT_SECRET`, and `ARM_TENANT_ID` for [Azure]({{< relref "/registry/packages/azure/installation-configuration" >}})
+* `GOOGLE_CREDENTIALS` for [GCP]({{< relref "/registry/packages/gcp/installation-configuration" >}})
+* `KUBECONFIG` for [Kubernetes]({{< relref "/registry/packages/kubernetes/installation-configuration" >}})
 
 ## Try It Out!
 

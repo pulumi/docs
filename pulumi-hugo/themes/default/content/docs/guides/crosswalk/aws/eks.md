@@ -2027,7 +2027,7 @@ To ease doing this against an EKS cluster just created, the cluster object itsel
 
 For more information about configuring access to multiple clusters, see [Configure Access to Multiple Clusters](
 https://kubernetes.io/docs/tasks/access-application-cluster/configure-access-multiple-clusters/) and the
-[Pulumi Kubernetes Setup documentation]({{< relref "/docs/intro/cloud-providers/kubernetes/setup" >}}).
+[Pulumi Kubernetes Setup documentation]({{< relref "/registry/packages/kubernetes/installation-configuration" >}}).
 
 ## Deploying Existing Kubernetes YAML Config to Your EKS Cluster
 

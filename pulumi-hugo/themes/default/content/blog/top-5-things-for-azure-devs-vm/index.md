@@ -12,7 +12,7 @@ tags:
 
 So you want to be an Azure dev and all-around infrastructure wizard? Let's start with the basics, virtual machines! In the [previous article]({{< relref "/blog/top-5-things-for-azure-devs-intro">}}), the common use case for virtual machines is migrating applications from dedicated hardware. You want full control of the machine to install required software for the application or configure storage and networking.
 
-Azure provides many ways to create and configure virtual machines ranging from [the Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli) to [the Azure Portal](https://azure.microsoft.com/en-us/features/azure-portal/). In this article, we'll first create a virtual machine using the portal to understand the requirements and process; then, we'll do it with code using [Pulumi's Azure Native provider](https://www.pulumi.com/docs/intro/cloud-providers/azure/), which is built directly from the Azure Resource Manager API.
+Azure provides many ways to create and configure virtual machines ranging from [the Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli) to [the Azure Portal](https://azure.microsoft.com/en-us/features/azure-portal/). In this article, we'll first create a virtual machine using the portal to understand the requirements and process; then, we'll do it with code using [Pulumi's Azure Native provider](https://www.pulumi.com/registry/packages/azure/), which is built directly from the Azure Resource Manager API.
 
 <!--more-->
 

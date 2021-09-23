@@ -25,7 +25,7 @@ In this tutorial, we'll launch a new Managed Kubernetes cluster in Google Kubern
     > Note: This auth mechanism is meant for inner loop developer
     > workflows. If you want to run this example in an unattended service
     > account setting, such as in CI/CD, please [follow instructions to
-    > configure your service account]({{< relref "service-account" >}}). The
+    > configure your service account]({{< ref "registry/packages/gcp/service-account" >}}). The
     > service account must have the role `Kubernetes Engine Admin` / `container.admin`.
 
 ## Create a new GKE cluster {#new-gke-cluster}

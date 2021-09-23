@@ -50,7 +50,7 @@ Amazon Elastic Container Registry (ECR) provides managed Docker container hostin
 
 #### Create a New Project
 
-To start, create a new project and [ensure it is configured to use your AWS account]({{< relref "/docs/intro/cloud-providers/aws/setup" >}}), and then scaffold your project with the imports and overall program structure that we will fill in one piece at a time:
+To start, create a new project and [ensure it is configured to use your AWS account]({{< relref "/registry/packages/aws/installation-configuration" >}}), and then scaffold your project with the imports and overall program structure that we will fill in one piece at a time:
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -407,7 +407,7 @@ Azure Container Registry (ACR) allows you to build, store, secure, scan, replica
 
 #### Create a New Project
 
-To start, create a new project and [ensure it is configured to use your Azure account]({{< relref "/docs/intro/cloud-providers/azure/setup" >}}), and then scaffold your project with the imports and overall program structure that we will fill in one piece at a time:
+To start, create a new project and [ensure it is configured to use your Azure account]({{< relref "/registry/packages/azure/installation-configuration" >}}), and then scaffold your project with the imports and overall program structure that we will fill in one piece at a time:
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -898,7 +898,7 @@ Google Container Registry (GCR) enables you to store, manage, and secure your Do
 
 #### Create a New Project
 
-To start, create a new project and [ensure it is configured to use your GCP account]({{< relref "/docs/intro/cloud-providers/gcp/setup" >}}), then scaffold your project with the imports and overall program structure that we will fill in one piece at a time:
+To start, create a new project and [ensure it is configured to use your GCP account]({{< relref "/registry/packages/gcp/installation-configuration" >}}), then scaffold your project with the imports and overall program structure that we will fill in one piece at a time:
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -1146,7 +1146,7 @@ DigitalOcean's Container Registry is an easy way to store and manage private con
 
 #### Create a New Project
 
-To start, create a new project and [ensure it is configured to use your DigitalOcean account]({{< relref "/docs/intro/cloud-providers/digitalocean/setup" >}}) and then scaffold your project with the imports and overall program structure that we will fill in one piece at a time:
+To start, create a new project and [ensure it is configured to use your DigitalOcean account]({{< relref "/registry/packages/digitalocean/installation-configuration" >}}) and then scaffold your project with the imports and overall program structure that we will fill in one piece at a time:
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -1915,7 +1915,7 @@ The Pulumi Docker `Image` component supports a number of additional options to c
 
 The same container image URLs exported above can be used as inputs to other resources, including infrastructure that will run your container inside of a container orchestration system such as Kubernetes, Amazon ECS, and so on.
 
-> This article assumes you already have a containerized environment to deploy to, like a Kubernetes cluster, and have [configured your project accordingly]({{< relref "/docs/intro/cloud-providers/kubernetes/setup" >}}). If not, you can provision one using Pulumi first. Pulumi supports many clouds and infrastructure resources, but here are a few starting points to get up and running with:
+> This article assumes you already have a containerized environment to deploy to, like a Kubernetes cluster, and have [configured your project accordingly]({{< relref "/registry/packages/kubernetes/installation-configuration" >}}). If not, you can provision one using Pulumi first. Pulumi supports many clouds and infrastructure resources, but here are a few starting points to get up and running with:
 
 - [AWS Elastic Container Service ECS]({{< relref "/docs/guides/crosswalk/aws/ecs" >}}),
 - [AWS Elastic Kubernetes Service (EKS)]({{< relref "/docs/guides/crosswalk/aws/eks" >}}),

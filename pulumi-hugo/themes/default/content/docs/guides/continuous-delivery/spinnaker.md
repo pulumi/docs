@@ -50,11 +50,11 @@ on your machine and push it to your Version Control System (VCS) repository.
 The source code used as an [example](https://github.com/pulumi/examples/tree/master/kubernetes-ts-nginx) in this guide
 uses TypeScript. The example infrastructure code creates a Kubernetes `Deployment` using the `nginx` container image.
 If you modify the sample app or wish to create the `Deployment` resource in a different Kubernetes cluster, follow the
-setup guide for the [Kubernetes provider](https://www.pulumi.com/docs/intro/cloud-providers/kubernetes/setup/)
+setup guide for the [Kubernetes provider](https://www.pulumi.com/registry/packages/kubernetes/installation-configuration/)
 to ensure that Pulumi can access that Kubernetes cluster.
 
 The example in this topic shows you how to deploy a Kubernetes resource; however, you can use any of the other
-[cloud providers](https://www.pulumi.com/docs/intro/cloud-providers/) that Pulumi supports.
+[cloud providers](https://www.pulumi.com/registry/packages/) that Pulumi supports.
 
 ## Pulumi Plugin For Spinnaker
 
@@ -126,7 +126,7 @@ To create this resource in your Spinnaker cluster, run:
 kubectl apply -f secrets.yaml
 ```
 
-You can set any environment variables required for the specific providers you plan to use in your Pulumi app. For more information, see the Setup page for a given [provider](https://www.pulumi.com/docs/intro/cloud-providers/).
+You can set any environment variables required for the specific providers you plan to use in your Pulumi app. For more information, see the Setup page for a given [provider](https://www.pulumi.com/registry/packages/).
 
 For private VCS repos, you can save the Personal Access Token used to clone your repo into the batch job container. This means when you configure the Stage in the Spinnaker Pipelines UI, you can reference the same key names in the URL you specify. For example, the environment variables in the URL `https://$(GIT_USERNAME):$(GIT_PAT)@github.com/owner/repo` will automatically resolve to the correct values as per your Secret resource inside the preconfigured job container.
 

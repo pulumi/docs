@@ -21,7 +21,7 @@ Pulumi is a modern infrastructure as code platform. Learn more about its most im
 </div>
 <div class="md:flex flex-row mt-6 mb-6">
     <div class="w-1/2 border-solid border-t-2 border-gray-200">
-        <h3 class="no-anchor pt-4"><a href="{{< relref "cloud-providers" >}}"><i class="fas fa-cloud pr-2"></i>Cloud Providers</a></h3>
+        <h3 class="no-anchor pt-4"><a href="{{< ref "/registry" >}}"><i class="fas fa-cloud pr-2"></i>Cloud Providers</a></h3>
         <p>Pulumi supports major cloud providers and offers tutorials on how to work with them.</p>
     </div>
     <div class="w-1/2 border-solid ml-4 border-t-2 border-gray-200">

@@ -13,7 +13,7 @@ In this tutorial, we'll build and publish a Docker container to a private Elasti
 
 1. [Install Docker Engine - Community](https://docs.docker.com/install/)
 1. [Install Pulumi]({{< relref "/docs/get-started/install" >}})
-1. [Configure Pulumi to use your AWS account]({{< relref "/docs/intro/cloud-providers/aws/setup" >}})
+1. [Configure Pulumi to use your AWS account]({{< relref "/registry/packages/aws/installation-configuration" >}})
 
 ## Deploy the App
 

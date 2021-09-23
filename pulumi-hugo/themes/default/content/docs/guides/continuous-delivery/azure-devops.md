@@ -402,5 +402,5 @@ popd
 To use the Pulumi Task Extension for Azure Pipelines with other clouds, you can specify the necessary environment variables
 as build variables or link variable groups to your build and release pipelines.
 
-For example, if you are using the [AWS provider]({{< relref "/docs/intro/cloud-providers/aws" >}}), you can set the [environment variables]({{< relref "/docs/intro/cloud-providers/aws/setup" >}})
+For example, if you are using the [AWS provider]({{< relref "/registry/packages/aws" >}}), you can set the [environment variables]({{< relref "/registry/packages/aws/installation-configuration" >}})
 `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY`.

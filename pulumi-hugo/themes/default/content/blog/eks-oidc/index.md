@@ -227,5 +227,5 @@ or join our [Community Slack](https://slack.pulumi.com/) channel if you have any
 [k8s-dynamic-webhook]: https://kubernetes.io/docs/reference/access-authn-authz/extensible-admission-controllers
 [eks-webhook]: https://github.com/aws/amazon-eks-pod-identity-webhook/
 [k8s-sa]: https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/
-[pulumi-k8s]: {{< relref "/docs/intro/cloud-providers/kubernetes" >}}
+[pulumi-k8s]: {{< relref "/registry/packages/kubernetes" >}}
 [p-get-started]: {{< relref "/docs/get-started/kubernetes" >}}

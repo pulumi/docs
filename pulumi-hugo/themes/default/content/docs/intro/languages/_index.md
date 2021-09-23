@@ -14,7 +14,7 @@ aliases: ["/docs/reference/languages/"]
 
 Pulumi is a multi-language infrastructure as code tool. Each language is as capable as the
 other and supports the entire surface area of [all of the clouds available in Pulumi](
-{{< relref "/docs/intro/cloud-providers" >}}).
+{{< relref "/registry" >}}).
 
 The following language runtimes are currently supported by Pulumi. Select one to learn more:
 

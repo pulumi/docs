@@ -15,7 +15,7 @@ Start by downloading the [example code](https://github.com/pulumi/examples/tree/
 
 If you haven't already, follow the steps in [Pulumi Installation and
 Setup]({{< relref "/docs/get-started/install" >}}) and [Configuring Pulumi
-Kubernetes]({{< relref "/docs/intro/cloud-providers/kubernetes/setup" >}}) to get set up with
+Kubernetes]({{< relref "/registry/packages/kubernetes/installation-configuration" >}}) to get set up with
 Pulumi and Kubernetes.
 
 Now, install dependencies:

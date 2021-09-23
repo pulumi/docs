@@ -378,5 +378,5 @@ This article reviews the Kubernetes objects and abstractions used to deploy appl
 This is the second in a series of articles on using infrastructure as code for Kubernetes. In the next article, we'll examine a complex application deployment and a deployment using a Helm chart. Until the next post, learn more about Kubernetes with these resources.
 
 - Watch educational content on [Pulumi TV](https://www.youtube.com/pulumitv)
-- Learn more about Pulumi's [support for Kubernetes]({{< relref "/docs/intro/cloud-providers/kubernetes" >}})
+- Learn more about Pulumi's [support for Kubernetes]({{< relref "/registry/packages/kubernetes" >}})
 - Practice [Kubernetes Tutorials]({{< relref "/docs/tutorials/kubernetes" >}}) using Pulumi

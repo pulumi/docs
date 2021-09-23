@@ -13,7 +13,7 @@ Pulumi makes it easy to author your Kubernetes configuration in your choice of l
 
 Pulumi also enables you to render the Kubernetes objects in your program into YAML which eases adoption in the opposite direction: you can use Pulumi to author your configuration, getting the benefits of general-purpose and familiar programming languages, while still being able to deploy the resulting YAML with existing toolchains like `kubectl` or your CI/CD vendor's Kubernetes support.
 
-> To learn more about Pulumi's Kubernetes support, see [the Kubernetes Overview]({{< relref "/docs/intro/cloud-providers/kubernetes" >}}) or jump straight in with [the Getting Started Guide]({{< relref "/docs/get-started/kubernetes" >}}).
+> To learn more about Pulumi's Kubernetes support, see [the Kubernetes Overview]({{< relref "/registry/packages/kubernetes" >}}) or jump straight in with [the Getting Started Guide]({{< relref "/docs/get-started/kubernetes" >}}).
 
 ## Deploying Kubernetes YAML
 

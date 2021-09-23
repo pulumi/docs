@@ -362,7 +362,7 @@ Learn more in the [announcement blog post]({{< relref "/blog/full-access-to-helm
 
 You can now use Pulumi's modern infrastructure-as-code solution to manage new resources! Our new provider for MinIO gives you access to the full range of high-performance, S3-compatible object storage offered by [MinIO](https://min.io). Likewise, our new provider for Snowflake lets you create and manage many of the data engineering, data lake, data warehouse, and other data resources in [Snowflake's](https://snowflake.com) data cloud.
 
-Learn more in the [MinIO]({{< relref "/docs/intro/cloud-providers/minio">}}) and [Snowflake]({{< relref "/docs/intro/cloud-providers/snowflake">}}) provider docs
+Learn more in the [MinIO]({{< relref "/registry/packages/minio">}}) and [Snowflake]({{< relref "/registry/packages/snowflake">}}) provider docs
 
 ### New resources in the Azure Native provider
 

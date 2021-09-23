@@ -10,7 +10,7 @@ In this tutorial, we'll use JavaScript to deploy a simple webserver Virtual Mach
 ## Prerequisites
 
 1. [Install Pulumi]({{< relref "/docs/get-started/install" >}})
-1. [Configure GCP credentials]({{< relref "/docs/intro/cloud-providers/gcp/setup" >}})
+1. [Configure GCP credentials]({{< relref "/registry/packages/gcp/installation-configuration" >}})
 
 ## Create a Virtual Machine with SSH access {#webserver}
 

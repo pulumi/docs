@@ -67,7 +67,7 @@ You can find available plugins by navigating to the Jenkins administration page 
 
 ### Project Parameters (Environment Variables)
 
-In order to deploy to one of the cloud providers, you will need to ensure that the authentication environment variables are set, so that the Pulumi CLI can use them to deploy your infrastructure resources. The set of environment variables to configure vary for each cloud. For Azure, depending on your setup, you may have to set at most 4 environment variables. In this example, we will assume you are using a [Service Principal]({{< relref "/docs/intro/cloud-providers/azure/setup#creating-a-service-principal" >}}).
+In order to deploy to one of the cloud providers, you will need to ensure that the authentication environment variables are set, so that the Pulumi CLI can use them to deploy your infrastructure resources. The set of environment variables to configure vary for each cloud. For Azure, depending on your setup, you may have to set at most 4 environment variables. In this example, we will assume you are using a [Service Principal]({{< relref "/registry/packages/azure/installation-configuration#creating-a-service-principal" >}}).
 
 The screenshot below shows you how you can parameterize your `Jenkinsfile` using environment variables.
 

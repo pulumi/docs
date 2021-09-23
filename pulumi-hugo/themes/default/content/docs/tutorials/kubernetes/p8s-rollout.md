@@ -126,7 +126,7 @@ can see `canary-example-app` and `canary-staging-app` created.
 
 <!-- markdownlint-disable MD034 -->
 [install]: {{< relref "/docs/get-started/install" >}}
-[configuration]: {{< relref "/docs/intro/cloud-providers/kubernetes/setup" >}}
+[configuration]: {{< relref "/registry/packages/kubernetes/installation-configuration" >}}
 [p8s]: https://prometheus.io/
 [helm]: https://www.helm.sh/
 <!-- markdownlint-restore MD034 -->
