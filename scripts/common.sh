@@ -146,7 +146,3 @@ retry() {
     }
     done
 }
-
-hugo_theme_path() {
-    echo "github.com/pulumi/pulumi-hugo/themes/default"
-}
