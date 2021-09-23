@@ -82,9 +82,18 @@ generate_docs() {
     fi
 
     echo "Running docs generator from schema for ${provider}..."
+
     pushd ${TOOL_RESDOCGEN}
+
     go mod tidy
-    go run . -logtostderr "${ABSOLUTEPACKDIR}/${provider}" "${SCHEMA_FILE}" "${plugin_version}" "${OVERLAY_SCHEMA_FILE}" || exit 3
+    go build -o "${HOME}/go/bin/resourcedocsgen" .
+    resourcedocsgen docs \
+      --docsOutDir "${ABSOLUTEPACKDIR}/${provider}" \
+      --schemaFile "${SCHEMA_FILE}" \
+      --version "${plugin_version}" \
+      --logtostderr \
+      --overlaysSchemaFile "${OVERLAY_SCHEMA_FILE}" || exit 3
+
     popd
 
     echo "Done generating resource docs for ${provider}"
