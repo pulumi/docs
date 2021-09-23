@@ -235,7 +235,7 @@ const exampleWorkspace = new azure.synapse.Workspace("exampleWorkspace", {
               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
               <span class="nx">aad_admin</span><span class="p">:</span> <span class="nx">Optional[WorkspaceAadAdminArgs]</span> = None<span class="p">,</span>
               <span class="nx">azure_devops_repo</span><span class="p">:</span> <span class="nx">Optional[WorkspaceAzureDevopsRepoArgs]</span> = None<span class="p">,</span>
-              <span class="nx">customer_managed_key_versionless_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">customer_managed_key</span><span class="p">:</span> <span class="nx">Optional[WorkspaceCustomerManagedKeyArgs]</span> = None<span class="p">,</span>
               <span class="nx">data_exfiltration_protection_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
               <span class="nx">github_repo</span><span class="p">:</span> <span class="nx">Optional[WorkspaceGithubRepoArgs]</span> = None<span class="p">,</span>
               <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -431,13 +431,13 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
     <dd>{{% md %}}An `azure_devops_repo` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="customermanagedkeyversionlessid_csharp">
-<a href="#customermanagedkeyversionlessid_csharp" style="color: inherit; text-decoration: inherit;">Customer<wbr>Managed<wbr>Key<wbr>Versionless<wbr>Id</a>
+        <span id="customermanagedkey_csharp">
+<a href="#customermanagedkey_csharp" style="color: inherit; text-decoration: inherit;">Customer<wbr>Managed<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#workspacecustomermanagedkey">Workspace<wbr>Customer<wbr>Managed<wbr>Key<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The Azure Key Vault Key Versionless ID to be used as the Customer Managed Key (CMK) for double encryption (e.g. `https://example-keyvault.vault.azure.net/type/cmk/`).
+    <dd>{{% md %}}A `customer_managed_key` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dataexfiltrationprotectionenabled_csharp">
@@ -570,13 +570,13 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
     <dd>{{% md %}}An `azure_devops_repo` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="customermanagedkeyversionlessid_go">
-<a href="#customermanagedkeyversionlessid_go" style="color: inherit; text-decoration: inherit;">Customer<wbr>Managed<wbr>Key<wbr>Versionless<wbr>Id</a>
+        <span id="customermanagedkey_go">
+<a href="#customermanagedkey_go" style="color: inherit; text-decoration: inherit;">Customer<wbr>Managed<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#workspacecustomermanagedkey">Workspace<wbr>Customer<wbr>Managed<wbr>Key<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The Azure Key Vault Key Versionless ID to be used as the Customer Managed Key (CMK) for double encryption (e.g. `https://example-keyvault.vault.azure.net/type/cmk/`).
+    <dd>{{% md %}}A `customer_managed_key` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dataexfiltrationprotectionenabled_go">
@@ -709,13 +709,13 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
     <dd>{{% md %}}An `azure_devops_repo` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="customermanagedkeyversionlessid_nodejs">
-<a href="#customermanagedkeyversionlessid_nodejs" style="color: inherit; text-decoration: inherit;">customer<wbr>Managed<wbr>Key<wbr>Versionless<wbr>Id</a>
+        <span id="customermanagedkey_nodejs">
+<a href="#customermanagedkey_nodejs" style="color: inherit; text-decoration: inherit;">customer<wbr>Managed<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#workspacecustomermanagedkey">Workspace<wbr>Customer<wbr>Managed<wbr>Key<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The Azure Key Vault Key Versionless ID to be used as the Customer Managed Key (CMK) for double encryption (e.g. `https://example-keyvault.vault.azure.net/type/cmk/`).
+    <dd>{{% md %}}A `customer_managed_key` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dataexfiltrationprotectionenabled_nodejs">
@@ -848,13 +848,13 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
     <dd>{{% md %}}An `azure_devops_repo` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="customer_managed_key_versionless_id_python">
-<a href="#customer_managed_key_versionless_id_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>managed_<wbr>key_<wbr>versionless_<wbr>id</a>
+        <span id="customer_managed_key_python">
+<a href="#customer_managed_key_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>managed_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#workspacecustomermanagedkey">Workspace<wbr>Customer<wbr>Managed<wbr>Key<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The Azure Key Vault Key Versionless ID to be used as the Customer Managed Key (CMK) for double encryption (e.g. `https://example-keyvault.vault.azure.net/type/cmk/`).
+    <dd>{{% md %}}A `customer_managed_key` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="data_exfiltration_protection_enabled_python">
@@ -1076,7 +1076,7 @@ Get an existing Workspace resource's state with the given name, ID, and optional
         <span class="nx">aad_admin</span><span class="p">:</span> <span class="nx">Optional[WorkspaceAadAdminArgs]</span> = None<span class="p">,</span>
         <span class="nx">azure_devops_repo</span><span class="p">:</span> <span class="nx">Optional[WorkspaceAzureDevopsRepoArgs]</span> = None<span class="p">,</span>
         <span class="nx">connectivity_endpoints</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
-        <span class="nx">customer_managed_key_versionless_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">customer_managed_key</span><span class="p">:</span> <span class="nx">Optional[WorkspaceCustomerManagedKeyArgs]</span> = None<span class="p">,</span>
         <span class="nx">data_exfiltration_protection_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">github_repo</span><span class="p">:</span> <span class="nx">Optional[WorkspaceGithubRepoArgs]</span> = None<span class="p">,</span>
         <span class="nx">identities</span><span class="p">:</span> <span class="nx">Optional[Sequence[WorkspaceIdentityArgs]]</span> = None<span class="p">,</span>
@@ -1229,13 +1229,13 @@ The following state arguments are supported:
     <dd>{{% md %}}A list of Connectivity endpoints for this Synapse Workspace.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="state_customermanagedkeyversionlessid_csharp">
-<a href="#state_customermanagedkeyversionlessid_csharp" style="color: inherit; text-decoration: inherit;">Customer<wbr>Managed<wbr>Key<wbr>Versionless<wbr>Id</a>
+        <span id="state_customermanagedkey_csharp">
+<a href="#state_customermanagedkey_csharp" style="color: inherit; text-decoration: inherit;">Customer<wbr>Managed<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#workspacecustomermanagedkey">Workspace<wbr>Customer<wbr>Managed<wbr>Key<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The Azure Key Vault Key Versionless ID to be used as the Customer Managed Key (CMK) for double encryption (e.g. `https://example-keyvault.vault.azure.net/type/cmk/`).
+    <dd>{{% md %}}A `customer_managed_key` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dataexfiltrationprotectionenabled_csharp">
@@ -1386,13 +1386,13 @@ The following state arguments are supported:
     <dd>{{% md %}}A list of Connectivity endpoints for this Synapse Workspace.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="state_customermanagedkeyversionlessid_go">
-<a href="#state_customermanagedkeyversionlessid_go" style="color: inherit; text-decoration: inherit;">Customer<wbr>Managed<wbr>Key<wbr>Versionless<wbr>Id</a>
+        <span id="state_customermanagedkey_go">
+<a href="#state_customermanagedkey_go" style="color: inherit; text-decoration: inherit;">Customer<wbr>Managed<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#workspacecustomermanagedkey">Workspace<wbr>Customer<wbr>Managed<wbr>Key<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The Azure Key Vault Key Versionless ID to be used as the Customer Managed Key (CMK) for double encryption (e.g. `https://example-keyvault.vault.azure.net/type/cmk/`).
+    <dd>{{% md %}}A `customer_managed_key` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dataexfiltrationprotectionenabled_go">
@@ -1543,13 +1543,13 @@ The following state arguments are supported:
     <dd>{{% md %}}A list of Connectivity endpoints for this Synapse Workspace.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="state_customermanagedkeyversionlessid_nodejs">
-<a href="#state_customermanagedkeyversionlessid_nodejs" style="color: inherit; text-decoration: inherit;">customer<wbr>Managed<wbr>Key<wbr>Versionless<wbr>Id</a>
+        <span id="state_customermanagedkey_nodejs">
+<a href="#state_customermanagedkey_nodejs" style="color: inherit; text-decoration: inherit;">customer<wbr>Managed<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#workspacecustomermanagedkey">Workspace<wbr>Customer<wbr>Managed<wbr>Key<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The Azure Key Vault Key Versionless ID to be used as the Customer Managed Key (CMK) for double encryption (e.g. `https://example-keyvault.vault.azure.net/type/cmk/`).
+    <dd>{{% md %}}A `customer_managed_key` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dataexfiltrationprotectionenabled_nodejs">
@@ -1700,13 +1700,13 @@ The following state arguments are supported:
     <dd>{{% md %}}A list of Connectivity endpoints for this Synapse Workspace.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="state_customer_managed_key_versionless_id_python">
-<a href="#state_customer_managed_key_versionless_id_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>managed_<wbr>key_<wbr>versionless_<wbr>id</a>
+        <span id="state_customer_managed_key_python">
+<a href="#state_customer_managed_key_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>managed_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#workspacecustomermanagedkey">Workspace<wbr>Customer<wbr>Managed<wbr>Key<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The Azure Key Vault Key Versionless ID to be used as the Customer Managed Key (CMK) for double encryption (e.g. `https://example-keyvault.vault.azure.net/type/cmk/`).
+    <dd>{{% md %}}A `customer_managed_key` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_data_exfiltration_protection_enabled_python">
@@ -2193,6 +2193,96 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}the ID of the tenant for the Azure DevOps account.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="workspacecustomermanagedkey">Workspace<wbr>Customer<wbr>Managed<wbr>Key</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="keyversionlessid_csharp">
+<a href="#keyversionlessid_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Versionless<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Azure Key Vault Key Versionless ID to be used as the Customer Managed Key (CMK) for double encryption (e.g. `https://example-keyvault.vault.azure.net/type/cmk/`).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="keyname_csharp">
+<a href="#keyname_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An identifier for the key. Name needs to match the name of the key used with the `azure.synapse.WorkspaceKey` resource. Defaults to "cmk" if not specified.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="keyversionlessid_go">
+<a href="#keyversionlessid_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Versionless<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Azure Key Vault Key Versionless ID to be used as the Customer Managed Key (CMK) for double encryption (e.g. `https://example-keyvault.vault.azure.net/type/cmk/`).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="keyname_go">
+<a href="#keyname_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An identifier for the key. Name needs to match the name of the key used with the `azure.synapse.WorkspaceKey` resource. Defaults to "cmk" if not specified.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="keyversionlessid_nodejs">
+<a href="#keyversionlessid_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Versionless<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Azure Key Vault Key Versionless ID to be used as the Customer Managed Key (CMK) for double encryption (e.g. `https://example-keyvault.vault.azure.net/type/cmk/`).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="keyname_nodejs">
+<a href="#keyname_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An identifier for the key. Name needs to match the name of the key used with the `azure.synapse.WorkspaceKey` resource. Defaults to "cmk" if not specified.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_versionless_id_python">
+<a href="#key_versionless_id_python" style="color: inherit; text-decoration: inherit;">key_<wbr>versionless_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Azure Key Vault Key Versionless ID to be used as the Customer Managed Key (CMK) for double encryption (e.g. `https://example-keyvault.vault.azure.net/type/cmk/`).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="key_name_python">
+<a href="#key_name_python" style="color: inherit; text-decoration: inherit;">key_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}An identifier for the key. Name needs to match the name of the key used with the `azure.synapse.WorkspaceKey` resource. Defaults to "cmk" if not specified.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

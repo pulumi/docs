@@ -429,6 +429,7 @@ const exampleInferenceCluster = new azure.machinelearning.InferenceCluster("exam
                      <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
                      <span class="nx">cluster_purpose</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                      <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                     <span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[InferenceClusterIdentityArgs]</span> = None<span class="p">,</span>
                      <span class="nx">kubernetes_cluster_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                      <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                      <span class="nx">machine_learning_workspace_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -597,7 +598,16 @@ The InferenceCluster resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description of the Machine Learning compute. Changing this forces a new Machine Learning Inference Cluster to be created.
+    <dd>{{% md %}}The description of the Machine Learning Inference Cluster. Changing this forces a new Machine Learning Inference Cluster to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="identity_csharp">
+<a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inferenceclusteridentity">Inference<wbr>Cluster<wbr>Identity<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `identity` block as defined below. Changing this forces a new Machine Learning Inference Cluster to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
@@ -673,7 +683,16 @@ The InferenceCluster resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description of the Machine Learning compute. Changing this forces a new Machine Learning Inference Cluster to be created.
+    <dd>{{% md %}}The description of the Machine Learning Inference Cluster. Changing this forces a new Machine Learning Inference Cluster to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="identity_go">
+<a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inferenceclusteridentity">Inference<wbr>Cluster<wbr>Identity<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `identity` block as defined below. Changing this forces a new Machine Learning Inference Cluster to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
@@ -749,7 +768,16 @@ The InferenceCluster resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description of the Machine Learning compute. Changing this forces a new Machine Learning Inference Cluster to be created.
+    <dd>{{% md %}}The description of the Machine Learning Inference Cluster. Changing this forces a new Machine Learning Inference Cluster to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="identity_nodejs">
+<a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inferenceclusteridentity">Inference<wbr>Cluster<wbr>Identity<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `identity` block as defined below. Changing this forces a new Machine Learning Inference Cluster to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
@@ -825,7 +853,16 @@ The InferenceCluster resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The description of the Machine Learning compute. Changing this forces a new Machine Learning Inference Cluster to be created.
+    <dd>{{% md %}}The description of the Machine Learning Inference Cluster. Changing this forces a new Machine Learning Inference Cluster to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="identity_python">
+<a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inferenceclusteridentity">Inference<wbr>Cluster<wbr>Identity<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `identity` block as defined below. Changing this forces a new Machine Learning Inference Cluster to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
@@ -938,6 +975,7 @@ Get an existing InferenceCluster resource's state with the given name, ID, and o
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
         <span class="nx">cluster_purpose</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[InferenceClusterIdentityArgs]</span> = None<span class="p">,</span>
         <span class="nx">kubernetes_cluster_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">machine_learning_workspace_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -1071,7 +1109,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description of the Machine Learning compute. Changing this forces a new Machine Learning Inference Cluster to be created.
+    <dd>{{% md %}}The description of the Machine Learning Inference Cluster. Changing this forces a new Machine Learning Inference Cluster to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_identity_csharp">
+<a href="#state_identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inferenceclusteridentity">Inference<wbr>Cluster<wbr>Identity<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `identity` block as defined below. Changing this forces a new Machine Learning Inference Cluster to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kubernetesclusterid_csharp">
@@ -1147,7 +1194,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description of the Machine Learning compute. Changing this forces a new Machine Learning Inference Cluster to be created.
+    <dd>{{% md %}}The description of the Machine Learning Inference Cluster. Changing this forces a new Machine Learning Inference Cluster to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_identity_go">
+<a href="#state_identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inferenceclusteridentity">Inference<wbr>Cluster<wbr>Identity<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `identity` block as defined below. Changing this forces a new Machine Learning Inference Cluster to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kubernetesclusterid_go">
@@ -1223,7 +1279,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description of the Machine Learning compute. Changing this forces a new Machine Learning Inference Cluster to be created.
+    <dd>{{% md %}}The description of the Machine Learning Inference Cluster. Changing this forces a new Machine Learning Inference Cluster to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_identity_nodejs">
+<a href="#state_identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inferenceclusteridentity">Inference<wbr>Cluster<wbr>Identity<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `identity` block as defined below. Changing this forces a new Machine Learning Inference Cluster to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kubernetesclusterid_nodejs">
@@ -1299,7 +1364,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The description of the Machine Learning compute. Changing this forces a new Machine Learning Inference Cluster to be created.
+    <dd>{{% md %}}The description of the Machine Learning Inference Cluster. Changing this forces a new Machine Learning Inference Cluster to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_identity_python">
+<a href="#state_identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inferenceclusteridentity">Inference<wbr>Cluster<wbr>Identity<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `identity` block as defined below. Changing this forces a new Machine Learning Inference Cluster to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kubernetes_cluster_id_python">
@@ -1365,6 +1439,168 @@ The following state arguments are supported:
 ## Supporting Types
 
 
+
+<h4 id="inferenceclusteridentity">Inference<wbr>Cluster<wbr>Identity</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Type of Identity which should be used for this Machine Learning Inference Cluster. Possible values are `SystemAssigned`, `UserAssigned` and `SystemAssigned,UserAssigned`. Changing this forces a new Machine Learning Inference Cluster to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="identityids_csharp">
+<a href="#identityids_csharp" style="color: inherit; text-decoration: inherit;">Identity<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of User Managed Identity ID's which should be assigned to the Machine Learning Inference Cluster. Changing this forces a new Machine Learning Inference Cluster to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="principalid_csharp">
+<a href="#principalid_csharp" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Principal ID for the Service Principal associated with the Managed Service Identity of this Machine Learning Inference Cluster.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tenantid_csharp">
+<a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Tenant ID for the Service Principal associated with the Managed Service Identity of this Machine Learning Inference Cluster.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Type of Identity which should be used for this Machine Learning Inference Cluster. Possible values are `SystemAssigned`, `UserAssigned` and `SystemAssigned,UserAssigned`. Changing this forces a new Machine Learning Inference Cluster to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="identityids_go">
+<a href="#identityids_go" style="color: inherit; text-decoration: inherit;">Identity<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of User Managed Identity ID's which should be assigned to the Machine Learning Inference Cluster. Changing this forces a new Machine Learning Inference Cluster to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="principalid_go">
+<a href="#principalid_go" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Principal ID for the Service Principal associated with the Managed Service Identity of this Machine Learning Inference Cluster.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tenantid_go">
+<a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Tenant ID for the Service Principal associated with the Managed Service Identity of this Machine Learning Inference Cluster.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Type of Identity which should be used for this Machine Learning Inference Cluster. Possible values are `SystemAssigned`, `UserAssigned` and `SystemAssigned,UserAssigned`. Changing this forces a new Machine Learning Inference Cluster to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="identityids_nodejs">
+<a href="#identityids_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of User Managed Identity ID's which should be assigned to the Machine Learning Inference Cluster. Changing this forces a new Machine Learning Inference Cluster to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="principalid_nodejs">
+<a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Principal ID for the Service Principal associated with the Managed Service Identity of this Machine Learning Inference Cluster.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tenantid_nodejs">
+<a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Tenant ID for the Service Principal associated with the Managed Service Identity of this Machine Learning Inference Cluster.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Type of Identity which should be used for this Machine Learning Inference Cluster. Possible values are `SystemAssigned`, `UserAssigned` and `SystemAssigned,UserAssigned`. Changing this forces a new Machine Learning Inference Cluster to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="identity_ids_python">
+<a href="#identity_ids_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of User Managed Identity ID's which should be assigned to the Machine Learning Inference Cluster. Changing this forces a new Machine Learning Inference Cluster to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="principal_id_python">
+<a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Principal ID for the Service Principal associated with the Managed Service Identity of this Machine Learning Inference Cluster.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tenant_id_python">
+<a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Tenant ID for the Service Principal associated with the Managed Service Identity of this Machine Learning Inference Cluster.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
 
 <h4 id="inferenceclusterssl">Inference<wbr>Cluster<wbr>Ssl</h4>
 

@@ -957,6 +957,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="apimanagement_csharp">
+<a href="#apimanagement_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Management</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#providerfeaturesapimanagement">Provider<wbr>Features<wbr>Api<wbr>Management</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="cognitiveaccount_csharp">
 <a href="#cognitiveaccount_csharp" style="color: inherit; text-decoration: inherit;">Cognitive<wbr>Account</a>
 </span>
@@ -1024,6 +1032,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="apimanagement_go">
+<a href="#apimanagement_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Management</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#providerfeaturesapimanagement">Provider<wbr>Features<wbr>Api<wbr>Management</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cognitiveaccount_go">
 <a href="#cognitiveaccount_go" style="color: inherit; text-decoration: inherit;">Cognitive<wbr>Account</a>
@@ -1093,6 +1109,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="apimanagement_nodejs">
+<a href="#apimanagement_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Management</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#providerfeaturesapimanagement">Provider<wbr>Features<wbr>Api<wbr>Management</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="cognitiveaccount_nodejs">
 <a href="#cognitiveaccount_nodejs" style="color: inherit; text-decoration: inherit;">cognitive<wbr>Account</a>
 </span>
@@ -1161,6 +1185,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="api_management_python">
+<a href="#api_management_python" style="color: inherit; text-decoration: inherit;">api_<wbr>management</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#providerfeaturesapimanagement">Provider<wbr>Features<wbr>Api<wbr>Management</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="cognitive_account_python">
 <a href="#cognitive_account_python" style="color: inherit; text-decoration: inherit;">cognitive_<wbr>account</a>
 </span>
@@ -1222,6 +1254,56 @@ All [input](#inputs) properties are implicitly available as output properties. A
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#providerfeaturesvirtualmachinescaleset">Provider<wbr>Features<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="providerfeaturesapimanagement">Provider<wbr>Features<wbr>Api<wbr>Management</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="purgesoftdeleteondestroy_csharp">
+<a href="#purgesoftdeleteondestroy_csharp" style="color: inherit; text-decoration: inherit;">Purge<wbr>Soft<wbr>Delete<wbr>On<wbr>Destroy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="purgesoftdeleteondestroy_go">
+<a href="#purgesoftdeleteondestroy_go" style="color: inherit; text-decoration: inherit;">Purge<wbr>Soft<wbr>Delete<wbr>On<wbr>Destroy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="purgesoftdeleteondestroy_nodejs">
+<a href="#purgesoftdeleteondestroy_nodejs" style="color: inherit; text-decoration: inherit;">purge<wbr>Soft<wbr>Delete<wbr>On<wbr>Destroy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="purge_soft_delete_on_destroy_python">
+<a href="#purge_soft_delete_on_destroy_python" style="color: inherit; text-decoration: inherit;">purge_<wbr>soft_<wbr>delete_<wbr>on_<wbr>destroy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
