@@ -28,6 +28,7 @@ Manages an AlertingAction Scheduled Query Rules resource within Azure Monitor.
                              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
                              <span class="nx">action</span><span class="p">:</span> <span class="nx">Optional[ScheduledQueryRulesAlertActionArgs]</span> = None<span class="p">,</span>
                              <span class="nx">authorized_resource_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+                             <span class="nx">auto_mitigation_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                              <span class="nx">data_source_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                              <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                              <span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
@@ -243,6 +244,16 @@ The ScheduledQueryRulesAlert resource accepts the following [input]({{< relref "
     <dd>{{% md %}}List of Resource IDs referred into query.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="automitigationenabled_csharp">
+<a href="#automitigationenabled_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Mitigation<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Should the alerts in this Metric Alert be auto resolved? Defaults to `false`.
+> **NOTE** `auto_mitigation_enabled` and `throttling` are mutually exclusive and cannot both be set.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
 </span>
@@ -386,6 +397,16 @@ The ScheduledQueryRulesAlert resource accepts the following [input]({{< relref "
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of Resource IDs referred into query.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="automitigationenabled_go">
+<a href="#automitigationenabled_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Mitigation<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Should the alerts in this Metric Alert be auto resolved? Defaults to `false`.
+> **NOTE** `auto_mitigation_enabled` and `throttling` are mutually exclusive and cannot both be set.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
@@ -533,6 +554,16 @@ The ScheduledQueryRulesAlert resource accepts the following [input]({{< relref "
     <dd>{{% md %}}List of Resource IDs referred into query.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="automitigationenabled_nodejs">
+<a href="#automitigationenabled_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Mitigation<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Should the alerts in this Metric Alert be auto resolved? Defaults to `false`.
+> **NOTE** `auto_mitigation_enabled` and `throttling` are mutually exclusive and cannot both be set.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
@@ -678,6 +709,16 @@ The ScheduledQueryRulesAlert resource accepts the following [input]({{< relref "
     <dd>{{% md %}}List of Resource IDs referred into query.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="auto_mitigation_enabled_python">
+<a href="#auto_mitigation_enabled_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>mitigation_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Should the alerts in this Metric Alert be auto resolved? Defaults to `false`.
+> **NOTE** `auto_mitigation_enabled` and `throttling` are mutually exclusive and cannot both be set.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
@@ -821,6 +862,7 @@ Get an existing ScheduledQueryRulesAlert resource's state with the given name, I
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
         <span class="nx">action</span><span class="p">:</span> <span class="nx">Optional[ScheduledQueryRulesAlertActionArgs]</span> = None<span class="p">,</span>
         <span class="nx">authorized_resource_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+        <span class="nx">auto_mitigation_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">data_source_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
@@ -963,6 +1005,16 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of Resource IDs referred into query.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_automitigationenabled_csharp">
+<a href="#state_automitigationenabled_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Mitigation<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Should the alerts in this Metric Alert be auto resolved? Defaults to `false`.
+> **NOTE** `auto_mitigation_enabled` and `throttling` are mutually exclusive and cannot both be set.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datasourceid_csharp">
@@ -1110,6 +1162,16 @@ The following state arguments are supported:
     <dd>{{% md %}}List of Resource IDs referred into query.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_automitigationenabled_go">
+<a href="#state_automitigationenabled_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Mitigation<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Should the alerts in this Metric Alert be auto resolved? Defaults to `false`.
+> **NOTE** `auto_mitigation_enabled` and `throttling` are mutually exclusive and cannot both be set.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_datasourceid_go">
 <a href="#state_datasourceid_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Source<wbr>Id</a>
 </span>
@@ -1255,6 +1317,16 @@ The following state arguments are supported:
     <dd>{{% md %}}List of Resource IDs referred into query.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_automitigationenabled_nodejs">
+<a href="#state_automitigationenabled_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Mitigation<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Should the alerts in this Metric Alert be auto resolved? Defaults to `false`.
+> **NOTE** `auto_mitigation_enabled` and `throttling` are mutually exclusive and cannot both be set.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_datasourceid_nodejs">
 <a href="#state_datasourceid_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Source<wbr>Id</a>
 </span>
@@ -1398,6 +1470,16 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of Resource IDs referred into query.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_auto_mitigation_enabled_python">
+<a href="#state_auto_mitigation_enabled_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>mitigation_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Should the alerts in this Metric Alert be auto resolved? Defaults to `false`.
+> **NOTE** `auto_mitigation_enabled` and `throttling` are mutually exclusive and cannot both be set.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_data_source_id_python">

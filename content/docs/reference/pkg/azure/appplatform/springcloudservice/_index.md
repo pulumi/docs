@@ -59,7 +59,7 @@ class MyStack : Stack
             },
             Trace = new Azure.AppPlatform.Inputs.SpringCloudServiceTraceArgs
             {
-                InstrumentationKey = exampleInsights.InstrumentationKey,
+                ConnectionString = exampleInsights.ConnectionString,
                 SampleRate = 10,
             },
             Tags = 
@@ -117,8 +117,8 @@ func main() {
 				},
 			},
 			Trace: &appplatform.SpringCloudServiceTraceArgs{
-				InstrumentationKey: exampleInsights.InstrumentationKey,
-				SampleRate:         pulumi.Float64(10),
+				ConnectionString: exampleInsights.ConnectionString,
+				SampleRate:       pulumi.Float64(10),
 			},
 			Tags: pulumi.StringMap{
 				"Env": pulumi.String("staging"),
@@ -160,7 +160,7 @@ example_spring_cloud_service = azure.appplatform.SpringCloudService("exampleSpri
         ],
     ),
     trace=azure.appplatform.SpringCloudServiceTraceArgs(
-        instrumentation_key=example_insights.instrumentation_key,
+        connection_string=example_insights.connection_string,
         sample_rate=10,
     ),
     tags={
@@ -198,7 +198,7 @@ const exampleSpringCloudService = new azure.appplatform.SpringCloudService("exam
         ],
     },
     trace: {
-        instrumentationKey: exampleInsights.instrumentationKey,
+        connectionString: exampleInsights.connectionString,
         sampleRate: 10,
     },
     tags: {
@@ -2719,16 +2719,24 @@ The following state arguments are supported:
 <h4 id="springcloudservicetrace">Spring<wbr>Cloud<wbr>Service<wbr>Trace</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="connectionstring_csharp">
+<a href="#connectionstring_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>String</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The connection string used for Application Insights.
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="instrumentationkey_csharp">
 <a href="#instrumentationkey_csharp" style="color: inherit; text-decoration: inherit;">Instrumentation<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Instrumentation Key used for Application Insights.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property is due to be removed from this service&#39;s API and thus has been deprecated and will be removed in v3.0 of the provider. Please switch to using the `connection_string` property with the connection string for the Application Insights instance to use.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="samplerate_csharp">
 <a href="#samplerate_csharp" style="color: inherit; text-decoration: inherit;">Sample<wbr>Rate</a>
@@ -2741,16 +2749,24 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="connectionstring_go">
+<a href="#connectionstring_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>String</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The connection string used for Application Insights.
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="instrumentationkey_go">
 <a href="#instrumentationkey_go" style="color: inherit; text-decoration: inherit;">Instrumentation<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Instrumentation Key used for Application Insights.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property is due to be removed from this service&#39;s API and thus has been deprecated and will be removed in v3.0 of the provider. Please switch to using the `connection_string` property with the connection string for the Application Insights instance to use.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="samplerate_go">
 <a href="#samplerate_go" style="color: inherit; text-decoration: inherit;">Sample<wbr>Rate</a>
@@ -2763,16 +2779,24 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="connectionstring_nodejs">
+<a href="#connectionstring_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>String</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The connection string used for Application Insights.
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="instrumentationkey_nodejs">
 <a href="#instrumentationkey_nodejs" style="color: inherit; text-decoration: inherit;">instrumentation<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Instrumentation Key used for Application Insights.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property is due to be removed from this service&#39;s API and thus has been deprecated and will be removed in v3.0 of the provider. Please switch to using the `connection_string` property with the connection string for the Application Insights instance to use.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="samplerate_nodejs">
 <a href="#samplerate_nodejs" style="color: inherit; text-decoration: inherit;">sample<wbr>Rate</a>
@@ -2785,16 +2809,24 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="connection_string_python">
+<a href="#connection_string_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>string</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The connection string used for Application Insights.
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="instrumentation_key_python">
 <a href="#instrumentation_key_python" style="color: inherit; text-decoration: inherit;">instrumentation_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Instrumentation Key used for Application Insights.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property is due to be removed from this service&#39;s API and thus has been deprecated and will be removed in v3.0 of the provider. Please switch to using the `connection_string` property with the connection string for the Application Insights instance to use.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="sample_rate_python">
 <a href="#sample_rate_python" style="color: inherit; text-decoration: inherit;">sample_<wbr>rate</a>

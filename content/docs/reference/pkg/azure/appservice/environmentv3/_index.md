@@ -26,21 +26,218 @@ Manages a 3rd Generation (v3) App Service Environment.
 
 {{< example csharp >}}
 
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West Europe",
+        });
+        var exampleVirtualNetwork = new Azure.Network.VirtualNetwork("exampleVirtualNetwork", new Azure.Network.VirtualNetworkArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            AddressSpaces = 
+            {
+                "10.0.0.0/16",
+            },
+        });
+        var exampleSubnet = new Azure.Network.Subnet("exampleSubnet", new Azure.Network.SubnetArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            VirtualNetworkName = exampleVirtualNetwork.Name,
+            AddressPrefixes = 
+            {
+                "10.0.2.0/24",
+            },
+            Delegations = 
+            {
+                new Azure.Network.Inputs.SubnetDelegationArgs
+                {
+                    Name = "delegation",
+                    ServiceDelegation = new Azure.Network.Inputs.SubnetDelegationServiceDelegationArgs
+                    {
+                        Name = "Microsoft.Web/hostingEnvironments",
+                        Actions = 
+                        {
+                            "Microsoft.Network/virtualNetworks/subnets/action",
+                        },
+                    },
+                },
+            },
+        });
+        var exampleEnvironmentV3 = new Azure.AppService.EnvironmentV3("exampleEnvironmentV3", new Azure.AppService.EnvironmentV3Args
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            SubnetId = exampleSubnet.Id,
+            ClusterSettings = 
+            {
+                new Azure.AppService.Inputs.EnvironmentV3ClusterSettingArgs
+                {
+                    Name = "DisableTls1.0",
+                    Value = "1",
+                },
+                new Azure.AppService.Inputs.EnvironmentV3ClusterSettingArgs
+                {
+                    Name = "InternalEncryption",
+                    Value = "true",
+                },
+                new Azure.AppService.Inputs.EnvironmentV3ClusterSettingArgs
+                {
+                    Name = "FrontEndSSLCipherSuiteOrder",
+                    Value = "TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
+                },
+            },
+            Tags = 
+            {
+                { "env", "production" },
+                { "terraformed", "true" },
+            },
+        });
+    }
+
+}
+```
+
 
 {{< /example >}}
 
 
 {{< example go >}}
 
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/appservice"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/network"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West Europe"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleVirtualNetwork, err := network.NewVirtualNetwork(ctx, "exampleVirtualNetwork", &network.VirtualNetworkArgs{
+			Location:          exampleResourceGroup.Location,
+			ResourceGroupName: exampleResourceGroup.Name,
+			AddressSpaces: pulumi.StringArray{
+				pulumi.String("10.0.0.0/16"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		exampleSubnet, err := network.NewSubnet(ctx, "exampleSubnet", &network.SubnetArgs{
+			ResourceGroupName:  exampleResourceGroup.Name,
+			VirtualNetworkName: exampleVirtualNetwork.Name,
+			AddressPrefixes: pulumi.StringArray{
+				pulumi.String("10.0.2.0/24"),
+			},
+			Delegations: network.SubnetDelegationArray{
+				&network.SubnetDelegationArgs{
+					Name: pulumi.String("delegation"),
+					ServiceDelegation: &network.SubnetDelegationServiceDelegationArgs{
+						Name: pulumi.String("Microsoft.Web/hostingEnvironments"),
+						Actions: pulumi.StringArray{
+							pulumi.String("Microsoft.Network/virtualNetworks/subnets/action"),
+						},
+					},
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = appservice.NewEnvironmentV3(ctx, "exampleEnvironmentV3", &appservice.EnvironmentV3Args{
+			ResourceGroupName: exampleResourceGroup.Name,
+			SubnetId:          exampleSubnet.ID(),
+			ClusterSettings: appservice.EnvironmentV3ClusterSettingArray{
+				&appservice.EnvironmentV3ClusterSettingArgs{
+					Name:  pulumi.String("DisableTls1.0"),
+					Value: pulumi.String("1"),
+				},
+				&appservice.EnvironmentV3ClusterSettingArgs{
+					Name:  pulumi.String("InternalEncryption"),
+					Value: pulumi.String("true"),
+				},
+				&appservice.EnvironmentV3ClusterSettingArgs{
+					Name:  pulumi.String("FrontEndSSLCipherSuiteOrder"),
+					Value: pulumi.String("TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256"),
+				},
+			},
+			Tags: pulumi.StringMap{
+				"env":         pulumi.String("production"),
+				"terraformed": pulumi.String("true"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 
 {{< /example >}}
 
 
 {{< example python >}}
 
-Coming soon!
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_virtual_network = azure.network.VirtualNetwork("exampleVirtualNetwork",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    address_spaces=["10.0.0.0/16"])
+example_subnet = azure.network.Subnet("exampleSubnet",
+    resource_group_name=example_resource_group.name,
+    virtual_network_name=example_virtual_network.name,
+    address_prefixes=["10.0.2.0/24"],
+    delegations=[azure.network.SubnetDelegationArgs(
+        name="delegation",
+        service_delegation=azure.network.SubnetDelegationServiceDelegationArgs(
+            name="Microsoft.Web/hostingEnvironments",
+            actions=["Microsoft.Network/virtualNetworks/subnets/action"],
+        ),
+    )])
+example_environment_v3 = azure.appservice.EnvironmentV3("exampleEnvironmentV3",
+    resource_group_name=example_resource_group.name,
+    subnet_id=example_subnet.id,
+    cluster_settings=[
+        azure.appservice.EnvironmentV3ClusterSettingArgs(
+            name="DisableTls1.0",
+            value="1",
+        ),
+        azure.appservice.EnvironmentV3ClusterSettingArgs(
+            name="InternalEncryption",
+            value="true",
+        ),
+        azure.appservice.EnvironmentV3ClusterSettingArgs(
+            name="FrontEndSSLCipherSuiteOrder",
+            value="TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
+        ),
+    ],
+    tags={
+        "env": "production",
+        "terraformed": "true",
+    })
+```
+
 
 {{< /example >}}
 
@@ -62,9 +259,12 @@ const exampleSubnet = new azure.network.Subnet("exampleSubnet", {
     resourceGroupName: exampleResourceGroup.name,
     virtualNetworkName: exampleVirtualNetwork.name,
     addressPrefixes: ["10.0.2.0/24"],
-    serviceDelegation: [{
-        name: "Microsoft.Web/hostingEnvironments",
-        actions: ["Microsoft.Network/virtualNetworks/subnets/action"],
+    delegations: [{
+        name: "delegation",
+        serviceDelegation: {
+            name: "Microsoft.Web/hostingEnvironments",
+            actions: ["Microsoft.Network/virtualNetworks/subnets/action"],
+        },
     }],
 });
 const exampleEnvironmentV3 = new azure.appservice.EnvironmentV3("exampleEnvironmentV3", {

@@ -22,6 +22,7 @@ Explore the resources and functions of the azure.policy module.
 <ul class="api">
     <li><a href="getpolicydefintion" title="GetPolicyDefintion"><span class="symbol function"></span>GetPolicyDefintion</a></li>
     <li><a href="getpolicysetdefinition" title="GetPolicySetDefinition"><span class="symbol function"></span>GetPolicySetDefinition</a></li>
+    <li><a href="getvirtualmachineconfigurationassignment" title="GetVirtualMachineConfigurationAssignment"><span class="symbol function"></span>GetVirtualMachineConfigurationAssignment</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -33,6 +34,6 @@ Explore the resources and functions of the azure.policy module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/hashicorp/terraform-provider-azurerm).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.18.0</dd>
+	<dd>4.19.0</dd>
 </dl>
 

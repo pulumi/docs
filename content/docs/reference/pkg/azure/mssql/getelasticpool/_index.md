@@ -348,7 +348,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Specifies the SKU Name for this Elasticpool.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="perdbmaxcapacity_csharp">
 <a href="#perdbmaxcapacity_csharp" style="color: inherit; text-decoration: inherit;">Per<wbr>Db<wbr>Max<wbr>Capacity</a>
@@ -383,6 +384,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="skus_csharp">
+<a href="#skus_csharp" style="color: inherit; text-decoration: inherit;">Skus</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getelasticpoolskus">List&lt;Get<wbr>Elastic<wbr>Pool<wbr>Skus&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A `sku` block as defined below.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -457,7 +467,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Specifies the SKU Name for this Elasticpool.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="perdbmaxcapacity_go">
 <a href="#perdbmaxcapacity_go" style="color: inherit; text-decoration: inherit;">Per<wbr>Db<wbr>Max<wbr>Capacity</a>
@@ -492,6 +503,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="skus_go">
+<a href="#skus_go" style="color: inherit; text-decoration: inherit;">Skus</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getelasticpoolskus">[]Get<wbr>Elastic<wbr>Pool<wbr>Skus</a></span>
+    </dt>
+    <dd>{{% md %}}A `sku` block as defined below.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -566,7 +586,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Specifies the SKU Name for this Elasticpool.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="perdbmaxcapacity_nodejs">
 <a href="#perdbmaxcapacity_nodejs" style="color: inherit; text-decoration: inherit;">per<wbr>Db<wbr>Max<wbr>Capacity</a>
@@ -601,6 +622,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="skus_nodejs">
+<a href="#skus_nodejs" style="color: inherit; text-decoration: inherit;">skus</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getelasticpoolskus">Get<wbr>Elastic<wbr>Pool<wbr>Skus[]</a></span>
+    </dt>
+    <dd>{{% md %}}A `sku` block as defined below.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -675,7 +705,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Specifies the SKU Name for this Elasticpool.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="per_db_max_capacity_python">
 <a href="#per_db_max_capacity_python" style="color: inherit; text-decoration: inherit;">per_<wbr>db_<wbr>max_<wbr>capacity</a>
@@ -711,6 +742,15 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="skus_python">
+<a href="#skus_python" style="color: inherit; text-decoration: inherit;">skus</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getelasticpoolskus">Sequence[Get<wbr>Elastic<wbr>Pool<wbr>Skus]</a></span>
+    </dt>
+    <dd>{{% md %}}A `sku` block as defined below.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
@@ -727,6 +767,176 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not this elastic pool is zone redundant.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+
+
+
+## Supporting Types
+
+
+<h4 id="getelasticpoolskus">Get<wbr>Elastic<wbr>Pool<wbr>Skus</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="capacity_csharp">
+<a href="#capacity_csharp" style="color: inherit; text-decoration: inherit;">Capacity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The scale up/out capacity, representing server's compute units.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="family_csharp">
+<a href="#family_csharp" style="color: inherit; text-decoration: inherit;">Family</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The `family` of hardware.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the elastic pool.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="tier_csharp">
+<a href="#tier_csharp" style="color: inherit; text-decoration: inherit;">Tier</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The tier of the particular SKU.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="capacity_go">
+<a href="#capacity_go" style="color: inherit; text-decoration: inherit;">Capacity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The scale up/out capacity, representing server's compute units.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="family_go">
+<a href="#family_go" style="color: inherit; text-decoration: inherit;">Family</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The `family` of hardware.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the elastic pool.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="tier_go">
+<a href="#tier_go" style="color: inherit; text-decoration: inherit;">Tier</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The tier of the particular SKU.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="capacity_nodejs">
+<a href="#capacity_nodejs" style="color: inherit; text-decoration: inherit;">capacity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The scale up/out capacity, representing server's compute units.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="family_nodejs">
+<a href="#family_nodejs" style="color: inherit; text-decoration: inherit;">family</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The `family` of hardware.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the elastic pool.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="tier_nodejs">
+<a href="#tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The tier of the particular SKU.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="capacity_python">
+<a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The scale up/out capacity, representing server's compute units.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="family_python">
+<a href="#family_python" style="color: inherit; text-decoration: inherit;">family</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The `family` of hardware.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the elastic pool.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="tier_python">
+<a href="#tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The tier of the particular SKU.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

@@ -189,6 +189,7 @@ const testTriggerSchedule = new azure.datafactory.TriggerSchedule("testTriggerSc
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">TriggerSchedule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                     <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                    <span class="nx">activated</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                     <span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
                     <span class="nx">data_factory_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                     <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -357,6 +358,15 @@ The TriggerSchedule resource accepts the following [input]({{< relref "/docs/int
     <dd>{{% md %}}The name of the resource group in which to create the Data Factory Schedule Trigger. Changing this forces a new resource
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="activated_csharp">
+<a href="#activated_csharp" style="color: inherit; text-decoration: inherit;">Activated</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies if the Data Factory Schedule Trigger is activated. Defaults to `true`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="annotations_csharp">
 <a href="#annotations_csharp" style="color: inherit; text-decoration: inherit;">Annotations</a>
 </span>
@@ -467,6 +477,15 @@ The TriggerSchedule resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the Data Factory Schedule Trigger. Changing this forces a new resource
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="activated_go">
+<a href="#activated_go" style="color: inherit; text-decoration: inherit;">Activated</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies if the Data Factory Schedule Trigger is activated. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="annotations_go">
@@ -581,6 +600,15 @@ The TriggerSchedule resource accepts the following [input]({{< relref "/docs/int
     <dd>{{% md %}}The name of the resource group in which to create the Data Factory Schedule Trigger. Changing this forces a new resource
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="activated_nodejs">
+<a href="#activated_nodejs" style="color: inherit; text-decoration: inherit;">activated</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Specifies if the Data Factory Schedule Trigger is activated. Defaults to `true`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="annotations_nodejs">
 <a href="#annotations_nodejs" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span>
@@ -691,6 +719,15 @@ The TriggerSchedule resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the Data Factory Schedule Trigger. Changing this forces a new resource
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="activated_python">
+<a href="#activated_python" style="color: inherit; text-decoration: inherit;">activated</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies if the Data Factory Schedule Trigger is activated. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="annotations_python">
@@ -846,6 +883,7 @@ Get an existing TriggerSchedule resource's state with the given name, ID, and op
 <span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">activated</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
         <span class="nx">data_factory_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -970,6 +1008,15 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="state_activated_csharp">
+<a href="#state_activated_csharp" style="color: inherit; text-decoration: inherit;">Activated</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies if the Data Factory Schedule Trigger is activated. Defaults to `true`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_annotations_csharp">
 <a href="#state_annotations_csharp" style="color: inherit; text-decoration: inherit;">Annotations</a>
 </span>
@@ -1081,6 +1128,15 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="state_activated_go">
+<a href="#state_activated_go" style="color: inherit; text-decoration: inherit;">Activated</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies if the Data Factory Schedule Trigger is activated. Defaults to `true`.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_annotations_go">
 <a href="#state_annotations_go" style="color: inherit; text-decoration: inherit;">Annotations</a>
@@ -1194,6 +1250,15 @@ The following state arguments are supported:
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="state_activated_nodejs">
+<a href="#state_activated_nodejs" style="color: inherit; text-decoration: inherit;">activated</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Specifies if the Data Factory Schedule Trigger is activated. Defaults to `true`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_annotations_nodejs">
 <a href="#state_annotations_nodejs" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span>
@@ -1305,6 +1370,15 @@ The following state arguments are supported:
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="state_activated_python">
+<a href="#state_activated_python" style="color: inherit; text-decoration: inherit;">activated</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies if the Data Factory Schedule Trigger is activated. Defaults to `true`.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_annotations_python">
 <a href="#state_annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>

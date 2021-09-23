@@ -139,6 +139,8 @@ const exampleWorkflow = new azure.logicapps.Workflow("exampleWorkflow", {
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Workflow</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+             <span class="nx">access_control</span><span class="p">:</span> <span class="nx">Optional[WorkflowAccessControlArgs]</span> = None<span class="p">,</span>
+             <span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
              <span class="nx">integration_service_environment_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">logic_app_integration_account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -287,6 +289,23 @@ The Workflow resource accepts the following [input]({{< relref "/docs/intro/conc
     <dd>{{% md %}}The name of the Resource Group in which the Logic App Workflow should be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="accesscontrol_csharp">
+<a href="#accesscontrol_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Control</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#workflowaccesscontrol">Workflow<wbr>Access<wbr>Control<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `access_control` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enabled_csharp">
+<a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="integrationserviceenvironmentid_csharp">
 <a href="#integrationserviceenvironmentid_csharp" style="color: inherit; text-decoration: inherit;">Integration<wbr>Service<wbr>Environment<wbr>Id</a>
 </span>
@@ -380,6 +399,23 @@ The Workflow resource accepts the following [input]({{< relref "/docs/intro/conc
     </dt>
     <dd>{{% md %}}The name of the Resource Group in which the Logic App Workflow should be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="accesscontrol_go">
+<a href="#accesscontrol_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Control</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#workflowaccesscontrol">Workflow<wbr>Access<wbr>Control<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `access_control` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enabled_go">
+<a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="integrationserviceenvironmentid_go">
 <a href="#integrationserviceenvironmentid_go" style="color: inherit; text-decoration: inherit;">Integration<wbr>Service<wbr>Environment<wbr>Id</a>
@@ -475,6 +511,23 @@ The Workflow resource accepts the following [input]({{< relref "/docs/intro/conc
     <dd>{{% md %}}The name of the Resource Group in which the Logic App Workflow should be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="accesscontrol_nodejs">
+<a href="#accesscontrol_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Control</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#workflowaccesscontrol">Workflow<wbr>Access<wbr>Control<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `access_control` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enabled_nodejs">
+<a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="integrationserviceenvironmentid_nodejs">
 <a href="#integrationserviceenvironmentid_nodejs" style="color: inherit; text-decoration: inherit;">integration<wbr>Service<wbr>Environment<wbr>Id</a>
 </span>
@@ -568,6 +621,23 @@ The Workflow resource accepts the following [input]({{< relref "/docs/intro/conc
     </dt>
     <dd>{{% md %}}The name of the Resource Group in which the Logic App Workflow should be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="access_control_python">
+<a href="#access_control_python" style="color: inherit; text-decoration: inherit;">access_<wbr>control</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#workflowaccesscontrol">Workflow<wbr>Access<wbr>Control<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `access_control` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enabled_python">
+<a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="integration_service_environment_id_python">
 <a href="#integration_service_environment_id_python" style="color: inherit; text-decoration: inherit;">integration_<wbr>service_<wbr>environment_<wbr>id</a>
@@ -902,9 +972,11 @@ Get an existing Workflow resource's state with the given name, ID, and optional 
 <span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">access_control</span><span class="p">:</span> <span class="nx">Optional[WorkflowAccessControlArgs]</span> = None<span class="p">,</span>
         <span class="nx">access_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">connector_endpoint_ip_addresses</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
         <span class="nx">connector_outbound_ip_addresses</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+        <span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">integration_service_environment_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">logic_app_integration_account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -1029,6 +1101,15 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="state_accesscontrol_csharp">
+<a href="#state_accesscontrol_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Control</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#workflowaccesscontrol">Workflow<wbr>Access<wbr>Control<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `access_control` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_accessendpoint_csharp">
 <a href="#state_accessendpoint_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Endpoint</a>
 </span>
@@ -1055,6 +1136,14 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The list of outgoing ip addresses of connector.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_enabled_csharp">
+<a href="#state_enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_integrationserviceenvironmentid_csharp">
 <a href="#state_integrationserviceenvironmentid_csharp" style="color: inherit; text-decoration: inherit;">Integration<wbr>Service<wbr>Environment<wbr>Id</a>
@@ -1168,6 +1257,15 @@ The following state arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="state_accesscontrol_go">
+<a href="#state_accesscontrol_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Control</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#workflowaccesscontrol">Workflow<wbr>Access<wbr>Control<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `access_control` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_accessendpoint_go">
 <a href="#state_accessendpoint_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Endpoint</a>
 </span>
@@ -1194,6 +1292,14 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The list of outgoing ip addresses of connector.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_enabled_go">
+<a href="#state_enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_integrationserviceenvironmentid_go">
 <a href="#state_integrationserviceenvironmentid_go" style="color: inherit; text-decoration: inherit;">Integration<wbr>Service<wbr>Environment<wbr>Id</a>
@@ -1307,6 +1413,15 @@ The following state arguments are supported:
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="state_accesscontrol_nodejs">
+<a href="#state_accesscontrol_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Control</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#workflowaccesscontrol">Workflow<wbr>Access<wbr>Control<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `access_control` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_accessendpoint_nodejs">
 <a href="#state_accessendpoint_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Endpoint</a>
 </span>
@@ -1333,6 +1448,14 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The list of outgoing ip addresses of connector.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_enabled_nodejs">
+<a href="#state_enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_integrationserviceenvironmentid_nodejs">
 <a href="#state_integrationserviceenvironmentid_nodejs" style="color: inherit; text-decoration: inherit;">integration<wbr>Service<wbr>Environment<wbr>Id</a>
@@ -1446,6 +1569,15 @@ The following state arguments are supported:
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="state_access_control_python">
+<a href="#state_access_control_python" style="color: inherit; text-decoration: inherit;">access_<wbr>control</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#workflowaccesscontrol">Workflow<wbr>Access<wbr>Control<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `access_control` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_access_endpoint_python">
 <a href="#state_access_endpoint_python" style="color: inherit; text-decoration: inherit;">access_<wbr>endpoint</a>
 </span>
@@ -1472,6 +1604,14 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The list of outgoing ip addresses of connector.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_enabled_python">
+<a href="#state_enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_integration_service_environment_id_python">
 <a href="#state_integration_service_environment_id_python" style="color: inherit; text-decoration: inherit;">integration_<wbr>service_<wbr>environment_<wbr>id</a>
@@ -1586,6 +1726,388 @@ The following state arguments are supported:
 
 
 
+
+## Supporting Types
+
+
+
+<h4 id="workflowaccesscontrol">Workflow<wbr>Access<wbr>Control</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="action_csharp">
+<a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#workflowaccesscontrolaction">Workflow<wbr>Access<wbr>Control<wbr>Action</a></span>
+    </dt>
+    <dd>{{% md %}}A `action` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="content_csharp">
+<a href="#content_csharp" style="color: inherit; text-decoration: inherit;">Content</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#workflowaccesscontrolcontent">Workflow<wbr>Access<wbr>Control<wbr>Content</a></span>
+    </dt>
+    <dd>{{% md %}}A `content` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="trigger_csharp">
+<a href="#trigger_csharp" style="color: inherit; text-decoration: inherit;">Trigger</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#workflowaccesscontroltrigger">Workflow<wbr>Access<wbr>Control<wbr>Trigger</a></span>
+    </dt>
+    <dd>{{% md %}}A `trigger` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="workflowmanagement_csharp">
+<a href="#workflowmanagement_csharp" style="color: inherit; text-decoration: inherit;">Workflow<wbr>Management</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#workflowaccesscontrolworkflowmanagement">Workflow<wbr>Access<wbr>Control<wbr>Workflow<wbr>Management</a></span>
+    </dt>
+    <dd>{{% md %}}A `workflow_management` block as defined below.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="action_go">
+<a href="#action_go" style="color: inherit; text-decoration: inherit;">Action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#workflowaccesscontrolaction">Workflow<wbr>Access<wbr>Control<wbr>Action</a></span>
+    </dt>
+    <dd>{{% md %}}A `action` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="content_go">
+<a href="#content_go" style="color: inherit; text-decoration: inherit;">Content</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#workflowaccesscontrolcontent">Workflow<wbr>Access<wbr>Control<wbr>Content</a></span>
+    </dt>
+    <dd>{{% md %}}A `content` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="trigger_go">
+<a href="#trigger_go" style="color: inherit; text-decoration: inherit;">Trigger</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#workflowaccesscontroltrigger">Workflow<wbr>Access<wbr>Control<wbr>Trigger</a></span>
+    </dt>
+    <dd>{{% md %}}A `trigger` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="workflowmanagement_go">
+<a href="#workflowmanagement_go" style="color: inherit; text-decoration: inherit;">Workflow<wbr>Management</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#workflowaccesscontrolworkflowmanagement">Workflow<wbr>Access<wbr>Control<wbr>Workflow<wbr>Management</a></span>
+    </dt>
+    <dd>{{% md %}}A `workflow_management` block as defined below.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="action_nodejs">
+<a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#workflowaccesscontrolaction">Workflow<wbr>Access<wbr>Control<wbr>Action</a></span>
+    </dt>
+    <dd>{{% md %}}A `action` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="content_nodejs">
+<a href="#content_nodejs" style="color: inherit; text-decoration: inherit;">content</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#workflowaccesscontrolcontent">Workflow<wbr>Access<wbr>Control<wbr>Content</a></span>
+    </dt>
+    <dd>{{% md %}}A `content` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="trigger_nodejs">
+<a href="#trigger_nodejs" style="color: inherit; text-decoration: inherit;">trigger</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#workflowaccesscontroltrigger">Workflow<wbr>Access<wbr>Control<wbr>Trigger</a></span>
+    </dt>
+    <dd>{{% md %}}A `trigger` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="workflowmanagement_nodejs">
+<a href="#workflowmanagement_nodejs" style="color: inherit; text-decoration: inherit;">workflow<wbr>Management</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#workflowaccesscontrolworkflowmanagement">Workflow<wbr>Access<wbr>Control<wbr>Workflow<wbr>Management</a></span>
+    </dt>
+    <dd>{{% md %}}A `workflow_management` block as defined below.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="action_python">
+<a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#workflowaccesscontrolaction">Workflow<wbr>Access<wbr>Control<wbr>Action</a></span>
+    </dt>
+    <dd>{{% md %}}A `action` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="content_python">
+<a href="#content_python" style="color: inherit; text-decoration: inherit;">content</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#workflowaccesscontrolcontent">Workflow<wbr>Access<wbr>Control<wbr>Content</a></span>
+    </dt>
+    <dd>{{% md %}}A `content` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="trigger_python">
+<a href="#trigger_python" style="color: inherit; text-decoration: inherit;">trigger</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#workflowaccesscontroltrigger">Workflow<wbr>Access<wbr>Control<wbr>Trigger</a></span>
+    </dt>
+    <dd>{{% md %}}A `trigger` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="workflow_management_python">
+<a href="#workflow_management_python" style="color: inherit; text-decoration: inherit;">workflow_<wbr>management</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#workflowaccesscontrolworkflowmanagement">Workflow<wbr>Access<wbr>Control<wbr>Workflow<wbr>Management</a></span>
+    </dt>
+    <dd>{{% md %}}A `workflow_management` block as defined below.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="workflowaccesscontrolaction">Workflow<wbr>Access<wbr>Control<wbr>Action</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="allowedcalleripaddressranges_csharp">
+<a href="#allowedcalleripaddressranges_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Caller<wbr>Ip<wbr>Address<wbr>Ranges</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of the allowed caller IP address ranges.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="allowedcalleripaddressranges_go">
+<a href="#allowedcalleripaddressranges_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Caller<wbr>Ip<wbr>Address<wbr>Ranges</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of the allowed caller IP address ranges.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="allowedcalleripaddressranges_nodejs">
+<a href="#allowedcalleripaddressranges_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Caller<wbr>Ip<wbr>Address<wbr>Ranges</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of the allowed caller IP address ranges.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="allowed_caller_ip_address_ranges_python">
+<a href="#allowed_caller_ip_address_ranges_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>caller_<wbr>ip_<wbr>address_<wbr>ranges</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of the allowed caller IP address ranges.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="workflowaccesscontrolcontent">Workflow<wbr>Access<wbr>Control<wbr>Content</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="allowedcalleripaddressranges_csharp">
+<a href="#allowedcalleripaddressranges_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Caller<wbr>Ip<wbr>Address<wbr>Ranges</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of the allowed caller IP address ranges.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="allowedcalleripaddressranges_go">
+<a href="#allowedcalleripaddressranges_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Caller<wbr>Ip<wbr>Address<wbr>Ranges</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of the allowed caller IP address ranges.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="allowedcalleripaddressranges_nodejs">
+<a href="#allowedcalleripaddressranges_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Caller<wbr>Ip<wbr>Address<wbr>Ranges</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of the allowed caller IP address ranges.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="allowed_caller_ip_address_ranges_python">
+<a href="#allowed_caller_ip_address_ranges_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>caller_<wbr>ip_<wbr>address_<wbr>ranges</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of the allowed caller IP address ranges.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="workflowaccesscontroltrigger">Workflow<wbr>Access<wbr>Control<wbr>Trigger</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="allowedcalleripaddressranges_csharp">
+<a href="#allowedcalleripaddressranges_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Caller<wbr>Ip<wbr>Address<wbr>Ranges</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of the allowed caller IP address ranges.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="allowedcalleripaddressranges_go">
+<a href="#allowedcalleripaddressranges_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Caller<wbr>Ip<wbr>Address<wbr>Ranges</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of the allowed caller IP address ranges.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="allowedcalleripaddressranges_nodejs">
+<a href="#allowedcalleripaddressranges_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Caller<wbr>Ip<wbr>Address<wbr>Ranges</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of the allowed caller IP address ranges.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="allowed_caller_ip_address_ranges_python">
+<a href="#allowed_caller_ip_address_ranges_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>caller_<wbr>ip_<wbr>address_<wbr>ranges</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of the allowed caller IP address ranges.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="workflowaccesscontrolworkflowmanagement">Workflow<wbr>Access<wbr>Control<wbr>Workflow<wbr>Management</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="allowedcalleripaddressranges_csharp">
+<a href="#allowedcalleripaddressranges_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Caller<wbr>Ip<wbr>Address<wbr>Ranges</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of the allowed caller IP address ranges.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="allowedcalleripaddressranges_go">
+<a href="#allowedcalleripaddressranges_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Caller<wbr>Ip<wbr>Address<wbr>Ranges</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of the allowed caller IP address ranges.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="allowedcalleripaddressranges_nodejs">
+<a href="#allowedcalleripaddressranges_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Caller<wbr>Ip<wbr>Address<wbr>Ranges</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of the allowed caller IP address ranges.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="allowed_caller_ip_address_ranges_python">
+<a href="#allowed_caller_ip_address_ranges_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>caller_<wbr>ip_<wbr>address_<wbr>ranges</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of the allowed caller IP address ranges.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
 ## Import
 
 

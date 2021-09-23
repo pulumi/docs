@@ -400,6 +400,8 @@ const test = new azure.machinelearning.ComputeCluster("test", {
                    <span class="nx">machine_learning_workspace_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                    <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                    <span class="nx">scale_settings</span><span class="p">:</span> <span class="nx">Optional[ComputeClusterScaleSettingsArgs]</span> = None<span class="p">,</span>
+                   <span class="nx">ssh</span><span class="p">:</span> <span class="nx">Optional[ComputeClusterSshArgs]</span> = None<span class="p">,</span>
+                   <span class="nx">ssh_public_access_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                    <span class="nx">subnet_resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                    <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
                    <span class="nx">vm_priority</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -533,15 +535,6 @@ The ComputeCluster resource accepts the following [input]({{< relref "/docs/intr
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="identity_csharp">
-<a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#computeclusteridentity">Compute<wbr>Cluster<wbr>Identity<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}A `identity` block as defined below. Changing this forces a new Machine Learning Compute Cluster to be created.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="machinelearningworkspaceid_csharp">
 <a href="#machinelearningworkspaceid_csharp" style="color: inherit; text-decoration: inherit;">Machine<wbr>Learning<wbr>Workspace<wbr>Id</a>
 </span>
@@ -587,6 +580,15 @@ The ComputeCluster resource accepts the following [input]({{< relref "/docs/intr
     <dd>{{% md %}}The description of the Machine Learning compute. Changing this forces a new Machine Learning Compute Cluster to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="identity_csharp">
+<a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#computeclusteridentity">Compute<wbr>Cluster<wbr>Identity<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `identity` block as defined below. Changing this forces a new Machine Learning Compute Cluster to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
 </span>
@@ -603,6 +605,24 @@ The ComputeCluster resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Machine Learning Compute Cluster. Changing this forces a new Machine Learning Compute Cluster to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ssh_csharp">
+<a href="#ssh_csharp" style="color: inherit; text-decoration: inherit;">Ssh</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#computeclusterssh">Compute<wbr>Cluster<wbr>Ssh<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Credentials for an administrator user account that will be created on each compute node. A `ssh` block as defined below. Changing this forces a new Machine Learning Compute Cluster to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sshpublicaccessenabled_csharp">
+<a href="#sshpublicaccessenabled_csharp" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Public<wbr>Access<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}A boolean value indicating whether enable the public SSH port. Changing this forces a new Machine Learning Compute Cluster to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnetresourceid_csharp">
@@ -626,15 +646,6 @@ The ComputeCluster resource accepts the following [input]({{< relref "/docs/intr
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="identity_go">
-<a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#computeclusteridentity">Compute<wbr>Cluster<wbr>Identity<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}A `identity` block as defined below. Changing this forces a new Machine Learning Compute Cluster to be created.
-{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="machinelearningworkspaceid_go">
 <a href="#machinelearningworkspaceid_go" style="color: inherit; text-decoration: inherit;">Machine<wbr>Learning<wbr>Workspace<wbr>Id</a>
@@ -681,6 +692,15 @@ The ComputeCluster resource accepts the following [input]({{< relref "/docs/intr
     <dd>{{% md %}}The description of the Machine Learning compute. Changing this forces a new Machine Learning Compute Cluster to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="identity_go">
+<a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#computeclusteridentity">Compute<wbr>Cluster<wbr>Identity<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `identity` block as defined below. Changing this forces a new Machine Learning Compute Cluster to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
 </span>
@@ -697,6 +717,24 @@ The ComputeCluster resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Machine Learning Compute Cluster. Changing this forces a new Machine Learning Compute Cluster to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ssh_go">
+<a href="#ssh_go" style="color: inherit; text-decoration: inherit;">Ssh</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#computeclusterssh">Compute<wbr>Cluster<wbr>Ssh<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Credentials for an administrator user account that will be created on each compute node. A `ssh` block as defined below. Changing this forces a new Machine Learning Compute Cluster to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sshpublicaccessenabled_go">
+<a href="#sshpublicaccessenabled_go" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Public<wbr>Access<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}A boolean value indicating whether enable the public SSH port. Changing this forces a new Machine Learning Compute Cluster to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnetresourceid_go">
@@ -720,15 +758,6 @@ The ComputeCluster resource accepts the following [input]({{< relref "/docs/intr
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="identity_nodejs">
-<a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#computeclusteridentity">Compute<wbr>Cluster<wbr>Identity<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}A `identity` block as defined below. Changing this forces a new Machine Learning Compute Cluster to be created.
-{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="machinelearningworkspaceid_nodejs">
 <a href="#machinelearningworkspaceid_nodejs" style="color: inherit; text-decoration: inherit;">machine<wbr>Learning<wbr>Workspace<wbr>Id</a>
@@ -775,6 +804,15 @@ The ComputeCluster resource accepts the following [input]({{< relref "/docs/intr
     <dd>{{% md %}}The description of the Machine Learning compute. Changing this forces a new Machine Learning Compute Cluster to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="identity_nodejs">
+<a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#computeclusteridentity">Compute<wbr>Cluster<wbr>Identity<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `identity` block as defined below. Changing this forces a new Machine Learning Compute Cluster to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
@@ -791,6 +829,24 @@ The ComputeCluster resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Machine Learning Compute Cluster. Changing this forces a new Machine Learning Compute Cluster to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ssh_nodejs">
+<a href="#ssh_nodejs" style="color: inherit; text-decoration: inherit;">ssh</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#computeclusterssh">Compute<wbr>Cluster<wbr>Ssh<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Credentials for an administrator user account that will be created on each compute node. A `ssh` block as defined below. Changing this forces a new Machine Learning Compute Cluster to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sshpublicaccessenabled_nodejs">
+<a href="#sshpublicaccessenabled_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>Public<wbr>Access<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}A boolean value indicating whether enable the public SSH port. Changing this forces a new Machine Learning Compute Cluster to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnetresourceid_nodejs">
@@ -814,15 +870,6 @@ The ComputeCluster resource accepts the following [input]({{< relref "/docs/intr
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="identity_python">
-<a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#computeclusteridentity">Compute<wbr>Cluster<wbr>Identity<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}A `identity` block as defined below. Changing this forces a new Machine Learning Compute Cluster to be created.
-{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="machine_learning_workspace_id_python">
 <a href="#machine_learning_workspace_id_python" style="color: inherit; text-decoration: inherit;">machine_<wbr>learning_<wbr>workspace_<wbr>id</a>
@@ -869,6 +916,15 @@ The ComputeCluster resource accepts the following [input]({{< relref "/docs/intr
     <dd>{{% md %}}The description of the Machine Learning compute. Changing this forces a new Machine Learning Compute Cluster to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="identity_python">
+<a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#computeclusteridentity">Compute<wbr>Cluster<wbr>Identity<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `identity` block as defined below. Changing this forces a new Machine Learning Compute Cluster to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
@@ -885,6 +941,24 @@ The ComputeCluster resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Machine Learning Compute Cluster. Changing this forces a new Machine Learning Compute Cluster to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ssh_python">
+<a href="#ssh_python" style="color: inherit; text-decoration: inherit;">ssh</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#computeclusterssh">Compute<wbr>Cluster<wbr>Ssh<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Credentials for an administrator user account that will be created on each compute node. A `ssh` block as defined below. Changing this forces a new Machine Learning Compute Cluster to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ssh_public_access_enabled_python">
+<a href="#ssh_public_access_enabled_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>public_<wbr>access_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}A boolean value indicating whether enable the public SSH port. Changing this forces a new Machine Learning Compute Cluster to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnet_resource_id_python">
@@ -983,6 +1057,8 @@ Get an existing ComputeCluster resource's state with the given name, ID, and opt
         <span class="nx">machine_learning_workspace_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">scale_settings</span><span class="p">:</span> <span class="nx">Optional[ComputeClusterScaleSettingsArgs]</span> = None<span class="p">,</span>
+        <span class="nx">ssh</span><span class="p">:</span> <span class="nx">Optional[ComputeClusterSshArgs]</span> = None<span class="p">,</span>
+        <span class="nx">ssh_public_access_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">subnet_resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
         <span class="nx">vm_priority</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -1153,6 +1229,24 @@ The following state arguments are supported:
     <dd>{{% md %}}A `scale_settings` block as defined below. Changing this forces a new Machine Learning Compute Cluster to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_ssh_csharp">
+<a href="#state_ssh_csharp" style="color: inherit; text-decoration: inherit;">Ssh</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#computeclusterssh">Compute<wbr>Cluster<wbr>Ssh<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Credentials for an administrator user account that will be created on each compute node. A `ssh` block as defined below. Changing this forces a new Machine Learning Compute Cluster to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_sshpublicaccessenabled_csharp">
+<a href="#state_sshpublicaccessenabled_csharp" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Public<wbr>Access<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}A boolean value indicating whether enable the public SSH port. Changing this forces a new Machine Learning Compute Cluster to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_subnetresourceid_csharp">
 <a href="#state_subnetresourceid_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Resource<wbr>Id</a>
 </span>
@@ -1245,6 +1339,24 @@ The following state arguments are supported:
         <span class="property-type"><a href="#computeclusterscalesettings">Compute<wbr>Cluster<wbr>Scale<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `scale_settings` block as defined below. Changing this forces a new Machine Learning Compute Cluster to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_ssh_go">
+<a href="#state_ssh_go" style="color: inherit; text-decoration: inherit;">Ssh</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#computeclusterssh">Compute<wbr>Cluster<wbr>Ssh<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Credentials for an administrator user account that will be created on each compute node. A `ssh` block as defined below. Changing this forces a new Machine Learning Compute Cluster to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_sshpublicaccessenabled_go">
+<a href="#state_sshpublicaccessenabled_go" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Public<wbr>Access<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}A boolean value indicating whether enable the public SSH port. Changing this forces a new Machine Learning Compute Cluster to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subnetresourceid_go">
@@ -1341,6 +1453,24 @@ The following state arguments are supported:
     <dd>{{% md %}}A `scale_settings` block as defined below. Changing this forces a new Machine Learning Compute Cluster to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_ssh_nodejs">
+<a href="#state_ssh_nodejs" style="color: inherit; text-decoration: inherit;">ssh</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#computeclusterssh">Compute<wbr>Cluster<wbr>Ssh<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Credentials for an administrator user account that will be created on each compute node. A `ssh` block as defined below. Changing this forces a new Machine Learning Compute Cluster to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_sshpublicaccessenabled_nodejs">
+<a href="#state_sshpublicaccessenabled_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>Public<wbr>Access<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}A boolean value indicating whether enable the public SSH port. Changing this forces a new Machine Learning Compute Cluster to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_subnetresourceid_nodejs">
 <a href="#state_subnetresourceid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Resource<wbr>Id</a>
 </span>
@@ -1435,6 +1565,24 @@ The following state arguments are supported:
     <dd>{{% md %}}A `scale_settings` block as defined below. Changing this forces a new Machine Learning Compute Cluster to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_ssh_python">
+<a href="#state_ssh_python" style="color: inherit; text-decoration: inherit;">ssh</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#computeclusterssh">Compute<wbr>Cluster<wbr>Ssh<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Credentials for an administrator user account that will be created on each compute node. A `ssh` block as defined below. Changing this forces a new Machine Learning Compute Cluster to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_ssh_public_access_enabled_python">
+<a href="#state_ssh_public_access_enabled_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>public_<wbr>access_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}A boolean value indicating whether enable the public SSH port. Changing this forces a new Machine Learning Compute Cluster to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_subnet_resource_id_python">
 <a href="#state_subnet_resource_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>resource_<wbr>id</a>
 </span>
@@ -1492,7 +1640,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Type of Identity which should be used for this Disk Encryption Set. At this time the only possible value is SystemAssigned. Changing this forces a new Machine Learning Compute Cluster to be created.
+    <dd>{{% md %}}The Type of Identity which should be used for this Machine Learning Compute Cluster. Possible values are `SystemAssigned`, `UserAssigned` and `SystemAssigned,UserAssigned`. Changing this forces a new Machine Learning Compute Cluster to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="identityids_csharp">
+<a href="#identityids_csharp" style="color: inherit; text-decoration: inherit;">Identity<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of User Managed Identity ID's which should be assigned to the Machine Learning Compute Cluster. Changing this forces a new Machine Learning Compute Cluster to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="principalid_csharp">
@@ -1501,7 +1658,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The Principal ID for the Service Principal associated with the Managed Service Identity of this Machine Learning Compute Cluster.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_csharp">
 <a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -1509,7 +1667,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The Tenant ID for the Service Principal associated with the Managed Service Identity of this Machine Learning Compute Cluster.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1521,7 +1680,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Type of Identity which should be used for this Disk Encryption Set. At this time the only possible value is SystemAssigned. Changing this forces a new Machine Learning Compute Cluster to be created.
+    <dd>{{% md %}}The Type of Identity which should be used for this Machine Learning Compute Cluster. Possible values are `SystemAssigned`, `UserAssigned` and `SystemAssigned,UserAssigned`. Changing this forces a new Machine Learning Compute Cluster to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="identityids_go">
+<a href="#identityids_go" style="color: inherit; text-decoration: inherit;">Identity<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of User Managed Identity ID's which should be assigned to the Machine Learning Compute Cluster. Changing this forces a new Machine Learning Compute Cluster to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="principalid_go">
@@ -1530,7 +1698,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The Principal ID for the Service Principal associated with the Managed Service Identity of this Machine Learning Compute Cluster.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_go">
 <a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -1538,7 +1707,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The Tenant ID for the Service Principal associated with the Managed Service Identity of this Machine Learning Compute Cluster.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1550,7 +1720,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Type of Identity which should be used for this Disk Encryption Set. At this time the only possible value is SystemAssigned. Changing this forces a new Machine Learning Compute Cluster to be created.
+    <dd>{{% md %}}The Type of Identity which should be used for this Machine Learning Compute Cluster. Possible values are `SystemAssigned`, `UserAssigned` and `SystemAssigned,UserAssigned`. Changing this forces a new Machine Learning Compute Cluster to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="identityids_nodejs">
+<a href="#identityids_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of User Managed Identity ID's which should be assigned to the Machine Learning Compute Cluster. Changing this forces a new Machine Learning Compute Cluster to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="principalid_nodejs">
@@ -1559,7 +1738,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The Principal ID for the Service Principal associated with the Managed Service Identity of this Machine Learning Compute Cluster.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_nodejs">
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
@@ -1567,7 +1747,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The Tenant ID for the Service Principal associated with the Managed Service Identity of this Machine Learning Compute Cluster.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1579,7 +1760,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Type of Identity which should be used for this Disk Encryption Set. At this time the only possible value is SystemAssigned. Changing this forces a new Machine Learning Compute Cluster to be created.
+    <dd>{{% md %}}The Type of Identity which should be used for this Machine Learning Compute Cluster. Possible values are `SystemAssigned`, `UserAssigned` and `SystemAssigned,UserAssigned`. Changing this forces a new Machine Learning Compute Cluster to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="identity_ids_python">
+<a href="#identity_ids_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of User Managed Identity ID's which should be assigned to the Machine Learning Compute Cluster. Changing this forces a new Machine Learning Compute Cluster to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="principal_id_python">
@@ -1588,7 +1778,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The Principal ID for the Service Principal associated with the Managed Service Identity of this Machine Learning Compute Cluster.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenant_id_python">
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
@@ -1596,7 +1787,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The Tenant ID for the Service Principal associated with the Managed Service Identity of this Machine Learning Compute Cluster.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="computeclusterscalesettings">Compute<wbr>Cluster<wbr>Scale<wbr>Settings</h4>
@@ -1722,6 +1914,132 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Node Idle Time Before Scale Down: defines the time until the compute is shutdown when it has gone into Idle state. Is defined according to W3C XML schema standard for duration. Changing this forces a new Machine Learning Compute Cluster to be created.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="computeclusterssh">Compute<wbr>Cluster<wbr>Ssh</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="adminusername_csharp">
+<a href="#adminusername_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>Username</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the administrator user account which can be used to SSH to nodes. Changing this forces a new Machine Learning Compute Cluster to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="adminpassword_csharp">
+<a href="#adminpassword_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>Password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Password of the administrator user account. Changing this forces a new Machine Learning Compute Cluster to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="keyvalue_csharp">
+<a href="#keyvalue_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}SSH public key of the administrator user account. Changing this forces a new Machine Learning Compute Cluster to be created.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="adminusername_go">
+<a href="#adminusername_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>Username</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the administrator user account which can be used to SSH to nodes. Changing this forces a new Machine Learning Compute Cluster to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="adminpassword_go">
+<a href="#adminpassword_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>Password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Password of the administrator user account. Changing this forces a new Machine Learning Compute Cluster to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="keyvalue_go">
+<a href="#keyvalue_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}SSH public key of the administrator user account. Changing this forces a new Machine Learning Compute Cluster to be created.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="adminusername_nodejs">
+<a href="#adminusername_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>Username</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the administrator user account which can be used to SSH to nodes. Changing this forces a new Machine Learning Compute Cluster to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="adminpassword_nodejs">
+<a href="#adminpassword_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>Password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Password of the administrator user account. Changing this forces a new Machine Learning Compute Cluster to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="keyvalue_nodejs">
+<a href="#keyvalue_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}SSH public key of the administrator user account. Changing this forces a new Machine Learning Compute Cluster to be created.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="admin_username_python">
+<a href="#admin_username_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>username</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Name of the administrator user account which can be used to SSH to nodes. Changing this forces a new Machine Learning Compute Cluster to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="admin_password_python">
+<a href="#admin_password_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Password of the administrator user account. Changing this forces a new Machine Learning Compute Cluster to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="key_value_python">
+<a href="#key_value_python" style="color: inherit; text-decoration: inherit;">key_<wbr>value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}SSH public key of the administrator user account. Changing this forces a new Machine Learning Compute Cluster to be created.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
