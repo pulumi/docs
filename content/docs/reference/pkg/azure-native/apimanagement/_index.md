@@ -47,6 +47,7 @@ Explore the resources and functions of the azure-native.apimanagement module.
     <li><a href="notificationrecipientuser" title="NotificationRecipientUser"><span class="symbol resource"></span>NotificationRecipientUser</a></li>
     <li><a href="openidconnectprovider" title="OpenIdConnectProvider"><span class="symbol resource"></span>OpenIdConnectProvider</a></li>
     <li><a href="policy" title="Policy"><span class="symbol resource"></span>Policy</a></li>
+    <li><a href="privateendpointconnectionbyname" title="PrivateEndpointConnectionByName"><span class="symbol resource"></span>PrivateEndpointConnectionByName</a></li>
     <li><a href="product" title="Product"><span class="symbol resource"></span>Product</a></li>
     <li><a href="productapi" title="ProductApi"><span class="symbol resource"></span>ProductApi</a></li>
     <li><a href="productgroup" title="ProductGroup"><span class="symbol resource"></span>ProductGroup</a></li>
@@ -94,6 +95,7 @@ Explore the resources and functions of the azure-native.apimanagement module.
     <li><a href="getnamedvalue" title="GetNamedValue"><span class="symbol function"></span>GetNamedValue</a></li>
     <li><a href="getopenidconnectprovider" title="GetOpenIdConnectProvider"><span class="symbol function"></span>GetOpenIdConnectProvider</a></li>
     <li><a href="getpolicy" title="GetPolicy"><span class="symbol function"></span>GetPolicy</a></li>
+    <li><a href="getprivateendpointconnectionbyname" title="GetPrivateEndpointConnectionByName"><span class="symbol function"></span>GetPrivateEndpointConnectionByName</a></li>
     <li><a href="getproduct" title="GetProduct"><span class="symbol function"></span>GetProduct</a></li>
     <li><a href="getproductpolicy" title="GetProductPolicy"><span class="symbol function"></span>GetProductPolicy</a></li>
     <li><a href="getproperty" title="GetProperty"><span class="symbol function"></span>GetProperty</a></li>
@@ -122,6 +124,6 @@ Explore the resources and functions of the azure-native.apimanagement module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.30.0</dd>
+	<dd>1.31.0</dd>
 </dl>
 

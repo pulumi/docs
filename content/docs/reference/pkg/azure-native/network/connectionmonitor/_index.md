@@ -1862,7 +1862,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#endpointtype">Endpoint<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#endpointtype">Endpoint<wbr>Type<wbr>Enum</a></span>
     </dt>
     <dd>{{% md %}}The endpoint type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
