@@ -13,6 +13,3 @@ fi
 # Install the Node dependencies for the website and the infrastructure.
 yarn install
 yarn --cwd infrastructure install
-
-# Fetch Hugo modules.
-hugo mod vendor

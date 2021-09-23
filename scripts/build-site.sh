@@ -18,19 +18,10 @@ export JS_BUNDLE="static/js/bundle.min.${ASSET_BUNDLE_ID}.js"
 # Relative paths to those same files, read by Hugo templates.
 export REL_CSS_BUNDLE="/css/styles.${ASSET_BUNDLE_ID}.css"
 export REL_JS_BUNDLE="/js/bundle.min.${ASSET_BUNDLE_ID}.js"
-
 export REPO_THEME_PATH="themes/default/"
-export LOCAL_THEME_PATH="_vendor/$(hugo_theme_path)/"
 
 printf "Copying prebuilt docs...\n\n"
 make copy_static_prebuilt
-
-# Themes are expected to manage their own dependencies and to expose `ensure`, `test`, and `build` scripts.
-pushd $LOCAL_THEME_PATH
-    yarn run ensure
-    yarn run test
-    yarn run build
-popd
 
 printf "Running Hugo...\n\n"
 if [ "$1" == "preview" ]; then
@@ -39,5 +30,8 @@ if [ "$1" == "preview" ]; then
 else
     GOGC=5 hugo --minify --templateMetrics -e production
 fi
+
+# Purge unused CSS.
+yarn run purgecss
 
 printf "Done!\n\n"
