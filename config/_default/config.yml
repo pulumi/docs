@@ -11,12 +11,6 @@ module:
           target: layouts
         - source: data
           target: data
-        - source: package.json
-          target: assets
-        - source: tsconfig.json
-          target: assets
-        - source: yarn.lock
-          target: assets
     - path: github.com/pulumi/pulumi-hugo/themes/default
       mounts:
         - source: content
