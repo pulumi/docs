@@ -4771,7 +4771,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gatewaytype_go" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#virtualnetworkgatewaytype">Virtual<wbr>Network<wbr>Gateway<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#virtualnetworkgatewaytype">Virtual<wbr>Network<wbr>Gateway<wbr>Type<wbr>Enum</a></span>
     </dt>
     <dd>{{% md %}}The type of this virtual network gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

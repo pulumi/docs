@@ -18,6 +18,8 @@ Explore the resources and functions of the azure-native.security module.
     <li><a href="assessmentmetadatainsubscription" title="AssessmentMetadataInSubscription"><span class="symbol resource"></span>AssessmentMetadataInSubscription</a></li>
     <li><a href="automation" title="Automation"><span class="symbol resource"></span>Automation</a></li>
     <li><a href="connector" title="Connector"><span class="symbol resource"></span>Connector</a></li>
+    <li><a href="customassessmentautomation" title="CustomAssessmentAutomation"><span class="symbol resource"></span>CustomAssessmentAutomation</a></li>
+    <li><a href="customentitystoreassignment" title="CustomEntityStoreAssignment"><span class="symbol resource"></span>CustomEntityStoreAssignment</a></li>
     <li><a href="devicesecuritygroup" title="DeviceSecurityGroup"><span class="symbol resource"></span>DeviceSecurityGroup</a></li>
     <li><a href="ingestionsetting" title="IngestionSetting"><span class="symbol resource"></span>IngestionSetting</a></li>
     <li><a href="iotsecuritysolution" title="IotSecuritySolution"><span class="symbol resource"></span>IotSecuritySolution</a></li>
@@ -37,6 +39,8 @@ Explore the resources and functions of the azure-native.security module.
     <li><a href="getassessmentmetadatainsubscription" title="GetAssessmentMetadataInSubscription"><span class="symbol function"></span>GetAssessmentMetadataInSubscription</a></li>
     <li><a href="getautomation" title="GetAutomation"><span class="symbol function"></span>GetAutomation</a></li>
     <li><a href="getconnector" title="GetConnector"><span class="symbol function"></span>GetConnector</a></li>
+    <li><a href="getcustomassessmentautomation" title="GetCustomAssessmentAutomation"><span class="symbol function"></span>GetCustomAssessmentAutomation</a></li>
+    <li><a href="getcustomentitystoreassignment" title="GetCustomEntityStoreAssignment"><span class="symbol function"></span>GetCustomEntityStoreAssignment</a></li>
     <li><a href="getdevicesecuritygroup" title="GetDeviceSecurityGroup"><span class="symbol function"></span>GetDeviceSecurityGroup</a></li>
     <li><a href="getingestionsetting" title="GetIngestionSetting"><span class="symbol function"></span>GetIngestionSetting</a></li>
     <li><a href="getiotsecuritysolution" title="GetIotSecuritySolution"><span class="symbol function"></span>GetIotSecuritySolution</a></li>
@@ -56,6 +60,6 @@ Explore the resources and functions of the azure-native.security module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.30.0</dd>
+	<dd>1.31.0</dd>
 </dl>
 
