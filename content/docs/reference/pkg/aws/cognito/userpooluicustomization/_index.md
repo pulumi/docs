@@ -14,6 +14,313 @@ Provides a Cognito User Pool UI Customization resource.
 
 > **Note:** To use this resource, the user pool must have a domain associated with it. For more information, see the Amazon Cognito Developer Guide on [Customizing the Built-in Sign-In and Sign-up Webpages](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pools-app-ui-customization.html).
 
+{{% examples %}}
+
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+
+### UI customization settings for a single client
+
+
+{{< example csharp >}}
+
+```csharp
+using System;
+using System.IO;
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+	private static string ReadFileBase64(string path) {
+		return Convert.ToBase64String(System.Text.UTF8.GetBytes(File.ReadAllText(path)))
+	}
+
+    public MyStack()
+    {
+        var exampleUserPool = new Aws.Cognito.UserPool("exampleUserPool", new Aws.Cognito.UserPoolArgs
+        {
+        });
+        var exampleUserPoolDomain = new Aws.Cognito.UserPoolDomain("exampleUserPoolDomain", new Aws.Cognito.UserPoolDomainArgs
+        {
+            Domain = "example",
+            UserPoolId = exampleUserPool.Id,
+        });
+        var exampleUserPoolClient = new Aws.Cognito.UserPoolClient("exampleUserPoolClient", new Aws.Cognito.UserPoolClientArgs
+        {
+            UserPoolId = exampleUserPool.Id,
+        });
+        var exampleUserPoolUICustomization = new Aws.Cognito.UserPoolUICustomization("exampleUserPoolUICustomization", new Aws.Cognito.UserPoolUICustomizationArgs
+        {
+            ClientId = exampleUserPoolClient.Id,
+            Css = ".label-customizable {font-weight: 400;}",
+            ImageFile = ReadFileBase64("logo.png"),
+            UserPoolId = exampleUserPoolDomain.UserPoolId,
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"encoding/base64"
+	"io/ioutil"
+
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/cognito"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func filebase64OrPanic(path string) pulumi.StringPtrInput {
+	if fileData, err := ioutil.ReadFile(path); err == nil {
+		return pulumi.String(base64.StdEncoding.EncodeToString(fileData[:]))
+	} else {
+		panic(err.Error())
+	}
+}
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleUserPool, err := cognito.NewUserPool(ctx, "exampleUserPool", nil)
+		if err != nil {
+			return err
+		}
+		exampleUserPoolDomain, err := cognito.NewUserPoolDomain(ctx, "exampleUserPoolDomain", &cognito.UserPoolDomainArgs{
+			Domain:     pulumi.String("example"),
+			UserPoolId: exampleUserPool.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		exampleUserPoolClient, err := cognito.NewUserPoolClient(ctx, "exampleUserPoolClient", &cognito.UserPoolClientArgs{
+			UserPoolId: exampleUserPool.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = cognito.NewUserPoolUICustomization(ctx, "exampleUserPoolUICustomization", &cognito.UserPoolUICustomizationArgs{
+			ClientId:   exampleUserPoolClient.ID(),
+			Css:        pulumi.String(".label-customizable {font-weight: 400;}"),
+			ImageFile:  filebase64OrPanic("logo.png"),
+			UserPoolId: exampleUserPoolDomain.UserPoolId,
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import base64
+import pulumi_aws as aws
+
+example_user_pool = aws.cognito.UserPool("exampleUserPool")
+example_user_pool_domain = aws.cognito.UserPoolDomain("exampleUserPoolDomain",
+    domain="example",
+    user_pool_id=example_user_pool.id)
+example_user_pool_client = aws.cognito.UserPoolClient("exampleUserPoolClient", user_pool_id=example_user_pool.id)
+example_user_pool_ui_customization = aws.cognito.UserPoolUICustomization("exampleUserPoolUICustomization",
+    client_id=example_user_pool_client.id,
+    css=".label-customizable {font-weight: 400;}",
+    image_file=(lambda path: base64.b64encode(open(path).read().encode()).decode())("logo.png"),
+    user_pool_id=example_user_pool_domain.user_pool_id)
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+import * from "fs";
+
+const exampleUserPool = new aws.cognito.UserPool("exampleUserPool", {});
+const exampleUserPoolDomain = new aws.cognito.UserPoolDomain("exampleUserPoolDomain", {
+    domain: "example",
+    userPoolId: exampleUserPool.id,
+});
+const exampleUserPoolClient = new aws.cognito.UserPoolClient("exampleUserPoolClient", {userPoolId: exampleUserPool.id});
+const exampleUserPoolUICustomization = new aws.cognito.UserPoolUICustomization("exampleUserPoolUICustomization", {
+    clientId: exampleUserPoolClient.id,
+    css: ".label-customizable {font-weight: 400;}",
+    imageFile: Buffer.from(fs.readFileSync("logo.png"), 'binary').toString('base64'),
+    userPoolId: exampleUserPoolDomain.userPoolId,
+});
+```
+
+
+{{< /example >}}
+
+
+
+
+### UI customization settings for all clients
+
+
+{{< example csharp >}}
+
+```csharp
+using System;
+using System.IO;
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+	private static string ReadFileBase64(string path) {
+		return Convert.ToBase64String(System.Text.UTF8.GetBytes(File.ReadAllText(path)))
+	}
+
+    public MyStack()
+    {
+        var exampleUserPool = new Aws.Cognito.UserPool("exampleUserPool", new Aws.Cognito.UserPoolArgs
+        {
+        });
+        var exampleUserPoolDomain = new Aws.Cognito.UserPoolDomain("exampleUserPoolDomain", new Aws.Cognito.UserPoolDomainArgs
+        {
+            Domain = "example",
+            UserPoolId = exampleUserPool.Id,
+        });
+        var exampleUserPoolUICustomization = new Aws.Cognito.UserPoolUICustomization("exampleUserPoolUICustomization", new Aws.Cognito.UserPoolUICustomizationArgs
+        {
+            Css = ".label-customizable {font-weight: 400;}",
+            ImageFile = ReadFileBase64("logo.png"),
+            UserPoolId = exampleUserPoolDomain.UserPoolId,
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"encoding/base64"
+	"io/ioutil"
+
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/cognito"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func filebase64OrPanic(path string) pulumi.StringPtrInput {
+	if fileData, err := ioutil.ReadFile(path); err == nil {
+		return pulumi.String(base64.StdEncoding.EncodeToString(fileData[:]))
+	} else {
+		panic(err.Error())
+	}
+}
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleUserPool, err := cognito.NewUserPool(ctx, "exampleUserPool", nil)
+		if err != nil {
+			return err
+		}
+		exampleUserPoolDomain, err := cognito.NewUserPoolDomain(ctx, "exampleUserPoolDomain", &cognito.UserPoolDomainArgs{
+			Domain:     pulumi.String("example"),
+			UserPoolId: exampleUserPool.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = cognito.NewUserPoolUICustomization(ctx, "exampleUserPoolUICustomization", &cognito.UserPoolUICustomizationArgs{
+			Css:        pulumi.String(".label-customizable {font-weight: 400;}"),
+			ImageFile:  filebase64OrPanic("logo.png"),
+			UserPoolId: exampleUserPoolDomain.UserPoolId,
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import base64
+import pulumi_aws as aws
+
+example_user_pool = aws.cognito.UserPool("exampleUserPool")
+example_user_pool_domain = aws.cognito.UserPoolDomain("exampleUserPoolDomain",
+    domain="example",
+    user_pool_id=example_user_pool.id)
+example_user_pool_ui_customization = aws.cognito.UserPoolUICustomization("exampleUserPoolUICustomization",
+    css=".label-customizable {font-weight: 400;}",
+    image_file=(lambda path: base64.b64encode(open(path).read().encode()).decode())("logo.png"),
+    user_pool_id=example_user_pool_domain.user_pool_id)
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+import * from "fs";
+
+const exampleUserPool = new aws.cognito.UserPool("exampleUserPool", {});
+const exampleUserPoolDomain = new aws.cognito.UserPoolDomain("exampleUserPoolDomain", {
+    domain: "example",
+    userPoolId: exampleUserPool.id,
+});
+const exampleUserPoolUICustomization = new aws.cognito.UserPoolUICustomization("exampleUserPoolUICustomization", {
+    css: ".label-customizable {font-weight: 400;}",
+    imageFile: Buffer.from(fs.readFileSync("logo.png"), 'binary').toString('base64'),
+    userPoolId: exampleUserPoolDomain.userPoolId,
+});
+```
+
+
+{{< /example >}}
+
+
+
+
+
+{{% /examples %}}
+
+
 
 
 ## Create a UserPoolUICustomization Resource {#create}

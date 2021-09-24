@@ -218,6 +218,142 @@ func main() {
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
+### Basic Example
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var iamForLambda = new Aws.Iam.Role("iamForLambda", new Aws.Iam.RoleArgs
+        {
+            AssumeRolePolicy = @"{
+  ""Version"": ""2012-10-17"",
+  ""Statement"": [
+    {
+      ""Action"": ""sts:AssumeRole"",
+      ""Principal"": {
+        ""Service"": ""lambda.amazonaws.com""
+      },
+      ""Effect"": ""Allow"",
+      ""Sid"": """"
+    }
+  ]
+}
+",
+        });
+        var testLambda = new Aws.Lambda.Function("testLambda", new Aws.Lambda.FunctionArgs
+        {
+            Code = new FileArchive("lambda_function_payload.zip"),
+            Role = iamForLambda.Arn,
+            Handler = "index.test",
+            Runtime = "nodejs12.x",
+            Environment = new Aws.Lambda.Inputs.FunctionEnvironmentArgs
+            {
+                Variables = 
+                {
+                    { "foo", "bar" },
+                },
+            },
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+Coming soon!
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_aws as aws
+
+iam_for_lambda = aws.iam.Role("iamForLambda", assume_role_policy="""{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Action": "sts:AssumeRole",
+      "Principal": {
+        "Service": "lambda.amazonaws.com"
+      },
+      "Effect": "Allow",
+      "Sid": ""
+    }
+  ]
+}
+""")
+test_lambda = aws.lambda_.Function("testLambda",
+    code=pulumi.FileArchive("lambda_function_payload.zip"),
+    role=iam_for_lambda.arn,
+    handler="index.test",
+    runtime="nodejs12.x",
+    environment=aws.lambda..FunctionEnvironmentArgs(
+        variables={
+            "foo": "bar",
+        },
+    ))
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const iamForLambda = new aws.iam.Role("iamForLambda", {assumeRolePolicy: `{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Action": "sts:AssumeRole",
+      "Principal": {
+        "Service": "lambda.amazonaws.com"
+      },
+      "Effect": "Allow",
+      "Sid": ""
+    }
+  ]
+}
+`});
+const testLambda = new aws.lambda.Function("testLambda", {
+    code: new pulumi.asset.FileArchive("lambda_function_payload.zip"),
+    role: iamForLambda.arn,
+    handler: "index.test",
+    runtime: "nodejs12.x",
+    environment: {
+        variables: {
+            foo: "bar",
+        },
+    },
+});
+```
+
+
+{{< /example >}}
+
+
+
+
 ### Lambda Layers
 
 

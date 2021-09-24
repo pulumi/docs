@@ -12,6 +12,246 @@ meta_desc: "Documentation for the aws.apigateway.Authorizer resource with exampl
 
 Provides an API Gateway Authorizer.
 
+{{% examples %}}
+
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+
+
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var demoRestApi = new Aws.ApiGateway.RestApi("demoRestApi", new Aws.ApiGateway.RestApiArgs
+        {
+        });
+        var invocationRole = new Aws.Iam.Role("invocationRole", new Aws.Iam.RoleArgs
+        {
+            Path = "/",
+            AssumeRolePolicy = @"{
+  ""Version"": ""2012-10-17"",
+  ""Statement"": [
+    {
+      ""Action"": ""sts:AssumeRole"",
+      ""Principal"": {
+        ""Service"": ""apigateway.amazonaws.com""
+      },
+      ""Effect"": ""Allow"",
+      ""Sid"": """"
+    }
+  ]
+}
+",
+        });
+        var lambda = new Aws.Iam.Role("lambda", new Aws.Iam.RoleArgs
+        {
+            AssumeRolePolicy = @"{
+  ""Version"": ""2012-10-17"",
+  ""Statement"": [
+    {
+      ""Action"": ""sts:AssumeRole"",
+      ""Principal"": {
+        ""Service"": ""lambda.amazonaws.com""
+      },
+      ""Effect"": ""Allow"",
+      ""Sid"": """"
+    }
+  ]
+}
+",
+        });
+        var authorizer = new Aws.Lambda.Function("authorizer", new Aws.Lambda.FunctionArgs
+        {
+            Code = new FileArchive("lambda-function.zip"),
+            Role = lambda.Arn,
+            Handler = "exports.example",
+        });
+        var demoAuthorizer = new Aws.ApiGateway.Authorizer("demoAuthorizer", new Aws.ApiGateway.AuthorizerArgs
+        {
+            RestApi = demoRestApi.Id,
+            AuthorizerUri = authorizer.InvokeArn,
+            AuthorizerCredentials = invocationRole.Arn,
+        });
+        var invocationPolicy = new Aws.Iam.RolePolicy("invocationPolicy", new Aws.Iam.RolePolicyArgs
+        {
+            Role = invocationRole.Id,
+            Policy = authorizer.Arn.Apply(arn => @$"{{
+  ""Version"": ""2012-10-17"",
+  ""Statement"": [
+    {{
+      ""Action"": ""lambda:InvokeFunction"",
+      ""Effect"": ""Allow"",
+      ""Resource"": ""{arn}""
+    }}
+  ]
+}}
+"),
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+Coming soon!
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_aws as aws
+
+demo_rest_api = aws.apigateway.RestApi("demoRestApi")
+invocation_role = aws.iam.Role("invocationRole",
+    path="/",
+    assume_role_policy="""{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Action": "sts:AssumeRole",
+      "Principal": {
+        "Service": "apigateway.amazonaws.com"
+      },
+      "Effect": "Allow",
+      "Sid": ""
+    }
+  ]
+}
+""")
+lambda_ = aws.iam.Role("lambda", assume_role_policy="""{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Action": "sts:AssumeRole",
+      "Principal": {
+        "Service": "lambda.amazonaws.com"
+      },
+      "Effect": "Allow",
+      "Sid": ""
+    }
+  ]
+}
+""")
+authorizer = aws.lambda_.Function("authorizer",
+    code=pulumi.FileArchive("lambda-function.zip"),
+    role=lambda_.arn,
+    handler="exports.example")
+demo_authorizer = aws.apigateway.Authorizer("demoAuthorizer",
+    rest_api=demo_rest_api.id,
+    authorizer_uri=authorizer.invoke_arn,
+    authorizer_credentials=invocation_role.arn)
+invocation_policy = aws.iam.RolePolicy("invocationPolicy",
+    role=invocation_role.id,
+    policy=authorizer.arn.apply(lambda arn: f"""{{
+  "Version": "2012-10-17",
+  "Statement": [
+    {{
+      "Action": "lambda:InvokeFunction",
+      "Effect": "Allow",
+      "Resource": "{arn}"
+    }}
+  ]
+}}
+"""))
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const demoRestApi = new aws.apigateway.RestApi("demoRestApi", {});
+const invocationRole = new aws.iam.Role("invocationRole", {
+    path: "/",
+    assumeRolePolicy: `{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Action": "sts:AssumeRole",
+      "Principal": {
+        "Service": "apigateway.amazonaws.com"
+      },
+      "Effect": "Allow",
+      "Sid": ""
+    }
+  ]
+}
+`,
+});
+const lambda = new aws.iam.Role("lambda", {assumeRolePolicy: `{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Action": "sts:AssumeRole",
+      "Principal": {
+        "Service": "lambda.amazonaws.com"
+      },
+      "Effect": "Allow",
+      "Sid": ""
+    }
+  ]
+}
+`});
+const authorizer = new aws.lambda.Function("authorizer", {
+    code: new pulumi.asset.FileArchive("lambda-function.zip"),
+    role: lambda.arn,
+    handler: "exports.example",
+});
+const demoAuthorizer = new aws.apigateway.Authorizer("demoAuthorizer", {
+    restApi: demoRestApi.id,
+    authorizerUri: authorizer.invokeArn,
+    authorizerCredentials: invocationRole.arn,
+});
+const invocationPolicy = new aws.iam.RolePolicy("invocationPolicy", {
+    role: invocationRole.id,
+    policy: pulumi.interpolate`{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Action": "lambda:InvokeFunction",
+      "Effect": "Allow",
+      "Resource": "${authorizer.arn}"
+    }
+  ]
+}
+`,
+});
+```
+
+
+{{< /example >}}
+
+
+
+
+
+{{% /examples %}}
+
+
 
 
 ## Create a Authorizer Resource {#create}
