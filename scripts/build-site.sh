@@ -32,6 +32,6 @@ else
 fi
 
 # Purge unused CSS.
-yarn run purgecss
+yarn run minify-css
 
 printf "Done!\n\n"
