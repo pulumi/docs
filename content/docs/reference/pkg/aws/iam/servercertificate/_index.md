@@ -62,17 +62,25 @@ class MyStack : Stack
 package main
 
 import (
-	"fmt"
+	"io/ioutil"
 
 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/iam"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
+func readFileOrPanic(path string) pulumi.StringPtrInput {
+	data, err := ioutil.ReadFile(path)
+	if err != nil {
+		panic(err.Error())
+	}
+	return pulumi.String(string(data))
+}
+
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := iam.NewServerCertificate(ctx, "testCertAlt", &iam.ServerCertificateArgs{
-			CertificateBody: pulumi.String(fmt.Sprintf("%v%v%v%v", "-----BEGIN CERTIFICATE-----\n", "[......] # cert contents\n", "-----END CERTIFICATE-----\n", "\n")),
-			PrivateKey:      pulumi.String(fmt.Sprintf("%v%v%v%v", "-----BEGIN RSA PRIVATE KEY-----\n", "[......] # cert contents\n", "-----END RSA PRIVATE KEY-----\n", "\n")),
+		_, err := iam.NewServerCertificate(ctx, "testCert", &iam.ServerCertificateArgs{
+			CertificateBody: readFileOrPanic("self-ca-cert.pem"),
+			PrivateKey:      readFileOrPanic("test-key.pem"),
 		})
 		if err != nil {
 			return err

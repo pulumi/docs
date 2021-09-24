@@ -14,6 +14,184 @@ Provides a Public Elastic Container Registry Repository.
 
 > **NOTE:** This resource can only be used with `us-east-1` region.
 
+{{% examples %}}
+
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+
+
+
+
+{{< example csharp >}}
+
+```csharp
+using System;
+using System.IO;
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+	private static string ReadFileBase64(string path) {
+		return Convert.ToBase64String(System.Text.UTF8.GetBytes(File.ReadAllText(path)))
+	}
+
+    public MyStack()
+    {
+        var usEast1 = new Aws.Provider("usEast1", new Aws.ProviderArgs
+        {
+            Region = "us-east-1",
+        });
+        var foo = new Aws.EcrPublic.Repository("foo", new Aws.EcrPublic.RepositoryArgs
+        {
+            RepositoryName = "bar",
+            CatalogData = new Aws.EcrPublic.Inputs.RepositoryCatalogDataArgs
+            {
+                AboutText = "About Text",
+                Architectures = 
+                {
+                    "ARM",
+                },
+                Description = "Description",
+                LogoImageBlob = ReadFileBase64(image.Png),
+                OperatingSystems = 
+                {
+                    "Linux",
+                },
+                UsageText = "Usage Text",
+            },
+        }, new CustomResourceOptions
+        {
+            Provider = aws.Us_east_1,
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"encoding/base64"
+	"io/ioutil"
+
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ecrpublic"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/providers"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func filebase64OrPanic(path string) pulumi.StringPtrInput {
+	if fileData, err := ioutil.ReadFile(path); err == nil {
+		return pulumi.String(base64.StdEncoding.EncodeToString(fileData[:]))
+	} else {
+		panic(err.Error())
+	}
+}
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := providers.Newaws(ctx, "usEast1", &providers.awsArgs{
+			Region: "us-east-1",
+		})
+		if err != nil {
+			return err
+		}
+		_, err = ecrpublic.NewRepository(ctx, "foo", &ecrpublic.RepositoryArgs{
+			RepositoryName: pulumi.String("bar"),
+			CatalogData: &ecrpublic.RepositoryCatalogDataArgs{
+				AboutText: pulumi.String("About Text"),
+				Architectures: pulumi.StringArray{
+					pulumi.String("ARM"),
+				},
+				Description:   pulumi.String("Description"),
+				LogoImageBlob: filebase64OrPanic(image.Png),
+				OperatingSystems: pulumi.StringArray{
+					pulumi.String("Linux"),
+				},
+				UsageText: pulumi.String("Usage Text"),
+			},
+		}, pulumi.Provider(aws.Us_east_1))
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import base64
+import pulumi_aws as aws
+import pulumi_pulumi as pulumi
+
+us_east1 = pulumi.providers.Aws("usEast1", region="us-east-1")
+foo = aws.ecrpublic.Repository("foo",
+    repository_name="bar",
+    catalog_data=aws.ecrpublic.RepositoryCatalogDataArgs(
+        about_text="About Text",
+        architectures=["ARM"],
+        description="Description",
+        logo_image_blob=(lambda path: base64.b64encode(open(path).read().encode()).decode())(image["png"]),
+        operating_systems=["Linux"],
+        usage_text="Usage Text",
+    ),
+    opts=pulumi.ResourceOptions(provider=aws["us_east_1"]))
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+import * from "fs";
+
+const usEast1 = new aws.Provider("usEast1", {region: "us-east-1"});
+const foo = new aws.ecrpublic.Repository("foo", {
+    repositoryName: "bar",
+    catalogData: {
+        aboutText: "About Text",
+        architectures: ["ARM"],
+        description: "Description",
+        logoImageBlob: Buffer.from(fs.readFileSync(image.png), 'binary').toString('base64'),
+        operatingSystems: ["Linux"],
+        usageText: "Usage Text",
+    },
+}, {
+    provider: aws.us_east_1,
+});
+```
+
+
+{{< /example >}}
+
+
+
+
+
+{{% /examples %}}
+
+
 
 
 ## Create a Repository Resource {#create}

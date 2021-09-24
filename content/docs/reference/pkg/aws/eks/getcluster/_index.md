@@ -13,6 +13,119 @@ meta_desc: "Documentation for the aws.eks.getCluster function with examples, inp
 Retrieve information about an EKS Cluster.
 
 
+{{% examples %}}
+
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+
+
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = Output.Create(Aws.Eks.GetCluster.InvokeAsync(new Aws.Eks.GetClusterArgs
+        {
+            Name = "example",
+        }));
+        this.Endpoint = example.Apply(example => example.Endpoint);
+        this.Kubeconfig_certificate_authority_data = example.Apply(example => example.CertificateAuthority?.Data);
+        this.Identity_oidc_issuer = example.Apply(example => example.Identities?[0]?.Oidcs?[0]?.Issuer);
+    }
+
+    [Output("endpoint")]
+    public Output<string> Endpoint { get; set; }
+    [Output("kubeconfig-certificate-authority-data")]
+    public Output<string> Kubeconfig_certificate_authority_data { get; set; }
+    [Output("identity-oidc-issuer")]
+    public Output<string> Identity_oidc_issuer { get; set; }
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/eks"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := eks.LookupCluster(ctx, &eks.LookupClusterArgs{
+			Name: "example",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("endpoint", example.Endpoint)
+		ctx.Export("kubeconfig-certificate-authority-data", example.CertificateAuthority.Data)
+		ctx.Export("identity-oidc-issuer", example.Identities[0].Oidcs[0].Issuer)
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.eks.get_cluster(name="example")
+pulumi.export("endpoint", example.endpoint)
+pulumi.export("kubeconfig-certificate-authority-data", example.certificate_authority.data)
+pulumi.export("identity-oidc-issuer", example.identities[0].oidcs[0].issuer)
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const example = aws.eks.getCluster({
+    name: "example",
+});
+export const endpoint = example.then(example => example.endpoint);
+export const kubeconfig_certificate_authority_data = example.then(example => example.certificateAuthority?.data);
+export const identity_oidc_issuer = example.then(example => example.identities?[0]?.oidcs?[0]?.issuer);
+```
+
+
+{{< /example >}}
+
+
+
+
+
+{{% /examples %}}
+
+
 
 
 ## Using getCluster {#using}

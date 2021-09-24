@@ -55,7 +55,41 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+```go
+package main
+
+import (
+	"fmt"
+	"io/ioutil"
+
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/cloudfront"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func readFileOrPanic(path string) pulumi.StringPtrInput {
+	data, err := ioutil.ReadFile(path)
+	if err != nil {
+		panic(err.Error())
+	}
+	return pulumi.String(string(data))
+}
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := cloudfront.NewFunction(ctx, "test", &cloudfront.FunctionArgs{
+			Runtime: pulumi.String("cloudfront-js-1.0"),
+			Comment: pulumi.String("my function"),
+			Publish: pulumi.Bool(true),
+			Code:    readFileOrPanic(fmt.Sprintf("%v%v", path.Module, "/function.js")),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 
 {{< /example >}}
 

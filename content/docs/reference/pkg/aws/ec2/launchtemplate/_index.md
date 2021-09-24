@@ -12,6 +12,408 @@ meta_desc: "Documentation for the aws.ec2.LaunchTemplate resource with examples,
 
 Provides an EC2 launch template resource. Can be used to create instances or auto scaling groups.
 
+{{% examples %}}
+
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+
+
+
+
+{{< example csharp >}}
+
+```csharp
+using System;
+using System.IO;
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+	private static string ReadFileBase64(string path) {
+		return Convert.ToBase64String(System.Text.UTF8.GetBytes(File.ReadAllText(path)))
+	}
+
+    public MyStack()
+    {
+        var foo = new Aws.Ec2.LaunchTemplate("foo", new Aws.Ec2.LaunchTemplateArgs
+        {
+            BlockDeviceMappings = 
+            {
+                new Aws.Ec2.Inputs.LaunchTemplateBlockDeviceMappingArgs
+                {
+                    DeviceName = "/dev/sda1",
+                    Ebs = new Aws.Ec2.Inputs.LaunchTemplateBlockDeviceMappingEbsArgs
+                    {
+                        VolumeSize = 20,
+                    },
+                },
+            },
+            CapacityReservationSpecification = new Aws.Ec2.Inputs.LaunchTemplateCapacityReservationSpecificationArgs
+            {
+                CapacityReservationPreference = "open",
+            },
+            CpuOptions = new Aws.Ec2.Inputs.LaunchTemplateCpuOptionsArgs
+            {
+                CoreCount = 4,
+                ThreadsPerCore = 2,
+            },
+            CreditSpecification = new Aws.Ec2.Inputs.LaunchTemplateCreditSpecificationArgs
+            {
+                CpuCredits = "standard",
+            },
+            DisableApiTermination = true,
+            EbsOptimized = "true",
+            ElasticGpuSpecifications = 
+            {
+                new Aws.Ec2.Inputs.LaunchTemplateElasticGpuSpecificationArgs
+                {
+                    Type = "test",
+                },
+            },
+            ElasticInferenceAccelerator = new Aws.Ec2.Inputs.LaunchTemplateElasticInferenceAcceleratorArgs
+            {
+                Type = "eia1.medium",
+            },
+            IamInstanceProfile = new Aws.Ec2.Inputs.LaunchTemplateIamInstanceProfileArgs
+            {
+                Name = "test",
+            },
+            ImageId = "ami-test",
+            InstanceInitiatedShutdownBehavior = "terminate",
+            InstanceMarketOptions = new Aws.Ec2.Inputs.LaunchTemplateInstanceMarketOptionsArgs
+            {
+                MarketType = "spot",
+            },
+            InstanceType = "t2.micro",
+            KernelId = "test",
+            KeyName = "test",
+            LicenseSpecifications = 
+            {
+                new Aws.Ec2.Inputs.LaunchTemplateLicenseSpecificationArgs
+                {
+                    LicenseConfigurationArn = "arn:aws:license-manager:eu-west-1:123456789012:license-configuration:lic-0123456789abcdef0123456789abcdef",
+                },
+            },
+            MetadataOptions = new Aws.Ec2.Inputs.LaunchTemplateMetadataOptionsArgs
+            {
+                HttpEndpoint = "enabled",
+                HttpTokens = "required",
+                HttpPutResponseHopLimit = 1,
+            },
+            Monitoring = new Aws.Ec2.Inputs.LaunchTemplateMonitoringArgs
+            {
+                Enabled = true,
+            },
+            NetworkInterfaces = 
+            {
+                new Aws.Ec2.Inputs.LaunchTemplateNetworkInterfaceArgs
+                {
+                    AssociatePublicIpAddress = "true",
+                },
+            },
+            Placement = new Aws.Ec2.Inputs.LaunchTemplatePlacementArgs
+            {
+                AvailabilityZone = "us-west-2a",
+            },
+            RamDiskId = "test",
+            VpcSecurityGroupIds = 
+            {
+                "sg-12345678",
+            },
+            TagSpecifications = 
+            {
+                new Aws.Ec2.Inputs.LaunchTemplateTagSpecificationArgs
+                {
+                    ResourceType = "instance",
+                    Tags = 
+                    {
+                        { "Name", "test" },
+                    },
+                },
+            },
+            UserData = ReadFileBase64($"{path.Module}/example.sh"),
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"encoding/base64"
+	"fmt"
+	"io/ioutil"
+
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func filebase64OrPanic(path string) pulumi.StringPtrInput {
+	if fileData, err := ioutil.ReadFile(path); err == nil {
+		return pulumi.String(base64.StdEncoding.EncodeToString(fileData[:]))
+	} else {
+		panic(err.Error())
+	}
+}
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := ec2.NewLaunchTemplate(ctx, "foo", &ec2.LaunchTemplateArgs{
+			BlockDeviceMappings: ec2.LaunchTemplateBlockDeviceMappingArray{
+				&ec2.LaunchTemplateBlockDeviceMappingArgs{
+					DeviceName: pulumi.String("/dev/sda1"),
+					Ebs: &ec2.LaunchTemplateBlockDeviceMappingEbsArgs{
+						VolumeSize: pulumi.Int(20),
+					},
+				},
+			},
+			CapacityReservationSpecification: &ec2.LaunchTemplateCapacityReservationSpecificationArgs{
+				CapacityReservationPreference: pulumi.String("open"),
+			},
+			CpuOptions: &ec2.LaunchTemplateCpuOptionsArgs{
+				CoreCount:      pulumi.Int(4),
+				ThreadsPerCore: pulumi.Int(2),
+			},
+			CreditSpecification: &ec2.LaunchTemplateCreditSpecificationArgs{
+				CpuCredits: pulumi.String("standard"),
+			},
+			DisableApiTermination: pulumi.Bool(true),
+			EbsOptimized:          pulumi.String("true"),
+			ElasticGpuSpecifications: ec2.LaunchTemplateElasticGpuSpecificationArray{
+				&ec2.LaunchTemplateElasticGpuSpecificationArgs{
+					Type: pulumi.String("test"),
+				},
+			},
+			ElasticInferenceAccelerator: &ec2.LaunchTemplateElasticInferenceAcceleratorArgs{
+				Type: pulumi.String("eia1.medium"),
+			},
+			IamInstanceProfile: &ec2.LaunchTemplateIamInstanceProfileArgs{
+				Name: pulumi.String("test"),
+			},
+			ImageId:                           pulumi.String("ami-test"),
+			InstanceInitiatedShutdownBehavior: pulumi.String("terminate"),
+			InstanceMarketOptions: &ec2.LaunchTemplateInstanceMarketOptionsArgs{
+				MarketType: pulumi.String("spot"),
+			},
+			InstanceType: pulumi.String("t2.micro"),
+			KernelId:     pulumi.String("test"),
+			KeyName:      pulumi.String("test"),
+			LicenseSpecifications: ec2.LaunchTemplateLicenseSpecificationArray{
+				&ec2.LaunchTemplateLicenseSpecificationArgs{
+					LicenseConfigurationArn: pulumi.String("arn:aws:license-manager:eu-west-1:123456789012:license-configuration:lic-0123456789abcdef0123456789abcdef"),
+				},
+			},
+			MetadataOptions: &ec2.LaunchTemplateMetadataOptionsArgs{
+				HttpEndpoint:            pulumi.String("enabled"),
+				HttpTokens:              pulumi.String("required"),
+				HttpPutResponseHopLimit: pulumi.Int(1),
+			},
+			Monitoring: &ec2.LaunchTemplateMonitoringArgs{
+				Enabled: pulumi.Bool(true),
+			},
+			NetworkInterfaces: ec2.LaunchTemplateNetworkInterfaceArray{
+				&ec2.LaunchTemplateNetworkInterfaceArgs{
+					AssociatePublicIpAddress: pulumi.String("true"),
+				},
+			},
+			Placement: &ec2.LaunchTemplatePlacementArgs{
+				AvailabilityZone: pulumi.String("us-west-2a"),
+			},
+			RamDiskId: pulumi.String("test"),
+			VpcSecurityGroupIds: pulumi.StringArray{
+				pulumi.String("sg-12345678"),
+			},
+			TagSpecifications: ec2.LaunchTemplateTagSpecificationArray{
+				&ec2.LaunchTemplateTagSpecificationArgs{
+					ResourceType: pulumi.String("instance"),
+					Tags: pulumi.StringMap{
+						"Name": pulumi.String("test"),
+					},
+				},
+			},
+			UserData: filebase64OrPanic(fmt.Sprintf("%v%v", path.Module, "/example.sh")),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import base64
+import pulumi_aws as aws
+
+foo = aws.ec2.LaunchTemplate("foo",
+    block_device_mappings=[aws.ec2.LaunchTemplateBlockDeviceMappingArgs(
+        device_name="/dev/sda1",
+        ebs=aws.ec2.LaunchTemplateBlockDeviceMappingEbsArgs(
+            volume_size=20,
+        ),
+    )],
+    capacity_reservation_specification=aws.ec2.LaunchTemplateCapacityReservationSpecificationArgs(
+        capacity_reservation_preference="open",
+    ),
+    cpu_options=aws.ec2.LaunchTemplateCpuOptionsArgs(
+        core_count=4,
+        threads_per_core=2,
+    ),
+    credit_specification=aws.ec2.LaunchTemplateCreditSpecificationArgs(
+        cpu_credits="standard",
+    ),
+    disable_api_termination=True,
+    ebs_optimized="true",
+    elastic_gpu_specifications=[aws.ec2.LaunchTemplateElasticGpuSpecificationArgs(
+        type="test",
+    )],
+    elastic_inference_accelerator=aws.ec2.LaunchTemplateElasticInferenceAcceleratorArgs(
+        type="eia1.medium",
+    ),
+    iam_instance_profile=aws.ec2.LaunchTemplateIamInstanceProfileArgs(
+        name="test",
+    ),
+    image_id="ami-test",
+    instance_initiated_shutdown_behavior="terminate",
+    instance_market_options=aws.ec2.LaunchTemplateInstanceMarketOptionsArgs(
+        market_type="spot",
+    ),
+    instance_type="t2.micro",
+    kernel_id="test",
+    key_name="test",
+    license_specifications=[aws.ec2.LaunchTemplateLicenseSpecificationArgs(
+        license_configuration_arn="arn:aws:license-manager:eu-west-1:123456789012:license-configuration:lic-0123456789abcdef0123456789abcdef",
+    )],
+    metadata_options=aws.ec2.LaunchTemplateMetadataOptionsArgs(
+        http_endpoint="enabled",
+        http_tokens="required",
+        http_put_response_hop_limit=1,
+    ),
+    monitoring=aws.ec2.LaunchTemplateMonitoringArgs(
+        enabled=True,
+    ),
+    network_interfaces=[aws.ec2.LaunchTemplateNetworkInterfaceArgs(
+        associate_public_ip_address="true",
+    )],
+    placement=aws.ec2.LaunchTemplatePlacementArgs(
+        availability_zone="us-west-2a",
+    ),
+    ram_disk_id="test",
+    vpc_security_group_ids=["sg-12345678"],
+    tag_specifications=[aws.ec2.LaunchTemplateTagSpecificationArgs(
+        resource_type="instance",
+        tags={
+            "Name": "test",
+        },
+    )],
+    user_data=(lambda path: base64.b64encode(open(path).read().encode()).decode())(f"{path['module']}/example.sh"))
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+import * from "fs";
+
+const foo = new aws.ec2.LaunchTemplate("foo", {
+    blockDeviceMappings: [{
+        deviceName: "/dev/sda1",
+        ebs: {
+            volumeSize: 20,
+        },
+    }],
+    capacityReservationSpecification: {
+        capacityReservationPreference: "open",
+    },
+    cpuOptions: {
+        coreCount: 4,
+        threadsPerCore: 2,
+    },
+    creditSpecification: {
+        cpuCredits: "standard",
+    },
+    disableApiTermination: true,
+    ebsOptimized: true,
+    elasticGpuSpecifications: [{
+        type: "test",
+    }],
+    elasticInferenceAccelerator: {
+        type: "eia1.medium",
+    },
+    iamInstanceProfile: {
+        name: "test",
+    },
+    imageId: "ami-test",
+    instanceInitiatedShutdownBehavior: "terminate",
+    instanceMarketOptions: {
+        marketType: "spot",
+    },
+    instanceType: "t2.micro",
+    kernelId: "test",
+    keyName: "test",
+    licenseSpecifications: [{
+        licenseConfigurationArn: "arn:aws:license-manager:eu-west-1:123456789012:license-configuration:lic-0123456789abcdef0123456789abcdef",
+    }],
+    metadataOptions: {
+        httpEndpoint: "enabled",
+        httpTokens: "required",
+        httpPutResponseHopLimit: 1,
+    },
+    monitoring: {
+        enabled: true,
+    },
+    networkInterfaces: [{
+        associatePublicIpAddress: true,
+    }],
+    placement: {
+        availabilityZone: "us-west-2a",
+    },
+    ramDiskId: "test",
+    vpcSecurityGroupIds: ["sg-12345678"],
+    tagSpecifications: [{
+        resourceType: "instance",
+        tags: {
+            Name: "test",
+        },
+    }],
+    userData: Buffer.from(fs.readFileSync(`${path.module}/example.sh`), 'binary').toString('base64'),
+});
+```
+
+
+{{< /example >}}
+
+
+
+
+
+{{% /examples %}}
+
+
 
 
 ## Create a LaunchTemplate Resource {#create}

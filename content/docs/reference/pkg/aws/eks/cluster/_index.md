@@ -19,6 +19,150 @@ Manages an EKS Cluster.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
+### Basic Usage
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.Eks.Cluster("example", new Aws.Eks.ClusterArgs
+        {
+            RoleArn = aws_iam_role.Example.Arn,
+            VpcConfig = new Aws.Eks.Inputs.ClusterVpcConfigArgs
+            {
+                SubnetIds = 
+                {
+                    aws_subnet.Example1.Id,
+                    aws_subnet.Example2.Id,
+                },
+            },
+        }, new CustomResourceOptions
+        {
+            DependsOn = 
+            {
+                aws_iam_role_policy_attachment.Example_AmazonEKSClusterPolicy,
+                aws_iam_role_policy_attachment.Example_AmazonEKSVPCResourceController,
+            },
+        });
+        this.Endpoint = example.Endpoint;
+        this.Kubeconfig_certificate_authority_data = example.CertificateAuthority.Apply(certificateAuthority => certificateAuthority.Data);
+    }
+
+    [Output("endpoint")]
+    public Output<string> Endpoint { get; set; }
+    [Output("kubeconfig-certificate-authority-data")]
+    public Output<string> Kubeconfig_certificate_authority_data { get; set; }
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/eks"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := eks.NewCluster(ctx, "example", &eks.ClusterArgs{
+			RoleArn: pulumi.Any(aws_iam_role.Example.Arn),
+			VpcConfig: &eks.ClusterVpcConfigArgs{
+				SubnetIds: pulumi.StringArray{
+					pulumi.Any(aws_subnet.Example1.Id),
+					pulumi.Any(aws_subnet.Example2.Id),
+				},
+			},
+		}, pulumi.DependsOn([]pulumi.Resource{
+			aws_iam_role_policy_attachment.Example - AmazonEKSClusterPolicy,
+			aws_iam_role_policy_attachment.Example - AmazonEKSVPCResourceController,
+		}))
+		if err != nil {
+			return err
+		}
+		ctx.Export("endpoint", example.Endpoint)
+		ctx.Export("kubeconfig-certificate-authority-data", example.CertificateAuthority.ApplyT(func(certificateAuthority eks.ClusterCertificateAuthority) (string, error) {
+			return certificateAuthority.Data, nil
+		}).(pulumi.StringOutput))
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.eks.Cluster("example",
+    role_arn=aws_iam_role["example"]["arn"],
+    vpc_config=aws.eks.ClusterVpcConfigArgs(
+        subnet_ids=[
+            aws_subnet["example1"]["id"],
+            aws_subnet["example2"]["id"],
+        ],
+    ),
+    opts=pulumi.ResourceOptions(depends_on=[
+            aws_iam_role_policy_attachment["example-AmazonEKSClusterPolicy"],
+            aws_iam_role_policy_attachment["example-AmazonEKSVPCResourceController"],
+        ]))
+pulumi.export("endpoint", example.endpoint)
+pulumi.export("kubeconfig-certificate-authority-data", example.certificate_authority.data)
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const example = new aws.eks.Cluster("example", {
+    roleArn: aws_iam_role.example.arn,
+    vpcConfig: {
+        subnetIds: [
+            aws_subnet.example1.id,
+            aws_subnet.example2.id,
+        ],
+    },
+}, {
+    dependsOn: [
+        aws_iam_role_policy_attachment["example-AmazonEKSClusterPolicy"],
+        aws_iam_role_policy_attachment["example-AmazonEKSVPCResourceController"],
+    ],
+});
+export const endpoint = example.endpoint;
+export const kubeconfig_certificate_authority_data = example.certificateAuthority.apply(certificateAuthority => certificateAuthority.data);
+```
+
+
+{{< /example >}}
+
+
+
+
 ### Example IAM Role for EKS Cluster
 
 

@@ -12,6 +12,388 @@ meta_desc: "Documentation for the aws.apigateway.UsagePlan resource with example
 
 Provides an API Gateway Usage Plan.
 
+{{% examples %}}
+
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+
+
+
+
+{{< example csharp >}}
+
+```csharp
+using System.Collections.Generic;
+using System.Security.Cryptography;
+using System.Text;
+using System.Text.Json;
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+	private static string ComputeSHA1(string input) {
+		return BitConverter.ToString(
+			SHA1.Create().ComputeHash(Encoding.UTF8.GetBytes(input))
+		).Replace("-","").ToLowerInvariant());
+	}
+
+    public MyStack()
+    {
+        var exampleRestApi = new Aws.ApiGateway.RestApi("exampleRestApi", new Aws.ApiGateway.RestApiArgs
+        {
+            Body = JsonSerializer.Serialize(new Dictionary<string, object?>
+            {
+                { "openapi", "3.0.1" },
+                { "info", new Dictionary<string, object?>
+                {
+                    { "title", "example" },
+                    { "version", "1.0" },
+                } },
+                { "paths", new Dictionary<string, object?>
+                {
+                    { "/path1", new Dictionary<string, object?>
+                    {
+                        { "get", new Dictionary<string, object?>
+                        {
+                            { "x-amazon-apigateway-integration", new Dictionary<string, object?>
+                            {
+                                { "httpMethod", "GET" },
+                                { "payloadFormatVersion", "1.0" },
+                                { "type", "HTTP_PROXY" },
+                                { "uri", "https://ip-ranges.amazonaws.com/ip-ranges.json" },
+                            } },
+                        } },
+                    } },
+                } },
+            }),
+        });
+        var exampleDeployment = new Aws.ApiGateway.Deployment("exampleDeployment", new Aws.ApiGateway.DeploymentArgs
+        {
+            RestApi = exampleRestApi.Id,
+            Triggers = 
+            {
+                { "redeployment", exampleRestApi.Body.Apply(body => JsonSerializer.Serialize(body)).Apply(toJSON => ComputeSHA1(toJSON)) },
+            },
+        });
+        var development = new Aws.ApiGateway.Stage("development", new Aws.ApiGateway.StageArgs
+        {
+            Deployment = exampleDeployment.Id,
+            RestApi = exampleRestApi.Id,
+            StageName = "development",
+        });
+        var production = new Aws.ApiGateway.Stage("production", new Aws.ApiGateway.StageArgs
+        {
+            Deployment = exampleDeployment.Id,
+            RestApi = exampleRestApi.Id,
+            StageName = "production",
+        });
+        var exampleUsagePlan = new Aws.ApiGateway.UsagePlan("exampleUsagePlan", new Aws.ApiGateway.UsagePlanArgs
+        {
+            Description = "my description",
+            ProductCode = "MYCODE",
+            ApiStages = 
+            {
+                new Aws.ApiGateway.Inputs.UsagePlanApiStageArgs
+                {
+                    ApiId = exampleRestApi.Id,
+                    Stage = development.StageName,
+                },
+                new Aws.ApiGateway.Inputs.UsagePlanApiStageArgs
+                {
+                    ApiId = exampleRestApi.Id,
+                    Stage = production.StageName,
+                },
+            },
+            QuotaSettings = new Aws.ApiGateway.Inputs.UsagePlanQuotaSettingsArgs
+            {
+                Limit = 20,
+                Offset = 2,
+                Period = "WEEK",
+            },
+            ThrottleSettings = new Aws.ApiGateway.Inputs.UsagePlanThrottleSettingsArgs
+            {
+                BurstLimit = 5,
+                RateLimit = 10,
+            },
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"crypto/sha1"
+	"encoding/json"
+	"fmt"
+
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/apigateway"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func sha1Hash(input string) string {
+	hash := sha1.Sum([]byte(input))
+	return hex.EncodeToString(hash[:])
+}
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		tmpJSON0, err := json.Marshal(map[string]interface{}{
+			"openapi": "3.0.1",
+			"info": map[string]interface{}{
+				"title":   "example",
+				"version": "1.0",
+			},
+			"paths": map[string]interface{}{
+				"/path1": map[string]interface{}{
+					"get": map[string]interface{}{
+						"x-amazon-apigateway-integration": map[string]interface{}{
+							"httpMethod":           "GET",
+							"payloadFormatVersion": "1.0",
+							"type":                 "HTTP_PROXY",
+							"uri":                  "https://ip-ranges.amazonaws.com/ip-ranges.json",
+						},
+					},
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		json0 := string(tmpJSON0)
+		exampleRestApi, err := apigateway.NewRestApi(ctx, "exampleRestApi", &apigateway.RestApiArgs{
+			Body: pulumi.String(json0),
+		})
+		if err != nil {
+			return err
+		}
+		exampleDeployment, err := apigateway.NewDeployment(ctx, "exampleDeployment", &apigateway.DeploymentArgs{
+			RestApi: exampleRestApi.ID(),
+			Triggers: pulumi.StringMap{
+				"redeployment": exampleRestApi.Body.ApplyT(func(body string) (pulumi.String, error) {
+					var _zero pulumi.String
+					tmpJSON1, err := json.Marshal(body)
+					if err != nil {
+						return _zero, err
+					}
+					json1 := string(tmpJSON1)
+					return json1, nil
+				}).(pulumi.StringOutput).ApplyT(func(toJSON string) (pulumi.String, error) {
+					return sha1Hash(toJSON), nil
+				}).(pulumi.StringOutput),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		development, err := apigateway.NewStage(ctx, "development", &apigateway.StageArgs{
+			Deployment: exampleDeployment.ID(),
+			RestApi:    exampleRestApi.ID(),
+			StageName:  pulumi.String("development"),
+		})
+		if err != nil {
+			return err
+		}
+		production, err := apigateway.NewStage(ctx, "production", &apigateway.StageArgs{
+			Deployment: exampleDeployment.ID(),
+			RestApi:    exampleRestApi.ID(),
+			StageName:  pulumi.String("production"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = apigateway.NewUsagePlan(ctx, "exampleUsagePlan", &apigateway.UsagePlanArgs{
+			Description: pulumi.String("my description"),
+			ProductCode: pulumi.String("MYCODE"),
+			ApiStages: apigateway.UsagePlanApiStageArray{
+				&apigateway.UsagePlanApiStageArgs{
+					ApiId: exampleRestApi.ID(),
+					Stage: development.StageName,
+				},
+				&apigateway.UsagePlanApiStageArgs{
+					ApiId: exampleRestApi.ID(),
+					Stage: production.StageName,
+				},
+			},
+			QuotaSettings: &apigateway.UsagePlanQuotaSettingsArgs{
+				Limit:  pulumi.Int(20),
+				Offset: pulumi.Int(2),
+				Period: pulumi.String("WEEK"),
+			},
+			ThrottleSettings: &apigateway.UsagePlanThrottleSettingsArgs{
+				BurstLimit: pulumi.Int(5),
+				RateLimit:  pulumi.Float64(10),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import hashlib
+import json
+import pulumi_aws as aws
+
+example_rest_api = aws.apigateway.RestApi("exampleRestApi", body=json.dumps({
+    "openapi": "3.0.1",
+    "info": {
+        "title": "example",
+        "version": "1.0",
+    },
+    "paths": {
+        "/path1": {
+            "get": {
+                "x-amazon-apigateway-integration": {
+                    "httpMethod": "GET",
+                    "payloadFormatVersion": "1.0",
+                    "type": "HTTP_PROXY",
+                    "uri": "https://ip-ranges.amazonaws.com/ip-ranges.json",
+                },
+            },
+        },
+    },
+}))
+example_deployment = aws.apigateway.Deployment("exampleDeployment",
+    rest_api=example_rest_api.id,
+    triggers={
+        "redeployment": example_rest_api.body.apply(lambda body: json.dumps(body)).apply(lambda to_json: hashlib.sha1(to_json.encode()).hexdigest()),
+    })
+development = aws.apigateway.Stage("development",
+    deployment=example_deployment.id,
+    rest_api=example_rest_api.id,
+    stage_name="development")
+production = aws.apigateway.Stage("production",
+    deployment=example_deployment.id,
+    rest_api=example_rest_api.id,
+    stage_name="production")
+example_usage_plan = aws.apigateway.UsagePlan("exampleUsagePlan",
+    description="my description",
+    product_code="MYCODE",
+    api_stages=[
+        aws.apigateway.UsagePlanApiStageArgs(
+            api_id=example_rest_api.id,
+            stage=development.stage_name,
+        ),
+        aws.apigateway.UsagePlanApiStageArgs(
+            api_id=example_rest_api.id,
+            stage=production.stage_name,
+        ),
+    ],
+    quota_settings=aws.apigateway.UsagePlanQuotaSettingsArgs(
+        limit=20,
+        offset=2,
+        period="WEEK",
+    ),
+    throttle_settings=aws.apigateway.UsagePlanThrottleSettingsArgs(
+        burst_limit=5,
+        rate_limit=10,
+    ))
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+import * as crypto from "crypto";
+
+const exampleRestApi = new aws.apigateway.RestApi("exampleRestApi", {body: JSON.stringify({
+    openapi: "3.0.1",
+    info: {
+        title: "example",
+        version: "1.0",
+    },
+    paths: {
+        "/path1": {
+            get: {
+                "x-amazon-apigateway-integration": {
+                    httpMethod: "GET",
+                    payloadFormatVersion: "1.0",
+                    type: "HTTP_PROXY",
+                    uri: "https://ip-ranges.amazonaws.com/ip-ranges.json",
+                },
+            },
+        },
+    },
+})});
+const exampleDeployment = new aws.apigateway.Deployment("exampleDeployment", {
+    restApi: exampleRestApi.id,
+    triggers: {
+        redeployment: exampleRestApi.body.apply(body => JSON.stringify(body)).apply(toJSON => crypto.createHash('sha1').update(toJSON).digest('hex')),
+    },
+});
+const development = new aws.apigateway.Stage("development", {
+    deployment: exampleDeployment.id,
+    restApi: exampleRestApi.id,
+    stageName: "development",
+});
+const production = new aws.apigateway.Stage("production", {
+    deployment: exampleDeployment.id,
+    restApi: exampleRestApi.id,
+    stageName: "production",
+});
+const exampleUsagePlan = new aws.apigateway.UsagePlan("exampleUsagePlan", {
+    description: "my description",
+    productCode: "MYCODE",
+    apiStages: [
+        {
+            apiId: exampleRestApi.id,
+            stage: development.stageName,
+        },
+        {
+            apiId: exampleRestApi.id,
+            stage: production.stageName,
+        },
+    ],
+    quotaSettings: {
+        limit: 20,
+        offset: 2,
+        period: "WEEK",
+    },
+    throttleSettings: {
+        burstLimit: 5,
+        rateLimit: 10,
+    },
+});
+```
+
+
+{{< /example >}}
+
+
+
+
+
+{{% /examples %}}
+
+
 
 
 ## Create a UsagePlan Resource {#create}
