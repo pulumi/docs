@@ -1,13 +1,13 @@
 ---
 # Name of the webinar.
 title: "From Zero to Production in Kubernetes"
-meta_desc: "Watch as Lee Briggs & Elijah Zupancic go from zero to production on Kubernetes by using Python to build abstractions that make getting to production easier."
+meta_desc: "Join Damian Curry & Elijah Zupancic and go from zero to production on Kubernetes by using Python to build abstractions that make getting to production easier."
 
 # A featured webinar will display first in the list.
 featured: false
 
 # If the video is pre-recorded or live.
-pre_recorded: true
+pre_recorded: false
 
 # If the video is part of the PulumiTV series. Setting this value to true will list the video in the "PulumiTV" section.
 pulumi_tv: false
@@ -20,7 +20,7 @@ unlisted: false
 
 # Gated webinars will have a registration form and the user will need
 # to fill out the form before viewing.
-gated: false
+gated: true
 
 # The layout of the landing page.
 type: webinars
@@ -50,7 +50,7 @@ main:
     # URL for embedding a URL for ungated webinars.
     youtube_url: "https://www.youtube.com/embed/L-8uzn6AdHM"
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2021-07-20T10:00:00-07:00
+    sortable_date: 2021-10-21T14:00:00-07:00
     # Duration of the webinar.
     duration: "1 hour"
     # Datetime of the webinar.
@@ -63,8 +63,8 @@ main:
 
     # The webinar presenters
     presenters:
-        - name: Lee Briggs
-          role: Community Engineer, Pulumi
+        - name: Damian Curry
+          role: Business Development Technical Director, NGINX
         - name: Elijah Zupancic
           role: Solutions Architect, NGINX
 
@@ -77,5 +77,5 @@ main:
 # The right hand side form section.
 form:
     # HubSpot form id.
-    hubspot_form_id: 455d3e60-9d8d-49c9-876e-08d33d2cfe0d
+    hubspot_form_id: e6b5082c-2ca8-43b7-96fb-6d19a331d554
 ---

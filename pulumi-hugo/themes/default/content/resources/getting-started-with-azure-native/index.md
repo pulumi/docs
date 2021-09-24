@@ -7,7 +7,7 @@ meta_desc: "In this workshop, you’ll use the Azure native provider to build in
 featured: false
 
 # If the video is pre-recorded or live.
-pre_recorded: true
+pre_recorded: false
 
 # If the video is part of the PulumiTV series. Setting this value to true will list the video in the "PulumiTV" section.
 pulumi_tv: false
@@ -20,7 +20,7 @@ unlisted: false
 
 # Gated webinars will have a registration form and the user will need
 # to fill out the form before viewing.
-gated: false
+gated: true
 
 # The layout of the landing page.
 type: webinars
@@ -37,9 +37,12 @@ block_external_search_index: false
 url_slug: "getting-started-with-azure-native"
 
 # Webinar pages support multiple session via the 'multiple' property.
-# multiple:
-#     - datetime: 2021-08-12T09:00:00-07:00
-#       hubspot_form_id: d69a09b6-9f49-4d07-a4fd-98668b1fac26
+multiple:
+    - datetime: 2021-10-21T09:00:00-07:00
+      hubspot_form_id: 7de43dee-4699-46e9-9ce3-9a6fffd56aa5
+
+    - datetime: 2021-10-21T21:00:00-07:00
+      hubspot_form_id: a3ca0bab-312f-4779-b3d1-11884f181629
 
 # The content of the hero section.
 hero:

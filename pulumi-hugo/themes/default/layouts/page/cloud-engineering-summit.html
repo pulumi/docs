@@ -102,6 +102,48 @@
         </div>
     </section>
 
+    <section id="workshops" class="container mx-auto my-32">
+        <h2 class="text-center mb-12">{{ .Params.workshops.title }}</h2>
+
+        <div class="benefits-section relative">
+            <div class="shape-background home-benefits-section">
+                <div class="shape-container">
+                    <div class="circle-left"></div>
+                    <div class="circle-right"></div>
+                </div>
+            </div>
+
+            <div class="flex flex-wrap items-stretch justify-center">
+                {{ range $item := .Params.workshops.items }}
+                    <div class="w-full lg:w-1/2 p-4 my-2">
+                        <div class="card h-full text-center py-16 px-8 relative bg-white">
+                            <div class="icon-section mb-4">
+                                {{ partial "color-icon.html" (dict "icon" $item.icon "icon_color" $item.icon_color) }}
+                            </div>
+                            <div>
+                                <h5>{{ $item.title }}</h5>
+                            </div>
+                            <div class="description">
+                                <p>{{ $item.description }}</p>
+                            </div>
+                            <div class="mt-8">
+                                {{ range $time := $item.times }}
+                                    <p class="text-sm my-2">
+                                        <span class="mr-2"><i class="fas fa-calendar"></i></span>
+                                        <pulumi-datetime class="inline-block" date="{{ $time }}"></pulumi-datetime>
+                                    </p>
+                                {{ end }}
+                            </div>
+                            <div class="card-cta-btn">
+                                <a href="{{ $item.link }}" class="btn-primary">Save your spot</a>
+                            </div>
+                        </div>
+                    </div>
+                {{ end }}
+            </div>
+        </div>
+    </section>
+
     <section id="sponsors" class="container mx-auto mt-32">
         <h2 class="text-center">Brought to you by</h2>
         <div class="flex flex-wrap items-center justify-center">
