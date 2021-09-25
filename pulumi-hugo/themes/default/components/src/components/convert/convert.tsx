@@ -1,6 +1,6 @@
 import { Component, Element, h, Prop, State } from '@stencil/core';
 
-export type SourceKind = "tf" | "kube" | "arm";
+export type SourceKind = "tf" | "kube" | "arm" | "cf";
 export type InputEditorMode = "ruby" | "javascript" | "yaml";
 export type OutputEditorLanguage = "typescript" | "python" | "go" | "csharp";
 export type OutputEditorFilename = "index.ts" | "index.js" | "__main__.py" | "main.go" | "MyStack.cs";
@@ -111,6 +111,7 @@ export class Convert {
             case "tf":
                 return "ruby";
             case "kube":
+            case "cf":
                 return "yaml";
             case "arm":
                 return "javascript";
@@ -131,6 +132,8 @@ export class Convert {
                 return "kube.yaml";
             case "arm":
                 return "azuredeploy.json";
+            case "cf":
+                return "aws.yaml";
         }
     }
 
@@ -143,6 +146,8 @@ export class Convert {
                 return "Kubernetes YAML";
             case "arm":
                 return "ARM";
+            case "cf":
+                return "CloudFormation";
         }
     }
 
@@ -155,6 +160,8 @@ export class Convert {
                 return "convertARM";
             case "kube":
                 return "convertKube";
+            case "cf":
+                return "convertCFN";
         }
     }
 
@@ -175,6 +182,11 @@ export class Convert {
                 return {
                     name: "arm2pulumi",
                     githubURL: "https://github.com/pulumi/arm2pulumi",
+                };
+            case "cf":
+                return {
+                    name: "cf2pulumi",
+                    githubURL: "https://github.com/pulumi/cf2pulumi",
                 };
             default:
                 return {
@@ -205,7 +217,7 @@ export class Convert {
     private validateProps() {
         const errors: string[] = [];
 
-        if (!this.from || !["tf", "kube", "arm"].includes(this.from)) {
+        if (!this.from || !["tf", "kube", "arm", "cf"].includes(this.from)) {
             errors.push("A valid `from` attribute is required.");
         }
 
@@ -240,7 +252,7 @@ export class Convert {
 
         this.inputEditor = CodeMirror.fromTextArea(this.inputEditorEl, {
             ...config,
-            indentUnit: this.from === "kube" ? 2 : 4,
+            indentUnit: ["kube", "cf"].includes(this.from) ? 2 : 4,
             mode: this.inputEditorMode,
         });
 
