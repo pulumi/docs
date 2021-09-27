@@ -268,7 +268,7 @@ The IntegrationLambdaArn resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Your AWS Account ID without dashes.
+    <dd>{{% md %}}Your AWS Account ID without dashes. If your account is a GovCloud or China account, specify the `access_key_id` here.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lambdaarn_csharp">
@@ -290,7 +290,7 @@ The IntegrationLambdaArn resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Your AWS Account ID without dashes.
+    <dd>{{% md %}}Your AWS Account ID without dashes. If your account is a GovCloud or China account, specify the `access_key_id` here.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lambdaarn_go">
@@ -312,7 +312,7 @@ The IntegrationLambdaArn resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Your AWS Account ID without dashes.
+    <dd>{{% md %}}Your AWS Account ID without dashes. If your account is a GovCloud or China account, specify the `access_key_id` here.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lambdaarn_nodejs">
@@ -334,7 +334,7 @@ The IntegrationLambdaArn resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Your AWS Account ID without dashes.
+    <dd>{{% md %}}Your AWS Account ID without dashes. If your account is a GovCloud or China account, specify the `access_key_id` here.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lambda_arn_python">
@@ -538,7 +538,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Your AWS Account ID without dashes.
+    <dd>{{% md %}}Your AWS Account ID without dashes. If your account is a GovCloud or China account, specify the `access_key_id` here.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lambdaarn_csharp">
@@ -560,7 +560,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Your AWS Account ID without dashes.
+    <dd>{{% md %}}Your AWS Account ID without dashes. If your account is a GovCloud or China account, specify the `access_key_id` here.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lambdaarn_go">
@@ -582,7 +582,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Your AWS Account ID without dashes.
+    <dd>{{% md %}}Your AWS Account ID without dashes. If your account is a GovCloud or China account, specify the `access_key_id` here.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lambdaarn_nodejs">
@@ -604,7 +604,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Your AWS Account ID without dashes.
+    <dd>{{% md %}}Your AWS Account ID without dashes. If your account is a GovCloud or China account, specify the `access_key_id` here.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lambda_arn_python">
