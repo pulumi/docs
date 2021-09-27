@@ -375,7 +375,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The security policy mode, either `KRS` (update manually) or `AAG` (update automatically),
+    <dd>{{% md %}}The security policy mode, either `KRS` (update manually) or `AAG` (update automatically), For Adaptive Security Engine (ASE) __BETA__, use `ASE_AUTO` for automatic updates or `ASE_MANUAL` to manually get current rules. Please contact your Akamai representative to learn more about ASE.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="outputtext_csharp">
@@ -467,7 +467,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The security policy mode, either `KRS` (update manually) or `AAG` (update automatically),
+    <dd>{{% md %}}The security policy mode, either `KRS` (update manually) or `AAG` (update automatically), For Adaptive Security Engine (ASE) __BETA__, use `ASE_AUTO` for automatic updates or `ASE_MANUAL` to manually get current rules. Please contact your Akamai representative to learn more about ASE.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="outputtext_go">
@@ -559,7 +559,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The security policy mode, either `KRS` (update manually) or `AAG` (update automatically),
+    <dd>{{% md %}}The security policy mode, either `KRS` (update manually) or `AAG` (update automatically), For Adaptive Security Engine (ASE) __BETA__, use `ASE_AUTO` for automatic updates or `ASE_MANUAL` to manually get current rules. Please contact your Akamai representative to learn more about ASE.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="outputtext_nodejs">
@@ -651,7 +651,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The security policy mode, either `KRS` (update manually) or `AAG` (update automatically),
+    <dd>{{% md %}}The security policy mode, either `KRS` (update manually) or `AAG` (update automatically), For Adaptive Security Engine (ASE) __BETA__, use `ASE_AUTO` for automatic updates or `ASE_MANUAL` to manually get current rules. Please contact your Akamai representative to learn more about ASE.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="output_text_python">

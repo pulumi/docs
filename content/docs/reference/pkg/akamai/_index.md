@@ -35,6 +35,7 @@ A Pulumi package for creating and managing akamai cloud resources.
     <li><a href="appseccustomrule" title="AppSecCustomRule"><span class="symbol resource"></span>AppSecCustomRule</a></li>
     <li><a href="appseccustomruleaction" title="AppSecCustomRuleAction"><span class="symbol resource"></span>AppSecCustomRuleAction</a></li>
     <li><a href="appseceval" title="AppSecEval"><span class="symbol resource"></span>AppSecEval</a></li>
+    <li><a href="appsecevalgroup" title="AppSecEvalGroup"><span class="symbol resource"></span>AppSecEvalGroup</a></li>
     <li><a href="appsecevalhostnames" title="AppSecEvalHostnames"><span class="symbol resource"></span>AppSecEvalHostnames</a></li>
     <li><a href="appsecevalprotecthost" title="AppSecEvalProtectHost"><span class="symbol resource"></span>AppSecEvalProtectHost</a></li>
     <li><a href="appsecevalrule" title="AppSecEvalRule"><span class="symbol resource"></span>AppSecEvalRule</a></li>
@@ -58,9 +59,11 @@ A Pulumi package for creating and managing akamai cloud resources.
     <li><a href="appsecsiemsettings" title="AppSecSiemSettings"><span class="symbol resource"></span>AppSecSiemSettings</a></li>
     <li><a href="appsecslowpost" title="AppSecSlowPost"><span class="symbol resource"></span>AppSecSlowPost</a></li>
     <li><a href="appsecslowpostprotection" title="AppSecSlowPostProtection"><span class="symbol resource"></span>AppSecSlowPostProtection</a></li>
+    <li><a href="appsecthreatintel" title="AppSecThreatIntel"><span class="symbol resource"></span>AppSecThreatIntel</a></li>
     <li><a href="appsecversionnodes" title="AppSecVersionNodes"><span class="symbol resource"></span>AppSecVersionNodes</a></li>
     <li><a href="appsecwafmode" title="AppSecWafMode"><span class="symbol resource"></span>AppSecWafMode</a></li>
     <li><a href="appsecwafprotection" title="AppSecWafProtection"><span class="symbol resource"></span>AppSecWafProtection</a></li>
+    <li><a href="appsecwapselectedhostnames" title="AppSecWapSelectedHostnames"><span class="symbol resource"></span>AppSecWapSelectedHostnames</a></li>
     <li><a href="cpcode" title="CpCode"><span class="symbol resource"></span>CpCode</a></li>
     <li><a href="cpsdvenrollment" title="CpsDvEnrollment"><span class="symbol resource"></span>CpsDvEnrollment</a></li>
     <li><a href="cpsdvvalidation" title="CpsDvValidation"><span class="symbol resource"></span>CpsDvValidation</a></li>
@@ -100,6 +103,7 @@ A Pulumi package for creating and managing akamai cloud resources.
     <li><a href="getappseccustomruleactions" title="GetAppSecCustomRuleActions"><span class="symbol function"></span>GetAppSecCustomRuleActions</a></li>
     <li><a href="getappseccustomrules" title="GetAppSecCustomRules"><span class="symbol function"></span>GetAppSecCustomRules</a></li>
     <li><a href="getappseceval" title="GetAppSecEval"><span class="symbol function"></span>GetAppSecEval</a></li>
+    <li><a href="getappsecevalgroups" title="GetAppSecEvalGroups"><span class="symbol function"></span>GetAppSecEvalGroups</a></li>
     <li><a href="getappsecevalhostnames" title="GetAppSecEvalHostnames"><span class="symbol function"></span>GetAppSecEvalHostnames</a></li>
     <li><a href="getappsecevalrules" title="GetAppSecEvalRules"><span class="symbol function"></span>GetAppSecEvalRules</a></li>
     <li><a href="getappsecexportconfiguration" title="GetAppSecExportConfiguration"><span class="symbol function"></span>GetAppSecExportConfiguration</a></li>
@@ -124,8 +128,10 @@ A Pulumi package for creating and managing akamai cloud resources.
     <li><a href="getappsecsiemdefinitions" title="GetAppSecSiemDefinitions"><span class="symbol function"></span>GetAppSecSiemDefinitions</a></li>
     <li><a href="getappsecsiemsettings" title="GetAppSecSiemSettings"><span class="symbol function"></span>GetAppSecSiemSettings</a></li>
     <li><a href="getappsecslowpost" title="GetAppSecSlowPost"><span class="symbol function"></span>GetAppSecSlowPost</a></li>
+    <li><a href="getappsecthreatintel" title="GetAppSecThreatIntel"><span class="symbol function"></span>GetAppSecThreatIntel</a></li>
     <li><a href="getappsecversionnotes" title="GetAppSecVersionNotes"><span class="symbol function"></span>GetAppSecVersionNotes</a></li>
     <li><a href="getappsecwafmode" title="GetAppSecWafMode"><span class="symbol function"></span>GetAppSecWafMode</a></li>
+    <li><a href="getappsecwapselectedhostnames" title="GetAppSecWapSelectedHostnames"><span class="symbol function"></span>GetAppSecWapSelectedHostnames</a></li>
     <li><a href="getauthoritiesset" title="GetAuthoritiesSet"><span class="symbol function"></span>GetAuthoritiesSet</a></li>
     <li><a href="getcontract" title="GetContract"><span class="symbol function"></span>GetContract</a></li>
     <li><a href="getcontracts" title="GetContracts"><span class="symbol function"></span>GetContracts</a></li>
@@ -153,6 +159,6 @@ A Pulumi package for creating and managing akamai cloud resources.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`akamai` Terraform Provider](https://github.com/akamai/terraform-provider-akamai).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>2.3.0</dd>
+	<dd>2.4.0</dd>
 </dl>
 

@@ -323,7 +323,7 @@ The AppSecWafMode resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}"KRS" to update the rule sets manually, or "AAG" to have them update automatically.
+    <dd>{{% md %}}"KRS" to update the rule sets manually, or "AAG" to have them update automatically. For Adaptive Security Engine (ASE) __BETA__, use `ASE_AUTO` for automatic updates or `ASE_MANUAL` to manually get current rules. Please contact your Akamai representative to learn more about ASE. Policy Rule Actions and Threat Intelligence setting are read only in ASE_AUTO mode
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="securitypolicyid_csharp">
@@ -354,7 +354,7 @@ The AppSecWafMode resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}"KRS" to update the rule sets manually, or "AAG" to have them update automatically.
+    <dd>{{% md %}}"KRS" to update the rule sets manually, or "AAG" to have them update automatically. For Adaptive Security Engine (ASE) __BETA__, use `ASE_AUTO` for automatic updates or `ASE_MANUAL` to manually get current rules. Please contact your Akamai representative to learn more about ASE. Policy Rule Actions and Threat Intelligence setting are read only in ASE_AUTO mode
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="securitypolicyid_go">
@@ -385,7 +385,7 @@ The AppSecWafMode resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}"KRS" to update the rule sets manually, or "AAG" to have them update automatically.
+    <dd>{{% md %}}"KRS" to update the rule sets manually, or "AAG" to have them update automatically. For Adaptive Security Engine (ASE) __BETA__, use `ASE_AUTO` for automatic updates or `ASE_MANUAL` to manually get current rules. Please contact your Akamai representative to learn more about ASE. Policy Rule Actions and Threat Intelligence setting are read only in ASE_AUTO mode
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="securitypolicyid_nodejs">
@@ -416,7 +416,7 @@ The AppSecWafMode resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}"KRS" to update the rule sets manually, or "AAG" to have them update automatically.
+    <dd>{{% md %}}"KRS" to update the rule sets manually, or "AAG" to have them update automatically. For Adaptive Security Engine (ASE) __BETA__, use `ASE_AUTO` for automatic updates or `ASE_MANUAL` to manually get current rules. Please contact your Akamai representative to learn more about ASE. Policy Rule Actions and Threat Intelligence setting are read only in ASE_AUTO mode
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="security_policy_id_python">
@@ -851,7 +851,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}"KRS" to update the rule sets manually, or "AAG" to have them update automatically.
+    <dd>{{% md %}}"KRS" to update the rule sets manually, or "AAG" to have them update automatically. For Adaptive Security Engine (ASE) __BETA__, use `ASE_AUTO` for automatic updates or `ASE_MANUAL` to manually get current rules. Please contact your Akamai representative to learn more about ASE. Policy Rule Actions and Threat Intelligence setting are read only in ASE_AUTO mode
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_outputtext_csharp">
@@ -927,7 +927,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}"KRS" to update the rule sets manually, or "AAG" to have them update automatically.
+    <dd>{{% md %}}"KRS" to update the rule sets manually, or "AAG" to have them update automatically. For Adaptive Security Engine (ASE) __BETA__, use `ASE_AUTO` for automatic updates or `ASE_MANUAL` to manually get current rules. Please contact your Akamai representative to learn more about ASE. Policy Rule Actions and Threat Intelligence setting are read only in ASE_AUTO mode
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_outputtext_go">
@@ -1003,7 +1003,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}"KRS" to update the rule sets manually, or "AAG" to have them update automatically.
+    <dd>{{% md %}}"KRS" to update the rule sets manually, or "AAG" to have them update automatically. For Adaptive Security Engine (ASE) __BETA__, use `ASE_AUTO` for automatic updates or `ASE_MANUAL` to manually get current rules. Please contact your Akamai representative to learn more about ASE. Policy Rule Actions and Threat Intelligence setting are read only in ASE_AUTO mode
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_outputtext_nodejs">
@@ -1079,7 +1079,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}"KRS" to update the rule sets manually, or "AAG" to have them update automatically.
+    <dd>{{% md %}}"KRS" to update the rule sets manually, or "AAG" to have them update automatically. For Adaptive Security Engine (ASE) __BETA__, use `ASE_AUTO` for automatic updates or `ASE_MANUAL` to manually get current rules. Please contact your Akamai representative to learn more about ASE. Policy Rule Actions and Threat Intelligence setting are read only in ASE_AUTO mode
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_output_text_python">

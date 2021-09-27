@@ -13,6 +13,173 @@ meta_desc: "Documentation for the akamai.AppSecSiemSettings resource with exampl
 Use the `akamai.AppSecSiemSettings` resource to mpdate the SIEM integration settings for a specific configuration.
 
 
+{{% examples %}}
+
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+
+
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using Akamai = Pulumi.Akamai;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var configuration = Output.Create(Akamai.GetAppSecConfiguration.InvokeAsync(new Akamai.GetAppSecConfigurationArgs
+        {
+            Name = @var.Security_configuration,
+        }));
+        var siemDefinition = Output.Create(Akamai.GetAppSecSiemDefinitions.InvokeAsync(new Akamai.GetAppSecSiemDefinitionsArgs
+        {
+            SiemDefinitionName = @var.Siem_definition_name,
+        }));
+        var securityPolicies = configuration.Apply(configuration => Output.Create(Akamai.GetAppSecSecurityPolicy.InvokeAsync(new Akamai.GetAppSecSecurityPolicyArgs
+        {
+            ConfigId = configuration.ConfigId,
+        })));
+        var siem = new Akamai.AppSecSiemSettings("siem", new Akamai.AppSecSiemSettingsArgs
+        {
+            ConfigId = configuration.Apply(configuration => configuration.ConfigId),
+            EnableSiem = true,
+            EnableForAllPolicies = false,
+            EnableBotmanSiem = true,
+            SiemId = siemDefinition.Apply(siemDefinition => siemDefinition.Id),
+            SecurityPolicyIds = securityPolicies.Apply(securityPolicies => securityPolicies.SecurityPolicyIdLists),
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-akamai/sdk/v2/go/akamai"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := _var.Security_configuration
+		configuration, err := akamai.LookupAppSecConfiguration(ctx, &akamai.LookupAppSecConfigurationArgs{
+			Name: &opt0,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		opt1 := _var.Siem_definition_name
+		siemDefinition, err := akamai.GetAppSecSiemDefinitions(ctx, &akamai.GetAppSecSiemDefinitionsArgs{
+			SiemDefinitionName: &opt1,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		securityPolicies, err := akamai.LookupAppSecSecurityPolicy(ctx, &akamai.LookupAppSecSecurityPolicyArgs{
+			ConfigId: configuration.ConfigId,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		_, err = akamai.NewAppSecSiemSettings(ctx, "siem", &akamai.AppSecSiemSettingsArgs{
+			ConfigId:             pulumi.Int(configuration.ConfigId),
+			EnableSiem:           pulumi.Bool(true),
+			EnableForAllPolicies: pulumi.Bool(false),
+			EnableBotmanSiem:     pulumi.Bool(true),
+			SiemId:               pulumi.String(siemDefinition.Id),
+			SecurityPolicyIds:    toPulumiStringArray(securityPolicies.SecurityPolicyIdLists),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+func toPulumiStringArray(arr []string) pulumi.StringArray {
+	var pulumiArr pulumi.StringArray
+	for _, v := range arr {
+		pulumiArr = append(pulumiArr, pulumi.String(v))
+	}
+	return pulumiArr
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_akamai as akamai
+
+configuration = akamai.get_app_sec_configuration(name=var["security_configuration"])
+siem_definition = akamai.get_app_sec_siem_definitions(siem_definition_name=var["siem_definition_name"])
+security_policies = akamai.get_app_sec_security_policy(config_id=configuration.config_id)
+siem = akamai.AppSecSiemSettings("siem",
+    config_id=configuration.config_id,
+    enable_siem=True,
+    enable_for_all_policies=False,
+    enable_botman_siem=True,
+    siem_id=siem_definition.id,
+    security_policy_ids=security_policies.security_policy_id_lists)
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as akamai from "@pulumi/akamai";
+
+const configuration = akamai.getAppSecConfiguration({
+    name: _var.security_configuration,
+});
+const siemDefinition = akamai.getAppSecSiemDefinitions({
+    siemDefinitionName: _var.siem_definition_name,
+});
+const securityPolicies = configuration.then(configuration => akamai.getAppSecSecurityPolicy({
+    configId: configuration.configId,
+}));
+const siem = new akamai.AppSecSiemSettings("siem", {
+    configId: configuration.then(configuration => configuration.configId),
+    enableSiem: true,
+    enableForAllPolicies: false,
+    enableBotmanSiem: true,
+    siemId: siemDefinition.then(siemDefinition => siemDefinition.id),
+    securityPolicyIds: securityPolicies.then(securityPolicies => securityPolicies.securityPolicyIdLists),
+});
+```
+
+
+{{< /example >}}
+
+
+
+
+
+{{% /examples %}}
+
+
 
 
 ## Create a AppSecSiemSettings Resource {#create}

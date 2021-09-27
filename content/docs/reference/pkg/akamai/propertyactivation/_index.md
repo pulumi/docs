@@ -21,6 +21,7 @@ The following arguments are supported:
 * `contact` - (Required) One or more email addresses to send activation status changes to.
 * `version` - (Required) The property version to activate. Previously this field was optional. It now depends on the `akamai.Property` resource to identify latest instead of calculating it locally.  This association helps keep the dependency tree properly aligned. To always use the latest version, enter this value `{resource}.{resource identifier}.{field name}`. Using the example code above, the entry would be `akamai_property.example.latest_version` since we want the value of the `latest_version` attribute in the `akamai.Property` resource labeled `example`.
 * `network` - (Optional) Akamai network to activate on, either `STAGING` or `PRODUCTION`. `STAGING` is the default.
+* `note` - (Optional) A log message you can assign to the activation request.
 * `auto_acknowledge_rule_warnings` - (Optional) Whether the activation should proceed despite any warnings. By default set to `true`.
 
 ### Deprecated arguments
@@ -87,8 +88,8 @@ class MyStack : Stack
                 email,
             },
             Version = example.LatestVersion,
+            Note = "Sample activation",
         });
-        // not specifying network will target STAGING
         var exampleProd = new Akamai.PropertyActivation("exampleProd", new Akamai.PropertyActivationArgs
         {
             PropertyId = example.Id,
@@ -143,8 +144,8 @@ example = akamai.Property("example",
 example_staging = akamai.PropertyActivation("exampleStaging",
     property_id=example.id,
     contacts=[email],
-    version=example.latest_version)
-# not specifying network will target STAGING
+    version=example.latest_version,
+    note="Sample activation")
 example_prod = akamai.PropertyActivation("exampleProd",
     property_id=example.id,
     network="PRODUCTION",
@@ -183,8 +184,8 @@ const exampleStaging = new akamai.PropertyActivation("exampleStaging", {
     propertyId: example.id,
     contacts: [email],
     version: example.latestVersion,
+    note: "Sample activation",
 });
-// not specifying network will target STAGING
 const exampleProd = new akamai.PropertyActivation("exampleProd", {
     propertyId: example.id,
     network: "PRODUCTION",
@@ -223,6 +224,7 @@ const exampleProd = new akamai.PropertyActivation("exampleProd", {
                        <span class="nx">auto_acknowledge_rule_warnings</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                        <span class="nx">contacts</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
                        <span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                       <span class="nx">note</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                        <span class="nx">property</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                        <span class="nx">property_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                        <span class="nx">rule_errors</span><span class="p">:</span> <span class="nx">Optional[Sequence[PropertyActivationRuleErrorArgs]]</span> = None<span class="p">,</span>
@@ -396,7 +398,16 @@ The PropertyActivation resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="note_csharp">
+<a href="#note_csharp" style="color: inherit; text-decoration: inherit;">Note</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}assigns a log message to the activation request
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="property_csharp">
 <a href="#property_csharp" style="color: inherit; text-decoration: inherit;">Property</a>
@@ -473,7 +484,16 @@ The PropertyActivation resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="note_go">
+<a href="#note_go" style="color: inherit; text-decoration: inherit;">Note</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}assigns a log message to the activation request
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="property_go">
 <a href="#property_go" style="color: inherit; text-decoration: inherit;">Property</a>
@@ -550,7 +570,16 @@ The PropertyActivation resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="note_nodejs">
+<a href="#note_nodejs" style="color: inherit; text-decoration: inherit;">note</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}assigns a log message to the activation request
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="property_nodejs">
 <a href="#property_nodejs" style="color: inherit; text-decoration: inherit;">property</a>
@@ -627,7 +656,16 @@ The PropertyActivation resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="note_python">
+<a href="#note_python" style="color: inherit; text-decoration: inherit;">note</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}assigns a log message to the activation request
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="property_python">
 <a href="#property_python" style="color: inherit; text-decoration: inherit;">property</a>
@@ -834,6 +872,7 @@ Get an existing PropertyActivation resource's state with the given name, ID, and
         <span class="nx">contacts</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
         <span class="nx">errors</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">note</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">property</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">property_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">rule_errors</span><span class="p">:</span> <span class="nx">Optional[Sequence[PropertyActivationRuleErrorArgs]]</span> = None<span class="p">,</span>
@@ -992,7 +1031,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_note_csharp">
+<a href="#state_note_csharp" style="color: inherit; text-decoration: inherit;">Note</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}assigns a log message to the activation request
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_property_csharp">
 <a href="#state_property_csharp" style="color: inherit; text-decoration: inherit;">Property</a>
@@ -1093,7 +1141,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_note_go">
+<a href="#state_note_go" style="color: inherit; text-decoration: inherit;">Note</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}assigns a log message to the activation request
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_property_go">
 <a href="#state_property_go" style="color: inherit; text-decoration: inherit;">Property</a>
@@ -1194,7 +1251,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_note_nodejs">
+<a href="#state_note_nodejs" style="color: inherit; text-decoration: inherit;">note</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}assigns a log message to the activation request
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_property_nodejs">
 <a href="#state_property_nodejs" style="color: inherit; text-decoration: inherit;">property</a>
@@ -1295,7 +1361,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_note_python">
+<a href="#state_note_python" style="color: inherit; text-decoration: inherit;">note</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}assigns a log message to the activation request
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_property_python">
 <a href="#state_property_python" style="color: inherit; text-decoration: inherit;">property</a>

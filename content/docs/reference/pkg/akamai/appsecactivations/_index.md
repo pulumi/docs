@@ -298,6 +298,17 @@ The AppSecActivations resource accepts the following [input]({{< relref "/docs/i
     <dd>{{% md %}}The ID of the security configuration to use.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="notes_csharp">
+<a href="#notes_csharp" style="color: inherit; text-decoration: inherit;">Notes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A text note describing this operation. If no attributes were changed since the last time a security
+configuration was updated using the akamai.AppSecActivations resource, an activation will not occur. To ensure an activation
+is called, please update one of the attributes, e.g. the notes attribute.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="notificationemails_csharp">
 <a href="#notificationemails_csharp" style="color: inherit; text-decoration: inherit;">Notification<wbr>Emails</a>
 </span>
@@ -323,15 +334,6 @@ The AppSecActivations resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The network in which the security configuration should be activated. If supplied, must be either STAGING or PRODUCTION. If not supplied, STAGING will be assumed.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="notes_csharp">
-<a href="#notes_csharp" style="color: inherit; text-decoration: inherit;">Notes</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}An optional text note describing this operation.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -345,6 +347,17 @@ The AppSecActivations resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ID of the security configuration to use.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="notes_go">
+<a href="#notes_go" style="color: inherit; text-decoration: inherit;">Notes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A text note describing this operation. If no attributes were changed since the last time a security
+configuration was updated using the akamai.AppSecActivations resource, an activation will not occur. To ensure an activation
+is called, please update one of the attributes, e.g. the notes attribute.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="notificationemails_go">
@@ -372,15 +385,6 @@ The AppSecActivations resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The network in which the security configuration should be activated. If supplied, must be either STAGING or PRODUCTION. If not supplied, STAGING will be assumed.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="notes_go">
-<a href="#notes_go" style="color: inherit; text-decoration: inherit;">Notes</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}An optional text note describing this operation.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -394,6 +398,17 @@ The AppSecActivations resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The ID of the security configuration to use.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="notes_nodejs">
+<a href="#notes_nodejs" style="color: inherit; text-decoration: inherit;">notes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A text note describing this operation. If no attributes were changed since the last time a security
+configuration was updated using the akamai.AppSecActivations resource, an activation will not occur. To ensure an activation
+is called, please update one of the attributes, e.g. the notes attribute.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="notificationemails_nodejs">
@@ -421,15 +436,6 @@ The AppSecActivations resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The network in which the security configuration should be activated. If supplied, must be either STAGING or PRODUCTION. If not supplied, STAGING will be assumed.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="notes_nodejs">
-<a href="#notes_nodejs" style="color: inherit; text-decoration: inherit;">notes</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}An optional text note describing this operation.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -443,6 +449,17 @@ The AppSecActivations resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ID of the security configuration to use.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="notes_python">
+<a href="#notes_python" style="color: inherit; text-decoration: inherit;">notes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A text note describing this operation. If no attributes were changed since the last time a security
+configuration was updated using the akamai.AppSecActivations resource, an activation will not occur. To ensure an activation
+is called, please update one of the attributes, e.g. the notes attribute.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="notification_emails_python">
@@ -470,15 +487,6 @@ The AppSecActivations resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The network in which the security configuration should be activated. If supplied, must be either STAGING or PRODUCTION. If not supplied, STAGING will be assumed.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="notes_python">
-<a href="#notes_python" style="color: inherit; text-decoration: inherit;">notes</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}An optional text note describing this operation.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -740,7 +748,9 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An optional text note describing this operation.
+    <dd>{{% md %}}A text note describing this operation. If no attributes were changed since the last time a security
+configuration was updated using the akamai.AppSecActivations resource, an activation will not occur. To ensure an activation
+is called, please update one of the attributes, e.g. the notes attribute.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_notificationemails_csharp">
@@ -798,7 +808,9 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An optional text note describing this operation.
+    <dd>{{% md %}}A text note describing this operation. If no attributes were changed since the last time a security
+configuration was updated using the akamai.AppSecActivations resource, an activation will not occur. To ensure an activation
+is called, please update one of the attributes, e.g. the notes attribute.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_notificationemails_go">
@@ -856,7 +868,9 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An optional text note describing this operation.
+    <dd>{{% md %}}A text note describing this operation. If no attributes were changed since the last time a security
+configuration was updated using the akamai.AppSecActivations resource, an activation will not occur. To ensure an activation
+is called, please update one of the attributes, e.g. the notes attribute.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_notificationemails_nodejs">
@@ -914,7 +928,9 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}An optional text note describing this operation.
+    <dd>{{% md %}}A text note describing this operation. If no attributes were changed since the last time a security
+configuration was updated using the akamai.AppSecActivations resource, an activation will not occur. To ensure an activation
+is called, please update one of the attributes, e.g. the notes attribute.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_notification_emails_python">

@@ -162,7 +162,8 @@ export const ruleUpgradeEvalStatus = ruleUpgrade.evalStatus;
 <span class="k">def </span><span class="nx">AppSecRuleUpgrade</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                       <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
                       <span class="nx">config_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
-                      <span class="nx">security_policy_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+                      <span class="nx">security_policy_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                      <span class="nx">upgrade_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">AppSecRuleUpgrade</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                       <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AppSecRuleUpgradeArgs</a></span><span class="p">,</span>
@@ -308,6 +309,15 @@ The AppSecRuleUpgrade resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the security policy to use.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="upgrademode_csharp">
+<a href="#upgrademode_csharp" style="color: inherit; text-decoration: inherit;">Upgrade<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}__ASE Beta__. (Optional) ASE_AUTO or ASE_MANUAL.  ASE (Adaptive Security Engine) is currently in beta. Please contact your Akamai representative to learn more. Rule Actions and Threat Intelligence setting are read only in ASE_AUTO mode
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -330,6 +340,15 @@ The AppSecRuleUpgrade resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the security policy to use.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="upgrademode_go">
+<a href="#upgrademode_go" style="color: inherit; text-decoration: inherit;">Upgrade<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}__ASE Beta__. (Optional) ASE_AUTO or ASE_MANUAL.  ASE (Adaptive Security Engine) is currently in beta. Please contact your Akamai representative to learn more. Rule Actions and Threat Intelligence setting are read only in ASE_AUTO mode
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -352,6 +371,15 @@ The AppSecRuleUpgrade resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the security policy to use.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="upgrademode_nodejs">
+<a href="#upgrademode_nodejs" style="color: inherit; text-decoration: inherit;">upgrade<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}__ASE Beta__. (Optional) ASE_AUTO or ASE_MANUAL.  ASE (Adaptive Security Engine) is currently in beta. Please contact your Akamai representative to learn more. Rule Actions and Threat Intelligence setting are read only in ASE_AUTO mode
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -374,6 +402,15 @@ The AppSecRuleUpgrade resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the security policy to use.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="upgrade_mode_python">
+<a href="#upgrade_mode_python" style="color: inherit; text-decoration: inherit;">upgrade_<wbr>mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}__ASE Beta__. (Optional) ASE_AUTO or ASE_MANUAL.  ASE (Adaptive Security Engine) is currently in beta. Please contact your Akamai representative to learn more. Rule Actions and Threat Intelligence setting are read only in ASE_AUTO mode
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -419,7 +456,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A string indicating the current mode, either "KRS" or "AAG".
+    <dd>{{% md %}}A string indicating the current mode, either KRS,AAG,ASE_AUTO,ASE_MANUAL
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -458,7 +495,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A string indicating the current mode, either "KRS" or "AAG".
+    <dd>{{% md %}}A string indicating the current mode, either KRS,AAG,ASE_AUTO,ASE_MANUAL
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -497,7 +534,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A string indicating the current mode, either "KRS" or "AAG".
+    <dd>{{% md %}}A string indicating the current mode, either KRS,AAG,ASE_AUTO,ASE_MANUAL
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -536,7 +573,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A string indicating the current mode, either "KRS" or "AAG".
+    <dd>{{% md %}}A string indicating the current mode, either KRS,AAG,ASE_AUTO,ASE_MANUAL
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -560,7 +597,8 @@ Get an existing AppSecRuleUpgrade resource's state with the given name, ID, and 
         <span class="nx">current_ruleset</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">eval_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-        <span class="nx">security_policy_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> AppSecRuleUpgrade</code></pre></div>
+        <span class="nx">security_policy_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">upgrade_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> AppSecRuleUpgrade</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -706,7 +744,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A string indicating the current mode, either "KRS" or "AAG".
+    <dd>{{% md %}}A string indicating the current mode, either KRS,AAG,ASE_AUTO,ASE_MANUAL
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_securitypolicyid_csharp">
@@ -716,6 +754,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the security policy to use.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_upgrademode_csharp">
+<a href="#state_upgrademode_csharp" style="color: inherit; text-decoration: inherit;">Upgrade<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}__ASE Beta__. (Optional) ASE_AUTO or ASE_MANUAL.  ASE (Adaptive Security Engine) is currently in beta. Please contact your Akamai representative to learn more. Rule Actions and Threat Intelligence setting are read only in ASE_AUTO mode
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -755,7 +802,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A string indicating the current mode, either "KRS" or "AAG".
+    <dd>{{% md %}}A string indicating the current mode, either KRS,AAG,ASE_AUTO,ASE_MANUAL
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_securitypolicyid_go">
@@ -765,6 +812,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the security policy to use.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_upgrademode_go">
+<a href="#state_upgrademode_go" style="color: inherit; text-decoration: inherit;">Upgrade<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}__ASE Beta__. (Optional) ASE_AUTO or ASE_MANUAL.  ASE (Adaptive Security Engine) is currently in beta. Please contact your Akamai representative to learn more. Rule Actions and Threat Intelligence setting are read only in ASE_AUTO mode
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -804,7 +860,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A string indicating the current mode, either "KRS" or "AAG".
+    <dd>{{% md %}}A string indicating the current mode, either KRS,AAG,ASE_AUTO,ASE_MANUAL
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_securitypolicyid_nodejs">
@@ -814,6 +870,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the security policy to use.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_upgrademode_nodejs">
+<a href="#state_upgrademode_nodejs" style="color: inherit; text-decoration: inherit;">upgrade<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}__ASE Beta__. (Optional) ASE_AUTO or ASE_MANUAL.  ASE (Adaptive Security Engine) is currently in beta. Please contact your Akamai representative to learn more. Rule Actions and Threat Intelligence setting are read only in ASE_AUTO mode
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -853,7 +918,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A string indicating the current mode, either "KRS" or "AAG".
+    <dd>{{% md %}}A string indicating the current mode, either KRS,AAG,ASE_AUTO,ASE_MANUAL
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_security_policy_id_python">
@@ -863,6 +928,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the security policy to use.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_upgrade_mode_python">
+<a href="#state_upgrade_mode_python" style="color: inherit; text-decoration: inherit;">upgrade_<wbr>mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}__ASE Beta__. (Optional) ASE_AUTO or ASE_MANUAL.  ASE (Adaptive Security Engine) is currently in beta. Please contact your Akamai representative to learn more. Rule Actions and Threat Intelligence setting are read only in ASE_AUTO mode
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
