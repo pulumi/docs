@@ -59,7 +59,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-cloudflare/sdk/v3/go/cloudflare"
+	"github.com/pulumi/pulumi-cloudflare/sdk/v4/go/cloudflare"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
@@ -456,7 +456,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ownershipverification_csharp" style="color: inherit; text-decoration: inherit;">Ownership<wbr>Verification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customhostnameownershipverification">Custom<wbr>Hostname<wbr>Ownership<wbr>Verification</a></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
@@ -464,7 +464,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ownershipverificationhttp_csharp" style="color: inherit; text-decoration: inherit;">Ownership<wbr>Verification<wbr>Http</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customhostnameownershipverificationhttp">Custom<wbr>Hostname<wbr>Ownership<wbr>Verification<wbr>Http</a></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
@@ -492,7 +492,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ownershipverification_go" style="color: inherit; text-decoration: inherit;">Ownership<wbr>Verification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customhostnameownershipverification">Custom<wbr>Hostname<wbr>Ownership<wbr>Verification</a></span>
+        <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
@@ -500,7 +500,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ownershipverificationhttp_go" style="color: inherit; text-decoration: inherit;">Ownership<wbr>Verification<wbr>Http</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customhostnameownershipverificationhttp">Custom<wbr>Hostname<wbr>Ownership<wbr>Verification<wbr>Http</a></span>
+        <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
@@ -528,7 +528,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ownershipverification_nodejs" style="color: inherit; text-decoration: inherit;">ownership<wbr>Verification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customhostnameownershipverification">Custom<wbr>Hostname<wbr>Ownership<wbr>Verification</a></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
@@ -536,7 +536,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ownershipverificationhttp_nodejs" style="color: inherit; text-decoration: inherit;">ownership<wbr>Verification<wbr>Http</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customhostnameownershipverificationhttp">Custom<wbr>Hostname<wbr>Ownership<wbr>Verification<wbr>Http</a></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
@@ -564,7 +564,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ownership_verification_python" style="color: inherit; text-decoration: inherit;">ownership_<wbr>verification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customhostnameownershipverification">Custom<wbr>Hostname<wbr>Ownership<wbr>Verification</a></span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
@@ -572,7 +572,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ownership_verification_http_python" style="color: inherit; text-decoration: inherit;">ownership_<wbr>verification_<wbr>http</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customhostnameownershipverificationhttp">Custom<wbr>Hostname<wbr>Ownership<wbr>Verification<wbr>Http</a></span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
@@ -603,8 +603,8 @@ Get an existing CustomHostname resource's state with the given name, ID, and opt
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
         <span class="nx">custom_origin_server</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">hostname</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-        <span class="nx">ownership_verification</span><span class="p">:</span> <span class="nx">Optional[CustomHostnameOwnershipVerificationArgs]</span> = None<span class="p">,</span>
-        <span class="nx">ownership_verification_http</span><span class="p">:</span> <span class="nx">Optional[CustomHostnameOwnershipVerificationHttpArgs]</span> = None<span class="p">,</span>
+        <span class="nx">ownership_verification</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+        <span class="nx">ownership_verification_http</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
         <span class="nx">ssls</span><span class="p">:</span> <span class="nx">Optional[Sequence[CustomHostnameSslArgs]]</span> = None<span class="p">,</span>
         <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> CustomHostname</code></pre></div>
@@ -742,7 +742,7 @@ The following state arguments are supported:
 <a href="#state_ownershipverification_csharp" style="color: inherit; text-decoration: inherit;">Ownership<wbr>Verification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customhostnameownershipverification">Custom<wbr>Hostname<wbr>Ownership<wbr>Verification<wbr>Args</a></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -750,7 +750,7 @@ The following state arguments are supported:
 <a href="#state_ownershipverificationhttp_csharp" style="color: inherit; text-decoration: inherit;">Ownership<wbr>Verification<wbr>Http</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customhostnameownershipverificationhttp">Custom<wbr>Hostname<wbr>Ownership<wbr>Verification<wbr>Http<wbr>Args</a></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -806,7 +806,7 @@ The following state arguments are supported:
 <a href="#state_ownershipverification_go" style="color: inherit; text-decoration: inherit;">Ownership<wbr>Verification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customhostnameownershipverification">Custom<wbr>Hostname<wbr>Ownership<wbr>Verification<wbr>Args</a></span>
+        <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -814,7 +814,7 @@ The following state arguments are supported:
 <a href="#state_ownershipverificationhttp_go" style="color: inherit; text-decoration: inherit;">Ownership<wbr>Verification<wbr>Http</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customhostnameownershipverificationhttp">Custom<wbr>Hostname<wbr>Ownership<wbr>Verification<wbr>Http<wbr>Args</a></span>
+        <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -870,7 +870,7 @@ The following state arguments are supported:
 <a href="#state_ownershipverification_nodejs" style="color: inherit; text-decoration: inherit;">ownership<wbr>Verification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customhostnameownershipverification">Custom<wbr>Hostname<wbr>Ownership<wbr>Verification<wbr>Args</a></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -878,7 +878,7 @@ The following state arguments are supported:
 <a href="#state_ownershipverificationhttp_nodejs" style="color: inherit; text-decoration: inherit;">ownership<wbr>Verification<wbr>Http</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customhostnameownershipverificationhttp">Custom<wbr>Hostname<wbr>Ownership<wbr>Verification<wbr>Http<wbr>Args</a></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -934,7 +934,7 @@ The following state arguments are supported:
 <a href="#state_ownership_verification_python" style="color: inherit; text-decoration: inherit;">ownership_<wbr>verification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customhostnameownershipverification">Custom<wbr>Hostname<wbr>Ownership<wbr>Verification<wbr>Args</a></span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -942,7 +942,7 @@ The following state arguments are supported:
 <a href="#state_ownership_verification_http_python" style="color: inherit; text-decoration: inherit;">ownership_<wbr>verification_<wbr>http</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customhostnameownershipverificationhttp">Custom<wbr>Hostname<wbr>Ownership<wbr>Verification<wbr>Http<wbr>Args</a></span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -981,206 +981,6 @@ The following state arguments are supported:
 ## Supporting Types
 
 
-
-<h4 id="customhostnameownershipverification">Custom<wbr>Hostname<wbr>Ownership<wbr>Verification</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="name_csharp">
-<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="type_csharp">
-<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Level of validation to be used for this hostname. Domain validation ("dv") must be used.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="value_csharp">
-<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="name_go">
-<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="type_go">
-<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Level of validation to be used for this hostname. Domain validation ("dv") must be used.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="value_go">
-<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="name_nodejs">
-<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="type_nodejs">
-<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Level of validation to be used for this hostname. Domain validation ("dv") must be used.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="value_nodejs">
-<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="name_python">
-<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="type_python">
-<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Level of validation to be used for this hostname. Domain validation ("dv") must be used.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="value_python">
-<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="customhostnameownershipverificationhttp">Custom<wbr>Hostname<wbr>Ownership<wbr>Verification<wbr>Http</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="httpbody_csharp">
-<a href="#httpbody_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Body</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="httpurl_csharp">
-<a href="#httpurl_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Url</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="httpbody_go">
-<a href="#httpbody_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Body</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="httpurl_go">
-<a href="#httpurl_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Url</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="httpbody_nodejs">
-<a href="#httpbody_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Body</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="httpurl_nodejs">
-<a href="#httpurl_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Url</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="http_body_python">
-<a href="#http_body_python" style="color: inherit; text-decoration: inherit;">http_<wbr>body</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="http_url_python">
-<a href="#http_url_python" style="color: inherit; text-decoration: inherit;">http_<wbr>url</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
 
 <h4 id="customhostnamessl">Custom<wbr>Hostname<wbr>Ssl</h4>
 

@@ -91,9 +91,9 @@ class MyStack : Stack
                     Condition = "http.request.uri.path contains \"testing\"",
                     FixedResponse = new Cloudflare.Inputs.LoadBalancerRuleFixedResponseArgs
                     {
-                        Message_body = "hello",
-                        Status_code = 200,
-                        Content_type = "html",
+                        MessageBody = "hello",
+                        StatusCode = 200,
+                        ContentType = "html",
                         Location = "www.example.com",
                     },
                 },
@@ -114,7 +114,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-cloudflare/sdk/v3/go/cloudflare"
+	"github.com/pulumi/pulumi-cloudflare/sdk/v4/go/cloudflare"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
@@ -164,10 +164,10 @@ func main() {
 					Name:      pulumi.String("example rule"),
 					Condition: pulumi.String("http.request.uri.path contains \"testing\""),
 					FixedResponse: &cloudflare.LoadBalancerRuleFixedResponseArgs{
-						Message_body: pulumi.String("hello"),
-						Status_code:  pulumi.Float64(200),
-						Content_type: pulumi.String("html"),
-						Location:     pulumi.String("www.example.com"),
+						MessageBody: pulumi.String("hello"),
+						StatusCode:  pulumi.Int(200),
+						ContentType: pulumi.String("html"),
+						Location:    pulumi.String("www.example.com"),
 					},
 				},
 			},
@@ -270,9 +270,9 @@ const bar = new cloudflare.LoadBalancer("bar", {
         name: "example rule",
         condition: "http.request.uri.path contains \"testing\"",
         fixedResponse: {
-            message_body: "hello",
-            status_code: 200,
-            content_type: "html",
+            messageBody: "hello",
+            statusCode: 200,
+            contentType: "html",
             location: "www.example.com",
         },
     }],

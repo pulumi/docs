@@ -72,7 +72,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-cloudflare/sdk/v3/go/cloudflare"
+	"github.com/pulumi/pulumi-cloudflare/sdk/v4/go/cloudflare"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
@@ -432,7 +432,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#initialsettings_csharp" style="color: inherit; text-decoration: inherit;">Initial<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#zonesettingsoverrideinitialsettings">Zone<wbr>Settings<wbr>Override<wbr>Initial<wbr>Settings</a></span>
+        <span class="property-type"><a href="#zonesettingsoverrideinitialsetting">List&lt;Zone<wbr>Settings<wbr>Override<wbr>Initial<wbr>Setting&gt;</a></span>
     </dt>
     <dd>{{% md %}}Settings present in the zone at the time the resource is created. This will be used to restore the original settings when this resource is destroyed. Shares the same schema as the `settings` attribute (Above).
 {{% /md %}}</dd><dt class="property-"
@@ -488,7 +488,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#initialsettings_go" style="color: inherit; text-decoration: inherit;">Initial<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#zonesettingsoverrideinitialsettings">Zone<wbr>Settings<wbr>Override<wbr>Initial<wbr>Settings</a></span>
+        <span class="property-type"><a href="#zonesettingsoverrideinitialsetting">[]Zone<wbr>Settings<wbr>Override<wbr>Initial<wbr>Setting</a></span>
     </dt>
     <dd>{{% md %}}Settings present in the zone at the time the resource is created. This will be used to restore the original settings when this resource is destroyed. Shares the same schema as the `settings` attribute (Above).
 {{% /md %}}</dd><dt class="property-"
@@ -544,7 +544,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#initialsettings_nodejs" style="color: inherit; text-decoration: inherit;">initial<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#zonesettingsoverrideinitialsettings">Zone<wbr>Settings<wbr>Override<wbr>Initial<wbr>Settings</a></span>
+        <span class="property-type"><a href="#zonesettingsoverrideinitialsetting">Zone<wbr>Settings<wbr>Override<wbr>Initial<wbr>Setting[]</a></span>
     </dt>
     <dd>{{% md %}}Settings present in the zone at the time the resource is created. This will be used to restore the original settings when this resource is destroyed. Shares the same schema as the `settings` attribute (Above).
 {{% /md %}}</dd><dt class="property-"
@@ -600,7 +600,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#initial_settings_python" style="color: inherit; text-decoration: inherit;">initial_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#zonesettingsoverrideinitialsettings">Zone<wbr>Settings<wbr>Override<wbr>Initial<wbr>Settings</a></span>
+        <span class="property-type"><a href="#zonesettingsoverrideinitialsetting">Sequence[Zone<wbr>Settings<wbr>Override<wbr>Initial<wbr>Setting]</a></span>
     </dt>
     <dd>{{% md %}}Settings present in the zone at the time the resource is created. This will be used to restore the original settings when this resource is destroyed. Shares the same schema as the `settings` attribute (Above).
 {{% /md %}}</dd><dt class="property-"
@@ -657,7 +657,7 @@ Get an existing ZoneSettingsOverride resource's state with the given name, ID, a
 <span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">initial_settings</span><span class="p">:</span> <span class="nx">Optional[ZoneSettingsOverrideInitialSettingsArgs]</span> = None<span class="p">,</span>
+        <span class="nx">initial_settings</span><span class="p">:</span> <span class="nx">Optional[Sequence[ZoneSettingsOverrideInitialSettingArgs]]</span> = None<span class="p">,</span>
         <span class="nx">initial_settings_read_at</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">readonly_settings</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
         <span class="nx">settings</span><span class="p">:</span> <span class="nx">Optional[ZoneSettingsOverrideSettingsArgs]</span> = None<span class="p">,</span>
@@ -780,7 +780,7 @@ The following state arguments are supported:
 <a href="#state_initialsettings_csharp" style="color: inherit; text-decoration: inherit;">Initial<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#zonesettingsoverrideinitialsettings">Zone<wbr>Settings<wbr>Override<wbr>Initial<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#zonesettingsoverrideinitialsetting">List&lt;Zone<wbr>Settings<wbr>Override<wbr>Initial<wbr>Setting<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Settings present in the zone at the time the resource is created. This will be used to restore the original settings when this resource is destroyed. Shares the same schema as the `settings` attribute (Above).
 {{% /md %}}</dd><dt class="property-optional"
@@ -846,7 +846,7 @@ The following state arguments are supported:
 <a href="#state_initialsettings_go" style="color: inherit; text-decoration: inherit;">Initial<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#zonesettingsoverrideinitialsettings">Zone<wbr>Settings<wbr>Override<wbr>Initial<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#zonesettingsoverrideinitialsetting">[]Zone<wbr>Settings<wbr>Override<wbr>Initial<wbr>Setting<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings present in the zone at the time the resource is created. This will be used to restore the original settings when this resource is destroyed. Shares the same schema as the `settings` attribute (Above).
 {{% /md %}}</dd><dt class="property-optional"
@@ -912,7 +912,7 @@ The following state arguments are supported:
 <a href="#state_initialsettings_nodejs" style="color: inherit; text-decoration: inherit;">initial<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#zonesettingsoverrideinitialsettings">Zone<wbr>Settings<wbr>Override<wbr>Initial<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#zonesettingsoverrideinitialsetting">Zone<wbr>Settings<wbr>Override<wbr>Initial<wbr>Setting<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Settings present in the zone at the time the resource is created. This will be used to restore the original settings when this resource is destroyed. Shares the same schema as the `settings` attribute (Above).
 {{% /md %}}</dd><dt class="property-optional"
@@ -978,7 +978,7 @@ The following state arguments are supported:
 <a href="#state_initial_settings_python" style="color: inherit; text-decoration: inherit;">initial_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#zonesettingsoverrideinitialsettings">Zone<wbr>Settings<wbr>Override<wbr>Initial<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#zonesettingsoverrideinitialsetting">Sequence[Zone<wbr>Settings<wbr>Override<wbr>Initial<wbr>Setting<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Settings present in the zone at the time the resource is created. This will be used to restore the original settings when this resource is destroyed. Shares the same schema as the `settings` attribute (Above).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1046,7 +1046,7 @@ The following state arguments are supported:
 
 
 
-<h4 id="zonesettingsoverrideinitialsettings">Zone<wbr>Settings<wbr>Override<wbr>Initial<wbr>Settings</h4>
+<h4 id="zonesettingsoverrideinitialsetting">Zone<wbr>Settings<wbr>Override<wbr>Initial<wbr>Setting</h4>
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
@@ -1215,7 +1215,7 @@ The following state arguments are supported:
 <a href="#minify_csharp" style="color: inherit; text-decoration: inherit;">Minify</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#zonesettingsoverrideinitialsettingsminify">Zone<wbr>Settings<wbr>Override<wbr>Initial<wbr>Settings<wbr>Minify</a></span>
+        <span class="property-type"><a href="#zonesettingsoverrideinitialsettingminify">Zone<wbr>Settings<wbr>Override<wbr>Initial<wbr>Setting<wbr>Minify</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1231,7 +1231,7 @@ The following state arguments are supported:
 <a href="#mobileredirect_csharp" style="color: inherit; text-decoration: inherit;">Mobile<wbr>Redirect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#zonesettingsoverrideinitialsettingsmobileredirect">Zone<wbr>Settings<wbr>Override<wbr>Initial<wbr>Settings<wbr>Mobile<wbr>Redirect</a></span>
+        <span class="property-type"><a href="#zonesettingsoverrideinitialsettingmobileredirect">Zone<wbr>Settings<wbr>Override<wbr>Initial<wbr>Setting<wbr>Mobile<wbr>Redirect</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1311,7 +1311,7 @@ The following state arguments are supported:
 <a href="#securityheader_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#zonesettingsoverrideinitialsettingssecurityheader">Zone<wbr>Settings<wbr>Override<wbr>Initial<wbr>Settings<wbr>Security<wbr>Header</a></span>
+        <span class="property-type"><a href="#zonesettingsoverrideinitialsettingsecurityheader">Zone<wbr>Settings<wbr>Override<wbr>Initial<wbr>Setting<wbr>Security<wbr>Header</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1588,7 +1588,7 @@ The following state arguments are supported:
 <a href="#minify_go" style="color: inherit; text-decoration: inherit;">Minify</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#zonesettingsoverrideinitialsettingsminify">Zone<wbr>Settings<wbr>Override<wbr>Initial<wbr>Settings<wbr>Minify</a></span>
+        <span class="property-type"><a href="#zonesettingsoverrideinitialsettingminify">Zone<wbr>Settings<wbr>Override<wbr>Initial<wbr>Setting<wbr>Minify</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1604,7 +1604,7 @@ The following state arguments are supported:
 <a href="#mobileredirect_go" style="color: inherit; text-decoration: inherit;">Mobile<wbr>Redirect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#zonesettingsoverrideinitialsettingsmobileredirect">Zone<wbr>Settings<wbr>Override<wbr>Initial<wbr>Settings<wbr>Mobile<wbr>Redirect</a></span>
+        <span class="property-type"><a href="#zonesettingsoverrideinitialsettingmobileredirect">Zone<wbr>Settings<wbr>Override<wbr>Initial<wbr>Setting<wbr>Mobile<wbr>Redirect</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1684,7 +1684,7 @@ The following state arguments are supported:
 <a href="#securityheader_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#zonesettingsoverrideinitialsettingssecurityheader">Zone<wbr>Settings<wbr>Override<wbr>Initial<wbr>Settings<wbr>Security<wbr>Header</a></span>
+        <span class="property-type"><a href="#zonesettingsoverrideinitialsettingsecurityheader">Zone<wbr>Settings<wbr>Override<wbr>Initial<wbr>Setting<wbr>Security<wbr>Header</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1961,7 +1961,7 @@ The following state arguments are supported:
 <a href="#minify_nodejs" style="color: inherit; text-decoration: inherit;">minify</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#zonesettingsoverrideinitialsettingsminify">Zone<wbr>Settings<wbr>Override<wbr>Initial<wbr>Settings<wbr>Minify</a></span>
+        <span class="property-type"><a href="#zonesettingsoverrideinitialsettingminify">Zone<wbr>Settings<wbr>Override<wbr>Initial<wbr>Setting<wbr>Minify</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1977,7 +1977,7 @@ The following state arguments are supported:
 <a href="#mobileredirect_nodejs" style="color: inherit; text-decoration: inherit;">mobile<wbr>Redirect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#zonesettingsoverrideinitialsettingsmobileredirect">Zone<wbr>Settings<wbr>Override<wbr>Initial<wbr>Settings<wbr>Mobile<wbr>Redirect</a></span>
+        <span class="property-type"><a href="#zonesettingsoverrideinitialsettingmobileredirect">Zone<wbr>Settings<wbr>Override<wbr>Initial<wbr>Setting<wbr>Mobile<wbr>Redirect</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2057,7 +2057,7 @@ The following state arguments are supported:
 <a href="#securityheader_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#zonesettingsoverrideinitialsettingssecurityheader">Zone<wbr>Settings<wbr>Override<wbr>Initial<wbr>Settings<wbr>Security<wbr>Header</a></span>
+        <span class="property-type"><a href="#zonesettingsoverrideinitialsettingsecurityheader">Zone<wbr>Settings<wbr>Override<wbr>Initial<wbr>Setting<wbr>Security<wbr>Header</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2334,7 +2334,7 @@ The following state arguments are supported:
 <a href="#minify_python" style="color: inherit; text-decoration: inherit;">minify</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#zonesettingsoverrideinitialsettingsminify">Zone<wbr>Settings<wbr>Override<wbr>Initial<wbr>Settings<wbr>Minify</a></span>
+        <span class="property-type"><a href="#zonesettingsoverrideinitialsettingminify">Zone<wbr>Settings<wbr>Override<wbr>Initial<wbr>Setting<wbr>Minify</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2350,7 +2350,7 @@ The following state arguments are supported:
 <a href="#mobile_redirect_python" style="color: inherit; text-decoration: inherit;">mobile_<wbr>redirect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#zonesettingsoverrideinitialsettingsmobileredirect">Zone<wbr>Settings<wbr>Override<wbr>Initial<wbr>Settings<wbr>Mobile<wbr>Redirect</a></span>
+        <span class="property-type"><a href="#zonesettingsoverrideinitialsettingmobileredirect">Zone<wbr>Settings<wbr>Override<wbr>Initial<wbr>Setting<wbr>Mobile<wbr>Redirect</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2430,7 +2430,7 @@ The following state arguments are supported:
 <a href="#security_header_python" style="color: inherit; text-decoration: inherit;">security_<wbr>header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#zonesettingsoverrideinitialsettingssecurityheader">Zone<wbr>Settings<wbr>Override<wbr>Initial<wbr>Settings<wbr>Security<wbr>Header</a></span>
+        <span class="property-type"><a href="#zonesettingsoverrideinitialsettingsecurityheader">Zone<wbr>Settings<wbr>Override<wbr>Initial<wbr>Setting<wbr>Security<wbr>Header</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2540,7 +2540,7 @@ The following state arguments are supported:
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
-<h4 id="zonesettingsoverrideinitialsettingsminify">Zone<wbr>Settings<wbr>Override<wbr>Initial<wbr>Settings<wbr>Minify</h4>
+<h4 id="zonesettingsoverrideinitialsettingminify">Zone<wbr>Settings<wbr>Override<wbr>Initial<wbr>Setting<wbr>Minify</h4>
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
@@ -2666,7 +2666,7 @@ The following state arguments are supported:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
-<h4 id="zonesettingsoverrideinitialsettingsmobileredirect">Zone<wbr>Settings<wbr>Override<wbr>Initial<wbr>Settings<wbr>Mobile<wbr>Redirect</h4>
+<h4 id="zonesettingsoverrideinitialsettingmobileredirect">Zone<wbr>Settings<wbr>Override<wbr>Initial<wbr>Setting<wbr>Mobile<wbr>Redirect</h4>
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
@@ -2792,7 +2792,7 @@ The following state arguments are supported:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
-<h4 id="zonesettingsoverrideinitialsettingssecurityheader">Zone<wbr>Settings<wbr>Override<wbr>Initial<wbr>Settings<wbr>Security<wbr>Header</h4>
+<h4 id="zonesettingsoverrideinitialsettingsecurityheader">Zone<wbr>Settings<wbr>Override<wbr>Initial<wbr>Setting<wbr>Security<wbr>Header</h4>
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"

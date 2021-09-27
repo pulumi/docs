@@ -212,11 +212,14 @@ const testPolicyIndex_accessPolicyAccessPolicy = new cloudflare.AccessPolicy("te
                  <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
                  <span class="nx">account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                  <span class="nx">application_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">approval_groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[AccessPolicyApprovalGroupArgs]]</span> = None<span class="p">,</span>
                  <span class="nx">decision</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                  <span class="nx">excludes</span><span class="p">:</span> <span class="nx">Optional[Sequence[AccessPolicyExcludeArgs]]</span> = None<span class="p">,</span>
                  <span class="nx">includes</span><span class="p">:</span> <span class="nx">Optional[Sequence[AccessPolicyIncludeArgs]]</span> = None<span class="p">,</span>
                  <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                  <span class="nx">precedence</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+                 <span class="nx">purpose_justification_prompt</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">purpose_justification_required</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                  <span class="nx">requires</span><span class="p">:</span> <span class="nx">Optional[Sequence[AccessPolicyRequireArgs]]</span> = None<span class="p">,</span>
                  <span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
@@ -403,6 +406,15 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
     <dd>{{% md %}}The account to which the access rule should be added. Conflicts with `zone_id`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="approvalgroups_csharp">
+<a href="#approvalgroups_csharp" style="color: inherit; text-decoration: inherit;">Approval<wbr>Groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accesspolicyapprovalgroup">List&lt;Access<wbr>Policy<wbr>Approval<wbr>Group<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}List of approval group blocks for configuring additional approvals (refer to the nested schema).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="excludes_csharp">
 <a href="#excludes_csharp" style="color: inherit; text-decoration: inherit;">Excludes</a>
 </span>
@@ -410,6 +422,24 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-type"><a href="#accesspolicyexclude">List&lt;Access<wbr>Policy<wbr>Exclude<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A series of access conditions, see [Access Groups](https://www.terraform.io/providers/cloudflare/cloudflare/latest/docs/resources/access_group#conditions).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="purposejustificationprompt_csharp">
+<a href="#purposejustificationprompt_csharp" style="color: inherit; text-decoration: inherit;">Purpose<wbr>Justification<wbr>Prompt</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}String to present to the user when purpose justification is enabled.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="purposejustificationrequired_csharp">
+<a href="#purposejustificationrequired_csharp" style="color: inherit; text-decoration: inherit;">Purpose<wbr>Justification<wbr>Required</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Boolean of whether to prompt the user for a justification for accessing the resource.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requires_csharp">
@@ -489,6 +519,15 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
     <dd>{{% md %}}The account to which the access rule should be added. Conflicts with `zone_id`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="approvalgroups_go">
+<a href="#approvalgroups_go" style="color: inherit; text-decoration: inherit;">Approval<wbr>Groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accesspolicyapprovalgroup">[]Access<wbr>Policy<wbr>Approval<wbr>Group<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}List of approval group blocks for configuring additional approvals (refer to the nested schema).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="excludes_go">
 <a href="#excludes_go" style="color: inherit; text-decoration: inherit;">Excludes</a>
 </span>
@@ -496,6 +535,24 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-type"><a href="#accesspolicyexclude">[]Access<wbr>Policy<wbr>Exclude<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A series of access conditions, see [Access Groups](https://www.terraform.io/providers/cloudflare/cloudflare/latest/docs/resources/access_group#conditions).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="purposejustificationprompt_go">
+<a href="#purposejustificationprompt_go" style="color: inherit; text-decoration: inherit;">Purpose<wbr>Justification<wbr>Prompt</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}String to present to the user when purpose justification is enabled.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="purposejustificationrequired_go">
+<a href="#purposejustificationrequired_go" style="color: inherit; text-decoration: inherit;">Purpose<wbr>Justification<wbr>Required</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Boolean of whether to prompt the user for a justification for accessing the resource.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requires_go">
@@ -575,6 +632,15 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
     <dd>{{% md %}}The account to which the access rule should be added. Conflicts with `zone_id`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="approvalgroups_nodejs">
+<a href="#approvalgroups_nodejs" style="color: inherit; text-decoration: inherit;">approval<wbr>Groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accesspolicyapprovalgroup">Access<wbr>Policy<wbr>Approval<wbr>Group<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}List of approval group blocks for configuring additional approvals (refer to the nested schema).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="excludes_nodejs">
 <a href="#excludes_nodejs" style="color: inherit; text-decoration: inherit;">excludes</a>
 </span>
@@ -582,6 +648,24 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-type"><a href="#accesspolicyexclude">Access<wbr>Policy<wbr>Exclude<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A series of access conditions, see [Access Groups](https://www.terraform.io/providers/cloudflare/cloudflare/latest/docs/resources/access_group#conditions).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="purposejustificationprompt_nodejs">
+<a href="#purposejustificationprompt_nodejs" style="color: inherit; text-decoration: inherit;">purpose<wbr>Justification<wbr>Prompt</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}String to present to the user when purpose justification is enabled.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="purposejustificationrequired_nodejs">
+<a href="#purposejustificationrequired_nodejs" style="color: inherit; text-decoration: inherit;">purpose<wbr>Justification<wbr>Required</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Boolean of whether to prompt the user for a justification for accessing the resource.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requires_nodejs">
@@ -661,6 +745,15 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
     <dd>{{% md %}}The account to which the access rule should be added. Conflicts with `zone_id`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="approval_groups_python">
+<a href="#approval_groups_python" style="color: inherit; text-decoration: inherit;">approval_<wbr>groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accesspolicyapprovalgroup">Sequence[Access<wbr>Policy<wbr>Approval<wbr>Group<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}List of approval group blocks for configuring additional approvals (refer to the nested schema).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="excludes_python">
 <a href="#excludes_python" style="color: inherit; text-decoration: inherit;">excludes</a>
 </span>
@@ -668,6 +761,24 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-type"><a href="#accesspolicyexclude">Sequence[Access<wbr>Policy<wbr>Exclude<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A series of access conditions, see [Access Groups](https://www.terraform.io/providers/cloudflare/cloudflare/latest/docs/resources/access_group#conditions).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="purpose_justification_prompt_python">
+<a href="#purpose_justification_prompt_python" style="color: inherit; text-decoration: inherit;">purpose_<wbr>justification_<wbr>prompt</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}String to present to the user when purpose justification is enabled.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="purpose_justification_required_python">
+<a href="#purpose_justification_required_python" style="color: inherit; text-decoration: inherit;">purpose_<wbr>justification_<wbr>required</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Boolean of whether to prompt the user for a justification for accessing the resource.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requires_python">
@@ -762,11 +873,14 @@ Get an existing AccessPolicy resource's state with the given name, ID, and optio
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
         <span class="nx">account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">application_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">approval_groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[AccessPolicyApprovalGroupArgs]]</span> = None<span class="p">,</span>
         <span class="nx">decision</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">excludes</span><span class="p">:</span> <span class="nx">Optional[Sequence[AccessPolicyExcludeArgs]]</span> = None<span class="p">,</span>
         <span class="nx">includes</span><span class="p">:</span> <span class="nx">Optional[Sequence[AccessPolicyIncludeArgs]]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">precedence</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+        <span class="nx">purpose_justification_prompt</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">purpose_justification_required</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">requires</span><span class="p">:</span> <span class="nx">Optional[Sequence[AccessPolicyRequireArgs]]</span> = None<span class="p">,</span>
         <span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> AccessPolicy</code></pre></div>
 {{% /choosable %}}
@@ -899,6 +1013,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The ID of the application the policy is associated with.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_approvalgroups_csharp">
+<a href="#state_approvalgroups_csharp" style="color: inherit; text-decoration: inherit;">Approval<wbr>Groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accesspolicyapprovalgroup">List&lt;Access<wbr>Policy<wbr>Approval<wbr>Group<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}List of approval group blocks for configuring additional approvals (refer to the nested schema).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_decision_csharp">
 <a href="#state_decision_csharp" style="color: inherit; text-decoration: inherit;">Decision</a>
 </span>
@@ -945,6 +1068,24 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
     <dd>{{% md %}}The unique precedence for policies on a single application. Integer.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_purposejustificationprompt_csharp">
+<a href="#state_purposejustificationprompt_csharp" style="color: inherit; text-decoration: inherit;">Purpose<wbr>Justification<wbr>Prompt</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}String to present to the user when purpose justification is enabled.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_purposejustificationrequired_csharp">
+<a href="#state_purposejustificationrequired_csharp" style="color: inherit; text-decoration: inherit;">Purpose<wbr>Justification<wbr>Required</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Boolean of whether to prompt the user for a justification for accessing the resource.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_requires_csharp">
 <a href="#state_requires_csharp" style="color: inherit; text-decoration: inherit;">Requires</a>
 </span>
@@ -983,6 +1124,15 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the application the policy is associated with.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_approvalgroups_go">
+<a href="#state_approvalgroups_go" style="color: inherit; text-decoration: inherit;">Approval<wbr>Groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accesspolicyapprovalgroup">[]Access<wbr>Policy<wbr>Approval<wbr>Group<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}List of approval group blocks for configuring additional approvals (refer to the nested schema).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_decision_go">
@@ -1031,6 +1181,24 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
     <dd>{{% md %}}The unique precedence for policies on a single application. Integer.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_purposejustificationprompt_go">
+<a href="#state_purposejustificationprompt_go" style="color: inherit; text-decoration: inherit;">Purpose<wbr>Justification<wbr>Prompt</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}String to present to the user when purpose justification is enabled.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_purposejustificationrequired_go">
+<a href="#state_purposejustificationrequired_go" style="color: inherit; text-decoration: inherit;">Purpose<wbr>Justification<wbr>Required</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Boolean of whether to prompt the user for a justification for accessing the resource.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_requires_go">
 <a href="#state_requires_go" style="color: inherit; text-decoration: inherit;">Requires</a>
 </span>
@@ -1069,6 +1237,15 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the application the policy is associated with.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_approvalgroups_nodejs">
+<a href="#state_approvalgroups_nodejs" style="color: inherit; text-decoration: inherit;">approval<wbr>Groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accesspolicyapprovalgroup">Access<wbr>Policy<wbr>Approval<wbr>Group<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}List of approval group blocks for configuring additional approvals (refer to the nested schema).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_decision_nodejs">
@@ -1117,6 +1294,24 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
     <dd>{{% md %}}The unique precedence for policies on a single application. Integer.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_purposejustificationprompt_nodejs">
+<a href="#state_purposejustificationprompt_nodejs" style="color: inherit; text-decoration: inherit;">purpose<wbr>Justification<wbr>Prompt</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}String to present to the user when purpose justification is enabled.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_purposejustificationrequired_nodejs">
+<a href="#state_purposejustificationrequired_nodejs" style="color: inherit; text-decoration: inherit;">purpose<wbr>Justification<wbr>Required</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Boolean of whether to prompt the user for a justification for accessing the resource.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_requires_nodejs">
 <a href="#state_requires_nodejs" style="color: inherit; text-decoration: inherit;">requires</a>
 </span>
@@ -1155,6 +1350,15 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the application the policy is associated with.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_approval_groups_python">
+<a href="#state_approval_groups_python" style="color: inherit; text-decoration: inherit;">approval_<wbr>groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accesspolicyapprovalgroup">Sequence[Access<wbr>Policy<wbr>Approval<wbr>Group<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}List of approval group blocks for configuring additional approvals (refer to the nested schema).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_decision_python">
@@ -1203,6 +1407,24 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
     <dd>{{% md %}}The unique precedence for policies on a single application. Integer.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_purpose_justification_prompt_python">
+<a href="#state_purpose_justification_prompt_python" style="color: inherit; text-decoration: inherit;">purpose_<wbr>justification_<wbr>prompt</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}String to present to the user when purpose justification is enabled.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_purpose_justification_required_python">
+<a href="#state_purpose_justification_required_python" style="color: inherit; text-decoration: inherit;">purpose_<wbr>justification_<wbr>required</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Boolean of whether to prompt the user for a justification for accessing the resource.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_requires_python">
 <a href="#state_requires_python" style="color: inherit; text-decoration: inherit;">requires</a>
 </span>
@@ -1230,6 +1452,128 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
 ## Supporting Types
 
 
+
+<h4 id="accesspolicyapprovalgroup">Access<wbr>Policy<wbr>Approval<wbr>Group</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="approvalsneeded_csharp">
+<a href="#approvalsneeded_csharp" style="color: inherit; text-decoration: inherit;">Approvals<wbr>Needed</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Number of approvals needed.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="emailaddresses_csharp">
+<a href="#emailaddresses_csharp" style="color: inherit; text-decoration: inherit;">Email<wbr>Addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}List of emails to request approval from.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="emaillistuuid_csharp">
+<a href="#emaillistuuid_csharp" style="color: inherit; text-decoration: inherit;">Email<wbr>List<wbr>Uuid</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="approvalsneeded_go">
+<a href="#approvalsneeded_go" style="color: inherit; text-decoration: inherit;">Approvals<wbr>Needed</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Number of approvals needed.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="emailaddresses_go">
+<a href="#emailaddresses_go" style="color: inherit; text-decoration: inherit;">Email<wbr>Addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}List of emails to request approval from.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="emaillistuuid_go">
+<a href="#emaillistuuid_go" style="color: inherit; text-decoration: inherit;">Email<wbr>List<wbr>Uuid</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="approvalsneeded_nodejs">
+<a href="#approvalsneeded_nodejs" style="color: inherit; text-decoration: inherit;">approvals<wbr>Needed</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Number of approvals needed.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="emailaddresses_nodejs">
+<a href="#emailaddresses_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}List of emails to request approval from.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="emaillistuuid_nodejs">
+<a href="#emaillistuuid_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>List<wbr>Uuid</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="approvals_needed_python">
+<a href="#approvals_needed_python" style="color: inherit; text-decoration: inherit;">approvals_<wbr>needed</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Number of approvals needed.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="email_addresses_python">
+<a href="#email_addresses_python" style="color: inherit; text-decoration: inherit;">email_<wbr>addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}List of emails to request approval from.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="email_list_uuid_python">
+<a href="#email_list_uuid_python" style="color: inherit; text-decoration: inherit;">email_<wbr>list_<wbr>uuid</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
 
 <h4 id="accesspolicyexclude">Access<wbr>Policy<wbr>Exclude</h4>
 

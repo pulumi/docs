@@ -39,10 +39,10 @@ class MyStack : Stack
         {
             CustomSslOptions = new Cloudflare.Inputs.CustomSslCustomSslOptionsArgs
             {
-                Bundle_method = "ubiquitous",
+                BundleMethod = "ubiquitous",
                 Certificate = "-----INSERT CERTIFICATE-----",
-                Geo_restrictions = "us",
-                Private_key = "-----INSERT PRIVATE KEY-----",
+                GeoRestrictions = "us",
+                PrivateKey = "-----INSERT PRIVATE KEY-----",
                 Type = "legacy_custom",
             },
             ZoneId = cloudflareZoneId,
@@ -62,7 +62,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-cloudflare/sdk/v3/go/cloudflare"
+	"github.com/pulumi/pulumi-cloudflare/sdk/v4/go/cloudflare"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi/config"
 )
@@ -76,11 +76,11 @@ func main() {
 		}
 		_, err := cloudflare.NewCustomSsl(ctx, "foossl", &cloudflare.CustomSslArgs{
 			CustomSslOptions: &cloudflare.CustomSslCustomSslOptionsArgs{
-				Bundle_method:    pulumi.String("ubiquitous"),
-				Certificate:      pulumi.String("-----INSERT CERTIFICATE-----"),
-				Geo_restrictions: pulumi.String("us"),
-				Private_key:      pulumi.String("-----INSERT PRIVATE KEY-----"),
-				Type:             pulumi.String("legacy_custom"),
+				BundleMethod:    pulumi.String("ubiquitous"),
+				Certificate:     pulumi.String("-----INSERT CERTIFICATE-----"),
+				GeoRestrictions: pulumi.String("us"),
+				PrivateKey:      pulumi.String("-----INSERT PRIVATE KEY-----"),
+				Type:            pulumi.String("legacy_custom"),
 			},
 			ZoneId: pulumi.String(cloudflareZoneId),
 		})
@@ -135,10 +135,10 @@ const cloudflareZoneId = config.get("cloudflareZoneId") || "1d5fdc9e88c8a8c4518b
 // Add a custom ssl certificate to the domain
 const foossl = new cloudflare.CustomSsl("foossl", {
     customSslOptions: {
-        bundle_method: "ubiquitous",
+        bundleMethod: "ubiquitous",
         certificate: "-----INSERT CERTIFICATE-----",
-        geo_restrictions: "us",
-        private_key: "-----INSERT PRIVATE KEY-----",
+        geoRestrictions: "us",
+        privateKey: "-----INSERT PRIVATE KEY-----",
         type: "legacy_custom",
     },
     zoneId: cloudflareZoneId,
@@ -1253,25 +1253,7 @@ The following state arguments are supported:
 <h4 id="customsslcustomssloptions">Custom<wbr>Ssl<wbr>Custom<wbr>Ssl<wbr>Options</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="certificate_csharp">
-<a href="#certificate_csharp" style="color: inherit; text-decoration: inherit;">Certificate</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Certificate certificate and the intermediate(s)
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="privatekey_csharp">
-<a href="#privatekey_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Key</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Certificate's private key
-{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="bundlemethod_csharp">
 <a href="#bundlemethod_csharp" style="color: inherit; text-decoration: inherit;">Bundle<wbr>Method</a>
@@ -1282,6 +1264,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Method of building intermediate certificate chain. A ubiquitous bundle has the highest probability of being verified everywhere, even by clients using outdated or unusual trust stores. An optimal bundle uses the shortest chain and newest intermediates. And the force bundle verifies the chain, but does not otherwise modify it. Valid values are `ubiquitous` (default), `optimal`, `force`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="certificate_csharp">
+<a href="#certificate_csharp" style="color: inherit; text-decoration: inherit;">Certificate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Certificate certificate and the intermediate(s)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="georestrictions_csharp">
 <a href="#georestrictions_csharp" style="color: inherit; text-decoration: inherit;">Geo<wbr>Restrictions</a>
 </span>
@@ -1289,6 +1280,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the region where your private key can be held locally. Valid values are `us`, `eu`, `highest_security`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="privatekey_csharp">
+<a href="#privatekey_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Certificate's private key
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
@@ -1302,25 +1302,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="certificate_go">
-<a href="#certificate_go" style="color: inherit; text-decoration: inherit;">Certificate</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Certificate certificate and the intermediate(s)
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="privatekey_go">
-<a href="#privatekey_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Key</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Certificate's private key
-{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="bundlemethod_go">
 <a href="#bundlemethod_go" style="color: inherit; text-decoration: inherit;">Bundle<wbr>Method</a>
@@ -1331,6 +1313,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Method of building intermediate certificate chain. A ubiquitous bundle has the highest probability of being verified everywhere, even by clients using outdated or unusual trust stores. An optimal bundle uses the shortest chain and newest intermediates. And the force bundle verifies the chain, but does not otherwise modify it. Valid values are `ubiquitous` (default), `optimal`, `force`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="certificate_go">
+<a href="#certificate_go" style="color: inherit; text-decoration: inherit;">Certificate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Certificate certificate and the intermediate(s)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="georestrictions_go">
 <a href="#georestrictions_go" style="color: inherit; text-decoration: inherit;">Geo<wbr>Restrictions</a>
 </span>
@@ -1338,6 +1329,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the region where your private key can be held locally. Valid values are `us`, `eu`, `highest_security`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="privatekey_go">
+<a href="#privatekey_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Certificate's private key
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_go">
@@ -1351,25 +1351,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="certificate_nodejs">
-<a href="#certificate_nodejs" style="color: inherit; text-decoration: inherit;">certificate</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Certificate certificate and the intermediate(s)
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="privatekey_nodejs">
-<a href="#privatekey_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Key</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Certificate's private key
-{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="bundlemethod_nodejs">
 <a href="#bundlemethod_nodejs" style="color: inherit; text-decoration: inherit;">bundle<wbr>Method</a>
@@ -1380,6 +1362,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Method of building intermediate certificate chain. A ubiquitous bundle has the highest probability of being verified everywhere, even by clients using outdated or unusual trust stores. An optimal bundle uses the shortest chain and newest intermediates. And the force bundle verifies the chain, but does not otherwise modify it. Valid values are `ubiquitous` (default), `optimal`, `force`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="certificate_nodejs">
+<a href="#certificate_nodejs" style="color: inherit; text-decoration: inherit;">certificate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Certificate certificate and the intermediate(s)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="georestrictions_nodejs">
 <a href="#georestrictions_nodejs" style="color: inherit; text-decoration: inherit;">geo<wbr>Restrictions</a>
 </span>
@@ -1387,6 +1378,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the region where your private key can be held locally. Valid values are `us`, `eu`, `highest_security`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="privatekey_nodejs">
+<a href="#privatekey_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Certificate's private key
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
@@ -1400,25 +1400,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="certificate_python">
-<a href="#certificate_python" style="color: inherit; text-decoration: inherit;">certificate</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Certificate certificate and the intermediate(s)
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="private_key_python">
-<a href="#private_key_python" style="color: inherit; text-decoration: inherit;">private_<wbr>key</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Certificate's private key
-{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="bundle_method_python">
 <a href="#bundle_method_python" style="color: inherit; text-decoration: inherit;">bundle_<wbr>method</a>
@@ -1429,6 +1411,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Method of building intermediate certificate chain. A ubiquitous bundle has the highest probability of being verified everywhere, even by clients using outdated or unusual trust stores. An optimal bundle uses the shortest chain and newest intermediates. And the force bundle verifies the chain, but does not otherwise modify it. Valid values are `ubiquitous` (default), `optimal`, `force`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="certificate_python">
+<a href="#certificate_python" style="color: inherit; text-decoration: inherit;">certificate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Certificate certificate and the intermediate(s)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="geo_restrictions_python">
 <a href="#geo_restrictions_python" style="color: inherit; text-decoration: inherit;">geo_<wbr>restrictions</a>
 </span>
@@ -1436,6 +1427,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the region where your private key can be held locally. Valid values are `us`, `eu`, `highest_security`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="private_key_python">
+<a href="#private_key_python" style="color: inherit; text-decoration: inherit;">private_<wbr>key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Certificate's private key
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_python">

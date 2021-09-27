@@ -18,6 +18,7 @@ A Pulumi package for creating and managing Cloudflare cloud resources.
     <li><a href="accesscacertificate" title="AccessCaCertificate"><span class="symbol resource"></span>AccessCaCertificate</a></li>
     <li><a href="accessgroup" title="AccessGroup"><span class="symbol resource"></span>AccessGroup</a></li>
     <li><a href="accessidentityprovider" title="AccessIdentityProvider"><span class="symbol resource"></span>AccessIdentityProvider</a></li>
+    <li><a href="accesskeysconfiguration" title="AccessKeysConfiguration"><span class="symbol resource"></span>AccessKeysConfiguration</a></li>
     <li><a href="accessmutualtlscertificate" title="AccessMutualTlsCertificate"><span class="symbol resource"></span>AccessMutualTlsCertificate</a></li>
     <li><a href="accesspolicy" title="AccessPolicy"><span class="symbol resource"></span>AccessPolicy</a></li>
     <li><a href="accessrule" title="AccessRule"><span class="symbol resource"></span>AccessRule</a></li>
@@ -56,8 +57,10 @@ A Pulumi package for creating and managing Cloudflare cloud resources.
     <li><a href="ruleset" title="Ruleset"><span class="symbol resource"></span>Ruleset</a></li>
     <li><a href="spectrumapplication" title="SpectrumApplication"><span class="symbol resource"></span>SpectrumApplication</a></li>
     <li><a href="staticroute" title="StaticRoute"><span class="symbol resource"></span>StaticRoute</a></li>
+    <li><a href="teamsaccount" title="TeamsAccount"><span class="symbol resource"></span>TeamsAccount</a></li>
     <li><a href="teamslist" title="TeamsList"><span class="symbol resource"></span>TeamsList</a></li>
     <li><a href="teamslocation" title="TeamsLocation"><span class="symbol resource"></span>TeamsLocation</a></li>
+    <li><a href="teamsrule" title="TeamsRule"><span class="symbol resource"></span>TeamsRule</a></li>
     <li><a href="wafgroup" title="WafGroup"><span class="symbol resource"></span>WafGroup</a></li>
     <li><a href="wafoverride" title="WafOverride"><span class="symbol resource"></span>WafOverride</a></li>
     <li><a href="wafpackage" title="WafPackage"><span class="symbol resource"></span>WafPackage</a></li>
@@ -95,6 +98,6 @@ A Pulumi package for creating and managing Cloudflare cloud resources.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`cloudflare` Terraform Provider](https://github.com/cloudflare/terraform-provider-cloudflare).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>3.5.0</dd>
+	<dd>4.0.0</dd>
 </dl>
 

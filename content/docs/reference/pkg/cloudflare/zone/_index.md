@@ -384,7 +384,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#meta_csharp" style="color: inherit; text-decoration: inherit;">Meta</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#zonemeta">Zone<wbr>Meta</a></span>
+        <span class="property-type">Dictionary&lt;string, bool&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
@@ -442,7 +442,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#meta_go" style="color: inherit; text-decoration: inherit;">Meta</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#zonemeta">Zone<wbr>Meta</a></span>
+        <span class="property-type">map[string]bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
@@ -500,7 +500,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#meta_nodejs" style="color: inherit; text-decoration: inherit;">meta</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#zonemeta">Zone<wbr>Meta</a></span>
+        <span class="property-type">{[key: string]: boolean}</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
@@ -558,7 +558,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#meta_python" style="color: inherit; text-decoration: inherit;">meta</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#zonemeta">Zone<wbr>Meta</a></span>
+        <span class="property-type">Mapping[str, bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
@@ -618,7 +618,7 @@ Get an existing Zone resource's state with the given name, ID, and optional extr
         <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
         <span class="nx">jump_start</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
-        <span class="nx">meta</span><span class="p">:</span> <span class="nx">Optional[ZoneMetaArgs]</span> = None<span class="p">,</span>
+        <span class="nx">meta</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, bool]]</span> = None<span class="p">,</span>
         <span class="nx">name_servers</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
         <span class="nx">paused</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -752,7 +752,7 @@ The following state arguments are supported:
 <a href="#state_meta_csharp" style="color: inherit; text-decoration: inherit;">Meta</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#zonemeta">Zone<wbr>Meta<wbr>Args</a></span>
+        <span class="property-type">Dictionary&lt;string, bool&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -847,7 +847,7 @@ The following state arguments are supported:
 <a href="#state_meta_go" style="color: inherit; text-decoration: inherit;">Meta</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#zonemeta">Zone<wbr>Meta<wbr>Args</a></span>
+        <span class="property-type">map[string]bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -942,7 +942,7 @@ The following state arguments are supported:
 <a href="#state_meta_nodejs" style="color: inherit; text-decoration: inherit;">meta</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#zonemeta">Zone<wbr>Meta<wbr>Args</a></span>
+        <span class="property-type">{[key: string]: boolean}</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1037,7 +1037,7 @@ The following state arguments are supported:
 <a href="#state_meta_python" style="color: inherit; text-decoration: inherit;">meta</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#zonemeta">Zone<wbr>Meta<wbr>Args</a></span>
+        <span class="property-type">Mapping[str, bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1120,92 +1120,6 @@ The following state arguments are supported:
 
 
 
-
-## Supporting Types
-
-
-
-<h4 id="zonemeta">Zone<wbr>Meta</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="phishingdetected_csharp">
-<a href="#phishingdetected_csharp" style="color: inherit; text-decoration: inherit;">Phishing<wbr>Detected</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="wildcardproxiable_csharp">
-<a href="#wildcardproxiable_csharp" style="color: inherit; text-decoration: inherit;">Wildcard<wbr>Proxiable</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="phishingdetected_go">
-<a href="#phishingdetected_go" style="color: inherit; text-decoration: inherit;">Phishing<wbr>Detected</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="wildcardproxiable_go">
-<a href="#wildcardproxiable_go" style="color: inherit; text-decoration: inherit;">Wildcard<wbr>Proxiable</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="phishingdetected_nodejs">
-<a href="#phishingdetected_nodejs" style="color: inherit; text-decoration: inherit;">phishing<wbr>Detected</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="wildcardproxiable_nodejs">
-<a href="#wildcardproxiable_nodejs" style="color: inherit; text-decoration: inherit;">wildcard<wbr>Proxiable</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="phishing_detected_python">
-<a href="#phishing_detected_python" style="color: inherit; text-decoration: inherit;">phishing_<wbr>detected</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="wildcard_proxiable_python">
-<a href="#wildcard_proxiable_python" style="color: inherit; text-decoration: inherit;">wildcard_<wbr>proxiable</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
 
 
 <h2 id="package-details">Package Details</h2>
