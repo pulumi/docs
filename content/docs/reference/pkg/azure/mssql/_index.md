@@ -15,6 +15,7 @@ Explore the resources and functions of the azure.mssql module.
     <li><a href="databaseextendedauditingpolicy" title="DatabaseExtendedAuditingPolicy"><span class="symbol resource"></span>DatabaseExtendedAuditingPolicy</a></li>
     <li><a href="databasevulnerabilityassessmentrulebaseline" title="DatabaseVulnerabilityAssessmentRuleBaseline"><span class="symbol resource"></span>DatabaseVulnerabilityAssessmentRuleBaseline</a></li>
     <li><a href="elasticpool" title="ElasticPool"><span class="symbol resource"></span>ElasticPool</a></li>
+    <li><a href="failovergroup" title="FailoverGroup"><span class="symbol resource"></span>FailoverGroup</a></li>
     <li><a href="firewallrule" title="FirewallRule"><span class="symbol resource"></span>FirewallRule</a></li>
     <li><a href="jobagent" title="JobAgent"><span class="symbol resource"></span>JobAgent</a></li>
     <li><a href="jobcredential" title="JobCredential"><span class="symbol resource"></span>JobCredential</a></li>
@@ -43,6 +44,6 @@ Explore the resources and functions of the azure.mssql module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/hashicorp/terraform-provider-azurerm).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.19.0</dd>
+	<dd>4.20.0</dd>
 </dl>
 

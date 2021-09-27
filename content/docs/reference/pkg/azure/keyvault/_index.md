@@ -18,6 +18,8 @@ Explore the resources and functions of the azure.keyvault module.
     <li><a href="key" title="Key"><span class="symbol resource"></span>Key</a></li>
     <li><a href="keyvault" title="KeyVault"><span class="symbol resource"></span>KeyVault</a></li>
     <li><a href="managedhardwaresecuritymodule" title="ManagedHardwareSecurityModule"><span class="symbol resource"></span>ManagedHardwareSecurityModule</a></li>
+    <li><a href="managedstorageaccount" title="ManagedStorageAccount"><span class="symbol resource"></span>ManagedStorageAccount</a></li>
+    <li><a href="managedstorageaccountsastokendefinition" title="ManagedStorageAccountSasTokenDefinition"><span class="symbol resource"></span>ManagedStorageAccountSasTokenDefinition</a></li>
     <li><a href="secret" title="Secret"><span class="symbol resource"></span>Secret</a></li>
 </ul>
 
@@ -43,6 +45,6 @@ Explore the resources and functions of the azure.keyvault module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/hashicorp/terraform-provider-azurerm).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.19.0</dd>
+	<dd>4.20.0</dd>
 </dl>
 

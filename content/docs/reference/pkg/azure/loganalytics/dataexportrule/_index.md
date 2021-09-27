@@ -59,6 +59,7 @@ class MyStack : Stack
             {
                 "Heartbeat",
             },
+            Enabled = true,
         });
     }
 
@@ -115,6 +116,7 @@ func main() {
 			TableNames: pulumi.StringArray{
 				pulumi.String("Heartbeat"),
 			},
+			Enabled: pulumi.Bool(true),
 		})
 		if err != nil {
 			return err
@@ -149,7 +151,8 @@ example_data_export_rule = azure.loganalytics.DataExportRule("exampleDataExportR
     resource_group_name=example_resource_group.name,
     workspace_resource_id=example_analytics_workspace.id,
     destination_resource_id=example_account.id,
-    table_names=["Heartbeat"])
+    table_names=["Heartbeat"],
+    enabled=True)
 ```
 
 
@@ -181,6 +184,7 @@ const exampleDataExportRule = new azure.loganalytics.DataExportRule("exampleData
     workspaceResourceId: exampleAnalyticsWorkspace.id,
     destinationResourceId: exampleAccount.id,
     tableNames: ["Heartbeat"],
+    enabled: true,
 });
 ```
 

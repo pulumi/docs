@@ -1635,7 +1635,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the identity type of the Data Factory. Possible values are `SystemAssigned` and `UserAssigned`.
+    <dd>{{% md %}}Specifies the identity type of the Data Factory. Possible values are `SystemAssigned`, `UserAssigned` and `SystemAssigned,UserAssigned`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identityids_csharp">
@@ -1644,7 +1644,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Specifies the IDs of user assigned identities. Requiered if `UserAssigned` type is used.
+    <dd>{{% md %}}Specifies the IDs of user assigned identities. Required if `UserAssigned` or `SystemAssigned,UserAssigned` type is used.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="principalid_csharp">
@@ -1675,7 +1675,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the identity type of the Data Factory. Possible values are `SystemAssigned` and `UserAssigned`.
+    <dd>{{% md %}}Specifies the identity type of the Data Factory. Possible values are `SystemAssigned`, `UserAssigned` and `SystemAssigned,UserAssigned`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identityids_go">
@@ -1684,7 +1684,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Specifies the IDs of user assigned identities. Requiered if `UserAssigned` type is used.
+    <dd>{{% md %}}Specifies the IDs of user assigned identities. Required if `UserAssigned` or `SystemAssigned,UserAssigned` type is used.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="principalid_go">
@@ -1715,7 +1715,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the identity type of the Data Factory. Possible values are `SystemAssigned` and `UserAssigned`.
+    <dd>{{% md %}}Specifies the identity type of the Data Factory. Possible values are `SystemAssigned`, `UserAssigned` and `SystemAssigned,UserAssigned`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identityids_nodejs">
@@ -1724,7 +1724,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Specifies the IDs of user assigned identities. Requiered if `UserAssigned` type is used.
+    <dd>{{% md %}}Specifies the IDs of user assigned identities. Required if `UserAssigned` or `SystemAssigned,UserAssigned` type is used.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="principalid_nodejs">
@@ -1755,7 +1755,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the identity type of the Data Factory. Possible values are `SystemAssigned` and `UserAssigned`.
+    <dd>{{% md %}}Specifies the identity type of the Data Factory. Possible values are `SystemAssigned`, `UserAssigned` and `SystemAssigned,UserAssigned`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identity_ids_python">
@@ -1764,7 +1764,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Specifies the IDs of user assigned identities. Requiered if `UserAssigned` type is used.
+    <dd>{{% md %}}Specifies the IDs of user assigned identities. Required if `UserAssigned` or `SystemAssigned,UserAssigned` type is used.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="principal_id_python">

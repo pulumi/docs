@@ -12,6 +12,301 @@ meta_desc: "Documentation for the azure.network.VpnGatewayConnection resource wi
 
 Manages a VPN Gateway Connection.
 
+{{% examples %}}
+
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+
+
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West Europe",
+        });
+        var exampleVirtualWan = new Azure.Network.VirtualWan("exampleVirtualWan", new Azure.Network.VirtualWanArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            Location = exampleResourceGroup.Location,
+        });
+        var exampleVirtualHub = new Azure.Network.VirtualHub("exampleVirtualHub", new Azure.Network.VirtualHubArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            Location = exampleResourceGroup.Location,
+            VirtualWanId = exampleVirtualWan.Id,
+            AddressPrefix = "10.0.0.0/24",
+        });
+        var exampleVpnGateway = new Azure.Network.VpnGateway("exampleVpnGateway", new Azure.Network.VpnGatewayArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            VirtualHubId = exampleVirtualHub.Id,
+        });
+        var exampleVpnSite = new Azure.Network.VpnSite("exampleVpnSite", new Azure.Network.VpnSiteArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            VirtualWanId = exampleVirtualWan.Id,
+            Links = 
+            {
+                new Azure.Network.Inputs.VpnSiteLinkArgs
+                {
+                    Name = "link1",
+                    IpAddress = "10.1.0.0",
+                },
+                new Azure.Network.Inputs.VpnSiteLinkArgs
+                {
+                    Name = "link2",
+                    IpAddress = "10.2.0.0",
+                },
+            },
+        });
+        var exampleVpnGatewayConnection = new Azure.Network.VpnGatewayConnection("exampleVpnGatewayConnection", new Azure.Network.VpnGatewayConnectionArgs
+        {
+            VpnGatewayId = exampleVpnGateway.Id,
+            RemoteVpnSiteId = exampleVpnSite.Id,
+            VpnLinks = 
+            {
+                new Azure.Network.Inputs.VpnGatewayConnectionVpnLinkArgs
+                {
+                    Name = "link1",
+                    VpnSiteLinkId = exampleVpnSite.Links.Apply(links => links?[0]?.Id),
+                },
+                new Azure.Network.Inputs.VpnGatewayConnectionVpnLinkArgs
+                {
+                    Name = "link2",
+                    VpnSiteLinkId = exampleVpnSite.Links.Apply(links => links?[1]?.Id),
+                },
+            },
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/network"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West Europe"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleVirtualWan, err := network.NewVirtualWan(ctx, "exampleVirtualWan", &network.VirtualWanArgs{
+			ResourceGroupName: exampleResourceGroup.Name,
+			Location:          exampleResourceGroup.Location,
+		})
+		if err != nil {
+			return err
+		}
+		exampleVirtualHub, err := network.NewVirtualHub(ctx, "exampleVirtualHub", &network.VirtualHubArgs{
+			ResourceGroupName: exampleResourceGroup.Name,
+			Location:          exampleResourceGroup.Location,
+			VirtualWanId:      exampleVirtualWan.ID(),
+			AddressPrefix:     pulumi.String("10.0.0.0/24"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleVpnGateway, err := network.NewVpnGateway(ctx, "exampleVpnGateway", &network.VpnGatewayArgs{
+			Location:          exampleResourceGroup.Location,
+			ResourceGroupName: exampleResourceGroup.Name,
+			VirtualHubId:      exampleVirtualHub.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		exampleVpnSite, err := network.NewVpnSite(ctx, "exampleVpnSite", &network.VpnSiteArgs{
+			Location:          exampleResourceGroup.Location,
+			ResourceGroupName: exampleResourceGroup.Name,
+			VirtualWanId:      exampleVirtualWan.ID(),
+			Links: network.VpnSiteLinkArray{
+				&network.VpnSiteLinkArgs{
+					Name:      pulumi.String("link1"),
+					IpAddress: pulumi.String("10.1.0.0"),
+				},
+				&network.VpnSiteLinkArgs{
+					Name:      pulumi.String("link2"),
+					IpAddress: pulumi.String("10.2.0.0"),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = network.NewVpnGatewayConnection(ctx, "exampleVpnGatewayConnection", &network.VpnGatewayConnectionArgs{
+			VpnGatewayId:    exampleVpnGateway.ID(),
+			RemoteVpnSiteId: exampleVpnSite.ID(),
+			VpnLinks: network.VpnGatewayConnectionVpnLinkArray{
+				&network.VpnGatewayConnectionVpnLinkArgs{
+					Name: pulumi.String("link1"),
+					VpnSiteLinkId: exampleVpnSite.Links.ApplyT(func(links []network.VpnSiteLink) (string, error) {
+						return links[0].Id, nil
+					}).(pulumi.StringOutput),
+				},
+				&network.VpnGatewayConnectionVpnLinkArgs{
+					Name: pulumi.String("link2"),
+					VpnSiteLinkId: exampleVpnSite.Links.ApplyT(func(links []network.VpnSiteLink) (string, error) {
+						return links[1].Id, nil
+					}).(pulumi.StringOutput),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_virtual_wan = azure.network.VirtualWan("exampleVirtualWan",
+    resource_group_name=example_resource_group.name,
+    location=example_resource_group.location)
+example_virtual_hub = azure.network.VirtualHub("exampleVirtualHub",
+    resource_group_name=example_resource_group.name,
+    location=example_resource_group.location,
+    virtual_wan_id=example_virtual_wan.id,
+    address_prefix="10.0.0.0/24")
+example_vpn_gateway = azure.network.VpnGateway("exampleVpnGateway",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    virtual_hub_id=example_virtual_hub.id)
+example_vpn_site = azure.network.VpnSite("exampleVpnSite",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    virtual_wan_id=example_virtual_wan.id,
+    links=[
+        azure.network.VpnSiteLinkArgs(
+            name="link1",
+            ip_address="10.1.0.0",
+        ),
+        azure.network.VpnSiteLinkArgs(
+            name="link2",
+            ip_address="10.2.0.0",
+        ),
+    ])
+example_vpn_gateway_connection = azure.network.VpnGatewayConnection("exampleVpnGatewayConnection",
+    vpn_gateway_id=example_vpn_gateway.id,
+    remote_vpn_site_id=example_vpn_site.id,
+    vpn_links=[
+        azure.network.VpnGatewayConnectionVpnLinkArgs(
+            name="link1",
+            vpn_site_link_id=example_vpn_site.links[0].id,
+        ),
+        azure.network.VpnGatewayConnectionVpnLinkArgs(
+            name="link2",
+            vpn_site_link_id=example_vpn_site.links[1].id,
+        ),
+    ])
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const exampleVirtualWan = new azure.network.VirtualWan("exampleVirtualWan", {
+    resourceGroupName: exampleResourceGroup.name,
+    location: exampleResourceGroup.location,
+});
+const exampleVirtualHub = new azure.network.VirtualHub("exampleVirtualHub", {
+    resourceGroupName: exampleResourceGroup.name,
+    location: exampleResourceGroup.location,
+    virtualWanId: exampleVirtualWan.id,
+    addressPrefix: "10.0.0.0/24",
+});
+const exampleVpnGateway = new azure.network.VpnGateway("exampleVpnGateway", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    virtualHubId: exampleVirtualHub.id,
+});
+const exampleVpnSite = new azure.network.VpnSite("exampleVpnSite", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    virtualWanId: exampleVirtualWan.id,
+    links: [
+        {
+            name: "link1",
+            ipAddress: "10.1.0.0",
+        },
+        {
+            name: "link2",
+            ipAddress: "10.2.0.0",
+        },
+    ],
+});
+const exampleVpnGatewayConnection = new azure.network.VpnGatewayConnection("exampleVpnGatewayConnection", {
+    vpnGatewayId: exampleVpnGateway.id,
+    remoteVpnSiteId: exampleVpnSite.id,
+    vpnLinks: [
+        {
+            name: "link1",
+            vpnSiteLinkId: exampleVpnSite.links.apply(links => links?[0]?.id),
+        },
+        {
+            name: "link2",
+            vpnSiteLinkId: exampleVpnSite.links.apply(links => links?[1]?.id),
+        },
+    ],
+});
+```
+
+
+{{< /example >}}
+
+
+
+
+
+{{% /examples %}}
+
+
 
 
 ## Create a VpnGatewayConnection Resource {#create}

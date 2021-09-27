@@ -204,6 +204,7 @@ const exampleDatasetSnowflake = new azure.datafactory.DatasetSnowflake("exampleD
                      <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                      <span class="nx">schema_columns</span><span class="p">:</span> <span class="nx">Optional[Sequence[DatasetSnowflakeSchemaColumnArgs]]</span> = None<span class="p">,</span>
                      <span class="nx">schema_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                     <span class="nx">structure_columns</span><span class="p">:</span> <span class="nx">Optional[Sequence[DatasetSnowflakeStructureColumnArgs]]</span> = None<span class="p">,</span>
                      <span class="nx">table_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">DatasetSnowflake</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
@@ -431,7 +432,15 @@ The DatasetSnowflake resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The schema name of the Data Factory Dataset Snowflake.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="structurecolumns_csharp">
+<a href="#structurecolumns_csharp" style="color: inherit; text-decoration: inherit;">Structure<wbr>Columns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasetsnowflakestructurecolumn">List&lt;Dataset<wbr>Snowflake<wbr>Structure<wbr>Column<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This block has been deprecated in favour of `schema_column` and will be removed.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="tablename_csharp">
 <a href="#tablename_csharp" style="color: inherit; text-decoration: inherit;">Table<wbr>Name</a>
@@ -543,7 +552,15 @@ The DatasetSnowflake resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The schema name of the Data Factory Dataset Snowflake.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="structurecolumns_go">
+<a href="#structurecolumns_go" style="color: inherit; text-decoration: inherit;">Structure<wbr>Columns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasetsnowflakestructurecolumn">[]Dataset<wbr>Snowflake<wbr>Structure<wbr>Column<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This block has been deprecated in favour of `schema_column` and will be removed.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="tablename_go">
 <a href="#tablename_go" style="color: inherit; text-decoration: inherit;">Table<wbr>Name</a>
@@ -655,7 +672,15 @@ The DatasetSnowflake resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The schema name of the Data Factory Dataset Snowflake.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="structurecolumns_nodejs">
+<a href="#structurecolumns_nodejs" style="color: inherit; text-decoration: inherit;">structure<wbr>Columns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasetsnowflakestructurecolumn">Dataset<wbr>Snowflake<wbr>Structure<wbr>Column<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This block has been deprecated in favour of `schema_column` and will be removed.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="tablename_nodejs">
 <a href="#tablename_nodejs" style="color: inherit; text-decoration: inherit;">table<wbr>Name</a>
@@ -767,7 +792,15 @@ The DatasetSnowflake resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The schema name of the Data Factory Dataset Snowflake.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="structure_columns_python">
+<a href="#structure_columns_python" style="color: inherit; text-decoration: inherit;">structure_<wbr>columns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasetsnowflakestructurecolumn">Sequence[Dataset<wbr>Snowflake<wbr>Structure<wbr>Column<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This block has been deprecated in favour of `schema_column` and will be removed.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="table_name_python">
 <a href="#table_name_python" style="color: inherit; text-decoration: inherit;">table_<wbr>name</a>
@@ -861,6 +894,7 @@ Get an existing DatasetSnowflake resource's state with the given name, ID, and o
         <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">schema_columns</span><span class="p">:</span> <span class="nx">Optional[Sequence[DatasetSnowflakeSchemaColumnArgs]]</span> = None<span class="p">,</span>
         <span class="nx">schema_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">structure_columns</span><span class="p">:</span> <span class="nx">Optional[Sequence[DatasetSnowflakeStructureColumnArgs]]</span> = None<span class="p">,</span>
         <span class="nx">table_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> DatasetSnowflake</code></pre></div>
 {{% /choosable %}}
 
@@ -1071,7 +1105,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The schema name of the Data Factory Dataset Snowflake.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="state_structurecolumns_csharp">
+<a href="#state_structurecolumns_csharp" style="color: inherit; text-decoration: inherit;">Structure<wbr>Columns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasetsnowflakestructurecolumn">List&lt;Dataset<wbr>Snowflake<wbr>Structure<wbr>Column<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This block has been deprecated in favour of `schema_column` and will be removed.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_tablename_csharp">
 <a href="#state_tablename_csharp" style="color: inherit; text-decoration: inherit;">Table<wbr>Name</a>
@@ -1183,7 +1225,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The schema name of the Data Factory Dataset Snowflake.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="state_structurecolumns_go">
+<a href="#state_structurecolumns_go" style="color: inherit; text-decoration: inherit;">Structure<wbr>Columns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasetsnowflakestructurecolumn">[]Dataset<wbr>Snowflake<wbr>Structure<wbr>Column<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This block has been deprecated in favour of `schema_column` and will be removed.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_tablename_go">
 <a href="#state_tablename_go" style="color: inherit; text-decoration: inherit;">Table<wbr>Name</a>
@@ -1295,7 +1345,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The schema name of the Data Factory Dataset Snowflake.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="state_structurecolumns_nodejs">
+<a href="#state_structurecolumns_nodejs" style="color: inherit; text-decoration: inherit;">structure<wbr>Columns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasetsnowflakestructurecolumn">Dataset<wbr>Snowflake<wbr>Structure<wbr>Column<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This block has been deprecated in favour of `schema_column` and will be removed.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_tablename_nodejs">
 <a href="#state_tablename_nodejs" style="color: inherit; text-decoration: inherit;">table<wbr>Name</a>
@@ -1407,7 +1465,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The schema name of the Data Factory Dataset Snowflake.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="state_structure_columns_python">
+<a href="#state_structure_columns_python" style="color: inherit; text-decoration: inherit;">structure_<wbr>columns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasetsnowflakestructurecolumn">Sequence[Dataset<wbr>Snowflake<wbr>Structure<wbr>Column<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This block has been deprecated in favour of `schema_column` and will be removed.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_table_name_python">
 <a href="#state_table_name_python" style="color: inherit; text-decoration: inherit;">table_<wbr>name</a>
@@ -1429,6 +1495,168 @@ The following state arguments are supported:
 
 
 <h4 id="datasetsnowflakeschemacolumn">Dataset<wbr>Snowflake<wbr>Schema<wbr>Column</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the column.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="precision_csharp">
+<a href="#precision_csharp" style="color: inherit; text-decoration: inherit;">Precision</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The total number of digits allowed.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="scale_csharp">
+<a href="#scale_csharp" style="color: inherit; text-decoration: inherit;">Scale</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of digits allowed to the right of the decimal point.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of the column. Valid values are `NUMBER`, `DECIMAL`, `NUMERIC`, `INT`, `INTEGER`, `BIGINT`, `SMALLINT`, `FLOAT``FLOAT4`, `FLOAT8`, `DOUBLE`, `DOUBLE PRECISION`, `REAL`, `VARCHAR`, `CHAR`, `CHARACTER`, `STRING`, `TEXT`, `BINARY`, `VARBINARY`, `BOOLEAN`, `DATE`, `DATETIME`, `TIME`, `TIMESTAMP`, `TIMESTAMP_LTZ`, `TIMESTAMP_NTZ`, `TIMESTAMP_TZ`, `VARIANT`, `OBJECT`, `ARRAY`, `GEOGRAPHY`. Please note these values are case sensitive.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the column.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="precision_go">
+<a href="#precision_go" style="color: inherit; text-decoration: inherit;">Precision</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The total number of digits allowed.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="scale_go">
+<a href="#scale_go" style="color: inherit; text-decoration: inherit;">Scale</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of digits allowed to the right of the decimal point.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of the column. Valid values are `NUMBER`, `DECIMAL`, `NUMERIC`, `INT`, `INTEGER`, `BIGINT`, `SMALLINT`, `FLOAT``FLOAT4`, `FLOAT8`, `DOUBLE`, `DOUBLE PRECISION`, `REAL`, `VARCHAR`, `CHAR`, `CHARACTER`, `STRING`, `TEXT`, `BINARY`, `VARBINARY`, `BOOLEAN`, `DATE`, `DATETIME`, `TIME`, `TIMESTAMP`, `TIMESTAMP_LTZ`, `TIMESTAMP_NTZ`, `TIMESTAMP_TZ`, `VARIANT`, `OBJECT`, `ARRAY`, `GEOGRAPHY`. Please note these values are case sensitive.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the column.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="precision_nodejs">
+<a href="#precision_nodejs" style="color: inherit; text-decoration: inherit;">precision</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The total number of digits allowed.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="scale_nodejs">
+<a href="#scale_nodejs" style="color: inherit; text-decoration: inherit;">scale</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The number of digits allowed to the right of the decimal point.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of the column. Valid values are `NUMBER`, `DECIMAL`, `NUMERIC`, `INT`, `INTEGER`, `BIGINT`, `SMALLINT`, `FLOAT``FLOAT4`, `FLOAT8`, `DOUBLE`, `DOUBLE PRECISION`, `REAL`, `VARCHAR`, `CHAR`, `CHARACTER`, `STRING`, `TEXT`, `BINARY`, `VARBINARY`, `BOOLEAN`, `DATE`, `DATETIME`, `TIME`, `TIMESTAMP`, `TIMESTAMP_LTZ`, `TIMESTAMP_NTZ`, `TIMESTAMP_TZ`, `VARIANT`, `OBJECT`, `ARRAY`, `GEOGRAPHY`. Please note these values are case sensitive.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the column.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="precision_python">
+<a href="#precision_python" style="color: inherit; text-decoration: inherit;">precision</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The total number of digits allowed.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="scale_python">
+<a href="#scale_python" style="color: inherit; text-decoration: inherit;">scale</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of digits allowed to the right of the decimal point.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Type of the column. Valid values are `NUMBER`, `DECIMAL`, `NUMERIC`, `INT`, `INTEGER`, `BIGINT`, `SMALLINT`, `FLOAT``FLOAT4`, `FLOAT8`, `DOUBLE`, `DOUBLE PRECISION`, `REAL`, `VARCHAR`, `CHAR`, `CHARACTER`, `STRING`, `TEXT`, `BINARY`, `VARBINARY`, `BOOLEAN`, `DATE`, `DATETIME`, `TIME`, `TIMESTAMP`, `TIMESTAMP_LTZ`, `TIMESTAMP_NTZ`, `TIMESTAMP_TZ`, `VARIANT`, `OBJECT`, `ARRAY`, `GEOGRAPHY`. Please note these values are case sensitive.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="datasetsnowflakestructurecolumn">Dataset<wbr>Snowflake<wbr>Structure<wbr>Column</h4>
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
@@ -1556,7 +1784,9 @@ The following state arguments are supported:
 ## Import
 
 
-Data Factory Snowflake Datasets can be imported using the `resource id`, e.g.
+Data Factory Snowflake Datasets can be imported using the `resource id`,
+
+e.g.
 
 ```sh
  $ pulumi import azure:datafactory/datasetSnowflake:DatasetSnowflake example /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/example/providers/Microsoft.DataFactory/factories/example/datasets/example

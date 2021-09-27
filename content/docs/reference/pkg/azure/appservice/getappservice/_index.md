@@ -1407,7 +1407,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Should all outbound traffic to have Virtual Network Security Groups and User Defined Routes applied?
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="websocketsenabled_csharp">
 <a href="#websocketsenabled_csharp" style="color: inherit; text-decoration: inherit;">Websockets<wbr>Enabled</a>
@@ -1680,7 +1681,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Should all outbound traffic to have Virtual Network Security Groups and User Defined Routes applied?
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="websocketsenabled_go">
 <a href="#websocketsenabled_go" style="color: inherit; text-decoration: inherit;">Websockets<wbr>Enabled</a>
@@ -1953,7 +1955,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Should all outbound traffic to have Virtual Network Security Groups and User Defined Routes applied?
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="websocketsenabled_nodejs">
 <a href="#websocketsenabled_nodejs" style="color: inherit; text-decoration: inherit;">websockets<wbr>Enabled</a>
@@ -2226,7 +2229,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Should all outbound traffic to have Virtual Network Security Groups and User Defined Routes applied?
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="websockets_enabled_python">
 <a href="#websockets_enabled_python" style="color: inherit; text-decoration: inherit;">websockets_<wbr>enabled</a>

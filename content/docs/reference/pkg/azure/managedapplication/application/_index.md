@@ -122,7 +122,7 @@ example_application = azure.managedapplication.Application("exampleApplication",
     parameters={
         "location": example_resource_group.location,
         "storageAccountNamePrefix": "storeNamePrefix",
-        "storage_account_type": "Standard_LRS",
+        "storageAccountType": "Standard_LRS",
     })
 ```
 

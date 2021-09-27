@@ -300,7 +300,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The sku of the Azure Maps Account. Possible values are `S0` and `S1`.
+    <dd>{{% md %}}The sku of the Azure Maps Account. Possible values are `S0`, `S1` and `G2`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
@@ -340,7 +340,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The sku of the Azure Maps Account. Possible values are `S0` and `S1`.
+    <dd>{{% md %}}The sku of the Azure Maps Account. Possible values are `S0`, `S1` and `G2`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
@@ -380,7 +380,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The sku of the Azure Maps Account. Possible values are `S0` and `S1`.
+    <dd>{{% md %}}The sku of the Azure Maps Account. Possible values are `S0`, `S1` and `G2`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
@@ -420,7 +420,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The sku of the Azure Maps Account. Possible values are `S0` and `S1`.
+    <dd>{{% md %}}The sku of the Azure Maps Account. Possible values are `S0`, `S1` and `G2`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
@@ -782,7 +782,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The sku of the Azure Maps Account. Possible values are `S0` and `S1`.
+    <dd>{{% md %}}The sku of the Azure Maps Account. Possible values are `S0`, `S1` and `G2`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
@@ -849,7 +849,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The sku of the Azure Maps Account. Possible values are `S0` and `S1`.
+    <dd>{{% md %}}The sku of the Azure Maps Account. Possible values are `S0`, `S1` and `G2`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
@@ -916,7 +916,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The sku of the Azure Maps Account. Possible values are `S0` and `S1`.
+    <dd>{{% md %}}The sku of the Azure Maps Account. Possible values are `S0`, `S1` and `G2`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
@@ -983,7 +983,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The sku of the Azure Maps Account. Possible values are `S0` and `S1`.
+    <dd>{{% md %}}The sku of the Azure Maps Account. Possible values are `S0`, `S1` and `G2`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">

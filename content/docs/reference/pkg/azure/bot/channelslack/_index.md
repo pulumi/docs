@@ -197,6 +197,7 @@ const exampleChannelSlack = new azure.bot.ChannelSlack("exampleChannelSlack", {
                  <span class="nx">landing_page_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                  <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                  <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">signing_secret</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                  <span class="nx">verification_token</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">ChannelSlack</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
@@ -388,6 +389,15 @@ The ChannelSlack resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The supported Azure location where the resource exists. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="signingsecret_csharp">
+<a href="#signingsecret_csharp" style="color: inherit; text-decoration: inherit;">Signing<wbr>Secret</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Signing Secret that will be used to sign the requests.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -455,6 +465,15 @@ The ChannelSlack resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The supported Azure location where the resource exists. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="signingsecret_go">
+<a href="#signingsecret_go" style="color: inherit; text-decoration: inherit;">Signing<wbr>Secret</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Signing Secret that will be used to sign the requests.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -522,6 +541,15 @@ The ChannelSlack resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The supported Azure location where the resource exists. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="signingsecret_nodejs">
+<a href="#signingsecret_nodejs" style="color: inherit; text-decoration: inherit;">signing<wbr>Secret</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Signing Secret that will be used to sign the requests.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -589,6 +617,15 @@ The ChannelSlack resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The supported Azure location where the resource exists. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="signing_secret_python">
+<a href="#signing_secret_python" style="color: inherit; text-decoration: inherit;">signing_<wbr>secret</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Signing Secret that will be used to sign the requests.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -669,6 +706,7 @@ Get an existing ChannelSlack resource's state with the given name, ID, and optio
         <span class="nx">landing_page_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">signing_secret</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">verification_token</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> ChannelSlack</code></pre></div>
 {{% /choosable %}}
 
@@ -836,6 +874,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The name of the resource group in which to create the Bot Channel. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_signingsecret_csharp">
+<a href="#state_signingsecret_csharp" style="color: inherit; text-decoration: inherit;">Signing<wbr>Secret</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Signing Secret that will be used to sign the requests.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_verificationtoken_csharp">
 <a href="#state_verificationtoken_csharp" style="color: inherit; text-decoration: inherit;">Verification<wbr>Token</a>
 </span>
@@ -901,6 +948,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the Bot Channel. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_signingsecret_go">
+<a href="#state_signingsecret_go" style="color: inherit; text-decoration: inherit;">Signing<wbr>Secret</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Signing Secret that will be used to sign the requests.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_verificationtoken_go">
@@ -970,6 +1026,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The name of the resource group in which to create the Bot Channel. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_signingsecret_nodejs">
+<a href="#state_signingsecret_nodejs" style="color: inherit; text-decoration: inherit;">signing<wbr>Secret</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Signing Secret that will be used to sign the requests.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_verificationtoken_nodejs">
 <a href="#state_verificationtoken_nodejs" style="color: inherit; text-decoration: inherit;">verification<wbr>Token</a>
 </span>
@@ -1035,6 +1100,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the Bot Channel. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_signing_secret_python">
+<a href="#state_signing_secret_python" style="color: inherit; text-decoration: inherit;">signing_<wbr>secret</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Signing Secret that will be used to sign the requests.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_verification_token_python">

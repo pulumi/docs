@@ -383,13 +383,13 @@ example_scale_set = azure.compute.ScaleSet("exampleScaleSet",
     network_profiles=[azure.compute.ScaleSetNetworkProfileArgs(
         name="mynetworkprofile",
         primary=True,
-        ip_configurations=[{
-            "name": "TestIPConfiguration",
-            "primary": True,
-            "subnet_id": example_subnet.id,
-            "loadBalancerBackendAddressPoolIds": [bpepool.id],
-            "loadBalancerInboundNatRulesIds": [lbnatpool.id],
-        }],
+        ip_configurations=[azure.compute.ScaleSetNetworkProfileIpConfigurationArgs(
+            name="TestIPConfiguration",
+            primary=True,
+            subnet_id=example_subnet.id,
+            load_balancer_backend_address_pool_ids=[bpepool.id],
+            load_balancer_inbound_nat_rules_ids=[lbnatpool.id],
+        )],
     )],
     tags={
         "environment": "staging",
@@ -710,11 +710,11 @@ example_scale_set = azure.compute.ScaleSet("exampleScaleSet",
     network_profiles=[azure.compute.ScaleSetNetworkProfileArgs(
         name="TestNetworkProfile",
         primary=True,
-        ip_configurations=[{
-            "name": "TestIPConfiguration",
-            "primary": True,
-            "subnet_id": example_subnet.id,
-        }],
+        ip_configurations=[azure.compute.ScaleSetNetworkProfileIpConfigurationArgs(
+            name="TestIPConfiguration",
+            primary=True,
+            subnet_id=example_subnet.id,
+        )],
     )],
     storage_profile_os_disk=azure.compute.ScaleSetStorageProfileOsDiskArgs(
         name="osDiskProfile",
