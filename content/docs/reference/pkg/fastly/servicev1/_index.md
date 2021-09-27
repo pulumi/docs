@@ -354,14 +354,6 @@ The Servicev1 resource accepts the following [input]({{< relref "/docs/intro/con
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="backends_csharp">
-<a href="#backends_csharp" style="color: inherit; text-decoration: inherit;">Backends</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1backend">List&lt;Servicev1Backend<wbr>Args&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="domains_csharp">
 <a href="#domains_csharp" style="color: inherit; text-decoration: inherit;">Domains</a>
 </span>
@@ -387,6 +379,14 @@ The Servicev1 resource accepts the following [input]({{< relref "/docs/intro/con
     </dt>
     <dd>{{% md %}}Conditionally prevents the Service from being activated. The apply step will continue to create a new draft version but will not activate it if this is set to `false`. Default `true`
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="backends_csharp">
+<a href="#backends_csharp" style="color: inherit; text-decoration: inherit;">Backends</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicev1backend">List&lt;Servicev1Backend<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bigqueryloggings_csharp">
 <a href="#bigqueryloggings_csharp" style="color: inherit; text-decoration: inherit;">Bigqueryloggings</a>
@@ -758,14 +758,6 @@ The Servicev1 resource accepts the following [input]({{< relref "/docs/intro/con
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="backends_go">
-<a href="#backends_go" style="color: inherit; text-decoration: inherit;">Backends</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1backend">[]Servicev1Backend<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="domains_go">
 <a href="#domains_go" style="color: inherit; text-decoration: inherit;">Domains</a>
 </span>
@@ -791,6 +783,14 @@ The Servicev1 resource accepts the following [input]({{< relref "/docs/intro/con
     </dt>
     <dd>{{% md %}}Conditionally prevents the Service from being activated. The apply step will continue to create a new draft version but will not activate it if this is set to `false`. Default `true`
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="backends_go">
+<a href="#backends_go" style="color: inherit; text-decoration: inherit;">Backends</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicev1backend">[]Servicev1Backend<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bigqueryloggings_go">
 <a href="#bigqueryloggings_go" style="color: inherit; text-decoration: inherit;">Bigqueryloggings</a>
@@ -1162,14 +1162,6 @@ The Servicev1 resource accepts the following [input]({{< relref "/docs/intro/con
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="backends_nodejs">
-<a href="#backends_nodejs" style="color: inherit; text-decoration: inherit;">backends</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1backend">Servicev1Backend<wbr>Args[]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="domains_nodejs">
 <a href="#domains_nodejs" style="color: inherit; text-decoration: inherit;">domains</a>
 </span>
@@ -1195,6 +1187,14 @@ The Servicev1 resource accepts the following [input]({{< relref "/docs/intro/con
     </dt>
     <dd>{{% md %}}Conditionally prevents the Service from being activated. The apply step will continue to create a new draft version but will not activate it if this is set to `false`. Default `true`
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="backends_nodejs">
+<a href="#backends_nodejs" style="color: inherit; text-decoration: inherit;">backends</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicev1backend">Servicev1Backend<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bigqueryloggings_nodejs">
 <a href="#bigqueryloggings_nodejs" style="color: inherit; text-decoration: inherit;">bigqueryloggings</a>
@@ -1566,14 +1566,6 @@ The Servicev1 resource accepts the following [input]({{< relref "/docs/intro/con
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="backends_python">
-<a href="#backends_python" style="color: inherit; text-decoration: inherit;">backends</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1backend">Sequence[Servicev1Backend<wbr>Args]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="domains_python">
 <a href="#domains_python" style="color: inherit; text-decoration: inherit;">domains</a>
 </span>
@@ -1599,6 +1591,14 @@ The Servicev1 resource accepts the following [input]({{< relref "/docs/intro/con
     </dt>
     <dd>{{% md %}}Conditionally prevents the Service from being activated. The apply step will continue to create a new draft version but will not activate it if this is set to `false`. Default `true`
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="backends_python">
+<a href="#backends_python" style="color: inherit; text-decoration: inherit;">backends</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicev1backend">Sequence[Servicev1Backend<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bigqueryloggings_python">
 <a href="#bigqueryloggings_python" style="color: inherit; text-decoration: inherit;">bigqueryloggings</a>
@@ -14709,6 +14709,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Where in the generated VCL the logging call should be placed.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="region_csharp">
+<a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The region that log data will be sent to. Default: `US`
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="responsecondition_csharp">
 <a href="#responsecondition_csharp" style="color: inherit; text-decoration: inherit;">Response<wbr>Condition</a>
 </span>
@@ -14765,6 +14774,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Where in the generated VCL the logging call should be placed.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="region_go">
+<a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The region that log data will be sent to. Default: `US`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="responsecondition_go">
@@ -14825,6 +14843,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Where in the generated VCL the logging call should be placed.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="region_nodejs">
+<a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The region that log data will be sent to. Default: `US`
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="responsecondition_nodejs">
 <a href="#responsecondition_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Condition</a>
 </span>
@@ -14881,6 +14908,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Where in the generated VCL the logging call should be placed.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="region_python">
+<a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The region that log data will be sent to. Default: `US`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="response_condition_python">
@@ -16750,8 +16786,8 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Forces the request to use SSL (Redirects a non-SSL request to SSL)
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="geoheaders_csharp">
 <a href="#geoheaders_csharp" style="color: inherit; text-decoration: inherit;">Geo<wbr>Headers</a>
 </span>
@@ -16759,7 +16795,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Injects Fastly-Geo-Country, Fastly-Geo-City, and Fastly-Geo-Region into the request headers
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}&#39;geo_headers&#39; attribute has been deprecated and will be removed in the next major version release{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="hashkeys_csharp">
 <a href="#hashkeys_csharp" style="color: inherit; text-decoration: inherit;">Hash<wbr>Keys</a>
@@ -16862,8 +16898,8 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Forces the request to use SSL (Redirects a non-SSL request to SSL)
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="geoheaders_go">
 <a href="#geoheaders_go" style="color: inherit; text-decoration: inherit;">Geo<wbr>Headers</a>
 </span>
@@ -16871,7 +16907,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Injects Fastly-Geo-Country, Fastly-Geo-City, and Fastly-Geo-Region into the request headers
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}&#39;geo_headers&#39; attribute has been deprecated and will be removed in the next major version release{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="hashkeys_go">
 <a href="#hashkeys_go" style="color: inherit; text-decoration: inherit;">Hash<wbr>Keys</a>
@@ -16974,8 +17010,8 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Forces the request to use SSL (Redirects a non-SSL request to SSL)
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="geoheaders_nodejs">
 <a href="#geoheaders_nodejs" style="color: inherit; text-decoration: inherit;">geo<wbr>Headers</a>
 </span>
@@ -16983,7 +17019,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Injects Fastly-Geo-Country, Fastly-Geo-City, and Fastly-Geo-Region into the request headers
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}&#39;geo_headers&#39; attribute has been deprecated and will be removed in the next major version release{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="hashkeys_nodejs">
 <a href="#hashkeys_nodejs" style="color: inherit; text-decoration: inherit;">hash<wbr>Keys</a>
@@ -17086,8 +17122,8 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Forces the request to use SSL (Redirects a non-SSL request to SSL)
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="geo_headers_python">
 <a href="#geo_headers_python" style="color: inherit; text-decoration: inherit;">geo_<wbr>headers</a>
 </span>
@@ -17095,7 +17131,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Injects Fastly-Geo-Country, Fastly-Geo-City, and Fastly-Geo-Region into the request headers
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}&#39;geo_headers&#39; attribute has been deprecated and will be removed in the next major version release{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="hash_keys_python">
 <a href="#hash_keys_python" style="color: inherit; text-decoration: inherit;">hash_<wbr>keys</a>
