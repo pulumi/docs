@@ -271,7 +271,7 @@ The IntegrationLogCollection resource accepts the following [input]({{< relref "
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Your AWS Account ID without dashes.
+    <dd>{{% md %}}Your AWS Account ID without dashes. If your account is a GovCloud or China account, specify the `access_key_id` here.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="services_csharp">
@@ -293,7 +293,7 @@ The IntegrationLogCollection resource accepts the following [input]({{< relref "
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Your AWS Account ID without dashes.
+    <dd>{{% md %}}Your AWS Account ID without dashes. If your account is a GovCloud or China account, specify the `access_key_id` here.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="services_go">
@@ -315,7 +315,7 @@ The IntegrationLogCollection resource accepts the following [input]({{< relref "
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Your AWS Account ID without dashes.
+    <dd>{{% md %}}Your AWS Account ID without dashes. If your account is a GovCloud or China account, specify the `access_key_id` here.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="services_nodejs">
@@ -337,7 +337,7 @@ The IntegrationLogCollection resource accepts the following [input]({{< relref "
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Your AWS Account ID without dashes.
+    <dd>{{% md %}}Your AWS Account ID without dashes. If your account is a GovCloud or China account, specify the `access_key_id` here.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="services_python">
@@ -541,7 +541,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Your AWS Account ID without dashes.
+    <dd>{{% md %}}Your AWS Account ID without dashes. If your account is a GovCloud or China account, specify the `access_key_id` here.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_services_csharp">
@@ -563,7 +563,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Your AWS Account ID without dashes.
+    <dd>{{% md %}}Your AWS Account ID without dashes. If your account is a GovCloud or China account, specify the `access_key_id` here.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_services_go">
@@ -585,7 +585,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Your AWS Account ID without dashes.
+    <dd>{{% md %}}Your AWS Account ID without dashes. If your account is a GovCloud or China account, specify the `access_key_id` here.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_services_nodejs">
@@ -607,7 +607,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Your AWS Account ID without dashes.
+    <dd>{{% md %}}Your AWS Account ID without dashes. If your account is a GovCloud or China account, specify the `access_key_id` here.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_services_python">

@@ -37,6 +37,31 @@ class MyStack : Stack
         {
             Name = "My super list",
         }));
+        // Create a dashboard and register it in the list above.
+        var time = new Datadog.Dashboard("time", new Datadog.DashboardArgs
+        {
+            DashboardLists = 
+            {
+                test.Apply(test => test.Id),
+            },
+            Description = "Created using the Datadog provider in Terraform",
+            IsReadOnly = true,
+            LayoutType = "ordered",
+            Title = "TF Test Layout Dashboard",
+            Widgets = 
+            {
+                new Datadog.Inputs.DashboardWidgetArgs
+                {
+                    AlertGraphDefinition = new Datadog.Inputs.DashboardWidgetAlertGraphDefinitionArgs
+                    {
+                        AlertId = "1234",
+                        LiveSpan = "1h",
+                        Title = "Widget Title",
+                        VizType = "timeseries",
+                    },
+                },
+            },
+        });
     }
 
 }
@@ -48,27 +73,7 @@ class MyStack : Stack
 
 {{< example go >}}
 
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-datadog/sdk/v4/go/datadog"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := datadog.LookupDashboardList(ctx, &datadog.LookupDashboardListArgs{
-			Name: "My super list",
-		}, nil)
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
+Coming soon!
 
 {{< /example >}}
 
@@ -80,6 +85,21 @@ import pulumi
 import pulumi_datadog as datadog
 
 test = datadog.get_dashboard_list(name="My super list")
+# Create a dashboard and register it in the list above.
+time = datadog.Dashboard("time",
+    dashboard_lists=[test.id],
+    description="Created using the Datadog provider in Terraform",
+    is_read_only=True,
+    layout_type="ordered",
+    title="TF Test Layout Dashboard",
+    widgets=[datadog.DashboardWidgetArgs(
+        alert_graph_definition=datadog.DashboardWidgetAlertGraphDefinitionArgs(
+            alert_id="1234",
+            live_span="1h",
+            title="Widget Title",
+            viz_type="timeseries",
+        ),
+    )])
 ```
 
 
@@ -96,6 +116,22 @@ import * as datadog from "@pulumi/datadog";
 const test = pulumi.output(datadog.getDashboardList({
     name: "My super list",
 }));
+// Create a dashboard and register it in the list above.
+const time = new datadog.Dashboard("time", {
+    dashboardLists: [test.apply(test => Number.parseFloat(test.id))],
+    description: "Created using the Datadog provider in Terraform",
+    isReadOnly: true,
+    layoutType: "ordered",
+    title: "TF Test Layout Dashboard",
+    widgets: [{
+        alertGraphDefinition: {
+            alertId: "1234",
+            liveSpan: "1h",
+            title: "Widget Title",
+            vizType: "timeseries",
+        },
+    }],
+});
 ```
 
 
