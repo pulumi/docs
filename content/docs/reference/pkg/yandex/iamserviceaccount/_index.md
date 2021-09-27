@@ -283,7 +283,6 @@ Defaults to the provider folder configuration.
     </dt>
     <dd>{{% md %}}Name of the service account.
 Can be updated without creating a new resource.
-Name should comply to this pattern: /a-z?/
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -317,7 +316,6 @@ Defaults to the provider folder configuration.
     </dt>
     <dd>{{% md %}}Name of the service account.
 Can be updated without creating a new resource.
-Name should comply to this pattern: /a-z?/
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -351,7 +349,6 @@ Defaults to the provider folder configuration.
     </dt>
     <dd>{{% md %}}Name of the service account.
 Can be updated without creating a new resource.
-Name should comply to this pattern: /a-z?/
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -385,7 +382,6 @@ Defaults to the provider folder configuration.
     </dt>
     <dd>{{% md %}}Name of the service account.
 Can be updated without creating a new resource.
-Name should comply to this pattern: /a-z?/
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -643,7 +639,6 @@ Defaults to the provider folder configuration.
     </dt>
     <dd>{{% md %}}Name of the service account.
 Can be updated without creating a new resource.
-Name should comply to this pattern: /a-z?/
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -685,7 +680,6 @@ Defaults to the provider folder configuration.
     </dt>
     <dd>{{% md %}}Name of the service account.
 Can be updated without creating a new resource.
-Name should comply to this pattern: /a-z?/
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -727,7 +721,6 @@ Defaults to the provider folder configuration.
     </dt>
     <dd>{{% md %}}Name of the service account.
 Can be updated without creating a new resource.
-Name should comply to this pattern: /a-z?/
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -769,7 +762,6 @@ Defaults to the provider folder configuration.
     </dt>
     <dd>{{% md %}}Name of the service account.
 Can be updated without creating a new resource.
-Name should comply to this pattern: /a-z?/
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

@@ -406,7 +406,7 @@ If omitted, the provider folder is used.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ID of the availability zone where the network load balancer resides. 
+    <dd>{{% md %}}ID of the availability zone where the network load balancer resides.
 The default is 'ru-central1'.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -485,7 +485,7 @@ If omitted, the provider folder is used.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ID of the availability zone where the network load balancer resides. 
+    <dd>{{% md %}}ID of the availability zone where the network load balancer resides.
 The default is 'ru-central1'.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -564,7 +564,7 @@ If omitted, the provider folder is used.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ID of the availability zone where the network load balancer resides. 
+    <dd>{{% md %}}ID of the availability zone where the network load balancer resides.
 The default is 'ru-central1'.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -643,7 +643,7 @@ If omitted, the provider folder is used.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}ID of the availability zone where the network load balancer resides. 
+    <dd>{{% md %}}ID of the availability zone where the network load balancer resides.
 The default is 'ru-central1'.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -956,7 +956,7 @@ If omitted, the provider folder is used.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ID of the availability zone where the network load balancer resides. 
+    <dd>{{% md %}}ID of the availability zone where the network load balancer resides.
 The default is 'ru-central1'.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1044,7 +1044,7 @@ If omitted, the provider folder is used.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ID of the availability zone where the network load balancer resides. 
+    <dd>{{% md %}}ID of the availability zone where the network load balancer resides.
 The default is 'ru-central1'.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1132,7 +1132,7 @@ If omitted, the provider folder is used.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ID of the availability zone where the network load balancer resides. 
+    <dd>{{% md %}}ID of the availability zone where the network load balancer resides.
 The default is 'ru-central1'.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1220,7 +1220,7 @@ If omitted, the provider folder is used.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}ID of the availability zone where the network load balancer resides. 
+    <dd>{{% md %}}ID of the availability zone where the network load balancer resides.
 The default is 'ru-central1'.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1992,7 +1992,7 @@ The default is 'ru-central1'.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}External IP address for a listener. IP address will be allocated if it wasn't been set.
+    <dd>{{% md %}}Internal IP address for a listener. Must belong to the subnet that is referenced in subnet_id. IP address will be allocated if it wasn't been set.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipversion_csharp">
@@ -2014,7 +2014,7 @@ The default is 'ru-central1'.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}External IP address for a listener. IP address will be allocated if it wasn't been set.
+    <dd>{{% md %}}Internal IP address for a listener. Must belong to the subnet that is referenced in subnet_id. IP address will be allocated if it wasn't been set.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipversion_go">
@@ -2036,7 +2036,7 @@ The default is 'ru-central1'.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}External IP address for a listener. IP address will be allocated if it wasn't been set.
+    <dd>{{% md %}}Internal IP address for a listener. Must belong to the subnet that is referenced in subnet_id. IP address will be allocated if it wasn't been set.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipversion_nodejs">
@@ -2058,7 +2058,7 @@ The default is 'ru-central1'.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}External IP address for a listener. IP address will be allocated if it wasn't been set.
+    <dd>{{% md %}}Internal IP address for a listener. Must belong to the subnet that is referenced in subnet_id. IP address will be allocated if it wasn't been set.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ip_version_python">
@@ -2091,7 +2091,7 @@ The default is 'ru-central1'.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}External IP address for a listener. IP address will be allocated if it wasn't been set.
+    <dd>{{% md %}}Internal IP address for a listener. Must belong to the subnet that is referenced in subnet_id. IP address will be allocated if it wasn't been set.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipversion_csharp">
@@ -2122,7 +2122,7 @@ The default is 'ru-central1'.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}External IP address for a listener. IP address will be allocated if it wasn't been set.
+    <dd>{{% md %}}Internal IP address for a listener. Must belong to the subnet that is referenced in subnet_id. IP address will be allocated if it wasn't been set.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipversion_go">
@@ -2153,7 +2153,7 @@ The default is 'ru-central1'.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}External IP address for a listener. IP address will be allocated if it wasn't been set.
+    <dd>{{% md %}}Internal IP address for a listener. Must belong to the subnet that is referenced in subnet_id. IP address will be allocated if it wasn't been set.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipversion_nodejs">
@@ -2184,7 +2184,7 @@ The default is 'ru-central1'.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}External IP address for a listener. IP address will be allocated if it wasn't been set.
+    <dd>{{% md %}}Internal IP address for a listener. Must belong to the subnet that is referenced in subnet_id. IP address will be allocated if it wasn't been set.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ip_version_python">

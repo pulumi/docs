@@ -11,8 +11,8 @@ meta_desc: "Documentation for the yandex.VpcSecurityGroupRule resource with exam
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Manages a single Secuirity Group Rule within the Yandex.Cloud. For more information, see the official documentation
-of [security groups](https://cloud.yandex.ru/docs/vpc/concepts/security-groups)
-and [security group rules](https://cloud.yandex.ru/docs/vpc/concepts/security-groups#rules).
+of [security groups](https://cloud.yandex.com/docs/vpc/concepts/security-groups)
+and [security group rules](https://cloud.yandex.com/docs/vpc/concepts/security-groups#rules).
 
 > **NOTE:** There is another way to manage security group rules by `ingress` and `egress` arguments in yandex_vpc_security_group. Both ways are equivalent but not compatible now. Using in-line rules of yandex.VpcSecurityGroup with Security Group Rule resource at the same time will cause a conflict of rules configuration.
 
@@ -310,7 +310,7 @@ The VpcSecurityGroupRule resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Special-purpose targets such as "self_security_group". [See docs](https://cloud.yandex.ru/docs/vpc/concepts/security-groups) for possible options.
+    <dd>{{% md %}}Special-purpose targets such as "self_security_group". [See docs](https://cloud.yandex.com/docs/vpc/concepts/security-groups) for possible options.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protocol_csharp">
@@ -422,7 +422,7 @@ The VpcSecurityGroupRule resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Special-purpose targets such as "self_security_group". [See docs](https://cloud.yandex.ru/docs/vpc/concepts/security-groups) for possible options.
+    <dd>{{% md %}}Special-purpose targets such as "self_security_group". [See docs](https://cloud.yandex.com/docs/vpc/concepts/security-groups) for possible options.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protocol_go">
@@ -534,7 +534,7 @@ The VpcSecurityGroupRule resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Special-purpose targets such as "self_security_group". [See docs](https://cloud.yandex.ru/docs/vpc/concepts/security-groups) for possible options.
+    <dd>{{% md %}}Special-purpose targets such as "self_security_group". [See docs](https://cloud.yandex.com/docs/vpc/concepts/security-groups) for possible options.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protocol_nodejs">
@@ -646,7 +646,7 @@ The VpcSecurityGroupRule resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Special-purpose targets such as "self_security_group". [See docs](https://cloud.yandex.ru/docs/vpc/concepts/security-groups) for possible options.
+    <dd>{{% md %}}Special-purpose targets such as "self_security_group". [See docs](https://cloud.yandex.com/docs/vpc/concepts/security-groups) for possible options.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protocol_python">
@@ -941,7 +941,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Special-purpose targets such as "self_security_group". [See docs](https://cloud.yandex.ru/docs/vpc/concepts/security-groups) for possible options.
+    <dd>{{% md %}}Special-purpose targets such as "self_security_group". [See docs](https://cloud.yandex.com/docs/vpc/concepts/security-groups) for possible options.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_protocol_csharp">
@@ -1053,7 +1053,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Special-purpose targets such as "self_security_group". [See docs](https://cloud.yandex.ru/docs/vpc/concepts/security-groups) for possible options.
+    <dd>{{% md %}}Special-purpose targets such as "self_security_group". [See docs](https://cloud.yandex.com/docs/vpc/concepts/security-groups) for possible options.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_protocol_go">
@@ -1165,7 +1165,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Special-purpose targets such as "self_security_group". [See docs](https://cloud.yandex.ru/docs/vpc/concepts/security-groups) for possible options.
+    <dd>{{% md %}}Special-purpose targets such as "self_security_group". [See docs](https://cloud.yandex.com/docs/vpc/concepts/security-groups) for possible options.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_protocol_nodejs">
@@ -1277,7 +1277,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Special-purpose targets such as "self_security_group". [See docs](https://cloud.yandex.ru/docs/vpc/concepts/security-groups) for possible options.
+    <dd>{{% md %}}Special-purpose targets such as "self_security_group". [See docs](https://cloud.yandex.com/docs/vpc/concepts/security-groups) for possible options.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_protocol_python">

@@ -1290,7 +1290,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Allows access for [SQL queries in the management console](https://cloud.yandex.ru/docs/managed-mysql/operations/web-sql-query).
+    <dd>{{% md %}}Allows access for [SQL queries in the management console](https://cloud.yandex.com/docs/managed-mysql/operations/web-sql-query).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1312,7 +1312,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Allows access for [SQL queries in the management console](https://cloud.yandex.ru/docs/managed-mysql/operations/web-sql-query).
+    <dd>{{% md %}}Allows access for [SQL queries in the management console](https://cloud.yandex.com/docs/managed-mysql/operations/web-sql-query).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1334,7 +1334,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Allows access for [SQL queries in the management console](https://cloud.yandex.ru/docs/managed-mysql/operations/web-sql-query).
+    <dd>{{% md %}}Allows access for [SQL queries in the management console](https://cloud.yandex.com/docs/managed-mysql/operations/web-sql-query).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1356,7 +1356,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Allows access for [SQL queries in the management console](https://cloud.yandex.ru/docs/managed-mysql/operations/web-sql-query).
+    <dd>{{% md %}}Allows access for [SQL queries in the management console](https://cloud.yandex.com/docs/managed-mysql/operations/web-sql-query).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

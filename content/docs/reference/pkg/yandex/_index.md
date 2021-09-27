@@ -55,6 +55,7 @@ A Pulumi package for creating and managing yandex cloud resources.
     <li><a href="lbtargetgroup" title="LbTargetGroup"><span class="symbol resource"></span>LbTargetGroup</a></li>
     <li><a href="mdbclickhousecluster" title="MdbClickhouseCluster"><span class="symbol resource"></span>MdbClickhouseCluster</a></li>
     <li><a href="mdbelasticsearchcluster" title="MdbElasticSearchCluster"><span class="symbol resource"></span>MdbElasticSearchCluster</a></li>
+    <li><a href="mdbgreenplumcluster" title="MdbGreenplumCluster"><span class="symbol resource"></span>MdbGreenplumCluster</a></li>
     <li><a href="mdbkafkacluster" title="MdbKafkaCluster"><span class="symbol resource"></span>MdbKafkaCluster</a></li>
     <li><a href="mdbmongodbcluster" title="MdbMongodbCluster"><span class="symbol resource"></span>MdbMongodbCluster</a></li>
     <li><a href="mdbmysqlcluster" title="MdbMysqlCluster"><span class="symbol resource"></span>MdbMysqlCluster</a></li>
@@ -118,6 +119,7 @@ A Pulumi package for creating and managing yandex cloud resources.
     <li><a href="getlbtargetgroup" title="GetLbTargetGroup"><span class="symbol function"></span>GetLbTargetGroup</a></li>
     <li><a href="getmdbclickhousecluster" title="GetMdbClickhouseCluster"><span class="symbol function"></span>GetMdbClickhouseCluster</a></li>
     <li><a href="getmdbelasticsearchcluster" title="GetMdbElasticSearchCluster"><span class="symbol function"></span>GetMdbElasticSearchCluster</a></li>
+    <li><a href="getmdbgreenplumcluster" title="GetMdbGreenplumCluster"><span class="symbol function"></span>GetMdbGreenplumCluster</a></li>
     <li><a href="getmdbkafkacluster" title="GetMdbKafkaCluster"><span class="symbol function"></span>GetMdbKafkaCluster</a></li>
     <li><a href="getmdbmongodbcluster" title="GetMdbMongodbCluster"><span class="symbol function"></span>GetMdbMongodbCluster</a></li>
     <li><a href="getmdbmysqlcluster" title="GetMdbMysqlCluster"><span class="symbol function"></span>GetMdbMysqlCluster</a></li>
@@ -146,6 +148,6 @@ A Pulumi package for creating and managing yandex cloud resources.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`yandex` Terraform Provider](https://github.com/yandex-cloud/terraform-provider-yandex).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>0.6.0</dd>
+	<dd>0.7.0</dd>
 </dl>
 

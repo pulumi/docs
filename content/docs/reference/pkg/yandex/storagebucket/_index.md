@@ -12,6 +12,8 @@ meta_desc: "Documentation for the yandex.StorageBucket resource with examples, i
 
 Allows management of [Yandex.Cloud Storage Bucket](https://cloud.yandex.com/docs/storage/concepts/bucket).
 
+> **Note:** Your need to provide [static access key](https://cloud.yandex.com/docs/iam/concepts/authorization/access-key) (Access and Secret) to create storage client to work with Storage Service. To create them you need Service Account and proper permissions.
+
 {{% examples %}}
 
 ## Example Usage
@@ -32,8 +34,30 @@ class MyStack : Stack
 {
     public MyStack()
     {
+        var folderId = "<folder-id>";
+        // Create SA
+        var sa = new Yandex.IamServiceAccount("sa", new Yandex.IamServiceAccountArgs
+        {
+            FolderId = folderId,
+        });
+        // Grant permissions
+        var sa_editor = new Yandex.ResourcemanagerFolderIamMember("sa-editor", new Yandex.ResourcemanagerFolderIamMemberArgs
+        {
+            FolderId = folderId,
+            Role = "storage.editor",
+            Member = sa.Id.Apply(id => $"serviceAccount:{id}"),
+        });
+        // Create Static Access Keys
+        var sa_static_key = new Yandex.IamServiceAccountStaticAccessKey("sa-static-key", new Yandex.IamServiceAccountStaticAccessKeyArgs
+        {
+            ServiceAccountId = sa.Id,
+            Description = "static access key for object storage",
+        });
+        // Use keys to create bucket
         var test = new Yandex.StorageBucket("test", new Yandex.StorageBucketArgs
         {
+            AccessKey = sa_static_key.AccessKey,
+            SecretKey = sa_static_key.SecretKey,
             Bucket = "tf-test-bucket",
         });
     }
@@ -51,14 +75,42 @@ class MyStack : Stack
 package main
 
 import (
+	"fmt"
+
 	"github.com/pulumi/pulumi-yandex/sdk/go/yandex"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := yandex.NewStorageBucket(ctx, "test", &yandex.StorageBucketArgs{
-			Bucket: pulumi.String("tf-test-bucket"),
+		folderId := "<folder-id>"
+		sa, err := yandex.NewIamServiceAccount(ctx, "sa", &yandex.IamServiceAccountArgs{
+			FolderId: pulumi.String(folderId),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = yandex.NewResourcemanagerFolderIamMember(ctx, "sa_editor", &yandex.ResourcemanagerFolderIamMemberArgs{
+			FolderId: pulumi.String(folderId),
+			Role:     pulumi.String("storage.editor"),
+			Member: sa.ID().ApplyT(func(id string) (string, error) {
+				return fmt.Sprintf("%v%v", "serviceAccount:", id), nil
+			}).(pulumi.StringOutput),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = yandex.NewIamServiceAccountStaticAccessKey(ctx, "sa_static_key", &yandex.IamServiceAccountStaticAccessKeyArgs{
+			ServiceAccountId: sa.ID(),
+			Description:      pulumi.String("static access key for object storage"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = yandex.NewStorageBucket(ctx, "test", &yandex.StorageBucketArgs{
+			AccessKey: sa_static_key.AccessKey,
+			SecretKey: sa_static_key.SecretKey,
+			Bucket:    pulumi.String("tf-test-bucket"),
 		})
 		if err != nil {
 			return err
@@ -78,7 +130,23 @@ func main() {
 import pulumi
 import pulumi_yandex as yandex
 
-test = yandex.StorageBucket("test", bucket="tf-test-bucket")
+folder_id = "<folder-id>"
+# Create SA
+sa = yandex.IamServiceAccount("sa", folder_id=folder_id)
+# Grant permissions
+sa_editor = yandex.ResourcemanagerFolderIamMember("sa-editor",
+    folder_id=folder_id,
+    role="storage.editor",
+    member=sa.id.apply(lambda id: f"serviceAccount:{id}"))
+# Create Static Access Keys
+sa_static_key = yandex.IamServiceAccountStaticAccessKey("sa-static-key",
+    service_account_id=sa.id,
+    description="static access key for object storage")
+# Use keys to create bucket
+test = yandex.StorageBucket("test",
+    access_key=sa_static_key.access_key,
+    secret_key=sa_static_key.secret_key,
+    bucket="tf-test-bucket")
 ```
 
 
@@ -92,7 +160,24 @@ test = yandex.StorageBucket("test", bucket="tf-test-bucket")
 import * as pulumi from "@pulumi/pulumi";
 import * as yandex from "@pulumi/yandex";
 
+const folderId = "<folder-id>";
+// Create SA
+const sa = new yandex.IamServiceAccount("sa", {folderId: folderId});
+// Grant permissions
+const sa_editor = new yandex.ResourcemanagerFolderIamMember("sa-editor", {
+    folderId: folderId,
+    role: "storage.editor",
+    member: pulumi.interpolate`serviceAccount:${sa.id}`,
+});
+// Create Static Access Keys
+const sa_static_key = new yandex.IamServiceAccountStaticAccessKey("sa-static-key", {
+    serviceAccountId: sa.id,
+    description: "static access key for object storage",
+});
+// Use keys to create bucket
 const test = new yandex.StorageBucket("test", {
+    accessKey: sa_static_key.accessKey,
+    secretKey: sa_static_key.secretKey,
     bucket: "tf-test-bucket",
 });
 ```
@@ -2120,7 +2205,7 @@ The StorageBucket resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#storagebucketlogging">List&lt;Storage<wbr>Bucket<wbr>Logging<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A settings of [bucket logging](https://cloud.yandex.ru/docs/storage/concepts/server-logs) (documented below).
+    <dd>{{% md %}}A settings of [bucket logging](https://cloud.yandex.com/docs/storage/concepts/server-logs) (documented below).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policy_csharp">
@@ -2155,7 +2240,7 @@ The StorageBucket resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#storagebucketversioning">Storage<wbr>Bucket<wbr>Versioning<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A state of [versioning](https://cloud.yandex.ru/docs/storage/concepts/versioning) (documented below)
+    <dd>{{% md %}}A state of [versioning](https://cloud.yandex.com/docs/storage/concepts/versioning) (documented below)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="website_csharp">
@@ -2164,7 +2249,7 @@ The StorageBucket resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#storagebucketwebsite">Storage<wbr>Bucket<wbr>Website<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A [website object](https://cloud.yandex.ru/docs/storage/concepts/hosting) (documented below).
+    <dd>{{% md %}}A [website object](https://cloud.yandex.com/docs/storage/concepts/hosting) (documented below).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="websitedomain_csharp">
@@ -2266,7 +2351,7 @@ The StorageBucket resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#storagebucketlogging">[]Storage<wbr>Bucket<wbr>Logging<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A settings of [bucket logging](https://cloud.yandex.ru/docs/storage/concepts/server-logs) (documented below).
+    <dd>{{% md %}}A settings of [bucket logging](https://cloud.yandex.com/docs/storage/concepts/server-logs) (documented below).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policy_go">
@@ -2301,7 +2386,7 @@ The StorageBucket resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#storagebucketversioning">Storage<wbr>Bucket<wbr>Versioning<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A state of [versioning](https://cloud.yandex.ru/docs/storage/concepts/versioning) (documented below)
+    <dd>{{% md %}}A state of [versioning](https://cloud.yandex.com/docs/storage/concepts/versioning) (documented below)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="website_go">
@@ -2310,7 +2395,7 @@ The StorageBucket resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#storagebucketwebsite">Storage<wbr>Bucket<wbr>Website<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A [website object](https://cloud.yandex.ru/docs/storage/concepts/hosting) (documented below).
+    <dd>{{% md %}}A [website object](https://cloud.yandex.com/docs/storage/concepts/hosting) (documented below).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="websitedomain_go">
@@ -2412,7 +2497,7 @@ The StorageBucket resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#storagebucketlogging">Storage<wbr>Bucket<wbr>Logging<wbr>Args[]</a></span>
     </dt>
-    <dd>{{% md %}}A settings of [bucket logging](https://cloud.yandex.ru/docs/storage/concepts/server-logs) (documented below).
+    <dd>{{% md %}}A settings of [bucket logging](https://cloud.yandex.com/docs/storage/concepts/server-logs) (documented below).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policy_nodejs">
@@ -2447,7 +2532,7 @@ The StorageBucket resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#storagebucketversioning">Storage<wbr>Bucket<wbr>Versioning<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A state of [versioning](https://cloud.yandex.ru/docs/storage/concepts/versioning) (documented below)
+    <dd>{{% md %}}A state of [versioning](https://cloud.yandex.com/docs/storage/concepts/versioning) (documented below)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="website_nodejs">
@@ -2456,7 +2541,7 @@ The StorageBucket resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#storagebucketwebsite">Storage<wbr>Bucket<wbr>Website<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A [website object](https://cloud.yandex.ru/docs/storage/concepts/hosting) (documented below).
+    <dd>{{% md %}}A [website object](https://cloud.yandex.com/docs/storage/concepts/hosting) (documented below).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="websitedomain_nodejs">
@@ -2558,7 +2643,7 @@ The StorageBucket resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#storagebucketlogging">Sequence[Storage<wbr>Bucket<wbr>Logging<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}A settings of [bucket logging](https://cloud.yandex.ru/docs/storage/concepts/server-logs) (documented below).
+    <dd>{{% md %}}A settings of [bucket logging](https://cloud.yandex.com/docs/storage/concepts/server-logs) (documented below).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policy_python">
@@ -2593,7 +2678,7 @@ The StorageBucket resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#storagebucketversioning">Storage<wbr>Bucket<wbr>Versioning<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A state of [versioning](https://cloud.yandex.ru/docs/storage/concepts/versioning) (documented below)
+    <dd>{{% md %}}A state of [versioning](https://cloud.yandex.com/docs/storage/concepts/versioning) (documented below)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="website_python">
@@ -2602,7 +2687,7 @@ The StorageBucket resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#storagebucketwebsite">Storage<wbr>Bucket<wbr>Website<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A [website object](https://cloud.yandex.ru/docs/storage/concepts/hosting) (documented below).
+    <dd>{{% md %}}A [website object](https://cloud.yandex.com/docs/storage/concepts/hosting) (documented below).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="website_domain_python">
@@ -2946,7 +3031,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#storagebucketlogging">List&lt;Storage<wbr>Bucket<wbr>Logging<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A settings of [bucket logging](https://cloud.yandex.ru/docs/storage/concepts/server-logs) (documented below).
+    <dd>{{% md %}}A settings of [bucket logging](https://cloud.yandex.com/docs/storage/concepts/server-logs) (documented below).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policy_csharp">
@@ -2981,7 +3066,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#storagebucketversioning">Storage<wbr>Bucket<wbr>Versioning<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A state of [versioning](https://cloud.yandex.ru/docs/storage/concepts/versioning) (documented below)
+    <dd>{{% md %}}A state of [versioning](https://cloud.yandex.com/docs/storage/concepts/versioning) (documented below)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_website_csharp">
@@ -2990,7 +3075,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#storagebucketwebsite">Storage<wbr>Bucket<wbr>Website<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A [website object](https://cloud.yandex.ru/docs/storage/concepts/hosting) (documented below).
+    <dd>{{% md %}}A [website object](https://cloud.yandex.com/docs/storage/concepts/hosting) (documented below).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_websitedomain_csharp">
@@ -3101,7 +3186,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#storagebucketlogging">[]Storage<wbr>Bucket<wbr>Logging<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A settings of [bucket logging](https://cloud.yandex.ru/docs/storage/concepts/server-logs) (documented below).
+    <dd>{{% md %}}A settings of [bucket logging](https://cloud.yandex.com/docs/storage/concepts/server-logs) (documented below).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policy_go">
@@ -3136,7 +3221,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#storagebucketversioning">Storage<wbr>Bucket<wbr>Versioning<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A state of [versioning](https://cloud.yandex.ru/docs/storage/concepts/versioning) (documented below)
+    <dd>{{% md %}}A state of [versioning](https://cloud.yandex.com/docs/storage/concepts/versioning) (documented below)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_website_go">
@@ -3145,7 +3230,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#storagebucketwebsite">Storage<wbr>Bucket<wbr>Website<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A [website object](https://cloud.yandex.ru/docs/storage/concepts/hosting) (documented below).
+    <dd>{{% md %}}A [website object](https://cloud.yandex.com/docs/storage/concepts/hosting) (documented below).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_websitedomain_go">
@@ -3256,7 +3341,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#storagebucketlogging">Storage<wbr>Bucket<wbr>Logging<wbr>Args[]</a></span>
     </dt>
-    <dd>{{% md %}}A settings of [bucket logging](https://cloud.yandex.ru/docs/storage/concepts/server-logs) (documented below).
+    <dd>{{% md %}}A settings of [bucket logging](https://cloud.yandex.com/docs/storage/concepts/server-logs) (documented below).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policy_nodejs">
@@ -3291,7 +3376,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#storagebucketversioning">Storage<wbr>Bucket<wbr>Versioning<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A state of [versioning](https://cloud.yandex.ru/docs/storage/concepts/versioning) (documented below)
+    <dd>{{% md %}}A state of [versioning](https://cloud.yandex.com/docs/storage/concepts/versioning) (documented below)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_website_nodejs">
@@ -3300,7 +3385,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#storagebucketwebsite">Storage<wbr>Bucket<wbr>Website<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A [website object](https://cloud.yandex.ru/docs/storage/concepts/hosting) (documented below).
+    <dd>{{% md %}}A [website object](https://cloud.yandex.com/docs/storage/concepts/hosting) (documented below).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_websitedomain_nodejs">
@@ -3411,7 +3496,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#storagebucketlogging">Sequence[Storage<wbr>Bucket<wbr>Logging<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}A settings of [bucket logging](https://cloud.yandex.ru/docs/storage/concepts/server-logs) (documented below).
+    <dd>{{% md %}}A settings of [bucket logging](https://cloud.yandex.com/docs/storage/concepts/server-logs) (documented below).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policy_python">
@@ -3446,7 +3531,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#storagebucketversioning">Storage<wbr>Bucket<wbr>Versioning<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A state of [versioning](https://cloud.yandex.ru/docs/storage/concepts/versioning) (documented below)
+    <dd>{{% md %}}A state of [versioning](https://cloud.yandex.com/docs/storage/concepts/versioning) (documented below)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_website_python">
@@ -3455,7 +3540,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#storagebucketwebsite">Storage<wbr>Bucket<wbr>Website<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A [website object](https://cloud.yandex.ru/docs/storage/concepts/hosting) (documented below).
+    <dd>{{% md %}}A [website object](https://cloud.yandex.com/docs/storage/concepts/hosting) (documented below).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_website_domain_python">
@@ -4916,7 +5001,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A json array containing [routing rules](https://cloud.yandex.ru/docs/storage/s3/api-ref/hosting/upload#request-scheme) describing redirect behavior and when redirects are applied.
+    <dd>{{% md %}}A json array containing [routing rules](https://cloud.yandex.com/docs/storage/s3/api-ref/hosting/upload#request-scheme) describing redirect behavior and when redirects are applied.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -4956,7 +5041,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A json array containing [routing rules](https://cloud.yandex.ru/docs/storage/s3/api-ref/hosting/upload#request-scheme) describing redirect behavior and when redirects are applied.
+    <dd>{{% md %}}A json array containing [routing rules](https://cloud.yandex.com/docs/storage/s3/api-ref/hosting/upload#request-scheme) describing redirect behavior and when redirects are applied.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -4996,7 +5081,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A json array containing [routing rules](https://cloud.yandex.ru/docs/storage/s3/api-ref/hosting/upload#request-scheme) describing redirect behavior and when redirects are applied.
+    <dd>{{% md %}}A json array containing [routing rules](https://cloud.yandex.com/docs/storage/s3/api-ref/hosting/upload#request-scheme) describing redirect behavior and when redirects are applied.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -5036,7 +5121,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A json array containing [routing rules](https://cloud.yandex.ru/docs/storage/s3/api-ref/hosting/upload#request-scheme) describing redirect behavior and when redirects are applied.
+    <dd>{{% md %}}A json array containing [routing rules](https://cloud.yandex.com/docs/storage/s3/api-ref/hosting/upload#request-scheme) describing redirect behavior and when redirects are applied.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import

@@ -11,7 +11,7 @@ meta_desc: "Documentation for the yandex.ComputeDiskPlacementGroup resource with
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A Disk Placement Group resource. For more information, see
-[the official documentation](https://cloud.yandex.ru/docs/compute/concepts/disk#nr-disks).
+[the official documentation](https://cloud.yandex.com/docs/compute/concepts/disk#nr-disks).
 
 
 {{% examples %}}
