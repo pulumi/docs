@@ -25,21 +25,63 @@ Provides details about the backups of an Instance.
 
 {{< example csharp >}}
 
-Coming soon!
+```csharp
+using Pulumi;
+using Linode = Pulumi.Linode;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var my_backups = Output.Create(Linode.GetInstanceBackups.InvokeAsync(new Linode.GetInstanceBackupsArgs
+        {
+            Id = 123,
+        }));
+    }
+
+}
+```
+
 
 {{< /example >}}
 
 
 {{< example go >}}
 
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-linode/sdk/v3/go/linode"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := linode.GetInstanceBackups(ctx, &GetInstanceBackupsArgs{
+			Id: 123,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 
 {{< /example >}}
 
 
 {{< example python >}}
 
-Coming soon!
+```python
+import pulumi
+import pulumi_linode as linode
+
+my_backups = linode.get_instance_backups(id=123)
+```
+
 
 {{< /example >}}
 
@@ -53,7 +95,7 @@ import * as linode from "@pulumi/linode";
 
 const my_backups = pulumi.output(linode.getInstanceBackups({
     id: "123",
-}, { async: true }));
+}));
 ```
 
 

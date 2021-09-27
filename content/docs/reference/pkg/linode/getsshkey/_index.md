@@ -58,7 +58,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := linode.LookupSshKey(ctx, &linode.LookupSshKeyArgs{
+		_, err := linode.LookupSshKey(ctx, &GetSshKeyArgs{
 			Label: "foo",
 		}, nil)
 		if err != nil {
@@ -95,7 +95,7 @@ import * as linode from "@pulumi/linode";
 
 const foo = pulumi.output(linode.getSshKey({
     label: "foo",
-}, { async: true }));
+}));
 ```
 
 

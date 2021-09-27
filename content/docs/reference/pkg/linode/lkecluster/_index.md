@@ -74,8 +74,8 @@ func main() {
 		_, err := linode.NewLkeCluster(ctx, "my_cluster", &linode.LkeClusterArgs{
 			K8sVersion: pulumi.String("1.20"),
 			Label:      pulumi.String("my-cluster"),
-			Pools: linode.LkeClusterPoolArray{
-				&linode.LkeClusterPoolArgs{
+			Pools: LkeClusterPoolArray{
+				&LkeClusterPoolArgs{
 					Count: pulumi.Int(3),
 					Type:  pulumi.String("g6-standard-2"),
 				},

@@ -85,7 +85,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := linode.GetInstanceType(ctx, &linode.GetInstanceTypeArgs{
+		_, err := linode.GetInstanceType(ctx, &GetInstanceTypeArgs{
 			Id: "g6-standard-2",
 		}, nil)
 		if err != nil {
@@ -122,7 +122,7 @@ import * as linode from "@pulumi/linode";
 
 const defaultInstanceType = pulumi.output(linode.getInstanceType({
     id: "g6-standard-2",
-}, { async: true }));
+}));
 ```
 
 

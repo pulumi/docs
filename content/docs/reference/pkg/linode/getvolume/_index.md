@@ -81,7 +81,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := linode.LookupVolume(ctx, &linode.LookupVolumeArgs{
+		_, err := linode.LookupVolume(ctx, &GetVolumeArgs{
 			Id: 1234567,
 		}, nil)
 		if err != nil {
@@ -118,7 +118,7 @@ import * as linode from "@pulumi/linode";
 
 const foo = pulumi.output(linode.getVolume({
     id: 1234567,
-}, { async: true }));
+}));
 ```
 
 

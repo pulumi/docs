@@ -117,7 +117,7 @@ account = linode.get_account()
 import * as pulumi from "@pulumi/pulumi";
 import * as linode from "@pulumi/linode";
 
-const account = pulumi.output(linode.getAccount({ async: true }));
+const account = pulumi.output(linode.getAccount());
 ```
 
 

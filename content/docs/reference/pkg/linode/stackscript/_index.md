@@ -141,8 +141,8 @@ func main() {
 			},
 			RootPass:      pulumi.String("..."),
 			StackscriptId: fooStackScript.ID(),
-			StackscriptData: pulumi.StringMap{
-				"package": pulumi.String("nginx"),
+			StackscriptData: pulumi.AnyMap{
+				"package": pulumi.Any("nginx"),
 			},
 		})
 		if err != nil {

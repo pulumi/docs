@@ -64,7 +64,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		primary, err := linode.GetObjectStorageCluster(ctx, &linode.GetObjectStorageClusterArgs{
+		primary, err := linode.GetObjectStorageCluster(ctx, &GetObjectStorageClusterArgs{
 			Id: "us-east-1",
 		}, nil)
 		if err != nil {

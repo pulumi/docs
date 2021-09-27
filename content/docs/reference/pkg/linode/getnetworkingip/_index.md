@@ -79,7 +79,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := linode.GetNetworkingIp(ctx, &linode.GetNetworkingIpArgs{
+		_, err := linode.GetNetworkingIp(ctx, &GetNetworkingIpArgs{
 			Address: "162.159.27.72",
 		}, nil)
 		if err != nil {
@@ -116,7 +116,7 @@ import * as linode from "@pulumi/linode";
 
 const ns1LinodeCom = pulumi.output(linode.getNetworkingIp({
     address: "162.159.27.72",
-}, { async: true }));
+}));
 ```
 
 

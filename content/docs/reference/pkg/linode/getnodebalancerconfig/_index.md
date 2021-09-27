@@ -59,7 +59,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := linode.LookupNodeBalancerConfig(ctx, &linode.LookupNodeBalancerConfigArgs{
+		_, err := linode.LookupNodeBalancerConfig(ctx, &GetNodeBalancerConfigArgs{
 			Id:             123,
 			NodebalancerId: 456,
 		}, nil)
@@ -99,7 +99,7 @@ import * as linode from "@pulumi/linode";
 const my_config = pulumi.output(linode.getNodeBalancerConfig({
     id: 123,
     nodebalancerId: 456,
-}, { async: true }));
+}));
 ```
 
 

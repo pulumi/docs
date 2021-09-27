@@ -67,7 +67,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := linode.LookupUser(ctx, &linode.LookupUserArgs{
+		_, err := linode.LookupUser(ctx, &GetUserArgs{
 			Username: "foo",
 		}, nil)
 		if err != nil {
@@ -104,7 +104,7 @@ import * as linode from "@pulumi/linode";
 
 const foo = pulumi.output(linode.getUser({
     username: "foo",
-}, { async: true }));
+}));
 ```
 
 
