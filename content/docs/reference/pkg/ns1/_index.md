@@ -15,11 +15,13 @@ A Pulumi package for creating and managing ns1 cloud resources.
 <h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="apikey" title="APIKey"><span class="symbol resource"></span>APIKey</a></li>
+    <li><a href="application" title="Application"><span class="symbol resource"></span>Application</a></li>
     <li><a href="datafeed" title="DataFeed"><span class="symbol resource"></span>DataFeed</a></li>
     <li><a href="datasource" title="DataSource"><span class="symbol resource"></span>DataSource</a></li>
     <li><a href="monitoringjob" title="MonitoringJob"><span class="symbol resource"></span>MonitoringJob</a></li>
     <li><a href="notifylist" title="NotifyList"><span class="symbol resource"></span>NotifyList</a></li>
     <li><a href="provider" title="Provider"><span class="symbol resource"></span>Provider</a></li>
+    <li><a href="pulsarjob" title="PulsarJob"><span class="symbol resource"></span>PulsarJob</a></li>
     <li><a href="record" title="Record"><span class="symbol resource"></span>Record</a></li>
     <li><a href="team" title="Team"><span class="symbol resource"></span>Team</a></li>
     <li><a href="user" title="User"><span class="symbol resource"></span>User</a></li>
@@ -42,6 +44,6 @@ A Pulumi package for creating and managing ns1 cloud resources.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`ns1` Terraform Provider](https://github.com/ns1-terraform/terraform-provider-ns1).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>2.1.0</dd>
+	<dd>2.2.0</dd>
 </dl>
 
