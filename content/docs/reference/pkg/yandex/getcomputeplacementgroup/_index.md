@@ -11,7 +11,7 @@ meta_desc: "Documentation for the yandex.getComputePlacementGroup function with 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Get information about a Yandex Compute Placement group. For more information, see
-[the official documentation](https://cloud.yandex.ru/docs/compute/concepts/placement-groups).
+[the official documentation](https://cloud.yandex.com/docs/compute/concepts/placement-groups).
 
 
 {{% examples %}}

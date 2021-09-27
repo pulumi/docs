@@ -11,7 +11,7 @@ meta_desc: "Documentation for the yandex.getVpcSecurityGroup function with examp
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Get information about a Yandex VPC Security Group. For more information, see
-[Yandex.Cloud VPC](https://cloud.yandex.ru/docs/vpc/concepts/security-groups).
+[Yandex.Cloud VPC](https://cloud.yandex.com/docs/vpc/concepts/security-groups).
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";

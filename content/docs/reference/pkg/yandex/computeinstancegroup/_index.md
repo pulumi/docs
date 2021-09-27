@@ -6451,8 +6451,7 @@ It may also contain another placeholders, see metadata doc for full list.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#computeinstancegroupscalepolicytestautoscale">Compute<wbr>Instance<wbr>Group<wbr>Scale<wbr>Policy<wbr>Test<wbr>Auto<wbr>Scale</a></span>
     </dt>
-    <dd>{{% md %}}The test auto scaling policy of the instance group. Use it to test how the auto scale works. 
-The structure is documented below.
+    <dd>{{% md %}}The test auto scaling policy of the instance group. Use it to test how the auto scale works. The structure is documented below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -6483,8 +6482,7 @@ The structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#computeinstancegroupscalepolicytestautoscale">Compute<wbr>Instance<wbr>Group<wbr>Scale<wbr>Policy<wbr>Test<wbr>Auto<wbr>Scale</a></span>
     </dt>
-    <dd>{{% md %}}The test auto scaling policy of the instance group. Use it to test how the auto scale works. 
-The structure is documented below.
+    <dd>{{% md %}}The test auto scaling policy of the instance group. Use it to test how the auto scale works. The structure is documented below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -6515,8 +6513,7 @@ The structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#computeinstancegroupscalepolicytestautoscale">Compute<wbr>Instance<wbr>Group<wbr>Scale<wbr>Policy<wbr>Test<wbr>Auto<wbr>Scale</a></span>
     </dt>
-    <dd>{{% md %}}The test auto scaling policy of the instance group. Use it to test how the auto scale works. 
-The structure is documented below.
+    <dd>{{% md %}}The test auto scaling policy of the instance group. Use it to test how the auto scale works. The structure is documented below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -6547,8 +6544,7 @@ The structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#computeinstancegroupscalepolicytestautoscale">Compute<wbr>Instance<wbr>Group<wbr>Scale<wbr>Policy<wbr>Test<wbr>Auto<wbr>Scale</a></span>
     </dt>
-    <dd>{{% md %}}The test auto scaling policy of the instance group. Use it to test how the auto scale works. 
-The structure is documented below.
+    <dd>{{% md %}}The test auto scaling policy of the instance group. Use it to test how the auto scale works. The structure is documented below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

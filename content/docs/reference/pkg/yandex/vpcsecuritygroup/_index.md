@@ -11,7 +11,7 @@ meta_desc: "Documentation for the yandex.VpcSecurityGroup resource with examples
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Manages a Security Group within the Yandex.Cloud. For more information, see
-[the official documentation](https://cloud.yandex.ru/docs/vpc/concepts/security-groups).
+[the official documentation](https://cloud.yandex.com/docs/vpc/concepts/security-groups).
 
 
 {{% examples %}}

@@ -520,7 +520,6 @@ If it is not provided, the default provider folder is used.
         <span class="property-type"><a href="#kubernetesclusternetworkimplementation">Kubernetes<wbr>Cluster<wbr>Network<wbr>Implementation<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}(Optional) Network Implementation options. The structure is documented below.
----
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkpolicyprovider_csharp">
@@ -686,7 +685,6 @@ If it is not provided, the default provider folder is used.
         <span class="property-type"><a href="#kubernetesclusternetworkimplementation">Kubernetes<wbr>Cluster<wbr>Network<wbr>Implementation<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}(Optional) Network Implementation options. The structure is documented below.
----
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkpolicyprovider_go">
@@ -852,7 +850,6 @@ If it is not provided, the default provider folder is used.
         <span class="property-type"><a href="#kubernetesclusternetworkimplementation">Kubernetes<wbr>Cluster<wbr>Network<wbr>Implementation<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}(Optional) Network Implementation options. The structure is documented below.
----
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkpolicyprovider_nodejs">
@@ -1018,7 +1015,6 @@ If it is not provided, the default provider folder is used.
         <span class="property-type"><a href="#kubernetesclusternetworkimplementation">Kubernetes<wbr>Cluster<wbr>Network<wbr>Implementation<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}(Optional) Network Implementation options. The structure is documented below.
----
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="network_policy_provider_python">
@@ -1535,7 +1531,6 @@ If it is not provided, the default provider folder is used.
         <span class="property-type"><a href="#kubernetesclusternetworkimplementation">Kubernetes<wbr>Cluster<wbr>Network<wbr>Implementation<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}(Optional) Network Implementation options. The structure is documented below.
----
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networkpolicyprovider_csharp">
@@ -1737,7 +1732,6 @@ If it is not provided, the default provider folder is used.
         <span class="property-type"><a href="#kubernetesclusternetworkimplementation">Kubernetes<wbr>Cluster<wbr>Network<wbr>Implementation<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}(Optional) Network Implementation options. The structure is documented below.
----
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networkpolicyprovider_go">
@@ -1939,7 +1933,6 @@ If it is not provided, the default provider folder is used.
         <span class="property-type"><a href="#kubernetesclusternetworkimplementation">Kubernetes<wbr>Cluster<wbr>Network<wbr>Implementation<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}(Optional) Network Implementation options. The structure is documented below.
----
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networkpolicyprovider_nodejs">
@@ -2141,7 +2134,6 @@ If it is not provided, the default provider folder is used.
         <span class="property-type"><a href="#kubernetesclusternetworkimplementation">Kubernetes<wbr>Cluster<wbr>Network<wbr>Implementation<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}(Optional) Network Implementation options. The structure is documented below.
----
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_network_policy_provider_python">

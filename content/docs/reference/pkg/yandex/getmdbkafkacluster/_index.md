@@ -1547,7 +1547,7 @@ The following output properties are available:
 <a href="#defaultreplicationfactor_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Replication<wbr>Factor</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1555,7 +1555,7 @@ The following output properties are available:
 <a href="#logflushintervalmessages_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Flush<wbr>Interval<wbr>Messages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1563,7 +1563,7 @@ The following output properties are available:
 <a href="#logflushintervalms_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Flush<wbr>Interval<wbr>Ms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1571,7 +1571,7 @@ The following output properties are available:
 <a href="#logflushschedulerintervalms_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Flush<wbr>Scheduler<wbr>Interval<wbr>Ms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1587,7 +1587,7 @@ The following output properties are available:
 <a href="#logretentionbytes_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Retention<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1595,7 +1595,7 @@ The following output properties are available:
 <a href="#logretentionhours_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Retention<wbr>Hours</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1603,7 +1603,7 @@ The following output properties are available:
 <a href="#logretentionminutes_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Retention<wbr>Minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1611,7 +1611,7 @@ The following output properties are available:
 <a href="#logretentionms_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Retention<wbr>Ms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1619,7 +1619,7 @@ The following output properties are available:
 <a href="#logsegmentbytes_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Segment<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1627,7 +1627,7 @@ The following output properties are available:
 <a href="#numpartitions_csharp" style="color: inherit; text-decoration: inherit;">Num<wbr>Partitions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1635,7 +1635,7 @@ The following output properties are available:
 <a href="#socketreceivebufferbytes_csharp" style="color: inherit; text-decoration: inherit;">Socket<wbr>Receive<wbr>Buffer<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1643,7 +1643,7 @@ The following output properties are available:
 <a href="#socketsendbufferbytes_csharp" style="color: inherit; text-decoration: inherit;">Socket<wbr>Send<wbr>Buffer<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1671,7 +1671,7 @@ The following output properties are available:
 <a href="#defaultreplicationfactor_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Replication<wbr>Factor</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1679,7 +1679,7 @@ The following output properties are available:
 <a href="#logflushintervalmessages_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Flush<wbr>Interval<wbr>Messages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1687,7 +1687,7 @@ The following output properties are available:
 <a href="#logflushintervalms_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Flush<wbr>Interval<wbr>Ms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1695,7 +1695,7 @@ The following output properties are available:
 <a href="#logflushschedulerintervalms_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Flush<wbr>Scheduler<wbr>Interval<wbr>Ms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1711,7 +1711,7 @@ The following output properties are available:
 <a href="#logretentionbytes_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Retention<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1719,7 +1719,7 @@ The following output properties are available:
 <a href="#logretentionhours_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Retention<wbr>Hours</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1727,7 +1727,7 @@ The following output properties are available:
 <a href="#logretentionminutes_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Retention<wbr>Minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1735,7 +1735,7 @@ The following output properties are available:
 <a href="#logretentionms_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Retention<wbr>Ms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1743,7 +1743,7 @@ The following output properties are available:
 <a href="#logsegmentbytes_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Segment<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1751,7 +1751,7 @@ The following output properties are available:
 <a href="#numpartitions_go" style="color: inherit; text-decoration: inherit;">Num<wbr>Partitions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1759,7 +1759,7 @@ The following output properties are available:
 <a href="#socketreceivebufferbytes_go" style="color: inherit; text-decoration: inherit;">Socket<wbr>Receive<wbr>Buffer<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1767,7 +1767,7 @@ The following output properties are available:
 <a href="#socketsendbufferbytes_go" style="color: inherit; text-decoration: inherit;">Socket<wbr>Send<wbr>Buffer<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1795,7 +1795,7 @@ The following output properties are available:
 <a href="#defaultreplicationfactor_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Replication<wbr>Factor</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1803,7 +1803,7 @@ The following output properties are available:
 <a href="#logflushintervalmessages_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Flush<wbr>Interval<wbr>Messages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1811,7 +1811,7 @@ The following output properties are available:
 <a href="#logflushintervalms_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Flush<wbr>Interval<wbr>Ms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1819,7 +1819,7 @@ The following output properties are available:
 <a href="#logflushschedulerintervalms_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Flush<wbr>Scheduler<wbr>Interval<wbr>Ms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1835,7 +1835,7 @@ The following output properties are available:
 <a href="#logretentionbytes_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Retention<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1843,7 +1843,7 @@ The following output properties are available:
 <a href="#logretentionhours_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Retention<wbr>Hours</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1851,7 +1851,7 @@ The following output properties are available:
 <a href="#logretentionminutes_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Retention<wbr>Minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1859,7 +1859,7 @@ The following output properties are available:
 <a href="#logretentionms_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Retention<wbr>Ms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1867,7 +1867,7 @@ The following output properties are available:
 <a href="#logsegmentbytes_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Segment<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1875,7 +1875,7 @@ The following output properties are available:
 <a href="#numpartitions_nodejs" style="color: inherit; text-decoration: inherit;">num<wbr>Partitions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1883,7 +1883,7 @@ The following output properties are available:
 <a href="#socketreceivebufferbytes_nodejs" style="color: inherit; text-decoration: inherit;">socket<wbr>Receive<wbr>Buffer<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1891,7 +1891,7 @@ The following output properties are available:
 <a href="#socketsendbufferbytes_nodejs" style="color: inherit; text-decoration: inherit;">socket<wbr>Send<wbr>Buffer<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1919,7 +1919,7 @@ The following output properties are available:
 <a href="#default_replication_factor_python" style="color: inherit; text-decoration: inherit;">default_<wbr>replication_<wbr>factor</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1927,7 +1927,7 @@ The following output properties are available:
 <a href="#log_flush_interval_messages_python" style="color: inherit; text-decoration: inherit;">log_<wbr>flush_<wbr>interval_<wbr>messages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1935,7 +1935,7 @@ The following output properties are available:
 <a href="#log_flush_interval_ms_python" style="color: inherit; text-decoration: inherit;">log_<wbr>flush_<wbr>interval_<wbr>ms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1943,7 +1943,7 @@ The following output properties are available:
 <a href="#log_flush_scheduler_interval_ms_python" style="color: inherit; text-decoration: inherit;">log_<wbr>flush_<wbr>scheduler_<wbr>interval_<wbr>ms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1959,7 +1959,7 @@ The following output properties are available:
 <a href="#log_retention_bytes_python" style="color: inherit; text-decoration: inherit;">log_<wbr>retention_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1967,7 +1967,7 @@ The following output properties are available:
 <a href="#log_retention_hours_python" style="color: inherit; text-decoration: inherit;">log_<wbr>retention_<wbr>hours</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1975,7 +1975,7 @@ The following output properties are available:
 <a href="#log_retention_minutes_python" style="color: inherit; text-decoration: inherit;">log_<wbr>retention_<wbr>minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1983,7 +1983,7 @@ The following output properties are available:
 <a href="#log_retention_ms_python" style="color: inherit; text-decoration: inherit;">log_<wbr>retention_<wbr>ms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1991,7 +1991,7 @@ The following output properties are available:
 <a href="#log_segment_bytes_python" style="color: inherit; text-decoration: inherit;">log_<wbr>segment_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1999,7 +1999,7 @@ The following output properties are available:
 <a href="#num_partitions_python" style="color: inherit; text-decoration: inherit;">num_<wbr>partitions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2007,7 +2007,7 @@ The following output properties are available:
 <a href="#socket_receive_buffer_bytes_python" style="color: inherit; text-decoration: inherit;">socket_<wbr>receive_<wbr>buffer_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2015,7 +2015,7 @@ The following output properties are available:
 <a href="#socket_send_buffer_bytes_python" style="color: inherit; text-decoration: inherit;">socket_<wbr>send_<wbr>buffer_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2759,7 +2759,7 @@ For more information see [the official documentation](https://cloud.yandex.com/d
 <a href="#deleteretentionms_csharp" style="color: inherit; text-decoration: inherit;">Delete<wbr>Retention<wbr>Ms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2767,7 +2767,7 @@ For more information see [the official documentation](https://cloud.yandex.com/d
 <a href="#filedeletedelayms_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>Delete<wbr>Delay<wbr>Ms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2775,7 +2775,7 @@ For more information see [the official documentation](https://cloud.yandex.com/d
 <a href="#flushmessages_csharp" style="color: inherit; text-decoration: inherit;">Flush<wbr>Messages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2783,7 +2783,7 @@ For more information see [the official documentation](https://cloud.yandex.com/d
 <a href="#flushms_csharp" style="color: inherit; text-decoration: inherit;">Flush<wbr>Ms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2791,7 +2791,7 @@ For more information see [the official documentation](https://cloud.yandex.com/d
 <a href="#maxmessagebytes_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Message<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2799,7 +2799,7 @@ For more information see [the official documentation](https://cloud.yandex.com/d
 <a href="#mincompactionlagms_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Compaction<wbr>Lag<wbr>Ms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2807,7 +2807,7 @@ For more information see [the official documentation](https://cloud.yandex.com/d
 <a href="#mininsyncreplicas_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Insync<wbr>Replicas</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2823,7 +2823,7 @@ For more information see [the official documentation](https://cloud.yandex.com/d
 <a href="#retentionbytes_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2831,7 +2831,7 @@ For more information see [the official documentation](https://cloud.yandex.com/d
 <a href="#retentionms_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Ms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2839,7 +2839,7 @@ For more information see [the official documentation](https://cloud.yandex.com/d
 <a href="#segmentbytes_csharp" style="color: inherit; text-decoration: inherit;">Segment<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2867,7 +2867,7 @@ For more information see [the official documentation](https://cloud.yandex.com/d
 <a href="#deleteretentionms_go" style="color: inherit; text-decoration: inherit;">Delete<wbr>Retention<wbr>Ms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2875,7 +2875,7 @@ For more information see [the official documentation](https://cloud.yandex.com/d
 <a href="#filedeletedelayms_go" style="color: inherit; text-decoration: inherit;">File<wbr>Delete<wbr>Delay<wbr>Ms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2883,7 +2883,7 @@ For more information see [the official documentation](https://cloud.yandex.com/d
 <a href="#flushmessages_go" style="color: inherit; text-decoration: inherit;">Flush<wbr>Messages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2891,7 +2891,7 @@ For more information see [the official documentation](https://cloud.yandex.com/d
 <a href="#flushms_go" style="color: inherit; text-decoration: inherit;">Flush<wbr>Ms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2899,7 +2899,7 @@ For more information see [the official documentation](https://cloud.yandex.com/d
 <a href="#maxmessagebytes_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Message<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2907,7 +2907,7 @@ For more information see [the official documentation](https://cloud.yandex.com/d
 <a href="#mincompactionlagms_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Compaction<wbr>Lag<wbr>Ms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2915,7 +2915,7 @@ For more information see [the official documentation](https://cloud.yandex.com/d
 <a href="#mininsyncreplicas_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Insync<wbr>Replicas</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2931,7 +2931,7 @@ For more information see [the official documentation](https://cloud.yandex.com/d
 <a href="#retentionbytes_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2939,7 +2939,7 @@ For more information see [the official documentation](https://cloud.yandex.com/d
 <a href="#retentionms_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Ms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2947,7 +2947,7 @@ For more information see [the official documentation](https://cloud.yandex.com/d
 <a href="#segmentbytes_go" style="color: inherit; text-decoration: inherit;">Segment<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2975,7 +2975,7 @@ For more information see [the official documentation](https://cloud.yandex.com/d
 <a href="#deleteretentionms_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>Retention<wbr>Ms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2983,7 +2983,7 @@ For more information see [the official documentation](https://cloud.yandex.com/d
 <a href="#filedeletedelayms_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Delete<wbr>Delay<wbr>Ms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2991,7 +2991,7 @@ For more information see [the official documentation](https://cloud.yandex.com/d
 <a href="#flushmessages_nodejs" style="color: inherit; text-decoration: inherit;">flush<wbr>Messages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2999,7 +2999,7 @@ For more information see [the official documentation](https://cloud.yandex.com/d
 <a href="#flushms_nodejs" style="color: inherit; text-decoration: inherit;">flush<wbr>Ms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3007,7 +3007,7 @@ For more information see [the official documentation](https://cloud.yandex.com/d
 <a href="#maxmessagebytes_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Message<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3015,7 +3015,7 @@ For more information see [the official documentation](https://cloud.yandex.com/d
 <a href="#mincompactionlagms_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Compaction<wbr>Lag<wbr>Ms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3023,7 +3023,7 @@ For more information see [the official documentation](https://cloud.yandex.com/d
 <a href="#mininsyncreplicas_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Insync<wbr>Replicas</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3039,7 +3039,7 @@ For more information see [the official documentation](https://cloud.yandex.com/d
 <a href="#retentionbytes_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3047,7 +3047,7 @@ For more information see [the official documentation](https://cloud.yandex.com/d
 <a href="#retentionms_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Ms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3055,7 +3055,7 @@ For more information see [the official documentation](https://cloud.yandex.com/d
 <a href="#segmentbytes_nodejs" style="color: inherit; text-decoration: inherit;">segment<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3083,7 +3083,7 @@ For more information see [the official documentation](https://cloud.yandex.com/d
 <a href="#delete_retention_ms_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>retention_<wbr>ms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3091,7 +3091,7 @@ For more information see [the official documentation](https://cloud.yandex.com/d
 <a href="#file_delete_delay_ms_python" style="color: inherit; text-decoration: inherit;">file_<wbr>delete_<wbr>delay_<wbr>ms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3099,7 +3099,7 @@ For more information see [the official documentation](https://cloud.yandex.com/d
 <a href="#flush_messages_python" style="color: inherit; text-decoration: inherit;">flush_<wbr>messages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3107,7 +3107,7 @@ For more information see [the official documentation](https://cloud.yandex.com/d
 <a href="#flush_ms_python" style="color: inherit; text-decoration: inherit;">flush_<wbr>ms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3115,7 +3115,7 @@ For more information see [the official documentation](https://cloud.yandex.com/d
 <a href="#max_message_bytes_python" style="color: inherit; text-decoration: inherit;">max_<wbr>message_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3123,7 +3123,7 @@ For more information see [the official documentation](https://cloud.yandex.com/d
 <a href="#min_compaction_lag_ms_python" style="color: inherit; text-decoration: inherit;">min_<wbr>compaction_<wbr>lag_<wbr>ms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3131,7 +3131,7 @@ For more information see [the official documentation](https://cloud.yandex.com/d
 <a href="#min_insync_replicas_python" style="color: inherit; text-decoration: inherit;">min_<wbr>insync_<wbr>replicas</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3147,7 +3147,7 @@ For more information see [the official documentation](https://cloud.yandex.com/d
 <a href="#retention_bytes_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3155,7 +3155,7 @@ For more information see [the official documentation](https://cloud.yandex.com/d
 <a href="#retention_ms_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>ms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3163,7 +3163,7 @@ For more information see [the official documentation](https://cloud.yandex.com/d
 <a href="#segment_bytes_python" style="color: inherit; text-decoration: inherit;">segment_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}

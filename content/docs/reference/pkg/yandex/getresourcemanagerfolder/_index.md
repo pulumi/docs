@@ -11,7 +11,7 @@ meta_desc: "Documentation for the yandex.getResourcemanagerFolder function with 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Use this data source to get information about a Yandex Resource Manager Folder. For more information, see
-[the official documentation](https://cloud.yandex.ru/docs/resource-manager/concepts/resources-hierarchy#folder).
+[the official documentation](https://cloud.yandex.com/docs/resource-manager/concepts/resources-hierarchy#folder).
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";

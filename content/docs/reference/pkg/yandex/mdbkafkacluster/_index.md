@@ -56,17 +56,17 @@ class MyStack : Stack
                     KafkaConfig = new Yandex.Inputs.MdbKafkaClusterConfigKafkaKafkaConfigArgs
                     {
                         CompressionType = "COMPRESSION_TYPE_ZSTD",
-                        DefaultReplicationFactor = 1,
-                        LogFlushIntervalMessages = 1024,
-                        LogFlushIntervalMs = 1000,
-                        LogFlushSchedulerIntervalMs = 1000,
+                        DefaultReplicationFactor = "1",
+                        LogFlushIntervalMessages = "1024",
+                        LogFlushIntervalMs = "1000",
+                        LogFlushSchedulerIntervalMs = "1000",
                         LogPreallocate = true,
-                        LogRetentionBytes = 1073741824,
-                        LogRetentionHours = 168,
-                        LogRetentionMinutes = 10080,
-                        LogRetentionMs = 86400000,
-                        LogSegmentBytes = 134217728,
-                        NumPartitions = 10,
+                        LogRetentionBytes = "1073741824",
+                        LogRetentionHours = "168",
+                        LogRetentionMinutes = "10080",
+                        LogRetentionMs = "86400000",
+                        LogSegmentBytes = "134217728",
+                        NumPartitions = "10",
                     },
                     Resources = new Yandex.Inputs.MdbKafkaClusterConfigKafkaResourcesArgs
                     {
@@ -98,17 +98,17 @@ class MyStack : Stack
                     TopicConfig = new Yandex.Inputs.MdbKafkaClusterTopicTopicConfigArgs
                     {
                         CompressionType = "COMPRESSION_TYPE_LZ4",
-                        DeleteRetentionMs = 86400000,
-                        FileDeleteDelayMs = 60000,
-                        FlushMessages = 128,
-                        FlushMs = 1000,
-                        MaxMessageBytes = 1048588,
-                        MinCompactionLagMs = 0,
-                        MinInsyncReplicas = 1,
+                        DeleteRetentionMs = "86400000",
+                        FileDeleteDelayMs = "60000",
+                        FlushMessages = "128",
+                        FlushMs = "1000",
+                        MaxMessageBytes = "1048588",
+                        MinCompactionLagMs = "0",
+                        MinInsyncReplicas = "1",
                         Preallocate = true,
-                        RetentionBytes = 10737418240,
-                        RetentionMs = 604800000,
-                        SegmentBytes = 268435456,
+                        RetentionBytes = "10737418240",
+                        RetentionMs = "604800000",
+                        SegmentBytes = "268435456",
                     },
                 },
                 new Yandex.Inputs.MdbKafkaClusterTopicArgs
@@ -119,9 +119,9 @@ class MyStack : Stack
                     TopicConfig = new Yandex.Inputs.MdbKafkaClusterTopicTopicConfigArgs
                     {
                         CompressionType = "COMPRESSION_TYPE_GZIP",
-                        MaxMessageBytes = 1048588,
+                        MaxMessageBytes = "1048588",
                         Preallocate = false,
-                        SegmentBytes = 536870912,
+                        SegmentBytes = "536870912",
                     },
                 },
             },
@@ -202,17 +202,17 @@ func main() {
 				Kafka: &yandex.MdbKafkaClusterConfigKafkaArgs{
 					KafkaConfig: &yandex.MdbKafkaClusterConfigKafkaKafkaConfigArgs{
 						CompressionType:             pulumi.String("COMPRESSION_TYPE_ZSTD"),
-						DefaultReplicationFactor:    pulumi.Int(1),
-						LogFlushIntervalMessages:    pulumi.Int(1024),
-						LogFlushIntervalMs:          pulumi.Int(1000),
-						LogFlushSchedulerIntervalMs: pulumi.Int(1000),
+						DefaultReplicationFactor:    pulumi.String("1"),
+						LogFlushIntervalMessages:    pulumi.String("1024"),
+						LogFlushIntervalMs:          pulumi.String("1000"),
+						LogFlushSchedulerIntervalMs: pulumi.String("1000"),
 						LogPreallocate:              pulumi.Bool(true),
-						LogRetentionBytes:           pulumi.Int(1073741824),
-						LogRetentionHours:           pulumi.Int(168),
-						LogRetentionMinutes:         pulumi.Int(10080),
-						LogRetentionMs:              pulumi.Int(86400000),
-						LogSegmentBytes:             pulumi.Int(134217728),
-						NumPartitions:               pulumi.Int(10),
+						LogRetentionBytes:           pulumi.String("1073741824"),
+						LogRetentionHours:           pulumi.String("168"),
+						LogRetentionMinutes:         pulumi.String("10080"),
+						LogRetentionMs:              pulumi.String("86400000"),
+						LogSegmentBytes:             pulumi.String("134217728"),
+						NumPartitions:               pulumi.String("10"),
 					},
 					Resources: &yandex.MdbKafkaClusterConfigKafkaResourcesArgs{
 						DiskSize:         pulumi.Int(32),
@@ -238,17 +238,17 @@ func main() {
 					ReplicationFactor: pulumi.Int(1),
 					TopicConfig: &yandex.MdbKafkaClusterTopicTopicConfigArgs{
 						CompressionType:    pulumi.String("COMPRESSION_TYPE_LZ4"),
-						DeleteRetentionMs:  pulumi.Int(86400000),
-						FileDeleteDelayMs:  pulumi.Int(60000),
-						FlushMessages:      pulumi.Int(128),
-						FlushMs:            pulumi.Int(1000),
-						MaxMessageBytes:    pulumi.Int(1048588),
-						MinCompactionLagMs: pulumi.Int(0),
-						MinInsyncReplicas:  pulumi.Int(1),
+						DeleteRetentionMs:  pulumi.String("86400000"),
+						FileDeleteDelayMs:  pulumi.String("60000"),
+						FlushMessages:      pulumi.String("128"),
+						FlushMs:            pulumi.String("1000"),
+						MaxMessageBytes:    pulumi.String("1048588"),
+						MinCompactionLagMs: pulumi.String("0"),
+						MinInsyncReplicas:  pulumi.String("1"),
 						Preallocate:        pulumi.Bool(true),
-						RetentionBytes:     pulumi.Int(10737418240),
-						RetentionMs:        pulumi.Int(604800000),
-						SegmentBytes:       pulumi.Int(268435456),
+						RetentionBytes:     pulumi.String("10737418240"),
+						RetentionMs:        pulumi.String("604800000"),
+						SegmentBytes:       pulumi.String("268435456"),
 					},
 				},
 				&yandex.MdbKafkaClusterTopicArgs{
@@ -257,9 +257,9 @@ func main() {
 					ReplicationFactor: pulumi.Int(1),
 					TopicConfig: &yandex.MdbKafkaClusterTopicTopicConfigArgs{
 						CompressionType: pulumi.String("COMPRESSION_TYPE_GZIP"),
-						MaxMessageBytes: pulumi.Int(1048588),
+						MaxMessageBytes: pulumi.String("1048588"),
 						Preallocate:     pulumi.Bool(false),
-						SegmentBytes:    pulumi.Int(536870912),
+						SegmentBytes:    pulumi.String("536870912"),
 					},
 				},
 			},
@@ -320,17 +320,17 @@ foo_mdb_kafka_cluster = yandex.MdbKafkaCluster("fooMdbKafkaCluster",
         kafka=yandex.MdbKafkaClusterConfigKafkaArgs(
             kafka_config=yandex.MdbKafkaClusterConfigKafkaKafkaConfigArgs(
                 compression_type="COMPRESSION_TYPE_ZSTD",
-                default_replication_factor=1,
-                log_flush_interval_messages=1024,
-                log_flush_interval_ms=1000,
-                log_flush_scheduler_interval_ms=1000,
+                default_replication_factor="1",
+                log_flush_interval_messages="1024",
+                log_flush_interval_ms="1000",
+                log_flush_scheduler_interval_ms="1000",
                 log_preallocate=True,
-                log_retention_bytes=1073741824,
-                log_retention_hours=168,
-                log_retention_minutes=10080,
-                log_retention_ms=86400000,
-                log_segment_bytes=134217728,
-                num_partitions=10,
+                log_retention_bytes="1073741824",
+                log_retention_hours="168",
+                log_retention_minutes="10080",
+                log_retention_ms="86400000",
+                log_segment_bytes="134217728",
+                num_partitions="10",
             ),
             resources=yandex.MdbKafkaClusterConfigKafkaResourcesArgs(
                 disk_size=32,
@@ -352,17 +352,17 @@ foo_mdb_kafka_cluster = yandex.MdbKafkaCluster("fooMdbKafkaCluster",
             replication_factor=1,
             topic_config=yandex.MdbKafkaClusterTopicTopicConfigArgs(
                 compression_type="COMPRESSION_TYPE_LZ4",
-                delete_retention_ms=86400000,
-                file_delete_delay_ms=60000,
-                flush_messages=128,
-                flush_ms=1000,
-                max_message_bytes=1048588,
-                min_compaction_lag_ms=0,
-                min_insync_replicas=1,
+                delete_retention_ms="86400000",
+                file_delete_delay_ms="60000",
+                flush_messages="128",
+                flush_ms="1000",
+                max_message_bytes="1048588",
+                min_compaction_lag_ms="0",
+                min_insync_replicas="1",
                 preallocate=True,
-                retention_bytes=10737418240,
-                retention_ms=604800000,
-                segment_bytes=268435456,
+                retention_bytes="10737418240",
+                retention_ms="604800000",
+                segment_bytes="268435456",
             ),
         ),
         yandex.MdbKafkaClusterTopicArgs(
@@ -371,9 +371,9 @@ foo_mdb_kafka_cluster = yandex.MdbKafkaCluster("fooMdbKafkaCluster",
             replication_factor=1,
             topic_config=yandex.MdbKafkaClusterTopicTopicConfigArgs(
                 compression_type="COMPRESSION_TYPE_GZIP",
-                max_message_bytes=1048588,
+                max_message_bytes="1048588",
                 preallocate=False,
-                segment_bytes=536870912,
+                segment_bytes="536870912",
             ),
         ),
     ],
@@ -427,17 +427,17 @@ const fooMdbKafkaCluster = new yandex.MdbKafkaCluster("foo", {
         kafka: {
             kafkaConfig: {
                 compressionType: "COMPRESSION_TYPE_ZSTD",
-                defaultReplicationFactor: 1,
-                logFlushIntervalMessages: 1024,
-                logFlushIntervalMs: 1000,
-                logFlushSchedulerIntervalMs: 1000,
+                defaultReplicationFactor: "1",
+                logFlushIntervalMessages: "1024",
+                logFlushIntervalMs: "1000",
+                logFlushSchedulerIntervalMs: "1000",
                 logPreallocate: true,
-                logRetentionBytes: 1073741824,
-                logRetentionHours: 168,
-                logRetentionMinutes: 10080,
-                logRetentionMs: 86400000,
-                logSegmentBytes: 134217728,
-                numPartitions: 10,
+                logRetentionBytes: "1.073741824e+09",
+                logRetentionHours: "168",
+                logRetentionMinutes: "10080",
+                logRetentionMs: "8.64e+07",
+                logSegmentBytes: "1.34217728e+08",
+                numPartitions: "10",
             },
             resources: {
                 diskSize: 32,
@@ -459,17 +459,17 @@ const fooMdbKafkaCluster = new yandex.MdbKafkaCluster("foo", {
             replicationFactor: 1,
             topicConfig: {
                 compressionType: "COMPRESSION_TYPE_LZ4",
-                deleteRetentionMs: 86400000,
-                fileDeleteDelayMs: 60000,
-                flushMessages: 128,
-                flushMs: 1000,
-                maxMessageBytes: 1048588,
-                minCompactionLagMs: 0,
-                minInsyncReplicas: 1,
+                deleteRetentionMs: "8.64e+07",
+                fileDeleteDelayMs: "60000",
+                flushMessages: "128",
+                flushMs: "1000",
+                maxMessageBytes: "1.048588e+06",
+                minCompactionLagMs: "0",
+                minInsyncReplicas: "1",
                 preallocate: true,
-                retentionBytes: 10737418240,
-                retentionMs: 604800000,
-                segmentBytes: 268435456,
+                retentionBytes: "1.073741824e+10",
+                retentionMs: "6.048e+08",
+                segmentBytes: "2.68435456e+08",
             },
         },
         {
@@ -478,9 +478,9 @@ const fooMdbKafkaCluster = new yandex.MdbKafkaCluster("foo", {
             replicationFactor: 1,
             topicConfig: {
                 compressionType: "COMPRESSION_TYPE_GZIP",
-                maxMessageBytes: 1048588,
+                maxMessageBytes: "1.048588e+06",
                 preallocate: false,
-                segmentBytes: 536870912,
+                segmentBytes: "5.36870912e+08",
             },
         },
     ],
@@ -2529,7 +2529,7 @@ For more information see `status` field of JSON representation in [the official 
 <a href="#defaultreplicationfactor_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Replication<wbr>Factor</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2537,7 +2537,7 @@ For more information see `status` field of JSON representation in [the official 
 <a href="#logflushintervalmessages_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Flush<wbr>Interval<wbr>Messages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2545,7 +2545,7 @@ For more information see `status` field of JSON representation in [the official 
 <a href="#logflushintervalms_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Flush<wbr>Interval<wbr>Ms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2553,7 +2553,7 @@ For more information see `status` field of JSON representation in [the official 
 <a href="#logflushschedulerintervalms_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Flush<wbr>Scheduler<wbr>Interval<wbr>Ms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2569,7 +2569,7 @@ For more information see `status` field of JSON representation in [the official 
 <a href="#logretentionbytes_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Retention<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2577,7 +2577,7 @@ For more information see `status` field of JSON representation in [the official 
 <a href="#logretentionhours_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Retention<wbr>Hours</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2585,7 +2585,7 @@ For more information see `status` field of JSON representation in [the official 
 <a href="#logretentionminutes_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Retention<wbr>Minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2593,7 +2593,7 @@ For more information see `status` field of JSON representation in [the official 
 <a href="#logretentionms_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Retention<wbr>Ms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2601,7 +2601,7 @@ For more information see `status` field of JSON representation in [the official 
 <a href="#logsegmentbytes_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Segment<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2609,7 +2609,7 @@ For more information see `status` field of JSON representation in [the official 
 <a href="#numpartitions_csharp" style="color: inherit; text-decoration: inherit;">Num<wbr>Partitions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2617,7 +2617,7 @@ For more information see `status` field of JSON representation in [the official 
 <a href="#socketreceivebufferbytes_csharp" style="color: inherit; text-decoration: inherit;">Socket<wbr>Receive<wbr>Buffer<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2625,7 +2625,7 @@ For more information see `status` field of JSON representation in [the official 
 <a href="#socketsendbufferbytes_csharp" style="color: inherit; text-decoration: inherit;">Socket<wbr>Send<wbr>Buffer<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2653,7 +2653,7 @@ For more information see `status` field of JSON representation in [the official 
 <a href="#defaultreplicationfactor_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Replication<wbr>Factor</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2661,7 +2661,7 @@ For more information see `status` field of JSON representation in [the official 
 <a href="#logflushintervalmessages_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Flush<wbr>Interval<wbr>Messages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2669,7 +2669,7 @@ For more information see `status` field of JSON representation in [the official 
 <a href="#logflushintervalms_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Flush<wbr>Interval<wbr>Ms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2677,7 +2677,7 @@ For more information see `status` field of JSON representation in [the official 
 <a href="#logflushschedulerintervalms_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Flush<wbr>Scheduler<wbr>Interval<wbr>Ms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2693,7 +2693,7 @@ For more information see `status` field of JSON representation in [the official 
 <a href="#logretentionbytes_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Retention<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2701,7 +2701,7 @@ For more information see `status` field of JSON representation in [the official 
 <a href="#logretentionhours_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Retention<wbr>Hours</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2709,7 +2709,7 @@ For more information see `status` field of JSON representation in [the official 
 <a href="#logretentionminutes_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Retention<wbr>Minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2717,7 +2717,7 @@ For more information see `status` field of JSON representation in [the official 
 <a href="#logretentionms_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Retention<wbr>Ms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2725,7 +2725,7 @@ For more information see `status` field of JSON representation in [the official 
 <a href="#logsegmentbytes_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Segment<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2733,7 +2733,7 @@ For more information see `status` field of JSON representation in [the official 
 <a href="#numpartitions_go" style="color: inherit; text-decoration: inherit;">Num<wbr>Partitions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2741,7 +2741,7 @@ For more information see `status` field of JSON representation in [the official 
 <a href="#socketreceivebufferbytes_go" style="color: inherit; text-decoration: inherit;">Socket<wbr>Receive<wbr>Buffer<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2749,7 +2749,7 @@ For more information see `status` field of JSON representation in [the official 
 <a href="#socketsendbufferbytes_go" style="color: inherit; text-decoration: inherit;">Socket<wbr>Send<wbr>Buffer<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2777,7 +2777,7 @@ For more information see `status` field of JSON representation in [the official 
 <a href="#defaultreplicationfactor_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Replication<wbr>Factor</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2785,7 +2785,7 @@ For more information see `status` field of JSON representation in [the official 
 <a href="#logflushintervalmessages_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Flush<wbr>Interval<wbr>Messages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2793,7 +2793,7 @@ For more information see `status` field of JSON representation in [the official 
 <a href="#logflushintervalms_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Flush<wbr>Interval<wbr>Ms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2801,7 +2801,7 @@ For more information see `status` field of JSON representation in [the official 
 <a href="#logflushschedulerintervalms_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Flush<wbr>Scheduler<wbr>Interval<wbr>Ms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2817,7 +2817,7 @@ For more information see `status` field of JSON representation in [the official 
 <a href="#logretentionbytes_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Retention<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2825,7 +2825,7 @@ For more information see `status` field of JSON representation in [the official 
 <a href="#logretentionhours_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Retention<wbr>Hours</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2833,7 +2833,7 @@ For more information see `status` field of JSON representation in [the official 
 <a href="#logretentionminutes_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Retention<wbr>Minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2841,7 +2841,7 @@ For more information see `status` field of JSON representation in [the official 
 <a href="#logretentionms_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Retention<wbr>Ms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2849,7 +2849,7 @@ For more information see `status` field of JSON representation in [the official 
 <a href="#logsegmentbytes_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Segment<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2857,7 +2857,7 @@ For more information see `status` field of JSON representation in [the official 
 <a href="#numpartitions_nodejs" style="color: inherit; text-decoration: inherit;">num<wbr>Partitions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2865,7 +2865,7 @@ For more information see `status` field of JSON representation in [the official 
 <a href="#socketreceivebufferbytes_nodejs" style="color: inherit; text-decoration: inherit;">socket<wbr>Receive<wbr>Buffer<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2873,7 +2873,7 @@ For more information see `status` field of JSON representation in [the official 
 <a href="#socketsendbufferbytes_nodejs" style="color: inherit; text-decoration: inherit;">socket<wbr>Send<wbr>Buffer<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2901,7 +2901,7 @@ For more information see `status` field of JSON representation in [the official 
 <a href="#default_replication_factor_python" style="color: inherit; text-decoration: inherit;">default_<wbr>replication_<wbr>factor</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2909,7 +2909,7 @@ For more information see `status` field of JSON representation in [the official 
 <a href="#log_flush_interval_messages_python" style="color: inherit; text-decoration: inherit;">log_<wbr>flush_<wbr>interval_<wbr>messages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2917,7 +2917,7 @@ For more information see `status` field of JSON representation in [the official 
 <a href="#log_flush_interval_ms_python" style="color: inherit; text-decoration: inherit;">log_<wbr>flush_<wbr>interval_<wbr>ms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2925,7 +2925,7 @@ For more information see `status` field of JSON representation in [the official 
 <a href="#log_flush_scheduler_interval_ms_python" style="color: inherit; text-decoration: inherit;">log_<wbr>flush_<wbr>scheduler_<wbr>interval_<wbr>ms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2941,7 +2941,7 @@ For more information see `status` field of JSON representation in [the official 
 <a href="#log_retention_bytes_python" style="color: inherit; text-decoration: inherit;">log_<wbr>retention_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2949,7 +2949,7 @@ For more information see `status` field of JSON representation in [the official 
 <a href="#log_retention_hours_python" style="color: inherit; text-decoration: inherit;">log_<wbr>retention_<wbr>hours</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2957,7 +2957,7 @@ For more information see `status` field of JSON representation in [the official 
 <a href="#log_retention_minutes_python" style="color: inherit; text-decoration: inherit;">log_<wbr>retention_<wbr>minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2965,7 +2965,7 @@ For more information see `status` field of JSON representation in [the official 
 <a href="#log_retention_ms_python" style="color: inherit; text-decoration: inherit;">log_<wbr>retention_<wbr>ms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2973,7 +2973,7 @@ For more information see `status` field of JSON representation in [the official 
 <a href="#log_segment_bytes_python" style="color: inherit; text-decoration: inherit;">log_<wbr>segment_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2981,7 +2981,7 @@ For more information see `status` field of JSON representation in [the official 
 <a href="#num_partitions_python" style="color: inherit; text-decoration: inherit;">num_<wbr>partitions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2989,7 +2989,7 @@ For more information see `status` field of JSON representation in [the official 
 <a href="#socket_receive_buffer_bytes_python" style="color: inherit; text-decoration: inherit;">socket_<wbr>receive_<wbr>buffer_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2997,7 +2997,7 @@ For more information see `status` field of JSON representation in [the official 
 <a href="#socket_send_buffer_bytes_python" style="color: inherit; text-decoration: inherit;">socket_<wbr>send_<wbr>buffer_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3729,7 +3729,7 @@ For more information see [the official documentation](https://cloud.yandex.com/d
 <a href="#deleteretentionms_csharp" style="color: inherit; text-decoration: inherit;">Delete<wbr>Retention<wbr>Ms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3737,7 +3737,7 @@ For more information see [the official documentation](https://cloud.yandex.com/d
 <a href="#filedeletedelayms_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>Delete<wbr>Delay<wbr>Ms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3745,7 +3745,7 @@ For more information see [the official documentation](https://cloud.yandex.com/d
 <a href="#flushmessages_csharp" style="color: inherit; text-decoration: inherit;">Flush<wbr>Messages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3753,7 +3753,7 @@ For more information see [the official documentation](https://cloud.yandex.com/d
 <a href="#flushms_csharp" style="color: inherit; text-decoration: inherit;">Flush<wbr>Ms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3761,7 +3761,7 @@ For more information see [the official documentation](https://cloud.yandex.com/d
 <a href="#maxmessagebytes_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Message<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3769,7 +3769,7 @@ For more information see [the official documentation](https://cloud.yandex.com/d
 <a href="#mincompactionlagms_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Compaction<wbr>Lag<wbr>Ms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3777,7 +3777,7 @@ For more information see [the official documentation](https://cloud.yandex.com/d
 <a href="#mininsyncreplicas_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Insync<wbr>Replicas</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3793,7 +3793,7 @@ For more information see [the official documentation](https://cloud.yandex.com/d
 <a href="#retentionbytes_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3801,7 +3801,7 @@ For more information see [the official documentation](https://cloud.yandex.com/d
 <a href="#retentionms_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Ms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3809,7 +3809,7 @@ For more information see [the official documentation](https://cloud.yandex.com/d
 <a href="#segmentbytes_csharp" style="color: inherit; text-decoration: inherit;">Segment<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3837,7 +3837,7 @@ For more information see [the official documentation](https://cloud.yandex.com/d
 <a href="#deleteretentionms_go" style="color: inherit; text-decoration: inherit;">Delete<wbr>Retention<wbr>Ms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3845,7 +3845,7 @@ For more information see [the official documentation](https://cloud.yandex.com/d
 <a href="#filedeletedelayms_go" style="color: inherit; text-decoration: inherit;">File<wbr>Delete<wbr>Delay<wbr>Ms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3853,7 +3853,7 @@ For more information see [the official documentation](https://cloud.yandex.com/d
 <a href="#flushmessages_go" style="color: inherit; text-decoration: inherit;">Flush<wbr>Messages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3861,7 +3861,7 @@ For more information see [the official documentation](https://cloud.yandex.com/d
 <a href="#flushms_go" style="color: inherit; text-decoration: inherit;">Flush<wbr>Ms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3869,7 +3869,7 @@ For more information see [the official documentation](https://cloud.yandex.com/d
 <a href="#maxmessagebytes_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Message<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3877,7 +3877,7 @@ For more information see [the official documentation](https://cloud.yandex.com/d
 <a href="#mincompactionlagms_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Compaction<wbr>Lag<wbr>Ms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3885,7 +3885,7 @@ For more information see [the official documentation](https://cloud.yandex.com/d
 <a href="#mininsyncreplicas_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Insync<wbr>Replicas</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3901,7 +3901,7 @@ For more information see [the official documentation](https://cloud.yandex.com/d
 <a href="#retentionbytes_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3909,7 +3909,7 @@ For more information see [the official documentation](https://cloud.yandex.com/d
 <a href="#retentionms_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Ms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3917,7 +3917,7 @@ For more information see [the official documentation](https://cloud.yandex.com/d
 <a href="#segmentbytes_go" style="color: inherit; text-decoration: inherit;">Segment<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3945,7 +3945,7 @@ For more information see [the official documentation](https://cloud.yandex.com/d
 <a href="#deleteretentionms_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>Retention<wbr>Ms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3953,7 +3953,7 @@ For more information see [the official documentation](https://cloud.yandex.com/d
 <a href="#filedeletedelayms_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Delete<wbr>Delay<wbr>Ms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3961,7 +3961,7 @@ For more information see [the official documentation](https://cloud.yandex.com/d
 <a href="#flushmessages_nodejs" style="color: inherit; text-decoration: inherit;">flush<wbr>Messages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3969,7 +3969,7 @@ For more information see [the official documentation](https://cloud.yandex.com/d
 <a href="#flushms_nodejs" style="color: inherit; text-decoration: inherit;">flush<wbr>Ms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3977,7 +3977,7 @@ For more information see [the official documentation](https://cloud.yandex.com/d
 <a href="#maxmessagebytes_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Message<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3985,7 +3985,7 @@ For more information see [the official documentation](https://cloud.yandex.com/d
 <a href="#mincompactionlagms_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Compaction<wbr>Lag<wbr>Ms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3993,7 +3993,7 @@ For more information see [the official documentation](https://cloud.yandex.com/d
 <a href="#mininsyncreplicas_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Insync<wbr>Replicas</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4009,7 +4009,7 @@ For more information see [the official documentation](https://cloud.yandex.com/d
 <a href="#retentionbytes_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4017,7 +4017,7 @@ For more information see [the official documentation](https://cloud.yandex.com/d
 <a href="#retentionms_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Ms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4025,7 +4025,7 @@ For more information see [the official documentation](https://cloud.yandex.com/d
 <a href="#segmentbytes_nodejs" style="color: inherit; text-decoration: inherit;">segment<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4053,7 +4053,7 @@ For more information see [the official documentation](https://cloud.yandex.com/d
 <a href="#delete_retention_ms_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>retention_<wbr>ms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4061,7 +4061,7 @@ For more information see [the official documentation](https://cloud.yandex.com/d
 <a href="#file_delete_delay_ms_python" style="color: inherit; text-decoration: inherit;">file_<wbr>delete_<wbr>delay_<wbr>ms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4069,7 +4069,7 @@ For more information see [the official documentation](https://cloud.yandex.com/d
 <a href="#flush_messages_python" style="color: inherit; text-decoration: inherit;">flush_<wbr>messages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4077,7 +4077,7 @@ For more information see [the official documentation](https://cloud.yandex.com/d
 <a href="#flush_ms_python" style="color: inherit; text-decoration: inherit;">flush_<wbr>ms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4085,7 +4085,7 @@ For more information see [the official documentation](https://cloud.yandex.com/d
 <a href="#max_message_bytes_python" style="color: inherit; text-decoration: inherit;">max_<wbr>message_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4093,7 +4093,7 @@ For more information see [the official documentation](https://cloud.yandex.com/d
 <a href="#min_compaction_lag_ms_python" style="color: inherit; text-decoration: inherit;">min_<wbr>compaction_<wbr>lag_<wbr>ms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4101,7 +4101,7 @@ For more information see [the official documentation](https://cloud.yandex.com/d
 <a href="#min_insync_replicas_python" style="color: inherit; text-decoration: inherit;">min_<wbr>insync_<wbr>replicas</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4117,7 +4117,7 @@ For more information see [the official documentation](https://cloud.yandex.com/d
 <a href="#retention_bytes_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4125,7 +4125,7 @@ For more information see [the official documentation](https://cloud.yandex.com/d
 <a href="#retention_ms_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>ms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4133,7 +4133,7 @@ For more information see [the official documentation](https://cloud.yandex.com/d
 <a href="#segment_bytes_python" style="color: inherit; text-decoration: inherit;">segment_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}

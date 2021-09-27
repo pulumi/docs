@@ -11,7 +11,7 @@ meta_desc: "Documentation for the yandex.ComputePlacementGroup resource with exa
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A Placement group resource. For more information, see
-[the official documentation](https://cloud.yandex.ru/docs/compute/concepts/placement-groups).
+[the official documentation](https://cloud.yandex.com/docs/compute/concepts/placement-groups).
 
 
 {{% examples %}}
