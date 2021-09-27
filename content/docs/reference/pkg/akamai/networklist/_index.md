@@ -39,6 +39,8 @@ class MyStack : Stack
             Description = "network list description",
             Lists = @var.List,
             Mode = "APPEND",
+            ContractId = "ABC-123",
+            GroupId = 12345,
         });
     }
 
@@ -66,6 +68,8 @@ func main() {
 			Description: pulumi.String("network list description"),
 			Lists:       _var.List,
 			Mode:        pulumi.String("APPEND"),
+			ContractId:  pulumi.String("ABC-123"),
+			GroupId:     pulumi.Int(12345),
 		})
 		if err != nil {
 			return err
@@ -89,7 +93,9 @@ network_list = akamai.NetworkList("networkList",
     type="IP",
     description="network list description",
     lists=var["list"],
-    mode="APPEND")
+    mode="APPEND",
+    contract_id="ABC-123",
+    group_id=12345)
 ```
 
 
@@ -108,6 +114,8 @@ const networkList = new akamai.NetworkList("networkList", {
     description: "network list description",
     lists: _var.list,
     mode: "APPEND",
+    contractId: "ABC-123",
+    groupId: 12345,
 });
 ```
 
@@ -135,7 +143,9 @@ const networkList = new akamai.NetworkList("networkList", {
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">NetworkList</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                <span class="nx">contract_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                 <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">group_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
                 <span class="nx">lists</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
                 <span class="nx">mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                 <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -296,6 +306,26 @@ The NetworkList resource accepts the following [input]({{< relref "/docs/intro/c
     <dd>{{% md %}}The type of the network list; must be either "IP" or "GEO".
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="contractid_csharp">
+<a href="#contractid_csharp" style="color: inherit; text-decoration: inherit;">Contract<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The contract ID of the network list. If supplied, group_id must also be supplied. The
+contract_id value of an existing network list may not be modified.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="groupid_csharp">
+<a href="#groupid_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The group ID of the network list. If supplied, contract_id must also be supplied. The
+group_id value of an existing network list may not be modified.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="lists_csharp">
 <a href="#lists_csharp" style="color: inherit; text-decoration: inherit;">Lists</a>
 </span>
@@ -344,6 +374,26 @@ removed from an existing list.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the network list; must be either "IP" or "GEO".
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="contractid_go">
+<a href="#contractid_go" style="color: inherit; text-decoration: inherit;">Contract<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The contract ID of the network list. If supplied, group_id must also be supplied. The
+contract_id value of an existing network list may not be modified.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="groupid_go">
+<a href="#groupid_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The group ID of the network list. If supplied, contract_id must also be supplied. The
+group_id value of an existing network list may not be modified.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lists_go">
@@ -396,6 +446,26 @@ removed from an existing list.
     <dd>{{% md %}}The type of the network list; must be either "IP" or "GEO".
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="contractid_nodejs">
+<a href="#contractid_nodejs" style="color: inherit; text-decoration: inherit;">contract<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The contract ID of the network list. If supplied, group_id must also be supplied. The
+contract_id value of an existing network list may not be modified.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="groupid_nodejs">
+<a href="#groupid_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The group ID of the network list. If supplied, contract_id must also be supplied. The
+group_id value of an existing network list may not be modified.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="lists_nodejs">
 <a href="#lists_nodejs" style="color: inherit; text-decoration: inherit;">lists</a>
 </span>
@@ -444,6 +514,26 @@ removed from an existing list.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the network list; must be either "IP" or "GEO".
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="contract_id_python">
+<a href="#contract_id_python" style="color: inherit; text-decoration: inherit;">contract_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The contract ID of the network list. If supplied, group_id must also be supplied. The
+contract_id value of an existing network list may not be modified.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="group_id_python">
+<a href="#group_id_python" style="color: inherit; text-decoration: inherit;">group_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The group ID of the network list. If supplied, contract_id must also be supplied. The
+group_id value of an existing network list may not be modified.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lists_python">
@@ -649,7 +739,9 @@ Get an existing NetworkList resource's state with the given name, ID, and option
 <span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">contract_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">group_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">lists</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
         <span class="nx">mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -769,6 +861,16 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="state_contractid_csharp">
+<a href="#state_contractid_csharp" style="color: inherit; text-decoration: inherit;">Contract<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The contract ID of the network list. If supplied, group_id must also be supplied. The
+contract_id value of an existing network list may not be modified.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
 </span>
@@ -776,6 +878,16 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description to be assigned to the network list.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_groupid_csharp">
+<a href="#state_groupid_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The group ID of the network list. If supplied, contract_id must also be supplied. The
+group_id value of an existing network list may not be modified.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lists_csharp">
@@ -847,6 +959,16 @@ the list is modified.
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="state_contractid_go">
+<a href="#state_contractid_go" style="color: inherit; text-decoration: inherit;">Contract<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The contract ID of the network list. If supplied, group_id must also be supplied. The
+contract_id value of an existing network list may not be modified.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
 </span>
@@ -854,6 +976,16 @@ the list is modified.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description to be assigned to the network list.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_groupid_go">
+<a href="#state_groupid_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The group ID of the network list. If supplied, contract_id must also be supplied. The
+group_id value of an existing network list may not be modified.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lists_go">
@@ -925,6 +1057,16 @@ the list is modified.
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="state_contractid_nodejs">
+<a href="#state_contractid_nodejs" style="color: inherit; text-decoration: inherit;">contract<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The contract ID of the network list. If supplied, group_id must also be supplied. The
+contract_id value of an existing network list may not be modified.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
@@ -932,6 +1074,16 @@ the list is modified.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description to be assigned to the network list.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_groupid_nodejs">
+<a href="#state_groupid_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The group ID of the network list. If supplied, contract_id must also be supplied. The
+group_id value of an existing network list may not be modified.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lists_nodejs">
@@ -1003,6 +1155,16 @@ the list is modified.
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="state_contract_id_python">
+<a href="#state_contract_id_python" style="color: inherit; text-decoration: inherit;">contract_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The contract ID of the network list. If supplied, group_id must also be supplied. The
+contract_id value of an existing network list may not be modified.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
@@ -1010,6 +1172,16 @@ the list is modified.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description to be assigned to the network list.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_group_id_python">
+<a href="#state_group_id_python" style="color: inherit; text-decoration: inherit;">group_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The group ID of the network list. If supplied, contract_id must also be supplied. The
+group_id value of an existing network list may not be modified.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lists_python">

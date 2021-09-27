@@ -171,6 +171,7 @@ export const evalModeStatus = evalOperation.evalStatus;
 <span class="k">def </span><span class="nx">AppSecEval</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
                <span class="nx">config_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+               <span class="nx">eval_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                <span class="nx">eval_operation</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                <span class="nx">security_policy_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
@@ -327,6 +328,15 @@ The AppSecEval resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the security policy to use.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="evalmode_csharp">
+<a href="#evalmode_csharp" style="color: inherit; text-decoration: inherit;">Eval<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}__ASE Beta__. (Optional) Used for ASE Rulesets: ASE_MANUAL or ASE_AUTO - default. "ASE (Adaptive Security Engine) is currently in beta. Please contact your Akamai representative to learn more. Policy Evaluation Rule Actions and Threat Intelligence setting are read only in ASE_AUTO evaluation mode
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -358,6 +368,15 @@ The AppSecEval resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the security policy to use.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="evalmode_go">
+<a href="#evalmode_go" style="color: inherit; text-decoration: inherit;">Eval<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}__ASE Beta__. (Optional) Used for ASE Rulesets: ASE_MANUAL or ASE_AUTO - default. "ASE (Adaptive Security Engine) is currently in beta. Please contact your Akamai representative to learn more. Policy Evaluation Rule Actions and Threat Intelligence setting are read only in ASE_AUTO evaluation mode
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -389,6 +408,15 @@ The AppSecEval resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the security policy to use.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="evalmode_nodejs">
+<a href="#evalmode_nodejs" style="color: inherit; text-decoration: inherit;">eval<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}__ASE Beta__. (Optional) Used for ASE Rulesets: ASE_MANUAL or ASE_AUTO - default. "ASE (Adaptive Security Engine) is currently in beta. Please contact your Akamai representative to learn more. Policy Evaluation Rule Actions and Threat Intelligence setting are read only in ASE_AUTO evaluation mode
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -420,6 +448,15 @@ The AppSecEval resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the security policy to use.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="eval_mode_python">
+<a href="#eval_mode_python" style="color: inherit; text-decoration: inherit;">eval_<wbr>mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}__ASE Beta__. (Optional) Used for ASE Rulesets: ASE_MANUAL or ASE_AUTO - default. "ASE (Adaptive Security Engine) is currently in beta. Please contact your Akamai representative to learn more. Policy Evaluation Rule Actions and Threat Intelligence setting are read only in ASE_AUTO evaluation mode
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -640,6 +677,7 @@ Get an existing AppSecEval resource's state with the given name, ID, and optiona
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
         <span class="nx">config_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">current_ruleset</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">eval_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">eval_operation</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">eval_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">evaluating_ruleset</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -775,6 +813,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The set of rules currently in effect.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_evalmode_csharp">
+<a href="#state_evalmode_csharp" style="color: inherit; text-decoration: inherit;">Eval<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}__ASE Beta__. (Optional) Used for ASE Rulesets: ASE_MANUAL or ASE_AUTO - default. "ASE (Adaptive Security Engine) is currently in beta. Please contact your Akamai representative to learn more. Policy Evaluation Rule Actions and Threat Intelligence setting are read only in ASE_AUTO evaluation mode
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_evaloperation_csharp">
 <a href="#state_evaloperation_csharp" style="color: inherit; text-decoration: inherit;">Eval<wbr>Operation</a>
 </span>
@@ -840,6 +887,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The set of rules currently in effect.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_evalmode_go">
+<a href="#state_evalmode_go" style="color: inherit; text-decoration: inherit;">Eval<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}__ASE Beta__. (Optional) Used for ASE Rulesets: ASE_MANUAL or ASE_AUTO - default. "ASE (Adaptive Security Engine) is currently in beta. Please contact your Akamai representative to learn more. Policy Evaluation Rule Actions and Threat Intelligence setting are read only in ASE_AUTO evaluation mode
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_evaloperation_go">
@@ -909,6 +965,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The set of rules currently in effect.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_evalmode_nodejs">
+<a href="#state_evalmode_nodejs" style="color: inherit; text-decoration: inherit;">eval<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}__ASE Beta__. (Optional) Used for ASE Rulesets: ASE_MANUAL or ASE_AUTO - default. "ASE (Adaptive Security Engine) is currently in beta. Please contact your Akamai representative to learn more. Policy Evaluation Rule Actions and Threat Intelligence setting are read only in ASE_AUTO evaluation mode
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_evaloperation_nodejs">
 <a href="#state_evaloperation_nodejs" style="color: inherit; text-decoration: inherit;">eval<wbr>Operation</a>
 </span>
@@ -974,6 +1039,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The set of rules currently in effect.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_eval_mode_python">
+<a href="#state_eval_mode_python" style="color: inherit; text-decoration: inherit;">eval_<wbr>mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}__ASE Beta__. (Optional) Used for ASE Rulesets: ASE_MANUAL or ASE_AUTO - default. "ASE (Adaptive Security Engine) is currently in beta. Please contact your Akamai representative to learn more. Policy Evaluation Rule Actions and Threat Intelligence setting are read only in ASE_AUTO evaluation mode
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_eval_operation_python">
