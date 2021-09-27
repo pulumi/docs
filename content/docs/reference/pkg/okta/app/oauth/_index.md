@@ -155,7 +155,12 @@ const example = new okta.app.OAuth("example", {
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">OAuth</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+          <span class="nx">accessibility_error_redirect_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">accessibility_login_redirect_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">accessibility_self_service</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
           <span class="nx">admin_note</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">app_links_json</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">app_settings_json</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
           <span class="nx">auto_key_rotation</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
           <span class="nx">auto_submit_toolbar</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
           <span class="nx">client_basic_secret</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -186,6 +191,8 @@ const example = new okta.app.OAuth("example", {
           <span class="nx">refresh_token_leeway</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
           <span class="nx">refresh_token_rotation</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
           <span class="nx">response_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+          <span class="nx">skip_groups</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+          <span class="nx">skip_users</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
           <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
           <span class="nx">token_endpoint_auth_method</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
           <span class="nx">tos_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -339,6 +346,33 @@ The OAuth resource accepts the following [input]({{< relref "/docs/intro/concept
     <dd>{{% md %}}Groups claim type. Valid values: `"FILTER"`, `"EXPRESSION"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="accessibilityerrorredirecturl_csharp">
+<a href="#accessibilityerrorredirecturl_csharp" style="color: inherit; text-decoration: inherit;">Accessibility<wbr>Error<wbr>Redirect<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Custom error page URL.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="accessibilityloginredirecturl_csharp">
+<a href="#accessibilityloginredirecturl_csharp" style="color: inherit; text-decoration: inherit;">Accessibility<wbr>Login<wbr>Redirect<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Custom login page for this application.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="accessibilityselfservice_csharp">
+<a href="#accessibilityselfservice_csharp" style="color: inherit; text-decoration: inherit;">Accessibility<wbr>Self<wbr>Service</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable self-service. By default, it is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="adminnote_csharp">
 <a href="#adminnote_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>Note</a>
 </span>
@@ -346,6 +380,24 @@ The OAuth resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Application notes for admins.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="applinksjson_csharp">
+<a href="#applinksjson_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Links<wbr>Json</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Displays specific appLinks for the app
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="appsettingsjson_csharp">
+<a href="#appsettingsjson_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Settings<wbr>Json</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Application settings in JSON format.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autokeyrotation_csharp">
@@ -527,7 +579,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Application logo. The file must be in PNG, JPG, or GIF format, and less than 1 MB in size.
+    <dd>{{% md %}}Local file path to the logo. The file must be in PNG, JPG, or GIF format, and less than 1 MB in size.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logouri_csharp">
@@ -611,6 +663,24 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
     <dd>{{% md %}}List of OAuth 2.0 response type strings.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="skipgroups_csharp">
+<a href="#skipgroups_csharp" style="color: inherit; text-decoration: inherit;">Skip<wbr>Groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicator that allows the app to skip `groups` sync (it's also can be provided during import). Default is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="skipusers_csharp">
+<a href="#skipusers_csharp" style="color: inherit; text-decoration: inherit;">Skip<wbr>Users</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicator that allows the app to skip `users` sync (it's also can be provided during import). Default is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
@@ -679,6 +749,33 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
     <dd>{{% md %}}Groups claim type. Valid values: `"FILTER"`, `"EXPRESSION"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="accessibilityerrorredirecturl_go">
+<a href="#accessibilityerrorredirecturl_go" style="color: inherit; text-decoration: inherit;">Accessibility<wbr>Error<wbr>Redirect<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Custom error page URL.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="accessibilityloginredirecturl_go">
+<a href="#accessibilityloginredirecturl_go" style="color: inherit; text-decoration: inherit;">Accessibility<wbr>Login<wbr>Redirect<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Custom login page for this application.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="accessibilityselfservice_go">
+<a href="#accessibilityselfservice_go" style="color: inherit; text-decoration: inherit;">Accessibility<wbr>Self<wbr>Service</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable self-service. By default, it is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="adminnote_go">
 <a href="#adminnote_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>Note</a>
 </span>
@@ -686,6 +783,24 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Application notes for admins.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="applinksjson_go">
+<a href="#applinksjson_go" style="color: inherit; text-decoration: inherit;">App<wbr>Links<wbr>Json</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Displays specific appLinks for the app
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="appsettingsjson_go">
+<a href="#appsettingsjson_go" style="color: inherit; text-decoration: inherit;">App<wbr>Settings<wbr>Json</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Application settings in JSON format.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autokeyrotation_go">
@@ -867,7 +982,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Application logo. The file must be in PNG, JPG, or GIF format, and less than 1 MB in size.
+    <dd>{{% md %}}Local file path to the logo. The file must be in PNG, JPG, or GIF format, and less than 1 MB in size.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logouri_go">
@@ -951,6 +1066,24 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
     <dd>{{% md %}}List of OAuth 2.0 response type strings.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="skipgroups_go">
+<a href="#skipgroups_go" style="color: inherit; text-decoration: inherit;">Skip<wbr>Groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicator that allows the app to skip `groups` sync (it's also can be provided during import). Default is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="skipusers_go">
+<a href="#skipusers_go" style="color: inherit; text-decoration: inherit;">Skip<wbr>Users</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicator that allows the app to skip `users` sync (it's also can be provided during import). Default is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
@@ -1019,6 +1152,33 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
     <dd>{{% md %}}Groups claim type. Valid values: `"FILTER"`, `"EXPRESSION"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="accessibilityerrorredirecturl_nodejs">
+<a href="#accessibilityerrorredirecturl_nodejs" style="color: inherit; text-decoration: inherit;">accessibility<wbr>Error<wbr>Redirect<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Custom error page URL.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="accessibilityloginredirecturl_nodejs">
+<a href="#accessibilityloginredirecturl_nodejs" style="color: inherit; text-decoration: inherit;">accessibility<wbr>Login<wbr>Redirect<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Custom login page for this application.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="accessibilityselfservice_nodejs">
+<a href="#accessibilityselfservice_nodejs" style="color: inherit; text-decoration: inherit;">accessibility<wbr>Self<wbr>Service</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Enable self-service. By default, it is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="adminnote_nodejs">
 <a href="#adminnote_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>Note</a>
 </span>
@@ -1026,6 +1186,24 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Application notes for admins.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="applinksjson_nodejs">
+<a href="#applinksjson_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Links<wbr>Json</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Displays specific appLinks for the app
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="appsettingsjson_nodejs">
+<a href="#appsettingsjson_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Settings<wbr>Json</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Application settings in JSON format.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autokeyrotation_nodejs">
@@ -1207,7 +1385,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Application logo. The file must be in PNG, JPG, or GIF format, and less than 1 MB in size.
+    <dd>{{% md %}}Local file path to the logo. The file must be in PNG, JPG, or GIF format, and less than 1 MB in size.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logouri_nodejs">
@@ -1291,6 +1469,24 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
     <dd>{{% md %}}List of OAuth 2.0 response type strings.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="skipgroups_nodejs">
+<a href="#skipgroups_nodejs" style="color: inherit; text-decoration: inherit;">skip<wbr>Groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Indicator that allows the app to skip `groups` sync (it's also can be provided during import). Default is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="skipusers_nodejs">
+<a href="#skipusers_nodejs" style="color: inherit; text-decoration: inherit;">skip<wbr>Users</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Indicator that allows the app to skip `users` sync (it's also can be provided during import). Default is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
@@ -1359,6 +1555,33 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
     <dd>{{% md %}}Groups claim type. Valid values: `"FILTER"`, `"EXPRESSION"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="accessibility_error_redirect_url_python">
+<a href="#accessibility_error_redirect_url_python" style="color: inherit; text-decoration: inherit;">accessibility_<wbr>error_<wbr>redirect_<wbr>url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Custom error page URL.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="accessibility_login_redirect_url_python">
+<a href="#accessibility_login_redirect_url_python" style="color: inherit; text-decoration: inherit;">accessibility_<wbr>login_<wbr>redirect_<wbr>url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Custom login page for this application.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="accessibility_self_service_python">
+<a href="#accessibility_self_service_python" style="color: inherit; text-decoration: inherit;">accessibility_<wbr>self_<wbr>service</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable self-service. By default, it is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="admin_note_python">
 <a href="#admin_note_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>note</a>
 </span>
@@ -1366,6 +1589,24 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Application notes for admins.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="app_links_json_python">
+<a href="#app_links_json_python" style="color: inherit; text-decoration: inherit;">app_<wbr>links_<wbr>json</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Displays specific appLinks for the app
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="app_settings_json_python">
+<a href="#app_settings_json_python" style="color: inherit; text-decoration: inherit;">app_<wbr>settings_<wbr>json</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Application settings in JSON format.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="auto_key_rotation_python">
@@ -1547,7 +1788,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Application logo. The file must be in PNG, JPG, or GIF format, and less than 1 MB in size.
+    <dd>{{% md %}}Local file path to the logo. The file must be in PNG, JPG, or GIF format, and less than 1 MB in size.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logo_uri_python">
@@ -1629,6 +1870,24 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of OAuth 2.0 response type strings.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="skip_groups_python">
+<a href="#skip_groups_python" style="color: inherit; text-decoration: inherit;">skip_<wbr>groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicator that allows the app to skip `groups` sync (it's also can be provided during import). Default is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="skip_users_python">
+<a href="#skip_users_python" style="color: inherit; text-decoration: inherit;">skip_<wbr>users</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicator that allows the app to skip `users` sync (it's also can be provided during import). Default is `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_python">
@@ -1893,7 +2152,12 @@ Get an existing OAuth resource's state with the given name, ID, and optional ext
 <span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">accessibility_error_redirect_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">accessibility_login_redirect_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">accessibility_self_service</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">admin_note</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">app_links_json</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">app_settings_json</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">auto_key_rotation</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">auto_submit_toolbar</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">client_basic_secret</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -1928,6 +2192,8 @@ Get an existing OAuth resource's state with the given name, ID, and optional ext
         <span class="nx">refresh_token_rotation</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">response_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
         <span class="nx">sign_on_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">skip_groups</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">skip_users</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">token_endpoint_auth_method</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">tos_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -2046,6 +2312,33 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="state_accessibilityerrorredirecturl_csharp">
+<a href="#state_accessibilityerrorredirecturl_csharp" style="color: inherit; text-decoration: inherit;">Accessibility<wbr>Error<wbr>Redirect<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Custom error page URL.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_accessibilityloginredirecturl_csharp">
+<a href="#state_accessibilityloginredirecturl_csharp" style="color: inherit; text-decoration: inherit;">Accessibility<wbr>Login<wbr>Redirect<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Custom login page for this application.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_accessibilityselfservice_csharp">
+<a href="#state_accessibilityselfservice_csharp" style="color: inherit; text-decoration: inherit;">Accessibility<wbr>Self<wbr>Service</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable self-service. By default, it is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_adminnote_csharp">
 <a href="#state_adminnote_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>Note</a>
 </span>
@@ -2053,6 +2346,24 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Application notes for admins.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_applinksjson_csharp">
+<a href="#state_applinksjson_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Links<wbr>Json</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Displays specific appLinks for the app
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_appsettingsjson_csharp">
+<a href="#state_appsettingsjson_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Settings<wbr>Json</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Application settings in JSON format.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autokeyrotation_csharp">
@@ -2252,7 +2563,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Application logo. The file must be in PNG, JPG, or GIF format, and less than 1 MB in size.
+    <dd>{{% md %}}Local file path to the logo. The file must be in PNG, JPG, or GIF format, and less than 1 MB in size.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logouri_csharp">
@@ -2363,6 +2674,24 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
     <dd>{{% md %}}Sign-on mode of application.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_skipgroups_csharp">
+<a href="#state_skipgroups_csharp" style="color: inherit; text-decoration: inherit;">Skip<wbr>Groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicator that allows the app to skip `groups` sync (it's also can be provided during import). Default is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_skipusers_csharp">
+<a href="#state_skipusers_csharp" style="color: inherit; text-decoration: inherit;">Skip<wbr>Users</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicator that allows the app to skip `users` sync (it's also can be provided during import). Default is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_status_csharp">
 <a href="#state_status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
@@ -2422,6 +2751,33 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="state_accessibilityerrorredirecturl_go">
+<a href="#state_accessibilityerrorredirecturl_go" style="color: inherit; text-decoration: inherit;">Accessibility<wbr>Error<wbr>Redirect<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Custom error page URL.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_accessibilityloginredirecturl_go">
+<a href="#state_accessibilityloginredirecturl_go" style="color: inherit; text-decoration: inherit;">Accessibility<wbr>Login<wbr>Redirect<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Custom login page for this application.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_accessibilityselfservice_go">
+<a href="#state_accessibilityselfservice_go" style="color: inherit; text-decoration: inherit;">Accessibility<wbr>Self<wbr>Service</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable self-service. By default, it is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_adminnote_go">
 <a href="#state_adminnote_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>Note</a>
 </span>
@@ -2429,6 +2785,24 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Application notes for admins.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_applinksjson_go">
+<a href="#state_applinksjson_go" style="color: inherit; text-decoration: inherit;">App<wbr>Links<wbr>Json</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Displays specific appLinks for the app
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_appsettingsjson_go">
+<a href="#state_appsettingsjson_go" style="color: inherit; text-decoration: inherit;">App<wbr>Settings<wbr>Json</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Application settings in JSON format.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autokeyrotation_go">
@@ -2628,7 +3002,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Application logo. The file must be in PNG, JPG, or GIF format, and less than 1 MB in size.
+    <dd>{{% md %}}Local file path to the logo. The file must be in PNG, JPG, or GIF format, and less than 1 MB in size.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logouri_go">
@@ -2739,6 +3113,24 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
     <dd>{{% md %}}Sign-on mode of application.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_skipgroups_go">
+<a href="#state_skipgroups_go" style="color: inherit; text-decoration: inherit;">Skip<wbr>Groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicator that allows the app to skip `groups` sync (it's also can be provided during import). Default is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_skipusers_go">
+<a href="#state_skipusers_go" style="color: inherit; text-decoration: inherit;">Skip<wbr>Users</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicator that allows the app to skip `users` sync (it's also can be provided during import). Default is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_status_go">
 <a href="#state_status_go" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
@@ -2798,6 +3190,33 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="state_accessibilityerrorredirecturl_nodejs">
+<a href="#state_accessibilityerrorredirecturl_nodejs" style="color: inherit; text-decoration: inherit;">accessibility<wbr>Error<wbr>Redirect<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Custom error page URL.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_accessibilityloginredirecturl_nodejs">
+<a href="#state_accessibilityloginredirecturl_nodejs" style="color: inherit; text-decoration: inherit;">accessibility<wbr>Login<wbr>Redirect<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Custom login page for this application.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_accessibilityselfservice_nodejs">
+<a href="#state_accessibilityselfservice_nodejs" style="color: inherit; text-decoration: inherit;">accessibility<wbr>Self<wbr>Service</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Enable self-service. By default, it is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_adminnote_nodejs">
 <a href="#state_adminnote_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>Note</a>
 </span>
@@ -2805,6 +3224,24 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Application notes for admins.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_applinksjson_nodejs">
+<a href="#state_applinksjson_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Links<wbr>Json</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Displays specific appLinks for the app
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_appsettingsjson_nodejs">
+<a href="#state_appsettingsjson_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Settings<wbr>Json</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Application settings in JSON format.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autokeyrotation_nodejs">
@@ -3004,7 +3441,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Application logo. The file must be in PNG, JPG, or GIF format, and less than 1 MB in size.
+    <dd>{{% md %}}Local file path to the logo. The file must be in PNG, JPG, or GIF format, and less than 1 MB in size.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logouri_nodejs">
@@ -3115,6 +3552,24 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
     <dd>{{% md %}}Sign-on mode of application.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_skipgroups_nodejs">
+<a href="#state_skipgroups_nodejs" style="color: inherit; text-decoration: inherit;">skip<wbr>Groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Indicator that allows the app to skip `groups` sync (it's also can be provided during import). Default is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_skipusers_nodejs">
+<a href="#state_skipusers_nodejs" style="color: inherit; text-decoration: inherit;">skip<wbr>Users</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Indicator that allows the app to skip `users` sync (it's also can be provided during import). Default is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_status_nodejs">
 <a href="#state_status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
@@ -3174,6 +3629,33 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="state_accessibility_error_redirect_url_python">
+<a href="#state_accessibility_error_redirect_url_python" style="color: inherit; text-decoration: inherit;">accessibility_<wbr>error_<wbr>redirect_<wbr>url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Custom error page URL.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_accessibility_login_redirect_url_python">
+<a href="#state_accessibility_login_redirect_url_python" style="color: inherit; text-decoration: inherit;">accessibility_<wbr>login_<wbr>redirect_<wbr>url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Custom login page for this application.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_accessibility_self_service_python">
+<a href="#state_accessibility_self_service_python" style="color: inherit; text-decoration: inherit;">accessibility_<wbr>self_<wbr>service</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable self-service. By default, it is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_admin_note_python">
 <a href="#state_admin_note_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>note</a>
 </span>
@@ -3181,6 +3663,24 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Application notes for admins.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_app_links_json_python">
+<a href="#state_app_links_json_python" style="color: inherit; text-decoration: inherit;">app_<wbr>links_<wbr>json</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Displays specific appLinks for the app
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_app_settings_json_python">
+<a href="#state_app_settings_json_python" style="color: inherit; text-decoration: inherit;">app_<wbr>settings_<wbr>json</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Application settings in JSON format.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_auto_key_rotation_python">
@@ -3380,7 +3880,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Application logo. The file must be in PNG, JPG, or GIF format, and less than 1 MB in size.
+    <dd>{{% md %}}Local file path to the logo. The file must be in PNG, JPG, or GIF format, and less than 1 MB in size.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logo_uri_python">
@@ -3489,6 +3989,24 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Sign-on mode of application.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_skip_groups_python">
+<a href="#state_skip_groups_python" style="color: inherit; text-decoration: inherit;">skip_<wbr>groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicator that allows the app to skip `groups` sync (it's also can be provided during import). Default is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_skip_users_python">
+<a href="#state_skip_users_python" style="color: inherit; text-decoration: inherit;">skip_<wbr>users</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicator that allows the app to skip `users` sync (it's also can be provided during import). Default is `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_python">
@@ -4020,6 +4538,20 @@ An OIDC Application can be imported via the Okta ID.
 
 ```sh
  $ pulumi import okta:app/oAuth:OAuth example <app id>
+```
+
+ It's also possible to import app without groups or/and users. In this case ID may look like this
+
+```sh
+ $ pulumi import okta:app/oAuth:OAuth example <app id>/skip_users
+```
+
+```sh
+ $ pulumi import okta:app/oAuth:OAuth example <app id>/skip_users/skip_groups
+```
+
+```sh
+ $ pulumi import okta:app/oAuth:OAuth example <app id>/skip_groups
 ```
 
 

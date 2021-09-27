@@ -146,7 +146,8 @@ const example = new okta.group.Rule("example", {
          <span class="nx">group_assignments</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
          <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
          <span class="nx">remove_assigned_users</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
-         <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+         <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+         <span class="nx">users_excludeds</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Rule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
          <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RuleArgs</a></span><span class="p">,</span>
@@ -330,6 +331,15 @@ group after destroying this resource. Default is `false`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the group rule.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="usersexcludeds_csharp">
+<a href="#usersexcludeds_csharp" style="color: inherit; text-decoration: inherit;">Users<wbr>Excludeds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The list of user IDs that would be excluded when rules are processed.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -390,6 +400,15 @@ group after destroying this resource. Default is `false`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the group rule.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="usersexcludeds_go">
+<a href="#usersexcludeds_go" style="color: inherit; text-decoration: inherit;">Users<wbr>Excludeds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The list of user IDs that would be excluded when rules are processed.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -450,6 +469,15 @@ group after destroying this resource. Default is `false`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the group rule.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="usersexcludeds_nodejs">
+<a href="#usersexcludeds_nodejs" style="color: inherit; text-decoration: inherit;">users<wbr>Excludeds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The list of user IDs that would be excluded when rules are processed.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -510,6 +538,15 @@ group after destroying this resource. Default is `false`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The status of the group rule.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="users_excludeds_python">
+<a href="#users_excludeds_python" style="color: inherit; text-decoration: inherit;">users_<wbr>excludeds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}The list of user IDs that would be excluded when rules are processed.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -589,7 +626,8 @@ Get an existing Rule resource's state with the given name, ID, and optional extr
         <span class="nx">group_assignments</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">remove_assigned_users</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
-        <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Rule</code></pre></div>
+        <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">users_excludeds</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">) -&gt;</span> Rule</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -756,6 +794,15 @@ group after destroying this resource. Default is `false`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the group rule.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_usersexcludeds_csharp">
+<a href="#state_usersexcludeds_csharp" style="color: inherit; text-decoration: inherit;">Users<wbr>Excludeds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The list of user IDs that would be excluded when rules are processed.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -816,6 +863,15 @@ group after destroying this resource. Default is `false`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the group rule.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_usersexcludeds_go">
+<a href="#state_usersexcludeds_go" style="color: inherit; text-decoration: inherit;">Users<wbr>Excludeds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The list of user IDs that would be excluded when rules are processed.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -876,6 +932,15 @@ group after destroying this resource. Default is `false`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the group rule.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_usersexcludeds_nodejs">
+<a href="#state_usersexcludeds_nodejs" style="color: inherit; text-decoration: inherit;">users<wbr>Excludeds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The list of user IDs that would be excluded when rules are processed.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -936,6 +1001,15 @@ group after destroying this resource. Default is `false`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The status of the group rule.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_users_excludeds_python">
+<a href="#state_users_excludeds_python" style="color: inherit; text-decoration: inherit;">users_<wbr>excludeds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}The list of user IDs that would be excluded when rules are processed.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

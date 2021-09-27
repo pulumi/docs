@@ -804,6 +804,8 @@ const office365 = new okta.app.Saml("office365", {
          <span class="nx">single_logout_certificate</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
          <span class="nx">single_logout_issuer</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
          <span class="nx">single_logout_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+         <span class="nx">skip_groups</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+         <span class="nx">skip_users</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
          <span class="nx">sp_issuer</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
          <span class="nx">sso_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
          <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -966,7 +968,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Custom login page URL.
+    <dd>{{% md %}}Custom login page for this application.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accessibilityselfservice_csharp">
@@ -975,7 +977,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable self-service.
+    <dd>{{% md %}}Enable self-service. By default, it is `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="acsendpoints_csharp">
@@ -1183,7 +1185,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Application logo. The file must be in PNG, JPG, or GIF format, and less than 1 MB in size.
+    <dd>{{% md %}}Local file path to the logo. The file must be in PNG, JPG, or GIF format, and less than 1 MB in size.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preconfiguredapp_csharp">
@@ -1266,6 +1268,24 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location where the logout response is sent.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="skipgroups_csharp">
+<a href="#skipgroups_csharp" style="color: inherit; text-decoration: inherit;">Skip<wbr>Groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicator that allows the app to skip `groups` sync (it's also can be provided during import). Default is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="skipusers_csharp">
+<a href="#skipusers_csharp" style="color: inherit; text-decoration: inherit;">Skip<wbr>Users</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicator that allows the app to skip `users` sync (it's also can be provided during import). Default is `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spissuer_csharp">
@@ -1378,7 +1398,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Custom login page URL.
+    <dd>{{% md %}}Custom login page for this application.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accessibilityselfservice_go">
@@ -1387,7 +1407,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable self-service.
+    <dd>{{% md %}}Enable self-service. By default, it is `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="acsendpoints_go">
@@ -1595,7 +1615,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Application logo. The file must be in PNG, JPG, or GIF format, and less than 1 MB in size.
+    <dd>{{% md %}}Local file path to the logo. The file must be in PNG, JPG, or GIF format, and less than 1 MB in size.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preconfiguredapp_go">
@@ -1678,6 +1698,24 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location where the logout response is sent.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="skipgroups_go">
+<a href="#skipgroups_go" style="color: inherit; text-decoration: inherit;">Skip<wbr>Groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicator that allows the app to skip `groups` sync (it's also can be provided during import). Default is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="skipusers_go">
+<a href="#skipusers_go" style="color: inherit; text-decoration: inherit;">Skip<wbr>Users</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicator that allows the app to skip `users` sync (it's also can be provided during import). Default is `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spissuer_go">
@@ -1790,7 +1828,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Custom login page URL.
+    <dd>{{% md %}}Custom login page for this application.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accessibilityselfservice_nodejs">
@@ -1799,7 +1837,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Enable self-service.
+    <dd>{{% md %}}Enable self-service. By default, it is `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="acsendpoints_nodejs">
@@ -2007,7 +2045,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Application logo. The file must be in PNG, JPG, or GIF format, and less than 1 MB in size.
+    <dd>{{% md %}}Local file path to the logo. The file must be in PNG, JPG, or GIF format, and less than 1 MB in size.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preconfiguredapp_nodejs">
@@ -2090,6 +2128,24 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location where the logout response is sent.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="skipgroups_nodejs">
+<a href="#skipgroups_nodejs" style="color: inherit; text-decoration: inherit;">skip<wbr>Groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Indicator that allows the app to skip `groups` sync (it's also can be provided during import). Default is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="skipusers_nodejs">
+<a href="#skipusers_nodejs" style="color: inherit; text-decoration: inherit;">skip<wbr>Users</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Indicator that allows the app to skip `users` sync (it's also can be provided during import). Default is `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spissuer_nodejs">
@@ -2202,7 +2258,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Custom login page URL.
+    <dd>{{% md %}}Custom login page for this application.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accessibility_self_service_python">
@@ -2211,7 +2267,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable self-service.
+    <dd>{{% md %}}Enable self-service. By default, it is `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="acs_endpoints_python">
@@ -2419,7 +2475,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Application logo. The file must be in PNG, JPG, or GIF format, and less than 1 MB in size.
+    <dd>{{% md %}}Local file path to the logo. The file must be in PNG, JPG, or GIF format, and less than 1 MB in size.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preconfigured_app_python">
@@ -2502,6 +2558,24 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The location where the logout response is sent.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="skip_groups_python">
+<a href="#skip_groups_python" style="color: inherit; text-decoration: inherit;">skip_<wbr>groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicator that allows the app to skip `groups` sync (it's also can be provided during import). Default is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="skip_users_python">
+<a href="#skip_users_python" style="color: inherit; text-decoration: inherit;">skip_<wbr>users</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicator that allows the app to skip `users` sync (it's also can be provided during import). Default is `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sp_issuer_python">
@@ -3101,6 +3175,8 @@ Get an existing Saml resource's state with the given name, ID, and optional extr
         <span class="nx">single_logout_certificate</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">single_logout_issuer</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">single_logout_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">skip_groups</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">skip_users</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">sp_issuer</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">sso_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -3237,7 +3313,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Custom login page URL.
+    <dd>{{% md %}}Custom login page for this application.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_accessibilityselfservice_csharp">
@@ -3246,7 +3322,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable self-service.
+    <dd>{{% md %}}Enable self-service. By default, it is `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_acsendpoints_csharp">
@@ -3517,7 +3593,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Application logo. The file must be in PNG, JPG, or GIF format, and less than 1 MB in size.
+    <dd>{{% md %}}Local file path to the logo. The file must be in PNG, JPG, or GIF format, and less than 1 MB in size.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logourl_csharp">
@@ -3647,6 +3723,24 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
     <dd>{{% md %}}The location where the logout response is sent.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_skipgroups_csharp">
+<a href="#state_skipgroups_csharp" style="color: inherit; text-decoration: inherit;">Skip<wbr>Groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicator that allows the app to skip `groups` sync (it's also can be provided during import). Default is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_skipusers_csharp">
+<a href="#state_skipusers_csharp" style="color: inherit; text-decoration: inherit;">Skip<wbr>Users</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicator that allows the app to skip `users` sync (it's also can be provided during import). Default is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_spissuer_csharp">
 <a href="#state_spissuer_csharp" style="color: inherit; text-decoration: inherit;">Sp<wbr>Issuer</a>
 </span>
@@ -3748,7 +3842,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Custom login page URL.
+    <dd>{{% md %}}Custom login page for this application.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_accessibilityselfservice_go">
@@ -3757,7 +3851,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable self-service.
+    <dd>{{% md %}}Enable self-service. By default, it is `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_acsendpoints_go">
@@ -4028,7 +4122,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Application logo. The file must be in PNG, JPG, or GIF format, and less than 1 MB in size.
+    <dd>{{% md %}}Local file path to the logo. The file must be in PNG, JPG, or GIF format, and less than 1 MB in size.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logourl_go">
@@ -4158,6 +4252,24 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
     <dd>{{% md %}}The location where the logout response is sent.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_skipgroups_go">
+<a href="#state_skipgroups_go" style="color: inherit; text-decoration: inherit;">Skip<wbr>Groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicator that allows the app to skip `groups` sync (it's also can be provided during import). Default is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_skipusers_go">
+<a href="#state_skipusers_go" style="color: inherit; text-decoration: inherit;">Skip<wbr>Users</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicator that allows the app to skip `users` sync (it's also can be provided during import). Default is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_spissuer_go">
 <a href="#state_spissuer_go" style="color: inherit; text-decoration: inherit;">Sp<wbr>Issuer</a>
 </span>
@@ -4259,7 +4371,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Custom login page URL.
+    <dd>{{% md %}}Custom login page for this application.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_accessibilityselfservice_nodejs">
@@ -4268,7 +4380,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Enable self-service.
+    <dd>{{% md %}}Enable self-service. By default, it is `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_acsendpoints_nodejs">
@@ -4539,7 +4651,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Application logo. The file must be in PNG, JPG, or GIF format, and less than 1 MB in size.
+    <dd>{{% md %}}Local file path to the logo. The file must be in PNG, JPG, or GIF format, and less than 1 MB in size.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logourl_nodejs">
@@ -4669,6 +4781,24 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
     <dd>{{% md %}}The location where the logout response is sent.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_skipgroups_nodejs">
+<a href="#state_skipgroups_nodejs" style="color: inherit; text-decoration: inherit;">skip<wbr>Groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Indicator that allows the app to skip `groups` sync (it's also can be provided during import). Default is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_skipusers_nodejs">
+<a href="#state_skipusers_nodejs" style="color: inherit; text-decoration: inherit;">skip<wbr>Users</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Indicator that allows the app to skip `users` sync (it's also can be provided during import). Default is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_spissuer_nodejs">
 <a href="#state_spissuer_nodejs" style="color: inherit; text-decoration: inherit;">sp<wbr>Issuer</a>
 </span>
@@ -4770,7 +4900,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Custom login page URL.
+    <dd>{{% md %}}Custom login page for this application.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_accessibility_self_service_python">
@@ -4779,7 +4909,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable self-service.
+    <dd>{{% md %}}Enable self-service. By default, it is `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_acs_endpoints_python">
@@ -5050,7 +5180,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Application logo. The file must be in PNG, JPG, or GIF format, and less than 1 MB in size.
+    <dd>{{% md %}}Local file path to the logo. The file must be in PNG, JPG, or GIF format, and less than 1 MB in size.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logo_url_python">
@@ -5178,6 +5308,24 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The location where the logout response is sent.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_skip_groups_python">
+<a href="#state_skip_groups_python" style="color: inherit; text-decoration: inherit;">skip_<wbr>groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicator that allows the app to skip `groups` sync (it's also can be provided during import). Default is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_skip_users_python">
+<a href="#state_skip_users_python" style="color: inherit; text-decoration: inherit;">skip_<wbr>users</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicator that allows the app to skip `users` sync (it's also can be provided during import). Default is `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sp_issuer_python">
@@ -5662,6 +5810,20 @@ A SAML App can be imported via the Okta ID.
 
 ```sh
  $ pulumi import okta:app/saml:Saml example <app id>
+```
+
+ It's also possible to import app without groups or/and users. In this case ID may look like this
+
+```sh
+ $ pulumi import okta:app/saml:Saml example <app id>/skip_users
+```
+
+```sh
+ $ pulumi import okta:app/saml:Saml example <app id>/skip_users/skip_groups
+```
+
+```sh
+ $ pulumi import okta:app/saml:Saml example <app id>/skip_groups
 ```
 
 
