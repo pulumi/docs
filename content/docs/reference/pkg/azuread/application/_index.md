@@ -40,6 +40,7 @@ Applications can be imported using their object ID, e.g.
                 <span class="nx">fallback_public_client_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                 <span class="nx">group_membership_claims</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
                 <span class="nx">identifier_uris</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+                <span class="nx">logo_image</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                 <span class="nx">marketing_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                 <span class="nx">oauth2_post_response_required</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                 <span class="nx">optional_claims</span><span class="p">:</span> <span class="nx">Optional[ApplicationOptionalClaimsArgs]</span> = None<span class="p">,</span>
@@ -246,6 +247,15 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
     <dd>{{% md %}}A set of user-defined URI(s) that uniquely identify an application within its Azure AD tenant, or within a verified custom domain if the application is multi-tenant.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="logoimage_csharp">
+<a href="#logoimage_csharp" style="color: inherit; text-decoration: inherit;">Logo<wbr>Image</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A logo image to upload for the application, as a raw base64-encoded string. The image should be in gif, jpeg or png format. Note that once an image has been uploaded, it is not possible to remove it without replacing it with another image.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="marketingurl_csharp">
 <a href="#marketingurl_csharp" style="color: inherit; text-decoration: inherit;">Marketing<wbr>Url</a>
 </span>
@@ -437,6 +447,15 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A set of user-defined URI(s) that uniquely identify an application within its Azure AD tenant, or within a verified custom domain if the application is multi-tenant.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="logoimage_go">
+<a href="#logoimage_go" style="color: inherit; text-decoration: inherit;">Logo<wbr>Image</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A logo image to upload for the application, as a raw base64-encoded string. The image should be in gif, jpeg or png format. Note that once an image has been uploaded, it is not possible to remove it without replacing it with another image.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="marketingurl_go">
@@ -632,6 +651,15 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
     <dd>{{% md %}}A set of user-defined URI(s) that uniquely identify an application within its Azure AD tenant, or within a verified custom domain if the application is multi-tenant.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="logoimage_nodejs">
+<a href="#logoimage_nodejs" style="color: inherit; text-decoration: inherit;">logo<wbr>Image</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A logo image to upload for the application, as a raw base64-encoded string. The image should be in gif, jpeg or png format. Note that once an image has been uploaded, it is not possible to remove it without replacing it with another image.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="marketingurl_nodejs">
 <a href="#marketingurl_nodejs" style="color: inherit; text-decoration: inherit;">marketing<wbr>Url</a>
 </span>
@@ -825,6 +853,15 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
     <dd>{{% md %}}A set of user-defined URI(s) that uniquely identify an application within its Azure AD tenant, or within a verified custom domain if the application is multi-tenant.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="logo_image_python">
+<a href="#logo_image_python" style="color: inherit; text-decoration: inherit;">logo_<wbr>image</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A logo image to upload for the application, as a raw base64-encoded string. The image should be in gif, jpeg or png format. Note that once an image has been uploaded, it is not possible to remove it without replacing it with another image.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="marketing_url_python">
 <a href="#marketing_url_python" style="color: inherit; text-decoration: inherit;">marketing_<wbr>url</a>
 </span>
@@ -1003,7 +1040,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}CDN URL to the application's logo.
+    <dd>{{% md %}}CDN URL to the application's logo, as uploaded with the `logo_image` property.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="oauth2permissionscopeids_csharp">
@@ -1078,7 +1115,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}CDN URL to the application's logo.
+    <dd>{{% md %}}CDN URL to the application's logo, as uploaded with the `logo_image` property.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="oauth2permissionscopeids_go">
@@ -1153,7 +1190,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}CDN URL to the application's logo.
+    <dd>{{% md %}}CDN URL to the application's logo, as uploaded with the `logo_image` property.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="oauth2permissionscopeids_nodejs">
@@ -1228,7 +1265,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}CDN URL to the application's logo.
+    <dd>{{% md %}}CDN URL to the application's logo, as uploaded with the `logo_image` property.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="oauth2_permission_scope_ids_python">
@@ -1285,6 +1322,7 @@ Get an existing Application resource's state with the given name, ID, and option
         <span class="nx">fallback_public_client_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">group_membership_claims</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
         <span class="nx">identifier_uris</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+        <span class="nx">logo_image</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">logo_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">marketing_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">oauth2_permission_scope_ids</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
@@ -1505,13 +1543,22 @@ The following state arguments are supported:
     <dd>{{% md %}}A set of user-defined URI(s) that uniquely identify an application within its Azure AD tenant, or within a verified custom domain if the application is multi-tenant.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_logoimage_csharp">
+<a href="#state_logoimage_csharp" style="color: inherit; text-decoration: inherit;">Logo<wbr>Image</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A logo image to upload for the application, as a raw base64-encoded string. The image should be in gif, jpeg or png format. Note that once an image has been uploaded, it is not possible to remove it without replacing it with another image.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_logourl_csharp">
 <a href="#state_logourl_csharp" style="color: inherit; text-decoration: inherit;">Logo<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}CDN URL to the application's logo.
+    <dd>{{% md %}}CDN URL to the application's logo, as uploaded with the `logo_image` property.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_marketingurl_csharp">
@@ -1761,13 +1808,22 @@ The following state arguments are supported:
     <dd>{{% md %}}A set of user-defined URI(s) that uniquely identify an application within its Azure AD tenant, or within a verified custom domain if the application is multi-tenant.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_logoimage_go">
+<a href="#state_logoimage_go" style="color: inherit; text-decoration: inherit;">Logo<wbr>Image</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A logo image to upload for the application, as a raw base64-encoded string. The image should be in gif, jpeg or png format. Note that once an image has been uploaded, it is not possible to remove it without replacing it with another image.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_logourl_go">
 <a href="#state_logourl_go" style="color: inherit; text-decoration: inherit;">Logo<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}CDN URL to the application's logo.
+    <dd>{{% md %}}CDN URL to the application's logo, as uploaded with the `logo_image` property.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_marketingurl_go">
@@ -2017,13 +2073,22 @@ The following state arguments are supported:
     <dd>{{% md %}}A set of user-defined URI(s) that uniquely identify an application within its Azure AD tenant, or within a verified custom domain if the application is multi-tenant.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_logoimage_nodejs">
+<a href="#state_logoimage_nodejs" style="color: inherit; text-decoration: inherit;">logo<wbr>Image</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A logo image to upload for the application, as a raw base64-encoded string. The image should be in gif, jpeg or png format. Note that once an image has been uploaded, it is not possible to remove it without replacing it with another image.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_logourl_nodejs">
 <a href="#state_logourl_nodejs" style="color: inherit; text-decoration: inherit;">logo<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}CDN URL to the application's logo.
+    <dd>{{% md %}}CDN URL to the application's logo, as uploaded with the `logo_image` property.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_marketingurl_nodejs">
@@ -2273,13 +2338,22 @@ The following state arguments are supported:
     <dd>{{% md %}}A set of user-defined URI(s) that uniquely identify an application within its Azure AD tenant, or within a verified custom domain if the application is multi-tenant.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_logo_image_python">
+<a href="#state_logo_image_python" style="color: inherit; text-decoration: inherit;">logo_<wbr>image</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A logo image to upload for the application, as a raw base64-encoded string. The image should be in gif, jpeg or png format. Note that once an image has been uploaded, it is not possible to remove it without replacing it with another image.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_logo_url_python">
 <a href="#state_logo_url_python" style="color: inherit; text-decoration: inherit;">logo_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}CDN URL to the application's logo.
+    <dd>{{% md %}}CDN URL to the application's logo, as uploaded with the `logo_image` property.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_marketing_url_python">
@@ -3770,7 +3844,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}A set of URLs where user tokens are sent for sign-in, or the redirect URIs where OAuth 2.0 authorization codes and access tokens are sent.
+    <dd>{{% md %}}A set of URLs where user tokens are sent for sign-in, or the redirect URIs where OAuth 2.0 authorization codes and access tokens are sent. Must be a valid `https` or `ms-appx-web` URL.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3783,7 +3857,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}A set of URLs where user tokens are sent for sign-in, or the redirect URIs where OAuth 2.0 authorization codes and access tokens are sent.
+    <dd>{{% md %}}A set of URLs where user tokens are sent for sign-in, or the redirect URIs where OAuth 2.0 authorization codes and access tokens are sent. Must be a valid `https` or `ms-appx-web` URL.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3796,7 +3870,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}A set of URLs where user tokens are sent for sign-in, or the redirect URIs where OAuth 2.0 authorization codes and access tokens are sent.
+    <dd>{{% md %}}A set of URLs where user tokens are sent for sign-in, or the redirect URIs where OAuth 2.0 authorization codes and access tokens are sent. Must be a valid `https` or `ms-appx-web` URL.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3809,7 +3883,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}A set of URLs where user tokens are sent for sign-in, or the redirect URIs where OAuth 2.0 authorization codes and access tokens are sent.
+    <dd>{{% md %}}A set of URLs where user tokens are sent for sign-in, or the redirect URIs where OAuth 2.0 authorization codes and access tokens are sent. Must be a valid `https` or `ms-appx-web` URL.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -4004,7 +4078,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}A set of URLs where user tokens are sent for sign-in, or the redirect URIs where OAuth 2.0 authorization codes and access tokens are sent.
+    <dd>{{% md %}}A set of URLs where user tokens are sent for sign-in, or the redirect URIs where OAuth 2.0 authorization codes and access tokens are sent. Must be a valid `https` URL.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -4017,7 +4091,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}A set of URLs where user tokens are sent for sign-in, or the redirect URIs where OAuth 2.0 authorization codes and access tokens are sent.
+    <dd>{{% md %}}A set of URLs where user tokens are sent for sign-in, or the redirect URIs where OAuth 2.0 authorization codes and access tokens are sent. Must be a valid `https` URL.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -4030,7 +4104,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}A set of URLs where user tokens are sent for sign-in, or the redirect URIs where OAuth 2.0 authorization codes and access tokens are sent.
+    <dd>{{% md %}}A set of URLs where user tokens are sent for sign-in, or the redirect URIs where OAuth 2.0 authorization codes and access tokens are sent. Must be a valid `https` URL.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -4043,7 +4117,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}A set of URLs where user tokens are sent for sign-in, or the redirect URIs where OAuth 2.0 authorization codes and access tokens are sent.
+    <dd>{{% md %}}A set of URLs where user tokens are sent for sign-in, or the redirect URIs where OAuth 2.0 authorization codes and access tokens are sent. Must be a valid `https` URL.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -4085,7 +4159,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}A set of URLs where user tokens are sent for sign-in, or the redirect URIs where OAuth 2.0 authorization codes and access tokens are sent.
+    <dd>{{% md %}}A set of URLs where user tokens are sent for sign-in, or the redirect URIs where OAuth 2.0 authorization codes and access tokens are sent. Must be a valid `http` URL or a URN.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -4125,7 +4199,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}A set of URLs where user tokens are sent for sign-in, or the redirect URIs where OAuth 2.0 authorization codes and access tokens are sent.
+    <dd>{{% md %}}A set of URLs where user tokens are sent for sign-in, or the redirect URIs where OAuth 2.0 authorization codes and access tokens are sent. Must be a valid `http` URL or a URN.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -4165,7 +4239,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}A set of URLs where user tokens are sent for sign-in, or the redirect URIs where OAuth 2.0 authorization codes and access tokens are sent.
+    <dd>{{% md %}}A set of URLs where user tokens are sent for sign-in, or the redirect URIs where OAuth 2.0 authorization codes and access tokens are sent. Must be a valid `http` URL or a URN.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -4205,7 +4279,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}A set of URLs where user tokens are sent for sign-in, or the redirect URIs where OAuth 2.0 authorization codes and access tokens are sent.
+    <dd>{{% md %}}A set of URLs where user tokens are sent for sign-in, or the redirect URIs where OAuth 2.0 authorization codes and access tokens are sent. Must be a valid `http` URL or a URN.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

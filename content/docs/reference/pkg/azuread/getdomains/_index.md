@@ -21,6 +21,85 @@ When authenticated with a service principal, this data source requires one of th
 When authenticated with a user principal, this data source does not require any additional roles.
 
 
+{{% examples %}}
+
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+
+
+
+
+{{< example csharp >}}
+
+```csharp
+using System.Linq;
+using Pulumi;
+using AzureAD = Pulumi.AzureAD;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var aadDomains = Output.Create(AzureAD.GetDomains.InvokeAsync());
+        this.DomainNames = 
+        {
+            aadDomains.Apply(aadDomains => aadDomains.Domains),
+        }.Select(__item => __item?.DomainName).ToList();
+    }
+
+    [Output("domainNames")]
+    public Output<string> DomainNames { get; set; }
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+Coming soon!
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_azuread as azuread
+
+aad_domains = azuread.get_domains()
+pulumi.export("domainNames", [__item.domain_name for __item in [aad_domains.domains]])
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azuread from "@pulumi/azuread";
+
+const aadDomains = azuread.getDomains({});
+export const domainNames = [aadDomains.then(aadDomains => aadDomains.domains)].map(__item => __item?.domainName);
+```
+
+
+{{< /example >}}
+
+
+
+
+
+{{% /examples %}}
+
+
 
 
 ## Using getDomains {#using}

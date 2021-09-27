@@ -33,7 +33,7 @@ This resource does not support importing.
                         <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                         <span class="nx">end_date</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                         <span class="nx">end_date_relative</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                        <span class="nx">keepers</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+                        <span class="nx">rotate_when_changed</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
                         <span class="nx">start_date</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">ApplicationPassword</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
@@ -200,13 +200,13 @@ The ApplicationPassword resource accepts the following [input]({{< relref "/docs
     <dd>{{% md %}}A relative duration for which the password is valid until, for example `240h` (10 days) or `2400h30m`. Changing this field forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="keepers_csharp">
-<a href="#keepers_csharp" style="color: inherit; text-decoration: inherit;">Keepers</a>
+        <span id="rotatewhenchanged_csharp">
+<a href="#rotatewhenchanged_csharp" style="color: inherit; text-decoration: inherit;">Rotate<wbr>When<wbr>Changed</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Arbitrary map of values that, when changed, will trigger rotation of the password
+    <dd>{{% md %}}A map of arbitrary key/value pairs that will force recreation of the password when they change, enabling password rotation based on external conditions such as a rotating timestamp. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="startdate_csharp">
@@ -258,13 +258,13 @@ The ApplicationPassword resource accepts the following [input]({{< relref "/docs
     <dd>{{% md %}}A relative duration for which the password is valid until, for example `240h` (10 days) or `2400h30m`. Changing this field forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="keepers_go">
-<a href="#keepers_go" style="color: inherit; text-decoration: inherit;">Keepers</a>
+        <span id="rotatewhenchanged_go">
+<a href="#rotatewhenchanged_go" style="color: inherit; text-decoration: inherit;">Rotate<wbr>When<wbr>Changed</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Arbitrary map of values that, when changed, will trigger rotation of the password
+    <dd>{{% md %}}A map of arbitrary key/value pairs that will force recreation of the password when they change, enabling password rotation based on external conditions such as a rotating timestamp. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="startdate_go">
@@ -316,13 +316,13 @@ The ApplicationPassword resource accepts the following [input]({{< relref "/docs
     <dd>{{% md %}}A relative duration for which the password is valid until, for example `240h` (10 days) or `2400h30m`. Changing this field forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="keepers_nodejs">
-<a href="#keepers_nodejs" style="color: inherit; text-decoration: inherit;">keepers</a>
+        <span id="rotatewhenchanged_nodejs">
+<a href="#rotatewhenchanged_nodejs" style="color: inherit; text-decoration: inherit;">rotate<wbr>When<wbr>Changed</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Arbitrary map of values that, when changed, will trigger rotation of the password
+    <dd>{{% md %}}A map of arbitrary key/value pairs that will force recreation of the password when they change, enabling password rotation based on external conditions such as a rotating timestamp. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="startdate_nodejs">
@@ -374,13 +374,13 @@ The ApplicationPassword resource accepts the following [input]({{< relref "/docs
     <dd>{{% md %}}A relative duration for which the password is valid until, for example `240h` (10 days) or `2400h30m`. Changing this field forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="keepers_python">
-<a href="#keepers_python" style="color: inherit; text-decoration: inherit;">keepers</a>
+        <span id="rotate_when_changed_python">
+<a href="#rotate_when_changed_python" style="color: inherit; text-decoration: inherit;">rotate_<wbr>when_<wbr>changed</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Arbitrary map of values that, when changed, will trigger rotation of the password
+    <dd>{{% md %}}A map of arbitrary key/value pairs that will force recreation of the password when they change, enabling password rotation based on external conditions such as a rotating timestamp. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="start_date_python">
@@ -540,8 +540,8 @@ Get an existing ApplicationPassword resource's state with the given name, ID, an
         <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">end_date</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">end_date_relative</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-        <span class="nx">keepers</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
         <span class="nx">key_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">rotate_when_changed</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
         <span class="nx">start_date</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">value</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> ApplicationPassword</code></pre></div>
 {{% /choosable %}}
@@ -692,15 +692,6 @@ The following state arguments are supported:
     <dd>{{% md %}}A relative duration for which the password is valid until, for example `240h` (10 days) or `2400h30m`. Changing this field forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="state_keepers_csharp">
-<a href="#state_keepers_csharp" style="color: inherit; text-decoration: inherit;">Keepers</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, string&gt;</span>
-    </dt>
-    <dd>{{% md %}}Arbitrary map of values that, when changed, will trigger rotation of the password
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="state_keyid_csharp">
 <a href="#state_keyid_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Id</a>
 </span>
@@ -708,6 +699,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A UUID used to uniquely identify this password credential.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_rotatewhenchanged_csharp">
+<a href="#state_rotatewhenchanged_csharp" style="color: inherit; text-decoration: inherit;">Rotate<wbr>When<wbr>Changed</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A map of arbitrary key/value pairs that will force recreation of the password when they change, enabling password rotation based on external conditions such as a rotating timestamp. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_startdate_csharp">
@@ -768,15 +768,6 @@ The following state arguments are supported:
     <dd>{{% md %}}A relative duration for which the password is valid until, for example `240h` (10 days) or `2400h30m`. Changing this field forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="state_keepers_go">
-<a href="#state_keepers_go" style="color: inherit; text-decoration: inherit;">Keepers</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]string</span>
-    </dt>
-    <dd>{{% md %}}Arbitrary map of values that, when changed, will trigger rotation of the password
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="state_keyid_go">
 <a href="#state_keyid_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Id</a>
 </span>
@@ -784,6 +775,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A UUID used to uniquely identify this password credential.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_rotatewhenchanged_go">
+<a href="#state_rotatewhenchanged_go" style="color: inherit; text-decoration: inherit;">Rotate<wbr>When<wbr>Changed</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}A map of arbitrary key/value pairs that will force recreation of the password when they change, enabling password rotation based on external conditions such as a rotating timestamp. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_startdate_go">
@@ -844,15 +844,6 @@ The following state arguments are supported:
     <dd>{{% md %}}A relative duration for which the password is valid until, for example `240h` (10 days) or `2400h30m`. Changing this field forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="state_keepers_nodejs">
-<a href="#state_keepers_nodejs" style="color: inherit; text-decoration: inherit;">keepers</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
-    </dt>
-    <dd>{{% md %}}Arbitrary map of values that, when changed, will trigger rotation of the password
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="state_keyid_nodejs">
 <a href="#state_keyid_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Id</a>
 </span>
@@ -860,6 +851,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A UUID used to uniquely identify this password credential.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_rotatewhenchanged_nodejs">
+<a href="#state_rotatewhenchanged_nodejs" style="color: inherit; text-decoration: inherit;">rotate<wbr>When<wbr>Changed</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}A map of arbitrary key/value pairs that will force recreation of the password when they change, enabling password rotation based on external conditions such as a rotating timestamp. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_startdate_nodejs">
@@ -920,15 +920,6 @@ The following state arguments are supported:
     <dd>{{% md %}}A relative duration for which the password is valid until, for example `240h` (10 days) or `2400h30m`. Changing this field forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="state_keepers_python">
-<a href="#state_keepers_python" style="color: inherit; text-decoration: inherit;">keepers</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
-    </dt>
-    <dd>{{% md %}}Arbitrary map of values that, when changed, will trigger rotation of the password
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="state_key_id_python">
 <a href="#state_key_id_python" style="color: inherit; text-decoration: inherit;">key_<wbr>id</a>
 </span>
@@ -936,6 +927,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A UUID used to uniquely identify this password credential.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_rotate_when_changed_python">
+<a href="#state_rotate_when_changed_python" style="color: inherit; text-decoration: inherit;">rotate_<wbr>when_<wbr>changed</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}A map of arbitrary key/value pairs that will force recreation of the password when they change, enabling password rotation based on external conditions such as a rotating timestamp. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_start_date_python">

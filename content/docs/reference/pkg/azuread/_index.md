@@ -14,11 +14,14 @@ A Pulumi package for creating and managing azuread cloud resources.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
+    <li><a href="approleassignment" title="AppRoleAssignment"><span class="symbol resource"></span>AppRoleAssignment</a></li>
     <li><a href="application" title="Application"><span class="symbol resource"></span>Application</a></li>
     <li><a href="applicationcertificate" title="ApplicationCertificate"><span class="symbol resource"></span>ApplicationCertificate</a></li>
     <li><a href="applicationpassword" title="ApplicationPassword"><span class="symbol resource"></span>ApplicationPassword</a></li>
     <li><a href="applicationpreauthorized" title="ApplicationPreAuthorized"><span class="symbol resource"></span>ApplicationPreAuthorized</a></li>
     <li><a href="conditionalaccesspolicy" title="ConditionalAccessPolicy"><span class="symbol resource"></span>ConditionalAccessPolicy</a></li>
+    <li><a href="directoryrole" title="DirectoryRole"><span class="symbol resource"></span>DirectoryRole</a></li>
+    <li><a href="directoryrolemember" title="DirectoryRoleMember"><span class="symbol resource"></span>DirectoryRoleMember</a></li>
     <li><a href="group" title="Group"><span class="symbol resource"></span>Group</a></li>
     <li><a href="groupmember" title="GroupMember"><span class="symbol resource"></span>GroupMember</a></li>
     <li><a href="invitation" title="Invitation"><span class="symbol resource"></span>Invitation</a></li>
@@ -54,6 +57,6 @@ A Pulumi package for creating and managing azuread cloud resources.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`azuread` Terraform Provider](https://github.com/hashicorp/terraform-provider-azuread).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>5.2.0</dd>
+	<dd>5.3.0</dd>
 </dl>
 
