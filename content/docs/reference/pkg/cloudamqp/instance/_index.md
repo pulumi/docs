@@ -300,7 +300,7 @@ const instance = new cloudamqp.Instance("instance", {
 
 ## Instance Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Architecture and Concepts docs.
 
 ### Inputs
 
@@ -353,7 +353,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of nodes, 1, 3 or 5. **Note: Changed from optional to computed. In order to change number of nodes, the subscription plan needs to be updated.**
+    <dd>{{% md %}}Number of nodes, 1, 3 or 5. **DEPRECATED. In order to change number of nodes, the subscription `plan` needs to be updated.**
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rmqversion_csharp">
@@ -429,7 +429,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of nodes, 1, 3 or 5. **Note: Changed from optional to computed. In order to change number of nodes, the subscription plan needs to be updated.**
+    <dd>{{% md %}}Number of nodes, 1, 3 or 5. **DEPRECATED. In order to change number of nodes, the subscription `plan` needs to be updated.**
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rmqversion_go">
@@ -505,7 +505,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Number of nodes, 1, 3 or 5. **Note: Changed from optional to computed. In order to change number of nodes, the subscription plan needs to be updated.**
+    <dd>{{% md %}}Number of nodes, 1, 3 or 5. **DEPRECATED. In order to change number of nodes, the subscription `plan` needs to be updated.**
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rmqversion_nodejs">
@@ -581,7 +581,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of nodes, 1, 3 or 5. **Note: Changed from optional to computed. In order to change number of nodes, the subscription plan needs to be updated.**
+    <dd>{{% md %}}Number of nodes, 1, 3 or 5. **DEPRECATED. In order to change number of nodes, the subscription `plan` needs to be updated.**
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rmq_version_python">
@@ -628,7 +628,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}(Computed) API key needed to communicate to CloudAMQP's second API. The second API is used to manage alarms, integration and more, full description [CloudAMQP API](https://docs.cloudamqp.com/cloudamqp_api.html).
+    <dd>{{% md %}}API key needed to communicate to CloudAMQP's second API. The second API is used to manage alarms, integration and more, full description [CloudAMQP API](https://docs.cloudamqp.com/cloudamqp_api.html).
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dedicated_csharp">
@@ -646,7 +646,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}(Computed) The host name for the CloudAMQP instance.
+    <dd>{{% md %}}The host name for the CloudAMQP instance.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
@@ -672,7 +672,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}(Computed) AMQP server endpoint. `amqps://{username}:{password}@{hostname}/{vhost}`
+    <dd>{{% md %}}AMQP server endpoint. `amqps://{username}:{password}@{hostname}/{vhost}`
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vhost_csharp">
@@ -681,7 +681,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}(Computed) The virtual host used by Rabbit MQ.
+    <dd>{{% md %}}The virtual host used by Rabbit MQ.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -694,7 +694,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}(Computed) API key needed to communicate to CloudAMQP's second API. The second API is used to manage alarms, integration and more, full description [CloudAMQP API](https://docs.cloudamqp.com/cloudamqp_api.html).
+    <dd>{{% md %}}API key needed to communicate to CloudAMQP's second API. The second API is used to manage alarms, integration and more, full description [CloudAMQP API](https://docs.cloudamqp.com/cloudamqp_api.html).
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dedicated_go">
@@ -712,7 +712,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}(Computed) The host name for the CloudAMQP instance.
+    <dd>{{% md %}}The host name for the CloudAMQP instance.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
@@ -738,7 +738,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}(Computed) AMQP server endpoint. `amqps://{username}:{password}@{hostname}/{vhost}`
+    <dd>{{% md %}}AMQP server endpoint. `amqps://{username}:{password}@{hostname}/{vhost}`
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vhost_go">
@@ -747,7 +747,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}(Computed) The virtual host used by Rabbit MQ.
+    <dd>{{% md %}}The virtual host used by Rabbit MQ.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -760,7 +760,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}(Computed) API key needed to communicate to CloudAMQP's second API. The second API is used to manage alarms, integration and more, full description [CloudAMQP API](https://docs.cloudamqp.com/cloudamqp_api.html).
+    <dd>{{% md %}}API key needed to communicate to CloudAMQP's second API. The second API is used to manage alarms, integration and more, full description [CloudAMQP API](https://docs.cloudamqp.com/cloudamqp_api.html).
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dedicated_nodejs">
@@ -778,7 +778,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}(Computed) The host name for the CloudAMQP instance.
+    <dd>{{% md %}}The host name for the CloudAMQP instance.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
@@ -804,7 +804,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}(Computed) AMQP server endpoint. `amqps://{username}:{password}@{hostname}/{vhost}`
+    <dd>{{% md %}}AMQP server endpoint. `amqps://{username}:{password}@{hostname}/{vhost}`
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vhost_nodejs">
@@ -813,7 +813,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}(Computed) The virtual host used by Rabbit MQ.
+    <dd>{{% md %}}The virtual host used by Rabbit MQ.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -826,7 +826,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}(Computed) API key needed to communicate to CloudAMQP's second API. The second API is used to manage alarms, integration and more, full description [CloudAMQP API](https://docs.cloudamqp.com/cloudamqp_api.html).
+    <dd>{{% md %}}API key needed to communicate to CloudAMQP's second API. The second API is used to manage alarms, integration and more, full description [CloudAMQP API](https://docs.cloudamqp.com/cloudamqp_api.html).
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dedicated_python">
@@ -844,7 +844,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}(Computed) The host name for the CloudAMQP instance.
+    <dd>{{% md %}}The host name for the CloudAMQP instance.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
@@ -870,7 +870,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}(Computed) AMQP server endpoint. `amqps://{username}:{password}@{hostname}/{vhost}`
+    <dd>{{% md %}}AMQP server endpoint. `amqps://{username}:{password}@{hostname}/{vhost}`
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vhost_python">
@@ -879,7 +879,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}(Computed) The virtual host used by Rabbit MQ.
+    <dd>{{% md %}}The virtual host used by Rabbit MQ.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1031,7 +1031,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}(Computed) API key needed to communicate to CloudAMQP's second API. The second API is used to manage alarms, integration and more, full description [CloudAMQP API](https://docs.cloudamqp.com/cloudamqp_api.html).
+    <dd>{{% md %}}API key needed to communicate to CloudAMQP's second API. The second API is used to manage alarms, integration and more, full description [CloudAMQP API](https://docs.cloudamqp.com/cloudamqp_api.html).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dedicated_csharp">
@@ -1049,7 +1049,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}(Computed) The host name for the CloudAMQP instance.
+    <dd>{{% md %}}The host name for the CloudAMQP instance.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
@@ -1076,7 +1076,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of nodes, 1, 3 or 5. **Note: Changed from optional to computed. In order to change number of nodes, the subscription plan needs to be updated.**
+    <dd>{{% md %}}Number of nodes, 1, 3 or 5. **DEPRECATED. In order to change number of nodes, the subscription `plan` needs to be updated.**
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_plan_csharp">
@@ -1130,7 +1130,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}(Computed) AMQP server endpoint. `amqps://{username}:{password}@{hostname}/{vhost}`
+    <dd>{{% md %}}AMQP server endpoint. `amqps://{username}:{password}@{hostname}/{vhost}`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vhost_csharp">
@@ -1139,7 +1139,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}(Computed) The virtual host used by Rabbit MQ.
+    <dd>{{% md %}}The virtual host used by Rabbit MQ.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpcsubnet_csharp">
@@ -1161,7 +1161,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}(Computed) API key needed to communicate to CloudAMQP's second API. The second API is used to manage alarms, integration and more, full description [CloudAMQP API](https://docs.cloudamqp.com/cloudamqp_api.html).
+    <dd>{{% md %}}API key needed to communicate to CloudAMQP's second API. The second API is used to manage alarms, integration and more, full description [CloudAMQP API](https://docs.cloudamqp.com/cloudamqp_api.html).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dedicated_go">
@@ -1179,7 +1179,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}(Computed) The host name for the CloudAMQP instance.
+    <dd>{{% md %}}The host name for the CloudAMQP instance.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
@@ -1206,7 +1206,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of nodes, 1, 3 or 5. **Note: Changed from optional to computed. In order to change number of nodes, the subscription plan needs to be updated.**
+    <dd>{{% md %}}Number of nodes, 1, 3 or 5. **DEPRECATED. In order to change number of nodes, the subscription `plan` needs to be updated.**
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_plan_go">
@@ -1260,7 +1260,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}(Computed) AMQP server endpoint. `amqps://{username}:{password}@{hostname}/{vhost}`
+    <dd>{{% md %}}AMQP server endpoint. `amqps://{username}:{password}@{hostname}/{vhost}`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vhost_go">
@@ -1269,7 +1269,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}(Computed) The virtual host used by Rabbit MQ.
+    <dd>{{% md %}}The virtual host used by Rabbit MQ.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpcsubnet_go">
@@ -1291,7 +1291,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}(Computed) API key needed to communicate to CloudAMQP's second API. The second API is used to manage alarms, integration and more, full description [CloudAMQP API](https://docs.cloudamqp.com/cloudamqp_api.html).
+    <dd>{{% md %}}API key needed to communicate to CloudAMQP's second API. The second API is used to manage alarms, integration and more, full description [CloudAMQP API](https://docs.cloudamqp.com/cloudamqp_api.html).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dedicated_nodejs">
@@ -1309,7 +1309,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}(Computed) The host name for the CloudAMQP instance.
+    <dd>{{% md %}}The host name for the CloudAMQP instance.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
@@ -1336,7 +1336,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Number of nodes, 1, 3 or 5. **Note: Changed from optional to computed. In order to change number of nodes, the subscription plan needs to be updated.**
+    <dd>{{% md %}}Number of nodes, 1, 3 or 5. **DEPRECATED. In order to change number of nodes, the subscription `plan` needs to be updated.**
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_plan_nodejs">
@@ -1390,7 +1390,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}(Computed) AMQP server endpoint. `amqps://{username}:{password}@{hostname}/{vhost}`
+    <dd>{{% md %}}AMQP server endpoint. `amqps://{username}:{password}@{hostname}/{vhost}`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vhost_nodejs">
@@ -1399,7 +1399,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}(Computed) The virtual host used by Rabbit MQ.
+    <dd>{{% md %}}The virtual host used by Rabbit MQ.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpcsubnet_nodejs">
@@ -1421,7 +1421,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}(Computed) API key needed to communicate to CloudAMQP's second API. The second API is used to manage alarms, integration and more, full description [CloudAMQP API](https://docs.cloudamqp.com/cloudamqp_api.html).
+    <dd>{{% md %}}API key needed to communicate to CloudAMQP's second API. The second API is used to manage alarms, integration and more, full description [CloudAMQP API](https://docs.cloudamqp.com/cloudamqp_api.html).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dedicated_python">
@@ -1439,7 +1439,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}(Computed) The host name for the CloudAMQP instance.
+    <dd>{{% md %}}The host name for the CloudAMQP instance.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
@@ -1466,7 +1466,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of nodes, 1, 3 or 5. **Note: Changed from optional to computed. In order to change number of nodes, the subscription plan needs to be updated.**
+    <dd>{{% md %}}Number of nodes, 1, 3 or 5. **DEPRECATED. In order to change number of nodes, the subscription `plan` needs to be updated.**
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_plan_python">
@@ -1520,7 +1520,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}(Computed) AMQP server endpoint. `amqps://{username}:{password}@{hostname}/{vhost}`
+    <dd>{{% md %}}AMQP server endpoint. `amqps://{username}:{password}@{hostname}/{vhost}`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vhost_python">
@@ -1529,7 +1529,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}(Computed) The virtual host used by Rabbit MQ.
+    <dd>{{% md %}}The virtual host used by Rabbit MQ.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpc_subnet_python">
@@ -1552,7 +1552,7 @@ The following state arguments are supported:
 `cloudamqp_instance`can be imported using CloudAMQP internal identifier. To retrieve the identifier for an instance, use [CloudAMQP customer API](https://docs.cloudamqp.com/#list-instances).
 
 ```sh
- $ pulumi import cloudamqp:index/instance:Instance instance <instance_id>`
+ $ pulumi import cloudamqp:index/instance:Instance instance <id>`
 ```
 
 

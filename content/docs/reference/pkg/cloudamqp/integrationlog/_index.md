@@ -31,7 +31,7 @@ Valid names for third party log integration.
 |------------|---------------------------------------------------------------|
 | cloudwatchlog | Create a IAM with programmatic access. |
 | logentries | Create a Logentries token at https://logentries.com/app#/add-log/manual  |
-| loggly     | Create a Loggly token at https://{your-company}.loggly.com/tokens |
+| loggly     | Create a Loggly token at https://your-company}.loggly.com/tokens |
 | papertrail | Create a Papertrail endpoint https://papertrailapp.com/systems/setup |
 | splunk     | Create a HTTP Event Collector token at https://.cloud.splunk.com/en-US/manager/search/http-eventcollector |
 | datadog       | Create a Datadog API key at app.datadoghq.com |
@@ -444,7 +444,7 @@ const stackdriver = new cloudamqp.IntegrationLog("stackdriver", {
 
 ## IntegrationLog Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Architecture and Concepts docs.
 
 ### Inputs
 
@@ -1623,7 +1623,7 @@ The following state arguments are supported:
 `cloudamqp_integration_log`can be imported using the resource identifier together with CloudAMQP instance identifier. The name and identifier are CSV separated, see example below.
 
 ```sh
- $ pulumi import cloudamqp:index/integrationLog:IntegrationLog <resource_name> <resource_id>,<instance_id>`
+ $ pulumi import cloudamqp:index/integrationLog:IntegrationLog <resource_name> <id>,<instance_id>`
 ```
 
 

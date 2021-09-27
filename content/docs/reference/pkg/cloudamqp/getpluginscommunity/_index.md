@@ -15,17 +15,20 @@ Use this data source to retrieve information about available community plugins f
 
 * `instance_id` - (Required) The CloudAMQP instance identifier.
 
-## Attribute reference
+## Attributes reference
 
-* `plugins` - (Computed) An array of community plugins. Each `plugins` block consists of the fields documented below.
+All attributes reference are computed
+
+* `id`      - The identifier for this resource.
+* `plugins` - An array of community plugins. Each `plugins` block consists of the fields documented below.
 
 ***
 
 The `plugins` block consists of
 
-* `name`        - (Computed) The type of the recipient.
-* `require`     - (Computed) Min. required Rabbit MQ version to be used.
-* `description` - (Computed) Description of what the plugin does.
+* `name`        - The type of the recipient.
+* `require`     - Min. required Rabbit MQ version to be used.
+* `description` - Description of what the plugin does.
 
 ## Dependency
 
@@ -141,7 +144,6 @@ const communitPlugins = cloudamqp.getPluginsCommunity({
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_plugins_community(</span><span class="nx">instance_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
-                          <span class="nx">plugins</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetPluginsCommunityPlugin]]</span> = None<span class="p">,</span>
                           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetPluginsCommunityResult</code></pre></div>
 {{% /choosable %}}
 
@@ -174,14 +176,6 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="plugins_csharp">
-<a href="#plugins_csharp" style="color: inherit; text-decoration: inherit;">Plugins</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpluginscommunityplugin">List&lt;Pulumi.<wbr>Cloud<wbr>Amqp.<wbr>Inputs.<wbr>Get<wbr>Plugins<wbr>Community<wbr>Plugin&gt;</a></span>
-    </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -193,14 +187,6 @@ The following arguments are supported:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="plugins_go">
-<a href="#plugins_go" style="color: inherit; text-decoration: inherit;">Plugins</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpluginscommunityplugin">[]Get<wbr>Plugins<wbr>Community<wbr>Plugin</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -214,14 +200,6 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="plugins_nodejs">
-<a href="#plugins_nodejs" style="color: inherit; text-decoration: inherit;">plugins</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpluginscommunityplugin">Get<wbr>Plugins<wbr>Community<wbr>Plugin[]</a></span>
-    </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -233,14 +211,6 @@ The following arguments are supported:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="plugins_python">
-<a href="#plugins_python" style="color: inherit; text-decoration: inherit;">plugins</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpluginscommunityplugin">Sequence[Get<wbr>Plugins<wbr>Community<wbr>Plugin]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -381,24 +351,24 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="require_csharp">
 <a href="#require_csharp" style="color: inherit; text-decoration: inherit;">Require</a>
 </span>
@@ -409,24 +379,24 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="require_go">
 <a href="#require_go" style="color: inherit; text-decoration: inherit;">Require</a>
 </span>
@@ -437,24 +407,24 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="require_nodejs">
 <a href="#require_nodejs" style="color: inherit; text-decoration: inherit;">require</a>
 </span>
@@ -465,24 +435,24 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="require_python">
 <a href="#require_python" style="color: inherit; text-decoration: inherit;">require</a>
 </span>

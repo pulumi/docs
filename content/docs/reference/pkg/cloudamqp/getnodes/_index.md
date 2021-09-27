@@ -15,20 +15,24 @@ Use this data source to retrieve information about the node(s) created by CloudA
 
 * `instance_id` - (Required) The CloudAMQP instance identifier.
 
-## Attribute reference
+## Attributes reference
 
-* `nodes` - (Computed) An array of node information. Each `nodes` block consists of the fields documented below.
+All attributes reference are computed
+
+* `id`    - The identifier for this resource.
+* `nodes` - An array of node information. Each `nodes` block consists of the fields documented below.
 
 ***
 
 The `nodes` block consist of
 
-* `hostname`          - (Computed) Hostname assigned to the node.
-* `name`              - (Computed) Name of the node.
-* `running`           - (Computed) Is the node running?
-* `rabbitmq_version`  - (Computed) Currently configured Rabbit MQ version on the node.
-* `erlang_version`    - (Computed) Currently used Erlanbg version on the node.
-* `hipe`              - (Computed) Enable or disable High-performance Erlang.
+* `hostname`          - Hostname assigned to the node.
+* `name`              - Name of the node.
+* `running`           - Is the node running?
+* `rabbitmq_version`  - Currently configured Rabbit MQ version on the node.
+* `erlang_version`    - Currently used Erlanbg version on the node.
+* `hipe`              - Enable or disable High-performance Erlang.
+* `configured`        - Is the node configured?
 
 ## Dependency
 
@@ -144,7 +148,6 @@ const nodes = cloudamqp.getNodes({
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_nodes(</span><span class="nx">instance_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
-              <span class="nx">nodes</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetNodesNode]]</span> = None<span class="p">,</span>
               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetNodesResult</code></pre></div>
 {{% /choosable %}}
 
@@ -177,14 +180,6 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="nodes_csharp">
-<a href="#nodes_csharp" style="color: inherit; text-decoration: inherit;">Nodes</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getnodesnode">List&lt;Pulumi.<wbr>Cloud<wbr>Amqp.<wbr>Inputs.<wbr>Get<wbr>Nodes<wbr>Node&gt;</a></span>
-    </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -196,14 +191,6 @@ The following arguments are supported:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="nodes_go">
-<a href="#nodes_go" style="color: inherit; text-decoration: inherit;">Nodes</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getnodesnode">[]Get<wbr>Nodes<wbr>Node</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -217,14 +204,6 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="nodes_nodejs">
-<a href="#nodes_nodejs" style="color: inherit; text-decoration: inherit;">nodes</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getnodesnode">Get<wbr>Nodes<wbr>Node[]</a></span>
-    </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -236,14 +215,6 @@ The following arguments are supported:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="nodes_python">
-<a href="#nodes_python" style="color: inherit; text-decoration: inherit;">nodes</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getnodesnode">Sequence[Get<wbr>Nodes<wbr>Node]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -386,6 +357,14 @@ The following output properties are available:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
+        <span id="configured_csharp">
+<a href="#configured_csharp" style="color: inherit; text-decoration: inherit;">Configured</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="erlangversion_csharp">
 <a href="#erlangversion_csharp" style="color: inherit; text-decoration: inherit;">Erlang<wbr>Version</a>
 </span>
@@ -437,6 +416,14 @@ The following output properties are available:
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="configured_go">
+<a href="#configured_go" style="color: inherit; text-decoration: inherit;">Configured</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="erlangversion_go">
 <a href="#erlangversion_go" style="color: inherit; text-decoration: inherit;">Erlang<wbr>Version</a>
@@ -490,6 +477,14 @@ The following output properties are available:
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
+        <span id="configured_nodejs">
+<a href="#configured_nodejs" style="color: inherit; text-decoration: inherit;">configured</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="erlangversion_nodejs">
 <a href="#erlangversion_nodejs" style="color: inherit; text-decoration: inherit;">erlang<wbr>Version</a>
 </span>
@@ -541,6 +536,14 @@ The following output properties are available:
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="configured_python">
+<a href="#configured_python" style="color: inherit; text-decoration: inherit;">configured</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="erlang_version_python">
 <a href="#erlang_version_python" style="color: inherit; text-decoration: inherit;">erlang_<wbr>version</a>
