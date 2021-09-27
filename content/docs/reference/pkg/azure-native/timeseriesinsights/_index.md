@@ -18,6 +18,7 @@ Explore the resources and functions of the azure-native.timeseriesinsights modul
     <li><a href="gen1environment" title="Gen1Environment"><span class="symbol resource"></span>Gen1Environment</a></li>
     <li><a href="gen2environment" title="Gen2Environment"><span class="symbol resource"></span>Gen2Environment</a></li>
     <li><a href="iothubeventsource" title="IoTHubEventSource"><span class="symbol resource"></span>IoTHubEventSource</a></li>
+    <li><a href="privateendpointconnection" title="PrivateEndpointConnection"><span class="symbol resource"></span>PrivateEndpointConnection</a></li>
     <li><a href="referencedataset" title="ReferenceDataSet"><span class="symbol resource"></span>ReferenceDataSet</a></li>
 </ul>
 
@@ -30,6 +31,7 @@ Explore the resources and functions of the azure-native.timeseriesinsights modul
     <li><a href="getgen1environment" title="GetGen1Environment"><span class="symbol function"></span>GetGen1Environment</a></li>
     <li><a href="getgen2environment" title="GetGen2Environment"><span class="symbol function"></span>GetGen2Environment</a></li>
     <li><a href="getiothubeventsource" title="GetIoTHubEventSource"><span class="symbol function"></span>GetIoTHubEventSource</a></li>
+    <li><a href="getprivateendpointconnection" title="GetPrivateEndpointConnection"><span class="symbol function"></span>GetPrivateEndpointConnection</a></li>
     <li><a href="getreferencedataset" title="GetReferenceDataSet"><span class="symbol function"></span>GetReferenceDataSet</a></li>
 </ul>
 
@@ -40,6 +42,6 @@ Explore the resources and functions of the azure-native.timeseriesinsights modul
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.31.0</dd>
+	<dd>1.32.0</dd>
 </dl>
 

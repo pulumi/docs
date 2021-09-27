@@ -35,10 +35,10 @@ class MyStack : Stack
     {
         var syncMember = new AzureNative.Sql.SyncMember("syncMember", new AzureNative.Sql.SyncMemberArgs
         {
-            DatabaseName = "syncgroupcrud-7421",
+            DatabaseName = "syncgroupcrud-4328",
             DatabaseType = "AzureSqlDatabase",
             ResourceGroupName = "syncgroupcrud-65440",
-            ServerName = "syncgroupcrud-3379.database.windows.net",
+            ServerName = "syncgroupcrud-8475",
             SyncDirection = "Bidirectional",
             SyncGroupName = "syncgroupcrud-3187",
             SyncMemberAzureDatabaseResourceId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/syncgroupcrud-65440/providers/Microsoft.Sql/servers/syncgroupcrud-8475/databases/syncgroupcrud-4328",
@@ -70,10 +70,10 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := sql.NewSyncMember(ctx, "syncMember", &sql.SyncMemberArgs{
-			DatabaseName:                      pulumi.String("syncgroupcrud-7421"),
+			DatabaseName:                      pulumi.String("syncgroupcrud-4328"),
 			DatabaseType:                      pulumi.String("AzureSqlDatabase"),
 			ResourceGroupName:                 pulumi.String("syncgroupcrud-65440"),
-			ServerName:                        pulumi.String("syncgroupcrud-3379.database.windows.net"),
+			ServerName:                        pulumi.String("syncgroupcrud-8475"),
 			SyncDirection:                     pulumi.String("Bidirectional"),
 			SyncGroupName:                     pulumi.String("syncgroupcrud-3187"),
 			SyncMemberAzureDatabaseResourceId: pulumi.String("/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/syncgroupcrud-65440/providers/Microsoft.Sql/servers/syncgroupcrud-8475/databases/syncgroupcrud-4328"),
@@ -102,10 +102,10 @@ import pulumi
 import pulumi_azure_native as azure_native
 
 sync_member = azure_native.sql.SyncMember("syncMember",
-    database_name="syncgroupcrud-7421",
+    database_name="syncgroupcrud-4328",
     database_type="AzureSqlDatabase",
     resource_group_name="syncgroupcrud-65440",
-    server_name="syncgroupcrud-3379.database.windows.net",
+    server_name="syncgroupcrud-8475",
     sync_direction="Bidirectional",
     sync_group_name="syncgroupcrud-3187",
     sync_member_azure_database_resource_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/syncgroupcrud-65440/providers/Microsoft.Sql/servers/syncgroupcrud-8475/databases/syncgroupcrud-4328",
@@ -127,10 +127,10 @@ import * as pulumi from "@pulumi/pulumi";
 import * as azure_native from "@pulumi/azure-native";
 
 const syncMember = new azure_native.sql.SyncMember("syncMember", {
-    databaseName: "syncgroupcrud-7421",
+    databaseName: "syncgroupcrud-4328",
     databaseType: "AzureSqlDatabase",
     resourceGroupName: "syncgroupcrud-65440",
-    serverName: "syncgroupcrud-3379.database.windows.net",
+    serverName: "syncgroupcrud-8475",
     syncDirection: "Bidirectional",
     syncGroupName: "syncgroupcrud-3187",
     syncMemberAzureDatabaseResourceId: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/syncgroupcrud-65440/providers/Microsoft.Sql/servers/syncgroupcrud-8475/databases/syncgroupcrud-4328",
@@ -165,7 +165,7 @@ class MyStack : Stack
             DatabaseName = "syncgroupcrud-7421",
             DatabaseType = "AzureSqlDatabase",
             ResourceGroupName = "syncgroupcrud-65440",
-            ServerName = "syncgroupcrud-3379.database.windows.net",
+            ServerName = "syncgroupcrud-8475",
             SyncDirection = "Bidirectional",
             SyncGroupName = "syncgroupcrud-3187",
             SyncMemberAzureDatabaseResourceId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/syncgroupcrud-65440/providers/Microsoft.Sql/servers/syncgroupcrud-8475/databases/syncgroupcrud-4328",
@@ -200,7 +200,7 @@ func main() {
 			DatabaseName:                      pulumi.String("syncgroupcrud-7421"),
 			DatabaseType:                      pulumi.String("AzureSqlDatabase"),
 			ResourceGroupName:                 pulumi.String("syncgroupcrud-65440"),
-			ServerName:                        pulumi.String("syncgroupcrud-3379.database.windows.net"),
+			ServerName:                        pulumi.String("syncgroupcrud-8475"),
 			SyncDirection:                     pulumi.String("Bidirectional"),
 			SyncGroupName:                     pulumi.String("syncgroupcrud-3187"),
 			SyncMemberAzureDatabaseResourceId: pulumi.String("/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/syncgroupcrud-65440/providers/Microsoft.Sql/servers/syncgroupcrud-8475/databases/syncgroupcrud-4328"),
@@ -232,7 +232,7 @@ sync_member = azure_native.sql.SyncMember("syncMember",
     database_name="syncgroupcrud-7421",
     database_type="AzureSqlDatabase",
     resource_group_name="syncgroupcrud-65440",
-    server_name="syncgroupcrud-3379.database.windows.net",
+    server_name="syncgroupcrud-8475",
     sync_direction="Bidirectional",
     sync_group_name="syncgroupcrud-3187",
     sync_member_azure_database_resource_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/syncgroupcrud-65440/providers/Microsoft.Sql/servers/syncgroupcrud-8475/databases/syncgroupcrud-4328",
@@ -257,7 +257,7 @@ const syncMember = new azure_native.sql.SyncMember("syncMember", {
     databaseName: "syncgroupcrud-7421",
     databaseType: "AzureSqlDatabase",
     resourceGroupName: "syncgroupcrud-65440",
-    serverName: "syncgroupcrud-3379.database.windows.net",
+    serverName: "syncgroupcrud-8475",
     syncDirection: "Bidirectional",
     syncGroupName: "syncgroupcrud-3187",
     syncMemberAzureDatabaseResourceId: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/syncgroupcrud-65440/providers/Microsoft.Sql/servers/syncgroupcrud-8475/databases/syncgroupcrud-4328",
