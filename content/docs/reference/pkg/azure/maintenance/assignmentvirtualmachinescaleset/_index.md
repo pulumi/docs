@@ -444,12 +444,12 @@ example_linux_virtual_machine_scale_set = azure.compute.LinuxVirtualMachineScale
     network_interfaces=[azure.compute.LinuxVirtualMachineScaleSetNetworkInterfaceArgs(
         name="example",
         primary=True,
-        ip_configurations=[{
-            "name": "internal",
-            "primary": True,
-            "subnet_id": example_subnet.id,
-            "loadBalancerBackendAddressPoolIds": [example_backend_address_pool.id],
-        }],
+        ip_configurations=[azure.compute.LinuxVirtualMachineScaleSetNetworkInterfaceIpConfigurationArgs(
+            name="internal",
+            primary=True,
+            subnet_id=example_subnet.id,
+            load_balancer_backend_address_pool_ids=[example_backend_address_pool.id],
+        )],
     )],
     automatic_os_upgrade_policy=azure.compute.LinuxVirtualMachineScaleSetAutomaticOsUpgradePolicyArgs(
         disable_automatic_rollback=True,

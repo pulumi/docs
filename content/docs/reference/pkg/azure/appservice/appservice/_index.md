@@ -5093,7 +5093,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Should all outbound traffic to have Virtual Network Security Groups and User Defined Routes applied.
+    <dd>{{% md %}}Should all outbound traffic to have Virtual Network Security Groups and User Defined Routes applied? Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="websocketsenabled_csharp">
@@ -5375,7 +5375,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Should all outbound traffic to have Virtual Network Security Groups and User Defined Routes applied.
+    <dd>{{% md %}}Should all outbound traffic to have Virtual Network Security Groups and User Defined Routes applied? Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="websocketsenabled_go">
@@ -5657,7 +5657,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Should all outbound traffic to have Virtual Network Security Groups and User Defined Routes applied.
+    <dd>{{% md %}}Should all outbound traffic to have Virtual Network Security Groups and User Defined Routes applied? Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="websocketsenabled_nodejs">
@@ -5939,7 +5939,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Should all outbound traffic to have Virtual Network Security Groups and User Defined Routes applied.
+    <dd>{{% md %}}Should all outbound traffic to have Virtual Network Security Groups and User Defined Routes applied? Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="websockets_enabled_python">

@@ -816,6 +816,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="networkinterfaces_csharp">
+<a href="#networkinterfaces_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Interfaces</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#endpointnetworkinterface">List&lt;Endpoint<wbr>Network<wbr>Interface&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="privatednszoneconfigs_csharp">
 <a href="#privatednszoneconfigs_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Dns<wbr>Zone<wbr>Configs</a>
 </span>
@@ -843,6 +851,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="networkinterfaces_go">
+<a href="#networkinterfaces_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Interfaces</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#endpointnetworkinterface">[]Endpoint<wbr>Network<wbr>Interface</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="privatednszoneconfigs_go">
 <a href="#privatednszoneconfigs_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Dns<wbr>Zone<wbr>Configs</a>
@@ -872,6 +888,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="networkinterfaces_nodejs">
+<a href="#networkinterfaces_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Interfaces</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#endpointnetworkinterface">Endpoint<wbr>Network<wbr>Interface[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="privatednszoneconfigs_nodejs">
 <a href="#privatednszoneconfigs_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Dns<wbr>Zone<wbr>Configs</a>
 </span>
@@ -899,6 +923,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="network_interfaces_python">
+<a href="#network_interfaces_python" style="color: inherit; text-decoration: inherit;">network_<wbr>interfaces</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#endpointnetworkinterface">Sequence[Endpoint<wbr>Network<wbr>Interface]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="private_dns_zone_configs_python">
 <a href="#private_dns_zone_configs_python" style="color: inherit; text-decoration: inherit;">private_<wbr>dns_<wbr>zone_<wbr>configs</a>
@@ -928,6 +960,7 @@ Get an existing Endpoint resource's state with the given name, ID, and optional 
         <span class="nx">custom_dns_configs</span><span class="p">:</span> <span class="nx">Optional[Sequence[EndpointCustomDnsConfigArgs]]</span> = None<span class="p">,</span>
         <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">network_interfaces</span><span class="p">:</span> <span class="nx">Optional[Sequence[EndpointNetworkInterfaceArgs]]</span> = None<span class="p">,</span>
         <span class="nx">private_dns_zone_configs</span><span class="p">:</span> <span class="nx">Optional[Sequence[EndpointPrivateDnsZoneConfigArgs]]</span> = None<span class="p">,</span>
         <span class="nx">private_dns_zone_group</span><span class="p">:</span> <span class="nx">Optional[EndpointPrivateDnsZoneGroupArgs]</span> = None<span class="p">,</span>
         <span class="nx">private_service_connection</span><span class="p">:</span> <span class="nx">Optional[EndpointPrivateServiceConnectionArgs]</span> = None<span class="p">,</span>
@@ -1072,6 +1105,14 @@ The following state arguments are supported:
     <dd>{{% md %}}Specifies the Name of the Private Endpoint. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_networkinterfaces_csharp">
+<a href="#state_networkinterfaces_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Interfaces</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#endpointnetworkinterface">List&lt;Endpoint<wbr>Network<wbr>Interface<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_privatednszoneconfigs_csharp">
 <a href="#state_privatednszoneconfigs_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Dns<wbr>Zone<wbr>Configs</a>
 </span>
@@ -1154,6 +1195,14 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Specifies the Name of the Private Endpoint. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_networkinterfaces_go">
+<a href="#state_networkinterfaces_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Interfaces</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#endpointnetworkinterface">[]Endpoint<wbr>Network<wbr>Interface<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privatednszoneconfigs_go">
 <a href="#state_privatednszoneconfigs_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Dns<wbr>Zone<wbr>Configs</a>
@@ -1238,6 +1287,14 @@ The following state arguments are supported:
     <dd>{{% md %}}Specifies the Name of the Private Endpoint. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_networkinterfaces_nodejs">
+<a href="#state_networkinterfaces_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Interfaces</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#endpointnetworkinterface">Endpoint<wbr>Network<wbr>Interface<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_privatednszoneconfigs_nodejs">
 <a href="#state_privatednszoneconfigs_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Dns<wbr>Zone<wbr>Configs</a>
 </span>
@@ -1320,6 +1377,14 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Specifies the Name of the Private Endpoint. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_network_interfaces_python">
+<a href="#state_network_interfaces_python" style="color: inherit; text-decoration: inherit;">network_<wbr>interfaces</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#endpointnetworkinterface">Sequence[Endpoint<wbr>Network<wbr>Interface<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_private_dns_zone_configs_python">
 <a href="#state_private_dns_zone_configs_python" style="color: inherit; text-decoration: inherit;">private_<wbr>dns_<wbr>zone_<wbr>configs</a>
@@ -1471,6 +1536,96 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of all IP Addresses that map to the `private_dns_zone` fqdn.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="endpointnetworkinterface">Endpoint<wbr>Network<wbr>Interface</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Private DNS Zone Config.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the Name of the Private Endpoint. Changing this forces a new resource to be created.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Private DNS Zone Config.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the Name of the Private Endpoint. Changing this forces a new resource to be created.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Private DNS Zone Config.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the Name of the Private Endpoint. Changing this forces a new resource to be created.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Private DNS Zone Config.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the Name of the Private Endpoint. Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

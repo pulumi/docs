@@ -257,9 +257,11 @@ const exampleWorkspace = new azure.machinelearning.Workspace("exampleWorkspace",
               <span class="nx">friendly_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
               <span class="nx">high_business_impact</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
               <span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[WorkspaceIdentityArgs]</span> = None<span class="p">,</span>
+              <span class="nx">image_build_compute_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
               <span class="nx">key_vault_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
               <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
               <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">public_network_access_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
               <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
               <span class="nx">sku_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
               <span class="nx">storage_account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -474,6 +476,15 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
     <dd>{{% md %}}Flag to signal High Business Impact (HBI) data in the workspace and reduce diagnostic data collected by the service
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="imagebuildcomputename_csharp">
+<a href="#imagebuildcomputename_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Build<wbr>Compute<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The compute name for image build of the Machine Learning Workspace.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
 </span>
@@ -490,6 +501,15 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Machine Learning Workspace. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="publicnetworkaccessenabled_csharp">
+<a href="#publicnetworkaccessenabled_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable public access when this Machine Learning Workspace is behind VNet.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="skuname_csharp">
@@ -595,6 +615,15 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
     <dd>{{% md %}}Flag to signal High Business Impact (HBI) data in the workspace and reduce diagnostic data collected by the service
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="imagebuildcomputename_go">
+<a href="#imagebuildcomputename_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Build<wbr>Compute<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The compute name for image build of the Machine Learning Workspace.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
 </span>
@@ -611,6 +640,15 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Machine Learning Workspace. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="publicnetworkaccessenabled_go">
+<a href="#publicnetworkaccessenabled_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable public access when this Machine Learning Workspace is behind VNet.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="skuname_go">
@@ -716,6 +754,15 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
     <dd>{{% md %}}Flag to signal High Business Impact (HBI) data in the workspace and reduce diagnostic data collected by the service
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="imagebuildcomputename_nodejs">
+<a href="#imagebuildcomputename_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Build<wbr>Compute<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The compute name for image build of the Machine Learning Workspace.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
@@ -732,6 +779,15 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Machine Learning Workspace. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="publicnetworkaccessenabled_nodejs">
+<a href="#publicnetworkaccessenabled_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Network<wbr>Access<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Enable public access when this Machine Learning Workspace is behind VNet.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="skuname_nodejs">
@@ -837,6 +893,15 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
     <dd>{{% md %}}Flag to signal High Business Impact (HBI) data in the workspace and reduce diagnostic data collected by the service
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="image_build_compute_name_python">
+<a href="#image_build_compute_name_python" style="color: inherit; text-decoration: inherit;">image_<wbr>build_<wbr>compute_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The compute name for image build of the Machine Learning Workspace.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
@@ -853,6 +918,15 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Machine Learning Workspace. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="public_network_access_enabled_python">
+<a href="#public_network_access_enabled_python" style="color: inherit; text-decoration: inherit;">public_<wbr>network_<wbr>access_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable public access when this Machine Learning Workspace is behind VNet.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sku_name_python">
@@ -884,6 +958,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-"
             title="">
+        <span id="discoveryurl_csharp">
+<a href="#discoveryurl_csharp" style="color: inherit; text-decoration: inherit;">Discovery<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The URL for the discovery service to identify regional endpoints for machine learning experimentation services.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
@@ -895,6 +978,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-"
+            title="">
+        <span id="discoveryurl_go">
+<a href="#discoveryurl_go" style="color: inherit; text-decoration: inherit;">Discovery<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The URL for the discovery service to identify regional endpoints for machine learning experimentation services.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -908,6 +1000,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-"
             title="">
+        <span id="discoveryurl_nodejs">
+<a href="#discoveryurl_nodejs" style="color: inherit; text-decoration: inherit;">discovery<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The URL for the discovery service to identify regional endpoints for machine learning experimentation services.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
@@ -919,6 +1020,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-"
+            title="">
+        <span id="discovery_url_python">
+<a href="#discovery_url_python" style="color: inherit; text-decoration: inherit;">discovery_<wbr>url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The URL for the discovery service to identify regional endpoints for machine learning experimentation services.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -948,12 +1058,15 @@ Get an existing Workspace resource's state with the given name, ID, and optional
         <span class="nx">application_insights_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">container_registry_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">discovery_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">friendly_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">high_business_impact</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[WorkspaceIdentityArgs]</span> = None<span class="p">,</span>
+        <span class="nx">image_build_compute_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">key_vault_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">public_network_access_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">sku_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">storage_account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -1097,6 +1210,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The description of this Machine Learning Workspace.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_discoveryurl_csharp">
+<a href="#state_discoveryurl_csharp" style="color: inherit; text-decoration: inherit;">Discovery<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The URL for the discovery service to identify regional endpoints for machine learning experimentation services.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_friendlyname_csharp">
 <a href="#state_friendlyname_csharp" style="color: inherit; text-decoration: inherit;">Friendly<wbr>Name</a>
 </span>
@@ -1124,6 +1246,15 @@ The following state arguments are supported:
     <dd>{{% md %}}An `identity` block defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_imagebuildcomputename_csharp">
+<a href="#state_imagebuildcomputename_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Build<wbr>Compute<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The compute name for image build of the Machine Learning Workspace.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_keyvaultid_csharp">
 <a href="#state_keyvaultid_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Id</a>
 </span>
@@ -1149,6 +1280,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Machine Learning Workspace. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_publicnetworkaccessenabled_csharp">
+<a href="#state_publicnetworkaccessenabled_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable public access when this Machine Learning Workspace is behind VNet.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_csharp">
@@ -1218,6 +1358,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The description of this Machine Learning Workspace.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_discoveryurl_go">
+<a href="#state_discoveryurl_go" style="color: inherit; text-decoration: inherit;">Discovery<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The URL for the discovery service to identify regional endpoints for machine learning experimentation services.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_friendlyname_go">
 <a href="#state_friendlyname_go" style="color: inherit; text-decoration: inherit;">Friendly<wbr>Name</a>
 </span>
@@ -1245,6 +1394,15 @@ The following state arguments are supported:
     <dd>{{% md %}}An `identity` block defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_imagebuildcomputename_go">
+<a href="#state_imagebuildcomputename_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Build<wbr>Compute<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The compute name for image build of the Machine Learning Workspace.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_keyvaultid_go">
 <a href="#state_keyvaultid_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Id</a>
 </span>
@@ -1270,6 +1428,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Machine Learning Workspace. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_publicnetworkaccessenabled_go">
+<a href="#state_publicnetworkaccessenabled_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable public access when this Machine Learning Workspace is behind VNet.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_go">
@@ -1339,6 +1506,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The description of this Machine Learning Workspace.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_discoveryurl_nodejs">
+<a href="#state_discoveryurl_nodejs" style="color: inherit; text-decoration: inherit;">discovery<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The URL for the discovery service to identify regional endpoints for machine learning experimentation services.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_friendlyname_nodejs">
 <a href="#state_friendlyname_nodejs" style="color: inherit; text-decoration: inherit;">friendly<wbr>Name</a>
 </span>
@@ -1366,6 +1542,15 @@ The following state arguments are supported:
     <dd>{{% md %}}An `identity` block defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_imagebuildcomputename_nodejs">
+<a href="#state_imagebuildcomputename_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Build<wbr>Compute<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The compute name for image build of the Machine Learning Workspace.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_keyvaultid_nodejs">
 <a href="#state_keyvaultid_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault<wbr>Id</a>
 </span>
@@ -1391,6 +1576,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Machine Learning Workspace. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_publicnetworkaccessenabled_nodejs">
+<a href="#state_publicnetworkaccessenabled_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Network<wbr>Access<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Enable public access when this Machine Learning Workspace is behind VNet.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_nodejs">
@@ -1460,6 +1654,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The description of this Machine Learning Workspace.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_discovery_url_python">
+<a href="#state_discovery_url_python" style="color: inherit; text-decoration: inherit;">discovery_<wbr>url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The URL for the discovery service to identify regional endpoints for machine learning experimentation services.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_friendly_name_python">
 <a href="#state_friendly_name_python" style="color: inherit; text-decoration: inherit;">friendly_<wbr>name</a>
 </span>
@@ -1487,6 +1690,15 @@ The following state arguments are supported:
     <dd>{{% md %}}An `identity` block defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_image_build_compute_name_python">
+<a href="#state_image_build_compute_name_python" style="color: inherit; text-decoration: inherit;">image_<wbr>build_<wbr>compute_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The compute name for image build of the Machine Learning Workspace.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_key_vault_id_python">
 <a href="#state_key_vault_id_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>id</a>
 </span>
@@ -1512,6 +1724,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Machine Learning Workspace. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_public_network_access_enabled_python">
+<a href="#state_public_network_access_enabled_python" style="color: inherit; text-decoration: inherit;">public_<wbr>network_<wbr>access_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable public access when this Machine Learning Workspace is behind VNet.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resource_group_name_python">

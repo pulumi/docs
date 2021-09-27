@@ -283,6 +283,14 @@ The following output properties are available:
     <dd>{{% md %}}The name of the private endpoint.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="networkinterfaces_csharp">
+<a href="#networkinterfaces_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Interfaces</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getendpointconnectionnetworkinterface">List&lt;Get<wbr>Endpoint<wbr>Connection<wbr>Network<wbr>Interface&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="privateserviceconnections_csharp">
 <a href="#privateserviceconnections_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Service<wbr>Connections</a>
 </span>
@@ -329,6 +337,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The name of the private endpoint.
 {{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="networkinterfaces_go">
+<a href="#networkinterfaces_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Interfaces</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getendpointconnectionnetworkinterface">[]Get<wbr>Endpoint<wbr>Connection<wbr>Network<wbr>Interface</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="privateserviceconnections_go">
 <a href="#privateserviceconnections_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Service<wbr>Connections</a>
@@ -377,6 +393,14 @@ The following output properties are available:
     <dd>{{% md %}}The name of the private endpoint.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="networkinterfaces_nodejs">
+<a href="#networkinterfaces_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Interfaces</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getendpointconnectionnetworkinterface">Get<wbr>Endpoint<wbr>Connection<wbr>Network<wbr>Interface[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="privateserviceconnections_nodejs">
 <a href="#privateserviceconnections_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Service<wbr>Connections</a>
 </span>
@@ -424,6 +448,14 @@ The following output properties are available:
     <dd>{{% md %}}The name of the private endpoint.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="network_interfaces_python">
+<a href="#network_interfaces_python" style="color: inherit; text-decoration: inherit;">network_<wbr>interfaces</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getendpointconnectionnetworkinterface">Sequence[Get<wbr>Endpoint<wbr>Connection<wbr>Network<wbr>Interface]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="private_service_connections_python">
 <a href="#private_service_connections_python" style="color: inherit; text-decoration: inherit;">private_<wbr>service_<wbr>connections</a>
 </span>
@@ -446,6 +478,98 @@ The following output properties are available:
 
 ## Supporting Types
 
+
+<h4 id="getendpointconnectionnetworkinterface">Get<wbr>Endpoint<wbr>Connection<wbr>Network<wbr>Interface</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the network interface associated with the private endpoint.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the Name of the private endpoint.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the network interface associated with the private endpoint.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the Name of the private endpoint.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the network interface associated with the private endpoint.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the Name of the private endpoint.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ID of the network interface associated with the private endpoint.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the Name of the private endpoint.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
 
 <h4 id="getendpointconnectionprivateserviceconnection">Get<wbr>Endpoint<wbr>Connection<wbr>Private<wbr>Service<wbr>Connection</h4>
 

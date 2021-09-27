@@ -225,11 +225,11 @@ example_windows_virtual_machine_scale_set = azure.compute.WindowsVirtualMachineS
     network_interfaces=[azure.compute.WindowsVirtualMachineScaleSetNetworkInterfaceArgs(
         name="example",
         primary=True,
-        ip_configurations=[{
-            "name": "internal",
-            "primary": True,
-            "subnet_id": internal.id,
-        }],
+        ip_configurations=[azure.compute.WindowsVirtualMachineScaleSetNetworkInterfaceIpConfigurationArgs(
+            name="internal",
+            primary=True,
+            subnet_id=internal.id,
+        )],
     )])
 ```
 

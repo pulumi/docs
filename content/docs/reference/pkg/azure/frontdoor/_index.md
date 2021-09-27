@@ -14,6 +14,7 @@ Explore the resources and functions of the azure.frontdoor module.
     <li><a href="customhttpsconfiguration" title="CustomHttpsConfiguration"><span class="symbol resource"></span>CustomHttpsConfiguration</a></li>
     <li><a href="firewallpolicy" title="FirewallPolicy"><span class="symbol resource"></span>FirewallPolicy</a></li>
     <li><a href="frontdoor" title="Frontdoor"><span class="symbol resource"></span>Frontdoor</a></li>
+    <li><a href="rulesengine" title="RulesEngine"><span class="symbol resource"></span>RulesEngine</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -25,6 +26,6 @@ Explore the resources and functions of the azure.frontdoor module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/hashicorp/terraform-provider-azurerm).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.19.0</dd>
+	<dd>4.20.0</dd>
 </dl>
 

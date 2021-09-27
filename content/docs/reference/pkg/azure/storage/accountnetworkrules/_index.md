@@ -287,6 +287,7 @@ const test = new azure.storage.AccountNetworkRules("test", {
                         <span class="nx">ip_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
                         <span class="nx">private_link_access_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[AccountNetworkRulesPrivateLinkAccessRuleArgs]]</span> = None<span class="p">,</span>
                         <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                        <span class="nx">storage_account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                         <span class="nx">storage_account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                         <span class="nx">virtual_network_subnet_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
@@ -425,24 +426,6 @@ The AccountNetworkRules resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the default action of allow or deny when no other rules match. Valid options are `Deny` or `Allow`.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="resourcegroupname_csharp">
-<a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the resource group in which to create the storage account. Changing this forces a new resource to be created.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="storageaccountname_csharp">
-<a href="#storageaccountname_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the name of the storage account. Changing this forces a new resource to be created. This must be unique across the entire Azure service, not just within the resource group.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bypasses_csharp">
@@ -470,7 +453,34 @@ The AccountNetworkRules resource accepts the following [input]({{< relref "/docs
         <span class="property-type"><a href="#accountnetworkrulesprivatelinkaccessrule">List&lt;Account<wbr>Network<wbr>Rules<wbr>Private<wbr>Link<wbr>Access<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or More `private_link_access` block as defined below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="resourcegroupname_csharp">
+<a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the resource group in which to create the storage account. Changing this forces a new resource to be created.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `storage_account_id`{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="storageaccountid_csharp">
+<a href="#storageaccountid_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the ID of the storage account. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="storageaccountname_csharp">
+<a href="#storageaccountname_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the name of the storage account. Changing this forces a new resource to be created. This must be unique across the entire Azure service, not just within the resource group.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `storage_account_id`{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="virtualnetworksubnetids_csharp">
 <a href="#virtualnetworksubnetids_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Subnet<wbr>Ids</a>
@@ -492,24 +502,6 @@ The AccountNetworkRules resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the default action of allow or deny when no other rules match. Valid options are `Deny` or `Allow`.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="resourcegroupname_go">
-<a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the resource group in which to create the storage account. Changing this forces a new resource to be created.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="storageaccountname_go">
-<a href="#storageaccountname_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the name of the storage account. Changing this forces a new resource to be created. This must be unique across the entire Azure service, not just within the resource group.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bypasses_go">
@@ -537,7 +529,34 @@ The AccountNetworkRules resource accepts the following [input]({{< relref "/docs
         <span class="property-type"><a href="#accountnetworkrulesprivatelinkaccessrule">[]Account<wbr>Network<wbr>Rules<wbr>Private<wbr>Link<wbr>Access<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or More `private_link_access` block as defined below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="resourcegroupname_go">
+<a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the resource group in which to create the storage account. Changing this forces a new resource to be created.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `storage_account_id`{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="storageaccountid_go">
+<a href="#storageaccountid_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the ID of the storage account. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="storageaccountname_go">
+<a href="#storageaccountname_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the name of the storage account. Changing this forces a new resource to be created. This must be unique across the entire Azure service, not just within the resource group.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `storage_account_id`{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="virtualnetworksubnetids_go">
 <a href="#virtualnetworksubnetids_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Subnet<wbr>Ids</a>
@@ -559,24 +578,6 @@ The AccountNetworkRules resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the default action of allow or deny when no other rules match. Valid options are `Deny` or `Allow`.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="resourcegroupname_nodejs">
-<a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the resource group in which to create the storage account. Changing this forces a new resource to be created.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="storageaccountname_nodejs">
-<a href="#storageaccountname_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the name of the storage account. Changing this forces a new resource to be created. This must be unique across the entire Azure service, not just within the resource group.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bypasses_nodejs">
@@ -604,7 +605,34 @@ The AccountNetworkRules resource accepts the following [input]({{< relref "/docs
         <span class="property-type"><a href="#accountnetworkrulesprivatelinkaccessrule">Account<wbr>Network<wbr>Rules<wbr>Private<wbr>Link<wbr>Access<wbr>Rule<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}One or More `private_link_access` block as defined below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="resourcegroupname_nodejs">
+<a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the resource group in which to create the storage account. Changing this forces a new resource to be created.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `storage_account_id`{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="storageaccountid_nodejs">
+<a href="#storageaccountid_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the ID of the storage account. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="storageaccountname_nodejs">
+<a href="#storageaccountname_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the name of the storage account. Changing this forces a new resource to be created. This must be unique across the entire Azure service, not just within the resource group.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `storage_account_id`{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="virtualnetworksubnetids_nodejs">
 <a href="#virtualnetworksubnetids_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Subnet<wbr>Ids</a>
@@ -626,24 +654,6 @@ The AccountNetworkRules resource accepts the following [input]({{< relref "/docs
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the default action of allow or deny when no other rules match. Valid options are `Deny` or `Allow`.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="resource_group_name_python">
-<a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the resource group in which to create the storage account. Changing this forces a new resource to be created.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="storage_account_name_python">
-<a href="#storage_account_name_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Specifies the name of the storage account. Changing this forces a new resource to be created. This must be unique across the entire Azure service, not just within the resource group.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bypasses_python">
@@ -671,7 +681,34 @@ The AccountNetworkRules resource accepts the following [input]({{< relref "/docs
         <span class="property-type"><a href="#accountnetworkrulesprivatelinkaccessrule">Sequence[Account<wbr>Network<wbr>Rules<wbr>Private<wbr>Link<wbr>Access<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or More `private_link_access` block as defined below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="resource_group_name_python">
+<a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the resource group in which to create the storage account. Changing this forces a new resource to be created.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `storage_account_id`{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="storage_account_id_python">
+<a href="#storage_account_id_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the ID of the storage account. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="storage_account_name_python">
+<a href="#storage_account_name_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the name of the storage account. Changing this forces a new resource to be created. This must be unique across the entire Azure service, not just within the resource group.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `storage_account_id`{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="virtual_network_subnet_ids_python">
 <a href="#virtual_network_subnet_ids_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>subnet_<wbr>ids</a>
@@ -759,6 +796,7 @@ Get an existing AccountNetworkRules resource's state with the given name, ID, an
         <span class="nx">ip_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
         <span class="nx">private_link_access_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[AccountNetworkRulesPrivateLinkAccessRuleArgs]]</span> = None<span class="p">,</span>
         <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">storage_account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">storage_account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">virtual_network_subnet_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">) -&gt;</span> AccountNetworkRules</code></pre></div>
 {{% /choosable %}}
@@ -907,8 +945,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#accountnetworkrulesprivatelinkaccessrule">List&lt;Account<wbr>Network<wbr>Rules<wbr>Private<wbr>Link<wbr>Access<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or More `private_link_access` block as defined below.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_resourcegroupname_csharp">
 <a href="#state_resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
 </span>
@@ -916,8 +954,17 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the storage account. Changing this forces a new resource to be created.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `storage_account_id`{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
+        <span id="state_storageaccountid_csharp">
+<a href="#state_storageaccountid_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the ID of the storage account. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_storageaccountname_csharp">
 <a href="#state_storageaccountname_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Name</a>
 </span>
@@ -925,7 +972,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the storage account. Changing this forces a new resource to be created. This must be unique across the entire Azure service, not just within the resource group.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `storage_account_id`{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_virtualnetworksubnetids_csharp">
 <a href="#state_virtualnetworksubnetids_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Subnet<wbr>Ids</a>
@@ -974,8 +1021,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#accountnetworkrulesprivatelinkaccessrule">[]Account<wbr>Network<wbr>Rules<wbr>Private<wbr>Link<wbr>Access<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or More `private_link_access` block as defined below.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_resourcegroupname_go">
 <a href="#state_resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
 </span>
@@ -983,8 +1030,17 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the storage account. Changing this forces a new resource to be created.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `storage_account_id`{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
+        <span id="state_storageaccountid_go">
+<a href="#state_storageaccountid_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the ID of the storage account. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_storageaccountname_go">
 <a href="#state_storageaccountname_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Name</a>
 </span>
@@ -992,7 +1048,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the storage account. Changing this forces a new resource to be created. This must be unique across the entire Azure service, not just within the resource group.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `storage_account_id`{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_virtualnetworksubnetids_go">
 <a href="#state_virtualnetworksubnetids_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Subnet<wbr>Ids</a>
@@ -1041,8 +1097,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#accountnetworkrulesprivatelinkaccessrule">Account<wbr>Network<wbr>Rules<wbr>Private<wbr>Link<wbr>Access<wbr>Rule<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}One or More `private_link_access` block as defined below.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_resourcegroupname_nodejs">
 <a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
@@ -1050,8 +1106,17 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the storage account. Changing this forces a new resource to be created.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `storage_account_id`{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
+        <span id="state_storageaccountid_nodejs">
+<a href="#state_storageaccountid_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the ID of the storage account. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_storageaccountname_nodejs">
 <a href="#state_storageaccountname_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Name</a>
 </span>
@@ -1059,7 +1124,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the storage account. Changing this forces a new resource to be created. This must be unique across the entire Azure service, not just within the resource group.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `storage_account_id`{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_virtualnetworksubnetids_nodejs">
 <a href="#state_virtualnetworksubnetids_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Subnet<wbr>Ids</a>
@@ -1108,8 +1173,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#accountnetworkrulesprivatelinkaccessrule">Sequence[Account<wbr>Network<wbr>Rules<wbr>Private<wbr>Link<wbr>Access<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or More `private_link_access` block as defined below.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_resource_group_name_python">
 <a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
@@ -1117,8 +1182,17 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the storage account. Changing this forces a new resource to be created.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `storage_account_id`{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
+        <span id="state_storage_account_id_python">
+<a href="#state_storage_account_id_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the ID of the storage account. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_storage_account_name_python">
 <a href="#state_storage_account_name_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>name</a>
 </span>
@@ -1126,7 +1200,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the storage account. Changing this forces a new resource to be created. This must be unique across the entire Azure service, not just within the resource group.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `storage_account_id`{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_virtual_network_subnet_ids_python">
 <a href="#state_virtual_network_subnet_ids_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>subnet_<wbr>ids</a>

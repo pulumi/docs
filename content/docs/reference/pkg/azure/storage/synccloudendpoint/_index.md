@@ -181,9 +181,9 @@ example_share = azure.storage.Share("exampleShare",
     storage_account_name=example_account.name,
     acls=[azure.storage.ShareAclArgs(
         id="GhostedRecall",
-        access_policies=[{
-            "permissions": "r",
-        }],
+        access_policies=[azure.storage.ShareAclAccessPolicyArgs(
+            permissions="r",
+        )],
     )])
 example_sync_cloud_endpoint = azure.storage.SyncCloudEndpoint("exampleSyncCloudEndpoint",
     storage_sync_group_id=example_sync_group.id,
