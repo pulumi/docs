@@ -2201,7 +2201,15 @@ only when a new service is being created.
     </dt>
     <dd>{{% md %}}Name of another service to fork from. This has effect only when 
 a new service is being created.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="staticips_csharp">
+<a href="#staticips_csharp" style="color: inherit; text-decoration: inherit;">Static<wbr>Ips</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2349,7 +2357,15 @@ only when a new service is being created.
     </dt>
     <dd>{{% md %}}Name of another service to fork from. This has effect only when 
 a new service is being created.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="staticips_go">
+<a href="#staticips_go" style="color: inherit; text-decoration: inherit;">Static<wbr>Ips</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2497,7 +2513,15 @@ only when a new service is being created.
     </dt>
     <dd>{{% md %}}Name of another service to fork from. This has effect only when 
 a new service is being created.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="staticips_nodejs">
+<a href="#staticips_nodejs" style="color: inherit; text-decoration: inherit;">static<wbr>Ips</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -2645,7 +2669,15 @@ only when a new service is being created.
     </dt>
     <dd>{{% md %}}Name of another service to fork from. This has effect only when 
 a new service is being created.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="static_ips_python">
+<a href="#static_ips_python" style="color: inherit; text-decoration: inherit;">static_<wbr>ips</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getmysqlmysqluserconfigmigration">Get<wbr>My<wbr>Sql<wbr>Mysql<wbr>User<wbr>Config<wbr>Migration</h4>
@@ -3051,6 +3083,14 @@ causes InnoDB to abort and roll back the entire transaction.
 activity on an interactive connection before closing it.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="internaltmpmemstorageengine_csharp">
+<a href="#internaltmpmemstorageengine_csharp" style="color: inherit; text-decoration: inherit;">Internal<wbr>Tmp<wbr>Mem<wbr>Storage<wbr>Engine</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="longquerytime_csharp">
 <a href="#longquerytime_csharp" style="color: inherit; text-decoration: inherit;">Long<wbr>Query<wbr>Time</a>
 </span>
@@ -3287,6 +3327,14 @@ causes InnoDB to abort and roll back the entire transaction.
     <dd>{{% md %}}The number of seconds the server waits for 
 activity on an interactive connection before closing it.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="internaltmpmemstorageengine_go">
+<a href="#internaltmpmemstorageengine_go" style="color: inherit; text-decoration: inherit;">Internal<wbr>Tmp<wbr>Mem<wbr>Storage<wbr>Engine</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="longquerytime_go">
 <a href="#longquerytime_go" style="color: inherit; text-decoration: inherit;">Long<wbr>Query<wbr>Time</a>
@@ -3525,6 +3573,14 @@ causes InnoDB to abort and roll back the entire transaction.
 activity on an interactive connection before closing it.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="internaltmpmemstorageengine_nodejs">
+<a href="#internaltmpmemstorageengine_nodejs" style="color: inherit; text-decoration: inherit;">internal<wbr>Tmp<wbr>Mem<wbr>Storage<wbr>Engine</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="longquerytime_nodejs">
 <a href="#longquerytime_nodejs" style="color: inherit; text-decoration: inherit;">long<wbr>Query<wbr>Time</a>
 </span>
@@ -3761,6 +3817,14 @@ causes InnoDB to abort and roll back the entire transaction.
     <dd>{{% md %}}The number of seconds the server waits for 
 activity on an interactive connection before closing it.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="internal_tmp_mem_storage_engine_python">
+<a href="#internal_tmp_mem_storage_engine_python" style="color: inherit; text-decoration: inherit;">internal_<wbr>tmp_<wbr>mem_<wbr>storage_<wbr>engine</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="long_query_time_python">
 <a href="#long_query_time_python" style="color: inherit; text-decoration: inherit;">long_<wbr>query_<wbr>time</a>

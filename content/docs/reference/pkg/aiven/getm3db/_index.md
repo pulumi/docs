@@ -2158,7 +2158,15 @@ rules will be sent to it and nothing else.
     </dt>
     <dd>{{% md %}}Name of another service to fork from. This has effect only 
 when a new service is being created.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="staticips_csharp">
+<a href="#staticips_csharp" style="color: inherit; text-decoration: inherit;">Static<wbr>Ips</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2275,7 +2283,15 @@ rules will be sent to it and nothing else.
     </dt>
     <dd>{{% md %}}Name of another service to fork from. This has effect only 
 when a new service is being created.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="staticips_go">
+<a href="#staticips_go" style="color: inherit; text-decoration: inherit;">Static<wbr>Ips</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2392,7 +2408,15 @@ rules will be sent to it and nothing else.
     </dt>
     <dd>{{% md %}}Name of another service to fork from. This has effect only 
 when a new service is being created.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="staticips_nodejs">
+<a href="#staticips_nodejs" style="color: inherit; text-decoration: inherit;">static<wbr>Ips</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -2509,7 +2533,15 @@ rules will be sent to it and nothing else.
     </dt>
     <dd>{{% md %}}Name of another service to fork from. This has effect only 
 when a new service is being created.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="static_ips_python">
+<a href="#static_ips_python" style="color: inherit; text-decoration: inherit;">static_<wbr>ips</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getm3dbm3dbuserconfiglimits">Get<wbr>M3Db<wbr>M3db<wbr>User<wbr>Config<wbr>Limits</h4>

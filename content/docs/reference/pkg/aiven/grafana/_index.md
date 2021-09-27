@@ -2421,6 +2421,14 @@ deletion is done.
     <dd>{{% md %}}Default error or timeout setting for new alerting rules
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="alertingmaxannotationstokeep_csharp">
+<a href="#alertingmaxannotationstokeep_csharp" style="color: inherit; text-decoration: inherit;">Alerting<wbr>Max<wbr>Annotations<wbr>To<wbr>Keep</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="alertingnodataornullvalues_csharp">
 <a href="#alertingnodataornullvalues_csharp" style="color: inherit; text-decoration: inherit;">Alerting<wbr>Nodata<wbr>Or<wbr>Nullvalues</a>
 </span>
@@ -2440,6 +2448,14 @@ new alerting rules
     <dd>{{% md %}}Allow embedding Grafana dashboards with iframe/frame/object/embed 
 tags. Disabled by default to limit impact of clickjacking
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="authazuread_csharp">
+<a href="#authazuread_csharp" style="color: inherit; text-decoration: inherit;">Auth<wbr>Azuread</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#grafanagrafanauserconfigauthazuread">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Azuread</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authbasicenabled_csharp">
 <a href="#authbasicenabled_csharp" style="color: inherit; text-decoration: inherit;">Auth<wbr>Basic<wbr>Enabled</a>
@@ -2542,6 +2558,14 @@ by a unit suffix (ms, s, m, h, d), e.g. 30s, 1h.
     </dt>
     <dd>{{% md %}}Timeout for data proxy requests in seconds.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dateformats_csharp">
+<a href="#dateformats_csharp" style="color: inherit; text-decoration: inherit;">Date<wbr>Formats</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#grafanagrafanauserconfigdateformats">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Date<wbr>Formats</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablegravatar_csharp">
 <a href="#disablegravatar_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Gravatar</a>
@@ -2662,6 +2686,14 @@ when a new service is being created.
     <dd>{{% md %}}SMTP server settings.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="staticips_csharp">
+<a href="#staticips_csharp" style="color: inherit; text-decoration: inherit;">Static<wbr>Ips</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="userautoassignorg_csharp">
 <a href="#userautoassignorg_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Auto<wbr>Assign<wbr>Org</a>
 </span>
@@ -2712,6 +2744,14 @@ Defaults to false.
     <dd>{{% md %}}Default error or timeout setting for new alerting rules
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="alertingmaxannotationstokeep_go">
+<a href="#alertingmaxannotationstokeep_go" style="color: inherit; text-decoration: inherit;">Alerting<wbr>Max<wbr>Annotations<wbr>To<wbr>Keep</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="alertingnodataornullvalues_go">
 <a href="#alertingnodataornullvalues_go" style="color: inherit; text-decoration: inherit;">Alerting<wbr>Nodata<wbr>Or<wbr>Nullvalues</a>
 </span>
@@ -2731,6 +2771,14 @@ new alerting rules
     <dd>{{% md %}}Allow embedding Grafana dashboards with iframe/frame/object/embed 
 tags. Disabled by default to limit impact of clickjacking
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="authazuread_go">
+<a href="#authazuread_go" style="color: inherit; text-decoration: inherit;">Auth<wbr>Azuread</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#grafanagrafanauserconfigauthazuread">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Azuread</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authbasicenabled_go">
 <a href="#authbasicenabled_go" style="color: inherit; text-decoration: inherit;">Auth<wbr>Basic<wbr>Enabled</a>
@@ -2833,6 +2881,14 @@ by a unit suffix (ms, s, m, h, d), e.g. 30s, 1h.
     </dt>
     <dd>{{% md %}}Timeout for data proxy requests in seconds.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dateformats_go">
+<a href="#dateformats_go" style="color: inherit; text-decoration: inherit;">Date<wbr>Formats</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#grafanagrafanauserconfigdateformats">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Date<wbr>Formats</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablegravatar_go">
 <a href="#disablegravatar_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Gravatar</a>
@@ -2953,6 +3009,14 @@ when a new service is being created.
     <dd>{{% md %}}SMTP server settings.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="staticips_go">
+<a href="#staticips_go" style="color: inherit; text-decoration: inherit;">Static<wbr>Ips</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="userautoassignorg_go">
 <a href="#userautoassignorg_go" style="color: inherit; text-decoration: inherit;">User<wbr>Auto<wbr>Assign<wbr>Org</a>
 </span>
@@ -3003,6 +3067,14 @@ Defaults to false.
     <dd>{{% md %}}Default error or timeout setting for new alerting rules
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="alertingmaxannotationstokeep_nodejs">
+<a href="#alertingmaxannotationstokeep_nodejs" style="color: inherit; text-decoration: inherit;">alerting<wbr>Max<wbr>Annotations<wbr>To<wbr>Keep</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="alertingnodataornullvalues_nodejs">
 <a href="#alertingnodataornullvalues_nodejs" style="color: inherit; text-decoration: inherit;">alerting<wbr>Nodata<wbr>Or<wbr>Nullvalues</a>
 </span>
@@ -3022,6 +3094,14 @@ new alerting rules
     <dd>{{% md %}}Allow embedding Grafana dashboards with iframe/frame/object/embed 
 tags. Disabled by default to limit impact of clickjacking
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="authazuread_nodejs">
+<a href="#authazuread_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Azuread</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#grafanagrafanauserconfigauthazuread">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Azuread</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authbasicenabled_nodejs">
 <a href="#authbasicenabled_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Basic<wbr>Enabled</a>
@@ -3124,6 +3204,14 @@ by a unit suffix (ms, s, m, h, d), e.g. 30s, 1h.
     </dt>
     <dd>{{% md %}}Timeout for data proxy requests in seconds.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dateformats_nodejs">
+<a href="#dateformats_nodejs" style="color: inherit; text-decoration: inherit;">date<wbr>Formats</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#grafanagrafanauserconfigdateformats">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Date<wbr>Formats</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablegravatar_nodejs">
 <a href="#disablegravatar_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Gravatar</a>
@@ -3244,6 +3332,14 @@ when a new service is being created.
     <dd>{{% md %}}SMTP server settings.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="staticips_nodejs">
+<a href="#staticips_nodejs" style="color: inherit; text-decoration: inherit;">static<wbr>Ips</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="userautoassignorg_nodejs">
 <a href="#userautoassignorg_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Auto<wbr>Assign<wbr>Org</a>
 </span>
@@ -3294,6 +3390,14 @@ Defaults to false.
     <dd>{{% md %}}Default error or timeout setting for new alerting rules
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="alerting_max_annotations_to_keep_python">
+<a href="#alerting_max_annotations_to_keep_python" style="color: inherit; text-decoration: inherit;">alerting_<wbr>max_<wbr>annotations_<wbr>to_<wbr>keep</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="alerting_nodata_or_nullvalues_python">
 <a href="#alerting_nodata_or_nullvalues_python" style="color: inherit; text-decoration: inherit;">alerting_<wbr>nodata_<wbr>or_<wbr>nullvalues</a>
 </span>
@@ -3313,6 +3417,14 @@ new alerting rules
     <dd>{{% md %}}Allow embedding Grafana dashboards with iframe/frame/object/embed 
 tags. Disabled by default to limit impact of clickjacking
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="auth_azuread_python">
+<a href="#auth_azuread_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>azuread</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#grafanagrafanauserconfigauthazuread">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Azuread</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="auth_basic_enabled_python">
 <a href="#auth_basic_enabled_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>basic_<wbr>enabled</a>
@@ -3415,6 +3527,14 @@ by a unit suffix (ms, s, m, h, d), e.g. 30s, 1h.
     </dt>
     <dd>{{% md %}}Timeout for data proxy requests in seconds.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="date_formats_python">
+<a href="#date_formats_python" style="color: inherit; text-decoration: inherit;">date_<wbr>formats</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#grafanagrafanauserconfigdateformats">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Date<wbr>Formats</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disable_gravatar_python">
 <a href="#disable_gravatar_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>gravatar</a>
@@ -3535,6 +3655,14 @@ when a new service is being created.
     <dd>{{% md %}}SMTP server settings.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="static_ips_python">
+<a href="#static_ips_python" style="color: inherit; text-decoration: inherit;">static_<wbr>ips</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="user_auto_assign_org_python">
 <a href="#user_auto_assign_org_python" style="color: inherit; text-decoration: inherit;">user_<wbr>auto_<wbr>assign_<wbr>org</a>
 </span>
@@ -3561,6 +3689,276 @@ Defaults to false.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Users with view-only permission can edit but not save dashboards.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="grafanagrafanauserconfigauthazuread">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Azuread</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="allowsignup_csharp">
+<a href="#allowsignup_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Sign<wbr>Up</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Automatically sign-up users on successful sign-in
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="alloweddomains_csharp">
+<a href="#alloweddomains_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Domains</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Allowed domain
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="allowedgroups_csharp">
+<a href="#allowedgroups_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Require users to belong to one of given groups
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="authurl_csharp">
+<a href="#authurl_csharp" style="color: inherit; text-decoration: inherit;">Auth<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Authorization URL. This only needs to be set when using self hosted GitLab
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="clientid_csharp">
+<a href="#clientid_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Client ID from provider
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="clientsecret_csharp">
+<a href="#clientsecret_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Secret</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Client secret from provider
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tokenurl_csharp">
+<a href="#tokenurl_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Token URL. This only needs to be set when using self hosted GitLab
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="allowsignup_go">
+<a href="#allowsignup_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Sign<wbr>Up</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Automatically sign-up users on successful sign-in
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="alloweddomains_go">
+<a href="#alloweddomains_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Domains</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}Allowed domain
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="allowedgroups_go">
+<a href="#allowedgroups_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}Require users to belong to one of given groups
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="authurl_go">
+<a href="#authurl_go" style="color: inherit; text-decoration: inherit;">Auth<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Authorization URL. This only needs to be set when using self hosted GitLab
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="clientid_go">
+<a href="#clientid_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Client ID from provider
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="clientsecret_go">
+<a href="#clientsecret_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Secret</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Client secret from provider
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tokenurl_go">
+<a href="#tokenurl_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Token URL. This only needs to be set when using self hosted GitLab
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="allowsignup_nodejs">
+<a href="#allowsignup_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Sign<wbr>Up</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Automatically sign-up users on successful sign-in
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="alloweddomains_nodejs">
+<a href="#alloweddomains_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Domains</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}Allowed domain
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="allowedgroups_nodejs">
+<a href="#allowedgroups_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}Require users to belong to one of given groups
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="authurl_nodejs">
+<a href="#authurl_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Authorization URL. This only needs to be set when using self hosted GitLab
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="clientid_nodejs">
+<a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Client ID from provider
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="clientsecret_nodejs">
+<a href="#clientsecret_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Secret</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Client secret from provider
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tokenurl_nodejs">
+<a href="#tokenurl_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Token URL. This only needs to be set when using self hosted GitLab
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="allow_sign_up_python">
+<a href="#allow_sign_up_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>sign_<wbr>up</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Automatically sign-up users on successful sign-in
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="allowed_domains_python">
+<a href="#allowed_domains_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>domains</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}Allowed domain
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="allowed_groups_python">
+<a href="#allowed_groups_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}Require users to belong to one of given groups
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="auth_url_python">
+<a href="#auth_url_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Authorization URL. This only needs to be set when using self hosted GitLab
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="client_id_python">
+<a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Client ID from provider
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="client_secret_python">
+<a href="#client_secret_python" style="color: inherit; text-decoration: inherit;">client_<wbr>secret</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Client secret from provider
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="token_url_python">
+<a href="#token_url_python" style="color: inherit; text-decoration: inherit;">token_<wbr>url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Token URL. This only needs to be set when using self hosted GitLab
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -4570,6 +4968,280 @@ Defaults to false.
     </dt>
     <dd>{{% md %}}Client secret from provider
 {{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="grafanagrafanauserconfigdateformats">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Date<wbr>Formats</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="defaulttimezone_csharp">
+<a href="#defaulttimezone_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Timezone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="fulldate_csharp">
+<a href="#fulldate_csharp" style="color: inherit; text-decoration: inherit;">Full<wbr>Date</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="intervalday_csharp">
+<a href="#intervalday_csharp" style="color: inherit; text-decoration: inherit;">Interval<wbr>Day</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="intervalhour_csharp">
+<a href="#intervalhour_csharp" style="color: inherit; text-decoration: inherit;">Interval<wbr>Hour</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="intervalminute_csharp">
+<a href="#intervalminute_csharp" style="color: inherit; text-decoration: inherit;">Interval<wbr>Minute</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="intervalmonth_csharp">
+<a href="#intervalmonth_csharp" style="color: inherit; text-decoration: inherit;">Interval<wbr>Month</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="intervalsecond_csharp">
+<a href="#intervalsecond_csharp" style="color: inherit; text-decoration: inherit;">Interval<wbr>Second</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="intervalyear_csharp">
+<a href="#intervalyear_csharp" style="color: inherit; text-decoration: inherit;">Interval<wbr>Year</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="defaulttimezone_go">
+<a href="#defaulttimezone_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Timezone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="fulldate_go">
+<a href="#fulldate_go" style="color: inherit; text-decoration: inherit;">Full<wbr>Date</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="intervalday_go">
+<a href="#intervalday_go" style="color: inherit; text-decoration: inherit;">Interval<wbr>Day</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="intervalhour_go">
+<a href="#intervalhour_go" style="color: inherit; text-decoration: inherit;">Interval<wbr>Hour</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="intervalminute_go">
+<a href="#intervalminute_go" style="color: inherit; text-decoration: inherit;">Interval<wbr>Minute</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="intervalmonth_go">
+<a href="#intervalmonth_go" style="color: inherit; text-decoration: inherit;">Interval<wbr>Month</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="intervalsecond_go">
+<a href="#intervalsecond_go" style="color: inherit; text-decoration: inherit;">Interval<wbr>Second</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="intervalyear_go">
+<a href="#intervalyear_go" style="color: inherit; text-decoration: inherit;">Interval<wbr>Year</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="defaulttimezone_nodejs">
+<a href="#defaulttimezone_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Timezone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="fulldate_nodejs">
+<a href="#fulldate_nodejs" style="color: inherit; text-decoration: inherit;">full<wbr>Date</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="intervalday_nodejs">
+<a href="#intervalday_nodejs" style="color: inherit; text-decoration: inherit;">interval<wbr>Day</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="intervalhour_nodejs">
+<a href="#intervalhour_nodejs" style="color: inherit; text-decoration: inherit;">interval<wbr>Hour</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="intervalminute_nodejs">
+<a href="#intervalminute_nodejs" style="color: inherit; text-decoration: inherit;">interval<wbr>Minute</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="intervalmonth_nodejs">
+<a href="#intervalmonth_nodejs" style="color: inherit; text-decoration: inherit;">interval<wbr>Month</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="intervalsecond_nodejs">
+<a href="#intervalsecond_nodejs" style="color: inherit; text-decoration: inherit;">interval<wbr>Second</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="intervalyear_nodejs">
+<a href="#intervalyear_nodejs" style="color: inherit; text-decoration: inherit;">interval<wbr>Year</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="default_timezone_python">
+<a href="#default_timezone_python" style="color: inherit; text-decoration: inherit;">default_<wbr>timezone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="full_date_python">
+<a href="#full_date_python" style="color: inherit; text-decoration: inherit;">full_<wbr>date</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="interval_day_python">
+<a href="#interval_day_python" style="color: inherit; text-decoration: inherit;">interval_<wbr>day</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="interval_hour_python">
+<a href="#interval_hour_python" style="color: inherit; text-decoration: inherit;">interval_<wbr>hour</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="interval_minute_python">
+<a href="#interval_minute_python" style="color: inherit; text-decoration: inherit;">interval_<wbr>minute</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="interval_month_python">
+<a href="#interval_month_python" style="color: inherit; text-decoration: inherit;">interval_<wbr>month</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="interval_second_python">
+<a href="#interval_second_python" style="color: inherit; text-decoration: inherit;">interval_<wbr>second</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="interval_year_python">
+<a href="#interval_year_python" style="color: inherit; text-decoration: inherit;">interval_<wbr>year</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="grafanagrafanauserconfigexternalimagestorage">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>External<wbr>Image<wbr>Storage</h4>

@@ -2548,6 +2548,14 @@ memory buffers. Valid range is 20-60 (float), which corresponds to 20% - 60%. Th
 the shared_buffers configuration value. The absolute maximum is 12 GB.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="staticips_csharp">
+<a href="#staticips_csharp" style="color: inherit; text-decoration: inherit;">Static<wbr>Ips</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="synchronousreplication_csharp">
 <a href="#synchronousreplication_csharp" style="color: inherit; text-decoration: inherit;">Synchronous<wbr>Replication</a>
 </span>
@@ -2772,6 +2780,14 @@ when a new service is being created.
 memory buffers. Valid range is 20-60 (float), which corresponds to 20% - 60%. This setting adjusts
 the shared_buffers configuration value. The absolute maximum is 12 GB.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="staticips_go">
+<a href="#staticips_go" style="color: inherit; text-decoration: inherit;">Static<wbr>Ips</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="synchronousreplication_go">
 <a href="#synchronousreplication_go" style="color: inherit; text-decoration: inherit;">Synchronous<wbr>Replication</a>
@@ -2998,6 +3014,14 @@ memory buffers. Valid range is 20-60 (float), which corresponds to 20% - 60%. Th
 the shared_buffers configuration value. The absolute maximum is 12 GB.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="staticips_nodejs">
+<a href="#staticips_nodejs" style="color: inherit; text-decoration: inherit;">static<wbr>Ips</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="synchronousreplication_nodejs">
 <a href="#synchronousreplication_nodejs" style="color: inherit; text-decoration: inherit;">synchronous<wbr>Replication</a>
 </span>
@@ -3222,6 +3246,14 @@ when a new service is being created.
 memory buffers. Valid range is 20-60 (float), which corresponds to 20% - 60%. This setting adjusts
 the shared_buffers configuration value. The absolute maximum is 12 GB.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="static_ips_python">
+<a href="#static_ips_python" style="color: inherit; text-decoration: inherit;">static_<wbr>ips</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="synchronous_replication_python">
 <a href="#synchronous_replication_python" style="color: inherit; text-decoration: inherit;">synchronous_<wbr>replication</a>
@@ -3643,6 +3675,38 @@ autovacuum_vacuum_threshold when deciding whether to trigger a VACUUM. The defau
 needed to trigger a VACUUM in any one table. The default is 50 tuples
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="bgwriterdelay_csharp">
+<a href="#bgwriterdelay_csharp" style="color: inherit; text-decoration: inherit;">Bgwriter<wbr>Delay</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="bgwriterflushafter_csharp">
+<a href="#bgwriterflushafter_csharp" style="color: inherit; text-decoration: inherit;">Bgwriter<wbr>Flush<wbr>After</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="bgwriterlrumaxpages_csharp">
+<a href="#bgwriterlrumaxpages_csharp" style="color: inherit; text-decoration: inherit;">Bgwriter<wbr>Lru<wbr>Maxpages</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="bgwriterlrumultiplier_csharp">
+<a href="#bgwriterlrumultiplier_csharp" style="color: inherit; text-decoration: inherit;">Bgwriter<wbr>Lru<wbr>Multiplier</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="deadlocktimeout_csharp">
 <a href="#deadlocktimeout_csharp" style="color: inherit; text-decoration: inherit;">Deadlock<wbr>Timeout</a>
 </span>
@@ -4041,6 +4105,38 @@ autovacuum_vacuum_threshold when deciding whether to trigger a VACUUM. The defau
     <dd>{{% md %}}specifies the minimum number of updated or deleted tuples 
 needed to trigger a VACUUM in any one table. The default is 50 tuples
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="bgwriterdelay_go">
+<a href="#bgwriterdelay_go" style="color: inherit; text-decoration: inherit;">Bgwriter<wbr>Delay</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="bgwriterflushafter_go">
+<a href="#bgwriterflushafter_go" style="color: inherit; text-decoration: inherit;">Bgwriter<wbr>Flush<wbr>After</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="bgwriterlrumaxpages_go">
+<a href="#bgwriterlrumaxpages_go" style="color: inherit; text-decoration: inherit;">Bgwriter<wbr>Lru<wbr>Maxpages</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="bgwriterlrumultiplier_go">
+<a href="#bgwriterlrumultiplier_go" style="color: inherit; text-decoration: inherit;">Bgwriter<wbr>Lru<wbr>Multiplier</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deadlocktimeout_go">
 <a href="#deadlocktimeout_go" style="color: inherit; text-decoration: inherit;">Deadlock<wbr>Timeout</a>
@@ -4441,6 +4537,38 @@ autovacuum_vacuum_threshold when deciding whether to trigger a VACUUM. The defau
 needed to trigger a VACUUM in any one table. The default is 50 tuples
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="bgwriterdelay_nodejs">
+<a href="#bgwriterdelay_nodejs" style="color: inherit; text-decoration: inherit;">bgwriter<wbr>Delay</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="bgwriterflushafter_nodejs">
+<a href="#bgwriterflushafter_nodejs" style="color: inherit; text-decoration: inherit;">bgwriter<wbr>Flush<wbr>After</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="bgwriterlrumaxpages_nodejs">
+<a href="#bgwriterlrumaxpages_nodejs" style="color: inherit; text-decoration: inherit;">bgwriter<wbr>Lru<wbr>Maxpages</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="bgwriterlrumultiplier_nodejs">
+<a href="#bgwriterlrumultiplier_nodejs" style="color: inherit; text-decoration: inherit;">bgwriter<wbr>Lru<wbr>Multiplier</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="deadlocktimeout_nodejs">
 <a href="#deadlocktimeout_nodejs" style="color: inherit; text-decoration: inherit;">deadlock<wbr>Timeout</a>
 </span>
@@ -4839,6 +4967,38 @@ autovacuum_vacuum_threshold when deciding whether to trigger a VACUUM. The defau
     <dd>{{% md %}}specifies the minimum number of updated or deleted tuples 
 needed to trigger a VACUUM in any one table. The default is 50 tuples
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="bgwriter_delay_python">
+<a href="#bgwriter_delay_python" style="color: inherit; text-decoration: inherit;">bgwriter_<wbr>delay</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="bgwriter_flush_after_python">
+<a href="#bgwriter_flush_after_python" style="color: inherit; text-decoration: inherit;">bgwriter_<wbr>flush_<wbr>after</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="bgwriter_lru_maxpages_python">
+<a href="#bgwriter_lru_maxpages_python" style="color: inherit; text-decoration: inherit;">bgwriter_<wbr>lru_<wbr>maxpages</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="bgwriter_lru_multiplier_python">
+<a href="#bgwriter_lru_multiplier_python" style="color: inherit; text-decoration: inherit;">bgwriter_<wbr>lru_<wbr>multiplier</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deadlock_timeout_python">
 <a href="#deadlock_timeout_python" style="color: inherit; text-decoration: inherit;">deadlock_<wbr>timeout</a>

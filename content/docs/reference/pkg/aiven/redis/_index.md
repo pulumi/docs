@@ -2471,6 +2471,14 @@ effect only when a new service is being created.
     <dd>{{% md %}}Name of the basebackup to restore in forked service
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="redisaclchannelsdefault_csharp">
+<a href="#redisaclchannelsdefault_csharp" style="color: inherit; text-decoration: inherit;">Redis<wbr>Acl<wbr>Channels<wbr>Default</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="redisiothreads_csharp">
 <a href="#redisiothreads_csharp" style="color: inherit; text-decoration: inherit;">Redis<wbr>Io<wbr>Threads</a>
 </span>
@@ -2517,6 +2525,30 @@ maxmemory-policies
     <dd>{{% md %}}Set notify-keyspace-events option
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="redisnumberofdatabases_csharp">
+<a href="#redisnumberofdatabases_csharp" style="color: inherit; text-decoration: inherit;">Redis<wbr>Number<wbr>Of<wbr>Databases</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="redispersistence_csharp">
+<a href="#redispersistence_csharp" style="color: inherit; text-decoration: inherit;">Redis<wbr>Persistence</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="redispubsubclientoutputbufferlimit_csharp">
+<a href="#redispubsubclientoutputbufferlimit_csharp" style="color: inherit; text-decoration: inherit;">Redis<wbr>Pubsub<wbr>Client<wbr>Output<wbr>Buffer<wbr>Limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="redisssl_csharp">
 <a href="#redisssl_csharp" style="color: inherit; text-decoration: inherit;">Redis<wbr>Ssl</a>
 </span>
@@ -2539,6 +2571,14 @@ when a new service is being created.
             title="Optional">
         <span id="servicetoforkfrom_csharp">
 <a href="#servicetoforkfrom_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>To<wbr>Fork<wbr>From</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="staticips_csharp">
+<a href="#staticips_csharp" style="color: inherit; text-decoration: inherit;">Static<wbr>Ips</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -2613,6 +2653,14 @@ effect only when a new service is being created.
     <dd>{{% md %}}Name of the basebackup to restore in forked service
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="redisaclchannelsdefault_go">
+<a href="#redisaclchannelsdefault_go" style="color: inherit; text-decoration: inherit;">Redis<wbr>Acl<wbr>Channels<wbr>Default</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="redisiothreads_go">
 <a href="#redisiothreads_go" style="color: inherit; text-decoration: inherit;">Redis<wbr>Io<wbr>Threads</a>
 </span>
@@ -2659,6 +2707,30 @@ maxmemory-policies
     <dd>{{% md %}}Set notify-keyspace-events option
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="redisnumberofdatabases_go">
+<a href="#redisnumberofdatabases_go" style="color: inherit; text-decoration: inherit;">Redis<wbr>Number<wbr>Of<wbr>Databases</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="redispersistence_go">
+<a href="#redispersistence_go" style="color: inherit; text-decoration: inherit;">Redis<wbr>Persistence</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="redispubsubclientoutputbufferlimit_go">
+<a href="#redispubsubclientoutputbufferlimit_go" style="color: inherit; text-decoration: inherit;">Redis<wbr>Pubsub<wbr>Client<wbr>Output<wbr>Buffer<wbr>Limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="redisssl_go">
 <a href="#redisssl_go" style="color: inherit; text-decoration: inherit;">Redis<wbr>Ssl</a>
 </span>
@@ -2681,6 +2753,14 @@ when a new service is being created.
             title="Optional">
         <span id="servicetoforkfrom_go">
 <a href="#servicetoforkfrom_go" style="color: inherit; text-decoration: inherit;">Service<wbr>To<wbr>Fork<wbr>From</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="staticips_go">
+<a href="#staticips_go" style="color: inherit; text-decoration: inherit;">Static<wbr>Ips</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -2755,6 +2835,14 @@ effect only when a new service is being created.
     <dd>{{% md %}}Name of the basebackup to restore in forked service
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="redisaclchannelsdefault_nodejs">
+<a href="#redisaclchannelsdefault_nodejs" style="color: inherit; text-decoration: inherit;">redis<wbr>Acl<wbr>Channels<wbr>Default</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="redisiothreads_nodejs">
 <a href="#redisiothreads_nodejs" style="color: inherit; text-decoration: inherit;">redis<wbr>Io<wbr>Threads</a>
 </span>
@@ -2801,6 +2889,30 @@ maxmemory-policies
     <dd>{{% md %}}Set notify-keyspace-events option
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="redisnumberofdatabases_nodejs">
+<a href="#redisnumberofdatabases_nodejs" style="color: inherit; text-decoration: inherit;">redis<wbr>Number<wbr>Of<wbr>Databases</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="redispersistence_nodejs">
+<a href="#redispersistence_nodejs" style="color: inherit; text-decoration: inherit;">redis<wbr>Persistence</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="redispubsubclientoutputbufferlimit_nodejs">
+<a href="#redispubsubclientoutputbufferlimit_nodejs" style="color: inherit; text-decoration: inherit;">redis<wbr>Pubsub<wbr>Client<wbr>Output<wbr>Buffer<wbr>Limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="redisssl_nodejs">
 <a href="#redisssl_nodejs" style="color: inherit; text-decoration: inherit;">redis<wbr>Ssl</a>
 </span>
@@ -2823,6 +2935,14 @@ when a new service is being created.
             title="Optional">
         <span id="servicetoforkfrom_nodejs">
 <a href="#servicetoforkfrom_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>To<wbr>Fork<wbr>From</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="staticips_nodejs">
+<a href="#staticips_nodejs" style="color: inherit; text-decoration: inherit;">static<wbr>Ips</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -2897,6 +3017,14 @@ effect only when a new service is being created.
     <dd>{{% md %}}Name of the basebackup to restore in forked service
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="redis_acl_channels_default_python">
+<a href="#redis_acl_channels_default_python" style="color: inherit; text-decoration: inherit;">redis_<wbr>acl_<wbr>channels_<wbr>default</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="redis_io_threads_python">
 <a href="#redis_io_threads_python" style="color: inherit; text-decoration: inherit;">redis_<wbr>io_<wbr>threads</a>
 </span>
@@ -2943,6 +3071,30 @@ maxmemory-policies
     <dd>{{% md %}}Set notify-keyspace-events option
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="redis_number_of_databases_python">
+<a href="#redis_number_of_databases_python" style="color: inherit; text-decoration: inherit;">redis_<wbr>number_<wbr>of_<wbr>databases</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="redis_persistence_python">
+<a href="#redis_persistence_python" style="color: inherit; text-decoration: inherit;">redis_<wbr>persistence</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="redis_pubsub_client_output_buffer_limit_python">
+<a href="#redis_pubsub_client_output_buffer_limit_python" style="color: inherit; text-decoration: inherit;">redis_<wbr>pubsub_<wbr>client_<wbr>output_<wbr>buffer_<wbr>limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="redis_ssl_python">
 <a href="#redis_ssl_python" style="color: inherit; text-decoration: inherit;">redis_<wbr>ssl</a>
 </span>
@@ -2965,6 +3117,14 @@ when a new service is being created.
             title="Optional">
         <span id="service_to_fork_from_python">
 <a href="#service_to_fork_from_python" style="color: inherit; text-decoration: inherit;">service_<wbr>to_<wbr>fork_<wbr>from</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="static_ips_python">
+<a href="#static_ips_python" style="color: inherit; text-decoration: inherit;">static_<wbr>ips</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>

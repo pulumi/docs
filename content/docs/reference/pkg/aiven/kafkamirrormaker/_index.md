@@ -2408,7 +2408,15 @@ deletion is done.
         <span class="property-type"><a href="#kafkamirrormakerkafkamirrormakeruserconfigkafkamirrormaker">Kafka<wbr>Mirror<wbr>Maker<wbr>Kafka<wbr>Mirrormaker<wbr>User<wbr>Config<wbr>Kafka<wbr>Mirrormaker</a></span>
     </dt>
     <dd>{{% md %}}Kafka MirrorMaker configuration values
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="staticips_csharp">
+<a href="#staticips_csharp" style="color: inherit; text-decoration: inherit;">Static<wbr>Ips</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2430,7 +2438,15 @@ deletion is done.
         <span class="property-type"><a href="#kafkamirrormakerkafkamirrormakeruserconfigkafkamirrormaker">Kafka<wbr>Mirror<wbr>Maker<wbr>Kafka<wbr>Mirrormaker<wbr>User<wbr>Config<wbr>Kafka<wbr>Mirrormaker</a></span>
     </dt>
     <dd>{{% md %}}Kafka MirrorMaker configuration values
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="staticips_go">
+<a href="#staticips_go" style="color: inherit; text-decoration: inherit;">Static<wbr>Ips</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2452,7 +2468,15 @@ deletion is done.
         <span class="property-type"><a href="#kafkamirrormakerkafkamirrormakeruserconfigkafkamirrormaker">Kafka<wbr>Mirror<wbr>Maker<wbr>Kafka<wbr>Mirrormaker<wbr>User<wbr>Config<wbr>Kafka<wbr>Mirrormaker</a></span>
     </dt>
     <dd>{{% md %}}Kafka MirrorMaker configuration values
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="staticips_nodejs">
+<a href="#staticips_nodejs" style="color: inherit; text-decoration: inherit;">static<wbr>Ips</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -2474,7 +2498,15 @@ deletion is done.
         <span class="property-type"><a href="#kafkamirrormakerkafkamirrormakeruserconfigkafkamirrormaker">Kafka<wbr>Mirror<wbr>Maker<wbr>Kafka<wbr>Mirrormaker<wbr>User<wbr>Config<wbr>Kafka<wbr>Mirrormaker</a></span>
     </dt>
     <dd>{{% md %}}Kafka MirrorMaker configuration values
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="static_ips_python">
+<a href="#static_ips_python" style="color: inherit; text-decoration: inherit;">static_<wbr>ips</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="kafkamirrormakerkafkamirrormakeruserconfigkafkamirrormaker">Kafka<wbr>Mirror<wbr>Maker<wbr>Kafka<wbr>Mirrormaker<wbr>User<wbr>Config<wbr>Kafka<wbr>Mirrormaker</h4>
@@ -2558,7 +2590,23 @@ seconds. Defaults to 600 seconds (10 minutes).
     </dt>
     <dd>{{% md %}}Frequency at which consumer group offsets
 are synced (default: 60, every minute).
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="synctopicconfigsenabled_csharp">
+<a href="#synctopicconfigsenabled_csharp" style="color: inherit; text-decoration: inherit;">Sync<wbr>Topic<wbr>Configs<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tasksmaxpercpu_csharp">
+<a href="#tasksmaxpercpu_csharp" style="color: inherit; text-decoration: inherit;">Tasks<wbr>Max<wbr>Per<wbr>Cpu</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2640,7 +2688,23 @@ seconds. Defaults to 600 seconds (10 minutes).
     </dt>
     <dd>{{% md %}}Frequency at which consumer group offsets
 are synced (default: 60, every minute).
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="synctopicconfigsenabled_go">
+<a href="#synctopicconfigsenabled_go" style="color: inherit; text-decoration: inherit;">Sync<wbr>Topic<wbr>Configs<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tasksmaxpercpu_go">
+<a href="#tasksmaxpercpu_go" style="color: inherit; text-decoration: inherit;">Tasks<wbr>Max<wbr>Per<wbr>Cpu</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2722,7 +2786,23 @@ seconds. Defaults to 600 seconds (10 minutes).
     </dt>
     <dd>{{% md %}}Frequency at which consumer group offsets
 are synced (default: 60, every minute).
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="synctopicconfigsenabled_nodejs">
+<a href="#synctopicconfigsenabled_nodejs" style="color: inherit; text-decoration: inherit;">sync<wbr>Topic<wbr>Configs<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tasksmaxpercpu_nodejs">
+<a href="#tasksmaxpercpu_nodejs" style="color: inherit; text-decoration: inherit;">tasks<wbr>Max<wbr>Per<wbr>Cpu</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -2804,7 +2884,23 @@ seconds. Defaults to 600 seconds (10 minutes).
     </dt>
     <dd>{{% md %}}Frequency at which consumer group offsets
 are synced (default: 60, every minute).
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sync_topic_configs_enabled_python">
+<a href="#sync_topic_configs_enabled_python" style="color: inherit; text-decoration: inherit;">sync_<wbr>topic_<wbr>configs_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tasks_max_per_cpu_python">
+<a href="#tasks_max_per_cpu_python" style="color: inherit; text-decoration: inherit;">tasks_<wbr>max_<wbr>per_<wbr>cpu</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="kafkamirrormakerserviceintegration">Kafka<wbr>Mirror<wbr>Maker<wbr>Service<wbr>Integration</h4>

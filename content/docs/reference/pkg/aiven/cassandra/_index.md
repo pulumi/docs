@@ -2156,6 +2156,14 @@ deletion is done.
     <dd>{{% md %}}Cassandra configuration values
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="cassandraversion_csharp">
+<a href="#cassandraversion_csharp" style="color: inherit; text-decoration: inherit;">Cassandra<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="ipfilters_csharp">
 <a href="#ipfilters_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Filters</a>
 </span>
@@ -2209,7 +2217,15 @@ utility to be used to upload Cassandra data files. Available only on service cre
     </dt>
     <dd>{{% md %}}Name of another service to fork from. This has effect only 
 when a new service is being created.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="staticips_csharp">
+<a href="#staticips_csharp" style="color: inherit; text-decoration: inherit;">Static<wbr>Ips</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2223,6 +2239,14 @@ when a new service is being created.
     </dt>
     <dd>{{% md %}}Cassandra configuration values
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="cassandraversion_go">
+<a href="#cassandraversion_go" style="color: inherit; text-decoration: inherit;">Cassandra<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipfilters_go">
 <a href="#ipfilters_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Filters</a>
@@ -2277,7 +2301,15 @@ utility to be used to upload Cassandra data files. Available only on service cre
     </dt>
     <dd>{{% md %}}Name of another service to fork from. This has effect only 
 when a new service is being created.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="staticips_go">
+<a href="#staticips_go" style="color: inherit; text-decoration: inherit;">Static<wbr>Ips</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2291,6 +2323,14 @@ when a new service is being created.
     </dt>
     <dd>{{% md %}}Cassandra configuration values
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="cassandraversion_nodejs">
+<a href="#cassandraversion_nodejs" style="color: inherit; text-decoration: inherit;">cassandra<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipfilters_nodejs">
 <a href="#ipfilters_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Filters</a>
@@ -2345,7 +2385,15 @@ utility to be used to upload Cassandra data files. Available only on service cre
     </dt>
     <dd>{{% md %}}Name of another service to fork from. This has effect only 
 when a new service is being created.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="staticips_nodejs">
+<a href="#staticips_nodejs" style="color: inherit; text-decoration: inherit;">static<wbr>Ips</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -2359,6 +2407,14 @@ when a new service is being created.
     </dt>
     <dd>{{% md %}}Cassandra configuration values
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="cassandra_version_python">
+<a href="#cassandra_version_python" style="color: inherit; text-decoration: inherit;">cassandra_<wbr>version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ip_filters_python">
 <a href="#ip_filters_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>filters</a>
@@ -2413,7 +2469,15 @@ utility to be used to upload Cassandra data files. Available only on service cre
     </dt>
     <dd>{{% md %}}Name of another service to fork from. This has effect only 
 when a new service is being created.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="static_ips_python">
+<a href="#static_ips_python" style="color: inherit; text-decoration: inherit;">static_<wbr>ips</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="cassandracassandrauserconfigcassandra">Cassandra<wbr>Cassandra<wbr>User<wbr>Config<wbr>Cassandra</h4>
