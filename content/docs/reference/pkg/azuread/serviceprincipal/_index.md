@@ -59,12 +59,6 @@ class MyStack : Stack
             {
                 current.Apply(current => current.ObjectId),
             },
-            Tags = 
-            {
-                "example",
-                "tags",
-                "here",
-            },
         });
     }
 
@@ -106,11 +100,6 @@ func main() {
 			Owners: pulumi.StringArray{
 				pulumi.String(current.ObjectId),
 			},
-			Tags: pulumi.StringArray{
-				pulumi.String("example"),
-				pulumi.String("tags"),
-				pulumi.String("here"),
-			},
 		})
 		if err != nil {
 			return err
@@ -137,12 +126,7 @@ example_application = azuread.Application("exampleApplication",
 example_service_principal = azuread.ServicePrincipal("exampleServicePrincipal",
     application_id=example_application.application_id,
     app_role_assignment_required=False,
-    owners=[current.object_id],
-    tags=[
-        "example",
-        "tags",
-        "here",
-    ])
+    owners=[current.object_id])
 ```
 
 
@@ -165,11 +149,6 @@ const exampleServicePrincipal = new azuread.ServicePrincipal("exampleServicePrin
     applicationId: exampleApplication.applicationId,
     appRoleAssignmentRequired: false,
     owners: [current.then(current => current.objectId)],
-    tags: [
-        "example",
-        "tags",
-        "here",
-    ],
 });
 ```
 
@@ -202,6 +181,7 @@ const exampleServicePrincipal = new azuread.ServicePrincipal("exampleServicePrin
                      <span class="nx">app_role_assignment_required</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                      <span class="nx">application_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                      <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                     <span class="nx">features</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServicePrincipalFeatureArgs]]</span> = None<span class="p">,</span>
                      <span class="nx">login_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                      <span class="nx">notes</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                      <span class="nx">notification_email_addresses</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
@@ -384,6 +364,15 @@ The ServicePrincipal resource accepts the following [input]({{< relref "/docs/in
     <dd>{{% md %}}A description of the service principal provided for internal end-users.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="features_csharp">
+<a href="#features_csharp" style="color: inherit; text-decoration: inherit;">Features</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceprincipalfeature">List&lt;Pulumi.<wbr>Azure<wbr>AD.<wbr>Inputs.<wbr>Service<wbr>Principal<wbr>Feature<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A `features` block as described below. Cannot be used together with the `tags` property.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="loginurl_csharp">
 <a href="#loginurl_csharp" style="color: inherit; text-decoration: inherit;">Login<wbr>Url</a>
 </span>
@@ -444,7 +433,7 @@ The ServicePrincipal resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}A set of tags to apply to the service principal.
+    <dd>{{% md %}}A set of tags to apply to the service principal. Cannot be used together with the `features` block.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="useexisting_csharp">
@@ -503,6 +492,15 @@ The ServicePrincipal resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the service principal provided for internal end-users.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="features_go">
+<a href="#features_go" style="color: inherit; text-decoration: inherit;">Features</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceprincipalfeature">[]Service<wbr>Principal<wbr>Feature<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `features` block as described below. Cannot be used together with the `tags` property.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loginurl_go">
@@ -565,7 +563,7 @@ The ServicePrincipal resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}A set of tags to apply to the service principal.
+    <dd>{{% md %}}A set of tags to apply to the service principal. Cannot be used together with the `features` block.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="useexisting_go">
@@ -624,6 +622,15 @@ The ServicePrincipal resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the service principal provided for internal end-users.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="features_nodejs">
+<a href="#features_nodejs" style="color: inherit; text-decoration: inherit;">features</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceprincipalfeature">Service<wbr>Principal<wbr>Feature<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}A `features` block as described below. Cannot be used together with the `tags` property.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loginurl_nodejs">
@@ -686,7 +693,7 @@ The ServicePrincipal resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}A set of tags to apply to the service principal.
+    <dd>{{% md %}}A set of tags to apply to the service principal. Cannot be used together with the `features` block.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="useexisting_nodejs">
@@ -745,6 +752,15 @@ The ServicePrincipal resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A description of the service principal provided for internal end-users.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="features_python">
+<a href="#features_python" style="color: inherit; text-decoration: inherit;">features</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceprincipalfeature">Sequence[Service<wbr>Principal<wbr>Feature<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}A `features` block as described below. Cannot be used together with the `tags` property.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="login_url_python">
@@ -807,7 +823,7 @@ The ServicePrincipal resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}A set of tags to apply to the service principal.
+    <dd>{{% md %}}A set of tags to apply to the service principal. Cannot be used together with the `features` block.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="use_existing_python">
@@ -1404,6 +1420,7 @@ Get an existing ServicePrincipal resource's state with the given name, ID, and o
         <span class="nx">application_tenant_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">features</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServicePrincipalFeatureArgs]]</span> = None<span class="p">,</span>
         <span class="nx">homepage_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">login_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">logout_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -1615,6 +1632,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Display name for the app role that appears during app role assignment and in consent experiences.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_features_csharp">
+<a href="#state_features_csharp" style="color: inherit; text-decoration: inherit;">Features</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceprincipalfeature">List&lt;Pulumi.<wbr>Azure<wbr>AD.<wbr>Inputs.<wbr>Service<wbr>Principal<wbr>Feature<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A `features` block as described below. Cannot be used together with the `tags` property.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_homepageurl_csharp">
 <a href="#state_homepageurl_csharp" style="color: inherit; text-decoration: inherit;">Homepage<wbr>Url</a>
 </span>
@@ -1756,7 +1782,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}A set of tags to apply to the service principal.
+    <dd>{{% md %}}A set of tags to apply to the service principal. Cannot be used together with the `features` block.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_csharp">
@@ -1860,6 +1886,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Display name for the app role that appears during app role assignment and in consent experiences.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_features_go">
+<a href="#state_features_go" style="color: inherit; text-decoration: inherit;">Features</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceprincipalfeature">[]Service<wbr>Principal<wbr>Feature<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `features` block as described below. Cannot be used together with the `tags` property.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_homepageurl_go">
@@ -2003,7 +2038,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}A set of tags to apply to the service principal.
+    <dd>{{% md %}}A set of tags to apply to the service principal. Cannot be used together with the `features` block.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_go">
@@ -2107,6 +2142,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Display name for the app role that appears during app role assignment and in consent experiences.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_features_nodejs">
+<a href="#state_features_nodejs" style="color: inherit; text-decoration: inherit;">features</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceprincipalfeature">Service<wbr>Principal<wbr>Feature<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}A `features` block as described below. Cannot be used together with the `tags` property.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_homepageurl_nodejs">
@@ -2250,7 +2294,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}A set of tags to apply to the service principal.
+    <dd>{{% md %}}A set of tags to apply to the service principal. Cannot be used together with the `features` block.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_nodejs">
@@ -2354,6 +2398,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Display name for the app role that appears during app role assignment and in consent experiences.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_features_python">
+<a href="#state_features_python" style="color: inherit; text-decoration: inherit;">features</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceprincipalfeature">Sequence[Service<wbr>Principal<wbr>Feature<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}A `features` block as described below. Cannot be used together with the `tags` property.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_homepage_url_python">
@@ -2497,7 +2550,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}A set of tags to apply to the service principal.
+    <dd>{{% md %}}A set of tags to apply to the service principal. Cannot be used together with the `features` block.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_python">
@@ -2759,6 +2812,168 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value that is used for the `scp` claim in OAuth 2.0 access tokens.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="serviceprincipalfeature">Service<wbr>Principal<wbr>Feature</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="customsinglesignonapp_csharp">
+<a href="#customsinglesignonapp_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Single<wbr>Sign<wbr>On<wbr>App</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether this service principal represents a custom SAML application. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enterpriseapplication_csharp">
+<a href="#enterpriseapplication_csharp" style="color: inherit; text-decoration: inherit;">Enterprise<wbr>Application</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether this service principal represents an Enterprise Application. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="galleryapplication_csharp">
+<a href="#galleryapplication_csharp" style="color: inherit; text-decoration: inherit;">Gallery<wbr>Application</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether this service principal represents a gallery application. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="visibletousers_csharp">
+<a href="#visibletousers_csharp" style="color: inherit; text-decoration: inherit;">Visible<wbr>To<wbr>Users</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether this app is visible to users in My Apps and Office 365 Launcher. Defaults to `true`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="customsinglesignonapp_go">
+<a href="#customsinglesignonapp_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Single<wbr>Sign<wbr>On<wbr>App</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether this service principal represents a custom SAML application. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enterpriseapplication_go">
+<a href="#enterpriseapplication_go" style="color: inherit; text-decoration: inherit;">Enterprise<wbr>Application</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether this service principal represents an Enterprise Application. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="galleryapplication_go">
+<a href="#galleryapplication_go" style="color: inherit; text-decoration: inherit;">Gallery<wbr>Application</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether this service principal represents a gallery application. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="visibletousers_go">
+<a href="#visibletousers_go" style="color: inherit; text-decoration: inherit;">Visible<wbr>To<wbr>Users</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether this app is visible to users in My Apps and Office 365 Launcher. Defaults to `true`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="customsinglesignonapp_nodejs">
+<a href="#customsinglesignonapp_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Single<wbr>Sign<wbr>On<wbr>App</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether this service principal represents a custom SAML application. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enterpriseapplication_nodejs">
+<a href="#enterpriseapplication_nodejs" style="color: inherit; text-decoration: inherit;">enterprise<wbr>Application</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether this service principal represents an Enterprise Application. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="galleryapplication_nodejs">
+<a href="#galleryapplication_nodejs" style="color: inherit; text-decoration: inherit;">gallery<wbr>Application</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether this service principal represents a gallery application. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="visibletousers_nodejs">
+<a href="#visibletousers_nodejs" style="color: inherit; text-decoration: inherit;">visible<wbr>To<wbr>Users</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether this app is visible to users in My Apps and Office 365 Launcher. Defaults to `true`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="custom_single_sign_on_app_python">
+<a href="#custom_single_sign_on_app_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>single_<wbr>sign_<wbr>on_<wbr>app</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether this service principal represents a custom SAML application. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enterprise_application_python">
+<a href="#enterprise_application_python" style="color: inherit; text-decoration: inherit;">enterprise_<wbr>application</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether this service principal represents an Enterprise Application. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="gallery_application_python">
+<a href="#gallery_application_python" style="color: inherit; text-decoration: inherit;">gallery_<wbr>application</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether this service principal represents a gallery application. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="visible_to_users_python">
+<a href="#visible_to_users_python" style="color: inherit; text-decoration: inherit;">visible_<wbr>to_<wbr>users</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether this app is visible to users in My Apps and Office 365 Launcher. Defaults to `true`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

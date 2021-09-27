@@ -233,8 +233,8 @@ Principal using a Client Certificate
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The cloud environment which should be used. Possible values are `global` (formerly `public`), `usgovernment`, `dod`,
-`germany`, and `china`. Defaults to `global`
+    <dd>{{% md %}}The cloud environment which should be used. Possible values are: `global` (also `public`), `usgovernmentl4` (also
+`usgovernment`), `usgovernmentl5` (also `dod`), `germany` (also `german`), and `china`. Defaults to `global`
  It can also be sourced from the following environment variable: `ARM_ENVIRONMENT`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="msiendpoint_csharp">
@@ -348,8 +348,8 @@ Principal using a Client Certificate
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The cloud environment which should be used. Possible values are `global` (formerly `public`), `usgovernment`, `dod`,
-`germany`, and `china`. Defaults to `global`
+    <dd>{{% md %}}The cloud environment which should be used. Possible values are: `global` (also `public`), `usgovernmentl4` (also
+`usgovernment`), `usgovernmentl5` (also `dod`), `germany` (also `german`), and `china`. Defaults to `global`
  It can also be sourced from the following environment variable: `ARM_ENVIRONMENT`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="msiendpoint_go">
@@ -463,8 +463,8 @@ Principal using a Client Certificate
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The cloud environment which should be used. Possible values are `global` (formerly `public`), `usgovernment`, `dod`,
-`germany`, and `china`. Defaults to `global`
+    <dd>{{% md %}}The cloud environment which should be used. Possible values are: `global` (also `public`), `usgovernmentl4` (also
+`usgovernment`), `usgovernmentl5` (also `dod`), `germany` (also `german`), and `china`. Defaults to `global`
  It can also be sourced from the following environment variable: `ARM_ENVIRONMENT`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="msiendpoint_nodejs">
@@ -578,8 +578,8 @@ Principal using a Client Certificate
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The cloud environment which should be used. Possible values are `global` (formerly `public`), `usgovernment`, `dod`,
-`germany`, and `china`. Defaults to `global`
+    <dd>{{% md %}}The cloud environment which should be used. Possible values are: `global` (also `public`), `usgovernmentl4` (also
+`usgovernment`), `usgovernmentl5` (also `dod`), `germany` (also `german`), and `china`. Defaults to `global`
  It can also be sourced from the following environment variable: `ARM_ENVIRONMENT`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="msi_endpoint_python">

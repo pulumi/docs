@@ -1095,8 +1095,8 @@ The following state arguments are supported:
 <h4 id="conditionalaccesspolicyconditions">Conditional<wbr>Access<wbr>Policy<wbr>Conditions</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
         <span id="applications_csharp">
 <a href="#applications_csharp" style="color: inherit; text-decoration: inherit;">Applications</a>
 </span>
@@ -1104,8 +1104,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#conditionalaccesspolicyconditionsapplications">Pulumi.<wbr>Azure<wbr>AD.<wbr>Inputs.<wbr>Conditional<wbr>Access<wbr>Policy<wbr>Conditions<wbr>Applications</a></span>
     </dt>
     <dd>{{% md %}}An `applications` block as documented below, which specifies applications and user actions included in and excluded from the policy.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="clientapptypes_csharp">
 <a href="#clientapptypes_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>App<wbr>Types</a>
 </span>
@@ -1113,8 +1113,8 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of client application types included in the policy. Possible values are: `all`, `browser`, `mobileAppsAndDesktopClients`, `exchangeActiveSync`, `easSupported` and `other`.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="locations_csharp">
 <a href="#locations_csharp" style="color: inherit; text-decoration: inherit;">Locations</a>
 </span>
@@ -1122,8 +1122,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#conditionalaccesspolicyconditionslocations">Pulumi.<wbr>Azure<wbr>AD.<wbr>Inputs.<wbr>Conditional<wbr>Access<wbr>Policy<wbr>Conditions<wbr>Locations</a></span>
     </dt>
     <dd>{{% md %}}A `locations` block as documented below, which specifies locations included in and excluded from the policy.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="platforms_csharp">
 <a href="#platforms_csharp" style="color: inherit; text-decoration: inherit;">Platforms</a>
 </span>
@@ -1131,6 +1131,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#conditionalaccesspolicyconditionsplatforms">Pulumi.<wbr>Azure<wbr>AD.<wbr>Inputs.<wbr>Conditional<wbr>Access<wbr>Policy<wbr>Conditions<wbr>Platforms</a></span>
     </dt>
     <dd>{{% md %}}A `platforms` block as documented below, which specifies platforms included in and excluded from the policy.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="users_csharp">
+<a href="#users_csharp" style="color: inherit; text-decoration: inherit;">Users</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#conditionalaccesspolicyconditionsusers">Pulumi.<wbr>Azure<wbr>AD.<wbr>Inputs.<wbr>Conditional<wbr>Access<wbr>Policy<wbr>Conditions<wbr>Users</a></span>
+    </dt>
+    <dd>{{% md %}}A `users` block as documented below, which specifies users, groups, and roles included in and excluded from the policy.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="signinrisklevels_csharp">
@@ -1149,21 +1158,12 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of user risk levels included in the policy. Possible values are: `low`, `medium`, `high`, `hidden`, `none`, `unknownFutureValue`.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="users_csharp">
-<a href="#users_csharp" style="color: inherit; text-decoration: inherit;">Users</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#conditionalaccesspolicyconditionsusers">Pulumi.<wbr>Azure<wbr>AD.<wbr>Inputs.<wbr>Conditional<wbr>Access<wbr>Policy<wbr>Conditions<wbr>Users</a></span>
-    </dt>
-    <dd>{{% md %}}A `users` block as documented below, which specifies users, groups, and roles included in and excluded from the policy.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
         <span id="applications_go">
 <a href="#applications_go" style="color: inherit; text-decoration: inherit;">Applications</a>
 </span>
@@ -1171,8 +1171,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#conditionalaccesspolicyconditionsapplications">Conditional<wbr>Access<wbr>Policy<wbr>Conditions<wbr>Applications</a></span>
     </dt>
     <dd>{{% md %}}An `applications` block as documented below, which specifies applications and user actions included in and excluded from the policy.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="clientapptypes_go">
 <a href="#clientapptypes_go" style="color: inherit; text-decoration: inherit;">Client<wbr>App<wbr>Types</a>
 </span>
@@ -1180,8 +1180,8 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of client application types included in the policy. Possible values are: `all`, `browser`, `mobileAppsAndDesktopClients`, `exchangeActiveSync`, `easSupported` and `other`.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="locations_go">
 <a href="#locations_go" style="color: inherit; text-decoration: inherit;">Locations</a>
 </span>
@@ -1189,8 +1189,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#conditionalaccesspolicyconditionslocations">Conditional<wbr>Access<wbr>Policy<wbr>Conditions<wbr>Locations</a></span>
     </dt>
     <dd>{{% md %}}A `locations` block as documented below, which specifies locations included in and excluded from the policy.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="platforms_go">
 <a href="#platforms_go" style="color: inherit; text-decoration: inherit;">Platforms</a>
 </span>
@@ -1198,6 +1198,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#conditionalaccesspolicyconditionsplatforms">Conditional<wbr>Access<wbr>Policy<wbr>Conditions<wbr>Platforms</a></span>
     </dt>
     <dd>{{% md %}}A `platforms` block as documented below, which specifies platforms included in and excluded from the policy.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="users_go">
+<a href="#users_go" style="color: inherit; text-decoration: inherit;">Users</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#conditionalaccesspolicyconditionsusers">Conditional<wbr>Access<wbr>Policy<wbr>Conditions<wbr>Users</a></span>
+    </dt>
+    <dd>{{% md %}}A `users` block as documented below, which specifies users, groups, and roles included in and excluded from the policy.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="signinrisklevels_go">
@@ -1216,21 +1225,12 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of user risk levels included in the policy. Possible values are: `low`, `medium`, `high`, `hidden`, `none`, `unknownFutureValue`.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="users_go">
-<a href="#users_go" style="color: inherit; text-decoration: inherit;">Users</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#conditionalaccesspolicyconditionsusers">Conditional<wbr>Access<wbr>Policy<wbr>Conditions<wbr>Users</a></span>
-    </dt>
-    <dd>{{% md %}}A `users` block as documented below, which specifies users, groups, and roles included in and excluded from the policy.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
         <span id="applications_nodejs">
 <a href="#applications_nodejs" style="color: inherit; text-decoration: inherit;">applications</a>
 </span>
@@ -1238,8 +1238,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#conditionalaccesspolicyconditionsapplications">Conditional<wbr>Access<wbr>Policy<wbr>Conditions<wbr>Applications</a></span>
     </dt>
     <dd>{{% md %}}An `applications` block as documented below, which specifies applications and user actions included in and excluded from the policy.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="clientapptypes_nodejs">
 <a href="#clientapptypes_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>App<wbr>Types</a>
 </span>
@@ -1247,8 +1247,8 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of client application types included in the policy. Possible values are: `all`, `browser`, `mobileAppsAndDesktopClients`, `exchangeActiveSync`, `easSupported` and `other`.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="locations_nodejs">
 <a href="#locations_nodejs" style="color: inherit; text-decoration: inherit;">locations</a>
 </span>
@@ -1256,8 +1256,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#conditionalaccesspolicyconditionslocations">Conditional<wbr>Access<wbr>Policy<wbr>Conditions<wbr>Locations</a></span>
     </dt>
     <dd>{{% md %}}A `locations` block as documented below, which specifies locations included in and excluded from the policy.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="platforms_nodejs">
 <a href="#platforms_nodejs" style="color: inherit; text-decoration: inherit;">platforms</a>
 </span>
@@ -1265,6 +1265,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#conditionalaccesspolicyconditionsplatforms">Conditional<wbr>Access<wbr>Policy<wbr>Conditions<wbr>Platforms</a></span>
     </dt>
     <dd>{{% md %}}A `platforms` block as documented below, which specifies platforms included in and excluded from the policy.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="users_nodejs">
+<a href="#users_nodejs" style="color: inherit; text-decoration: inherit;">users</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#conditionalaccesspolicyconditionsusers">Conditional<wbr>Access<wbr>Policy<wbr>Conditions<wbr>Users</a></span>
+    </dt>
+    <dd>{{% md %}}A `users` block as documented below, which specifies users, groups, and roles included in and excluded from the policy.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="signinrisklevels_nodejs">
@@ -1283,21 +1292,12 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of user risk levels included in the policy. Possible values are: `low`, `medium`, `high`, `hidden`, `none`, `unknownFutureValue`.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="users_nodejs">
-<a href="#users_nodejs" style="color: inherit; text-decoration: inherit;">users</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#conditionalaccesspolicyconditionsusers">Conditional<wbr>Access<wbr>Policy<wbr>Conditions<wbr>Users</a></span>
-    </dt>
-    <dd>{{% md %}}A `users` block as documented below, which specifies users, groups, and roles included in and excluded from the policy.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
         <span id="applications_python">
 <a href="#applications_python" style="color: inherit; text-decoration: inherit;">applications</a>
 </span>
@@ -1305,8 +1305,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#conditionalaccesspolicyconditionsapplications">Conditional<wbr>Access<wbr>Policy<wbr>Conditions<wbr>Applications</a></span>
     </dt>
     <dd>{{% md %}}An `applications` block as documented below, which specifies applications and user actions included in and excluded from the policy.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="client_app_types_python">
 <a href="#client_app_types_python" style="color: inherit; text-decoration: inherit;">client_<wbr>app_<wbr>types</a>
 </span>
@@ -1314,8 +1314,8 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of client application types included in the policy. Possible values are: `all`, `browser`, `mobileAppsAndDesktopClients`, `exchangeActiveSync`, `easSupported` and `other`.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="locations_python">
 <a href="#locations_python" style="color: inherit; text-decoration: inherit;">locations</a>
 </span>
@@ -1323,8 +1323,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#conditionalaccesspolicyconditionslocations">Conditional<wbr>Access<wbr>Policy<wbr>Conditions<wbr>Locations</a></span>
     </dt>
     <dd>{{% md %}}A `locations` block as documented below, which specifies locations included in and excluded from the policy.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="platforms_python">
 <a href="#platforms_python" style="color: inherit; text-decoration: inherit;">platforms</a>
 </span>
@@ -1332,6 +1332,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#conditionalaccesspolicyconditionsplatforms">Conditional<wbr>Access<wbr>Policy<wbr>Conditions<wbr>Platforms</a></span>
     </dt>
     <dd>{{% md %}}A `platforms` block as documented below, which specifies platforms included in and excluded from the policy.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="users_python">
+<a href="#users_python" style="color: inherit; text-decoration: inherit;">users</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#conditionalaccesspolicyconditionsusers">Conditional<wbr>Access<wbr>Policy<wbr>Conditions<wbr>Users</a></span>
+    </dt>
+    <dd>{{% md %}}A `users` block as documented below, which specifies users, groups, and roles included in and excluded from the policy.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sign_in_risk_levels_python">
@@ -1350,15 +1359,6 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of user risk levels included in the policy. Possible values are: `low`, `medium`, `high`, `hidden`, `none`, `unknownFutureValue`.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="users_python">
-<a href="#users_python" style="color: inherit; text-decoration: inherit;">users</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#conditionalaccesspolicyconditionsusers">Conditional<wbr>Access<wbr>Policy<wbr>Conditions<wbr>Users</a></span>
-    </dt>
-    <dd>{{% md %}}A `users` block as documented below, which specifies users, groups, and roles included in and excluded from the policy.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1589,7 +1589,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}A list of platforms the policy applies to, unless explicitly excluded. Possible values are: `android`, `iOS`, `windows`, `windowsPhone`, `macOS`, `all`, `unknownFutureValue`.
+    <dd>{{% md %}}A list of platforms the policy applies to, unless explicitly excluded. Possible values are: `all`, `android`, `iOS`, `macOS`, `windows`, `windowsPhone` or `unknownFutureValue`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="excludedplatforms_csharp">
@@ -1598,7 +1598,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}A list of platforms explicitly excluded from the policy. Possible values are: `android`, `iOS`, `windows`, `windowsPhone`, `macOS`, `all`, `unknownFutureValue`.
+    <dd>{{% md %}}A list of platforms explicitly excluded from the policy. Possible values are: `all`, `android`, `iOS`, `macOS`, `windows`, `windowsPhone` or `unknownFutureValue`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1611,7 +1611,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}A list of platforms the policy applies to, unless explicitly excluded. Possible values are: `android`, `iOS`, `windows`, `windowsPhone`, `macOS`, `all`, `unknownFutureValue`.
+    <dd>{{% md %}}A list of platforms the policy applies to, unless explicitly excluded. Possible values are: `all`, `android`, `iOS`, `macOS`, `windows`, `windowsPhone` or `unknownFutureValue`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="excludedplatforms_go">
@@ -1620,7 +1620,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}A list of platforms explicitly excluded from the policy. Possible values are: `android`, `iOS`, `windows`, `windowsPhone`, `macOS`, `all`, `unknownFutureValue`.
+    <dd>{{% md %}}A list of platforms explicitly excluded from the policy. Possible values are: `all`, `android`, `iOS`, `macOS`, `windows`, `windowsPhone` or `unknownFutureValue`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1633,7 +1633,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}A list of platforms the policy applies to, unless explicitly excluded. Possible values are: `android`, `iOS`, `windows`, `windowsPhone`, `macOS`, `all`, `unknownFutureValue`.
+    <dd>{{% md %}}A list of platforms the policy applies to, unless explicitly excluded. Possible values are: `all`, `android`, `iOS`, `macOS`, `windows`, `windowsPhone` or `unknownFutureValue`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="excludedplatforms_nodejs">
@@ -1642,7 +1642,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}A list of platforms explicitly excluded from the policy. Possible values are: `android`, `iOS`, `windows`, `windowsPhone`, `macOS`, `all`, `unknownFutureValue`.
+    <dd>{{% md %}}A list of platforms explicitly excluded from the policy. Possible values are: `all`, `android`, `iOS`, `macOS`, `windows`, `windowsPhone` or `unknownFutureValue`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1655,7 +1655,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}A list of platforms the policy applies to, unless explicitly excluded. Possible values are: `android`, `iOS`, `windows`, `windowsPhone`, `macOS`, `all`, `unknownFutureValue`.
+    <dd>{{% md %}}A list of platforms the policy applies to, unless explicitly excluded. Possible values are: `all`, `android`, `iOS`, `macOS`, `windows`, `windowsPhone` or `unknownFutureValue`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="excluded_platforms_python">
@@ -1664,7 +1664,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}A list of platforms explicitly excluded from the policy. Possible values are: `android`, `iOS`, `windows`, `windowsPhone`, `macOS`, `all`, `unknownFutureValue`.
+    <dd>{{% md %}}A list of platforms explicitly excluded from the policy. Possible values are: `all`, `android`, `iOS`, `macOS`, `windows`, `windowsPhone` or `unknownFutureValue`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1913,7 +1913,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}List of built-in controls required by the policy. Possible values are: `block`, `mfa`, `compliantDevice`, `domainJoinedDevice`, `approvedApplication`, `compliantApplication`, `passwordChange`, `unknownFutureValue`.
+    <dd>{{% md %}}List of built-in controls required by the policy. Possible values are: `block`, `mfa`, `approvedApplication`, `compliantApplication`, `compliantDevice`, `domainJoinedDevice`, `passwordChange` or `unknownFutureValue`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="operator_csharp">
@@ -1953,7 +1953,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}List of built-in controls required by the policy. Possible values are: `block`, `mfa`, `compliantDevice`, `domainJoinedDevice`, `approvedApplication`, `compliantApplication`, `passwordChange`, `unknownFutureValue`.
+    <dd>{{% md %}}List of built-in controls required by the policy. Possible values are: `block`, `mfa`, `approvedApplication`, `compliantApplication`, `compliantDevice`, `domainJoinedDevice`, `passwordChange` or `unknownFutureValue`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="operator_go">
@@ -1993,7 +1993,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}List of built-in controls required by the policy. Possible values are: `block`, `mfa`, `compliantDevice`, `domainJoinedDevice`, `approvedApplication`, `compliantApplication`, `passwordChange`, `unknownFutureValue`.
+    <dd>{{% md %}}List of built-in controls required by the policy. Possible values are: `block`, `mfa`, `approvedApplication`, `compliantApplication`, `compliantDevice`, `domainJoinedDevice`, `passwordChange` or `unknownFutureValue`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="operator_nodejs">
@@ -2033,7 +2033,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}List of built-in controls required by the policy. Possible values are: `block`, `mfa`, `compliantDevice`, `domainJoinedDevice`, `approvedApplication`, `compliantApplication`, `passwordChange`, `unknownFutureValue`.
+    <dd>{{% md %}}List of built-in controls required by the policy. Possible values are: `block`, `mfa`, `approvedApplication`, `compliantApplication`, `compliantDevice`, `domainJoinedDevice`, `passwordChange` or `unknownFutureValue`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="operator_python">
@@ -2084,7 +2084,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Enables cloud app security and specifies the cloud app security policy to use. Possible values are: `mcasConfigured`, `monitorOnly`, `blockDownloads` or `unknownFutureValue`.
+    <dd>{{% md %}}Enables cloud app security and specifies the cloud app security policy to use. Possible values are: `blockDownloads`, `mcasConfigured`, `monitorOnly` or `unknownFutureValue`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="signinfrequency_csharp">
@@ -2093,7 +2093,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of days or hours to enforce sign-in frequency. Required when `sign_in_frequency_period` is specified.
+    <dd>{{% md %}}Number of days or hours to enforce sign-in frequency. Required when `sign_in_frequency_period` is specified. Due to an API issue, removing this property forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="signinfrequencyperiod_csharp">
@@ -2102,8 +2102,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time period to enforce sign-in frequency. Possible values are: `hours` or `days`. Required when `sign_in_frequency_period` is specified.
----
+    <dd>{{% md %}}The time period to enforce sign-in frequency. Possible values are: `hours` or `days`. Required when `sign_in_frequency_period` is specified. Due to an API issue, removing this property forces a new resource to be created.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2125,7 +2124,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Enables cloud app security and specifies the cloud app security policy to use. Possible values are: `mcasConfigured`, `monitorOnly`, `blockDownloads` or `unknownFutureValue`.
+    <dd>{{% md %}}Enables cloud app security and specifies the cloud app security policy to use. Possible values are: `blockDownloads`, `mcasConfigured`, `monitorOnly` or `unknownFutureValue`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="signinfrequency_go">
@@ -2134,7 +2133,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of days or hours to enforce sign-in frequency. Required when `sign_in_frequency_period` is specified.
+    <dd>{{% md %}}Number of days or hours to enforce sign-in frequency. Required when `sign_in_frequency_period` is specified. Due to an API issue, removing this property forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="signinfrequencyperiod_go">
@@ -2143,8 +2142,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time period to enforce sign-in frequency. Possible values are: `hours` or `days`. Required when `sign_in_frequency_period` is specified.
----
+    <dd>{{% md %}}The time period to enforce sign-in frequency. Possible values are: `hours` or `days`. Required when `sign_in_frequency_period` is specified. Due to an API issue, removing this property forces a new resource to be created.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2166,7 +2164,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Enables cloud app security and specifies the cloud app security policy to use. Possible values are: `mcasConfigured`, `monitorOnly`, `blockDownloads` or `unknownFutureValue`.
+    <dd>{{% md %}}Enables cloud app security and specifies the cloud app security policy to use. Possible values are: `blockDownloads`, `mcasConfigured`, `monitorOnly` or `unknownFutureValue`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="signinfrequency_nodejs">
@@ -2175,7 +2173,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Number of days or hours to enforce sign-in frequency. Required when `sign_in_frequency_period` is specified.
+    <dd>{{% md %}}Number of days or hours to enforce sign-in frequency. Required when `sign_in_frequency_period` is specified. Due to an API issue, removing this property forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="signinfrequencyperiod_nodejs">
@@ -2184,8 +2182,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time period to enforce sign-in frequency. Possible values are: `hours` or `days`. Required when `sign_in_frequency_period` is specified.
----
+    <dd>{{% md %}}The time period to enforce sign-in frequency. Possible values are: `hours` or `days`. Required when `sign_in_frequency_period` is specified. Due to an API issue, removing this property forces a new resource to be created.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2207,7 +2204,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Enables cloud app security and specifies the cloud app security policy to use. Possible values are: `mcasConfigured`, `monitorOnly`, `blockDownloads` or `unknownFutureValue`.
+    <dd>{{% md %}}Enables cloud app security and specifies the cloud app security policy to use. Possible values are: `blockDownloads`, `mcasConfigured`, `monitorOnly` or `unknownFutureValue`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sign_in_frequency_python">
@@ -2216,7 +2213,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of days or hours to enforce sign-in frequency. Required when `sign_in_frequency_period` is specified.
+    <dd>{{% md %}}Number of days or hours to enforce sign-in frequency. Required when `sign_in_frequency_period` is specified. Due to an API issue, removing this property forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sign_in_frequency_period_python">
@@ -2225,8 +2222,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The time period to enforce sign-in frequency. Possible values are: `hours` or `days`. Required when `sign_in_frequency_period` is specified.
----
+    <dd>{{% md %}}The time period to enforce sign-in frequency. Possible values are: `hours` or `days`. Required when `sign_in_frequency_period` is specified. Due to an API issue, removing this property forces a new resource to be created.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import

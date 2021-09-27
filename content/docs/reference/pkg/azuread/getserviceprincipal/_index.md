@@ -373,6 +373,15 @@ The following output properties are available:
     <dd>{{% md %}}Display name for the permission that appears in the admin consent and app assignment experiences.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="features_csharp">
+<a href="#features_csharp" style="color: inherit; text-decoration: inherit;">Features</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getserviceprincipalfeature">List&lt;Pulumi.<wbr>Azure<wbr>AD.<wbr>Outputs.<wbr>Get<wbr>Service<wbr>Principal<wbr>Feature&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A `features` block as described below.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="homepageurl_csharp">
 <a href="#homepageurl_csharp" style="color: inherit; text-decoration: inherit;">Homepage<wbr>Url</a>
 </span>
@@ -609,6 +618,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Display name for the permission that appears in the admin consent and app assignment experiences.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="features_go">
+<a href="#features_go" style="color: inherit; text-decoration: inherit;">Features</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getserviceprincipalfeature">[]Get<wbr>Service<wbr>Principal<wbr>Feature</a></span>
+    </dt>
+    <dd>{{% md %}}A `features` block as described below.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="homepageurl_go">
@@ -849,6 +867,15 @@ The following output properties are available:
     <dd>{{% md %}}Display name for the permission that appears in the admin consent and app assignment experiences.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="features_nodejs">
+<a href="#features_nodejs" style="color: inherit; text-decoration: inherit;">features</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getserviceprincipalfeature">Get<wbr>Service<wbr>Principal<wbr>Feature[]</a></span>
+    </dt>
+    <dd>{{% md %}}A `features` block as described below.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="homepageurl_nodejs">
 <a href="#homepageurl_nodejs" style="color: inherit; text-decoration: inherit;">homepage<wbr>Url</a>
 </span>
@@ -1085,6 +1112,15 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Display name for the permission that appears in the admin consent and app assignment experiences.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="features_python">
+<a href="#features_python" style="color: inherit; text-decoration: inherit;">features</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getserviceprincipalfeature">Sequence[Get<wbr>Service<wbr>Principal<wbr>Feature]</a></span>
+    </dt>
+    <dd>{{% md %}}A `features` block as described below.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="homepage_url_python">
@@ -1480,6 +1516,170 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value that is used for the `scp` claim in OAuth 2.0 access tokens.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="getserviceprincipalfeature">Get<wbr>Service<wbr>Principal<wbr>Feature</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="customsinglesignonapp_csharp">
+<a href="#customsinglesignonapp_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Single<wbr>Sign<wbr>On<wbr>App</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether this service principal represents a custom SAML application.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="enterpriseapplication_csharp">
+<a href="#enterpriseapplication_csharp" style="color: inherit; text-decoration: inherit;">Enterprise<wbr>Application</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether this service principal represents an Enterprise Application.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="galleryapplication_csharp">
+<a href="#galleryapplication_csharp" style="color: inherit; text-decoration: inherit;">Gallery<wbr>Application</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether this service principal represents a gallery application.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="visibletousers_csharp">
+<a href="#visibletousers_csharp" style="color: inherit; text-decoration: inherit;">Visible<wbr>To<wbr>Users</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether this app is visible to users in My Apps and Office 365 Launcher.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="customsinglesignonapp_go">
+<a href="#customsinglesignonapp_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Single<wbr>Sign<wbr>On<wbr>App</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether this service principal represents a custom SAML application.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="enterpriseapplication_go">
+<a href="#enterpriseapplication_go" style="color: inherit; text-decoration: inherit;">Enterprise<wbr>Application</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether this service principal represents an Enterprise Application.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="galleryapplication_go">
+<a href="#galleryapplication_go" style="color: inherit; text-decoration: inherit;">Gallery<wbr>Application</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether this service principal represents a gallery application.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="visibletousers_go">
+<a href="#visibletousers_go" style="color: inherit; text-decoration: inherit;">Visible<wbr>To<wbr>Users</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether this app is visible to users in My Apps and Office 365 Launcher.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="customsinglesignonapp_nodejs">
+<a href="#customsinglesignonapp_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Single<wbr>Sign<wbr>On<wbr>App</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether this service principal represents a custom SAML application.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="enterpriseapplication_nodejs">
+<a href="#enterpriseapplication_nodejs" style="color: inherit; text-decoration: inherit;">enterprise<wbr>Application</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether this service principal represents an Enterprise Application.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="galleryapplication_nodejs">
+<a href="#galleryapplication_nodejs" style="color: inherit; text-decoration: inherit;">gallery<wbr>Application</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether this service principal represents a gallery application.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="visibletousers_nodejs">
+<a href="#visibletousers_nodejs" style="color: inherit; text-decoration: inherit;">visible<wbr>To<wbr>Users</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether this app is visible to users in My Apps and Office 365 Launcher.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="custom_single_sign_on_app_python">
+<a href="#custom_single_sign_on_app_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>single_<wbr>sign_<wbr>on_<wbr>app</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether this service principal represents a custom SAML application.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="enterprise_application_python">
+<a href="#enterprise_application_python" style="color: inherit; text-decoration: inherit;">enterprise_<wbr>application</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether this service principal represents an Enterprise Application.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="gallery_application_python">
+<a href="#gallery_application_python" style="color: inherit; text-decoration: inherit;">gallery_<wbr>application</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether this service principal represents a gallery application.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="visible_to_users_python">
+<a href="#visible_to_users_python" style="color: inherit; text-decoration: inherit;">visible_<wbr>to_<wbr>users</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether this app is visible to users in My Apps and Office 365 Launcher.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
