@@ -125,6 +125,7 @@ const example = new okta.group.Group("example", {
           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
           <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
           <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">skip_users</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
           <span class="nx">users</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Group</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
@@ -271,6 +272,15 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Okta Group.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="skipusers_csharp">
+<a href="#skipusers_csharp" style="color: inherit; text-decoration: inherit;">Skip<wbr>Users</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicator that allows a group to skip `users` sync (it's also can be provided during import). Default is `false`.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="users_csharp">
@@ -280,6 +290,7 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The users associated with the group. This can also be done per user.
+`DEPRECATED`: Please replace usage with the `okta.GroupMemberships` resource.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}The `users` field is now deprecated for the resource `okta_group`, please replace all uses of this with: `okta_group_memberships`{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
@@ -302,6 +313,15 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Okta Group.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="skipusers_go">
+<a href="#skipusers_go" style="color: inherit; text-decoration: inherit;">Skip<wbr>Users</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicator that allows a group to skip `users` sync (it's also can be provided during import). Default is `false`.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="users_go">
@@ -311,6 +331,7 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The users associated with the group. This can also be done per user.
+`DEPRECATED`: Please replace usage with the `okta.GroupMemberships` resource.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}The `users` field is now deprecated for the resource `okta_group`, please replace all uses of this with: `okta_group_memberships`{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
@@ -333,6 +354,15 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Okta Group.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="skipusers_nodejs">
+<a href="#skipusers_nodejs" style="color: inherit; text-decoration: inherit;">skip<wbr>Users</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Indicator that allows a group to skip `users` sync (it's also can be provided during import). Default is `false`.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="users_nodejs">
@@ -342,6 +372,7 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The users associated with the group. This can also be done per user.
+`DEPRECATED`: Please replace usage with the `okta.GroupMemberships` resource.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}The `users` field is now deprecated for the resource `okta_group`, please replace all uses of this with: `okta_group_memberships`{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
@@ -364,6 +395,15 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Okta Group.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="skip_users_python">
+<a href="#skip_users_python" style="color: inherit; text-decoration: inherit;">skip_<wbr>users</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicator that allows a group to skip `users` sync (it's also can be provided during import). Default is `false`.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="users_python">
@@ -373,6 +413,7 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The users associated with the group. This can also be done per user.
+`DEPRECATED`: Please replace usage with the `okta.GroupMemberships` resource.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}The `users` field is now deprecated for the resource `okta_group`, please replace all uses of this with: `okta_group_memberships`{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
@@ -449,6 +490,7 @@ Get an existing Group resource's state with the given name, ID, and optional ext
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
         <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">skip_users</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">users</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">) -&gt;</span> Group</code></pre></div>
 {{% /choosable %}}
 
@@ -578,6 +620,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Okta Group.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_skipusers_csharp">
+<a href="#state_skipusers_csharp" style="color: inherit; text-decoration: inherit;">Skip<wbr>Users</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicator that allows a group to skip `users` sync (it's also can be provided during import). Default is `false`.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_users_csharp">
@@ -587,6 +638,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The users associated with the group. This can also be done per user.
+`DEPRECATED`: Please replace usage with the `okta.GroupMemberships` resource.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}The `users` field is now deprecated for the resource `okta_group`, please replace all uses of this with: `okta_group_memberships`{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
@@ -609,6 +661,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Okta Group.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_skipusers_go">
+<a href="#state_skipusers_go" style="color: inherit; text-decoration: inherit;">Skip<wbr>Users</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicator that allows a group to skip `users` sync (it's also can be provided during import). Default is `false`.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_users_go">
@@ -618,6 +679,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The users associated with the group. This can also be done per user.
+`DEPRECATED`: Please replace usage with the `okta.GroupMemberships` resource.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}The `users` field is now deprecated for the resource `okta_group`, please replace all uses of this with: `okta_group_memberships`{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
@@ -640,6 +702,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Okta Group.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_skipusers_nodejs">
+<a href="#state_skipusers_nodejs" style="color: inherit; text-decoration: inherit;">skip<wbr>Users</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Indicator that allows a group to skip `users` sync (it's also can be provided during import). Default is `false`.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_users_nodejs">
@@ -649,6 +720,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The users associated with the group. This can also be done per user.
+`DEPRECATED`: Please replace usage with the `okta.GroupMemberships` resource.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}The `users` field is now deprecated for the resource `okta_group`, please replace all uses of this with: `okta_group_memberships`{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
@@ -671,6 +743,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Okta Group.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_skip_users_python">
+<a href="#state_skip_users_python" style="color: inherit; text-decoration: inherit;">skip_<wbr>users</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicator that allows a group to skip `users` sync (it's also can be provided during import). Default is `false`.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_users_python">
@@ -680,6 +761,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The users associated with the group. This can also be done per user.
+`DEPRECATED`: Please replace usage with the `okta.GroupMemberships` resource.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}The `users` field is now deprecated for the resource `okta_group`, please replace all uses of this with: `okta_group_memberships`{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
@@ -694,6 +776,12 @@ An Okta Group can be imported via the Okta ID.
 
 ```sh
  $ pulumi import okta:group/group:Group example <group id>
+```
+
+ It's also possible to import group without users. In this case ID will look like this
+
+```sh
+ $ pulumi import okta:group/group:Group example <group id>/skip_users
 ```
 
 

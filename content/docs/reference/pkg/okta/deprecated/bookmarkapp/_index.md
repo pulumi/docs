@@ -25,7 +25,11 @@ meta_desc: "Documentation for the okta.deprecated.BookmarkApp resource with exam
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">BookmarkApp</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                <span class="nx">accessibility_error_redirect_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">accessibility_login_redirect_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">accessibility_self_service</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                 <span class="nx">admin_note</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">app_links_json</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                 <span class="nx">auto_submit_toolbar</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                 <span class="nx">enduser_note</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                 <span class="nx">groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
@@ -34,6 +38,8 @@ meta_desc: "Documentation for the okta.deprecated.BookmarkApp resource with exam
                 <span class="nx">label</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                 <span class="nx">logo</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                 <span class="nx">request_integration</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                <span class="nx">skip_groups</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                <span class="nx">skip_users</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                 <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                 <span class="nx">url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                 <span class="nx">users</span><span class="p">:</span> <span class="nx">Optional[Sequence[BookmarkAppUserArgs]]</span> = None<span class="p">)</span>
@@ -183,6 +189,33 @@ The BookmarkApp resource accepts the following [input]({{< relref "/docs/intro/c
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="accessibilityerrorredirecturl_csharp">
+<a href="#accessibilityerrorredirecturl_csharp" style="color: inherit; text-decoration: inherit;">Accessibility<wbr>Error<wbr>Redirect<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Custom error page URL
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="accessibilityloginredirecturl_csharp">
+<a href="#accessibilityloginredirecturl_csharp" style="color: inherit; text-decoration: inherit;">Accessibility<wbr>Login<wbr>Redirect<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Custom login page URL
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="accessibilityselfservice_csharp">
+<a href="#accessibilityselfservice_csharp" style="color: inherit; text-decoration: inherit;">Accessibility<wbr>Self<wbr>Service</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable self service
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="adminnote_csharp">
 <a href="#adminnote_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>Note</a>
 </span>
@@ -190,6 +223,15 @@ The BookmarkApp resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Application notes for admins.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="applinksjson_csharp">
+<a href="#applinksjson_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Links<wbr>Json</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Displays specific appLinks for the app
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autosubmittoolbar_csharp">
@@ -243,7 +285,7 @@ The BookmarkApp resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Logo of the application.
+    <dd>{{% md %}}Local path to logo of the application.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestintegration_csharp">
@@ -253,6 +295,24 @@ The BookmarkApp resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="skipgroups_csharp">
+<a href="#skipgroups_csharp" style="color: inherit; text-decoration: inherit;">Skip<wbr>Groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Ignore groups sync. This is a temporary solution until 'groups' field is supported in all the app-like resources
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="skipusers_csharp">
+<a href="#skipusers_csharp" style="color: inherit; text-decoration: inherit;">Skip<wbr>Users</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Ignore users sync. This is a temporary solution until 'users' field is supported in all the app-like resources
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -293,6 +353,33 @@ The BookmarkApp resource accepts the following [input]({{< relref "/docs/intro/c
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="accessibilityerrorredirecturl_go">
+<a href="#accessibilityerrorredirecturl_go" style="color: inherit; text-decoration: inherit;">Accessibility<wbr>Error<wbr>Redirect<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Custom error page URL
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="accessibilityloginredirecturl_go">
+<a href="#accessibilityloginredirecturl_go" style="color: inherit; text-decoration: inherit;">Accessibility<wbr>Login<wbr>Redirect<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Custom login page URL
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="accessibilityselfservice_go">
+<a href="#accessibilityselfservice_go" style="color: inherit; text-decoration: inherit;">Accessibility<wbr>Self<wbr>Service</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable self service
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="adminnote_go">
 <a href="#adminnote_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>Note</a>
 </span>
@@ -300,6 +387,15 @@ The BookmarkApp resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Application notes for admins.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="applinksjson_go">
+<a href="#applinksjson_go" style="color: inherit; text-decoration: inherit;">App<wbr>Links<wbr>Json</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Displays specific appLinks for the app
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autosubmittoolbar_go">
@@ -353,7 +449,7 @@ The BookmarkApp resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Logo of the application.
+    <dd>{{% md %}}Local path to logo of the application.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestintegration_go">
@@ -363,6 +459,24 @@ The BookmarkApp resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="skipgroups_go">
+<a href="#skipgroups_go" style="color: inherit; text-decoration: inherit;">Skip<wbr>Groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Ignore groups sync. This is a temporary solution until 'groups' field is supported in all the app-like resources
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="skipusers_go">
+<a href="#skipusers_go" style="color: inherit; text-decoration: inherit;">Skip<wbr>Users</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Ignore users sync. This is a temporary solution until 'users' field is supported in all the app-like resources
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -403,6 +517,33 @@ The BookmarkApp resource accepts the following [input]({{< relref "/docs/intro/c
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="accessibilityerrorredirecturl_nodejs">
+<a href="#accessibilityerrorredirecturl_nodejs" style="color: inherit; text-decoration: inherit;">accessibility<wbr>Error<wbr>Redirect<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Custom error page URL
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="accessibilityloginredirecturl_nodejs">
+<a href="#accessibilityloginredirecturl_nodejs" style="color: inherit; text-decoration: inherit;">accessibility<wbr>Login<wbr>Redirect<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Custom login page URL
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="accessibilityselfservice_nodejs">
+<a href="#accessibilityselfservice_nodejs" style="color: inherit; text-decoration: inherit;">accessibility<wbr>Self<wbr>Service</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Enable self service
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="adminnote_nodejs">
 <a href="#adminnote_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>Note</a>
 </span>
@@ -410,6 +551,15 @@ The BookmarkApp resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Application notes for admins.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="applinksjson_nodejs">
+<a href="#applinksjson_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Links<wbr>Json</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Displays specific appLinks for the app
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autosubmittoolbar_nodejs">
@@ -463,7 +613,7 @@ The BookmarkApp resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Logo of the application.
+    <dd>{{% md %}}Local path to logo of the application.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestintegration_nodejs">
@@ -473,6 +623,24 @@ The BookmarkApp resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="skipgroups_nodejs">
+<a href="#skipgroups_nodejs" style="color: inherit; text-decoration: inherit;">skip<wbr>Groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Ignore groups sync. This is a temporary solution until 'groups' field is supported in all the app-like resources
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="skipusers_nodejs">
+<a href="#skipusers_nodejs" style="color: inherit; text-decoration: inherit;">skip<wbr>Users</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Ignore users sync. This is a temporary solution until 'users' field is supported in all the app-like resources
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -513,6 +681,33 @@ The BookmarkApp resource accepts the following [input]({{< relref "/docs/intro/c
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="accessibility_error_redirect_url_python">
+<a href="#accessibility_error_redirect_url_python" style="color: inherit; text-decoration: inherit;">accessibility_<wbr>error_<wbr>redirect_<wbr>url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Custom error page URL
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="accessibility_login_redirect_url_python">
+<a href="#accessibility_login_redirect_url_python" style="color: inherit; text-decoration: inherit;">accessibility_<wbr>login_<wbr>redirect_<wbr>url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Custom login page URL
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="accessibility_self_service_python">
+<a href="#accessibility_self_service_python" style="color: inherit; text-decoration: inherit;">accessibility_<wbr>self_<wbr>service</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable self service
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="admin_note_python">
 <a href="#admin_note_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>note</a>
 </span>
@@ -520,6 +715,15 @@ The BookmarkApp resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Application notes for admins.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="app_links_json_python">
+<a href="#app_links_json_python" style="color: inherit; text-decoration: inherit;">app_<wbr>links_<wbr>json</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Displays specific appLinks for the app
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="auto_submit_toolbar_python">
@@ -573,7 +777,7 @@ The BookmarkApp resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Logo of the application.
+    <dd>{{% md %}}Local path to logo of the application.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="request_integration_python">
@@ -583,6 +787,24 @@ The BookmarkApp resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="skip_groups_python">
+<a href="#skip_groups_python" style="color: inherit; text-decoration: inherit;">skip_<wbr>groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Ignore groups sync. This is a temporary solution until 'groups' field is supported in all the app-like resources
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="skip_users_python">
+<a href="#skip_users_python" style="color: inherit; text-decoration: inherit;">skip_<wbr>users</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Ignore users sync. This is a temporary solution until 'users' field is supported in all the app-like resources
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -782,7 +1004,11 @@ Get an existing BookmarkApp resource's state with the given name, ID, and option
 <span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">accessibility_error_redirect_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">accessibility_login_redirect_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">accessibility_self_service</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">admin_note</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">app_links_json</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">auto_submit_toolbar</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">enduser_note</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
@@ -794,6 +1020,8 @@ Get an existing BookmarkApp resource's state with the given name, ID, and option
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">request_integration</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">sign_on_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">skip_groups</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">skip_users</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">users</span><span class="p">:</span> <span class="nx">Optional[Sequence[BookmarkAppUserArgs]]</span> = None<span class="p">) -&gt;</span> BookmarkApp</code></pre></div>
@@ -909,6 +1137,33 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="state_accessibilityerrorredirecturl_csharp">
+<a href="#state_accessibilityerrorredirecturl_csharp" style="color: inherit; text-decoration: inherit;">Accessibility<wbr>Error<wbr>Redirect<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Custom error page URL
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_accessibilityloginredirecturl_csharp">
+<a href="#state_accessibilityloginredirecturl_csharp" style="color: inherit; text-decoration: inherit;">Accessibility<wbr>Login<wbr>Redirect<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Custom login page URL
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_accessibilityselfservice_csharp">
+<a href="#state_accessibilityselfservice_csharp" style="color: inherit; text-decoration: inherit;">Accessibility<wbr>Self<wbr>Service</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable self service
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_adminnote_csharp">
 <a href="#state_adminnote_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>Note</a>
 </span>
@@ -916,6 +1171,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Application notes for admins.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_applinksjson_csharp">
+<a href="#state_applinksjson_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Links<wbr>Json</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Displays specific appLinks for the app
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autosubmittoolbar_csharp">
@@ -978,7 +1242,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Logo of the application.
+    <dd>{{% md %}}Local path to logo of the application.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logourl_csharp">
@@ -1016,6 +1280,24 @@ The following state arguments are supported:
     <dd>{{% md %}}Sign on mode of application.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_skipgroups_csharp">
+<a href="#state_skipgroups_csharp" style="color: inherit; text-decoration: inherit;">Skip<wbr>Groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Ignore groups sync. This is a temporary solution until 'groups' field is supported in all the app-like resources
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_skipusers_csharp">
+<a href="#state_skipusers_csharp" style="color: inherit; text-decoration: inherit;">Skip<wbr>Users</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Ignore users sync. This is a temporary solution until 'users' field is supported in all the app-like resources
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_status_csharp">
 <a href="#state_status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
@@ -1046,6 +1328,33 @@ The following state arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="state_accessibilityerrorredirecturl_go">
+<a href="#state_accessibilityerrorredirecturl_go" style="color: inherit; text-decoration: inherit;">Accessibility<wbr>Error<wbr>Redirect<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Custom error page URL
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_accessibilityloginredirecturl_go">
+<a href="#state_accessibilityloginredirecturl_go" style="color: inherit; text-decoration: inherit;">Accessibility<wbr>Login<wbr>Redirect<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Custom login page URL
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_accessibilityselfservice_go">
+<a href="#state_accessibilityselfservice_go" style="color: inherit; text-decoration: inherit;">Accessibility<wbr>Self<wbr>Service</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable self service
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_adminnote_go">
 <a href="#state_adminnote_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>Note</a>
 </span>
@@ -1053,6 +1362,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Application notes for admins.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_applinksjson_go">
+<a href="#state_applinksjson_go" style="color: inherit; text-decoration: inherit;">App<wbr>Links<wbr>Json</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Displays specific appLinks for the app
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autosubmittoolbar_go">
@@ -1115,7 +1433,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Logo of the application.
+    <dd>{{% md %}}Local path to logo of the application.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logourl_go">
@@ -1153,6 +1471,24 @@ The following state arguments are supported:
     <dd>{{% md %}}Sign on mode of application.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_skipgroups_go">
+<a href="#state_skipgroups_go" style="color: inherit; text-decoration: inherit;">Skip<wbr>Groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Ignore groups sync. This is a temporary solution until 'groups' field is supported in all the app-like resources
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_skipusers_go">
+<a href="#state_skipusers_go" style="color: inherit; text-decoration: inherit;">Skip<wbr>Users</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Ignore users sync. This is a temporary solution until 'users' field is supported in all the app-like resources
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_status_go">
 <a href="#state_status_go" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
@@ -1183,6 +1519,33 @@ The following state arguments are supported:
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="state_accessibilityerrorredirecturl_nodejs">
+<a href="#state_accessibilityerrorredirecturl_nodejs" style="color: inherit; text-decoration: inherit;">accessibility<wbr>Error<wbr>Redirect<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Custom error page URL
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_accessibilityloginredirecturl_nodejs">
+<a href="#state_accessibilityloginredirecturl_nodejs" style="color: inherit; text-decoration: inherit;">accessibility<wbr>Login<wbr>Redirect<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Custom login page URL
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_accessibilityselfservice_nodejs">
+<a href="#state_accessibilityselfservice_nodejs" style="color: inherit; text-decoration: inherit;">accessibility<wbr>Self<wbr>Service</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Enable self service
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_adminnote_nodejs">
 <a href="#state_adminnote_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>Note</a>
 </span>
@@ -1190,6 +1553,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Application notes for admins.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_applinksjson_nodejs">
+<a href="#state_applinksjson_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Links<wbr>Json</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Displays specific appLinks for the app
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autosubmittoolbar_nodejs">
@@ -1252,7 +1624,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Logo of the application.
+    <dd>{{% md %}}Local path to logo of the application.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logourl_nodejs">
@@ -1290,6 +1662,24 @@ The following state arguments are supported:
     <dd>{{% md %}}Sign on mode of application.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_skipgroups_nodejs">
+<a href="#state_skipgroups_nodejs" style="color: inherit; text-decoration: inherit;">skip<wbr>Groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Ignore groups sync. This is a temporary solution until 'groups' field is supported in all the app-like resources
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_skipusers_nodejs">
+<a href="#state_skipusers_nodejs" style="color: inherit; text-decoration: inherit;">skip<wbr>Users</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Ignore users sync. This is a temporary solution until 'users' field is supported in all the app-like resources
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_status_nodejs">
 <a href="#state_status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
@@ -1320,6 +1710,33 @@ The following state arguments are supported:
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="state_accessibility_error_redirect_url_python">
+<a href="#state_accessibility_error_redirect_url_python" style="color: inherit; text-decoration: inherit;">accessibility_<wbr>error_<wbr>redirect_<wbr>url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Custom error page URL
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_accessibility_login_redirect_url_python">
+<a href="#state_accessibility_login_redirect_url_python" style="color: inherit; text-decoration: inherit;">accessibility_<wbr>login_<wbr>redirect_<wbr>url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Custom login page URL
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_accessibility_self_service_python">
+<a href="#state_accessibility_self_service_python" style="color: inherit; text-decoration: inherit;">accessibility_<wbr>self_<wbr>service</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable self service
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_admin_note_python">
 <a href="#state_admin_note_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>note</a>
 </span>
@@ -1327,6 +1744,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Application notes for admins.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_app_links_json_python">
+<a href="#state_app_links_json_python" style="color: inherit; text-decoration: inherit;">app_<wbr>links_<wbr>json</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Displays specific appLinks for the app
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_auto_submit_toolbar_python">
@@ -1389,7 +1815,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Logo of the application.
+    <dd>{{% md %}}Local path to logo of the application.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logo_url_python">
@@ -1425,6 +1851,24 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Sign on mode of application.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_skip_groups_python">
+<a href="#state_skip_groups_python" style="color: inherit; text-decoration: inherit;">skip_<wbr>groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Ignore groups sync. This is a temporary solution until 'groups' field is supported in all the app-like resources
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_skip_users_python">
+<a href="#state_skip_users_python" style="color: inherit; text-decoration: inherit;">skip_<wbr>users</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Ignore users sync. This is a temporary solution until 'users' field is supported in all the app-like resources
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_python">

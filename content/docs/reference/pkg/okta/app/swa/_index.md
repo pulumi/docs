@@ -141,8 +141,10 @@ const example = new okta.app.Swa("example", {
 <span class="k">def </span><span class="nx">Swa</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
         <span class="nx">accessibility_error_redirect_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">accessibility_login_redirect_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">accessibility_self_service</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">admin_note</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">app_links_json</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">auto_submit_toolbar</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">button_field</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">enduser_note</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -153,6 +155,8 @@ const example = new okta.app.Swa("example", {
         <span class="nx">logo</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">password_field</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">preconfigured_app</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">skip_groups</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">skip_users</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">url_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -308,6 +312,15 @@ The Swa resource accepts the following [input]({{< relref "/docs/intro/concepts/
     <dd>{{% md %}}Custom error page URL.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="accessibilityloginredirecturl_csharp">
+<a href="#accessibilityloginredirecturl_csharp" style="color: inherit; text-decoration: inherit;">Accessibility<wbr>Login<wbr>Redirect<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Custom login page for this application.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="accessibilityselfservice_csharp">
 <a href="#accessibilityselfservice_csharp" style="color: inherit; text-decoration: inherit;">Accessibility<wbr>Self<wbr>Service</a>
 </span>
@@ -324,6 +337,15 @@ The Swa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Application notes for admins.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="applinksjson_csharp">
+<a href="#applinksjson_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Links<wbr>Json</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Displays specific appLinks for the app
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autosubmittoolbar_csharp">
@@ -387,7 +409,7 @@ The Swa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Application logo. The file must be in PNG, JPG, or GIF format, and less than 1 MB in size.
+    <dd>{{% md %}}Local file path to the logo. The file must be in PNG, JPG, or GIF format, and less than 1 MB in size.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="passwordfield_csharp">
@@ -406,6 +428,24 @@ The Swa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}name of application from the Okta Integration Network, if not included a custom app will be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="skipgroups_csharp">
+<a href="#skipgroups_csharp" style="color: inherit; text-decoration: inherit;">Skip<wbr>Groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicator that allows the app to skip `groups` sync (it's also can be provided during import). Default is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="skipusers_csharp">
+<a href="#skipusers_csharp" style="color: inherit; text-decoration: inherit;">Skip<wbr>Users</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicator that allows the app to skip `users` sync (it's also can be provided during import). Default is `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_csharp">
@@ -503,6 +543,15 @@ The Swa resource accepts the following [input]({{< relref "/docs/intro/concepts/
     <dd>{{% md %}}Custom error page URL.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="accessibilityloginredirecturl_go">
+<a href="#accessibilityloginredirecturl_go" style="color: inherit; text-decoration: inherit;">Accessibility<wbr>Login<wbr>Redirect<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Custom login page for this application.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="accessibilityselfservice_go">
 <a href="#accessibilityselfservice_go" style="color: inherit; text-decoration: inherit;">Accessibility<wbr>Self<wbr>Service</a>
 </span>
@@ -519,6 +568,15 @@ The Swa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Application notes for admins.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="applinksjson_go">
+<a href="#applinksjson_go" style="color: inherit; text-decoration: inherit;">App<wbr>Links<wbr>Json</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Displays specific appLinks for the app
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autosubmittoolbar_go">
@@ -582,7 +640,7 @@ The Swa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Application logo. The file must be in PNG, JPG, or GIF format, and less than 1 MB in size.
+    <dd>{{% md %}}Local file path to the logo. The file must be in PNG, JPG, or GIF format, and less than 1 MB in size.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="passwordfield_go">
@@ -601,6 +659,24 @@ The Swa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}name of application from the Okta Integration Network, if not included a custom app will be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="skipgroups_go">
+<a href="#skipgroups_go" style="color: inherit; text-decoration: inherit;">Skip<wbr>Groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicator that allows the app to skip `groups` sync (it's also can be provided during import). Default is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="skipusers_go">
+<a href="#skipusers_go" style="color: inherit; text-decoration: inherit;">Skip<wbr>Users</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicator that allows the app to skip `users` sync (it's also can be provided during import). Default is `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_go">
@@ -698,6 +774,15 @@ The Swa resource accepts the following [input]({{< relref "/docs/intro/concepts/
     <dd>{{% md %}}Custom error page URL.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="accessibilityloginredirecturl_nodejs">
+<a href="#accessibilityloginredirecturl_nodejs" style="color: inherit; text-decoration: inherit;">accessibility<wbr>Login<wbr>Redirect<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Custom login page for this application.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="accessibilityselfservice_nodejs">
 <a href="#accessibilityselfservice_nodejs" style="color: inherit; text-decoration: inherit;">accessibility<wbr>Self<wbr>Service</a>
 </span>
@@ -714,6 +799,15 @@ The Swa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Application notes for admins.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="applinksjson_nodejs">
+<a href="#applinksjson_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Links<wbr>Json</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Displays specific appLinks for the app
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autosubmittoolbar_nodejs">
@@ -777,7 +871,7 @@ The Swa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Application logo. The file must be in PNG, JPG, or GIF format, and less than 1 MB in size.
+    <dd>{{% md %}}Local file path to the logo. The file must be in PNG, JPG, or GIF format, and less than 1 MB in size.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="passwordfield_nodejs">
@@ -796,6 +890,24 @@ The Swa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}name of application from the Okta Integration Network, if not included a custom app will be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="skipgroups_nodejs">
+<a href="#skipgroups_nodejs" style="color: inherit; text-decoration: inherit;">skip<wbr>Groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Indicator that allows the app to skip `groups` sync (it's also can be provided during import). Default is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="skipusers_nodejs">
+<a href="#skipusers_nodejs" style="color: inherit; text-decoration: inherit;">skip<wbr>Users</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Indicator that allows the app to skip `users` sync (it's also can be provided during import). Default is `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_nodejs">
@@ -893,6 +1005,15 @@ The Swa resource accepts the following [input]({{< relref "/docs/intro/concepts/
     <dd>{{% md %}}Custom error page URL.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="accessibility_login_redirect_url_python">
+<a href="#accessibility_login_redirect_url_python" style="color: inherit; text-decoration: inherit;">accessibility_<wbr>login_<wbr>redirect_<wbr>url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Custom login page for this application.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="accessibility_self_service_python">
 <a href="#accessibility_self_service_python" style="color: inherit; text-decoration: inherit;">accessibility_<wbr>self_<wbr>service</a>
 </span>
@@ -909,6 +1030,15 @@ The Swa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Application notes for admins.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="app_links_json_python">
+<a href="#app_links_json_python" style="color: inherit; text-decoration: inherit;">app_<wbr>links_<wbr>json</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Displays specific appLinks for the app
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="auto_submit_toolbar_python">
@@ -972,7 +1102,7 @@ The Swa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Application logo. The file must be in PNG, JPG, or GIF format, and less than 1 MB in size.
+    <dd>{{% md %}}Local file path to the logo. The file must be in PNG, JPG, or GIF format, and less than 1 MB in size.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_field_python">
@@ -991,6 +1121,24 @@ The Swa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}name of application from the Okta Integration Network, if not included a custom app will be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="skip_groups_python">
+<a href="#skip_groups_python" style="color: inherit; text-decoration: inherit;">skip_<wbr>groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicator that allows the app to skip `groups` sync (it's also can be provided during import). Default is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="skip_users_python">
+<a href="#skip_users_python" style="color: inherit; text-decoration: inherit;">skip_<wbr>users</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicator that allows the app to skip `users` sync (it's also can be provided during import). Default is `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_python">
@@ -1247,8 +1395,10 @@ Get an existing Swa resource's state with the given name, ID, and optional extra
         <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
         <span class="nx">accessibility_error_redirect_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">accessibility_login_redirect_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">accessibility_self_service</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">admin_note</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">app_links_json</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">auto_submit_toolbar</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">button_field</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">enduser_note</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -1262,6 +1412,8 @@ Get an existing Swa resource's state with the given name, ID, and optional extra
         <span class="nx">password_field</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">preconfigured_app</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">sign_on_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">skip_groups</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">skip_users</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">url_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -1391,6 +1543,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Custom error page URL.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_accessibilityloginredirecturl_csharp">
+<a href="#state_accessibilityloginredirecturl_csharp" style="color: inherit; text-decoration: inherit;">Accessibility<wbr>Login<wbr>Redirect<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Custom login page for this application.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_accessibilityselfservice_csharp">
 <a href="#state_accessibilityselfservice_csharp" style="color: inherit; text-decoration: inherit;">Accessibility<wbr>Self<wbr>Service</a>
 </span>
@@ -1407,6 +1568,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Application notes for admins.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_applinksjson_csharp">
+<a href="#state_applinksjson_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Links<wbr>Json</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Displays specific appLinks for the app
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autosubmittoolbar_csharp">
@@ -1479,7 +1649,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Application logo. The file must be in PNG, JPG, or GIF format, and less than 1 MB in size.
+    <dd>{{% md %}}Local file path to the logo. The file must be in PNG, JPG, or GIF format, and less than 1 MB in size.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logourl_csharp">
@@ -1525,6 +1695,24 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sign-on mode of application.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_skipgroups_csharp">
+<a href="#state_skipgroups_csharp" style="color: inherit; text-decoration: inherit;">Skip<wbr>Groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicator that allows the app to skip `groups` sync (it's also can be provided during import). Default is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_skipusers_csharp">
+<a href="#state_skipusers_csharp" style="color: inherit; text-decoration: inherit;">Skip<wbr>Users</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicator that allows the app to skip `users` sync (it's also can be provided during import). Default is `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_csharp">
@@ -1613,6 +1801,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Custom error page URL.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_accessibilityloginredirecturl_go">
+<a href="#state_accessibilityloginredirecturl_go" style="color: inherit; text-decoration: inherit;">Accessibility<wbr>Login<wbr>Redirect<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Custom login page for this application.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_accessibilityselfservice_go">
 <a href="#state_accessibilityselfservice_go" style="color: inherit; text-decoration: inherit;">Accessibility<wbr>Self<wbr>Service</a>
 </span>
@@ -1629,6 +1826,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Application notes for admins.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_applinksjson_go">
+<a href="#state_applinksjson_go" style="color: inherit; text-decoration: inherit;">App<wbr>Links<wbr>Json</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Displays specific appLinks for the app
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autosubmittoolbar_go">
@@ -1701,7 +1907,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Application logo. The file must be in PNG, JPG, or GIF format, and less than 1 MB in size.
+    <dd>{{% md %}}Local file path to the logo. The file must be in PNG, JPG, or GIF format, and less than 1 MB in size.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logourl_go">
@@ -1747,6 +1953,24 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sign-on mode of application.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_skipgroups_go">
+<a href="#state_skipgroups_go" style="color: inherit; text-decoration: inherit;">Skip<wbr>Groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicator that allows the app to skip `groups` sync (it's also can be provided during import). Default is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_skipusers_go">
+<a href="#state_skipusers_go" style="color: inherit; text-decoration: inherit;">Skip<wbr>Users</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicator that allows the app to skip `users` sync (it's also can be provided during import). Default is `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_go">
@@ -1835,6 +2059,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Custom error page URL.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_accessibilityloginredirecturl_nodejs">
+<a href="#state_accessibilityloginredirecturl_nodejs" style="color: inherit; text-decoration: inherit;">accessibility<wbr>Login<wbr>Redirect<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Custom login page for this application.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_accessibilityselfservice_nodejs">
 <a href="#state_accessibilityselfservice_nodejs" style="color: inherit; text-decoration: inherit;">accessibility<wbr>Self<wbr>Service</a>
 </span>
@@ -1851,6 +2084,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Application notes for admins.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_applinksjson_nodejs">
+<a href="#state_applinksjson_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Links<wbr>Json</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Displays specific appLinks for the app
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autosubmittoolbar_nodejs">
@@ -1923,7 +2165,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Application logo. The file must be in PNG, JPG, or GIF format, and less than 1 MB in size.
+    <dd>{{% md %}}Local file path to the logo. The file must be in PNG, JPG, or GIF format, and less than 1 MB in size.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logourl_nodejs">
@@ -1969,6 +2211,24 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sign-on mode of application.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_skipgroups_nodejs">
+<a href="#state_skipgroups_nodejs" style="color: inherit; text-decoration: inherit;">skip<wbr>Groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Indicator that allows the app to skip `groups` sync (it's also can be provided during import). Default is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_skipusers_nodejs">
+<a href="#state_skipusers_nodejs" style="color: inherit; text-decoration: inherit;">skip<wbr>Users</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Indicator that allows the app to skip `users` sync (it's also can be provided during import). Default is `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_nodejs">
@@ -2057,6 +2317,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Custom error page URL.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_accessibility_login_redirect_url_python">
+<a href="#state_accessibility_login_redirect_url_python" style="color: inherit; text-decoration: inherit;">accessibility_<wbr>login_<wbr>redirect_<wbr>url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Custom login page for this application.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_accessibility_self_service_python">
 <a href="#state_accessibility_self_service_python" style="color: inherit; text-decoration: inherit;">accessibility_<wbr>self_<wbr>service</a>
 </span>
@@ -2073,6 +2342,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Application notes for admins.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_app_links_json_python">
+<a href="#state_app_links_json_python" style="color: inherit; text-decoration: inherit;">app_<wbr>links_<wbr>json</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Displays specific appLinks for the app
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_auto_submit_toolbar_python">
@@ -2145,7 +2423,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Application logo. The file must be in PNG, JPG, or GIF format, and less than 1 MB in size.
+    <dd>{{% md %}}Local file path to the logo. The file must be in PNG, JPG, or GIF format, and less than 1 MB in size.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logo_url_python">
@@ -2191,6 +2469,24 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Sign-on mode of application.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_skip_groups_python">
+<a href="#state_skip_groups_python" style="color: inherit; text-decoration: inherit;">skip_<wbr>groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicator that allows the app to skip `groups` sync (it's also can be provided during import). Default is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_skip_users_python">
+<a href="#state_skip_users_python" style="color: inherit; text-decoration: inherit;">skip_<wbr>users</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicator that allows the app to skip `users` sync (it's also can be provided during import). Default is `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_python">
@@ -2428,6 +2724,20 @@ Okta SWA App can be imported via the Okta ID.
 
 ```sh
  $ pulumi import okta:app/swa:Swa example <app id>
+```
+
+ It's also possible to import app without groups or/and users. In this case ID may look like this
+
+```sh
+ $ pulumi import okta:app/swa:Swa example <app id>/skip_users
+```
+
+```sh
+ $ pulumi import okta:app/swa:Swa example <app id>/skip_users/skip_groups
+```
+
+```sh
+ $ pulumi import okta:app/swa:Swa example <app id>/skip_groups
 ```
 
 

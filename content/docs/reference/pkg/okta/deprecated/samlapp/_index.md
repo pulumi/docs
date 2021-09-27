@@ -61,6 +61,8 @@ meta_desc: "Documentation for the okta.deprecated.SamlApp resource with examples
             <span class="nx">single_logout_certificate</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">single_logout_issuer</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">single_logout_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">skip_groups</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+            <span class="nx">skip_users</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
             <span class="nx">sp_issuer</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">sso_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -259,7 +261,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Application settings in JSON format
+    <dd>{{% md %}}Displays specific appLinks for the app
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="appsettingsjson_csharp">
@@ -438,7 +440,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Logo of the application.
+    <dd>{{% md %}}Local path to logo of the application.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preconfiguredapp_csharp">
@@ -520,6 +522,24 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location where the logout response is sent
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="skipgroups_csharp">
+<a href="#skipgroups_csharp" style="color: inherit; text-decoration: inherit;">Skip<wbr>Groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Ignore groups sync. This is a temporary solution until 'groups' field is supported in all the app-like resources
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="skipusers_csharp">
+<a href="#skipusers_csharp" style="color: inherit; text-decoration: inherit;">Skip<wbr>Users</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Ignore users sync. This is a temporary solution until 'users' field is supported in all the app-like resources
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spissuer_csharp">
@@ -667,7 +687,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Application settings in JSON format
+    <dd>{{% md %}}Displays specific appLinks for the app
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="appsettingsjson_go">
@@ -846,7 +866,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Logo of the application.
+    <dd>{{% md %}}Local path to logo of the application.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preconfiguredapp_go">
@@ -928,6 +948,24 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location where the logout response is sent
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="skipgroups_go">
+<a href="#skipgroups_go" style="color: inherit; text-decoration: inherit;">Skip<wbr>Groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Ignore groups sync. This is a temporary solution until 'groups' field is supported in all the app-like resources
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="skipusers_go">
+<a href="#skipusers_go" style="color: inherit; text-decoration: inherit;">Skip<wbr>Users</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Ignore users sync. This is a temporary solution until 'users' field is supported in all the app-like resources
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spissuer_go">
@@ -1075,7 +1113,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Application settings in JSON format
+    <dd>{{% md %}}Displays specific appLinks for the app
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="appsettingsjson_nodejs">
@@ -1254,7 +1292,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Logo of the application.
+    <dd>{{% md %}}Local path to logo of the application.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preconfiguredapp_nodejs">
@@ -1336,6 +1374,24 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location where the logout response is sent
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="skipgroups_nodejs">
+<a href="#skipgroups_nodejs" style="color: inherit; text-decoration: inherit;">skip<wbr>Groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Ignore groups sync. This is a temporary solution until 'groups' field is supported in all the app-like resources
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="skipusers_nodejs">
+<a href="#skipusers_nodejs" style="color: inherit; text-decoration: inherit;">skip<wbr>Users</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Ignore users sync. This is a temporary solution until 'users' field is supported in all the app-like resources
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spissuer_nodejs">
@@ -1483,7 +1539,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Application settings in JSON format
+    <dd>{{% md %}}Displays specific appLinks for the app
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="app_settings_json_python">
@@ -1662,7 +1718,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Logo of the application.
+    <dd>{{% md %}}Local path to logo of the application.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preconfigured_app_python">
@@ -1744,6 +1800,24 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The location where the logout response is sent
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="skip_groups_python">
+<a href="#skip_groups_python" style="color: inherit; text-decoration: inherit;">skip_<wbr>groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Ignore groups sync. This is a temporary solution until 'groups' field is supported in all the app-like resources
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="skip_users_python">
+<a href="#skip_users_python" style="color: inherit; text-decoration: inherit;">skip_<wbr>users</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Ignore users sync. This is a temporary solution until 'users' field is supported in all the app-like resources
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sp_issuer_python">
@@ -2342,6 +2416,8 @@ Get an existing SamlApp resource's state with the given name, ID, and optional e
         <span class="nx">single_logout_certificate</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">single_logout_issuer</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">single_logout_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">skip_groups</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">skip_users</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">sp_issuer</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">sso_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -2514,7 +2590,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Application settings in JSON format
+    <dd>{{% md %}}Displays specific appLinks for the app
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_appsettingsjson_csharp">
@@ -2756,7 +2832,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Logo of the application.
+    <dd>{{% md %}}Local path to logo of the application.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logourl_csharp">
@@ -2883,6 +2959,24 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location where the logout response is sent
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_skipgroups_csharp">
+<a href="#state_skipgroups_csharp" style="color: inherit; text-decoration: inherit;">Skip<wbr>Groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Ignore groups sync. This is a temporary solution until 'groups' field is supported in all the app-like resources
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_skipusers_csharp">
+<a href="#state_skipusers_csharp" style="color: inherit; text-decoration: inherit;">Skip<wbr>Users</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Ignore users sync. This is a temporary solution until 'users' field is supported in all the app-like resources
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_spissuer_csharp">
@@ -3021,7 +3115,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Application settings in JSON format
+    <dd>{{% md %}}Displays specific appLinks for the app
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_appsettingsjson_go">
@@ -3263,7 +3357,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Logo of the application.
+    <dd>{{% md %}}Local path to logo of the application.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logourl_go">
@@ -3390,6 +3484,24 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location where the logout response is sent
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_skipgroups_go">
+<a href="#state_skipgroups_go" style="color: inherit; text-decoration: inherit;">Skip<wbr>Groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Ignore groups sync. This is a temporary solution until 'groups' field is supported in all the app-like resources
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_skipusers_go">
+<a href="#state_skipusers_go" style="color: inherit; text-decoration: inherit;">Skip<wbr>Users</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Ignore users sync. This is a temporary solution until 'users' field is supported in all the app-like resources
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_spissuer_go">
@@ -3528,7 +3640,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Application settings in JSON format
+    <dd>{{% md %}}Displays specific appLinks for the app
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_appsettingsjson_nodejs">
@@ -3770,7 +3882,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Logo of the application.
+    <dd>{{% md %}}Local path to logo of the application.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logourl_nodejs">
@@ -3897,6 +4009,24 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location where the logout response is sent
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_skipgroups_nodejs">
+<a href="#state_skipgroups_nodejs" style="color: inherit; text-decoration: inherit;">skip<wbr>Groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Ignore groups sync. This is a temporary solution until 'groups' field is supported in all the app-like resources
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_skipusers_nodejs">
+<a href="#state_skipusers_nodejs" style="color: inherit; text-decoration: inherit;">skip<wbr>Users</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Ignore users sync. This is a temporary solution until 'users' field is supported in all the app-like resources
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_spissuer_nodejs">
@@ -4035,7 +4165,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Application settings in JSON format
+    <dd>{{% md %}}Displays specific appLinks for the app
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_app_settings_json_python">
@@ -4277,7 +4407,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Logo of the application.
+    <dd>{{% md %}}Local path to logo of the application.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logo_url_python">
@@ -4404,6 +4534,24 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The location where the logout response is sent
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_skip_groups_python">
+<a href="#state_skip_groups_python" style="color: inherit; text-decoration: inherit;">skip_<wbr>groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Ignore groups sync. This is a temporary solution until 'groups' field is supported in all the app-like resources
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_skip_users_python">
+<a href="#state_skip_users_python" style="color: inherit; text-decoration: inherit;">skip_<wbr>users</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Ignore users sync. This is a temporary solution until 'users' field is supported in all the app-like resources
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sp_issuer_python">
