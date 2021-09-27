@@ -11,6 +11,43 @@ meta_desc: "Documentation for the spotinst.aws.OceanLaunchSpec resource with exa
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Manages a Spotinst Ocean AWS [Virtual Node Group](https://docs.spot.io/ocean/features/launch-specifications) resource.
+## Update Policy
+
+* `update_policy` - (Optional)
+    * `should_roll` - (Required) Enables the roll.
+    * `roll_config` - (Required) Holds the roll configuration.
+        * `batch_size_percentage` - (Required) Sets the percentage of the instances to deploy in each batch.
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+```
+```python
+import pulumi
+```
+```csharp
+using Pulumi;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+    }
+
+}
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		return nil
+	})
+}
+```
 
 
 {{% examples %}}
@@ -70,6 +107,10 @@ class MyStack : Stack
             CreateOptions = new SpotInst.Aws.Inputs.OceanLaunchSpecCreateOptionsArgs
             {
                 InitialNodes = 1,
+            },
+            DeleteOptions = new SpotInst.Aws.Inputs.OceanLaunchSpecDeleteOptionsArgs
+            {
+                ForceDelete = true,
             },
             ElasticIpPools = 
             {
@@ -199,6 +240,9 @@ func main() {
 			CreateOptions: &aws.OceanLaunchSpecCreateOptionsArgs{
 				InitialNodes: pulumi.Int(1),
 			},
+			DeleteOptions: &aws.OceanLaunchSpecDeleteOptionsArgs{
+				ForceDelete: pulumi.Bool(true),
+			},
 			ElasticIpPools: aws.OceanLaunchSpecElasticIpPoolArray{
 				&aws.OceanLaunchSpecElasticIpPoolArgs{
 					TagSelector: &aws.OceanLaunchSpecElasticIpPoolTagSelectorArgs{
@@ -303,6 +347,9 @@ example = spotinst.aws.OceanLaunchSpec("example",
     create_options=spotinst.aws.OceanLaunchSpecCreateOptionsArgs(
         initial_nodes=1,
     ),
+    delete_options=spotinst.aws.OceanLaunchSpecDeleteOptionsArgs(
+        force_delete=True,
+    ),
     elastic_ip_pools=[spotinst.aws.OceanLaunchSpecElasticIpPoolArgs(
         tag_selector=spotinst.aws.OceanLaunchSpecElasticIpPoolTagSelectorArgs(
             tag_key="key",
@@ -385,6 +432,9 @@ const example = new spotinst.aws.OceanLaunchSpec("example", {
     createOptions: {
         initialNodes: 1,
     },
+    deleteOptions: {
+        forceDelete: true,
+    },
     elasticIpPools: [{
         tagSelector: {
             tagKey: "key",
@@ -459,6 +509,7 @@ const example = new spotinst.aws.OceanLaunchSpec("example", {
                     <span class="nx">autoscale_headrooms</span><span class="p">:</span> <span class="nx">Optional[Sequence[OceanLaunchSpecAutoscaleHeadroomArgs]]</span> = None<span class="p">,</span>
                     <span class="nx">block_device_mappings</span><span class="p">:</span> <span class="nx">Optional[Sequence[OceanLaunchSpecBlockDeviceMappingArgs]]</span> = None<span class="p">,</span>
                     <span class="nx">create_options</span><span class="p">:</span> <span class="nx">Optional[OceanLaunchSpecCreateOptionsArgs]</span> = None<span class="p">,</span>
+                    <span class="nx">delete_options</span><span class="p">:</span> <span class="nx">Optional[OceanLaunchSpecDeleteOptionsArgs]</span> = None<span class="p">,</span>
                     <span class="nx">elastic_ip_pools</span><span class="p">:</span> <span class="nx">Optional[Sequence[OceanLaunchSpecElasticIpPoolArgs]]</span> = None<span class="p">,</span>
                     <span class="nx">iam_instance_profile</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                     <span class="nx">image_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -475,6 +526,7 @@ const example = new spotinst.aws.OceanLaunchSpec("example", {
                     <span class="nx">subnet_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
                     <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[OceanLaunchSpecTagArgs]]</span> = None<span class="p">,</span>
                     <span class="nx">taints</span><span class="p">:</span> <span class="nx">Optional[Sequence[OceanLaunchSpecTaintArgs]]</span> = None<span class="p">,</span>
+                    <span class="nx">update_policy</span><span class="p">:</span> <span class="nx">Optional[OceanLaunchSpecUpdatePolicyArgs]</span> = None<span class="p">,</span>
                     <span class="nx">user_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">OceanLaunchSpec</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
@@ -649,6 +701,14 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="deleteoptions_csharp">
+<a href="#deleteoptions_csharp" style="color: inherit; text-decoration: inherit;">Delete<wbr>Options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanlaunchspecdeleteoptions">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Ocean<wbr>Launch<wbr>Spec<wbr>Delete<wbr>Options<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="elasticippools_csharp">
 <a href="#elasticippools_csharp" style="color: inherit; text-decoration: inherit;">Elastic<wbr>Ip<wbr>Pools</a>
 </span>
@@ -782,6 +842,14 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
     <dd>{{% md %}}Optionally adds labels to instances launched in the cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="updatepolicy_csharp">
+<a href="#updatepolicy_csharp" style="color: inherit; text-decoration: inherit;">Update<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanlaunchspecupdatepolicy">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Ocean<wbr>Launch<wbr>Spec<wbr>Update<wbr>Policy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="userdata_csharp">
 <a href="#userdata_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Data</a>
 </span>
@@ -836,6 +904,14 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanlaunchspeccreateoptions">Ocean<wbr>Launch<wbr>Spec<wbr>Create<wbr>Options<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="deleteoptions_go">
+<a href="#deleteoptions_go" style="color: inherit; text-decoration: inherit;">Delete<wbr>Options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanlaunchspecdeleteoptions">Ocean<wbr>Launch<wbr>Spec<wbr>Delete<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -972,6 +1048,14 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
     <dd>{{% md %}}Optionally adds labels to instances launched in the cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="updatepolicy_go">
+<a href="#updatepolicy_go" style="color: inherit; text-decoration: inherit;">Update<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanlaunchspecupdatepolicy">Ocean<wbr>Launch<wbr>Spec<wbr>Update<wbr>Policy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="userdata_go">
 <a href="#userdata_go" style="color: inherit; text-decoration: inherit;">User<wbr>Data</a>
 </span>
@@ -1026,6 +1110,14 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanlaunchspeccreateoptions">Ocean<wbr>Launch<wbr>Spec<wbr>Create<wbr>Options<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="deleteoptions_nodejs">
+<a href="#deleteoptions_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>Options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanlaunchspecdeleteoptions">Ocean<wbr>Launch<wbr>Spec<wbr>Delete<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1162,6 +1254,14 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
     <dd>{{% md %}}Optionally adds labels to instances launched in the cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="updatepolicy_nodejs">
+<a href="#updatepolicy_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanlaunchspecupdatepolicy">Ocean<wbr>Launch<wbr>Spec<wbr>Update<wbr>Policy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="userdata_nodejs">
 <a href="#userdata_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Data</a>
 </span>
@@ -1216,6 +1316,14 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanlaunchspeccreateoptions">Ocean<wbr>Launch<wbr>Spec<wbr>Create<wbr>Options<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="delete_options_python">
+<a href="#delete_options_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanlaunchspecdeleteoptions">Ocean<wbr>Launch<wbr>Spec<wbr>Delete<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1352,6 +1460,14 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
     <dd>{{% md %}}Optionally adds labels to instances launched in the cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="update_policy_python">
+<a href="#update_policy_python" style="color: inherit; text-decoration: inherit;">update_<wbr>policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanlaunchspecupdatepolicy">Ocean<wbr>Launch<wbr>Spec<wbr>Update<wbr>Policy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="user_data_python">
 <a href="#user_data_python" style="color: inherit; text-decoration: inherit;">user_<wbr>data</a>
 </span>
@@ -1437,6 +1553,7 @@ Get an existing OceanLaunchSpec resource's state with the given name, ID, and op
         <span class="nx">autoscale_headrooms</span><span class="p">:</span> <span class="nx">Optional[Sequence[OceanLaunchSpecAutoscaleHeadroomArgs]]</span> = None<span class="p">,</span>
         <span class="nx">block_device_mappings</span><span class="p">:</span> <span class="nx">Optional[Sequence[OceanLaunchSpecBlockDeviceMappingArgs]]</span> = None<span class="p">,</span>
         <span class="nx">create_options</span><span class="p">:</span> <span class="nx">Optional[OceanLaunchSpecCreateOptionsArgs]</span> = None<span class="p">,</span>
+        <span class="nx">delete_options</span><span class="p">:</span> <span class="nx">Optional[OceanLaunchSpecDeleteOptionsArgs]</span> = None<span class="p">,</span>
         <span class="nx">elastic_ip_pools</span><span class="p">:</span> <span class="nx">Optional[Sequence[OceanLaunchSpecElasticIpPoolArgs]]</span> = None<span class="p">,</span>
         <span class="nx">iam_instance_profile</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">image_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -1453,6 +1570,7 @@ Get an existing OceanLaunchSpec resource's state with the given name, ID, and op
         <span class="nx">subnet_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
         <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[OceanLaunchSpecTagArgs]]</span> = None<span class="p">,</span>
         <span class="nx">taints</span><span class="p">:</span> <span class="nx">Optional[Sequence[OceanLaunchSpecTaintArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">update_policy</span><span class="p">:</span> <span class="nx">Optional[OceanLaunchSpecUpdatePolicyArgs]</span> = None<span class="p">,</span>
         <span class="nx">user_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> OceanLaunchSpec</code></pre></div>
 {{% /choosable %}}
 
@@ -1601,6 +1719,14 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_deleteoptions_csharp">
+<a href="#state_deleteoptions_csharp" style="color: inherit; text-decoration: inherit;">Delete<wbr>Options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanlaunchspecdeleteoptions">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Ocean<wbr>Launch<wbr>Spec<wbr>Delete<wbr>Options<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_elasticippools_csharp">
 <a href="#state_elasticippools_csharp" style="color: inherit; text-decoration: inherit;">Elastic<wbr>Ip<wbr>Pools</a>
 </span>
@@ -1743,6 +1869,14 @@ The following state arguments are supported:
     <dd>{{% md %}}Optionally adds labels to instances launched in the cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_updatepolicy_csharp">
+<a href="#state_updatepolicy_csharp" style="color: inherit; text-decoration: inherit;">Update<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanlaunchspecupdatepolicy">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Ocean<wbr>Launch<wbr>Spec<wbr>Update<wbr>Policy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_userdata_csharp">
 <a href="#state_userdata_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Data</a>
 </span>
@@ -1788,6 +1922,14 @@ The following state arguments are supported:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanlaunchspeccreateoptions">Ocean<wbr>Launch<wbr>Spec<wbr>Create<wbr>Options<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_deleteoptions_go">
+<a href="#state_deleteoptions_go" style="color: inherit; text-decoration: inherit;">Delete<wbr>Options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanlaunchspecdeleteoptions">Ocean<wbr>Launch<wbr>Spec<wbr>Delete<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1933,6 +2075,14 @@ The following state arguments are supported:
     <dd>{{% md %}}Optionally adds labels to instances launched in the cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_updatepolicy_go">
+<a href="#state_updatepolicy_go" style="color: inherit; text-decoration: inherit;">Update<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanlaunchspecupdatepolicy">Ocean<wbr>Launch<wbr>Spec<wbr>Update<wbr>Policy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_userdata_go">
 <a href="#state_userdata_go" style="color: inherit; text-decoration: inherit;">User<wbr>Data</a>
 </span>
@@ -1978,6 +2128,14 @@ The following state arguments are supported:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanlaunchspeccreateoptions">Ocean<wbr>Launch<wbr>Spec<wbr>Create<wbr>Options<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_deleteoptions_nodejs">
+<a href="#state_deleteoptions_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>Options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanlaunchspecdeleteoptions">Ocean<wbr>Launch<wbr>Spec<wbr>Delete<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2123,6 +2281,14 @@ The following state arguments are supported:
     <dd>{{% md %}}Optionally adds labels to instances launched in the cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_updatepolicy_nodejs">
+<a href="#state_updatepolicy_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanlaunchspecupdatepolicy">Ocean<wbr>Launch<wbr>Spec<wbr>Update<wbr>Policy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_userdata_nodejs">
 <a href="#state_userdata_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Data</a>
 </span>
@@ -2168,6 +2334,14 @@ The following state arguments are supported:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanlaunchspeccreateoptions">Ocean<wbr>Launch<wbr>Spec<wbr>Create<wbr>Options<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_delete_options_python">
+<a href="#state_delete_options_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanlaunchspecdeleteoptions">Ocean<wbr>Launch<wbr>Spec<wbr>Delete<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2312,6 +2486,14 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Optionally adds labels to instances launched in the cluster.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_update_policy_python">
+<a href="#state_update_policy_python" style="color: inherit; text-decoration: inherit;">update_<wbr>policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanlaunchspecupdatepolicy">Ocean<wbr>Launch<wbr>Spec<wbr>Update<wbr>Policy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_user_data_python">
 <a href="#state_user_data_python" style="color: inherit; text-decoration: inherit;">user_<wbr>data</a>
@@ -3131,7 +3313,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}When set to an integer greater than 0, a corresponding amount of nodes will be launched from the created virtual node group.
+    <dd>{{% md %}}When set to an integer greater than 0, a corresponding amount of nodes will be launched from the created Virtual Node Group.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3144,7 +3326,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}When set to an integer greater than 0, a corresponding amount of nodes will be launched from the created virtual node group.
+    <dd>{{% md %}}When set to an integer greater than 0, a corresponding amount of nodes will be launched from the created Virtual Node Group.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3157,7 +3339,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}When set to an integer greater than 0, a corresponding amount of nodes will be launched from the created virtual node group.
+    <dd>{{% md %}}When set to an integer greater than 0, a corresponding amount of nodes will be launched from the created Virtual Node Group.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3170,7 +3352,61 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}When set to an integer greater than 0, a corresponding amount of nodes will be launched from the created virtual node group.
+    <dd>{{% md %}}When set to an integer greater than 0, a corresponding amount of nodes will be launched from the created Virtual Node Group.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="oceanlaunchspecdeleteoptions">Ocean<wbr>Launch<wbr>Spec<wbr>Delete<wbr>Options</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="forcedelete_csharp">
+<a href="#forcedelete_csharp" style="color: inherit; text-decoration: inherit;">Force<wbr>Delete</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}When set to `true`, delete even if it is the last Virtual Node Group (also, the default Virtual Node Group must be configured with `useAsTemlateOnly = true`). Should be set at creation or update, but will be used only at deletion.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="forcedelete_go">
+<a href="#forcedelete_go" style="color: inherit; text-decoration: inherit;">Force<wbr>Delete</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}When set to `true`, delete even if it is the last Virtual Node Group (also, the default Virtual Node Group must be configured with `useAsTemlateOnly = true`). Should be set at creation or update, but will be used only at deletion.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="forcedelete_nodejs">
+<a href="#forcedelete_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Delete</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}When set to `true`, delete even if it is the last Virtual Node Group (also, the default Virtual Node Group must be configured with `useAsTemlateOnly = true`). Should be set at creation or update, but will be used only at deletion.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="force_delete_python">
+<a href="#force_delete_python" style="color: inherit; text-decoration: inherit;">force_<wbr>delete</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}When set to `true`, delete even if it is the last Virtual Node Group (also, the default Virtual Node Group must be configured with `useAsTemlateOnly = true`). Should be set at creation or update, but will be used only at deletion.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3730,6 +3966,138 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The taint value.
 {{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="oceanlaunchspecupdatepolicy">Ocean<wbr>Launch<wbr>Spec<wbr>Update<wbr>Policy</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="shouldroll_csharp">
+<a href="#shouldroll_csharp" style="color: inherit; text-decoration: inherit;">Should<wbr>Roll</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="rollconfig_csharp">
+<a href="#rollconfig_csharp" style="color: inherit; text-decoration: inherit;">Roll<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanlaunchspecupdatepolicyrollconfig">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Ocean<wbr>Launch<wbr>Spec<wbr>Update<wbr>Policy<wbr>Roll<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="shouldroll_go">
+<a href="#shouldroll_go" style="color: inherit; text-decoration: inherit;">Should<wbr>Roll</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="rollconfig_go">
+<a href="#rollconfig_go" style="color: inherit; text-decoration: inherit;">Roll<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanlaunchspecupdatepolicyrollconfig">Ocean<wbr>Launch<wbr>Spec<wbr>Update<wbr>Policy<wbr>Roll<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="shouldroll_nodejs">
+<a href="#shouldroll_nodejs" style="color: inherit; text-decoration: inherit;">should<wbr>Roll</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="rollconfig_nodejs">
+<a href="#rollconfig_nodejs" style="color: inherit; text-decoration: inherit;">roll<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanlaunchspecupdatepolicyrollconfig">Ocean<wbr>Launch<wbr>Spec<wbr>Update<wbr>Policy<wbr>Roll<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="should_roll_python">
+<a href="#should_roll_python" style="color: inherit; text-decoration: inherit;">should_<wbr>roll</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="roll_config_python">
+<a href="#roll_config_python" style="color: inherit; text-decoration: inherit;">roll_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanlaunchspecupdatepolicyrollconfig">Ocean<wbr>Launch<wbr>Spec<wbr>Update<wbr>Policy<wbr>Roll<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="oceanlaunchspecupdatepolicyrollconfig">Ocean<wbr>Launch<wbr>Spec<wbr>Update<wbr>Policy<wbr>Roll<wbr>Config</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="batchsizepercentage_csharp">
+<a href="#batchsizepercentage_csharp" style="color: inherit; text-decoration: inherit;">Batch<wbr>Size<wbr>Percentage</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="batchsizepercentage_go">
+<a href="#batchsizepercentage_go" style="color: inherit; text-decoration: inherit;">Batch<wbr>Size<wbr>Percentage</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="batchsizepercentage_nodejs">
+<a href="#batchsizepercentage_nodejs" style="color: inherit; text-decoration: inherit;">batch<wbr>Size<wbr>Percentage</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="batch_size_percentage_python">
+<a href="#batch_size_percentage_python" style="color: inherit; text-decoration: inherit;">batch_<wbr>size_<wbr>percentage</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
