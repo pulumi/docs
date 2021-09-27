@@ -141,12 +141,14 @@ const samlClient = new keycloak.saml.Client("samlClient", {
            <span class="nx">assertion_consumer_redirect_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
            <span class="nx">authentication_flow_binding_overrides</span><span class="p">:</span> <span class="nx">Optional[ClientAuthenticationFlowBindingOverridesArgs]</span> = None<span class="p">,</span>
            <span class="nx">base_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+           <span class="nx">canonicalization_method</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
            <span class="nx">client_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
            <span class="nx">client_signature_required</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
            <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
            <span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
            <span class="nx">encrypt_assertions</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
            <span class="nx">encryption_certificate</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+           <span class="nx">extra_config</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">,</span>
            <span class="nx">force_name_id_format</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
            <span class="nx">force_post_binding</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
            <span class="nx">front_channel_logout</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
@@ -154,6 +156,7 @@ const samlClient = new keycloak.saml.Client("samlClient", {
            <span class="nx">idp_initiated_sso_relay_state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
            <span class="nx">idp_initiated_sso_url_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
            <span class="nx">include_authn_statement</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+           <span class="nx">login_theme</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
            <span class="nx">logout_service_post_binding_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
            <span class="nx">logout_service_redirect_binding_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
            <span class="nx">master_saml_processing_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -164,6 +167,7 @@ const samlClient = new keycloak.saml.Client("samlClient", {
            <span class="nx">sign_assertions</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
            <span class="nx">sign_documents</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
            <span class="nx">signature_algorithm</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+           <span class="nx">signature_key_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
            <span class="nx">signing_certificate</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
            <span class="nx">signing_private_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
            <span class="nx">valid_redirect_uris</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span>
@@ -350,13 +354,22 @@ The Client resource accepts the following [input]({{< relref "/docs/intro/concep
     <dd>{{% md %}}When specified, this URL will be used whenever Keycloak needs to link to this client.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="canonicalizationmethod_csharp">
+<a href="#canonicalizationmethod_csharp" style="color: inherit; text-decoration: inherit;">Canonicalization<wbr>Method</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Canonicalization Method for XML signatures. Should be one of "EXCLUSIVE", "EXCLUSIVE_WITH_COMMENTS", "INCLUSIVE", or "INCLUSIVE_WITH_COMMENTS". Defaults to "EXCLUSIVE".
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="clientsignaturerequired_csharp">
 <a href="#clientsignaturerequired_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Signature<wbr>Required</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}When `true`, Keycloak will expect that documents originating from a client will be signed using the certificate and/or key configured via `signing_certificate` and `signing_private_key`.
+    <dd>{{% md %}}When `true`, Keycloak will expect that documents originating from a client will be signed using the certificate and/or key configured via `signing_certificate` and `signing_private_key`. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
@@ -383,7 +396,7 @@ The Client resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}When `true`, the SAML assertions will be encrypted by Keycloak using the client's public key.
+    <dd>{{% md %}}When `true`, the SAML assertions will be encrypted by Keycloak using the client's public key. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryptioncertificate_csharp">
@@ -395,13 +408,21 @@ The Client resource accepts the following [input]({{< relref "/docs/intro/concep
     <dd>{{% md %}}If assertions for the client are encrypted, this certificate will be used for encryption.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="extraconfig_csharp">
+<a href="#extraconfig_csharp" style="color: inherit; text-decoration: inherit;">Extra<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="forcenameidformat_csharp">
 <a href="#forcenameidformat_csharp" style="color: inherit; text-decoration: inherit;">Force<wbr>Name<wbr>Id<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Ignore requested NameID subject format and use the one defined in `name_id_format` instead.
+    <dd>{{% md %}}Ignore requested NameID subject format and use the one defined in `name_id_format` instead. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="forcepostbinding_csharp">
@@ -410,7 +431,7 @@ The Client resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}When `true`, Keycloak will always respond to an authentication request via the SAML POST Binding.
+    <dd>{{% md %}}When `true`, Keycloak will always respond to an authentication request via the SAML POST Binding. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="frontchannellogout_csharp">
@@ -419,7 +440,7 @@ The Client resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}When `true`, this client will require a browser redirect in order to perform a logout.
+    <dd>{{% md %}}When `true`, this client will require a browser redirect in order to perform a logout. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fullscopeallowed_csharp">
@@ -455,7 +476,16 @@ The Client resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}When `true`, an `AuthnStatement` will be included in the SAML response.
+    <dd>{{% md %}}When `true`, an `AuthnStatement` will be included in the SAML response. Defaults to `true`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="logintheme_csharp">
+<a href="#logintheme_csharp" style="color: inherit; text-decoration: inherit;">Login<wbr>Theme</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The login theme of this client.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logoutservicepostbindingurl_csharp">
@@ -518,7 +548,7 @@ The Client resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}When `true`, the SAML assertions will be signed by Keycloak using the realm's private key, and embedded within the SAML XML Auth response.
+    <dd>{{% md %}}When `true`, the SAML assertions will be signed by Keycloak using the realm's private key, and embedded within the SAML XML Auth response. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="signdocuments_csharp">
@@ -527,7 +557,7 @@ The Client resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}When `true`, the SAML document will be signed by Keycloak using the realm's private key.
+    <dd>{{% md %}}When `true`, the SAML document will be signed by Keycloak using the realm's private key. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="signaturealgorithm_csharp">
@@ -537,6 +567,15 @@ The Client resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The signature algorithm used to sign documents. Should be one of "RSA_SHA1", "RSA_SHA256", "RSA_SHA512", or "DSA_SHA1".
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="signaturekeyname_csharp">
+<a href="#signaturekeyname_csharp" style="color: inherit; text-decoration: inherit;">Signature<wbr>Key<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The value of the `KeyName` element within the signed SAML document. Should be one of "NONE", "KEY_ID", or "CERT_SUBJECT". Defaults to "KEY_ID".
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="signingcertificate_csharp">
@@ -624,13 +663,22 @@ The Client resource accepts the following [input]({{< relref "/docs/intro/concep
     <dd>{{% md %}}When specified, this URL will be used whenever Keycloak needs to link to this client.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="canonicalizationmethod_go">
+<a href="#canonicalizationmethod_go" style="color: inherit; text-decoration: inherit;">Canonicalization<wbr>Method</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Canonicalization Method for XML signatures. Should be one of "EXCLUSIVE", "EXCLUSIVE_WITH_COMMENTS", "INCLUSIVE", or "INCLUSIVE_WITH_COMMENTS". Defaults to "EXCLUSIVE".
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="clientsignaturerequired_go">
 <a href="#clientsignaturerequired_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Signature<wbr>Required</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}When `true`, Keycloak will expect that documents originating from a client will be signed using the certificate and/or key configured via `signing_certificate` and `signing_private_key`.
+    <dd>{{% md %}}When `true`, Keycloak will expect that documents originating from a client will be signed using the certificate and/or key configured via `signing_certificate` and `signing_private_key`. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
@@ -657,7 +705,7 @@ The Client resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}When `true`, the SAML assertions will be encrypted by Keycloak using the client's public key.
+    <dd>{{% md %}}When `true`, the SAML assertions will be encrypted by Keycloak using the client's public key. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryptioncertificate_go">
@@ -669,13 +717,21 @@ The Client resource accepts the following [input]({{< relref "/docs/intro/concep
     <dd>{{% md %}}If assertions for the client are encrypted, this certificate will be used for encryption.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="extraconfig_go">
+<a href="#extraconfig_go" style="color: inherit; text-decoration: inherit;">Extra<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="forcenameidformat_go">
 <a href="#forcenameidformat_go" style="color: inherit; text-decoration: inherit;">Force<wbr>Name<wbr>Id<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Ignore requested NameID subject format and use the one defined in `name_id_format` instead.
+    <dd>{{% md %}}Ignore requested NameID subject format and use the one defined in `name_id_format` instead. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="forcepostbinding_go">
@@ -684,7 +740,7 @@ The Client resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}When `true`, Keycloak will always respond to an authentication request via the SAML POST Binding.
+    <dd>{{% md %}}When `true`, Keycloak will always respond to an authentication request via the SAML POST Binding. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="frontchannellogout_go">
@@ -693,7 +749,7 @@ The Client resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}When `true`, this client will require a browser redirect in order to perform a logout.
+    <dd>{{% md %}}When `true`, this client will require a browser redirect in order to perform a logout. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fullscopeallowed_go">
@@ -729,7 +785,16 @@ The Client resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}When `true`, an `AuthnStatement` will be included in the SAML response.
+    <dd>{{% md %}}When `true`, an `AuthnStatement` will be included in the SAML response. Defaults to `true`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="logintheme_go">
+<a href="#logintheme_go" style="color: inherit; text-decoration: inherit;">Login<wbr>Theme</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The login theme of this client.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logoutservicepostbindingurl_go">
@@ -792,7 +857,7 @@ The Client resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}When `true`, the SAML assertions will be signed by Keycloak using the realm's private key, and embedded within the SAML XML Auth response.
+    <dd>{{% md %}}When `true`, the SAML assertions will be signed by Keycloak using the realm's private key, and embedded within the SAML XML Auth response. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="signdocuments_go">
@@ -801,7 +866,7 @@ The Client resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}When `true`, the SAML document will be signed by Keycloak using the realm's private key.
+    <dd>{{% md %}}When `true`, the SAML document will be signed by Keycloak using the realm's private key. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="signaturealgorithm_go">
@@ -811,6 +876,15 @@ The Client resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The signature algorithm used to sign documents. Should be one of "RSA_SHA1", "RSA_SHA256", "RSA_SHA512", or "DSA_SHA1".
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="signaturekeyname_go">
+<a href="#signaturekeyname_go" style="color: inherit; text-decoration: inherit;">Signature<wbr>Key<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The value of the `KeyName` element within the signed SAML document. Should be one of "NONE", "KEY_ID", or "CERT_SUBJECT". Defaults to "KEY_ID".
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="signingcertificate_go">
@@ -898,13 +972,22 @@ The Client resource accepts the following [input]({{< relref "/docs/intro/concep
     <dd>{{% md %}}When specified, this URL will be used whenever Keycloak needs to link to this client.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="canonicalizationmethod_nodejs">
+<a href="#canonicalizationmethod_nodejs" style="color: inherit; text-decoration: inherit;">canonicalization<wbr>Method</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Canonicalization Method for XML signatures. Should be one of "EXCLUSIVE", "EXCLUSIVE_WITH_COMMENTS", "INCLUSIVE", or "INCLUSIVE_WITH_COMMENTS". Defaults to "EXCLUSIVE".
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="clientsignaturerequired_nodejs">
 <a href="#clientsignaturerequired_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Signature<wbr>Required</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}When `true`, Keycloak will expect that documents originating from a client will be signed using the certificate and/or key configured via `signing_certificate` and `signing_private_key`.
+    <dd>{{% md %}}When `true`, Keycloak will expect that documents originating from a client will be signed using the certificate and/or key configured via `signing_certificate` and `signing_private_key`. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
@@ -931,7 +1014,7 @@ The Client resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}When `true`, the SAML assertions will be encrypted by Keycloak using the client's public key.
+    <dd>{{% md %}}When `true`, the SAML assertions will be encrypted by Keycloak using the client's public key. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryptioncertificate_nodejs">
@@ -943,13 +1026,21 @@ The Client resource accepts the following [input]({{< relref "/docs/intro/concep
     <dd>{{% md %}}If assertions for the client are encrypted, this certificate will be used for encryption.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="extraconfig_nodejs">
+<a href="#extraconfig_nodejs" style="color: inherit; text-decoration: inherit;">extra<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="forcenameidformat_nodejs">
 <a href="#forcenameidformat_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Name<wbr>Id<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Ignore requested NameID subject format and use the one defined in `name_id_format` instead.
+    <dd>{{% md %}}Ignore requested NameID subject format and use the one defined in `name_id_format` instead. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="forcepostbinding_nodejs">
@@ -958,7 +1049,7 @@ The Client resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}When `true`, Keycloak will always respond to an authentication request via the SAML POST Binding.
+    <dd>{{% md %}}When `true`, Keycloak will always respond to an authentication request via the SAML POST Binding. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="frontchannellogout_nodejs">
@@ -967,7 +1058,7 @@ The Client resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}When `true`, this client will require a browser redirect in order to perform a logout.
+    <dd>{{% md %}}When `true`, this client will require a browser redirect in order to perform a logout. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fullscopeallowed_nodejs">
@@ -1003,7 +1094,16 @@ The Client resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}When `true`, an `AuthnStatement` will be included in the SAML response.
+    <dd>{{% md %}}When `true`, an `AuthnStatement` will be included in the SAML response. Defaults to `true`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="logintheme_nodejs">
+<a href="#logintheme_nodejs" style="color: inherit; text-decoration: inherit;">login<wbr>Theme</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The login theme of this client.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logoutservicepostbindingurl_nodejs">
@@ -1066,7 +1166,7 @@ The Client resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}When `true`, the SAML assertions will be signed by Keycloak using the realm's private key, and embedded within the SAML XML Auth response.
+    <dd>{{% md %}}When `true`, the SAML assertions will be signed by Keycloak using the realm's private key, and embedded within the SAML XML Auth response. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="signdocuments_nodejs">
@@ -1075,7 +1175,7 @@ The Client resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}When `true`, the SAML document will be signed by Keycloak using the realm's private key.
+    <dd>{{% md %}}When `true`, the SAML document will be signed by Keycloak using the realm's private key. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="signaturealgorithm_nodejs">
@@ -1085,6 +1185,15 @@ The Client resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The signature algorithm used to sign documents. Should be one of "RSA_SHA1", "RSA_SHA256", "RSA_SHA512", or "DSA_SHA1".
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="signaturekeyname_nodejs">
+<a href="#signaturekeyname_nodejs" style="color: inherit; text-decoration: inherit;">signature<wbr>Key<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The value of the `KeyName` element within the signed SAML document. Should be one of "NONE", "KEY_ID", or "CERT_SUBJECT". Defaults to "KEY_ID".
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="signingcertificate_nodejs">
@@ -1172,13 +1281,22 @@ The Client resource accepts the following [input]({{< relref "/docs/intro/concep
     <dd>{{% md %}}When specified, this URL will be used whenever Keycloak needs to link to this client.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="canonicalization_method_python">
+<a href="#canonicalization_method_python" style="color: inherit; text-decoration: inherit;">canonicalization_<wbr>method</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Canonicalization Method for XML signatures. Should be one of "EXCLUSIVE", "EXCLUSIVE_WITH_COMMENTS", "INCLUSIVE", or "INCLUSIVE_WITH_COMMENTS". Defaults to "EXCLUSIVE".
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="client_signature_required_python">
 <a href="#client_signature_required_python" style="color: inherit; text-decoration: inherit;">client_<wbr>signature_<wbr>required</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}When `true`, Keycloak will expect that documents originating from a client will be signed using the certificate and/or key configured via `signing_certificate` and `signing_private_key`.
+    <dd>{{% md %}}When `true`, Keycloak will expect that documents originating from a client will be signed using the certificate and/or key configured via `signing_certificate` and `signing_private_key`. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
@@ -1205,7 +1323,7 @@ The Client resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}When `true`, the SAML assertions will be encrypted by Keycloak using the client's public key.
+    <dd>{{% md %}}When `true`, the SAML assertions will be encrypted by Keycloak using the client's public key. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryption_certificate_python">
@@ -1217,13 +1335,21 @@ The Client resource accepts the following [input]({{< relref "/docs/intro/concep
     <dd>{{% md %}}If assertions for the client are encrypted, this certificate will be used for encryption.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="extra_config_python">
+<a href="#extra_config_python" style="color: inherit; text-decoration: inherit;">extra_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="force_name_id_format_python">
 <a href="#force_name_id_format_python" style="color: inherit; text-decoration: inherit;">force_<wbr>name_<wbr>id_<wbr>format</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Ignore requested NameID subject format and use the one defined in `name_id_format` instead.
+    <dd>{{% md %}}Ignore requested NameID subject format and use the one defined in `name_id_format` instead. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="force_post_binding_python">
@@ -1232,7 +1358,7 @@ The Client resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}When `true`, Keycloak will always respond to an authentication request via the SAML POST Binding.
+    <dd>{{% md %}}When `true`, Keycloak will always respond to an authentication request via the SAML POST Binding. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="front_channel_logout_python">
@@ -1241,7 +1367,7 @@ The Client resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}When `true`, this client will require a browser redirect in order to perform a logout.
+    <dd>{{% md %}}When `true`, this client will require a browser redirect in order to perform a logout. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="full_scope_allowed_python">
@@ -1277,7 +1403,16 @@ The Client resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}When `true`, an `AuthnStatement` will be included in the SAML response.
+    <dd>{{% md %}}When `true`, an `AuthnStatement` will be included in the SAML response. Defaults to `true`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="login_theme_python">
+<a href="#login_theme_python" style="color: inherit; text-decoration: inherit;">login_<wbr>theme</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The login theme of this client.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logout_service_post_binding_url_python">
@@ -1340,7 +1475,7 @@ The Client resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}When `true`, the SAML assertions will be signed by Keycloak using the realm's private key, and embedded within the SAML XML Auth response.
+    <dd>{{% md %}}When `true`, the SAML assertions will be signed by Keycloak using the realm's private key, and embedded within the SAML XML Auth response. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sign_documents_python">
@@ -1349,7 +1484,7 @@ The Client resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}When `true`, the SAML document will be signed by Keycloak using the realm's private key.
+    <dd>{{% md %}}When `true`, the SAML document will be signed by Keycloak using the realm's private key. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="signature_algorithm_python">
@@ -1359,6 +1494,15 @@ The Client resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The signature algorithm used to sign documents. Should be one of "RSA_SHA1", "RSA_SHA256", "RSA_SHA512", or "DSA_SHA1".
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="signature_key_name_python">
+<a href="#signature_key_name_python" style="color: inherit; text-decoration: inherit;">signature_<wbr>key_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The value of the `KeyName` element within the signed SAML document. Should be one of "NONE", "KEY_ID", or "CERT_SUBJECT". Defaults to "KEY_ID".
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="signing_certificate_python">
@@ -1399,17 +1543,53 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-"
             title="">
+        <span id="encryptioncertificatesha1_csharp">
+<a href="#encryptioncertificatesha1_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Certificate<wbr>Sha1</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}(Computed) The sha1sum fingerprint of the encryption certificate. If the encryption certificate is not in correct base64 format, this will be left empty.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="signingcertificatesha1_csharp">
+<a href="#signingcertificatesha1_csharp" style="color: inherit; text-decoration: inherit;">Signing<wbr>Certificate<wbr>Sha1</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}(Computed) The sha1sum fingerprint of the signing certificate. If the signing certificate is not in correct base64 format, this will be left empty.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="signingprivatekeysha1_csharp">
+<a href="#signingprivatekeysha1_csharp" style="color: inherit; text-decoration: inherit;">Signing<wbr>Private<wbr>Key<wbr>Sha1</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}(Computed) The sha1sum fingerprint of the signing private key. If the signing private key is not in correct base64 format, this will be left empty.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-"
+            title="">
+        <span id="encryptioncertificatesha1_go">
+<a href="#encryptioncertificatesha1_go" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Certificate<wbr>Sha1</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}(Computed) The sha1sum fingerprint of the encryption certificate. If the encryption certificate is not in correct base64 format, this will be left empty.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1417,11 +1597,38 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="signingcertificatesha1_go">
+<a href="#signingcertificatesha1_go" style="color: inherit; text-decoration: inherit;">Signing<wbr>Certificate<wbr>Sha1</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}(Computed) The sha1sum fingerprint of the signing certificate. If the signing certificate is not in correct base64 format, this will be left empty.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="signingprivatekeysha1_go">
+<a href="#signingprivatekeysha1_go" style="color: inherit; text-decoration: inherit;">Signing<wbr>Private<wbr>Key<wbr>Sha1</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}(Computed) The sha1sum fingerprint of the signing private key. If the signing private key is not in correct base64 format, this will be left empty.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-"
+            title="">
+        <span id="encryptioncertificatesha1_nodejs">
+<a href="#encryptioncertificatesha1_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Certificate<wbr>Sha1</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}(Computed) The sha1sum fingerprint of the encryption certificate. If the encryption certificate is not in correct base64 format, this will be left empty.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1429,11 +1636,38 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="signingcertificatesha1_nodejs">
+<a href="#signingcertificatesha1_nodejs" style="color: inherit; text-decoration: inherit;">signing<wbr>Certificate<wbr>Sha1</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}(Computed) The sha1sum fingerprint of the signing certificate. If the signing certificate is not in correct base64 format, this will be left empty.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="signingprivatekeysha1_nodejs">
+<a href="#signingprivatekeysha1_nodejs" style="color: inherit; text-decoration: inherit;">signing<wbr>Private<wbr>Key<wbr>Sha1</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}(Computed) The sha1sum fingerprint of the signing private key. If the signing private key is not in correct base64 format, this will be left empty.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-"
+            title="">
+        <span id="encryption_certificate_sha1_python">
+<a href="#encryption_certificate_sha1_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>certificate_<wbr>sha1</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}(Computed) The sha1sum fingerprint of the encryption certificate. If the encryption certificate is not in correct base64 format, this will be left empty.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1441,7 +1675,25 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="signing_certificate_sha1_python">
+<a href="#signing_certificate_sha1_python" style="color: inherit; text-decoration: inherit;">signing_<wbr>certificate_<wbr>sha1</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}(Computed) The sha1sum fingerprint of the signing certificate. If the signing certificate is not in correct base64 format, this will be left empty.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="signing_private_key_sha1_python">
+<a href="#signing_private_key_sha1_python" style="color: inherit; text-decoration: inherit;">signing_<wbr>private_<wbr>key_<wbr>sha1</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}(Computed) The sha1sum fingerprint of the signing private key. If the signing private key is not in correct base64 format, this will be left empty.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1464,12 +1716,15 @@ Get an existing Client resource's state with the given name, ID, and optional ex
         <span class="nx">assertion_consumer_redirect_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">authentication_flow_binding_overrides</span><span class="p">:</span> <span class="nx">Optional[ClientAuthenticationFlowBindingOverridesArgs]</span> = None<span class="p">,</span>
         <span class="nx">base_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">canonicalization_method</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">client_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">client_signature_required</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">encrypt_assertions</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">encryption_certificate</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">encryption_certificate_sha1</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">extra_config</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">,</span>
         <span class="nx">force_name_id_format</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">force_post_binding</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">front_channel_logout</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
@@ -1477,6 +1732,7 @@ Get an existing Client resource's state with the given name, ID, and optional ex
         <span class="nx">idp_initiated_sso_relay_state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">idp_initiated_sso_url_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">include_authn_statement</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">login_theme</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">logout_service_post_binding_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">logout_service_redirect_binding_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">master_saml_processing_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -1487,8 +1743,11 @@ Get an existing Client resource's state with the given name, ID, and optional ex
         <span class="nx">sign_assertions</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">sign_documents</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">signature_algorithm</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">signature_key_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">signing_certificate</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">signing_certificate_sha1</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">signing_private_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">signing_private_key_sha1</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">valid_redirect_uris</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">) -&gt;</span> Client</code></pre></div>
 {{% /choosable %}}
 
@@ -1638,6 +1897,15 @@ The following state arguments are supported:
     <dd>{{% md %}}When specified, this URL will be used whenever Keycloak needs to link to this client.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_canonicalizationmethod_csharp">
+<a href="#state_canonicalizationmethod_csharp" style="color: inherit; text-decoration: inherit;">Canonicalization<wbr>Method</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Canonicalization Method for XML signatures. Should be one of "EXCLUSIVE", "EXCLUSIVE_WITH_COMMENTS", "INCLUSIVE", or "INCLUSIVE_WITH_COMMENTS". Defaults to "EXCLUSIVE".
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_clientid_csharp">
 <a href="#state_clientid_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
 </span>
@@ -1653,7 +1921,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}When `true`, Keycloak will expect that documents originating from a client will be signed using the certificate and/or key configured via `signing_certificate` and `signing_private_key`.
+    <dd>{{% md %}}When `true`, Keycloak will expect that documents originating from a client will be signed using the certificate and/or key configured via `signing_certificate` and `signing_private_key`. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
@@ -1680,7 +1948,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}When `true`, the SAML assertions will be encrypted by Keycloak using the client's public key.
+    <dd>{{% md %}}When `true`, the SAML assertions will be encrypted by Keycloak using the client's public key. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_encryptioncertificate_csharp">
@@ -1692,13 +1960,30 @@ The following state arguments are supported:
     <dd>{{% md %}}If assertions for the client are encrypted, this certificate will be used for encryption.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_encryptioncertificatesha1_csharp">
+<a href="#state_encryptioncertificatesha1_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Certificate<wbr>Sha1</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}(Computed) The sha1sum fingerprint of the encryption certificate. If the encryption certificate is not in correct base64 format, this will be left empty.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_extraconfig_csharp">
+<a href="#state_extraconfig_csharp" style="color: inherit; text-decoration: inherit;">Extra<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_forcenameidformat_csharp">
 <a href="#state_forcenameidformat_csharp" style="color: inherit; text-decoration: inherit;">Force<wbr>Name<wbr>Id<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Ignore requested NameID subject format and use the one defined in `name_id_format` instead.
+    <dd>{{% md %}}Ignore requested NameID subject format and use the one defined in `name_id_format` instead. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_forcepostbinding_csharp">
@@ -1707,7 +1992,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}When `true`, Keycloak will always respond to an authentication request via the SAML POST Binding.
+    <dd>{{% md %}}When `true`, Keycloak will always respond to an authentication request via the SAML POST Binding. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_frontchannellogout_csharp">
@@ -1716,7 +2001,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}When `true`, this client will require a browser redirect in order to perform a logout.
+    <dd>{{% md %}}When `true`, this client will require a browser redirect in order to perform a logout. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fullscopeallowed_csharp">
@@ -1752,7 +2037,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}When `true`, an `AuthnStatement` will be included in the SAML response.
+    <dd>{{% md %}}When `true`, an `AuthnStatement` will be included in the SAML response. Defaults to `true`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_logintheme_csharp">
+<a href="#state_logintheme_csharp" style="color: inherit; text-decoration: inherit;">Login<wbr>Theme</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The login theme of this client.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logoutservicepostbindingurl_csharp">
@@ -1824,7 +2118,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}When `true`, the SAML assertions will be signed by Keycloak using the realm's private key, and embedded within the SAML XML Auth response.
+    <dd>{{% md %}}When `true`, the SAML assertions will be signed by Keycloak using the realm's private key, and embedded within the SAML XML Auth response. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_signdocuments_csharp">
@@ -1833,7 +2127,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}When `true`, the SAML document will be signed by Keycloak using the realm's private key.
+    <dd>{{% md %}}When `true`, the SAML document will be signed by Keycloak using the realm's private key. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_signaturealgorithm_csharp">
@@ -1845,6 +2139,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The signature algorithm used to sign documents. Should be one of "RSA_SHA1", "RSA_SHA256", "RSA_SHA512", or "DSA_SHA1".
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_signaturekeyname_csharp">
+<a href="#state_signaturekeyname_csharp" style="color: inherit; text-decoration: inherit;">Signature<wbr>Key<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The value of the `KeyName` element within the signed SAML document. Should be one of "NONE", "KEY_ID", or "CERT_SUBJECT". Defaults to "KEY_ID".
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_signingcertificate_csharp">
 <a href="#state_signingcertificate_csharp" style="color: inherit; text-decoration: inherit;">Signing<wbr>Certificate</a>
 </span>
@@ -1854,6 +2157,15 @@ The following state arguments are supported:
     <dd>{{% md %}}If documents or assertions from the client are signed, this certificate will be used to verify the signature.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_signingcertificatesha1_csharp">
+<a href="#state_signingcertificatesha1_csharp" style="color: inherit; text-decoration: inherit;">Signing<wbr>Certificate<wbr>Sha1</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}(Computed) The sha1sum fingerprint of the signing certificate. If the signing certificate is not in correct base64 format, this will be left empty.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_signingprivatekey_csharp">
 <a href="#state_signingprivatekey_csharp" style="color: inherit; text-decoration: inherit;">Signing<wbr>Private<wbr>Key</a>
 </span>
@@ -1861,6 +2173,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If documents or assertions from the client are signed, this private key will be used to verify the signature.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_signingprivatekeysha1_csharp">
+<a href="#state_signingprivatekeysha1_csharp" style="color: inherit; text-decoration: inherit;">Signing<wbr>Private<wbr>Key<wbr>Sha1</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}(Computed) The sha1sum fingerprint of the signing private key. If the signing private key is not in correct base64 format, this will be left empty.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_validredirecturis_csharp">
@@ -1912,6 +2233,15 @@ The following state arguments are supported:
     <dd>{{% md %}}When specified, this URL will be used whenever Keycloak needs to link to this client.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_canonicalizationmethod_go">
+<a href="#state_canonicalizationmethod_go" style="color: inherit; text-decoration: inherit;">Canonicalization<wbr>Method</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Canonicalization Method for XML signatures. Should be one of "EXCLUSIVE", "EXCLUSIVE_WITH_COMMENTS", "INCLUSIVE", or "INCLUSIVE_WITH_COMMENTS". Defaults to "EXCLUSIVE".
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_clientid_go">
 <a href="#state_clientid_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
 </span>
@@ -1927,7 +2257,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}When `true`, Keycloak will expect that documents originating from a client will be signed using the certificate and/or key configured via `signing_certificate` and `signing_private_key`.
+    <dd>{{% md %}}When `true`, Keycloak will expect that documents originating from a client will be signed using the certificate and/or key configured via `signing_certificate` and `signing_private_key`. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
@@ -1954,7 +2284,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}When `true`, the SAML assertions will be encrypted by Keycloak using the client's public key.
+    <dd>{{% md %}}When `true`, the SAML assertions will be encrypted by Keycloak using the client's public key. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_encryptioncertificate_go">
@@ -1966,13 +2296,30 @@ The following state arguments are supported:
     <dd>{{% md %}}If assertions for the client are encrypted, this certificate will be used for encryption.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_encryptioncertificatesha1_go">
+<a href="#state_encryptioncertificatesha1_go" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Certificate<wbr>Sha1</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}(Computed) The sha1sum fingerprint of the encryption certificate. If the encryption certificate is not in correct base64 format, this will be left empty.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_extraconfig_go">
+<a href="#state_extraconfig_go" style="color: inherit; text-decoration: inherit;">Extra<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_forcenameidformat_go">
 <a href="#state_forcenameidformat_go" style="color: inherit; text-decoration: inherit;">Force<wbr>Name<wbr>Id<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Ignore requested NameID subject format and use the one defined in `name_id_format` instead.
+    <dd>{{% md %}}Ignore requested NameID subject format and use the one defined in `name_id_format` instead. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_forcepostbinding_go">
@@ -1981,7 +2328,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}When `true`, Keycloak will always respond to an authentication request via the SAML POST Binding.
+    <dd>{{% md %}}When `true`, Keycloak will always respond to an authentication request via the SAML POST Binding. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_frontchannellogout_go">
@@ -1990,7 +2337,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}When `true`, this client will require a browser redirect in order to perform a logout.
+    <dd>{{% md %}}When `true`, this client will require a browser redirect in order to perform a logout. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fullscopeallowed_go">
@@ -2026,7 +2373,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}When `true`, an `AuthnStatement` will be included in the SAML response.
+    <dd>{{% md %}}When `true`, an `AuthnStatement` will be included in the SAML response. Defaults to `true`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_logintheme_go">
+<a href="#state_logintheme_go" style="color: inherit; text-decoration: inherit;">Login<wbr>Theme</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The login theme of this client.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logoutservicepostbindingurl_go">
@@ -2098,7 +2454,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}When `true`, the SAML assertions will be signed by Keycloak using the realm's private key, and embedded within the SAML XML Auth response.
+    <dd>{{% md %}}When `true`, the SAML assertions will be signed by Keycloak using the realm's private key, and embedded within the SAML XML Auth response. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_signdocuments_go">
@@ -2107,7 +2463,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}When `true`, the SAML document will be signed by Keycloak using the realm's private key.
+    <dd>{{% md %}}When `true`, the SAML document will be signed by Keycloak using the realm's private key. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_signaturealgorithm_go">
@@ -2119,6 +2475,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The signature algorithm used to sign documents. Should be one of "RSA_SHA1", "RSA_SHA256", "RSA_SHA512", or "DSA_SHA1".
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_signaturekeyname_go">
+<a href="#state_signaturekeyname_go" style="color: inherit; text-decoration: inherit;">Signature<wbr>Key<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The value of the `KeyName` element within the signed SAML document. Should be one of "NONE", "KEY_ID", or "CERT_SUBJECT". Defaults to "KEY_ID".
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_signingcertificate_go">
 <a href="#state_signingcertificate_go" style="color: inherit; text-decoration: inherit;">Signing<wbr>Certificate</a>
 </span>
@@ -2128,6 +2493,15 @@ The following state arguments are supported:
     <dd>{{% md %}}If documents or assertions from the client are signed, this certificate will be used to verify the signature.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_signingcertificatesha1_go">
+<a href="#state_signingcertificatesha1_go" style="color: inherit; text-decoration: inherit;">Signing<wbr>Certificate<wbr>Sha1</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}(Computed) The sha1sum fingerprint of the signing certificate. If the signing certificate is not in correct base64 format, this will be left empty.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_signingprivatekey_go">
 <a href="#state_signingprivatekey_go" style="color: inherit; text-decoration: inherit;">Signing<wbr>Private<wbr>Key</a>
 </span>
@@ -2135,6 +2509,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If documents or assertions from the client are signed, this private key will be used to verify the signature.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_signingprivatekeysha1_go">
+<a href="#state_signingprivatekeysha1_go" style="color: inherit; text-decoration: inherit;">Signing<wbr>Private<wbr>Key<wbr>Sha1</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}(Computed) The sha1sum fingerprint of the signing private key. If the signing private key is not in correct base64 format, this will be left empty.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_validredirecturis_go">
@@ -2186,6 +2569,15 @@ The following state arguments are supported:
     <dd>{{% md %}}When specified, this URL will be used whenever Keycloak needs to link to this client.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_canonicalizationmethod_nodejs">
+<a href="#state_canonicalizationmethod_nodejs" style="color: inherit; text-decoration: inherit;">canonicalization<wbr>Method</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Canonicalization Method for XML signatures. Should be one of "EXCLUSIVE", "EXCLUSIVE_WITH_COMMENTS", "INCLUSIVE", or "INCLUSIVE_WITH_COMMENTS". Defaults to "EXCLUSIVE".
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_clientid_nodejs">
 <a href="#state_clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
 </span>
@@ -2201,7 +2593,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}When `true`, Keycloak will expect that documents originating from a client will be signed using the certificate and/or key configured via `signing_certificate` and `signing_private_key`.
+    <dd>{{% md %}}When `true`, Keycloak will expect that documents originating from a client will be signed using the certificate and/or key configured via `signing_certificate` and `signing_private_key`. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
@@ -2228,7 +2620,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}When `true`, the SAML assertions will be encrypted by Keycloak using the client's public key.
+    <dd>{{% md %}}When `true`, the SAML assertions will be encrypted by Keycloak using the client's public key. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_encryptioncertificate_nodejs">
@@ -2240,13 +2632,30 @@ The following state arguments are supported:
     <dd>{{% md %}}If assertions for the client are encrypted, this certificate will be used for encryption.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_encryptioncertificatesha1_nodejs">
+<a href="#state_encryptioncertificatesha1_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Certificate<wbr>Sha1</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}(Computed) The sha1sum fingerprint of the encryption certificate. If the encryption certificate is not in correct base64 format, this will be left empty.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_extraconfig_nodejs">
+<a href="#state_extraconfig_nodejs" style="color: inherit; text-decoration: inherit;">extra<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_forcenameidformat_nodejs">
 <a href="#state_forcenameidformat_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Name<wbr>Id<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Ignore requested NameID subject format and use the one defined in `name_id_format` instead.
+    <dd>{{% md %}}Ignore requested NameID subject format and use the one defined in `name_id_format` instead. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_forcepostbinding_nodejs">
@@ -2255,7 +2664,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}When `true`, Keycloak will always respond to an authentication request via the SAML POST Binding.
+    <dd>{{% md %}}When `true`, Keycloak will always respond to an authentication request via the SAML POST Binding. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_frontchannellogout_nodejs">
@@ -2264,7 +2673,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}When `true`, this client will require a browser redirect in order to perform a logout.
+    <dd>{{% md %}}When `true`, this client will require a browser redirect in order to perform a logout. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fullscopeallowed_nodejs">
@@ -2300,7 +2709,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}When `true`, an `AuthnStatement` will be included in the SAML response.
+    <dd>{{% md %}}When `true`, an `AuthnStatement` will be included in the SAML response. Defaults to `true`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_logintheme_nodejs">
+<a href="#state_logintheme_nodejs" style="color: inherit; text-decoration: inherit;">login<wbr>Theme</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The login theme of this client.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logoutservicepostbindingurl_nodejs">
@@ -2372,7 +2790,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}When `true`, the SAML assertions will be signed by Keycloak using the realm's private key, and embedded within the SAML XML Auth response.
+    <dd>{{% md %}}When `true`, the SAML assertions will be signed by Keycloak using the realm's private key, and embedded within the SAML XML Auth response. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_signdocuments_nodejs">
@@ -2381,7 +2799,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}When `true`, the SAML document will be signed by Keycloak using the realm's private key.
+    <dd>{{% md %}}When `true`, the SAML document will be signed by Keycloak using the realm's private key. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_signaturealgorithm_nodejs">
@@ -2393,6 +2811,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The signature algorithm used to sign documents. Should be one of "RSA_SHA1", "RSA_SHA256", "RSA_SHA512", or "DSA_SHA1".
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_signaturekeyname_nodejs">
+<a href="#state_signaturekeyname_nodejs" style="color: inherit; text-decoration: inherit;">signature<wbr>Key<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The value of the `KeyName` element within the signed SAML document. Should be one of "NONE", "KEY_ID", or "CERT_SUBJECT". Defaults to "KEY_ID".
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_signingcertificate_nodejs">
 <a href="#state_signingcertificate_nodejs" style="color: inherit; text-decoration: inherit;">signing<wbr>Certificate</a>
 </span>
@@ -2402,6 +2829,15 @@ The following state arguments are supported:
     <dd>{{% md %}}If documents or assertions from the client are signed, this certificate will be used to verify the signature.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_signingcertificatesha1_nodejs">
+<a href="#state_signingcertificatesha1_nodejs" style="color: inherit; text-decoration: inherit;">signing<wbr>Certificate<wbr>Sha1</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}(Computed) The sha1sum fingerprint of the signing certificate. If the signing certificate is not in correct base64 format, this will be left empty.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_signingprivatekey_nodejs">
 <a href="#state_signingprivatekey_nodejs" style="color: inherit; text-decoration: inherit;">signing<wbr>Private<wbr>Key</a>
 </span>
@@ -2409,6 +2845,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If documents or assertions from the client are signed, this private key will be used to verify the signature.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_signingprivatekeysha1_nodejs">
+<a href="#state_signingprivatekeysha1_nodejs" style="color: inherit; text-decoration: inherit;">signing<wbr>Private<wbr>Key<wbr>Sha1</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}(Computed) The sha1sum fingerprint of the signing private key. If the signing private key is not in correct base64 format, this will be left empty.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_validredirecturis_nodejs">
@@ -2460,6 +2905,15 @@ The following state arguments are supported:
     <dd>{{% md %}}When specified, this URL will be used whenever Keycloak needs to link to this client.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_canonicalization_method_python">
+<a href="#state_canonicalization_method_python" style="color: inherit; text-decoration: inherit;">canonicalization_<wbr>method</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Canonicalization Method for XML signatures. Should be one of "EXCLUSIVE", "EXCLUSIVE_WITH_COMMENTS", "INCLUSIVE", or "INCLUSIVE_WITH_COMMENTS". Defaults to "EXCLUSIVE".
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_client_id_python">
 <a href="#state_client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
 </span>
@@ -2475,7 +2929,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}When `true`, Keycloak will expect that documents originating from a client will be signed using the certificate and/or key configured via `signing_certificate` and `signing_private_key`.
+    <dd>{{% md %}}When `true`, Keycloak will expect that documents originating from a client will be signed using the certificate and/or key configured via `signing_certificate` and `signing_private_key`. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
@@ -2502,7 +2956,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}When `true`, the SAML assertions will be encrypted by Keycloak using the client's public key.
+    <dd>{{% md %}}When `true`, the SAML assertions will be encrypted by Keycloak using the client's public key. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_encryption_certificate_python">
@@ -2514,13 +2968,30 @@ The following state arguments are supported:
     <dd>{{% md %}}If assertions for the client are encrypted, this certificate will be used for encryption.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_encryption_certificate_sha1_python">
+<a href="#state_encryption_certificate_sha1_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>certificate_<wbr>sha1</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}(Computed) The sha1sum fingerprint of the encryption certificate. If the encryption certificate is not in correct base64 format, this will be left empty.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_extra_config_python">
+<a href="#state_extra_config_python" style="color: inherit; text-decoration: inherit;">extra_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_force_name_id_format_python">
 <a href="#state_force_name_id_format_python" style="color: inherit; text-decoration: inherit;">force_<wbr>name_<wbr>id_<wbr>format</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Ignore requested NameID subject format and use the one defined in `name_id_format` instead.
+    <dd>{{% md %}}Ignore requested NameID subject format and use the one defined in `name_id_format` instead. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_force_post_binding_python">
@@ -2529,7 +3000,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}When `true`, Keycloak will always respond to an authentication request via the SAML POST Binding.
+    <dd>{{% md %}}When `true`, Keycloak will always respond to an authentication request via the SAML POST Binding. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_front_channel_logout_python">
@@ -2538,7 +3009,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}When `true`, this client will require a browser redirect in order to perform a logout.
+    <dd>{{% md %}}When `true`, this client will require a browser redirect in order to perform a logout. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_full_scope_allowed_python">
@@ -2574,7 +3045,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}When `true`, an `AuthnStatement` will be included in the SAML response.
+    <dd>{{% md %}}When `true`, an `AuthnStatement` will be included in the SAML response. Defaults to `true`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_login_theme_python">
+<a href="#state_login_theme_python" style="color: inherit; text-decoration: inherit;">login_<wbr>theme</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The login theme of this client.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logout_service_post_binding_url_python">
@@ -2646,7 +3126,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}When `true`, the SAML assertions will be signed by Keycloak using the realm's private key, and embedded within the SAML XML Auth response.
+    <dd>{{% md %}}When `true`, the SAML assertions will be signed by Keycloak using the realm's private key, and embedded within the SAML XML Auth response. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sign_documents_python">
@@ -2655,7 +3135,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}When `true`, the SAML document will be signed by Keycloak using the realm's private key.
+    <dd>{{% md %}}When `true`, the SAML document will be signed by Keycloak using the realm's private key. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_signature_algorithm_python">
@@ -2667,6 +3147,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The signature algorithm used to sign documents. Should be one of "RSA_SHA1", "RSA_SHA256", "RSA_SHA512", or "DSA_SHA1".
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_signature_key_name_python">
+<a href="#state_signature_key_name_python" style="color: inherit; text-decoration: inherit;">signature_<wbr>key_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The value of the `KeyName` element within the signed SAML document. Should be one of "NONE", "KEY_ID", or "CERT_SUBJECT". Defaults to "KEY_ID".
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_signing_certificate_python">
 <a href="#state_signing_certificate_python" style="color: inherit; text-decoration: inherit;">signing_<wbr>certificate</a>
 </span>
@@ -2676,6 +3165,15 @@ The following state arguments are supported:
     <dd>{{% md %}}If documents or assertions from the client are signed, this certificate will be used to verify the signature.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_signing_certificate_sha1_python">
+<a href="#state_signing_certificate_sha1_python" style="color: inherit; text-decoration: inherit;">signing_<wbr>certificate_<wbr>sha1</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}(Computed) The sha1sum fingerprint of the signing certificate. If the signing certificate is not in correct base64 format, this will be left empty.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_signing_private_key_python">
 <a href="#state_signing_private_key_python" style="color: inherit; text-decoration: inherit;">signing_<wbr>private_<wbr>key</a>
 </span>
@@ -2683,6 +3181,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If documents or assertions from the client are signed, this private key will be used to verify the signature.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_signing_private_key_sha1_python">
+<a href="#state_signing_private_key_sha1_python" style="color: inherit; text-decoration: inherit;">signing_<wbr>private_<wbr>key_<wbr>sha1</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}(Computed) The sha1sum fingerprint of the signing private key. If the signing private key is not in correct base64 format, this will be left empty.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_valid_redirect_uris_python">

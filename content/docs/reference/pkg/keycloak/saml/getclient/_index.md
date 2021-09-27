@@ -306,6 +306,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="canonicalizationmethod_csharp">
+<a href="#canonicalizationmethod_csharp" style="color: inherit; text-decoration: inherit;">Canonicalization<wbr>Method</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="clientid_csharp">
 <a href="#clientid_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
 </span>
@@ -351,6 +359,22 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="encryptioncertificatesha1_csharp">
+<a href="#encryptioncertificatesha1_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Certificate<wbr>Sha1</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="extraconfig_csharp">
+<a href="#extraconfig_csharp" style="color: inherit; text-decoration: inherit;">Extra<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
@@ -419,6 +443,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="logintheme_csharp">
+<a href="#logintheme_csharp" style="color: inherit; text-decoration: inherit;">Login<wbr>Theme</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="logoutservicepostbindingurl_csharp">
 <a href="#logoutservicepostbindingurl_csharp" style="color: inherit; text-decoration: inherit;">Logout<wbr>Service<wbr>Post<wbr>Binding<wbr>Url</a>
 </span>
@@ -475,6 +507,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="samlsignaturekeyname_csharp">
+<a href="#samlsignaturekeyname_csharp" style="color: inherit; text-decoration: inherit;">Saml<wbr>Signature<wbr>Key<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="signassertions_csharp">
 <a href="#signassertions_csharp" style="color: inherit; text-decoration: inherit;">Sign<wbr>Assertions</a>
 </span>
@@ -499,6 +539,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="signaturekeyname_csharp">
+<a href="#signaturekeyname_csharp" style="color: inherit; text-decoration: inherit;">Signature<wbr>Key<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="signingcertificate_csharp">
 <a href="#signingcertificate_csharp" style="color: inherit; text-decoration: inherit;">Signing<wbr>Certificate</a>
 </span>
@@ -507,8 +555,24 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="signingcertificatesha1_csharp">
+<a href="#signingcertificatesha1_csharp" style="color: inherit; text-decoration: inherit;">Signing<wbr>Certificate<wbr>Sha1</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="signingprivatekey_csharp">
 <a href="#signingprivatekey_csharp" style="color: inherit; text-decoration: inherit;">Signing<wbr>Private<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="signingprivatekeysha1_csharp">
+<a href="#signingprivatekeysha1_csharp" style="color: inherit; text-decoration: inherit;">Signing<wbr>Private<wbr>Key<wbr>Sha1</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -553,6 +617,14 @@ The following output properties are available:
             title="">
         <span id="baseurl_go">
 <a href="#baseurl_go" style="color: inherit; text-decoration: inherit;">Base<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="canonicalizationmethod_go">
+<a href="#canonicalizationmethod_go" style="color: inherit; text-decoration: inherit;">Canonicalization<wbr>Method</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -604,6 +676,22 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="encryptioncertificatesha1_go">
+<a href="#encryptioncertificatesha1_go" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Certificate<wbr>Sha1</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="extraconfig_go">
+<a href="#extraconfig_go" style="color: inherit; text-decoration: inherit;">Extra<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
@@ -672,6 +760,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="logintheme_go">
+<a href="#logintheme_go" style="color: inherit; text-decoration: inherit;">Login<wbr>Theme</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="logoutservicepostbindingurl_go">
 <a href="#logoutservicepostbindingurl_go" style="color: inherit; text-decoration: inherit;">Logout<wbr>Service<wbr>Post<wbr>Binding<wbr>Url</a>
 </span>
@@ -728,6 +824,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="samlsignaturekeyname_go">
+<a href="#samlsignaturekeyname_go" style="color: inherit; text-decoration: inherit;">Saml<wbr>Signature<wbr>Key<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="signassertions_go">
 <a href="#signassertions_go" style="color: inherit; text-decoration: inherit;">Sign<wbr>Assertions</a>
 </span>
@@ -752,6 +856,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="signaturekeyname_go">
+<a href="#signaturekeyname_go" style="color: inherit; text-decoration: inherit;">Signature<wbr>Key<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="signingcertificate_go">
 <a href="#signingcertificate_go" style="color: inherit; text-decoration: inherit;">Signing<wbr>Certificate</a>
 </span>
@@ -760,8 +872,24 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="signingcertificatesha1_go">
+<a href="#signingcertificatesha1_go" style="color: inherit; text-decoration: inherit;">Signing<wbr>Certificate<wbr>Sha1</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="signingprivatekey_go">
 <a href="#signingprivatekey_go" style="color: inherit; text-decoration: inherit;">Signing<wbr>Private<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="signingprivatekeysha1_go">
+<a href="#signingprivatekeysha1_go" style="color: inherit; text-decoration: inherit;">Signing<wbr>Private<wbr>Key<wbr>Sha1</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -806,6 +934,14 @@ The following output properties are available:
             title="">
         <span id="baseurl_nodejs">
 <a href="#baseurl_nodejs" style="color: inherit; text-decoration: inherit;">base<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="canonicalizationmethod_nodejs">
+<a href="#canonicalizationmethod_nodejs" style="color: inherit; text-decoration: inherit;">canonicalization<wbr>Method</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -857,6 +993,22 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="encryptioncertificatesha1_nodejs">
+<a href="#encryptioncertificatesha1_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Certificate<wbr>Sha1</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="extraconfig_nodejs">
+<a href="#extraconfig_nodejs" style="color: inherit; text-decoration: inherit;">extra<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
@@ -925,6 +1077,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="logintheme_nodejs">
+<a href="#logintheme_nodejs" style="color: inherit; text-decoration: inherit;">login<wbr>Theme</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="logoutservicepostbindingurl_nodejs">
 <a href="#logoutservicepostbindingurl_nodejs" style="color: inherit; text-decoration: inherit;">logout<wbr>Service<wbr>Post<wbr>Binding<wbr>Url</a>
 </span>
@@ -981,6 +1141,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="samlsignaturekeyname_nodejs">
+<a href="#samlsignaturekeyname_nodejs" style="color: inherit; text-decoration: inherit;">saml<wbr>Signature<wbr>Key<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="signassertions_nodejs">
 <a href="#signassertions_nodejs" style="color: inherit; text-decoration: inherit;">sign<wbr>Assertions</a>
 </span>
@@ -1005,6 +1173,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="signaturekeyname_nodejs">
+<a href="#signaturekeyname_nodejs" style="color: inherit; text-decoration: inherit;">signature<wbr>Key<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="signingcertificate_nodejs">
 <a href="#signingcertificate_nodejs" style="color: inherit; text-decoration: inherit;">signing<wbr>Certificate</a>
 </span>
@@ -1013,8 +1189,24 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="signingcertificatesha1_nodejs">
+<a href="#signingcertificatesha1_nodejs" style="color: inherit; text-decoration: inherit;">signing<wbr>Certificate<wbr>Sha1</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="signingprivatekey_nodejs">
 <a href="#signingprivatekey_nodejs" style="color: inherit; text-decoration: inherit;">signing<wbr>Private<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="signingprivatekeysha1_nodejs">
+<a href="#signingprivatekeysha1_nodejs" style="color: inherit; text-decoration: inherit;">signing<wbr>Private<wbr>Key<wbr>Sha1</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -1059,6 +1251,14 @@ The following output properties are available:
             title="">
         <span id="base_url_python">
 <a href="#base_url_python" style="color: inherit; text-decoration: inherit;">base_<wbr>url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="canonicalization_method_python">
+<a href="#canonicalization_method_python" style="color: inherit; text-decoration: inherit;">canonicalization_<wbr>method</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -1110,6 +1310,22 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="encryption_certificate_sha1_python">
+<a href="#encryption_certificate_sha1_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>certificate_<wbr>sha1</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="extra_config_python">
+<a href="#extra_config_python" style="color: inherit; text-decoration: inherit;">extra_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
@@ -1178,6 +1394,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="login_theme_python">
+<a href="#login_theme_python" style="color: inherit; text-decoration: inherit;">login_<wbr>theme</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="logout_service_post_binding_url_python">
 <a href="#logout_service_post_binding_url_python" style="color: inherit; text-decoration: inherit;">logout_<wbr>service_<wbr>post_<wbr>binding_<wbr>url</a>
 </span>
@@ -1234,6 +1458,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="saml_signature_key_name_python">
+<a href="#saml_signature_key_name_python" style="color: inherit; text-decoration: inherit;">saml_<wbr>signature_<wbr>key_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="sign_assertions_python">
 <a href="#sign_assertions_python" style="color: inherit; text-decoration: inherit;">sign_<wbr>assertions</a>
 </span>
@@ -1258,6 +1490,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="signature_key_name_python">
+<a href="#signature_key_name_python" style="color: inherit; text-decoration: inherit;">signature_<wbr>key_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="signing_certificate_python">
 <a href="#signing_certificate_python" style="color: inherit; text-decoration: inherit;">signing_<wbr>certificate</a>
 </span>
@@ -1266,8 +1506,24 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="signing_certificate_sha1_python">
+<a href="#signing_certificate_sha1_python" style="color: inherit; text-decoration: inherit;">signing_<wbr>certificate_<wbr>sha1</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="signing_private_key_python">
 <a href="#signing_private_key_python" style="color: inherit; text-decoration: inherit;">signing_<wbr>private_<wbr>key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="signing_private_key_sha1_python">
+<a href="#signing_private_key_sha1_python" style="color: inherit; text-decoration: inherit;">signing_<wbr>private_<wbr>key_<wbr>sha1</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>

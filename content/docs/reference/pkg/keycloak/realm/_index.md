@@ -384,6 +384,7 @@ const realm = new keycloak.Realm("realm", {
           <span class="nx">offline_session_idle_timeout</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
           <span class="nx">offline_session_max_lifespan</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
           <span class="nx">offline_session_max_lifespan_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+          <span class="nx">otp_policy</span><span class="p">:</span> <span class="nx">Optional[RealmOtpPolicyArgs]</span> = None<span class="p">,</span>
           <span class="nx">password_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
           <span class="nx">realm</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
           <span class="nx">refresh_token_max_reuse</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
@@ -800,6 +801,14 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
     </dt>
     <dd>{{% md %}}Enable `offline_session_max_lifespan`.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="otppolicy_csharp">
+<a href="#otppolicy_csharp" style="color: inherit; text-decoration: inherit;">Otp<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#realmotppolicy">Realm<wbr>Otp<wbr>Policy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="passwordpolicy_csharp">
 <a href="#passwordpolicy_csharp" style="color: inherit; text-decoration: inherit;">Password<wbr>Policy</a>
@@ -1248,6 +1257,14 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
     <dd>{{% md %}}Enable `offline_session_max_lifespan`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="otppolicy_go">
+<a href="#otppolicy_go" style="color: inherit; text-decoration: inherit;">Otp<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#realmotppolicy">Realm<wbr>Otp<wbr>Policy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="passwordpolicy_go">
 <a href="#passwordpolicy_go" style="color: inherit; text-decoration: inherit;">Password<wbr>Policy</a>
 </span>
@@ -1694,6 +1711,14 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
     </dt>
     <dd>{{% md %}}Enable `offline_session_max_lifespan`.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="otppolicy_nodejs">
+<a href="#otppolicy_nodejs" style="color: inherit; text-decoration: inherit;">otp<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#realmotppolicy">Realm<wbr>Otp<wbr>Policy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="passwordpolicy_nodejs">
 <a href="#passwordpolicy_nodejs" style="color: inherit; text-decoration: inherit;">password<wbr>Policy</a>
@@ -2142,6 +2167,14 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
     <dd>{{% md %}}Enable `offline_session_max_lifespan`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="otp_policy_python">
+<a href="#otp_policy_python" style="color: inherit; text-decoration: inherit;">otp_<wbr>policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#realmotppolicy">Realm<wbr>Otp<wbr>Policy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="password_policy_python">
 <a href="#password_policy_python" style="color: inherit; text-decoration: inherit;">password_<wbr>policy</a>
 </span>
@@ -2452,6 +2485,7 @@ Get an existing Realm resource's state with the given name, ID, and optional ext
         <span class="nx">offline_session_idle_timeout</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">offline_session_max_lifespan</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">offline_session_max_lifespan_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">otp_policy</span><span class="p">:</span> <span class="nx">Optional[RealmOtpPolicyArgs]</span> = None<span class="p">,</span>
         <span class="nx">password_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">realm</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">refresh_token_max_reuse</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
@@ -2850,6 +2884,14 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Enable `offline_session_max_lifespan`.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_otppolicy_csharp">
+<a href="#state_otppolicy_csharp" style="color: inherit; text-decoration: inherit;">Otp<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#realmotppolicy">Realm<wbr>Otp<wbr>Policy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_passwordpolicy_csharp">
 <a href="#state_passwordpolicy_csharp" style="color: inherit; text-decoration: inherit;">Password<wbr>Policy</a>
@@ -3306,6 +3348,14 @@ The following state arguments are supported:
     <dd>{{% md %}}Enable `offline_session_max_lifespan`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_otppolicy_go">
+<a href="#state_otppolicy_go" style="color: inherit; text-decoration: inherit;">Otp<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#realmotppolicy">Realm<wbr>Otp<wbr>Policy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_passwordpolicy_go">
 <a href="#state_passwordpolicy_go" style="color: inherit; text-decoration: inherit;">Password<wbr>Policy</a>
 </span>
@@ -3760,6 +3810,14 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Enable `offline_session_max_lifespan`.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_otppolicy_nodejs">
+<a href="#state_otppolicy_nodejs" style="color: inherit; text-decoration: inherit;">otp<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#realmotppolicy">Realm<wbr>Otp<wbr>Policy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_passwordpolicy_nodejs">
 <a href="#state_passwordpolicy_nodejs" style="color: inherit; text-decoration: inherit;">password<wbr>Policy</a>
@@ -4216,6 +4274,14 @@ The following state arguments are supported:
     <dd>{{% md %}}Enable `offline_session_max_lifespan`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_otp_policy_python">
+<a href="#state_otp_policy_python" style="color: inherit; text-decoration: inherit;">otp_<wbr>policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#realmotppolicy">Realm<wbr>Otp<wbr>Policy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_password_policy_python">
 <a href="#state_password_policy_python" style="color: inherit; text-decoration: inherit;">password_<wbr>policy</a>
 </span>
@@ -4498,6 +4564,240 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of [ISO 639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) locale codes that the realm should support.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="realmotppolicy">Realm<wbr>Otp<wbr>Policy</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="algorithm_csharp">
+<a href="#algorithm_csharp" style="color: inherit; text-decoration: inherit;">Algorithm</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}What hashing algorithm should be used to generate the OTP, Valid options are `HmacSHA1`,`HmacSHA256` and `HmacSHA512`. Defaults to `HmacSHA1`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="digits_csharp">
+<a href="#digits_csharp" style="color: inherit; text-decoration: inherit;">Digits</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}How many digits the OTP have. Defaults to `6`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="initialcounter_csharp">
+<a href="#initialcounter_csharp" style="color: inherit; text-decoration: inherit;">Initial<wbr>Counter</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}What should the initial counter value be. Defaults to `2`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="lookaheadwindow_csharp">
+<a href="#lookaheadwindow_csharp" style="color: inherit; text-decoration: inherit;">Look<wbr>Ahead<wbr>Window</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}How far ahead should the server look just in case the token generator and server are out of time sync or counter sync. Defaults to `1`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="period_csharp">
+<a href="#period_csharp" style="color: inherit; text-decoration: inherit;">Period</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}How many seconds should an OTP token be valid. Defaults to `30`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}One Time Password Type, supported Values are `totp` for Time-Based One Time Password and `hotp` for Counter Based. Defaults to `totp`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="algorithm_go">
+<a href="#algorithm_go" style="color: inherit; text-decoration: inherit;">Algorithm</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}What hashing algorithm should be used to generate the OTP, Valid options are `HmacSHA1`,`HmacSHA256` and `HmacSHA512`. Defaults to `HmacSHA1`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="digits_go">
+<a href="#digits_go" style="color: inherit; text-decoration: inherit;">Digits</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}How many digits the OTP have. Defaults to `6`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="initialcounter_go">
+<a href="#initialcounter_go" style="color: inherit; text-decoration: inherit;">Initial<wbr>Counter</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}What should the initial counter value be. Defaults to `2`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="lookaheadwindow_go">
+<a href="#lookaheadwindow_go" style="color: inherit; text-decoration: inherit;">Look<wbr>Ahead<wbr>Window</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}How far ahead should the server look just in case the token generator and server are out of time sync or counter sync. Defaults to `1`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="period_go">
+<a href="#period_go" style="color: inherit; text-decoration: inherit;">Period</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}How many seconds should an OTP token be valid. Defaults to `30`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}One Time Password Type, supported Values are `totp` for Time-Based One Time Password and `hotp` for Counter Based. Defaults to `totp`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="algorithm_nodejs">
+<a href="#algorithm_nodejs" style="color: inherit; text-decoration: inherit;">algorithm</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}What hashing algorithm should be used to generate the OTP, Valid options are `HmacSHA1`,`HmacSHA256` and `HmacSHA512`. Defaults to `HmacSHA1`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="digits_nodejs">
+<a href="#digits_nodejs" style="color: inherit; text-decoration: inherit;">digits</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}How many digits the OTP have. Defaults to `6`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="initialcounter_nodejs">
+<a href="#initialcounter_nodejs" style="color: inherit; text-decoration: inherit;">initial<wbr>Counter</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}What should the initial counter value be. Defaults to `2`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="lookaheadwindow_nodejs">
+<a href="#lookaheadwindow_nodejs" style="color: inherit; text-decoration: inherit;">look<wbr>Ahead<wbr>Window</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}How far ahead should the server look just in case the token generator and server are out of time sync or counter sync. Defaults to `1`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="period_nodejs">
+<a href="#period_nodejs" style="color: inherit; text-decoration: inherit;">period</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}How many seconds should an OTP token be valid. Defaults to `30`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}One Time Password Type, supported Values are `totp` for Time-Based One Time Password and `hotp` for Counter Based. Defaults to `totp`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="algorithm_python">
+<a href="#algorithm_python" style="color: inherit; text-decoration: inherit;">algorithm</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}What hashing algorithm should be used to generate the OTP, Valid options are `HmacSHA1`,`HmacSHA256` and `HmacSHA512`. Defaults to `HmacSHA1`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="digits_python">
+<a href="#digits_python" style="color: inherit; text-decoration: inherit;">digits</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}How many digits the OTP have. Defaults to `6`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="initial_counter_python">
+<a href="#initial_counter_python" style="color: inherit; text-decoration: inherit;">initial_<wbr>counter</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}What should the initial counter value be. Defaults to `2`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="look_ahead_window_python">
+<a href="#look_ahead_window_python" style="color: inherit; text-decoration: inherit;">look_<wbr>ahead_<wbr>window</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}How far ahead should the server look just in case the token generator and server are out of time sync or counter sync. Defaults to `1`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="period_python">
+<a href="#period_python" style="color: inherit; text-decoration: inherit;">period</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}How many seconds should an OTP token be valid. Defaults to `30`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}One Time Password Type, supported Values are `totp` for Time-Based One Time Password and `hotp` for Counter Based. Defaults to `totp`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

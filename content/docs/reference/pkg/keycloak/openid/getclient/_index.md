@@ -150,12 +150,8 @@ const admin = realmManagement.then(realmManagement => keycloak.getRole({
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_client(</span><span class="nx">client_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-               <span class="nx">client_offline_session_idle_timeout</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-               <span class="nx">client_offline_session_max_lifespan</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-               <span class="nx">client_session_idle_timeout</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-               <span class="nx">client_session_max_lifespan</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">extra_config</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">,</span>
                <span class="nx">realm_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-               <span class="nx">use_refresh_tokens</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetClientResult</code></pre></div>
 {{% /choosable %}}
 
@@ -200,43 +196,11 @@ The following arguments are supported:
     <dd>{{% md %}}The realm id.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="clientofflinesessionidletimeout_csharp">
-<a href="#clientofflinesessionidletimeout_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Offline<wbr>Session<wbr>Idle<wbr>Timeout</a>
+        <span id="extraconfig_csharp">
+<a href="#extraconfig_csharp" style="color: inherit; text-decoration: inherit;">Extra<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="clientofflinesessionmaxlifespan_csharp">
-<a href="#clientofflinesessionmaxlifespan_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Offline<wbr>Session<wbr>Max<wbr>Lifespan</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="clientsessionidletimeout_csharp">
-<a href="#clientsessionidletimeout_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Session<wbr>Idle<wbr>Timeout</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="clientsessionmaxlifespan_csharp">
-<a href="#clientsessionmaxlifespan_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Session<wbr>Max<wbr>Lifespan</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="userefreshtokens_csharp">
-<a href="#userefreshtokens_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Refresh<wbr>Tokens</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -262,43 +226,11 @@ The following arguments are supported:
     <dd>{{% md %}}The realm id.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="clientofflinesessionidletimeout_go">
-<a href="#clientofflinesessionidletimeout_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Offline<wbr>Session<wbr>Idle<wbr>Timeout</a>
+        <span id="extraconfig_go">
+<a href="#extraconfig_go" style="color: inherit; text-decoration: inherit;">Extra<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="clientofflinesessionmaxlifespan_go">
-<a href="#clientofflinesessionmaxlifespan_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Offline<wbr>Session<wbr>Max<wbr>Lifespan</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="clientsessionidletimeout_go">
-<a href="#clientsessionidletimeout_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Session<wbr>Idle<wbr>Timeout</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="clientsessionmaxlifespan_go">
-<a href="#clientsessionmaxlifespan_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Session<wbr>Max<wbr>Lifespan</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="userefreshtokens_go">
-<a href="#userefreshtokens_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Refresh<wbr>Tokens</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -324,43 +256,11 @@ The following arguments are supported:
     <dd>{{% md %}}The realm id.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="clientofflinesessionidletimeout_nodejs">
-<a href="#clientofflinesessionidletimeout_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Offline<wbr>Session<wbr>Idle<wbr>Timeout</a>
+        <span id="extraconfig_nodejs">
+<a href="#extraconfig_nodejs" style="color: inherit; text-decoration: inherit;">extra<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="clientofflinesessionmaxlifespan_nodejs">
-<a href="#clientofflinesessionmaxlifespan_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Offline<wbr>Session<wbr>Max<wbr>Lifespan</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="clientsessionidletimeout_nodejs">
-<a href="#clientsessionidletimeout_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Session<wbr>Idle<wbr>Timeout</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="clientsessionmaxlifespan_nodejs">
-<a href="#clientsessionmaxlifespan_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Session<wbr>Max<wbr>Lifespan</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="userefreshtokens_nodejs">
-<a href="#userefreshtokens_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Refresh<wbr>Tokens</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -386,43 +286,11 @@ The following arguments are supported:
     <dd>{{% md %}}The realm id.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="client_offline_session_idle_timeout_python">
-<a href="#client_offline_session_idle_timeout_python" style="color: inherit; text-decoration: inherit;">client_<wbr>offline_<wbr>session_<wbr>idle_<wbr>timeout</a>
+        <span id="extra_config_python">
+<a href="#extra_config_python" style="color: inherit; text-decoration: inherit;">extra_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="client_offline_session_max_lifespan_python">
-<a href="#client_offline_session_max_lifespan_python" style="color: inherit; text-decoration: inherit;">client_<wbr>offline_<wbr>session_<wbr>max_<wbr>lifespan</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="client_session_idle_timeout_python">
-<a href="#client_session_idle_timeout_python" style="color: inherit; text-decoration: inherit;">client_<wbr>session_<wbr>idle_<wbr>timeout</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="client_session_max_lifespan_python">
-<a href="#client_session_max_lifespan_python" style="color: inherit; text-decoration: inherit;">client_<wbr>session_<wbr>max_<wbr>lifespan</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="use_refresh_tokens_python">
-<a href="#use_refresh_tokens_python" style="color: inherit; text-decoration: inherit;">use_<wbr>refresh_<wbr>tokens</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -479,6 +347,30 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="backchannellogoutrevokeofflinesessions_csharp">
+<a href="#backchannellogoutrevokeofflinesessions_csharp" style="color: inherit; text-decoration: inherit;">Backchannel<wbr>Logout<wbr>Revoke<wbr>Offline<wbr>Sessions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="backchannellogoutsessionrequired_csharp">
+<a href="#backchannellogoutsessionrequired_csharp" style="color: inherit; text-decoration: inherit;">Backchannel<wbr>Logout<wbr>Session<wbr>Required</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="backchannellogouturl_csharp">
+<a href="#backchannellogouturl_csharp" style="color: inherit; text-decoration: inherit;">Backchannel<wbr>Logout<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="baseurl_csharp">
 <a href="#baseurl_csharp" style="color: inherit; text-decoration: inherit;">Base<wbr>Url</a>
 </span>
@@ -495,8 +387,40 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="clientofflinesessionidletimeout_csharp">
+<a href="#clientofflinesessionidletimeout_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Offline<wbr>Session<wbr>Idle<wbr>Timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="clientofflinesessionmaxlifespan_csharp">
+<a href="#clientofflinesessionmaxlifespan_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Offline<wbr>Session<wbr>Max<wbr>Lifespan</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="clientsecret_csharp">
 <a href="#clientsecret_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Secret</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="clientsessionidletimeout_csharp">
+<a href="#clientsessionidletimeout_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Session<wbr>Idle<wbr>Timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="clientsessionmaxlifespan_csharp">
+<a href="#clientsessionmaxlifespan_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Session<wbr>Max<wbr>Lifespan</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -540,6 +464,14 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="extraconfig_csharp">
+<a href="#extraconfig_csharp" style="color: inherit; text-decoration: inherit;">Extra<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
@@ -640,6 +572,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="userefreshtokens_csharp">
+<a href="#userefreshtokens_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Refresh<wbr>Tokens</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="validredirecturis_csharp">
 <a href="#validredirecturis_csharp" style="color: inherit; text-decoration: inherit;">Valid<wbr>Redirect<wbr>Uris</a>
 </span>
@@ -653,46 +593,6 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="clientofflinesessionidletimeout_csharp">
-<a href="#clientofflinesessionidletimeout_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Offline<wbr>Session<wbr>Idle<wbr>Timeout</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="clientofflinesessionmaxlifespan_csharp">
-<a href="#clientofflinesessionmaxlifespan_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Offline<wbr>Session<wbr>Max<wbr>Lifespan</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="clientsessionidletimeout_csharp">
-<a href="#clientsessionidletimeout_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Session<wbr>Idle<wbr>Timeout</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="clientsessionmaxlifespan_csharp">
-<a href="#clientsessionmaxlifespan_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Session<wbr>Max<wbr>Lifespan</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="userefreshtokens_csharp">
-<a href="#userefreshtokens_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Refresh<wbr>Tokens</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -740,6 +640,30 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="backchannellogoutrevokeofflinesessions_go">
+<a href="#backchannellogoutrevokeofflinesessions_go" style="color: inherit; text-decoration: inherit;">Backchannel<wbr>Logout<wbr>Revoke<wbr>Offline<wbr>Sessions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="backchannellogoutsessionrequired_go">
+<a href="#backchannellogoutsessionrequired_go" style="color: inherit; text-decoration: inherit;">Backchannel<wbr>Logout<wbr>Session<wbr>Required</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="backchannellogouturl_go">
+<a href="#backchannellogouturl_go" style="color: inherit; text-decoration: inherit;">Backchannel<wbr>Logout<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="baseurl_go">
 <a href="#baseurl_go" style="color: inherit; text-decoration: inherit;">Base<wbr>Url</a>
 </span>
@@ -756,8 +680,40 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="clientofflinesessionidletimeout_go">
+<a href="#clientofflinesessionidletimeout_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Offline<wbr>Session<wbr>Idle<wbr>Timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="clientofflinesessionmaxlifespan_go">
+<a href="#clientofflinesessionmaxlifespan_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Offline<wbr>Session<wbr>Max<wbr>Lifespan</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="clientsecret_go">
 <a href="#clientsecret_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Secret</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="clientsessionidletimeout_go">
+<a href="#clientsessionidletimeout_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Session<wbr>Idle<wbr>Timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="clientsessionmaxlifespan_go">
+<a href="#clientsessionmaxlifespan_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Session<wbr>Max<wbr>Lifespan</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -801,6 +757,14 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="extraconfig_go">
+<a href="#extraconfig_go" style="color: inherit; text-decoration: inherit;">Extra<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
@@ -901,6 +865,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="userefreshtokens_go">
+<a href="#userefreshtokens_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Refresh<wbr>Tokens</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="validredirecturis_go">
 <a href="#validredirecturis_go" style="color: inherit; text-decoration: inherit;">Valid<wbr>Redirect<wbr>Uris</a>
 </span>
@@ -914,46 +886,6 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="clientofflinesessionidletimeout_go">
-<a href="#clientofflinesessionidletimeout_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Offline<wbr>Session<wbr>Idle<wbr>Timeout</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="clientofflinesessionmaxlifespan_go">
-<a href="#clientofflinesessionmaxlifespan_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Offline<wbr>Session<wbr>Max<wbr>Lifespan</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="clientsessionidletimeout_go">
-<a href="#clientsessionidletimeout_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Session<wbr>Idle<wbr>Timeout</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="clientsessionmaxlifespan_go">
-<a href="#clientsessionmaxlifespan_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Session<wbr>Max<wbr>Lifespan</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="userefreshtokens_go">
-<a href="#userefreshtokens_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Refresh<wbr>Tokens</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1001,6 +933,30 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="backchannellogoutrevokeofflinesessions_nodejs">
+<a href="#backchannellogoutrevokeofflinesessions_nodejs" style="color: inherit; text-decoration: inherit;">backchannel<wbr>Logout<wbr>Revoke<wbr>Offline<wbr>Sessions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="backchannellogoutsessionrequired_nodejs">
+<a href="#backchannellogoutsessionrequired_nodejs" style="color: inherit; text-decoration: inherit;">backchannel<wbr>Logout<wbr>Session<wbr>Required</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="backchannellogouturl_nodejs">
+<a href="#backchannellogouturl_nodejs" style="color: inherit; text-decoration: inherit;">backchannel<wbr>Logout<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="baseurl_nodejs">
 <a href="#baseurl_nodejs" style="color: inherit; text-decoration: inherit;">base<wbr>Url</a>
 </span>
@@ -1017,8 +973,40 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="clientofflinesessionidletimeout_nodejs">
+<a href="#clientofflinesessionidletimeout_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Offline<wbr>Session<wbr>Idle<wbr>Timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="clientofflinesessionmaxlifespan_nodejs">
+<a href="#clientofflinesessionmaxlifespan_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Offline<wbr>Session<wbr>Max<wbr>Lifespan</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="clientsecret_nodejs">
 <a href="#clientsecret_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Secret</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="clientsessionidletimeout_nodejs">
+<a href="#clientsessionidletimeout_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Session<wbr>Idle<wbr>Timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="clientsessionmaxlifespan_nodejs">
+<a href="#clientsessionmaxlifespan_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Session<wbr>Max<wbr>Lifespan</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -1062,6 +1050,14 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="extraconfig_nodejs">
+<a href="#extraconfig_nodejs" style="color: inherit; text-decoration: inherit;">extra<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
@@ -1162,6 +1158,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="userefreshtokens_nodejs">
+<a href="#userefreshtokens_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Refresh<wbr>Tokens</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="validredirecturis_nodejs">
 <a href="#validredirecturis_nodejs" style="color: inherit; text-decoration: inherit;">valid<wbr>Redirect<wbr>Uris</a>
 </span>
@@ -1175,46 +1179,6 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="clientofflinesessionidletimeout_nodejs">
-<a href="#clientofflinesessionidletimeout_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Offline<wbr>Session<wbr>Idle<wbr>Timeout</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="clientofflinesessionmaxlifespan_nodejs">
-<a href="#clientofflinesessionmaxlifespan_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Offline<wbr>Session<wbr>Max<wbr>Lifespan</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="clientsessionidletimeout_nodejs">
-<a href="#clientsessionidletimeout_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Session<wbr>Idle<wbr>Timeout</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="clientsessionmaxlifespan_nodejs">
-<a href="#clientsessionmaxlifespan_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Session<wbr>Max<wbr>Lifespan</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="userefreshtokens_nodejs">
-<a href="#userefreshtokens_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Refresh<wbr>Tokens</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1262,6 +1226,30 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="backchannel_logout_revoke_offline_sessions_python">
+<a href="#backchannel_logout_revoke_offline_sessions_python" style="color: inherit; text-decoration: inherit;">backchannel_<wbr>logout_<wbr>revoke_<wbr>offline_<wbr>sessions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="backchannel_logout_session_required_python">
+<a href="#backchannel_logout_session_required_python" style="color: inherit; text-decoration: inherit;">backchannel_<wbr>logout_<wbr>session_<wbr>required</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="backchannel_logout_url_python">
+<a href="#backchannel_logout_url_python" style="color: inherit; text-decoration: inherit;">backchannel_<wbr>logout_<wbr>url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="base_url_python">
 <a href="#base_url_python" style="color: inherit; text-decoration: inherit;">base_<wbr>url</a>
 </span>
@@ -1278,8 +1266,40 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="client_offline_session_idle_timeout_python">
+<a href="#client_offline_session_idle_timeout_python" style="color: inherit; text-decoration: inherit;">client_<wbr>offline_<wbr>session_<wbr>idle_<wbr>timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="client_offline_session_max_lifespan_python">
+<a href="#client_offline_session_max_lifespan_python" style="color: inherit; text-decoration: inherit;">client_<wbr>offline_<wbr>session_<wbr>max_<wbr>lifespan</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="client_secret_python">
 <a href="#client_secret_python" style="color: inherit; text-decoration: inherit;">client_<wbr>secret</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="client_session_idle_timeout_python">
+<a href="#client_session_idle_timeout_python" style="color: inherit; text-decoration: inherit;">client_<wbr>session_<wbr>idle_<wbr>timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="client_session_max_lifespan_python">
+<a href="#client_session_max_lifespan_python" style="color: inherit; text-decoration: inherit;">client_<wbr>session_<wbr>max_<wbr>lifespan</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -1323,6 +1343,14 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="extra_config_python">
+<a href="#extra_config_python" style="color: inherit; text-decoration: inherit;">extra_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
@@ -1423,6 +1451,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="use_refresh_tokens_python">
+<a href="#use_refresh_tokens_python" style="color: inherit; text-decoration: inherit;">use_<wbr>refresh_<wbr>tokens</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="valid_redirect_uris_python">
 <a href="#valid_redirect_uris_python" style="color: inherit; text-decoration: inherit;">valid_<wbr>redirect_<wbr>uris</a>
 </span>
@@ -1436,46 +1472,6 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="client_offline_session_idle_timeout_python">
-<a href="#client_offline_session_idle_timeout_python" style="color: inherit; text-decoration: inherit;">client_<wbr>offline_<wbr>session_<wbr>idle_<wbr>timeout</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="client_offline_session_max_lifespan_python">
-<a href="#client_offline_session_max_lifespan_python" style="color: inherit; text-decoration: inherit;">client_<wbr>offline_<wbr>session_<wbr>max_<wbr>lifespan</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="client_session_idle_timeout_python">
-<a href="#client_session_idle_timeout_python" style="color: inherit; text-decoration: inherit;">client_<wbr>session_<wbr>idle_<wbr>timeout</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="client_session_max_lifespan_python">
-<a href="#client_session_max_lifespan_python" style="color: inherit; text-decoration: inherit;">client_<wbr>session_<wbr>max_<wbr>lifespan</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="use_refresh_tokens_python">
-<a href="#use_refresh_tokens_python" style="color: inherit; text-decoration: inherit;">use_<wbr>refresh_<wbr>tokens</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}

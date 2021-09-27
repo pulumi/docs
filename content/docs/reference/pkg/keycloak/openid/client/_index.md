@@ -52,6 +52,11 @@ class MyStack : Stack
                 "http://localhost:8080/openid-callback",
             },
             LoginTheme = "keycloak",
+            ExtraConfig = 
+            {
+                { "key1", "value1" },
+                { "key2", "value2" },
+            },
         });
     }
 
@@ -91,6 +96,10 @@ func main() {
 				pulumi.String("http://localhost:8080/openid-callback"),
 			},
 			LoginTheme: pulumi.String("keycloak"),
+			ExtraConfig: pulumi.StringMap{
+				"key1": pulumi.String("value1"),
+				"key2": pulumi.String("value2"),
+			},
 		})
 		if err != nil {
 			return err
@@ -119,7 +128,11 @@ openid_client = keycloak.openid.Client("openidClient",
     enabled=True,
     access_type="CONFIDENTIAL",
     valid_redirect_uris=["http://localhost:8080/openid-callback"],
-    login_theme="keycloak")
+    login_theme="keycloak",
+    extra_config={
+        "key1": "value1",
+        "key2": "value2",
+    })
 ```
 
 
@@ -144,6 +157,10 @@ const openidClient = new keycloak.openid.Client("openidClient", {
     accessType: "CONFIDENTIAL",
     validRedirectUris: ["http://localhost:8080/openid-callback"],
     loginTheme: "keycloak",
+    extraConfig: {
+        key1: "value1",
+        key2: "value2",
+    },
 });
 ```
 
@@ -176,6 +193,9 @@ const openidClient = new keycloak.openid.Client("openidClient", {
            <span class="nx">admin_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
            <span class="nx">authentication_flow_binding_overrides</span><span class="p">:</span> <span class="nx">Optional[ClientAuthenticationFlowBindingOverridesArgs]</span> = None<span class="p">,</span>
            <span class="nx">authorization</span><span class="p">:</span> <span class="nx">Optional[ClientAuthorizationArgs]</span> = None<span class="p">,</span>
+           <span class="nx">backchannel_logout_revoke_offline_sessions</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+           <span class="nx">backchannel_logout_session_required</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+           <span class="nx">backchannel_logout_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
            <span class="nx">base_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
            <span class="nx">client_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
            <span class="nx">client_offline_session_idle_timeout</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -188,6 +208,7 @@ const openidClient = new keycloak.openid.Client("openidClient", {
            <span class="nx">direct_access_grants_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
            <span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
            <span class="nx">exclude_session_state_from_auth_response</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+           <span class="nx">extra_config</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">,</span>
            <span class="nx">full_scope_allowed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
            <span class="nx">implicit_flow_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
            <span class="nx">login_theme</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -392,6 +413,33 @@ The Client resource accepts the following [input]({{< relref "/docs/intro/concep
     <dd>{{% md %}}When this block is present, fine-grained authorization will be enabled for this client. The client's `access_type` must be `CONFIDENTIAL`, and `service_accounts_enabled` must be `true`. This block has the following arguments:
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="backchannellogoutrevokeofflinesessions_csharp">
+<a href="#backchannellogoutrevokeofflinesessions_csharp" style="color: inherit; text-decoration: inherit;">Backchannel<wbr>Logout<wbr>Revoke<wbr>Offline<wbr>Sessions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifying whether a "revoke_offline_access" event is included in the Logout Token when the Backchannel Logout URL is used. Keycloak will revoke offline sessions when receiving a Logout Token with this event.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="backchannellogoutsessionrequired_csharp">
+<a href="#backchannellogoutsessionrequired_csharp" style="color: inherit; text-decoration: inherit;">Backchannel<wbr>Logout<wbr>Session<wbr>Required</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}When `true`, a sid (session ID) claim will be included in the logout token when the backchannel logout URL is used. Defaults to `true`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="backchannellogouturl_csharp">
+<a href="#backchannellogouturl_csharp" style="color: inherit; text-decoration: inherit;">Backchannel<wbr>Logout<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The URL that will cause the client to log itself out when a logout request is sent to this realm. If omitted, no logout request will be sent to the client is this case.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="baseurl_csharp">
 <a href="#baseurl_csharp" style="color: inherit; text-decoration: inherit;">Base<wbr>Url</a>
 </span>
@@ -490,6 +538,14 @@ The Client resource accepts the following [input]({{< relref "/docs/intro/concep
     </dt>
     <dd>{{% md %}}When `true`, the parameter `session_state` will not be included in OpenID Connect Authentication Response.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="extraconfig_csharp">
+<a href="#extraconfig_csharp" style="color: inherit; text-decoration: inherit;">Extra<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fullscopeallowed_csharp">
 <a href="#fullscopeallowed_csharp" style="color: inherit; text-decoration: inherit;">Full<wbr>Scope<wbr>Allowed</a>
@@ -659,6 +715,33 @@ is set to `true`.
     <dd>{{% md %}}When this block is present, fine-grained authorization will be enabled for this client. The client's `access_type` must be `CONFIDENTIAL`, and `service_accounts_enabled` must be `true`. This block has the following arguments:
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="backchannellogoutrevokeofflinesessions_go">
+<a href="#backchannellogoutrevokeofflinesessions_go" style="color: inherit; text-decoration: inherit;">Backchannel<wbr>Logout<wbr>Revoke<wbr>Offline<wbr>Sessions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifying whether a "revoke_offline_access" event is included in the Logout Token when the Backchannel Logout URL is used. Keycloak will revoke offline sessions when receiving a Logout Token with this event.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="backchannellogoutsessionrequired_go">
+<a href="#backchannellogoutsessionrequired_go" style="color: inherit; text-decoration: inherit;">Backchannel<wbr>Logout<wbr>Session<wbr>Required</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}When `true`, a sid (session ID) claim will be included in the logout token when the backchannel logout URL is used. Defaults to `true`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="backchannellogouturl_go">
+<a href="#backchannellogouturl_go" style="color: inherit; text-decoration: inherit;">Backchannel<wbr>Logout<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The URL that will cause the client to log itself out when a logout request is sent to this realm. If omitted, no logout request will be sent to the client is this case.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="baseurl_go">
 <a href="#baseurl_go" style="color: inherit; text-decoration: inherit;">Base<wbr>Url</a>
 </span>
@@ -757,6 +840,14 @@ is set to `true`.
     </dt>
     <dd>{{% md %}}When `true`, the parameter `session_state` will not be included in OpenID Connect Authentication Response.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="extraconfig_go">
+<a href="#extraconfig_go" style="color: inherit; text-decoration: inherit;">Extra<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fullscopeallowed_go">
 <a href="#fullscopeallowed_go" style="color: inherit; text-decoration: inherit;">Full<wbr>Scope<wbr>Allowed</a>
@@ -926,6 +1017,33 @@ is set to `true`.
     <dd>{{% md %}}When this block is present, fine-grained authorization will be enabled for this client. The client's `access_type` must be `CONFIDENTIAL`, and `service_accounts_enabled` must be `true`. This block has the following arguments:
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="backchannellogoutrevokeofflinesessions_nodejs">
+<a href="#backchannellogoutrevokeofflinesessions_nodejs" style="color: inherit; text-decoration: inherit;">backchannel<wbr>Logout<wbr>Revoke<wbr>Offline<wbr>Sessions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Specifying whether a "revoke_offline_access" event is included in the Logout Token when the Backchannel Logout URL is used. Keycloak will revoke offline sessions when receiving a Logout Token with this event.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="backchannellogoutsessionrequired_nodejs">
+<a href="#backchannellogoutsessionrequired_nodejs" style="color: inherit; text-decoration: inherit;">backchannel<wbr>Logout<wbr>Session<wbr>Required</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}When `true`, a sid (session ID) claim will be included in the logout token when the backchannel logout URL is used. Defaults to `true`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="backchannellogouturl_nodejs">
+<a href="#backchannellogouturl_nodejs" style="color: inherit; text-decoration: inherit;">backchannel<wbr>Logout<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The URL that will cause the client to log itself out when a logout request is sent to this realm. If omitted, no logout request will be sent to the client is this case.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="baseurl_nodejs">
 <a href="#baseurl_nodejs" style="color: inherit; text-decoration: inherit;">base<wbr>Url</a>
 </span>
@@ -1024,6 +1142,14 @@ is set to `true`.
     </dt>
     <dd>{{% md %}}When `true`, the parameter `session_state` will not be included in OpenID Connect Authentication Response.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="extraconfig_nodejs">
+<a href="#extraconfig_nodejs" style="color: inherit; text-decoration: inherit;">extra<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fullscopeallowed_nodejs">
 <a href="#fullscopeallowed_nodejs" style="color: inherit; text-decoration: inherit;">full<wbr>Scope<wbr>Allowed</a>
@@ -1193,6 +1319,33 @@ is set to `true`.
     <dd>{{% md %}}When this block is present, fine-grained authorization will be enabled for this client. The client's `access_type` must be `CONFIDENTIAL`, and `service_accounts_enabled` must be `true`. This block has the following arguments:
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="backchannel_logout_revoke_offline_sessions_python">
+<a href="#backchannel_logout_revoke_offline_sessions_python" style="color: inherit; text-decoration: inherit;">backchannel_<wbr>logout_<wbr>revoke_<wbr>offline_<wbr>sessions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifying whether a "revoke_offline_access" event is included in the Logout Token when the Backchannel Logout URL is used. Keycloak will revoke offline sessions when receiving a Logout Token with this event.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="backchannel_logout_session_required_python">
+<a href="#backchannel_logout_session_required_python" style="color: inherit; text-decoration: inherit;">backchannel_<wbr>logout_<wbr>session_<wbr>required</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}When `true`, a sid (session ID) claim will be included in the logout token when the backchannel logout URL is used. Defaults to `true`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="backchannel_logout_url_python">
+<a href="#backchannel_logout_url_python" style="color: inherit; text-decoration: inherit;">backchannel_<wbr>logout_<wbr>url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The URL that will cause the client to log itself out when a logout request is sent to this realm. If omitted, no logout request will be sent to the client is this case.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="base_url_python">
 <a href="#base_url_python" style="color: inherit; text-decoration: inherit;">base_<wbr>url</a>
 </span>
@@ -1291,6 +1444,14 @@ is set to `true`.
     </dt>
     <dd>{{% md %}}When `true`, the parameter `session_state` will not be included in OpenID Connect Authentication Response.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="extra_config_python">
+<a href="#extra_config_python" style="color: inherit; text-decoration: inherit;">extra_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="full_scope_allowed_python">
 <a href="#full_scope_allowed_python" style="color: inherit; text-decoration: inherit;">full_<wbr>scope_<wbr>allowed</a>
@@ -1542,6 +1703,9 @@ Get an existing Client resource's state with the given name, ID, and optional ex
         <span class="nx">admin_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">authentication_flow_binding_overrides</span><span class="p">:</span> <span class="nx">Optional[ClientAuthenticationFlowBindingOverridesArgs]</span> = None<span class="p">,</span>
         <span class="nx">authorization</span><span class="p">:</span> <span class="nx">Optional[ClientAuthorizationArgs]</span> = None<span class="p">,</span>
+        <span class="nx">backchannel_logout_revoke_offline_sessions</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">backchannel_logout_session_required</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">backchannel_logout_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">base_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">client_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">client_offline_session_idle_timeout</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -1554,6 +1718,7 @@ Get an existing Client resource's state with the given name, ID, and optional ex
         <span class="nx">direct_access_grants_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">exclude_session_state_from_auth_response</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">extra_config</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">,</span>
         <span class="nx">full_scope_allowed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">implicit_flow_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">login_theme</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -1725,6 +1890,33 @@ The following state arguments are supported:
     <dd>{{% md %}}When this block is present, fine-grained authorization will be enabled for this client. The client's `access_type` must be `CONFIDENTIAL`, and `service_accounts_enabled` must be `true`. This block has the following arguments:
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_backchannellogoutrevokeofflinesessions_csharp">
+<a href="#state_backchannellogoutrevokeofflinesessions_csharp" style="color: inherit; text-decoration: inherit;">Backchannel<wbr>Logout<wbr>Revoke<wbr>Offline<wbr>Sessions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifying whether a "revoke_offline_access" event is included in the Logout Token when the Backchannel Logout URL is used. Keycloak will revoke offline sessions when receiving a Logout Token with this event.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_backchannellogoutsessionrequired_csharp">
+<a href="#state_backchannellogoutsessionrequired_csharp" style="color: inherit; text-decoration: inherit;">Backchannel<wbr>Logout<wbr>Session<wbr>Required</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}When `true`, a sid (session ID) claim will be included in the logout token when the backchannel logout URL is used. Defaults to `true`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_backchannellogouturl_csharp">
+<a href="#state_backchannellogouturl_csharp" style="color: inherit; text-decoration: inherit;">Backchannel<wbr>Logout<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The URL that will cause the client to log itself out when a logout request is sent to this realm. If omitted, no logout request will be sent to the client is this case.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_baseurl_csharp">
 <a href="#state_baseurl_csharp" style="color: inherit; text-decoration: inherit;">Base<wbr>Url</a>
 </span>
@@ -1832,6 +2024,14 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}When `true`, the parameter `session_state` will not be included in OpenID Connect Authentication Response.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_extraconfig_csharp">
+<a href="#state_extraconfig_csharp" style="color: inherit; text-decoration: inherit;">Extra<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fullscopeallowed_csharp">
 <a href="#state_fullscopeallowed_csharp" style="color: inherit; text-decoration: inherit;">Full<wbr>Scope<wbr>Allowed</a>
@@ -2010,6 +2210,33 @@ is set to `true`.
     <dd>{{% md %}}When this block is present, fine-grained authorization will be enabled for this client. The client's `access_type` must be `CONFIDENTIAL`, and `service_accounts_enabled` must be `true`. This block has the following arguments:
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_backchannellogoutrevokeofflinesessions_go">
+<a href="#state_backchannellogoutrevokeofflinesessions_go" style="color: inherit; text-decoration: inherit;">Backchannel<wbr>Logout<wbr>Revoke<wbr>Offline<wbr>Sessions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifying whether a "revoke_offline_access" event is included in the Logout Token when the Backchannel Logout URL is used. Keycloak will revoke offline sessions when receiving a Logout Token with this event.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_backchannellogoutsessionrequired_go">
+<a href="#state_backchannellogoutsessionrequired_go" style="color: inherit; text-decoration: inherit;">Backchannel<wbr>Logout<wbr>Session<wbr>Required</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}When `true`, a sid (session ID) claim will be included in the logout token when the backchannel logout URL is used. Defaults to `true`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_backchannellogouturl_go">
+<a href="#state_backchannellogouturl_go" style="color: inherit; text-decoration: inherit;">Backchannel<wbr>Logout<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The URL that will cause the client to log itself out when a logout request is sent to this realm. If omitted, no logout request will be sent to the client is this case.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_baseurl_go">
 <a href="#state_baseurl_go" style="color: inherit; text-decoration: inherit;">Base<wbr>Url</a>
 </span>
@@ -2117,6 +2344,14 @@ is set to `true`.
     </dt>
     <dd>{{% md %}}When `true`, the parameter `session_state` will not be included in OpenID Connect Authentication Response.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_extraconfig_go">
+<a href="#state_extraconfig_go" style="color: inherit; text-decoration: inherit;">Extra<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fullscopeallowed_go">
 <a href="#state_fullscopeallowed_go" style="color: inherit; text-decoration: inherit;">Full<wbr>Scope<wbr>Allowed</a>
@@ -2295,6 +2530,33 @@ is set to `true`.
     <dd>{{% md %}}When this block is present, fine-grained authorization will be enabled for this client. The client's `access_type` must be `CONFIDENTIAL`, and `service_accounts_enabled` must be `true`. This block has the following arguments:
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_backchannellogoutrevokeofflinesessions_nodejs">
+<a href="#state_backchannellogoutrevokeofflinesessions_nodejs" style="color: inherit; text-decoration: inherit;">backchannel<wbr>Logout<wbr>Revoke<wbr>Offline<wbr>Sessions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Specifying whether a "revoke_offline_access" event is included in the Logout Token when the Backchannel Logout URL is used. Keycloak will revoke offline sessions when receiving a Logout Token with this event.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_backchannellogoutsessionrequired_nodejs">
+<a href="#state_backchannellogoutsessionrequired_nodejs" style="color: inherit; text-decoration: inherit;">backchannel<wbr>Logout<wbr>Session<wbr>Required</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}When `true`, a sid (session ID) claim will be included in the logout token when the backchannel logout URL is used. Defaults to `true`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_backchannellogouturl_nodejs">
+<a href="#state_backchannellogouturl_nodejs" style="color: inherit; text-decoration: inherit;">backchannel<wbr>Logout<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The URL that will cause the client to log itself out when a logout request is sent to this realm. If omitted, no logout request will be sent to the client is this case.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_baseurl_nodejs">
 <a href="#state_baseurl_nodejs" style="color: inherit; text-decoration: inherit;">base<wbr>Url</a>
 </span>
@@ -2402,6 +2664,14 @@ is set to `true`.
     </dt>
     <dd>{{% md %}}When `true`, the parameter `session_state` will not be included in OpenID Connect Authentication Response.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_extraconfig_nodejs">
+<a href="#state_extraconfig_nodejs" style="color: inherit; text-decoration: inherit;">extra<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fullscopeallowed_nodejs">
 <a href="#state_fullscopeallowed_nodejs" style="color: inherit; text-decoration: inherit;">full<wbr>Scope<wbr>Allowed</a>
@@ -2580,6 +2850,33 @@ is set to `true`.
     <dd>{{% md %}}When this block is present, fine-grained authorization will be enabled for this client. The client's `access_type` must be `CONFIDENTIAL`, and `service_accounts_enabled` must be `true`. This block has the following arguments:
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_backchannel_logout_revoke_offline_sessions_python">
+<a href="#state_backchannel_logout_revoke_offline_sessions_python" style="color: inherit; text-decoration: inherit;">backchannel_<wbr>logout_<wbr>revoke_<wbr>offline_<wbr>sessions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifying whether a "revoke_offline_access" event is included in the Logout Token when the Backchannel Logout URL is used. Keycloak will revoke offline sessions when receiving a Logout Token with this event.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_backchannel_logout_session_required_python">
+<a href="#state_backchannel_logout_session_required_python" style="color: inherit; text-decoration: inherit;">backchannel_<wbr>logout_<wbr>session_<wbr>required</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}When `true`, a sid (session ID) claim will be included in the logout token when the backchannel logout URL is used. Defaults to `true`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_backchannel_logout_url_python">
+<a href="#state_backchannel_logout_url_python" style="color: inherit; text-decoration: inherit;">backchannel_<wbr>logout_<wbr>url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The URL that will cause the client to log itself out when a logout request is sent to this realm. If omitted, no logout request will be sent to the client is this case.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_base_url_python">
 <a href="#state_base_url_python" style="color: inherit; text-decoration: inherit;">base_<wbr>url</a>
 </span>
@@ -2687,6 +2984,14 @@ is set to `true`.
     </dt>
     <dd>{{% md %}}When `true`, the parameter `session_state` will not be included in OpenID Connect Authentication Response.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_extra_config_python">
+<a href="#state_extra_config_python" style="color: inherit; text-decoration: inherit;">extra_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_full_scope_allowed_python">
 <a href="#state_full_scope_allowed_python" style="color: inherit; text-decoration: inherit;">full_<wbr>scope_<wbr>allowed</a>
