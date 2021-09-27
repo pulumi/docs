@@ -29,21 +29,63 @@ meta_desc: "Documentation for the snowflake.Share resource with examples, input 
 
 {{< example csharp >}}
 
-Coming soon!
+```csharp
+using Pulumi;
+using Snowflake = Pulumi.Snowflake;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var test = new Snowflake.Share("test", new Snowflake.ShareArgs
+        {
+            Comment = "cool comment",
+        });
+    }
+
+}
+```
+
 
 {{< /example >}}
 
 
 {{< example go >}}
 
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-snowflake/sdk/go/snowflake"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := snowflake.NewShare(ctx, "test", &snowflake.ShareArgs{
+			Comment: pulumi.String("cool comment"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 
 {{< /example >}}
 
 
 {{< example python >}}
 
-Coming soon!
+```python
+import pulumi
+import pulumi_snowflake as snowflake
+
+test = snowflake.Share("test", comment="cool comment")
+```
+
 
 {{< /example >}}
 
@@ -55,20 +97,8 @@ Coming soon!
 import * as pulumi from "@pulumi/pulumi";
 import * as snowflake from "@pulumi/snowflake";
 
-const share = new snowflake.Share("share", {
-    databaseName: "db",
-    privilege: "USAGE",
-    roles: [
-        "role1",
-        "role2",
-    ],
-    schemaName: "schema",
-    shares: [
-        "share1",
-        "share2",
-    ],
-    stageName: "stage",
-    withGrantOption: false,
+const test = new snowflake.Share("test", {
+    comment: "cool comment",
 });
 ```
 

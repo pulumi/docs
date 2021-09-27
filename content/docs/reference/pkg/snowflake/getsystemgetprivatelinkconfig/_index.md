@@ -99,8 +99,8 @@ The following output properties are available:
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="oscpurl_csharp">
-<a href="#oscpurl_csharp" style="color: inherit; text-decoration: inherit;">Oscp<wbr>Url</a>
+        <span id="ocspurl_csharp">
+<a href="#ocspurl_csharp" style="color: inherit; text-decoration: inherit;">Ocsp<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -157,8 +157,8 @@ The following output properties are available:
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="oscpurl_go">
-<a href="#oscpurl_go" style="color: inherit; text-decoration: inherit;">Oscp<wbr>Url</a>
+        <span id="ocspurl_go">
+<a href="#ocspurl_go" style="color: inherit; text-decoration: inherit;">Ocsp<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -215,8 +215,8 @@ The following output properties are available:
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="oscpurl_nodejs">
-<a href="#oscpurl_nodejs" style="color: inherit; text-decoration: inherit;">oscp<wbr>Url</a>
+        <span id="ocspurl_nodejs">
+<a href="#ocspurl_nodejs" style="color: inherit; text-decoration: inherit;">ocsp<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -273,8 +273,8 @@ The following output properties are available:
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="oscp_url_python">
-<a href="#oscp_url_python" style="color: inherit; text-decoration: inherit;">oscp_<wbr>url</a>
+        <span id="ocsp_url_python">
+<a href="#ocsp_url_python" style="color: inherit; text-decoration: inherit;">ocsp_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
