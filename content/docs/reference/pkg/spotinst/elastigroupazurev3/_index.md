@@ -35,6 +35,7 @@ class MyStack : Stack
     {
         var testAzureGroup = new SpotInst.ElastigroupAzureV3("testAzureGroup", new SpotInst.ElastigroupAzureV3Args
         {
+            CustomData = "IyEvYmluL2Jhc2gKZWNobyAidGVzdCI=",
             DesiredCapacity = 1,
             Images = 
             {
@@ -132,6 +133,7 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := spotinst.NewElastigroupAzureV3(ctx, "testAzureGroup", &spotinst.ElastigroupAzureV3Args{
+			CustomData:      pulumi.String("IyEvYmluL2Jhc2gKZWNobyAidGVzdCI="),
 			DesiredCapacity: pulumi.Int(1),
 			Images: spotinst.ElastigroupAzureV3ImageArray{
 				&spotinst.ElastigroupAzureV3ImageArgs{
@@ -211,6 +213,7 @@ import pulumi
 import pulumi_spotinst as spotinst
 
 test_azure_group = spotinst.ElastigroupAzureV3("testAzureGroup",
+    custom_data="IyEvYmluL2Jhc2gKZWNobyAidGVzdCI=",
     desired_capacity=1,
     images=[spotinst.ElastigroupAzureV3ImageArgs(
         marketplaces=[spotinst.ElastigroupAzureV3ImageMarketplaceArgs(
@@ -274,6 +277,8 @@ import * as pulumi from "@pulumi/pulumi";
 import * as spotinst from "@pulumi/spotinst";
 
 const testAzureGroup = new spotinst.ElastigroupAzureV3("test_azure_group", {
+    // --- LAUNCH SPEC ---------------------------------------------------
+    customData: "IyEvYmluL2Jhc2gKZWNobyAidGVzdCI=",
     desiredCapacity: 1,
     // --- IMAGE ---------------------------------------------------------
     images: [{
@@ -356,6 +361,7 @@ const testAzureGroup = new spotinst.ElastigroupAzureV3("test_azure_group", {
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">ElastigroupAzureV3</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                       <span class="nx">custom_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                        <span class="nx">desired_capacity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
                        <span class="nx">images</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupAzureV3ImageArgs]]</span> = None<span class="p">,</span>
                        <span class="nx">login</span><span class="p">:</span> <span class="nx">Optional[ElastigroupAzureV3LoginArgs]</span> = None<span class="p">,</span>
@@ -561,6 +567,15 @@ The ElastigroupAzureV3 resource accepts the following [input]({{< relref "/docs/
     <dd>{{% md %}}Describes the deployment strategy.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="customdata_csharp">
+<a href="#customdata_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Custom init script file or text in Base64 encoded format.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="desiredcapacity_csharp">
 <a href="#desiredcapacity_csharp" style="color: inherit; text-decoration: inherit;">Desired<wbr>Capacity</a>
 </span>
@@ -680,6 +695,15 @@ The ElastigroupAzureV3 resource accepts the following [input]({{< relref "/docs/
         <span class="property-type"><a href="#elastigroupazurev3strategy">Elastigroup<wbr>Azure<wbr>V3Strategy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the deployment strategy.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="customdata_go">
+<a href="#customdata_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Custom init script file or text in Base64 encoded format.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="desiredcapacity_go">
@@ -803,6 +827,15 @@ The ElastigroupAzureV3 resource accepts the following [input]({{< relref "/docs/
     <dd>{{% md %}}Describes the deployment strategy.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="customdata_nodejs">
+<a href="#customdata_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Custom init script file or text in Base64 encoded format.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="desiredcapacity_nodejs">
 <a href="#desiredcapacity_nodejs" style="color: inherit; text-decoration: inherit;">desired<wbr>Capacity</a>
 </span>
@@ -922,6 +955,15 @@ The ElastigroupAzureV3 resource accepts the following [input]({{< relref "/docs/
         <span class="property-type"><a href="#elastigroupazurev3strategy">Elastigroup<wbr>Azure<wbr>V3Strategy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the deployment strategy.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="custom_data_python">
+<a href="#custom_data_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Custom init script file or text in Base64 encoded format.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="desired_capacity_python">
@@ -1050,6 +1092,7 @@ Get an existing ElastigroupAzureV3 resource's state with the given name, ID, and
 <span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">custom_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">desired_capacity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">images</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupAzureV3ImageArgs]]</span> = None<span class="p">,</span>
         <span class="nx">login</span><span class="p">:</span> <span class="nx">Optional[ElastigroupAzureV3LoginArgs]</span> = None<span class="p">,</span>
@@ -1175,6 +1218,15 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="state_customdata_csharp">
+<a href="#state_customdata_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Custom init script file or text in Base64 encoded format.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_desiredcapacity_csharp">
 <a href="#state_desiredcapacity_csharp" style="color: inherit; text-decoration: inherit;">Desired<wbr>Capacity</a>
 </span>
@@ -1295,6 +1347,15 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="state_customdata_go">
+<a href="#state_customdata_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Custom init script file or text in Base64 encoded format.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_desiredcapacity_go">
 <a href="#state_desiredcapacity_go" style="color: inherit; text-decoration: inherit;">Desired<wbr>Capacity</a>
@@ -1417,6 +1478,15 @@ The following state arguments are supported:
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="state_customdata_nodejs">
+<a href="#state_customdata_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Custom init script file or text in Base64 encoded format.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_desiredcapacity_nodejs">
 <a href="#state_desiredcapacity_nodejs" style="color: inherit; text-decoration: inherit;">desired<wbr>Capacity</a>
 </span>
@@ -1537,6 +1607,15 @@ The following state arguments are supported:
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="state_custom_data_python">
+<a href="#state_custom_data_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Custom init script file or text in Base64 encoded format.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_desired_capacity_python">
 <a href="#state_desired_capacity_python" style="color: inherit; text-decoration: inherit;">desired_<wbr>capacity</a>
@@ -1875,7 +1954,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}-
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1914,7 +1994,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}-
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1953,7 +2034,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}-
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1992,7 +2074,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}-
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="elastigroupazurev3login">Elastigroup<wbr>Azure<wbr>V3Login</h4>
@@ -2132,7 +2215,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupazurev3networknetworkinterface">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Inputs.<wbr>Elastigroup<wbr>Azure<wbr>V3Network<wbr>Network<wbr>Interface&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}-
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -2162,7 +2246,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupazurev3networknetworkinterface">[]Elastigroup<wbr>Azure<wbr>V3Network<wbr>Network<wbr>Interface</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}-
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -2192,7 +2277,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupazurev3networknetworkinterface">Elastigroup<wbr>Azure<wbr>V3Network<wbr>Network<wbr>Interface[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}-
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -2222,7 +2308,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupazurev3networknetworkinterface">Sequence[Elastigroup<wbr>Azure<wbr>V3Network<wbr>Network<wbr>Interface]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}-
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -2262,7 +2349,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}-
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subnetname_csharp">
 <a href="#subnetname_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Name</a>
@@ -2309,7 +2397,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}-
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subnetname_go">
 <a href="#subnetname_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Name</a>
@@ -2356,7 +2445,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}-
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subnetname_nodejs">
 <a href="#subnetname_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Name</a>
@@ -2403,7 +2493,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}-
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subnet_name_python">
 <a href="#subnet_name_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>name</a>
@@ -2633,7 +2724,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}-
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="odcount_csharp">
 <a href="#odcount_csharp" style="color: inherit; text-decoration: inherit;">Od<wbr>Count</a>
@@ -2641,7 +2733,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of On-Demand instances to maintain. Required if low_priority_percentage is not specified.
+    <dd>{{% md %}}Number of On-Demand instances to maintain. Required if `low_priority_percentage` is not specified.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spotpercentage_csharp">
@@ -2672,7 +2764,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}-
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="odcount_go">
 <a href="#odcount_go" style="color: inherit; text-decoration: inherit;">Od<wbr>Count</a>
@@ -2680,7 +2773,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of On-Demand instances to maintain. Required if low_priority_percentage is not specified.
+    <dd>{{% md %}}Number of On-Demand instances to maintain. Required if `low_priority_percentage` is not specified.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spotpercentage_go">
@@ -2711,7 +2804,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}-
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="odcount_nodejs">
 <a href="#odcount_nodejs" style="color: inherit; text-decoration: inherit;">od<wbr>Count</a>
@@ -2719,7 +2813,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Number of On-Demand instances to maintain. Required if low_priority_percentage is not specified.
+    <dd>{{% md %}}Number of On-Demand instances to maintain. Required if `low_priority_percentage` is not specified.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spotpercentage_nodejs">
@@ -2750,7 +2844,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}-
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="od_count_python">
 <a href="#od_count_python" style="color: inherit; text-decoration: inherit;">od_<wbr>count</a>
@@ -2758,7 +2853,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of On-Demand instances to maintain. Required if low_priority_percentage is not specified.
+    <dd>{{% md %}}Number of On-Demand instances to maintain. Required if `low_priority_percentage` is not specified.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spot_percentage_python">

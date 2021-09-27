@@ -3972,6 +3972,15 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Sets the percentage of the instances to deploy in each batch.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="launchspecids_csharp">
+<a href="#launchspecids_csharp" style="color: inherit; text-decoration: inherit;">Launch<wbr>Spec<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}List of virtual node group identifiers to be rolled.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3985,6 +3994,15 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Sets the percentage of the instances to deploy in each batch.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="launchspecids_go">
+<a href="#launchspecids_go" style="color: inherit; text-decoration: inherit;">Launch<wbr>Spec<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}List of virtual node group identifiers to be rolled.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3998,6 +4016,15 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Sets the percentage of the instances to deploy in each batch.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="launchspecids_nodejs">
+<a href="#launchspecids_nodejs" style="color: inherit; text-decoration: inherit;">launch<wbr>Spec<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}List of virtual node group identifiers to be rolled.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -4011,6 +4038,15 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Sets the percentage of the instances to deploy in each batch.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="launch_spec_ids_python">
+<a href="#launch_spec_ids_python" style="color: inherit; text-decoration: inherit;">launch_<wbr>spec_<wbr>ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}List of virtual node group identifiers to be rolled.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

@@ -35,6 +35,7 @@ meta_desc: "Documentation for the spotinst.gke.OceanImport resource with example
                 <span class="nx">min_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
                 <span class="nx">root_volume_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                 <span class="nx">scheduled_tasks</span><span class="p">:</span> <span class="nx">Optional[Sequence[OceanImportScheduledTaskArgs]]</span> = None<span class="p">,</span>
+                <span class="nx">update_policy</span><span class="p">:</span> <span class="nx">Optional[OceanImportUpdatePolicyArgs]</span> = None<span class="p">,</span>
                 <span class="nx">whitelists</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">OceanImport</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
@@ -254,6 +255,14 @@ The OceanImport resource accepts the following [input]({{< relref "/docs/intro/c
     <dd>{{% md %}}Set scheduling object.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="updatepolicy_csharp">
+<a href="#updatepolicy_csharp" style="color: inherit; text-decoration: inherit;">Update<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanimportupdatepolicy">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Gke.<wbr>Inputs.<wbr>Ocean<wbr>Import<wbr>Update<wbr>Policy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="whitelists_csharp">
 <a href="#whitelists_csharp" style="color: inherit; text-decoration: inherit;">Whitelists</a>
 </span>
@@ -355,6 +364,14 @@ The OceanImport resource accepts the following [input]({{< relref "/docs/intro/c
     </dt>
     <dd>{{% md %}}Set scheduling object.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="updatepolicy_go">
+<a href="#updatepolicy_go" style="color: inherit; text-decoration: inherit;">Update<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanimportupdatepolicy">Ocean<wbr>Import<wbr>Update<wbr>Policy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="whitelists_go">
 <a href="#whitelists_go" style="color: inherit; text-decoration: inherit;">Whitelists</a>
@@ -458,6 +475,14 @@ The OceanImport resource accepts the following [input]({{< relref "/docs/intro/c
     <dd>{{% md %}}Set scheduling object.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="updatepolicy_nodejs">
+<a href="#updatepolicy_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanimportupdatepolicy">Ocean<wbr>Import<wbr>Update<wbr>Policy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="whitelists_nodejs">
 <a href="#whitelists_nodejs" style="color: inherit; text-decoration: inherit;">whitelists</a>
 </span>
@@ -559,6 +584,14 @@ The OceanImport resource accepts the following [input]({{< relref "/docs/intro/c
     </dt>
     <dd>{{% md %}}Set scheduling object.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="update_policy_python">
+<a href="#update_policy_python" style="color: inherit; text-decoration: inherit;">update_<wbr>policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanimportupdatepolicy">Ocean<wbr>Import<wbr>Update<wbr>Policy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="whitelists_python">
 <a href="#whitelists_python" style="color: inherit; text-decoration: inherit;">whitelists</a>
@@ -684,6 +717,7 @@ Get an existing OceanImport resource's state with the given name, ID, and option
         <span class="nx">min_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">root_volume_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">scheduled_tasks</span><span class="p">:</span> <span class="nx">Optional[Sequence[OceanImportScheduledTaskArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">update_policy</span><span class="p">:</span> <span class="nx">Optional[OceanImportUpdatePolicyArgs]</span> = None<span class="p">,</span>
         <span class="nx">whitelists</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">) -&gt;</span> OceanImport</code></pre></div>
 {{% /choosable %}}
 
@@ -894,6 +928,14 @@ The following state arguments are supported:
     <dd>{{% md %}}Set scheduling object.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_updatepolicy_csharp">
+<a href="#state_updatepolicy_csharp" style="color: inherit; text-decoration: inherit;">Update<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanimportupdatepolicy">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Gke.<wbr>Inputs.<wbr>Ocean<wbr>Import<wbr>Update<wbr>Policy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_whitelists_csharp">
 <a href="#state_whitelists_csharp" style="color: inherit; text-decoration: inherit;">Whitelists</a>
 </span>
@@ -1003,6 +1045,14 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Set scheduling object.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_updatepolicy_go">
+<a href="#state_updatepolicy_go" style="color: inherit; text-decoration: inherit;">Update<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanimportupdatepolicy">Ocean<wbr>Import<wbr>Update<wbr>Policy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_whitelists_go">
 <a href="#state_whitelists_go" style="color: inherit; text-decoration: inherit;">Whitelists</a>
@@ -1114,6 +1164,14 @@ The following state arguments are supported:
     <dd>{{% md %}}Set scheduling object.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_updatepolicy_nodejs">
+<a href="#state_updatepolicy_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanimportupdatepolicy">Ocean<wbr>Import<wbr>Update<wbr>Policy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_whitelists_nodejs">
 <a href="#state_whitelists_nodejs" style="color: inherit; text-decoration: inherit;">whitelists</a>
 </span>
@@ -1223,6 +1281,14 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Set scheduling object.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_update_policy_python">
+<a href="#state_update_policy_python" style="color: inherit; text-decoration: inherit;">update_<wbr>policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanimportupdatepolicy">Ocean<wbr>Import<wbr>Update<wbr>Policy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_whitelists_python">
 <a href="#state_whitelists_python" style="color: inherit; text-decoration: inherit;">whitelists</a>
@@ -2451,6 +2517,178 @@ Example: 0 1 * * *
     <dd>{{% md %}}Value in % to set size of batch in roll. Valid values are 0-100
 Example: 20.
 {{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="oceanimportupdatepolicy">Ocean<wbr>Import<wbr>Update<wbr>Policy</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="shouldroll_csharp">
+<a href="#shouldroll_csharp" style="color: inherit; text-decoration: inherit;">Should<wbr>Roll</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="rollconfig_csharp">
+<a href="#rollconfig_csharp" style="color: inherit; text-decoration: inherit;">Roll<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanimportupdatepolicyrollconfig">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Gke.<wbr>Inputs.<wbr>Ocean<wbr>Import<wbr>Update<wbr>Policy<wbr>Roll<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="shouldroll_go">
+<a href="#shouldroll_go" style="color: inherit; text-decoration: inherit;">Should<wbr>Roll</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="rollconfig_go">
+<a href="#rollconfig_go" style="color: inherit; text-decoration: inherit;">Roll<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanimportupdatepolicyrollconfig">Ocean<wbr>Import<wbr>Update<wbr>Policy<wbr>Roll<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="shouldroll_nodejs">
+<a href="#shouldroll_nodejs" style="color: inherit; text-decoration: inherit;">should<wbr>Roll</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="rollconfig_nodejs">
+<a href="#rollconfig_nodejs" style="color: inherit; text-decoration: inherit;">roll<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanimportupdatepolicyrollconfig">Ocean<wbr>Import<wbr>Update<wbr>Policy<wbr>Roll<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="should_roll_python">
+<a href="#should_roll_python" style="color: inherit; text-decoration: inherit;">should_<wbr>roll</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="roll_config_python">
+<a href="#roll_config_python" style="color: inherit; text-decoration: inherit;">roll_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanimportupdatepolicyrollconfig">Ocean<wbr>Import<wbr>Update<wbr>Policy<wbr>Roll<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="oceanimportupdatepolicyrollconfig">Ocean<wbr>Import<wbr>Update<wbr>Policy<wbr>Roll<wbr>Config</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="batchsizepercentage_csharp">
+<a href="#batchsizepercentage_csharp" style="color: inherit; text-decoration: inherit;">Batch<wbr>Size<wbr>Percentage</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Value in % to set size of batch in roll. Valid values are 0-100
+Example: 20.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="launchspecids_csharp">
+<a href="#launchspecids_csharp" style="color: inherit; text-decoration: inherit;">Launch<wbr>Spec<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="batchsizepercentage_go">
+<a href="#batchsizepercentage_go" style="color: inherit; text-decoration: inherit;">Batch<wbr>Size<wbr>Percentage</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Value in % to set size of batch in roll. Valid values are 0-100
+Example: 20.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="launchspecids_go">
+<a href="#launchspecids_go" style="color: inherit; text-decoration: inherit;">Launch<wbr>Spec<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="batchsizepercentage_nodejs">
+<a href="#batchsizepercentage_nodejs" style="color: inherit; text-decoration: inherit;">batch<wbr>Size<wbr>Percentage</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Value in % to set size of batch in roll. Valid values are 0-100
+Example: 20.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="launchspecids_nodejs">
+<a href="#launchspecids_nodejs" style="color: inherit; text-decoration: inherit;">launch<wbr>Spec<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="batch_size_percentage_python">
+<a href="#batch_size_percentage_python" style="color: inherit; text-decoration: inherit;">batch_<wbr>size_<wbr>percentage</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Value in % to set size of batch in roll. Valid values are 0-100
+Example: 20.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="launch_spec_ids_python">
+<a href="#launch_spec_ids_python" style="color: inherit; text-decoration: inherit;">launch_<wbr>spec_<wbr>ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
