@@ -17,6 +17,7 @@ A Pulumi package for creating and managing venafi cloud resources.
     <li><a href="certificate" title="Certificate"><span class="symbol resource"></span>Certificate</a></li>
     <li><a href="policy" title="Policy"><span class="symbol resource"></span>Policy</a></li>
     <li><a href="provider" title="Provider"><span class="symbol resource"></span>Provider</a></li>
+    <li><a href="sshcertificate" title="SshCertificate"><span class="symbol resource"></span>SshCertificate</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -28,6 +29,6 @@ A Pulumi package for creating and managing venafi cloud resources.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`venafi` Terraform Provider](https://github.com/Venafi/terraform-provider-venafi).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>1.1.0</dd>
+	<dd>1.2.0</dd>
 </dl>
 
