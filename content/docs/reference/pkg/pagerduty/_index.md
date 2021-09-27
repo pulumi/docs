@@ -30,6 +30,7 @@ A Pulumi package for creating and managing pagerduty cloud resources.
     <li><a href="servicedependency" title="ServiceDependency"><span class="symbol resource"></span>ServiceDependency</a></li>
     <li><a href="serviceeventrule" title="ServiceEventRule"><span class="symbol resource"></span>ServiceEventRule</a></li>
     <li><a href="serviceintegration" title="ServiceIntegration"><span class="symbol resource"></span>ServiceIntegration</a></li>
+    <li><a href="slackconnection" title="SlackConnection"><span class="symbol resource"></span>SlackConnection</a></li>
     <li><a href="team" title="Team"><span class="symbol resource"></span>Team</a></li>
     <li><a href="teammembership" title="TeamMembership"><span class="symbol resource"></span>TeamMembership</a></li>
     <li><a href="user" title="User"><span class="symbol resource"></span>User</a></li>
@@ -62,6 +63,6 @@ A Pulumi package for creating and managing pagerduty cloud resources.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`pagerduty` Terraform Provider](https://github.com/PagerDuty/terraform-provider-pagerduty).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>2.1.1</dd>
+	<dd>2.2.0</dd>
 </dl>
 
