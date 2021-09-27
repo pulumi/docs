@@ -2539,6 +2539,14 @@ be kept.
     <dd>{{% md %}}allow incoming connections from CIDR address block, e.g. `10.20.0.0/16`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="keepindexrefreshinterval_csharp">
+<a href="#keepindexrefreshinterval_csharp" style="color: inherit; text-decoration: inherit;">Keep<wbr>Index<wbr>Refresh<wbr>Interval</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="kibana_csharp">
 <a href="#kibana_csharp" style="color: inherit; text-decoration: inherit;">Kibana</a>
 </span>
@@ -2557,6 +2565,14 @@ service nodes that are in a project VPC or another type of private network.
     </dt>
     <dd>{{% md %}}Maximum number of indexes to keep before deleting the oldest one.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="opensearchversion_csharp">
+<a href="#opensearchversion_csharp" style="color: inherit; text-decoration: inherit;">Opensearch<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privateaccess_csharp">
 <a href="#privateaccess_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Access</a>
@@ -2612,7 +2628,15 @@ effect only when a new service is being created.
     </dt>
     <dd>{{% md %}}Name of another service to fork from. This has effect 
 only when a new service is being created.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="staticips_csharp">
+<a href="#staticips_csharp" style="color: inherit; text-decoration: inherit;">Static<wbr>Ips</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2687,6 +2711,14 @@ be kept.
     <dd>{{% md %}}allow incoming connections from CIDR address block, e.g. `10.20.0.0/16`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="keepindexrefreshinterval_go">
+<a href="#keepindexrefreshinterval_go" style="color: inherit; text-decoration: inherit;">Keep<wbr>Index<wbr>Refresh<wbr>Interval</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="kibana_go">
 <a href="#kibana_go" style="color: inherit; text-decoration: inherit;">Kibana</a>
 </span>
@@ -2705,6 +2737,14 @@ service nodes that are in a project VPC or another type of private network.
     </dt>
     <dd>{{% md %}}Maximum number of indexes to keep before deleting the oldest one.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="opensearchversion_go">
+<a href="#opensearchversion_go" style="color: inherit; text-decoration: inherit;">Opensearch<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privateaccess_go">
 <a href="#privateaccess_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Access</a>
@@ -2760,7 +2800,15 @@ effect only when a new service is being created.
     </dt>
     <dd>{{% md %}}Name of another service to fork from. This has effect 
 only when a new service is being created.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="staticips_go">
+<a href="#staticips_go" style="color: inherit; text-decoration: inherit;">Static<wbr>Ips</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2835,6 +2883,14 @@ be kept.
     <dd>{{% md %}}allow incoming connections from CIDR address block, e.g. `10.20.0.0/16`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="keepindexrefreshinterval_nodejs">
+<a href="#keepindexrefreshinterval_nodejs" style="color: inherit; text-decoration: inherit;">keep<wbr>Index<wbr>Refresh<wbr>Interval</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="kibana_nodejs">
 <a href="#kibana_nodejs" style="color: inherit; text-decoration: inherit;">kibana</a>
 </span>
@@ -2853,6 +2909,14 @@ service nodes that are in a project VPC or another type of private network.
     </dt>
     <dd>{{% md %}}Maximum number of indexes to keep before deleting the oldest one.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="opensearchversion_nodejs">
+<a href="#opensearchversion_nodejs" style="color: inherit; text-decoration: inherit;">opensearch<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privateaccess_nodejs">
 <a href="#privateaccess_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Access</a>
@@ -2908,7 +2972,15 @@ effect only when a new service is being created.
     </dt>
     <dd>{{% md %}}Name of another service to fork from. This has effect 
 only when a new service is being created.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="staticips_nodejs">
+<a href="#staticips_nodejs" style="color: inherit; text-decoration: inherit;">static<wbr>Ips</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -2983,6 +3055,14 @@ be kept.
     <dd>{{% md %}}allow incoming connections from CIDR address block, e.g. `10.20.0.0/16`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="keep_index_refresh_interval_python">
+<a href="#keep_index_refresh_interval_python" style="color: inherit; text-decoration: inherit;">keep_<wbr>index_<wbr>refresh_<wbr>interval</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="kibana_python">
 <a href="#kibana_python" style="color: inherit; text-decoration: inherit;">kibana</a>
 </span>
@@ -3001,6 +3081,14 @@ service nodes that are in a project VPC or another type of private network.
     </dt>
     <dd>{{% md %}}Maximum number of indexes to keep before deleting the oldest one.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="opensearch_version_python">
+<a href="#opensearch_version_python" style="color: inherit; text-decoration: inherit;">opensearch_<wbr>version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="private_access_python">
 <a href="#private_access_python" style="color: inherit; text-decoration: inherit;">private_<wbr>access</a>
@@ -3056,7 +3144,15 @@ effect only when a new service is being created.
     </dt>
     <dd>{{% md %}}Name of another service to fork from. This has effect 
 only when a new service is being created.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="static_ips_python">
+<a href="#static_ips_python" style="color: inherit; text-decoration: inherit;">static_<wbr>ips</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="elasticsearchelasticsearchuserconfigelasticsearch">Elastic<wbr>Search<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Elasticsearch</h4>

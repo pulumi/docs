@@ -44,6 +44,8 @@ meta_desc: "Documentation for the aiven.getService function with examples, input
                 <span class="nx">maintenance_window_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                 <span class="nx">mysql</span><span class="p">:</span> <span class="nx">Optional[GetServiceMysql]</span> = None<span class="p">,</span>
                 <span class="nx">mysql_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceMysqlUserConfig]</span> = None<span class="p">,</span>
+                <span class="nx">opensearch</span><span class="p">:</span> <span class="nx">Optional[GetServiceOpensearch]</span> = None<span class="p">,</span>
+                <span class="nx">opensearch_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceOpensearchUserConfig]</span> = None<span class="p">,</span>
                 <span class="nx">pg</span><span class="p">:</span> <span class="nx">Optional[GetServicePg]</span> = None<span class="p">,</span>
                 <span class="nx">pg_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServicePgUserConfig]</span> = None<span class="p">,</span>
                 <span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -263,6 +265,22 @@ The following arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="opensearch_csharp">
+<a href="#opensearch_csharp" style="color: inherit; text-decoration: inherit;">Opensearch</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getserviceopensearch">Get<wbr>Service<wbr>Opensearch</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="opensearchuserconfig_csharp">
+<a href="#opensearchuserconfig_csharp" style="color: inherit; text-decoration: inherit;">Opensearch<wbr>User<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getserviceopensearchuserconfig">Get<wbr>Service<wbr>Opensearch<wbr>User<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="pg_csharp">
 <a href="#pg_csharp" style="color: inherit; text-decoration: inherit;">Pg</a>
 </span>
@@ -431,7 +449,7 @@ The following arguments are supported:
 <a href="#components_go" style="color: inherit; text-decoration: inherit;">Components</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicecomponent">[]Get<wbr>Service<wbr>Component<wbr>Type</a></span>
+        <span class="property-type"><a href="#getservicecomponent">[]Get<wbr>Service<wbr>Component</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -560,6 +578,22 @@ The following arguments are supported:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getservicemysqluserconfig">Get<wbr>Service<wbr>Mysql<wbr>User<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="opensearch_go">
+<a href="#opensearch_go" style="color: inherit; text-decoration: inherit;">Opensearch</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getserviceopensearch">Get<wbr>Service<wbr>Opensearch</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="opensearchuserconfig_go">
+<a href="#opensearchuserconfig_go" style="color: inherit; text-decoration: inherit;">Opensearch<wbr>User<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getserviceopensearchuserconfig">Get<wbr>Service<wbr>Opensearch<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -863,6 +897,22 @@ The following arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="opensearch_nodejs">
+<a href="#opensearch_nodejs" style="color: inherit; text-decoration: inherit;">opensearch</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getserviceopensearch">Get<wbr>Service<wbr>Opensearch</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="opensearchuserconfig_nodejs">
+<a href="#opensearchuserconfig_nodejs" style="color: inherit; text-decoration: inherit;">opensearch<wbr>User<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getserviceopensearchuserconfig">Get<wbr>Service<wbr>Opensearch<wbr>User<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="pg_nodejs">
 <a href="#pg_nodejs" style="color: inherit; text-decoration: inherit;">pg</a>
 </span>
@@ -1160,6 +1210,22 @@ The following arguments are supported:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getservicemysqluserconfig">Get<wbr>Service<wbr>Mysql<wbr>User<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="opensearch_python">
+<a href="#opensearch_python" style="color: inherit; text-decoration: inherit;">opensearch</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getserviceopensearch">Get<wbr>Service<wbr>Opensearch</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="opensearch_user_config_python">
+<a href="#opensearch_user_config_python" style="color: inherit; text-decoration: inherit;">opensearch_<wbr>user_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getserviceopensearchuserconfig">Get<wbr>Service<wbr>Opensearch<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1377,6 +1443,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="opensearch_csharp">
+<a href="#opensearch_csharp" style="color: inherit; text-decoration: inherit;">Opensearch</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getserviceopensearch">Get<wbr>Service<wbr>Opensearch</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="pg_csharp">
 <a href="#pg_csharp" style="color: inherit; text-decoration: inherit;">Pg</a>
 </span>
@@ -1545,6 +1619,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="opensearchuserconfig_csharp">
+<a href="#opensearchuserconfig_csharp" style="color: inherit; text-decoration: inherit;">Opensearch<wbr>User<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getserviceopensearchuserconfig">Get<wbr>Service<wbr>Opensearch<wbr>User<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="pguserconfig_csharp">
 <a href="#pguserconfig_csharp" style="color: inherit; text-decoration: inherit;">Pg<wbr>User<wbr>Config</a>
 </span>
@@ -1617,7 +1699,7 @@ The following output properties are available:
 <a href="#components_go" style="color: inherit; text-decoration: inherit;">Components</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicecomponent">[]Get<wbr>Service<wbr>Component<wbr>Type</a></span>
+        <span class="property-type"><a href="#getservicecomponent">[]Get<wbr>Service<wbr>Component</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
@@ -1683,6 +1765,14 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getservicemysql">Get<wbr>Service<wbr>Mysql</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="opensearch_go">
+<a href="#opensearch_go" style="color: inherit; text-decoration: inherit;">Opensearch</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getserviceopensearch">Get<wbr>Service<wbr>Opensearch</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
@@ -1854,6 +1944,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="opensearchuserconfig_go">
+<a href="#opensearchuserconfig_go" style="color: inherit; text-decoration: inherit;">Opensearch<wbr>User<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getserviceopensearchuserconfig">Get<wbr>Service<wbr>Opensearch<wbr>User<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="pguserconfig_go">
 <a href="#pguserconfig_go" style="color: inherit; text-decoration: inherit;">Pg<wbr>User<wbr>Config</a>
 </span>
@@ -1992,6 +2090,14 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getservicemysql">Get<wbr>Service<wbr>Mysql</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="opensearch_nodejs">
+<a href="#opensearch_nodejs" style="color: inherit; text-decoration: inherit;">opensearch</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getserviceopensearch">Get<wbr>Service<wbr>Opensearch</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
@@ -2163,6 +2269,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="opensearchuserconfig_nodejs">
+<a href="#opensearchuserconfig_nodejs" style="color: inherit; text-decoration: inherit;">opensearch<wbr>User<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getserviceopensearchuserconfig">Get<wbr>Service<wbr>Opensearch<wbr>User<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="pguserconfig_nodejs">
 <a href="#pguserconfig_nodejs" style="color: inherit; text-decoration: inherit;">pg<wbr>User<wbr>Config</a>
 </span>
@@ -2301,6 +2415,14 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getservicemysql">Get<wbr>Service<wbr>Mysql</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="opensearch_python">
+<a href="#opensearch_python" style="color: inherit; text-decoration: inherit;">opensearch</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getserviceopensearch">Get<wbr>Service<wbr>Opensearch</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
@@ -2472,6 +2594,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="opensearch_user_config_python">
+<a href="#opensearch_user_config_python" style="color: inherit; text-decoration: inherit;">opensearch_<wbr>user_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getserviceopensearchuserconfig">Get<wbr>Service<wbr>Opensearch<wbr>User<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="pg_user_config_python">
 <a href="#pg_user_config_python" style="color: inherit; text-decoration: inherit;">pg_<wbr>user_<wbr>config</a>
 </span>
@@ -2550,6 +2680,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="cassandraversion_csharp">
+<a href="#cassandraversion_csharp" style="color: inherit; text-decoration: inherit;">Cassandra<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="ipfilters_csharp">
 <a href="#ipfilters_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Filters</a>
 </span>
@@ -2596,6 +2734,14 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="staticips_csharp">
+<a href="#staticips_csharp" style="color: inherit; text-decoration: inherit;">Static<wbr>Ips</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2607,6 +2753,14 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getservicecassandrauserconfigcassandra">Get<wbr>Service<wbr>Cassandra<wbr>User<wbr>Config<wbr>Cassandra</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="cassandraversion_go">
+<a href="#cassandraversion_go" style="color: inherit; text-decoration: inherit;">Cassandra<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2656,6 +2810,14 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="staticips_go">
+<a href="#staticips_go" style="color: inherit; text-decoration: inherit;">Static<wbr>Ips</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2667,6 +2829,14 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getservicecassandrauserconfigcassandra">Get<wbr>Service<wbr>Cassandra<wbr>User<wbr>Config<wbr>Cassandra</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="cassandraversion_nodejs">
+<a href="#cassandraversion_nodejs" style="color: inherit; text-decoration: inherit;">cassandra<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2716,6 +2886,14 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="staticips_nodejs">
+<a href="#staticips_nodejs" style="color: inherit; text-decoration: inherit;">static<wbr>Ips</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2727,6 +2905,14 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getservicecassandrauserconfigcassandra">Get<wbr>Service<wbr>Cassandra<wbr>User<wbr>Config<wbr>Cassandra</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="cassandra_version_python">
+<a href="#cassandra_version_python" style="color: inherit; text-decoration: inherit;">cassandra_<wbr>version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2772,6 +2958,14 @@ The following output properties are available:
             title="Optional">
         <span id="service_to_fork_from_python">
 <a href="#service_to_fork_from_python" style="color: inherit; text-decoration: inherit;">service_<wbr>to_<wbr>fork_<wbr>from</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="static_ips_python">
+<a href="#static_ips_python" style="color: inherit; text-decoration: inherit;">static_<wbr>ips</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -3326,6 +3520,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="keepindexrefreshinterval_csharp">
+<a href="#keepindexrefreshinterval_csharp" style="color: inherit; text-decoration: inherit;">Keep<wbr>Index<wbr>Refresh<wbr>Interval</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="kibana_csharp">
 <a href="#kibana_csharp" style="color: inherit; text-decoration: inherit;">Kibana</a>
 </span>
@@ -3336,6 +3538,14 @@ The following output properties are available:
             title="Optional">
         <span id="maxindexcount_csharp">
 <a href="#maxindexcount_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Index<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="opensearchversion_csharp">
+<a href="#opensearchversion_csharp" style="color: inherit; text-decoration: inherit;">Opensearch<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -3384,6 +3594,14 @@ The following output properties are available:
             title="Optional">
         <span id="servicetoforkfrom_csharp">
 <a href="#servicetoforkfrom_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>To<wbr>Fork<wbr>From</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="staticips_csharp">
+<a href="#staticips_csharp" style="color: inherit; text-decoration: inherit;">Static<wbr>Ips</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -3450,6 +3668,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="keepindexrefreshinterval_go">
+<a href="#keepindexrefreshinterval_go" style="color: inherit; text-decoration: inherit;">Keep<wbr>Index<wbr>Refresh<wbr>Interval</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="kibana_go">
 <a href="#kibana_go" style="color: inherit; text-decoration: inherit;">Kibana</a>
 </span>
@@ -3460,6 +3686,14 @@ The following output properties are available:
             title="Optional">
         <span id="maxindexcount_go">
 <a href="#maxindexcount_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Index<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="opensearchversion_go">
+<a href="#opensearchversion_go" style="color: inherit; text-decoration: inherit;">Opensearch<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -3508,6 +3742,14 @@ The following output properties are available:
             title="Optional">
         <span id="servicetoforkfrom_go">
 <a href="#servicetoforkfrom_go" style="color: inherit; text-decoration: inherit;">Service<wbr>To<wbr>Fork<wbr>From</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="staticips_go">
+<a href="#staticips_go" style="color: inherit; text-decoration: inherit;">Static<wbr>Ips</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -3574,6 +3816,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="keepindexrefreshinterval_nodejs">
+<a href="#keepindexrefreshinterval_nodejs" style="color: inherit; text-decoration: inherit;">keep<wbr>Index<wbr>Refresh<wbr>Interval</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="kibana_nodejs">
 <a href="#kibana_nodejs" style="color: inherit; text-decoration: inherit;">kibana</a>
 </span>
@@ -3584,6 +3834,14 @@ The following output properties are available:
             title="Optional">
         <span id="maxindexcount_nodejs">
 <a href="#maxindexcount_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Index<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="opensearchversion_nodejs">
+<a href="#opensearchversion_nodejs" style="color: inherit; text-decoration: inherit;">opensearch<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -3632,6 +3890,14 @@ The following output properties are available:
             title="Optional">
         <span id="servicetoforkfrom_nodejs">
 <a href="#servicetoforkfrom_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>To<wbr>Fork<wbr>From</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="staticips_nodejs">
+<a href="#staticips_nodejs" style="color: inherit; text-decoration: inherit;">static<wbr>Ips</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -3698,6 +3964,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="keep_index_refresh_interval_python">
+<a href="#keep_index_refresh_interval_python" style="color: inherit; text-decoration: inherit;">keep_<wbr>index_<wbr>refresh_<wbr>interval</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="kibana_python">
 <a href="#kibana_python" style="color: inherit; text-decoration: inherit;">kibana</a>
 </span>
@@ -3708,6 +3982,14 @@ The following output properties are available:
             title="Optional">
         <span id="max_index_count_python">
 <a href="#max_index_count_python" style="color: inherit; text-decoration: inherit;">max_<wbr>index_<wbr>count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="opensearch_version_python">
+<a href="#opensearch_version_python" style="color: inherit; text-decoration: inherit;">opensearch_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -3756,6 +4038,14 @@ The following output properties are available:
             title="Optional">
         <span id="service_to_fork_from_python">
 <a href="#service_to_fork_from_python" style="color: inherit; text-decoration: inherit;">service_<wbr>to_<wbr>fork_<wbr>from</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="static_ips_python">
+<a href="#static_ips_python" style="color: inherit; text-decoration: inherit;">static_<wbr>ips</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -5270,6 +5560,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="alertingmaxannotationstokeep_csharp">
+<a href="#alertingmaxannotationstokeep_csharp" style="color: inherit; text-decoration: inherit;">Alerting<wbr>Max<wbr>Annotations<wbr>To<wbr>Keep</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="alertingnodataornullvalues_csharp">
 <a href="#alertingnodataornullvalues_csharp" style="color: inherit; text-decoration: inherit;">Alerting<wbr>Nodata<wbr>Or<wbr>Nullvalues</a>
 </span>
@@ -5283,6 +5581,14 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="authazuread_csharp">
+<a href="#authazuread_csharp" style="color: inherit; text-decoration: inherit;">Auth<wbr>Azuread</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getservicegrafanauserconfigauthazuread">Get<wbr>Service<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Azuread</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5371,6 +5677,14 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dateformats_csharp">
+<a href="#dateformats_csharp" style="color: inherit; text-decoration: inherit;">Date<wbr>Formats</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getservicegrafanauserconfigdateformats">Get<wbr>Service<wbr>Grafana<wbr>User<wbr>Config<wbr>Date<wbr>Formats</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5478,6 +5792,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="staticips_csharp">
+<a href="#staticips_csharp" style="color: inherit; text-decoration: inherit;">Static<wbr>Ips</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="userautoassignorg_csharp">
 <a href="#userautoassignorg_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Auto<wbr>Assign<wbr>Org</a>
 </span>
@@ -5522,6 +5844,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="alertingmaxannotationstokeep_go">
+<a href="#alertingmaxannotationstokeep_go" style="color: inherit; text-decoration: inherit;">Alerting<wbr>Max<wbr>Annotations<wbr>To<wbr>Keep</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="alertingnodataornullvalues_go">
 <a href="#alertingnodataornullvalues_go" style="color: inherit; text-decoration: inherit;">Alerting<wbr>Nodata<wbr>Or<wbr>Nullvalues</a>
 </span>
@@ -5535,6 +5865,14 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="authazuread_go">
+<a href="#authazuread_go" style="color: inherit; text-decoration: inherit;">Auth<wbr>Azuread</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getservicegrafanauserconfigauthazuread">Get<wbr>Service<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Azuread</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5623,6 +5961,14 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dateformats_go">
+<a href="#dateformats_go" style="color: inherit; text-decoration: inherit;">Date<wbr>Formats</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getservicegrafanauserconfigdateformats">Get<wbr>Service<wbr>Grafana<wbr>User<wbr>Config<wbr>Date<wbr>Formats</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5730,6 +6076,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="staticips_go">
+<a href="#staticips_go" style="color: inherit; text-decoration: inherit;">Static<wbr>Ips</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="userautoassignorg_go">
 <a href="#userautoassignorg_go" style="color: inherit; text-decoration: inherit;">User<wbr>Auto<wbr>Assign<wbr>Org</a>
 </span>
@@ -5774,6 +6128,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="alertingmaxannotationstokeep_nodejs">
+<a href="#alertingmaxannotationstokeep_nodejs" style="color: inherit; text-decoration: inherit;">alerting<wbr>Max<wbr>Annotations<wbr>To<wbr>Keep</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="alertingnodataornullvalues_nodejs">
 <a href="#alertingnodataornullvalues_nodejs" style="color: inherit; text-decoration: inherit;">alerting<wbr>Nodata<wbr>Or<wbr>Nullvalues</a>
 </span>
@@ -5787,6 +6149,14 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="authazuread_nodejs">
+<a href="#authazuread_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Azuread</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getservicegrafanauserconfigauthazuread">Get<wbr>Service<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Azuread</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5875,6 +6245,14 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dateformats_nodejs">
+<a href="#dateformats_nodejs" style="color: inherit; text-decoration: inherit;">date<wbr>Formats</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getservicegrafanauserconfigdateformats">Get<wbr>Service<wbr>Grafana<wbr>User<wbr>Config<wbr>Date<wbr>Formats</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5982,6 +6360,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="staticips_nodejs">
+<a href="#staticips_nodejs" style="color: inherit; text-decoration: inherit;">static<wbr>Ips</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="userautoassignorg_nodejs">
 <a href="#userautoassignorg_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Auto<wbr>Assign<wbr>Org</a>
 </span>
@@ -6026,6 +6412,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="alerting_max_annotations_to_keep_python">
+<a href="#alerting_max_annotations_to_keep_python" style="color: inherit; text-decoration: inherit;">alerting_<wbr>max_<wbr>annotations_<wbr>to_<wbr>keep</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="alerting_nodata_or_nullvalues_python">
 <a href="#alerting_nodata_or_nullvalues_python" style="color: inherit; text-decoration: inherit;">alerting_<wbr>nodata_<wbr>or_<wbr>nullvalues</a>
 </span>
@@ -6039,6 +6433,14 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="auth_azuread_python">
+<a href="#auth_azuread_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>azuread</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getservicegrafanauserconfigauthazuread">Get<wbr>Service<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Azuread</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6127,6 +6529,14 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="date_formats_python">
+<a href="#date_formats_python" style="color: inherit; text-decoration: inherit;">date_<wbr>formats</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getservicegrafanauserconfigdateformats">Get<wbr>Service<wbr>Grafana<wbr>User<wbr>Config<wbr>Date<wbr>Formats</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6234,6 +6644,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="static_ips_python">
+<a href="#static_ips_python" style="color: inherit; text-decoration: inherit;">static_<wbr>ips</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="user_auto_assign_org_python">
 <a href="#user_auto_assign_org_python" style="color: inherit; text-decoration: inherit;">user_<wbr>auto_<wbr>assign_<wbr>org</a>
 </span>
@@ -6252,6 +6670,250 @@ The following output properties are available:
             title="Optional">
         <span id="viewers_can_edit_python">
 <a href="#viewers_can_edit_python" style="color: inherit; text-decoration: inherit;">viewers_<wbr>can_<wbr>edit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="getservicegrafanauserconfigauthazuread">Get<wbr>Service<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Azuread</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="allowsignup_csharp">
+<a href="#allowsignup_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Sign<wbr>Up</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="alloweddomains_csharp">
+<a href="#alloweddomains_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Domains</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="allowedgroups_csharp">
+<a href="#allowedgroups_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="authurl_csharp">
+<a href="#authurl_csharp" style="color: inherit; text-decoration: inherit;">Auth<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="clientid_csharp">
+<a href="#clientid_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="clientsecret_csharp">
+<a href="#clientsecret_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Secret</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tokenurl_csharp">
+<a href="#tokenurl_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="allowsignup_go">
+<a href="#allowsignup_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Sign<wbr>Up</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="alloweddomains_go">
+<a href="#alloweddomains_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Domains</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="allowedgroups_go">
+<a href="#allowedgroups_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="authurl_go">
+<a href="#authurl_go" style="color: inherit; text-decoration: inherit;">Auth<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="clientid_go">
+<a href="#clientid_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="clientsecret_go">
+<a href="#clientsecret_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Secret</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tokenurl_go">
+<a href="#tokenurl_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="allowsignup_nodejs">
+<a href="#allowsignup_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Sign<wbr>Up</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="alloweddomains_nodejs">
+<a href="#alloweddomains_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Domains</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="allowedgroups_nodejs">
+<a href="#allowedgroups_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="authurl_nodejs">
+<a href="#authurl_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="clientid_nodejs">
+<a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="clientsecret_nodejs">
+<a href="#clientsecret_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Secret</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tokenurl_nodejs">
+<a href="#tokenurl_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="allow_sign_up_python">
+<a href="#allow_sign_up_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>sign_<wbr>up</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="allowed_domains_python">
+<a href="#allowed_domains_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>domains</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="allowed_groups_python">
+<a href="#allowed_groups_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="auth_url_python">
+<a href="#auth_url_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="client_id_python">
+<a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="client_secret_python">
+<a href="#client_secret_python" style="color: inherit; text-decoration: inherit;">client_<wbr>secret</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="token_url_python">
+<a href="#token_url_python" style="color: inherit; text-decoration: inherit;">token_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -7171,6 +7833,282 @@ The following output properties are available:
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="getservicegrafanauserconfigdateformats">Get<wbr>Service<wbr>Grafana<wbr>User<wbr>Config<wbr>Date<wbr>Formats</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="defaulttimezone_csharp">
+<a href="#defaulttimezone_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Timezone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="fulldate_csharp">
+<a href="#fulldate_csharp" style="color: inherit; text-decoration: inherit;">Full<wbr>Date</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="intervalday_csharp">
+<a href="#intervalday_csharp" style="color: inherit; text-decoration: inherit;">Interval<wbr>Day</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="intervalhour_csharp">
+<a href="#intervalhour_csharp" style="color: inherit; text-decoration: inherit;">Interval<wbr>Hour</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="intervalminute_csharp">
+<a href="#intervalminute_csharp" style="color: inherit; text-decoration: inherit;">Interval<wbr>Minute</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="intervalmonth_csharp">
+<a href="#intervalmonth_csharp" style="color: inherit; text-decoration: inherit;">Interval<wbr>Month</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="intervalsecond_csharp">
+<a href="#intervalsecond_csharp" style="color: inherit; text-decoration: inherit;">Interval<wbr>Second</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="intervalyear_csharp">
+<a href="#intervalyear_csharp" style="color: inherit; text-decoration: inherit;">Interval<wbr>Year</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="defaulttimezone_go">
+<a href="#defaulttimezone_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Timezone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="fulldate_go">
+<a href="#fulldate_go" style="color: inherit; text-decoration: inherit;">Full<wbr>Date</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="intervalday_go">
+<a href="#intervalday_go" style="color: inherit; text-decoration: inherit;">Interval<wbr>Day</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="intervalhour_go">
+<a href="#intervalhour_go" style="color: inherit; text-decoration: inherit;">Interval<wbr>Hour</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="intervalminute_go">
+<a href="#intervalminute_go" style="color: inherit; text-decoration: inherit;">Interval<wbr>Minute</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="intervalmonth_go">
+<a href="#intervalmonth_go" style="color: inherit; text-decoration: inherit;">Interval<wbr>Month</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="intervalsecond_go">
+<a href="#intervalsecond_go" style="color: inherit; text-decoration: inherit;">Interval<wbr>Second</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="intervalyear_go">
+<a href="#intervalyear_go" style="color: inherit; text-decoration: inherit;">Interval<wbr>Year</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="defaulttimezone_nodejs">
+<a href="#defaulttimezone_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Timezone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="fulldate_nodejs">
+<a href="#fulldate_nodejs" style="color: inherit; text-decoration: inherit;">full<wbr>Date</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="intervalday_nodejs">
+<a href="#intervalday_nodejs" style="color: inherit; text-decoration: inherit;">interval<wbr>Day</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="intervalhour_nodejs">
+<a href="#intervalhour_nodejs" style="color: inherit; text-decoration: inherit;">interval<wbr>Hour</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="intervalminute_nodejs">
+<a href="#intervalminute_nodejs" style="color: inherit; text-decoration: inherit;">interval<wbr>Minute</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="intervalmonth_nodejs">
+<a href="#intervalmonth_nodejs" style="color: inherit; text-decoration: inherit;">interval<wbr>Month</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="intervalsecond_nodejs">
+<a href="#intervalsecond_nodejs" style="color: inherit; text-decoration: inherit;">interval<wbr>Second</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="intervalyear_nodejs">
+<a href="#intervalyear_nodejs" style="color: inherit; text-decoration: inherit;">interval<wbr>Year</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="default_timezone_python">
+<a href="#default_timezone_python" style="color: inherit; text-decoration: inherit;">default_<wbr>timezone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="full_date_python">
+<a href="#full_date_python" style="color: inherit; text-decoration: inherit;">full_<wbr>date</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="interval_day_python">
+<a href="#interval_day_python" style="color: inherit; text-decoration: inherit;">interval_<wbr>day</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="interval_hour_python">
+<a href="#interval_hour_python" style="color: inherit; text-decoration: inherit;">interval_<wbr>hour</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="interval_minute_python">
+<a href="#interval_minute_python" style="color: inherit; text-decoration: inherit;">interval_<wbr>minute</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="interval_month_python">
+<a href="#interval_month_python" style="color: inherit; text-decoration: inherit;">interval_<wbr>month</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="interval_second_python">
+<a href="#interval_second_python" style="color: inherit; text-decoration: inherit;">interval_<wbr>second</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="interval_year_python">
+<a href="#interval_year_python" style="color: inherit; text-decoration: inherit;">interval_<wbr>year</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="getservicegrafanauserconfigexternalimagestorage">Get<wbr>Service<wbr>Grafana<wbr>User<wbr>Config<wbr>External<wbr>Image<wbr>Storage</h4>
 
 
@@ -7880,6 +8818,14 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="staticips_csharp">
+<a href="#staticips_csharp" style="color: inherit; text-decoration: inherit;">Static<wbr>Ips</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -7952,6 +8898,14 @@ The following output properties are available:
             title="Optional">
         <span id="servicetoforkfrom_go">
 <a href="#servicetoforkfrom_go" style="color: inherit; text-decoration: inherit;">Service<wbr>To<wbr>Fork<wbr>From</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="staticips_go">
+<a href="#staticips_go" style="color: inherit; text-decoration: inherit;">Static<wbr>Ips</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -8032,6 +8986,14 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="staticips_nodejs">
+<a href="#staticips_nodejs" style="color: inherit; text-decoration: inherit;">static<wbr>Ips</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -8108,6 +9070,14 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="static_ips_python">
+<a href="#static_ips_python" style="color: inherit; text-decoration: inherit;">static_<wbr>ips</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -8120,6 +9090,14 @@ The following output properties are available:
             title="Optional">
         <span id="logqueriesafter_csharp">
 <a href="#logqueriesafter_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Queries<wbr>After</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maxconnectionlimit_csharp">
+<a href="#maxconnectionlimit_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Connection<wbr>Limit</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -8170,6 +9148,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="maxconnectionlimit_go">
+<a href="#maxconnectionlimit_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Connection<wbr>Limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxrowlimit_go">
 <a href="#maxrowlimit_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Row<wbr>Limit</a>
 </span>
@@ -8214,6 +9200,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="maxconnectionlimit_nodejs">
+<a href="#maxconnectionlimit_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Connection<wbr>Limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxrowlimit_nodejs">
 <a href="#maxrowlimit_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Row<wbr>Limit</a>
 </span>
@@ -8252,6 +9246,14 @@ The following output properties are available:
             title="Optional">
         <span id="log_queries_after_python">
 <a href="#log_queries_after_python" style="color: inherit; text-decoration: inherit;">log_<wbr>queries_<wbr>after</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="max_connection_limit_python">
+<a href="#max_connection_limit_python" style="color: inherit; text-decoration: inherit;">max_<wbr>connection_<wbr>limit</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -8672,6 +9674,14 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getservicekafkaconnectuserconfigpublicaccess">Get<wbr>Service<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Public<wbr>Access</a></span>
     </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="staticips_csharp">
+<a href="#staticips_csharp" style="color: inherit; text-decoration: inherit;">Static<wbr>Ips</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -8715,6 +9725,14 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getservicekafkaconnectuserconfigpublicaccess">Get<wbr>Service<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Public<wbr>Access</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="staticips_go">
+<a href="#staticips_go" style="color: inherit; text-decoration: inherit;">Static<wbr>Ips</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8760,6 +9778,14 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getservicekafkaconnectuserconfigpublicaccess">Get<wbr>Service<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Public<wbr>Access</a></span>
     </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="staticips_nodejs">
+<a href="#staticips_nodejs" style="color: inherit; text-decoration: inherit;">static<wbr>Ips</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -8803,6 +9829,14 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getservicekafkaconnectuserconfigpublicaccess">Get<wbr>Service<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Public<wbr>Access</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="static_ips_python">
+<a href="#static_ips_python" style="color: inherit; text-decoration: inherit;">static_<wbr>ips</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9420,6 +10454,14 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getservicekafkamirrormakeruserconfigkafkamirrormaker">Get<wbr>Service<wbr>Kafka<wbr>Mirrormaker<wbr>User<wbr>Config<wbr>Kafka<wbr>Mirrormaker</a></span>
     </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="staticips_csharp">
+<a href="#staticips_csharp" style="color: inherit; text-decoration: inherit;">Static<wbr>Ips</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -9439,6 +10481,14 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getservicekafkamirrormakeruserconfigkafkamirrormaker">Get<wbr>Service<wbr>Kafka<wbr>Mirrormaker<wbr>User<wbr>Config<wbr>Kafka<wbr>Mirrormaker</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="staticips_go">
+<a href="#staticips_go" style="color: inherit; text-decoration: inherit;">Static<wbr>Ips</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9460,6 +10510,14 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getservicekafkamirrormakeruserconfigkafkamirrormaker">Get<wbr>Service<wbr>Kafka<wbr>Mirrormaker<wbr>User<wbr>Config<wbr>Kafka<wbr>Mirrormaker</a></span>
     </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="staticips_nodejs">
+<a href="#staticips_nodejs" style="color: inherit; text-decoration: inherit;">static<wbr>Ips</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -9479,6 +10537,14 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getservicekafkamirrormakeruserconfigkafkamirrormaker">Get<wbr>Service<wbr>Kafka<wbr>Mirrormaker<wbr>User<wbr>Config<wbr>Kafka<wbr>Mirrormaker</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="static_ips_python">
+<a href="#static_ips_python" style="color: inherit; text-decoration: inherit;">static_<wbr>ips</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9552,6 +10618,22 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="synctopicconfigsenabled_csharp">
+<a href="#synctopicconfigsenabled_csharp" style="color: inherit; text-decoration: inherit;">Sync<wbr>Topic<wbr>Configs<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tasksmaxpercpu_csharp">
+<a href="#tasksmaxpercpu_csharp" style="color: inherit; text-decoration: inherit;">Tasks<wbr>Max<wbr>Per<wbr>Cpu</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -9616,6 +10698,22 @@ The following output properties are available:
             title="Optional">
         <span id="syncgroupoffsetsintervalseconds_go">
 <a href="#syncgroupoffsetsintervalseconds_go" style="color: inherit; text-decoration: inherit;">Sync<wbr>Group<wbr>Offsets<wbr>Interval<wbr>Seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="synctopicconfigsenabled_go">
+<a href="#synctopicconfigsenabled_go" style="color: inherit; text-decoration: inherit;">Sync<wbr>Topic<wbr>Configs<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tasksmaxpercpu_go">
+<a href="#tasksmaxpercpu_go" style="color: inherit; text-decoration: inherit;">Tasks<wbr>Max<wbr>Per<wbr>Cpu</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -9688,6 +10786,22 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="synctopicconfigsenabled_nodejs">
+<a href="#synctopicconfigsenabled_nodejs" style="color: inherit; text-decoration: inherit;">sync<wbr>Topic<wbr>Configs<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tasksmaxpercpu_nodejs">
+<a href="#tasksmaxpercpu_nodejs" style="color: inherit; text-decoration: inherit;">tasks<wbr>Max<wbr>Per<wbr>Cpu</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -9752,6 +10866,22 @@ The following output properties are available:
             title="Optional">
         <span id="sync_group_offsets_interval_seconds_python">
 <a href="#sync_group_offsets_interval_seconds_python" style="color: inherit; text-decoration: inherit;">sync_<wbr>group_<wbr>offsets_<wbr>interval_<wbr>seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sync_topic_configs_enabled_python">
+<a href="#sync_topic_configs_enabled_python" style="color: inherit; text-decoration: inherit;">sync_<wbr>topic_<wbr>configs_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tasks_max_per_cpu_python">
+<a href="#tasks_max_per_cpu_python" style="color: inherit; text-decoration: inherit;">tasks_<wbr>max_<wbr>per_<wbr>cpu</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -9876,6 +11006,14 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getservicekafkauserconfigschemaregistryconfig">Get<wbr>Service<wbr>Kafka<wbr>User<wbr>Config<wbr>Schema<wbr>Registry<wbr>Config</a></span>
     </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="staticips_csharp">
+<a href="#staticips_csharp" style="color: inherit; text-decoration: inherit;">Static<wbr>Ips</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -9991,6 +11129,14 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getservicekafkauserconfigschemaregistryconfig">Get<wbr>Service<wbr>Kafka<wbr>User<wbr>Config<wbr>Schema<wbr>Registry<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="staticips_go">
+<a href="#staticips_go" style="color: inherit; text-decoration: inherit;">Static<wbr>Ips</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10108,6 +11254,14 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getservicekafkauserconfigschemaregistryconfig">Get<wbr>Service<wbr>Kafka<wbr>User<wbr>Config<wbr>Schema<wbr>Registry<wbr>Config</a></span>
     </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="staticips_nodejs">
+<a href="#staticips_nodejs" style="color: inherit; text-decoration: inherit;">static<wbr>Ips</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -10223,6 +11377,14 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getservicekafkauserconfigschemaregistryconfig">Get<wbr>Service<wbr>Kafka<wbr>User<wbr>Config<wbr>Schema<wbr>Registry<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="static_ips_python">
+<a href="#static_ips_python" style="color: inherit; text-decoration: inherit;">static_<wbr>ips</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -12752,6 +13914,14 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="staticips_csharp">
+<a href="#staticips_csharp" style="color: inherit; text-decoration: inherit;">Static<wbr>Ips</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -12872,6 +14042,14 @@ The following output properties are available:
             title="Optional">
         <span id="servicetoforkfrom_go">
 <a href="#servicetoforkfrom_go" style="color: inherit; text-decoration: inherit;">Service<wbr>To<wbr>Fork<wbr>From</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="staticips_go">
+<a href="#staticips_go" style="color: inherit; text-decoration: inherit;">Static<wbr>Ips</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -13000,6 +14178,14 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="staticips_nodejs">
+<a href="#staticips_nodejs" style="color: inherit; text-decoration: inherit;">static<wbr>Ips</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -13120,6 +14306,14 @@ The following output properties are available:
             title="Optional">
         <span id="service_to_fork_from_python">
 <a href="#service_to_fork_from_python" style="color: inherit; text-decoration: inherit;">service_<wbr>to_<wbr>fork_<wbr>from</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="static_ips_python">
+<a href="#static_ips_python" style="color: inherit; text-decoration: inherit;">static_<wbr>ips</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -13474,6 +14668,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="internaltmpmemstorageengine_csharp">
+<a href="#internaltmpmemstorageengine_csharp" style="color: inherit; text-decoration: inherit;">Internal<wbr>Tmp<wbr>Mem<wbr>Storage<wbr>Engine</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="longquerytime_csharp">
 <a href="#longquerytime_csharp" style="color: inherit; text-decoration: inherit;">Long<wbr>Query<wbr>Time</a>
 </span>
@@ -13656,6 +14858,14 @@ The following output properties are available:
             title="Optional">
         <span id="interactivetimeout_go">
 <a href="#interactivetimeout_go" style="color: inherit; text-decoration: inherit;">Interactive<wbr>Timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="internaltmpmemstorageengine_go">
+<a href="#internaltmpmemstorageengine_go" style="color: inherit; text-decoration: inherit;">Internal<wbr>Tmp<wbr>Mem<wbr>Storage<wbr>Engine</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -13850,6 +15060,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="internaltmpmemstorageengine_nodejs">
+<a href="#internaltmpmemstorageengine_nodejs" style="color: inherit; text-decoration: inherit;">internal<wbr>Tmp<wbr>Mem<wbr>Storage<wbr>Engine</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="longquerytime_nodejs">
 <a href="#longquerytime_nodejs" style="color: inherit; text-decoration: inherit;">long<wbr>Query<wbr>Time</a>
 </span>
@@ -14032,6 +15250,14 @@ The following output properties are available:
             title="Optional">
         <span id="interactive_timeout_python">
 <a href="#interactive_timeout_python" style="color: inherit; text-decoration: inherit;">interactive_<wbr>timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="internal_tmp_mem_storage_engine_python">
+<a href="#internal_tmp_mem_storage_engine_python" style="color: inherit; text-decoration: inherit;">internal_<wbr>tmp_<wbr>mem_<wbr>storage_<wbr>engine</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -14428,6 +15654,2074 @@ The following output properties are available:
             title="Optional">
         <span id="mysqlx_python">
 <a href="#mysqlx_python" style="color: inherit; text-decoration: inherit;">mysqlx</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="prometheus_python">
+<a href="#prometheus_python" style="color: inherit; text-decoration: inherit;">prometheus</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="getserviceopensearch">Get<wbr>Service<wbr>Opensearch</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="opensearchdashboardsuri_csharp">
+<a href="#opensearchdashboardsuri_csharp" style="color: inherit; text-decoration: inherit;">Opensearch<wbr>Dashboards<wbr>Uri</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="opensearchdashboardsuri_go">
+<a href="#opensearchdashboardsuri_go" style="color: inherit; text-decoration: inherit;">Opensearch<wbr>Dashboards<wbr>Uri</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="opensearchdashboardsuri_nodejs">
+<a href="#opensearchdashboardsuri_nodejs" style="color: inherit; text-decoration: inherit;">opensearch<wbr>Dashboards<wbr>Uri</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="opensearch_dashboards_uri_python">
+<a href="#opensearch_dashboards_uri_python" style="color: inherit; text-decoration: inherit;">opensearch_<wbr>dashboards_<wbr>uri</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="getserviceopensearchuserconfig">Get<wbr>Service<wbr>Opensearch<wbr>User<wbr>Config</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="customdomain_csharp">
+<a href="#customdomain_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Domain</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablereplicationfactoradjustment_csharp">
+<a href="#disablereplicationfactoradjustment_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Replication<wbr>Factor<wbr>Adjustment</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="indexpatterns_csharp">
+<a href="#indexpatterns_csharp" style="color: inherit; text-decoration: inherit;">Index<wbr>Patterns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getserviceopensearchuserconfigindexpattern">List&lt;Get<wbr>Service<wbr>Opensearch<wbr>User<wbr>Config<wbr>Index<wbr>Pattern&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="indextemplate_csharp">
+<a href="#indextemplate_csharp" style="color: inherit; text-decoration: inherit;">Index<wbr>Template</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getserviceopensearchuserconfigindextemplate">Get<wbr>Service<wbr>Opensearch<wbr>User<wbr>Config<wbr>Index<wbr>Template</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ipfilters_csharp">
+<a href="#ipfilters_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Filters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="keepindexrefreshinterval_csharp">
+<a href="#keepindexrefreshinterval_csharp" style="color: inherit; text-decoration: inherit;">Keep<wbr>Index<wbr>Refresh<wbr>Interval</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maxindexcount_csharp">
+<a href="#maxindexcount_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Index<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="opensearch_csharp">
+<a href="#opensearch_csharp" style="color: inherit; text-decoration: inherit;">Opensearch</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getserviceopensearchuserconfigopensearch">Get<wbr>Service<wbr>Opensearch<wbr>User<wbr>Config<wbr>Opensearch</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="opensearchdashboards_csharp">
+<a href="#opensearchdashboards_csharp" style="color: inherit; text-decoration: inherit;">Opensearch<wbr>Dashboards</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getserviceopensearchuserconfigopensearchdashboards">Get<wbr>Service<wbr>Opensearch<wbr>User<wbr>Config<wbr>Opensearch<wbr>Dashboards</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="opensearchversion_csharp">
+<a href="#opensearchversion_csharp" style="color: inherit; text-decoration: inherit;">Opensearch<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="privateaccess_csharp">
+<a href="#privateaccess_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getserviceopensearchuserconfigprivateaccess">Get<wbr>Service<wbr>Opensearch<wbr>User<wbr>Config<wbr>Private<wbr>Access</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="privatelinkaccess_csharp">
+<a href="#privatelinkaccess_csharp" style="color: inherit; text-decoration: inherit;">Privatelink<wbr>Access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getserviceopensearchuserconfigprivatelinkaccess">Get<wbr>Service<wbr>Opensearch<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="projecttoforkfrom_csharp">
+<a href="#projecttoforkfrom_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>To<wbr>Fork<wbr>From</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="publicaccess_csharp">
+<a href="#publicaccess_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getserviceopensearchuserconfigpublicaccess">Get<wbr>Service<wbr>Opensearch<wbr>User<wbr>Config<wbr>Public<wbr>Access</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="recoverybasebackupname_csharp">
+<a href="#recoverybasebackupname_csharp" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Basebackup<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="servicetoforkfrom_csharp">
+<a href="#servicetoforkfrom_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>To<wbr>Fork<wbr>From</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="staticips_csharp">
+<a href="#staticips_csharp" style="color: inherit; text-decoration: inherit;">Static<wbr>Ips</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="customdomain_go">
+<a href="#customdomain_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Domain</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablereplicationfactoradjustment_go">
+<a href="#disablereplicationfactoradjustment_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Replication<wbr>Factor<wbr>Adjustment</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="indexpatterns_go">
+<a href="#indexpatterns_go" style="color: inherit; text-decoration: inherit;">Index<wbr>Patterns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getserviceopensearchuserconfigindexpattern">[]Get<wbr>Service<wbr>Opensearch<wbr>User<wbr>Config<wbr>Index<wbr>Pattern</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="indextemplate_go">
+<a href="#indextemplate_go" style="color: inherit; text-decoration: inherit;">Index<wbr>Template</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getserviceopensearchuserconfigindextemplate">Get<wbr>Service<wbr>Opensearch<wbr>User<wbr>Config<wbr>Index<wbr>Template</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ipfilters_go">
+<a href="#ipfilters_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Filters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="keepindexrefreshinterval_go">
+<a href="#keepindexrefreshinterval_go" style="color: inherit; text-decoration: inherit;">Keep<wbr>Index<wbr>Refresh<wbr>Interval</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maxindexcount_go">
+<a href="#maxindexcount_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Index<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="opensearch_go">
+<a href="#opensearch_go" style="color: inherit; text-decoration: inherit;">Opensearch</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getserviceopensearchuserconfigopensearch">Get<wbr>Service<wbr>Opensearch<wbr>User<wbr>Config<wbr>Opensearch</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="opensearchdashboards_go">
+<a href="#opensearchdashboards_go" style="color: inherit; text-decoration: inherit;">Opensearch<wbr>Dashboards</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getserviceopensearchuserconfigopensearchdashboards">Get<wbr>Service<wbr>Opensearch<wbr>User<wbr>Config<wbr>Opensearch<wbr>Dashboards</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="opensearchversion_go">
+<a href="#opensearchversion_go" style="color: inherit; text-decoration: inherit;">Opensearch<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="privateaccess_go">
+<a href="#privateaccess_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getserviceopensearchuserconfigprivateaccess">Get<wbr>Service<wbr>Opensearch<wbr>User<wbr>Config<wbr>Private<wbr>Access</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="privatelinkaccess_go">
+<a href="#privatelinkaccess_go" style="color: inherit; text-decoration: inherit;">Privatelink<wbr>Access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getserviceopensearchuserconfigprivatelinkaccess">Get<wbr>Service<wbr>Opensearch<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="projecttoforkfrom_go">
+<a href="#projecttoforkfrom_go" style="color: inherit; text-decoration: inherit;">Project<wbr>To<wbr>Fork<wbr>From</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="publicaccess_go">
+<a href="#publicaccess_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getserviceopensearchuserconfigpublicaccess">Get<wbr>Service<wbr>Opensearch<wbr>User<wbr>Config<wbr>Public<wbr>Access</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="recoverybasebackupname_go">
+<a href="#recoverybasebackupname_go" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Basebackup<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="servicetoforkfrom_go">
+<a href="#servicetoforkfrom_go" style="color: inherit; text-decoration: inherit;">Service<wbr>To<wbr>Fork<wbr>From</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="staticips_go">
+<a href="#staticips_go" style="color: inherit; text-decoration: inherit;">Static<wbr>Ips</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="customdomain_nodejs">
+<a href="#customdomain_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Domain</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablereplicationfactoradjustment_nodejs">
+<a href="#disablereplicationfactoradjustment_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Replication<wbr>Factor<wbr>Adjustment</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="indexpatterns_nodejs">
+<a href="#indexpatterns_nodejs" style="color: inherit; text-decoration: inherit;">index<wbr>Patterns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getserviceopensearchuserconfigindexpattern">Get<wbr>Service<wbr>Opensearch<wbr>User<wbr>Config<wbr>Index<wbr>Pattern[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="indextemplate_nodejs">
+<a href="#indextemplate_nodejs" style="color: inherit; text-decoration: inherit;">index<wbr>Template</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getserviceopensearchuserconfigindextemplate">Get<wbr>Service<wbr>Opensearch<wbr>User<wbr>Config<wbr>Index<wbr>Template</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ipfilters_nodejs">
+<a href="#ipfilters_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Filters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="keepindexrefreshinterval_nodejs">
+<a href="#keepindexrefreshinterval_nodejs" style="color: inherit; text-decoration: inherit;">keep<wbr>Index<wbr>Refresh<wbr>Interval</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maxindexcount_nodejs">
+<a href="#maxindexcount_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Index<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="opensearch_nodejs">
+<a href="#opensearch_nodejs" style="color: inherit; text-decoration: inherit;">opensearch</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getserviceopensearchuserconfigopensearch">Get<wbr>Service<wbr>Opensearch<wbr>User<wbr>Config<wbr>Opensearch</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="opensearchdashboards_nodejs">
+<a href="#opensearchdashboards_nodejs" style="color: inherit; text-decoration: inherit;">opensearch<wbr>Dashboards</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getserviceopensearchuserconfigopensearchdashboards">Get<wbr>Service<wbr>Opensearch<wbr>User<wbr>Config<wbr>Opensearch<wbr>Dashboards</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="opensearchversion_nodejs">
+<a href="#opensearchversion_nodejs" style="color: inherit; text-decoration: inherit;">opensearch<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="privateaccess_nodejs">
+<a href="#privateaccess_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getserviceopensearchuserconfigprivateaccess">Get<wbr>Service<wbr>Opensearch<wbr>User<wbr>Config<wbr>Private<wbr>Access</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="privatelinkaccess_nodejs">
+<a href="#privatelinkaccess_nodejs" style="color: inherit; text-decoration: inherit;">privatelink<wbr>Access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getserviceopensearchuserconfigprivatelinkaccess">Get<wbr>Service<wbr>Opensearch<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="projecttoforkfrom_nodejs">
+<a href="#projecttoforkfrom_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>To<wbr>Fork<wbr>From</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="publicaccess_nodejs">
+<a href="#publicaccess_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getserviceopensearchuserconfigpublicaccess">Get<wbr>Service<wbr>Opensearch<wbr>User<wbr>Config<wbr>Public<wbr>Access</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="recoverybasebackupname_nodejs">
+<a href="#recoverybasebackupname_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Basebackup<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="servicetoforkfrom_nodejs">
+<a href="#servicetoforkfrom_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>To<wbr>Fork<wbr>From</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="staticips_nodejs">
+<a href="#staticips_nodejs" style="color: inherit; text-decoration: inherit;">static<wbr>Ips</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="custom_domain_python">
+<a href="#custom_domain_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>domain</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disable_replication_factor_adjustment_python">
+<a href="#disable_replication_factor_adjustment_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>replication_<wbr>factor_<wbr>adjustment</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="index_patterns_python">
+<a href="#index_patterns_python" style="color: inherit; text-decoration: inherit;">index_<wbr>patterns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getserviceopensearchuserconfigindexpattern">Sequence[Get<wbr>Service<wbr>Opensearch<wbr>User<wbr>Config<wbr>Index<wbr>Pattern]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="index_template_python">
+<a href="#index_template_python" style="color: inherit; text-decoration: inherit;">index_<wbr>template</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getserviceopensearchuserconfigindextemplate">Get<wbr>Service<wbr>Opensearch<wbr>User<wbr>Config<wbr>Index<wbr>Template</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ip_filters_python">
+<a href="#ip_filters_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>filters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="keep_index_refresh_interval_python">
+<a href="#keep_index_refresh_interval_python" style="color: inherit; text-decoration: inherit;">keep_<wbr>index_<wbr>refresh_<wbr>interval</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="max_index_count_python">
+<a href="#max_index_count_python" style="color: inherit; text-decoration: inherit;">max_<wbr>index_<wbr>count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="opensearch_python">
+<a href="#opensearch_python" style="color: inherit; text-decoration: inherit;">opensearch</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getserviceopensearchuserconfigopensearch">Get<wbr>Service<wbr>Opensearch<wbr>User<wbr>Config<wbr>Opensearch</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="opensearch_dashboards_python">
+<a href="#opensearch_dashboards_python" style="color: inherit; text-decoration: inherit;">opensearch_<wbr>dashboards</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getserviceopensearchuserconfigopensearchdashboards">Get<wbr>Service<wbr>Opensearch<wbr>User<wbr>Config<wbr>Opensearch<wbr>Dashboards</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="opensearch_version_python">
+<a href="#opensearch_version_python" style="color: inherit; text-decoration: inherit;">opensearch_<wbr>version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="private_access_python">
+<a href="#private_access_python" style="color: inherit; text-decoration: inherit;">private_<wbr>access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getserviceopensearchuserconfigprivateaccess">Get<wbr>Service<wbr>Opensearch<wbr>User<wbr>Config<wbr>Private<wbr>Access</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="privatelink_access_python">
+<a href="#privatelink_access_python" style="color: inherit; text-decoration: inherit;">privatelink_<wbr>access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getserviceopensearchuserconfigprivatelinkaccess">Get<wbr>Service<wbr>Opensearch<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="project_to_fork_from_python">
+<a href="#project_to_fork_from_python" style="color: inherit; text-decoration: inherit;">project_<wbr>to_<wbr>fork_<wbr>from</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="public_access_python">
+<a href="#public_access_python" style="color: inherit; text-decoration: inherit;">public_<wbr>access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getserviceopensearchuserconfigpublicaccess">Get<wbr>Service<wbr>Opensearch<wbr>User<wbr>Config<wbr>Public<wbr>Access</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="recovery_basebackup_name_python">
+<a href="#recovery_basebackup_name_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>basebackup_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="service_to_fork_from_python">
+<a href="#service_to_fork_from_python" style="color: inherit; text-decoration: inherit;">service_<wbr>to_<wbr>fork_<wbr>from</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="static_ips_python">
+<a href="#static_ips_python" style="color: inherit; text-decoration: inherit;">static_<wbr>ips</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="getserviceopensearchuserconfigindexpattern">Get<wbr>Service<wbr>Opensearch<wbr>User<wbr>Config<wbr>Index<wbr>Pattern</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="maxindexcount_csharp">
+<a href="#maxindexcount_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Index<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="pattern_csharp">
+<a href="#pattern_csharp" style="color: inherit; text-decoration: inherit;">Pattern</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sortingalgorithm_csharp">
+<a href="#sortingalgorithm_csharp" style="color: inherit; text-decoration: inherit;">Sorting<wbr>Algorithm</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="maxindexcount_go">
+<a href="#maxindexcount_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Index<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="pattern_go">
+<a href="#pattern_go" style="color: inherit; text-decoration: inherit;">Pattern</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sortingalgorithm_go">
+<a href="#sortingalgorithm_go" style="color: inherit; text-decoration: inherit;">Sorting<wbr>Algorithm</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="maxindexcount_nodejs">
+<a href="#maxindexcount_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Index<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="pattern_nodejs">
+<a href="#pattern_nodejs" style="color: inherit; text-decoration: inherit;">pattern</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sortingalgorithm_nodejs">
+<a href="#sortingalgorithm_nodejs" style="color: inherit; text-decoration: inherit;">sorting<wbr>Algorithm</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="max_index_count_python">
+<a href="#max_index_count_python" style="color: inherit; text-decoration: inherit;">max_<wbr>index_<wbr>count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="pattern_python">
+<a href="#pattern_python" style="color: inherit; text-decoration: inherit;">pattern</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sorting_algorithm_python">
+<a href="#sorting_algorithm_python" style="color: inherit; text-decoration: inherit;">sorting_<wbr>algorithm</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="getserviceopensearchuserconfigindextemplate">Get<wbr>Service<wbr>Opensearch<wbr>User<wbr>Config<wbr>Index<wbr>Template</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="mappingnestedobjectslimit_csharp">
+<a href="#mappingnestedobjectslimit_csharp" style="color: inherit; text-decoration: inherit;">Mapping<wbr>Nested<wbr>Objects<wbr>Limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="numberofreplicas_csharp">
+<a href="#numberofreplicas_csharp" style="color: inherit; text-decoration: inherit;">Number<wbr>Of<wbr>Replicas</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="numberofshards_csharp">
+<a href="#numberofshards_csharp" style="color: inherit; text-decoration: inherit;">Number<wbr>Of<wbr>Shards</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="mappingnestedobjectslimit_go">
+<a href="#mappingnestedobjectslimit_go" style="color: inherit; text-decoration: inherit;">Mapping<wbr>Nested<wbr>Objects<wbr>Limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="numberofreplicas_go">
+<a href="#numberofreplicas_go" style="color: inherit; text-decoration: inherit;">Number<wbr>Of<wbr>Replicas</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="numberofshards_go">
+<a href="#numberofshards_go" style="color: inherit; text-decoration: inherit;">Number<wbr>Of<wbr>Shards</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="mappingnestedobjectslimit_nodejs">
+<a href="#mappingnestedobjectslimit_nodejs" style="color: inherit; text-decoration: inherit;">mapping<wbr>Nested<wbr>Objects<wbr>Limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="numberofreplicas_nodejs">
+<a href="#numberofreplicas_nodejs" style="color: inherit; text-decoration: inherit;">number<wbr>Of<wbr>Replicas</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="numberofshards_nodejs">
+<a href="#numberofshards_nodejs" style="color: inherit; text-decoration: inherit;">number<wbr>Of<wbr>Shards</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="mapping_nested_objects_limit_python">
+<a href="#mapping_nested_objects_limit_python" style="color: inherit; text-decoration: inherit;">mapping_<wbr>nested_<wbr>objects_<wbr>limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="number_of_replicas_python">
+<a href="#number_of_replicas_python" style="color: inherit; text-decoration: inherit;">number_<wbr>of_<wbr>replicas</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="number_of_shards_python">
+<a href="#number_of_shards_python" style="color: inherit; text-decoration: inherit;">number_<wbr>of_<wbr>shards</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="getserviceopensearchuserconfigopensearch">Get<wbr>Service<wbr>Opensearch<wbr>User<wbr>Config<wbr>Opensearch</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="actionautocreateindexenabled_csharp">
+<a href="#actionautocreateindexenabled_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Auto<wbr>Create<wbr>Index<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="actiondestructiverequiresname_csharp">
+<a href="#actiondestructiverequiresname_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Destructive<wbr>Requires<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="clustermaxshardspernode_csharp">
+<a href="#clustermaxshardspernode_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Max<wbr>Shards<wbr>Per<wbr>Node</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="httpmaxcontentlength_csharp">
+<a href="#httpmaxcontentlength_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Max<wbr>Content<wbr>Length</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="httpmaxheadersize_csharp">
+<a href="#httpmaxheadersize_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Max<wbr>Header<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="httpmaxinitiallinelength_csharp">
+<a href="#httpmaxinitiallinelength_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Max<wbr>Initial<wbr>Line<wbr>Length</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="indicesfielddatacachesize_csharp">
+<a href="#indicesfielddatacachesize_csharp" style="color: inherit; text-decoration: inherit;">Indices<wbr>Fielddata<wbr>Cache<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="indicesmemoryindexbuffersize_csharp">
+<a href="#indicesmemoryindexbuffersize_csharp" style="color: inherit; text-decoration: inherit;">Indices<wbr>Memory<wbr>Index<wbr>Buffer<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="indicesqueriescachesize_csharp">
+<a href="#indicesqueriescachesize_csharp" style="color: inherit; text-decoration: inherit;">Indices<wbr>Queries<wbr>Cache<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="indicesqueryboolmaxclausecount_csharp">
+<a href="#indicesqueryboolmaxclausecount_csharp" style="color: inherit; text-decoration: inherit;">Indices<wbr>Query<wbr>Bool<wbr>Max<wbr>Clause<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="reindexremotewhitelists_csharp">
+<a href="#reindexremotewhitelists_csharp" style="color: inherit; text-decoration: inherit;">Reindex<wbr>Remote<wbr>Whitelists</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="searchmaxbuckets_csharp">
+<a href="#searchmaxbuckets_csharp" style="color: inherit; text-decoration: inherit;">Search<wbr>Max<wbr>Buckets</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="threadpoolanalyzequeuesize_csharp">
+<a href="#threadpoolanalyzequeuesize_csharp" style="color: inherit; text-decoration: inherit;">Thread<wbr>Pool<wbr>Analyze<wbr>Queue<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="threadpoolanalyzesize_csharp">
+<a href="#threadpoolanalyzesize_csharp" style="color: inherit; text-decoration: inherit;">Thread<wbr>Pool<wbr>Analyze<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="threadpoolforcemergesize_csharp">
+<a href="#threadpoolforcemergesize_csharp" style="color: inherit; text-decoration: inherit;">Thread<wbr>Pool<wbr>Force<wbr>Merge<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="threadpoolgetqueuesize_csharp">
+<a href="#threadpoolgetqueuesize_csharp" style="color: inherit; text-decoration: inherit;">Thread<wbr>Pool<wbr>Get<wbr>Queue<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="threadpoolgetsize_csharp">
+<a href="#threadpoolgetsize_csharp" style="color: inherit; text-decoration: inherit;">Thread<wbr>Pool<wbr>Get<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="threadpoolindexsize_csharp">
+<a href="#threadpoolindexsize_csharp" style="color: inherit; text-decoration: inherit;">Thread<wbr>Pool<wbr>Index<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="threadpoolsearchqueuesize_csharp">
+<a href="#threadpoolsearchqueuesize_csharp" style="color: inherit; text-decoration: inherit;">Thread<wbr>Pool<wbr>Search<wbr>Queue<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="threadpoolsearchsize_csharp">
+<a href="#threadpoolsearchsize_csharp" style="color: inherit; text-decoration: inherit;">Thread<wbr>Pool<wbr>Search<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="threadpoolsearchthrottledqueuesize_csharp">
+<a href="#threadpoolsearchthrottledqueuesize_csharp" style="color: inherit; text-decoration: inherit;">Thread<wbr>Pool<wbr>Search<wbr>Throttled<wbr>Queue<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="threadpoolsearchthrottledsize_csharp">
+<a href="#threadpoolsearchthrottledsize_csharp" style="color: inherit; text-decoration: inherit;">Thread<wbr>Pool<wbr>Search<wbr>Throttled<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="threadpoolwritequeuesize_csharp">
+<a href="#threadpoolwritequeuesize_csharp" style="color: inherit; text-decoration: inherit;">Thread<wbr>Pool<wbr>Write<wbr>Queue<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="threadpoolwritesize_csharp">
+<a href="#threadpoolwritesize_csharp" style="color: inherit; text-decoration: inherit;">Thread<wbr>Pool<wbr>Write<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="actionautocreateindexenabled_go">
+<a href="#actionautocreateindexenabled_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Auto<wbr>Create<wbr>Index<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="actiondestructiverequiresname_go">
+<a href="#actiondestructiverequiresname_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Destructive<wbr>Requires<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="clustermaxshardspernode_go">
+<a href="#clustermaxshardspernode_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Max<wbr>Shards<wbr>Per<wbr>Node</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="httpmaxcontentlength_go">
+<a href="#httpmaxcontentlength_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Max<wbr>Content<wbr>Length</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="httpmaxheadersize_go">
+<a href="#httpmaxheadersize_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Max<wbr>Header<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="httpmaxinitiallinelength_go">
+<a href="#httpmaxinitiallinelength_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Max<wbr>Initial<wbr>Line<wbr>Length</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="indicesfielddatacachesize_go">
+<a href="#indicesfielddatacachesize_go" style="color: inherit; text-decoration: inherit;">Indices<wbr>Fielddata<wbr>Cache<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="indicesmemoryindexbuffersize_go">
+<a href="#indicesmemoryindexbuffersize_go" style="color: inherit; text-decoration: inherit;">Indices<wbr>Memory<wbr>Index<wbr>Buffer<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="indicesqueriescachesize_go">
+<a href="#indicesqueriescachesize_go" style="color: inherit; text-decoration: inherit;">Indices<wbr>Queries<wbr>Cache<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="indicesqueryboolmaxclausecount_go">
+<a href="#indicesqueryboolmaxclausecount_go" style="color: inherit; text-decoration: inherit;">Indices<wbr>Query<wbr>Bool<wbr>Max<wbr>Clause<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="reindexremotewhitelists_go">
+<a href="#reindexremotewhitelists_go" style="color: inherit; text-decoration: inherit;">Reindex<wbr>Remote<wbr>Whitelists</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="searchmaxbuckets_go">
+<a href="#searchmaxbuckets_go" style="color: inherit; text-decoration: inherit;">Search<wbr>Max<wbr>Buckets</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="threadpoolanalyzequeuesize_go">
+<a href="#threadpoolanalyzequeuesize_go" style="color: inherit; text-decoration: inherit;">Thread<wbr>Pool<wbr>Analyze<wbr>Queue<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="threadpoolanalyzesize_go">
+<a href="#threadpoolanalyzesize_go" style="color: inherit; text-decoration: inherit;">Thread<wbr>Pool<wbr>Analyze<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="threadpoolforcemergesize_go">
+<a href="#threadpoolforcemergesize_go" style="color: inherit; text-decoration: inherit;">Thread<wbr>Pool<wbr>Force<wbr>Merge<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="threadpoolgetqueuesize_go">
+<a href="#threadpoolgetqueuesize_go" style="color: inherit; text-decoration: inherit;">Thread<wbr>Pool<wbr>Get<wbr>Queue<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="threadpoolgetsize_go">
+<a href="#threadpoolgetsize_go" style="color: inherit; text-decoration: inherit;">Thread<wbr>Pool<wbr>Get<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="threadpoolindexsize_go">
+<a href="#threadpoolindexsize_go" style="color: inherit; text-decoration: inherit;">Thread<wbr>Pool<wbr>Index<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="threadpoolsearchqueuesize_go">
+<a href="#threadpoolsearchqueuesize_go" style="color: inherit; text-decoration: inherit;">Thread<wbr>Pool<wbr>Search<wbr>Queue<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="threadpoolsearchsize_go">
+<a href="#threadpoolsearchsize_go" style="color: inherit; text-decoration: inherit;">Thread<wbr>Pool<wbr>Search<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="threadpoolsearchthrottledqueuesize_go">
+<a href="#threadpoolsearchthrottledqueuesize_go" style="color: inherit; text-decoration: inherit;">Thread<wbr>Pool<wbr>Search<wbr>Throttled<wbr>Queue<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="threadpoolsearchthrottledsize_go">
+<a href="#threadpoolsearchthrottledsize_go" style="color: inherit; text-decoration: inherit;">Thread<wbr>Pool<wbr>Search<wbr>Throttled<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="threadpoolwritequeuesize_go">
+<a href="#threadpoolwritequeuesize_go" style="color: inherit; text-decoration: inherit;">Thread<wbr>Pool<wbr>Write<wbr>Queue<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="threadpoolwritesize_go">
+<a href="#threadpoolwritesize_go" style="color: inherit; text-decoration: inherit;">Thread<wbr>Pool<wbr>Write<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="actionautocreateindexenabled_nodejs">
+<a href="#actionautocreateindexenabled_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Auto<wbr>Create<wbr>Index<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="actiondestructiverequiresname_nodejs">
+<a href="#actiondestructiverequiresname_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Destructive<wbr>Requires<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="clustermaxshardspernode_nodejs">
+<a href="#clustermaxshardspernode_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Max<wbr>Shards<wbr>Per<wbr>Node</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="httpmaxcontentlength_nodejs">
+<a href="#httpmaxcontentlength_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Max<wbr>Content<wbr>Length</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="httpmaxheadersize_nodejs">
+<a href="#httpmaxheadersize_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Max<wbr>Header<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="httpmaxinitiallinelength_nodejs">
+<a href="#httpmaxinitiallinelength_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Max<wbr>Initial<wbr>Line<wbr>Length</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="indicesfielddatacachesize_nodejs">
+<a href="#indicesfielddatacachesize_nodejs" style="color: inherit; text-decoration: inherit;">indices<wbr>Fielddata<wbr>Cache<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="indicesmemoryindexbuffersize_nodejs">
+<a href="#indicesmemoryindexbuffersize_nodejs" style="color: inherit; text-decoration: inherit;">indices<wbr>Memory<wbr>Index<wbr>Buffer<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="indicesqueriescachesize_nodejs">
+<a href="#indicesqueriescachesize_nodejs" style="color: inherit; text-decoration: inherit;">indices<wbr>Queries<wbr>Cache<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="indicesqueryboolmaxclausecount_nodejs">
+<a href="#indicesqueryboolmaxclausecount_nodejs" style="color: inherit; text-decoration: inherit;">indices<wbr>Query<wbr>Bool<wbr>Max<wbr>Clause<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="reindexremotewhitelists_nodejs">
+<a href="#reindexremotewhitelists_nodejs" style="color: inherit; text-decoration: inherit;">reindex<wbr>Remote<wbr>Whitelists</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="searchmaxbuckets_nodejs">
+<a href="#searchmaxbuckets_nodejs" style="color: inherit; text-decoration: inherit;">search<wbr>Max<wbr>Buckets</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="threadpoolanalyzequeuesize_nodejs">
+<a href="#threadpoolanalyzequeuesize_nodejs" style="color: inherit; text-decoration: inherit;">thread<wbr>Pool<wbr>Analyze<wbr>Queue<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="threadpoolanalyzesize_nodejs">
+<a href="#threadpoolanalyzesize_nodejs" style="color: inherit; text-decoration: inherit;">thread<wbr>Pool<wbr>Analyze<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="threadpoolforcemergesize_nodejs">
+<a href="#threadpoolforcemergesize_nodejs" style="color: inherit; text-decoration: inherit;">thread<wbr>Pool<wbr>Force<wbr>Merge<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="threadpoolgetqueuesize_nodejs">
+<a href="#threadpoolgetqueuesize_nodejs" style="color: inherit; text-decoration: inherit;">thread<wbr>Pool<wbr>Get<wbr>Queue<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="threadpoolgetsize_nodejs">
+<a href="#threadpoolgetsize_nodejs" style="color: inherit; text-decoration: inherit;">thread<wbr>Pool<wbr>Get<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="threadpoolindexsize_nodejs">
+<a href="#threadpoolindexsize_nodejs" style="color: inherit; text-decoration: inherit;">thread<wbr>Pool<wbr>Index<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="threadpoolsearchqueuesize_nodejs">
+<a href="#threadpoolsearchqueuesize_nodejs" style="color: inherit; text-decoration: inherit;">thread<wbr>Pool<wbr>Search<wbr>Queue<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="threadpoolsearchsize_nodejs">
+<a href="#threadpoolsearchsize_nodejs" style="color: inherit; text-decoration: inherit;">thread<wbr>Pool<wbr>Search<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="threadpoolsearchthrottledqueuesize_nodejs">
+<a href="#threadpoolsearchthrottledqueuesize_nodejs" style="color: inherit; text-decoration: inherit;">thread<wbr>Pool<wbr>Search<wbr>Throttled<wbr>Queue<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="threadpoolsearchthrottledsize_nodejs">
+<a href="#threadpoolsearchthrottledsize_nodejs" style="color: inherit; text-decoration: inherit;">thread<wbr>Pool<wbr>Search<wbr>Throttled<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="threadpoolwritequeuesize_nodejs">
+<a href="#threadpoolwritequeuesize_nodejs" style="color: inherit; text-decoration: inherit;">thread<wbr>Pool<wbr>Write<wbr>Queue<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="threadpoolwritesize_nodejs">
+<a href="#threadpoolwritesize_nodejs" style="color: inherit; text-decoration: inherit;">thread<wbr>Pool<wbr>Write<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="action_auto_create_index_enabled_python">
+<a href="#action_auto_create_index_enabled_python" style="color: inherit; text-decoration: inherit;">action_<wbr>auto_<wbr>create_<wbr>index_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="action_destructive_requires_name_python">
+<a href="#action_destructive_requires_name_python" style="color: inherit; text-decoration: inherit;">action_<wbr>destructive_<wbr>requires_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="cluster_max_shards_per_node_python">
+<a href="#cluster_max_shards_per_node_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>max_<wbr>shards_<wbr>per_<wbr>node</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="http_max_content_length_python">
+<a href="#http_max_content_length_python" style="color: inherit; text-decoration: inherit;">http_<wbr>max_<wbr>content_<wbr>length</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="http_max_header_size_python">
+<a href="#http_max_header_size_python" style="color: inherit; text-decoration: inherit;">http_<wbr>max_<wbr>header_<wbr>size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="http_max_initial_line_length_python">
+<a href="#http_max_initial_line_length_python" style="color: inherit; text-decoration: inherit;">http_<wbr>max_<wbr>initial_<wbr>line_<wbr>length</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="indices_fielddata_cache_size_python">
+<a href="#indices_fielddata_cache_size_python" style="color: inherit; text-decoration: inherit;">indices_<wbr>fielddata_<wbr>cache_<wbr>size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="indices_memory_index_buffer_size_python">
+<a href="#indices_memory_index_buffer_size_python" style="color: inherit; text-decoration: inherit;">indices_<wbr>memory_<wbr>index_<wbr>buffer_<wbr>size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="indices_queries_cache_size_python">
+<a href="#indices_queries_cache_size_python" style="color: inherit; text-decoration: inherit;">indices_<wbr>queries_<wbr>cache_<wbr>size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="indices_query_bool_max_clause_count_python">
+<a href="#indices_query_bool_max_clause_count_python" style="color: inherit; text-decoration: inherit;">indices_<wbr>query_<wbr>bool_<wbr>max_<wbr>clause_<wbr>count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="reindex_remote_whitelists_python">
+<a href="#reindex_remote_whitelists_python" style="color: inherit; text-decoration: inherit;">reindex_<wbr>remote_<wbr>whitelists</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="search_max_buckets_python">
+<a href="#search_max_buckets_python" style="color: inherit; text-decoration: inherit;">search_<wbr>max_<wbr>buckets</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="thread_pool_analyze_queue_size_python">
+<a href="#thread_pool_analyze_queue_size_python" style="color: inherit; text-decoration: inherit;">thread_<wbr>pool_<wbr>analyze_<wbr>queue_<wbr>size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="thread_pool_analyze_size_python">
+<a href="#thread_pool_analyze_size_python" style="color: inherit; text-decoration: inherit;">thread_<wbr>pool_<wbr>analyze_<wbr>size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="thread_pool_force_merge_size_python">
+<a href="#thread_pool_force_merge_size_python" style="color: inherit; text-decoration: inherit;">thread_<wbr>pool_<wbr>force_<wbr>merge_<wbr>size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="thread_pool_get_queue_size_python">
+<a href="#thread_pool_get_queue_size_python" style="color: inherit; text-decoration: inherit;">thread_<wbr>pool_<wbr>get_<wbr>queue_<wbr>size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="thread_pool_get_size_python">
+<a href="#thread_pool_get_size_python" style="color: inherit; text-decoration: inherit;">thread_<wbr>pool_<wbr>get_<wbr>size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="thread_pool_index_size_python">
+<a href="#thread_pool_index_size_python" style="color: inherit; text-decoration: inherit;">thread_<wbr>pool_<wbr>index_<wbr>size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="thread_pool_search_queue_size_python">
+<a href="#thread_pool_search_queue_size_python" style="color: inherit; text-decoration: inherit;">thread_<wbr>pool_<wbr>search_<wbr>queue_<wbr>size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="thread_pool_search_size_python">
+<a href="#thread_pool_search_size_python" style="color: inherit; text-decoration: inherit;">thread_<wbr>pool_<wbr>search_<wbr>size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="thread_pool_search_throttled_queue_size_python">
+<a href="#thread_pool_search_throttled_queue_size_python" style="color: inherit; text-decoration: inherit;">thread_<wbr>pool_<wbr>search_<wbr>throttled_<wbr>queue_<wbr>size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="thread_pool_search_throttled_size_python">
+<a href="#thread_pool_search_throttled_size_python" style="color: inherit; text-decoration: inherit;">thread_<wbr>pool_<wbr>search_<wbr>throttled_<wbr>size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="thread_pool_write_queue_size_python">
+<a href="#thread_pool_write_queue_size_python" style="color: inherit; text-decoration: inherit;">thread_<wbr>pool_<wbr>write_<wbr>queue_<wbr>size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="thread_pool_write_size_python">
+<a href="#thread_pool_write_size_python" style="color: inherit; text-decoration: inherit;">thread_<wbr>pool_<wbr>write_<wbr>size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="getserviceopensearchuserconfigopensearchdashboards">Get<wbr>Service<wbr>Opensearch<wbr>User<wbr>Config<wbr>Opensearch<wbr>Dashboards</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="enabled_csharp">
+<a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maxoldspacesize_csharp">
+<a href="#maxoldspacesize_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Old<wbr>Space<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="opensearchrequesttimeout_csharp">
+<a href="#opensearchrequesttimeout_csharp" style="color: inherit; text-decoration: inherit;">Opensearch<wbr>Request<wbr>Timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="enabled_go">
+<a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maxoldspacesize_go">
+<a href="#maxoldspacesize_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Old<wbr>Space<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="opensearchrequesttimeout_go">
+<a href="#opensearchrequesttimeout_go" style="color: inherit; text-decoration: inherit;">Opensearch<wbr>Request<wbr>Timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="enabled_nodejs">
+<a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maxoldspacesize_nodejs">
+<a href="#maxoldspacesize_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Old<wbr>Space<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="opensearchrequesttimeout_nodejs">
+<a href="#opensearchrequesttimeout_nodejs" style="color: inherit; text-decoration: inherit;">opensearch<wbr>Request<wbr>Timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="enabled_python">
+<a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="max_old_space_size_python">
+<a href="#max_old_space_size_python" style="color: inherit; text-decoration: inherit;">max_<wbr>old_<wbr>space_<wbr>size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="opensearch_request_timeout_python">
+<a href="#opensearch_request_timeout_python" style="color: inherit; text-decoration: inherit;">opensearch_<wbr>request_<wbr>timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="getserviceopensearchuserconfigprivateaccess">Get<wbr>Service<wbr>Opensearch<wbr>User<wbr>Config<wbr>Private<wbr>Access</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="opensearch_csharp">
+<a href="#opensearch_csharp" style="color: inherit; text-decoration: inherit;">Opensearch</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="opensearchdashboards_csharp">
+<a href="#opensearchdashboards_csharp" style="color: inherit; text-decoration: inherit;">Opensearch<wbr>Dashboards</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="prometheus_csharp">
+<a href="#prometheus_csharp" style="color: inherit; text-decoration: inherit;">Prometheus</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="opensearch_go">
+<a href="#opensearch_go" style="color: inherit; text-decoration: inherit;">Opensearch</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="opensearchdashboards_go">
+<a href="#opensearchdashboards_go" style="color: inherit; text-decoration: inherit;">Opensearch<wbr>Dashboards</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="prometheus_go">
+<a href="#prometheus_go" style="color: inherit; text-decoration: inherit;">Prometheus</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="opensearch_nodejs">
+<a href="#opensearch_nodejs" style="color: inherit; text-decoration: inherit;">opensearch</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="opensearchdashboards_nodejs">
+<a href="#opensearchdashboards_nodejs" style="color: inherit; text-decoration: inherit;">opensearch<wbr>Dashboards</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="prometheus_nodejs">
+<a href="#prometheus_nodejs" style="color: inherit; text-decoration: inherit;">prometheus</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="opensearch_python">
+<a href="#opensearch_python" style="color: inherit; text-decoration: inherit;">opensearch</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="opensearch_dashboards_python">
+<a href="#opensearch_dashboards_python" style="color: inherit; text-decoration: inherit;">opensearch_<wbr>dashboards</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="prometheus_python">
+<a href="#prometheus_python" style="color: inherit; text-decoration: inherit;">prometheus</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="getserviceopensearchuserconfigprivatelinkaccess">Get<wbr>Service<wbr>Opensearch<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="opensearch_csharp">
+<a href="#opensearch_csharp" style="color: inherit; text-decoration: inherit;">Opensearch</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="opensearchdashboards_csharp">
+<a href="#opensearchdashboards_csharp" style="color: inherit; text-decoration: inherit;">Opensearch<wbr>Dashboards</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="opensearch_go">
+<a href="#opensearch_go" style="color: inherit; text-decoration: inherit;">Opensearch</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="opensearchdashboards_go">
+<a href="#opensearchdashboards_go" style="color: inherit; text-decoration: inherit;">Opensearch<wbr>Dashboards</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="opensearch_nodejs">
+<a href="#opensearch_nodejs" style="color: inherit; text-decoration: inherit;">opensearch</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="opensearchdashboards_nodejs">
+<a href="#opensearchdashboards_nodejs" style="color: inherit; text-decoration: inherit;">opensearch<wbr>Dashboards</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="opensearch_python">
+<a href="#opensearch_python" style="color: inherit; text-decoration: inherit;">opensearch</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="opensearch_dashboards_python">
+<a href="#opensearch_dashboards_python" style="color: inherit; text-decoration: inherit;">opensearch_<wbr>dashboards</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="getserviceopensearchuserconfigpublicaccess">Get<wbr>Service<wbr>Opensearch<wbr>User<wbr>Config<wbr>Public<wbr>Access</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="opensearch_csharp">
+<a href="#opensearch_csharp" style="color: inherit; text-decoration: inherit;">Opensearch</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="opensearchdashboards_csharp">
+<a href="#opensearchdashboards_csharp" style="color: inherit; text-decoration: inherit;">Opensearch<wbr>Dashboards</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="prometheus_csharp">
+<a href="#prometheus_csharp" style="color: inherit; text-decoration: inherit;">Prometheus</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="opensearch_go">
+<a href="#opensearch_go" style="color: inherit; text-decoration: inherit;">Opensearch</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="opensearchdashboards_go">
+<a href="#opensearchdashboards_go" style="color: inherit; text-decoration: inherit;">Opensearch<wbr>Dashboards</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="prometheus_go">
+<a href="#prometheus_go" style="color: inherit; text-decoration: inherit;">Prometheus</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="opensearch_nodejs">
+<a href="#opensearch_nodejs" style="color: inherit; text-decoration: inherit;">opensearch</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="opensearchdashboards_nodejs">
+<a href="#opensearchdashboards_nodejs" style="color: inherit; text-decoration: inherit;">opensearch<wbr>Dashboards</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="prometheus_nodejs">
+<a href="#prometheus_nodejs" style="color: inherit; text-decoration: inherit;">prometheus</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="opensearch_python">
+<a href="#opensearch_python" style="color: inherit; text-decoration: inherit;">opensearch</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="opensearch_dashboards_python">
+<a href="#opensearch_dashboards_python" style="color: inherit; text-decoration: inherit;">opensearch_<wbr>dashboards</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -14878,6 +18172,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="staticips_csharp">
+<a href="#staticips_csharp" style="color: inherit; text-decoration: inherit;">Static<wbr>Ips</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="synchronousreplication_csharp">
 <a href="#synchronousreplication_csharp" style="color: inherit; text-decoration: inherit;">Synchronous<wbr>Replication</a>
 </span>
@@ -15060,6 +18362,14 @@ The following output properties are available:
             title="Optional">
         <span id="sharedbufferspercentage_go">
 <a href="#sharedbufferspercentage_go" style="color: inherit; text-decoration: inherit;">Shared<wbr>Buffers<wbr>Percentage</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="staticips_go">
+<a href="#staticips_go" style="color: inherit; text-decoration: inherit;">Static<wbr>Ips</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -15254,6 +18564,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="staticips_nodejs">
+<a href="#staticips_nodejs" style="color: inherit; text-decoration: inherit;">static<wbr>Ips</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="synchronousreplication_nodejs">
 <a href="#synchronousreplication_nodejs" style="color: inherit; text-decoration: inherit;">synchronous<wbr>Replication</a>
 </span>
@@ -15436,6 +18754,14 @@ The following output properties are available:
             title="Optional">
         <span id="shared_buffers_percentage_python">
 <a href="#shared_buffers_percentage_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>buffers_<wbr>percentage</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="static_ips_python">
+<a href="#static_ips_python" style="color: inherit; text-decoration: inherit;">static_<wbr>ips</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -15798,6 +19124,38 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="bgwriterdelay_csharp">
+<a href="#bgwriterdelay_csharp" style="color: inherit; text-decoration: inherit;">Bgwriter<wbr>Delay</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="bgwriterflushafter_csharp">
+<a href="#bgwriterflushafter_csharp" style="color: inherit; text-decoration: inherit;">Bgwriter<wbr>Flush<wbr>After</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="bgwriterlrumaxpages_csharp">
+<a href="#bgwriterlrumaxpages_csharp" style="color: inherit; text-decoration: inherit;">Bgwriter<wbr>Lru<wbr>Maxpages</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="bgwriterlrumultiplier_csharp">
+<a href="#bgwriterlrumultiplier_csharp" style="color: inherit; text-decoration: inherit;">Bgwriter<wbr>Lru<wbr>Multiplier</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="deadlocktimeout_csharp">
 <a href="#deadlocktimeout_csharp" style="color: inherit; text-decoration: inherit;">Deadlock<wbr>Timeout</a>
 </span>
@@ -16116,6 +19474,38 @@ The following output properties are available:
             title="Optional">
         <span id="autovacuumvacuumthreshold_go">
 <a href="#autovacuumvacuumthreshold_go" style="color: inherit; text-decoration: inherit;">Autovacuum<wbr>Vacuum<wbr>Threshold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="bgwriterdelay_go">
+<a href="#bgwriterdelay_go" style="color: inherit; text-decoration: inherit;">Bgwriter<wbr>Delay</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="bgwriterflushafter_go">
+<a href="#bgwriterflushafter_go" style="color: inherit; text-decoration: inherit;">Bgwriter<wbr>Flush<wbr>After</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="bgwriterlrumaxpages_go">
+<a href="#bgwriterlrumaxpages_go" style="color: inherit; text-decoration: inherit;">Bgwriter<wbr>Lru<wbr>Maxpages</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="bgwriterlrumultiplier_go">
+<a href="#bgwriterlrumultiplier_go" style="color: inherit; text-decoration: inherit;">Bgwriter<wbr>Lru<wbr>Multiplier</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -16446,6 +19836,38 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="bgwriterdelay_nodejs">
+<a href="#bgwriterdelay_nodejs" style="color: inherit; text-decoration: inherit;">bgwriter<wbr>Delay</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="bgwriterflushafter_nodejs">
+<a href="#bgwriterflushafter_nodejs" style="color: inherit; text-decoration: inherit;">bgwriter<wbr>Flush<wbr>After</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="bgwriterlrumaxpages_nodejs">
+<a href="#bgwriterlrumaxpages_nodejs" style="color: inherit; text-decoration: inherit;">bgwriter<wbr>Lru<wbr>Maxpages</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="bgwriterlrumultiplier_nodejs">
+<a href="#bgwriterlrumultiplier_nodejs" style="color: inherit; text-decoration: inherit;">bgwriter<wbr>Lru<wbr>Multiplier</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="deadlocktimeout_nodejs">
 <a href="#deadlocktimeout_nodejs" style="color: inherit; text-decoration: inherit;">deadlock<wbr>Timeout</a>
 </span>
@@ -16764,6 +20186,38 @@ The following output properties are available:
             title="Optional">
         <span id="autovacuum_vacuum_threshold_python">
 <a href="#autovacuum_vacuum_threshold_python" style="color: inherit; text-decoration: inherit;">autovacuum_<wbr>vacuum_<wbr>threshold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="bgwriter_delay_python">
+<a href="#bgwriter_delay_python" style="color: inherit; text-decoration: inherit;">bgwriter_<wbr>delay</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="bgwriter_flush_after_python">
+<a href="#bgwriter_flush_after_python" style="color: inherit; text-decoration: inherit;">bgwriter_<wbr>flush_<wbr>after</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="bgwriter_lru_maxpages_python">
+<a href="#bgwriter_lru_maxpages_python" style="color: inherit; text-decoration: inherit;">bgwriter_<wbr>lru_<wbr>maxpages</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="bgwriter_lru_multiplier_python">
+<a href="#bgwriter_lru_multiplier_python" style="color: inherit; text-decoration: inherit;">bgwriter_<wbr>lru_<wbr>multiplier</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -17810,6 +21264,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="redisaclchannelsdefault_csharp">
+<a href="#redisaclchannelsdefault_csharp" style="color: inherit; text-decoration: inherit;">Redis<wbr>Acl<wbr>Channels<wbr>Default</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="redisiothreads_csharp">
 <a href="#redisiothreads_csharp" style="color: inherit; text-decoration: inherit;">Redis<wbr>Io<wbr>Threads</a>
 </span>
@@ -17850,6 +21312,30 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="redisnumberofdatabases_csharp">
+<a href="#redisnumberofdatabases_csharp" style="color: inherit; text-decoration: inherit;">Redis<wbr>Number<wbr>Of<wbr>Databases</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="redispersistence_csharp">
+<a href="#redispersistence_csharp" style="color: inherit; text-decoration: inherit;">Redis<wbr>Persistence</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="redispubsubclientoutputbufferlimit_csharp">
+<a href="#redispubsubclientoutputbufferlimit_csharp" style="color: inherit; text-decoration: inherit;">Redis<wbr>Pubsub<wbr>Client<wbr>Output<wbr>Buffer<wbr>Limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="redisssl_csharp">
 <a href="#redisssl_csharp" style="color: inherit; text-decoration: inherit;">Redis<wbr>Ssl</a>
 </span>
@@ -17868,6 +21354,14 @@ The following output properties are available:
             title="Optional">
         <span id="servicetoforkfrom_csharp">
 <a href="#servicetoforkfrom_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>To<wbr>Fork<wbr>From</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="staticips_csharp">
+<a href="#staticips_csharp" style="color: inherit; text-decoration: inherit;">Static<wbr>Ips</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -17934,6 +21428,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="redisaclchannelsdefault_go">
+<a href="#redisaclchannelsdefault_go" style="color: inherit; text-decoration: inherit;">Redis<wbr>Acl<wbr>Channels<wbr>Default</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="redisiothreads_go">
 <a href="#redisiothreads_go" style="color: inherit; text-decoration: inherit;">Redis<wbr>Io<wbr>Threads</a>
 </span>
@@ -17974,6 +21476,30 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="redisnumberofdatabases_go">
+<a href="#redisnumberofdatabases_go" style="color: inherit; text-decoration: inherit;">Redis<wbr>Number<wbr>Of<wbr>Databases</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="redispersistence_go">
+<a href="#redispersistence_go" style="color: inherit; text-decoration: inherit;">Redis<wbr>Persistence</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="redispubsubclientoutputbufferlimit_go">
+<a href="#redispubsubclientoutputbufferlimit_go" style="color: inherit; text-decoration: inherit;">Redis<wbr>Pubsub<wbr>Client<wbr>Output<wbr>Buffer<wbr>Limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="redisssl_go">
 <a href="#redisssl_go" style="color: inherit; text-decoration: inherit;">Redis<wbr>Ssl</a>
 </span>
@@ -17992,6 +21518,14 @@ The following output properties are available:
             title="Optional">
         <span id="servicetoforkfrom_go">
 <a href="#servicetoforkfrom_go" style="color: inherit; text-decoration: inherit;">Service<wbr>To<wbr>Fork<wbr>From</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="staticips_go">
+<a href="#staticips_go" style="color: inherit; text-decoration: inherit;">Static<wbr>Ips</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -18058,6 +21592,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="redisaclchannelsdefault_nodejs">
+<a href="#redisaclchannelsdefault_nodejs" style="color: inherit; text-decoration: inherit;">redis<wbr>Acl<wbr>Channels<wbr>Default</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="redisiothreads_nodejs">
 <a href="#redisiothreads_nodejs" style="color: inherit; text-decoration: inherit;">redis<wbr>Io<wbr>Threads</a>
 </span>
@@ -18098,6 +21640,30 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="redisnumberofdatabases_nodejs">
+<a href="#redisnumberofdatabases_nodejs" style="color: inherit; text-decoration: inherit;">redis<wbr>Number<wbr>Of<wbr>Databases</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="redispersistence_nodejs">
+<a href="#redispersistence_nodejs" style="color: inherit; text-decoration: inherit;">redis<wbr>Persistence</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="redispubsubclientoutputbufferlimit_nodejs">
+<a href="#redispubsubclientoutputbufferlimit_nodejs" style="color: inherit; text-decoration: inherit;">redis<wbr>Pubsub<wbr>Client<wbr>Output<wbr>Buffer<wbr>Limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="redisssl_nodejs">
 <a href="#redisssl_nodejs" style="color: inherit; text-decoration: inherit;">redis<wbr>Ssl</a>
 </span>
@@ -18116,6 +21682,14 @@ The following output properties are available:
             title="Optional">
         <span id="servicetoforkfrom_nodejs">
 <a href="#servicetoforkfrom_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>To<wbr>Fork<wbr>From</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="staticips_nodejs">
+<a href="#staticips_nodejs" style="color: inherit; text-decoration: inherit;">static<wbr>Ips</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -18182,6 +21756,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="redis_acl_channels_default_python">
+<a href="#redis_acl_channels_default_python" style="color: inherit; text-decoration: inherit;">redis_<wbr>acl_<wbr>channels_<wbr>default</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="redis_io_threads_python">
 <a href="#redis_io_threads_python" style="color: inherit; text-decoration: inherit;">redis_<wbr>io_<wbr>threads</a>
 </span>
@@ -18222,6 +21804,30 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="redis_number_of_databases_python">
+<a href="#redis_number_of_databases_python" style="color: inherit; text-decoration: inherit;">redis_<wbr>number_<wbr>of_<wbr>databases</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="redis_persistence_python">
+<a href="#redis_persistence_python" style="color: inherit; text-decoration: inherit;">redis_<wbr>persistence</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="redis_pubsub_client_output_buffer_limit_python">
+<a href="#redis_pubsub_client_output_buffer_limit_python" style="color: inherit; text-decoration: inherit;">redis_<wbr>pubsub_<wbr>client_<wbr>output_<wbr>buffer_<wbr>limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="redis_ssl_python">
 <a href="#redis_ssl_python" style="color: inherit; text-decoration: inherit;">redis_<wbr>ssl</a>
 </span>
@@ -18240,6 +21846,14 @@ The following output properties are available:
             title="Optional">
         <span id="service_to_fork_from_python">
 <a href="#service_to_fork_from_python" style="color: inherit; text-decoration: inherit;">service_<wbr>to_<wbr>fork_<wbr>from</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="static_ips_python">
+<a href="#static_ips_python" style="color: inherit; text-decoration: inherit;">static_<wbr>ips</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>

@@ -2180,7 +2180,15 @@ effect only when a new service is being created.
     </dt>
     <dd>{{% md %}}Name of another service to fork from. This has effect 
 only when a new service is being created.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="staticips_csharp">
+<a href="#staticips_csharp" style="color: inherit; text-decoration: inherit;">Static<wbr>Ips</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2267,7 +2275,15 @@ effect only when a new service is being created.
     </dt>
     <dd>{{% md %}}Name of another service to fork from. This has effect 
 only when a new service is being created.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="staticips_go">
+<a href="#staticips_go" style="color: inherit; text-decoration: inherit;">Static<wbr>Ips</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2354,7 +2370,15 @@ effect only when a new service is being created.
     </dt>
     <dd>{{% md %}}Name of another service to fork from. This has effect 
 only when a new service is being created.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="staticips_nodejs">
+<a href="#staticips_nodejs" style="color: inherit; text-decoration: inherit;">static<wbr>Ips</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -2441,7 +2465,15 @@ effect only when a new service is being created.
     </dt>
     <dd>{{% md %}}Name of another service to fork from. This has effect 
 only when a new service is being created.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="static_ips_python">
+<a href="#static_ips_python" style="color: inherit; text-decoration: inherit;">static_<wbr>ips</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getinfluxdbinfluxdbuserconfiginfluxdb">Get<wbr>Influx<wbr>Db<wbr>Influxdb<wbr>User<wbr>Config<wbr>Influxdb</h4>
@@ -2460,6 +2492,14 @@ only when a new service is being created.
     <dd>{{% md %}}The maximum duration in seconds before a query is 
 logged as a slow query. Setting this to 0 (the default) will never log slow queries.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maxconnectionlimit_csharp">
+<a href="#maxconnectionlimit_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Connection<wbr>Limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxrowlimit_csharp">
 <a href="#maxrowlimit_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Row<wbr>Limit</a>
@@ -2516,6 +2556,14 @@ Setting this to 0 (the default) will never kill slow queries.
 logged as a slow query. Setting this to 0 (the default) will never log slow queries.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="maxconnectionlimit_go">
+<a href="#maxconnectionlimit_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Connection<wbr>Limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxrowlimit_go">
 <a href="#maxrowlimit_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Row<wbr>Limit</a>
 </span>
@@ -2571,6 +2619,14 @@ Setting this to 0 (the default) will never kill slow queries.
 logged as a slow query. Setting this to 0 (the default) will never log slow queries.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="maxconnectionlimit_nodejs">
+<a href="#maxconnectionlimit_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Connection<wbr>Limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxrowlimit_nodejs">
 <a href="#maxrowlimit_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Row<wbr>Limit</a>
 </span>
@@ -2625,6 +2681,14 @@ Setting this to 0 (the default) will never kill slow queries.
     <dd>{{% md %}}The maximum duration in seconds before a query is 
 logged as a slow query. Setting this to 0 (the default) will never log slow queries.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="max_connection_limit_python">
+<a href="#max_connection_limit_python" style="color: inherit; text-decoration: inherit;">max_<wbr>connection_<wbr>limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_row_limit_python">
 <a href="#max_row_limit_python" style="color: inherit; text-decoration: inherit;">max_<wbr>row_<wbr>limit</a>

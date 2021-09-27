@@ -26,6 +26,8 @@ A Pulumi package for creating and managing Aiven cloud resources.
     <li><a href="database" title="Database"><span class="symbol resource"></span>Database</a></li>
     <li><a href="elasticsearch" title="ElasticSearch"><span class="symbol resource"></span>ElasticSearch</a></li>
     <li><a href="elasticsearchacl" title="ElasticSearchAcl"><span class="symbol resource"></span>ElasticSearchAcl</a></li>
+    <li><a href="elasticsearchaclconfig" title="ElasticSearchAclConfig"><span class="symbol resource"></span>ElasticSearchAclConfig</a></li>
+    <li><a href="elasticsearchaclrule" title="ElasticSearchAclRule"><span class="symbol resource"></span>ElasticSearchAclRule</a></li>
     <li><a href="grafana" title="Grafana"><span class="symbol resource"></span>Grafana</a></li>
     <li><a href="influxdb" title="InfluxDb"><span class="symbol resource"></span>InfluxDb</a></li>
     <li><a href="kafka" title="Kafka"><span class="symbol resource"></span>Kafka</a></li>
@@ -40,6 +42,9 @@ A Pulumi package for creating and managing Aiven cloud resources.
     <li><a href="m3db" title="M3Db"><span class="symbol resource"></span>M3Db</a></li>
     <li><a href="mirrormakerreplicationflow" title="MirrorMakerReplicationFlow"><span class="symbol resource"></span>MirrorMakerReplicationFlow</a></li>
     <li><a href="mysql" title="MySql"><span class="symbol resource"></span>MySql</a></li>
+    <li><a href="opensearch" title="OpenSearch"><span class="symbol resource"></span>OpenSearch</a></li>
+    <li><a href="opensearchaclconfig" title="OpenSearchAclConfig"><span class="symbol resource"></span>OpenSearchAclConfig</a></li>
+    <li><a href="opensearchaclrule" title="OpenSearchAclRule"><span class="symbol resource"></span>OpenSearchAclRule</a></li>
     <li><a href="pg" title="Pg"><span class="symbol resource"></span>Pg</a></li>
     <li><a href="project" title="Project"><span class="symbol resource"></span>Project</a></li>
     <li><a href="projectuser" title="ProjectUser"><span class="symbol resource"></span>ProjectUser</a></li>
@@ -67,6 +72,8 @@ A Pulumi package for creating and managing Aiven cloud resources.
     <li><a href="getdatabase" title="GetDatabase"><span class="symbol function"></span>GetDatabase</a></li>
     <li><a href="getelasticsearch" title="GetElasticSearch"><span class="symbol function"></span>GetElasticSearch</a></li>
     <li><a href="getelasticsearchacl" title="GetElasticSearchAcl"><span class="symbol function"></span>GetElasticSearchAcl</a></li>
+    <li><a href="getelasticsearchaclconfig" title="GetElasticSearchAclConfig"><span class="symbol function"></span>GetElasticSearchAclConfig</a></li>
+    <li><a href="getelasticsearchaclrule" title="GetElasticSearchAclRule"><span class="symbol function"></span>GetElasticSearchAclRule</a></li>
     <li><a href="getgrafana" title="GetGrafana"><span class="symbol function"></span>GetGrafana</a></li>
     <li><a href="getinfluxdb" title="GetInfluxDb"><span class="symbol function"></span>GetInfluxDb</a></li>
     <li><a href="getkafka" title="GetKafka"><span class="symbol function"></span>GetKafka</a></li>
@@ -81,6 +88,9 @@ A Pulumi package for creating and managing Aiven cloud resources.
     <li><a href="getm3db" title="GetM3Db"><span class="symbol function"></span>GetM3Db</a></li>
     <li><a href="getmirrormakerreplicationflow" title="GetMirrorMakerReplicationFlow"><span class="symbol function"></span>GetMirrorMakerReplicationFlow</a></li>
     <li><a href="getmysql" title="GetMySql"><span class="symbol function"></span>GetMySql</a></li>
+    <li><a href="getopensearch" title="GetOpenSearch"><span class="symbol function"></span>GetOpenSearch</a></li>
+    <li><a href="getopensearchaclconfig" title="GetOpenSearchAclConfig"><span class="symbol function"></span>GetOpenSearchAclConfig</a></li>
+    <li><a href="getopensearchaclrule" title="GetOpenSearchAclRule"><span class="symbol function"></span>GetOpenSearchAclRule</a></li>
     <li><a href="getpg" title="GetPg"><span class="symbol function"></span>GetPg</a></li>
     <li><a href="getproject" title="GetProject"><span class="symbol function"></span>GetProject</a></li>
     <li><a href="getprojectuser" title="GetProjectUser"><span class="symbol function"></span>GetProjectUser</a></li>
@@ -104,6 +114,6 @@ A Pulumi package for creating and managing Aiven cloud resources.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`aiven` Terraform Provider](https://github.com/aiven/terraform-provider-aiven).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.1.4</dd>
+	<dd>4.2.0</dd>
 </dl>
 
