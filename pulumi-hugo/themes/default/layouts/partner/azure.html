@@ -1,5 +1,5 @@
 {{ define "hero" }}
-    {{ partial "hero" (dict "title" "Cloud Engineering with Azure") }}
+    {{ partial "hero" (dict "title" .Params.title) }}
 {{ end }}
 
 {{ define "main" }}
@@ -10,20 +10,22 @@
             <div class="w-full order-last lg:mt-0 lg:order-first lg:w-1/2 px-5">
                 <h2>{{ .Params.hero.title }}</h2>
                 <p class="mr-4">{{ .Params.hero.description | markdownify }}</p>
-                <p class="my-6">
-                    <a class="inline-flex items-center link" href="{{ relref . .Params.hero.cta_url }}">
-                        <span class="inline-block w-6 text-orange-300 mr-3">
-                            <svg aria-hidden="true" focusable="false" data-prefix="fad" data-icon="sparkles" class="svg-inline--fa fa-sparkles fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><g class="fa-group"><path class="fa-secondary" fill="currentColor" d="M423.16 186.58L448 127l59.58-24.84a8 8 0 0 0 0-14.32L448 63 423.16 3.42a8 8 0 0 0-14.32 0L384 63l-59.58 24.84a8 8 0 0 0 0 14.32L384 127l24.84 59.58a8 8 0 0 0 14.32 0zm-14.32 136.84L384 383l-59.58 24.84a8 8 0 0 0 0 14.32L384 447l24.84 59.58a8 8 0 0 0 14.32 0L448 447l59.58-24.84a8 8 0 0 0 0-14.32L448 383l-24.84-59.58a8 8 0 0 0-14.32 0z" opacity="0.4"></path><path class="fa-primary" fill="currentColor" d="M384 254.64a16.06 16.06 0 0 0-8.84-14.33l-112.57-56.39-56.28-112.77c-5.44-10.87-23.19-10.87-28.62 0l-56.28 112.77L8.84 240.31a16 16 0 0 0 0 28.67l112.57 56.39 56.28 112.77a16 16 0 0 0 28.62 0l56.28-112.77L375.16 269a16.07 16.07 0 0 0 8.84-14.36z"></path></g></svg>
-                        </span>
-                        <span class="mr-2 hover:mr-3" style="transition: all 100ms linear;">
-                            {{ .Params.hero.cta_text | markdownify }}
-                        </span>
-                        <span>
-                            &rarr;
-                        </span>
-                    </a>
-                </p>
-                <div class="header-hero-actions">
+                {{ if .Params.hero.cta_url }}
+                    <p class="my-6">
+                        <a class="inline-flex items-center link" href="{{ relref . .Params.hero.cta_url }}">
+                            <span class="inline-block w-6 text-orange-300 mr-3">
+                                <svg aria-hidden="true" focusable="false" data-prefix="fad" data-icon="sparkles" class="svg-inline--fa fa-sparkles fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><g class="fa-group"><path class="fa-secondary" fill="currentColor" d="M423.16 186.58L448 127l59.58-24.84a8 8 0 0 0 0-14.32L448 63 423.16 3.42a8 8 0 0 0-14.32 0L384 63l-59.58 24.84a8 8 0 0 0 0 14.32L384 127l24.84 59.58a8 8 0 0 0 14.32 0zm-14.32 136.84L384 383l-59.58 24.84a8 8 0 0 0 0 14.32L384 447l24.84 59.58a8 8 0 0 0 14.32 0L448 447l59.58-24.84a8 8 0 0 0 0-14.32L448 383l-24.84-59.58a8 8 0 0 0-14.32 0z" opacity="0.4"></path><path class="fa-primary" fill="currentColor" d="M384 254.64a16.06 16.06 0 0 0-8.84-14.33l-112.57-56.39-56.28-112.77c-5.44-10.87-23.19-10.87-28.62 0l-56.28 112.77L8.84 240.31a16 16 0 0 0 0 28.67l112.57 56.39 56.28 112.77a16 16 0 0 0 28.62 0l56.28-112.77L375.16 269a16.07 16.07 0 0 0 8.84-14.36z"></path></g></svg>
+                            </span>
+                            <span class="mr-2 hover:mr-3" style="transition: all 100ms linear;">
+                                {{ .Params.hero.cta_text | markdownify }}
+                            </span>
+                            <span>
+                                &rarr;
+                            </span>
+                        </a>
+                    </p>
+                {{ end }}
+                <div class="header-hero-actions mt-8">
                     <a class="btn-primary mr-4" href="{{ relref . "/docs/get-started/azure" }}">Get Started</a>
                     <a class="btn-secondary" href="{{ relref . "#azure-overview" }}">Learn More</a>
                 </div>
@@ -87,93 +89,79 @@
         </div>
     </section>
 
-    <!-- Customer logos -->
-    <section id="customers" class="my-20 px-4">
-        <h3 class="mt-12 mb-8 text-center">
-            Powering top engineering teams
-        </h3>
-        <div class="container mx-auto">
-            <div class="flex flex-col lg:flex-row items-center justify-center my-4">
-                <a data-track="customer-logo" href="https://www.snowflake.com/" target="_blank">
-                    <img class="mx-auto my-4 lg:my-2 lg:mx-8 h-12" src="/logos/customers/snowflake-logo.svg" alt="Snowflake" title="Snowflake">
-                </a>
-                <a data-track="customer-logo" href="https://www.tableau.com/" target="_blank">
-                    <img class="mx-auto my-4 lg:my-2 lg:mx-8 h-12" src="/logos/customers/tableau_logo.png" alt="Tableau Software" title="Tableau Software">
-                </a>
-                <a data-track="customer-logo" href="{{ relref . "/case-studies/mercedes-benz" }}">
-                    <img class="mx-auto my-4 lg:my-2 lg:mx-8 h-12" src="/logos/customers/mercedes-benz-RDNA_logo.png" title="Mercedes-Benz Research and Development" alt="Mercedes-Benz Research and Development">
-                </a>
-                <a data-track="customer-logo" href="https://www.mindbodyonline.com/" target="_blank">
-                    <img class="mx-auto my-4 lg:my-2 lg:mx-8 h-6" src="/logos/customers/mindbody_logo.svg" alt="MindBody" title="MindBody">
-                </a>
-                <a data-track="customer-logo" href="https://www.nih.gov/" target="_blank">
-                    <img class="mx-auto my-4 lg:my-2 lg:mx-8 h-10" src="/logos/customers/nih.png" alt="National Institutes of Health" title="National Institutes of Health">
-                </a>
-            </div>
-            <div class="lg:flex items-center justify-center my-4">
-                <a data-track="customer-logo" href="https://www.sourcegraph.com/" target="_blank">
-                    <img class="mx-auto my-4 lg:my-2 lg:mx-8 h-6" src="/logos/customers/sourcegraph-logo.svg" alt="Sourcegraph" title="Sourcegraph">
-                </a>
-                <a data-track="customer-logo" href="https://www.snopes.com/" target="_blank">
-                    <img class="mx-auto my-6 lg:my-2 lg:mx-8 h-10" src="/logos/customers/snopes_logo.png" alt="Snopes" title="Snopes">
-                </a>
-                <a data-track="customer-logo" href="{{ relref . "/case-studies/lemonade" }}">
-                    <img class="mx-auto my-8 lg:my-2 lg:mx-8 h-8" src="/logos/customers/lemonade.svg" alt="Lemonade" title="Lemonade">
-                </a>
-            </div>
-        </div>
+    <!-- Logos -->
+    <section class="container mx-auto text-center my-0 mb-16 lg:my-24 overflow-hidden px-3">
+        <h3 class="text-center mb-10 hidden lg:block">{{ .Params.customer_logos.title }}</h3>
+        <h6 class="text-center mb-10 lg:hidden">{{ .Params.customer_logos.title }}</h6>
+        <pulumi-swiper loop="true" autoplay="true" autoplay-delay="2500" speed="2000">
+            {{ range $logoBunch := .Params.customer_logos.logos }}
+                <pulumi-swipeable>
+                    <div class="flex flex-wrap items-center justify-center">
+                        {{ range $logo := $logoBunch.items }}
+                            <div class="w-1/3 lg:w-1/5 px-2 py-4 lg:py-0 lg:px-8">
+                                {{ partial "customer-logo.html" (dict "logo" $logo "hoverable" true) }}
+                            </div>
+                        {{ end }}
+                    </div>
+                </pulumi-swipeable>
+            {{ end }}
+        </pulumi-swiper>
     </section>
 
-    <section id="azure-overview" class="py-16 bg-white px-4 lg:px-0">
-        <div class="container mx-auto flex flex-col lg:mx-auto lg:flex lg:flex-row lg:items-center lg:justify-center">
-            {{ with .Params.azure_overview }}
-                <div class="lg:w-1/2">
-                    <div class="w-2/3 pb-16 mx-auto">
-                        {{ partial "pulumipus" (dict "type" "lightning") }}
-                    </div>
-                </div>
-                <div class="lg:w-1/2">
-                    <div class="md:px-24 lg:px-4">
-                        <h3>{{ .title }}</h3>
-                        <p>{{ .description }}</p>
-                        <ul>
-                            {{ range $i, $item := .list }}
-                                <li>{{ $item | markdownify }}</li>
-                            {{ end }}
-                        </ul>
-                        <div class="my-8">
-                            <a class="btn-secondary lg:inline-block" href="{{ relref $pageContext .cta_url }}">
-                                {{ .cta }}
-                            </a>
+    {{ if .Params.azure_overview }}
+        <section id="azure-overview" class="py-16 bg-white px-4 lg:px-0">
+            <div class="container mx-auto flex flex-col lg:mx-auto lg:flex lg:flex-row lg:items-center lg:justify-center">
+                {{ with .Params.azure_overview }}
+                    <div class="lg:w-1/2">
+                        <div class="w-2/3 pb-16 mx-auto">
+                            {{ partial "pulumipus" (dict "type" "lightning") }}
                         </div>
                     </div>
-                </div>
-            {{ end }}
-        </div>
-    </section>
+                    <div class="lg:w-1/2">
+                        <div class="md:px-24 lg:px-4">
+                            <h3>{{ .title }}</h3>
+                            <p>{{ .description }}</p>
+                            <ul>
+                                {{ range $i, $item := .list }}
+                                    <li>{{ $item | markdownify }}</li>
+                                {{ end }}
+                            </ul>
+                            <div class="my-8">
+                                <a class="btn-secondary lg:inline-block" href="{{ relref $pageContext .cta_url }}">
+                                    {{ .cta }}
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                {{ end }}
+            </div>
+        </section>
+    {{ end }}
 
-    <section id="arm2pulumi" class="py-16 bg-white px-4 lg:px-0">
-        <div class="container mx-auto flex flex-col lg:mx-auto lg:flex lg:flex-row lg:items-center lg:justify-center">
-            {{ with .Params.arm2pulumi }}
-                <div class="lg:w-1/2 pr-10">
-                    <div class="md:px-24 lg:px-4">
-                        <h3>{{ .title | markdownify }}</h3>
-                        <p>{{ .description | markdownify }}</p>
-                        <div class="my-8">
-                            <a class="btn-secondary lg:inline-block" href="{{ relref $pageContext .cta_url }}">
-                                {{ .cta }}
-                            </a>
+    {{ if .Params.arm2pulumi }}
+        <section id="arm2pulumi" class="py-16 bg-white px-4 lg:px-0">
+            <div class="container mx-auto flex flex-col lg:mx-auto lg:flex lg:flex-row lg:items-center lg:justify-center">
+                {{ with .Params.arm2pulumi }}
+                    <div class="lg:w-1/2 pr-10">
+                        <div class="md:px-24 lg:px-4">
+                            <h3>{{ .title | markdownify }}</h3>
+                            <p>{{ .description | markdownify }}</p>
+                            <div class="my-8">
+                                <a class="btn-secondary lg:inline-block" href="{{ relref $pageContext .cta_url }}">
+                                    {{ .cta }}
+                                </a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="lg:w-1/2">
-                    <div class="w-full pb-16 mx-auto">
-                        <img src="/images/partners/arm2pulumi.png" />
+                    <div class="lg:w-1/2">
+                        <div class="w-full pb-16 mx-auto">
+                            <img src="/images/partners/arm2pulumi.png" />
+                        </div>
                     </div>
-                </div>
-            {{ end }}
-        </div>
-    </section>
+                {{ end }}
+            </div>
+        </section>
+    {{ end }}
 
 
     {{ range $index, $item := .Params.detail_sections }}
@@ -189,11 +177,14 @@
                 <div class="w-full max-w-2xl mx-auto text-center">
                     <h3>{{ $item.title }}</h3>
                     <p class="md:px-24 lg:px-0">{{ $item.description | markdownify }}</p>
-                    <a class="hidden btn-secondary lg:inline-block my-4" href="{{ relref $pageContext $item.cta_url }}">
-                        {{ $item.cta }}
-                    </a>
+
+                    {{ if $item.cta }}
+                        <a class="hidden btn-secondary lg:inline-block my-4" href="{{ relref $pageContext $item.cta_url }}">
+                            {{ $item.cta }}
+                        </a>
+                    {{ end }}
                 </div>
-                <div class="my-8 lg:flex flex-wrap">
+                <div class="my-8 lg:flex flex-wrap items-center justify-center">
                     {{ range $i, $row := $item.items }}
                         <div class="lg:w-1/2 lg:pr-4 mb-8 lg:mb-0">
                             <div class="w-full px-8 text-center my-4">
@@ -205,51 +196,84 @@
                     {{ end }}
                 </div>
             </div>
-            <div class="container mx-auto md:px-24 lg:hidden lg:px-0 text-center">
-                <a class="btn-secondary my-4" href="{{ relref $pageContext $item.cta_url }}">
-                    {{ $item.cta }}
-                </a>
+            {{ if $item.cta }}
+                <div class="container mx-auto md:px-24 lg:hidden lg:px-0 text-center">
+                    <a class="btn-secondary my-4" href="{{ relref $pageContext $item.cta_url }}">
+                        {{ $item.cta }}
+                    </a>
+                </div>
+            {{ end }}
+        </section>
+    {{ end }}
+
+    {{ if .Params.superpowers }}
+        <section id="superpowers" class="bg-white pt-24 px-4 justify-center" id="editions">
+            <div class="container mx-auto lg:flex justify-center">
+                <ul class="flex flex-col lg:flex-row lg:flex-wrap items-start list-none p-0">
+                    {{ $powers := .Params.superpowers }}
+                    {{ range $i, $item := $powers }}
+                        <li class="lg:w-1/2 lg:flex items-start mt-0">
+                            <div class="text-center lg:text-left mb-4 lg:mb-0">
+                                <div class="inline-block bg-blue-100 border-4 border-blue-200 rounded-full p-6" style="fill: #4387c7;">
+                                    {{ partial "superpower-icon" (dict "type" $item.icon_type) }}
+                                </div>
+                            </div>
+                            <div class="lg:pl-6 lg:pr-12">
+                                <h4 class="text-center lg:text-left mt-0" >
+                                    <a class="link" href="{{ relref $pageContext $item.cta_url }}">
+                                        <span class="align-middle">{{ $item.title }}</span>
+                                    </a>
+                                </h4>
+                                <p class="leading-relaxed md:px-24 lg:px-0">{{ $item.description }}</p>
+                                <p class="m-0 text-lg text-center lg:text-left">
+                                    <a class="link" href="{{ relref $pageContext $item.cta_url }}">
+                                        <span class="transition-all hover:mr-1">{{ $item.cta }}</span>
+                                        <span>&rarr;</span>
+                                    </a>
+                                </p>
+                                {{ $borderBottom := "border-b"}}
+                                {{ if eq $i (sub (len $powers) 2) }}
+                                    {{ $borderBottom = "border-b md:border-none" }}
+                                {{ else if eq $i (sub (len $powers) 1) }}
+                                    {{ $borderBottom = "border-none" }}
+                                {{ end }}
+                                <div class="mb-12 pb-12 border-gray-300 {{ $borderBottom }}"></div>
+                            </div>
+                        </li>
+                    {{ end }}
+                </ul>
             </div>
         </section>
     {{ end }}
 
-    <section id="superpowers" class="bg-white pt-24 px-4 justify-center" id="editions">
-        <div class="container mx-auto lg:flex justify-center">
-            <ul class="flex flex-col lg:flex-row lg:flex-wrap items-start list-none p-0">
-                {{ $powers := .Params.superpowers }}
-                {{ range $i, $item := $powers }}
-                    <li class="lg:w-1/2 lg:flex items-start mt-0">
-                        <div class="text-center lg:text-left mb-4 lg:mb-0">
-                            <div class="inline-block bg-blue-100 border-4 border-blue-200 rounded-full p-6" style="fill: #4387c7;">
-                                {{ partial "superpower-icon" (dict "type" $item.icon_type) }}
-                            </div>
-                        </div>
-                        <div class="lg:pl-6 lg:pr-12">
-                            <h4 class="text-center lg:text-left mt-0" >
-                                <a class="link" href="{{ relref $pageContext $item.cta_url }}">
-                                    <span class="align-middle">{{ $item.title }}</span>
-                                </a>
-                            </h4>
-                            <p class="leading-relaxed md:px-24 lg:px-0">{{ $item.description }}</p>
-                            <p class="m-0 text-lg text-center lg:text-left">
-                                <a class="link" href="{{ relref $pageContext $item.cta_url }}">
-                                    <span class="transition-all hover:mr-1">{{ $item.cta }}</span>
-                                    <span>&rarr;</span>
-                                </a>
-                            </p>
-                            {{ $borderBottom := "border-b"}}
-                            {{ if eq $i (sub (len $powers) 2) }}
-                                {{ $borderBottom = "border-b md:border-none" }}
-                            {{ else if eq $i (sub (len $powers) 1) }}
-                                {{ $borderBottom = "border-none" }}
+    {{ if .Params.resources }}
+        <section id="resources" class="bg-white container mx-auto">
+            <div class="flex flex-wrap items-stretch">
+                <div class="w-full lg:w-1/2 p-6">
+                    <div class="card h-full p-6">
+                        <h3>{{ .Params.resources.azure.title }}</h3>
+                        <p>{{ .Params.resources.azure.description | markdownify }}</p>
+                        <ul>
+                            {{ range $item := .Params.resources.azure.items }}
+                                <li>{{ $item | markdownify }}</li>
                             {{ end }}
-                            <div class="mb-12 pb-12 border-gray-300 {{ $borderBottom }}"></div>
-                        </div>
-                    </li>
-                {{ end }}
-            </ul>
-        </div>
-    </section>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="w-full lg:w-1/2 p-6">
+                    <div class="card h-full p-6">
+                        <h3>{{ .Params.resources.other.title }}</h3>
+                        <ul>
+                            {{ range $item := .Params.resources.other.items }}
+                                <li>{{ $item | markdownify }}</li>
+                            {{ end }}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    {{ end }}
 
     {{ partial "hand-raise-section" . }}
 {{ end }}
