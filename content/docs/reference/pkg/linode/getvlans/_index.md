@@ -105,8 +105,8 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := linode.NewInstance(ctx, "myInstance", &linode.InstanceArgs{
 			Image: pulumi.String("linode/ubuntu18.04"),
-			Interfaces: linode.InstanceInterfaceArray{
-				&linode.InstanceInterfaceArgs{
+			Interfaces: InstanceInterfaceArray{
+				&InstanceInterfaceArgs{
 					Label:   pulumi.String("my-vlan"),
 					Purpose: pulumi.String("vlan"),
 				},
@@ -119,9 +119,9 @@ func main() {
 		if err != nil {
 			return err
 		}
-		_, err = linode.GetVlans(ctx, &linode.GetVlansArgs{
-			Filters: []linode.GetVlansFilter{
-				linode.GetVlansFilter{
+		_, err = linode.GetVlans(ctx, &GetVlansArgs{
+			Filters: []GetVlansFilter{
+				GetVlansFilter{
 					Name: "label",
 					Values: []string{
 						"my-vlan",
@@ -190,7 +190,7 @@ const my_vlans = pulumi.output(linode.getVlans({
         name: "label",
         values: ["my-vlan"],
     }],
-}, { async: true }));
+}));
 ```
 
 

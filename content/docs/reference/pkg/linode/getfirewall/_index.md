@@ -58,7 +58,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := linode.LookupFirewall(ctx, &linode.LookupFirewallArgs{
+		_, err := linode.LookupFirewall(ctx, &GetFirewallArgs{
 			Id: 123,
 		}, nil)
 		if err != nil {
@@ -95,7 +95,7 @@ import * as linode from "@pulumi/linode";
 
 const my_firewall = pulumi.output(linode.getFirewall({
     id: 123,
-}, { async: true }));
+}));
 ```
 
 

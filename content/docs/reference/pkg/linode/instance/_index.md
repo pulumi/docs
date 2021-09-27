@@ -295,8 +295,8 @@ func main() {
 			Region:    pulumi.String("us-central"),
 			Type:      pulumi.String("g6-nanode-1"),
 			PrivateIp: pulumi.Bool(true),
-			Disks: linode.InstanceDiskArray{
-				&linode.InstanceDiskArgs{
+			Disks: InstanceDiskArray{
+				&InstanceDiskArgs{
 					Label: pulumi.String("boot"),
 					Size:  pulumi.Int(3000),
 					Image: pulumi.String("linode/ubuntu18.04"),
@@ -309,15 +309,15 @@ func main() {
 					RootPass: pulumi.String("terr4form-test"),
 				},
 			},
-			Configs: linode.InstanceConfigArray{
-				&linode.InstanceConfigArgs{
+			Configs: InstanceConfigArray{
+				&InstanceConfigArgs{
 					Label:  pulumi.String("boot_config"),
 					Kernel: pulumi.String("linode/latest-64bit"),
-					Devices: &linode.InstanceConfigDevicesArgs{
-						Sda: &linode.InstanceConfigDevicesSdaArgs{
+					Devices: &InstanceConfigDevicesArgs{
+						Sda: &InstanceConfigDevicesSdaArgs{
 							DiskLabel: pulumi.String("boot"),
 						},
-						Sdb: &linode.InstanceConfigDevicesSdbArgs{
+						Sdb: &InstanceConfigDevicesSdbArgs{
 							VolumeId: webVolume.ID(),
 						},
 					},

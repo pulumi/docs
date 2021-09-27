@@ -99,7 +99,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := linode.LookupStackScript(ctx, &linode.LookupStackScriptArgs{
+		_, err := linode.LookupStackScript(ctx, &GetStackScriptArgs{
 			Id: 355872,
 		}, nil)
 		if err != nil {
@@ -136,7 +136,7 @@ import * as linode from "@pulumi/linode";
 
 const myStackscript = pulumi.output(linode.getStackScript({
     id: 355872,
-}, { async: true }));
+}));
 ```
 
 

@@ -58,7 +58,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := linode.GetRegion(ctx, &linode.GetRegionArgs{
+		_, err := linode.GetRegion(ctx, &GetRegionArgs{
 			Id: "us-east",
 		}, nil)
 		if err != nil {
@@ -95,7 +95,7 @@ import * as linode from "@pulumi/linode";
 
 const region = pulumi.output(linode.getRegion({
     id: "us-east",
-}, { async: true }));
+}));
 ```
 
 

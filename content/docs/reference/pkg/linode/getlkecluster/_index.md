@@ -58,7 +58,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := linode.LookupLkeCluster(ctx, &linode.LookupLkeClusterArgs{
+		_, err := linode.LookupLkeCluster(ctx, &GetLkeClusterArgs{
 			Id: 123,
 		}, nil)
 		if err != nil {
@@ -95,7 +95,7 @@ import * as linode from "@pulumi/linode";
 
 const my_cluster = pulumi.output(linode.getLkeCluster({
     id: 123,
-}, { async: true }));
+}));
 ```
 
 

@@ -69,7 +69,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := linode.GetObjectStorageCluster(ctx, &linode.GetObjectStorageClusterArgs{
+		_, err := linode.GetObjectStorageCluster(ctx, &GetObjectStorageClusterArgs{
 			Id: "us-east-1",
 		}, nil)
 		if err != nil {
@@ -106,7 +106,7 @@ import * as linode from "@pulumi/linode";
 
 const primary = pulumi.output(linode.getObjectStorageCluster({
     id: "us-east-1",
-}, { async: true }));
+}));
 ```
 
 

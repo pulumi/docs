@@ -75,7 +75,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := linode.GetKernel(ctx, &linode.GetKernelArgs{
+		_, err := linode.GetKernel(ctx, &GetKernelArgs{
 			Id: "linode/latest-64bit",
 		}, nil)
 		if err != nil {
@@ -112,7 +112,7 @@ import * as linode from "@pulumi/linode";
 
 const latest = pulumi.output(linode.getKernel({
     id: "linode/latest-64bit",
-}, { async: true }));
+}));
 ```
 
 

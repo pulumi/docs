@@ -70,7 +70,28 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var all_images = Output.Create(Linode.GetImages.InvokeAsync());
+        var specific_images = Output.Create(Linode.GetImages.InvokeAsync(new Linode.GetImagesArgs
+        {
+            Filters = 
+            {
+                new Linode.Inputs.GetImagesFilterArgs
+                {
+                    Name = "label",
+                    Values = 
+                    {
+                        "Debian 8",
+                    },
+                },
+                new Linode.Inputs.GetImagesFilterArgs
+                {
+                    Name = "is_public",
+                    Values = 
+                    {
+                        "true",
+                    },
+                },
+            },
+        }));
     }
 
 }
@@ -92,7 +113,22 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := linode.GetImages(ctx, nil, nil)
+		_, err := linode.GetImages(ctx, &GetImagesArgs{
+			Filters: []GetImagesFilter{
+				GetImagesFilter{
+					Name: "label",
+					Values: []string{
+						"Debian 8",
+					},
+				},
+				GetImagesFilter{
+					Name: "is_public",
+					Values: []string{
+						"true",
+					},
+				},
+			},
+		}, nil)
 		if err != nil {
 			return err
 		}
@@ -111,7 +147,16 @@ func main() {
 import pulumi
 import pulumi_linode as linode
 
-all_images = linode.get_images()
+specific_images = linode.get_images(filters=[
+    linode.GetImagesFilterArgs(
+        name="label",
+        values=["Debian 8"],
+    ),
+    linode.GetImagesFilterArgs(
+        name="is_public",
+        values=["true"],
+    ),
+])
 ```
 
 
@@ -136,7 +181,7 @@ const specific_images = pulumi.output(linode.getImages({
             values: ["true"],
         },
     ],
-}, { async: true }));
+}));
 ```
 
 

@@ -94,14 +94,14 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		opt0 := "1234567"
-		_, err := linode.LookupDomain(ctx, &linode.LookupDomainArgs{
+		_, err := linode.LookupDomain(ctx, &GetDomainArgs{
 			Id: &opt0,
 		}, nil)
 		if err != nil {
 			return err
 		}
 		opt1 := "bar.example.com"
-		_, err = linode.LookupDomain(ctx, &linode.LookupDomainArgs{
+		_, err = linode.LookupDomain(ctx, &GetDomainArgs{
 			Domain: &opt1,
 		}, nil)
 		if err != nil {
@@ -139,10 +139,10 @@ import * as linode from "@pulumi/linode";
 
 const foo = pulumi.output(linode.getDomain({
     id: "1234567",
-}, { async: true }));
+}));
 const bar = pulumi.output(linode.getDomain({
     domain: "bar.example.com",
-}, { async: true }));
+}));
 ```
 
 
