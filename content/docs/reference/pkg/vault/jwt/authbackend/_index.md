@@ -142,6 +142,7 @@ const example = new vault.jwt.AuthBackend("example", {
                 <span class="nx">jwks_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                 <span class="nx">jwt_supported_algs</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
                 <span class="nx">jwt_validation_pubkeys</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+                <span class="nx">local</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                 <span class="nx">oidc_client_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                 <span class="nx">oidc_client_secret</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                 <span class="nx">oidc_discovery_ca_pem</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -342,6 +343,15 @@ The AuthBackend resource accepts the following [input]({{< relref "/docs/intro/c
     <dd>{{% md %}}A list of PEM-encoded public keys to use to authenticate signatures locally. Cannot be used in combination with `oidc_discovery_url`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="local_csharp">
+<a href="#local_csharp" style="color: inherit; text-decoration: inherit;">Local</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies if the auth method is local only.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="oidcclientid_csharp">
 <a href="#oidcclientid_csharp" style="color: inherit; text-decoration: inherit;">Oidc<wbr>Client<wbr>Id</a>
 </span>
@@ -478,6 +488,15 @@ The AuthBackend resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of PEM-encoded public keys to use to authenticate signatures locally. Cannot be used in combination with `oidc_discovery_url`
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="local_go">
+<a href="#local_go" style="color: inherit; text-decoration: inherit;">Local</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies if the auth method is local only.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="oidcclientid_go">
@@ -618,6 +637,15 @@ The AuthBackend resource accepts the following [input]({{< relref "/docs/intro/c
     <dd>{{% md %}}A list of PEM-encoded public keys to use to authenticate signatures locally. Cannot be used in combination with `oidc_discovery_url`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="local_nodejs">
+<a href="#local_nodejs" style="color: inherit; text-decoration: inherit;">local</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Specifies if the auth method is local only.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="oidcclientid_nodejs">
 <a href="#oidcclientid_nodejs" style="color: inherit; text-decoration: inherit;">oidc<wbr>Client<wbr>Id</a>
 </span>
@@ -754,6 +782,15 @@ The AuthBackend resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of PEM-encoded public keys to use to authenticate signatures locally. Cannot be used in combination with `oidc_discovery_url`
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="local_python">
+<a href="#local_python" style="color: inherit; text-decoration: inherit;">local</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies if the auth method is local only.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="oidc_client_id_python">
@@ -943,6 +980,7 @@ Get an existing AuthBackend resource's state with the given name, ID, and option
         <span class="nx">jwks_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">jwt_supported_algs</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
         <span class="nx">jwt_validation_pubkeys</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+        <span class="nx">local</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">oidc_client_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">oidc_client_secret</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">oidc_discovery_ca_pem</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -1135,6 +1173,15 @@ The following state arguments are supported:
     <dd>{{% md %}}A list of PEM-encoded public keys to use to authenticate signatures locally. Cannot be used in combination with `oidc_discovery_url`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_local_csharp">
+<a href="#state_local_csharp" style="color: inherit; text-decoration: inherit;">Local</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies if the auth method is local only.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_oidcclientid_csharp">
 <a href="#state_oidcclientid_csharp" style="color: inherit; text-decoration: inherit;">Oidc<wbr>Client<wbr>Id</a>
 </span>
@@ -1280,6 +1327,15 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of PEM-encoded public keys to use to authenticate signatures locally. Cannot be used in combination with `oidc_discovery_url`
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_local_go">
+<a href="#state_local_go" style="color: inherit; text-decoration: inherit;">Local</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies if the auth method is local only.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_oidcclientid_go">
@@ -1429,6 +1485,15 @@ The following state arguments are supported:
     <dd>{{% md %}}A list of PEM-encoded public keys to use to authenticate signatures locally. Cannot be used in combination with `oidc_discovery_url`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_local_nodejs">
+<a href="#state_local_nodejs" style="color: inherit; text-decoration: inherit;">local</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Specifies if the auth method is local only.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_oidcclientid_nodejs">
 <a href="#state_oidcclientid_nodejs" style="color: inherit; text-decoration: inherit;">oidc<wbr>Client<wbr>Id</a>
 </span>
@@ -1574,6 +1639,15 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of PEM-encoded public keys to use to authenticate signatures locally. Cannot be used in combination with `oidc_discovery_url`
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_local_python">
+<a href="#state_local_python" style="color: inherit; text-decoration: inherit;">local</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies if the auth method is local only.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_oidc_client_id_python">

@@ -39,6 +39,7 @@ Consul secret backends can be imported using the `path`, e.g.
                   <span class="nx">client_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                   <span class="nx">default_lease_ttl_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
                   <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                  <span class="nx">local</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                   <span class="nx">max_lease_ttl_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
                   <span class="nx">path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                   <span class="nx">scheme</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -235,6 +236,15 @@ The SecretBackend resource accepts the following [input]({{< relref "/docs/intro
     <dd>{{% md %}}A human-friendly description for this backend.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="local_csharp">
+<a href="#local_csharp" style="color: inherit; text-decoration: inherit;">Local</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies if the secret backend is local only.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxleasettlseconds_csharp">
 <a href="#maxleasettlseconds_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Lease<wbr>Ttl<wbr>Seconds</a>
 </span>
@@ -328,6 +338,15 @@ for credentials issued by this backend.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A human-friendly description for this backend.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="local_go">
+<a href="#local_go" style="color: inherit; text-decoration: inherit;">Local</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies if the secret backend is local only.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxleasettlseconds_go">
@@ -425,6 +444,15 @@ for credentials issued by this backend.
     <dd>{{% md %}}A human-friendly description for this backend.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="local_nodejs">
+<a href="#local_nodejs" style="color: inherit; text-decoration: inherit;">local</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Specifies if the secret backend is local only.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxleasettlseconds_nodejs">
 <a href="#maxleasettlseconds_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Lease<wbr>Ttl<wbr>Seconds</a>
 </span>
@@ -518,6 +546,15 @@ for credentials issued by this backend.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A human-friendly description for this backend.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="local_python">
+<a href="#local_python" style="color: inherit; text-decoration: inherit;">local</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies if the secret backend is local only.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_lease_ttl_seconds_python">
@@ -626,6 +663,7 @@ Get an existing SecretBackend resource's state with the given name, ID, and opti
         <span class="nx">client_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">default_lease_ttl_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">local</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">max_lease_ttl_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">scheme</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -796,6 +834,15 @@ The following state arguments are supported:
     <dd>{{% md %}}A human-friendly description for this backend.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_local_csharp">
+<a href="#state_local_csharp" style="color: inherit; text-decoration: inherit;">Local</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies if the secret backend is local only.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_maxleasettlseconds_csharp">
 <a href="#state_maxleasettlseconds_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Lease<wbr>Ttl<wbr>Seconds</a>
 </span>
@@ -889,6 +936,15 @@ for credentials issued by this backend.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A human-friendly description for this backend.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_local_go">
+<a href="#state_local_go" style="color: inherit; text-decoration: inherit;">Local</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies if the secret backend is local only.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxleasettlseconds_go">
@@ -986,6 +1042,15 @@ for credentials issued by this backend.
     <dd>{{% md %}}A human-friendly description for this backend.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_local_nodejs">
+<a href="#state_local_nodejs" style="color: inherit; text-decoration: inherit;">local</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Specifies if the secret backend is local only.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_maxleasettlseconds_nodejs">
 <a href="#state_maxleasettlseconds_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Lease<wbr>Ttl<wbr>Seconds</a>
 </span>
@@ -1079,6 +1144,15 @@ for credentials issued by this backend.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A human-friendly description for this backend.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_local_python">
+<a href="#state_local_python" style="color: inherit; text-decoration: inherit;">local</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies if the secret backend is local only.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_max_lease_ttl_seconds_python">

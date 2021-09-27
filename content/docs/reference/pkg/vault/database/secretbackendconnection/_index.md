@@ -50,6 +50,7 @@ Database secret backend connections can be imported using the `backend`, `/confi
                             <span class="nx">oracle</span><span class="p">:</span> <span class="nx">Optional[SecretBackendConnectionOracleArgs]</span> = None<span class="p">,</span>
                             <span class="nx">postgresql</span><span class="p">:</span> <span class="nx">Optional[SecretBackendConnectionPostgresqlArgs]</span> = None<span class="p">,</span>
                             <span class="nx">root_rotation_statements</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+                            <span class="nx">snowflake</span><span class="p">:</span> <span class="nx">Optional[SecretBackendConnectionSnowflakeArgs]</span> = None<span class="p">,</span>
                             <span class="nx">verify_connection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">SecretBackendConnection</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
@@ -334,6 +335,15 @@ connection.
     <dd>{{% md %}}A list of database statements to be executed to rotate the root user's credentials.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="snowflake_csharp">
+<a href="#snowflake_csharp" style="color: inherit; text-decoration: inherit;">Snowflake</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#secretbackendconnectionsnowflake">Secret<wbr>Backend<wbr>Connection<wbr>Snowflake<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A nested block containing configuration options for Snowflake connections.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="verifyconnection_csharp">
 <a href="#verifyconnection_csharp" style="color: inherit; text-decoration: inherit;">Verify<wbr>Connection</a>
 </span>
@@ -500,6 +510,15 @@ connection.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of database statements to be executed to rotate the root user's credentials.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="snowflake_go">
+<a href="#snowflake_go" style="color: inherit; text-decoration: inherit;">Snowflake</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#secretbackendconnectionsnowflake">Secret<wbr>Backend<wbr>Connection<wbr>Snowflake<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A nested block containing configuration options for Snowflake connections.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="verifyconnection_go">
@@ -670,6 +689,15 @@ connection.
     <dd>{{% md %}}A list of database statements to be executed to rotate the root user's credentials.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="snowflake_nodejs">
+<a href="#snowflake_nodejs" style="color: inherit; text-decoration: inherit;">snowflake</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#secretbackendconnectionsnowflake">Secret<wbr>Backend<wbr>Connection<wbr>Snowflake<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A nested block containing configuration options for Snowflake connections.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="verifyconnection_nodejs">
 <a href="#verifyconnection_nodejs" style="color: inherit; text-decoration: inherit;">verify<wbr>Connection</a>
 </span>
@@ -838,6 +866,15 @@ connection.
     <dd>{{% md %}}A list of database statements to be executed to rotate the root user's credentials.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="snowflake_python">
+<a href="#snowflake_python" style="color: inherit; text-decoration: inherit;">snowflake</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#secretbackendconnectionsnowflake">Secret<wbr>Backend<wbr>Connection<wbr>Snowflake<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A nested block containing configuration options for Snowflake connections.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="verify_connection_python">
 <a href="#verify_connection_python" style="color: inherit; text-decoration: inherit;">verify_<wbr>connection</a>
 </span>
@@ -937,6 +974,7 @@ Get an existing SecretBackendConnection resource's state with the given name, ID
         <span class="nx">oracle</span><span class="p">:</span> <span class="nx">Optional[SecretBackendConnectionOracleArgs]</span> = None<span class="p">,</span>
         <span class="nx">postgresql</span><span class="p">:</span> <span class="nx">Optional[SecretBackendConnectionPostgresqlArgs]</span> = None<span class="p">,</span>
         <span class="nx">root_rotation_statements</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+        <span class="nx">snowflake</span><span class="p">:</span> <span class="nx">Optional[SecretBackendConnectionSnowflakeArgs]</span> = None<span class="p">,</span>
         <span class="nx">verify_connection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> SecretBackendConnection</code></pre></div>
 {{% /choosable %}}
 
@@ -1204,6 +1242,15 @@ connection.
     <dd>{{% md %}}A list of database statements to be executed to rotate the root user's credentials.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_snowflake_csharp">
+<a href="#state_snowflake_csharp" style="color: inherit; text-decoration: inherit;">Snowflake</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#secretbackendconnectionsnowflake">Secret<wbr>Backend<wbr>Connection<wbr>Snowflake<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A nested block containing configuration options for Snowflake connections.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_verifyconnection_csharp">
 <a href="#state_verifyconnection_csharp" style="color: inherit; text-decoration: inherit;">Verify<wbr>Connection</a>
 </span>
@@ -1370,6 +1417,15 @@ connection.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of database statements to be executed to rotate the root user's credentials.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_snowflake_go">
+<a href="#state_snowflake_go" style="color: inherit; text-decoration: inherit;">Snowflake</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#secretbackendconnectionsnowflake">Secret<wbr>Backend<wbr>Connection<wbr>Snowflake<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A nested block containing configuration options for Snowflake connections.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_verifyconnection_go">
@@ -1540,6 +1596,15 @@ connection.
     <dd>{{% md %}}A list of database statements to be executed to rotate the root user's credentials.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_snowflake_nodejs">
+<a href="#state_snowflake_nodejs" style="color: inherit; text-decoration: inherit;">snowflake</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#secretbackendconnectionsnowflake">Secret<wbr>Backend<wbr>Connection<wbr>Snowflake<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A nested block containing configuration options for Snowflake connections.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_verifyconnection_nodejs">
 <a href="#state_verifyconnection_nodejs" style="color: inherit; text-decoration: inherit;">verify<wbr>Connection</a>
 </span>
@@ -1708,6 +1773,15 @@ connection.
     <dd>{{% md %}}A list of database statements to be executed to rotate the root user's credentials.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_snowflake_python">
+<a href="#state_snowflake_python" style="color: inherit; text-decoration: inherit;">snowflake</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#secretbackendconnectionsnowflake">Secret<wbr>Backend<wbr>Connection<wbr>Snowflake<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A nested block containing configuration options for Snowflake connections.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_verify_connection_python">
 <a href="#state_verify_connection_python" style="color: inherit; text-decoration: inherit;">verify_<wbr>connection</a>
 </span>
@@ -1824,7 +1898,7 @@ part of the host.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The username to be used in the connection.
+    <dd>{{% md %}}The username to be used in the connection (the account admin level).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1922,7 +1996,7 @@ part of the host.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The username to be used in the connection.
+    <dd>{{% md %}}The username to be used in the connection (the account admin level).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2020,7 +2094,7 @@ part of the host.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The username to be used in the connection.
+    <dd>{{% md %}}The username to be used in the connection (the account admin level).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2118,7 +2192,7 @@ part of the host.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The username to be used in the connection.
+    <dd>{{% md %}}The username to be used in the connection (the account admin level).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2152,7 +2226,7 @@ by trusted CA if used.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The username to be used in the connection.
+    <dd>{{% md %}}The username to be used in the connection (the account admin level).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2184,7 +2258,7 @@ by trusted CA if used.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The username to be used in the connection.
+    <dd>{{% md %}}The username to be used in the connection (the account admin level).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2216,7 +2290,7 @@ by trusted CA if used.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The username to be used in the connection.
+    <dd>{{% md %}}The username to be used in the connection (the account admin level).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2248,7 +2322,7 @@ by trusted CA if used.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The username to be used in the connection.
+    <dd>{{% md %}}The username to be used in the connection (the account admin level).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2265,7 +2339,7 @@ by trusted CA if used.
     </dt>
     <dd>{{% md %}}A URL containing connection information. See
 the [Vault
-docs](https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-payload)
+docs](https://www.vaultproject.io/api-docs/secret/databases/snowflake#sample-payload)
 for an example.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2311,7 +2385,7 @@ use.
     </dt>
     <dd>{{% md %}}A URL containing connection information. See
 the [Vault
-docs](https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-payload)
+docs](https://www.vaultproject.io/api-docs/secret/databases/snowflake#sample-payload)
 for an example.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2357,7 +2431,7 @@ use.
     </dt>
     <dd>{{% md %}}A URL containing connection information. See
 the [Vault
-docs](https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-payload)
+docs](https://www.vaultproject.io/api-docs/secret/databases/snowflake#sample-payload)
 for an example.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2403,7 +2477,7 @@ use.
     </dt>
     <dd>{{% md %}}A URL containing connection information. See
 the [Vault
-docs](https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-payload)
+docs](https://www.vaultproject.io/api-docs/secret/databases/snowflake#sample-payload)
 for an example.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2451,7 +2525,7 @@ use.
     </dt>
     <dd>{{% md %}}A URL containing connection information. See
 the [Vault
-docs](https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-payload)
+docs](https://www.vaultproject.io/api-docs/secret/databases/snowflake#sample-payload)
 for an example.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2483,6 +2557,15 @@ maintain.
     </dt>
     <dd>{{% md %}}The maximum number of open connections to
 use.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="usernametemplate_csharp">
+<a href="#usernametemplate_csharp" style="color: inherit; text-decoration: inherit;">Username<wbr>Template</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}- [Template](https://www.vaultproject.io/docs/concepts/username-templating) describing how dynamic usernames are generated.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2497,7 +2580,7 @@ use.
     </dt>
     <dd>{{% md %}}A URL containing connection information. See
 the [Vault
-docs](https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-payload)
+docs](https://www.vaultproject.io/api-docs/secret/databases/snowflake#sample-payload)
 for an example.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2529,6 +2612,15 @@ maintain.
     </dt>
     <dd>{{% md %}}The maximum number of open connections to
 use.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="usernametemplate_go">
+<a href="#usernametemplate_go" style="color: inherit; text-decoration: inherit;">Username<wbr>Template</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}- [Template](https://www.vaultproject.io/docs/concepts/username-templating) describing how dynamic usernames are generated.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2543,7 +2635,7 @@ use.
     </dt>
     <dd>{{% md %}}A URL containing connection information. See
 the [Vault
-docs](https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-payload)
+docs](https://www.vaultproject.io/api-docs/secret/databases/snowflake#sample-payload)
 for an example.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2575,6 +2667,15 @@ maintain.
     </dt>
     <dd>{{% md %}}The maximum number of open connections to
 use.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="usernametemplate_nodejs">
+<a href="#usernametemplate_nodejs" style="color: inherit; text-decoration: inherit;">username<wbr>Template</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}- [Template](https://www.vaultproject.io/docs/concepts/username-templating) describing how dynamic usernames are generated.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2589,7 +2690,7 @@ use.
     </dt>
     <dd>{{% md %}}A URL containing connection information. See
 the [Vault
-docs](https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-payload)
+docs](https://www.vaultproject.io/api-docs/secret/databases/snowflake#sample-payload)
 for an example.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2621,6 +2722,15 @@ maintain.
     </dt>
     <dd>{{% md %}}The maximum number of open connections to
 use.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="username_template_python">
+<a href="#username_template_python" style="color: inherit; text-decoration: inherit;">username_<wbr>template</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}- [Template](https://www.vaultproject.io/docs/concepts/username-templating) describing how dynamic usernames are generated.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2763,7 +2873,7 @@ use.
     </dt>
     <dd>{{% md %}}A URL containing connection information. See
 the [Vault
-docs](https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-payload)
+docs](https://www.vaultproject.io/api-docs/secret/databases/snowflake#sample-payload)
 for an example.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2795,6 +2905,15 @@ maintain.
     </dt>
     <dd>{{% md %}}The maximum number of open connections to
 use.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="usernametemplate_csharp">
+<a href="#usernametemplate_csharp" style="color: inherit; text-decoration: inherit;">Username<wbr>Template</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}- [Template](https://www.vaultproject.io/docs/concepts/username-templating) describing how dynamic usernames are generated.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2809,7 +2928,7 @@ use.
     </dt>
     <dd>{{% md %}}A URL containing connection information. See
 the [Vault
-docs](https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-payload)
+docs](https://www.vaultproject.io/api-docs/secret/databases/snowflake#sample-payload)
 for an example.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2841,6 +2960,15 @@ maintain.
     </dt>
     <dd>{{% md %}}The maximum number of open connections to
 use.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="usernametemplate_go">
+<a href="#usernametemplate_go" style="color: inherit; text-decoration: inherit;">Username<wbr>Template</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}- [Template](https://www.vaultproject.io/docs/concepts/username-templating) describing how dynamic usernames are generated.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2855,7 +2983,7 @@ use.
     </dt>
     <dd>{{% md %}}A URL containing connection information. See
 the [Vault
-docs](https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-payload)
+docs](https://www.vaultproject.io/api-docs/secret/databases/snowflake#sample-payload)
 for an example.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2887,6 +3015,15 @@ maintain.
     </dt>
     <dd>{{% md %}}The maximum number of open connections to
 use.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="usernametemplate_nodejs">
+<a href="#usernametemplate_nodejs" style="color: inherit; text-decoration: inherit;">username<wbr>Template</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}- [Template](https://www.vaultproject.io/docs/concepts/username-templating) describing how dynamic usernames are generated.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2901,7 +3038,7 @@ use.
     </dt>
     <dd>{{% md %}}A URL containing connection information. See
 the [Vault
-docs](https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-payload)
+docs](https://www.vaultproject.io/api-docs/secret/databases/snowflake#sample-payload)
 for an example.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2933,6 +3070,15 @@ maintain.
     </dt>
     <dd>{{% md %}}The maximum number of open connections to
 use.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="username_template_python">
+<a href="#username_template_python" style="color: inherit; text-decoration: inherit;">username_<wbr>template</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}- [Template](https://www.vaultproject.io/docs/concepts/username-templating) describing how dynamic usernames are generated.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2949,7 +3095,7 @@ use.
     </dt>
     <dd>{{% md %}}A URL containing connection information. See
 the [Vault
-docs](https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-payload)
+docs](https://www.vaultproject.io/api-docs/secret/databases/snowflake#sample-payload)
 for an example.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2999,6 +3145,15 @@ use.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}x509 certificate for connecting to the database. This must be a PEM encoded version of the private key and the certificate combined.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="usernametemplate_csharp">
+<a href="#usernametemplate_csharp" style="color: inherit; text-decoration: inherit;">Username<wbr>Template</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}- [Template](https://www.vaultproject.io/docs/concepts/username-templating) describing how dynamic usernames are generated.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3013,7 +3168,7 @@ use.
     </dt>
     <dd>{{% md %}}A URL containing connection information. See
 the [Vault
-docs](https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-payload)
+docs](https://www.vaultproject.io/api-docs/secret/databases/snowflake#sample-payload)
 for an example.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3063,6 +3218,15 @@ use.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}x509 certificate for connecting to the database. This must be a PEM encoded version of the private key and the certificate combined.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="usernametemplate_go">
+<a href="#usernametemplate_go" style="color: inherit; text-decoration: inherit;">Username<wbr>Template</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}- [Template](https://www.vaultproject.io/docs/concepts/username-templating) describing how dynamic usernames are generated.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3077,7 +3241,7 @@ use.
     </dt>
     <dd>{{% md %}}A URL containing connection information. See
 the [Vault
-docs](https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-payload)
+docs](https://www.vaultproject.io/api-docs/secret/databases/snowflake#sample-payload)
 for an example.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3127,6 +3291,15 @@ use.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}x509 certificate for connecting to the database. This must be a PEM encoded version of the private key and the certificate combined.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="usernametemplate_nodejs">
+<a href="#usernametemplate_nodejs" style="color: inherit; text-decoration: inherit;">username<wbr>Template</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}- [Template](https://www.vaultproject.io/docs/concepts/username-templating) describing how dynamic usernames are generated.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3141,7 +3314,7 @@ use.
     </dt>
     <dd>{{% md %}}A URL containing connection information. See
 the [Vault
-docs](https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-payload)
+docs](https://www.vaultproject.io/api-docs/secret/databases/snowflake#sample-payload)
 for an example.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3191,6 +3364,15 @@ use.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}x509 certificate for connecting to the database. This must be a PEM encoded version of the private key and the certificate combined.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="username_template_python">
+<a href="#username_template_python" style="color: inherit; text-decoration: inherit;">username_<wbr>template</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}- [Template](https://www.vaultproject.io/docs/concepts/username-templating) describing how dynamic usernames are generated.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3207,7 +3389,7 @@ use.
     </dt>
     <dd>{{% md %}}A URL containing connection information. See
 the [Vault
-docs](https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-payload)
+docs](https://www.vaultproject.io/api-docs/secret/databases/snowflake#sample-payload)
 for an example.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3239,6 +3421,15 @@ maintain.
     </dt>
     <dd>{{% md %}}The maximum number of open connections to
 use.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="usernametemplate_csharp">
+<a href="#usernametemplate_csharp" style="color: inherit; text-decoration: inherit;">Username<wbr>Template</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}- [Template](https://www.vaultproject.io/docs/concepts/username-templating) describing how dynamic usernames are generated.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3253,7 +3444,7 @@ use.
     </dt>
     <dd>{{% md %}}A URL containing connection information. See
 the [Vault
-docs](https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-payload)
+docs](https://www.vaultproject.io/api-docs/secret/databases/snowflake#sample-payload)
 for an example.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3285,6 +3476,15 @@ maintain.
     </dt>
     <dd>{{% md %}}The maximum number of open connections to
 use.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="usernametemplate_go">
+<a href="#usernametemplate_go" style="color: inherit; text-decoration: inherit;">Username<wbr>Template</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}- [Template](https://www.vaultproject.io/docs/concepts/username-templating) describing how dynamic usernames are generated.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3299,7 +3499,7 @@ use.
     </dt>
     <dd>{{% md %}}A URL containing connection information. See
 the [Vault
-docs](https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-payload)
+docs](https://www.vaultproject.io/api-docs/secret/databases/snowflake#sample-payload)
 for an example.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3331,6 +3531,15 @@ maintain.
     </dt>
     <dd>{{% md %}}The maximum number of open connections to
 use.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="usernametemplate_nodejs">
+<a href="#usernametemplate_nodejs" style="color: inherit; text-decoration: inherit;">username<wbr>Template</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}- [Template](https://www.vaultproject.io/docs/concepts/username-templating) describing how dynamic usernames are generated.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3345,7 +3554,7 @@ use.
     </dt>
     <dd>{{% md %}}A URL containing connection information. See
 the [Vault
-docs](https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-payload)
+docs](https://www.vaultproject.io/api-docs/secret/databases/snowflake#sample-payload)
 for an example.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3377,6 +3586,15 @@ maintain.
     </dt>
     <dd>{{% md %}}The maximum number of open connections to
 use.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="username_template_python">
+<a href="#username_template_python" style="color: inherit; text-decoration: inherit;">username_<wbr>template</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}- [Template](https://www.vaultproject.io/docs/concepts/username-templating) describing how dynamic usernames are generated.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3393,7 +3611,7 @@ use.
     </dt>
     <dd>{{% md %}}A URL containing connection information. See
 the [Vault
-docs](https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-payload)
+docs](https://www.vaultproject.io/api-docs/secret/databases/snowflake#sample-payload)
 for an example.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3425,6 +3643,15 @@ maintain.
     </dt>
     <dd>{{% md %}}The maximum number of open connections to
 use.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="usernametemplate_csharp">
+<a href="#usernametemplate_csharp" style="color: inherit; text-decoration: inherit;">Username<wbr>Template</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}- [Template](https://www.vaultproject.io/docs/concepts/username-templating) describing how dynamic usernames are generated.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3439,7 +3666,7 @@ use.
     </dt>
     <dd>{{% md %}}A URL containing connection information. See
 the [Vault
-docs](https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-payload)
+docs](https://www.vaultproject.io/api-docs/secret/databases/snowflake#sample-payload)
 for an example.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3471,6 +3698,15 @@ maintain.
     </dt>
     <dd>{{% md %}}The maximum number of open connections to
 use.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="usernametemplate_go">
+<a href="#usernametemplate_go" style="color: inherit; text-decoration: inherit;">Username<wbr>Template</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}- [Template](https://www.vaultproject.io/docs/concepts/username-templating) describing how dynamic usernames are generated.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3485,7 +3721,7 @@ use.
     </dt>
     <dd>{{% md %}}A URL containing connection information. See
 the [Vault
-docs](https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-payload)
+docs](https://www.vaultproject.io/api-docs/secret/databases/snowflake#sample-payload)
 for an example.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3517,6 +3753,15 @@ maintain.
     </dt>
     <dd>{{% md %}}The maximum number of open connections to
 use.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="usernametemplate_nodejs">
+<a href="#usernametemplate_nodejs" style="color: inherit; text-decoration: inherit;">username<wbr>Template</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}- [Template](https://www.vaultproject.io/docs/concepts/username-templating) describing how dynamic usernames are generated.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3531,7 +3776,7 @@ use.
     </dt>
     <dd>{{% md %}}A URL containing connection information. See
 the [Vault
-docs](https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-payload)
+docs](https://www.vaultproject.io/api-docs/secret/databases/snowflake#sample-payload)
 for an example.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3563,6 +3808,15 @@ maintain.
     </dt>
     <dd>{{% md %}}The maximum number of open connections to
 use.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="username_template_python">
+<a href="#username_template_python" style="color: inherit; text-decoration: inherit;">username_<wbr>template</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}- [Template](https://www.vaultproject.io/docs/concepts/username-templating) describing how dynamic usernames are generated.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3579,7 +3833,7 @@ use.
     </dt>
     <dd>{{% md %}}A URL containing connection information. See
 the [Vault
-docs](https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-payload)
+docs](https://www.vaultproject.io/api-docs/secret/databases/snowflake#sample-payload)
 for an example.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3611,6 +3865,15 @@ maintain.
     </dt>
     <dd>{{% md %}}The maximum number of open connections to
 use.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="usernametemplate_csharp">
+<a href="#usernametemplate_csharp" style="color: inherit; text-decoration: inherit;">Username<wbr>Template</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}- [Template](https://www.vaultproject.io/docs/concepts/username-templating) describing how dynamic usernames are generated.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3625,7 +3888,7 @@ use.
     </dt>
     <dd>{{% md %}}A URL containing connection information. See
 the [Vault
-docs](https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-payload)
+docs](https://www.vaultproject.io/api-docs/secret/databases/snowflake#sample-payload)
 for an example.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3657,6 +3920,15 @@ maintain.
     </dt>
     <dd>{{% md %}}The maximum number of open connections to
 use.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="usernametemplate_go">
+<a href="#usernametemplate_go" style="color: inherit; text-decoration: inherit;">Username<wbr>Template</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}- [Template](https://www.vaultproject.io/docs/concepts/username-templating) describing how dynamic usernames are generated.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3671,7 +3943,7 @@ use.
     </dt>
     <dd>{{% md %}}A URL containing connection information. See
 the [Vault
-docs](https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-payload)
+docs](https://www.vaultproject.io/api-docs/secret/databases/snowflake#sample-payload)
 for an example.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3703,6 +3975,15 @@ maintain.
     </dt>
     <dd>{{% md %}}The maximum number of open connections to
 use.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="usernametemplate_nodejs">
+<a href="#usernametemplate_nodejs" style="color: inherit; text-decoration: inherit;">username<wbr>Template</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}- [Template](https://www.vaultproject.io/docs/concepts/username-templating) describing how dynamic usernames are generated.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3717,7 +3998,7 @@ use.
     </dt>
     <dd>{{% md %}}A URL containing connection information. See
 the [Vault
-docs](https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-payload)
+docs](https://www.vaultproject.io/api-docs/secret/databases/snowflake#sample-payload)
 for an example.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3749,6 +4030,15 @@ maintain.
     </dt>
     <dd>{{% md %}}The maximum number of open connections to
 use.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="username_template_python">
+<a href="#username_template_python" style="color: inherit; text-decoration: inherit;">username_<wbr>template</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}- [Template](https://www.vaultproject.io/docs/concepts/username-templating) describing how dynamic usernames are generated.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3765,7 +4055,7 @@ use.
     </dt>
     <dd>{{% md %}}A URL containing connection information. See
 the [Vault
-docs](https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-payload)
+docs](https://www.vaultproject.io/api-docs/secret/databases/snowflake#sample-payload)
 for an example.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3797,6 +4087,15 @@ maintain.
     </dt>
     <dd>{{% md %}}The maximum number of open connections to
 use.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="usernametemplate_csharp">
+<a href="#usernametemplate_csharp" style="color: inherit; text-decoration: inherit;">Username<wbr>Template</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}- [Template](https://www.vaultproject.io/docs/concepts/username-templating) describing how dynamic usernames are generated.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3811,7 +4110,7 @@ use.
     </dt>
     <dd>{{% md %}}A URL containing connection information. See
 the [Vault
-docs](https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-payload)
+docs](https://www.vaultproject.io/api-docs/secret/databases/snowflake#sample-payload)
 for an example.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3843,6 +4142,15 @@ maintain.
     </dt>
     <dd>{{% md %}}The maximum number of open connections to
 use.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="usernametemplate_go">
+<a href="#usernametemplate_go" style="color: inherit; text-decoration: inherit;">Username<wbr>Template</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}- [Template](https://www.vaultproject.io/docs/concepts/username-templating) describing how dynamic usernames are generated.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3857,7 +4165,7 @@ use.
     </dt>
     <dd>{{% md %}}A URL containing connection information. See
 the [Vault
-docs](https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-payload)
+docs](https://www.vaultproject.io/api-docs/secret/databases/snowflake#sample-payload)
 for an example.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3889,6 +4197,15 @@ maintain.
     </dt>
     <dd>{{% md %}}The maximum number of open connections to
 use.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="usernametemplate_nodejs">
+<a href="#usernametemplate_nodejs" style="color: inherit; text-decoration: inherit;">username<wbr>Template</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}- [Template](https://www.vaultproject.io/docs/concepts/username-templating) describing how dynamic usernames are generated.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3903,7 +4220,7 @@ use.
     </dt>
     <dd>{{% md %}}A URL containing connection information. See
 the [Vault
-docs](https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-payload)
+docs](https://www.vaultproject.io/api-docs/secret/databases/snowflake#sample-payload)
 for an example.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3935,6 +4252,15 @@ maintain.
     </dt>
     <dd>{{% md %}}The maximum number of open connections to
 use.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="username_template_python">
+<a href="#username_template_python" style="color: inherit; text-decoration: inherit;">username_<wbr>template</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}- [Template](https://www.vaultproject.io/docs/concepts/username-templating) describing how dynamic usernames are generated.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3951,7 +4277,7 @@ use.
     </dt>
     <dd>{{% md %}}A URL containing connection information. See
 the [Vault
-docs](https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-payload)
+docs](https://www.vaultproject.io/api-docs/secret/databases/snowflake#sample-payload)
 for an example.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3983,6 +4309,15 @@ maintain.
     </dt>
     <dd>{{% md %}}The maximum number of open connections to
 use.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="usernametemplate_csharp">
+<a href="#usernametemplate_csharp" style="color: inherit; text-decoration: inherit;">Username<wbr>Template</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}- [Template](https://www.vaultproject.io/docs/concepts/username-templating) describing how dynamic usernames are generated.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3997,7 +4332,7 @@ use.
     </dt>
     <dd>{{% md %}}A URL containing connection information. See
 the [Vault
-docs](https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-payload)
+docs](https://www.vaultproject.io/api-docs/secret/databases/snowflake#sample-payload)
 for an example.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4029,6 +4364,15 @@ maintain.
     </dt>
     <dd>{{% md %}}The maximum number of open connections to
 use.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="usernametemplate_go">
+<a href="#usernametemplate_go" style="color: inherit; text-decoration: inherit;">Username<wbr>Template</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}- [Template](https://www.vaultproject.io/docs/concepts/username-templating) describing how dynamic usernames are generated.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -4043,7 +4387,7 @@ use.
     </dt>
     <dd>{{% md %}}A URL containing connection information. See
 the [Vault
-docs](https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-payload)
+docs](https://www.vaultproject.io/api-docs/secret/databases/snowflake#sample-payload)
 for an example.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4075,6 +4419,15 @@ maintain.
     </dt>
     <dd>{{% md %}}The maximum number of open connections to
 use.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="usernametemplate_nodejs">
+<a href="#usernametemplate_nodejs" style="color: inherit; text-decoration: inherit;">username<wbr>Template</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}- [Template](https://www.vaultproject.io/docs/concepts/username-templating) describing how dynamic usernames are generated.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -4089,7 +4442,7 @@ use.
     </dt>
     <dd>{{% md %}}A URL containing connection information. See
 the [Vault
-docs](https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-payload)
+docs](https://www.vaultproject.io/api-docs/secret/databases/snowflake#sample-payload)
 for an example.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4121,6 +4474,309 @@ maintain.
     </dt>
     <dd>{{% md %}}The maximum number of open connections to
 use.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="username_template_python">
+<a href="#username_template_python" style="color: inherit; text-decoration: inherit;">username_<wbr>template</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}- [Template](https://www.vaultproject.io/docs/concepts/username-templating) describing how dynamic usernames are generated.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="secretbackendconnectionsnowflake">Secret<wbr>Backend<wbr>Connection<wbr>Snowflake</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="connectionurl_csharp">
+<a href="#connectionurl_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A URL containing connection information. See
+the [Vault
+docs](https://www.vaultproject.io/api-docs/secret/databases/snowflake#sample-payload)
+for an example.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maxconnectionlifetime_csharp">
+<a href="#maxconnectionlifetime_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Connection<wbr>Lifetime</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The maximum number of seconds to keep
+a connection alive for.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maxidleconnections_csharp">
+<a href="#maxidleconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Idle<wbr>Connections</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The maximum number of idle connections to
+maintain.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maxopenconnections_csharp">
+<a href="#maxopenconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Open<wbr>Connections</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The maximum number of open connections to
+use.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="password_csharp">
+<a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The password to be used in the connection.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="username_csharp">
+<a href="#username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The username to be used in the connection (the account admin level).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="usernametemplate_csharp">
+<a href="#usernametemplate_csharp" style="color: inherit; text-decoration: inherit;">Username<wbr>Template</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}- [Template](https://www.vaultproject.io/docs/concepts/username-templating) describing how dynamic usernames are generated.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="connectionurl_go">
+<a href="#connectionurl_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A URL containing connection information. See
+the [Vault
+docs](https://www.vaultproject.io/api-docs/secret/databases/snowflake#sample-payload)
+for an example.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maxconnectionlifetime_go">
+<a href="#maxconnectionlifetime_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Connection<wbr>Lifetime</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The maximum number of seconds to keep
+a connection alive for.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maxidleconnections_go">
+<a href="#maxidleconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Idle<wbr>Connections</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The maximum number of idle connections to
+maintain.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maxopenconnections_go">
+<a href="#maxopenconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Open<wbr>Connections</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The maximum number of open connections to
+use.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="password_go">
+<a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The password to be used in the connection.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="username_go">
+<a href="#username_go" style="color: inherit; text-decoration: inherit;">Username</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The username to be used in the connection (the account admin level).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="usernametemplate_go">
+<a href="#usernametemplate_go" style="color: inherit; text-decoration: inherit;">Username<wbr>Template</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}- [Template](https://www.vaultproject.io/docs/concepts/username-templating) describing how dynamic usernames are generated.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="connectionurl_nodejs">
+<a href="#connectionurl_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A URL containing connection information. See
+the [Vault
+docs](https://www.vaultproject.io/api-docs/secret/databases/snowflake#sample-payload)
+for an example.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maxconnectionlifetime_nodejs">
+<a href="#maxconnectionlifetime_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Connection<wbr>Lifetime</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The maximum number of seconds to keep
+a connection alive for.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maxidleconnections_nodejs">
+<a href="#maxidleconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Idle<wbr>Connections</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The maximum number of idle connections to
+maintain.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maxopenconnections_nodejs">
+<a href="#maxopenconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Open<wbr>Connections</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The maximum number of open connections to
+use.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="password_nodejs">
+<a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The password to be used in the connection.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="username_nodejs">
+<a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The username to be used in the connection (the account admin level).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="usernametemplate_nodejs">
+<a href="#usernametemplate_nodejs" style="color: inherit; text-decoration: inherit;">username<wbr>Template</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}- [Template](https://www.vaultproject.io/docs/concepts/username-templating) describing how dynamic usernames are generated.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="connection_url_python">
+<a href="#connection_url_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A URL containing connection information. See
+the [Vault
+docs](https://www.vaultproject.io/api-docs/secret/databases/snowflake#sample-payload)
+for an example.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="max_connection_lifetime_python">
+<a href="#max_connection_lifetime_python" style="color: inherit; text-decoration: inherit;">max_<wbr>connection_<wbr>lifetime</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The maximum number of seconds to keep
+a connection alive for.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="max_idle_connections_python">
+<a href="#max_idle_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>idle_<wbr>connections</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The maximum number of idle connections to
+maintain.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="max_open_connections_python">
+<a href="#max_open_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>open_<wbr>connections</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The maximum number of open connections to
+use.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="password_python">
+<a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The password to be used in the connection.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="username_python">
+<a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The username to be used in the connection (the account admin level).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="username_template_python">
+<a href="#username_template_python" style="color: inherit; text-decoration: inherit;">username_<wbr>template</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}- [Template](https://www.vaultproject.io/docs/concepts/username-templating) describing how dynamic usernames are generated.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

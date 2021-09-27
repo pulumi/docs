@@ -162,6 +162,7 @@ const ldap = new vault.ldap.AuthBackend("ldap", {
                 <span class="nx">groupdn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                 <span class="nx">groupfilter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                 <span class="nx">insecure_tls</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                <span class="nx">local</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                 <span class="nx">path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                 <span class="nx">starttls</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                 <span class="nx">tls_max_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -420,6 +421,15 @@ The AuthBackend resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Control whether or TLS certificates must be validated
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="local_csharp">
+<a href="#local_csharp" style="color: inherit; text-decoration: inherit;">Local</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies if the auth method is local only.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_csharp">
@@ -710,6 +720,15 @@ requests a different type at generation time.
     <dd>{{% md %}}Control whether or TLS certificates must be validated
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="local_go">
+<a href="#local_go" style="color: inherit; text-decoration: inherit;">Local</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies if the auth method is local only.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="path_go">
 <a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
 </span>
@@ -998,6 +1017,15 @@ requests a different type at generation time.
     <dd>{{% md %}}Control whether or TLS certificates must be validated
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="local_nodejs">
+<a href="#local_nodejs" style="color: inherit; text-decoration: inherit;">local</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Specifies if the auth method is local only.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="path_nodejs">
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
@@ -1284,6 +1312,15 @@ requests a different type at generation time.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Control whether or TLS certificates must be validated
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="local_python">
+<a href="#local_python" style="color: inherit; text-decoration: inherit;">local</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies if the auth method is local only.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_python">
@@ -1578,6 +1615,7 @@ Get an existing AuthBackend resource's state with the given name, ID, and option
         <span class="nx">groupdn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">groupfilter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">insecure_tls</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">local</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">starttls</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">tls_max_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -1819,6 +1857,15 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Control whether or TLS certificates must be validated
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_local_csharp">
+<a href="#state_local_csharp" style="color: inherit; text-decoration: inherit;">Local</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies if the auth method is local only.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_path_csharp">
@@ -2118,6 +2165,15 @@ requests a different type at generation time.
     <dd>{{% md %}}Control whether or TLS certificates must be validated
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_local_go">
+<a href="#state_local_go" style="color: inherit; text-decoration: inherit;">Local</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies if the auth method is local only.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_path_go">
 <a href="#state_path_go" style="color: inherit; text-decoration: inherit;">Path</a>
 </span>
@@ -2415,6 +2471,15 @@ requests a different type at generation time.
     <dd>{{% md %}}Control whether or TLS certificates must be validated
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_local_nodejs">
+<a href="#state_local_nodejs" style="color: inherit; text-decoration: inherit;">local</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Specifies if the auth method is local only.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_path_nodejs">
 <a href="#state_path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
@@ -2710,6 +2775,15 @@ requests a different type at generation time.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Control whether or TLS certificates must be validated
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_local_python">
+<a href="#state_local_python" style="color: inherit; text-decoration: inherit;">local</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies if the auth method is local only.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_path_python">
