@@ -271,7 +271,7 @@ const webhookQueue = new cloudamqp.Webhook("webhookQueue", {
 
 ## Webhook Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Architecture and Concepts docs.
 
 ### Inputs
 
@@ -939,7 +939,7 @@ The following state arguments are supported:
 `cloudamqp_webhook` can be imported using the resource identifier together with CloudAMQP instance identifier. The identifiers are CSV separated, see example below.
 
 ```sh
- $ pulumi import cloudamqp:index/webhook:Webhook webhook_queue <webhook_id>,<instance_id>`
+ $ pulumi import cloudamqp:index/webhook:Webhook webhook_queue <id>,<instance_id>`
 ```
 
 

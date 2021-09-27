@@ -16,19 +16,22 @@ Use this data source to retrieve information about an already created CloudAMQP 
 
 * `instance_id` - (Required) The CloudAMQP instance identifier.
 
-## Attribute reference
+## Attributes reference
 
-* `name`        - (Computed) The name of the CloudAMQP instance.
-* `plan`        - (Computed) The subscription plan for the CloudAMQP instance.
-* `region`      - (Computed) The cloud platform and region that host the CloudAMQP instance, `{platform}::{region}`.
-* `vpc_subnet`  - (Computed) Dedicated VPC subnet configured for the CloudAMQP instance.
-* `nodes`       - (Computed) Number of nodes in the cluster of the CloudAMQP instance.
-* `rmq_version` - (Computed) The version of installed Rabbit MQ.
-* `url`         - (Computed/Sensitive) The AMQP url, used by clients to connect for pub/sub.
-* `apikey`      - (Computed/Sensitive) The API key to secondary API handing alarms, integration etc.
-* `tags`        - (Computed) Tags the CloudAMQP instance with categories.
-* `host`        - (Computed) The hostname for the CloudAMQP instance.
-* `vhost`       - (Computed) The virtual host configured in Rabbit MQ.
+All attributes reference are computed
+
+* `id`          - The identifier for this resource.
+* `name`        - The name of the CloudAMQP instance.
+* `plan`        - The subscription plan for the CloudAMQP instance.
+* `region`      - The cloud platform and region that host the CloudAMQP instance, `{platform}::{region}`.
+* `vpc_subnet`  - Dedicated VPC subnet configured for the CloudAMQP instance.
+* `nodes`       - Number of nodes in the cluster of the CloudAMQP instance.
+* `rmq_version` - The version of installed Rabbit MQ.
+* `url`         - (Sensitive) The AMQP url, used by clients to connect for pub/sub.
+* `apikey`      - (Sensitive) The API key to secondary API handing alarms, integration etc.
+* `tags`        - Tags the CloudAMQP instance with categories.
+* `host`        - The hostname for the CloudAMQP instance.
+* `vhost`       - The virtual host configured in Rabbit MQ.
 
 
 
@@ -45,7 +48,6 @@ Use this data source to retrieve information about an already created CloudAMQP 
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_instance(</span><span class="nx">instance_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
-                 <span class="nx">vpc_subnet</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                  <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetInstanceResult</code></pre></div>
 {{% /choosable %}}
 
@@ -78,14 +80,6 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="vpcsubnet_csharp">
-<a href="#vpcsubnet_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Subnet</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -97,14 +91,6 @@ The following arguments are supported:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="vpcsubnet_go">
-<a href="#vpcsubnet_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Subnet</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -118,14 +104,6 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="vpcsubnet_nodejs">
-<a href="#vpcsubnet_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Subnet</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -137,14 +115,6 @@ The following arguments are supported:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="vpc_subnet_python">
-<a href="#vpc_subnet_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>subnet</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}

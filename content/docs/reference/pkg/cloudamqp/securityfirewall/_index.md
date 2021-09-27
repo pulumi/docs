@@ -152,7 +152,7 @@ This resource depends on CloudAMQP instance identifier, `cloudamqp_instance.inst
 
 ## SecurityFirewall Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Architecture and Concepts docs.
 
 ### Inputs
 
@@ -198,7 +198,7 @@ The SecurityFirewall resource accepts the following [input]({{< relref "/docs/in
 <a href="#rules_go" style="color: inherit; text-decoration: inherit;">Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securityfirewallrule">[]Security<wbr>Firewall<wbr>Rule</a></span>
+        <span class="property-type"><a href="#securityfirewallrule">[]Security<wbr>Firewall<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An array of rules, minimum of 1 needs to be configured. Each `rules` block consists of the field documented below.
 {{% /md %}}</dd></dl>
@@ -468,7 +468,7 @@ The following state arguments are supported:
 <a href="#state_rules_go" style="color: inherit; text-decoration: inherit;">Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securityfirewallrule">[]Security<wbr>Firewall<wbr>Rule</a></span>
+        <span class="property-type"><a href="#securityfirewallrule">[]Security<wbr>Firewall<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An array of rules, minimum of 1 needs to be configured. Each `rules` block consists of the field documented below.
 {{% /md %}}</dd></dl>

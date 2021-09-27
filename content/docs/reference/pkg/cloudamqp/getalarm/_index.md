@@ -17,15 +17,18 @@ Use this data source to retrieve information about default or created alarms. Ei
 * `alarm_id`    - (Optional) The alarm identifier. Either use this or `type` to give `cloudamqp.Alarm` necessary information to retrieve the alarm.
 * `type`        - (Optional) The alarm type. Either use this or `alarm_id` to give `cloudamqp.Alarm` necessary information when retrieve the alarm.
 
-## Attribute reference
+## Attributes reference
 
-* `enabled`         - (Computed) Enable/disable status of the alarm.
-* `value_threshold` - (Computed) The value threshold that triggers the alarm.
-* `time_threshold`  - (Computed) The time interval (in seconds) the `value_threshold` should be active before trigger an alarm.
-* `queue_regex`     - (Computed) Regular expression for which queue to check.
-* `vhost_regex`     - (Computed) Regular expression for which vhost to check
-* `recipients`      - (Computed) Identifier for recipient to be notified.
-* `message_type`    - (Computed) Message type `(total, unacked, ready)` used by queue alarm type.
+All attributes reference are computed
+
+* `id`              - The identifier for this resource.
+* `enabled`         - Enable/disable status of the alarm.
+* `value_threshold` - The value threshold that triggers the alarm.
+* `time_threshold`  - The time interval (in seconds) the `value_threshold` should be active before trigger an alarm.
+* `queue_regex`     - Regular expression for which queue to check.
+* `vhost_regex`     - Regular expression for which vhost to check
+* `recipients`      - Identifier for recipient to be notified.
+* `message_type`    - Message type `(total, unacked, ready)` used by queue alarm type.
 
 ## Dependency
 
