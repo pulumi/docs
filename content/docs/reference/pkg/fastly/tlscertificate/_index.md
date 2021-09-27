@@ -165,7 +165,7 @@ The TlsCertificate resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}PEM-formatted certificate.
+    <dd>{{% md %}}PEM-formatted certificate, optionally including any intermediary certificates.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
@@ -187,7 +187,7 @@ The TlsCertificate resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}PEM-formatted certificate.
+    <dd>{{% md %}}PEM-formatted certificate, optionally including any intermediary certificates.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
@@ -209,7 +209,7 @@ The TlsCertificate resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}PEM-formatted certificate.
+    <dd>{{% md %}}PEM-formatted certificate, optionally including any intermediary certificates.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
@@ -231,7 +231,7 @@ The TlsCertificate resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}PEM-formatted certificate.
+    <dd>{{% md %}}PEM-formatted certificate, optionally including any intermediary certificates.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
@@ -731,7 +731,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}PEM-formatted certificate.
+    <dd>{{% md %}}PEM-formatted certificate, optionally including any intermediary certificates.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_createdat_csharp">
@@ -825,7 +825,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}PEM-formatted certificate.
+    <dd>{{% md %}}PEM-formatted certificate, optionally including any intermediary certificates.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_createdat_go">
@@ -919,7 +919,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}PEM-formatted certificate.
+    <dd>{{% md %}}PEM-formatted certificate, optionally including any intermediary certificates.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_createdat_nodejs">
@@ -1013,7 +1013,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}PEM-formatted certificate.
+    <dd>{{% md %}}PEM-formatted certificate, optionally including any intermediary certificates.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_created_at_python">
