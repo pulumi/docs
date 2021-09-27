@@ -58,6 +58,7 @@ A Pulumi package for creating and managing keycloak cloud resources.
     <li><a href="getrealmkeys" title="GetRealmKeys"><span class="symbol function"></span>GetRealmKeys</a></li>
     <li><a href="getrole" title="GetRole"><span class="symbol function"></span>GetRole</a></li>
     <li><a href="getuser" title="GetUser"><span class="symbol function"></span>GetUser</a></li>
+    <li><a href="getuserrealmroles" title="GetUserRealmRoles"><span class="symbol function"></span>GetUserRealmRoles</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -69,6 +70,6 @@ A Pulumi package for creating and managing keycloak cloud resources.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`keycloak` Terraform Provider](https://github.com/mrparkers/terraform-provider-keycloak).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.3.0</dd>
+	<dd>4.4.0</dd>
 </dl>
 
