@@ -5,5 +5,7 @@ meta_desc: The Cloud Engineering Summit is a day of learning for cloud practitio
 type: page
 layout: cloud-engineering-summit-speakers
 
+meta_image: /images/cloud-eng-summit-2021-meta.jpg
+
 sessionize_id: wbl7wd7l
 ---
