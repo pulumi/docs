@@ -21,6 +21,7 @@ Explore the resources and functions of the azure-native.sql module.
     <li><a href="databasevulnerabilityassessmentrulebaseline" title="DatabaseVulnerabilityAssessmentRuleBaseline"><span class="symbol resource"></span>DatabaseVulnerabilityAssessmentRuleBaseline</a></li>
     <li><a href="disasterrecoveryconfiguration" title="DisasterRecoveryConfiguration"><span class="symbol resource"></span>DisasterRecoveryConfiguration</a></li>
     <li><a href="elasticpool" title="ElasticPool"><span class="symbol resource"></span>ElasticPool</a></li>
+    <li><a href="encryptionprotector" title="EncryptionProtector"><span class="symbol resource"></span>EncryptionProtector</a></li>
     <li><a href="extendeddatabaseblobauditingpolicy" title="ExtendedDatabaseBlobAuditingPolicy"><span class="symbol resource"></span>ExtendedDatabaseBlobAuditingPolicy</a></li>
     <li><a href="extendedserverblobauditingpolicy" title="ExtendedServerBlobAuditingPolicy"><span class="symbol resource"></span>ExtendedServerBlobAuditingPolicy</a></li>
     <li><a href="failovergroup" title="FailoverGroup"><span class="symbol resource"></span>FailoverGroup</a></li>
@@ -79,6 +80,7 @@ Explore the resources and functions of the azure-native.sql module.
     <li><a href="getdatabasevulnerabilityassessmentrulebaseline" title="GetDatabaseVulnerabilityAssessmentRuleBaseline"><span class="symbol function"></span>GetDatabaseVulnerabilityAssessmentRuleBaseline</a></li>
     <li><a href="getdisasterrecoveryconfiguration" title="GetDisasterRecoveryConfiguration"><span class="symbol function"></span>GetDisasterRecoveryConfiguration</a></li>
     <li><a href="getelasticpool" title="GetElasticPool"><span class="symbol function"></span>GetElasticPool</a></li>
+    <li><a href="getencryptionprotector" title="GetEncryptionProtector"><span class="symbol function"></span>GetEncryptionProtector</a></li>
     <li><a href="getextendeddatabaseblobauditingpolicy" title="GetExtendedDatabaseBlobAuditingPolicy"><span class="symbol function"></span>GetExtendedDatabaseBlobAuditingPolicy</a></li>
     <li><a href="getextendedserverblobauditingpolicy" title="GetExtendedServerBlobAuditingPolicy"><span class="symbol function"></span>GetExtendedServerBlobAuditingPolicy</a></li>
     <li><a href="getfailovergroup" title="GetFailoverGroup"><span class="symbol function"></span>GetFailoverGroup</a></li>
@@ -132,6 +134,6 @@ Explore the resources and functions of the azure-native.sql module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.32.0</dd>
+	<dd>1.33.0</dd>
 </dl>
 

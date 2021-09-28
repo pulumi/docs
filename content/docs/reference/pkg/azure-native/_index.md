@@ -159,6 +159,7 @@ A native Pulumi package for creating and managing Azure resources.
     <li><a href="servicebus/" title="servicebus"><span class="symbol module"></span>servicebus</a></li>
     <li><a href="servicefabric/" title="servicefabric"><span class="symbol module"></span>servicefabric</a></li>
     <li><a href="servicefabricmesh/" title="servicefabricmesh"><span class="symbol module"></span>servicefabricmesh</a></li>
+    <li><a href="servicelinker/" title="servicelinker"><span class="symbol module"></span>servicelinker</a></li>
     <li><a href="signalrservice/" title="signalrservice"><span class="symbol module"></span>signalrservice</a></li>
     <li><a href="softwareplan/" title="softwareplan"><span class="symbol module"></span>softwareplan</a></li>
     <li><a href="solutions/" title="solutions"><span class="symbol module"></span>solutions</a></li>
@@ -196,6 +197,6 @@ A native Pulumi package for creating and managing Azure resources.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.32.0</dd>
+	<dd>1.33.0</dd>
 </dl>
 
