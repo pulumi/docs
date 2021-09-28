@@ -156,7 +156,7 @@ primary_preemptible_nodes = gcp.container.NodePool("primaryPreemptibleNodes",
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const _default = new gcp.serviceAccount.Account("default", {
+const _default = new gcp.serviceaccount.Account("default", {
     accountId: "service-account-id",
     displayName: "Service Account",
 });
@@ -214,7 +214,7 @@ Coming soon!
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const _default = new gcp.serviceAccount.Account("default", {
+const _default = new gcp.serviceaccount.Account("default", {
     accountId: "service-account-id",
     displayName: "Service Account",
 });

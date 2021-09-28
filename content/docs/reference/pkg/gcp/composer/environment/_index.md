@@ -272,13 +272,13 @@ test_environment = gcp.composer.Environment("testEnvironment",
     region="us-central1",
     config=gcp.composer.EnvironmentConfigArgs(
         node_count=4,
-        node_config={
-            "zone": "us-central1-a",
-            "machine_type": "e2-medium",
-            "network": test_network.id,
-            "subnetwork": test_subnetwork.id,
-            "service_account": test_account.name,
-        },
+        node_config=gcp.composer.EnvironmentConfigNodeConfigArgs(
+            zone="us-central1-a",
+            machine_type="e2-medium",
+            network=test_network.id,
+            subnetwork=test_subnetwork.id,
+            service_account=test_account.name,
+        ),
     ))
 composer_worker = gcp.projects.IAMMember("composer-worker",
     role="roles/composer.worker",
@@ -302,7 +302,7 @@ const testSubnetwork = new gcp.compute.Subnetwork("testSubnetwork", {
     region: "us-central1",
     network: testNetwork.id,
 });
-const testAccount = new gcp.serviceAccount.Account("testAccount", {
+const testAccount = new gcp.serviceaccount.Account("testAccount", {
     accountId: "composer-env-account",
     displayName: "Test Service Account for Composer Environment",
 });

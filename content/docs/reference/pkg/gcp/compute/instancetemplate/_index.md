@@ -552,7 +552,7 @@ default_instance_template = gcp.compute.InstanceTemplate("defaultInstanceTemplat
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const defaultAccount = new gcp.serviceAccount.Account("defaultAccount", {
+const defaultAccount = new gcp.serviceaccount.Account("defaultAccount", {
     accountId: "service-account-id",
     displayName: "Service Account",
 });

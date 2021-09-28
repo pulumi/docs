@@ -390,11 +390,11 @@ basic = gcp.dataloss.PreventionDeidentifyTemplate("basic",
                             context=gcp.dataloss.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigContextArgs(
                                 name="sometweak",
                             ),
-                            crypto_key={
-                                "transient": {
-                                    "name": "beep",
-                                },
-                            },
+                            crypto_key=gcp.dataloss.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigCryptoKeyArgs(
+                                transient=gcp.dataloss.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigCryptoKeyTransientArgs(
+                                    name="beep",
+                                ),
+                            ),
                             surrogate_info_type=gcp.dataloss.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigSurrogateInfoTypeArgs(
                                 name="abc",
                             ),

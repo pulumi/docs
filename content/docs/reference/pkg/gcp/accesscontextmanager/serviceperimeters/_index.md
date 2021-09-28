@@ -236,12 +236,12 @@ service_perimeter = gcp.accesscontextmanager.ServicePerimeters("service-perimete
 access_level = gcp.accesscontextmanager.AccessLevel("access-level",
     basic=gcp.accesscontextmanager.AccessLevelBasicArgs(
         conditions=[gcp.accesscontextmanager.AccessLevelBasicConditionArgs(
-            device_policy={
-                "osConstraints": [{
-                    "osType": "DESKTOP_CHROME_OS",
-                }],
-                "requireScreenLock": False,
-            },
+            device_policy=gcp.accesscontextmanager.AccessLevelBasicConditionDevicePolicyArgs(
+                os_constraints=[gcp.accesscontextmanager.AccessLevelBasicConditionDevicePolicyOsConstraintArgs(
+                    os_type="DESKTOP_CHROME_OS",
+                )],
+                require_screen_lock=False,
+            ),
             regions=[
                 "CH",
                 "IT",

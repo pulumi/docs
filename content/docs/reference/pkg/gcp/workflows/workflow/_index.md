@@ -176,7 +176,7 @@ example = gcp.workflows.Workflow("example",
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const testAccount = new gcp.serviceAccount.Account("testAccount", {
+const testAccount = new gcp.serviceaccount.Account("testAccount", {
     accountId: "my-account",
     displayName: "Test Service Account",
 });

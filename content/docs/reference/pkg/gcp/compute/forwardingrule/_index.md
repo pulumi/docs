@@ -4635,7 +4635,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Creation timestamp in RFC3339 text format.
+    <dd>{{% md %}}[Output Only] Creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
@@ -4652,7 +4652,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The fingerprint used for optimistic locking of this resource. Used internally during updates.
+    <dd>{{% md %}}Used internally during label updates.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="selflink_csharp">
@@ -4670,7 +4670,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The internal fully qualified service name for this Forwarding Rule. This field is only used for INTERNAL load balancing.
+    <dd>{{% md %}}[Output Only] The internal fully qualified service name for this Forwarding Rule. This field is only used for internal
+load balancing.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -4683,7 +4684,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Creation timestamp in RFC3339 text format.
+    <dd>{{% md %}}[Output Only] Creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
@@ -4700,7 +4701,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The fingerprint used for optimistic locking of this resource. Used internally during updates.
+    <dd>{{% md %}}Used internally during label updates.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="selflink_go">
@@ -4718,7 +4719,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The internal fully qualified service name for this Forwarding Rule. This field is only used for INTERNAL load balancing.
+    <dd>{{% md %}}[Output Only] The internal fully qualified service name for this Forwarding Rule. This field is only used for internal
+load balancing.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -4731,7 +4733,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Creation timestamp in RFC3339 text format.
+    <dd>{{% md %}}[Output Only] Creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
@@ -4748,7 +4750,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The fingerprint used for optimistic locking of this resource. Used internally during updates.
+    <dd>{{% md %}}Used internally during label updates.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="selflink_nodejs">
@@ -4766,7 +4768,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The internal fully qualified service name for this Forwarding Rule. This field is only used for INTERNAL load balancing.
+    <dd>{{% md %}}[Output Only] The internal fully qualified service name for this Forwarding Rule. This field is only used for internal
+load balancing.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -4779,7 +4782,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Creation timestamp in RFC3339 text format.
+    <dd>{{% md %}}[Output Only] Creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
@@ -4796,7 +4799,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The fingerprint used for optimistic locking of this resource. Used internally during updates.
+    <dd>{{% md %}}Used internally during label updates.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="self_link_python">
@@ -4814,7 +4817,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The internal fully qualified service name for this Forwarding Rule. This field is only used for INTERNAL load balancing.
+    <dd>{{% md %}}[Output Only] The internal fully qualified service name for this Forwarding Rule. This field is only used for internal
+load balancing.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -5010,7 +5014,7 @@ for INTERNAL load balancing.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Creation timestamp in RFC3339 text format.
+    <dd>{{% md %}}[Output Only] Creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
@@ -5076,7 +5080,7 @@ loadBalancingScheme set to INTERNAL.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The fingerprint used for optimistic locking of this resource. Used internally during updates.
+    <dd>{{% md %}}Used internally during label updates.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_csharp">
@@ -5237,7 +5241,8 @@ This field is only used for INTERNAL load balancing.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The internal fully qualified service name for this Forwarding Rule. This field is only used for INTERNAL load balancing.
+    <dd>{{% md %}}[Output Only] The internal fully qualified service name for this Forwarding Rule. This field is only used for internal
+load balancing.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subnetwork_csharp">
@@ -5310,7 +5315,7 @@ for INTERNAL load balancing.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Creation timestamp in RFC3339 text format.
+    <dd>{{% md %}}[Output Only] Creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
@@ -5376,7 +5381,7 @@ loadBalancingScheme set to INTERNAL.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The fingerprint used for optimistic locking of this resource. Used internally during updates.
+    <dd>{{% md %}}Used internally during label updates.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_go">
@@ -5537,7 +5542,8 @@ This field is only used for INTERNAL load balancing.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The internal fully qualified service name for this Forwarding Rule. This field is only used for INTERNAL load balancing.
+    <dd>{{% md %}}[Output Only] The internal fully qualified service name for this Forwarding Rule. This field is only used for internal
+load balancing.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subnetwork_go">
@@ -5610,7 +5616,7 @@ for INTERNAL load balancing.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Creation timestamp in RFC3339 text format.
+    <dd>{{% md %}}[Output Only] Creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
@@ -5676,7 +5682,7 @@ loadBalancingScheme set to INTERNAL.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The fingerprint used for optimistic locking of this resource. Used internally during updates.
+    <dd>{{% md %}}Used internally during label updates.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_nodejs">
@@ -5837,7 +5843,8 @@ This field is only used for INTERNAL load balancing.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The internal fully qualified service name for this Forwarding Rule. This field is only used for INTERNAL load balancing.
+    <dd>{{% md %}}[Output Only] The internal fully qualified service name for this Forwarding Rule. This field is only used for internal
+load balancing.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subnetwork_nodejs">
@@ -5910,7 +5917,7 @@ for INTERNAL load balancing.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Creation timestamp in RFC3339 text format.
+    <dd>{{% md %}}[Output Only] Creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
@@ -5976,7 +5983,7 @@ loadBalancingScheme set to INTERNAL.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The fingerprint used for optimistic locking of this resource. Used internally during updates.
+    <dd>{{% md %}}Used internally during label updates.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_python">
@@ -6137,7 +6144,8 @@ This field is only used for INTERNAL load balancing.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The internal fully qualified service name for this Forwarding Rule. This field is only used for INTERNAL load balancing.
+    <dd>{{% md %}}[Output Only] The internal fully qualified service name for this Forwarding Rule. This field is only used for internal
+load balancing.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subnetwork_python">

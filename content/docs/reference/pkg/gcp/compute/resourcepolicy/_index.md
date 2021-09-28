@@ -245,10 +245,10 @@ import pulumi_gcp as gcp
 bar = gcp.compute.ResourcePolicy("bar",
     region="us-central1",
     snapshot_schedule_policy=gcp.compute.ResourcePolicySnapshotSchedulePolicyArgs(
-        retention_policy={
-            "maxRetentionDays": 10,
-            "onSourceDiskDelete": "KEEP_AUTO_SNAPSHOTS",
-        },
+        retention_policy=gcp.compute.ResourcePolicySnapshotSchedulePolicyRetentionPolicyArgs(
+            max_retention_days=10,
+            on_source_disk_delete="KEEP_AUTO_SNAPSHOTS",
+        ),
         schedule=gcp.compute.ResourcePolicySnapshotSchedulePolicyScheduleArgs(
             hourly_schedule=gcp.compute.ResourcePolicySnapshotSchedulePolicyScheduleHourlyScheduleArgs(
                 hours_in_cycle=20,

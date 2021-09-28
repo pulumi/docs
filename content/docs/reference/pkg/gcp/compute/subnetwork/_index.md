@@ -719,7 +719,8 @@ Possible values are `ACTIVE` and `BACKUP`.
     <dd>{{% md %}}An array of configurations for secondary IP ranges for VM instances
 contained in this subnetwork. The primary IP of such VM must belong
 to the primary ipCidrRange of the subnetwork. The alias IPs may belong
-to either primary or secondary ranges. Structure is documented below.
+to either primary or secondary ranges.
+Structure is documented below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -861,7 +862,8 @@ Possible values are `ACTIVE` and `BACKUP`.
     <dd>{{% md %}}An array of configurations for secondary IP ranges for VM instances
 contained in this subnetwork. The primary IP of such VM must belong
 to the primary ipCidrRange of the subnetwork. The alias IPs may belong
-to either primary or secondary ranges. Structure is documented below.
+to either primary or secondary ranges.
+Structure is documented below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1003,7 +1005,8 @@ Possible values are `ACTIVE` and `BACKUP`.
     <dd>{{% md %}}An array of configurations for secondary IP ranges for VM instances
 contained in this subnetwork. The primary IP of such VM must belong
 to the primary ipCidrRange of the subnetwork. The alias IPs may belong
-to either primary or secondary ranges. Structure is documented below.
+to either primary or secondary ranges.
+Structure is documented below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1145,7 +1148,8 @@ Possible values are `ACTIVE` and `BACKUP`.
     <dd>{{% md %}}An array of configurations for secondary IP ranges for VM instances
 contained in this subnetwork. The primary IP of such VM must belong
 to the primary ipCidrRange of the subnetwork. The alias IPs may belong
-to either primary or secondary ranges. Structure is documented below.
+to either primary or secondary ranges.
+Structure is documented below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1654,7 +1658,8 @@ Possible values are `ACTIVE` and `BACKUP`.
     <dd>{{% md %}}An array of configurations for secondary IP ranges for VM instances
 contained in this subnetwork. The primary IP of such VM must belong
 to the primary ipCidrRange of the subnetwork. The alias IPs may belong
-to either primary or secondary ranges. Structure is documented below.
+to either primary or secondary ranges.
+Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_selflink_csharp">
@@ -1832,7 +1837,8 @@ Possible values are `ACTIVE` and `BACKUP`.
     <dd>{{% md %}}An array of configurations for secondary IP ranges for VM instances
 contained in this subnetwork. The primary IP of such VM must belong
 to the primary ipCidrRange of the subnetwork. The alias IPs may belong
-to either primary or secondary ranges. Structure is documented below.
+to either primary or secondary ranges.
+Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_selflink_go">
@@ -2010,7 +2016,8 @@ Possible values are `ACTIVE` and `BACKUP`.
     <dd>{{% md %}}An array of configurations for secondary IP ranges for VM instances
 contained in this subnetwork. The primary IP of such VM must belong
 to the primary ipCidrRange of the subnetwork. The alias IPs may belong
-to either primary or secondary ranges. Structure is documented below.
+to either primary or secondary ranges.
+Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_selflink_nodejs">
@@ -2188,7 +2195,8 @@ Possible values are `ACTIVE` and `BACKUP`.
     <dd>{{% md %}}An array of configurations for secondary IP ranges for VM instances
 contained in this subnetwork. The primary IP of such VM must belong
 to the primary ipCidrRange of the subnetwork. The alias IPs may belong
-to either primary or secondary ranges. Structure is documented below.
+to either primary or secondary ranges.
+Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_self_link_python">

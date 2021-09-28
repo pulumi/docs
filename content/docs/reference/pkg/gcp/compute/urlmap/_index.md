@@ -714,20 +714,20 @@ urlmap = gcp.compute.URLMap("urlmap",
         default_service=home.id,
         route_rules=[gcp.compute.URLMapPathMatcherRouteRuleArgs(
             priority=1,
-            header_action={
-                "requestHeadersToRemoves": ["RemoveMe2"],
-                "requestHeadersToAdds": [{
-                    "headerName": "AddSomethingElse",
-                    "headerValue": "MyOtherValue",
-                    "replace": True,
-                }],
-                "responseHeadersToRemoves": ["RemoveMe3"],
-                "responseHeadersToAdds": [{
-                    "headerName": "AddMe",
-                    "headerValue": "MyValue",
-                    "replace": False,
-                }],
-            },
+            header_action=gcp.compute.URLMapPathMatcherRouteRuleHeaderActionArgs(
+                request_headers_to_removes=["RemoveMe2"],
+                request_headers_to_adds=[gcp.compute.URLMapPathMatcherRouteRuleHeaderActionRequestHeadersToAddArgs(
+                    header_name="AddSomethingElse",
+                    header_value="MyOtherValue",
+                    replace=True,
+                )],
+                response_headers_to_removes=["RemoveMe3"],
+                response_headers_to_adds=[gcp.compute.URLMapPathMatcherRouteRuleHeaderActionResponseHeadersToAddArgs(
+                    header_name="AddMe",
+                    header_value="MyValue",
+                    replace=False,
+                )],
+            ),
             match_rules=[gcp.compute.URLMapPathMatcherRouteRuleMatchRuleArgs(
                 full_path_match="a full path",
                 header_matches=[gcp.compute.URLMapPathMatcherRouteRuleMatchRuleHeaderMatchArgs(
@@ -736,13 +736,13 @@ urlmap = gcp.compute.URLMap("urlmap",
                     invert_match=True,
                 )],
                 ignore_case=True,
-                metadata_filters=[{
-                    "filterMatchCriteria": "MATCH_ANY",
-                    "filterLabels": [{
-                        "name": "PLANET",
-                        "value": "MARS",
-                    }],
-                }],
+                metadata_filters=[gcp.compute.URLMapPathMatcherRouteRuleMatchRuleMetadataFilterArgs(
+                    filter_match_criteria="MATCH_ANY",
+                    filter_labels=[gcp.compute.URLMapPathMatcherRouteRuleMatchRuleMetadataFilterFilterLabelArgs(
+                        name="PLANET",
+                        value="MARS",
+                    )],
+                )],
                 query_parameter_matches=[gcp.compute.URLMapPathMatcherRouteRuleMatchRuleQueryParameterMatchArgs(
                     name="a query parameter",
                     present_match=True,
@@ -1561,16 +1561,16 @@ urlmap = gcp.compute.URLMap("urlmap",
                 request_mirror_policy=gcp.compute.URLMapPathMatcherPathRuleRouteActionRequestMirrorPolicyArgs(
                     backend_service=home.id,
                 ),
-                retry_policy={
-                    "numRetries": 4,
-                    "perTryTimeout": {
-                        "seconds": 30,
-                    },
-                    "retry_conditions": [
+                retry_policy=gcp.compute.URLMapPathMatcherPathRuleRouteActionRetryPolicyArgs(
+                    num_retries=4,
+                    per_try_timeout=gcp.compute.URLMapPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeoutArgs(
+                        seconds="30",
+                    ),
+                    retry_conditions=[
                         "5xx",
                         "deadline-exceeded",
                     ],
-                },
+                ),
                 timeout=gcp.compute.URLMapPathMatcherPathRuleRouteActionTimeoutArgs(
                     seconds="20",
                     nanos=750000000,
@@ -1582,20 +1582,20 @@ urlmap = gcp.compute.URLMap("urlmap",
                 weighted_backend_services=[gcp.compute.URLMapPathMatcherPathRuleRouteActionWeightedBackendServiceArgs(
                     backend_service=home.id,
                     weight=400,
-                    header_action={
-                        "requestHeadersToRemoves": ["RemoveMe"],
-                        "requestHeadersToAdds": [{
-                            "headerName": "AddMe",
-                            "headerValue": "MyValue",
-                            "replace": True,
-                        }],
-                        "responseHeadersToRemoves": ["RemoveMe"],
-                        "responseHeadersToAdds": [{
-                            "headerName": "AddMe",
-                            "headerValue": "MyValue",
-                            "replace": False,
-                        }],
-                    },
+                    header_action=gcp.compute.URLMapPathMatcherPathRuleRouteActionWeightedBackendServiceHeaderActionArgs(
+                        request_headers_to_removes=["RemoveMe"],
+                        request_headers_to_adds=[gcp.compute.URLMapPathMatcherPathRuleRouteActionWeightedBackendServiceHeaderActionRequestHeadersToAddArgs(
+                            header_name="AddMe",
+                            header_value="MyValue",
+                            replace=True,
+                        )],
+                        response_headers_to_removes=["RemoveMe"],
+                        response_headers_to_adds=[gcp.compute.URLMapPathMatcherPathRuleRouteActionWeightedBackendServiceHeaderActionResponseHeadersToAddArgs(
+                            header_name="AddMe",
+                            header_value="MyValue",
+                            replace=False,
+                        )],
+                    ),
                 )],
             ),
         )],
@@ -2036,20 +2036,20 @@ urlmap = gcp.compute.URLMap("urlmap",
                 weighted_backend_services=[gcp.compute.URLMapPathMatcherPathRuleRouteActionWeightedBackendServiceArgs(
                     backend_service=home.id,
                     weight=400,
-                    header_action={
-                        "requestHeadersToRemoves": ["RemoveMe"],
-                        "requestHeadersToAdds": [{
-                            "headerName": "AddMe",
-                            "headerValue": "MyValue",
-                            "replace": True,
-                        }],
-                        "responseHeadersToRemoves": ["RemoveMe"],
-                        "responseHeadersToAdds": [{
-                            "headerName": "AddMe",
-                            "headerValue": "MyValue",
-                            "replace": False,
-                        }],
-                    },
+                    header_action=gcp.compute.URLMapPathMatcherPathRuleRouteActionWeightedBackendServiceHeaderActionArgs(
+                        request_headers_to_removes=["RemoveMe"],
+                        request_headers_to_adds=[gcp.compute.URLMapPathMatcherPathRuleRouteActionWeightedBackendServiceHeaderActionRequestHeadersToAddArgs(
+                            header_name="AddMe",
+                            header_value="MyValue",
+                            replace=True,
+                        )],
+                        response_headers_to_removes=["RemoveMe"],
+                        response_headers_to_adds=[gcp.compute.URLMapPathMatcherPathRuleRouteActionWeightedBackendServiceHeaderActionResponseHeadersToAddArgs(
+                            header_name="AddMe",
+                            header_value="MyValue",
+                            replace=False,
+                        )],
+                    ),
                 )],
             ),
         )],

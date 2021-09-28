@@ -1133,7 +1133,8 @@ to networks listed under `private_visibility_config`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedzoneservicedirectoryconfig">Managed<wbr>Zone<wbr>Service<wbr>Directory<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The presence of this field indicates that this zone is backed by Service Directory. The value of this field contains information related to the namespace associated with the zone.  Structure is documented below.
+    <dd>{{% md %}}The presence of this field indicates that this zone is backed by Service Directory. The value of this field contains information related to the namespace associated with the zone.
+Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="visibility_csharp">
@@ -1269,7 +1270,8 @@ to networks listed under `private_visibility_config`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedzoneservicedirectoryconfig">Managed<wbr>Zone<wbr>Service<wbr>Directory<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The presence of this field indicates that this zone is backed by Service Directory. The value of this field contains information related to the namespace associated with the zone.  Structure is documented below.
+    <dd>{{% md %}}The presence of this field indicates that this zone is backed by Service Directory. The value of this field contains information related to the namespace associated with the zone.
+Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="visibility_go">
@@ -1405,7 +1407,8 @@ to networks listed under `private_visibility_config`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedzoneservicedirectoryconfig">Managed<wbr>Zone<wbr>Service<wbr>Directory<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The presence of this field indicates that this zone is backed by Service Directory. The value of this field contains information related to the namespace associated with the zone.  Structure is documented below.
+    <dd>{{% md %}}The presence of this field indicates that this zone is backed by Service Directory. The value of this field contains information related to the namespace associated with the zone.
+Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="visibility_nodejs">
@@ -1541,7 +1544,8 @@ to networks listed under `private_visibility_config`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedzoneservicedirectoryconfig">Managed<wbr>Zone<wbr>Service<wbr>Directory<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The presence of this field indicates that this zone is backed by Service Directory. The value of this field contains information related to the namespace associated with the zone.  Structure is documented below.
+    <dd>{{% md %}}The presence of this field indicates that this zone is backed by Service Directory. The value of this field contains information related to the namespace associated with the zone.
+Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="visibility_python">
@@ -1916,7 +1920,8 @@ to networks listed under `private_visibility_config`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedzoneservicedirectoryconfig">Managed<wbr>Zone<wbr>Service<wbr>Directory<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The presence of this field indicates that this zone is backed by Service Directory. The value of this field contains information related to the namespace associated with the zone.  Structure is documented below.
+    <dd>{{% md %}}The presence of this field indicates that this zone is backed by Service Directory. The value of this field contains information related to the namespace associated with the zone.
+Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_visibility_csharp">
@@ -2061,7 +2066,8 @@ to networks listed under `private_visibility_config`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedzoneservicedirectoryconfig">Managed<wbr>Zone<wbr>Service<wbr>Directory<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The presence of this field indicates that this zone is backed by Service Directory. The value of this field contains information related to the namespace associated with the zone.  Structure is documented below.
+    <dd>{{% md %}}The presence of this field indicates that this zone is backed by Service Directory. The value of this field contains information related to the namespace associated with the zone.
+Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_visibility_go">
@@ -2206,7 +2212,8 @@ to networks listed under `private_visibility_config`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedzoneservicedirectoryconfig">Managed<wbr>Zone<wbr>Service<wbr>Directory<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The presence of this field indicates that this zone is backed by Service Directory. The value of this field contains information related to the namespace associated with the zone.  Structure is documented below.
+    <dd>{{% md %}}The presence of this field indicates that this zone is backed by Service Directory. The value of this field contains information related to the namespace associated with the zone.
+Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_visibility_nodejs">
@@ -2351,7 +2358,8 @@ to networks listed under `private_visibility_config`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedzoneservicedirectoryconfig">Managed<wbr>Zone<wbr>Service<wbr>Directory<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The presence of this field indicates that this zone is backed by Service Directory. The value of this field contains information related to the namespace associated with the zone.  Structure is documented below.
+    <dd>{{% md %}}The presence of this field indicates that this zone is backed by Service Directory. The value of this field contains information related to the namespace associated with the zone.
+Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_visibility_python">
@@ -3055,8 +3063,7 @@ This should be formatted like `projects/{project}/global/networks/{network}` or
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedzoneprivatevisibilityconfignetwork">List&lt;Managed<wbr>Zone<wbr>Private<wbr>Visibility<wbr>Config<wbr>Network&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The list of VPC networks that can see this zone. Structure is documented below.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -3068,8 +3075,7 @@ This should be formatted like `projects/{project}/global/networks/{network}` or
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedzoneprivatevisibilityconfignetwork">[]Managed<wbr>Zone<wbr>Private<wbr>Visibility<wbr>Config<wbr>Network</a></span>
     </dt>
-    <dd>{{% md %}}The list of VPC networks that can see this zone. Structure is documented below.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -3081,8 +3087,7 @@ This should be formatted like `projects/{project}/global/networks/{network}` or
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedzoneprivatevisibilityconfignetwork">Managed<wbr>Zone<wbr>Private<wbr>Visibility<wbr>Config<wbr>Network[]</a></span>
     </dt>
-    <dd>{{% md %}}The list of VPC networks that can see this zone. Structure is documented below.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -3094,8 +3099,7 @@ This should be formatted like `projects/{project}/global/networks/{network}` or
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedzoneprivatevisibilityconfignetwork">Sequence[Managed<wbr>Zone<wbr>Private<wbr>Visibility<wbr>Config<wbr>Network]</a></span>
     </dt>
-    <dd>{{% md %}}The list of VPC networks that can see this zone. Structure is documented below.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="managedzoneprivatevisibilityconfignetwork">Managed<wbr>Zone<wbr>Private<wbr>Visibility<wbr>Config<wbr>Network</h4>

@@ -146,8 +146,8 @@ note = gcp.containeranalysis.Note("note", attestation_authority=gcp.containerana
 ))
 attestor = gcp.binaryauthorization.Attestor("attestor", attestation_authority_note=gcp.binaryauthorization.AttestorAttestationAuthorityNoteArgs(
     note_reference=note.name,
-    public_keys=[{
-        "asciiArmoredPgpPublicKey": """mQENBFtP0doBCADF+joTiXWKVuP8kJt3fgpBSjT9h8ezMfKA4aXZctYLx5wslWQl
+    public_keys=[gcp.binaryauthorization.AttestorAttestationAuthorityNotePublicKeyArgs(
+        ascii_armored_pgp_public_key="""mQENBFtP0doBCADF+joTiXWKVuP8kJt3fgpBSjT9h8ezMfKA4aXZctYLx5wslWQl
 bB7Iu2ezkECNzoEeU7WxUe8a61pMCh9cisS9H5mB2K2uM4Jnf8tgFeXn3akJDVo0
 oR1IC+Dp9mXbRSK3MAvKkOwWlG99sx3uEdvmeBRHBOO+grchLx24EThXFOyP9Fk6
 V39j6xMjw4aggLD15B4V0v9JqBDdJiIYFzszZDL6pJwZrzcP0z8JO4rTZd+f64bD
@@ -163,7 +163,7 @@ MAU9vdm1DIv567meMqTaVZgR3w7bck2P49AO8lO5ERFpVkErtu/98y+rUy9d789l
 qoIRW6y0+UlAc+MbqfL0ziHDOAmcqz1GnROg
 =6Bvm
 """,
-    }],
+    )],
 ))
 ```
 
@@ -373,13 +373,13 @@ note = gcp.containeranalysis.Note("note", attestation_authority=gcp.containerana
 ))
 attestor = gcp.binaryauthorization.Attestor("attestor", attestation_authority_note=gcp.binaryauthorization.AttestorAttestationAuthorityNoteArgs(
     note_reference=note.name,
-    public_keys=[{
-        "id": version.id,
-        "pkixPublicKey": {
-            "publicKeyPem": version.public_keys[0].pem,
-            "signatureAlgorithm": version.public_keys[0].algorithm,
-        },
-    }],
+    public_keys=[gcp.binaryauthorization.AttestorAttestationAuthorityNotePublicKeyArgs(
+        id=version.id,
+        pkix_public_key=gcp.binaryauthorization.AttestorAttestationAuthorityNotePublicKeyPkixPublicKeyArgs(
+            public_key_pem=version.public_keys[0].pem,
+            signature_algorithm=version.public_keys[0].algorithm,
+        ),
+    )],
 ))
 ```
 

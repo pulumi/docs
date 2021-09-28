@@ -163,7 +163,7 @@ primary_preemptible_nodes = gcp.container.NodePool("primaryPreemptibleNodes",
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const _default = new gcp.serviceAccount.Account("default", {
+const _default = new gcp.serviceaccount.Account("default", {
     accountId: "service-account-id",
     displayName: "Service Account",
 });
@@ -222,7 +222,7 @@ Coming soon!
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const _default = new gcp.serviceAccount.Account("default", {
+const _default = new gcp.serviceaccount.Account("default", {
     accountId: "service-account-id",
     displayName: "Service Account",
 });
@@ -394,6 +394,7 @@ const primary = new gcp.container.Cluster("primary", {
             <span class="nx">default_max_pods_per_node</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
             <span class="nx">default_snat_status</span><span class="p">:</span> <span class="nx">Optional[ClusterDefaultSnatStatusArgs]</span> = None<span class="p">,</span>
             <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">dns_config</span><span class="p">:</span> <span class="nx">Optional[ClusterDnsConfigArgs]</span> = None<span class="p">,</span>
             <span class="nx">enable_autopilot</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
             <span class="nx">enable_binary_authorization</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
             <span class="nx">enable_intranode_visibility</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
@@ -673,6 +674,16 @@ for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the cluster.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dnsconfig_csharp">
+<a href="#dnsconfig_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterdnsconfig">Cluster<wbr>Dns<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}})
+Configuration for [Using Cloud DNS for GKE](https://cloud.google.com/kubernetes-engine/docs/how-to/cloud-dns). Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enableautopilot_csharp">
@@ -1222,6 +1233,16 @@ for more information.
     <dd>{{% md %}}Description of the cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="dnsconfig_go">
+<a href="#dnsconfig_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterdnsconfig">Cluster<wbr>Dns<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}})
+Configuration for [Using Cloud DNS for GKE](https://cloud.google.com/kubernetes-engine/docs/how-to/cloud-dns). Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="enableautopilot_go">
 <a href="#enableautopilot_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Autopilot</a>
 </span>
@@ -1769,6 +1790,16 @@ for more information.
     <dd>{{% md %}}Description of the cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="dnsconfig_nodejs">
+<a href="#dnsconfig_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterdnsconfig">Cluster<wbr>Dns<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}})
+Configuration for [Using Cloud DNS for GKE](https://cloud.google.com/kubernetes-engine/docs/how-to/cloud-dns). Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="enableautopilot_nodejs">
 <a href="#enableautopilot_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Autopilot</a>
 </span>
@@ -2314,6 +2345,16 @@ for more information.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description of the cluster.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dns_config_python">
+<a href="#dns_config_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterdnsconfig">Cluster<wbr>Dns<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}})
+Configuration for [Using Cloud DNS for GKE](https://cloud.google.com/kubernetes-engine/docs/how-to/cloud-dns). Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_autopilot_python">
@@ -3143,6 +3184,7 @@ Get an existing Cluster resource's state with the given name, ID, and optional e
         <span class="nx">default_max_pods_per_node</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">default_snat_status</span><span class="p">:</span> <span class="nx">Optional[ClusterDefaultSnatStatusArgs]</span> = None<span class="p">,</span>
         <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">dns_config</span><span class="p">:</span> <span class="nx">Optional[ClusterDnsConfigArgs]</span> = None<span class="p">,</span>
         <span class="nx">enable_autopilot</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">enable_binary_authorization</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">enable_intranode_visibility</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
@@ -3413,6 +3455,16 @@ for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the cluster.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_dnsconfig_csharp">
+<a href="#state_dnsconfig_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterdnsconfig">Cluster<wbr>Dns<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}})
+Configuration for [Using Cloud DNS for GKE](https://cloud.google.com/kubernetes-engine/docs/how-to/cloud-dns). Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enableautopilot_csharp">
@@ -4041,6 +4093,16 @@ for more information.
     <dd>{{% md %}}Description of the cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_dnsconfig_go">
+<a href="#state_dnsconfig_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterdnsconfig">Cluster<wbr>Dns<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}})
+Configuration for [Using Cloud DNS for GKE](https://cloud.google.com/kubernetes-engine/docs/how-to/cloud-dns). Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_enableautopilot_go">
 <a href="#state_enableautopilot_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Autopilot</a>
 </span>
@@ -4667,6 +4729,16 @@ for more information.
     <dd>{{% md %}}Description of the cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_dnsconfig_nodejs">
+<a href="#state_dnsconfig_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterdnsconfig">Cluster<wbr>Dns<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}})
+Configuration for [Using Cloud DNS for GKE](https://cloud.google.com/kubernetes-engine/docs/how-to/cloud-dns). Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_enableautopilot_nodejs">
 <a href="#state_enableautopilot_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Autopilot</a>
 </span>
@@ -5291,6 +5363,16 @@ for more information.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description of the cluster.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_dns_config_python">
+<a href="#state_dns_config_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterdnsconfig">Cluster<wbr>Dns<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}})
+Configuration for [Using Cloud DNS for GKE](https://cloud.google.com/kubernetes-engine/docs/how-to/cloud-dns). Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enable_autopilot_python">
@@ -7611,6 +7693,132 @@ cluster. It is disabled by default. Set `disabled = false` to enable.
     </dt>
     <dd>{{% md %}}The status of the Istio addon, which makes it easy to set up Istio for services in a
 cluster. It is disabled by default. Set `disabled = false` to enable.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="clusterdnsconfig">Cluster<wbr>Dns<wbr>Config</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="clusterdns_csharp">
+<a href="#clusterdns_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Dns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Which in-cluster DNS provider should be used. `PROVIDER_UNSPECIFIED` (default) or `PLATFORM_DEFAULT` or `CLOUD_DNS`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="clusterdnsdomain_csharp">
+<a href="#clusterdnsdomain_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Dns<wbr>Domain</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The suffix used for all cluster service records.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="clusterdnsscope_csharp">
+<a href="#clusterdnsscope_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Dns<wbr>Scope</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The scope of access to cluster DNS records. `DNS_SCOPE_UNSPECIFIED` (default) or `CLUSTER_SCOPE` or `VPC_SCOPE`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="clusterdns_go">
+<a href="#clusterdns_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Dns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Which in-cluster DNS provider should be used. `PROVIDER_UNSPECIFIED` (default) or `PLATFORM_DEFAULT` or `CLOUD_DNS`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="clusterdnsdomain_go">
+<a href="#clusterdnsdomain_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Dns<wbr>Domain</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The suffix used for all cluster service records.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="clusterdnsscope_go">
+<a href="#clusterdnsscope_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Dns<wbr>Scope</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The scope of access to cluster DNS records. `DNS_SCOPE_UNSPECIFIED` (default) or `CLUSTER_SCOPE` or `VPC_SCOPE`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="clusterdns_nodejs">
+<a href="#clusterdns_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Dns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Which in-cluster DNS provider should be used. `PROVIDER_UNSPECIFIED` (default) or `PLATFORM_DEFAULT` or `CLOUD_DNS`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="clusterdnsdomain_nodejs">
+<a href="#clusterdnsdomain_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Dns<wbr>Domain</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The suffix used for all cluster service records.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="clusterdnsscope_nodejs">
+<a href="#clusterdnsscope_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Dns<wbr>Scope</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The scope of access to cluster DNS records. `DNS_SCOPE_UNSPECIFIED` (default) or `CLUSTER_SCOPE` or `VPC_SCOPE`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="cluster_dns_python">
+<a href="#cluster_dns_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>dns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Which in-cluster DNS provider should be used. `PROVIDER_UNSPECIFIED` (default) or `PLATFORM_DEFAULT` or `CLOUD_DNS`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="cluster_dns_domain_python">
+<a href="#cluster_dns_domain_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>dns_<wbr>domain</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The suffix used for all cluster service records.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="cluster_dns_scope_python">
+<a href="#cluster_dns_scope_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>dns_<wbr>scope</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The scope of access to cluster DNS records. `DNS_SCOPE_UNSPECIFIED` (default) or `CLUSTER_SCOPE` or `VPC_SCOPE`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

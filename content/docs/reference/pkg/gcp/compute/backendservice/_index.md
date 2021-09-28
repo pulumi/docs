@@ -5203,7 +5203,8 @@ can be specified as values, and you cannot specify a status code more than once.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backendservicecircuitbreakersconnecttimeout">Backend<wbr>Service<wbr>Circuit<wbr>Breakers<wbr>Connect<wbr>Timeout</a></span>
     </dt>
-    <dd>{{% md %}}The timeout for new network connections to hosts.  Structure is documented below.
+    <dd>{{% md %}}The timeout for new network connections to hosts.
+Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconnections_csharp">
@@ -5268,7 +5269,8 @@ Defaults to 3.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backendservicecircuitbreakersconnecttimeout">Backend<wbr>Service<wbr>Circuit<wbr>Breakers<wbr>Connect<wbr>Timeout</a></span>
     </dt>
-    <dd>{{% md %}}The timeout for new network connections to hosts.  Structure is documented below.
+    <dd>{{% md %}}The timeout for new network connections to hosts.
+Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconnections_go">
@@ -5333,7 +5335,8 @@ Defaults to 3.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backendservicecircuitbreakersconnecttimeout">Backend<wbr>Service<wbr>Circuit<wbr>Breakers<wbr>Connect<wbr>Timeout</a></span>
     </dt>
-    <dd>{{% md %}}The timeout for new network connections to hosts.  Structure is documented below.
+    <dd>{{% md %}}The timeout for new network connections to hosts.
+Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconnections_nodejs">
@@ -5398,7 +5401,8 @@ Defaults to 3.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backendservicecircuitbreakersconnecttimeout">Backend<wbr>Service<wbr>Circuit<wbr>Breakers<wbr>Connect<wbr>Timeout</a></span>
     </dt>
-    <dd>{{% md %}}The timeout for new network connections to hosts.  Structure is documented below.
+    <dd>{{% md %}}The timeout for new network connections to hosts.
+Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_connections_python">
