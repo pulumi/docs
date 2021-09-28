@@ -2687,6 +2687,14 @@ Interfaces below for more details.
     <dd>{{% md %}}The state of the metadata service: `enabled`, `disabled`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="httpprotocolipv6_csharp">
+<a href="#httpprotocolipv6_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Protocol<wbr>Ipv6</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="httpputresponsehoplimit_csharp">
 <a href="#httpputresponsehoplimit_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Put<wbr>Response<wbr>Hop<wbr>Limit</a>
 </span>
@@ -2717,6 +2725,14 @@ Interfaces below for more details.
     </dt>
     <dd>{{% md %}}The state of the metadata service: `enabled`, `disabled`.
 {{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="httpprotocolipv6_go">
+<a href="#httpprotocolipv6_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Protocol<wbr>Ipv6</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="httpputresponsehoplimit_go">
 <a href="#httpputresponsehoplimit_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Put<wbr>Response<wbr>Hop<wbr>Limit</a>
@@ -2749,6 +2765,14 @@ Interfaces below for more details.
     <dd>{{% md %}}The state of the metadata service: `enabled`, `disabled`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="httpprotocolipv6_nodejs">
+<a href="#httpprotocolipv6_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Protocol<wbr>Ipv6</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="httpputresponsehoplimit_nodejs">
 <a href="#httpputresponsehoplimit_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Put<wbr>Response<wbr>Hop<wbr>Limit</a>
 </span>
@@ -2779,6 +2803,14 @@ Interfaces below for more details.
     </dt>
     <dd>{{% md %}}The state of the metadata service: `enabled`, `disabled`.
 {{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="http_protocol_ipv6_python">
+<a href="#http_protocol_ipv6_python" style="color: inherit; text-decoration: inherit;">http_<wbr>protocol_<wbr>ipv6</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="http_put_response_hop_limit_python">
 <a href="#http_put_response_hop_limit_python" style="color: inherit; text-decoration: inherit;">http_<wbr>put_<wbr>response_<wbr>hop_<wbr>limit</a>

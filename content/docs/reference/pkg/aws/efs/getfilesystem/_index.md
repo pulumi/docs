@@ -885,6 +885,14 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="transitiontoprimarystorageclass_csharp">
+<a href="#transitiontoprimarystorageclass_csharp" style="color: inherit; text-decoration: inherit;">Transition<wbr>To<wbr>Primary<wbr>Storage<wbr>Class</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -893,6 +901,14 @@ The following output properties are available:
             title="Required">
         <span id="transitiontoia_go">
 <a href="#transitiontoia_go" style="color: inherit; text-decoration: inherit;">Transition<wbr>To<wbr>Ia</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="transitiontoprimarystorageclass_go">
+<a href="#transitiontoprimarystorageclass_go" style="color: inherit; text-decoration: inherit;">Transition<wbr>To<wbr>Primary<wbr>Storage<wbr>Class</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -909,6 +925,14 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="transitiontoprimarystorageclass_nodejs">
+<a href="#transitiontoprimarystorageclass_nodejs" style="color: inherit; text-decoration: inherit;">transition<wbr>To<wbr>Primary<wbr>Storage<wbr>Class</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -917,6 +941,14 @@ The following output properties are available:
             title="Required">
         <span id="transition_to_ia_python">
 <a href="#transition_to_ia_python" style="color: inherit; text-decoration: inherit;">transition_<wbr>to_<wbr>ia</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="transition_to_primary_storage_class_python">
+<a href="#transition_to_primary_storage_class_python" style="color: inherit; text-decoration: inherit;">transition_<wbr>to_<wbr>primary_<wbr>storage_<wbr>class</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>

@@ -40,6 +40,7 @@ Explore the resources and functions of the aws.ec2 module.
     <li><a href="localgatewayroutetablevpcassociation" title="LocalGatewayRouteTableVpcAssociation"><span class="symbol resource"></span>LocalGatewayRouteTableVpcAssociation</a></li>
     <li><a href="mainroutetableassociation" title="MainRouteTableAssociation"><span class="symbol resource"></span>MainRouteTableAssociation</a></li>
     <li><a href="managedprefixlist" title="ManagedPrefixList"><span class="symbol resource"></span>ManagedPrefixList</a></li>
+    <li><a href="managedprefixlistentry" title="ManagedPrefixListEntry"><span class="symbol resource"></span>ManagedPrefixListEntry</a></li>
     <li><a href="natgateway" title="NatGateway"><span class="symbol resource"></span>NatGateway</a></li>
     <li><a href="networkacl" title="NetworkAcl"><span class="symbol resource"></span>NetworkAcl</a></li>
     <li><a href="networkaclrule" title="NetworkAclRule"><span class="symbol resource"></span>NetworkAclRule</a></li>
@@ -144,6 +145,6 @@ Explore the resources and functions of the aws.ec2 module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.21.2</dd>
+	<dd>4.22.0</dd>
 </dl>
 

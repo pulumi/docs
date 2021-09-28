@@ -51,6 +51,7 @@ A Pulumi package for creating and managing Amazon Web Services (AWS) cloud resou
     <li><a href="codestarconnections/" title="codestarconnections"><span class="symbol module"></span>codestarconnections</a></li>
     <li><a href="codestarnotifications/" title="codestarnotifications"><span class="symbol module"></span>codestarnotifications</a></li>
     <li><a href="cognito/" title="cognito"><span class="symbol module"></span>cognito</a></li>
+    <li><a href="connect/" title="connect"><span class="symbol module"></span>connect</a></li>
     <li><a href="cur/" title="cur"><span class="symbol module"></span>cur</a></li>
     <li><a href="datapipeline/" title="datapipeline"><span class="symbol module"></span>datapipeline</a></li>
     <li><a href="datasync/" title="datasync"><span class="symbol module"></span>datasync</a></li>
@@ -192,6 +193,6 @@ A Pulumi package for creating and managing Amazon Web Services (AWS) cloud resou
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.21.2</dd>
+	<dd>4.22.0</dd>
 </dl>
 
