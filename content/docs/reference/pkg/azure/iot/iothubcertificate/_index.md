@@ -12,6 +12,178 @@ meta_desc: "Documentation for the azure.iot.IotHubCertificate resource with exam
 
 Manages an IotHub Device Provisioning Service Certificate.
 
+{{% examples %}}
+
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+
+
+
+
+{{< example csharp >}}
+
+```csharp
+using System;
+using System.IO;
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+	private static string ReadFileBase64(string path) {
+		return Convert.ToBase64String(System.Text.UTF8.GetBytes(File.ReadAllText(path)))
+	}
+
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West Europe",
+        });
+        var exampleIotHubDps = new Azure.Iot.IotHubDps("exampleIotHubDps", new Azure.Iot.IotHubDpsArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            Location = exampleResourceGroup.Location,
+            Sku = new Azure.Iot.Inputs.IotHubDpsSkuArgs
+            {
+                Name = "S1",
+                Capacity = 1,
+            },
+        });
+        var exampleIotHubCertificate = new Azure.Iot.IotHubCertificate("exampleIotHubCertificate", new Azure.Iot.IotHubCertificateArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            IotDpsName = exampleIotHubDps.Name,
+            CertificateContent = ReadFileBase64("example.cer"),
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"encoding/base64"
+	"io/ioutil"
+
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/iot"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func filebase64OrPanic(path string) pulumi.StringPtrInput {
+	if fileData, err := ioutil.ReadFile(path); err == nil {
+		return pulumi.String(base64.StdEncoding.EncodeToString(fileData[:]))
+	} else {
+		panic(err.Error())
+	}
+}
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West Europe"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleIotHubDps, err := iot.NewIotHubDps(ctx, "exampleIotHubDps", &iot.IotHubDpsArgs{
+			ResourceGroupName: exampleResourceGroup.Name,
+			Location:          exampleResourceGroup.Location,
+			Sku: &iot.IotHubDpsSkuArgs{
+				Name:     pulumi.String("S1"),
+				Capacity: pulumi.Int(1),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = iot.NewIotHubCertificate(ctx, "exampleIotHubCertificate", &iot.IotHubCertificateArgs{
+			ResourceGroupName:  exampleResourceGroup.Name,
+			IotDpsName:         exampleIotHubDps.Name,
+			CertificateContent: filebase64OrPanic("example.cer"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import base64
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_iot_hub_dps = azure.iot.IotHubDps("exampleIotHubDps",
+    resource_group_name=example_resource_group.name,
+    location=example_resource_group.location,
+    sku=azure.iot.IotHubDpsSkuArgs(
+        name="S1",
+        capacity=1,
+    ))
+example_iot_hub_certificate = azure.iot.IotHubCertificate("exampleIotHubCertificate",
+    resource_group_name=example_resource_group.name,
+    iot_dps_name=example_iot_hub_dps.name,
+    certificate_content=(lambda path: base64.b64encode(open(path).read().encode()).decode())("example.cer"))
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+import * from "fs";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const exampleIotHubDps = new azure.iot.IotHubDps("exampleIotHubDps", {
+    resourceGroupName: exampleResourceGroup.name,
+    location: exampleResourceGroup.location,
+    sku: {
+        name: "S1",
+        capacity: "1",
+    },
+});
+const exampleIotHubCertificate = new azure.iot.IotHubCertificate("exampleIotHubCertificate", {
+    resourceGroupName: exampleResourceGroup.name,
+    iotDpsName: exampleIotHubDps.name,
+    certificateContent: Buffer.from(fs.readFileSync("example.cer"), 'binary').toString('base64'),
+});
+```
+
+
+{{< /example >}}
+
+
+
+
+
+{{% /examples %}}
+
+
 
 
 ## Create a IotHubCertificate Resource {#create}

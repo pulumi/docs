@@ -12,6 +12,262 @@ meta_desc: "Documentation for the azure.datafactory.LinkedServiceKusto resource 
 
 Manages a Linked Service (connection) between a Kusto Cluster and Azure Data Factory.
 
+{{% examples %}}
+
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+
+
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West Europe",
+        });
+        var exampleFactory = new Azure.DataFactory.Factory("exampleFactory", new Azure.DataFactory.FactoryArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            Identity = new Azure.DataFactory.Inputs.FactoryIdentityArgs
+            {
+                Type = "SystemAssigned",
+            },
+        });
+        var exampleCluster = new Azure.Kusto.Cluster("exampleCluster", new Azure.Kusto.ClusterArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            Sku = new Azure.Kusto.Inputs.ClusterSkuArgs
+            {
+                Name = "Standard_D13_v2",
+                Capacity = 2,
+            },
+        });
+        var exampleDatabase = new Azure.Kusto.Database("exampleDatabase", new Azure.Kusto.DatabaseArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            Location = exampleResourceGroup.Location,
+            ClusterName = exampleCluster.Name,
+        });
+        var exampleLinkedServiceKusto = new Azure.DataFactory.LinkedServiceKusto("exampleLinkedServiceKusto", new Azure.DataFactory.LinkedServiceKustoArgs
+        {
+            DataFactoryId = exampleFactory.Id,
+            KustoEndpoint = exampleCluster.Uri,
+            KustoDatabaseName = exampleDatabase.Name,
+            UseManagedIdentity = true,
+        });
+        var exampleDatabasePrincipalAssignment = new Azure.Kusto.DatabasePrincipalAssignment("exampleDatabasePrincipalAssignment", new Azure.Kusto.DatabasePrincipalAssignmentArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            ClusterName = exampleCluster.Name,
+            DatabaseName = exampleDatabase.Name,
+            TenantId = exampleFactory.Identity.Apply(identity => identity.TenantId),
+            PrincipalId = exampleFactory.Identity.Apply(identity => identity.PrincipalId),
+            PrincipalType = "App",
+            Role = "Viewer",
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/datafactory"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/kusto"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West Europe"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleFactory, err := datafactory.NewFactory(ctx, "exampleFactory", &datafactory.FactoryArgs{
+			Location:          exampleResourceGroup.Location,
+			ResourceGroupName: exampleResourceGroup.Name,
+			Identity: &datafactory.FactoryIdentityArgs{
+				Type: pulumi.String("SystemAssigned"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		exampleCluster, err := kusto.NewCluster(ctx, "exampleCluster", &kusto.ClusterArgs{
+			Location:          exampleResourceGroup.Location,
+			ResourceGroupName: exampleResourceGroup.Name,
+			Sku: &kusto.ClusterSkuArgs{
+				Name:     pulumi.String("Standard_D13_v2"),
+				Capacity: pulumi.Int(2),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		exampleDatabase, err := kusto.NewDatabase(ctx, "exampleDatabase", &kusto.DatabaseArgs{
+			ResourceGroupName: exampleResourceGroup.Name,
+			Location:          exampleResourceGroup.Location,
+			ClusterName:       exampleCluster.Name,
+		})
+		if err != nil {
+			return err
+		}
+		_, err = datafactory.NewLinkedServiceKusto(ctx, "exampleLinkedServiceKusto", &datafactory.LinkedServiceKustoArgs{
+			DataFactoryId:      exampleFactory.ID(),
+			KustoEndpoint:      exampleCluster.Uri,
+			KustoDatabaseName:  exampleDatabase.Name,
+			UseManagedIdentity: pulumi.Bool(true),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = kusto.NewDatabasePrincipalAssignment(ctx, "exampleDatabasePrincipalAssignment", &kusto.DatabasePrincipalAssignmentArgs{
+			ResourceGroupName: exampleResourceGroup.Name,
+			ClusterName:       exampleCluster.Name,
+			DatabaseName:      exampleDatabase.Name,
+			TenantId: exampleFactory.Identity.ApplyT(func(identity datafactory.FactoryIdentity) (string, error) {
+				return identity.TenantId, nil
+			}).(pulumi.StringOutput),
+			PrincipalId: exampleFactory.Identity.ApplyT(func(identity datafactory.FactoryIdentity) (string, error) {
+				return identity.PrincipalId, nil
+			}).(pulumi.StringOutput),
+			PrincipalType: pulumi.String("App"),
+			Role:          pulumi.String("Viewer"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_factory = azure.datafactory.Factory("exampleFactory",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    identity=azure.datafactory.FactoryIdentityArgs(
+        type="SystemAssigned",
+    ))
+example_cluster = azure.kusto.Cluster("exampleCluster",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    sku=azure.kusto.ClusterSkuArgs(
+        name="Standard_D13_v2",
+        capacity=2,
+    ))
+example_database = azure.kusto.Database("exampleDatabase",
+    resource_group_name=example_resource_group.name,
+    location=example_resource_group.location,
+    cluster_name=example_cluster.name)
+example_linked_service_kusto = azure.datafactory.LinkedServiceKusto("exampleLinkedServiceKusto",
+    data_factory_id=example_factory.id,
+    kusto_endpoint=example_cluster.uri,
+    kusto_database_name=example_database.name,
+    use_managed_identity=True)
+example_database_principal_assignment = azure.kusto.DatabasePrincipalAssignment("exampleDatabasePrincipalAssignment",
+    resource_group_name=example_resource_group.name,
+    cluster_name=example_cluster.name,
+    database_name=example_database.name,
+    tenant_id=example_factory.identity.tenant_id,
+    principal_id=example_factory.identity.principal_id,
+    principal_type="App",
+    role="Viewer")
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const exampleFactory = new azure.datafactory.Factory("exampleFactory", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    identity: {
+        type: "SystemAssigned",
+    },
+});
+const exampleCluster = new azure.kusto.Cluster("exampleCluster", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    sku: {
+        name: "Standard_D13_v2",
+        capacity: 2,
+    },
+});
+const exampleDatabase = new azure.kusto.Database("exampleDatabase", {
+    resourceGroupName: exampleResourceGroup.name,
+    location: exampleResourceGroup.location,
+    clusterName: exampleCluster.name,
+});
+const exampleLinkedServiceKusto = new azure.datafactory.LinkedServiceKusto("exampleLinkedServiceKusto", {
+    dataFactoryId: exampleFactory.id,
+    kustoEndpoint: exampleCluster.uri,
+    kustoDatabaseName: exampleDatabase.name,
+    useManagedIdentity: true,
+});
+const exampleDatabasePrincipalAssignment = new azure.kusto.DatabasePrincipalAssignment("exampleDatabasePrincipalAssignment", {
+    resourceGroupName: exampleResourceGroup.name,
+    clusterName: exampleCluster.name,
+    databaseName: exampleDatabase.name,
+    tenantId: exampleFactory.identity.apply(identity => identity.tenantId),
+    principalId: exampleFactory.identity.apply(identity => identity.principalId),
+    principalType: "App",
+    role: "Viewer",
+});
+```
+
+
+{{< /example >}}
+
+
+
+
+
+{{% /examples %}}
+
+
 
 
 ## Create a LinkedServiceKusto Resource {#create}

@@ -282,7 +282,190 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+```go
+package main
+
+import (
+	"io/ioutil"
+
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/compute"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/lb"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/network"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func readFileOrPanic(path string) pulumi.StringPtrInput {
+	data, err := ioutil.ReadFile(path)
+	if err != nil {
+		panic(err.Error())
+	}
+	return pulumi.String(string(data))
+}
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West Europe"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleVirtualNetwork, err := network.NewVirtualNetwork(ctx, "exampleVirtualNetwork", &network.VirtualNetworkArgs{
+			AddressSpaces: pulumi.StringArray{
+				pulumi.String("10.0.0.0/16"),
+			},
+			Location:          exampleResourceGroup.Location,
+			ResourceGroupName: exampleResourceGroup.Name,
+		})
+		if err != nil {
+			return err
+		}
+		exampleSubnet, err := network.NewSubnet(ctx, "exampleSubnet", &network.SubnetArgs{
+			ResourceGroupName:  exampleResourceGroup.Name,
+			VirtualNetworkName: exampleVirtualNetwork.Name,
+			AddressPrefixes: pulumi.StringArray{
+				pulumi.String("10.0.2.0/24"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		examplePublicIp, err := network.NewPublicIp(ctx, "examplePublicIp", &network.PublicIpArgs{
+			Location:          exampleResourceGroup.Location,
+			ResourceGroupName: exampleResourceGroup.Name,
+			AllocationMethod:  pulumi.String("Static"),
+			DomainNameLabel:   exampleResourceGroup.Name,
+			Tags: pulumi.StringMap{
+				"environment": pulumi.String("staging"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		exampleLoadBalancer, err := lb.NewLoadBalancer(ctx, "exampleLoadBalancer", &lb.LoadBalancerArgs{
+			Location:          exampleResourceGroup.Location,
+			ResourceGroupName: exampleResourceGroup.Name,
+			FrontendIpConfigurations: lb.LoadBalancerFrontendIpConfigurationArray{
+				&lb.LoadBalancerFrontendIpConfigurationArgs{
+					Name:              pulumi.String("PublicIPAddress"),
+					PublicIpAddressId: examplePublicIp.ID(),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		bpepool, err := lb.NewBackendAddressPool(ctx, "bpepool", &lb.BackendAddressPoolArgs{
+			ResourceGroupName: exampleResourceGroup.Name,
+			LoadbalancerId:    exampleLoadBalancer.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		lbnatpool, err := lb.NewNatPool(ctx, "lbnatpool", &lb.NatPoolArgs{
+			ResourceGroupName:           exampleResourceGroup.Name,
+			LoadbalancerId:              exampleLoadBalancer.ID(),
+			Protocol:                    pulumi.String("Tcp"),
+			FrontendPortStart:           pulumi.Int(50000),
+			FrontendPortEnd:             pulumi.Int(50119),
+			BackendPort:                 pulumi.Int(22),
+			FrontendIpConfigurationName: pulumi.String("PublicIPAddress"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleProbe, err := lb.NewProbe(ctx, "exampleProbe", &lb.ProbeArgs{
+			ResourceGroupName: exampleResourceGroup.Name,
+			LoadbalancerId:    exampleLoadBalancer.ID(),
+			Protocol:          pulumi.String("Http"),
+			RequestPath:       pulumi.String("/health"),
+			Port:              pulumi.Int(8080),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = compute.NewScaleSet(ctx, "exampleScaleSet", &compute.ScaleSetArgs{
+			Location:           exampleResourceGroup.Location,
+			ResourceGroupName:  exampleResourceGroup.Name,
+			AutomaticOsUpgrade: pulumi.Bool(true),
+			UpgradePolicyMode:  pulumi.String("Rolling"),
+			RollingUpgradePolicy: &compute.ScaleSetRollingUpgradePolicyArgs{
+				MaxBatchInstancePercent:             pulumi.Int(20),
+				MaxUnhealthyInstancePercent:         pulumi.Int(20),
+				MaxUnhealthyUpgradedInstancePercent: pulumi.Int(5),
+				PauseTimeBetweenBatches:             pulumi.String("PT0S"),
+			},
+			HealthProbeId: exampleProbe.ID(),
+			Sku: &compute.ScaleSetSkuArgs{
+				Name:     pulumi.String("Standard_F2"),
+				Tier:     pulumi.String("Standard"),
+				Capacity: pulumi.Int(2),
+			},
+			StorageProfileImageReference: &compute.ScaleSetStorageProfileImageReferenceArgs{
+				Publisher: pulumi.String("Canonical"),
+				Offer:     pulumi.String("UbuntuServer"),
+				Sku:       pulumi.String("16.04-LTS"),
+				Version:   pulumi.String("latest"),
+			},
+			StorageProfileOsDisk: &compute.ScaleSetStorageProfileOsDiskArgs{
+				Name:            pulumi.String(""),
+				Caching:         pulumi.String("ReadWrite"),
+				CreateOption:    pulumi.String("FromImage"),
+				ManagedDiskType: pulumi.String("Standard_LRS"),
+			},
+			StorageProfileDataDisks: compute.ScaleSetStorageProfileDataDiskArray{
+				&compute.ScaleSetStorageProfileDataDiskArgs{
+					Lun:          pulumi.Int(0),
+					Caching:      pulumi.String("ReadWrite"),
+					CreateOption: pulumi.String("Empty"),
+					DiskSizeGb:   pulumi.Int(10),
+				},
+			},
+			OsProfile: &compute.ScaleSetOsProfileArgs{
+				ComputerNamePrefix: pulumi.String("testvm"),
+				AdminUsername:      pulumi.String("myadmin"),
+			},
+			OsProfileLinuxConfig: &compute.ScaleSetOsProfileLinuxConfigArgs{
+				DisablePasswordAuthentication: pulumi.Bool(true),
+				SshKeys: compute.ScaleSetOsProfileLinuxConfigSshKeyArray{
+					&compute.ScaleSetOsProfileLinuxConfigSshKeyArgs{
+						Path:    pulumi.String("/home/myadmin/.ssh/authorized_keys"),
+						KeyData: readFileOrPanic("~/.ssh/demo_key.pub"),
+					},
+				},
+			},
+			NetworkProfiles: compute.ScaleSetNetworkProfileArray{
+				&compute.ScaleSetNetworkProfileArgs{
+					Name:    pulumi.String("mynetworkprofile"),
+					Primary: pulumi.Bool(true),
+					IpConfigurations: compute.ScaleSetNetworkProfileIpConfigurationArray{
+						&compute.ScaleSetNetworkProfileIpConfigurationArgs{
+							Name:     pulumi.String("TestIPConfiguration"),
+							Primary:  pulumi.Bool(true),
+							SubnetId: exampleSubnet.ID(),
+							LoadBalancerBackendAddressPoolIds: pulumi.StringArray{
+								bpepool.ID(),
+							},
+							LoadBalancerInboundNatRulesIds: pulumi.StringArray{
+								lbnatpool.ID(),
+							},
+						},
+					},
+				},
+			},
+			Tags: pulumi.StringMap{
+				"environment": pulumi.String("staging"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 
 {{< /example >}}
 
@@ -656,7 +839,137 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+```go
+package main
+
+import (
+	"fmt"
+	"io/ioutil"
+
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/compute"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/network"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/storage"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func readFileOrPanic(path string) pulumi.StringPtrInput {
+	data, err := ioutil.ReadFile(path)
+	if err != nil {
+		panic(err.Error())
+	}
+	return pulumi.String(string(data))
+}
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West Europe"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleVirtualNetwork, err := network.NewVirtualNetwork(ctx, "exampleVirtualNetwork", &network.VirtualNetworkArgs{
+			AddressSpaces: pulumi.StringArray{
+				pulumi.String("10.0.0.0/16"),
+			},
+			Location:          pulumi.String("West US"),
+			ResourceGroupName: exampleResourceGroup.Name,
+		})
+		if err != nil {
+			return err
+		}
+		exampleSubnet, err := network.NewSubnet(ctx, "exampleSubnet", &network.SubnetArgs{
+			ResourceGroupName:  exampleResourceGroup.Name,
+			VirtualNetworkName: exampleVirtualNetwork.Name,
+			AddressPrefixes: pulumi.StringArray{
+				pulumi.String("10.0.2.0/24"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		exampleAccount, err := storage.NewAccount(ctx, "exampleAccount", &storage.AccountArgs{
+			ResourceGroupName:      exampleResourceGroup.Name,
+			Location:               pulumi.String("westus"),
+			AccountTier:            pulumi.String("Standard"),
+			AccountReplicationType: pulumi.String("LRS"),
+			Tags: pulumi.StringMap{
+				"environment": pulumi.String("staging"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		exampleContainer, err := storage.NewContainer(ctx, "exampleContainer", &storage.ContainerArgs{
+			StorageAccountName:  exampleAccount.Name,
+			ContainerAccessType: pulumi.String("private"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = compute.NewScaleSet(ctx, "exampleScaleSet", &compute.ScaleSetArgs{
+			Location:          pulumi.String("West US"),
+			ResourceGroupName: exampleResourceGroup.Name,
+			UpgradePolicyMode: pulumi.String("Manual"),
+			Sku: &compute.ScaleSetSkuArgs{
+				Name:     pulumi.String("Standard_F2"),
+				Tier:     pulumi.String("Standard"),
+				Capacity: pulumi.Int(2),
+			},
+			OsProfile: &compute.ScaleSetOsProfileArgs{
+				ComputerNamePrefix: pulumi.String("testvm"),
+				AdminUsername:      pulumi.String("myadmin"),
+			},
+			OsProfileLinuxConfig: &compute.ScaleSetOsProfileLinuxConfigArgs{
+				DisablePasswordAuthentication: pulumi.Bool(true),
+				SshKeys: compute.ScaleSetOsProfileLinuxConfigSshKeyArray{
+					&compute.ScaleSetOsProfileLinuxConfigSshKeyArgs{
+						Path:    pulumi.String("/home/myadmin/.ssh/authorized_keys"),
+						KeyData: readFileOrPanic("~/.ssh/demo_key.pub"),
+					},
+				},
+			},
+			NetworkProfiles: compute.ScaleSetNetworkProfileArray{
+				&compute.ScaleSetNetworkProfileArgs{
+					Name:    pulumi.String("TestNetworkProfile"),
+					Primary: pulumi.Bool(true),
+					IpConfigurations: compute.ScaleSetNetworkProfileIpConfigurationArray{
+						&compute.ScaleSetNetworkProfileIpConfigurationArgs{
+							Name:     pulumi.String("TestIPConfiguration"),
+							Primary:  pulumi.Bool(true),
+							SubnetId: exampleSubnet.ID(),
+						},
+					},
+				},
+			},
+			StorageProfileOsDisk: &compute.ScaleSetStorageProfileOsDiskArgs{
+				Name:         pulumi.String("osDiskProfile"),
+				Caching:      pulumi.String("ReadWrite"),
+				CreateOption: pulumi.String("FromImage"),
+				VhdContainers: pulumi.StringArray{
+					pulumi.All(exampleAccount.PrimaryBlobEndpoint, exampleContainer.Name).ApplyT(func(_args []interface{}) (string, error) {
+						primaryBlobEndpoint := _args[0].(string)
+						name := _args[1].(string)
+						return fmt.Sprintf("%v%v", primaryBlobEndpoint, name), nil
+					}).(pulumi.StringOutput),
+				},
+			},
+			StorageProfileImageReference: &compute.ScaleSetStorageProfileImageReferenceArgs{
+				Publisher: pulumi.String("Canonical"),
+				Offer:     pulumi.String("UbuntuServer"),
+				Sku:       pulumi.String("16.04-LTS"),
+				Version:   pulumi.String("latest"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 
 {{< /example >}}
 

@@ -12,6 +12,441 @@ meta_desc: "Documentation for the azure.mysql.ServerKey resource with examples, 
 
 Manages a Customer Managed Key for a MySQL Server.
 
+{{% examples %}}
+
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+
+
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var current = Output.Create(Azure.Core.GetClientConfig.InvokeAsync());
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West Europe",
+        });
+        var exampleKeyVault = new Azure.KeyVault.KeyVault("exampleKeyVault", new Azure.KeyVault.KeyVaultArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            TenantId = current.Apply(current => current.TenantId),
+            SkuName = "premium",
+            PurgeProtectionEnabled = true,
+        });
+        var exampleServer = new Azure.MySql.Server("exampleServer", new Azure.MySql.ServerArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            SkuName = "GP_Gen5_2",
+            AdministratorLogin = "acctestun",
+            AdministratorLoginPassword = "H@Sh1CoR3!",
+            SslEnforcementEnabled = true,
+            SslMinimalTlsVersionEnforced = "TLS1_1",
+            StorageMb = 51200,
+            Version = "5.7",
+            Identity = new Azure.MySql.Inputs.ServerIdentityArgs
+            {
+                Type = "SystemAssigned",
+            },
+        });
+        var server = new Azure.KeyVault.AccessPolicy("server", new Azure.KeyVault.AccessPolicyArgs
+        {
+            KeyVaultId = exampleKeyVault.Id,
+            TenantId = current.Apply(current => current.TenantId),
+            ObjectId = exampleServer.Identity.Apply(identity => identity?.PrincipalId),
+            KeyPermissions = 
+            {
+                "get",
+                "unwrapkey",
+                "wrapkey",
+            },
+            SecretPermissions = 
+            {
+                "get",
+            },
+        });
+        var client = new Azure.KeyVault.AccessPolicy("client", new Azure.KeyVault.AccessPolicyArgs
+        {
+            KeyVaultId = exampleKeyVault.Id,
+            TenantId = current.Apply(current => current.TenantId),
+            ObjectId = current.Apply(current => current.ObjectId),
+            KeyPermissions = 
+            {
+                "get",
+                "create",
+                "delete",
+                "list",
+                "restore",
+                "recover",
+                "unwrapkey",
+                "wrapkey",
+                "purge",
+                "encrypt",
+                "decrypt",
+                "sign",
+                "verify",
+            },
+            SecretPermissions = 
+            {
+                "get",
+            },
+        });
+        var exampleKey = new Azure.KeyVault.Key("exampleKey", new Azure.KeyVault.KeyArgs
+        {
+            KeyVaultId = exampleKeyVault.Id,
+            KeyType = "RSA",
+            KeySize = 2048,
+            KeyOpts = 
+            {
+                "decrypt",
+                "encrypt",
+                "sign",
+                "unwrapKey",
+                "verify",
+                "wrapKey",
+            },
+        }, new CustomResourceOptions
+        {
+            DependsOn = 
+            {
+                client,
+                server,
+            },
+        });
+        var exampleServerKey = new Azure.MySql.ServerKey("exampleServerKey", new Azure.MySql.ServerKeyArgs
+        {
+            ServerId = exampleServer.Id,
+            KeyVaultKeyId = exampleKey.Id,
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/keyvault"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/mysql"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		current, err := core.GetClientConfig(ctx, nil, nil)
+		if err != nil {
+			return err
+		}
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West Europe"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleKeyVault, err := keyvault.NewKeyVault(ctx, "exampleKeyVault", &keyvault.KeyVaultArgs{
+			Location:               exampleResourceGroup.Location,
+			ResourceGroupName:      exampleResourceGroup.Name,
+			TenantId:               pulumi.String(current.TenantId),
+			SkuName:                pulumi.String("premium"),
+			PurgeProtectionEnabled: pulumi.Bool(true),
+		})
+		if err != nil {
+			return err
+		}
+		exampleServer, err := mysql.NewServer(ctx, "exampleServer", &mysql.ServerArgs{
+			Location:                     exampleResourceGroup.Location,
+			ResourceGroupName:            exampleResourceGroup.Name,
+			SkuName:                      pulumi.String("GP_Gen5_2"),
+			AdministratorLogin:           pulumi.String("acctestun"),
+			AdministratorLoginPassword:   pulumi.String("H@Sh1CoR3!"),
+			SslEnforcementEnabled:        pulumi.Bool(true),
+			SslMinimalTlsVersionEnforced: pulumi.String("TLS1_1"),
+			StorageMb:                    pulumi.Int(51200),
+			Version:                      pulumi.String("5.7"),
+			Identity: &mysql.ServerIdentityArgs{
+				Type: pulumi.String("SystemAssigned"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		server, err := keyvault.NewAccessPolicy(ctx, "server", &keyvault.AccessPolicyArgs{
+			KeyVaultId: exampleKeyVault.ID(),
+			TenantId:   pulumi.String(current.TenantId),
+			ObjectId: exampleServer.Identity.ApplyT(func(identity mysql.ServerIdentity) (string, error) {
+				return identity.PrincipalId, nil
+			}).(pulumi.StringOutput),
+			KeyPermissions: pulumi.StringArray{
+				pulumi.String("get"),
+				pulumi.String("unwrapkey"),
+				pulumi.String("wrapkey"),
+			},
+			SecretPermissions: pulumi.StringArray{
+				pulumi.String("get"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		client, err := keyvault.NewAccessPolicy(ctx, "client", &keyvault.AccessPolicyArgs{
+			KeyVaultId: exampleKeyVault.ID(),
+			TenantId:   pulumi.String(current.TenantId),
+			ObjectId:   pulumi.String(current.ObjectId),
+			KeyPermissions: pulumi.StringArray{
+				pulumi.String("get"),
+				pulumi.String("create"),
+				pulumi.String("delete"),
+				pulumi.String("list"),
+				pulumi.String("restore"),
+				pulumi.String("recover"),
+				pulumi.String("unwrapkey"),
+				pulumi.String("wrapkey"),
+				pulumi.String("purge"),
+				pulumi.String("encrypt"),
+				pulumi.String("decrypt"),
+				pulumi.String("sign"),
+				pulumi.String("verify"),
+			},
+			SecretPermissions: pulumi.StringArray{
+				pulumi.String("get"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		exampleKey, err := keyvault.NewKey(ctx, "exampleKey", &keyvault.KeyArgs{
+			KeyVaultId: exampleKeyVault.ID(),
+			KeyType:    pulumi.String("RSA"),
+			KeySize:    pulumi.Int(2048),
+			KeyOpts: pulumi.StringArray{
+				pulumi.String("decrypt"),
+				pulumi.String("encrypt"),
+				pulumi.String("sign"),
+				pulumi.String("unwrapKey"),
+				pulumi.String("verify"),
+				pulumi.String("wrapKey"),
+			},
+		}, pulumi.DependsOn([]pulumi.Resource{
+			client,
+			server,
+		}))
+		if err != nil {
+			return err
+		}
+		_, err = mysql.NewServerKey(ctx, "exampleServerKey", &mysql.ServerKeyArgs{
+			ServerId:      exampleServer.ID(),
+			KeyVaultKeyId: exampleKey.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_azure as azure
+
+current = azure.core.get_client_config()
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_key_vault = azure.keyvault.KeyVault("exampleKeyVault",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    tenant_id=current.tenant_id,
+    sku_name="premium",
+    purge_protection_enabled=True)
+example_server = azure.mysql.Server("exampleServer",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    sku_name="GP_Gen5_2",
+    administrator_login="acctestun",
+    administrator_login_password="H@Sh1CoR3!",
+    ssl_enforcement_enabled=True,
+    ssl_minimal_tls_version_enforced="TLS1_1",
+    storage_mb=51200,
+    version="5.7",
+    identity=azure.mysql.ServerIdentityArgs(
+        type="SystemAssigned",
+    ))
+server = azure.keyvault.AccessPolicy("server",
+    key_vault_id=example_key_vault.id,
+    tenant_id=current.tenant_id,
+    object_id=example_server.identity.principal_id,
+    key_permissions=[
+        "get",
+        "unwrapkey",
+        "wrapkey",
+    ],
+    secret_permissions=["get"])
+client = azure.keyvault.AccessPolicy("client",
+    key_vault_id=example_key_vault.id,
+    tenant_id=current.tenant_id,
+    object_id=current.object_id,
+    key_permissions=[
+        "get",
+        "create",
+        "delete",
+        "list",
+        "restore",
+        "recover",
+        "unwrapkey",
+        "wrapkey",
+        "purge",
+        "encrypt",
+        "decrypt",
+        "sign",
+        "verify",
+    ],
+    secret_permissions=["get"])
+example_key = azure.keyvault.Key("exampleKey",
+    key_vault_id=example_key_vault.id,
+    key_type="RSA",
+    key_size=2048,
+    key_opts=[
+        "decrypt",
+        "encrypt",
+        "sign",
+        "unwrapKey",
+        "verify",
+        "wrapKey",
+    ],
+    opts=pulumi.ResourceOptions(depends_on=[
+            client,
+            server,
+        ]))
+example_server_key = azure.mysql.ServerKey("exampleServerKey",
+    server_id=example_server.id,
+    key_vault_key_id=example_key.id)
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const current = azure.core.getClientConfig({});
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const exampleKeyVault = new azure.keyvault.KeyVault("exampleKeyVault", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    tenantId: current.then(current => current.tenantId),
+    skuName: "premium",
+    purgeProtectionEnabled: true,
+});
+const exampleServer = new azure.mysql.Server("exampleServer", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    skuName: "GP_Gen5_2",
+    administratorLogin: "acctestun",
+    administratorLoginPassword: "H@Sh1CoR3!",
+    sslEnforcementEnabled: true,
+    sslMinimalTlsVersionEnforced: "TLS1_1",
+    storageMb: 51200,
+    version: "5.7",
+    identity: {
+        type: "SystemAssigned",
+    },
+});
+const server = new azure.keyvault.AccessPolicy("server", {
+    keyVaultId: exampleKeyVault.id,
+    tenantId: current.then(current => current.tenantId),
+    objectId: exampleServer.identity.apply(identity => identity?.principalId),
+    keyPermissions: [
+        "get",
+        "unwrapkey",
+        "wrapkey",
+    ],
+    secretPermissions: ["get"],
+});
+const client = new azure.keyvault.AccessPolicy("client", {
+    keyVaultId: exampleKeyVault.id,
+    tenantId: current.then(current => current.tenantId),
+    objectId: current.then(current => current.objectId),
+    keyPermissions: [
+        "get",
+        "create",
+        "delete",
+        "list",
+        "restore",
+        "recover",
+        "unwrapkey",
+        "wrapkey",
+        "purge",
+        "encrypt",
+        "decrypt",
+        "sign",
+        "verify",
+    ],
+    secretPermissions: ["get"],
+});
+const exampleKey = new azure.keyvault.Key("exampleKey", {
+    keyVaultId: exampleKeyVault.id,
+    keyType: "RSA",
+    keySize: 2048,
+    keyOpts: [
+        "decrypt",
+        "encrypt",
+        "sign",
+        "unwrapKey",
+        "verify",
+        "wrapKey",
+    ],
+}, {
+    dependsOn: [
+        client,
+        server,
+    ],
+});
+const exampleServerKey = new azure.mysql.ServerKey("exampleServerKey", {
+    serverId: exampleServer.id,
+    keyVaultKeyId: exampleKey.id,
+});
+```
+
+
+{{< /example >}}
+
+
+
+
+
+{{% /examples %}}
+
+
 
 
 ## Create a ServerKey Resource {#create}

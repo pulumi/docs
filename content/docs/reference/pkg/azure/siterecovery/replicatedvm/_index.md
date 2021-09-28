@@ -12,6 +12,764 @@ meta_desc: "Documentation for the azure.siterecovery.ReplicatedVM resource with 
 
 Manages a VM replicated using Azure Site Recovery (Azure to Azure only). A replicated VM keeps a copiously updated image of the VM in another region in order to be able to start the VM in that region in case of a disaster.
 
+{{% examples %}}
+
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+
+
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var primaryResourceGroup = new Azure.Core.ResourceGroup("primaryResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West US",
+        });
+        var secondaryResourceGroup = new Azure.Core.ResourceGroup("secondaryResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "East US",
+        });
+        var primaryVirtualNetwork = new Azure.Network.VirtualNetwork("primaryVirtualNetwork", new Azure.Network.VirtualNetworkArgs
+        {
+            ResourceGroupName = primaryResourceGroup.Name,
+            AddressSpaces = 
+            {
+                "192.168.1.0/24",
+            },
+            Location = primaryResourceGroup.Location,
+        });
+        var primarySubnet = new Azure.Network.Subnet("primarySubnet", new Azure.Network.SubnetArgs
+        {
+            ResourceGroupName = primaryResourceGroup.Name,
+            VirtualNetworkName = primaryVirtualNetwork.Name,
+            AddressPrefixes = 
+            {
+                "192.168.1.0/24",
+            },
+        });
+        var primaryPublicIp = new Azure.Network.PublicIp("primaryPublicIp", new Azure.Network.PublicIpArgs
+        {
+            AllocationMethod = "Static",
+            Location = primaryResourceGroup.Location,
+            ResourceGroupName = primaryResourceGroup.Name,
+            Sku = "Basic",
+        });
+        var vmNetworkInterface = new Azure.Network.NetworkInterface("vmNetworkInterface", new Azure.Network.NetworkInterfaceArgs
+        {
+            Location = primaryResourceGroup.Location,
+            ResourceGroupName = primaryResourceGroup.Name,
+            IpConfigurations = 
+            {
+                new Azure.Network.Inputs.NetworkInterfaceIpConfigurationArgs
+                {
+                    Name = "vm",
+                    SubnetId = primarySubnet.Id,
+                    PrivateIpAddressAllocation = "Dynamic",
+                    PublicIpAddressId = primaryPublicIp.Id,
+                },
+            },
+        });
+        var vmVirtualMachine = new Azure.Compute.VirtualMachine("vmVirtualMachine", new Azure.Compute.VirtualMachineArgs
+        {
+            Location = primaryResourceGroup.Location,
+            ResourceGroupName = primaryResourceGroup.Name,
+            VmSize = "Standard_B1s",
+            NetworkInterfaceIds = 
+            {
+                vmNetworkInterface.Id,
+            },
+            StorageImageReference = new Azure.Compute.Inputs.VirtualMachineStorageImageReferenceArgs
+            {
+                Publisher = "OpenLogic",
+                Offer = "CentOS",
+                Sku = "7.5",
+                Version = "latest",
+            },
+            StorageOsDisk = new Azure.Compute.Inputs.VirtualMachineStorageOsDiskArgs
+            {
+                Name = "vm-os-disk",
+                OsType = "Linux",
+                Caching = "ReadWrite",
+                CreateOption = "FromImage",
+                ManagedDiskType = "Premium_LRS",
+            },
+            OsProfile = new Azure.Compute.Inputs.VirtualMachineOsProfileArgs
+            {
+                AdminUsername = "test-admin-123",
+                AdminPassword = "test-pwd-123",
+                ComputerName = "vm",
+            },
+            OsProfileLinuxConfig = new Azure.Compute.Inputs.VirtualMachineOsProfileLinuxConfigArgs
+            {
+                DisablePasswordAuthentication = false,
+            },
+        });
+        var vault = new Azure.RecoveryServices.Vault("vault", new Azure.RecoveryServices.VaultArgs
+        {
+            Location = secondaryResourceGroup.Location,
+            ResourceGroupName = secondaryResourceGroup.Name,
+            Sku = "Standard",
+        });
+        var primaryFabric = new Azure.SiteRecovery.Fabric("primaryFabric", new Azure.SiteRecovery.FabricArgs
+        {
+            ResourceGroupName = secondaryResourceGroup.Name,
+            RecoveryVaultName = vault.Name,
+            Location = primaryResourceGroup.Location,
+        });
+        var secondaryFabric = new Azure.SiteRecovery.Fabric("secondaryFabric", new Azure.SiteRecovery.FabricArgs
+        {
+            ResourceGroupName = secondaryResourceGroup.Name,
+            RecoveryVaultName = vault.Name,
+            Location = secondaryResourceGroup.Location,
+        });
+        var primaryProtectionContainer = new Azure.SiteRecovery.ProtectionContainer("primaryProtectionContainer", new Azure.SiteRecovery.ProtectionContainerArgs
+        {
+            ResourceGroupName = secondaryResourceGroup.Name,
+            RecoveryVaultName = vault.Name,
+            RecoveryFabricName = primaryFabric.Name,
+        });
+        var secondaryProtectionContainer = new Azure.SiteRecovery.ProtectionContainer("secondaryProtectionContainer", new Azure.SiteRecovery.ProtectionContainerArgs
+        {
+            ResourceGroupName = secondaryResourceGroup.Name,
+            RecoveryVaultName = vault.Name,
+            RecoveryFabricName = secondaryFabric.Name,
+        });
+        var policy = new Azure.SiteRecovery.ReplicationPolicy("policy", new Azure.SiteRecovery.ReplicationPolicyArgs
+        {
+            ResourceGroupName = secondaryResourceGroup.Name,
+            RecoveryVaultName = vault.Name,
+            RecoveryPointRetentionInMinutes = 24 * 60,
+            ApplicationConsistentSnapshotFrequencyInMinutes = 4 * 60,
+        });
+        var container_mapping = new Azure.SiteRecovery.ProtectionContainerMapping("container-mapping", new Azure.SiteRecovery.ProtectionContainerMappingArgs
+        {
+            ResourceGroupName = secondaryResourceGroup.Name,
+            RecoveryVaultName = vault.Name,
+            RecoveryFabricName = primaryFabric.Name,
+            RecoverySourceProtectionContainerName = primaryProtectionContainer.Name,
+            RecoveryTargetProtectionContainerId = secondaryProtectionContainer.Id,
+            RecoveryReplicationPolicyId = policy.Id,
+        });
+        var primaryAccount = new Azure.Storage.Account("primaryAccount", new Azure.Storage.AccountArgs
+        {
+            Location = primaryResourceGroup.Location,
+            ResourceGroupName = primaryResourceGroup.Name,
+            AccountTier = "Standard",
+            AccountReplicationType = "LRS",
+        });
+        var secondaryVirtualNetwork = new Azure.Network.VirtualNetwork("secondaryVirtualNetwork", new Azure.Network.VirtualNetworkArgs
+        {
+            ResourceGroupName = secondaryResourceGroup.Name,
+            AddressSpaces = 
+            {
+                "192.168.2.0/24",
+            },
+            Location = secondaryResourceGroup.Location,
+        });
+        var secondarySubnet = new Azure.Network.Subnet("secondarySubnet", new Azure.Network.SubnetArgs
+        {
+            ResourceGroupName = secondaryResourceGroup.Name,
+            VirtualNetworkName = secondaryVirtualNetwork.Name,
+            AddressPrefixes = 
+            {
+                "192.168.2.0/24",
+            },
+        });
+        var secondaryPublicIp = new Azure.Network.PublicIp("secondaryPublicIp", new Azure.Network.PublicIpArgs
+        {
+            AllocationMethod = "Static",
+            Location = secondaryResourceGroup.Location,
+            ResourceGroupName = secondaryResourceGroup.Name,
+            Sku = "Basic",
+        });
+        var vm_replication = new Azure.SiteRecovery.ReplicatedVM("vm-replication", new Azure.SiteRecovery.ReplicatedVMArgs
+        {
+            ResourceGroupName = secondaryResourceGroup.Name,
+            RecoveryVaultName = vault.Name,
+            SourceRecoveryFabricName = primaryFabric.Name,
+            SourceVmId = vmVirtualMachine.Id,
+            RecoveryReplicationPolicyId = policy.Id,
+            SourceRecoveryProtectionContainerName = primaryProtectionContainer.Name,
+            TargetResourceGroupId = secondaryResourceGroup.Id,
+            TargetRecoveryFabricId = secondaryFabric.Id,
+            TargetRecoveryProtectionContainerId = secondaryProtectionContainer.Id,
+            ManagedDisks = 
+            {
+                new Azure.SiteRecovery.Inputs.ReplicatedVMManagedDiskArgs
+                {
+                    DiskId = vmVirtualMachine.StorageOsDisk.Apply(storageOsDisk => storageOsDisk.ManagedDiskId),
+                    StagingStorageAccountId = primaryAccount.Id,
+                    TargetResourceGroupId = secondaryResourceGroup.Id,
+                    TargetDiskType = "Premium_LRS",
+                    TargetReplicaDiskType = "Premium_LRS",
+                },
+            },
+            NetworkInterfaces = 
+            {
+                new Azure.SiteRecovery.Inputs.ReplicatedVMNetworkInterfaceArgs
+                {
+                    SourceNetworkInterfaceId = vmNetworkInterface.Id,
+                    TargetSubnetName = "network2-subnet",
+                    RecoveryPublicIpAddressId = secondaryPublicIp.Id,
+                },
+            },
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/compute"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/network"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/recoveryservices"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/siterecovery"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/storage"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		primaryResourceGroup, err := core.NewResourceGroup(ctx, "primaryResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West US"),
+		})
+		if err != nil {
+			return err
+		}
+		secondaryResourceGroup, err := core.NewResourceGroup(ctx, "secondaryResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("East US"),
+		})
+		if err != nil {
+			return err
+		}
+		primaryVirtualNetwork, err := network.NewVirtualNetwork(ctx, "primaryVirtualNetwork", &network.VirtualNetworkArgs{
+			ResourceGroupName: primaryResourceGroup.Name,
+			AddressSpaces: pulumi.StringArray{
+				pulumi.String("192.168.1.0/24"),
+			},
+			Location: primaryResourceGroup.Location,
+		})
+		if err != nil {
+			return err
+		}
+		primarySubnet, err := network.NewSubnet(ctx, "primarySubnet", &network.SubnetArgs{
+			ResourceGroupName:  primaryResourceGroup.Name,
+			VirtualNetworkName: primaryVirtualNetwork.Name,
+			AddressPrefixes: pulumi.StringArray{
+				pulumi.String("192.168.1.0/24"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		primaryPublicIp, err := network.NewPublicIp(ctx, "primaryPublicIp", &network.PublicIpArgs{
+			AllocationMethod:  pulumi.String("Static"),
+			Location:          primaryResourceGroup.Location,
+			ResourceGroupName: primaryResourceGroup.Name,
+			Sku:               pulumi.String("Basic"),
+		})
+		if err != nil {
+			return err
+		}
+		vmNetworkInterface, err := network.NewNetworkInterface(ctx, "vmNetworkInterface", &network.NetworkInterfaceArgs{
+			Location:          primaryResourceGroup.Location,
+			ResourceGroupName: primaryResourceGroup.Name,
+			IpConfigurations: network.NetworkInterfaceIpConfigurationArray{
+				&network.NetworkInterfaceIpConfigurationArgs{
+					Name:                       pulumi.String("vm"),
+					SubnetId:                   primarySubnet.ID(),
+					PrivateIpAddressAllocation: pulumi.String("Dynamic"),
+					PublicIpAddressId:          primaryPublicIp.ID(),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		vmVirtualMachine, err := compute.NewVirtualMachine(ctx, "vmVirtualMachine", &compute.VirtualMachineArgs{
+			Location:          primaryResourceGroup.Location,
+			ResourceGroupName: primaryResourceGroup.Name,
+			VmSize:            pulumi.String("Standard_B1s"),
+			NetworkInterfaceIds: pulumi.StringArray{
+				vmNetworkInterface.ID(),
+			},
+			StorageImageReference: &compute.VirtualMachineStorageImageReferenceArgs{
+				Publisher: pulumi.String("OpenLogic"),
+				Offer:     pulumi.String("CentOS"),
+				Sku:       pulumi.String("7.5"),
+				Version:   pulumi.String("latest"),
+			},
+			StorageOsDisk: &compute.VirtualMachineStorageOsDiskArgs{
+				Name:            pulumi.String("vm-os-disk"),
+				OsType:          pulumi.String("Linux"),
+				Caching:         pulumi.String("ReadWrite"),
+				CreateOption:    pulumi.String("FromImage"),
+				ManagedDiskType: pulumi.String("Premium_LRS"),
+			},
+			OsProfile: &compute.VirtualMachineOsProfileArgs{
+				AdminUsername: pulumi.String("test-admin-123"),
+				AdminPassword: pulumi.String("test-pwd-123"),
+				ComputerName:  pulumi.String("vm"),
+			},
+			OsProfileLinuxConfig: &compute.VirtualMachineOsProfileLinuxConfigArgs{
+				DisablePasswordAuthentication: pulumi.Bool(false),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		vault, err := recoveryservices.NewVault(ctx, "vault", &recoveryservices.VaultArgs{
+			Location:          secondaryResourceGroup.Location,
+			ResourceGroupName: secondaryResourceGroup.Name,
+			Sku:               pulumi.String("Standard"),
+		})
+		if err != nil {
+			return err
+		}
+		primaryFabric, err := siterecovery.NewFabric(ctx, "primaryFabric", &siterecovery.FabricArgs{
+			ResourceGroupName: secondaryResourceGroup.Name,
+			RecoveryVaultName: vault.Name,
+			Location:          primaryResourceGroup.Location,
+		})
+		if err != nil {
+			return err
+		}
+		secondaryFabric, err := siterecovery.NewFabric(ctx, "secondaryFabric", &siterecovery.FabricArgs{
+			ResourceGroupName: secondaryResourceGroup.Name,
+			RecoveryVaultName: vault.Name,
+			Location:          secondaryResourceGroup.Location,
+		})
+		if err != nil {
+			return err
+		}
+		primaryProtectionContainer, err := siterecovery.NewProtectionContainer(ctx, "primaryProtectionContainer", &siterecovery.ProtectionContainerArgs{
+			ResourceGroupName:  secondaryResourceGroup.Name,
+			RecoveryVaultName:  vault.Name,
+			RecoveryFabricName: primaryFabric.Name,
+		})
+		if err != nil {
+			return err
+		}
+		secondaryProtectionContainer, err := siterecovery.NewProtectionContainer(ctx, "secondaryProtectionContainer", &siterecovery.ProtectionContainerArgs{
+			ResourceGroupName:  secondaryResourceGroup.Name,
+			RecoveryVaultName:  vault.Name,
+			RecoveryFabricName: secondaryFabric.Name,
+		})
+		if err != nil {
+			return err
+		}
+		policy, err := siterecovery.NewReplicationPolicy(ctx, "policy", &siterecovery.ReplicationPolicyArgs{
+			ResourceGroupName:                               secondaryResourceGroup.Name,
+			RecoveryVaultName:                               vault.Name,
+			RecoveryPointRetentionInMinutes:                 24 * 60,
+			ApplicationConsistentSnapshotFrequencyInMinutes: 4 * 60,
+		})
+		if err != nil {
+			return err
+		}
+		_, err = siterecovery.NewProtectionContainerMapping(ctx, "container_mapping", &siterecovery.ProtectionContainerMappingArgs{
+			ResourceGroupName:                     secondaryResourceGroup.Name,
+			RecoveryVaultName:                     vault.Name,
+			RecoveryFabricName:                    primaryFabric.Name,
+			RecoverySourceProtectionContainerName: primaryProtectionContainer.Name,
+			RecoveryTargetProtectionContainerId:   secondaryProtectionContainer.ID(),
+			RecoveryReplicationPolicyId:           policy.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		primaryAccount, err := storage.NewAccount(ctx, "primaryAccount", &storage.AccountArgs{
+			Location:               primaryResourceGroup.Location,
+			ResourceGroupName:      primaryResourceGroup.Name,
+			AccountTier:            pulumi.String("Standard"),
+			AccountReplicationType: pulumi.String("LRS"),
+		})
+		if err != nil {
+			return err
+		}
+		secondaryVirtualNetwork, err := network.NewVirtualNetwork(ctx, "secondaryVirtualNetwork", &network.VirtualNetworkArgs{
+			ResourceGroupName: secondaryResourceGroup.Name,
+			AddressSpaces: pulumi.StringArray{
+				pulumi.String("192.168.2.0/24"),
+			},
+			Location: secondaryResourceGroup.Location,
+		})
+		if err != nil {
+			return err
+		}
+		_, err = network.NewSubnet(ctx, "secondarySubnet", &network.SubnetArgs{
+			ResourceGroupName:  secondaryResourceGroup.Name,
+			VirtualNetworkName: secondaryVirtualNetwork.Name,
+			AddressPrefixes: pulumi.StringArray{
+				pulumi.String("192.168.2.0/24"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		secondaryPublicIp, err := network.NewPublicIp(ctx, "secondaryPublicIp", &network.PublicIpArgs{
+			AllocationMethod:  pulumi.String("Static"),
+			Location:          secondaryResourceGroup.Location,
+			ResourceGroupName: secondaryResourceGroup.Name,
+			Sku:               pulumi.String("Basic"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = siterecovery.NewReplicatedVM(ctx, "vm_replication", &siterecovery.ReplicatedVMArgs{
+			ResourceGroupName:                     secondaryResourceGroup.Name,
+			RecoveryVaultName:                     vault.Name,
+			SourceRecoveryFabricName:              primaryFabric.Name,
+			SourceVmId:                            vmVirtualMachine.ID(),
+			RecoveryReplicationPolicyId:           policy.ID(),
+			SourceRecoveryProtectionContainerName: primaryProtectionContainer.Name,
+			TargetResourceGroupId:                 secondaryResourceGroup.ID(),
+			TargetRecoveryFabricId:                secondaryFabric.ID(),
+			TargetRecoveryProtectionContainerId:   secondaryProtectionContainer.ID(),
+			ManagedDisks: siterecovery.ReplicatedVMManagedDiskArray{
+				&siterecovery.ReplicatedVMManagedDiskArgs{
+					DiskId: vmVirtualMachine.StorageOsDisk.ApplyT(func(storageOsDisk compute.VirtualMachineStorageOsDisk) (string, error) {
+						return storageOsDisk.ManagedDiskId, nil
+					}).(pulumi.StringOutput),
+					StagingStorageAccountId: primaryAccount.ID(),
+					TargetResourceGroupId:   secondaryResourceGroup.ID(),
+					TargetDiskType:          pulumi.String("Premium_LRS"),
+					TargetReplicaDiskType:   pulumi.String("Premium_LRS"),
+				},
+			},
+			NetworkInterfaces: siterecovery.ReplicatedVMNetworkInterfaceArray{
+				&siterecovery.ReplicatedVMNetworkInterfaceArgs{
+					SourceNetworkInterfaceId:  vmNetworkInterface.ID(),
+					TargetSubnetName:          pulumi.String("network2-subnet"),
+					RecoveryPublicIpAddressId: secondaryPublicIp.ID(),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_azure as azure
+
+primary_resource_group = azure.core.ResourceGroup("primaryResourceGroup", location="West US")
+secondary_resource_group = azure.core.ResourceGroup("secondaryResourceGroup", location="East US")
+primary_virtual_network = azure.network.VirtualNetwork("primaryVirtualNetwork",
+    resource_group_name=primary_resource_group.name,
+    address_spaces=["192.168.1.0/24"],
+    location=primary_resource_group.location)
+primary_subnet = azure.network.Subnet("primarySubnet",
+    resource_group_name=primary_resource_group.name,
+    virtual_network_name=primary_virtual_network.name,
+    address_prefixes=["192.168.1.0/24"])
+primary_public_ip = azure.network.PublicIp("primaryPublicIp",
+    allocation_method="Static",
+    location=primary_resource_group.location,
+    resource_group_name=primary_resource_group.name,
+    sku="Basic")
+vm_network_interface = azure.network.NetworkInterface("vmNetworkInterface",
+    location=primary_resource_group.location,
+    resource_group_name=primary_resource_group.name,
+    ip_configurations=[azure.network.NetworkInterfaceIpConfigurationArgs(
+        name="vm",
+        subnet_id=primary_subnet.id,
+        private_ip_address_allocation="Dynamic",
+        public_ip_address_id=primary_public_ip.id,
+    )])
+vm_virtual_machine = azure.compute.VirtualMachine("vmVirtualMachine",
+    location=primary_resource_group.location,
+    resource_group_name=primary_resource_group.name,
+    vm_size="Standard_B1s",
+    network_interface_ids=[vm_network_interface.id],
+    storage_image_reference=azure.compute.VirtualMachineStorageImageReferenceArgs(
+        publisher="OpenLogic",
+        offer="CentOS",
+        sku="7.5",
+        version="latest",
+    ),
+    storage_os_disk=azure.compute.VirtualMachineStorageOsDiskArgs(
+        name="vm-os-disk",
+        os_type="Linux",
+        caching="ReadWrite",
+        create_option="FromImage",
+        managed_disk_type="Premium_LRS",
+    ),
+    os_profile=azure.compute.VirtualMachineOsProfileArgs(
+        admin_username="test-admin-123",
+        admin_password="test-pwd-123",
+        computer_name="vm",
+    ),
+    os_profile_linux_config=azure.compute.VirtualMachineOsProfileLinuxConfigArgs(
+        disable_password_authentication=False,
+    ))
+vault = azure.recoveryservices.Vault("vault",
+    location=secondary_resource_group.location,
+    resource_group_name=secondary_resource_group.name,
+    sku="Standard")
+primary_fabric = azure.siterecovery.Fabric("primaryFabric",
+    resource_group_name=secondary_resource_group.name,
+    recovery_vault_name=vault.name,
+    location=primary_resource_group.location)
+secondary_fabric = azure.siterecovery.Fabric("secondaryFabric",
+    resource_group_name=secondary_resource_group.name,
+    recovery_vault_name=vault.name,
+    location=secondary_resource_group.location)
+primary_protection_container = azure.siterecovery.ProtectionContainer("primaryProtectionContainer",
+    resource_group_name=secondary_resource_group.name,
+    recovery_vault_name=vault.name,
+    recovery_fabric_name=primary_fabric.name)
+secondary_protection_container = azure.siterecovery.ProtectionContainer("secondaryProtectionContainer",
+    resource_group_name=secondary_resource_group.name,
+    recovery_vault_name=vault.name,
+    recovery_fabric_name=secondary_fabric.name)
+policy = azure.siterecovery.ReplicationPolicy("policy",
+    resource_group_name=secondary_resource_group.name,
+    recovery_vault_name=vault.name,
+    recovery_point_retention_in_minutes=24 * 60,
+    application_consistent_snapshot_frequency_in_minutes=4 * 60)
+container_mapping = azure.siterecovery.ProtectionContainerMapping("container-mapping",
+    resource_group_name=secondary_resource_group.name,
+    recovery_vault_name=vault.name,
+    recovery_fabric_name=primary_fabric.name,
+    recovery_source_protection_container_name=primary_protection_container.name,
+    recovery_target_protection_container_id=secondary_protection_container.id,
+    recovery_replication_policy_id=policy.id)
+primary_account = azure.storage.Account("primaryAccount",
+    location=primary_resource_group.location,
+    resource_group_name=primary_resource_group.name,
+    account_tier="Standard",
+    account_replication_type="LRS")
+secondary_virtual_network = azure.network.VirtualNetwork("secondaryVirtualNetwork",
+    resource_group_name=secondary_resource_group.name,
+    address_spaces=["192.168.2.0/24"],
+    location=secondary_resource_group.location)
+secondary_subnet = azure.network.Subnet("secondarySubnet",
+    resource_group_name=secondary_resource_group.name,
+    virtual_network_name=secondary_virtual_network.name,
+    address_prefixes=["192.168.2.0/24"])
+secondary_public_ip = azure.network.PublicIp("secondaryPublicIp",
+    allocation_method="Static",
+    location=secondary_resource_group.location,
+    resource_group_name=secondary_resource_group.name,
+    sku="Basic")
+vm_replication = azure.siterecovery.ReplicatedVM("vm-replication",
+    resource_group_name=secondary_resource_group.name,
+    recovery_vault_name=vault.name,
+    source_recovery_fabric_name=primary_fabric.name,
+    source_vm_id=vm_virtual_machine.id,
+    recovery_replication_policy_id=policy.id,
+    source_recovery_protection_container_name=primary_protection_container.name,
+    target_resource_group_id=secondary_resource_group.id,
+    target_recovery_fabric_id=secondary_fabric.id,
+    target_recovery_protection_container_id=secondary_protection_container.id,
+    managed_disks=[azure.siterecovery.ReplicatedVMManagedDiskArgs(
+        disk_id=vm_virtual_machine.storage_os_disk.managed_disk_id,
+        staging_storage_account_id=primary_account.id,
+        target_resource_group_id=secondary_resource_group.id,
+        target_disk_type="Premium_LRS",
+        target_replica_disk_type="Premium_LRS",
+    )],
+    network_interfaces=[azure.siterecovery.ReplicatedVMNetworkInterfaceArgs(
+        source_network_interface_id=vm_network_interface.id,
+        target_subnet_name="network2-subnet",
+        recovery_public_ip_address_id=secondary_public_ip.id,
+    )])
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const primaryResourceGroup = new azure.core.ResourceGroup("primaryResourceGroup", {location: "West US"});
+const secondaryResourceGroup = new azure.core.ResourceGroup("secondaryResourceGroup", {location: "East US"});
+const primaryVirtualNetwork = new azure.network.VirtualNetwork("primaryVirtualNetwork", {
+    resourceGroupName: primaryResourceGroup.name,
+    addressSpaces: ["192.168.1.0/24"],
+    location: primaryResourceGroup.location,
+});
+const primarySubnet = new azure.network.Subnet("primarySubnet", {
+    resourceGroupName: primaryResourceGroup.name,
+    virtualNetworkName: primaryVirtualNetwork.name,
+    addressPrefixes: ["192.168.1.0/24"],
+});
+const primaryPublicIp = new azure.network.PublicIp("primaryPublicIp", {
+    allocationMethod: "Static",
+    location: primaryResourceGroup.location,
+    resourceGroupName: primaryResourceGroup.name,
+    sku: "Basic",
+});
+const vmNetworkInterface = new azure.network.NetworkInterface("vmNetworkInterface", {
+    location: primaryResourceGroup.location,
+    resourceGroupName: primaryResourceGroup.name,
+    ipConfigurations: [{
+        name: "vm",
+        subnetId: primarySubnet.id,
+        privateIpAddressAllocation: "Dynamic",
+        publicIpAddressId: primaryPublicIp.id,
+    }],
+});
+const vmVirtualMachine = new azure.compute.VirtualMachine("vmVirtualMachine", {
+    location: primaryResourceGroup.location,
+    resourceGroupName: primaryResourceGroup.name,
+    vmSize: "Standard_B1s",
+    networkInterfaceIds: [vmNetworkInterface.id],
+    storageImageReference: {
+        publisher: "OpenLogic",
+        offer: "CentOS",
+        sku: "7.5",
+        version: "latest",
+    },
+    storageOsDisk: {
+        name: "vm-os-disk",
+        osType: "Linux",
+        caching: "ReadWrite",
+        createOption: "FromImage",
+        managedDiskType: "Premium_LRS",
+    },
+    osProfile: {
+        adminUsername: "test-admin-123",
+        adminPassword: "test-pwd-123",
+        computerName: "vm",
+    },
+    osProfileLinuxConfig: {
+        disablePasswordAuthentication: false,
+    },
+});
+const vault = new azure.recoveryservices.Vault("vault", {
+    location: secondaryResourceGroup.location,
+    resourceGroupName: secondaryResourceGroup.name,
+    sku: "Standard",
+});
+const primaryFabric = new azure.siterecovery.Fabric("primaryFabric", {
+    resourceGroupName: secondaryResourceGroup.name,
+    recoveryVaultName: vault.name,
+    location: primaryResourceGroup.location,
+});
+const secondaryFabric = new azure.siterecovery.Fabric("secondaryFabric", {
+    resourceGroupName: secondaryResourceGroup.name,
+    recoveryVaultName: vault.name,
+    location: secondaryResourceGroup.location,
+});
+const primaryProtectionContainer = new azure.siterecovery.ProtectionContainer("primaryProtectionContainer", {
+    resourceGroupName: secondaryResourceGroup.name,
+    recoveryVaultName: vault.name,
+    recoveryFabricName: primaryFabric.name,
+});
+const secondaryProtectionContainer = new azure.siterecovery.ProtectionContainer("secondaryProtectionContainer", {
+    resourceGroupName: secondaryResourceGroup.name,
+    recoveryVaultName: vault.name,
+    recoveryFabricName: secondaryFabric.name,
+});
+const policy = new azure.siterecovery.ReplicationPolicy("policy", {
+    resourceGroupName: secondaryResourceGroup.name,
+    recoveryVaultName: vault.name,
+    recoveryPointRetentionInMinutes: 24 * 60,
+    applicationConsistentSnapshotFrequencyInMinutes: 4 * 60,
+});
+const container_mapping = new azure.siterecovery.ProtectionContainerMapping("container-mapping", {
+    resourceGroupName: secondaryResourceGroup.name,
+    recoveryVaultName: vault.name,
+    recoveryFabricName: primaryFabric.name,
+    recoverySourceProtectionContainerName: primaryProtectionContainer.name,
+    recoveryTargetProtectionContainerId: secondaryProtectionContainer.id,
+    recoveryReplicationPolicyId: policy.id,
+});
+const primaryAccount = new azure.storage.Account("primaryAccount", {
+    location: primaryResourceGroup.location,
+    resourceGroupName: primaryResourceGroup.name,
+    accountTier: "Standard",
+    accountReplicationType: "LRS",
+});
+const secondaryVirtualNetwork = new azure.network.VirtualNetwork("secondaryVirtualNetwork", {
+    resourceGroupName: secondaryResourceGroup.name,
+    addressSpaces: ["192.168.2.0/24"],
+    location: secondaryResourceGroup.location,
+});
+const secondarySubnet = new azure.network.Subnet("secondarySubnet", {
+    resourceGroupName: secondaryResourceGroup.name,
+    virtualNetworkName: secondaryVirtualNetwork.name,
+    addressPrefixes: ["192.168.2.0/24"],
+});
+const secondaryPublicIp = new azure.network.PublicIp("secondaryPublicIp", {
+    allocationMethod: "Static",
+    location: secondaryResourceGroup.location,
+    resourceGroupName: secondaryResourceGroup.name,
+    sku: "Basic",
+});
+const vm_replication = new azure.siterecovery.ReplicatedVM("vm-replication", {
+    resourceGroupName: secondaryResourceGroup.name,
+    recoveryVaultName: vault.name,
+    sourceRecoveryFabricName: primaryFabric.name,
+    sourceVmId: vmVirtualMachine.id,
+    recoveryReplicationPolicyId: policy.id,
+    sourceRecoveryProtectionContainerName: primaryProtectionContainer.name,
+    targetResourceGroupId: secondaryResourceGroup.id,
+    targetRecoveryFabricId: secondaryFabric.id,
+    targetRecoveryProtectionContainerId: secondaryProtectionContainer.id,
+    managedDisks: [{
+        diskId: vmVirtualMachine.storageOsDisk.apply(storageOsDisk => storageOsDisk.managedDiskId),
+        stagingStorageAccountId: primaryAccount.id,
+        targetResourceGroupId: secondaryResourceGroup.id,
+        targetDiskType: "Premium_LRS",
+        targetReplicaDiskType: "Premium_LRS",
+    }],
+    networkInterfaces: [{
+        sourceNetworkInterfaceId: vmNetworkInterface.id,
+        targetSubnetName: "network2-subnet",
+        recoveryPublicIpAddressId: secondaryPublicIp.id,
+    }],
+});
+```
+
+
+{{< /example >}}
+
+
+
+
+
+{{% /examples %}}
+
+
 
 
 ## Create a ReplicatedVM Resource {#create}

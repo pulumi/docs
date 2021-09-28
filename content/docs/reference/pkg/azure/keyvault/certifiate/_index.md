@@ -20,6 +20,427 @@ Manages a Key Vault Certificate.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
+### Importing a PFX
+
+
+{{< example csharp >}}
+
+```csharp
+using System;
+using System.IO;
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+	private static string ReadFileBase64(string path) {
+		return Convert.ToBase64String(System.Text.UTF8.GetBytes(File.ReadAllText(path)))
+	}
+
+    public MyStack()
+    {
+        var current = Output.Create(Azure.Core.GetClientConfig.InvokeAsync());
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West Europe",
+        });
+        var exampleKeyVault = new Azure.KeyVault.KeyVault("exampleKeyVault", new Azure.KeyVault.KeyVaultArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            TenantId = current.Apply(current => current.TenantId),
+            SkuName = "premium",
+            AccessPolicies = 
+            {
+                new Azure.KeyVault.Inputs.KeyVaultAccessPolicyArgs
+                {
+                    TenantId = current.Apply(current => current.TenantId),
+                    ObjectId = current.Apply(current => current.ObjectId),
+                    CertificatePermissions = 
+                    {
+                        "create",
+                        "delete",
+                        "deleteissuers",
+                        "get",
+                        "getissuers",
+                        "import",
+                        "list",
+                        "listissuers",
+                        "managecontacts",
+                        "manageissuers",
+                        "setissuers",
+                        "update",
+                    },
+                    KeyPermissions = 
+                    {
+                        "backup",
+                        "create",
+                        "decrypt",
+                        "delete",
+                        "encrypt",
+                        "get",
+                        "import",
+                        "list",
+                        "purge",
+                        "recover",
+                        "restore",
+                        "sign",
+                        "unwrapKey",
+                        "update",
+                        "verify",
+                        "wrapKey",
+                    },
+                    SecretPermissions = 
+                    {
+                        "backup",
+                        "delete",
+                        "get",
+                        "list",
+                        "purge",
+                        "recover",
+                        "restore",
+                        "set",
+                    },
+                },
+            },
+        });
+        var exampleCertificate = new Azure.KeyVault.Certificate("exampleCertificate", new Azure.KeyVault.CertificateArgs
+        {
+            KeyVaultId = exampleKeyVault.Id,
+            Certificate = new Azure.KeyVault.Inputs.CertificateCertificateArgs
+            {
+                Contents = ReadFileBase64("certificate-to-import.pfx"),
+                Password = "",
+            },
+            CertificatePolicy = new Azure.KeyVault.Inputs.CertificateCertificatePolicyArgs
+            {
+                IssuerParameters = new Azure.KeyVault.Inputs.CertificateCertificatePolicyIssuerParametersArgs
+                {
+                    Name = "Self",
+                },
+                KeyProperties = new Azure.KeyVault.Inputs.CertificateCertificatePolicyKeyPropertiesArgs
+                {
+                    Exportable = true,
+                    KeySize = 2048,
+                    KeyType = "RSA",
+                    ReuseKey = false,
+                },
+                SecretProperties = new Azure.KeyVault.Inputs.CertificateCertificatePolicySecretPropertiesArgs
+                {
+                    ContentType = "application/x-pkcs12",
+                },
+            },
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"encoding/base64"
+	"io/ioutil"
+
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/keyvault"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func filebase64OrPanic(path string) pulumi.StringPtrInput {
+	if fileData, err := ioutil.ReadFile(path); err == nil {
+		return pulumi.String(base64.StdEncoding.EncodeToString(fileData[:]))
+	} else {
+		panic(err.Error())
+	}
+}
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		current, err := core.GetClientConfig(ctx, nil, nil)
+		if err != nil {
+			return err
+		}
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West Europe"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleKeyVault, err := keyvault.NewKeyVault(ctx, "exampleKeyVault", &keyvault.KeyVaultArgs{
+			Location:          exampleResourceGroup.Location,
+			ResourceGroupName: exampleResourceGroup.Name,
+			TenantId:          pulumi.String(current.TenantId),
+			SkuName:           pulumi.String("premium"),
+			AccessPolicies: keyvault.KeyVaultAccessPolicyArray{
+				&keyvault.KeyVaultAccessPolicyArgs{
+					TenantId: pulumi.String(current.TenantId),
+					ObjectId: pulumi.String(current.ObjectId),
+					CertificatePermissions: pulumi.StringArray{
+						pulumi.String("create"),
+						pulumi.String("delete"),
+						pulumi.String("deleteissuers"),
+						pulumi.String("get"),
+						pulumi.String("getissuers"),
+						pulumi.String("import"),
+						pulumi.String("list"),
+						pulumi.String("listissuers"),
+						pulumi.String("managecontacts"),
+						pulumi.String("manageissuers"),
+						pulumi.String("setissuers"),
+						pulumi.String("update"),
+					},
+					KeyPermissions: pulumi.StringArray{
+						pulumi.String("backup"),
+						pulumi.String("create"),
+						pulumi.String("decrypt"),
+						pulumi.String("delete"),
+						pulumi.String("encrypt"),
+						pulumi.String("get"),
+						pulumi.String("import"),
+						pulumi.String("list"),
+						pulumi.String("purge"),
+						pulumi.String("recover"),
+						pulumi.String("restore"),
+						pulumi.String("sign"),
+						pulumi.String("unwrapKey"),
+						pulumi.String("update"),
+						pulumi.String("verify"),
+						pulumi.String("wrapKey"),
+					},
+					SecretPermissions: pulumi.StringArray{
+						pulumi.String("backup"),
+						pulumi.String("delete"),
+						pulumi.String("get"),
+						pulumi.String("list"),
+						pulumi.String("purge"),
+						pulumi.String("recover"),
+						pulumi.String("restore"),
+						pulumi.String("set"),
+					},
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = keyvault.NewCertificate(ctx, "exampleCertificate", &keyvault.CertificateArgs{
+			KeyVaultId: exampleKeyVault.ID(),
+			Certificate: &keyvault.CertificateCertificateArgs{
+				Contents: filebase64OrPanic("certificate-to-import.pfx"),
+				Password: pulumi.String(""),
+			},
+			CertificatePolicy: &keyvault.CertificateCertificatePolicyArgs{
+				IssuerParameters: &keyvault.CertificateCertificatePolicyIssuerParametersArgs{
+					Name: pulumi.String("Self"),
+				},
+				KeyProperties: &keyvault.CertificateCertificatePolicyKeyPropertiesArgs{
+					Exportable: pulumi.Bool(true),
+					KeySize:    pulumi.Int(2048),
+					KeyType:    pulumi.String("RSA"),
+					ReuseKey:   pulumi.Bool(false),
+				},
+				SecretProperties: &keyvault.CertificateCertificatePolicySecretPropertiesArgs{
+					ContentType: pulumi.String("application/x-pkcs12"),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import base64
+import pulumi_azure as azure
+
+current = azure.core.get_client_config()
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_key_vault = azure.keyvault.KeyVault("exampleKeyVault",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    tenant_id=current.tenant_id,
+    sku_name="premium",
+    access_policies=[azure.keyvault.KeyVaultAccessPolicyArgs(
+        tenant_id=current.tenant_id,
+        object_id=current.object_id,
+        certificate_permissions=[
+            "create",
+            "delete",
+            "deleteissuers",
+            "get",
+            "getissuers",
+            "import",
+            "list",
+            "listissuers",
+            "managecontacts",
+            "manageissuers",
+            "setissuers",
+            "update",
+        ],
+        key_permissions=[
+            "backup",
+            "create",
+            "decrypt",
+            "delete",
+            "encrypt",
+            "get",
+            "import",
+            "list",
+            "purge",
+            "recover",
+            "restore",
+            "sign",
+            "unwrapKey",
+            "update",
+            "verify",
+            "wrapKey",
+        ],
+        secret_permissions=[
+            "backup",
+            "delete",
+            "get",
+            "list",
+            "purge",
+            "recover",
+            "restore",
+            "set",
+        ],
+    )])
+example_certificate = azure.keyvault.Certificate("exampleCertificate",
+    key_vault_id=example_key_vault.id,
+    certificate=azure.keyvault.CertificateCertificateArgs(
+        contents=(lambda path: base64.b64encode(open(path).read().encode()).decode())("certificate-to-import.pfx"),
+        password="",
+    ),
+    certificate_policy=azure.keyvault.CertificateCertificatePolicyArgs(
+        issuer_parameters=azure.keyvault.CertificateCertificatePolicyIssuerParametersArgs(
+            name="Self",
+        ),
+        key_properties=azure.keyvault.CertificateCertificatePolicyKeyPropertiesArgs(
+            exportable=True,
+            key_size=2048,
+            key_type="RSA",
+            reuse_key=False,
+        ),
+        secret_properties=azure.keyvault.CertificateCertificatePolicySecretPropertiesArgs(
+            content_type="application/x-pkcs12",
+        ),
+    ))
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+import * from "fs";
+
+const current = azure.core.getClientConfig({});
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const exampleKeyVault = new azure.keyvault.KeyVault("exampleKeyVault", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    tenantId: current.then(current => current.tenantId),
+    skuName: "premium",
+    accessPolicies: [{
+        tenantId: current.then(current => current.tenantId),
+        objectId: current.then(current => current.objectId),
+        certificatePermissions: [
+            "create",
+            "delete",
+            "deleteissuers",
+            "get",
+            "getissuers",
+            "import",
+            "list",
+            "listissuers",
+            "managecontacts",
+            "manageissuers",
+            "setissuers",
+            "update",
+        ],
+        keyPermissions: [
+            "backup",
+            "create",
+            "decrypt",
+            "delete",
+            "encrypt",
+            "get",
+            "import",
+            "list",
+            "purge",
+            "recover",
+            "restore",
+            "sign",
+            "unwrapKey",
+            "update",
+            "verify",
+            "wrapKey",
+        ],
+        secretPermissions: [
+            "backup",
+            "delete",
+            "get",
+            "list",
+            "purge",
+            "recover",
+            "restore",
+            "set",
+        ],
+    }],
+});
+const exampleCertificate = new azure.keyvault.Certificate("exampleCertificate", {
+    keyVaultId: exampleKeyVault.id,
+    certificate: {
+        contents: Buffer.from(fs.readFileSync("certificate-to-import.pfx"), 'binary').toString('base64'),
+        password: "",
+    },
+    certificatePolicy: {
+        issuerParameters: {
+            name: "Self",
+        },
+        keyProperties: {
+            exportable: true,
+            keySize: 2048,
+            keyType: "RSA",
+            reuseKey: false,
+        },
+        secretProperties: {
+            contentType: "application/x-pkcs12",
+        },
+    },
+});
+```
+
+
+{{< /example >}}
+
+
+
+
 ### Generating a new certificate
 
 

@@ -12,6 +12,93 @@ meta_desc: "Documentation for the azure.dataprotection.BackupInstanceDisk resour
 
 Manages a Backup Instance to back up Disk.
 
+{{% examples %}}
+
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+
+
+
+
+{{< example csharp >}}
+
+Coming soon!
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+Coming soon!
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+Coming soon!
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const rg = new azure.core.ResourceGroup("rg", {location: "West Europe"});
+const exampleManagedDisk = new azure.compute.ManagedDisk("exampleManagedDisk", {
+    location: rg.location,
+    resourceGroupName: rg.name,
+    storageAccountType: "Standard_LRS",
+    createOption: "Empty",
+    diskSizeGb: "1",
+});
+const exampleBackupVault = new azure.dataprotection.BackupVault("exampleBackupVault", {
+    resourceGroupName: rg.name,
+    location: rg.location,
+    datastoreType: "VaultStore",
+    redundancy: "LocallyRedundant",
+});
+const example1 = new azure.authorization.Assignment("example1", {
+    scope: rg.id,
+    roleDefinitionName: "Disk Snapshot Contributor",
+    principalId: exampleBackupVault.identity.apply(identity => identity?.principalId),
+});
+const example2 = new azure.authorization.Assignment("example2", {
+    scope: exampleManagedDisk.id,
+    roleDefinitionName: "Disk Backup Reader",
+    principalId: exampleBackupVault.identity.apply(identity => identity?.principalId),
+});
+const exampleBackupPolicyDisk = new azure.dataprotection.BackupPolicyDisk("exampleBackupPolicyDisk", {
+    resourceGroupName: rg.name,
+    vaultName: exampleBackupVault.name,
+    backupRepeatingTimeIntervals: ["R/2021-05-19T06:33:16+00:00/PT4H"],
+    defaultRetentionDuration: "P7D",
+});
+const exampleBackupInstanceDisk = new azure.dataprotection.BackupInstanceDisk("exampleBackupInstanceDisk", {
+    location: exampleBackupVault.location,
+    vaultId: exampleBackupVault.id,
+    diskId: exampleManagedDisk.id,
+    snapshotResourceGroupName: rg.name,
+    backupPolicyId: exampleBackupPolicyDisk.id,
+});
+```
+
+
+{{< /example >}}
+
+
+
+
+
+{{% /examples %}}
+
+
 
 
 ## Create a BackupInstanceDisk Resource {#create}

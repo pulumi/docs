@@ -12,6 +12,409 @@ meta_desc: "Documentation for the azure.eventhub.NamespaceCustomerManagedKey res
 
 Manages a Customer Managed Key for a EventHub Namespace.
 
+{{% examples %}}
+
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+
+
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West Europe",
+        });
+        var exampleCluster = new Azure.EventHub.Cluster("exampleCluster", new Azure.EventHub.ClusterArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            Location = exampleResourceGroup.Location,
+            SkuName = "Dedicated_1",
+        });
+        var exampleEventHubNamespace = new Azure.EventHub.EventHubNamespace("exampleEventHubNamespace", new Azure.EventHub.EventHubNamespaceArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            Sku = "Standard",
+            DedicatedClusterId = exampleCluster.Id,
+            Identity = new Azure.EventHub.Inputs.EventHubNamespaceIdentityArgs
+            {
+                Type = "SystemAssigned",
+            },
+        });
+        var current = Output.Create(Azure.Core.GetClientConfig.InvokeAsync());
+        var exampleKeyVault = new Azure.KeyVault.KeyVault("exampleKeyVault", new Azure.KeyVault.KeyVaultArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            TenantId = current.Apply(current => current.TenantId),
+            SkuName = "standard",
+            SoftDeleteEnabled = true,
+            PurgeProtectionEnabled = true,
+        });
+        var exampleAccessPolicy = new Azure.KeyVault.AccessPolicy("exampleAccessPolicy", new Azure.KeyVault.AccessPolicyArgs
+        {
+            KeyVaultId = exampleKeyVault.Id,
+            TenantId = exampleEventHubNamespace.Identity.Apply(identity => identity?.TenantId),
+            ObjectId = exampleEventHubNamespace.Identity.Apply(identity => identity?.PrincipalId),
+            KeyPermissions = 
+            {
+                "get",
+                "unwrapkey",
+                "wrapkey",
+            },
+        });
+        var example2 = new Azure.KeyVault.AccessPolicy("example2", new Azure.KeyVault.AccessPolicyArgs
+        {
+            KeyVaultId = exampleKeyVault.Id,
+            TenantId = current.Apply(current => current.TenantId),
+            ObjectId = current.Apply(current => current.ObjectId),
+            KeyPermissions = 
+            {
+                "create",
+                "delete",
+                "get",
+                "list",
+                "purge",
+                "recover",
+            },
+        });
+        var exampleKey = new Azure.KeyVault.Key("exampleKey", new Azure.KeyVault.KeyArgs
+        {
+            KeyVaultId = exampleKeyVault.Id,
+            KeyType = "RSA",
+            KeySize = 2048,
+            KeyOpts = 
+            {
+                "decrypt",
+                "encrypt",
+                "sign",
+                "unwrapKey",
+                "verify",
+                "wrapKey",
+            },
+        }, new CustomResourceOptions
+        {
+            DependsOn = 
+            {
+                exampleAccessPolicy,
+                example2,
+            },
+        });
+        var exampleNamespaceCustomerManagedKey = new Azure.EventHub.NamespaceCustomerManagedKey("exampleNamespaceCustomerManagedKey", new Azure.EventHub.NamespaceCustomerManagedKeyArgs
+        {
+            EventhubNamespaceId = exampleEventHubNamespace.Id,
+            KeyVaultKeyIds = 
+            {
+                exampleKey.Id,
+            },
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/eventhub"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/keyvault"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West Europe"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleCluster, err := eventhub.NewCluster(ctx, "exampleCluster", &eventhub.ClusterArgs{
+			ResourceGroupName: exampleResourceGroup.Name,
+			Location:          exampleResourceGroup.Location,
+			SkuName:           pulumi.String("Dedicated_1"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleEventHubNamespace, err := eventhub.NewEventHubNamespace(ctx, "exampleEventHubNamespace", &eventhub.EventHubNamespaceArgs{
+			Location:           exampleResourceGroup.Location,
+			ResourceGroupName:  exampleResourceGroup.Name,
+			Sku:                pulumi.String("Standard"),
+			DedicatedClusterId: exampleCluster.ID(),
+			Identity: &eventhub.EventHubNamespaceIdentityArgs{
+				Type: pulumi.String("SystemAssigned"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		current, err := core.GetClientConfig(ctx, nil, nil)
+		if err != nil {
+			return err
+		}
+		exampleKeyVault, err := keyvault.NewKeyVault(ctx, "exampleKeyVault", &keyvault.KeyVaultArgs{
+			Location:               exampleResourceGroup.Location,
+			ResourceGroupName:      exampleResourceGroup.Name,
+			TenantId:               pulumi.String(current.TenantId),
+			SkuName:                pulumi.String("standard"),
+			SoftDeleteEnabled:      pulumi.Bool(true),
+			PurgeProtectionEnabled: pulumi.Bool(true),
+		})
+		if err != nil {
+			return err
+		}
+		exampleAccessPolicy, err := keyvault.NewAccessPolicy(ctx, "exampleAccessPolicy", &keyvault.AccessPolicyArgs{
+			KeyVaultId: exampleKeyVault.ID(),
+			TenantId: exampleEventHubNamespace.Identity.ApplyT(func(identity eventhub.EventHubNamespaceIdentity) (string, error) {
+				return identity.TenantId, nil
+			}).(pulumi.StringOutput),
+			ObjectId: exampleEventHubNamespace.Identity.ApplyT(func(identity eventhub.EventHubNamespaceIdentity) (string, error) {
+				return identity.PrincipalId, nil
+			}).(pulumi.StringOutput),
+			KeyPermissions: pulumi.StringArray{
+				pulumi.String("get"),
+				pulumi.String("unwrapkey"),
+				pulumi.String("wrapkey"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		example2, err := keyvault.NewAccessPolicy(ctx, "example2", &keyvault.AccessPolicyArgs{
+			KeyVaultId: exampleKeyVault.ID(),
+			TenantId:   pulumi.String(current.TenantId),
+			ObjectId:   pulumi.String(current.ObjectId),
+			KeyPermissions: pulumi.StringArray{
+				pulumi.String("create"),
+				pulumi.String("delete"),
+				pulumi.String("get"),
+				pulumi.String("list"),
+				pulumi.String("purge"),
+				pulumi.String("recover"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		exampleKey, err := keyvault.NewKey(ctx, "exampleKey", &keyvault.KeyArgs{
+			KeyVaultId: exampleKeyVault.ID(),
+			KeyType:    pulumi.String("RSA"),
+			KeySize:    pulumi.Int(2048),
+			KeyOpts: pulumi.StringArray{
+				pulumi.String("decrypt"),
+				pulumi.String("encrypt"),
+				pulumi.String("sign"),
+				pulumi.String("unwrapKey"),
+				pulumi.String("verify"),
+				pulumi.String("wrapKey"),
+			},
+		}, pulumi.DependsOn([]pulumi.Resource{
+			exampleAccessPolicy,
+			example2,
+		}))
+		if err != nil {
+			return err
+		}
+		_, err = eventhub.NewNamespaceCustomerManagedKey(ctx, "exampleNamespaceCustomerManagedKey", &eventhub.NamespaceCustomerManagedKeyArgs{
+			EventhubNamespaceId: exampleEventHubNamespace.ID(),
+			KeyVaultKeyIds: pulumi.StringArray{
+				exampleKey.ID(),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_cluster = azure.eventhub.Cluster("exampleCluster",
+    resource_group_name=example_resource_group.name,
+    location=example_resource_group.location,
+    sku_name="Dedicated_1")
+example_event_hub_namespace = azure.eventhub.EventHubNamespace("exampleEventHubNamespace",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    sku="Standard",
+    dedicated_cluster_id=example_cluster.id,
+    identity=azure.eventhub.EventHubNamespaceIdentityArgs(
+        type="SystemAssigned",
+    ))
+current = azure.core.get_client_config()
+example_key_vault = azure.keyvault.KeyVault("exampleKeyVault",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    tenant_id=current.tenant_id,
+    sku_name="standard",
+    soft_delete_enabled=True,
+    purge_protection_enabled=True)
+example_access_policy = azure.keyvault.AccessPolicy("exampleAccessPolicy",
+    key_vault_id=example_key_vault.id,
+    tenant_id=example_event_hub_namespace.identity.tenant_id,
+    object_id=example_event_hub_namespace.identity.principal_id,
+    key_permissions=[
+        "get",
+        "unwrapkey",
+        "wrapkey",
+    ])
+example2 = azure.keyvault.AccessPolicy("example2",
+    key_vault_id=example_key_vault.id,
+    tenant_id=current.tenant_id,
+    object_id=current.object_id,
+    key_permissions=[
+        "create",
+        "delete",
+        "get",
+        "list",
+        "purge",
+        "recover",
+    ])
+example_key = azure.keyvault.Key("exampleKey",
+    key_vault_id=example_key_vault.id,
+    key_type="RSA",
+    key_size=2048,
+    key_opts=[
+        "decrypt",
+        "encrypt",
+        "sign",
+        "unwrapKey",
+        "verify",
+        "wrapKey",
+    ],
+    opts=pulumi.ResourceOptions(depends_on=[
+            example_access_policy,
+            example2,
+        ]))
+example_namespace_customer_managed_key = azure.eventhub.NamespaceCustomerManagedKey("exampleNamespaceCustomerManagedKey",
+    eventhub_namespace_id=example_event_hub_namespace.id,
+    key_vault_key_ids=[example_key.id])
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const exampleCluster = new azure.eventhub.Cluster("exampleCluster", {
+    resourceGroupName: exampleResourceGroup.name,
+    location: exampleResourceGroup.location,
+    skuName: "Dedicated_1",
+});
+const exampleEventHubNamespace = new azure.eventhub.EventHubNamespace("exampleEventHubNamespace", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    sku: "Standard",
+    dedicatedClusterId: exampleCluster.id,
+    identity: {
+        type: "SystemAssigned",
+    },
+});
+const current = azure.core.getClientConfig({});
+const exampleKeyVault = new azure.keyvault.KeyVault("exampleKeyVault", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    tenantId: current.then(current => current.tenantId),
+    skuName: "standard",
+    softDeleteEnabled: true,
+    purgeProtectionEnabled: true,
+});
+const exampleAccessPolicy = new azure.keyvault.AccessPolicy("exampleAccessPolicy", {
+    keyVaultId: exampleKeyVault.id,
+    tenantId: exampleEventHubNamespace.identity.apply(identity => identity?.tenantId),
+    objectId: exampleEventHubNamespace.identity.apply(identity => identity?.principalId),
+    keyPermissions: [
+        "get",
+        "unwrapkey",
+        "wrapkey",
+    ],
+});
+const example2 = new azure.keyvault.AccessPolicy("example2", {
+    keyVaultId: exampleKeyVault.id,
+    tenantId: current.then(current => current.tenantId),
+    objectId: current.then(current => current.objectId),
+    keyPermissions: [
+        "create",
+        "delete",
+        "get",
+        "list",
+        "purge",
+        "recover",
+    ],
+});
+const exampleKey = new azure.keyvault.Key("exampleKey", {
+    keyVaultId: exampleKeyVault.id,
+    keyType: "RSA",
+    keySize: 2048,
+    keyOpts: [
+        "decrypt",
+        "encrypt",
+        "sign",
+        "unwrapKey",
+        "verify",
+        "wrapKey",
+    ],
+}, {
+    dependsOn: [
+        exampleAccessPolicy,
+        example2,
+    ],
+});
+const exampleNamespaceCustomerManagedKey = new azure.eventhub.NamespaceCustomerManagedKey("exampleNamespaceCustomerManagedKey", {
+    eventhubNamespaceId: exampleEventHubNamespace.id,
+    keyVaultKeyIds: [exampleKey.id],
+});
+```
+
+
+{{< /example >}}
+
+
+
+
+
+{{% /examples %}}
+
+
 
 
 ## Create a NamespaceCustomerManagedKey Resource {#create}

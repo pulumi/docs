@@ -60,7 +60,51 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+```go
+package main
+
+import (
+	"io/ioutil"
+
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/apimanagement"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func readFileOrPanic(path string) pulumi.StringPtrInput {
+	data, err := ioutil.ReadFile(path)
+	if err != nil {
+		panic(err.Error())
+	}
+	return pulumi.String(string(data))
+}
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleApi, err := apimanagement.LookupApi(ctx, &apimanagement.LookupApiArgs{
+			Name:              "search-api",
+			ApiManagementName: "search-api-management",
+			ResourceGroupName: "search-service",
+			Revision:          "2",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		_, err = apimanagement.NewApiSchema(ctx, "exampleApiSchema", &apimanagement.ApiSchemaArgs{
+			ApiName:           pulumi.String(exampleApi.Name),
+			ApiManagementName: pulumi.String(exampleApi.ApiManagementName),
+			ResourceGroupName: pulumi.String(exampleApi.ResourceGroupName),
+			SchemaId:          pulumi.String("example-sche,a"),
+			ContentType:       pulumi.String("application/vnd.ms-azure-apim.xsd+xml"),
+			Value:             readFileOrPanic("api_management_api_schema.xml"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 
 {{< /example >}}
 

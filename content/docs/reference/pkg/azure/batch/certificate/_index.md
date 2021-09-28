@@ -12,6 +12,226 @@ meta_desc: "Documentation for the azure.batch.Certificate resource with examples
 
 Manages a certificate in an Azure Batch account.
 
+{{% examples %}}
+
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+
+
+
+
+{{< example csharp >}}
+
+```csharp
+using System;
+using System.IO;
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+	private static string ReadFileBase64(string path) {
+		return Convert.ToBase64String(System.Text.UTF8.GetBytes(File.ReadAllText(path)))
+	}
+
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West Europe",
+        });
+        var exampleAccount = new Azure.Storage.Account("exampleAccount", new Azure.Storage.AccountArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            Location = exampleResourceGroup.Location,
+            AccountTier = "Standard",
+            AccountReplicationType = "LRS",
+        });
+        var exampleBatch_accountAccount = new Azure.Batch.Account("exampleBatch/accountAccount", new Azure.Batch.AccountArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            Location = exampleResourceGroup.Location,
+            PoolAllocationMode = "BatchService",
+            StorageAccountId = exampleAccount.Id,
+            Tags = 
+            {
+                { "env", "test" },
+            },
+        });
+        var exampleCertificate = new Azure.Batch.Certificate("exampleCertificate", new Azure.Batch.CertificateArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            AccountName = exampleBatch / accountAccount.Name,
+            Certificate = ReadFileBase64("certificate.pfx"),
+            Format = "Pfx",
+            Password = "password",
+            Thumbprint = "42C107874FD0E4A9583292A2F1098E8FE4B2EDDA",
+            ThumbprintAlgorithm = "SHA1",
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"encoding/base64"
+	"io/ioutil"
+
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/batch"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/storage"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func filebase64OrPanic(path string) pulumi.StringPtrInput {
+	if fileData, err := ioutil.ReadFile(path); err == nil {
+		return pulumi.String(base64.StdEncoding.EncodeToString(fileData[:]))
+	} else {
+		panic(err.Error())
+	}
+}
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West Europe"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleAccount, err := storage.NewAccount(ctx, "exampleAccount", &storage.AccountArgs{
+			ResourceGroupName:      exampleResourceGroup.Name,
+			Location:               exampleResourceGroup.Location,
+			AccountTier:            pulumi.String("Standard"),
+			AccountReplicationType: pulumi.String("LRS"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = batch.NewAccount(ctx, "exampleBatch_accountAccount", &batch.AccountArgs{
+			ResourceGroupName:  exampleResourceGroup.Name,
+			Location:           exampleResourceGroup.Location,
+			PoolAllocationMode: pulumi.String("BatchService"),
+			StorageAccountId:   exampleAccount.ID(),
+			Tags: pulumi.StringMap{
+				"env": pulumi.String("test"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = batch.NewCertificate(ctx, "exampleCertificate", &batch.CertificateArgs{
+			ResourceGroupName:   exampleResourceGroup.Name,
+			AccountName:         exampleBatch / accountAccount.Name,
+			Certificate:         filebase64OrPanic("certificate.pfx"),
+			Format:              pulumi.String("Pfx"),
+			Password:            pulumi.String("password"),
+			Thumbprint:          pulumi.String("42C107874FD0E4A9583292A2F1098E8FE4B2EDDA"),
+			ThumbprintAlgorithm: pulumi.String("SHA1"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import base64
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_account = azure.storage.Account("exampleAccount",
+    resource_group_name=example_resource_group.name,
+    location=example_resource_group.location,
+    account_tier="Standard",
+    account_replication_type="LRS")
+example_batch_account_account = azure.batch.Account("exampleBatch/accountAccount",
+    resource_group_name=example_resource_group.name,
+    location=example_resource_group.location,
+    pool_allocation_mode="BatchService",
+    storage_account_id=example_account.id,
+    tags={
+        "env": "test",
+    })
+example_certificate = azure.batch.Certificate("exampleCertificate",
+    resource_group_name=example_resource_group.name,
+    account_name=example_batch / account_account["name"],
+    certificate=(lambda path: base64.b64encode(open(path).read().encode()).decode())("certificate.pfx"),
+    format="Pfx",
+    password="password",
+    thumbprint="42C107874FD0E4A9583292A2F1098E8FE4B2EDDA",
+    thumbprint_algorithm="SHA1")
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+import * from "fs";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const exampleAccount = new azure.storage.Account("exampleAccount", {
+    resourceGroupName: exampleResourceGroup.name,
+    location: exampleResourceGroup.location,
+    accountTier: "Standard",
+    accountReplicationType: "LRS",
+});
+const exampleBatch_accountAccount = new azure.batch.Account("exampleBatch/accountAccount", {
+    resourceGroupName: exampleResourceGroup.name,
+    location: exampleResourceGroup.location,
+    poolAllocationMode: "BatchService",
+    storageAccountId: exampleAccount.id,
+    tags: {
+        env: "test",
+    },
+});
+const exampleCertificate = new azure.batch.Certificate("exampleCertificate", {
+    resourceGroupName: exampleResourceGroup.name,
+    accountName: exampleBatch / accountAccount.name,
+    certificate: Buffer.from(fs.readFileSync("certificate.pfx"), 'binary').toString('base64'),
+    format: "Pfx",
+    password: "password",
+    thumbprint: "42C107874FD0E4A9583292A2F1098E8FE4B2EDDA",
+    thumbprintAlgorithm: "SHA1",
+});
+```
+
+
+{{< /example >}}
+
+
+
+
+
+{{% /examples %}}
+
+
 
 
 ## Create a Certificate Resource {#create}

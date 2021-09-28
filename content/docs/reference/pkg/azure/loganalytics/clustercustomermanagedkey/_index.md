@@ -12,6 +12,342 @@ meta_desc: "Documentation for the azure.loganalytics.ClusterCustomerManagedKey r
 
 Manages a Log Analytics Cluster Customer Managed Key.
 
+{{% examples %}}
+
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+
+
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West Europe",
+        });
+        var exampleCluster = new Azure.LogAnalytics.Cluster("exampleCluster", new Azure.LogAnalytics.ClusterArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            Location = exampleResourceGroup.Location,
+            Identity = new Azure.LogAnalytics.Inputs.ClusterIdentityArgs
+            {
+                Type = "SystemAssigned",
+            },
+        });
+        var exampleKeyVault = new Azure.KeyVault.KeyVault("exampleKeyVault", new Azure.KeyVault.KeyVaultArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            TenantId = data.Azurerm_client_config.Current.Tenant_id,
+            SkuName = "premium",
+            AccessPolicies = 
+            {
+                new Azure.KeyVault.Inputs.KeyVaultAccessPolicyArgs
+                {
+                    TenantId = data.Azurerm_client_config.Current.Tenant_id,
+                    ObjectId = data.Azurerm_client_config.Current.Object_id,
+                    KeyPermissions = 
+                    {
+                        "create",
+                        "get",
+                    },
+                    SecretPermissions = 
+                    {
+                        "set",
+                    },
+                },
+                new Azure.KeyVault.Inputs.KeyVaultAccessPolicyArgs
+                {
+                    TenantId = exampleCluster.Identity.Apply(identity => identity.TenantId),
+                    ObjectId = exampleCluster.Identity.Apply(identity => identity.PrincipalId),
+                    KeyPermissions = 
+                    {
+                        "get",
+                        "unwrapkey",
+                        "wrapkey",
+                    },
+                },
+            },
+            Tags = 
+            {
+                { "environment", "Production" },
+            },
+        });
+        var exampleKey = new Azure.KeyVault.Key("exampleKey", new Azure.KeyVault.KeyArgs
+        {
+            KeyVaultId = exampleKeyVault.Id,
+            KeyType = "RSA",
+            KeySize = 2048,
+            KeyOpts = 
+            {
+                "decrypt",
+                "encrypt",
+                "sign",
+                "unwrapKey",
+                "verify",
+                "wrapKey",
+            },
+        });
+        var exampleClusterCustomerManagedKey = new Azure.LogAnalytics.ClusterCustomerManagedKey("exampleClusterCustomerManagedKey", new Azure.LogAnalytics.ClusterCustomerManagedKeyArgs
+        {
+            LogAnalyticsClusterId = exampleCluster.Id,
+            KeyVaultKeyId = exampleKey.Id,
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/keyvault"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/loganalytics"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West Europe"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleCluster, err := loganalytics.NewCluster(ctx, "exampleCluster", &loganalytics.ClusterArgs{
+			ResourceGroupName: exampleResourceGroup.Name,
+			Location:          exampleResourceGroup.Location,
+			Identity: &loganalytics.ClusterIdentityArgs{
+				Type: pulumi.String("SystemAssigned"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		exampleKeyVault, err := keyvault.NewKeyVault(ctx, "exampleKeyVault", &keyvault.KeyVaultArgs{
+			Location:          exampleResourceGroup.Location,
+			ResourceGroupName: exampleResourceGroup.Name,
+			TenantId:          pulumi.Any(data.Azurerm_client_config.Current.Tenant_id),
+			SkuName:           pulumi.String("premium"),
+			AccessPolicies: keyvault.KeyVaultAccessPolicyArray{
+				&keyvault.KeyVaultAccessPolicyArgs{
+					TenantId: pulumi.Any(data.Azurerm_client_config.Current.Tenant_id),
+					ObjectId: pulumi.Any(data.Azurerm_client_config.Current.Object_id),
+					KeyPermissions: pulumi.StringArray{
+						pulumi.String("create"),
+						pulumi.String("get"),
+					},
+					SecretPermissions: pulumi.StringArray{
+						pulumi.String("set"),
+					},
+				},
+				&keyvault.KeyVaultAccessPolicyArgs{
+					TenantId: exampleCluster.Identity.ApplyT(func(identity loganalytics.ClusterIdentity) (string, error) {
+						return identity.TenantId, nil
+					}).(pulumi.StringOutput),
+					ObjectId: exampleCluster.Identity.ApplyT(func(identity loganalytics.ClusterIdentity) (string, error) {
+						return identity.PrincipalId, nil
+					}).(pulumi.StringOutput),
+					KeyPermissions: pulumi.StringArray{
+						pulumi.String("get"),
+						pulumi.String("unwrapkey"),
+						pulumi.String("wrapkey"),
+					},
+				},
+			},
+			Tags: pulumi.StringMap{
+				"environment": pulumi.String("Production"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		exampleKey, err := keyvault.NewKey(ctx, "exampleKey", &keyvault.KeyArgs{
+			KeyVaultId: exampleKeyVault.ID(),
+			KeyType:    pulumi.String("RSA"),
+			KeySize:    pulumi.Int(2048),
+			KeyOpts: pulumi.StringArray{
+				pulumi.String("decrypt"),
+				pulumi.String("encrypt"),
+				pulumi.String("sign"),
+				pulumi.String("unwrapKey"),
+				pulumi.String("verify"),
+				pulumi.String("wrapKey"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = loganalytics.NewClusterCustomerManagedKey(ctx, "exampleClusterCustomerManagedKey", &loganalytics.ClusterCustomerManagedKeyArgs{
+			LogAnalyticsClusterId: exampleCluster.ID(),
+			KeyVaultKeyId:         exampleKey.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_cluster = azure.loganalytics.Cluster("exampleCluster",
+    resource_group_name=example_resource_group.name,
+    location=example_resource_group.location,
+    identity=azure.loganalytics.ClusterIdentityArgs(
+        type="SystemAssigned",
+    ))
+example_key_vault = azure.keyvault.KeyVault("exampleKeyVault",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    tenant_id=data["azurerm_client_config"]["current"]["tenant_id"],
+    sku_name="premium",
+    access_policies=[
+        azure.keyvault.KeyVaultAccessPolicyArgs(
+            tenant_id=data["azurerm_client_config"]["current"]["tenant_id"],
+            object_id=data["azurerm_client_config"]["current"]["object_id"],
+            key_permissions=[
+                "create",
+                "get",
+            ],
+            secret_permissions=["set"],
+        ),
+        azure.keyvault.KeyVaultAccessPolicyArgs(
+            tenant_id=example_cluster.identity.tenant_id,
+            object_id=example_cluster.identity.principal_id,
+            key_permissions=[
+                "get",
+                "unwrapkey",
+                "wrapkey",
+            ],
+        ),
+    ],
+    tags={
+        "environment": "Production",
+    })
+example_key = azure.keyvault.Key("exampleKey",
+    key_vault_id=example_key_vault.id,
+    key_type="RSA",
+    key_size=2048,
+    key_opts=[
+        "decrypt",
+        "encrypt",
+        "sign",
+        "unwrapKey",
+        "verify",
+        "wrapKey",
+    ])
+example_cluster_customer_managed_key = azure.loganalytics.ClusterCustomerManagedKey("exampleClusterCustomerManagedKey",
+    log_analytics_cluster_id=example_cluster.id,
+    key_vault_key_id=example_key.id)
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const exampleCluster = new azure.loganalytics.Cluster("exampleCluster", {
+    resourceGroupName: exampleResourceGroup.name,
+    location: exampleResourceGroup.location,
+    identity: {
+        type: "SystemAssigned",
+    },
+});
+const exampleKeyVault = new azure.keyvault.KeyVault("exampleKeyVault", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    tenantId: data.azurerm_client_config.current.tenant_id,
+    skuName: "premium",
+    accessPolicies: [
+        {
+            tenantId: data.azurerm_client_config.current.tenant_id,
+            objectId: data.azurerm_client_config.current.object_id,
+            keyPermissions: [
+                "create",
+                "get",
+            ],
+            secretPermissions: ["set"],
+        },
+        {
+            tenantId: exampleCluster.identity.apply(identity => identity.tenantId),
+            objectId: exampleCluster.identity.apply(identity => identity.principalId),
+            keyPermissions: [
+                "get",
+                "unwrapkey",
+                "wrapkey",
+            ],
+        },
+    ],
+    tags: {
+        environment: "Production",
+    },
+});
+const exampleKey = new azure.keyvault.Key("exampleKey", {
+    keyVaultId: exampleKeyVault.id,
+    keyType: "RSA",
+    keySize: 2048,
+    keyOpts: [
+        "decrypt",
+        "encrypt",
+        "sign",
+        "unwrapKey",
+        "verify",
+        "wrapKey",
+    ],
+});
+const exampleClusterCustomerManagedKey = new azure.loganalytics.ClusterCustomerManagedKey("exampleClusterCustomerManagedKey", {
+    logAnalyticsClusterId: exampleCluster.id,
+    keyVaultKeyId: exampleKey.id,
+});
+```
+
+
+{{< /example >}}
+
+
+
+
+
+{{% /examples %}}
+
+
 
 
 ## Create a ClusterCustomerManagedKey Resource {#create}

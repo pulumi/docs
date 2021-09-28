@@ -12,6 +12,173 @@ meta_desc: "Documentation for the azure.automation.Certificate resource with exa
 
 Manages an Automation Certificate.
 
+{{% examples %}}
+
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+
+
+
+
+{{< example csharp >}}
+
+```csharp
+using System;
+using System.IO;
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+	private static string ReadFileBase64(string path) {
+		return Convert.ToBase64String(System.Text.UTF8.GetBytes(File.ReadAllText(path)))
+	}
+
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West Europe",
+        });
+        var exampleAccount = new Azure.Automation.Account("exampleAccount", new Azure.Automation.AccountArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            SkuName = "Basic",
+        });
+        var exampleCertificate = new Azure.Automation.Certificate("exampleCertificate", new Azure.Automation.CertificateArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            AutomationAccountName = exampleAccount.Name,
+            Description = "This is an example certificate",
+            Base64 = ReadFileBase64("certificate.pfx"),
+            Exportable = true,
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"encoding/base64"
+	"io/ioutil"
+
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/automation"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/core"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func filebase64OrPanic(path string) pulumi.StringPtrInput {
+	if fileData, err := ioutil.ReadFile(path); err == nil {
+		return pulumi.String(base64.StdEncoding.EncodeToString(fileData[:]))
+	} else {
+		panic(err.Error())
+	}
+}
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West Europe"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleAccount, err := automation.NewAccount(ctx, "exampleAccount", &automation.AccountArgs{
+			Location:          exampleResourceGroup.Location,
+			ResourceGroupName: exampleResourceGroup.Name,
+			SkuName:           pulumi.String("Basic"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = automation.NewCertificate(ctx, "exampleCertificate", &automation.CertificateArgs{
+			ResourceGroupName:     exampleResourceGroup.Name,
+			AutomationAccountName: exampleAccount.Name,
+			Description:           pulumi.String("This is an example certificate"),
+			Base64:                filebase64OrPanic("certificate.pfx"),
+			Exportable:            pulumi.Bool(true),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import base64
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_account = azure.automation.Account("exampleAccount",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    sku_name="Basic")
+example_certificate = azure.automation.Certificate("exampleCertificate",
+    resource_group_name=example_resource_group.name,
+    automation_account_name=example_account.name,
+    description="This is an example certificate",
+    base64=(lambda path: base64.b64encode(open(path).read().encode()).decode())("certificate.pfx"),
+    exportable=True)
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+import * from "fs";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const exampleAccount = new azure.automation.Account("exampleAccount", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    skuName: "Basic",
+});
+const exampleCertificate = new azure.automation.Certificate("exampleCertificate", {
+    resourceGroupName: exampleResourceGroup.name,
+    automationAccountName: exampleAccount.name,
+    description: "This is an example certificate",
+    base64: Buffer.from(fs.readFileSync("certificate.pfx"), 'binary').toString('base64'),
+    exportable: true,
+});
+```
+
+
+{{< /example >}}
+
+
+
+
+
+{{% /examples %}}
+
+
 
 
 ## Create a Certificate Resource {#create}

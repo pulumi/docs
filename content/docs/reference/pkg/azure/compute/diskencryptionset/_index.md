@@ -14,6 +14,342 @@ Manages a Disk Encryption Set.
 
 > **NOTE:** At this time the Key Vault used to store the Active Key for this Disk Encryption Set must have both Soft Delete & Purge Protection enabled - which are not yet supported by this provider.
 
+{{% examples %}}
+
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+
+
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var current = Output.Create(Azure.Core.GetClientConfig.InvokeAsync());
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West Europe",
+        });
+        var exampleKeyVault = new Azure.KeyVault.KeyVault("exampleKeyVault", new Azure.KeyVault.KeyVaultArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            TenantId = current.Apply(current => current.TenantId),
+            SkuName = "premium",
+            EnabledForDiskEncryption = true,
+            SoftDeleteEnabled = true,
+            PurgeProtectionEnabled = true,
+        });
+        var example_user = new Azure.KeyVault.AccessPolicy("example-user", new Azure.KeyVault.AccessPolicyArgs
+        {
+            KeyVaultId = exampleKeyVault.Id,
+            TenantId = current.Apply(current => current.TenantId),
+            ObjectId = current.Apply(current => current.ObjectId),
+            KeyPermissions = 
+            {
+                "get",
+                "create",
+                "delete",
+            },
+        });
+        var exampleKey = new Azure.KeyVault.Key("exampleKey", new Azure.KeyVault.KeyArgs
+        {
+            KeyVaultId = exampleKeyVault.Id,
+            KeyType = "RSA",
+            KeySize = 2048,
+            KeyOpts = 
+            {
+                "decrypt",
+                "encrypt",
+                "sign",
+                "unwrapKey",
+                "verify",
+                "wrapKey",
+            },
+        }, new CustomResourceOptions
+        {
+            DependsOn = 
+            {
+                example_user,
+            },
+        });
+        var exampleDiskEncryptionSet = new Azure.Compute.DiskEncryptionSet("exampleDiskEncryptionSet", new Azure.Compute.DiskEncryptionSetArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            Location = exampleResourceGroup.Location,
+            KeyVaultKeyId = exampleKey.Id,
+            Identity = new Azure.Compute.Inputs.DiskEncryptionSetIdentityArgs
+            {
+                Type = "SystemAssigned",
+            },
+        });
+        var example_disk = new Azure.KeyVault.AccessPolicy("example-disk", new Azure.KeyVault.AccessPolicyArgs
+        {
+            KeyVaultId = exampleKeyVault.Id,
+            TenantId = exampleDiskEncryptionSet.Identity.Apply(identity => identity.TenantId),
+            ObjectId = exampleDiskEncryptionSet.Identity.Apply(identity => identity.PrincipalId),
+            KeyPermissions = 
+            {
+                "Get",
+                "WrapKey",
+                "UnwrapKey",
+            },
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/compute"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/keyvault"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		current, err := core.GetClientConfig(ctx, nil, nil)
+		if err != nil {
+			return err
+		}
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West Europe"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleKeyVault, err := keyvault.NewKeyVault(ctx, "exampleKeyVault", &keyvault.KeyVaultArgs{
+			Location:                 exampleResourceGroup.Location,
+			ResourceGroupName:        exampleResourceGroup.Name,
+			TenantId:                 pulumi.String(current.TenantId),
+			SkuName:                  pulumi.String("premium"),
+			EnabledForDiskEncryption: pulumi.Bool(true),
+			SoftDeleteEnabled:        pulumi.Bool(true),
+			PurgeProtectionEnabled:   pulumi.Bool(true),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = keyvault.NewAccessPolicy(ctx, "example_user", &keyvault.AccessPolicyArgs{
+			KeyVaultId: exampleKeyVault.ID(),
+			TenantId:   pulumi.String(current.TenantId),
+			ObjectId:   pulumi.String(current.ObjectId),
+			KeyPermissions: pulumi.StringArray{
+				pulumi.String("get"),
+				pulumi.String("create"),
+				pulumi.String("delete"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		exampleKey, err := keyvault.NewKey(ctx, "exampleKey", &keyvault.KeyArgs{
+			KeyVaultId: exampleKeyVault.ID(),
+			KeyType:    pulumi.String("RSA"),
+			KeySize:    pulumi.Int(2048),
+			KeyOpts: pulumi.StringArray{
+				pulumi.String("decrypt"),
+				pulumi.String("encrypt"),
+				pulumi.String("sign"),
+				pulumi.String("unwrapKey"),
+				pulumi.String("verify"),
+				pulumi.String("wrapKey"),
+			},
+		}, pulumi.DependsOn([]pulumi.Resource{
+			example_user,
+		}))
+		if err != nil {
+			return err
+		}
+		exampleDiskEncryptionSet, err := compute.NewDiskEncryptionSet(ctx, "exampleDiskEncryptionSet", &compute.DiskEncryptionSetArgs{
+			ResourceGroupName: exampleResourceGroup.Name,
+			Location:          exampleResourceGroup.Location,
+			KeyVaultKeyId:     exampleKey.ID(),
+			Identity: &compute.DiskEncryptionSetIdentityArgs{
+				Type: pulumi.String("SystemAssigned"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = keyvault.NewAccessPolicy(ctx, "example_disk", &keyvault.AccessPolicyArgs{
+			KeyVaultId: exampleKeyVault.ID(),
+			TenantId: exampleDiskEncryptionSet.Identity.ApplyT(func(identity compute.DiskEncryptionSetIdentity) (string, error) {
+				return identity.TenantId, nil
+			}).(pulumi.StringOutput),
+			ObjectId: exampleDiskEncryptionSet.Identity.ApplyT(func(identity compute.DiskEncryptionSetIdentity) (string, error) {
+				return identity.PrincipalId, nil
+			}).(pulumi.StringOutput),
+			KeyPermissions: pulumi.StringArray{
+				pulumi.String("Get"),
+				pulumi.String("WrapKey"),
+				pulumi.String("UnwrapKey"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_azure as azure
+
+current = azure.core.get_client_config()
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_key_vault = azure.keyvault.KeyVault("exampleKeyVault",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    tenant_id=current.tenant_id,
+    sku_name="premium",
+    enabled_for_disk_encryption=True,
+    soft_delete_enabled=True,
+    purge_protection_enabled=True)
+example_user = azure.keyvault.AccessPolicy("example-user",
+    key_vault_id=example_key_vault.id,
+    tenant_id=current.tenant_id,
+    object_id=current.object_id,
+    key_permissions=[
+        "get",
+        "create",
+        "delete",
+    ])
+example_key = azure.keyvault.Key("exampleKey",
+    key_vault_id=example_key_vault.id,
+    key_type="RSA",
+    key_size=2048,
+    key_opts=[
+        "decrypt",
+        "encrypt",
+        "sign",
+        "unwrapKey",
+        "verify",
+        "wrapKey",
+    ],
+    opts=pulumi.ResourceOptions(depends_on=[example_user]))
+example_disk_encryption_set = azure.compute.DiskEncryptionSet("exampleDiskEncryptionSet",
+    resource_group_name=example_resource_group.name,
+    location=example_resource_group.location,
+    key_vault_key_id=example_key.id,
+    identity=azure.compute.DiskEncryptionSetIdentityArgs(
+        type="SystemAssigned",
+    ))
+example_disk = azure.keyvault.AccessPolicy("example-disk",
+    key_vault_id=example_key_vault.id,
+    tenant_id=example_disk_encryption_set.identity.tenant_id,
+    object_id=example_disk_encryption_set.identity.principal_id,
+    key_permissions=[
+        "Get",
+        "WrapKey",
+        "UnwrapKey",
+    ])
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const current = azure.core.getClientConfig({});
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const exampleKeyVault = new azure.keyvault.KeyVault("exampleKeyVault", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    tenantId: current.then(current => current.tenantId),
+    skuName: "premium",
+    enabledForDiskEncryption: true,
+    softDeleteEnabled: true,
+    purgeProtectionEnabled: true,
+});
+const example_user = new azure.keyvault.AccessPolicy("example-user", {
+    keyVaultId: exampleKeyVault.id,
+    tenantId: current.then(current => current.tenantId),
+    objectId: current.then(current => current.objectId),
+    keyPermissions: [
+        "get",
+        "create",
+        "delete",
+    ],
+});
+const exampleKey = new azure.keyvault.Key("exampleKey", {
+    keyVaultId: exampleKeyVault.id,
+    keyType: "RSA",
+    keySize: 2048,
+    keyOpts: [
+        "decrypt",
+        "encrypt",
+        "sign",
+        "unwrapKey",
+        "verify",
+        "wrapKey",
+    ],
+}, {
+    dependsOn: [example_user],
+});
+const exampleDiskEncryptionSet = new azure.compute.DiskEncryptionSet("exampleDiskEncryptionSet", {
+    resourceGroupName: exampleResourceGroup.name,
+    location: exampleResourceGroup.location,
+    keyVaultKeyId: exampleKey.id,
+    identity: {
+        type: "SystemAssigned",
+    },
+});
+const example_disk = new azure.keyvault.AccessPolicy("example-disk", {
+    keyVaultId: exampleKeyVault.id,
+    tenantId: exampleDiskEncryptionSet.identity.apply(identity => identity.tenantId),
+    objectId: exampleDiskEncryptionSet.identity.apply(identity => identity.principalId),
+    keyPermissions: [
+        "Get",
+        "WrapKey",
+        "UnwrapKey",
+    ],
+});
+```
+
+
+{{< /example >}}
+
+
+
+
+
+{{% /examples %}}
+
+
 
 
 ## Create a DiskEncryptionSet Resource {#create}

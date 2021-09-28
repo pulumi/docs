@@ -14,6 +14,549 @@ Manages a Backup Instance to back up PostgreSQL.
 
 > **Note**: Before using this resource, there are some prerequisite permissions for configure backup and restore. See more details from https://docs.microsoft.com/en-us/azure/backup/backup-azure-database-postgresql#prerequisite-permissions-for-configure-backup-and-restore.
 
+{{% examples %}}
+
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+
+
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var current = Output.Create(Azure.Core.GetClientConfig.InvokeAsync());
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West Europe",
+        });
+        var exampleServer = new Azure.PostgreSql.Server("exampleServer", new Azure.PostgreSql.ServerArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            SkuName = "B_Gen5_2",
+            StorageMb = 5120,
+            BackupRetentionDays = 7,
+            GeoRedundantBackupEnabled = false,
+            AutoGrowEnabled = true,
+            AdministratorLogin = "psqladminun",
+            AdministratorLoginPassword = "H@Sh1CoR3!",
+            Version = "9.5",
+            SslEnforcementEnabled = true,
+        });
+        var exampleFirewallRule = new Azure.PostgreSql.FirewallRule("exampleFirewallRule", new Azure.PostgreSql.FirewallRuleArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            ServerName = exampleServer.Name,
+            StartIpAddress = "0.0.0.0",
+            EndIpAddress = "0.0.0.0",
+        });
+        var exampleDatabase = new Azure.PostgreSql.Database("exampleDatabase", new Azure.PostgreSql.DatabaseArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            ServerName = exampleServer.Name,
+            Charset = "UTF8",
+            Collation = "English_United States.1252",
+        });
+        var exampleBackupVault = new Azure.DataProtection.BackupVault("exampleBackupVault", new Azure.DataProtection.BackupVaultArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            Location = exampleResourceGroup.Location,
+            DatastoreType = "VaultStore",
+            Redundancy = "LocallyRedundant",
+            Identity = new Azure.DataProtection.Inputs.BackupVaultIdentityArgs
+            {
+                Type = "SystemAssigned",
+            },
+        });
+        var exampleKeyVault = new Azure.KeyVault.KeyVault("exampleKeyVault", new Azure.KeyVault.KeyVaultArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            TenantId = current.Apply(current => current.TenantId),
+            SkuName = "premium",
+            SoftDeleteRetentionDays = 7,
+            AccessPolicies = 
+            {
+                new Azure.KeyVault.Inputs.KeyVaultAccessPolicyArgs
+                {
+                    TenantId = current.Apply(current => current.TenantId),
+                    ObjectId = current.Apply(current => current.ObjectId),
+                    KeyPermissions = 
+                    {
+                        "create",
+                        "get",
+                    },
+                    SecretPermissions = 
+                    {
+                        "set",
+                        "get",
+                        "delete",
+                        "purge",
+                        "recover",
+                    },
+                },
+                new Azure.KeyVault.Inputs.KeyVaultAccessPolicyArgs
+                {
+                    TenantId = exampleBackupVault.Identity.Apply(identity => identity?.TenantId),
+                    ObjectId = exampleBackupVault.Identity.Apply(identity => identity?.PrincipalId),
+                    KeyPermissions = 
+                    {
+                        "create",
+                        "get",
+                    },
+                    SecretPermissions = 
+                    {
+                        "set",
+                        "get",
+                        "delete",
+                        "purge",
+                        "recover",
+                    },
+                },
+            },
+        });
+        var exampleSecret = new Azure.KeyVault.Secret("exampleSecret", new Azure.KeyVault.SecretArgs
+        {
+            Value = Output.Tuple(exampleServer.Name, exampleDatabase.Name, exampleServer.Name).Apply(values =>
+            {
+                var exampleServerName = values.Item1;
+                var exampleDatabaseName = values.Item2;
+                var exampleServerName1 = values.Item3;
+                return $"Server={exampleServerName}.postgres.database.azure.com;Database={exampleDatabaseName};Port=5432;User Id=psqladminun@{exampleServerName1};Password=H@Sh1CoR3!;Ssl Mode=Require;";
+            }),
+            KeyVaultId = exampleKeyVault.Id,
+        });
+        var exampleBackupPolicyPostgresql = new Azure.DataProtection.BackupPolicyPostgresql("exampleBackupPolicyPostgresql", new Azure.DataProtection.BackupPolicyPostgresqlArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            VaultName = exampleBackupVault.Name,
+            BackupRepeatingTimeIntervals = 
+            {
+                "R/2021-05-23T02:30:00+00:00/P1W",
+            },
+            DefaultRetentionDuration = "P4M",
+        });
+        var exampleAssignment = new Azure.Authorization.Assignment("exampleAssignment", new Azure.Authorization.AssignmentArgs
+        {
+            Scope = exampleServer.Id,
+            RoleDefinitionName = "Reader",
+            PrincipalId = exampleBackupVault.Identity.Apply(identity => identity?.PrincipalId),
+        });
+        var exampleBackupInstancePostgresql = new Azure.DataProtection.BackupInstancePostgresql("exampleBackupInstancePostgresql", new Azure.DataProtection.BackupInstancePostgresqlArgs
+        {
+            Location = exampleResourceGroup.Location,
+            VaultId = exampleBackupVault.Id,
+            DatabaseId = exampleDatabase.Id,
+            BackupPolicyId = exampleBackupPolicyPostgresql.Id,
+            DatabaseCredentialKeyVaultSecretId = exampleSecret.VersionlessId,
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/authorization"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/dataprotection"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/keyvault"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/postgresql"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		current, err := core.GetClientConfig(ctx, nil, nil)
+		if err != nil {
+			return err
+		}
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West Europe"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleServer, err := postgresql.NewServer(ctx, "exampleServer", &postgresql.ServerArgs{
+			Location:                   exampleResourceGroup.Location,
+			ResourceGroupName:          exampleResourceGroup.Name,
+			SkuName:                    pulumi.String("B_Gen5_2"),
+			StorageMb:                  pulumi.Int(5120),
+			BackupRetentionDays:        pulumi.Int(7),
+			GeoRedundantBackupEnabled:  pulumi.Bool(false),
+			AutoGrowEnabled:            pulumi.Bool(true),
+			AdministratorLogin:         pulumi.String("psqladminun"),
+			AdministratorLoginPassword: pulumi.String("H@Sh1CoR3!"),
+			Version:                    pulumi.String("9.5"),
+			SslEnforcementEnabled:      pulumi.Bool(true),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = postgresql.NewFirewallRule(ctx, "exampleFirewallRule", &postgresql.FirewallRuleArgs{
+			ResourceGroupName: exampleResourceGroup.Name,
+			ServerName:        exampleServer.Name,
+			StartIpAddress:    pulumi.String("0.0.0.0"),
+			EndIpAddress:      pulumi.String("0.0.0.0"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleDatabase, err := postgresql.NewDatabase(ctx, "exampleDatabase", &postgresql.DatabaseArgs{
+			ResourceGroupName: exampleResourceGroup.Name,
+			ServerName:        exampleServer.Name,
+			Charset:           pulumi.String("UTF8"),
+			Collation:         pulumi.String("English_United States.1252"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleBackupVault, err := dataprotection.NewBackupVault(ctx, "exampleBackupVault", &dataprotection.BackupVaultArgs{
+			ResourceGroupName: exampleResourceGroup.Name,
+			Location:          exampleResourceGroup.Location,
+			DatastoreType:     pulumi.String("VaultStore"),
+			Redundancy:        pulumi.String("LocallyRedundant"),
+			Identity: &dataprotection.BackupVaultIdentityArgs{
+				Type: pulumi.String("SystemAssigned"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		exampleKeyVault, err := keyvault.NewKeyVault(ctx, "exampleKeyVault", &keyvault.KeyVaultArgs{
+			Location:                exampleResourceGroup.Location,
+			ResourceGroupName:       exampleResourceGroup.Name,
+			TenantId:                pulumi.String(current.TenantId),
+			SkuName:                 pulumi.String("premium"),
+			SoftDeleteRetentionDays: pulumi.Int(7),
+			AccessPolicies: keyvault.KeyVaultAccessPolicyArray{
+				&keyvault.KeyVaultAccessPolicyArgs{
+					TenantId: pulumi.String(current.TenantId),
+					ObjectId: pulumi.String(current.ObjectId),
+					KeyPermissions: pulumi.StringArray{
+						pulumi.String("create"),
+						pulumi.String("get"),
+					},
+					SecretPermissions: pulumi.StringArray{
+						pulumi.String("set"),
+						pulumi.String("get"),
+						pulumi.String("delete"),
+						pulumi.String("purge"),
+						pulumi.String("recover"),
+					},
+				},
+				&keyvault.KeyVaultAccessPolicyArgs{
+					TenantId: exampleBackupVault.Identity.ApplyT(func(identity dataprotection.BackupVaultIdentity) (string, error) {
+						return identity.TenantId, nil
+					}).(pulumi.StringOutput),
+					ObjectId: exampleBackupVault.Identity.ApplyT(func(identity dataprotection.BackupVaultIdentity) (string, error) {
+						return identity.PrincipalId, nil
+					}).(pulumi.StringOutput),
+					KeyPermissions: pulumi.StringArray{
+						pulumi.String("create"),
+						pulumi.String("get"),
+					},
+					SecretPermissions: pulumi.StringArray{
+						pulumi.String("set"),
+						pulumi.String("get"),
+						pulumi.String("delete"),
+						pulumi.String("purge"),
+						pulumi.String("recover"),
+					},
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		exampleSecret, err := keyvault.NewSecret(ctx, "exampleSecret", &keyvault.SecretArgs{
+			Value: pulumi.All(exampleServer.Name, exampleDatabase.Name, exampleServer.Name).ApplyT(func(_args []interface{}) (string, error) {
+				exampleServerName := _args[0].(string)
+				exampleDatabaseName := _args[1].(string)
+				exampleServerName1 := _args[2].(string)
+				return fmt.Sprintf("%v%v%v%v%v%v%v", "Server=", exampleServerName, ".postgres.database.azure.com;Database=", exampleDatabaseName, ";Port=5432;User Id=psqladminun@", exampleServerName1, ";Password=H@Sh1CoR3!;Ssl Mode=Require;"), nil
+			}).(pulumi.StringOutput),
+			KeyVaultId: exampleKeyVault.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		exampleBackupPolicyPostgresql, err := dataprotection.NewBackupPolicyPostgresql(ctx, "exampleBackupPolicyPostgresql", &dataprotection.BackupPolicyPostgresqlArgs{
+			ResourceGroupName: exampleResourceGroup.Name,
+			VaultName:         exampleBackupVault.Name,
+			BackupRepeatingTimeIntervals: pulumi.StringArray{
+				pulumi.String("R/2021-05-23T02:30:00+00:00/P1W"),
+			},
+			DefaultRetentionDuration: pulumi.String("P4M"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = authorization.NewAssignment(ctx, "exampleAssignment", &authorization.AssignmentArgs{
+			Scope:              exampleServer.ID(),
+			RoleDefinitionName: pulumi.String("Reader"),
+			PrincipalId: exampleBackupVault.Identity.ApplyT(func(identity dataprotection.BackupVaultIdentity) (string, error) {
+				return identity.PrincipalId, nil
+			}).(pulumi.StringOutput),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = dataprotection.NewBackupInstancePostgresql(ctx, "exampleBackupInstancePostgresql", &dataprotection.BackupInstancePostgresqlArgs{
+			Location:                           exampleResourceGroup.Location,
+			VaultId:                            exampleBackupVault.ID(),
+			DatabaseId:                         exampleDatabase.ID(),
+			BackupPolicyId:                     exampleBackupPolicyPostgresql.ID(),
+			DatabaseCredentialKeyVaultSecretId: exampleSecret.VersionlessId,
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_azure as azure
+
+current = azure.core.get_client_config()
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_server = azure.postgresql.Server("exampleServer",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    sku_name="B_Gen5_2",
+    storage_mb=5120,
+    backup_retention_days=7,
+    geo_redundant_backup_enabled=False,
+    auto_grow_enabled=True,
+    administrator_login="psqladminun",
+    administrator_login_password="H@Sh1CoR3!",
+    version="9.5",
+    ssl_enforcement_enabled=True)
+example_firewall_rule = azure.postgresql.FirewallRule("exampleFirewallRule",
+    resource_group_name=example_resource_group.name,
+    server_name=example_server.name,
+    start_ip_address="0.0.0.0",
+    end_ip_address="0.0.0.0")
+example_database = azure.postgresql.Database("exampleDatabase",
+    resource_group_name=example_resource_group.name,
+    server_name=example_server.name,
+    charset="UTF8",
+    collation="English_United States.1252")
+example_backup_vault = azure.dataprotection.BackupVault("exampleBackupVault",
+    resource_group_name=example_resource_group.name,
+    location=example_resource_group.location,
+    datastore_type="VaultStore",
+    redundancy="LocallyRedundant",
+    identity=azure.dataprotection.BackupVaultIdentityArgs(
+        type="SystemAssigned",
+    ))
+example_key_vault = azure.keyvault.KeyVault("exampleKeyVault",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    tenant_id=current.tenant_id,
+    sku_name="premium",
+    soft_delete_retention_days=7,
+    access_policies=[
+        azure.keyvault.KeyVaultAccessPolicyArgs(
+            tenant_id=current.tenant_id,
+            object_id=current.object_id,
+            key_permissions=[
+                "create",
+                "get",
+            ],
+            secret_permissions=[
+                "set",
+                "get",
+                "delete",
+                "purge",
+                "recover",
+            ],
+        ),
+        azure.keyvault.KeyVaultAccessPolicyArgs(
+            tenant_id=example_backup_vault.identity.tenant_id,
+            object_id=example_backup_vault.identity.principal_id,
+            key_permissions=[
+                "create",
+                "get",
+            ],
+            secret_permissions=[
+                "set",
+                "get",
+                "delete",
+                "purge",
+                "recover",
+            ],
+        ),
+    ])
+example_secret = azure.keyvault.Secret("exampleSecret",
+    value=pulumi.Output.all(example_server.name, example_database.name, example_server.name).apply(lambda exampleServerName, exampleDatabaseName, exampleServerName1: f"Server={example_server_name}.postgres.database.azure.com;Database={example_database_name};Port=5432;User Id=psqladminun@{example_server_name1};Password=H@Sh1CoR3!;Ssl Mode=Require;"),
+    key_vault_id=example_key_vault.id)
+example_backup_policy_postgresql = azure.dataprotection.BackupPolicyPostgresql("exampleBackupPolicyPostgresql",
+    resource_group_name=example_resource_group.name,
+    vault_name=example_backup_vault.name,
+    backup_repeating_time_intervals=["R/2021-05-23T02:30:00+00:00/P1W"],
+    default_retention_duration="P4M")
+example_assignment = azure.authorization.Assignment("exampleAssignment",
+    scope=example_server.id,
+    role_definition_name="Reader",
+    principal_id=example_backup_vault.identity.principal_id)
+example_backup_instance_postgresql = azure.dataprotection.BackupInstancePostgresql("exampleBackupInstancePostgresql",
+    location=example_resource_group.location,
+    vault_id=example_backup_vault.id,
+    database_id=example_database.id,
+    backup_policy_id=example_backup_policy_postgresql.id,
+    database_credential_key_vault_secret_id=example_secret.versionless_id)
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const current = azure.core.getClientConfig({});
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const exampleServer = new azure.postgresql.Server("exampleServer", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    skuName: "B_Gen5_2",
+    storageMb: 5120,
+    backupRetentionDays: 7,
+    geoRedundantBackupEnabled: false,
+    autoGrowEnabled: true,
+    administratorLogin: "psqladminun",
+    administratorLoginPassword: "H@Sh1CoR3!",
+    version: "9.5",
+    sslEnforcementEnabled: true,
+});
+const exampleFirewallRule = new azure.postgresql.FirewallRule("exampleFirewallRule", {
+    resourceGroupName: exampleResourceGroup.name,
+    serverName: exampleServer.name,
+    startIpAddress: "0.0.0.0",
+    endIpAddress: "0.0.0.0",
+});
+const exampleDatabase = new azure.postgresql.Database("exampleDatabase", {
+    resourceGroupName: exampleResourceGroup.name,
+    serverName: exampleServer.name,
+    charset: "UTF8",
+    collation: "English_United States.1252",
+});
+const exampleBackupVault = new azure.dataprotection.BackupVault("exampleBackupVault", {
+    resourceGroupName: exampleResourceGroup.name,
+    location: exampleResourceGroup.location,
+    datastoreType: "VaultStore",
+    redundancy: "LocallyRedundant",
+    identity: {
+        type: "SystemAssigned",
+    },
+});
+const exampleKeyVault = new azure.keyvault.KeyVault("exampleKeyVault", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    tenantId: current.then(current => current.tenantId),
+    skuName: "premium",
+    softDeleteRetentionDays: 7,
+    accessPolicies: [
+        {
+            tenantId: current.then(current => current.tenantId),
+            objectId: current.then(current => current.objectId),
+            keyPermissions: [
+                "create",
+                "get",
+            ],
+            secretPermissions: [
+                "set",
+                "get",
+                "delete",
+                "purge",
+                "recover",
+            ],
+        },
+        {
+            tenantId: exampleBackupVault.identity.apply(identity => identity?.tenantId),
+            objectId: exampleBackupVault.identity.apply(identity => identity?.principalId),
+            keyPermissions: [
+                "create",
+                "get",
+            ],
+            secretPermissions: [
+                "set",
+                "get",
+                "delete",
+                "purge",
+                "recover",
+            ],
+        },
+    ],
+});
+const exampleSecret = new azure.keyvault.Secret("exampleSecret", {
+    value: pulumi.interpolate`Server=${exampleServer.name}.postgres.database.azure.com;Database=${exampleDatabase.name};Port=5432;User Id=psqladminun@${exampleServer.name};Password=H@Sh1CoR3!;Ssl Mode=Require;`,
+    keyVaultId: exampleKeyVault.id,
+});
+const exampleBackupPolicyPostgresql = new azure.dataprotection.BackupPolicyPostgresql("exampleBackupPolicyPostgresql", {
+    resourceGroupName: exampleResourceGroup.name,
+    vaultName: exampleBackupVault.name,
+    backupRepeatingTimeIntervals: ["R/2021-05-23T02:30:00+00:00/P1W"],
+    defaultRetentionDuration: "P4M",
+});
+const exampleAssignment = new azure.authorization.Assignment("exampleAssignment", {
+    scope: exampleServer.id,
+    roleDefinitionName: "Reader",
+    principalId: exampleBackupVault.identity.apply(identity => identity?.principalId),
+});
+const exampleBackupInstancePostgresql = new azure.dataprotection.BackupInstancePostgresql("exampleBackupInstancePostgresql", {
+    location: exampleResourceGroup.location,
+    vaultId: exampleBackupVault.id,
+    databaseId: exampleDatabase.id,
+    backupPolicyId: exampleBackupPolicyPostgresql.id,
+    databaseCredentialKeyVaultSecretId: exampleSecret.versionlessId,
+});
+```
+
+
+{{< /example >}}
+
+
+
+
+
+{{% /examples %}}
+
+
 
 
 ## Create a BackupInstancePostgresql Resource {#create}

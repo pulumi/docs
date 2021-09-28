@@ -99,7 +99,91 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+```go
+package main
+
+import (
+	"io/ioutil"
+
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/logicapps"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func readFileOrPanic(path string) pulumi.StringPtrInput {
+	data, err := ioutil.ReadFile(path)
+	if err != nil {
+		panic(err.Error())
+	}
+	return pulumi.String(string(data))
+}
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		testResourceGroup, err := core.NewResourceGroup(ctx, "testResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West Europe"),
+		})
+		if err != nil {
+			return err
+		}
+		testIntegrationAccount, err := logicapps.NewIntegrationAccount(ctx, "testIntegrationAccount", &logicapps.IntegrationAccountArgs{
+			Location:          testResourceGroup.Location,
+			ResourceGroupName: testResourceGroup.Name,
+			SkuName:           pulumi.String("Standard"),
+		})
+		if err != nil {
+			return err
+		}
+		host, err := logicapps.NewIntegrationAccountPartner(ctx, "host", &logicapps.IntegrationAccountPartnerArgs{
+			ResourceGroupName:      testResourceGroup.Name,
+			IntegrationAccountName: testIntegrationAccount.Name,
+			BusinessIdentities: logicapps.IntegrationAccountPartnerBusinessIdentityArray{
+				&logicapps.IntegrationAccountPartnerBusinessIdentityArgs{
+					Qualifier: pulumi.String("AS2Identity"),
+					Value:     pulumi.String("FabrikamNY"),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		guest, err := logicapps.NewIntegrationAccountPartner(ctx, "guest", &logicapps.IntegrationAccountPartnerArgs{
+			ResourceGroupName:      testResourceGroup.Name,
+			IntegrationAccountName: testIntegrationAccount.Name,
+			BusinessIdentities: logicapps.IntegrationAccountPartnerBusinessIdentityArray{
+				&logicapps.IntegrationAccountPartnerBusinessIdentityArgs{
+					Qualifier: pulumi.String("AS2Identity"),
+					Value:     pulumi.String("FabrikamDC"),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = logicapps.NewIntegrationAccountAgreement(ctx, "testIntegrationAccountAgreement", &logicapps.IntegrationAccountAgreementArgs{
+			ResourceGroupName:      testResourceGroup.Name,
+			IntegrationAccountName: testIntegrationAccount.Name,
+			AgreementType:          pulumi.String("AS2"),
+			HostPartnerName:        host.Name,
+			GuestPartnerName:       guest.Name,
+			Content:                readFileOrPanic("testdata/integration_account_agreement_content_as2.json"),
+			HostIdentity: &logicapps.IntegrationAccountAgreementHostIdentityArgs{
+				Qualifier: pulumi.String("AS2Identity"),
+				Value:     pulumi.String("FabrikamNY"),
+			},
+			GuestIdentity: &logicapps.IntegrationAccountAgreementGuestIdentityArgs{
+				Qualifier: pulumi.String("AS2Identity"),
+				Value:     pulumi.String("FabrikamDC"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 
 {{< /example >}}
 
