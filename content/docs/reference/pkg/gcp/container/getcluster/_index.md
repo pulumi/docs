@@ -424,6 +424,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="dnsconfigs_csharp">
+<a href="#dnsconfigs_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Configs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getclusterdnsconfig">List&lt;Get<wbr>Cluster<wbr>Dns<wbr>Config&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="enableautopilot_csharp">
 <a href="#enableautopilot_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Autopilot</a>
 </span>
@@ -882,6 +890,14 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="dnsconfigs_go">
+<a href="#dnsconfigs_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Configs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getclusterdnsconfig">[]Get<wbr>Cluster<wbr>Dns<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
@@ -1346,6 +1362,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="dnsconfigs_nodejs">
+<a href="#dnsconfigs_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Configs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getclusterdnsconfig">Get<wbr>Cluster<wbr>Dns<wbr>Config[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="enableautopilot_nodejs">
 <a href="#enableautopilot_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Autopilot</a>
 </span>
@@ -1804,6 +1828,14 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="dns_configs_python">
+<a href="#dns_configs_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>configs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getclusterdnsconfig">Sequence[Get<wbr>Cluster<wbr>Dns<wbr>Config]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
@@ -3691,6 +3723,122 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="getclusterdnsconfig">Get<wbr>Cluster<wbr>Dns<wbr>Config</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="clusterdns_csharp">
+<a href="#clusterdns_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Dns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="clusterdnsdomain_csharp">
+<a href="#clusterdnsdomain_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Dns<wbr>Domain</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="clusterdnsscope_csharp">
+<a href="#clusterdnsscope_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Dns<wbr>Scope</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="clusterdns_go">
+<a href="#clusterdns_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Dns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="clusterdnsdomain_go">
+<a href="#clusterdnsdomain_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Dns<wbr>Domain</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="clusterdnsscope_go">
+<a href="#clusterdnsscope_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Dns<wbr>Scope</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="clusterdns_nodejs">
+<a href="#clusterdns_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Dns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="clusterdnsdomain_nodejs">
+<a href="#clusterdnsdomain_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Dns<wbr>Domain</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="clusterdnsscope_nodejs">
+<a href="#clusterdnsscope_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Dns<wbr>Scope</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="cluster_dns_python">
+<a href="#cluster_dns_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>dns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="cluster_dns_domain_python">
+<a href="#cluster_dns_domain_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>dns_<wbr>domain</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="cluster_dns_scope_python">
+<a href="#cluster_dns_scope_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>dns_<wbr>scope</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}

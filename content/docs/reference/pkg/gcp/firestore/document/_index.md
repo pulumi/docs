@@ -25,6 +25,119 @@ Firestore enabled. If you haven't already enabled it, you can create a
 `"CLOUD_FIRESTORE"` to do so. Your Firestore location will be the same as
 the App Engine location specified.
 
+{{% examples %}}
+
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+
+### Firestore Document Basic
+
+
+{{< example csharp >}}
+
+Coming soon!
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+Coming soon!
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+Coming soon!
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const mydoc = new gcp.firestore.Document("mydoc", {
+    collection: "somenewcollection",
+    documentId: "my-doc-%{random_suffix}",
+    fields: "{\"something\":{\"mapValue\":{\"fields\":{\"akey\":{\"stringValue\":\"avalue\"}}}}}",
+    project: "my-project-name",
+});
+```
+
+
+{{< /example >}}
+
+
+
+
+### Firestore Document Nested Document
+
+
+{{< example csharp >}}
+
+Coming soon!
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+Coming soon!
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+Coming soon!
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const mydoc = new gcp.firestore.Document("mydoc", {
+    collection: "somenewcollection",
+    documentId: "my-doc-%{random_suffix}",
+    fields: "{\"something\":{\"mapValue\":{\"fields\":{\"akey\":{\"stringValue\":\"avalue\"}}}}}",
+    project: "my-project-name",
+});
+const subDocument = new gcp.firestore.Document("sub_document", {
+    collection: pulumi.interpolate`${mydoc.path}/subdocs`,
+    documentId: "bitcoinkey",
+    fields: "{\"something\":{\"mapValue\":{\"fields\":{\"ayo\":{\"stringValue\":\"val2\"}}}}}",
+    project: "my-project-name",
+});
+const subSubDocument = new gcp.firestore.Document("sub_sub_document", {
+    collection: pulumi.interpolate`${subDocument.path}/subsubdocs`,
+    documentId: "asecret",
+    fields: "{\"something\":{\"mapValue\":{\"fields\":{\"secret\":{\"stringValue\":\"hithere\"}}}}}",
+    project: "my-project-name",
+});
+```
+
+
+{{< /example >}}
+
+
+
+
+
+{{% /examples %}}
+
+
 
 
 ## Create a Document Resource {#create}

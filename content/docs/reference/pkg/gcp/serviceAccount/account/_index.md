@@ -138,6 +138,7 @@ const serviceAccount = new gcp.serviceAccount.Account("service_account", {
             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
             <span class="nx">account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">disabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
             <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
@@ -291,6 +292,16 @@ to comply with RFC1035. Changing this forces a new service account to be created
 Must be less than or equal to 256 UTF-8 bytes.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disabled_csharp">
+<a href="#disabled_csharp" style="color: inherit; text-decoration: inherit;">Disabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether a service account is disabled or not. Defaults to `false`. This field has no effect during creation.
+Must be set after creation to disable a service account.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="displayname_csharp">
 <a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
 </span>
@@ -335,6 +346,16 @@ to comply with RFC1035. Changing this forces a new service account to be created
     </dt>
     <dd>{{% md %}}A text description of the service account.
 Must be less than or equal to 256 UTF-8 bytes.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disabled_go">
+<a href="#disabled_go" style="color: inherit; text-decoration: inherit;">Disabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether a service account is disabled or not. Defaults to `false`. This field has no effect during creation.
+Must be set after creation to disable a service account.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_go">
@@ -383,6 +404,16 @@ to comply with RFC1035. Changing this forces a new service account to be created
 Must be less than or equal to 256 UTF-8 bytes.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disabled_nodejs">
+<a href="#disabled_nodejs" style="color: inherit; text-decoration: inherit;">disabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether a service account is disabled or not. Defaults to `false`. This field has no effect during creation.
+Must be set after creation to disable a service account.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="displayname_nodejs">
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
@@ -427,6 +458,16 @@ to comply with RFC1035. Changing this forces a new service account to be created
     </dt>
     <dd>{{% md %}}A text description of the service account.
 Must be less than or equal to 256 UTF-8 bytes.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disabled_python">
+<a href="#disabled_python" style="color: inherit; text-decoration: inherit;">disabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether a service account is disabled or not. Defaults to `false`. This field has no effect during creation.
+Must be set after creation to disable a service account.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="display_name_python">
@@ -639,6 +680,7 @@ Get an existing Account resource's state with the given name, ID, and optional e
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
         <span class="nx">account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">disabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">email</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -778,6 +820,16 @@ to comply with RFC1035. Changing this forces a new service account to be created
 Must be less than or equal to 256 UTF-8 bytes.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_disabled_csharp">
+<a href="#state_disabled_csharp" style="color: inherit; text-decoration: inherit;">Disabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether a service account is disabled or not. Defaults to `false`. This field has no effect during creation.
+Must be set after creation to disable a service account.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_displayname_csharp">
 <a href="#state_displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
 </span>
@@ -851,6 +903,16 @@ to comply with RFC1035. Changing this forces a new service account to be created
     </dt>
     <dd>{{% md %}}A text description of the service account.
 Must be less than or equal to 256 UTF-8 bytes.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_disabled_go">
+<a href="#state_disabled_go" style="color: inherit; text-decoration: inherit;">Disabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether a service account is disabled or not. Defaults to `false`. This field has no effect during creation.
+Must be set after creation to disable a service account.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_displayname_go">
@@ -928,6 +990,16 @@ to comply with RFC1035. Changing this forces a new service account to be created
 Must be less than or equal to 256 UTF-8 bytes.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_disabled_nodejs">
+<a href="#state_disabled_nodejs" style="color: inherit; text-decoration: inherit;">disabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether a service account is disabled or not. Defaults to `false`. This field has no effect during creation.
+Must be set after creation to disable a service account.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_displayname_nodejs">
 <a href="#state_displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
@@ -1001,6 +1073,16 @@ to comply with RFC1035. Changing this forces a new service account to be created
     </dt>
     <dd>{{% md %}}A text description of the service account.
 Must be less than or equal to 256 UTF-8 bytes.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_disabled_python">
+<a href="#state_disabled_python" style="color: inherit; text-decoration: inherit;">disabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether a service account is disabled or not. Defaults to `false`. This field has no effect during creation.
+Must be set after creation to disable a service account.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_display_name_python">

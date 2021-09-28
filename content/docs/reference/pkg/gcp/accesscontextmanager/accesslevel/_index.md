@@ -160,12 +160,12 @@ access_policy = gcp.accesscontextmanager.AccessPolicy("access-policy",
 access_level = gcp.accesscontextmanager.AccessLevel("access-level",
     basic=gcp.accesscontextmanager.AccessLevelBasicArgs(
         conditions=[gcp.accesscontextmanager.AccessLevelBasicConditionArgs(
-            device_policy={
-                "osConstraints": [{
-                    "osType": "DESKTOP_CHROME_OS",
-                }],
-                "requireScreenLock": True,
-            },
+            device_policy=gcp.accesscontextmanager.AccessLevelBasicConditionDevicePolicyArgs(
+                os_constraints=[gcp.accesscontextmanager.AccessLevelBasicConditionDevicePolicyOsConstraintArgs(
+                    os_type="DESKTOP_CHROME_OS",
+                )],
+                require_screen_lock=True,
+            ),
             regions=[
                 "CH",
                 "IT",

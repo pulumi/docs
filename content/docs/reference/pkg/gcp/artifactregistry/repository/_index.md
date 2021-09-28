@@ -379,7 +379,7 @@ const my_repo = new gcp.artifactregistry.Repository("my-repo", {
 }, {
     provider: google_beta,
 });
-const test_account = new gcp.serviceAccount.Account("test-account", {
+const test_account = new gcp.serviceaccount.Account("test-account", {
     accountId: "my-account",
     displayName: "Test Service Account",
 }, {

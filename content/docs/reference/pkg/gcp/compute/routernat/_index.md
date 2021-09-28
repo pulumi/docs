@@ -203,6 +203,152 @@ const nat = new gcp.compute.RouterNat("nat", {
 
 
 
+### Router Nat Manual Ips
+
+
+{{< example csharp >}}
+
+```csharp
+using System.Collections.Generic;
+using System.Linq;
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var net = new Gcp.Compute.Network("net", new Gcp.Compute.NetworkArgs
+        {
+        });
+        var subnet = new Gcp.Compute.Subnetwork("subnet", new Gcp.Compute.SubnetworkArgs
+        {
+            Network = net.Id,
+            IpCidrRange = "10.0.0.0/16",
+            Region = "us-central1",
+        });
+        var router = new Gcp.Compute.Router("router", new Gcp.Compute.RouterArgs
+        {
+            Region = subnet.Region,
+            Network = net.Id,
+        });
+        var address = new List<Gcp.Compute.Address>();
+        for (var rangeIndex = 0; rangeIndex < 2; rangeIndex++)
+        {
+            var range = new { Value = rangeIndex };
+            address.Add(new Gcp.Compute.Address($"address-{range.Value}", new Gcp.Compute.AddressArgs
+            {
+                Region = subnet.Region,
+            }));
+        }
+        var natManual = new Gcp.Compute.RouterNat("natManual", new Gcp.Compute.RouterNatArgs
+        {
+            Router = router.Name,
+            Region = router.Region,
+            NatIpAllocateOption = "MANUAL_ONLY",
+            NatIps = address.Select(__item => __item.SelfLink).ToList(),
+            SourceSubnetworkIpRangesToNat = "LIST_OF_SUBNETWORKS",
+            Subnetworks = 
+            {
+                new Gcp.Compute.Inputs.RouterNatSubnetworkArgs
+                {
+                    Name = subnet.Id,
+                    SourceIpRangesToNats = 
+                    {
+                        "ALL_IP_RANGES",
+                    },
+                },
+            },
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+Coming soon!
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+net = gcp.compute.Network("net")
+subnet = gcp.compute.Subnetwork("subnet",
+    network=net.id,
+    ip_cidr_range="10.0.0.0/16",
+    region="us-central1")
+router = gcp.compute.Router("router",
+    region=subnet.region,
+    network=net.id)
+address = []
+for range in [{"value": i} for i in range(0, 2)]:
+    address.append(gcp.compute.Address(f"address-{range['value']}", region=subnet.region))
+nat_manual = gcp.compute.RouterNat("natManual",
+    router=router.name,
+    region=router.region,
+    nat_ip_allocate_option="MANUAL_ONLY",
+    nat_ips=[__item.self_link for __item in address],
+    source_subnetwork_ip_ranges_to_nat="LIST_OF_SUBNETWORKS",
+    subnetworks=[gcp.compute.RouterNatSubnetworkArgs(
+        name=subnet.id,
+        source_ip_ranges_to_nats=["ALL_IP_RANGES"],
+    )])
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const net = new gcp.compute.Network("net", {});
+const subnet = new gcp.compute.Subnetwork("subnet", {
+    network: net.id,
+    ipCidrRange: "10.0.0.0/16",
+    region: "us-central1",
+});
+const router = new gcp.compute.Router("router", {
+    region: subnet.region,
+    network: net.id,
+});
+const address: gcp.compute.Address[];
+for (const range = {value: 0}; range.value < 2; range.value++) {
+    address.push(new gcp.compute.Address(`address-${range.value}`, {region: subnet.region}));
+}
+const natManual = new gcp.compute.RouterNat("natManual", {
+    router: router.name,
+    region: router.region,
+    natIpAllocateOption: "MANUAL_ONLY",
+    natIps: address.map(__item => __item.selfLink),
+    sourceSubnetworkIpRangesToNat: "LIST_OF_SUBNETWORKS",
+    subnetworks: [{
+        name: subnet.id,
+        sourceIpRangesToNats: ["ALL_IP_RANGES"],
+    }],
+});
+```
+
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
 

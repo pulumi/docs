@@ -19,6 +19,9 @@ To get more information about RegionBackendService, see:
 * How-to Guides
     * [Internal TCP/UDP Load Balancing](https://cloud.google.com/compute/docs/load-balancing/internal/)
 
+> **Warning:** All arguments including `iap.oauth2_client_secret` and `iap.oauth2_client_secret_sha256` will be stored in the raw
+state as plain-text. [Read more about sensitive data in state](https://www.terraform.io/docs/state/sensitive-data.html).
+
 {{% examples %}}
 
 ## Example Usage
@@ -1179,6 +1182,7 @@ const defaultRegionBackendService = new gcp.compute.RegionBackendService("defaul
                          <span class="nx">enable_cdn</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                          <span class="nx">failover_policy</span><span class="p">:</span> <span class="nx">Optional[RegionBackendServiceFailoverPolicyArgs]</span> = None<span class="p">,</span>
                          <span class="nx">health_checks</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                         <span class="nx">iap</span><span class="p">:</span> <span class="nx">Optional[RegionBackendServiceIapArgs]</span> = None<span class="p">,</span>
                          <span class="nx">load_balancing_scheme</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                          <span class="nx">locality_lb_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                          <span class="nx">log_config</span><span class="p">:</span> <span class="nx">Optional[RegionBackendServiceLogConfigArgs]</span> = None<span class="p">,</span>
@@ -1430,6 +1434,16 @@ this RegionBackendService. Currently at most one health
 check can be specified.
 A health check must be specified unless the backend service uses an internet
 or serverless NEG as a backend.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="iap_csharp">
+<a href="#iap_csharp" style="color: inherit; text-decoration: inherit;">Iap</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#regionbackendserviceiap">Region<wbr>Backend<wbr>Service<wbr>Iap<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Settings for enabling Cloud Identity Aware Proxy
+Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loadbalancingscheme_csharp">
@@ -1702,6 +1716,16 @@ A health check must be specified unless the backend service uses an internet
 or serverless NEG as a backend.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="iap_go">
+<a href="#iap_go" style="color: inherit; text-decoration: inherit;">Iap</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#regionbackendserviceiap">Region<wbr>Backend<wbr>Service<wbr>Iap<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Settings for enabling Cloud Identity Aware Proxy
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="loadbalancingscheme_go">
 <a href="#loadbalancingscheme_go" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancing<wbr>Scheme</a>
 </span>
@@ -1972,6 +1996,16 @@ A health check must be specified unless the backend service uses an internet
 or serverless NEG as a backend.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="iap_nodejs">
+<a href="#iap_nodejs" style="color: inherit; text-decoration: inherit;">iap</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#regionbackendserviceiap">Region<wbr>Backend<wbr>Service<wbr>Iap<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Settings for enabling Cloud Identity Aware Proxy
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="loadbalancingscheme_nodejs">
 <a href="#loadbalancingscheme_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancing<wbr>Scheme</a>
 </span>
@@ -2240,6 +2274,16 @@ this RegionBackendService. Currently at most one health
 check can be specified.
 A health check must be specified unless the backend service uses an internet
 or serverless NEG as a backend.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="iap_python">
+<a href="#iap_python" style="color: inherit; text-decoration: inherit;">iap</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#regionbackendserviceiap">Region<wbr>Backend<wbr>Service<wbr>Iap<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Settings for enabling Cloud Identity Aware Proxy
+Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="load_balancing_scheme_python">
@@ -2588,6 +2632,7 @@ Get an existing RegionBackendService resource's state with the given name, ID, a
         <span class="nx">failover_policy</span><span class="p">:</span> <span class="nx">Optional[RegionBackendServiceFailoverPolicyArgs]</span> = None<span class="p">,</span>
         <span class="nx">fingerprint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">health_checks</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">iap</span><span class="p">:</span> <span class="nx">Optional[RegionBackendServiceIapArgs]</span> = None<span class="p">,</span>
         <span class="nx">load_balancing_scheme</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">locality_lb_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">log_config</span><span class="p">:</span> <span class="nx">Optional[RegionBackendServiceLogConfigArgs]</span> = None<span class="p">,</span>
@@ -2841,6 +2886,16 @@ this RegionBackendService. Currently at most one health
 check can be specified.
 A health check must be specified unless the backend service uses an internet
 or serverless NEG as a backend.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_iap_csharp">
+<a href="#state_iap_csharp" style="color: inherit; text-decoration: inherit;">Iap</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#regionbackendserviceiap">Region<wbr>Backend<wbr>Service<wbr>Iap<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Settings for enabling Cloud Identity Aware Proxy
+Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loadbalancingscheme_csharp">
@@ -3140,6 +3195,16 @@ A health check must be specified unless the backend service uses an internet
 or serverless NEG as a backend.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_iap_go">
+<a href="#state_iap_go" style="color: inherit; text-decoration: inherit;">Iap</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#regionbackendserviceiap">Region<wbr>Backend<wbr>Service<wbr>Iap<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Settings for enabling Cloud Identity Aware Proxy
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_loadbalancingscheme_go">
 <a href="#state_loadbalancingscheme_go" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancing<wbr>Scheme</a>
 </span>
@@ -3437,6 +3502,16 @@ A health check must be specified unless the backend service uses an internet
 or serverless NEG as a backend.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_iap_nodejs">
+<a href="#state_iap_nodejs" style="color: inherit; text-decoration: inherit;">iap</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#regionbackendserviceiap">Region<wbr>Backend<wbr>Service<wbr>Iap<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Settings for enabling Cloud Identity Aware Proxy
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_loadbalancingscheme_nodejs">
 <a href="#state_loadbalancingscheme_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancing<wbr>Scheme</a>
 </span>
@@ -3732,6 +3807,16 @@ this RegionBackendService. Currently at most one health
 check can be specified.
 A health check must be specified unless the backend service uses an internet
 or serverless NEG as a backend.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_iap_python">
+<a href="#state_iap_python" style="color: inherit; text-decoration: inherit;">iap</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#regionbackendserviceiap">Region<wbr>Backend<wbr>Service<wbr>Iap<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Settings for enabling Cloud Identity Aware Proxy
+Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_load_balancing_scheme_python">
@@ -5330,7 +5415,8 @@ can be specified as values, and you cannot specify a status code more than once.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionbackendservicecircuitbreakersconnecttimeout">Region<wbr>Backend<wbr>Service<wbr>Circuit<wbr>Breakers<wbr>Connect<wbr>Timeout</a></span>
     </dt>
-    <dd>{{% md %}}The timeout for new network connections to hosts.  Structure is documented below.
+    <dd>{{% md %}}The timeout for new network connections to hosts.
+Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconnections_csharp">
@@ -5395,7 +5481,8 @@ Defaults to 3.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionbackendservicecircuitbreakersconnecttimeout">Region<wbr>Backend<wbr>Service<wbr>Circuit<wbr>Breakers<wbr>Connect<wbr>Timeout</a></span>
     </dt>
-    <dd>{{% md %}}The timeout for new network connections to hosts.  Structure is documented below.
+    <dd>{{% md %}}The timeout for new network connections to hosts.
+Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconnections_go">
@@ -5460,7 +5547,8 @@ Defaults to 3.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionbackendservicecircuitbreakersconnecttimeout">Region<wbr>Backend<wbr>Service<wbr>Circuit<wbr>Breakers<wbr>Connect<wbr>Timeout</a></span>
     </dt>
-    <dd>{{% md %}}The timeout for new network connections to hosts.  Structure is documented below.
+    <dd>{{% md %}}The timeout for new network connections to hosts.
+Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconnections_nodejs">
@@ -5525,7 +5613,8 @@ Defaults to 3.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionbackendservicecircuitbreakersconnecttimeout">Region<wbr>Backend<wbr>Service<wbr>Circuit<wbr>Breakers<wbr>Connect<wbr>Timeout</a></span>
     </dt>
-    <dd>{{% md %}}The timeout for new network connections to hosts.  Structure is documented below.
+    <dd>{{% md %}}The timeout for new network connections to hosts.
+Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_connections_python">
@@ -6272,6 +6361,144 @@ backend are unhealthy, the traffic will be directed back to the primary
 backend in the "force" mode, where traffic will be spread to the healthy
 VMs with the best effort, or to all VMs when no VM is healthy.
 This field is only used with l4 load balancing.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="regionbackendserviceiap">Region<wbr>Backend<wbr>Service<wbr>Iap</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="oauth2clientid_csharp">
+<a href="#oauth2clientid_csharp" style="color: inherit; text-decoration: inherit;">Oauth2Client<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}OAuth2 Client ID for IAP
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="oauth2clientsecret_csharp">
+<a href="#oauth2clientsecret_csharp" style="color: inherit; text-decoration: inherit;">Oauth2Client<wbr>Secret</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}OAuth2 Client Secret for IAP
+**Note**: This property is sensitive and will not be displayed in the plan.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="oauth2clientsecretsha256_csharp">
+<a href="#oauth2clientsecretsha256_csharp" style="color: inherit; text-decoration: inherit;">Oauth2Client<wbr>Secret<wbr>Sha256</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}-
+OAuth2 Client Secret SHA-256 for IAP
+**Note**: This property is sensitive and will not be displayed in the plan.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="oauth2clientid_go">
+<a href="#oauth2clientid_go" style="color: inherit; text-decoration: inherit;">Oauth2Client<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}OAuth2 Client ID for IAP
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="oauth2clientsecret_go">
+<a href="#oauth2clientsecret_go" style="color: inherit; text-decoration: inherit;">Oauth2Client<wbr>Secret</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}OAuth2 Client Secret for IAP
+**Note**: This property is sensitive and will not be displayed in the plan.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="oauth2clientsecretsha256_go">
+<a href="#oauth2clientsecretsha256_go" style="color: inherit; text-decoration: inherit;">Oauth2Client<wbr>Secret<wbr>Sha256</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}-
+OAuth2 Client Secret SHA-256 for IAP
+**Note**: This property is sensitive and will not be displayed in the plan.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="oauth2clientid_nodejs">
+<a href="#oauth2clientid_nodejs" style="color: inherit; text-decoration: inherit;">oauth2Client<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}OAuth2 Client ID for IAP
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="oauth2clientsecret_nodejs">
+<a href="#oauth2clientsecret_nodejs" style="color: inherit; text-decoration: inherit;">oauth2Client<wbr>Secret</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}OAuth2 Client Secret for IAP
+**Note**: This property is sensitive and will not be displayed in the plan.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="oauth2clientsecretsha256_nodejs">
+<a href="#oauth2clientsecretsha256_nodejs" style="color: inherit; text-decoration: inherit;">oauth2Client<wbr>Secret<wbr>Sha256</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}-
+OAuth2 Client Secret SHA-256 for IAP
+**Note**: This property is sensitive and will not be displayed in the plan.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="oauth2_client_id_python">
+<a href="#oauth2_client_id_python" style="color: inherit; text-decoration: inherit;">oauth2_<wbr>client_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}OAuth2 Client ID for IAP
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="oauth2_client_secret_python">
+<a href="#oauth2_client_secret_python" style="color: inherit; text-decoration: inherit;">oauth2_<wbr>client_<wbr>secret</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}OAuth2 Client Secret for IAP
+**Note**: This property is sensitive and will not be displayed in the plan.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="oauth2_client_secret_sha256_python">
+<a href="#oauth2_client_secret_sha256_python" style="color: inherit; text-decoration: inherit;">oauth2_<wbr>client_<wbr>secret_<wbr>sha256</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}-
+OAuth2 Client Secret SHA-256 for IAP
+**Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

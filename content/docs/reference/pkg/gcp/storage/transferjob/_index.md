@@ -90,6 +90,7 @@ class MyStack : Stack
                 GcsDataSink = new Gcp.Storage.Inputs.TransferJobTransferSpecGcsDataSinkArgs
                 {
                     BucketName = s3_backup_bucketBucket.Name,
+                    Path = "foo/bar/",
                 },
             },
             Schedule = new Gcp.Storage.Inputs.TransferJobScheduleArgs
@@ -190,6 +191,7 @@ func main() {
 				},
 				GcsDataSink: &storage.TransferJobTransferSpecGcsDataSinkArgs{
 					BucketName: s3_backup_bucketBucket.Name,
+					Path:       pulumi.String("foo/bar/"),
 				},
 			},
 			Schedule: &storage.TransferJobScheduleArgs{
@@ -260,6 +262,7 @@ s3_bucket_nightly_backup = gcp.storage.TransferJob("s3-bucket-nightly-backup",
         ),
         gcs_data_sink=gcp.storage.TransferJobTransferSpecGcsDataSinkArgs(
             bucket_name=s3_backup_bucket_bucket.name,
+            path="foo/bar/",
         ),
     ),
     schedule=gcp.storage.TransferJobScheduleArgs(
@@ -328,6 +331,7 @@ const s3_bucket_nightly_backup = new gcp.storage.TransferJob("s3-bucket-nightly-
         },
         gcsDataSink: {
             bucketName: s3_backup_bucketBucket.name,
+            path: "foo/bar/",
         },
     },
     schedule: {
@@ -2612,6 +2616,15 @@ is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}S3 Bucket name.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="path_csharp">
+<a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Root path to transfer objects. Must be an empty string or full path name that ends with a '/'. This field is treated as an object prefix. As such, it should generally not begin with a '/'.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2625,6 +2638,15 @@ is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}S3 Bucket name.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="path_go">
+<a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Root path to transfer objects. Must be an empty string or full path name that ends with a '/'. This field is treated as an object prefix. As such, it should generally not begin with a '/'.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2638,6 +2660,15 @@ is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}S3 Bucket name.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="path_nodejs">
+<a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Root path to transfer objects. Must be an empty string or full path name that ends with a '/'. This field is treated as an object prefix. As such, it should generally not begin with a '/'.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2651,6 +2682,15 @@ is not provided, the provider project is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}S3 Bucket name.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="path_python">
+<a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Root path to transfer objects. Must be an empty string or full path name that ends with a '/'. This field is treated as an object prefix. As such, it should generally not begin with a '/'.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2666,6 +2706,15 @@ is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}S3 Bucket name.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="path_csharp">
+<a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Root path to transfer objects. Must be an empty string or full path name that ends with a '/'. This field is treated as an object prefix. As such, it should generally not begin with a '/'.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2679,6 +2728,15 @@ is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}S3 Bucket name.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="path_go">
+<a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Root path to transfer objects. Must be an empty string or full path name that ends with a '/'. This field is treated as an object prefix. As such, it should generally not begin with a '/'.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2692,6 +2750,15 @@ is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}S3 Bucket name.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="path_nodejs">
+<a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Root path to transfer objects. Must be an empty string or full path name that ends with a '/'. This field is treated as an object prefix. As such, it should generally not begin with a '/'.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2705,6 +2772,15 @@ is not provided, the provider project is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}S3 Bucket name.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="path_python">
+<a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Root path to transfer objects. Must be an empty string or full path name that ends with a '/'. This field is treated as an object prefix. As such, it should generally not begin with a '/'.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

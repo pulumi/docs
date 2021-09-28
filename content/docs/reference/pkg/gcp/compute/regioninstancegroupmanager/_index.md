@@ -348,9 +348,9 @@ appserver = gcp.compute.RegionInstanceGroupManager("appserver",
         ),
         gcp.compute.RegionInstanceGroupManagerVersionArgs(
             instance_template=google_compute_instance_template["appserver-canary"]["id"],
-            target_size={
-                "fixed": 1,
-            },
+            target_size=gcp.compute.RegionInstanceGroupManagerVersionTargetSizeArgs(
+                fixed=1,
+            ),
         ),
     ])
 ```
