@@ -12,6 +12,87 @@ meta_desc: "Documentation for the azure.dataprotection.BackupInstanceBlogStorage
 
 Manages a Backup Instance Blob Storage.
 
+{{% examples %}}
+
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+
+
+
+
+{{< example csharp >}}
+
+Coming soon!
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+Coming soon!
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+Coming soon!
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const rg = new azure.core.ResourceGroup("rg", {location: "West Europe"});
+const exampleAccount = new azure.storage.Account("exampleAccount", {
+    resourceGroupName: azurerm_resource_group.example.name,
+    location: azurerm_resource_group.example.location,
+    accountTier: "Standard",
+    accountReplicationType: "LRS",
+});
+const exampleBackupVault = new azure.dataprotection.BackupVault("exampleBackupVault", {
+    resourceGroupName: rg.name,
+    location: rg.location,
+    datastoreType: "VaultStore",
+    redundancy: "LocallyRedundant",
+});
+const exampleAssignment = new azure.authorization.Assignment("exampleAssignment", {
+    scope: exampleAccount.id,
+    roleDefinitionName: "Storage Account Backup Contributor Role",
+    principalId: exampleBackupVault.identity.apply(identity => identity?.principalId),
+});
+const exampleBackupPolicyBlobStorage = new azure.dataprotection.BackupPolicyBlobStorage("exampleBackupPolicyBlobStorage", {
+    resourceGroupName: rg.name,
+    vaultId: exampleBackupVault.id,
+    retentionDuration: "P30D",
+});
+const exampleBackupInstanceBlogStorage = new azure.dataprotection.BackupInstanceBlogStorage("exampleBackupInstanceBlogStorage", {
+    vaultId: exampleBackupVault.id,
+    storageAccountLocation: rg.location,
+    storageAccountId: exampleAccount.id,
+    backupPolicyId: exampleBackupPolicyBlobStorage.id,
+}, {
+    dependsOn: [exampleAssignment],
+});
+```
+
+
+{{< /example >}}
+
+
+
+
+
+{{% /examples %}}
+
+
 
 
 ## Create a BackupInstanceBlogStorage Resource {#create}

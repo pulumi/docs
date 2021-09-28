@@ -12,6 +12,388 @@ meta_desc: "Documentation for the azure.kusto.ClusterCustomerManagedKey resource
 
 Manages a Customer Managed Key for a Kusto Cluster.
 
+{{% examples %}}
+
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+
+
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var current = Output.Create(Azure.Core.GetClientConfig.InvokeAsync());
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West Europe",
+        });
+        var exampleKeyVault = new Azure.KeyVault.KeyVault("exampleKeyVault", new Azure.KeyVault.KeyVaultArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            TenantId = current.Apply(current => current.TenantId),
+            SkuName = "standard",
+            PurgeProtectionEnabled = true,
+        });
+        var exampleCluster = new Azure.Kusto.Cluster("exampleCluster", new Azure.Kusto.ClusterArgs
+        {
+            Location = azurerm_resource_group.Rg.Location,
+            ResourceGroupName = azurerm_resource_group.Rg.Name,
+            Sku = new Azure.Kusto.Inputs.ClusterSkuArgs
+            {
+                Name = "Standard_D13_v2",
+                Capacity = 2,
+            },
+            Identity = new Azure.Kusto.Inputs.ClusterIdentityArgs
+            {
+                Type = "SystemAssigned",
+            },
+        });
+        var cluster = new Azure.KeyVault.AccessPolicy("cluster", new Azure.KeyVault.AccessPolicyArgs
+        {
+            KeyVaultId = exampleKeyVault.Id,
+            TenantId = current.Apply(current => current.TenantId),
+            ObjectId = exampleCluster.Identity.Apply(identity => identity.PrincipalId),
+            KeyPermissions = 
+            {
+                "get",
+                "unwrapkey",
+                "wrapkey",
+            },
+        });
+        var client = new Azure.KeyVault.AccessPolicy("client", new Azure.KeyVault.AccessPolicyArgs
+        {
+            KeyVaultId = exampleKeyVault.Id,
+            TenantId = current.Apply(current => current.TenantId),
+            ObjectId = current.Apply(current => current.ObjectId),
+            KeyPermissions = 
+            {
+                "get",
+                "list",
+                "create",
+                "delete",
+                "recover",
+            },
+        });
+        var exampleKey = new Azure.KeyVault.Key("exampleKey", new Azure.KeyVault.KeyArgs
+        {
+            KeyVaultId = exampleKeyVault.Id,
+            KeyType = "RSA",
+            KeySize = 2048,
+            KeyOpts = 
+            {
+                "decrypt",
+                "encrypt",
+                "sign",
+                "unwrapKey",
+                "verify",
+                "wrapKey",
+            },
+        }, new CustomResourceOptions
+        {
+            DependsOn = 
+            {
+                client,
+                cluster,
+            },
+        });
+        var exampleClusterCustomerManagedKey = new Azure.Kusto.ClusterCustomerManagedKey("exampleClusterCustomerManagedKey", new Azure.Kusto.ClusterCustomerManagedKeyArgs
+        {
+            ClusterId = exampleCluster.Id,
+            KeyVaultId = exampleKeyVault.Id,
+            KeyName = exampleKey.Name,
+            KeyVersion = exampleKey.Version,
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/keyvault"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/kusto"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		current, err := core.GetClientConfig(ctx, nil, nil)
+		if err != nil {
+			return err
+		}
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West Europe"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleKeyVault, err := keyvault.NewKeyVault(ctx, "exampleKeyVault", &keyvault.KeyVaultArgs{
+			Location:               exampleResourceGroup.Location,
+			ResourceGroupName:      exampleResourceGroup.Name,
+			TenantId:               pulumi.String(current.TenantId),
+			SkuName:                pulumi.String("standard"),
+			PurgeProtectionEnabled: pulumi.Bool(true),
+		})
+		if err != nil {
+			return err
+		}
+		exampleCluster, err := kusto.NewCluster(ctx, "exampleCluster", &kusto.ClusterArgs{
+			Location:          pulumi.Any(azurerm_resource_group.Rg.Location),
+			ResourceGroupName: pulumi.Any(azurerm_resource_group.Rg.Name),
+			Sku: &kusto.ClusterSkuArgs{
+				Name:     pulumi.String("Standard_D13_v2"),
+				Capacity: pulumi.Int(2),
+			},
+			Identity: &kusto.ClusterIdentityArgs{
+				Type: pulumi.String("SystemAssigned"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		cluster, err := keyvault.NewAccessPolicy(ctx, "cluster", &keyvault.AccessPolicyArgs{
+			KeyVaultId: exampleKeyVault.ID(),
+			TenantId:   pulumi.String(current.TenantId),
+			ObjectId: exampleCluster.Identity.ApplyT(func(identity kusto.ClusterIdentity) (string, error) {
+				return identity.PrincipalId, nil
+			}).(pulumi.StringOutput),
+			KeyPermissions: pulumi.StringArray{
+				pulumi.String("get"),
+				pulumi.String("unwrapkey"),
+				pulumi.String("wrapkey"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		client, err := keyvault.NewAccessPolicy(ctx, "client", &keyvault.AccessPolicyArgs{
+			KeyVaultId: exampleKeyVault.ID(),
+			TenantId:   pulumi.String(current.TenantId),
+			ObjectId:   pulumi.String(current.ObjectId),
+			KeyPermissions: pulumi.StringArray{
+				pulumi.String("get"),
+				pulumi.String("list"),
+				pulumi.String("create"),
+				pulumi.String("delete"),
+				pulumi.String("recover"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		exampleKey, err := keyvault.NewKey(ctx, "exampleKey", &keyvault.KeyArgs{
+			KeyVaultId: exampleKeyVault.ID(),
+			KeyType:    pulumi.String("RSA"),
+			KeySize:    pulumi.Int(2048),
+			KeyOpts: pulumi.StringArray{
+				pulumi.String("decrypt"),
+				pulumi.String("encrypt"),
+				pulumi.String("sign"),
+				pulumi.String("unwrapKey"),
+				pulumi.String("verify"),
+				pulumi.String("wrapKey"),
+			},
+		}, pulumi.DependsOn([]pulumi.Resource{
+			client,
+			cluster,
+		}))
+		if err != nil {
+			return err
+		}
+		_, err = kusto.NewClusterCustomerManagedKey(ctx, "exampleClusterCustomerManagedKey", &kusto.ClusterCustomerManagedKeyArgs{
+			ClusterId:  exampleCluster.ID(),
+			KeyVaultId: exampleKeyVault.ID(),
+			KeyName:    exampleKey.Name,
+			KeyVersion: exampleKey.Version,
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_azure as azure
+
+current = azure.core.get_client_config()
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_key_vault = azure.keyvault.KeyVault("exampleKeyVault",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    tenant_id=current.tenant_id,
+    sku_name="standard",
+    purge_protection_enabled=True)
+example_cluster = azure.kusto.Cluster("exampleCluster",
+    location=azurerm_resource_group["rg"]["location"],
+    resource_group_name=azurerm_resource_group["rg"]["name"],
+    sku=azure.kusto.ClusterSkuArgs(
+        name="Standard_D13_v2",
+        capacity=2,
+    ),
+    identity=azure.kusto.ClusterIdentityArgs(
+        type="SystemAssigned",
+    ))
+cluster = azure.keyvault.AccessPolicy("cluster",
+    key_vault_id=example_key_vault.id,
+    tenant_id=current.tenant_id,
+    object_id=example_cluster.identity.principal_id,
+    key_permissions=[
+        "get",
+        "unwrapkey",
+        "wrapkey",
+    ])
+client = azure.keyvault.AccessPolicy("client",
+    key_vault_id=example_key_vault.id,
+    tenant_id=current.tenant_id,
+    object_id=current.object_id,
+    key_permissions=[
+        "get",
+        "list",
+        "create",
+        "delete",
+        "recover",
+    ])
+example_key = azure.keyvault.Key("exampleKey",
+    key_vault_id=example_key_vault.id,
+    key_type="RSA",
+    key_size=2048,
+    key_opts=[
+        "decrypt",
+        "encrypt",
+        "sign",
+        "unwrapKey",
+        "verify",
+        "wrapKey",
+    ],
+    opts=pulumi.ResourceOptions(depends_on=[
+            client,
+            cluster,
+        ]))
+example_cluster_customer_managed_key = azure.kusto.ClusterCustomerManagedKey("exampleClusterCustomerManagedKey",
+    cluster_id=example_cluster.id,
+    key_vault_id=example_key_vault.id,
+    key_name=example_key.name,
+    key_version=example_key.version)
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const current = azure.core.getClientConfig({});
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const exampleKeyVault = new azure.keyvault.KeyVault("exampleKeyVault", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    tenantId: current.then(current => current.tenantId),
+    skuName: "standard",
+    purgeProtectionEnabled: true,
+});
+const exampleCluster = new azure.kusto.Cluster("exampleCluster", {
+    location: azurerm_resource_group.rg.location,
+    resourceGroupName: azurerm_resource_group.rg.name,
+    sku: {
+        name: "Standard_D13_v2",
+        capacity: 2,
+    },
+    identity: {
+        type: "SystemAssigned",
+    },
+});
+const cluster = new azure.keyvault.AccessPolicy("cluster", {
+    keyVaultId: exampleKeyVault.id,
+    tenantId: current.then(current => current.tenantId),
+    objectId: exampleCluster.identity.apply(identity => identity.principalId),
+    keyPermissions: [
+        "get",
+        "unwrapkey",
+        "wrapkey",
+    ],
+});
+const client = new azure.keyvault.AccessPolicy("client", {
+    keyVaultId: exampleKeyVault.id,
+    tenantId: current.then(current => current.tenantId),
+    objectId: current.then(current => current.objectId),
+    keyPermissions: [
+        "get",
+        "list",
+        "create",
+        "delete",
+        "recover",
+    ],
+});
+const exampleKey = new azure.keyvault.Key("exampleKey", {
+    keyVaultId: exampleKeyVault.id,
+    keyType: "RSA",
+    keySize: 2048,
+    keyOpts: [
+        "decrypt",
+        "encrypt",
+        "sign",
+        "unwrapKey",
+        "verify",
+        "wrapKey",
+    ],
+}, {
+    dependsOn: [
+        client,
+        cluster,
+    ],
+});
+const exampleClusterCustomerManagedKey = new azure.kusto.ClusterCustomerManagedKey("exampleClusterCustomerManagedKey", {
+    clusterId: exampleCluster.id,
+    keyVaultId: exampleKeyVault.id,
+    keyName: exampleKey.name,
+    keyVersion: exampleKey.version,
+});
+```
+
+
+{{< /example >}}
+
+
+
+
+
+{{% /examples %}}
+
+
 
 
 ## Create a ClusterCustomerManagedKey Resource {#create}

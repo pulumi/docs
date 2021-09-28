@@ -208,6 +208,417 @@ const exampleServerTransparentDataEncryption = new azure.mssql.ServerTransparent
 
 
 
+### With Customer Managed Key
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var current = Output.Create(Azure.Core.GetClientConfig.InvokeAsync());
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "EastUs",
+        });
+        var exampleServer = new Azure.MSSql.Server("exampleServer", new Azure.MSSql.ServerArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            Location = exampleResourceGroup.Location,
+            Version = "12.0",
+            AdministratorLogin = "missadministrator",
+            AdministratorLoginPassword = "thisIsKat11",
+            MinimumTlsVersion = "1.2",
+            AzureadAdministrator = new Azure.MSSql.Inputs.ServerAzureadAdministratorArgs
+            {
+                LoginUsername = "AzureAD Admin",
+                ObjectId = "00000000-0000-0000-0000-000000000000",
+            },
+            ExtendedAuditingPolicy = new Azure.MSSql.Inputs.ServerExtendedAuditingPolicyArgs
+            {
+                StorageEndpoint = azurerm_storage_account.Example.Primary_blob_endpoint,
+                StorageAccountAccessKey = azurerm_storage_account.Example.Primary_access_key,
+                StorageAccountAccessKeyIsSecondary = true,
+                RetentionInDays = 6,
+            },
+            Tags = 
+            {
+                { "environment", "production" },
+            },
+            Identity = new Azure.MSSql.Inputs.ServerIdentityArgs
+            {
+                Type = "SystemAssigned",
+            },
+        });
+        // Create a key vault with policies for the deployer to create a key & SQL Server to wrap/unwrap/get key
+        var exampleKeyVault = new Azure.KeyVault.KeyVault("exampleKeyVault", new Azure.KeyVault.KeyVaultArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            EnabledForDiskEncryption = true,
+            TenantId = current.Apply(current => current.TenantId),
+            SoftDeleteRetentionDays = 7,
+            PurgeProtectionEnabled = false,
+            SkuName = "standard",
+            AccessPolicies = 
+            {
+                new Azure.KeyVault.Inputs.KeyVaultAccessPolicyArgs
+                {
+                    TenantId = current.Apply(current => current.TenantId),
+                    ObjectId = current.Apply(current => current.ObjectId),
+                    KeyPermissions = 
+                    {
+                        "Get",
+                        "List",
+                        "Create",
+                        "Delete",
+                        "Update",
+                        "Recover",
+                        "Purge",
+                    },
+                },
+                new Azure.KeyVault.Inputs.KeyVaultAccessPolicyArgs
+                {
+                    TenantId = exampleServer.Identity.Apply(identity => identity?.TenantId),
+                    ObjectId = exampleServer.Identity.Apply(identity => identity?.PrincipalId),
+                    KeyPermissions = 
+                    {
+                        "Get",
+                        "WrapKey",
+                        "UnwrapKey",
+                    },
+                },
+            },
+        });
+        var exampleKey = new Azure.KeyVault.Key("exampleKey", new Azure.KeyVault.KeyArgs
+        {
+            KeyVaultId = exampleKeyVault.Id,
+            KeyType = "RSA",
+            KeySize = 2048,
+            KeyOpts = 
+            {
+                "unwrapKey",
+                "wrapKey",
+            },
+        }, new CustomResourceOptions
+        {
+            DependsOn = 
+            {
+                exampleKeyVault,
+            },
+        });
+        var exampleServerTransparentDataEncryption = new Azure.MSSql.ServerTransparentDataEncryption("exampleServerTransparentDataEncryption", new Azure.MSSql.ServerTransparentDataEncryptionArgs
+        {
+            ServerId = exampleServer.Id,
+            KeyVaultKeyId = exampleKey.Id,
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/keyvault"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/mssql"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		current, err := core.GetClientConfig(ctx, nil, nil)
+		if err != nil {
+			return err
+		}
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("EastUs"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleServer, err := mssql.NewServer(ctx, "exampleServer", &mssql.ServerArgs{
+			ResourceGroupName:          exampleResourceGroup.Name,
+			Location:                   exampleResourceGroup.Location,
+			Version:                    pulumi.String("12.0"),
+			AdministratorLogin:         pulumi.String("missadministrator"),
+			AdministratorLoginPassword: pulumi.String("thisIsKat11"),
+			MinimumTlsVersion:          pulumi.String("1.2"),
+			AzureadAdministrator: &mssql.ServerAzureadAdministratorArgs{
+				LoginUsername: pulumi.String("AzureAD Admin"),
+				ObjectId:      pulumi.String("00000000-0000-0000-0000-000000000000"),
+			},
+			ExtendedAuditingPolicy: &mssql.ServerExtendedAuditingPolicyArgs{
+				StorageEndpoint:                    pulumi.Any(azurerm_storage_account.Example.Primary_blob_endpoint),
+				StorageAccountAccessKey:            pulumi.Any(azurerm_storage_account.Example.Primary_access_key),
+				StorageAccountAccessKeyIsSecondary: pulumi.Bool(true),
+				RetentionInDays:                    pulumi.Int(6),
+			},
+			Tags: pulumi.StringMap{
+				"environment": pulumi.String("production"),
+			},
+			Identity: &mssql.ServerIdentityArgs{
+				Type: pulumi.String("SystemAssigned"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		exampleKeyVault, err := keyvault.NewKeyVault(ctx, "exampleKeyVault", &keyvault.KeyVaultArgs{
+			Location:                 exampleResourceGroup.Location,
+			ResourceGroupName:        exampleResourceGroup.Name,
+			EnabledForDiskEncryption: pulumi.Bool(true),
+			TenantId:                 pulumi.String(current.TenantId),
+			SoftDeleteRetentionDays:  pulumi.Int(7),
+			PurgeProtectionEnabled:   pulumi.Bool(false),
+			SkuName:                  pulumi.String("standard"),
+			AccessPolicies: keyvault.KeyVaultAccessPolicyArray{
+				&keyvault.KeyVaultAccessPolicyArgs{
+					TenantId: pulumi.String(current.TenantId),
+					ObjectId: pulumi.String(current.ObjectId),
+					KeyPermissions: pulumi.StringArray{
+						pulumi.String("Get"),
+						pulumi.String("List"),
+						pulumi.String("Create"),
+						pulumi.String("Delete"),
+						pulumi.String("Update"),
+						pulumi.String("Recover"),
+						pulumi.String("Purge"),
+					},
+				},
+				&keyvault.KeyVaultAccessPolicyArgs{
+					TenantId: exampleServer.Identity.ApplyT(func(identity mssql.ServerIdentity) (string, error) {
+						return identity.TenantId, nil
+					}).(pulumi.StringOutput),
+					ObjectId: exampleServer.Identity.ApplyT(func(identity mssql.ServerIdentity) (string, error) {
+						return identity.PrincipalId, nil
+					}).(pulumi.StringOutput),
+					KeyPermissions: pulumi.StringArray{
+						pulumi.String("Get"),
+						pulumi.String("WrapKey"),
+						pulumi.String("UnwrapKey"),
+					},
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		exampleKey, err := keyvault.NewKey(ctx, "exampleKey", &keyvault.KeyArgs{
+			KeyVaultId: exampleKeyVault.ID(),
+			KeyType:    pulumi.String("RSA"),
+			KeySize:    pulumi.Int(2048),
+			KeyOpts: pulumi.StringArray{
+				pulumi.String("unwrapKey"),
+				pulumi.String("wrapKey"),
+			},
+		}, pulumi.DependsOn([]pulumi.Resource{
+			exampleKeyVault,
+		}))
+		if err != nil {
+			return err
+		}
+		_, err = mssql.NewServerTransparentDataEncryption(ctx, "exampleServerTransparentDataEncryption", &mssql.ServerTransparentDataEncryptionArgs{
+			ServerId:      exampleServer.ID(),
+			KeyVaultKeyId: exampleKey.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_azure as azure
+
+current = azure.core.get_client_config()
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="EastUs")
+example_server = azure.mssql.Server("exampleServer",
+    resource_group_name=example_resource_group.name,
+    location=example_resource_group.location,
+    version="12.0",
+    administrator_login="missadministrator",
+    administrator_login_password="thisIsKat11",
+    minimum_tls_version="1.2",
+    azuread_administrator=azure.mssql.ServerAzureadAdministratorArgs(
+        login_username="AzureAD Admin",
+        object_id="00000000-0000-0000-0000-000000000000",
+    ),
+    extended_auditing_policy=azure.mssql.ServerExtendedAuditingPolicyArgs(
+        storage_endpoint=azurerm_storage_account["example"]["primary_blob_endpoint"],
+        storage_account_access_key=azurerm_storage_account["example"]["primary_access_key"],
+        storage_account_access_key_is_secondary=True,
+        retention_in_days=6,
+    ),
+    tags={
+        "environment": "production",
+    },
+    identity=azure.mssql.ServerIdentityArgs(
+        type="SystemAssigned",
+    ))
+# Create a key vault with policies for the deployer to create a key & SQL Server to wrap/unwrap/get key
+example_key_vault = azure.keyvault.KeyVault("exampleKeyVault",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    enabled_for_disk_encryption=True,
+    tenant_id=current.tenant_id,
+    soft_delete_retention_days=7,
+    purge_protection_enabled=False,
+    sku_name="standard",
+    access_policies=[
+        azure.keyvault.KeyVaultAccessPolicyArgs(
+            tenant_id=current.tenant_id,
+            object_id=current.object_id,
+            key_permissions=[
+                "Get",
+                "List",
+                "Create",
+                "Delete",
+                "Update",
+                "Recover",
+                "Purge",
+            ],
+        ),
+        azure.keyvault.KeyVaultAccessPolicyArgs(
+            tenant_id=example_server.identity.tenant_id,
+            object_id=example_server.identity.principal_id,
+            key_permissions=[
+                "Get",
+                "WrapKey",
+                "UnwrapKey",
+            ],
+        ),
+    ])
+example_key = azure.keyvault.Key("exampleKey",
+    key_vault_id=example_key_vault.id,
+    key_type="RSA",
+    key_size=2048,
+    key_opts=[
+        "unwrapKey",
+        "wrapKey",
+    ],
+    opts=pulumi.ResourceOptions(depends_on=[example_key_vault]))
+example_server_transparent_data_encryption = azure.mssql.ServerTransparentDataEncryption("exampleServerTransparentDataEncryption",
+    server_id=example_server.id,
+    key_vault_key_id=example_key.id)
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const current = azure.core.getClientConfig({});
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "EastUs"});
+const exampleServer = new azure.mssql.Server("exampleServer", {
+    resourceGroupName: exampleResourceGroup.name,
+    location: exampleResourceGroup.location,
+    version: "12.0",
+    administratorLogin: "missadministrator",
+    administratorLoginPassword: "thisIsKat11",
+    minimumTlsVersion: "1.2",
+    azureadAdministrator: {
+        loginUsername: "AzureAD Admin",
+        objectId: "00000000-0000-0000-0000-000000000000",
+    },
+    extendedAuditingPolicy: {
+        storageEndpoint: azurerm_storage_account.example.primary_blob_endpoint,
+        storageAccountAccessKey: azurerm_storage_account.example.primary_access_key,
+        storageAccountAccessKeyIsSecondary: true,
+        retentionInDays: 6,
+    },
+    tags: {
+        environment: "production",
+    },
+    identity: {
+        type: "SystemAssigned",
+    },
+});
+// Create a key vault with policies for the deployer to create a key & SQL Server to wrap/unwrap/get key
+const exampleKeyVault = new azure.keyvault.KeyVault("exampleKeyVault", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    enabledForDiskEncryption: true,
+    tenantId: current.then(current => current.tenantId),
+    softDeleteRetentionDays: 7,
+    purgeProtectionEnabled: false,
+    skuName: "standard",
+    accessPolicies: [
+        {
+            tenantId: current.then(current => current.tenantId),
+            objectId: current.then(current => current.objectId),
+            keyPermissions: [
+                "Get",
+                "List",
+                "Create",
+                "Delete",
+                "Update",
+                "Recover",
+                "Purge",
+            ],
+        },
+        {
+            tenantId: exampleServer.identity.apply(identity => identity?.tenantId),
+            objectId: exampleServer.identity.apply(identity => identity?.principalId),
+            keyPermissions: [
+                "Get",
+                "WrapKey",
+                "UnwrapKey",
+            ],
+        },
+    ],
+});
+const exampleKey = new azure.keyvault.Key("exampleKey", {
+    keyVaultId: exampleKeyVault.id,
+    keyType: "RSA",
+    keySize: 2048,
+    keyOpts: [
+        "unwrapKey",
+        "wrapKey",
+    ],
+}, {
+    dependsOn: [exampleKeyVault],
+});
+const exampleServerTransparentDataEncryption = new azure.mssql.ServerTransparentDataEncryption("exampleServerTransparentDataEncryption", {
+    serverId: exampleServer.id,
+    keyVaultKeyId: exampleKey.id,
+});
+```
+
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
 

@@ -12,6 +12,437 @@ meta_desc: "Documentation for the azure.batch.Pool resource with examples, input
 
 Manages an Azure Batch pool.
 
+{{% examples %}}
+
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+
+
+
+
+{{< example csharp >}}
+
+```csharp
+using System;
+using System.IO;
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+	private static string ReadFileBase64(string path) {
+		return Convert.ToBase64String(System.Text.UTF8.GetBytes(File.ReadAllText(path)))
+	}
+
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West Europe",
+        });
+        var exampleAccount = new Azure.Storage.Account("exampleAccount", new Azure.Storage.AccountArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            Location = exampleResourceGroup.Location,
+            AccountTier = "Standard",
+            AccountReplicationType = "LRS",
+        });
+        var exampleBatch_accountAccount = new Azure.Batch.Account("exampleBatch/accountAccount", new Azure.Batch.AccountArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            Location = exampleResourceGroup.Location,
+            PoolAllocationMode = "BatchService",
+            StorageAccountId = exampleAccount.Id,
+            Tags = 
+            {
+                { "env", "test" },
+            },
+        });
+        var exampleCertificate = new Azure.Batch.Certificate("exampleCertificate", new Azure.Batch.CertificateArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            AccountName = exampleBatch / accountAccount.Name,
+            Certificate = ReadFileBase64("certificate.cer"),
+            Format = "Cer",
+            Thumbprint = "312d31a79fa0cef49c00f769afc2b73e9f4edf34",
+            ThumbprintAlgorithm = "SHA1",
+        });
+        var examplePool = new Azure.Batch.Pool("examplePool", new Azure.Batch.PoolArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            AccountName = exampleBatch / accountAccount.Name,
+            DisplayName = "Test Acc Pool Auto",
+            VmSize = "Standard_A1",
+            NodeAgentSkuId = "batch.node.ubuntu 16.04",
+            AutoScale = new Azure.Batch.Inputs.PoolAutoScaleArgs
+            {
+                EvaluationInterval = "PT15M",
+                Formula = @"      startingNumberOfVMs = 1;
+      maxNumberofVMs = 25;
+      pendingTaskSamplePercent = $PendingTasks.GetSamplePercent(180 * TimeInterval_Second);
+      pendingTaskSamples = pendingTaskSamplePercent < 70 ? startingNumberOfVMs : avg($PendingTasks.GetSample(180 *   TimeInterval_Second));
+      $TargetDedicatedNodes=min(maxNumberofVMs, pendingTaskSamples);
+",
+            },
+            StorageImageReference = new Azure.Batch.Inputs.PoolStorageImageReferenceArgs
+            {
+                Publisher = "microsoft-azure-batch",
+                Offer = "ubuntu-server-container",
+                Sku = "16-04-lts",
+                Version = "latest",
+            },
+            ContainerConfiguration = new Azure.Batch.Inputs.PoolContainerConfigurationArgs
+            {
+                Type = "DockerCompatible",
+                ContainerRegistries = 
+                {
+                    new Azure.Batch.Inputs.PoolContainerConfigurationContainerRegistryArgs
+                    {
+                        RegistryServer = "docker.io",
+                        UserName = "login",
+                        Password = "apassword",
+                    },
+                },
+            },
+            StartTask = new Azure.Batch.Inputs.PoolStartTaskArgs
+            {
+                CommandLine = "echo 'Hello World from $env'",
+                MaxTaskRetryCount = 1,
+                WaitForSuccess = true,
+                Environment = 
+                {
+                    { "env", "TEST" },
+                },
+                UserIdentity = new Azure.Batch.Inputs.PoolStartTaskUserIdentityArgs
+                {
+                    AutoUser = new Azure.Batch.Inputs.PoolStartTaskUserIdentityAutoUserArgs
+                    {
+                        ElevationLevel = "NonAdmin",
+                        Scope = "Task",
+                    },
+                },
+            },
+            Certificates = 
+            {
+                new Azure.Batch.Inputs.PoolCertificateArgs
+                {
+                    Id = exampleCertificate.Id,
+                    Visibilities = 
+                    {
+                        "StartTask",
+                    },
+                },
+            },
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"encoding/base64"
+	"fmt"
+	"io/ioutil"
+
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/batch"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/storage"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func filebase64OrPanic(path string) pulumi.StringPtrInput {
+	if fileData, err := ioutil.ReadFile(path); err == nil {
+		return pulumi.String(base64.StdEncoding.EncodeToString(fileData[:]))
+	} else {
+		panic(err.Error())
+	}
+}
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West Europe"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleAccount, err := storage.NewAccount(ctx, "exampleAccount", &storage.AccountArgs{
+			ResourceGroupName:      exampleResourceGroup.Name,
+			Location:               exampleResourceGroup.Location,
+			AccountTier:            pulumi.String("Standard"),
+			AccountReplicationType: pulumi.String("LRS"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = batch.NewAccount(ctx, "exampleBatch_accountAccount", &batch.AccountArgs{
+			ResourceGroupName:  exampleResourceGroup.Name,
+			Location:           exampleResourceGroup.Location,
+			PoolAllocationMode: pulumi.String("BatchService"),
+			StorageAccountId:   exampleAccount.ID(),
+			Tags: pulumi.StringMap{
+				"env": pulumi.String("test"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		exampleCertificate, err := batch.NewCertificate(ctx, "exampleCertificate", &batch.CertificateArgs{
+			ResourceGroupName:   exampleResourceGroup.Name,
+			AccountName:         exampleBatch / accountAccount.Name,
+			Certificate:         filebase64OrPanic("certificate.cer"),
+			Format:              pulumi.String("Cer"),
+			Thumbprint:          pulumi.String("312d31a79fa0cef49c00f769afc2b73e9f4edf34"),
+			ThumbprintAlgorithm: pulumi.String("SHA1"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = batch.NewPool(ctx, "examplePool", &batch.PoolArgs{
+			ResourceGroupName: exampleResourceGroup.Name,
+			AccountName:       exampleBatch / accountAccount.Name,
+			DisplayName:       pulumi.String("Test Acc Pool Auto"),
+			VmSize:            pulumi.String("Standard_A1"),
+			NodeAgentSkuId:    pulumi.String("batch.node.ubuntu 16.04"),
+			AutoScale: &batch.PoolAutoScaleArgs{
+				EvaluationInterval: pulumi.String("PT15M"),
+				Formula:            pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v", "      startingNumberOfVMs = 1;\n", "      maxNumberofVMs = 25;\n", "      pendingTaskSamplePercent = ", "$", "PendingTasks.GetSamplePercent(180 * TimeInterval_Second);\n", "      pendingTaskSamples = pendingTaskSamplePercent < 70 ? startingNumberOfVMs : avg(", "$", "PendingTasks.GetSample(180 *   TimeInterval_Second));\n", "      ", "$", "TargetDedicatedNodes=min(maxNumberofVMs, pendingTaskSamples);\n")),
+			},
+			StorageImageReference: &batch.PoolStorageImageReferenceArgs{
+				Publisher: pulumi.String("microsoft-azure-batch"),
+				Offer:     pulumi.String("ubuntu-server-container"),
+				Sku:       pulumi.String("16-04-lts"),
+				Version:   pulumi.String("latest"),
+			},
+			ContainerConfiguration: &batch.PoolContainerConfigurationArgs{
+				Type: pulumi.String("DockerCompatible"),
+				ContainerRegistries: batch.PoolContainerConfigurationContainerRegistryArray{
+					&batch.PoolContainerConfigurationContainerRegistryArgs{
+						RegistryServer: pulumi.String("docker.io"),
+						UserName:       pulumi.String("login"),
+						Password:       pulumi.String("apassword"),
+					},
+				},
+			},
+			StartTask: &batch.PoolStartTaskArgs{
+				CommandLine:       pulumi.String(fmt.Sprintf("%v%v%v", "echo 'Hello World from ", "$", "env'")),
+				MaxTaskRetryCount: pulumi.Int(1),
+				WaitForSuccess:    pulumi.Bool(true),
+				Environment: pulumi.StringMap{
+					"env": pulumi.String("TEST"),
+				},
+				UserIdentity: &batch.PoolStartTaskUserIdentityArgs{
+					AutoUser: &batch.PoolStartTaskUserIdentityAutoUserArgs{
+						ElevationLevel: pulumi.String("NonAdmin"),
+						Scope:          pulumi.String("Task"),
+					},
+				},
+			},
+			Certificates: batch.PoolCertificateArray{
+				&batch.PoolCertificateArgs{
+					Id: exampleCertificate.ID(),
+					Visibilities: pulumi.StringArray{
+						pulumi.String("StartTask"),
+					},
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import base64
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_account = azure.storage.Account("exampleAccount",
+    resource_group_name=example_resource_group.name,
+    location=example_resource_group.location,
+    account_tier="Standard",
+    account_replication_type="LRS")
+example_batch_account_account = azure.batch.Account("exampleBatch/accountAccount",
+    resource_group_name=example_resource_group.name,
+    location=example_resource_group.location,
+    pool_allocation_mode="BatchService",
+    storage_account_id=example_account.id,
+    tags={
+        "env": "test",
+    })
+example_certificate = azure.batch.Certificate("exampleCertificate",
+    resource_group_name=example_resource_group.name,
+    account_name=example_batch / account_account["name"],
+    certificate=(lambda path: base64.b64encode(open(path).read().encode()).decode())("certificate.cer"),
+    format="Cer",
+    thumbprint="312d31a79fa0cef49c00f769afc2b73e9f4edf34",
+    thumbprint_algorithm="SHA1")
+example_pool = azure.batch.Pool("examplePool",
+    resource_group_name=example_resource_group.name,
+    account_name=example_batch / account_account["name"],
+    display_name="Test Acc Pool Auto",
+    vm_size="Standard_A1",
+    node_agent_sku_id="batch.node.ubuntu 16.04",
+    auto_scale=azure.batch.PoolAutoScaleArgs(
+        evaluation_interval="PT15M",
+        formula="""      startingNumberOfVMs = 1;
+      maxNumberofVMs = 25;
+      pendingTaskSamplePercent = $PendingTasks.GetSamplePercent(180 * TimeInterval_Second);
+      pendingTaskSamples = pendingTaskSamplePercent < 70 ? startingNumberOfVMs : avg($PendingTasks.GetSample(180 *   TimeInterval_Second));
+      $TargetDedicatedNodes=min(maxNumberofVMs, pendingTaskSamples);
+""",
+    ),
+    storage_image_reference=azure.batch.PoolStorageImageReferenceArgs(
+        publisher="microsoft-azure-batch",
+        offer="ubuntu-server-container",
+        sku="16-04-lts",
+        version="latest",
+    ),
+    container_configuration=azure.batch.PoolContainerConfigurationArgs(
+        type="DockerCompatible",
+        container_registries=[azure.batch.PoolContainerConfigurationContainerRegistryArgs(
+            registry_server="docker.io",
+            user_name="login",
+            password="apassword",
+        )],
+    ),
+    start_task=azure.batch.PoolStartTaskArgs(
+        command_line="echo 'Hello World from $env'",
+        max_task_retry_count=1,
+        wait_for_success=True,
+        environment={
+            "env": "TEST",
+        },
+        user_identity=azure.batch.PoolStartTaskUserIdentityArgs(
+            auto_user=azure.batch.PoolStartTaskUserIdentityAutoUserArgs(
+                elevation_level="NonAdmin",
+                scope="Task",
+            ),
+        ),
+    ),
+    certificates=[azure.batch.PoolCertificateArgs(
+        id=example_certificate.id,
+        visibilities=["StartTask"],
+    )])
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+import * from "fs";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const exampleAccount = new azure.storage.Account("exampleAccount", {
+    resourceGroupName: exampleResourceGroup.name,
+    location: exampleResourceGroup.location,
+    accountTier: "Standard",
+    accountReplicationType: "LRS",
+});
+const exampleBatch_accountAccount = new azure.batch.Account("exampleBatch/accountAccount", {
+    resourceGroupName: exampleResourceGroup.name,
+    location: exampleResourceGroup.location,
+    poolAllocationMode: "BatchService",
+    storageAccountId: exampleAccount.id,
+    tags: {
+        env: "test",
+    },
+});
+const exampleCertificate = new azure.batch.Certificate("exampleCertificate", {
+    resourceGroupName: exampleResourceGroup.name,
+    accountName: exampleBatch / accountAccount.name,
+    certificate: Buffer.from(fs.readFileSync("certificate.cer"), 'binary').toString('base64'),
+    format: "Cer",
+    thumbprint: "312d31a79fa0cef49c00f769afc2b73e9f4edf34",
+    thumbprintAlgorithm: "SHA1",
+});
+const examplePool = new azure.batch.Pool("examplePool", {
+    resourceGroupName: exampleResourceGroup.name,
+    accountName: exampleBatch / accountAccount.name,
+    displayName: "Test Acc Pool Auto",
+    vmSize: "Standard_A1",
+    nodeAgentSkuId: "batch.node.ubuntu 16.04",
+    autoScale: {
+        evaluationInterval: "PT15M",
+        formula: `      startingNumberOfVMs = 1;
+      maxNumberofVMs = 25;
+      pendingTaskSamplePercent = $PendingTasks.GetSamplePercent(180 * TimeInterval_Second);
+      pendingTaskSamples = pendingTaskSamplePercent < 70 ? startingNumberOfVMs : avg($PendingTasks.GetSample(180 *   TimeInterval_Second));
+      $TargetDedicatedNodes=min(maxNumberofVMs, pendingTaskSamples);
+`,
+    },
+    storageImageReference: {
+        publisher: "microsoft-azure-batch",
+        offer: "ubuntu-server-container",
+        sku: "16-04-lts",
+        version: "latest",
+    },
+    containerConfiguration: {
+        type: "DockerCompatible",
+        containerRegistries: [{
+            registryServer: "docker.io",
+            userName: "login",
+            password: "apassword",
+        }],
+    },
+    startTask: {
+        commandLine: `echo 'Hello World from $env'`,
+        maxTaskRetryCount: 1,
+        waitForSuccess: true,
+        environment: {
+            env: "TEST",
+        },
+        userIdentity: {
+            autoUser: {
+                elevationLevel: "NonAdmin",
+                scope: "Task",
+            },
+        },
+    },
+    certificates: [{
+        id: exampleCertificate.id,
+        visibilities: ["StartTask"],
+    }],
+});
+```
+
+
+{{< /example >}}
+
+
+
+
+
+{{% /examples %}}
+
+
 
 
 ## Create a Pool Resource {#create}

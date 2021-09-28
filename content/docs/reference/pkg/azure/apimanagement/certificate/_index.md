@@ -12,6 +12,518 @@ meta_desc: "Documentation for the azure.apimanagement.Certificate resource with 
 
 Manages an Certificate within an API Management Service.
 
+{{% examples %}}
+
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+
+### With Base64 Certificate)
+
+
+{{< example csharp >}}
+
+```csharp
+using System;
+using System.IO;
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+	private static string ReadFileBase64(string path) {
+		return Convert.ToBase64String(System.Text.UTF8.GetBytes(File.ReadAllText(path)))
+	}
+
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West Europe",
+        });
+        var exampleService = new Azure.ApiManagement.Service("exampleService", new Azure.ApiManagement.ServiceArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            PublisherName = "My Company",
+            PublisherEmail = "company@exmaple.com",
+            SkuName = "Developer_1",
+        });
+        var exampleCertificate = new Azure.ApiManagement.Certificate("exampleCertificate", new Azure.ApiManagement.CertificateArgs
+        {
+            ApiManagementName = exampleService.Name,
+            ResourceGroupName = exampleResourceGroup.Name,
+            Data = ReadFileBase64("example.pfx"),
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"encoding/base64"
+	"io/ioutil"
+
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/apimanagement"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/core"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func filebase64OrPanic(path string) pulumi.StringPtrInput {
+	if fileData, err := ioutil.ReadFile(path); err == nil {
+		return pulumi.String(base64.StdEncoding.EncodeToString(fileData[:]))
+	} else {
+		panic(err.Error())
+	}
+}
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West Europe"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleService, err := apimanagement.NewService(ctx, "exampleService", &apimanagement.ServiceArgs{
+			Location:          exampleResourceGroup.Location,
+			ResourceGroupName: exampleResourceGroup.Name,
+			PublisherName:     pulumi.String("My Company"),
+			PublisherEmail:    pulumi.String("company@exmaple.com"),
+			SkuName:           pulumi.String("Developer_1"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = apimanagement.NewCertificate(ctx, "exampleCertificate", &apimanagement.CertificateArgs{
+			ApiManagementName: exampleService.Name,
+			ResourceGroupName: exampleResourceGroup.Name,
+			Data:              filebase64OrPanic("example.pfx"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import base64
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_service = azure.apimanagement.Service("exampleService",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    publisher_name="My Company",
+    publisher_email="company@exmaple.com",
+    sku_name="Developer_1")
+example_certificate = azure.apimanagement.Certificate("exampleCertificate",
+    api_management_name=example_service.name,
+    resource_group_name=example_resource_group.name,
+    data=(lambda path: base64.b64encode(open(path).read().encode()).decode())("example.pfx"))
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+import * from "fs";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const exampleService = new azure.apimanagement.Service("exampleService", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    publisherName: "My Company",
+    publisherEmail: "company@exmaple.com",
+    skuName: "Developer_1",
+});
+const exampleCertificate = new azure.apimanagement.Certificate("exampleCertificate", {
+    apiManagementName: exampleService.name,
+    resourceGroupName: exampleResourceGroup.name,
+    data: Buffer.from(fs.readFileSync("example.pfx"), 'binary').toString('base64'),
+});
+```
+
+
+{{< /example >}}
+
+
+
+
+### With Key Vault Certificate)
+
+
+{{< example csharp >}}
+
+```csharp
+using System;
+using System.IO;
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+	private static string ReadFileBase64(string path) {
+		return Convert.ToBase64String(System.Text.UTF8.GetBytes(File.ReadAllText(path)))
+	}
+
+    public MyStack()
+    {
+        var current = Output.Create(Azure.Core.GetClientConfig.InvokeAsync());
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West Europe",
+        });
+        var exampleService = new Azure.ApiManagement.Service("exampleService", new Azure.ApiManagement.ServiceArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            PublisherName = "My Company",
+            PublisherEmail = "company@terraform.io",
+            SkuName = "Developer_1",
+            Identity = new Azure.ApiManagement.Inputs.ServiceIdentityArgs
+            {
+                Type = "SystemAssigned",
+            },
+        });
+        var exampleKeyVault = new Azure.KeyVault.KeyVault("exampleKeyVault", new Azure.KeyVault.KeyVaultArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            SoftDeleteEnabled = true,
+            TenantId = data.Azurerm_client_config.Example.Tenant_id,
+            SkuName = "standard",
+        });
+        var exampleAccessPolicy = new Azure.KeyVault.AccessPolicy("exampleAccessPolicy", new Azure.KeyVault.AccessPolicyArgs
+        {
+            KeyVaultId = exampleKeyVault.Id,
+            TenantId = exampleService.Identity.Apply(identity => identity?.TenantId),
+            ObjectId = exampleService.Identity.Apply(identity => identity?.PrincipalId),
+            SecretPermissions = 
+            {
+                "get",
+            },
+            CertificatePermissions = 
+            {
+                "get",
+            },
+        });
+        var exampleCertificate = new Azure.KeyVault.Certificate("exampleCertificate", new Azure.KeyVault.CertificateArgs
+        {
+            KeyVaultId = exampleKeyVault.Id,
+            Certificate = new Azure.KeyVault.Inputs.CertificateCertificateArgs
+            {
+                Contents = ReadFileBase64("example_cert.pfx"),
+                Password = "terraform",
+            },
+            CertificatePolicy = new Azure.KeyVault.Inputs.CertificateCertificatePolicyArgs
+            {
+                IssuerParameters = new Azure.KeyVault.Inputs.CertificateCertificatePolicyIssuerParametersArgs
+                {
+                    Name = "Self",
+                },
+                KeyProperties = new Azure.KeyVault.Inputs.CertificateCertificatePolicyKeyPropertiesArgs
+                {
+                    Exportable = true,
+                    KeySize = 2048,
+                    KeyType = "RSA",
+                    ReuseKey = false,
+                },
+                SecretProperties = new Azure.KeyVault.Inputs.CertificateCertificatePolicySecretPropertiesArgs
+                {
+                    ContentType = "application/x-pkcs12",
+                },
+            },
+        });
+        var exampleApimanagement_certificateCertificate = new Azure.ApiManagement.Certificate("exampleApimanagement/certificateCertificate", new Azure.ApiManagement.CertificateArgs
+        {
+            ApiManagementName = exampleService.Name,
+            ResourceGroupName = exampleResourceGroup.Name,
+            KeyVaultSecretId = exampleCertificate.SecretId,
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"encoding/base64"
+	"io/ioutil"
+
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/apimanagement"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/keyvault"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func filebase64OrPanic(path string) pulumi.StringPtrInput {
+	if fileData, err := ioutil.ReadFile(path); err == nil {
+		return pulumi.String(base64.StdEncoding.EncodeToString(fileData[:]))
+	} else {
+		panic(err.Error())
+	}
+}
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := core.GetClientConfig(ctx, nil, nil)
+		if err != nil {
+			return err
+		}
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West Europe"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleService, err := apimanagement.NewService(ctx, "exampleService", &apimanagement.ServiceArgs{
+			Location:          exampleResourceGroup.Location,
+			ResourceGroupName: exampleResourceGroup.Name,
+			PublisherName:     pulumi.String("My Company"),
+			PublisherEmail:    pulumi.String("company@terraform.io"),
+			SkuName:           pulumi.String("Developer_1"),
+			Identity: &apimanagement.ServiceIdentityArgs{
+				Type: pulumi.String("SystemAssigned"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		exampleKeyVault, err := keyvault.NewKeyVault(ctx, "exampleKeyVault", &keyvault.KeyVaultArgs{
+			Location:          exampleResourceGroup.Location,
+			ResourceGroupName: exampleResourceGroup.Name,
+			SoftDeleteEnabled: pulumi.Bool(true),
+			TenantId:          pulumi.Any(data.Azurerm_client_config.Example.Tenant_id),
+			SkuName:           pulumi.String("standard"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = keyvault.NewAccessPolicy(ctx, "exampleAccessPolicy", &keyvault.AccessPolicyArgs{
+			KeyVaultId: exampleKeyVault.ID(),
+			TenantId: exampleService.Identity.ApplyT(func(identity apimanagement.ServiceIdentity) (string, error) {
+				return identity.TenantId, nil
+			}).(pulumi.StringOutput),
+			ObjectId: exampleService.Identity.ApplyT(func(identity apimanagement.ServiceIdentity) (string, error) {
+				return identity.PrincipalId, nil
+			}).(pulumi.StringOutput),
+			SecretPermissions: pulumi.StringArray{
+				pulumi.String("get"),
+			},
+			CertificatePermissions: pulumi.StringArray{
+				pulumi.String("get"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		exampleCertificate, err := keyvault.NewCertificate(ctx, "exampleCertificate", &keyvault.CertificateArgs{
+			KeyVaultId: exampleKeyVault.ID(),
+			Certificate: &keyvault.CertificateCertificateArgs{
+				Contents: filebase64OrPanic("example_cert.pfx"),
+				Password: pulumi.String("terraform"),
+			},
+			CertificatePolicy: &keyvault.CertificateCertificatePolicyArgs{
+				IssuerParameters: &keyvault.CertificateCertificatePolicyIssuerParametersArgs{
+					Name: pulumi.String("Self"),
+				},
+				KeyProperties: &keyvault.CertificateCertificatePolicyKeyPropertiesArgs{
+					Exportable: pulumi.Bool(true),
+					KeySize:    pulumi.Int(2048),
+					KeyType:    pulumi.String("RSA"),
+					ReuseKey:   pulumi.Bool(false),
+				},
+				SecretProperties: &keyvault.CertificateCertificatePolicySecretPropertiesArgs{
+					ContentType: pulumi.String("application/x-pkcs12"),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = apimanagement.NewCertificate(ctx, "exampleApimanagement_certificateCertificate", &apimanagement.CertificateArgs{
+			ApiManagementName: exampleService.Name,
+			ResourceGroupName: exampleResourceGroup.Name,
+			KeyVaultSecretId:  exampleCertificate.SecretId,
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import base64
+import pulumi_azure as azure
+
+current = azure.core.get_client_config()
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_service = azure.apimanagement.Service("exampleService",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    publisher_name="My Company",
+    publisher_email="company@terraform.io",
+    sku_name="Developer_1",
+    identity=azure.apimanagement.ServiceIdentityArgs(
+        type="SystemAssigned",
+    ))
+example_key_vault = azure.keyvault.KeyVault("exampleKeyVault",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    soft_delete_enabled=True,
+    tenant_id=data["azurerm_client_config"]["example"]["tenant_id"],
+    sku_name="standard")
+example_access_policy = azure.keyvault.AccessPolicy("exampleAccessPolicy",
+    key_vault_id=example_key_vault.id,
+    tenant_id=example_service.identity.tenant_id,
+    object_id=example_service.identity.principal_id,
+    secret_permissions=["get"],
+    certificate_permissions=["get"])
+example_certificate = azure.keyvault.Certificate("exampleCertificate",
+    key_vault_id=example_key_vault.id,
+    certificate=azure.keyvault.CertificateCertificateArgs(
+        contents=(lambda path: base64.b64encode(open(path).read().encode()).decode())("example_cert.pfx"),
+        password="terraform",
+    ),
+    certificate_policy=azure.keyvault.CertificateCertificatePolicyArgs(
+        issuer_parameters=azure.keyvault.CertificateCertificatePolicyIssuerParametersArgs(
+            name="Self",
+        ),
+        key_properties=azure.keyvault.CertificateCertificatePolicyKeyPropertiesArgs(
+            exportable=True,
+            key_size=2048,
+            key_type="RSA",
+            reuse_key=False,
+        ),
+        secret_properties=azure.keyvault.CertificateCertificatePolicySecretPropertiesArgs(
+            content_type="application/x-pkcs12",
+        ),
+    ))
+example_apimanagement_certificate_certificate = azure.apimanagement.Certificate("exampleApimanagement/certificateCertificate",
+    api_management_name=example_service.name,
+    resource_group_name=example_resource_group.name,
+    key_vault_secret_id=example_certificate.secret_id)
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+import * from "fs";
+
+const current = azure.core.getClientConfig({});
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const exampleService = new azure.apimanagement.Service("exampleService", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    publisherName: "My Company",
+    publisherEmail: "company@terraform.io",
+    skuName: "Developer_1",
+    identity: {
+        type: "SystemAssigned",
+    },
+});
+const exampleKeyVault = new azure.keyvault.KeyVault("exampleKeyVault", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    softDeleteEnabled: true,
+    tenantId: data.azurerm_client_config.example.tenant_id,
+    skuName: "standard",
+});
+const exampleAccessPolicy = new azure.keyvault.AccessPolicy("exampleAccessPolicy", {
+    keyVaultId: exampleKeyVault.id,
+    tenantId: exampleService.identity.apply(identity => identity?.tenantId),
+    objectId: exampleService.identity.apply(identity => identity?.principalId),
+    secretPermissions: ["get"],
+    certificatePermissions: ["get"],
+});
+const exampleCertificate = new azure.keyvault.Certificate("exampleCertificate", {
+    keyVaultId: exampleKeyVault.id,
+    certificate: {
+        contents: Buffer.from(fs.readFileSync("example_cert.pfx"), 'binary').toString('base64'),
+        password: "terraform",
+    },
+    certificatePolicy: {
+        issuerParameters: {
+            name: "Self",
+        },
+        keyProperties: {
+            exportable: true,
+            keySize: 2048,
+            keyType: "RSA",
+            reuseKey: false,
+        },
+        secretProperties: {
+            contentType: "application/x-pkcs12",
+        },
+    },
+});
+const exampleApimanagement_certificateCertificate = new azure.apimanagement.Certificate("exampleApimanagement/certificateCertificate", {
+    apiManagementName: exampleService.name,
+    resourceGroupName: exampleResourceGroup.name,
+    keyVaultSecretId: exampleCertificate.secretId,
+});
+```
+
+
+{{< /example >}}
+
+
+
+
+
+{{% /examples %}}
+
+
 
 
 ## Create a Certificate Resource {#create}

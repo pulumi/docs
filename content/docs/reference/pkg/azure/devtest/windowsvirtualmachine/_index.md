@@ -12,6 +12,248 @@ meta_desc: "Documentation for the azure.devtest.WindowsVirtualMachine resource w
 
 Manages a Windows Virtual Machine within a Dev Test Lab.
 
+{{% examples %}}
+
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+
+
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West Europe",
+        });
+        var exampleLab = new Azure.DevTest.Lab("exampleLab", new Azure.DevTest.LabArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            Tags = 
+            {
+                { "Sydney", "Australia" },
+            },
+        });
+        var exampleVirtualNetwork = new Azure.DevTest.VirtualNetwork("exampleVirtualNetwork", new Azure.DevTest.VirtualNetworkArgs
+        {
+            LabName = exampleLab.Name,
+            ResourceGroupName = exampleResourceGroup.Name,
+            Subnet = new Azure.DevTest.Inputs.VirtualNetworkSubnetArgs
+            {
+                UsePublicIpAddress = "Allow",
+                UseInVirtualMachineCreation = "Allow",
+            },
+        });
+        var exampleWindowsVirtualMachine = new Azure.DevTest.WindowsVirtualMachine("exampleWindowsVirtualMachine", new Azure.DevTest.WindowsVirtualMachineArgs
+        {
+            LabName = exampleLab.Name,
+            ResourceGroupName = exampleResourceGroup.Name,
+            Location = exampleResourceGroup.Location,
+            Size = "Standard_DS2",
+            Username = "exampleuser99",
+            Password = "Pa$w0rd1234!",
+            LabVirtualNetworkId = exampleVirtualNetwork.Id,
+            LabSubnetName = exampleVirtualNetwork.Subnet.Apply(subnet => subnet.Name),
+            StorageType = "Premium",
+            Notes = "Some notes about this Virtual Machine.",
+            GalleryImageReference = new Azure.DevTest.Inputs.WindowsVirtualMachineGalleryImageReferenceArgs
+            {
+                Offer = "WindowsServer",
+                Publisher = "MicrosoftWindowsServer",
+                Sku = "2019-Datacenter",
+                Version = "latest",
+            },
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/devtest"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West Europe"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleLab, err := devtest.NewLab(ctx, "exampleLab", &devtest.LabArgs{
+			Location:          exampleResourceGroup.Location,
+			ResourceGroupName: exampleResourceGroup.Name,
+			Tags: pulumi.StringMap{
+				"Sydney": pulumi.String("Australia"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		exampleVirtualNetwork, err := devtest.NewVirtualNetwork(ctx, "exampleVirtualNetwork", &devtest.VirtualNetworkArgs{
+			LabName:           exampleLab.Name,
+			ResourceGroupName: exampleResourceGroup.Name,
+			Subnet: &devtest.VirtualNetworkSubnetArgs{
+				UsePublicIpAddress:          pulumi.String("Allow"),
+				UseInVirtualMachineCreation: pulumi.String("Allow"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = devtest.NewWindowsVirtualMachine(ctx, "exampleWindowsVirtualMachine", &devtest.WindowsVirtualMachineArgs{
+			LabName:             exampleLab.Name,
+			ResourceGroupName:   exampleResourceGroup.Name,
+			Location:            exampleResourceGroup.Location,
+			Size:                pulumi.String("Standard_DS2"),
+			Username:            pulumi.String("exampleuser99"),
+			Password:            pulumi.String(fmt.Sprintf("%v%v%v", "Pa", "$", "w0rd1234!")),
+			LabVirtualNetworkId: exampleVirtualNetwork.ID(),
+			LabSubnetName: exampleVirtualNetwork.Subnet.ApplyT(func(subnet devtest.VirtualNetworkSubnet) (string, error) {
+				return subnet.Name, nil
+			}).(pulumi.StringOutput),
+			StorageType: pulumi.String("Premium"),
+			Notes:       pulumi.String("Some notes about this Virtual Machine."),
+			GalleryImageReference: &devtest.WindowsVirtualMachineGalleryImageReferenceArgs{
+				Offer:     pulumi.String("WindowsServer"),
+				Publisher: pulumi.String("MicrosoftWindowsServer"),
+				Sku:       pulumi.String("2019-Datacenter"),
+				Version:   pulumi.String("latest"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_lab = azure.devtest.Lab("exampleLab",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    tags={
+        "Sydney": "Australia",
+    })
+example_virtual_network = azure.devtest.VirtualNetwork("exampleVirtualNetwork",
+    lab_name=example_lab.name,
+    resource_group_name=example_resource_group.name,
+    subnet=azure.devtest.VirtualNetworkSubnetArgs(
+        use_public_ip_address="Allow",
+        use_in_virtual_machine_creation="Allow",
+    ))
+example_windows_virtual_machine = azure.devtest.WindowsVirtualMachine("exampleWindowsVirtualMachine",
+    lab_name=example_lab.name,
+    resource_group_name=example_resource_group.name,
+    location=example_resource_group.location,
+    size="Standard_DS2",
+    username="exampleuser99",
+    password="Pa$w0rd1234!",
+    lab_virtual_network_id=example_virtual_network.id,
+    lab_subnet_name=example_virtual_network.subnet.name,
+    storage_type="Premium",
+    notes="Some notes about this Virtual Machine.",
+    gallery_image_reference=azure.devtest.WindowsVirtualMachineGalleryImageReferenceArgs(
+        offer="WindowsServer",
+        publisher="MicrosoftWindowsServer",
+        sku="2019-Datacenter",
+        version="latest",
+    ))
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const exampleLab = new azure.devtest.Lab("exampleLab", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    tags: {
+        Sydney: "Australia",
+    },
+});
+const exampleVirtualNetwork = new azure.devtest.VirtualNetwork("exampleVirtualNetwork", {
+    labName: exampleLab.name,
+    resourceGroupName: exampleResourceGroup.name,
+    subnet: {
+        usePublicIpAddress: "Allow",
+        useInVirtualMachineCreation: "Allow",
+    },
+});
+const exampleWindowsVirtualMachine = new azure.devtest.WindowsVirtualMachine("exampleWindowsVirtualMachine", {
+    labName: exampleLab.name,
+    resourceGroupName: exampleResourceGroup.name,
+    location: exampleResourceGroup.location,
+    size: "Standard_DS2",
+    username: "exampleuser99",
+    password: `Pa$w0rd1234!`,
+    labVirtualNetworkId: exampleVirtualNetwork.id,
+    labSubnetName: exampleVirtualNetwork.subnet.apply(subnet => subnet.name),
+    storageType: "Premium",
+    notes: "Some notes about this Virtual Machine.",
+    galleryImageReference: {
+        offer: "WindowsServer",
+        publisher: "MicrosoftWindowsServer",
+        sku: "2019-Datacenter",
+        version: "latest",
+    },
+});
+```
+
+
+{{< /example >}}
+
+
+
+
+
+{{% /examples %}}
+
+
 
 
 ## Create a WindowsVirtualMachine Resource {#create}

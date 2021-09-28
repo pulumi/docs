@@ -12,6 +12,461 @@ meta_desc: "Documentation for the azure.storage.CustomerManagedKey resource with
 
 Manages a Customer Managed Key for a Storage Account.
 
+{{% examples %}}
+
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+
+
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var current = Output.Create(Azure.Core.GetClientConfig.InvokeAsync());
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West Europe",
+        });
+        var exampleKeyVault = new Azure.KeyVault.KeyVault("exampleKeyVault", new Azure.KeyVault.KeyVaultArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            TenantId = current.Apply(current => current.TenantId),
+            SkuName = "standard",
+            PurgeProtectionEnabled = true,
+        });
+        var exampleAccount = new Azure.Storage.Account("exampleAccount", new Azure.Storage.AccountArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            Location = exampleResourceGroup.Location,
+            AccountTier = "Standard",
+            AccountReplicationType = "GRS",
+            Identity = new Azure.Storage.Inputs.AccountIdentityArgs
+            {
+                Type = "SystemAssigned",
+            },
+        });
+        var storage = new Azure.KeyVault.AccessPolicy("storage", new Azure.KeyVault.AccessPolicyArgs
+        {
+            KeyVaultId = exampleKeyVault.Id,
+            TenantId = current.Apply(current => current.TenantId),
+            ObjectId = exampleAccount.Identity.Apply(identity => identity.PrincipalId),
+            KeyPermissions = 
+            {
+                "get",
+                "create",
+                "list",
+                "restore",
+                "recover",
+                "unwrapkey",
+                "wrapkey",
+                "purge",
+                "encrypt",
+                "decrypt",
+                "sign",
+                "verify",
+            },
+            SecretPermissions = 
+            {
+                "get",
+            },
+        });
+        var client = new Azure.KeyVault.AccessPolicy("client", new Azure.KeyVault.AccessPolicyArgs
+        {
+            KeyVaultId = exampleKeyVault.Id,
+            TenantId = current.Apply(current => current.TenantId),
+            ObjectId = current.Apply(current => current.ObjectId),
+            KeyPermissions = 
+            {
+                "get",
+                "create",
+                "delete",
+                "list",
+                "restore",
+                "recover",
+                "unwrapkey",
+                "wrapkey",
+                "purge",
+                "encrypt",
+                "decrypt",
+                "sign",
+                "verify",
+            },
+            SecretPermissions = 
+            {
+                "get",
+            },
+        });
+        var exampleKey = new Azure.KeyVault.Key("exampleKey", new Azure.KeyVault.KeyArgs
+        {
+            KeyVaultId = exampleKeyVault.Id,
+            KeyType = "RSA",
+            KeySize = 2048,
+            KeyOpts = 
+            {
+                "decrypt",
+                "encrypt",
+                "sign",
+                "unwrapKey",
+                "verify",
+                "wrapKey",
+            },
+        }, new CustomResourceOptions
+        {
+            DependsOn = 
+            {
+                client,
+                storage,
+            },
+        });
+        var exampleCustomerManagedKey = new Azure.Storage.CustomerManagedKey("exampleCustomerManagedKey", new Azure.Storage.CustomerManagedKeyArgs
+        {
+            StorageAccountId = exampleAccount.Id,
+            KeyVaultId = exampleKeyVault.Id,
+            KeyName = exampleKey.Name,
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/keyvault"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/storage"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		current, err := core.GetClientConfig(ctx, nil, nil)
+		if err != nil {
+			return err
+		}
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West Europe"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleKeyVault, err := keyvault.NewKeyVault(ctx, "exampleKeyVault", &keyvault.KeyVaultArgs{
+			Location:               exampleResourceGroup.Location,
+			ResourceGroupName:      exampleResourceGroup.Name,
+			TenantId:               pulumi.String(current.TenantId),
+			SkuName:                pulumi.String("standard"),
+			PurgeProtectionEnabled: pulumi.Bool(true),
+		})
+		if err != nil {
+			return err
+		}
+		exampleAccount, err := storage.NewAccount(ctx, "exampleAccount", &storage.AccountArgs{
+			ResourceGroupName:      exampleResourceGroup.Name,
+			Location:               exampleResourceGroup.Location,
+			AccountTier:            pulumi.String("Standard"),
+			AccountReplicationType: pulumi.String("GRS"),
+			Identity: &storage.AccountIdentityArgs{
+				Type: pulumi.String("SystemAssigned"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		storage, err := keyvault.NewAccessPolicy(ctx, "storage", &keyvault.AccessPolicyArgs{
+			KeyVaultId: exampleKeyVault.ID(),
+			TenantId:   pulumi.String(current.TenantId),
+			ObjectId: exampleAccount.Identity.ApplyT(func(identity storage.AccountIdentity) (string, error) {
+				return identity.PrincipalId, nil
+			}).(pulumi.StringOutput),
+			KeyPermissions: pulumi.StringArray{
+				pulumi.String("get"),
+				pulumi.String("create"),
+				pulumi.String("list"),
+				pulumi.String("restore"),
+				pulumi.String("recover"),
+				pulumi.String("unwrapkey"),
+				pulumi.String("wrapkey"),
+				pulumi.String("purge"),
+				pulumi.String("encrypt"),
+				pulumi.String("decrypt"),
+				pulumi.String("sign"),
+				pulumi.String("verify"),
+			},
+			SecretPermissions: pulumi.StringArray{
+				pulumi.String("get"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		client, err := keyvault.NewAccessPolicy(ctx, "client", &keyvault.AccessPolicyArgs{
+			KeyVaultId: exampleKeyVault.ID(),
+			TenantId:   pulumi.String(current.TenantId),
+			ObjectId:   pulumi.String(current.ObjectId),
+			KeyPermissions: pulumi.StringArray{
+				pulumi.String("get"),
+				pulumi.String("create"),
+				pulumi.String("delete"),
+				pulumi.String("list"),
+				pulumi.String("restore"),
+				pulumi.String("recover"),
+				pulumi.String("unwrapkey"),
+				pulumi.String("wrapkey"),
+				pulumi.String("purge"),
+				pulumi.String("encrypt"),
+				pulumi.String("decrypt"),
+				pulumi.String("sign"),
+				pulumi.String("verify"),
+			},
+			SecretPermissions: pulumi.StringArray{
+				pulumi.String("get"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		exampleKey, err := keyvault.NewKey(ctx, "exampleKey", &keyvault.KeyArgs{
+			KeyVaultId: exampleKeyVault.ID(),
+			KeyType:    pulumi.String("RSA"),
+			KeySize:    pulumi.Int(2048),
+			KeyOpts: pulumi.StringArray{
+				pulumi.String("decrypt"),
+				pulumi.String("encrypt"),
+				pulumi.String("sign"),
+				pulumi.String("unwrapKey"),
+				pulumi.String("verify"),
+				pulumi.String("wrapKey"),
+			},
+		}, pulumi.DependsOn([]pulumi.Resource{
+			client,
+			storage,
+		}))
+		if err != nil {
+			return err
+		}
+		_, err = storage.NewCustomerManagedKey(ctx, "exampleCustomerManagedKey", &storage.CustomerManagedKeyArgs{
+			StorageAccountId: exampleAccount.ID(),
+			KeyVaultId:       exampleKeyVault.ID(),
+			KeyName:          exampleKey.Name,
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_azure as azure
+
+current = azure.core.get_client_config()
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_key_vault = azure.keyvault.KeyVault("exampleKeyVault",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    tenant_id=current.tenant_id,
+    sku_name="standard",
+    purge_protection_enabled=True)
+example_account = azure.storage.Account("exampleAccount",
+    resource_group_name=example_resource_group.name,
+    location=example_resource_group.location,
+    account_tier="Standard",
+    account_replication_type="GRS",
+    identity=azure.storage.AccountIdentityArgs(
+        type="SystemAssigned",
+    ))
+storage = azure.keyvault.AccessPolicy("storage",
+    key_vault_id=example_key_vault.id,
+    tenant_id=current.tenant_id,
+    object_id=example_account.identity.principal_id,
+    key_permissions=[
+        "get",
+        "create",
+        "list",
+        "restore",
+        "recover",
+        "unwrapkey",
+        "wrapkey",
+        "purge",
+        "encrypt",
+        "decrypt",
+        "sign",
+        "verify",
+    ],
+    secret_permissions=["get"])
+client = azure.keyvault.AccessPolicy("client",
+    key_vault_id=example_key_vault.id,
+    tenant_id=current.tenant_id,
+    object_id=current.object_id,
+    key_permissions=[
+        "get",
+        "create",
+        "delete",
+        "list",
+        "restore",
+        "recover",
+        "unwrapkey",
+        "wrapkey",
+        "purge",
+        "encrypt",
+        "decrypt",
+        "sign",
+        "verify",
+    ],
+    secret_permissions=["get"])
+example_key = azure.keyvault.Key("exampleKey",
+    key_vault_id=example_key_vault.id,
+    key_type="RSA",
+    key_size=2048,
+    key_opts=[
+        "decrypt",
+        "encrypt",
+        "sign",
+        "unwrapKey",
+        "verify",
+        "wrapKey",
+    ],
+    opts=pulumi.ResourceOptions(depends_on=[
+            client,
+            storage,
+        ]))
+example_customer_managed_key = azure.storage.CustomerManagedKey("exampleCustomerManagedKey",
+    storage_account_id=example_account.id,
+    key_vault_id=example_key_vault.id,
+    key_name=example_key.name)
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const current = azure.core.getClientConfig({});
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const exampleKeyVault = new azure.keyvault.KeyVault("exampleKeyVault", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    tenantId: current.then(current => current.tenantId),
+    skuName: "standard",
+    purgeProtectionEnabled: true,
+});
+const exampleAccount = new azure.storage.Account("exampleAccount", {
+    resourceGroupName: exampleResourceGroup.name,
+    location: exampleResourceGroup.location,
+    accountTier: "Standard",
+    accountReplicationType: "GRS",
+    identity: {
+        type: "SystemAssigned",
+    },
+});
+const storage = new azure.keyvault.AccessPolicy("storage", {
+    keyVaultId: exampleKeyVault.id,
+    tenantId: current.then(current => current.tenantId),
+    objectId: exampleAccount.identity.apply(identity => identity.principalId),
+    keyPermissions: [
+        "get",
+        "create",
+        "list",
+        "restore",
+        "recover",
+        "unwrapkey",
+        "wrapkey",
+        "purge",
+        "encrypt",
+        "decrypt",
+        "sign",
+        "verify",
+    ],
+    secretPermissions: ["get"],
+});
+const client = new azure.keyvault.AccessPolicy("client", {
+    keyVaultId: exampleKeyVault.id,
+    tenantId: current.then(current => current.tenantId),
+    objectId: current.then(current => current.objectId),
+    keyPermissions: [
+        "get",
+        "create",
+        "delete",
+        "list",
+        "restore",
+        "recover",
+        "unwrapkey",
+        "wrapkey",
+        "purge",
+        "encrypt",
+        "decrypt",
+        "sign",
+        "verify",
+    ],
+    secretPermissions: ["get"],
+});
+const exampleKey = new azure.keyvault.Key("exampleKey", {
+    keyVaultId: exampleKeyVault.id,
+    keyType: "RSA",
+    keySize: 2048,
+    keyOpts: [
+        "decrypt",
+        "encrypt",
+        "sign",
+        "unwrapKey",
+        "verify",
+        "wrapKey",
+    ],
+}, {
+    dependsOn: [
+        client,
+        storage,
+    ],
+});
+const exampleCustomerManagedKey = new azure.storage.CustomerManagedKey("exampleCustomerManagedKey", {
+    storageAccountId: exampleAccount.id,
+    keyVaultId: exampleKeyVault.id,
+    keyName: exampleKey.name,
+});
+```
+
+
+{{< /example >}}
+
+
+
+
+
+{{% /examples %}}
+
+
 
 
 ## Create a CustomerManagedKey Resource {#create}

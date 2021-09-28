@@ -117,7 +117,98 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+```go
+package main
+
+import (
+	"io/ioutil"
+
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/compute"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/network"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func readFileOrPanic(path string) pulumi.StringPtrInput {
+	data, err := ioutil.ReadFile(path)
+	if err != nil {
+		panic(err.Error())
+	}
+	return pulumi.String(string(data))
+}
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West Europe"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleVirtualNetwork, err := network.NewVirtualNetwork(ctx, "exampleVirtualNetwork", &network.VirtualNetworkArgs{
+			ResourceGroupName: exampleResourceGroup.Name,
+			Location:          exampleResourceGroup.Location,
+			AddressSpaces: pulumi.StringArray{
+				pulumi.String("10.0.0.0/16"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		internal, err := network.NewSubnet(ctx, "internal", &network.SubnetArgs{
+			ResourceGroupName:  exampleResourceGroup.Name,
+			VirtualNetworkName: exampleVirtualNetwork.Name,
+			AddressPrefixes: pulumi.StringArray{
+				pulumi.String("10.0.2.0/24"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = compute.NewLinuxVirtualMachineScaleSet(ctx, "exampleLinuxVirtualMachineScaleSet", &compute.LinuxVirtualMachineScaleSetArgs{
+			ResourceGroupName: exampleResourceGroup.Name,
+			Location:          exampleResourceGroup.Location,
+			Sku:               pulumi.String("Standard_F2"),
+			Instances:         pulumi.Int(1),
+			AdminUsername:     pulumi.String("adminuser"),
+			AdminSshKeys: compute.LinuxVirtualMachineScaleSetAdminSshKeyArray{
+				&compute.LinuxVirtualMachineScaleSetAdminSshKeyArgs{
+					Username:  pulumi.String("adminuser"),
+					PublicKey: readFileOrPanic("~/.ssh/id_rsa.pub"),
+				},
+			},
+			SourceImageReference: &compute.LinuxVirtualMachineScaleSetSourceImageReferenceArgs{
+				Publisher: pulumi.String("Canonical"),
+				Offer:     pulumi.String("UbuntuServer"),
+				Sku:       pulumi.String("16.04-LTS"),
+				Version:   pulumi.String("latest"),
+			},
+			OsDisk: &compute.LinuxVirtualMachineScaleSetOsDiskArgs{
+				StorageAccountType: pulumi.String("Standard_LRS"),
+				Caching:            pulumi.String("ReadWrite"),
+			},
+			NetworkInterfaces: compute.LinuxVirtualMachineScaleSetNetworkInterfaceArray{
+				&compute.LinuxVirtualMachineScaleSetNetworkInterfaceArgs{
+					Name:    pulumi.String("example"),
+					Primary: pulumi.Bool(true),
+					IpConfigurations: compute.LinuxVirtualMachineScaleSetNetworkInterfaceIpConfigurationArray{
+						&compute.LinuxVirtualMachineScaleSetNetworkInterfaceIpConfigurationArgs{
+							Name:     pulumi.String("internal"),
+							Primary:  pulumi.Bool(true),
+							SubnetId: internal.ID(),
+						},
+					},
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 
 {{< /example >}}
 

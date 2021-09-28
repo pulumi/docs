@@ -12,6 +12,267 @@ meta_desc: "Documentation for the azure.datashare.DatasetKustoDatabase resource 
 
 Manages a Data Share Kusto Database Dataset.
 
+{{% examples %}}
+
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+
+
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West Europe",
+        });
+        var exampleAccount = new Azure.DataShare.Account("exampleAccount", new Azure.DataShare.AccountArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            Identity = new Azure.DataShare.Inputs.AccountIdentityArgs
+            {
+                Type = "SystemAssigned",
+            },
+        });
+        var exampleShare = new Azure.DataShare.Share("exampleShare", new Azure.DataShare.ShareArgs
+        {
+            AccountId = exampleAccount.Id,
+            Kind = "InPlace",
+        });
+        var exampleCluster = new Azure.Kusto.Cluster("exampleCluster", new Azure.Kusto.ClusterArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            Sku = new Azure.Kusto.Inputs.ClusterSkuArgs
+            {
+                Name = "Dev(No SLA)_Standard_D11_v2",
+                Capacity = 1,
+            },
+        });
+        var exampleDatabase = new Azure.Kusto.Database("exampleDatabase", new Azure.Kusto.DatabaseArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            Location = exampleResourceGroup.Location,
+            ClusterName = exampleCluster.Name,
+        });
+        var exampleAssignment = new Azure.Authorization.Assignment("exampleAssignment", new Azure.Authorization.AssignmentArgs
+        {
+            Scope = exampleCluster.Id,
+            RoleDefinitionName = "Contributor",
+            PrincipalId = exampleAccount.Identity.Apply(identity => identity.PrincipalId),
+        });
+        var exampleDatasetKustoDatabase = new Azure.DataShare.DatasetKustoDatabase("exampleDatasetKustoDatabase", new Azure.DataShare.DatasetKustoDatabaseArgs
+        {
+            ShareId = exampleShare.Id,
+            KustoDatabaseId = exampleDatabase.Id,
+        }, new CustomResourceOptions
+        {
+            DependsOn = 
+            {
+                exampleAssignment,
+            },
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/authorization"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/datashare"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/kusto"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West Europe"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleAccount, err := datashare.NewAccount(ctx, "exampleAccount", &datashare.AccountArgs{
+			Location:          exampleResourceGroup.Location,
+			ResourceGroupName: exampleResourceGroup.Name,
+			Identity: &datashare.AccountIdentityArgs{
+				Type: pulumi.String("SystemAssigned"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		exampleShare, err := datashare.NewShare(ctx, "exampleShare", &datashare.ShareArgs{
+			AccountId: exampleAccount.ID(),
+			Kind:      pulumi.String("InPlace"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleCluster, err := kusto.NewCluster(ctx, "exampleCluster", &kusto.ClusterArgs{
+			Location:          exampleResourceGroup.Location,
+			ResourceGroupName: exampleResourceGroup.Name,
+			Sku: &kusto.ClusterSkuArgs{
+				Name:     pulumi.String("Dev(No SLA)_Standard_D11_v2"),
+				Capacity: pulumi.Int(1),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		exampleDatabase, err := kusto.NewDatabase(ctx, "exampleDatabase", &kusto.DatabaseArgs{
+			ResourceGroupName: exampleResourceGroup.Name,
+			Location:          exampleResourceGroup.Location,
+			ClusterName:       exampleCluster.Name,
+		})
+		if err != nil {
+			return err
+		}
+		exampleAssignment, err := authorization.NewAssignment(ctx, "exampleAssignment", &authorization.AssignmentArgs{
+			Scope:              exampleCluster.ID(),
+			RoleDefinitionName: pulumi.String("Contributor"),
+			PrincipalId: exampleAccount.Identity.ApplyT(func(identity datashare.AccountIdentity) (string, error) {
+				return identity.PrincipalId, nil
+			}).(pulumi.StringOutput),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = datashare.NewDatasetKustoDatabase(ctx, "exampleDatasetKustoDatabase", &datashare.DatasetKustoDatabaseArgs{
+			ShareId:         exampleShare.ID(),
+			KustoDatabaseId: exampleDatabase.ID(),
+		}, pulumi.DependsOn([]pulumi.Resource{
+			exampleAssignment,
+		}))
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_account = azure.datashare.Account("exampleAccount",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    identity=azure.datashare.AccountIdentityArgs(
+        type="SystemAssigned",
+    ))
+example_share = azure.datashare.Share("exampleShare",
+    account_id=example_account.id,
+    kind="InPlace")
+example_cluster = azure.kusto.Cluster("exampleCluster",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    sku=azure.kusto.ClusterSkuArgs(
+        name="Dev(No SLA)_Standard_D11_v2",
+        capacity=1,
+    ))
+example_database = azure.kusto.Database("exampleDatabase",
+    resource_group_name=example_resource_group.name,
+    location=example_resource_group.location,
+    cluster_name=example_cluster.name)
+example_assignment = azure.authorization.Assignment("exampleAssignment",
+    scope=example_cluster.id,
+    role_definition_name="Contributor",
+    principal_id=example_account.identity.principal_id)
+example_dataset_kusto_database = azure.datashare.DatasetKustoDatabase("exampleDatasetKustoDatabase",
+    share_id=example_share.id,
+    kusto_database_id=example_database.id,
+    opts=pulumi.ResourceOptions(depends_on=[example_assignment]))
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const exampleAccount = new azure.datashare.Account("exampleAccount", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    identity: {
+        type: "SystemAssigned",
+    },
+});
+const exampleShare = new azure.datashare.Share("exampleShare", {
+    accountId: exampleAccount.id,
+    kind: "InPlace",
+});
+const exampleCluster = new azure.kusto.Cluster("exampleCluster", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    sku: {
+        name: "Dev(No SLA)_Standard_D11_v2",
+        capacity: 1,
+    },
+});
+const exampleDatabase = new azure.kusto.Database("exampleDatabase", {
+    resourceGroupName: exampleResourceGroup.name,
+    location: exampleResourceGroup.location,
+    clusterName: exampleCluster.name,
+});
+const exampleAssignment = new azure.authorization.Assignment("exampleAssignment", {
+    scope: exampleCluster.id,
+    roleDefinitionName: "Contributor",
+    principalId: exampleAccount.identity.apply(identity => identity.principalId),
+});
+const exampleDatasetKustoDatabase = new azure.datashare.DatasetKustoDatabase("exampleDatasetKustoDatabase", {
+    shareId: exampleShare.id,
+    kustoDatabaseId: exampleDatabase.id,
+}, {
+    dependsOn: [exampleAssignment],
+});
+```
+
+
+{{< /example >}}
+
+
+
+
+
+{{% /examples %}}
+
+
 
 
 ## Create a DatasetKustoDatabase Resource {#create}

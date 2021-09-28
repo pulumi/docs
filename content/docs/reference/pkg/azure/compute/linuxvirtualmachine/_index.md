@@ -121,7 +121,101 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+```go
+package main
+
+import (
+	"io/ioutil"
+
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/compute"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/network"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func readFileOrPanic(path string) pulumi.StringPtrInput {
+	data, err := ioutil.ReadFile(path)
+	if err != nil {
+		panic(err.Error())
+	}
+	return pulumi.String(string(data))
+}
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West Europe"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleVirtualNetwork, err := network.NewVirtualNetwork(ctx, "exampleVirtualNetwork", &network.VirtualNetworkArgs{
+			AddressSpaces: pulumi.StringArray{
+				pulumi.String("10.0.0.0/16"),
+			},
+			Location:          exampleResourceGroup.Location,
+			ResourceGroupName: exampleResourceGroup.Name,
+		})
+		if err != nil {
+			return err
+		}
+		exampleSubnet, err := network.NewSubnet(ctx, "exampleSubnet", &network.SubnetArgs{
+			ResourceGroupName:  exampleResourceGroup.Name,
+			VirtualNetworkName: exampleVirtualNetwork.Name,
+			AddressPrefixes: pulumi.StringArray{
+				pulumi.String("10.0.2.0/24"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		exampleNetworkInterface, err := network.NewNetworkInterface(ctx, "exampleNetworkInterface", &network.NetworkInterfaceArgs{
+			Location:          exampleResourceGroup.Location,
+			ResourceGroupName: exampleResourceGroup.Name,
+			IpConfigurations: network.NetworkInterfaceIpConfigurationArray{
+				&network.NetworkInterfaceIpConfigurationArgs{
+					Name:                       pulumi.String("internal"),
+					SubnetId:                   exampleSubnet.ID(),
+					PrivateIpAddressAllocation: pulumi.String("Dynamic"),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = compute.NewLinuxVirtualMachine(ctx, "exampleLinuxVirtualMachine", &compute.LinuxVirtualMachineArgs{
+			ResourceGroupName: exampleResourceGroup.Name,
+			Location:          exampleResourceGroup.Location,
+			Size:              pulumi.String("Standard_F2"),
+			AdminUsername:     pulumi.String("adminuser"),
+			NetworkInterfaceIds: pulumi.StringArray{
+				exampleNetworkInterface.ID(),
+			},
+			AdminSshKeys: compute.LinuxVirtualMachineAdminSshKeyArray{
+				&compute.LinuxVirtualMachineAdminSshKeyArgs{
+					Username:  pulumi.String("adminuser"),
+					PublicKey: readFileOrPanic("~/.ssh/id_rsa.pub"),
+				},
+			},
+			OsDisk: &compute.LinuxVirtualMachineOsDiskArgs{
+				Caching:            pulumi.String("ReadWrite"),
+				StorageAccountType: pulumi.String("Standard_LRS"),
+			},
+			SourceImageReference: &compute.LinuxVirtualMachineSourceImageReferenceArgs{
+				Publisher: pulumi.String("Canonical"),
+				Offer:     pulumi.String("UbuntuServer"),
+				Sku:       pulumi.String("16.04-LTS"),
+				Version:   pulumi.String("latest"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 
 {{< /example >}}
 

@@ -12,6 +12,169 @@ meta_desc: "Documentation for the azure.logicapps.IntegrationAccountAssembly res
 
 Manages a Logic App Integration Account Assembly.
 
+{{% examples %}}
+
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+
+
+
+
+{{< example csharp >}}
+
+```csharp
+using System;
+using System.IO;
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+	private static string ReadFileBase64(string path) {
+		return Convert.ToBase64String(System.Text.UTF8.GetBytes(File.ReadAllText(path)))
+	}
+
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West Europe",
+        });
+        var exampleIntegrationAccount = new Azure.LogicApps.IntegrationAccount("exampleIntegrationAccount", new Azure.LogicApps.IntegrationAccountArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            SkuName = "Basic",
+        });
+        var exampleIntegrationAccountAssembly = new Azure.LogicApps.IntegrationAccountAssembly("exampleIntegrationAccountAssembly", new Azure.LogicApps.IntegrationAccountAssemblyArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            IntegrationAccountName = exampleIntegrationAccount.Name,
+            AssemblyName = "TestAssembly",
+            Content = ReadFileBase64("testdata/log4net.dll"),
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"encoding/base64"
+	"io/ioutil"
+
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/logicapps"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func filebase64OrPanic(path string) pulumi.StringPtrInput {
+	if fileData, err := ioutil.ReadFile(path); err == nil {
+		return pulumi.String(base64.StdEncoding.EncodeToString(fileData[:]))
+	} else {
+		panic(err.Error())
+	}
+}
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West Europe"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleIntegrationAccount, err := logicapps.NewIntegrationAccount(ctx, "exampleIntegrationAccount", &logicapps.IntegrationAccountArgs{
+			Location:          exampleResourceGroup.Location,
+			ResourceGroupName: exampleResourceGroup.Name,
+			SkuName:           pulumi.String("Basic"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = logicapps.NewIntegrationAccountAssembly(ctx, "exampleIntegrationAccountAssembly", &logicapps.IntegrationAccountAssemblyArgs{
+			ResourceGroupName:      exampleResourceGroup.Name,
+			IntegrationAccountName: exampleIntegrationAccount.Name,
+			AssemblyName:           pulumi.String("TestAssembly"),
+			Content:                filebase64OrPanic("testdata/log4net.dll"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import base64
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_integration_account = azure.logicapps.IntegrationAccount("exampleIntegrationAccount",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    sku_name="Basic")
+example_integration_account_assembly = azure.logicapps.IntegrationAccountAssembly("exampleIntegrationAccountAssembly",
+    resource_group_name=example_resource_group.name,
+    integration_account_name=example_integration_account.name,
+    assembly_name="TestAssembly",
+    content=(lambda path: base64.b64encode(open(path).read().encode()).decode())("testdata/log4net.dll"))
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+import * from "fs";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const exampleIntegrationAccount = new azure.logicapps.IntegrationAccount("exampleIntegrationAccount", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    skuName: "Basic",
+});
+const exampleIntegrationAccountAssembly = new azure.logicapps.IntegrationAccountAssembly("exampleIntegrationAccountAssembly", {
+    resourceGroupName: exampleResourceGroup.name,
+    integrationAccountName: exampleIntegrationAccount.name,
+    assemblyName: "TestAssembly",
+    content: Buffer.from(fs.readFileSync("testdata/log4net.dll"), 'binary').toString('base64'),
+});
+```
+
+
+{{< /example >}}
+
+
+
+
+
+{{% /examples %}}
+
+
 
 
 ## Create a IntegrationAccountAssembly Resource {#create}
