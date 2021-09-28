@@ -52,6 +52,10 @@ class MyStack : Stack
             {
                 "https://myco.test",
             },
+            BoundClaims = 
+            {
+                { "color", "red,green,blue" },
+            },
             UserClaim = "https://vault/user",
             RoleType = "jwt",
         });
@@ -93,6 +97,9 @@ func main() {
 			BoundAudiences: pulumi.StringArray{
 				pulumi.String("https://myco.test"),
 			},
+			BoundClaims: pulumi.StringMap{
+				"color": pulumi.String("red,green,blue"),
+			},
 			UserClaim: pulumi.String("https://vault/user"),
 			RoleType:  pulumi.String("jwt"),
 		})
@@ -124,6 +131,9 @@ example = vault.jwt.AuthBackendRole("example",
         "prod",
     ],
     bound_audiences=["https://myco.test"],
+    bound_claims={
+        "color": "red,green,blue",
+    },
     user_claim="https://vault/user",
     role_type="jwt")
 ```
@@ -149,6 +159,9 @@ const example = new vault.jwt.AuthBackendRole("example", {
         "prod",
     ],
     boundAudiences: ["https://myco.test"],
+    boundClaims: {
+        color: "red,green,blue",
+    },
     userClaim: "https://vault/user",
     roleType: "jwt",
 });
@@ -405,8 +418,9 @@ CIDRs valid as the source address for login requests. This value is also encoded
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}If set, a map of claims/values to match against.
-The expected value may be a single string or a list of strings.
+    <dd>{{% md %}}If set, a map of claims to values to match against.
+A claim's value must be a string, which may contain one value or multiple
+comma-separated values, e.g. `"red"` or `"red,green,blue"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="boundclaimstype_csharp">
@@ -753,8 +767,9 @@ CIDRs valid as the source address for login requests. This value is also encoded
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}If set, a map of claims/values to match against.
-The expected value may be a single string or a list of strings.
+    <dd>{{% md %}}If set, a map of claims to values to match against.
+A claim's value must be a string, which may contain one value or multiple
+comma-separated values, e.g. `"red"` or `"red,green,blue"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="boundclaimstype_go">
@@ -1101,8 +1116,9 @@ CIDRs valid as the source address for login requests. This value is also encoded
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}If set, a map of claims/values to match against.
-The expected value may be a single string or a list of strings.
+    <dd>{{% md %}}If set, a map of claims to values to match against.
+A claim's value must be a string, which may contain one value or multiple
+comma-separated values, e.g. `"red"` or `"red,green,blue"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="boundclaimstype_nodejs">
@@ -1449,8 +1465,9 @@ CIDRs valid as the source address for login requests. This value is also encoded
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
-    <dd>{{% md %}}If set, a map of claims/values to match against.
-The expected value may be a single string or a list of strings.
+    <dd>{{% md %}}If set, a map of claims to values to match against.
+A claim's value must be a string, which may contain one value or multiple
+comma-separated values, e.g. `"red"` or `"red,green,blue"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bound_claims_type_python">
@@ -1989,8 +2006,9 @@ CIDRs valid as the source address for login requests. This value is also encoded
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}If set, a map of claims/values to match against.
-The expected value may be a single string or a list of strings.
+    <dd>{{% md %}}If set, a map of claims to values to match against.
+A claim's value must be a string, which may contain one value or multiple
+comma-separated values, e.g. `"red"` or `"red,green,blue"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_boundclaimstype_csharp">
@@ -2337,8 +2355,9 @@ CIDRs valid as the source address for login requests. This value is also encoded
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}If set, a map of claims/values to match against.
-The expected value may be a single string or a list of strings.
+    <dd>{{% md %}}If set, a map of claims to values to match against.
+A claim's value must be a string, which may contain one value or multiple
+comma-separated values, e.g. `"red"` or `"red,green,blue"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_boundclaimstype_go">
@@ -2685,8 +2704,9 @@ CIDRs valid as the source address for login requests. This value is also encoded
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}If set, a map of claims/values to match against.
-The expected value may be a single string or a list of strings.
+    <dd>{{% md %}}If set, a map of claims to values to match against.
+A claim's value must be a string, which may contain one value or multiple
+comma-separated values, e.g. `"red"` or `"red,green,blue"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_boundclaimstype_nodejs">
@@ -3033,8 +3053,9 @@ CIDRs valid as the source address for login requests. This value is also encoded
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
-    <dd>{{% md %}}If set, a map of claims/values to match against.
-The expected value may be a single string or a list of strings.
+    <dd>{{% md %}}If set, a map of claims to values to match against.
+A claim's value must be a string, which may contain one value or multiple
+comma-separated values, e.g. `"red"` or `"red,green,blue"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_bound_claims_type_python">

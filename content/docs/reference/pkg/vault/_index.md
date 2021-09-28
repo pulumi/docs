@@ -53,6 +53,7 @@ A Pulumi package for creating and managing vault cloud resources.
     <li><a href="provider" title="Provider"><span class="symbol resource"></span>Provider</a></li>
     <li><a href="quotaleasecount" title="QuotaLeaseCount"><span class="symbol resource"></span>QuotaLeaseCount</a></li>
     <li><a href="quotaratelimit" title="QuotaRateLimit"><span class="symbol resource"></span>QuotaRateLimit</a></li>
+    <li><a href="raftsnapshotagentconfig" title="RaftSnapshotAgentConfig"><span class="symbol resource"></span>RaftSnapshotAgentConfig</a></li>
     <li><a href="rgppolicy" title="RgpPolicy"><span class="symbol resource"></span>RgpPolicy</a></li>
     <li><a href="token" title="Token"><span class="symbol resource"></span>Token</a></li>
 </ul>
@@ -73,6 +74,6 @@ A Pulumi package for creating and managing vault cloud resources.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`vault` Terraform Provider](https://github.com/hashicorp/terraform-provider-vault).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.4.0</dd>
+	<dd>4.5.0</dd>
 </dl>
 
