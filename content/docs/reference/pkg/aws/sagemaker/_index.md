@@ -19,6 +19,7 @@ Explore the resources and functions of the aws.sagemaker module.
     <li><a href="endpoint" title="Endpoint"><span class="symbol resource"></span>Endpoint</a></li>
     <li><a href="endpointconfiguration" title="EndpointConfiguration"><span class="symbol resource"></span>EndpointConfiguration</a></li>
     <li><a href="featuregroup" title="FeatureGroup"><span class="symbol resource"></span>FeatureGroup</a></li>
+    <li><a href="flowdefinition" title="FlowDefinition"><span class="symbol resource"></span>FlowDefinition</a></li>
     <li><a href="humantaskui" title="HumanTaskUI"><span class="symbol resource"></span>HumanTaskUI</a></li>
     <li><a href="image" title="Image"><span class="symbol resource"></span>Image</a></li>
     <li><a href="imageversion" title="ImageVersion"><span class="symbol resource"></span>ImageVersion</a></li>
@@ -45,6 +46,6 @@ Explore the resources and functions of the aws.sagemaker module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.21.2</dd>
+	<dd>4.22.0</dd>
 </dl>
 

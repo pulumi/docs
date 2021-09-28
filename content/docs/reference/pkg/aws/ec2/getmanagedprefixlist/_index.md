@@ -553,7 +553,7 @@ The following output properties are available:
 <a href="#entries_go" style="color: inherit; text-decoration: inherit;">Entries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getmanagedprefixlistentry">[]Get<wbr>Managed<wbr>Prefix<wbr>List<wbr>Entry</a></span>
+        <span class="property-type"><a href="#getmanagedprefixlistentry">[]Get<wbr>Managed<wbr>Prefix<wbr>List<wbr>Entry<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The set of entries in this prefix list. Each entry is an object with `cidr` and `description`.
 {{% /md %}}</dd><dt class="property-"

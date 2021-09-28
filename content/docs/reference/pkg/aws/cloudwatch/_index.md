@@ -38,6 +38,7 @@ Explore the resources and functions of the aws.cloudwatch module.
     <li><a href="geteventconnection" title="GetEventConnection"><span class="symbol function"></span>GetEventConnection</a></li>
     <li><a href="geteventsource" title="GetEventSource"><span class="symbol function"></span>GetEventSource</a></li>
     <li><a href="getloggroup" title="GetLogGroup"><span class="symbol function"></span>GetLogGroup</a></li>
+    <li><a href="getloggroups" title="GetLogGroups"><span class="symbol function"></span>GetLogGroups</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -49,6 +50,6 @@ Explore the resources and functions of the aws.cloudwatch module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.21.2</dd>
+	<dd>4.22.0</dd>
 </dl>
 

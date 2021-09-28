@@ -1212,6 +1212,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A comma separated list of one or more hostname:port pairs to use to connect to the Apache Zookeeper cluster. The returned values are sorted alphbetically. The AWS API may not return all endpoints, so this value is not guaranteed to be stable across applies.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="zookeeperconnectstringtls_csharp">
+<a href="#zookeeperconnectstringtls_csharp" style="color: inherit; text-decoration: inherit;">Zookeeper<wbr>Connect<wbr>String<wbr>Tls</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A comma separated list of one or more hostname:port pairs to use to connect to the Apache Zookeeper cluster via TLS. The returned values are sorted alphbetically. The AWS API may not return all endpoints, so this value is not guaranteed to be stable across applies.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1297,6 +1306,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A comma separated list of one or more hostname:port pairs to use to connect to the Apache Zookeeper cluster. The returned values are sorted alphbetically. The AWS API may not return all endpoints, so this value is not guaranteed to be stable across applies.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="zookeeperconnectstringtls_go">
+<a href="#zookeeperconnectstringtls_go" style="color: inherit; text-decoration: inherit;">Zookeeper<wbr>Connect<wbr>String<wbr>Tls</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A comma separated list of one or more hostname:port pairs to use to connect to the Apache Zookeeper cluster via TLS. The returned values are sorted alphbetically. The AWS API may not return all endpoints, so this value is not guaranteed to be stable across applies.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1382,6 +1400,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A comma separated list of one or more hostname:port pairs to use to connect to the Apache Zookeeper cluster. The returned values are sorted alphbetically. The AWS API may not return all endpoints, so this value is not guaranteed to be stable across applies.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="zookeeperconnectstringtls_nodejs">
+<a href="#zookeeperconnectstringtls_nodejs" style="color: inherit; text-decoration: inherit;">zookeeper<wbr>Connect<wbr>String<wbr>Tls</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A comma separated list of one or more hostname:port pairs to use to connect to the Apache Zookeeper cluster via TLS. The returned values are sorted alphbetically. The AWS API may not return all endpoints, so this value is not guaranteed to be stable across applies.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1467,6 +1494,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A comma separated list of one or more hostname:port pairs to use to connect to the Apache Zookeeper cluster. The returned values are sorted alphbetically. The AWS API may not return all endpoints, so this value is not guaranteed to be stable across applies.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="zookeeper_connect_string_tls_python">
+<a href="#zookeeper_connect_string_tls_python" style="color: inherit; text-decoration: inherit;">zookeeper_<wbr>connect_<wbr>string_<wbr>tls</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A comma separated list of one or more hostname:port pairs to use to connect to the Apache Zookeeper cluster via TLS. The returned values are sorted alphbetically. The AWS API may not return all endpoints, so this value is not guaranteed to be stable across applies.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1504,7 +1540,8 @@ Get an existing Cluster resource's state with the given name, ID, and optional e
         <span class="nx">open_monitoring</span><span class="p">:</span> <span class="nx">Optional[ClusterOpenMonitoringArgs]</span> = None<span class="p">,</span>
         <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
         <span class="nx">tags_all</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
-        <span class="nx">zookeeper_connect_string</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Cluster</code></pre></div>
+        <span class="nx">zookeeper_connect_string</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">zookeeper_connect_string_tls</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Cluster</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1787,6 +1824,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A comma separated list of one or more hostname:port pairs to use to connect to the Apache Zookeeper cluster. The returned values are sorted alphbetically. The AWS API may not return all endpoints, so this value is not guaranteed to be stable across applies.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_zookeeperconnectstringtls_csharp">
+<a href="#state_zookeeperconnectstringtls_csharp" style="color: inherit; text-decoration: inherit;">Zookeeper<wbr>Connect<wbr>String<wbr>Tls</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A comma separated list of one or more hostname:port pairs to use to connect to the Apache Zookeeper cluster via TLS. The returned values are sorted alphbetically. The AWS API may not return all endpoints, so this value is not guaranteed to be stable across applies.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1963,6 +2009,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A comma separated list of one or more hostname:port pairs to use to connect to the Apache Zookeeper cluster. The returned values are sorted alphbetically. The AWS API may not return all endpoints, so this value is not guaranteed to be stable across applies.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_zookeeperconnectstringtls_go">
+<a href="#state_zookeeperconnectstringtls_go" style="color: inherit; text-decoration: inherit;">Zookeeper<wbr>Connect<wbr>String<wbr>Tls</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A comma separated list of one or more hostname:port pairs to use to connect to the Apache Zookeeper cluster via TLS. The returned values are sorted alphbetically. The AWS API may not return all endpoints, so this value is not guaranteed to be stable across applies.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2139,6 +2194,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A comma separated list of one or more hostname:port pairs to use to connect to the Apache Zookeeper cluster. The returned values are sorted alphbetically. The AWS API may not return all endpoints, so this value is not guaranteed to be stable across applies.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_zookeeperconnectstringtls_nodejs">
+<a href="#state_zookeeperconnectstringtls_nodejs" style="color: inherit; text-decoration: inherit;">zookeeper<wbr>Connect<wbr>String<wbr>Tls</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A comma separated list of one or more hostname:port pairs to use to connect to the Apache Zookeeper cluster via TLS. The returned values are sorted alphbetically. The AWS API may not return all endpoints, so this value is not guaranteed to be stable across applies.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2315,6 +2379,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A comma separated list of one or more hostname:port pairs to use to connect to the Apache Zookeeper cluster. The returned values are sorted alphbetically. The AWS API may not return all endpoints, so this value is not guaranteed to be stable across applies.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_zookeeper_connect_string_tls_python">
+<a href="#state_zookeeper_connect_string_tls_python" style="color: inherit; text-decoration: inherit;">zookeeper_<wbr>connect_<wbr>string_<wbr>tls</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A comma separated list of one or more hostname:port pairs to use to connect to the Apache Zookeeper cluster via TLS. The returned values are sorted alphbetically. The AWS API may not return all endpoints, so this value is not guaranteed to be stable across applies.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

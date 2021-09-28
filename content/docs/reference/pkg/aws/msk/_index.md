@@ -18,8 +18,10 @@ Explore the resources and functions of the aws.msk module.
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
+    <li><a href="getbrokernodes" title="GetBrokerNodes"><span class="symbol function"></span>GetBrokerNodes</a></li>
     <li><a href="getcluster" title="GetCluster"><span class="symbol function"></span>GetCluster</a></li>
     <li><a href="getconfiguration" title="GetConfiguration"><span class="symbol function"></span>GetConfiguration</a></li>
+    <li><a href="getkafkaversion" title="GetKafkaVersion"><span class="symbol function"></span>GetKafkaVersion</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -31,6 +33,6 @@ Explore the resources and functions of the aws.msk module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.21.2</dd>
+	<dd>4.22.0</dd>
 </dl>
 

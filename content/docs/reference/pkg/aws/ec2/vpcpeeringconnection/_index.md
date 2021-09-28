@@ -1288,9 +1288,7 @@ to the remote VPC.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow a local VPC to resolve public DNS hostnames to
-private IP addresses when queried from instances in the peer VPC. This is
-[not supported](https://docs.aws.amazon.com/vpc/latest/peering/modify-peering-connections.html) for
-inter-region VPC peering.
+private IP addresses when queried from instances in the peer VPC.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowvpctoremoteclassiclink_csharp">
@@ -1326,9 +1324,7 @@ to the remote VPC.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow a local VPC to resolve public DNS hostnames to
-private IP addresses when queried from instances in the peer VPC. This is
-[not supported](https://docs.aws.amazon.com/vpc/latest/peering/modify-peering-connections.html) for
-inter-region VPC peering.
+private IP addresses when queried from instances in the peer VPC.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowvpctoremoteclassiclink_go">
@@ -1364,9 +1360,7 @@ to the remote VPC.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Allow a local VPC to resolve public DNS hostnames to
-private IP addresses when queried from instances in the peer VPC. This is
-[not supported](https://docs.aws.amazon.com/vpc/latest/peering/modify-peering-connections.html) for
-inter-region VPC peering.
+private IP addresses when queried from instances in the peer VPC.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowvpctoremoteclassiclink_nodejs">
@@ -1402,9 +1396,7 @@ to the remote VPC.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow a local VPC to resolve public DNS hostnames to
-private IP addresses when queried from instances in the peer VPC. This is
-[not supported](https://docs.aws.amazon.com/vpc/latest/peering/modify-peering-connections.html) for
-inter-region VPC peering.
+private IP addresses when queried from instances in the peer VPC.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allow_vpc_to_remote_classic_link_python">
@@ -1442,9 +1434,7 @@ to the remote VPC.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow a local VPC to resolve public DNS hostnames to
-private IP addresses when queried from instances in the peer VPC. This is
-[not supported](https://docs.aws.amazon.com/vpc/latest/peering/modify-peering-connections.html) for
-inter-region VPC peering.
+private IP addresses when queried from instances in the peer VPC.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowvpctoremoteclassiclink_csharp">
@@ -1480,9 +1470,7 @@ to the remote VPC.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow a local VPC to resolve public DNS hostnames to
-private IP addresses when queried from instances in the peer VPC. This is
-[not supported](https://docs.aws.amazon.com/vpc/latest/peering/modify-peering-connections.html) for
-inter-region VPC peering.
+private IP addresses when queried from instances in the peer VPC.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowvpctoremoteclassiclink_go">
@@ -1518,9 +1506,7 @@ to the remote VPC.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Allow a local VPC to resolve public DNS hostnames to
-private IP addresses when queried from instances in the peer VPC. This is
-[not supported](https://docs.aws.amazon.com/vpc/latest/peering/modify-peering-connections.html) for
-inter-region VPC peering.
+private IP addresses when queried from instances in the peer VPC.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowvpctoremoteclassiclink_nodejs">
@@ -1556,9 +1542,7 @@ to the remote VPC.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow a local VPC to resolve public DNS hostnames to
-private IP addresses when queried from instances in the peer VPC. This is
-[not supported](https://docs.aws.amazon.com/vpc/latest/peering/modify-peering-connections.html) for
-inter-region VPC peering.
+private IP addresses when queried from instances in the peer VPC.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allow_vpc_to_remote_classic_link_python">
