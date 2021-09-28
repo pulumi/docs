@@ -37,7 +37,7 @@ block_external_search_index: false
 
 # The url slug for the webinar landing page. If this is an external
 # webinar, use the external URL as the value here.
-url_slug: "gettint-started-with-aws"
+url_slug: "getting-started-with-aws"
 
 # The content of the hero section.
 hero:
@@ -48,11 +48,11 @@ hero:
 
 # Webinar pages support multiple session via the 'multiple' property.
 multiple:
-    - datetime: 2021-09-16T04:00:00-07:00
-      hubspot_form_id: 63ed4da6-2388-4c13-b089-25088b2d0845
-
     - datetime: 2021-09-28T08:00:00-07:00
       hubspot_form_id: 1bb45b7f-b1ad-44ac-9e0a-fb045cb8fd06
+
+    - datetime: 2021-10-21T06:00:00-07:00
+      hubspot_form_id: 0c727231-dfc1-4fa6-ab76-69247ac652c8
 
 # Content for the left hand side section of the page.
 main:
@@ -75,10 +75,8 @@ main:
 
     # The webinar presenters
     presenters:
-        - name: "Kat Cosgrove"
-          role: "Staff Developer Advocate, Pulumi"
-        - name: "Sophia Parafina"
-          role: "Technical Marketing Manager"
+        - name: "Laura Santamaria"
+          role: "Developer Advocate, Pulumi"
 
     # A bullet point list containing what the user will learn during the webinar.
     learn:

@@ -16,6 +16,28 @@
             {{ partial "customer-logos/ro-color" }}
         {{ end }}
     </span>
+{{ else if eq .logo "panther-labs" }}
+    <span class="w-full h-full">
+        {{ if eq .hoverable true }}
+            <span class="ro-hoverable">
+                <span class="ro-gray">{{ partial "customer-logos/panther-labs-gray" }}</span>
+                <span class="ro-color">{{ partial "customer-logos/panther-labs-color" }}</span>
+            </span>
+        {{ else }}
+            {{ partial "customer-logos/panther-labs-color" }}
+        {{ end }}
+    </span>
+{{ else if eq .logo "mercedes-benz" }}
+    <span class="w-full h-full">
+        {{ if eq .hoverable true }}
+            <span class="ro-hoverable">
+                <span class="ro-gray">{{ partial "customer-logos/mercedes-benz-gray" }}</span>
+                <span class="ro-color">{{ partial "customer-logos/mercedes-benz-rdna" }}</span>
+            </span>
+        {{ else }}
+            {{ partial "customer-logos/mercedes-benz-rdna" }}
+        {{ end }}
+    </span>
 {{ else }}
     <span class="{{ $logoClass }} w-full h-full">
         {{ $path := .logo | printf "%s/%s" "customer-logos" | printf "%s" }}

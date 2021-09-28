@@ -18,6 +18,8 @@
 {{ end }}
 
 {{ define "main" }}
+    {{ $pageContext := . }}
+
     <section class="container mx-auto mt-20">
         <div class="flex flex-col lg:flex-row h-full">
             <div class="w-full lg:w-1/2 mt-16 lg:mt-0 h-full flex items-center justify-center relative overflow-hidden">
@@ -212,21 +214,39 @@
 
     <!-- Logos -->
     <section class="container mx-auto text-center my-0 mb-16 lg:my-24 overflow-hidden px-3">
+        <div class="mb-16">
+            <h3>Atlassian Bitbucket reduced developers’ time spent on maintenance by 50%</h3>
+            <div class="max-w-2xl mx-auto text-center">
+                <div class="max-w-xs mx-auto">
+                    {{ partial "customer-logo.html" (dict "logo" "atlassian") }}
+                </div>
+                <p class="mt-0">
+                    "Using Pulumi and Python, our team quickly and easily built a repeatable
+                    pipeline that deploys development environments for more than 100 team members
+                    worldwide. The benefits of working in languages we know can’t be overstated.
+                    That just made moving to the Pulumi Cloud Engineering Platform an obvious choice
+                    for the team."
+                </p>
+                <p>
+                    - Mike Corsaro, Senior Software Engineer at Bitbucket
+                </p>
+                <div class="mt-12">
+                    <a class="btn-primary" href="{{ relref . "/case-studies/atlassian" }}">Read Atlassian Case Study</a>
+                </div>
+            </div>
+        </div>
+
         <h3 class="text-center mb-10 hidden lg:block">{{ .Params.customer_logos.title }}</h3>
         <h6 class="text-center mb-10 lg:hidden">{{ .Params.customer_logos.title }}</h6>
-        <pulumi-swiper loop="true" autoplay="true" autoplay-delay="2500" speed="2000">
-            {{ range $logoBunch := .Params.customer_logos.logos }}
-                <pulumi-swipeable>
-                    <div class="flex flex-wrap items-center justify-center">
-                        {{ range $logo := $logoBunch.items }}
-                            <div class="w-1/3 lg:w-1/5 px-2 py-4 lg:py-0 lg:px-8">
-                                {{ partial "customer-logo.html" (dict "logo" $logo "hoverable" true) }}
-                            </div>
-                        {{ end }}
-                    </div>
-                </pulumi-swipeable>
+        <div class="flex flex-wrap items-center justify-center">
+            {{ range $logo := .Params.customer_logos.logos }}
+                <div class="w-3/4 lg:w-1/5 p-10">
+                    <a href="{{ relref $pageContext $logo.link }}">
+                        {{ partial "customer-logo.html" (dict "logo" $logo.name "hoverable" true) }}
+                    </a>
+                </div>
             {{ end }}
-        </pulumi-swiper>
+        </div>
     </section>
 
     <!-- Video -->

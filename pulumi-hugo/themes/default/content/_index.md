@@ -128,24 +128,26 @@ benefits:
 customer_logos:
   title: Leading engineering organizations are building with Pulumi
   logos:
-    - items:
-      - snowflake
-      - tableau
-      - atlassian
-      - fauna
-      - sans
-    - items:
-      - mindbody
-      - sourcegraph
-      - fenergo
-      - skai
-      - lemonade
-    - items:
-      - clearsale
-      - angellist
-      - webflow
-      - supabase
-      - ro
+    - name: mercedes-benz
+      link: /case-studies/mercedes-benz
+    - name: sans
+      link: /case-studies/sans-institute
+    - name: snowflake
+      link: /case-studies/snowflake
+    - name: credijusto
+      link: /case-studies/credijusto
+    - name: skai
+      link: /blog/kenshoo-migrates-to-aws-with-pulumi
+    - name: lemonade
+      link: /case-studies/lemonade
+    - name: lykke
+      link: /case-studies/lykke
+    - name: panther-labs
+      link: /case-studies/panther-labs
+    - name: sourcegraph
+      link: /case-studies/sourcegraph
+    - name: whylabs
+      link: /case-studies/whylabs
 
 get_started:
   tweets:

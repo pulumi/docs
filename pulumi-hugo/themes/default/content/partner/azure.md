@@ -1,5 +1,5 @@
 ---
-title: Modern Infrastructure as Code for Microsoft Azure | Pulumi
+title: Cloud Engineering with Azure
 layout: azure
 url: /azure
 
@@ -93,6 +93,28 @@ hero:
                         });
                     }
                 }
+
+customer_logos:
+  title: Powering top engineering teams
+  logos:
+    - items:
+      - snowflake
+      - tableau
+      - atlassian
+      - fauna
+      - sans
+    - items:
+      - mindbody
+      - sourcegraph
+      - fenergo
+      - skai
+      - lemonade
+    - items:
+      - clearsale
+      - angellist
+      - webflow
+      - supabase
+      - ro
 
 azure_overview:
   title: Modern Infrastructure as Code on Azure
