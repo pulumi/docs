@@ -8,7 +8,7 @@
     "watch": "yarn run concurrently 'yarn run watch-css' 'yarn run watch-js' 'yarn run watch-components'",
     "build": "yarn run build-css && yarn run build-js && yarn run build-components",
     "test-components": "yarn --cwd components run test",
-    "watch-css": "yarn run chokidar 'assets/sass/**/*.scss' -c \"yarn run --silent node-sass assets/sass/styles.scss | yarn run postcss --config assets/config --output ${CSS_BUNDLE}\"",
+    "watch-css": "yarn run chokidar 'assets/sass/**/*.scss' -c \"yarn run --silent sass assets/sass/styles.scss | yarn run postcss --config assets/config --output ${CSS_BUNDLE}\"",
     "watch-js": "yarn run tsc --watch --preserveWatchOutput --outFile ${JS_BUNDLE}",
     "watch-components": "yarn --cwd components run start",
     "build-css": "yarn run --silent sass assets/sass/styles.scss | yarn run postcss --config assets/config --output ${CSS_BUNDLE} --no-map",

@@ -209,7 +209,7 @@ pulumi-convert {
                 }
 
                 .alert {
-                    @apply hidden absolute right-0 left-0 z-10 text-sm rounded-t border-2 py-2 px-4 max-h-25 overflow-y-scroll;
+                    @apply hidden absolute opacity-100 transition-opacity right-0 left-0 z-10 text-sm rounded-t border-2 py-2 px-4 max-h-25 overflow-y-scroll;
                     bottom: 100%;
 
                     p {
@@ -218,6 +218,24 @@ pulumi-convert {
                         a {
                             @apply underline;
                         }
+                    }
+
+                    .toggle {
+                        @apply absolute top-4 right-4;
+
+                        .icon {
+                            @apply mr-0 text-gray-700 transition-colors;
+                            @extend .fas;
+                            @extend .fa-times;
+
+                            &:hover {
+                                @apply text-gray-800;
+                            }
+                        }
+                    }
+
+                    &.dismissed {
+                        @apply opacity-0;
                     }
                 }
 

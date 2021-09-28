@@ -68,6 +68,9 @@ export class Convert {
     @State()
     convertible: boolean = false;
 
+    @State()
+    alertDismissed: boolean = false;
+
     inputEditor: CodeMirror.EditorFromTextArea;
     selectedSourceFile: SourceFile;
     customSourceFile: SourceFile;
@@ -339,6 +342,11 @@ export class Convert {
             });
     }
 
+    // Hide the warning/error message box.
+    private dismissAlert() {
+        this.alertDismissed = true;
+    }
+
     // Convert the code provided.
     private async convert() {
         this.setOutputResult(null);
@@ -351,6 +359,7 @@ export class Convert {
         }
 
         this.converting = true;
+        this.alertDismissed = false;
 
         try {
             const response = await fetch([ this.endpointURL, this.endpointPath].join("/"), {
@@ -484,6 +493,12 @@ export class Convert {
         </pulumi-tooltip>
     }
 
+    private renderDismissAlertButton() {
+        return <button class="toggle" title="Dismiss this message" onClick={ this.dismissAlert.bind(this) }>
+            <span class="icon"></span>
+        </button>;
+    }
+
     // Render an editor status bar.
     private renderStatusBar(type: "input" | "output") {
         switch (type) {
@@ -499,7 +514,8 @@ export class Convert {
                 return <div class={ this.statusBarClasses }>
                     <span class="icon"></span>
                     <span class="message">{ this.outputResult?.status?.message }</span>
-                    <div class="alert alert-error">
+                    <div class={ this.combineClasses("alert", "alert-error", this.alertDismissed ? "dismissed" : undefined) }>
+                        { this.renderDismissAlertButton() }
                         <p>
                             <strong>Sorry, we were unable to convert your code.</strong>
                         </p>
@@ -515,7 +531,8 @@ export class Convert {
                             We're here to help!
                         </p>
                     </div>
-                    <div class="alert alert-warn">
+                    <div class={ this.combineClasses("alert", "alert-warn", this.alertDismissed ? "dismissed" : undefined) }>
+                        { this.renderDismissAlertButton() }
                         <p>
                             <strong>Sorry, we were unable to convert your code completely.</strong>
                         </p>
