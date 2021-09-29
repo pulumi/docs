@@ -1,6 +1,6 @@
 ---
-title: "aws-native"
-title_tag: "aws-native Package"
+title: "AWS Native (preview)"
+title_tag: "AWS Native (preview) Package"
 meta_desc: "A native Pulumi package for creating and managing Amazon Web Services (AWS) resources."
 menu:
     reference:
