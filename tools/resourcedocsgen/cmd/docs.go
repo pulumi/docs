@@ -60,7 +60,7 @@ func resourceDocsCmd() *cobra.Command {
 
 			docsgen.Initialize(tool, pulPkg)
 
-			if err := generateDocsFromSchema(docsOutDir, pulPkg); err != nil {
+			if err := generateDocsFromSchema(docsOutDir); err != nil {
 				return errors.Wrap(err, "generating docs from schema")
 			}
 
@@ -196,8 +196,8 @@ func mergeOverlaySchemaSpec(mainSpec *pschema.PackageSpec, overlaySpec *pschema.
 	return nil
 }
 
-func generateDocsFromSchema(outDir string, pkg *pschema.Package) error {
-	files, err := docsgen.GeneratePackage(tool, pkg)
+func generateDocsFromSchema(outDir string) error {
+	files, err := docsgen.GeneratePackage()
 	if err != nil {
 		return errors.Wrap(err, "generating Pulumi package")
 	}
