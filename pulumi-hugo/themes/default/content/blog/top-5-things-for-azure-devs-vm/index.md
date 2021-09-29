@@ -179,7 +179,7 @@ export("public_ip", public_ip_addr.ip_address)
 
 On the face of it, this seems more complex than using the Azure Portal. The critical thing to remember is that this process is reproducible, so if you require additional virtual machines, you can add a loop to create the necessary number of VMs.
 
-But what about provisioning? Because this is code, you can write a [provisioning script](https://github.com/pulumi/examples/blob/master/aws-py-ec2-provisioners/provisioners.py) using Pulumi's [dynamic provider]({{< relref "/docs/tutorials/aws/aws-py-dynamicresource" >}}) that connects to the webserver, copies files, and executes commands. Here's a code snippet of a dynamic provider that copies files to your VM using `scp`.
+But what about provisioning? Because this is code, you can write a [provisioning script](https://github.com/pulumi/examples/blob/master/aws-py-ec2-provisioners/provisioners.py) using Pulumi's [dynamic provider]({{< relref "/registry/packages/aws/how-to-guides/aws-py-dynamicresource" >}}) that connects to the webserver, copies files, and executes commands. Here's a code snippet of a dynamic provider that copies files to your VM using `scp`.
 
 ```python
 # CopyFileProvider implements the resource lifecycle for the CopyFile resource type below.

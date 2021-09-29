@@ -151,7 +151,7 @@ detail_sections:
         - title: Complete coverage of the Azure platform
           icon: clipboard
           icon_color: purple
-          description: The [Pulumi Azure Native Provider SDK](/docs/intro/cloud-providers/azure/) covers 100% of the resources available in Azure Resource Manager and gives you same-day access to newly released Azure features.
+          description: The [Pulumi Azure Native Provider SDK](/registry/packages/azure-native/) covers 100% of the resources available in Azure Resource Manager and gives you same-day access to newly released Azure features.
 
         - title: Use engineering practices with infrastructure
           icon: nodes
