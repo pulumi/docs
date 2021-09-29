@@ -189,7 +189,7 @@ export class Convert {
             case "cf":
                 return {
                     name: "cf2pulumi",
-                    githubURL: "https://github.com/pulumi/cf2pulumi",
+                    githubURL: "https://github.com/pulumi/pulumi-aws-native",
                 };
             default:
                 return {
