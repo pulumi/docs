@@ -17,7 +17,7 @@ workshops:
       icon: puzzle
       icon_color: violet
       link: /resources/build-reusable-infrastructure-as-code-patterns
-      times: [ "2021-10-21T09:00:00-07:00" ]
+      times: [ "2021-10-21T12:00:00-07:00" ]
       description: |
         In this workshop, we’ll guide you through an example of building a reusable Pulumi component for a hypothetical “production ready application” in Python.
 
@@ -25,7 +25,7 @@ workshops:
       icon: cloud-with-nodes
       icon_color: salmon
       link: /resources/getting-started-with-automation-api
-      times: [ "2021-10-21T09:00:00-07:00", "2021-10-21T12:00:00-07:00" ]
+      times: [ "2021-10-21T12:00:00-07:00" ]
       description: |
         In this workshop, you’ll build a Python & Flask web application that lets you and your developers deploy applications at the click of a button.
 
@@ -33,7 +33,7 @@ workshops:
       icon: code
       icon_color: yellow
       link: /resources/getting-started-with-aws
-      times: [ "2021-10-21T06:00:00-07:00" ]
+      times: [ "2021-10-21T09:00:00-07:00" ]
       description: |
         In this workshop, you will learn the fundamentals of Infrastructure as Code on AWS through a series of exercises using Pulumi’s Cloud Engineering platform.
 
@@ -41,7 +41,7 @@ workshops:
       icon: code
       icon_color: blue
       link: /resources/getting-started-with-azure-native
-      times: [ "2021-10-21T09:00:00-07:00", "2021-10-21T21:00:00-07:00" ]
+      times: [ "2021-10-21T09:00:00-07:00" ]
       description: |
         In this workshop, you’ll use the Azure native provider to build infrastructure using TypeScript SDK and examine some of the features not previously possible.
 
@@ -49,7 +49,7 @@ workshops:
       icon: code
       icon_color: fuchsia
       link: /resources/getting-started-with-google-cloud-platform
-      times: [ "2021-10-21T06:00:00-07:00" ]
+      times: [ "2021-10-21T12:00:00-07:00" ]
       description: |
         In this workshop, we’ll use the Google Cloud native provider to build infrastructure using TypeScript and examine some of Pulumi's newest features.
 

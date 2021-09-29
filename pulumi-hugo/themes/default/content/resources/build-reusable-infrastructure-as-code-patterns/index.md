@@ -50,11 +50,11 @@ main:
     # URL for embedding a URL for ungated webinars.
     youtube_url: "https://www.youtube.com/embed/3BaDCrCw5FM"
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2021-10-21T09:00:00-07:00
+    sortable_date: 2021-10-21T12:00:00-07:00
     # Duration of the webinar.
-    duration: "2 hours"
+    duration: "1 hour"
     # Datetime of the webinar.
-    datetime: "JUNE 17th, 2021"
+    datetime: "OCTOBER 21st, 2021"
     # Description of the webinar.
     description: |
         One of the great benefits of adopting [Infrastructure as Code](/what-is/what-is-infrastructure-as-code/) is that you can drastically reduce the amount of repetition when declaring your infrastructure. Using familiar languages like Python means you can use functions, loops and object oriented programming paradigms to reduce the boilerplate.
@@ -64,8 +64,8 @@ main:
 
     # The webinar presenters
     presenters:
-        - name: Matt Stratton
-          role: Staff Developer Advocate, Pulumi
+        - name: Lee Briggs
+          role: Sales Engineer, Pulumi
 
     # A bullet point list containing what the user will learn during the webinar.
     learn:

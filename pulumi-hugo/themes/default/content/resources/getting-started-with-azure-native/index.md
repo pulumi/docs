@@ -41,9 +41,6 @@ multiple:
     - datetime: 2021-10-21T09:00:00-07:00
       hubspot_form_id: 7de43dee-4699-46e9-9ce3-9a6fffd56aa5
 
-    - datetime: 2021-10-21T21:00:00-07:00
-      hubspot_form_id: a3ca0bab-312f-4779-b3d1-11884f181629
-
 # The content of the hero section.
 hero:
     # The title text in the hero. This also serves as the pages H1.
@@ -58,11 +55,11 @@ main:
     # URL for embedding a URL for ungated webinars.
     youtube_url: "https://www.youtube.com/embed/yzTSUDp2KXU"
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2021-04-28T09:00:00-07:00
+    sortable_date: 2021-10-21T09:00:00-07:00
     # Duration of the webinar.
     duration: "1 hour"
     # Datetime of the webinar.
-    datetime: "April 28th, 2021"
+    datetime: "OCTOBER 21st, 2021"
     # Description of the webinar.
     description: |
         Microsoft Azure’s product offering is continuously evolving, and infrastructure tools often can’t keep up with the speed of innovation. Pulumi’s Azure Native provider is built directly from the Azure API, bringing power of familiar programming languages to Azure without sacrificing on latest features.
@@ -71,8 +68,8 @@ main:
 
     # The webinar presenters
     presenters:
-        - name: Lee Briggs
-          role: Sales Engineer, Pulumi
+        - name: Matt Stratton
+          role: Staff Developer Advocate, Pulumi
 
     # A bullet point list containing what the user will learn during the webinar.
     learn:

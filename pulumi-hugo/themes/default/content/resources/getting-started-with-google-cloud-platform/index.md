@@ -50,11 +50,11 @@ main:
     # URL for embedding a URL for ungated webinars.
     youtube_url: "https://www.youtube.com/embed/2CHXNWiREBE"
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2021-10-21T06:00:00-07:00
+    sortable_date: 2021-10-21T12:00:00-07:00
     # Duration of the webinar.
-    duration: "2 hours"
+    duration: "1 hour"
     # Datetime of the webinar.
-    datetime: "JUNE 10TH, 2021"
+    datetime: "OCTOBER 21st, 2021"
     # Description of the webinar.
     description: |
         Google Cloud’s product offering is continuously evolving, and infrastructure tools often can’t keep up with the speed of innovation. Pulumi’s Google Cloud Native provider is built directly from the Google Cloud API, bringing power of familiar programming languages to Google Cloud without sacrificing on latest features.
@@ -64,8 +64,6 @@ main:
     # The webinar presenters
     presenters:
         - name: "Kat Cosgrove"
-          role: "Staff Developer Advocate, Pulumi"
-        - name: "Matty Stratton"
           role: "Staff Developer Advocate, Pulumi"
 
     # A bullet point list containing what the user will learn during the webinar.
