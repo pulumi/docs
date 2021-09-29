@@ -14,6 +14,7 @@ INSTALL_RESOURCE_PLUGIN_VERSION=${3:-}
 
 PACKDIR="./content/docs/reference/pkg"
 ABSOLUTEPACKDIR="$(pwd)/content/docs/reference/pkg"
+PACKAGE_TREE_OUT_DIR="../../../registry/data/navs"
 TOOL_RESDOCGEN="./tools/resourcedocsgen/"
 
 PROVIDERS=(
@@ -98,6 +99,7 @@ generate_docs() {
       --schemaFile "${SCHEMA_FILE}" \
       --version "${plugin_version}" \
       --logtostderr \
+      --packageTreeJSONOutDir "${PACKAGE_TREE_OUT_DIR}" \
       --overlaysSchemaFile "${OVERLAY_SCHEMA_FILE}" || exit 3
 
     popd
