@@ -32,7 +32,7 @@ large files efficiently.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
-
+### Basic Example
 
 
 {{< example csharp >}}
@@ -106,6 +106,93 @@ const lambdaLayer = new aws.lambda.LayerVersion("lambda_layer", {
 
 
 
+### Lambda Layer with Compatible Architectures
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var lambdaLayer = new Aws.Lambda.LayerVersion("lambdaLayer", new Aws.Lambda.LayerVersionArgs
+        {
+            CompatibleArchitectures = 
+            {
+                "arm64",
+                "x86_64",
+            },
+            CompatibleRuntimes = 
+            {
+                "nodejs12.x",
+            },
+            Code = new FileArchive("lambda_layer_payload.zip"),
+            LayerName = "lambda_layer_name",
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+Coming soon!
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_aws as aws
+
+lambda_layer = aws.lambda_.LayerVersion("lambdaLayer",
+    compatible_architectures=[
+        "arm64",
+        "x86_64",
+    ],
+    compatible_runtimes=["nodejs12.x"],
+    code=pulumi.FileArchive("lambda_layer_payload.zip"),
+    layer_name="lambda_layer_name")
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const lambdaLayer = new aws.lambda.LayerVersion("lambda_layer", {
+    compatibleArchitectures: [
+        "arm64",
+        "x86_64",
+    ],
+    compatibleRuntimes: ["nodejs12.x"],
+    code: new pulumi.asset.FileArchive("lambda_layer_payload.zip"),
+    layerName: "lambda_layer_name",
+});
+```
+
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
 
@@ -125,6 +212,7 @@ const lambdaLayer = new aws.lambda.LayerVersion("lambda_layer", {
 <span class="k">def </span><span class="nx">LayerVersion</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                  <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
                  <span class="nx">code</span><span class="p">:</span> <span class="nx">Optional[pulumi.Archive]</span> = None<span class="p">,</span>
+                 <span class="nx">compatible_architectures</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
                  <span class="nx">compatible_runtimes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
                  <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                  <span class="nx">layer_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -280,6 +368,15 @@ The LayerVersion resource accepts the following [input]({{< relref "/docs/intro/
     <dd>{{% md %}}The path to the function's deployment package within the local filesystem. If defined, The `s3_`-prefixed options cannot be used.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="compatiblearchitectures_csharp">
+<a href="#compatiblearchitectures_csharp" style="color: inherit; text-decoration: inherit;">Compatible<wbr>Architectures</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The compatible architectures for the specific Lambda Layer Version. Valid values are `arm64` and `x86_64`. If not supplied, a value of `null` is assumed and will default to the value used for the function architecture.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="compatibleruntimes_csharp">
 <a href="#compatibleruntimes_csharp" style="color: inherit; text-decoration: inherit;">Compatible<wbr>Runtimes</a>
 </span>
@@ -363,6 +460,15 @@ The LayerVersion resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">pulumi.<wbr>Archive</span>
     </dt>
     <dd>{{% md %}}The path to the function's deployment package within the local filesystem. If defined, The `s3_`-prefixed options cannot be used.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="compatiblearchitectures_go">
+<a href="#compatiblearchitectures_go" style="color: inherit; text-decoration: inherit;">Compatible<wbr>Architectures</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The compatible architectures for the specific Lambda Layer Version. Valid values are `arm64` and `x86_64`. If not supplied, a value of `null` is assumed and will default to the value used for the function architecture.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="compatibleruntimes_go">
@@ -450,6 +556,15 @@ The LayerVersion resource accepts the following [input]({{< relref "/docs/intro/
     <dd>{{% md %}}The path to the function's deployment package within the local filesystem. If defined, The `s3_`-prefixed options cannot be used.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="compatiblearchitectures_nodejs">
+<a href="#compatiblearchitectures_nodejs" style="color: inherit; text-decoration: inherit;">compatible<wbr>Architectures</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The compatible architectures for the specific Lambda Layer Version. Valid values are `arm64` and `x86_64`. If not supplied, a value of `null` is assumed and will default to the value used for the function architecture.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="compatibleruntimes_nodejs">
 <a href="#compatibleruntimes_nodejs" style="color: inherit; text-decoration: inherit;">compatible<wbr>Runtimes</a>
 </span>
@@ -533,6 +648,15 @@ The LayerVersion resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">pulumi.<wbr>Archive</span>
     </dt>
     <dd>{{% md %}}The path to the function's deployment package within the local filesystem. If defined, The `s3_`-prefixed options cannot be used.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="compatible_architectures_python">
+<a href="#compatible_architectures_python" style="color: inherit; text-decoration: inherit;">compatible_<wbr>architectures</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}The compatible architectures for the specific Lambda Layer Version. Valid values are `arm64` and `x86_64`. If not supplied, a value of `null` is assumed and will default to the value used for the function architecture.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="compatible_runtimes_python">
@@ -924,6 +1048,7 @@ Get an existing LayerVersion resource's state with the given name, ID, and optio
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
         <span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">code</span><span class="p">:</span> <span class="nx">Optional[pulumi.Archive]</span> = None<span class="p">,</span>
+        <span class="nx">compatible_architectures</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
         <span class="nx">compatible_runtimes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
         <span class="nx">created_date</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -1066,6 +1191,15 @@ The following state arguments are supported:
         <span class="property-type">Archive</span>
     </dt>
     <dd>{{% md %}}The path to the function's deployment package within the local filesystem. If defined, The `s3_`-prefixed options cannot be used.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_compatiblearchitectures_csharp">
+<a href="#state_compatiblearchitectures_csharp" style="color: inherit; text-decoration: inherit;">Compatible<wbr>Architectures</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The compatible architectures for the specific Lambda Layer Version. Valid values are `arm64` and `x86_64`. If not supplied, a value of `null` is assumed and will default to the value used for the function architecture.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_compatibleruntimes_csharp">
@@ -1216,6 +1350,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The path to the function's deployment package within the local filesystem. If defined, The `s3_`-prefixed options cannot be used.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_compatiblearchitectures_go">
+<a href="#state_compatiblearchitectures_go" style="color: inherit; text-decoration: inherit;">Compatible<wbr>Architectures</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The compatible architectures for the specific Lambda Layer Version. Valid values are `arm64` and `x86_64`. If not supplied, a value of `null` is assumed and will default to the value used for the function architecture.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_compatibleruntimes_go">
 <a href="#state_compatibleruntimes_go" style="color: inherit; text-decoration: inherit;">Compatible<wbr>Runtimes</a>
 </span>
@@ -1364,6 +1507,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The path to the function's deployment package within the local filesystem. If defined, The `s3_`-prefixed options cannot be used.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_compatiblearchitectures_nodejs">
+<a href="#state_compatiblearchitectures_nodejs" style="color: inherit; text-decoration: inherit;">compatible<wbr>Architectures</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The compatible architectures for the specific Lambda Layer Version. Valid values are `arm64` and `x86_64`. If not supplied, a value of `null` is assumed and will default to the value used for the function architecture.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_compatibleruntimes_nodejs">
 <a href="#state_compatibleruntimes_nodejs" style="color: inherit; text-decoration: inherit;">compatible<wbr>Runtimes</a>
 </span>
@@ -1510,6 +1662,15 @@ The following state arguments are supported:
         <span class="property-type">pulumi.<wbr>Archive</span>
     </dt>
     <dd>{{% md %}}The path to the function's deployment package within the local filesystem. If defined, The `s3_`-prefixed options cannot be used.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_compatible_architectures_python">
+<a href="#state_compatible_architectures_python" style="color: inherit; text-decoration: inherit;">compatible_<wbr>architectures</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}The compatible architectures for the specific Lambda Layer Version. Valid values are `arm64` and `x86_64`. If not supplied, a value of `null` is assumed and will default to the value used for the function architecture.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_compatible_runtimes_python">
