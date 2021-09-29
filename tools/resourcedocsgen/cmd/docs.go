@@ -2,6 +2,7 @@ package cmd
 
 import (
 	"encoding/json"
+	"fmt"
 	"io/ioutil"
 	"os"
 	"path"
@@ -21,9 +22,12 @@ import (
 	"github.com/pulumi/pulumi/sdk/v3/go/common/util/contract"
 )
 
+const tool = "Pulumi Docs Generator"
+
 func resourceDocsCmd() *cobra.Command {
 	var docsOutDir string
 	var overlaysSchemaFile string
+	var packageTreeJSONOutDir string
 
 	cmd := &cobra.Command{
 		Use:   "docs",
@@ -49,8 +53,32 @@ func resourceDocsCmd() *cobra.Command {
 				return errors.Wrapf(err, "deleting provider directory %v", docsOutDir)
 			}
 
-			if err := generateDocsFromSchema(docsOutDir, mainSpec); err != nil {
+			pulPkg, err := pschema.ImportSpec(*mainSpec, nil)
+			if err != nil {
+				return errors.Wrapf(err, "error importing package spec: %v", err)
+			}
+
+			docsgen.Initialize(tool, pulPkg)
+
+			if err := generateDocsFromSchema(docsOutDir, pulPkg); err != nil {
 				return errors.Wrap(err, "generating docs from schema")
+			}
+
+			if packageTreeJSONOutDir != "" {
+				tree, err := docsgen.GeneratePackageTree()
+				if err != nil {
+					return errors.Wrap(err, "generating the package tree")
+				}
+
+				b, err := json.Marshal(tree)
+				if err != nil {
+					return errors.Wrap(err, "marshalling the package tree")
+				}
+
+				filename := fmt.Sprintf("%s.json", pulPkg.Name)
+				if err := emitFile(packageTreeJSONOutDir, filename, b); err != nil {
+					return errors.Wrap(err, "writing the package tree")
+				}
 			}
 
 			return nil
@@ -58,7 +86,8 @@ func resourceDocsCmd() *cobra.Command {
 	}
 
 	cmd.Flags().StringVar(&docsOutDir, "docsOutDir", "", "The directory path to where the docs will be written to")
-	cmd.Flags().StringVar(&overlaysSchemaFile, "overlaysSchemaFile", "", "The optional overlays that should be merged with the main schema")
+	cmd.Flags().StringVar(&overlaysSchemaFile, "overlaysSchemaFile", "", "(Optional) Overlays that should be merged with the main schema")
+	cmd.Flags().StringVar(&packageTreeJSONOutDir, "packageTreeJSONOutDir", "", "(Optional) The directory path to write the package tree JSON file to")
 
 	cmd.MarkFlagRequired("docsOutDir")
 
@@ -167,13 +196,8 @@ func mergeOverlaySchemaSpec(mainSpec *pschema.PackageSpec, overlaySpec *pschema.
 	return nil
 }
 
-func generateDocsFromSchema(outDir string, spec *pschema.PackageSpec) error {
-	pulPkg, err := pschema.ImportSpec(*spec, nil)
-	if err != nil {
-		return errors.Wrapf(err, "error importing package spec: %v", err)
-	}
-
-	files, err := docsgen.GeneratePackage("Pulumi Docs Generator", pulPkg)
+func generateDocsFromSchema(outDir string, pkg *pschema.Package) error {
+	files, err := docsgen.GeneratePackage(tool, pkg)
 	if err != nil {
 		return errors.Wrap(err, "generating Pulumi package")
 	}
