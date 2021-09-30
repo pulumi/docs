@@ -8,7 +8,7 @@ menu:
     weight: 2
 ---
 
-<img src="/logos/tech/snowflake.png" align="right" class="h-16 px-8 pb-4">
+<img src="/logos/tech/snowflake.svg" align="right" class="h-16 px-8 pb-4">
 
 The Snowflake provider for Pulumi can be used to provision any of the cloud resources available in [Snowflake](https://www.snowflake.com/).
 The Snowflake provider must be configured with credentials to deploy and update resources in Snowflake.
