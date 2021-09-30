@@ -413,7 +413,7 @@ http requests{{% /md %}}</dd><dt class="property-optional"
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the deployment slot to create or update. By default, this API attempts to create or modify the production slot.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Name of the deployment slot to create or update. The name 'production' is reserved.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageaccountrequired_csharp">
 <a href="#storageaccountrequired_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Required</a>
@@ -663,7 +663,7 @@ http requests{{% /md %}}</dd><dt class="property-optional"
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the deployment slot to create or update. By default, this API attempts to create or modify the production slot.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Name of the deployment slot to create or update. The name 'production' is reserved.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageaccountrequired_go">
 <a href="#storageaccountrequired_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Required</a>
@@ -913,7 +913,7 @@ http requests{{% /md %}}</dd><dt class="property-optional"
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the deployment slot to create or update. By default, this API attempts to create or modify the production slot.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Name of the deployment slot to create or update. The name 'production' is reserved.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageaccountrequired_nodejs">
 <a href="#storageaccountrequired_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Required</a>
@@ -1163,7 +1163,7 @@ http requests{{% /md %}}</dd><dt class="property-optional"
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the deployment slot to create or update. By default, this API attempts to create or modify the production slot.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Name of the deployment slot to create or update. The name 'production' is reserved.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storage_account_required_python">
 <a href="#storage_account_required_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>required</a>
