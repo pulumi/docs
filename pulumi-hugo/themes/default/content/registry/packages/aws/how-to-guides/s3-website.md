@@ -224,9 +224,9 @@ You also learned how to work with the Pulumi CLI. To recap:
 ## Next steps
 
 - [S3 Folder Pulumi Component](https://www.pulumi.com/docs/tutorials/aws/s3-folder-component/)
-- [EC2 Linux WebServer Instance]({{< relref "/docs/tutorials/aws/ec2-webserver" >}})
-- [Containers on ECS Fargate]({{< relref "/docs/tutorials/aws/ecs-fargate" >}})
-- [API Gateways and Lambda]({{< relref "/docs/tutorials/aws/rest-api" >}})
+- [EC2 Linux WebServer Instance]({{< relref "/registry/packages/aws/how-to-guides/ec2-webserver" >}})
+- [Containers on ECS Fargate]({{< relref "/registry/packages/aws/how-to-guides/ecs-fargate" >}})
+- [API Gateways and Lambda]({{< relref "/registry/packages/aws/how-to-guides/rest-api" >}})
 
 <!-- markdownlint-disable url -->
 [@pulumi/aws]: {{< relref "/docs/reference/pkg/aws" >}}

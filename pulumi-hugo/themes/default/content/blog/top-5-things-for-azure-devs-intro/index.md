@@ -87,7 +87,7 @@ Deploying applications on AKS is equally flexible, and you can deploy using:
 - [kubectl](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#-strong-app-management-strong-) and YAML manifests
 - [Helm](https://docs.microsoft.com/en-us/azure/aks/kubernetes-helm), an open-source Kubernetes packaging tool
 - [Azure Pipelines](https://docs.microsoft.com/en-us/azure/devops/pipelines/apps/cd/deploy-aks?view=azure-devops&tabs=java)
-[Infrastructure as Code]({{< relref "/docs/tutorials/kubernetes/configmap-rollout" >}})
+[Infrastructure as Code]({{< relref "/registry/packages/kubernetes/how-to-guides/configmap-rollout" >}})
 
 We'll examine these options and do a deep dive on application deployment in a follow-up article.
 

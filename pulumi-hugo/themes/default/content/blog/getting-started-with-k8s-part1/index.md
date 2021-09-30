@@ -53,7 +53,7 @@ const cluster = new eks.Cluster("cluster", {
 export const kubeconfig = cluster.kubeconfig;
 ```
 
-You can try out the code by following the complete [tutorial]({{< relref "/docs/tutorials/kubernetes/eks" >}}).
+You can try out the code by following the complete [tutorial]({{< relref "/registry/packages/kubernetes/how-to-guides/eks" >}}).
 
 {{% /choosable %}}
 {{% choosable cloud azure %}}
@@ -245,7 +245,7 @@ export const k8sProvider = new k8s.Provider("gkeK8s", {
 });
 ```
 
-You can try out the code by following the complete [tutorial]({{< relref "/docs/tutorials/kubernetes/gke" >}}).
+You can try out the code by following the complete [tutorial]({{< relref "/registry/packages/kubernetes/how-to-guides/gke" >}}).
 
 {{% /choosable %}}
 {{< /chooser >}}

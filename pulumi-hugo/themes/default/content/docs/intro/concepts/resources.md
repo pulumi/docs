@@ -1473,7 +1473,7 @@ If you wish to have full control over one of the custom resource’s lifecycle i
 
 A component resource must register a unique type name with the base constructor. In the example, the registration is `pkg:index:MyComponent`. To reduce the potential of other type name conflicts, this name contains the package and module name, in addition to the type: `<package>:<module>:<type>`. These names are namespaced alongside non-component resources, such as aws:lambda:Function.
 
-For more information about component resources, see the [Pulumi Components tutorial]({{< relref "/docs/tutorials/aws/s3-folder-component" >}}).
+For more information about component resources, see the [Pulumi Components tutorial]({{< relref "/registry/packages/aws/how-to-guides/s3-folder-component" >}}).
 
 ### Creating Child Resources
 

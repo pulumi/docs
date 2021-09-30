@@ -386,7 +386,7 @@ Before moving on, tear down the resources that are part of your stack.
 In this tutorial, you saw how to use Pulumi programs to create and manage cloud resources in Microsoft Azure, using Python and pypi packages. To preview and update infrastructure, use `pulumi up`. To clean up resources, run `pulumi destroy`.
 
 For a follow-up example on how to use Pulumi programs to create a Kubernetes
-apps on your new cluster, see [Kubernetes Tutorial: Getting Started With Pulumi]({{< relref "/docs/tutorials/kubernetes/configmap-rollout" >}}).
+apps on your new cluster, see [Kubernetes Tutorial: Getting Started With Pulumi]({{< relref "/registry/packages/kubernetes/how-to-guides/configmap-rollout" >}}).
 
 We also encourage you to watch Joe Beda, co-founder of Kubernetes and Heptio,
 take Pulumi for a spin in an episode of [TGIK8s](https://github.com/heptio/tgik).

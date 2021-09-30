@@ -75,5 +75,5 @@ In this tutorial, we'll create a simplified version of the example above, that j
 [Component]: {{< relref "/docs/intro/concepts/programming-model#components" >}}
 [s3-folder]: https://github.com/pulumi/examples/tree/master/aws-js-s3-folder
 [s3-folder-component]: https://github.com/pulumi/examples/tree/master/aws-js-s3-folder-component
-[S3 website example]: {{< relref "/docs/tutorials/aws/s3-website" >}}
+[S3 website example]: {{< relref "/registry/packages/aws/how-to-guides/s3-website" >}}
 <!-- markdownlint-enable url -->

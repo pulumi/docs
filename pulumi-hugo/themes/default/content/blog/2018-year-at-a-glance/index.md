@@ -29,7 +29,7 @@ helping us to make Pulumi even better.
 **Support for major public, private, and hybrid clouds.** We launched with support for the three major public
 clouds, [AWS]({{< relref "/docs/get-started/aws" >}}), [Azure]({{< relref "/docs/get-started/azure" >}}), and
 [Google Cloud]({{< relref "/docs/get-started/gcp" >}}), and have since added capabilities across all
-of them, including adding [serverless]({{< relref "/docs/tutorials/aws/rest-api" >}}),
+of them, including adding [serverless]({{< relref "/registry/packages/aws/how-to-guides/rest-api" >}}),
 [containers](https://github.com/pulumi/examples/blob/master/aws-ts-containers/index.ts), and
 [infrastructure](https://github.com/pulumi/examples/blob/master/aws-js-webserver/index.js)
 productivity libraries -- it is here where we believe Pulumi’s unique approach of using general purpose languages truly

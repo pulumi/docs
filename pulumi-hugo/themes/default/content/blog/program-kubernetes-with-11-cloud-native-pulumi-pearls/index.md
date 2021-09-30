@@ -73,7 +73,7 @@ resources in code.
 
 [
 [Code](https://github.com/pulumi/examples/tree/master/kubernetes-ts-nginx) |
-[Tutorial]({{< relref "/docs/tutorials/kubernetes/stateless-app" >}}) ]
+[Tutorial]({{< relref "/registry/packages/kubernetes/how-to-guides/stateless-app" >}}) ]
 
 Let's begin by seeing what defining Kubernetes applications in a familiar
 language looks like. The full Kubernetes API is available, just in code
@@ -138,7 +138,7 @@ some more compelling reasons why this is so great.
 
 We've all seen [the canonical Kubernetes guestbook application](https://kubernetes.io/docs/tutorials/stateless-application/guestbook/)
 that uses PHP, Nginx, and Redis. We have
-[the same tutorial written in Pulumi]({{< relref "/docs/tutorials/kubernetes/guestbook" >}}).
+[the same tutorial written in Pulumi]({{< relref "/registry/packages/kubernetes/how-to-guides/guestbook" >}}).
 But the basic conversion from YAML to TypeScript leaves something to be
 desired; namely, it's equally as verbose, feels a little too "low level"
 for an application definition, and misses opportunities to reduce

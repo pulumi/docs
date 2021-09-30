@@ -1919,8 +1919,8 @@ The same container image URLs exported above can be used as inputs to other reso
 
 - [AWS Elastic Container Service ECS]({{< relref "/docs/guides/crosswalk/aws/ecs" >}}),
 - [AWS Elastic Kubernetes Service (EKS)]({{< relref "/docs/guides/crosswalk/aws/eks" >}}),
-- [Azure Kubernetes Service (AKS)]({{< relref "/docs/tutorials/kubernetes/aks" >}}),
-- [Google Cloud Kubernetes Engine (GKE)]({{< relref "/docs/tutorials/kubernetes/gke" >}}),
+- [Azure Kubernetes Service (AKS)]({{< relref "/registry/packages/kubernetes/how-to-guides/aks" >}}),
+- [Google Cloud Kubernetes Engine (GKE)]({{< relref "/registry/packages/kubernetes/how-to-guides/gke" >}}),
 - [DigitalOcean Kubernetes](https://www.digitalocean.com/community/tutorials/how-to-manage-digitalocean-and-kubernetes-infrastructure-with-pulumi).
 
 This example demonstrates deploying our Nginx web server as a load balanced service within Kubernetes. To do so, we'll declare our Kubernetes configuration, right inside of our existing program defined above, and export its resulting IP address:
