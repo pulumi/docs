@@ -20,6 +20,7 @@ REPOS=(
     "alicloud"
     "auth0"
     "aws"
+    "aws-native"
     "azure"
     "azure-native"
     "azuread"
