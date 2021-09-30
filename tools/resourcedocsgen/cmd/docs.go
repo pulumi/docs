@@ -58,26 +58,13 @@ func resourceDocsCmd() *cobra.Command {
 				return errors.Wrapf(err, "error importing package spec: %v", err)
 			}
 
-			docsgen.Initialize(tool, pulPkg)
-
-			if err := generateDocsFromSchema(docsOutDir); err != nil {
+			if err := generateDocsFromSchema(docsOutDir, pulPkg); err != nil {
 				return errors.Wrap(err, "generating docs from schema")
 			}
 
 			if packageTreeJSONOutDir != "" {
-				tree, err := docsgen.GeneratePackageTree()
-				if err != nil {
-					return errors.Wrap(err, "generating the package tree")
-				}
-
-				b, err := json.Marshal(tree)
-				if err != nil {
-					return errors.Wrap(err, "marshalling the package tree")
-				}
-
-				filename := fmt.Sprintf("%s.json", pulPkg.Name)
-				if err := emitFile(packageTreeJSONOutDir, filename, b); err != nil {
-					return errors.Wrap(err, "writing the package tree")
+				if err := generatePackageTree(packageTreeJSONOutDir, pulPkg); err != nil {
+					return errors.Wrap(err, "generating package tree")
 				}
 			}
 
@@ -196,8 +183,8 @@ func mergeOverlaySchemaSpec(mainSpec *pschema.PackageSpec, overlaySpec *pschema.
 	return nil
 }
 
-func generateDocsFromSchema(outDir string) error {
-	files, err := docsgen.GeneratePackage()
+func generateDocsFromSchema(outDir string, pulPkg *pschema.Package) error {
+	files, err := docsgen.GeneratePackage(tool, pulPkg)
 	if err != nil {
 		return errors.Wrap(err, "generating Pulumi package")
 	}
@@ -207,6 +194,25 @@ func generateDocsFromSchema(outDir string) error {
 			return errors.Wrapf(err, "emitting file %v", f)
 		}
 	}
+	return nil
+}
+
+func generatePackageTree(outDir string, pulPkg *pschema.Package) error {
+	tree, err := docsgen.GeneratePackageTree(tool, pulPkg)
+	if err != nil {
+		return errors.Wrap(err, "generating the package tree")
+	}
+
+	b, err := json.Marshal(tree)
+	if err != nil {
+		return errors.Wrap(err, "marshalling the package tree")
+	}
+
+	filename := fmt.Sprintf("%s.json", pulPkg.Name)
+	if err := emitFile(outDir, filename, b); err != nil {
+		return errors.Wrap(err, "writing the package tree")
+	}
+
 	return nil
 }
 
