@@ -8,7 +8,7 @@
     <section id="overview" class="my-16">
         <div class="flex flex-wrap container mx-auto">
             <div class="w-full order-last lg:mt-0 lg:order-first lg:w-1/2 px-5">
-                <h2>Create, Manage, & Deploy AWS Resources</h2>
+                <h2>Modern Infrastructure as Code for AWS</h2>
                 <p class="mr-4">{{ .Params.hero.description | markdownify }}</p>
                 <div>
                     <div class="flex justify-start items-start mt-8">
@@ -42,14 +42,13 @@
                         {{ partial "superpower-icon.html" (dict "type" "architecture")}}
                     </div>
                 </div>
-                <h2>Create</h2>
+                <h2>Build</h2>
             </div>
-            <h4 class="w-10/12 mx-auto mt-0">Start with the best experience for your engineering team.</h4>
+            <h4 class="w-10/12 mx-auto mt-0">Use familiar software practices and tools to build cloud infrastructure.</h4>
             <p class="text-center w-full p-5 lg:w-1/2 lg:p-0 mx-auto">
-                Software development begins with the Engineer and they need tools and processes
-                that enable them to deliver their ideas with speed and reliability. Pulumi puts
-                the Engineer's experience first and focuses on providing familiar tools that make
-                delivery applications and infrastructure easier than ever before.
+                Build cloud applications and infrastructure by combining the safety
+                and reliability of infrastructure as code with the power of familiar
+                programming languages and tools.
             </p>
             <div class="flex flex-col xl:flex-row xl:mt-12">
                 <div class="w-full p-5 xl:p-0 xl:w-1/2">
@@ -61,23 +60,25 @@
                 <div class="w-full xl:w-1/2 text-left px-10">
                     <h5>IDE Autocomplete</h5>
                     <p>
-                        By using Pulumi you use the productivity features available in
-                        your preferred IDE like autocompletion, to help write infrastructure
-                        programs faster and with more accuracy.
+                        With Pulumi, you can use your preferred IDE and productivity
+                        features like autocompletion so that you author infrastructure
+                        code faster and with more accuracy.
                     </p>
 
                     <h5>Native Testing Frameworks</h5>
                     <p>
-                        With Pulumi you can take advantage of your favorite  programming languages
-                        and popular testing frameworks to validate your infrastructure and applications
-                        through their entire lifecycle.
+                        Use your favorite programming languages and popular testing frameworks
+                        to validate your infrastructure and applications through their entire
+                        lifecycle. Pulumi can also mock cloud resources for you so that you
+                        can perform offline testing that’s faster and cheaper.
                     </p>
 
                     <h5>Sharing and Reuse</h5>
                     <p>
-                        Sharing and reusing your infrastructure code is available right out of the
-                        box with Pulumi. You can use your preferred programming language's native
-                        package managers to share and distribute infrastructure code within your organization.
+                        Sharing and reusing your infrastructure code is available right out
+                        of the box with Pulumi. You can use your preferred programming language's
+                        native package managers to share and distribute infrastructure code within
+                        your organization.
                     </p>
                 </div>
             </div>
@@ -92,11 +93,11 @@
                 </div>
                 <h2>Deploy</h2>
             </div>
-            <h4 class="w-10/12 mx-auto mt-0">Reduce obstacles and increase collaboration to ship faster.</h4>
+            <h4 class="w-10/12 mx-auto mt-0">Increase automation and collaboration to ship faster.</h4>
             <p class="text-center w-full p-5 lg:w-1/2 lg:p-0 mx-auto">
-                Getting an application into production can be an overwhelming process. Pulumi empowers you and your
-                team to work together to reduce obstacles and increase collaboration across your entire software
-                delivery pipeline.
+                Getting an application into production can be an overwhelming process. Pulumi empowers you
+                and your team to work together to reduce obstacles and increase collaboration across
+                your entire software delivery pipeline.
             </p>
             <div class="flex flex-col xl:flex-row xl:mt-12">
                 <div class="w-full p-5 lg:p-0 xl:w-1/2">
@@ -106,6 +107,13 @@
                 </div>
 
                 <div class="w-full xl:w-1/2 text-left px-10 flex flex-col justify-center">
+                    <h5>Full Coverage of AWS</h5>
+                    <p>
+                        You can deploy the entire breadth of AWS services with Pulumi’s AWS Classic Provider and Native Provider SDKs. The newly
+                        released AWS Native Provider (Preview) uses the AWS Cloud Control
+                        API to provide direct integration with AWS resource models and same-day updates for newly released AWS features.
+                    </p>
+
                     <h5>Architect for self-service</h5>
                     <p>
                         Pulumi's unique approach to <a href="{{ relref . "/what-is/what-is-infrastructure-as-code" }}">Infrastructure as Code</a>
@@ -113,12 +121,11 @@
                         for your teammates, allowing folks to focus on what's important.
                     </p>
 
-                    <h5>Continuously Delivery Value</h5>
+                    <h5>Continuous delivery for infrastructure</h5>
                     <p>
-                        Pulumi gives you the power to continuously test and deliver your
-                        cloud infrastructure using your favorite CI/CD platforms. By
-                        automating your testing and delivery you can focus more on delivering
-                        value to your customers.
+                        Pulumi gives you the power to continuously test and deliver your cloud infrastructure
+                        by <a href="{{ relref . "/docs/guides/continuous-delivery" }}">integrating</a> with your favorite CI/CD platforms.
+                        By automating your testing and delivery you can focus more on delivering value to your customers.
                     </p>
                 </div>
             </div>
@@ -135,8 +142,9 @@
             </div>
             <h4 class="w-10/12 mx-auto mt-0">Gain full auditability and visibility into all your environments to tame complexity and put security first.</h4>
             <p class="text-center w-full p-5 lg:w-1/2 lg:p-0 mx-auto">
-                Pulumi gives you robust policy enforcement  for  your cloud environments so you can
-                prevent mistakes before they occur and respond rapidly to any incidents.
+                Manage cloud infrastructure with dashboards that provide visibility into your infrastructure
+                and any changes, <a href="{{ relref . "/docs/intro/console/organizations#organization-roles" }}">role-based access controls</a>,
+                and <a href="{{ relref . "/docs/guides/crossguard" }}">Policy as Code</a> enforcement across your organization.
             </p>
             <div class="flex flex-col xl:flex-row xl:mt-12">
                 <div class="w-full p-5 lg:p-0 xl:w-1/2">
@@ -148,23 +156,25 @@
                 <div class="w-full xl:w-1/2 text-left px-10">
                     <h5>Secrets management made easy</h5>
                     <p>
-                        Pulumi provides you with any easy way to ensure secrets are kept safe
-                        during the entire software development lifecycle. You can have Pulumi
-                        manage your secrets for you or bring your own secrets management provider.
+                        Pulumi provides you with any easy way to ensure secrets are kept safe during
+                        the entire software development lifecycle. You can have Pulumi manage your
+                        <a href="{{ relref . "/docs/intro/concepts/secrets" }}">secrets</a> for you or bring your own secrets management provider.
                     </p>
 
                     <h5>Keep your workflows secure</h5>
                     <p>
-                        When you enable Policy as Code within your organization you get the
-                        ability to define guardrails for your infrastructure, ensuring engineers
-                        are following best practices and putting security first.
+                        Enable <a href="{{ relref . "/docs/guides/crossguard" }}">Policy as Code</a> within your organization
+                        so that you can define guardrails for your infrastructure, ensuring engineers
+                        are following best practices and putting security first. This helps you
+                        prevent mistakes before they occur and respond rapidly to any incidents.
                     </p>
 
-                    <h5>Manage your complexity</h5>
+                    <h5>Clear visibility across AWS resources</h5>
                     <p>
-                        The Pulumi Console gives you full auditability of the current state of
-                        your cloud infrastructure. From seeing what resources are being managed
-                        by which stack, to the actions specific team members are performing.
+                        The Pulumi Console gives you full visibility into your cloud infrastructure’s
+                        current and past states. See every resource running in each stack with deep
+                        links to the AWS Console, actions performed by team members, Git-like diffs
+                        for infrastructure changes, and much more.
                     </p>
                 </div>
             </div>
@@ -204,14 +214,13 @@
     <section id="automation-api" class="container mx-auto mb-12 px-8 lg:px-0">
         <div class="flex flex-col lg:flex-row">
             <div class="w-full lg:w-5/12 px-8">
-                <h3>Enable Everyone To Do Everything</h3>
+                <h3>Programmatic Infrastructure as Code</h3>
                 <p>
-                    The Automation API gives you the ability to build bespoke deployment tools that allow
-                    application developers to self-serve their infrastructure, using codified best practices.
-                    No two applications or environments are the same and you can quickly hit edges with tools
-                    trying to be one-size-fits-all solution. The Automation API enables you to write tooling that fits
-                    your use cases and works exactly the way you want it to. Everything from complex workflow
-                    orchestration to opinionated full-stack application frameworks is possible with the Automation API.
+                    Pulumi <a href="{{ relref . "/automation" }}">Automation API</a> exposes the full power of infrastructure as code through a
+                    programmatic interface, instead of through CLI commands. Automation API lets you
+                    use the Pulumi engine as an SDK, enabling you to create software that can create,
+                    update, configure, and destroy infrastructure dynamically. This enables you to
+                    build custom cloud interfaces that are tailored to your team, organization, or customers.
                 </p>
                 {{ partial "sparkle-arrow-cta" (dict "url" (relref . "/blog/automation-api") "text" "Learn More About Automation API" "textColor" "grey" "textAlign" "left") }}
             </div>
@@ -230,21 +239,21 @@
             </div>
 
             <div class="w-full order-first lg:order-last lg:w-1/2 px-8">
-                <h3>AWS Crosswalk</h3>
+                <h3>Use Well-Architected Practices</h3>
                 <p class="mt-0">
                     Pulumi Crosswalk for AWS is a collection of libraries that use automatic
                     well-architected best practices to make common infrastructure-as-code
-                    tasks in AWS easier and more secure. Secure and cost-conscious defaults are chosen
-                    so that simple programs automatically use best practices for the underlying
-                    infrastructure, enabling better productivity with confidence.
+                    tasks in AWS easier and more secure. Secure and cost-conscious defaults
+                    are chosen so that simple programs automatically use best practices for
+                    the underlying infrastructure, enabling better productivity with confidence.
                 </p>
 
                 <h5>Application and Infrastructure Together</h5>
                 <p>
-                    Crosswalk enables you to blur the lines between application and infrastructure code enabling
-                    you to author an entire full-stack application in one program. With support for inline Lambda
-                    functions and ease-of-use helper functions, building robust applications on AWS has never
-                    been easier.
+                    Crosswalk enables you to blur the lines between application and infrastructure code
+                    enabling you to author an entire full-stack application in one program. With support
+                    for inline Lambda functions and ease-of-use helper functions, building robust applications
+                    on AWS has never been easier.
                 </p>
                 {{ partial "sparkle-arrow-cta" (dict "url" (relref . "/docs/guides/crosswalk/aws") "text" "Learn More About Crosswalk" "textColor" "grey" "textAlign" "left") }}
             </div>

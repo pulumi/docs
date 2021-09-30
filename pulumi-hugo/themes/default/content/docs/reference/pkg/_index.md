@@ -56,8 +56,7 @@ explore what's possible, you've come to the right place.
 
 ### Preview Providers
 
-{{< resource-providers "google-native" >}}
-
+{{< resource-providers "aws-native,google-native" >}}
 
 ## Package Documentation
 
