@@ -58,12 +58,14 @@ func resourceDocsCmd() *cobra.Command {
 				return errors.Wrapf(err, "error importing package spec: %v", err)
 			}
 
+			docsgen.Initialize(tool, pulPkg)
+
 			if err := generateDocsFromSchema(docsOutDir, pulPkg); err != nil {
 				return errors.Wrap(err, "generating docs from schema")
 			}
 
 			if packageTreeJSONOutDir != "" {
-				if err := generatePackageTree(packageTreeJSONOutDir, pulPkg); err != nil {
+				if err := generatePackageTree(packageTreeJSONOutDir, pulPkg.Name); err != nil {
 					return errors.Wrap(err, "generating package tree")
 				}
 			}
@@ -197,8 +199,8 @@ func generateDocsFromSchema(outDir string, pulPkg *pschema.Package) error {
 	return nil
 }
 
-func generatePackageTree(outDir string, pulPkg *pschema.Package) error {
-	tree, err := docsgen.GeneratePackageTree(tool, pulPkg)
+func generatePackageTree(outDir string, pkgName string) error {
+	tree, err := docsgen.GeneratePackageTree()
 	if err != nil {
 		return errors.Wrap(err, "generating the package tree")
 	}
@@ -208,7 +210,7 @@ func generatePackageTree(outDir string, pulPkg *pschema.Package) error {
 		return errors.Wrap(err, "marshalling the package tree")
 	}
 
-	filename := fmt.Sprintf("%s.json", pulPkg.Name)
+	filename := fmt.Sprintf("%s.json", pkgName)
 	if err := emitFile(outDir, filename, b); err != nil {
 		return errors.Wrap(err, "writing the package tree")
 	}
