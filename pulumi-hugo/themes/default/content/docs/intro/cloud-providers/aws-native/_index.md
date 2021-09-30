@@ -33,19 +33,14 @@ Some [examples](https://github.com/pulumi/pulumi-aws-native/tree/master/examples
 
 ## Example
 
+{{< chooser language "typescript,python,csharp,go" >}}
+
+{{% choosable language typescript %}}
+
 ```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as awsclassic from "@pulumi/aws";
-import * as awsnative from "@pulumi/aws-native";
+const bucket = new awsnative.s3.Bucket("source");
 
-const bucket = new awsclassic.s3.Bucket("source");
-const checkpointObject = new awsclassic.s3.BucketObject("checkpoint", {
-   bucket: bucket.id,
-   key: "dev.json",
-   source: new pulumi.asset.FileAsset("stack.json"),
-});
-
-const accessPoint = new awsclassic.s3.AccessPoint("ap", {
+const accessPoint = new awsnative.s3.AccessPoint("ap", {
    bucket: bucket.id,
 });
 
@@ -62,8 +57,114 @@ const objectlambda = new awsnative.s3objectlambda.AccessPoint("objectlambda-ap",
        }]
    }
 });
-
 ```
+
+{{% /choosable %}}
+
+{{% choosable language python %}}
+
+```python
+import pulumi
+import pulumi_aws_native as aws_native
+
+my_bucket = aws_native.s3.Bucket("myBucket")
+
+ap = aws_native.s3.AccessPoint("ap", bucket=my_bucket.id)
+
+objectlambdaap = aws_native.s3objectlambda.AccessPoint("objectlambdaap", object_lambda_configuration=aws_native.s3objectlambda.AccessPointObjectLambdaConfigurationArgs(
+    supporting_access_point=ap.arn,
+    transformation_configurations=[aws_native.s3objectlambda.AccessPointTransformationConfigurationArgs(
+        actions=["GetObject"],
+        content_transformation={
+            "AwsLambda": {
+                "FunctionArn": fn.arn,
+            },
+        },
+    )],
+))
+```
+
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+
+```csharp
+var bucket = new AwsNative.S3.Bucket("my-bucket");
+
+var accessPoint = new AwsNative.S3.AccessPoint("ap", new AwsNative.S3.AccessPointArgs
+{
+    Bucket = bucket.Id
+});
+
+var objectLambda = new AwsNative.S3ObjectLambda.AccessPoint("objectlambda-ap", new AwsNative.S3ObjectLambda.AccessPointArgs
+{
+    ObjectLambdaConfiguration = new AwsNative.S3ObjectLambda.Inputs.AccessPointObjectLambdaConfigurationArgs
+    {
+        SupportingAccessPoint = accessPoint.Arn,
+        TransformationConfigurations =
+        {
+            new AwsNative.S3ObjectLambda.Inputs.AccessPointTransformationConfigurationArgs
+            {
+                Actions = { "GetObject" },
+                ContentTransformation = fn.Arn.Apply(arn => new Dictionary<string, object>
+                {
+                    ["AwsLambda"] = new Dictionary<string, object>
+                    {
+                        ["FunctionArn"] = arn
+                    }
+                }
+            }
+        }
+    }
+});
+```
+
+{{% /choosable %}}
+
+{{% choosable language go %}}
+
+```go
+func main() {
+    pulumi.Run(func(ctx *pulumi.Context) error {
+        myBucket, err := s3.NewBucket(ctx, "myBucket", nil)
+        if err != nil {
+            return err
+        }
+        ap, err := s3.NewAccessPoint(ctx, "ap", &s3.AccessPointArgs{
+            Bucket: myBucket.ID(),
+        })
+        if err != nil {
+            return err
+        }
+
+        _, err = s3objectlambda.NewAccessPoint(ctx, "objectlambdaap", &s3objectlambda.AccessPointArgs{
+            ObjectLambdaConfiguration: &s3objectlambda.AccessPointObjectLambdaConfigurationArgs{
+                SupportingAccessPoint: ap.Arn,
+                TransformationConfigurations: s3objectlambda.AccessPointTransformationConfigurationArray{
+                    &s3objectlambda.AccessPointTransformationConfigurationArgs{
+                        Actions: pulumi.StringArray{
+                            pulumi.String("GetObject"),
+                        },
+                        ContentTransformation: pulumi.Map{
+                            "AwsLambda": pulumi.Map{
+                                "FunctionArn": fn.Arn,
+                            },
+                        },
+                    },
+                },
+            },
+        })
+        if err != nil {
+            return err
+        }
+        return nil
+    })
+}
+```
+
+{{% /choosable %}}
+
+{{% /chooser %}}
 
 More examples of using AWS Native will be available in [the Pulumi examples repo](https://github.com/pulumi/examples) soon.
 

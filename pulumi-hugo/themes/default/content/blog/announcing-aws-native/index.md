@@ -31,10 +31,14 @@ Resources available in the Pulumi AWS Native provider are based on the resources
 
 The Pulumi AWS Native provider can be used in combination with the classic Pulumi AWS provider, as well as the 60+ additional Pulumi resource providers which cover a wide variety of other cloud and SaaS platforms.  While in preview, the Pulumi AWS Native provider may not yet have support for every feature of AWS that you need in your Pulumi applications, but can always be used along with the classic Pulumi AWS provider to cover both existing use cases and brand new supported features.  
 
-In this example, we can see how the new AWS S3 Object Lambda feature can be used via the AWS Native provider, with access to the full API defined by the S3 team at AWS, and combined naturally with another resource managed by the classic Pulumi AWS provider:
+In this example, we can see how the new AWS S3 Object Lambda feature can be used via the AWS Native provider, with access to the full API defined by the S3 team at AWS:
+
+{{< chooser language "typescript,python,csharp,go" >}}
+
+{{% choosable language typescript %}}
 
 ```typescript
-const bucket = new awsclassic.s3.Bucket("source");
+const bucket = new awsnative.s3.Bucket("source");
 
 const accessPoint = new awsnative.s3.AccessPoint("ap", {
    bucket: bucket.id,
@@ -54,6 +58,113 @@ const objectlambda = new awsnative.s3objectlambda.AccessPoint("objectlambda-ap",
    }
 });
 ```
+
+{{% /choosable %}}
+
+{{% choosable language python %}}
+
+```python
+import pulumi
+import pulumi_aws_native as aws_native
+
+my_bucket = aws_native.s3.Bucket("myBucket")
+
+ap = aws_native.s3.AccessPoint("ap", bucket=my_bucket.id)
+
+objectlambdaap = aws_native.s3objectlambda.AccessPoint("objectlambdaap", object_lambda_configuration=aws_native.s3objectlambda.AccessPointObjectLambdaConfigurationArgs(
+    supporting_access_point=ap.arn,
+    transformation_configurations=[aws_native.s3objectlambda.AccessPointTransformationConfigurationArgs(
+        actions=["GetObject"],
+        content_transformation={
+            "AwsLambda": {
+                "FunctionArn": fn.arn,
+            },
+        },
+    )],
+))
+```
+
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+
+```csharp
+var bucket = new AwsNative.S3.Bucket("my-bucket");
+
+var accessPoint = new AwsNative.S3.AccessPoint("ap", new AwsNative.S3.AccessPointArgs
+{
+    Bucket = bucket.Id
+});
+
+var objectLambda = new AwsNative.S3ObjectLambda.AccessPoint("objectlambda-ap", new AwsNative.S3ObjectLambda.AccessPointArgs
+{
+    ObjectLambdaConfiguration = new AwsNative.S3ObjectLambda.Inputs.AccessPointObjectLambdaConfigurationArgs
+    {
+        SupportingAccessPoint = accessPoint.Arn,
+        TransformationConfigurations =
+        {
+            new AwsNative.S3ObjectLambda.Inputs.AccessPointTransformationConfigurationArgs
+            {
+                Actions = { "GetObject" },
+                ContentTransformation = fn.Arn.Apply(arn => new Dictionary<string, object>
+                {
+                    ["AwsLambda"] = new Dictionary<string, object>
+                    {
+                        ["FunctionArn"] = arn
+                    }
+                }
+            }
+        }
+    }
+});
+```
+
+{{% /choosable %}}
+
+{{% choosable language go %}}
+
+```go
+func main() {
+    pulumi.Run(func(ctx *pulumi.Context) error {
+        myBucket, err := s3.NewBucket(ctx, "myBucket", nil)
+        if err != nil {
+            return err
+        }
+        ap, err := s3.NewAccessPoint(ctx, "ap", &s3.AccessPointArgs{
+            Bucket: myBucket.ID(),
+        })
+        if err != nil {
+            return err
+        }
+
+        _, err = s3objectlambda.NewAccessPoint(ctx, "objectlambdaap", &s3objectlambda.AccessPointArgs{
+            ObjectLambdaConfiguration: &s3objectlambda.AccessPointObjectLambdaConfigurationArgs{
+                SupportingAccessPoint: ap.Arn,
+                TransformationConfigurations: s3objectlambda.AccessPointTransformationConfigurationArray{
+                    &s3objectlambda.AccessPointTransformationConfigurationArgs{
+                        Actions: pulumi.StringArray{
+                            pulumi.String("GetObject"),
+                        },
+                        ContentTransformation: pulumi.Map{
+                            "AwsLambda": pulumi.Map{
+                                "FunctionArn": fn.Arn,
+                            },
+                        },
+                    },
+                },
+            },
+        })
+        if err != nil {
+            return err
+        }
+        return nil
+    })
+}
+```
+
+{{% /choosable %}}
+
+{{% /chooser %}}
 
 ## Always Up-To-Date
 
@@ -145,6 +256,6 @@ Get started with the AWS Native provider today:
 * [Docs](https://www.pulumi.com/docs/intro/cloud-providers/aws-native/)
 * [Examples](https://github.com/pulumi/examples)
 * [NPM](https://www.npmjs.com/package/@pulumi/aws-native)
-* [PyPI](https://pypi.org/project/pulumi-gcp-native/)
+* [PyPI](https://pypi.org/project/pulumi-aws-native/)
 * [NuGet](https://www.nuget.org/packages/Pulumi.AwsNative/)
 * [Go](https://pkg.go.dev/github.com/pulumi/pulumi-aws-native/sdk/go/aws)
