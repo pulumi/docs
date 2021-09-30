@@ -457,7 +457,7 @@ Pulumi updates through CI/CD.
 
 For a follow-up example on how to further use Pulumi to create Kubernetes
 clusters, or deploy workloads to a cluster, check out the rest of the
-[Kubernetes tutorials]({{< relref "/docs/tutorials/kubernetes" >}}).
+[Kubernetes tutorials]({{< relref "/registry/packages/kubernetes/how-to-guides" >}}).
 
 <!-- markdownlint-disable url -->
 [example-gh]: https://github.com/pulumi/examples/tree/master/aws-ts-eks-migrate-nodegroups

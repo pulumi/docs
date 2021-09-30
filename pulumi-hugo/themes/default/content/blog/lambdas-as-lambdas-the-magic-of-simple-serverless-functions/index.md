@@ -103,7 +103,7 @@ First, we're just defining two simple resources: 1) an `s3.Bucket`,
 where we expect new video files to be uploaded to, and 2) a
 `cloud.Topic` that will inform interested parties when new videos are
 uploaded. (The full surface area of AWS is available in [the aws package]({{< relref "/docs/get-started/aws" >}}), and
-[the cloud package]({{< relref "/docs/tutorials/cloudfx" >}}) offers
+[the cloud package]({{< relref "/registry/packages/cloudfx/how-to-guides" >}}) offers
 multi-cloud abstractions that work at a higher level of abstraction.)
 Right after defining the resources, we start creating our first FaaS
 resources. `videoBucket` has an `onObjectCreated` event subscription

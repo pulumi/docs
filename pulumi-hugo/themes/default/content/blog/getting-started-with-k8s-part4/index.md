@@ -92,4 +92,4 @@ Stateful applications present additional challenges when deployed in Kubernetes.
 
 - Watch educational content on [Pulumi TV](https://www.youtube.com/pulumitv)
 - Learn more about Pulumi's [support for Kubernetes]({{< relref "/registry/packages/kubernetes" >}})
-- Practice [Kubernetes Tutorials]({{< relref "/docs/tutorials/kubernetes" >}}) using Pulumi
+- Practice [Kubernetes Tutorials]({{< relref "/registry/packages/kubernetes/how-to-guides" >}}) using Pulumi
