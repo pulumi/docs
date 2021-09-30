@@ -75,10 +75,12 @@ var categoryLookup = map[string]pkg.PackageCategory{
 
 // TODO[pulumi/pulumi#7813]: Remove this lookup once display name is available in
 // the Pulumi schema.
-// titleLookup is a map to map module package name to the desired display name
-// for display in the TOC menu under API Reference.
+//
 // NOTE: For the time being this lookup map and the one used by the docs
 // generator in `pulumi/pulumi` must be kept up-to-date.
+//
+// titleLookup is a map pf package name to the desired display name
+// for display in the TOC menu under API Reference.
 var titleLookup = map[string]string{
 	"aiven":         "Aiven",
 	"akamai":        "Akamai",
