@@ -21,8 +21,33 @@ use_cases:
             - name: Lemonade
               link: /case-studies/lemonade
           description: |
-            Create reusable infrastructure components or self-service infrastructure platforms that empower your application developers to easily and quickly deploy
-            and use infrastructure they need to build applications.
+            Create reusable infrastructure components or self-service infrastructure platforms
+            that empower your application developers to easily and quickly deploy and use
+            infrastructure they need to build applications.
+
+            [Learn more about shared services platforms](/solutions/shared-services-platforms/)
+
+        - name: Infrastructure CI/CD
+          case_studies:
+            - name: Atlassian
+              link: /case-studies/atlassian/
+            - name: Panther Labs
+              link: /case-studies/panther-labs/
+          description: |
+            Automate your infrastructure provisioning and management through a CI/CD pipeline. Run all infrastructure updates through a standard set of unit and integration tests, allowing reduced errors, greater security, and increased delivery velocity.
+
+            [Learn more about CI/CD](/solutions/infrastructure-ci-cd/)
+
+        - name: Terraform Migration
+          case_studies:
+            - name: Lemonade
+              link: /case-studies/lemonade/
+            - name: Panther Labs
+              link: /case-studies/sans-institute/
+          description: |
+            Modernize how your teams provision and manage infrastructure in order to adapt to the changes in technologies (containers, serverless), architectures (distributed), and software release automation associated with the cloud.
+
+            [Learn more about Terraform migration](/solutions/terraform-migration)
 
         - name: Greenfield modern applications
           case_studies:
