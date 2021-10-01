@@ -24,3 +24,7 @@ This failure occurred because there is a conflict with an existing user account 
 3. Retry provisioning that user. This should now succeed if the username is now unique in the Pulumi console.
 
 If your identity provider doesn't allow you to control the value of the username attribute, please contact our [customer support](https://www.pulumi.com/support) for assistance.
+
+### Can I manage Pulumi-local teams if using SCIM?
+
+Yes. In addition to the SCIM-managed teams, one can also configure and manage Pulumi-local teams in the Pulumi console. See [Teams]({{< relref "/docs/intro/console/teams" >}}) for how to configure teams in the Pulumi console.  
