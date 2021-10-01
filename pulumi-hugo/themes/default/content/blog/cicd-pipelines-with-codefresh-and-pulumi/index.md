@@ -18,7 +18,7 @@ Delivering modern applications is complicated and requires the coordination of m
 Containerized applications deployed on Kubernetes are particularly susceptible to a misalignment between developers who frequently push changes and operators who want to maintain a stable architecture. Continuous Integration builds and tests software and delivers it as packages. Continuous Delivery or Deployment deploys applications on infrastructure. Let's take a look at how we can accomplish CI/CD for both applications and infrastructure.
 
 {{% notes type="info" %}}
-Join us for a [CI/CD with Kubernetes technical session](https://www.pulumi.com/events-workshops/ci-cd-pipelines-for-kubernetes-apps-with-codefresh/) on January 21st.
+Join us for a [CI/CD with Kubernetes technical session](https://www.pulumi.com/resources/ci-cd-pipelines-for-kubernetes-apps-with-codefresh/) on January 21st.
 {{% /notes %}}
 
 <!--more-->
@@ -67,4 +67,4 @@ Although this example is written in Python for AWS, there are similar examples i
 
 ## Putting it Together
 
-This article described how we could build both applications and infrastructure with CI/CD pipelines. To learn more about how Codefresh and Pulumi can automate Kubernetes deployments join us for a [technical session](https://www.pulumi.com/events-workshops/ci-cd-pipelines-for-kubernetes-apps-with-codefresh/) on January 21st.
+This article described how we could build both applications and infrastructure with CI/CD pipelines. To learn more about how Codefresh and Pulumi can automate Kubernetes deployments join us for a [technical session](https://www.pulumi.com/resources/ci-cd-pipelines-for-kubernetes-apps-with-codefresh/) on January 21st.

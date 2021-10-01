@@ -71,7 +71,7 @@ The following sections are also useful when first learning how to use Pulumi:
 
 <div class="md:flex flex-row mt-6 mb-6">
     <div class="w-full border-solid border-t-2 border-gray-200">
-        <h3 class="no-anchor pt-4"><a href="{{< relref "/events-workshops/introduction-to-pulumi" >}}"><i class="fas fa-users pr-2"></i>Live Workshops</a></h3>
+        <h3 class="no-anchor pt-4"><a href="{{< relref "/resources/introduction-to-pulumi" >}}"><i class="fas fa-users pr-2"></i>Live Workshops</a></h3>
         <p>Deploy your first Pulumi program in a live, instructor-led event.</p>
     </div>
 </div>

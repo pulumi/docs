@@ -16,7 +16,7 @@ option for users in publishing and pulling public container images. Pulumi fully
 
 <!--more-->
 
-If you want to learn more about Pulumi and building resources in AWS, join one of our [upcoming workshops](https://www.pulumi.com/events-workshops/#upcoming).
+If you want to learn more about Pulumi and building resources in AWS, join one of our [upcoming workshops](https://www.pulumi.com/resources/#upcoming).
 
 Pulumi publishes official container images for running Pulumi along with the desired Pulumi programming language runtimes.
 These containers are used directly by developers as the foundation for process automation, such as GitHub Actions; in custom

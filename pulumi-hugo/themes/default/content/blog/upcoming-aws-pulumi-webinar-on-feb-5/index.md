@@ -7,7 +7,7 @@ meta_desc: "In February, Pulumi & Learning Machine hosted a webinar with AWS Far
 meta_image: code-comparison.png
 ---
 
-Pulumi is hosting [a webinar with AWS Fargate]({{< relref "/events-workshops/aws-fargate-and-pulumi" >}}) **on
+Pulumi is hosting [a webinar with AWS Fargate]({{< relref "/resources/aws-fargate-and-pulumi" >}}) **on
 February 5th, 10AM PST** (register
 [here](https://pages.awscloud.com/acq_NAMER_IPC-Pulumi-February-2019-Registration-Page.html?sc_channel=el&sc_campaign=ContainersPulumiFebruary2019&sc_country=US&sc_geo=NAMER&sc_category=mult&sc_outcome=acq%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20&trk=Partner_Website_Landing_Page)).
 We'll be chatting about how to implement cloud native infrastructure
