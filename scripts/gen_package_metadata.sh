@@ -29,6 +29,7 @@ fi
 # will generate metadata for these packages.
 DEFAULT_PKGS=(
     "aws"
+    "aws-native"
     "azure"
     "azure-native"
     "azuread"

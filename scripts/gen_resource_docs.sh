@@ -19,6 +19,7 @@ TOOL_RESDOCGEN="./tools/resourcedocsgen/"
 
 PROVIDERS=(
     "aws"
+    "aws-native"
     "azure"
     "azure-native"
     "azuread"
