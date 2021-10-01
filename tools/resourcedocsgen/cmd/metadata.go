@@ -73,6 +73,75 @@ var categoryLookup = map[string]pkg.PackageCategory{
 	"sumologic":     pkg.PackageCategoryMonitoring,
 }
 
+// TODO[pulumi/pulumi#7813]: Remove this lookup once display name is available in
+// the Pulumi schema.
+//
+// NOTE: For the time being this lookup map and the one used by the docs
+// generator in `pulumi/pulumi` must be kept up-to-date.
+//
+// titleLookup is a map pf package name to the desired display name
+// for display in the TOC menu under API Reference.
+var titleLookup = map[string]string{
+	"aiven":         "Aiven",
+	"akamai":        "Akamai",
+	"alicloud":      "Alibaba Cloud",
+	"auth0":         "Auth0",
+	"aws":           "AWS",
+	"azure":         "Azure Classic",
+	"azure-native":  "Azure Native",
+	"azuread":       "Azure Active Directory",
+	"azuredevops":   "Azure DevOps",
+	"azuresel":      "Azure",
+	"civo":          "Civo",
+	"cloudamqp":     "CloudAMQP",
+	"cloudflare":    "Cloudflare",
+	"cloudinit":     "cloud-init",
+	"consul":        "Consul",
+	"datadog":       "Datadog",
+	"digitalocean":  "DigitalOcean",
+	"dnsimple":      "DNSimple",
+	"docker":        "Docker",
+	"eks":           "EKS",
+	"f5bigip":       "f5 BIG-IP",
+	"fastly":        "Fastly",
+	"gcp":           "Google Cloud Classic",
+	"google-native": "Google Cloud Native (preview)",
+	"github":        "GitHub",
+	"gitlab":        "GitLab",
+	"hcloud":        "Hetzner Cloud",
+	"kafka":         "Kafka",
+	"keycloak":      "Keycloak",
+	"kong":          "Kong",
+	"kubernetes":    "Kubernetes",
+	"linode":        "Linode",
+	"mailgun":       "Mailgun",
+	"mongodbatlas":  "MongoDB Atlas",
+	"mysql":         "MySQL",
+	"newrelic":      "New Relic",
+	"ns1":           "NS1",
+	"okta":          "Okta",
+	"openstack":     "OpenStack",
+	"opsgenie":      "Opsgenie",
+	"packet":        "Packet",
+	"pagerduty":     "PagerDuty",
+	"postgresql":    "PostgreSQL",
+	"rabbitmq":      "RabbitMQ",
+	"rancher2":      "Rancher 2",
+	"random":        "Random",
+	"signalfx":      "SignalFx",
+	"spotinst":      "Spotinst",
+	"tls":           "TLS",
+	"vault":         "Vault",
+	"venafi":        "Venafi",
+	"vsphere":       "vSphere",
+	"wavefront":     "Wavefront",
+	"equinix-metal": "Equinix Metal",
+	"splunk":        "Splunk",
+	"yandex":        "Yandex",
+	"rke":           "Rancher RKE",
+	"sumologic":     "SumoLogic",
+}
+
 func packageMetadataCmd() *cobra.Command {
 	var metadataOutDir string
 	var featured bool
@@ -91,11 +160,15 @@ func packageMetadataCmd() *cobra.Command {
 				category = c
 			}
 
+			title := mainSpec.Name
+			if v, ok := titleLookup[mainSpec.Name]; ok {
+				title = v
+			}
 			pm := pkg.PackageMeta{
 				Name:          mainSpec.Name,
 				UpdatedOn:     time.Now().Unix(),
 				Publisher:     "Pulumi",
-				Title:         mainSpec.Name,
+				Title:         title,
 				Description:   mainSpec.Description,
 				Category:      category,
 				PackageStatus: status,
