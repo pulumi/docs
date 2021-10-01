@@ -301,6 +301,15 @@ The following output properties are available:
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the Lambda Layer with version.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="compatiblearchitectures_csharp">
+<a href="#compatiblearchitectures_csharp" style="color: inherit; text-decoration: inherit;">Compatible<wbr>Architectures</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The compatible architectures of the specific Lambda Layer Version.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="compatibleruntimes_csharp">
 <a href="#compatibleruntimes_csharp" style="color: inherit; text-decoration: inherit;">Compatible<wbr>Runtimes</a>
 </span>
@@ -427,6 +436,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the Lambda Layer with version.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="compatiblearchitectures_go">
+<a href="#compatiblearchitectures_go" style="color: inherit; text-decoration: inherit;">Compatible<wbr>Architectures</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The compatible architectures of the specific Lambda Layer Version.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="compatibleruntimes_go">
@@ -557,6 +575,15 @@ The following output properties are available:
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the Lambda Layer with version.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="compatiblearchitectures_nodejs">
+<a href="#compatiblearchitectures_nodejs" style="color: inherit; text-decoration: inherit;">compatible<wbr>Architectures</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The compatible architectures of the specific Lambda Layer Version.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="compatibleruntimes_nodejs">
 <a href="#compatibleruntimes_nodejs" style="color: inherit; text-decoration: inherit;">compatible<wbr>Runtimes</a>
 </span>
@@ -683,6 +710,15 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the Lambda Layer with version.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="compatible_architectures_python">
+<a href="#compatible_architectures_python" style="color: inherit; text-decoration: inherit;">compatible_<wbr>architectures</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}The compatible architectures of the specific Lambda Layer Version.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="compatible_runtimes_python">

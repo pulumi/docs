@@ -35,7 +35,7 @@ class MyStack : Stack
     {
         var apiRelease = new AzureNative.ApiManagement.ApiRelease("apiRelease", new AzureNative.ApiManagement.ApiReleaseArgs
         {
-            ApiId = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/apis/a1",
+            ApiId = "a1",
             Notes = "yahooagain",
             ReleaseId = "testrev",
             ResourceGroupName = "rg1",
@@ -65,7 +65,7 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := apimanagement.NewApiRelease(ctx, "apiRelease", &apimanagement.ApiReleaseArgs{
-			ApiId:             pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/apis/a1"),
+			ApiId:             pulumi.String("a1"),
 			Notes:             pulumi.String("yahooagain"),
 			ReleaseId:         pulumi.String("testrev"),
 			ResourceGroupName: pulumi.String("rg1"),
@@ -92,7 +92,7 @@ import pulumi
 import pulumi_azure_native as azure_native
 
 api_release = azure_native.apimanagement.ApiRelease("apiRelease",
-    api_id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/apis/a1",
+    api_id="a1",
     notes="yahooagain",
     release_id="testrev",
     resource_group_name="rg1",
@@ -112,7 +112,7 @@ import * as pulumi from "@pulumi/pulumi";
 import * as azure_native from "@pulumi/azure-native";
 
 const apiRelease = new azure_native.apimanagement.ApiRelease("apiRelease", {
-    apiId: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/apis/a1",
+    apiId: "a1",
     notes: "yahooagain",
     releaseId: "testrev",
     resourceGroupName: "rg1",

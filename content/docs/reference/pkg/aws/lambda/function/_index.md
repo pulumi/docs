@@ -19,197 +19,6 @@ For information about Lambda and how to use it, see [What is AWS Lambda?](https:
 AWS Lambda expects source code to be provided as a deployment package whose structure varies depending on which `runtime` is in use. See [Runtimes](https://docs.aws.amazon.com/lambda/latest/dg/API_CreateFunction.html#SSS-CreateFunction-request-Runtime) for the valid values of `runtime`. The expected structure of the deployment package can be found in [the AWS Lambda documentation for each runtime](https://docs.aws.amazon.com/lambda/latest/dg/deployment-package-v2.html).
 Once you have created your deployment package you can specify it either directly as a local file (using the `filename` argument) or indirectly via Amazon S3 (using the `s3_bucket`, `s3_key` and `s3_object_version` arguments). When providing the deployment package via S3 it may be useful to use the `aws.s3.BucketObject` resource to upload it.
 For larger deployment packages it is recommended by Amazon to upload via S3, since the S3 API has better support for uploading large files efficiently.
-## CloudWatch Logging and Permissions
-
-For more information about CloudWatch Logs for Lambda, see the [Lambda User Guide](https://docs.aws.amazon.com/lambda/latest/dg/monitoring-functions-logs.html).
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const config = new pulumi.Config();
-const lambdaFunctionName = config.get("lambdaFunctionName") || "lambda_function_name";
-// This is to optionally manage the CloudWatch Log Group for the Lambda Function.
-// If skipping this resource configuration, also add "logs:CreateLogGroup" to the IAM policy below.
-const example = new aws.cloudwatch.LogGroup("example", {retentionInDays: 14});
-// See also the following AWS managed policy: AWSLambdaBasicExecutionRole
-const lambdaLogging = new aws.iam.Policy("lambdaLogging", {
-    path: "/",
-    description: "IAM policy for logging from a lambda",
-    policy: `{
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Action": [
-        "logs:CreateLogGroup",
-        "logs:CreateLogStream",
-        "logs:PutLogEvents"
-      ],
-      "Resource": "arn:aws:logs:*:*:*",
-      "Effect": "Allow"
-    }
-  ]
-}
-`,
-});
-const lambdaLogs = new aws.iam.RolePolicyAttachment("lambdaLogs", {
-    role: aws_iam_role.iam_for_lambda.name,
-    policyArn: lambdaLogging.arn,
-});
-const testLambda = new aws.lambda.Function("testLambda", {}, {
-    dependsOn: [
-        lambdaLogs,
-        example,
-    ],
-});
-```
-```python
-import pulumi
-import pulumi_aws as aws
-
-config = pulumi.Config()
-lambda_function_name = config.get("lambdaFunctionName")
-if lambda_function_name is None:
-    lambda_function_name = "lambda_function_name"
-# This is to optionally manage the CloudWatch Log Group for the Lambda Function.
-# If skipping this resource configuration, also add "logs:CreateLogGroup" to the IAM policy below.
-example = aws.cloudwatch.LogGroup("example", retention_in_days=14)
-# See also the following AWS managed policy: AWSLambdaBasicExecutionRole
-lambda_logging = aws.iam.Policy("lambdaLogging",
-    path="/",
-    description="IAM policy for logging from a lambda",
-    policy="""{
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Action": [
-        "logs:CreateLogGroup",
-        "logs:CreateLogStream",
-        "logs:PutLogEvents"
-      ],
-      "Resource": "arn:aws:logs:*:*:*",
-      "Effect": "Allow"
-    }
-  ]
-}
-""")
-lambda_logs = aws.iam.RolePolicyAttachment("lambdaLogs",
-    role=aws_iam_role["iam_for_lambda"]["name"],
-    policy_arn=lambda_logging.arn)
-test_lambda = aws.lambda_.Function("testLambda", opts=pulumi.ResourceOptions(depends_on=[
-        lambda_logs,
-        example,
-    ]))
-```
-```csharp
-using Pulumi;
-using Aws = Pulumi.Aws;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var config = new Config();
-        var lambdaFunctionName = config.Get("lambdaFunctionName") ?? "lambda_function_name";
-        // This is to optionally manage the CloudWatch Log Group for the Lambda Function.
-        // If skipping this resource configuration, also add "logs:CreateLogGroup" to the IAM policy below.
-        var example = new Aws.CloudWatch.LogGroup("example", new Aws.CloudWatch.LogGroupArgs
-        {
-            RetentionInDays = 14,
-        });
-        // See also the following AWS managed policy: AWSLambdaBasicExecutionRole
-        var lambdaLogging = new Aws.Iam.Policy("lambdaLogging", new Aws.Iam.PolicyArgs
-        {
-            Path = "/",
-            Description = "IAM policy for logging from a lambda",
-            Policy = @"{
-  ""Version"": ""2012-10-17"",
-  ""Statement"": [
-    {
-      ""Action"": [
-        ""logs:CreateLogGroup"",
-        ""logs:CreateLogStream"",
-        ""logs:PutLogEvents""
-      ],
-      ""Resource"": ""arn:aws:logs:*:*:*"",
-      ""Effect"": ""Allow""
-    }
-  ]
-}
-",
-        });
-        var lambdaLogs = new Aws.Iam.RolePolicyAttachment("lambdaLogs", new Aws.Iam.RolePolicyAttachmentArgs
-        {
-            Role = aws_iam_role.Iam_for_lambda.Name,
-            PolicyArn = lambdaLogging.Arn,
-        });
-        var testLambda = new Aws.Lambda.Function("testLambda", new Aws.Lambda.FunctionArgs
-        {
-        }, new CustomResourceOptions
-        {
-            DependsOn = 
-            {
-                lambdaLogs,
-                example,
-            },
-        });
-    }
-
-}
-```
-```go
-package main
-
-import (
-	"fmt"
-
-	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws"
-	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/cloudwatch"
-	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/iam"
-	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/lambda"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi/config"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		cfg := config.New(ctx, "")
-		lambdaFunctionName := "lambda_function_name"
-		if param := cfg.Get("lambdaFunctionName"); param != "" {
-			lambdaFunctionName = param
-		}
-		example, err := cloudwatch.NewLogGroup(ctx, "example", &cloudwatch.LogGroupArgs{
-			RetentionInDays: pulumi.Int(14),
-		})
-		if err != nil {
-			return err
-		}
-		lambdaLogging, err := iam.NewPolicy(ctx, "lambdaLogging", &iam.PolicyArgs{
-			Path:        pulumi.String("/"),
-			Description: pulumi.String("IAM policy for logging from a lambda"),
-			Policy:      pulumi.Any(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": [\n", "    {\n", "      \"Action\": [\n", "        \"logs:CreateLogGroup\",\n", "        \"logs:CreateLogStream\",\n", "        \"logs:PutLogEvents\"\n", "      ],\n", "      \"Resource\": \"arn:aws:logs:*:*:*\",\n", "      \"Effect\": \"Allow\"\n", "    }\n", "  ]\n", "}\n")),
-		})
-		if err != nil {
-			return err
-		}
-		lambdaLogs, err := iam.NewRolePolicyAttachment(ctx, "lambdaLogs", &iam.RolePolicyAttachmentArgs{
-			Role:      pulumi.Any(aws_iam_role.Iam_for_lambda.Name),
-			PolicyArn: lambdaLogging.Arn,
-		})
-		if err != nil {
-			return err
-		}
-		_, err = lambda.NewFunction(ctx, "testLambda", nil, pulumi.DependsOn([]pulumi.Resource{
-			lambdaLogs,
-			example,
-		}))
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
 
 {{% examples %}}
 
@@ -720,6 +529,369 @@ const example = new aws.lambda.Function("example", {
 
 
 
+### CloudWatch Logging and Permissions
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var config = new Config();
+        var lambdaFunctionName = config.Get("lambdaFunctionName") ?? "lambda_function_name";
+        // This is to optionally manage the CloudWatch Log Group for the Lambda Function.
+        // If skipping this resource configuration, also add "logs:CreateLogGroup" to the IAM policy below.
+        var example = new Aws.CloudWatch.LogGroup("example", new Aws.CloudWatch.LogGroupArgs
+        {
+            RetentionInDays = 14,
+        });
+        // See also the following AWS managed policy: AWSLambdaBasicExecutionRole
+        var lambdaLogging = new Aws.Iam.Policy("lambdaLogging", new Aws.Iam.PolicyArgs
+        {
+            Path = "/",
+            Description = "IAM policy for logging from a lambda",
+            Policy = @"{
+  ""Version"": ""2012-10-17"",
+  ""Statement"": [
+    {
+      ""Action"": [
+        ""logs:CreateLogGroup"",
+        ""logs:CreateLogStream"",
+        ""logs:PutLogEvents""
+      ],
+      ""Resource"": ""arn:aws:logs:*:*:*"",
+      ""Effect"": ""Allow""
+    }
+  ]
+}
+",
+        });
+        var lambdaLogs = new Aws.Iam.RolePolicyAttachment("lambdaLogs", new Aws.Iam.RolePolicyAttachmentArgs
+        {
+            Role = aws_iam_role.Iam_for_lambda.Name,
+            PolicyArn = lambdaLogging.Arn,
+        });
+        var testLambda = new Aws.Lambda.Function("testLambda", new Aws.Lambda.FunctionArgs
+        {
+        }, new CustomResourceOptions
+        {
+            DependsOn = 
+            {
+                lambdaLogs,
+                example,
+            },
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/cloudwatch"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/iam"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/lambda"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi/config"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		cfg := config.New(ctx, "")
+		lambdaFunctionName := "lambda_function_name"
+		if param := cfg.Get("lambdaFunctionName"); param != "" {
+			lambdaFunctionName = param
+		}
+		example, err := cloudwatch.NewLogGroup(ctx, "example", &cloudwatch.LogGroupArgs{
+			RetentionInDays: pulumi.Int(14),
+		})
+		if err != nil {
+			return err
+		}
+		lambdaLogging, err := iam.NewPolicy(ctx, "lambdaLogging", &iam.PolicyArgs{
+			Path:        pulumi.String("/"),
+			Description: pulumi.String("IAM policy for logging from a lambda"),
+			Policy:      pulumi.Any(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": [\n", "    {\n", "      \"Action\": [\n", "        \"logs:CreateLogGroup\",\n", "        \"logs:CreateLogStream\",\n", "        \"logs:PutLogEvents\"\n", "      ],\n", "      \"Resource\": \"arn:aws:logs:*:*:*\",\n", "      \"Effect\": \"Allow\"\n", "    }\n", "  ]\n", "}\n")),
+		})
+		if err != nil {
+			return err
+		}
+		lambdaLogs, err := iam.NewRolePolicyAttachment(ctx, "lambdaLogs", &iam.RolePolicyAttachmentArgs{
+			Role:      pulumi.Any(aws_iam_role.Iam_for_lambda.Name),
+			PolicyArn: lambdaLogging.Arn,
+		})
+		if err != nil {
+			return err
+		}
+		_, err = lambda.NewFunction(ctx, "testLambda", nil, pulumi.DependsOn([]pulumi.Resource{
+			lambdaLogs,
+			example,
+		}))
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_aws as aws
+
+config = pulumi.Config()
+lambda_function_name = config.get("lambdaFunctionName")
+if lambda_function_name is None:
+    lambda_function_name = "lambda_function_name"
+# This is to optionally manage the CloudWatch Log Group for the Lambda Function.
+# If skipping this resource configuration, also add "logs:CreateLogGroup" to the IAM policy below.
+example = aws.cloudwatch.LogGroup("example", retention_in_days=14)
+# See also the following AWS managed policy: AWSLambdaBasicExecutionRole
+lambda_logging = aws.iam.Policy("lambdaLogging",
+    path="/",
+    description="IAM policy for logging from a lambda",
+    policy="""{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Action": [
+        "logs:CreateLogGroup",
+        "logs:CreateLogStream",
+        "logs:PutLogEvents"
+      ],
+      "Resource": "arn:aws:logs:*:*:*",
+      "Effect": "Allow"
+    }
+  ]
+}
+""")
+lambda_logs = aws.iam.RolePolicyAttachment("lambdaLogs",
+    role=aws_iam_role["iam_for_lambda"]["name"],
+    policy_arn=lambda_logging.arn)
+test_lambda = aws.lambda_.Function("testLambda", opts=pulumi.ResourceOptions(depends_on=[
+        lambda_logs,
+        example,
+    ]))
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const config = new pulumi.Config();
+const lambdaFunctionName = config.get("lambdaFunctionName") || "lambda_function_name";
+// This is to optionally manage the CloudWatch Log Group for the Lambda Function.
+// If skipping this resource configuration, also add "logs:CreateLogGroup" to the IAM policy below.
+const example = new aws.cloudwatch.LogGroup("example", {retentionInDays: 14});
+// See also the following AWS managed policy: AWSLambdaBasicExecutionRole
+const lambdaLogging = new aws.iam.Policy("lambdaLogging", {
+    path: "/",
+    description: "IAM policy for logging from a lambda",
+    policy: `{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Action": [
+        "logs:CreateLogGroup",
+        "logs:CreateLogStream",
+        "logs:PutLogEvents"
+      ],
+      "Resource": "arn:aws:logs:*:*:*",
+      "Effect": "Allow"
+    }
+  ]
+}
+`,
+});
+const lambdaLogs = new aws.iam.RolePolicyAttachment("lambdaLogs", {
+    role: aws_iam_role.iam_for_lambda.name,
+    policyArn: lambdaLogging.arn,
+});
+const testLambda = new aws.lambda.Function("testLambda", {}, {
+    dependsOn: [
+        lambdaLogs,
+        example,
+    ],
+});
+```
+
+
+{{< /example >}}
+
+
+
+
+### Lambda with Targetted Architecture
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var iamForLambda = new Aws.Iam.Role("iamForLambda", new Aws.Iam.RoleArgs
+        {
+            AssumeRolePolicy = @"{
+  ""Version"": ""2012-10-17"",
+  ""Statement"": [
+    {
+      ""Action"": ""sts:AssumeRole"",
+      ""Principal"": {
+        ""Service"": ""lambda.amazonaws.com""
+      },
+      ""Effect"": ""Allow"",
+      ""Sid"": """"
+    }
+  ]
+}
+",
+        });
+        var testLambda = new Aws.Lambda.Function("testLambda", new Aws.Lambda.FunctionArgs
+        {
+            Code = new FileArchive("lambda_function_payload.zip"),
+            Role = iamForLambda.Arn,
+            Handler = "index.test",
+            Runtime = "nodejs12.x",
+            Architectures = 
+            {
+                "arm64",
+            },
+            Environment = new Aws.Lambda.Inputs.FunctionEnvironmentArgs
+            {
+                Variables = 
+                {
+                    { "foo", "bar" },
+                },
+            },
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+Coming soon!
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_aws as aws
+
+iam_for_lambda = aws.iam.Role("iamForLambda", assume_role_policy="""{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Action": "sts:AssumeRole",
+      "Principal": {
+        "Service": "lambda.amazonaws.com"
+      },
+      "Effect": "Allow",
+      "Sid": ""
+    }
+  ]
+}
+""")
+test_lambda = aws.lambda_.Function("testLambda",
+    code=pulumi.FileArchive("lambda_function_payload.zip"),
+    role=iam_for_lambda.arn,
+    handler="index.test",
+    runtime="nodejs12.x",
+    architectures=["arm64"],
+    environment=aws.lambda..FunctionEnvironmentArgs(
+        variables={
+            "foo": "bar",
+        },
+    ))
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const iamForLambda = new aws.iam.Role("iamForLambda", {assumeRolePolicy: `{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Action": "sts:AssumeRole",
+      "Principal": {
+        "Service": "lambda.amazonaws.com"
+      },
+      "Effect": "Allow",
+      "Sid": ""
+    }
+  ]
+}
+`});
+const testLambda = new aws.lambda.Function("testLambda", {
+    code: new pulumi.asset.FileArchive("lambda_function_payload.zip"),
+    role: iamForLambda.arn,
+    handler: "index.test",
+    runtime: "nodejs12.x",
+    architectures: ["arm64"],
+    environment: {
+        variables: {
+            foo: "bar",
+        },
+    },
+});
+```
+
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
 
@@ -738,6 +910,7 @@ const example = new aws.lambda.Function("example", {
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Function</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+             <span class="nx">architectures</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
              <span class="nx">code</span><span class="p">:</span> <span class="nx">Optional[pulumi.Archive]</span> = None<span class="p">,</span>
              <span class="nx">code_signing_config_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">dead_letter_config</span><span class="p">:</span> <span class="nx">Optional[_lambda_.FunctionDeadLetterConfigArgs]</span> = None<span class="p">,</span>
@@ -900,6 +1073,15 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the function's execution role. The role provides the function's identity and access to AWS services and resources.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="architectures_csharp">
+<a href="#architectures_csharp" style="color: inherit; text-decoration: inherit;">Architectures</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The target architectures for the function. Only a single value is value at this time. Valid values are `arm64` and `x86_64`. If not provided, AWS will default to `x86_64`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="code_csharp">
@@ -1140,6 +1322,15 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
     <dd>{{% md %}}Amazon Resource Name (ARN) of the function's execution role. The role provides the function's identity and access to AWS services and resources.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="architectures_go">
+<a href="#architectures_go" style="color: inherit; text-decoration: inherit;">Architectures</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The target architectures for the function. Only a single value is value at this time. Valid values are `arm64` and `x86_64`. If not provided, AWS will default to `x86_64`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="code_go">
 <a href="#code_go" style="color: inherit; text-decoration: inherit;">Code</a>
 </span>
@@ -1378,6 +1569,15 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
     <dd>{{% md %}}Amazon Resource Name (ARN) of the function's execution role. The role provides the function's identity and access to AWS services and resources.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="architectures_nodejs">
+<a href="#architectures_nodejs" style="color: inherit; text-decoration: inherit;">architectures</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The target architectures for the function. Only a single value is value at this time. Valid values are `arm64` and `x86_64`. If not provided, AWS will default to `x86_64`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="code_nodejs">
 <a href="#code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
 </span>
@@ -1614,6 +1814,15 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the function's execution role. The role provides the function's identity and access to AWS services and resources.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="architectures_python">
+<a href="#architectures_python" style="color: inherit; text-decoration: inherit;">architectures</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}The target architectures for the function. Only a single value is value at this time. Valid values are `arm64` and `x86_64`. If not provided, AWS will default to `x86_64`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="code_python">
@@ -2241,6 +2450,7 @@ Get an existing Function resource's state with the given name, ID, and optional 
 <span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">architectures</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
         <span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">code</span><span class="p">:</span> <span class="nx">Optional[pulumi.Archive]</span> = None<span class="p">,</span>
         <span class="nx">code_signing_config_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -2387,6 +2597,15 @@ The following state arguments are supported:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="state_architectures_csharp">
+<a href="#state_architectures_csharp" style="color: inherit; text-decoration: inherit;">Architectures</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The target architectures for the function. Only a single value is value at this time. Valid values are `arm64` and `x86_64`. If not provided, AWS will default to `x86_64`.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_arn_csharp">
 <a href="#state_arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -2708,6 +2927,15 @@ The following state arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="state_architectures_go">
+<a href="#state_architectures_go" style="color: inherit; text-decoration: inherit;">Architectures</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The target architectures for the function. Only a single value is value at this time. Valid values are `arm64` and `x86_64`. If not provided, AWS will default to `x86_64`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_arn_go">
 <a href="#state_arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
 </span>
@@ -3028,6 +3256,15 @@ The following state arguments are supported:
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="state_architectures_nodejs">
+<a href="#state_architectures_nodejs" style="color: inherit; text-decoration: inherit;">architectures</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The target architectures for the function. Only a single value is value at this time. Valid values are `arm64` and `x86_64`. If not provided, AWS will default to `x86_64`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_arn_nodejs">
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
@@ -3347,6 +3584,15 @@ The following state arguments are supported:
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="state_architectures_python">
+<a href="#state_architectures_python" style="color: inherit; text-decoration: inherit;">architectures</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}The target architectures for the function. Only a single value is value at this time. Valid values are `arm64` and `x86_64`. If not provided, AWS will default to `x86_64`.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_arn_python">
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>

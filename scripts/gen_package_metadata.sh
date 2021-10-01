@@ -29,6 +29,7 @@ fi
 # will generate metadata for these packages.
 DEFAULT_PKGS=(
     "aws"
+    "aws-native"
     "azure"
     "azure-native"
     "azuread"
@@ -90,7 +91,13 @@ generate_metadata() {
     pushd ${TOOL_RESDOCGEN}
 
     go mod tidy
-    go build -o "${HOME}/go/bin/resourcedocsgen" .
+
+    if [ -z "${GOPATH:-}" ]; then
+        echo "GOPATH is empty. Defaulting to ${HOME}/go"
+        GOPATH="${HOME}/go"
+    fi
+
+    go build -o "${GOPATH}/bin/resourcedocsgen" .
 
     featured=""
     # The surrounding white-space is needed to ensure that we match the whole word.

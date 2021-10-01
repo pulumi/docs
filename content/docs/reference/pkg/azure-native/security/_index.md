@@ -16,6 +16,7 @@ Explore the resources and functions of the azure-native.security module.
     <li><a href="alertssuppressionrule" title="AlertsSuppressionRule"><span class="symbol resource"></span>AlertsSuppressionRule</a></li>
     <li><a href="assessment" title="Assessment"><span class="symbol resource"></span>Assessment</a></li>
     <li><a href="assessmentmetadatainsubscription" title="AssessmentMetadataInSubscription"><span class="symbol resource"></span>AssessmentMetadataInSubscription</a></li>
+    <li><a href="assignment" title="Assignment"><span class="symbol resource"></span>Assignment</a></li>
     <li><a href="automation" title="Automation"><span class="symbol resource"></span>Automation</a></li>
     <li><a href="connector" title="Connector"><span class="symbol resource"></span>Connector</a></li>
     <li><a href="customassessmentautomation" title="CustomAssessmentAutomation"><span class="symbol resource"></span>CustomAssessmentAutomation</a></li>
@@ -27,6 +28,7 @@ Explore the resources and functions of the azure-native.security module.
     <li><a href="securitycontact" title="SecurityContact"><span class="symbol resource"></span>SecurityContact</a></li>
     <li><a href="servervulnerabilityassessment" title="ServerVulnerabilityAssessment"><span class="symbol resource"></span>ServerVulnerabilityAssessment</a></li>
     <li><a href="sqlvulnerabilityassessmentbaselinerule" title="SqlVulnerabilityAssessmentBaselineRule"><span class="symbol resource"></span>SqlVulnerabilityAssessmentBaselineRule</a></li>
+    <li><a href="standard" title="Standard"><span class="symbol resource"></span>Standard</a></li>
     <li><a href="workspacesetting" title="WorkspaceSetting"><span class="symbol resource"></span>WorkspaceSetting</a></li>
 </ul>
 
@@ -37,6 +39,7 @@ Explore the resources and functions of the azure-native.security module.
     <li><a href="getalertssuppressionrule" title="GetAlertsSuppressionRule"><span class="symbol function"></span>GetAlertsSuppressionRule</a></li>
     <li><a href="getassessment" title="GetAssessment"><span class="symbol function"></span>GetAssessment</a></li>
     <li><a href="getassessmentmetadatainsubscription" title="GetAssessmentMetadataInSubscription"><span class="symbol function"></span>GetAssessmentMetadataInSubscription</a></li>
+    <li><a href="getassignment" title="GetAssignment"><span class="symbol function"></span>GetAssignment</a></li>
     <li><a href="getautomation" title="GetAutomation"><span class="symbol function"></span>GetAutomation</a></li>
     <li><a href="getconnector" title="GetConnector"><span class="symbol function"></span>GetConnector</a></li>
     <li><a href="getcustomassessmentautomation" title="GetCustomAssessmentAutomation"><span class="symbol function"></span>GetCustomAssessmentAutomation</a></li>
@@ -48,6 +51,7 @@ Explore the resources and functions of the azure-native.security module.
     <li><a href="getsecuritycontact" title="GetSecurityContact"><span class="symbol function"></span>GetSecurityContact</a></li>
     <li><a href="getservervulnerabilityassessment" title="GetServerVulnerabilityAssessment"><span class="symbol function"></span>GetServerVulnerabilityAssessment</a></li>
     <li><a href="getsqlvulnerabilityassessmentbaselinerule" title="GetSqlVulnerabilityAssessmentBaselineRule"><span class="symbol function"></span>GetSqlVulnerabilityAssessmentBaselineRule</a></li>
+    <li><a href="getstandard" title="GetStandard"><span class="symbol function"></span>GetStandard</a></li>
     <li><a href="getworkspacesetting" title="GetWorkspaceSetting"><span class="symbol function"></span>GetWorkspaceSetting</a></li>
     <li><a href="listingestionsettingconnectionstrings" title="ListIngestionSettingConnectionStrings"><span class="symbol function"></span>ListIngestionSettingConnectionStrings</a></li>
     <li><a href="listingestionsettingtokens" title="ListIngestionSettingTokens"><span class="symbol function"></span>ListIngestionSettingTokens</a></li>
@@ -60,6 +64,6 @@ Explore the resources and functions of the azure-native.security module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.33.0</dd>
+	<dd>1.34.0</dd>
 </dl>
 
