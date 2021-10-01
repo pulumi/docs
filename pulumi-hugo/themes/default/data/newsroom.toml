@@ -1,4 +1,10 @@
 [[releases]]
+date = "30th September 2021"
+title = "Pulumi AWS Native Provider Speeds Users Into the Future of Modern Cloud Application Development on AWS"
+summary = "Pulumi now provides same-day support for new AWS Cloud Control API-supported services and features, allowing customers to harness modern cloud architectures using industry standard languages, software tools, and cloud engineering best practices"
+url = "https://info.pulumi.com/press-release/aws-native-provider"
+
+[[releases]]
 date = "3rd August 2021"
 title = "SANS Institute Selects Pulumi Cloud Engineering Platform to Radically Simplify and Automate Cloud Application and Infrastructure Delivery"
 summary = "Cybersecurity training and certification leader leverages cloud engineering best practices to increase deployment velocity by 3X"
