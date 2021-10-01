@@ -28,6 +28,6 @@ Explore the resources and functions of the kubernetes.rbac/v1alpha1 module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>3.7.2</dd>
+	<dd>3.7.3</dd>
 </dl>
 
