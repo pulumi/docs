@@ -26,7 +26,7 @@ To kickoff the year we start with a technical session that demonstrates how to c
 
 Taught by Pulumi and Codefresh engineers, you'll receive a thorough understanding of CI/CD and infrastructure as code best practices.
 
-Sign up for [CI/CD Pipelines for Kubernetes Apps with Pulumi & Codefresh]({{< relref "/resources/ci-cd-pipelines-for-kubernetes-apps-with-codefresh" >}}) on January 21, 10:00 AM MST.
+Sign up for [CI/CD Pipelines for Kubernetes Apps with Pulumi & Codefresh]({{< relref "/events-workshops/ci-cd-pipelines-for-kubernetes-apps-with-codefresh" >}}) on January 21, 10:00 AM MST.
 
 ## Intro to Pulumi
 
