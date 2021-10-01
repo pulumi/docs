@@ -48,10 +48,7 @@ hero:
 
 # Webinar pages support multiple session via the 'multiple' property.
 multiple:
-    - datetime: 2021-09-28T08:00:00-07:00
-      hubspot_form_id: 1bb45b7f-b1ad-44ac-9e0a-fb045cb8fd06
-
-    - datetime: 2021-10-21T06:00:00-07:00
+    - datetime: 2021-10-21T09:00:00-07:00
       hubspot_form_id: 0c727231-dfc1-4fa6-ab76-69247ac652c8
 
 # Content for the left hand side section of the page.
@@ -61,7 +58,7 @@ main:
     # URL for embedding a URL for ungated webinars.
     youtube_url: ""
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2020-02-05T10:00:00-07:00
+    sortable_date: 2020-10-21T09:00:00-07:00
     # Duration of the webinar.
     duration: "1 hour"
     # Datetime of the webinar.
@@ -77,6 +74,8 @@ main:
     presenters:
         - name: "Laura Santamaria"
           role: "Developer Advocate, Pulumi"
+        - name: Marina Novikova
+          role: Partner Solutions Architect, AWS
 
     # A bullet point list containing what the user will learn during the webinar.
     learn:

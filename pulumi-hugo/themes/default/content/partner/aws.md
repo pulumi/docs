@@ -3,14 +3,16 @@ title: Modern Infrastructure as Code for AWS
 layout: aws
 url: /aws
 
-meta_desc: Pulumi provides huge productivity gains and a unified programming model for Devs and DevOps, through infrastructure as code on the AWS cloud.
+meta_desc: Build, deploy & manage AWS Infrastructure as Code with TypeScript, Python, Go and C#. Use existing software engineering tools & practices with infrastructure.
 
 hero:
     title: Cloud Engineering for AWS
     description: |
         Pulumi's [infrastructure as code](/what-is/what-is-infrastructure-as-code/)
-        SDK helps create, deploy, and manage your AWS infrastructure, including containers,
-        serverless functions, and other infrastructure using modern programming languages.
+        SDK enables you to build, deploy, and manage your AWS infrastructure faster
+        and with more confidence, using modern programming languages and software engineering
+        practices. Leverage the full expressivity of languages like [TypeScript/JavaScript](/docs/intro/languages/javascript/),
+        [Python](/docs/intro/languages/python/), [Go](/docs/intro/languages/go/), and [C#](/docs/intro/languages/dotnet/) to build any cloud architecture including containers, serverless, and server-based.
 
 awsx_code: |
     import * as eks from "@pulumi/eks";

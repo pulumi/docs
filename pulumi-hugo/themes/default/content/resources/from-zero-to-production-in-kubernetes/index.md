@@ -52,9 +52,9 @@ main:
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
     sortable_date: 2021-10-21T14:00:00-07:00
     # Duration of the webinar.
-    duration: "1 hour"
+    duration: "1.5 hour"
     # Datetime of the webinar.
-    datetime: "TUE JUL 20, 2021"
+    datetime: "OCTOBER 21st, 2021"
     # Description of the webinar.
     description: |
         Setting up your production Kubernetes environment brings many benefits including scalability and portability for your applications. Before you reach production, It’s important to understand key Kubernetes concepts and architectures available to keep your clusters secure and scalable. Ingress controllers are vital parts of any Kubernetes platform and NGINX ingress controller provides the best in class traffic management solution for cloud native apps and containerized environments.

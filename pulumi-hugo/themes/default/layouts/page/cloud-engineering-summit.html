@@ -32,7 +32,12 @@
                 >
                 </pulumi-date-countdown>
                 <div class="text-center my-12">
-                    <a class="btn-secondary" href="{{ relref . "/cloud-engineering-summit/agenda" }}">See the agenda</a>
+                    <div class="pb-12">
+                        <a class="btn-primary lg:hidden" href="#register">Save your spot</a>
+                    </div>
+                    <div>
+                        <a class="btn-secondary" href="{{ relref . "/cloud-engineering-summit/agenda" }}">See the agenda</a>
+                    </div>
                 </div>
                 <div class="max-w-4xl mx-auto text-center">
                     <p class="mt-10">
@@ -43,7 +48,7 @@
                 </div>
             </div>
 
-            <div class="w-full lg:w-1/2 p-6">
+            <div id="register" class="w-full lg:w-1/2 p-6">
                 <div class="bg-gray-200 rounded p-6">
                     <h4>Register Now</h4>
                     <pulumi-hubspot-form form-id="{{ .Params.hubspot_form_id }}"></pulumi-hubspot-form>

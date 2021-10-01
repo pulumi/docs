@@ -1,0 +1,112 @@
+{{ define "hero" }}
+    {{ partial "hero.html" (dict "title" .Params.title) }}
+{{ end }}
+
+{{ define "main" }}
+    <!-- Overview -->
+    <section class="container mx-auto my-16">
+        <div class="flex flex-wrap">
+            <div class="w-full lg:w-1/2 p-6">
+                <h2>{{ .Params.overview.title }}</h2>
+                <p>{{ .Params.overview.description | markdownify }}</p>
+            </div>
+            <div class="w-full lg:w-1/2 p-6">
+                <img src="{{ .Params.overview.image }}" alt="Reference Architecture" />
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits -->
+    <section class="container mx-auto my-16 text-center">
+        <h2>{{ .Params.benefits.title }}</h2>
+
+        <h3>{{ .Params.benefits.benefits.title }}</h3>
+
+        <div class="flex flex-wrap items-stretch justify-center">
+            {{ range $benefit := .Params.benefits.benefits.items }}
+                <div class="w-full h-full lg:w-1/3 px-8 mt-8 lg:mb-0">
+                    <div class="lg:max-w-xs lg:mx-auto">
+                        {{ partial "color-icon.html" (dict "icon" $benefit.icon "icon_color" $benefit.icon_color) }}
+                        <h5>{{ $benefit.title }}</h5>
+                        <p class="key-feature-description">{{ $benefit.description | markdownify }}</p>
+                    </div>
+                </div>
+            {{ end }}
+        </div>
+
+        <h3>{{ .Params.benefits.help.title }}</h3>
+
+        <div class="flex flex-wrap items-stretch justify-center">
+            {{ $rowWidth := "w-1/2" }}
+            {{ if  eq (len .Params.benefits.help.items) 3 }}
+                {{ $rowWidth = "w-1/3" }}
+            {{ end }}
+            {{ range $benefit := .Params.benefits.help.items }}
+                <div class="w-full lg:{{ $rowWidth }} px-8 mt-8 lg:mb-0">
+                    <div class="lg:max-w-xs lg:mx-auto">
+                        {{ partial "color-icon.html" (dict "icon" $benefit.icon "icon_color" "salmon") }}
+                        <h5>{{ $benefit.title }}</h5>
+                        <p class="key-feature-description">{{ $benefit.description | markdownify }}</p>
+                    </div>
+                </div>
+            {{ end }}
+        </div>
+    </section>
+
+    <!-- Diagrams -->
+    <section class="container mx-auto my-16 text-center">
+        <h2>{{ .Params.diagrams.title }}</h2>
+        <p>{{ .Params.diagrams.description | markdownify  }}</p>
+
+        {{ range $diagram := .Params.diagrams.items }}
+            <div class="flex flex-wrap text-left">
+                <div class="w-full order-last lg:order-first lg:w-1/2 p-6">
+                    <img src="{{ $diagram.image }}" />
+                </div>
+
+                <div class="w-full order-first lg:order-last lg:w-1/2 p-6">
+                    <h3>{{ $diagram.title }}</h3>
+                    <p>{{ $diagram.content | markdownify }}</p>
+                </div>
+            </div>
+        {{ end }}
+    </section>
+
+    <!-- Logos -->
+    <section class="container mx-auto text-center my-0 mb-16 lg:my-24 overflow-hidden px-3">
+        {{ $pageContext := . }}
+
+        <h3 class="text-center mb-10 hidden lg:block">{{ .Params.customer_logos.title }}</h3>
+        <h6 class="text-center mb-10 lg:hidden">{{ .Params.customer_logos.title }}</h6>
+        <div class="flex flex-wrap items-center justify-center">
+            {{ range $logo := .Params.customer_logos.logos }}
+                <div class="w-3/4 lg:w-1/5 p-10">
+                    <a href="{{ relref $pageContext $logo.link }}">
+                        {{ partial "customer-logo.html" (dict "logo" $logo.name "hoverable" true) }}
+                    </a>
+                </div>
+            {{ end }}
+        </div>
+    </section>
+
+    <section id="get-started" class="my-32 relative">
+        <div class="shape-background product-get-started-section">
+            <div class="shape-container">
+                <div class="circle-center"></div>
+                <div class="circle-right"></div>
+            </div>
+        </div>
+
+        <div class="container mx-auto">
+            <h2 class="mb-8 text-center">{{ .Params.get_started.title }}</h2>
+
+            <div class="w-full lg:w-2/3 px-4 py-2 lg:p-8 lg:px-4 mx-auto text-center">
+                <div class="lg:shadow-2xl bg-violet-600 p-8 lg:px-24 lg:pt-4 g:pb-12 rounded-xl">
+                    <h4 class="text-white">{{ .Params.get_started.get_started.title }}</h4>
+                    <p class="mb-24 text-white">{{ .Params.get_started.get_started.description }}</p>
+                    <a href="{{ relref . "/contact?form=sales" }}" class="btn-secondary">{{ .Params.get_started.get_started.cta_text }}</a>
+                </div>
+            </div>
+        </div>
+    </section>
+{{ end }}

@@ -35,8 +35,8 @@
                         <li class="accordion-item {{ $itemClass }} py-6">
                             {{ partial "accordian-header" (dict "text" $item.name) }}
 
-                            <div class="accordion-item-body">
-                                <p class="mt-6">{{ $item.description }}</p>
+                            <div class="accordion-item-body-no-animation">
+                                <p class="mt-6">{{ $item.description | markdownify }}</p>
 
                                 {{ if $item.case_studies }}
                                     <ul class="list-none mt-6 pl-0">

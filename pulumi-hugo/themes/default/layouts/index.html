@@ -10,8 +10,13 @@
                 <span class="rainbow-text" data-text={{index (.Params.hero.title) 1}}>{{ index (.Params.hero.title) 1 }}</span>
             </h1>
             <p class="text-center max-w-xl leading-7">{{ .Params.hero.description }}</p>
-            <div class="mt-8">
-                <a class="home-hero-btn-primary" href="{{ relref . "/docs/get-started" }}">{{ .Params.hero.cta_text }}</a>
+            <div class="mt-8 text-center">
+                <div class="pb-12">
+                    <a class="home-hero-btn-primary" href="{{ relref . "/docs/get-started" }}">{{ .Params.hero.cta_text }}</a>
+                </div>
+                <div>
+                    <a class="btn-secondary" href="{{ relref . "/cloud-engineering-summit" }}">Cloud Engineering Summit</a>
+                </div>
             </div>
         </div>
     </header>
@@ -20,7 +25,7 @@
 {{ define "main" }}
     {{ $pageContext := . }}
 
-    <section class="container mx-auto mt-20">
+    <section class="container mx-auto mt-32 pt-8">
         <div class="flex flex-col lg:flex-row h-full">
             <div class="w-full lg:w-1/2 mt-16 lg:mt-0 h-full flex items-center justify-center relative overflow-hidden">
                 <div class="slot-machine-overlay">

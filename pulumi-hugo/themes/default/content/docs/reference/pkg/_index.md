@@ -28,7 +28,7 @@ explore what's possible, you've come to the right place.
 
 ### Infrastructure
 
-{{< resource-providers "aiven,auth0,azuread,azuredevops,consul,docker,kafka,keycloak,kong,mailgun,okta,pagerduty,rabbitmq,rancher2,spotinst,splunk,vault,venafi,opsgenie,rke,confluent,nomad,minio" >}}
+{{< resource-providers "aiven,auth0,azuread,azuredevops,consul,docker,kafka,keycloak,kong,mailgun,okta,pagerduty,rabbitmq,rancher2,spotinst,splunk,vault,venafi,opsgenie,rke,confluent,nomad,minio,snowflake" >}}
 
 ### Database
 
@@ -56,8 +56,7 @@ explore what's possible, you've come to the right place.
 
 ### Preview Providers
 
-{{< resource-providers "google-native" >}}
-
+{{< resource-providers "aws-native,google-native" >}}
 
 ## Package Documentation
 
