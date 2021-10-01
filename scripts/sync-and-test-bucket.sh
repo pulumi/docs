@@ -72,7 +72,7 @@ aws s3 cp "$build_dir/latest-version" "${destination_bucket_uri}/latest-version"
 echo "Running tests..."
 
 echo "Checking links on $s3_website_url..."
-# ./scripts/check-links.sh "url" "$s3_website_url"
+./scripts/check-links.sh "url" "$s3_website_url"
 
 echo "Running browser tests on $s3_website_url..."
 ./scripts/run-browser-tests.sh "$s3_website_url"
