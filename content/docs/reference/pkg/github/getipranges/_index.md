@@ -159,7 +159,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}A subset of the `actions` array that contains IP addresses in IPv4 CIDR format.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="actionsipv6s_csharp">
 <a href="#actionsipv6s_csharp" style="color: inherit; text-decoration: inherit;">Actions<wbr>Ipv6s</a>
@@ -167,7 +168,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}A subset of the `actions` array that contains IP addresses in IPv6 CIDR format.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dependabotipv4s_csharp">
 <a href="#dependabotipv4s_csharp" style="color: inherit; text-decoration: inherit;">Dependabot<wbr>Ipv4s</a>
@@ -175,7 +177,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}A subset of the `dependabot` array that contains IP addresses in IPv4 CIDR format.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dependabotipv6s_csharp">
 <a href="#dependabotipv6s_csharp" style="color: inherit; text-decoration: inherit;">Dependabot<wbr>Ipv6s</a>
@@ -183,7 +186,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}A subset of the `dependabot` array that contains IP addresses in IPv6 CIDR format.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dependabots_csharp">
 <a href="#dependabots_csharp" style="color: inherit; text-decoration: inherit;">Dependabots</a>
@@ -200,7 +204,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}A subset of the `git` array that contains IP addresses in IPv4 CIDR format.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="gitipv6s_csharp">
 <a href="#gitipv6s_csharp" style="color: inherit; text-decoration: inherit;">Git<wbr>Ipv6s</a>
@@ -208,7 +213,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}A subset of the `git` array that contains IP addresses in IPv6 CIDR format.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="gits_csharp">
 <a href="#gits_csharp" style="color: inherit; text-decoration: inherit;">Gits</a>
@@ -234,7 +240,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}A subset of the `hooks` array that contains IP addresses in IPv4 CIDR format.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="hooksipv6s_csharp">
 <a href="#hooksipv6s_csharp" style="color: inherit; text-decoration: inherit;">Hooks<wbr>Ipv6s</a>
@@ -242,7 +249,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}A subset of the `hooks` array that contains IP addresses in IPv6 CIDR format.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -259,7 +267,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}A subset of the `importer` array that contains IP addresses in IPv4 CIDR format.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="importeripv6s_csharp">
 <a href="#importeripv6s_csharp" style="color: inherit; text-decoration: inherit;">Importer<wbr>Ipv6s</a>
@@ -267,7 +276,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}A subset of the `importer` array that contains IP addresses in IPv6 CIDR format.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="importers_csharp">
 <a href="#importers_csharp" style="color: inherit; text-decoration: inherit;">Importers</a>
@@ -293,7 +303,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}A subset of the `pages` array that contains IP addresses in IPv4 CIDR format.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="pagesipv6s_csharp">
 <a href="#pagesipv6s_csharp" style="color: inherit; text-decoration: inherit;">Pages<wbr>Ipv6s</a>
@@ -301,7 +312,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}A subset of the `pages` array that contains IP addresses in IPv6 CIDR format.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -322,7 +334,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}A subset of the `actions` array that contains IP addresses in IPv4 CIDR format.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="actionsipv6s_go">
 <a href="#actionsipv6s_go" style="color: inherit; text-decoration: inherit;">Actions<wbr>Ipv6s</a>
@@ -330,7 +343,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}A subset of the `actions` array that contains IP addresses in IPv6 CIDR format.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dependabotipv4s_go">
 <a href="#dependabotipv4s_go" style="color: inherit; text-decoration: inherit;">Dependabot<wbr>Ipv4s</a>
@@ -338,7 +352,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}A subset of the `dependabot` array that contains IP addresses in IPv4 CIDR format.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dependabotipv6s_go">
 <a href="#dependabotipv6s_go" style="color: inherit; text-decoration: inherit;">Dependabot<wbr>Ipv6s</a>
@@ -346,7 +361,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}A subset of the `dependabot` array that contains IP addresses in IPv6 CIDR format.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dependabots_go">
 <a href="#dependabots_go" style="color: inherit; text-decoration: inherit;">Dependabots</a>
@@ -363,7 +379,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}A subset of the `git` array that contains IP addresses in IPv4 CIDR format.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="gitipv6s_go">
 <a href="#gitipv6s_go" style="color: inherit; text-decoration: inherit;">Git<wbr>Ipv6s</a>
@@ -371,7 +388,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}A subset of the `git` array that contains IP addresses in IPv6 CIDR format.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="gits_go">
 <a href="#gits_go" style="color: inherit; text-decoration: inherit;">Gits</a>
@@ -397,7 +415,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}A subset of the `hooks` array that contains IP addresses in IPv4 CIDR format.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="hooksipv6s_go">
 <a href="#hooksipv6s_go" style="color: inherit; text-decoration: inherit;">Hooks<wbr>Ipv6s</a>
@@ -405,7 +424,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}A subset of the `hooks` array that contains IP addresses in IPv6 CIDR format.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -422,7 +442,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}A subset of the `importer` array that contains IP addresses in IPv4 CIDR format.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="importeripv6s_go">
 <a href="#importeripv6s_go" style="color: inherit; text-decoration: inherit;">Importer<wbr>Ipv6s</a>
@@ -430,7 +451,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}A subset of the `importer` array that contains IP addresses in IPv6 CIDR format.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="importers_go">
 <a href="#importers_go" style="color: inherit; text-decoration: inherit;">Importers</a>
@@ -456,7 +478,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}A subset of the `pages` array that contains IP addresses in IPv4 CIDR format.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="pagesipv6s_go">
 <a href="#pagesipv6s_go" style="color: inherit; text-decoration: inherit;">Pages<wbr>Ipv6s</a>
@@ -464,7 +487,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}A subset of the `pages` array that contains IP addresses in IPv6 CIDR format.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -485,7 +509,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}A subset of the `actions` array that contains IP addresses in IPv4 CIDR format.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="actionsipv6s_nodejs">
 <a href="#actionsipv6s_nodejs" style="color: inherit; text-decoration: inherit;">actions<wbr>Ipv6s</a>
@@ -493,7 +518,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}A subset of the `actions` array that contains IP addresses in IPv6 CIDR format.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dependabotipv4s_nodejs">
 <a href="#dependabotipv4s_nodejs" style="color: inherit; text-decoration: inherit;">dependabot<wbr>Ipv4s</a>
@@ -501,7 +527,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}A subset of the `dependabot` array that contains IP addresses in IPv4 CIDR format.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dependabotipv6s_nodejs">
 <a href="#dependabotipv6s_nodejs" style="color: inherit; text-decoration: inherit;">dependabot<wbr>Ipv6s</a>
@@ -509,7 +536,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}A subset of the `dependabot` array that contains IP addresses in IPv6 CIDR format.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dependabots_nodejs">
 <a href="#dependabots_nodejs" style="color: inherit; text-decoration: inherit;">dependabots</a>
@@ -526,7 +554,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}A subset of the `git` array that contains IP addresses in IPv4 CIDR format.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="gitipv6s_nodejs">
 <a href="#gitipv6s_nodejs" style="color: inherit; text-decoration: inherit;">git<wbr>Ipv6s</a>
@@ -534,7 +563,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}A subset of the `git` array that contains IP addresses in IPv6 CIDR format.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="gits_nodejs">
 <a href="#gits_nodejs" style="color: inherit; text-decoration: inherit;">gits</a>
@@ -560,7 +590,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}A subset of the `hooks` array that contains IP addresses in IPv4 CIDR format.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="hooksipv6s_nodejs">
 <a href="#hooksipv6s_nodejs" style="color: inherit; text-decoration: inherit;">hooks<wbr>Ipv6s</a>
@@ -568,7 +599,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}A subset of the `hooks` array that contains IP addresses in IPv6 CIDR format.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -585,7 +617,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}A subset of the `importer` array that contains IP addresses in IPv4 CIDR format.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="importeripv6s_nodejs">
 <a href="#importeripv6s_nodejs" style="color: inherit; text-decoration: inherit;">importer<wbr>Ipv6s</a>
@@ -593,7 +626,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}A subset of the `importer` array that contains IP addresses in IPv6 CIDR format.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="importers_nodejs">
 <a href="#importers_nodejs" style="color: inherit; text-decoration: inherit;">importers</a>
@@ -619,7 +653,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}A subset of the `pages` array that contains IP addresses in IPv4 CIDR format.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="pagesipv6s_nodejs">
 <a href="#pagesipv6s_nodejs" style="color: inherit; text-decoration: inherit;">pages<wbr>Ipv6s</a>
@@ -627,7 +662,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}A subset of the `pages` array that contains IP addresses in IPv6 CIDR format.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -648,7 +684,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}A subset of the `actions` array that contains IP addresses in IPv4 CIDR format.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="actions_ipv6s_python">
 <a href="#actions_ipv6s_python" style="color: inherit; text-decoration: inherit;">actions_<wbr>ipv6s</a>
@@ -656,7 +693,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}A subset of the `actions` array that contains IP addresses in IPv6 CIDR format.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dependabot_ipv4s_python">
 <a href="#dependabot_ipv4s_python" style="color: inherit; text-decoration: inherit;">dependabot_<wbr>ipv4s</a>
@@ -664,7 +702,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}A subset of the `dependabot` array that contains IP addresses in IPv4 CIDR format.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dependabot_ipv6s_python">
 <a href="#dependabot_ipv6s_python" style="color: inherit; text-decoration: inherit;">dependabot_<wbr>ipv6s</a>
@@ -672,7 +711,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}A subset of the `dependabot` array that contains IP addresses in IPv6 CIDR format.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dependabots_python">
 <a href="#dependabots_python" style="color: inherit; text-decoration: inherit;">dependabots</a>
@@ -689,7 +729,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}A subset of the `git` array that contains IP addresses in IPv4 CIDR format.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="git_ipv6s_python">
 <a href="#git_ipv6s_python" style="color: inherit; text-decoration: inherit;">git_<wbr>ipv6s</a>
@@ -697,7 +738,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}A subset of the `git` array that contains IP addresses in IPv6 CIDR format.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="gits_python">
 <a href="#gits_python" style="color: inherit; text-decoration: inherit;">gits</a>
@@ -723,7 +765,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}A subset of the `hooks` array that contains IP addresses in IPv4 CIDR format.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="hooks_ipv6s_python">
 <a href="#hooks_ipv6s_python" style="color: inherit; text-decoration: inherit;">hooks_<wbr>ipv6s</a>
@@ -731,7 +774,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}A subset of the `hooks` array that contains IP addresses in IPv6 CIDR format.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -748,7 +792,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}A subset of the `importer` array that contains IP addresses in IPv4 CIDR format.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="importer_ipv6s_python">
 <a href="#importer_ipv6s_python" style="color: inherit; text-decoration: inherit;">importer_<wbr>ipv6s</a>
@@ -756,7 +801,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}A subset of the `importer` array that contains IP addresses in IPv6 CIDR format.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="importers_python">
 <a href="#importers_python" style="color: inherit; text-decoration: inherit;">importers</a>
@@ -782,7 +828,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}A subset of the `pages` array that contains IP addresses in IPv4 CIDR format.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="pages_ipv6s_python">
 <a href="#pages_ipv6s_python" style="color: inherit; text-decoration: inherit;">pages_<wbr>ipv6s</a>
@@ -790,7 +837,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}A subset of the `pages` array that contains IP addresses in IPv6 CIDR format.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
