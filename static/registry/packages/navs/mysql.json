@@ -1,0 +1,1 @@
+[{"name":"Provider","type":"resource","link":"provider"},{"name":"Database","type":"resource","link":"database"},{"name":"Grant","type":"resource","link":"grant"},{"name":"Role","type":"resource","link":"role"},{"name":"User","type":"resource","link":"user"},{"name":"UserPassword","type":"resource","link":"userpassword"}]

@@ -381,7 +381,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Sets exclusivity on this IP whitelist.
+    <dd>{{% md %}}Set to true to restrict access to only those IP addresses and networks listed in the **ip_whitelist** field.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipwhitelists_csharp">
@@ -390,7 +390,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The IP addresses to whitelist for this key.
+    <dd>{{% md %}}Array of IP addresses/networks to which to grant the API key access.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipammanageipam_csharp">
@@ -676,7 +676,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Sets exclusivity on this IP whitelist.
+    <dd>{{% md %}}Set to true to restrict access to only those IP addresses and networks listed in the **ip_whitelist** field.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipwhitelists_go">
@@ -685,7 +685,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The IP addresses to whitelist for this key.
+    <dd>{{% md %}}Array of IP addresses/networks to which to grant the API key access.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipammanageipam_go">
@@ -971,7 +971,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Sets exclusivity on this IP whitelist.
+    <dd>{{% md %}}Set to true to restrict access to only those IP addresses and networks listed in the **ip_whitelist** field.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipwhitelists_nodejs">
@@ -980,7 +980,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The IP addresses to whitelist for this key.
+    <dd>{{% md %}}Array of IP addresses/networks to which to grant the API key access.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipammanageipam_nodejs">
@@ -1266,7 +1266,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Sets exclusivity on this IP whitelist.
+    <dd>{{% md %}}Set to true to restrict access to only those IP addresses and networks listed in the **ip_whitelist** field.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ip_whitelists_python">
@@ -1275,7 +1275,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The IP addresses to whitelist for this key.
+    <dd>{{% md %}}Array of IP addresses/networks to which to grant the API key access.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipam_manage_ipam_python">
@@ -1810,7 +1810,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Sets exclusivity on this IP whitelist.
+    <dd>{{% md %}}Set to true to restrict access to only those IP addresses and networks listed in the **ip_whitelist** field.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipwhitelists_csharp">
@@ -1819,7 +1819,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The IP addresses to whitelist for this key.
+    <dd>{{% md %}}Array of IP addresses/networks to which to grant the API key access.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipammanageipam_csharp">
@@ -2114,7 +2114,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Sets exclusivity on this IP whitelist.
+    <dd>{{% md %}}Set to true to restrict access to only those IP addresses and networks listed in the **ip_whitelist** field.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipwhitelists_go">
@@ -2123,7 +2123,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The IP addresses to whitelist for this key.
+    <dd>{{% md %}}Array of IP addresses/networks to which to grant the API key access.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipammanageipam_go">
@@ -2418,7 +2418,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Sets exclusivity on this IP whitelist.
+    <dd>{{% md %}}Set to true to restrict access to only those IP addresses and networks listed in the **ip_whitelist** field.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipwhitelists_nodejs">
@@ -2427,7 +2427,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The IP addresses to whitelist for this key.
+    <dd>{{% md %}}Array of IP addresses/networks to which to grant the API key access.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipammanageipam_nodejs">
@@ -2722,7 +2722,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Sets exclusivity on this IP whitelist.
+    <dd>{{% md %}}Set to true to restrict access to only those IP addresses and networks listed in the **ip_whitelist** field.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ip_whitelists_python">
@@ -2731,7 +2731,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The IP addresses to whitelist for this key.
+    <dd>{{% md %}}Array of IP addresses/networks to which to grant the API key access.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipam_manage_ipam_python">

@@ -14,7 +14,7 @@ INSTALL_RESOURCE_PLUGIN_VERSION=${3:-}
 
 PACKDIR="content/registry/packages/"
 ABSOLUTEPACKDIR="$(pwd)/$PACKDIR"
-PACKAGE_TREE_OUT_DIR="../../../registry/packages/data/navs"
+PACKAGE_TREE_OUT_DIR="../../static/registry/packages/navs"
 TOOL_RESDOCGEN="./tools/resourcedocsgen/"
 
 PROVIDERS=(

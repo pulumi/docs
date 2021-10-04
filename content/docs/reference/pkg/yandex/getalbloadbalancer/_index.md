@@ -1979,8 +1979,8 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="servicenames_csharp">
-<a href="#servicenames_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Names</a>
+        <span id="servernames_csharp">
+<a href="#servernames_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
@@ -2007,8 +2007,8 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="servicenames_go">
-<a href="#servicenames_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Names</a>
+        <span id="servernames_go">
+<a href="#servernames_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
@@ -2035,8 +2035,8 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="servicenames_nodejs">
-<a href="#servicenames_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Names</a>
+        <span id="servernames_nodejs">
+<a href="#servernames_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
@@ -2063,8 +2063,8 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="service_names_python">
-<a href="#service_names_python" style="color: inherit; text-decoration: inherit;">service_<wbr>names</a>
+        <span id="server_names_python">
+<a href="#server_names_python" style="color: inherit; text-decoration: inherit;">server_<wbr>names</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>

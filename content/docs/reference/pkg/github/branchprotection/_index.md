@@ -282,6 +282,7 @@ const exampleTeamRepository = new github.TeamRepository("exampleTeamRepository",
                      <span class="nx">push_restrictions</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
                      <span class="nx">repository_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                      <span class="nx">require_signed_commits</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                     <span class="nx">required_linear_history</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                      <span class="nx">required_pull_request_reviews</span><span class="p">:</span> <span class="nx">Optional[Sequence[BranchProtectionRequiredPullRequestReviewArgs]]</span> = None<span class="p">,</span>
                      <span class="nx">required_status_checks</span><span class="p">:</span> <span class="nx">Optional[Sequence[BranchProtectionRequiredStatusCheckArgs]]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
@@ -476,6 +477,15 @@ The BranchProtection resource accepts the following [input]({{< relref "/docs/in
     <dd>{{% md %}}Boolean, setting this to `true` requires all commits to be signed with GPG.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="requiredlinearhistory_csharp">
+<a href="#requiredlinearhistory_csharp" style="color: inherit; text-decoration: inherit;">Required<wbr>Linear<wbr>History</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Boolean, setting this to `true` enforces a linear commit Git history, which prevents anyone from pushing merge commits to a branch
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="requiredpullrequestreviews_csharp">
 <a href="#requiredpullrequestreviews_csharp" style="color: inherit; text-decoration: inherit;">Required<wbr>Pull<wbr>Request<wbr>Reviews</a>
 </span>
@@ -559,6 +569,15 @@ The BranchProtection resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean, setting this to `true` requires all commits to be signed with GPG.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="requiredlinearhistory_go">
+<a href="#requiredlinearhistory_go" style="color: inherit; text-decoration: inherit;">Required<wbr>Linear<wbr>History</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Boolean, setting this to `true` enforces a linear commit Git history, which prevents anyone from pushing merge commits to a branch
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requiredpullrequestreviews_go">
@@ -646,6 +665,15 @@ The BranchProtection resource accepts the following [input]({{< relref "/docs/in
     <dd>{{% md %}}Boolean, setting this to `true` requires all commits to be signed with GPG.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="requiredlinearhistory_nodejs">
+<a href="#requiredlinearhistory_nodejs" style="color: inherit; text-decoration: inherit;">required<wbr>Linear<wbr>History</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Boolean, setting this to `true` enforces a linear commit Git history, which prevents anyone from pushing merge commits to a branch
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="requiredpullrequestreviews_nodejs">
 <a href="#requiredpullrequestreviews_nodejs" style="color: inherit; text-decoration: inherit;">required<wbr>Pull<wbr>Request<wbr>Reviews</a>
 </span>
@@ -729,6 +757,15 @@ The BranchProtection resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean, setting this to `true` requires all commits to be signed with GPG.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="required_linear_history_python">
+<a href="#required_linear_history_python" style="color: inherit; text-decoration: inherit;">required_<wbr>linear_<wbr>history</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Boolean, setting this to `true` enforces a linear commit Git history, which prevents anyone from pushing merge commits to a branch
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="required_pull_request_reviews_python">
@@ -828,6 +865,7 @@ Get an existing BranchProtection resource's state with the given name, ID, and o
         <span class="nx">push_restrictions</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
         <span class="nx">repository_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">require_signed_commits</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">required_linear_history</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">required_pull_request_reviews</span><span class="p">:</span> <span class="nx">Optional[Sequence[BranchProtectionRequiredPullRequestReviewArgs]]</span> = None<span class="p">,</span>
         <span class="nx">required_status_checks</span><span class="p">:</span> <span class="nx">Optional[Sequence[BranchProtectionRequiredStatusCheckArgs]]</span> = None<span class="p">) -&gt;</span> BranchProtection</code></pre></div>
 {{% /choosable %}}
@@ -1005,6 +1043,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Boolean, setting this to `true` requires all commits to be signed with GPG.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_requiredlinearhistory_csharp">
+<a href="#state_requiredlinearhistory_csharp" style="color: inherit; text-decoration: inherit;">Required<wbr>Linear<wbr>History</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Boolean, setting this to `true` enforces a linear commit Git history, which prevents anyone from pushing merge commits to a branch
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_requiredpullrequestreviews_csharp">
 <a href="#state_requiredpullrequestreviews_csharp" style="color: inherit; text-decoration: inherit;">Required<wbr>Pull<wbr>Request<wbr>Reviews</a>
 </span>
@@ -1088,6 +1135,15 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean, setting this to `true` requires all commits to be signed with GPG.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_requiredlinearhistory_go">
+<a href="#state_requiredlinearhistory_go" style="color: inherit; text-decoration: inherit;">Required<wbr>Linear<wbr>History</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Boolean, setting this to `true` enforces a linear commit Git history, which prevents anyone from pushing merge commits to a branch
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_requiredpullrequestreviews_go">
@@ -1175,6 +1231,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Boolean, setting this to `true` requires all commits to be signed with GPG.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_requiredlinearhistory_nodejs">
+<a href="#state_requiredlinearhistory_nodejs" style="color: inherit; text-decoration: inherit;">required<wbr>Linear<wbr>History</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Boolean, setting this to `true` enforces a linear commit Git history, which prevents anyone from pushing merge commits to a branch
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_requiredpullrequestreviews_nodejs">
 <a href="#state_requiredpullrequestreviews_nodejs" style="color: inherit; text-decoration: inherit;">required<wbr>Pull<wbr>Request<wbr>Reviews</a>
 </span>
@@ -1258,6 +1323,15 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean, setting this to `true` requires all commits to be signed with GPG.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_required_linear_history_python">
+<a href="#state_required_linear_history_python" style="color: inherit; text-decoration: inherit;">required_<wbr>linear_<wbr>history</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Boolean, setting this to `true` enforces a linear commit Git history, which prevents anyone from pushing merge commits to a branch
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_required_pull_request_reviews_python">

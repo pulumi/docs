@@ -334,16 +334,6 @@ result in the connection pool being deleted and new one created instead.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Service to link the connection pool to
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="username_csharp">
-<a href="#username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}is the name of the service user used to connect to the database. This should
-be defined using reference as shown above to set up dependencies correctly.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="poolmode_csharp">
@@ -365,6 +355,16 @@ default value for this is `transaction`.
     <dd>{{% md %}}is the number of connections the pool may create towards the backend
 server. This does not affect the number of incoming connections, which is always a much
 larger number. The default value for this is 10.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="username_csharp">
+<a href="#username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}is the name of the service user used to connect to the database. This should
+be defined using reference as shown above to set up dependencies correctly.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -409,16 +409,6 @@ result in the connection pool being deleted and new one created instead.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Service to link the connection pool to
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="username_go">
-<a href="#username_go" style="color: inherit; text-decoration: inherit;">Username</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}is the name of the service user used to connect to the database. This should
-be defined using reference as shown above to set up dependencies correctly.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="poolmode_go">
@@ -440,6 +430,16 @@ default value for this is `transaction`.
     <dd>{{% md %}}is the number of connections the pool may create towards the backend
 server. This does not affect the number of incoming connections, which is always a much
 larger number. The default value for this is 10.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="username_go">
+<a href="#username_go" style="color: inherit; text-decoration: inherit;">Username</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}is the name of the service user used to connect to the database. This should
+be defined using reference as shown above to set up dependencies correctly.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -484,16 +484,6 @@ result in the connection pool being deleted and new one created instead.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Service to link the connection pool to
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="username_nodejs">
-<a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}is the name of the service user used to connect to the database. This should
-be defined using reference as shown above to set up dependencies correctly.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="poolmode_nodejs">
@@ -515,6 +505,16 @@ default value for this is `transaction`.
     <dd>{{% md %}}is the number of connections the pool may create towards the backend
 server. This does not affect the number of incoming connections, which is always a much
 larger number. The default value for this is 10.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="username_nodejs">
+<a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}is the name of the service user used to connect to the database. This should
+be defined using reference as shown above to set up dependencies correctly.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -559,16 +559,6 @@ result in the connection pool being deleted and new one created instead.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Service to link the connection pool to
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="username_python">
-<a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}is the name of the service user used to connect to the database. This should
-be defined using reference as shown above to set up dependencies correctly.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pool_mode_python">
@@ -590,6 +580,16 @@ default value for this is `transaction`.
     <dd>{{% md %}}is the number of connections the pool may create towards the backend
 server. This does not affect the number of incoming connections, which is always a much
 larger number. The default value for this is 10.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="username_python">
+<a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}is the name of the service user used to connect to the database. This should
+be defined using reference as shown above to set up dependencies correctly.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
