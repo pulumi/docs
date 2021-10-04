@@ -1,6 +1,6 @@
 ---
-title: "Open Stack"
-title_tag: "Open Stack Package"
+title: "OpenStack"
+title_tag: "OpenStack Package"
 meta_desc: "A Pulumi package for creating and managing OpenStack cloud resources."
 menu:
     reference:
@@ -45,6 +45,6 @@ A Pulumi package for creating and managing OpenStack cloud resources.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`openstack` Terraform Provider](https://github.com/terraform-provider-openstack/terraform-provider-openstack).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>3.3.0</dd>
+	<dd>3.3.1</dd>
 </dl>
 
