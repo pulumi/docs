@@ -33,6 +33,7 @@ Manages a custom Spotinst Ocean GKE Launch Spec resource.
                     <span class="nx">instance_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
                     <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Sequence[OceanLaunchSpecLabelArgs]]</span> = None<span class="p">,</span>
                     <span class="nx">metadatas</span><span class="p">:</span> <span class="nx">Optional[Sequence[OceanLaunchSpecMetadataArgs]]</span> = None<span class="p">,</span>
+                    <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                     <span class="nx">node_pool_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                     <span class="nx">ocean_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                     <span class="nx">resource_limits</span><span class="p">:</span> <span class="nx">Optional[OceanLaunchSpecResourceLimitsArgs]</span> = None<span class="p">,</span>
@@ -219,6 +220,15 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
     <dd>{{% md %}}Cluster's metadata.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The launch specification name.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="nodepoolname_csharp">
 <a href="#nodepoolname_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Pool<wbr>Name</a>
 </span>
@@ -365,6 +375,15 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type"><a href="#oceanlaunchspecmetadata">[]Ocean<wbr>Launch<wbr>Spec<wbr>Metadata<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Cluster's metadata.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The launch specification name.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodepoolname_go">
@@ -515,6 +534,15 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
     <dd>{{% md %}}Cluster's metadata.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The launch specification name.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="nodepoolname_nodejs">
 <a href="#nodepoolname_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Pool<wbr>Name</a>
 </span>
@@ -661,6 +689,15 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type"><a href="#oceanlaunchspecmetadata">Sequence[Ocean<wbr>Launch<wbr>Spec<wbr>Metadata<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Cluster's metadata.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The launch specification name.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="node_pool_name_python">
@@ -838,6 +875,7 @@ Get an existing OceanLaunchSpec resource's state with the given name, ID, and op
         <span class="nx">instance_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
         <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Sequence[OceanLaunchSpecLabelArgs]]</span> = None<span class="p">,</span>
         <span class="nx">metadatas</span><span class="p">:</span> <span class="nx">Optional[Sequence[OceanLaunchSpecMetadataArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">node_pool_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">ocean_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">resource_limits</span><span class="p">:</span> <span class="nx">Optional[OceanLaunchSpecResourceLimitsArgs]</span> = None<span class="p">,</span>
@@ -998,6 +1036,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Cluster's metadata.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The launch specification name.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_nodepoolname_csharp">
 <a href="#state_nodepoolname_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Pool<wbr>Name</a>
 </span>
@@ -1144,6 +1191,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#oceanlaunchspecmetadata">[]Ocean<wbr>Launch<wbr>Spec<wbr>Metadata<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Cluster's metadata.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The launch specification name.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nodepoolname_go">
@@ -1294,6 +1350,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Cluster's metadata.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The launch specification name.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_nodepoolname_nodejs">
 <a href="#state_nodepoolname_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Pool<wbr>Name</a>
 </span>
@@ -1440,6 +1505,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#oceanlaunchspecmetadata">Sequence[Ocean<wbr>Launch<wbr>Spec<wbr>Metadata<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Cluster's metadata.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The launch specification name.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_node_pool_name_python">
@@ -1914,6 +1988,15 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Option to set a maximum number of instances per virtual node group. Can be null. If set, the value must be greater than or equal to 0.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="mininstancecount_csharp">
+<a href="#mininstancecount_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Instance<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Option to set a minimum number of instances per virtual node group. Can be null. If set, the value must be greater than or equal to 0.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1927,6 +2010,15 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Option to set a maximum number of instances per virtual node group. Can be null. If set, the value must be greater than or equal to 0.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="mininstancecount_go">
+<a href="#mininstancecount_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Instance<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Option to set a minimum number of instances per virtual node group. Can be null. If set, the value must be greater than or equal to 0.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1940,6 +2032,15 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Option to set a maximum number of instances per virtual node group. Can be null. If set, the value must be greater than or equal to 0.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="mininstancecount_nodejs">
+<a href="#mininstancecount_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Instance<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Option to set a minimum number of instances per virtual node group. Can be null. If set, the value must be greater than or equal to 0.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1953,6 +2054,15 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Option to set a maximum number of instances per virtual node group. Can be null. If set, the value must be greater than or equal to 0.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="min_instance_count_python">
+<a href="#min_instance_count_python" style="color: inherit; text-decoration: inherit;">min_<wbr>instance_<wbr>count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Option to set a minimum number of instances per virtual node group. Can be null. If set, the value must be greater than or equal to 0.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

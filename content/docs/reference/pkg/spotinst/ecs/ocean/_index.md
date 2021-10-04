@@ -2689,6 +2689,15 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="autoheadroompercentage_csharp">
+<a href="#autoheadroompercentage_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Headroom<wbr>Percentage</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The auto-headroom percentage. Set a number between 0-200 to control the headroom % of the cluster. Relevant when `isAutoConfig`= true.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="cooldown_csharp">
 <a href="#cooldown_csharp" style="color: inherit; text-decoration: inherit;">Cooldown</a>
 </span>
@@ -2746,6 +2755,15 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="autoheadroompercentage_go">
+<a href="#autoheadroompercentage_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Headroom<wbr>Percentage</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The auto-headroom percentage. Set a number between 0-200 to control the headroom % of the cluster. Relevant when `isAutoConfig`= true.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cooldown_go">
 <a href="#cooldown_go" style="color: inherit; text-decoration: inherit;">Cooldown</a>
@@ -2805,6 +2823,15 @@ The following state arguments are supported:
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="autoheadroompercentage_nodejs">
+<a href="#autoheadroompercentage_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Headroom<wbr>Percentage</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The auto-headroom percentage. Set a number between 0-200 to control the headroom % of the cluster. Relevant when `isAutoConfig`= true.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="cooldown_nodejs">
 <a href="#cooldown_nodejs" style="color: inherit; text-decoration: inherit;">cooldown</a>
 </span>
@@ -2862,6 +2889,15 @@ The following state arguments are supported:
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="auto_headroom_percentage_python">
+<a href="#auto_headroom_percentage_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>headroom_<wbr>percentage</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The auto-headroom percentage. Set a number between 0-200 to control the headroom % of the cluster. Relevant when `isAutoConfig`= true.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cooldown_python">
 <a href="#cooldown_python" style="color: inherit; text-decoration: inherit;">cooldown</a>
