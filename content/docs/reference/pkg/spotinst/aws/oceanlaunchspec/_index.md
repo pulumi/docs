@@ -151,6 +151,7 @@ class MyStack : Stack
                 new SpotInst.Aws.Inputs.OceanLaunchSpecResourceLimitArgs
                 {
                     MaxInstanceCount = 4,
+                    MinInstanceCount = 0,
                 },
             },
             RestrictScaleDown = true,
@@ -273,6 +274,7 @@ func main() {
 			ResourceLimits: aws.OceanLaunchSpecResourceLimitArray{
 				&aws.OceanLaunchSpecResourceLimitArgs{
 					MaxInstanceCount: pulumi.Int(4),
+					MinInstanceCount: pulumi.Int(0),
 				},
 			},
 			RestrictScaleDown: pulumi.Bool(true),
@@ -375,6 +377,7 @@ example = spotinst.aws.OceanLaunchSpec("example",
     ],
     resource_limits=[spotinst.aws.OceanLaunchSpecResourceLimitArgs(
         max_instance_count=4,
+        min_instance_count=0,
     )],
     restrict_scale_down=True,
     root_volume_size=30,
@@ -460,6 +463,7 @@ const example = new spotinst.aws.OceanLaunchSpec("example", {
     ],
     resourceLimits: [{
         maxInstanceCount: 4,
+        minInstanceCount: 0,
     }],
     restrictScaleDown: true,
     rootVolumeSize: 30,
@@ -3656,6 +3660,15 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Set a maximum number of instances per Virtual Node Group. Can be null. If set, value must be greater than or equal to 0.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="mininstancecount_csharp">
+<a href="#mininstancecount_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Instance<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Set a minimum number of instances per Virtual Node Group. Can be null. If set, value must be greater than or equal to 0.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3669,6 +3682,15 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Set a maximum number of instances per Virtual Node Group. Can be null. If set, value must be greater than or equal to 0.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="mininstancecount_go">
+<a href="#mininstancecount_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Instance<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Set a minimum number of instances per Virtual Node Group. Can be null. If set, value must be greater than or equal to 0.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3682,6 +3704,15 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Set a maximum number of instances per Virtual Node Group. Can be null. If set, value must be greater than or equal to 0.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="mininstancecount_nodejs">
+<a href="#mininstancecount_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Instance<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Set a minimum number of instances per Virtual Node Group. Can be null. If set, value must be greater than or equal to 0.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3695,6 +3726,15 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Set a maximum number of instances per Virtual Node Group. Can be null. If set, value must be greater than or equal to 0.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="min_instance_count_python">
+<a href="#min_instance_count_python" style="color: inherit; text-decoration: inherit;">min_<wbr>instance_<wbr>count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Set a minimum number of instances per Virtual Node Group. Can be null. If set, value must be greater than or equal to 0.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
