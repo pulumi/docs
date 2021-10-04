@@ -49,7 +49,7 @@ class MyStack : Stack
                 OpensearchDashboards = new Aiven.Inputs.OpenSearchOpensearchUserConfigOpensearchDashboardsArgs
                 {
                     Enabled = "true",
-                    OpensearchDashboardsRequestTimeout = 30000,
+                    OpensearchRequestTimeout = "30000",
                 },
                 PublicAccess = new Aiven.Inputs.OpenSearchOpensearchUserConfigPublicAccessArgs
                 {
@@ -89,8 +89,8 @@ func main() {
 			OpensearchUserConfig: &aiven.OpenSearchOpensearchUserConfigArgs{
 				OpensearchVersion: pulumi.String("1"),
 				OpensearchDashboards: &aiven.OpenSearchOpensearchUserConfigOpensearchDashboardsArgs{
-					Enabled:                            pulumi.String("true"),
-					OpensearchDashboardsRequestTimeout: pulumi.Float64(30000),
+					Enabled:                  pulumi.String("true"),
+					OpensearchRequestTimeout: pulumi.String("30000"),
 				},
 				PublicAccess: &aiven.OpenSearchOpensearchUserConfigPublicAccessArgs{
 					Opensearch:           pulumi.String("true"),
@@ -127,7 +127,7 @@ os1 = aiven.OpenSearch("os1",
         opensearch_version="1",
         opensearch_dashboards=aiven.OpenSearchOpensearchUserConfigOpensearchDashboardsArgs(
             enabled="true",
-            opensearch_dashboards_request_timeout=30000,
+            opensearch_request_timeout="30000",
         ),
         public_access=aiven.OpenSearchOpensearchUserConfigPublicAccessArgs(
             opensearch="true",
@@ -158,7 +158,7 @@ const os1 = new aiven.OpenSearch("os1", {
         opensearchVersion: 1,
         opensearchDashboards: {
             enabled: true,
-            opensearchDashboardsRequestTimeout: 30000,
+            opensearchRequestTimeout: 30000,
         },
         publicAccess: {
             opensearch: true,

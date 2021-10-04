@@ -2881,13 +2881,14 @@ with the same context to allow both RSA and ECDSA certificates. Only the first c
     <dd>{{% md %}}name of SNI match.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="servicenames_csharp">
-<a href="#servicenames_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Names</a>
+        <span id="servernames_csharp">
+<a href="#servernames_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}A set of server names.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2911,13 +2912,14 @@ with the same context to allow both RSA and ECDSA certificates. Only the first c
     <dd>{{% md %}}name of SNI match.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="servicenames_go">
-<a href="#servicenames_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Names</a>
+        <span id="servernames_go">
+<a href="#servernames_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}A set of server names.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2941,13 +2943,14 @@ with the same context to allow both RSA and ECDSA certificates. Only the first c
     <dd>{{% md %}}name of SNI match.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="servicenames_nodejs">
-<a href="#servicenames_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Names</a>
+        <span id="servernames_nodejs">
+<a href="#servernames_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}A set of server names.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -2971,13 +2974,14 @@ with the same context to allow both RSA and ECDSA certificates. Only the first c
     <dd>{{% md %}}name of SNI match.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="service_names_python">
-<a href="#service_names_python" style="color: inherit; text-decoration: inherit;">service_<wbr>names</a>
+        <span id="server_names_python">
+<a href="#server_names_python" style="color: inherit; text-decoration: inherit;">server_<wbr>names</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}A set of server names.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="albloadbalancerlistenertlssnihandlerhandler">Alb<wbr>Load<wbr>Balancer<wbr>Listener<wbr>Tls<wbr>Sni<wbr>Handler<wbr>Handler</h4>

@@ -172,10 +172,14 @@ const f1 = new aiven.MirrorMakerReplicationFlow("f1", {
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">MirrorMakerReplicationFlow</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                               <span class="nx">emit_heartbeats_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                                <span class="nx">enable</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                                <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                               <span class="nx">replication_policy_class</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                                <span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                                <span class="nx">source_cluster</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                               <span class="nx">sync_group_offsets_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                               <span class="nx">sync_group_offsets_interval_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
                                <span class="nx">target_cluster</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                                <span class="nx">topics</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
                                <span class="nx">topics_blacklists</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span>
@@ -354,6 +358,42 @@ Flow belongs to. They should be defined using reference as shown above to set up
     <dd>{{% md %}}is a target cluster alias.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="emitheartbeatsenabled_csharp">
+<a href="#emitheartbeatsenabled_csharp" style="color: inherit; text-decoration: inherit;">Emit<wbr>Heartbeats<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Emit heartbeats enabled
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="replicationpolicyclass_csharp">
+<a href="#replicationpolicyclass_csharp" style="color: inherit; text-decoration: inherit;">Replication<wbr>Policy<wbr>Class</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Replication policy class
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="syncgroupoffsetsenabled_csharp">
+<a href="#syncgroupoffsetsenabled_csharp" style="color: inherit; text-decoration: inherit;">Sync<wbr>Group<wbr>Offsets<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Sync consumer group offsets
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="syncgroupoffsetsintervalseconds_csharp">
+<a href="#syncgroupoffsetsintervalseconds_csharp" style="color: inherit; text-decoration: inherit;">Sync<wbr>Group<wbr>Offsets<wbr>Interval<wbr>Seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Frequency of consumer group offset sync
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="topics_csharp">
 <a href="#topics_csharp" style="color: inherit; text-decoration: inherit;">Topics</a>
 </span>
@@ -420,6 +460,42 @@ Flow belongs to. They should be defined using reference as shown above to set up
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}is a target cluster alias.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="emitheartbeatsenabled_go">
+<a href="#emitheartbeatsenabled_go" style="color: inherit; text-decoration: inherit;">Emit<wbr>Heartbeats<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Emit heartbeats enabled
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="replicationpolicyclass_go">
+<a href="#replicationpolicyclass_go" style="color: inherit; text-decoration: inherit;">Replication<wbr>Policy<wbr>Class</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Replication policy class
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="syncgroupoffsetsenabled_go">
+<a href="#syncgroupoffsetsenabled_go" style="color: inherit; text-decoration: inherit;">Sync<wbr>Group<wbr>Offsets<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Sync consumer group offsets
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="syncgroupoffsetsintervalseconds_go">
+<a href="#syncgroupoffsetsintervalseconds_go" style="color: inherit; text-decoration: inherit;">Sync<wbr>Group<wbr>Offsets<wbr>Interval<wbr>Seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Frequency of consumer group offset sync
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="topics_go">
@@ -490,6 +566,42 @@ Flow belongs to. They should be defined using reference as shown above to set up
     <dd>{{% md %}}is a target cluster alias.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="emitheartbeatsenabled_nodejs">
+<a href="#emitheartbeatsenabled_nodejs" style="color: inherit; text-decoration: inherit;">emit<wbr>Heartbeats<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Emit heartbeats enabled
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="replicationpolicyclass_nodejs">
+<a href="#replicationpolicyclass_nodejs" style="color: inherit; text-decoration: inherit;">replication<wbr>Policy<wbr>Class</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Replication policy class
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="syncgroupoffsetsenabled_nodejs">
+<a href="#syncgroupoffsetsenabled_nodejs" style="color: inherit; text-decoration: inherit;">sync<wbr>Group<wbr>Offsets<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Sync consumer group offsets
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="syncgroupoffsetsintervalseconds_nodejs">
+<a href="#syncgroupoffsetsintervalseconds_nodejs" style="color: inherit; text-decoration: inherit;">sync<wbr>Group<wbr>Offsets<wbr>Interval<wbr>Seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Frequency of consumer group offset sync
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="topics_nodejs">
 <a href="#topics_nodejs" style="color: inherit; text-decoration: inherit;">topics</a>
 </span>
@@ -556,6 +668,42 @@ Flow belongs to. They should be defined using reference as shown above to set up
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}is a target cluster alias.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="emit_heartbeats_enabled_python">
+<a href="#emit_heartbeats_enabled_python" style="color: inherit; text-decoration: inherit;">emit_<wbr>heartbeats_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Emit heartbeats enabled
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="replication_policy_class_python">
+<a href="#replication_policy_class_python" style="color: inherit; text-decoration: inherit;">replication_<wbr>policy_<wbr>class</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Replication policy class
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sync_group_offsets_enabled_python">
+<a href="#sync_group_offsets_enabled_python" style="color: inherit; text-decoration: inherit;">sync_<wbr>group_<wbr>offsets_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Sync consumer group offsets
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sync_group_offsets_interval_seconds_python">
+<a href="#sync_group_offsets_interval_seconds_python" style="color: inherit; text-decoration: inherit;">sync_<wbr>group_<wbr>offsets_<wbr>interval_<wbr>seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Frequency of consumer group offset sync
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="topics_python">
@@ -648,10 +796,14 @@ Get an existing MirrorMakerReplicationFlow resource's state with the given name,
 <span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">emit_heartbeats_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">enable</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">replication_policy_class</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">source_cluster</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">sync_group_offsets_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">sync_group_offsets_interval_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">target_cluster</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">topics</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
         <span class="nx">topics_blacklists</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">) -&gt;</span> MirrorMakerReplicationFlow</code></pre></div>
@@ -767,6 +919,15 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="state_emitheartbeatsenabled_csharp">
+<a href="#state_emitheartbeatsenabled_csharp" style="color: inherit; text-decoration: inherit;">Emit<wbr>Heartbeats<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Emit heartbeats enabled
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_enable_csharp">
 <a href="#state_enable_csharp" style="color: inherit; text-decoration: inherit;">Enable</a>
 </span>
@@ -786,6 +947,15 @@ The following state arguments are supported:
 Flow belongs to. They should be defined using reference as shown above to set up dependencies correctly.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_replicationpolicyclass_csharp">
+<a href="#state_replicationpolicyclass_csharp" style="color: inherit; text-decoration: inherit;">Replication<wbr>Policy<wbr>Class</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Replication policy class
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_servicename_csharp">
 <a href="#state_servicename_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
 </span>
@@ -802,6 +972,24 @@ Flow belongs to. They should be defined using reference as shown above to set up
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}is a source cluster alias.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_syncgroupoffsetsenabled_csharp">
+<a href="#state_syncgroupoffsetsenabled_csharp" style="color: inherit; text-decoration: inherit;">Sync<wbr>Group<wbr>Offsets<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Sync consumer group offsets
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_syncgroupoffsetsintervalseconds_csharp">
+<a href="#state_syncgroupoffsetsintervalseconds_csharp" style="color: inherit; text-decoration: inherit;">Sync<wbr>Group<wbr>Offsets<wbr>Interval<wbr>Seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Frequency of consumer group offset sync
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targetcluster_csharp">
@@ -835,6 +1023,15 @@ Flow belongs to. They should be defined using reference as shown above to set up
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="state_emitheartbeatsenabled_go">
+<a href="#state_emitheartbeatsenabled_go" style="color: inherit; text-decoration: inherit;">Emit<wbr>Heartbeats<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Emit heartbeats enabled
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_enable_go">
 <a href="#state_enable_go" style="color: inherit; text-decoration: inherit;">Enable</a>
 </span>
@@ -854,6 +1051,15 @@ Flow belongs to. They should be defined using reference as shown above to set up
 Flow belongs to. They should be defined using reference as shown above to set up dependencies correctly.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_replicationpolicyclass_go">
+<a href="#state_replicationpolicyclass_go" style="color: inherit; text-decoration: inherit;">Replication<wbr>Policy<wbr>Class</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Replication policy class
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_servicename_go">
 <a href="#state_servicename_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
 </span>
@@ -870,6 +1076,24 @@ Flow belongs to. They should be defined using reference as shown above to set up
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}is a source cluster alias.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_syncgroupoffsetsenabled_go">
+<a href="#state_syncgroupoffsetsenabled_go" style="color: inherit; text-decoration: inherit;">Sync<wbr>Group<wbr>Offsets<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Sync consumer group offsets
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_syncgroupoffsetsintervalseconds_go">
+<a href="#state_syncgroupoffsetsintervalseconds_go" style="color: inherit; text-decoration: inherit;">Sync<wbr>Group<wbr>Offsets<wbr>Interval<wbr>Seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Frequency of consumer group offset sync
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targetcluster_go">
@@ -903,6 +1127,15 @@ Flow belongs to. They should be defined using reference as shown above to set up
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="state_emitheartbeatsenabled_nodejs">
+<a href="#state_emitheartbeatsenabled_nodejs" style="color: inherit; text-decoration: inherit;">emit<wbr>Heartbeats<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Emit heartbeats enabled
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_enable_nodejs">
 <a href="#state_enable_nodejs" style="color: inherit; text-decoration: inherit;">enable</a>
 </span>
@@ -922,6 +1155,15 @@ Flow belongs to. They should be defined using reference as shown above to set up
 Flow belongs to. They should be defined using reference as shown above to set up dependencies correctly.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_replicationpolicyclass_nodejs">
+<a href="#state_replicationpolicyclass_nodejs" style="color: inherit; text-decoration: inherit;">replication<wbr>Policy<wbr>Class</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Replication policy class
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_servicename_nodejs">
 <a href="#state_servicename_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Name</a>
 </span>
@@ -938,6 +1180,24 @@ Flow belongs to. They should be defined using reference as shown above to set up
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}is a source cluster alias.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_syncgroupoffsetsenabled_nodejs">
+<a href="#state_syncgroupoffsetsenabled_nodejs" style="color: inherit; text-decoration: inherit;">sync<wbr>Group<wbr>Offsets<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Sync consumer group offsets
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_syncgroupoffsetsintervalseconds_nodejs">
+<a href="#state_syncgroupoffsetsintervalseconds_nodejs" style="color: inherit; text-decoration: inherit;">sync<wbr>Group<wbr>Offsets<wbr>Interval<wbr>Seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Frequency of consumer group offset sync
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targetcluster_nodejs">
@@ -971,6 +1231,15 @@ Flow belongs to. They should be defined using reference as shown above to set up
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="state_emit_heartbeats_enabled_python">
+<a href="#state_emit_heartbeats_enabled_python" style="color: inherit; text-decoration: inherit;">emit_<wbr>heartbeats_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Emit heartbeats enabled
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_enable_python">
 <a href="#state_enable_python" style="color: inherit; text-decoration: inherit;">enable</a>
 </span>
@@ -990,6 +1259,15 @@ Flow belongs to. They should be defined using reference as shown above to set up
 Flow belongs to. They should be defined using reference as shown above to set up dependencies correctly.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_replication_policy_class_python">
+<a href="#state_replication_policy_class_python" style="color: inherit; text-decoration: inherit;">replication_<wbr>policy_<wbr>class</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Replication policy class
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_service_name_python">
 <a href="#state_service_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>name</a>
 </span>
@@ -1006,6 +1284,24 @@ Flow belongs to. They should be defined using reference as shown above to set up
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}is a source cluster alias.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_sync_group_offsets_enabled_python">
+<a href="#state_sync_group_offsets_enabled_python" style="color: inherit; text-decoration: inherit;">sync_<wbr>group_<wbr>offsets_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Sync consumer group offsets
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_sync_group_offsets_interval_seconds_python">
+<a href="#state_sync_group_offsets_interval_seconds_python" style="color: inherit; text-decoration: inherit;">sync_<wbr>group_<wbr>offsets_<wbr>interval_<wbr>seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Frequency of consumer group offset sync
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_target_cluster_python">

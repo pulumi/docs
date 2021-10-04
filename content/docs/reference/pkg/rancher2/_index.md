@@ -17,6 +17,7 @@ A Pulumi package for creating and managing rancher2 resources.
     <li><a href="activedirectory" title="ActiveDirectory"><span class="symbol resource"></span>ActiveDirectory</a></li>
     <li><a href="app" title="App"><span class="symbol resource"></span>App</a></li>
     <li><a href="appv2" title="AppV2"><span class="symbol resource"></span>AppV2</a></li>
+    <li><a href="authconfigactivedirectory" title="AuthConfigActiveDirectory"><span class="symbol resource"></span>AuthConfigActiveDirectory</a></li>
     <li><a href="authconfigadfs" title="AuthConfigAdfs"><span class="symbol resource"></span>AuthConfigAdfs</a></li>
     <li><a href="authconfigazuread" title="AuthConfigAzureAd"><span class="symbol resource"></span>AuthConfigAzureAd</a></li>
     <li><a href="authconfigfreeipa" title="AuthConfigFreeIpa"><span class="symbol resource"></span>AuthConfigFreeIpa</a></li>
@@ -40,12 +41,14 @@ A Pulumi package for creating and managing rancher2 resources.
     <li><a href="clusterroletemplatebinding" title="ClusterRoleTemplateBinding"><span class="symbol resource"></span>ClusterRoleTemplateBinding</a></li>
     <li><a href="clustersync" title="ClusterSync"><span class="symbol resource"></span>ClusterSync</a></li>
     <li><a href="clustertemplate" title="ClusterTemplate"><span class="symbol resource"></span>ClusterTemplate</a></li>
+    <li><a href="clusterv2" title="ClusterV2"><span class="symbol resource"></span>ClusterV2</a></li>
     <li><a href="etcdbackup" title="EtcdBackup"><span class="symbol resource"></span>EtcdBackup</a></li>
     <li><a href="feature" title="Feature"><span class="symbol resource"></span>Feature</a></li>
     <li><a href="globaldns" title="GlobalDns"><span class="symbol resource"></span>GlobalDns</a></li>
     <li><a href="globaldnsprovider" title="GlobalDnsProvider"><span class="symbol resource"></span>GlobalDnsProvider</a></li>
     <li><a href="globalrole" title="GlobalRole"><span class="symbol resource"></span>GlobalRole</a></li>
     <li><a href="globalrolebinding" title="GlobalRoleBinding"><span class="symbol resource"></span>GlobalRoleBinding</a></li>
+    <li><a href="machineconfigv2" title="MachineConfigV2"><span class="symbol resource"></span>MachineConfigV2</a></li>
     <li><a href="multiclusterapp" title="MultiClusterApp"><span class="symbol resource"></span>MultiClusterApp</a></li>
     <li><a href="namespace" title="Namespace"><span class="symbol resource"></span>Namespace</a></li>
     <li><a href="nodedriver" title="NodeDriver"><span class="symbol resource"></span>NodeDriver</a></li>
@@ -61,9 +64,11 @@ A Pulumi package for creating and managing rancher2 resources.
     <li><a href="provider" title="Provider"><span class="symbol resource"></span>Provider</a></li>
     <li><a href="registry" title="Registry"><span class="symbol resource"></span>Registry</a></li>
     <li><a href="roletempalte" title="RoleTempalte"><span class="symbol resource"></span>RoleTempalte</a></li>
+    <li><a href="roletemplate" title="RoleTemplate"><span class="symbol resource"></span>RoleTemplate</a></li>
     <li><a href="secret" title="Secret"><span class="symbol resource"></span>Secret</a></li>
     <li><a href="secretv2" title="SecretV2"><span class="symbol resource"></span>SecretV2</a></li>
     <li><a href="setting" title="Setting"><span class="symbol resource"></span>Setting</a></li>
+    <li><a href="storageclassv2" title="StorageClassV2"><span class="symbol resource"></span>StorageClassV2</a></li>
     <li><a href="token" title="Token"><span class="symbol resource"></span>Token</a></li>
     <li><a href="user" title="User"><span class="symbol resource"></span>User</a></li>
 </ul>
@@ -83,6 +88,7 @@ A Pulumi package for creating and managing rancher2 resources.
     <li><a href="getclusterroletemplatebinding" title="GetClusterRoleTemplateBinding"><span class="symbol function"></span>GetClusterRoleTemplateBinding</a></li>
     <li><a href="getclusterscan" title="GetClusterScan"><span class="symbol function"></span>GetClusterScan</a></li>
     <li><a href="getclustertemplate" title="GetClusterTemplate"><span class="symbol function"></span>GetClusterTemplate</a></li>
+    <li><a href="getclusterv2" title="GetClusterV2"><span class="symbol function"></span>GetClusterV2</a></li>
     <li><a href="getetcdbackup" title="GetEtcdBackup"><span class="symbol function"></span>GetEtcdBackup</a></li>
     <li><a href="getglobaldnsprovider" title="GetGlobalDnsProvider"><span class="symbol function"></span>GetGlobalDnsProvider</a></li>
     <li><a href="getglobalrole" title="GetGlobalRole"><span class="symbol function"></span>GetGlobalRole</a></li>
@@ -105,6 +111,7 @@ A Pulumi package for creating and managing rancher2 resources.
     <li><a href="getsecret" title="GetSecret"><span class="symbol function"></span>GetSecret</a></li>
     <li><a href="getsecretv2" title="GetSecretV2"><span class="symbol function"></span>GetSecretV2</a></li>
     <li><a href="getsetting" title="GetSetting"><span class="symbol function"></span>GetSetting</a></li>
+    <li><a href="getstorageclassv2" title="GetStorageClassV2"><span class="symbol function"></span>GetStorageClassV2</a></li>
     <li><a href="getuser" title="GetUser"><span class="symbol function"></span>GetUser</a></li>
 </ul>
 
@@ -117,6 +124,6 @@ A Pulumi package for creating and managing rancher2 resources.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`rancher2` Terraform Provider](https://github.com/rancher/terraform-provider-rancher2).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>3.2.0</dd>
+	<dd>3.3.0</dd>
 </dl>
 
