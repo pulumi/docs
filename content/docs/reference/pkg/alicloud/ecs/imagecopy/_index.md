@@ -160,6 +160,7 @@ const defaultImageCopy = new alicloud.ecs.ImageCopy("default", {
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">ImageCopy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+              <span class="nx">delete_auto_snapshot</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
               <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
               <span class="nx">encrypted</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
               <span class="nx">force</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
@@ -316,6 +317,14 @@ The ImageCopy resource accepts the following [input]({{< relref "/docs/intro/con
     <dd>{{% md %}}The ID of the region to which the source custom image belongs. You can call [DescribeRegions](https://www.alibabacloud.com/help/doc-detail/25609.htm) to view the latest regions of Alibaba Cloud.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="deleteautosnapshot_csharp">
+<a href="#deleteautosnapshot_csharp" style="color: inherit; text-decoration: inherit;">Delete<wbr>Auto<wbr>Snapshot</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
 </span>
@@ -401,6 +410,14 @@ The ImageCopy resource accepts the following [input]({{< relref "/docs/intro/con
     </dt>
     <dd>{{% md %}}The ID of the region to which the source custom image belongs. You can call [DescribeRegions](https://www.alibabacloud.com/help/doc-detail/25609.htm) to view the latest regions of Alibaba Cloud.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="deleteautosnapshot_go">
+<a href="#deleteautosnapshot_go" style="color: inherit; text-decoration: inherit;">Delete<wbr>Auto<wbr>Snapshot</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -488,6 +505,14 @@ The ImageCopy resource accepts the following [input]({{< relref "/docs/intro/con
     <dd>{{% md %}}The ID of the region to which the source custom image belongs. You can call [DescribeRegions](https://www.alibabacloud.com/help/doc-detail/25609.htm) to view the latest regions of Alibaba Cloud.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="deleteautosnapshot_nodejs">
+<a href="#deleteautosnapshot_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>Auto<wbr>Snapshot</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
@@ -573,6 +598,14 @@ The ImageCopy resource accepts the following [input]({{< relref "/docs/intro/con
     </dt>
     <dd>{{% md %}}The ID of the region to which the source custom image belongs. You can call [DescribeRegions](https://www.alibabacloud.com/help/doc-detail/25609.htm) to view the latest regions of Alibaba Cloud.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="delete_auto_snapshot_python">
+<a href="#delete_auto_snapshot_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>auto_<wbr>snapshot</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -710,6 +743,7 @@ Get an existing ImageCopy resource's state with the given name, ID, and optional
 <span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">delete_auto_snapshot</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">encrypted</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">force</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
@@ -831,6 +865,14 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="state_deleteautosnapshot_csharp">
+<a href="#state_deleteautosnapshot_csharp" style="color: inherit; text-decoration: inherit;">Delete<wbr>Auto<wbr>Snapshot</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
 </span>
@@ -916,6 +958,14 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="state_deleteautosnapshot_go">
+<a href="#state_deleteautosnapshot_go" style="color: inherit; text-decoration: inherit;">Delete<wbr>Auto<wbr>Snapshot</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1003,6 +1053,14 @@ The following state arguments are supported:
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="state_deleteautosnapshot_nodejs">
+<a href="#state_deleteautosnapshot_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>Auto<wbr>Snapshot</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
@@ -1088,6 +1146,14 @@ The following state arguments are supported:
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="state_delete_auto_snapshot_python">
+<a href="#state_delete_auto_snapshot_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>auto_<wbr>snapshot</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>

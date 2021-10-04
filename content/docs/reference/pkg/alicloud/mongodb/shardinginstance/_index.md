@@ -42,6 +42,7 @@ MongoDB can be imported using the id, e.g.
                      <span class="nx">kms_encryption_context</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">,</span>
                      <span class="nx">mongo_lists</span><span class="p">:</span> <span class="nx">Optional[Sequence[ShardingInstanceMongoListArgs]]</span> = None<span class="p">,</span>
                      <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                     <span class="nx">order_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                      <span class="nx">period</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
                      <span class="nx">security_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                      <span class="nx">security_ip_lists</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
@@ -270,6 +271,18 @@ The ShardingInstance resource accepts the following [input]({{< relref "/docs/in
     <dd>{{% md %}}The name of DB instance. It a string of 2 to 256 characters.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="ordertype_csharp">
+<a href="#ordertype_csharp" style="color: inherit; text-decoration: inherit;">Order<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of configuration changes performed. Default value: DOWNGRADE. Valid values:
+* UPGRADE: The specifications are upgraded.
+* DOWNGRADE: The specifications are downgraded.
+Note: This parameter is only applicable to instances when `instance_charge_type` is PrePaid.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="period_csharp">
 <a href="#period_csharp" style="color: inherit; text-decoration: inherit;">Period</a>
 </span>
@@ -434,6 +447,18 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of DB instance. It a string of 2 to 256 characters.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ordertype_go">
+<a href="#ordertype_go" style="color: inherit; text-decoration: inherit;">Order<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of configuration changes performed. Default value: DOWNGRADE. Valid values:
+* UPGRADE: The specifications are upgraded.
+* DOWNGRADE: The specifications are downgraded.
+Note: This parameter is only applicable to instances when `instance_charge_type` is PrePaid.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="period_go">
@@ -602,6 +627,18 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
     <dd>{{% md %}}The name of DB instance. It a string of 2 to 256 characters.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="ordertype_nodejs">
+<a href="#ordertype_nodejs" style="color: inherit; text-decoration: inherit;">order<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of configuration changes performed. Default value: DOWNGRADE. Valid values:
+* UPGRADE: The specifications are upgraded.
+* DOWNGRADE: The specifications are downgraded.
+Note: This parameter is only applicable to instances when `instance_charge_type` is PrePaid.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="period_nodejs">
 <a href="#period_nodejs" style="color: inherit; text-decoration: inherit;">period</a>
 </span>
@@ -766,6 +803,18 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of DB instance. It a string of 2 to 256 characters.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="order_type_python">
+<a href="#order_type_python" style="color: inherit; text-decoration: inherit;">order_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The type of configuration changes performed. Default value: DOWNGRADE. Valid values:
+* UPGRADE: The specifications are upgraded.
+* DOWNGRADE: The specifications are downgraded.
+Note: This parameter is only applicable to instances when `instance_charge_type` is PrePaid.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="period_python">
@@ -957,6 +1006,7 @@ Get an existing ShardingInstance resource's state with the given name, ID, and o
         <span class="nx">kms_encryption_context</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">,</span>
         <span class="nx">mongo_lists</span><span class="p">:</span> <span class="nx">Optional[Sequence[ShardingInstanceMongoListArgs]]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">order_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">period</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">retention_period</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">security_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -1160,6 +1210,18 @@ The following state arguments are supported:
     <dd>{{% md %}}The name of DB instance. It a string of 2 to 256 characters.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_ordertype_csharp">
+<a href="#state_ordertype_csharp" style="color: inherit; text-decoration: inherit;">Order<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of configuration changes performed. Default value: DOWNGRADE. Valid values:
+* UPGRADE: The specifications are upgraded.
+* DOWNGRADE: The specifications are downgraded.
+Note: This parameter is only applicable to instances when `instance_charge_type` is PrePaid.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_period_csharp">
 <a href="#state_period_csharp" style="color: inherit; text-decoration: inherit;">Period</a>
 </span>
@@ -1333,6 +1395,18 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of DB instance. It a string of 2 to 256 characters.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_ordertype_go">
+<a href="#state_ordertype_go" style="color: inherit; text-decoration: inherit;">Order<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of configuration changes performed. Default value: DOWNGRADE. Valid values:
+* UPGRADE: The specifications are upgraded.
+* DOWNGRADE: The specifications are downgraded.
+Note: This parameter is only applicable to instances when `instance_charge_type` is PrePaid.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_period_go">
@@ -1510,6 +1584,18 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
     <dd>{{% md %}}The name of DB instance. It a string of 2 to 256 characters.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_ordertype_nodejs">
+<a href="#state_ordertype_nodejs" style="color: inherit; text-decoration: inherit;">order<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of configuration changes performed. Default value: DOWNGRADE. Valid values:
+* UPGRADE: The specifications are upgraded.
+* DOWNGRADE: The specifications are downgraded.
+Note: This parameter is only applicable to instances when `instance_charge_type` is PrePaid.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_period_nodejs">
 <a href="#state_period_nodejs" style="color: inherit; text-decoration: inherit;">period</a>
 </span>
@@ -1683,6 +1769,18 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of DB instance. It a string of 2 to 256 characters.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_order_type_python">
+<a href="#state_order_type_python" style="color: inherit; text-decoration: inherit;">order_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The type of configuration changes performed. Default value: DOWNGRADE. Valid values:
+* UPGRADE: The specifications are upgraded.
+* DOWNGRADE: The specifications are downgraded.
+Note: This parameter is only applicable to instances when `instance_charge_type` is PrePaid.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_period_python">

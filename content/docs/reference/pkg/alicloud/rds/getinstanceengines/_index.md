@@ -146,7 +146,9 @@ export const firstDbCategory = resources.instanceEngines[0].category;
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_instance_engines(</span><span class="nx">engine</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_instance_engines(</span><span class="nx">category</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                         <span class="nx">db_instance_storage_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                         <span class="nx">engine</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                          <span class="nx">engine_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                          <span class="nx">instance_charge_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                          <span class="nx">multi_zone</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
@@ -178,13 +180,31 @@ The following arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="category_csharp">
+<a href="#category_csharp" style="color: inherit; text-decoration: inherit;">Category</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}DB Instance category. the value like [`Basic`, `HighAvailability`, `Finance`, `AlwaysOn`], [detail info](https://www.alibabacloud.com/help/doc-detail/69795.htm).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dbinstancestoragetype_csharp">
+<a href="#dbinstancestoragetype_csharp" style="color: inherit; text-decoration: inherit;">Db<wbr>Instance<wbr>Storage<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The DB instance storage space required by the user. Valid values: "cloud_ssd", "local_ssd", "cloud_essd", "cloud_essd2", "cloud_essd3".
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="engine_csharp">
 <a href="#engine_csharp" style="color: inherit; text-decoration: inherit;">Engine</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Database type. Options are `MySQL`, `SQLServer`, `PostgreSQL` and `PPAS`. If no value is specified, all types are returned.
+    <dd>{{% md %}}Database type. Valid values: "MySQL", "SQLServer", "PostgreSQL", "PPAS", "MariaDB". If not set, it will match all of engines.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="engineversion_csharp">
@@ -235,13 +255,31 @@ The following arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="category_go">
+<a href="#category_go" style="color: inherit; text-decoration: inherit;">Category</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}DB Instance category. the value like [`Basic`, `HighAvailability`, `Finance`, `AlwaysOn`], [detail info](https://www.alibabacloud.com/help/doc-detail/69795.htm).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dbinstancestoragetype_go">
+<a href="#dbinstancestoragetype_go" style="color: inherit; text-decoration: inherit;">Db<wbr>Instance<wbr>Storage<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The DB instance storage space required by the user. Valid values: "cloud_ssd", "local_ssd", "cloud_essd", "cloud_essd2", "cloud_essd3".
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="engine_go">
 <a href="#engine_go" style="color: inherit; text-decoration: inherit;">Engine</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Database type. Options are `MySQL`, `SQLServer`, `PostgreSQL` and `PPAS`. If no value is specified, all types are returned.
+    <dd>{{% md %}}Database type. Valid values: "MySQL", "SQLServer", "PostgreSQL", "PPAS", "MariaDB". If not set, it will match all of engines.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="engineversion_go">
@@ -292,13 +330,31 @@ The following arguments are supported:
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="category_nodejs">
+<a href="#category_nodejs" style="color: inherit; text-decoration: inherit;">category</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}DB Instance category. the value like [`Basic`, `HighAvailability`, `Finance`, `AlwaysOn`], [detail info](https://www.alibabacloud.com/help/doc-detail/69795.htm).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dbinstancestoragetype_nodejs">
+<a href="#dbinstancestoragetype_nodejs" style="color: inherit; text-decoration: inherit;">db<wbr>Instance<wbr>Storage<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The DB instance storage space required by the user. Valid values: "cloud_ssd", "local_ssd", "cloud_essd", "cloud_essd2", "cloud_essd3".
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="engine_nodejs">
 <a href="#engine_nodejs" style="color: inherit; text-decoration: inherit;">engine</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Database type. Options are `MySQL`, `SQLServer`, `PostgreSQL` and `PPAS`. If no value is specified, all types are returned.
+    <dd>{{% md %}}Database type. Valid values: "MySQL", "SQLServer", "PostgreSQL", "PPAS", "MariaDB". If not set, it will match all of engines.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="engineversion_nodejs">
@@ -349,13 +405,31 @@ The following arguments are supported:
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="category_python">
+<a href="#category_python" style="color: inherit; text-decoration: inherit;">category</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}DB Instance category. the value like [`Basic`, `HighAvailability`, `Finance`, `AlwaysOn`], [detail info](https://www.alibabacloud.com/help/doc-detail/69795.htm).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="db_instance_storage_type_python">
+<a href="#db_instance_storage_type_python" style="color: inherit; text-decoration: inherit;">db_<wbr>instance_<wbr>storage_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The DB instance storage space required by the user. Valid values: "cloud_ssd", "local_ssd", "cloud_essd", "cloud_essd2", "cloud_essd3".
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="engine_python">
 <a href="#engine_python" style="color: inherit; text-decoration: inherit;">engine</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Database type. Options are `MySQL`, `SQLServer`, `PostgreSQL` and `PPAS`. If no value is specified, all types are returned.
+    <dd>{{% md %}}Database type. Valid values: "MySQL", "SQLServer", "PostgreSQL", "PPAS", "MariaDB". If not set, it will match all of engines.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="engine_version_python">
@@ -424,6 +498,15 @@ The following output properties are available:
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="ids_csharp">
+<a href="#ids_csharp" style="color: inherit; text-decoration: inherit;">Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of engines.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="instanceengines_csharp">
 <a href="#instanceengines_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Engines</a>
 </span>
@@ -432,6 +515,23 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}A list of Rds available resource. Each element contains the following attributes:
 {{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="category_csharp">
+<a href="#category_csharp" style="color: inherit; text-decoration: inherit;">Category</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}DB Instance category.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="dbinstancestoragetype_csharp">
+<a href="#dbinstancestoragetype_csharp" style="color: inherit; text-decoration: inherit;">Db<wbr>Instance<wbr>Storage<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="engine_csharp">
 <a href="#engine_csharp" style="color: inherit; text-decoration: inherit;">Engine</a>
@@ -496,6 +596,15 @@ The following output properties are available:
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="ids_go">
+<a href="#ids_go" style="color: inherit; text-decoration: inherit;">Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of engines.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="instanceengines_go">
 <a href="#instanceengines_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Engines</a>
 </span>
@@ -504,6 +613,23 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}A list of Rds available resource. Each element contains the following attributes:
 {{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="category_go">
+<a href="#category_go" style="color: inherit; text-decoration: inherit;">Category</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}DB Instance category.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="dbinstancestoragetype_go">
+<a href="#dbinstancestoragetype_go" style="color: inherit; text-decoration: inherit;">Db<wbr>Instance<wbr>Storage<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="engine_go">
 <a href="#engine_go" style="color: inherit; text-decoration: inherit;">Engine</a>
@@ -568,6 +694,15 @@ The following output properties are available:
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="ids_nodejs">
+<a href="#ids_nodejs" style="color: inherit; text-decoration: inherit;">ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of engines.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="instanceengines_nodejs">
 <a href="#instanceengines_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Engines</a>
 </span>
@@ -576,6 +711,23 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}A list of Rds available resource. Each element contains the following attributes:
 {{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="category_nodejs">
+<a href="#category_nodejs" style="color: inherit; text-decoration: inherit;">category</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}DB Instance category.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="dbinstancestoragetype_nodejs">
+<a href="#dbinstancestoragetype_nodejs" style="color: inherit; text-decoration: inherit;">db<wbr>Instance<wbr>Storage<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="engine_nodejs">
 <a href="#engine_nodejs" style="color: inherit; text-decoration: inherit;">engine</a>
@@ -640,6 +792,15 @@ The following output properties are available:
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="ids_python">
+<a href="#ids_python" style="color: inherit; text-decoration: inherit;">ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of engines.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="instance_engines_python">
 <a href="#instance_engines_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>engines</a>
 </span>
@@ -648,6 +809,23 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}A list of Rds available resource. Each element contains the following attributes:
 {{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="category_python">
+<a href="#category_python" style="color: inherit; text-decoration: inherit;">category</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}DB Instance category.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="db_instance_storage_type_python">
+<a href="#db_instance_storage_type_python" style="color: inherit; text-decoration: inherit;">db_<wbr>instance_<wbr>storage_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="engine_python">
 <a href="#engine_python" style="color: inherit; text-decoration: inherit;">engine</a>
@@ -719,7 +897,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}DB Instance category.
+    <dd>{{% md %}}DB Instance category. the value like [`Basic`, `HighAvailability`, `Finance`, `AlwaysOn`], [detail info](https://www.alibabacloud.com/help/doc-detail/69795.htm).
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="engine_csharp">
@@ -728,7 +906,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Database type. Options are `MySQL`, `SQLServer`, `PostgreSQL` and `PPAS`. If no value is specified, all types are returned.
+    <dd>{{% md %}}Database type. Valid values: "MySQL", "SQLServer", "PostgreSQL", "PPAS", "MariaDB". If not set, it will match all of engines.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="engineversion_csharp">
@@ -759,7 +937,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}DB Instance category.
+    <dd>{{% md %}}DB Instance category. the value like [`Basic`, `HighAvailability`, `Finance`, `AlwaysOn`], [detail info](https://www.alibabacloud.com/help/doc-detail/69795.htm).
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="engine_go">
@@ -768,7 +946,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Database type. Options are `MySQL`, `SQLServer`, `PostgreSQL` and `PPAS`. If no value is specified, all types are returned.
+    <dd>{{% md %}}Database type. Valid values: "MySQL", "SQLServer", "PostgreSQL", "PPAS", "MariaDB". If not set, it will match all of engines.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="engineversion_go">
@@ -799,7 +977,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}DB Instance category.
+    <dd>{{% md %}}DB Instance category. the value like [`Basic`, `HighAvailability`, `Finance`, `AlwaysOn`], [detail info](https://www.alibabacloud.com/help/doc-detail/69795.htm).
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="engine_nodejs">
@@ -808,7 +986,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Database type. Options are `MySQL`, `SQLServer`, `PostgreSQL` and `PPAS`. If no value is specified, all types are returned.
+    <dd>{{% md %}}Database type. Valid values: "MySQL", "SQLServer", "PostgreSQL", "PPAS", "MariaDB". If not set, it will match all of engines.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="engineversion_nodejs">
@@ -839,7 +1017,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}DB Instance category.
+    <dd>{{% md %}}DB Instance category. the value like [`Basic`, `HighAvailability`, `Finance`, `AlwaysOn`], [detail info](https://www.alibabacloud.com/help/doc-detail/69795.htm).
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="engine_python">
@@ -848,7 +1026,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Database type. Options are `MySQL`, `SQLServer`, `PostgreSQL` and `PPAS`. If no value is specified, all types are returned.
+    <dd>{{% md %}}Database type. Valid values: "MySQL", "SQLServer", "PostgreSQL", "PPAS", "MariaDB". If not set, it will match all of engines.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="engine_version_python">

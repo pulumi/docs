@@ -1329,6 +1329,15 @@ The following output properties are available:
     <dd>{{% md %}}The nat type of NAT gateway. Valid values `Enhanced` and `Normal`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="networktype_csharp">
+<a href="#networktype_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}(Available in 1.137.0+) Indicates the type of the created NAT gateway. Valid values `internet` and `intranet`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="paymenttype_csharp">
 <a href="#paymenttype_csharp" style="color: inherit; text-decoration: inherit;">Payment<wbr>Type</a>
 </span>
@@ -1529,6 +1538,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The nat type of NAT gateway. Valid values `Enhanced` and `Normal`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="networktype_go">
+<a href="#networktype_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}(Available in 1.137.0+) Indicates the type of the created NAT gateway. Valid values `internet` and `intranet`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="paymenttype_go">
@@ -1733,6 +1751,15 @@ The following output properties are available:
     <dd>{{% md %}}The nat type of NAT gateway. Valid values `Enhanced` and `Normal`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="networktype_nodejs">
+<a href="#networktype_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}(Available in 1.137.0+) Indicates the type of the created NAT gateway. Valid values `internet` and `intranet`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="paymenttype_nodejs">
 <a href="#paymenttype_nodejs" style="color: inherit; text-decoration: inherit;">payment<wbr>Type</a>
 </span>
@@ -1933,6 +1960,15 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The nat type of NAT gateway. Valid values `Enhanced` and `Normal`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="network_type_python">
+<a href="#network_type_python" style="color: inherit; text-decoration: inherit;">network_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}(Available in 1.137.0+) Indicates the type of the created NAT gateway. Valid values `internet` and `intranet`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="payment_type_python">

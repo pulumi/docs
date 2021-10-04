@@ -202,7 +202,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Recovery Destination Types. Valid Values: `ECS_FILE`, `OSS`, `NAS`.
+    <dd>{{% md %}}The type of recovery destination. Valid Values: `ECS_FILE`, `OSS`, `NAS`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="outputfile_csharp">
@@ -219,7 +219,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The restore id.
+    <dd>{{% md %}}The ID of restore job.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcetypes_csharp">
@@ -228,7 +228,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The Type of Data Source. Valid Values: `ECS_FILE`, `OSS`, `NAS`.
+    <dd>{{% md %}}The type of data source. Valid Values: `ECS_FILE`, `OSS`, `NAS`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_csharp">
@@ -237,7 +237,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Restore Job Status.
+    <dd>{{% md %}}The status of restore job.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetbuckets_csharp">
@@ -246,7 +246,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The Target ofo OSS Bucket Name.
+    <dd>{{% md %}}The name of target ofo OSS bucket.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetfilesystemids_csharp">
@@ -255,7 +255,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The Destination File System ID.
+    <dd>{{% md %}}The ID of destination file system.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetinstanceids_csharp">
@@ -264,7 +264,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Objective to ECS Instance Id.
+    <dd>{{% md %}}The ID of target ECS instance.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vaultids_csharp">
@@ -273,7 +273,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The ID of Vault.
+    <dd>{{% md %}}The ID of backup vault.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -286,7 +286,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Recovery Destination Types. Valid Values: `ECS_FILE`, `OSS`, `NAS`.
+    <dd>{{% md %}}The type of recovery destination. Valid Values: `ECS_FILE`, `OSS`, `NAS`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="outputfile_go">
@@ -303,7 +303,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The restore id.
+    <dd>{{% md %}}The ID of restore job.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcetypes_go">
@@ -312,7 +312,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The Type of Data Source. Valid Values: `ECS_FILE`, `OSS`, `NAS`.
+    <dd>{{% md %}}The type of data source. Valid Values: `ECS_FILE`, `OSS`, `NAS`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_go">
@@ -321,7 +321,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Restore Job Status.
+    <dd>{{% md %}}The status of restore job.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetbuckets_go">
@@ -330,7 +330,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The Target ofo OSS Bucket Name.
+    <dd>{{% md %}}The name of target ofo OSS bucket.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetfilesystemids_go">
@@ -339,7 +339,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The Destination File System ID.
+    <dd>{{% md %}}The ID of destination file system.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetinstanceids_go">
@@ -348,7 +348,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Objective to ECS Instance Id.
+    <dd>{{% md %}}The ID of target ECS instance.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vaultids_go">
@@ -357,7 +357,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The ID of Vault.
+    <dd>{{% md %}}The ID of backup vault.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -370,7 +370,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Recovery Destination Types. Valid Values: `ECS_FILE`, `OSS`, `NAS`.
+    <dd>{{% md %}}The type of recovery destination. Valid Values: `ECS_FILE`, `OSS`, `NAS`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="outputfile_nodejs">
@@ -387,7 +387,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The restore id.
+    <dd>{{% md %}}The ID of restore job.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcetypes_nodejs">
@@ -396,7 +396,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The Type of Data Source. Valid Values: `ECS_FILE`, `OSS`, `NAS`.
+    <dd>{{% md %}}The type of data source. Valid Values: `ECS_FILE`, `OSS`, `NAS`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_nodejs">
@@ -405,7 +405,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Restore Job Status.
+    <dd>{{% md %}}The status of restore job.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetbuckets_nodejs">
@@ -414,7 +414,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The Target ofo OSS Bucket Name.
+    <dd>{{% md %}}The name of target ofo OSS bucket.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetfilesystemids_nodejs">
@@ -423,7 +423,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The Destination File System ID.
+    <dd>{{% md %}}The ID of destination file system.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetinstanceids_nodejs">
@@ -432,7 +432,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Objective to ECS Instance Id.
+    <dd>{{% md %}}The ID of target ECS instance.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vaultids_nodejs">
@@ -441,7 +441,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The ID of Vault.
+    <dd>{{% md %}}The ID of backup vault.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -454,7 +454,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Recovery Destination Types. Valid Values: `ECS_FILE`, `OSS`, `NAS`.
+    <dd>{{% md %}}The type of recovery destination. Valid Values: `ECS_FILE`, `OSS`, `NAS`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="output_file_python">
@@ -471,7 +471,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The restore id.
+    <dd>{{% md %}}The ID of restore job.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_types_python">
@@ -480,7 +480,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The Type of Data Source. Valid Values: `ECS_FILE`, `OSS`, `NAS`.
+    <dd>{{% md %}}The type of data source. Valid Values: `ECS_FILE`, `OSS`, `NAS`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_python">
@@ -489,7 +489,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Restore Job Status.
+    <dd>{{% md %}}The status of restore job.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_buckets_python">
@@ -498,7 +498,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The Target ofo OSS Bucket Name.
+    <dd>{{% md %}}The name of target ofo OSS bucket.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_file_system_ids_python">
@@ -507,7 +507,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The Destination File System ID.
+    <dd>{{% md %}}The ID of destination file system.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_instance_ids_python">
@@ -516,7 +516,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Objective to ECS Instance Id.
+    <dd>{{% md %}}The ID of target ECS instance.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vault_ids_python">
@@ -525,7 +525,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The ID of Vault.
+    <dd>{{% md %}}The ID of backup vault.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -961,7 +961,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Actual Size of Snapshot.
+    <dd>{{% md %}}The actual size of Snapshot.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="actualitems_csharp">
@@ -970,7 +970,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Actual Number of Files.
+    <dd>{{% md %}}The actual number of files.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="bytesdone_csharp">
@@ -979,7 +979,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Recovery Is Successful, Size.
+    <dd>{{% md %}}The size of restore job recovered.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="bytestotal_csharp">
@@ -988,7 +988,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Restored Total.
+    <dd>{{% md %}}The total size of restore job recovered.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="completetime_csharp">
@@ -997,7 +997,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Restore Completion Time.
+    <dd>{{% md %}}The completion time of restore Job.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="createtime_csharp">
@@ -1006,7 +1006,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Restore Job Creation Time.
+    <dd>{{% md %}}The creation time of restore job.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="errorfile_csharp">
@@ -1023,7 +1023,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Recovery Task Execution Error Message.
+    <dd>{{% md %}}The error message of recovery task execution.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="expiretime_csharp">
@@ -1032,7 +1032,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Restore the Expiration Time. Unix Time in Seconds.
+    <dd>{{% md %}}The expiration time of restore job. Unix Time in seconds.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_csharp">
@@ -1041,7 +1041,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the Restore Job.
+    <dd>{{% md %}}The ID of the restore job.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="itemsdone_csharp">
@@ -1050,7 +1050,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Log of Files Successfully Recovered the Number.
+    <dd>{{% md %}}The number of items restore job recovered.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="itemstotal_csharp">
@@ -1059,7 +1059,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}File the Total Number.
+    <dd>{{% md %}}The total number of items restore job recovered.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="options_csharp">
@@ -1077,7 +1077,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Parent Node.
+    <dd>{{% md %}}The ID of parent node.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="progress_csharp">
@@ -1086,7 +1086,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The Recovery Progress 100% * 100.
+    <dd>{{% md %}}The recovery progress.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="restorejobid_csharp">
@@ -1095,7 +1095,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Restore Job ID.
+    <dd>{{% md %}}The ID of restore job.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="restoretype_csharp">
@@ -1104,7 +1104,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Recovery Destination Types. Valid Values: `ECS_FILE`, `OSS`, `NAS`.
+    <dd>{{% md %}}The type of recovery destination. Valid Values: `ECS_FILE`, `OSS`, `NAS`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="snapshothash_csharp">
@@ -1113,7 +1113,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Restore Snapshot of HashCode.
+    <dd>{{% md %}}The hashcode of Snapshot.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="snapshotid_csharp">
@@ -1131,7 +1131,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Type of Data Source. Valid Values: `ECS_FILE`, `OSS`, `NAS`.
+    <dd>{{% md %}}The type of data source. Valid Values: `ECS_FILE`, `OSS`, `NAS`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="starttime_csharp">
@@ -1140,7 +1140,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Restoring the Start Time. Unix Time in Seconds.
+    <dd>{{% md %}}The start time of restore job. Unix Time in Seconds.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="status_csharp">
@@ -1149,7 +1149,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Restore Job Status.
+    <dd>{{% md %}}The status of restore job.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetbucket_csharp">
@@ -1158,7 +1158,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Target ofo OSS Bucket Name.
+    <dd>{{% md %}}The name of target ofo OSS bucket.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetclientid_csharp">
@@ -1167,7 +1167,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of Target Client.
+    <dd>{{% md %}}The ID of target client.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetcreatetime_csharp">
@@ -1176,7 +1176,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Destination File System Creation Time.
+    <dd>{{% md %}}The creation time of destination file system.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetdatasourceid_csharp">
@@ -1185,7 +1185,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Destination ID.
+    <dd>{{% md %}}The ID of destination data source.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetfilesystemid_csharp">
@@ -1194,7 +1194,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Destination File System ID.
+    <dd>{{% md %}}The ID of destination file system.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetinstanceid_csharp">
@@ -1203,7 +1203,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Objective to ECS Instance Id.
+    <dd>{{% md %}}The ID of target ECS instance.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetpath_csharp">
@@ -1212,7 +1212,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Target of (ECS) Instance Changes the ECS File Path.
+    <dd>{{% md %}}The target file path of ECS instance.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetprefix_csharp">
@@ -1221,7 +1221,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Target of the OSS Object Prefix.
+    <dd>{{% md %}}The file prefix of target OSS object.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="updatedtime_csharp">
@@ -1230,7 +1230,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Update Time.
+    <dd>{{% md %}}The update Time of restore job. Unix Time in Seconds.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vaultid_csharp">
@@ -1239,7 +1239,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of Vault.
+    <dd>{{% md %}}The ID of backup vault.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1252,7 +1252,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Actual Size of Snapshot.
+    <dd>{{% md %}}The actual size of Snapshot.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="actualitems_go">
@@ -1261,7 +1261,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Actual Number of Files.
+    <dd>{{% md %}}The actual number of files.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="bytesdone_go">
@@ -1270,7 +1270,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Recovery Is Successful, Size.
+    <dd>{{% md %}}The size of restore job recovered.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="bytestotal_go">
@@ -1279,7 +1279,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Restored Total.
+    <dd>{{% md %}}The total size of restore job recovered.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="completetime_go">
@@ -1288,7 +1288,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Restore Completion Time.
+    <dd>{{% md %}}The completion time of restore Job.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="createtime_go">
@@ -1297,7 +1297,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Restore Job Creation Time.
+    <dd>{{% md %}}The creation time of restore job.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="errorfile_go">
@@ -1314,7 +1314,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Recovery Task Execution Error Message.
+    <dd>{{% md %}}The error message of recovery task execution.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="expiretime_go">
@@ -1323,7 +1323,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Restore the Expiration Time. Unix Time in Seconds.
+    <dd>{{% md %}}The expiration time of restore job. Unix Time in seconds.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_go">
@@ -1332,7 +1332,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the Restore Job.
+    <dd>{{% md %}}The ID of the restore job.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="itemsdone_go">
@@ -1341,7 +1341,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Log of Files Successfully Recovered the Number.
+    <dd>{{% md %}}The number of items restore job recovered.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="itemstotal_go">
@@ -1350,7 +1350,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}File the Total Number.
+    <dd>{{% md %}}The total number of items restore job recovered.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="options_go">
@@ -1368,7 +1368,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Parent Node.
+    <dd>{{% md %}}The ID of parent node.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="progress_go">
@@ -1377,7 +1377,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The Recovery Progress 100% * 100.
+    <dd>{{% md %}}The recovery progress.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="restorejobid_go">
@@ -1386,7 +1386,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Restore Job ID.
+    <dd>{{% md %}}The ID of restore job.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="restoretype_go">
@@ -1395,7 +1395,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Recovery Destination Types. Valid Values: `ECS_FILE`, `OSS`, `NAS`.
+    <dd>{{% md %}}The type of recovery destination. Valid Values: `ECS_FILE`, `OSS`, `NAS`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="snapshothash_go">
@@ -1404,7 +1404,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Restore Snapshot of HashCode.
+    <dd>{{% md %}}The hashcode of Snapshot.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="snapshotid_go">
@@ -1422,7 +1422,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Type of Data Source. Valid Values: `ECS_FILE`, `OSS`, `NAS`.
+    <dd>{{% md %}}The type of data source. Valid Values: `ECS_FILE`, `OSS`, `NAS`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="starttime_go">
@@ -1431,7 +1431,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Restoring the Start Time. Unix Time in Seconds.
+    <dd>{{% md %}}The start time of restore job. Unix Time in Seconds.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="status_go">
@@ -1440,7 +1440,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Restore Job Status.
+    <dd>{{% md %}}The status of restore job.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetbucket_go">
@@ -1449,7 +1449,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Target ofo OSS Bucket Name.
+    <dd>{{% md %}}The name of target ofo OSS bucket.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetclientid_go">
@@ -1458,7 +1458,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of Target Client.
+    <dd>{{% md %}}The ID of target client.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetcreatetime_go">
@@ -1467,7 +1467,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Destination File System Creation Time.
+    <dd>{{% md %}}The creation time of destination file system.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetdatasourceid_go">
@@ -1476,7 +1476,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Destination ID.
+    <dd>{{% md %}}The ID of destination data source.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetfilesystemid_go">
@@ -1485,7 +1485,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Destination File System ID.
+    <dd>{{% md %}}The ID of destination file system.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetinstanceid_go">
@@ -1494,7 +1494,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Objective to ECS Instance Id.
+    <dd>{{% md %}}The ID of target ECS instance.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetpath_go">
@@ -1503,7 +1503,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Target of (ECS) Instance Changes the ECS File Path.
+    <dd>{{% md %}}The target file path of ECS instance.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetprefix_go">
@@ -1512,7 +1512,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Target of the OSS Object Prefix.
+    <dd>{{% md %}}The file prefix of target OSS object.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="updatedtime_go">
@@ -1521,7 +1521,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Update Time.
+    <dd>{{% md %}}The update Time of restore job. Unix Time in Seconds.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vaultid_go">
@@ -1530,7 +1530,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of Vault.
+    <dd>{{% md %}}The ID of backup vault.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1543,7 +1543,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Actual Size of Snapshot.
+    <dd>{{% md %}}The actual size of Snapshot.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="actualitems_nodejs">
@@ -1552,7 +1552,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Actual Number of Files.
+    <dd>{{% md %}}The actual number of files.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="bytesdone_nodejs">
@@ -1561,7 +1561,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Recovery Is Successful, Size.
+    <dd>{{% md %}}The size of restore job recovered.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="bytestotal_nodejs">
@@ -1570,7 +1570,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Restored Total.
+    <dd>{{% md %}}The total size of restore job recovered.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="completetime_nodejs">
@@ -1579,7 +1579,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Restore Completion Time.
+    <dd>{{% md %}}The completion time of restore Job.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="createtime_nodejs">
@@ -1588,7 +1588,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Restore Job Creation Time.
+    <dd>{{% md %}}The creation time of restore job.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="errorfile_nodejs">
@@ -1605,7 +1605,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Recovery Task Execution Error Message.
+    <dd>{{% md %}}The error message of recovery task execution.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="expiretime_nodejs">
@@ -1614,7 +1614,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Restore the Expiration Time. Unix Time in Seconds.
+    <dd>{{% md %}}The expiration time of restore job. Unix Time in seconds.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_nodejs">
@@ -1623,7 +1623,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the Restore Job.
+    <dd>{{% md %}}The ID of the restore job.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="itemsdone_nodejs">
@@ -1632,7 +1632,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Log of Files Successfully Recovered the Number.
+    <dd>{{% md %}}The number of items restore job recovered.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="itemstotal_nodejs">
@@ -1641,7 +1641,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}File the Total Number.
+    <dd>{{% md %}}The total number of items restore job recovered.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="options_nodejs">
@@ -1659,7 +1659,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Parent Node.
+    <dd>{{% md %}}The ID of parent node.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="progress_nodejs">
@@ -1668,7 +1668,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The Recovery Progress 100% * 100.
+    <dd>{{% md %}}The recovery progress.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="restorejobid_nodejs">
@@ -1677,7 +1677,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Restore Job ID.
+    <dd>{{% md %}}The ID of restore job.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="restoretype_nodejs">
@@ -1686,7 +1686,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Recovery Destination Types. Valid Values: `ECS_FILE`, `OSS`, `NAS`.
+    <dd>{{% md %}}The type of recovery destination. Valid Values: `ECS_FILE`, `OSS`, `NAS`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="snapshothash_nodejs">
@@ -1695,7 +1695,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Restore Snapshot of HashCode.
+    <dd>{{% md %}}The hashcode of Snapshot.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="snapshotid_nodejs">
@@ -1713,7 +1713,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Type of Data Source. Valid Values: `ECS_FILE`, `OSS`, `NAS`.
+    <dd>{{% md %}}The type of data source. Valid Values: `ECS_FILE`, `OSS`, `NAS`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="starttime_nodejs">
@@ -1722,7 +1722,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Restoring the Start Time. Unix Time in Seconds.
+    <dd>{{% md %}}The start time of restore job. Unix Time in Seconds.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="status_nodejs">
@@ -1731,7 +1731,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Restore Job Status.
+    <dd>{{% md %}}The status of restore job.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetbucket_nodejs">
@@ -1740,7 +1740,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Target ofo OSS Bucket Name.
+    <dd>{{% md %}}The name of target ofo OSS bucket.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetclientid_nodejs">
@@ -1749,7 +1749,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of Target Client.
+    <dd>{{% md %}}The ID of target client.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetcreatetime_nodejs">
@@ -1758,7 +1758,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Destination File System Creation Time.
+    <dd>{{% md %}}The creation time of destination file system.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetdatasourceid_nodejs">
@@ -1767,7 +1767,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Destination ID.
+    <dd>{{% md %}}The ID of destination data source.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetfilesystemid_nodejs">
@@ -1776,7 +1776,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Destination File System ID.
+    <dd>{{% md %}}The ID of destination file system.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetinstanceid_nodejs">
@@ -1785,7 +1785,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Objective to ECS Instance Id.
+    <dd>{{% md %}}The ID of target ECS instance.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetpath_nodejs">
@@ -1794,7 +1794,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Target of (ECS) Instance Changes the ECS File Path.
+    <dd>{{% md %}}The target file path of ECS instance.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetprefix_nodejs">
@@ -1803,7 +1803,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Target of the OSS Object Prefix.
+    <dd>{{% md %}}The file prefix of target OSS object.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="updatedtime_nodejs">
@@ -1812,7 +1812,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Update Time.
+    <dd>{{% md %}}The update Time of restore job. Unix Time in Seconds.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vaultid_nodejs">
@@ -1821,7 +1821,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of Vault.
+    <dd>{{% md %}}The ID of backup vault.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1834,7 +1834,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Actual Size of Snapshot.
+    <dd>{{% md %}}The actual size of Snapshot.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="actual_items_python">
@@ -1843,7 +1843,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Actual Number of Files.
+    <dd>{{% md %}}The actual number of files.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="bytes_done_python">
@@ -1852,7 +1852,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Recovery Is Successful, Size.
+    <dd>{{% md %}}The size of restore job recovered.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="bytes_total_python">
@@ -1861,7 +1861,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Restored Total.
+    <dd>{{% md %}}The total size of restore job recovered.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="complete_time_python">
@@ -1870,7 +1870,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Restore Completion Time.
+    <dd>{{% md %}}The completion time of restore Job.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="create_time_python">
@@ -1879,7 +1879,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Restore Job Creation Time.
+    <dd>{{% md %}}The creation time of restore job.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="error_file_python">
@@ -1896,7 +1896,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Recovery Task Execution Error Message.
+    <dd>{{% md %}}The error message of recovery task execution.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="expire_time_python">
@@ -1905,7 +1905,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Restore the Expiration Time. Unix Time in Seconds.
+    <dd>{{% md %}}The expiration time of restore job. Unix Time in seconds.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_python">
@@ -1914,7 +1914,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ID of the Restore Job.
+    <dd>{{% md %}}The ID of the restore job.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="items_done_python">
@@ -1923,7 +1923,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Log of Files Successfully Recovered the Number.
+    <dd>{{% md %}}The number of items restore job recovered.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="items_total_python">
@@ -1932,7 +1932,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}File the Total Number.
+    <dd>{{% md %}}The total number of items restore job recovered.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="options_python">
@@ -1950,7 +1950,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Parent Node.
+    <dd>{{% md %}}The ID of parent node.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="progress_python">
@@ -1959,7 +1959,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The Recovery Progress 100% * 100.
+    <dd>{{% md %}}The recovery progress.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="restore_job_id_python">
@@ -1968,7 +1968,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Restore Job ID.
+    <dd>{{% md %}}The ID of restore job.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="restore_type_python">
@@ -1977,7 +1977,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Recovery Destination Types. Valid Values: `ECS_FILE`, `OSS`, `NAS`.
+    <dd>{{% md %}}The type of recovery destination. Valid Values: `ECS_FILE`, `OSS`, `NAS`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="snapshot_hash_python">
@@ -1986,7 +1986,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Restore Snapshot of HashCode.
+    <dd>{{% md %}}The hashcode of Snapshot.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="snapshot_id_python">
@@ -2004,7 +2004,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Type of Data Source. Valid Values: `ECS_FILE`, `OSS`, `NAS`.
+    <dd>{{% md %}}The type of data source. Valid Values: `ECS_FILE`, `OSS`, `NAS`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="start_time_python">
@@ -2013,7 +2013,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Restoring the Start Time. Unix Time in Seconds.
+    <dd>{{% md %}}The start time of restore job. Unix Time in Seconds.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="status_python">
@@ -2022,7 +2022,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Restore Job Status.
+    <dd>{{% md %}}The status of restore job.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="target_bucket_python">
@@ -2031,7 +2031,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Target ofo OSS Bucket Name.
+    <dd>{{% md %}}The name of target ofo OSS bucket.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="target_client_id_python">
@@ -2040,7 +2040,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ID of Target Client.
+    <dd>{{% md %}}The ID of target client.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="target_create_time_python">
@@ -2049,7 +2049,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Destination File System Creation Time.
+    <dd>{{% md %}}The creation time of destination file system.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="target_data_source_id_python">
@@ -2058,7 +2058,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Destination ID.
+    <dd>{{% md %}}The ID of destination data source.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="target_file_system_id_python">
@@ -2067,7 +2067,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Destination File System ID.
+    <dd>{{% md %}}The ID of destination file system.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="target_instance_id_python">
@@ -2076,7 +2076,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Objective to ECS Instance Id.
+    <dd>{{% md %}}The ID of target ECS instance.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="target_path_python">
@@ -2085,7 +2085,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Target of (ECS) Instance Changes the ECS File Path.
+    <dd>{{% md %}}The target file path of ECS instance.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="target_prefix_python">
@@ -2094,7 +2094,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Target of the OSS Object Prefix.
+    <dd>{{% md %}}The file prefix of target OSS object.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="updated_time_python">
@@ -2103,7 +2103,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Update Time.
+    <dd>{{% md %}}The update Time of restore job. Unix Time in Seconds.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vault_id_python">
@@ -2112,7 +2112,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ID of Vault.
+    <dd>{{% md %}}The ID of backup vault.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

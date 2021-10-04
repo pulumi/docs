@@ -502,6 +502,7 @@ const example = new alicloud.log.Audit("example", {
           <span class="nx">aliuid</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
           <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
           <span class="nx">multi_accounts</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+          <span class="nx">resource_directory_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
           <span class="nx">variable_map</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Audit</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
@@ -659,6 +660,15 @@ The Audit resource accepts the following [input]({{< relref "/docs/intro/concept
     <dd>{{% md %}}Multi-account configuration, please fill in multiple aliuid.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="resourcedirectorytype_csharp">
+<a href="#resourcedirectorytype_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Directory<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource Directory type. Optional values are all or custom. If the value is custom, argument multi_account should be provided.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="variablemap_csharp">
 <a href="#variablemap_csharp" style="color: inherit; text-decoration: inherit;">Variable<wbr>Map</a>
 </span>
@@ -697,6 +707,15 @@ The Audit resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Multi-account configuration, please fill in multiple aliuid.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="resourcedirectorytype_go">
+<a href="#resourcedirectorytype_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Directory<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource Directory type. Optional values are all or custom. If the value is custom, argument multi_account should be provided.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="variablemap_go">
@@ -739,6 +758,15 @@ The Audit resource accepts the following [input]({{< relref "/docs/intro/concept
     <dd>{{% md %}}Multi-account configuration, please fill in multiple aliuid.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="resourcedirectorytype_nodejs">
+<a href="#resourcedirectorytype_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Directory<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource Directory type. Optional values are all or custom. If the value is custom, argument multi_account should be provided.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="variablemap_nodejs">
 <a href="#variablemap_nodejs" style="color: inherit; text-decoration: inherit;">variable<wbr>Map</a>
 </span>
@@ -777,6 +805,15 @@ The Audit resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Multi-account configuration, please fill in multiple aliuid.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="resource_directory_type_python">
+<a href="#resource_directory_type_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>directory_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Resource Directory type. Optional values are all or custom. If the value is custom, argument multi_account should be provided.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="variable_map_python">
@@ -863,6 +900,7 @@ Get an existing Audit resource's state with the given name, ID, and optional ext
         <span class="nx">aliuid</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">multi_accounts</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+        <span class="nx">resource_directory_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">variable_map</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">) -&gt;</span> Audit</code></pre></div>
 {{% /choosable %}}
 
@@ -1003,6 +1041,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Multi-account configuration, please fill in multiple aliuid.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_resourcedirectorytype_csharp">
+<a href="#state_resourcedirectorytype_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Directory<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource Directory type. Optional values are all or custom. If the value is custom, argument multi_account should be provided.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_variablemap_csharp">
 <a href="#state_variablemap_csharp" style="color: inherit; text-decoration: inherit;">Variable<wbr>Map</a>
 </span>
@@ -1041,6 +1088,15 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Multi-account configuration, please fill in multiple aliuid.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_resourcedirectorytype_go">
+<a href="#state_resourcedirectorytype_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Directory<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource Directory type. Optional values are all or custom. If the value is custom, argument multi_account should be provided.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_variablemap_go">
@@ -1083,6 +1139,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Multi-account configuration, please fill in multiple aliuid.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_resourcedirectorytype_nodejs">
+<a href="#state_resourcedirectorytype_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Directory<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource Directory type. Optional values are all or custom. If the value is custom, argument multi_account should be provided.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_variablemap_nodejs">
 <a href="#state_variablemap_nodejs" style="color: inherit; text-decoration: inherit;">variable<wbr>Map</a>
 </span>
@@ -1121,6 +1186,15 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Multi-account configuration, please fill in multiple aliuid.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_resource_directory_type_python">
+<a href="#state_resource_directory_type_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>directory_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Resource Directory type. Optional values are all or custom. If the value is custom, argument multi_account should be provided.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_variable_map_python">

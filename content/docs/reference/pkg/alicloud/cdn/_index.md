@@ -14,10 +14,12 @@ Explore the resources and functions of the alicloud.cdn module.
     <li><a href="domain" title="Domain"><span class="symbol resource"></span>Domain</a></li>
     <li><a href="domainconfig" title="DomainConfig"><span class="symbol resource"></span>DomainConfig</a></li>
     <li><a href="domainnew" title="DomainNew"><span class="symbol resource"></span>DomainNew</a></li>
+    <li><a href="realtimelogdelivery" title="RealTimeLogDelivery"><span class="symbol resource"></span>RealTimeLogDelivery</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
+    <li><a href="getrealtimelogdeliveries" title="GetRealTimeLogDeliveries"><span class="symbol function"></span>GetRealTimeLogDeliveries</a></li>
     <li><a href="getservice" title="GetService"><span class="symbol function"></span>GetService</a></li>
 </ul>
 
@@ -30,6 +32,6 @@ Explore the resources and functions of the alicloud.cdn module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>3.7.0</dd>
+	<dd>3.8.0</dd>
 </dl>
 

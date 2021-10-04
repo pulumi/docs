@@ -28,21 +28,106 @@ For information about Cloud Firewall Control Policy Order and how to use it, see
 
 {{< example csharp >}}
 
-Coming soon!
+```csharp
+using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example1 = new AliCloud.CloudFirewall.ControlPolicy("example1", new AliCloud.CloudFirewall.ControlPolicyArgs
+        {
+            ApplicationName = "ANY",
+            AclAction = "accept",
+            Description = "example",
+            DestinationType = "net",
+            Destination = "100.1.1.0/24",
+            Direction = "out",
+            Proto = "ANY",
+            Source = "1.2.3.0/24",
+            SourceType = "net",
+        });
+        var example2 = new AliCloud.CloudFirewall.ControlPolicyOrder("example2", new AliCloud.CloudFirewall.ControlPolicyOrderArgs
+        {
+            AclUuid = example1.AclUuid,
+            Direction = example1.Direction,
+            Order = 1,
+        });
+    }
+
+}
+```
+
 
 {{< /example >}}
 
 
 {{< example go >}}
 
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v3/go/alicloud/cloudfirewall"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example1, err := cloudfirewall.NewControlPolicy(ctx, "example1", &cloudfirewall.ControlPolicyArgs{
+			ApplicationName: pulumi.String("ANY"),
+			AclAction:       pulumi.String("accept"),
+			Description:     pulumi.String("example"),
+			DestinationType: pulumi.String("net"),
+			Destination:     pulumi.String("100.1.1.0/24"),
+			Direction:       pulumi.String("out"),
+			Proto:           pulumi.String("ANY"),
+			Source:          pulumi.String("1.2.3.0/24"),
+			SourceType:      pulumi.String("net"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = cloudfirewall.NewControlPolicyOrder(ctx, "example2", &cloudfirewall.ControlPolicyOrderArgs{
+			AclUuid:   example1.AclUuid,
+			Direction: example1.Direction,
+			Order:     pulumi.Int(1),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 
 {{< /example >}}
 
 
 {{< example python >}}
 
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+example1 = alicloud.cloudfirewall.ControlPolicy("example1",
+    application_name="ANY",
+    acl_action="accept",
+    description="example",
+    destination_type="net",
+    destination="100.1.1.0/24",
+    direction="out",
+    proto="ANY",
+    source="1.2.3.0/24",
+    source_type="net")
+example2 = alicloud.cloudfirewall.ControlPolicyOrder("example2",
+    acl_uuid=example1.acl_uuid,
+    direction=example1.direction,
+    order=1)
+```
+
 
 {{< /example >}}
 
@@ -66,7 +151,7 @@ const example1 = new alicloud.cloudfirewall.ControlPolicy("example1", {
     sourceType: "net",
 });
 const example2 = new alicloud.cloudfirewall.ControlPolicyOrder("example2", {
-    aclAction: example1.aclUuid,
+    aclUuid: example1.aclUuid,
     direction: example1.direction,
     order: 1,
 });

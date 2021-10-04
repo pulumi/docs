@@ -12,6 +12,7 @@ Explore the resources and functions of the alicloud.alb module.
 <h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="acl" title="Acl"><span class="symbol resource"></span>Acl</a></li>
+    <li><a href="healthchecktemplate" title="HealthCheckTemplate"><span class="symbol resource"></span>HealthCheckTemplate</a></li>
     <li><a href="listener" title="Listener"><span class="symbol resource"></span>Listener</a></li>
     <li><a href="loadbalancer" title="LoadBalancer"><span class="symbol resource"></span>LoadBalancer</a></li>
     <li><a href="rule" title="Rule"><span class="symbol resource"></span>Rule</a></li>
@@ -22,6 +23,7 @@ Explore the resources and functions of the alicloud.alb module.
 <h2 id="functions">Functions</h2>
 <ul class="api">
     <li><a href="getacls" title="GetAcls"><span class="symbol function"></span>GetAcls</a></li>
+    <li><a href="gethealthchecktemplates" title="GetHealthCheckTemplates"><span class="symbol function"></span>GetHealthCheckTemplates</a></li>
     <li><a href="getlisteners" title="GetListeners"><span class="symbol function"></span>GetListeners</a></li>
     <li><a href="getloadbalancers" title="GetLoadBalancers"><span class="symbol function"></span>GetLoadBalancers</a></li>
     <li><a href="getrules" title="GetRules"><span class="symbol function"></span>GetRules</a></li>
@@ -39,6 +41,6 @@ Explore the resources and functions of the alicloud.alb module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>3.7.0</dd>
+	<dd>3.8.0</dd>
 </dl>
 

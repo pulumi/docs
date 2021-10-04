@@ -481,7 +481,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the function.
+    <dd>{{% md %}}(Available in 1.132.0+) The ID of the domain config function.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
@@ -498,7 +498,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Status of the function. Valid values: `success`, `testing`, `failed`, and `configuring`.
+    <dd>{{% md %}}(Available in 1.132.0+) The Status of the function. Valid values: `success`, `testing`, `failed`, and `configuring`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -511,7 +511,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the function.
+    <dd>{{% md %}}(Available in 1.132.0+) The ID of the domain config function.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
@@ -528,7 +528,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Status of the function. Valid values: `success`, `testing`, `failed`, and `configuring`.
+    <dd>{{% md %}}(Available in 1.132.0+) The Status of the function. Valid values: `success`, `testing`, `failed`, and `configuring`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -541,7 +541,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the function.
+    <dd>{{% md %}}(Available in 1.132.0+) The ID of the domain config function.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
@@ -558,7 +558,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Status of the function. Valid values: `success`, `testing`, `failed`, and `configuring`.
+    <dd>{{% md %}}(Available in 1.132.0+) The Status of the function. Valid values: `success`, `testing`, `failed`, and `configuring`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -571,7 +571,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ID of the function.
+    <dd>{{% md %}}(Available in 1.132.0+) The ID of the domain config function.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
@@ -588,7 +588,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Status of the function. Valid values: `success`, `testing`, `failed`, and `configuring`.
+    <dd>{{% md %}}(Available in 1.132.0+) The Status of the function. Valid values: `success`, `testing`, `failed`, and `configuring`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -731,7 +731,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the function.
+    <dd>{{% md %}}(Available in 1.132.0+) The ID of the domain config function.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_domainname_csharp">
@@ -767,7 +767,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Status of the function. Valid values: `success`, `testing`, `failed`, and `configuring`.
+    <dd>{{% md %}}(Available in 1.132.0+) The Status of the function. Valid values: `success`, `testing`, `failed`, and `configuring`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -780,7 +780,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the function.
+    <dd>{{% md %}}(Available in 1.132.0+) The ID of the domain config function.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_domainname_go">
@@ -816,7 +816,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Status of the function. Valid values: `success`, `testing`, `failed`, and `configuring`.
+    <dd>{{% md %}}(Available in 1.132.0+) The Status of the function. Valid values: `success`, `testing`, `failed`, and `configuring`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -829,7 +829,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the function.
+    <dd>{{% md %}}(Available in 1.132.0+) The ID of the domain config function.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_domainname_nodejs">
@@ -865,7 +865,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Status of the function. Valid values: `success`, `testing`, `failed`, and `configuring`.
+    <dd>{{% md %}}(Available in 1.132.0+) The Status of the function. Valid values: `success`, `testing`, `failed`, and `configuring`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -878,7 +878,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ID of the function.
+    <dd>{{% md %}}(Available in 1.132.0+) The ID of the domain config function.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_domain_name_python">
@@ -914,7 +914,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Status of the function. Valid values: `success`, `testing`, `failed`, and `configuring`.
+    <dd>{{% md %}}(Available in 1.132.0+) The Status of the function. Valid values: `success`, `testing`, `failed`, and `configuring`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

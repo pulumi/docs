@@ -11,12 +11,14 @@ Explore the resources and functions of the alicloud.waf module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
+    <li><a href="certificate" title="Certificate"><span class="symbol resource"></span>Certificate</a></li>
     <li><a href="domain" title="Domain"><span class="symbol resource"></span>Domain</a></li>
     <li><a href="instance" title="Instance"><span class="symbol resource"></span>Instance</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
+    <li><a href="getcertificates" title="GetCertificates"><span class="symbol function"></span>GetCertificates</a></li>
     <li><a href="getdomains" title="GetDomains"><span class="symbol function"></span>GetDomains</a></li>
     <li><a href="getinstances" title="GetInstances"><span class="symbol function"></span>GetInstances</a></li>
 </ul>
@@ -30,6 +32,6 @@ Explore the resources and functions of the alicloud.waf module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>3.7.0</dd>
+	<dd>3.8.0</dd>
 </dl>
 

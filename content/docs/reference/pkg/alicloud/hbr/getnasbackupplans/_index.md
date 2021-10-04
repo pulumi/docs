@@ -167,7 +167,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The File System ID.
+    <dd>{{% md %}}The File System ID of Nas.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ids_csharp">
@@ -202,7 +202,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Vault ID of the EcsBackupPlan used.
+    <dd>{{% md %}}The backup vault ID of the NasBackupPlan used.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -215,7 +215,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The File System ID.
+    <dd>{{% md %}}The File System ID of Nas.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ids_go">
@@ -250,7 +250,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Vault ID of the EcsBackupPlan used.
+    <dd>{{% md %}}The backup vault ID of the NasBackupPlan used.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -263,7 +263,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The File System ID.
+    <dd>{{% md %}}The File System ID of Nas.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ids_nodejs">
@@ -298,7 +298,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Vault ID of the EcsBackupPlan used.
+    <dd>{{% md %}}The backup vault ID of the NasBackupPlan used.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -311,7 +311,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The File System ID.
+    <dd>{{% md %}}The File System ID of Nas.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ids_python">
@@ -346,7 +346,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Vault ID of the EcsBackupPlan used.
+    <dd>{{% md %}}The backup vault ID of the NasBackupPlan used.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -654,7 +654,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Backup Type. Valid Values: * Complete. Valid values: `COMPLETE`.
+    <dd>{{% md %}}Backup type. Valid values: `COMPLETE`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="createtime_csharp">
@@ -680,7 +680,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The File System ID.
+    <dd>{{% md %}}The File System ID of Nas.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_csharp">
@@ -714,8 +714,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Options. NAS Backup Plan Does Not Support Yet.
-{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="paths_csharp">
 <a href="#paths_csharp" style="color: inherit; text-decoration: inherit;">Paths</a>
@@ -723,7 +722,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Backup Path. Up to 65536 Characters. e.g.`["/home", "/var"]`
+    <dd>{{% md %}}Backup path. Up to 65536 Characters. e.g.`["/home", "/var"]`
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="retention_csharp">
@@ -732,7 +731,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Backup Retention Period, the Minimum Value of 1.
+    <dd>{{% md %}}Backup retention days, the minimum is 1.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="schedule_csharp">
@@ -741,7 +740,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Backup Policy. Formats: I | {Range Specified by the Starttime }|{ Interval}\n* The Time Range Specified by the Starttime Backup Start Time in Unix Time Seconds.\n* Interval ISO8601 Time Intervals. For Example:\n**PT1H Interval for an Hour.\n**P1D Interval Day.\nMeaning from {Range Specified by the Starttime} Every {Interval} of the Time Where We Took Backups Once a Task. Does Not Compensate the Has Elapsed Time the Backup Task. If the Last Backup Has Not Been Completed without Triggering the next Backup.
+    <dd>{{% md %}}Backup strategy. Optional format: I|{startTime}|{interval}. It means to execute a backup task every {interval} starting from {startTime}. The backup task for the elapsed time will not be compensated. If the last backup task is not completed yet, the next backup task will not be triggered.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vaultid_csharp">
@@ -750,7 +749,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Vault ID of the EcsBackupPlan used.
+    <dd>{{% md %}}The backup vault ID of the NasBackupPlan used.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -763,7 +762,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Backup Type. Valid Values: * Complete. Valid values: `COMPLETE`.
+    <dd>{{% md %}}Backup type. Valid values: `COMPLETE`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="createtime_go">
@@ -789,7 +788,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The File System ID.
+    <dd>{{% md %}}The File System ID of Nas.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_go">
@@ -823,8 +822,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Options. NAS Backup Plan Does Not Support Yet.
-{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="paths_go">
 <a href="#paths_go" style="color: inherit; text-decoration: inherit;">Paths</a>
@@ -832,7 +830,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Backup Path. Up to 65536 Characters. e.g.`["/home", "/var"]`
+    <dd>{{% md %}}Backup path. Up to 65536 Characters. e.g.`["/home", "/var"]`
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="retention_go">
@@ -841,7 +839,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Backup Retention Period, the Minimum Value of 1.
+    <dd>{{% md %}}Backup retention days, the minimum is 1.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="schedule_go">
@@ -850,7 +848,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Backup Policy. Formats: I | {Range Specified by the Starttime }|{ Interval}\n* The Time Range Specified by the Starttime Backup Start Time in Unix Time Seconds.\n* Interval ISO8601 Time Intervals. For Example:\n**PT1H Interval for an Hour.\n**P1D Interval Day.\nMeaning from {Range Specified by the Starttime} Every {Interval} of the Time Where We Took Backups Once a Task. Does Not Compensate the Has Elapsed Time the Backup Task. If the Last Backup Has Not Been Completed without Triggering the next Backup.
+    <dd>{{% md %}}Backup strategy. Optional format: I|{startTime}|{interval}. It means to execute a backup task every {interval} starting from {startTime}. The backup task for the elapsed time will not be compensated. If the last backup task is not completed yet, the next backup task will not be triggered.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vaultid_go">
@@ -859,7 +857,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Vault ID of the EcsBackupPlan used.
+    <dd>{{% md %}}The backup vault ID of the NasBackupPlan used.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -872,7 +870,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Backup Type. Valid Values: * Complete. Valid values: `COMPLETE`.
+    <dd>{{% md %}}Backup type. Valid values: `COMPLETE`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="createtime_nodejs">
@@ -898,7 +896,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The File System ID.
+    <dd>{{% md %}}The File System ID of Nas.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_nodejs">
@@ -932,8 +930,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Options. NAS Backup Plan Does Not Support Yet.
-{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="paths_nodejs">
 <a href="#paths_nodejs" style="color: inherit; text-decoration: inherit;">paths</a>
@@ -941,7 +938,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Backup Path. Up to 65536 Characters. e.g.`["/home", "/var"]`
+    <dd>{{% md %}}Backup path. Up to 65536 Characters. e.g.`["/home", "/var"]`
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="retention_nodejs">
@@ -950,7 +947,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Backup Retention Period, the Minimum Value of 1.
+    <dd>{{% md %}}Backup retention days, the minimum is 1.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="schedule_nodejs">
@@ -959,7 +956,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Backup Policy. Formats: I | {Range Specified by the Starttime }|{ Interval}\n* The Time Range Specified by the Starttime Backup Start Time in Unix Time Seconds.\n* Interval ISO8601 Time Intervals. For Example:\n**PT1H Interval for an Hour.\n**P1D Interval Day.\nMeaning from {Range Specified by the Starttime} Every {Interval} of the Time Where We Took Backups Once a Task. Does Not Compensate the Has Elapsed Time the Backup Task. If the Last Backup Has Not Been Completed without Triggering the next Backup.
+    <dd>{{% md %}}Backup strategy. Optional format: I|{startTime}|{interval}. It means to execute a backup task every {interval} starting from {startTime}. The backup task for the elapsed time will not be compensated. If the last backup task is not completed yet, the next backup task will not be triggered.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vaultid_nodejs">
@@ -968,7 +965,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Vault ID of the EcsBackupPlan used.
+    <dd>{{% md %}}The backup vault ID of the NasBackupPlan used.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -981,7 +978,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Backup Type. Valid Values: * Complete. Valid values: `COMPLETE`.
+    <dd>{{% md %}}Backup type. Valid values: `COMPLETE`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="create_time_python">
@@ -1007,7 +1004,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The File System ID.
+    <dd>{{% md %}}The File System ID of Nas.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_python">
@@ -1041,8 +1038,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Options. NAS Backup Plan Does Not Support Yet.
-{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="paths_python">
 <a href="#paths_python" style="color: inherit; text-decoration: inherit;">paths</a>
@@ -1050,7 +1046,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Backup Path. Up to 65536 Characters. e.g.`["/home", "/var"]`
+    <dd>{{% md %}}Backup path. Up to 65536 Characters. e.g.`["/home", "/var"]`
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="retention_python">
@@ -1059,7 +1055,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Backup Retention Period, the Minimum Value of 1.
+    <dd>{{% md %}}Backup retention days, the minimum is 1.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="schedule_python">
@@ -1068,7 +1064,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Backup Policy. Formats: I | {Range Specified by the Starttime }|{ Interval}\n* The Time Range Specified by the Starttime Backup Start Time in Unix Time Seconds.\n* Interval ISO8601 Time Intervals. For Example:\n**PT1H Interval for an Hour.\n**P1D Interval Day.\nMeaning from {Range Specified by the Starttime} Every {Interval} of the Time Where We Took Backups Once a Task. Does Not Compensate the Has Elapsed Time the Backup Task. If the Last Backup Has Not Been Completed without Triggering the next Backup.
+    <dd>{{% md %}}Backup strategy. Optional format: I|{startTime}|{interval}. It means to execute a backup task every {interval} starting from {startTime}. The backup task for the elapsed time will not be compensated. If the last backup task is not completed yet, the next backup task will not be triggered.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vault_id_python">
@@ -1077,7 +1073,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Vault ID of the EcsBackupPlan used.
+    <dd>{{% md %}}The backup vault ID of the NasBackupPlan used.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

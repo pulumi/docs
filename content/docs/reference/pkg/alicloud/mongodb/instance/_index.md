@@ -45,6 +45,7 @@ MongoDB can be imported using the id, e.g.
              <span class="nx">maintain_end_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">maintain_start_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">order_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">period</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
              <span class="nx">replication_factor</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
              <span class="nx">security_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -294,6 +295,18 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
     <dd>{{% md %}}The name of DB instance. It a string of 2 to 256 characters.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="ordertype_csharp">
+<a href="#ordertype_csharp" style="color: inherit; text-decoration: inherit;">Order<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of configuration changes performed. Default value: DOWNGRADE. Valid values:
+* UPGRADE: The specifications are upgraded.
+* DOWNGRADE: The specifications are downgraded.
+Note: This parameter is only applicable to instances when `instance_charge_type` is PrePaid.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="period_csharp">
 <a href="#period_csharp" style="color: inherit; text-decoration: inherit;">Period</a>
 </span>
@@ -498,6 +511,18 @@ The multiple zone ID can be retrieved by setting `multi` to "true" in the data s
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of DB instance. It a string of 2 to 256 characters.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ordertype_go">
+<a href="#ordertype_go" style="color: inherit; text-decoration: inherit;">Order<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of configuration changes performed. Default value: DOWNGRADE. Valid values:
+* UPGRADE: The specifications are upgraded.
+* DOWNGRADE: The specifications are downgraded.
+Note: This parameter is only applicable to instances when `instance_charge_type` is PrePaid.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="period_go">
@@ -706,6 +731,18 @@ The multiple zone ID can be retrieved by setting `multi` to "true" in the data s
     <dd>{{% md %}}The name of DB instance. It a string of 2 to 256 characters.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="ordertype_nodejs">
+<a href="#ordertype_nodejs" style="color: inherit; text-decoration: inherit;">order<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of configuration changes performed. Default value: DOWNGRADE. Valid values:
+* UPGRADE: The specifications are upgraded.
+* DOWNGRADE: The specifications are downgraded.
+Note: This parameter is only applicable to instances when `instance_charge_type` is PrePaid.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="period_nodejs">
 <a href="#period_nodejs" style="color: inherit; text-decoration: inherit;">period</a>
 </span>
@@ -910,6 +947,18 @@ The multiple zone ID can be retrieved by setting `multi` to "true" in the data s
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of DB instance. It a string of 2 to 256 characters.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="order_type_python">
+<a href="#order_type_python" style="color: inherit; text-decoration: inherit;">order_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The type of configuration changes performed. Default value: DOWNGRADE. Valid values:
+* UPGRADE: The specifications are upgraded.
+* DOWNGRADE: The specifications are downgraded.
+Note: This parameter is only applicable to instances when `instance_charge_type` is PrePaid.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="period_python">
@@ -1196,6 +1245,7 @@ Get an existing Instance resource's state with the given name, ID, and optional 
         <span class="nx">maintain_end_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">maintain_start_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">order_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">period</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">replica_set_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">replication_factor</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
@@ -1431,6 +1481,18 @@ The following state arguments are supported:
     <dd>{{% md %}}The name of DB instance. It a string of 2 to 256 characters.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_ordertype_csharp">
+<a href="#state_ordertype_csharp" style="color: inherit; text-decoration: inherit;">Order<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of configuration changes performed. Default value: DOWNGRADE. Valid values:
+* UPGRADE: The specifications are upgraded.
+* DOWNGRADE: The specifications are downgraded.
+Note: This parameter is only applicable to instances when `instance_charge_type` is PrePaid.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_period_csharp">
 <a href="#state_period_csharp" style="color: inherit; text-decoration: inherit;">Period</a>
 </span>
@@ -1662,6 +1724,18 @@ The multiple zone ID can be retrieved by setting `multi` to "true" in the data s
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of DB instance. It a string of 2 to 256 characters.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_ordertype_go">
+<a href="#state_ordertype_go" style="color: inherit; text-decoration: inherit;">Order<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of configuration changes performed. Default value: DOWNGRADE. Valid values:
+* UPGRADE: The specifications are upgraded.
+* DOWNGRADE: The specifications are downgraded.
+Note: This parameter is only applicable to instances when `instance_charge_type` is PrePaid.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_period_go">
@@ -1897,6 +1971,18 @@ The multiple zone ID can be retrieved by setting `multi` to "true" in the data s
     <dd>{{% md %}}The name of DB instance. It a string of 2 to 256 characters.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_ordertype_nodejs">
+<a href="#state_ordertype_nodejs" style="color: inherit; text-decoration: inherit;">order<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of configuration changes performed. Default value: DOWNGRADE. Valid values:
+* UPGRADE: The specifications are upgraded.
+* DOWNGRADE: The specifications are downgraded.
+Note: This parameter is only applicable to instances when `instance_charge_type` is PrePaid.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_period_nodejs">
 <a href="#state_period_nodejs" style="color: inherit; text-decoration: inherit;">period</a>
 </span>
@@ -2128,6 +2214,18 @@ The multiple zone ID can be retrieved by setting `multi` to "true" in the data s
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of DB instance. It a string of 2 to 256 characters.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_order_type_python">
+<a href="#state_order_type_python" style="color: inherit; text-decoration: inherit;">order_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The type of configuration changes performed. Default value: DOWNGRADE. Valid values:
+* UPGRADE: The specifications are upgraded.
+* DOWNGRADE: The specifications are downgraded.
+Note: This parameter is only applicable to instances when `instance_charge_type` is PrePaid.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_period_python">

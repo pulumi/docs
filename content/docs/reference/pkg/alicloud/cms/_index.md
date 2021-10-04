@@ -15,6 +15,7 @@ Explore the resources and functions of the alicloud.cms module.
     <li><a href="alarmcontact" title="AlarmContact"><span class="symbol resource"></span>AlarmContact</a></li>
     <li><a href="alarmcontactgroup" title="AlarmContactGroup"><span class="symbol resource"></span>AlarmContactGroup</a></li>
     <li><a href="groupmetricrule" title="GroupMetricRule"><span class="symbol resource"></span>GroupMetricRule</a></li>
+    <li><a href="metricruletemplate" title="MetricRuleTemplate"><span class="symbol resource"></span>MetricRuleTemplate</a></li>
     <li><a href="monitorgroup" title="MonitorGroup"><span class="symbol resource"></span>MonitorGroup</a></li>
     <li><a href="monitorgroupinstances" title="MonitorGroupInstances"><span class="symbol resource"></span>MonitorGroupInstances</a></li>
     <li><a href="sitemonitor" title="SiteMonitor"><span class="symbol resource"></span>SiteMonitor</a></li>
@@ -25,6 +26,7 @@ Explore the resources and functions of the alicloud.cms module.
     <li><a href="getalarmcontactgroups" title="GetAlarmContactGroups"><span class="symbol function"></span>GetAlarmContactGroups</a></li>
     <li><a href="getalarmcontacts" title="GetAlarmContacts"><span class="symbol function"></span>GetAlarmContacts</a></li>
     <li><a href="getgroupmetricrules" title="GetGroupMetricRules"><span class="symbol function"></span>GetGroupMetricRules</a></li>
+    <li><a href="getmetricruletemplates" title="GetMetricRuleTemplates"><span class="symbol function"></span>GetMetricRuleTemplates</a></li>
     <li><a href="getmonitorgroupinstances" title="GetMonitorGroupInstances"><span class="symbol function"></span>GetMonitorGroupInstances</a></li>
     <li><a href="getmonitorgroups" title="GetMonitorGroups"><span class="symbol function"></span>GetMonitorGroups</a></li>
     <li><a href="getservice" title="GetService"><span class="symbol function"></span>GetService</a></li>
@@ -39,6 +41,6 @@ Explore the resources and functions of the alicloud.cms module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>3.7.0</dd>
+	<dd>3.8.0</dd>
 </dl>
 

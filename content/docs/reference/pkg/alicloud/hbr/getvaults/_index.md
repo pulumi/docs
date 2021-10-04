@@ -833,7 +833,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of Vault.
+    <dd>{{% md %}}The ID of Vault, same as `id`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vaultname_csharp">
@@ -851,7 +851,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Error status information of Vault.
+    <dd>{{% md %}}Error status information of Vault. Only valid for remote backup warehouses.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vaultstorageclass_csharp">
@@ -1061,7 +1061,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of Vault.
+    <dd>{{% md %}}The ID of Vault, same as `id`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vaultname_go">
@@ -1079,7 +1079,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Error status information of Vault.
+    <dd>{{% md %}}Error status information of Vault. Only valid for remote backup warehouses.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vaultstorageclass_go">
@@ -1289,7 +1289,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of Vault.
+    <dd>{{% md %}}The ID of Vault, same as `id`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vaultname_nodejs">
@@ -1307,7 +1307,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Error status information of Vault.
+    <dd>{{% md %}}Error status information of Vault. Only valid for remote backup warehouses.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vaultstorageclass_nodejs">
@@ -1517,7 +1517,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ID of Vault.
+    <dd>{{% md %}}The ID of Vault, same as `id`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vault_name_python">
@@ -1535,7 +1535,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Error status information of Vault.
+    <dd>{{% md %}}Error status information of Vault. Only valid for remote backup warehouses.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vault_storage_class_python">

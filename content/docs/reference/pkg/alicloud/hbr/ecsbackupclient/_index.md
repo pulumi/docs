@@ -17,14 +17,13 @@ For information about Hybrid Backup Recovery (HBR) Ecs Backup Client and how to 
 > **NOTE:** Available in v1.132.0+.
 ## Notice
 
-> Please read the following precautions carefully before deleting a client:
-
+> **Note:** Please read the following precautions carefully before deleting a client:
 1. You cannot delete active clients that have received heartbeat packets within one hour.
-2. You can make the client inactive by change the status of client to `ACTIVATED`.
+2. You can make the client inactive by change the status of client to `STOPPED`.
 3. The resources bound to the client will be deleted in cascade, including:
-- Backup plan
-- Backup task (Running in the background)
-- Snapshot
+    - Backup plan
+    - Backup task (Running in the background)
+    - Snapshot
 
 {{% examples %}}
 
@@ -339,7 +338,7 @@ The EcsBackupClient resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ECS Instance Id.
+    <dd>{{% md %}}The ID of ECS instance.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datanetworktype_csharp">
@@ -348,7 +347,7 @@ The EcsBackupClient resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Data Plane Data Access Point Type. Valid values: `CLASSIC`, `PUBLIC`, `VPC`.
+    <dd>{{% md %}}The data plane access point type. Valid values: `CLASSIC`, `PUBLIC`, `VPC`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dataproxysetting_csharp">
@@ -357,7 +356,7 @@ The EcsBackupClient resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Data Plane Proxy Settings. Valid values: `CUSTOM`, `DISABLE`, `USE_CONTROL_PROXY`.
+    <dd>{{% md %}}The data plane proxy settings. Valid values: `CUSTOM`, `DISABLE`, `USE_CONTROL_PROXY`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxcpucore_csharp">
@@ -366,7 +365,7 @@ The EcsBackupClient resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A Single Backup Task Uses for Example, Instances Can Be Grouped According to CPU Core Count, 0 Means No Restrictions.
+    <dd>{{% md %}}Number of CPU cores used by a single backup task, 0 means no restrictions.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxworker_csharp">
@@ -375,7 +374,7 @@ The EcsBackupClient resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A Single Backup Task Parallel Work, the Number of 0 Means No Restrictions.
+    <dd>{{% md %}}Number of concurrent jobs for a single backup task, 0 means no restrictions.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="proxyhost_csharp">
@@ -384,7 +383,7 @@ The EcsBackupClient resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Custom Data Plane Proxy Server Host Address.
+    <dd>{{% md %}}Custom data plane proxy server host address.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="proxypassword_csharp">
@@ -393,7 +392,7 @@ The EcsBackupClient resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Custom Data Plane Proxy Password.
+    <dd>{{% md %}}Custom data plane proxy server password.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="proxyport_csharp">
@@ -402,7 +401,7 @@ The EcsBackupClient resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Custom Data Plane Proxy Server Host Port.
+    <dd>{{% md %}}Custom data plane proxy server host port.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="proxyuser_csharp">
@@ -411,7 +410,7 @@ The EcsBackupClient resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Custom Data Plane Proxy Server Username.
+    <dd>{{% md %}}Username of custom data plane proxy server.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_csharp">
@@ -429,7 +428,7 @@ The EcsBackupClient resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates Whether to Use the Https Transport Data Plane Data. Valid values: `true`, `false`.
+    <dd>{{% md %}}Indicates whether to use the HTTPS protocol. Valid values: `true`, `false`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -442,7 +441,7 @@ The EcsBackupClient resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ECS Instance Id.
+    <dd>{{% md %}}The ID of ECS instance.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datanetworktype_go">
@@ -451,7 +450,7 @@ The EcsBackupClient resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Data Plane Data Access Point Type. Valid values: `CLASSIC`, `PUBLIC`, `VPC`.
+    <dd>{{% md %}}The data plane access point type. Valid values: `CLASSIC`, `PUBLIC`, `VPC`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dataproxysetting_go">
@@ -460,7 +459,7 @@ The EcsBackupClient resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Data Plane Proxy Settings. Valid values: `CUSTOM`, `DISABLE`, `USE_CONTROL_PROXY`.
+    <dd>{{% md %}}The data plane proxy settings. Valid values: `CUSTOM`, `DISABLE`, `USE_CONTROL_PROXY`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxcpucore_go">
@@ -469,7 +468,7 @@ The EcsBackupClient resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A Single Backup Task Uses for Example, Instances Can Be Grouped According to CPU Core Count, 0 Means No Restrictions.
+    <dd>{{% md %}}Number of CPU cores used by a single backup task, 0 means no restrictions.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxworker_go">
@@ -478,7 +477,7 @@ The EcsBackupClient resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A Single Backup Task Parallel Work, the Number of 0 Means No Restrictions.
+    <dd>{{% md %}}Number of concurrent jobs for a single backup task, 0 means no restrictions.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="proxyhost_go">
@@ -487,7 +486,7 @@ The EcsBackupClient resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Custom Data Plane Proxy Server Host Address.
+    <dd>{{% md %}}Custom data plane proxy server host address.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="proxypassword_go">
@@ -496,7 +495,7 @@ The EcsBackupClient resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Custom Data Plane Proxy Password.
+    <dd>{{% md %}}Custom data plane proxy server password.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="proxyport_go">
@@ -505,7 +504,7 @@ The EcsBackupClient resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Custom Data Plane Proxy Server Host Port.
+    <dd>{{% md %}}Custom data plane proxy server host port.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="proxyuser_go">
@@ -514,7 +513,7 @@ The EcsBackupClient resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Custom Data Plane Proxy Server Username.
+    <dd>{{% md %}}Username of custom data plane proxy server.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_go">
@@ -532,7 +531,7 @@ The EcsBackupClient resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates Whether to Use the Https Transport Data Plane Data. Valid values: `true`, `false`.
+    <dd>{{% md %}}Indicates whether to use the HTTPS protocol. Valid values: `true`, `false`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -545,7 +544,7 @@ The EcsBackupClient resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ECS Instance Id.
+    <dd>{{% md %}}The ID of ECS instance.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datanetworktype_nodejs">
@@ -554,7 +553,7 @@ The EcsBackupClient resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Data Plane Data Access Point Type. Valid values: `CLASSIC`, `PUBLIC`, `VPC`.
+    <dd>{{% md %}}The data plane access point type. Valid values: `CLASSIC`, `PUBLIC`, `VPC`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dataproxysetting_nodejs">
@@ -563,7 +562,7 @@ The EcsBackupClient resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Data Plane Proxy Settings. Valid values: `CUSTOM`, `DISABLE`, `USE_CONTROL_PROXY`.
+    <dd>{{% md %}}The data plane proxy settings. Valid values: `CUSTOM`, `DISABLE`, `USE_CONTROL_PROXY`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxcpucore_nodejs">
@@ -572,7 +571,7 @@ The EcsBackupClient resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A Single Backup Task Uses for Example, Instances Can Be Grouped According to CPU Core Count, 0 Means No Restrictions.
+    <dd>{{% md %}}Number of CPU cores used by a single backup task, 0 means no restrictions.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxworker_nodejs">
@@ -581,7 +580,7 @@ The EcsBackupClient resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A Single Backup Task Parallel Work, the Number of 0 Means No Restrictions.
+    <dd>{{% md %}}Number of concurrent jobs for a single backup task, 0 means no restrictions.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="proxyhost_nodejs">
@@ -590,7 +589,7 @@ The EcsBackupClient resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Custom Data Plane Proxy Server Host Address.
+    <dd>{{% md %}}Custom data plane proxy server host address.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="proxypassword_nodejs">
@@ -599,7 +598,7 @@ The EcsBackupClient resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Custom Data Plane Proxy Password.
+    <dd>{{% md %}}Custom data plane proxy server password.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="proxyport_nodejs">
@@ -608,7 +607,7 @@ The EcsBackupClient resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Custom Data Plane Proxy Server Host Port.
+    <dd>{{% md %}}Custom data plane proxy server host port.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="proxyuser_nodejs">
@@ -617,7 +616,7 @@ The EcsBackupClient resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Custom Data Plane Proxy Server Username.
+    <dd>{{% md %}}Username of custom data plane proxy server.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_nodejs">
@@ -635,7 +634,7 @@ The EcsBackupClient resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Indicates Whether to Use the Https Transport Data Plane Data. Valid values: `true`, `false`.
+    <dd>{{% md %}}Indicates whether to use the HTTPS protocol. Valid values: `true`, `false`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -648,7 +647,7 @@ The EcsBackupClient resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ECS Instance Id.
+    <dd>{{% md %}}The ID of ECS instance.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="data_network_type_python">
@@ -657,7 +656,7 @@ The EcsBackupClient resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Data Plane Data Access Point Type. Valid values: `CLASSIC`, `PUBLIC`, `VPC`.
+    <dd>{{% md %}}The data plane access point type. Valid values: `CLASSIC`, `PUBLIC`, `VPC`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="data_proxy_setting_python">
@@ -666,7 +665,7 @@ The EcsBackupClient resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Data Plane Proxy Settings. Valid values: `CUSTOM`, `DISABLE`, `USE_CONTROL_PROXY`.
+    <dd>{{% md %}}The data plane proxy settings. Valid values: `CUSTOM`, `DISABLE`, `USE_CONTROL_PROXY`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_cpu_core_python">
@@ -675,7 +674,7 @@ The EcsBackupClient resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A Single Backup Task Uses for Example, Instances Can Be Grouped According to CPU Core Count, 0 Means No Restrictions.
+    <dd>{{% md %}}Number of CPU cores used by a single backup task, 0 means no restrictions.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_worker_python">
@@ -684,7 +683,7 @@ The EcsBackupClient resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A Single Backup Task Parallel Work, the Number of 0 Means No Restrictions.
+    <dd>{{% md %}}Number of concurrent jobs for a single backup task, 0 means no restrictions.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="proxy_host_python">
@@ -693,7 +692,7 @@ The EcsBackupClient resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Custom Data Plane Proxy Server Host Address.
+    <dd>{{% md %}}Custom data plane proxy server host address.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="proxy_password_python">
@@ -702,7 +701,7 @@ The EcsBackupClient resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Custom Data Plane Proxy Password.
+    <dd>{{% md %}}Custom data plane proxy server password.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="proxy_port_python">
@@ -711,7 +710,7 @@ The EcsBackupClient resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Custom Data Plane Proxy Server Host Port.
+    <dd>{{% md %}}Custom data plane proxy server host port.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="proxy_user_python">
@@ -720,7 +719,7 @@ The EcsBackupClient resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Custom Data Plane Proxy Server Username.
+    <dd>{{% md %}}Username of custom data plane proxy server.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_python">
@@ -738,7 +737,7 @@ The EcsBackupClient resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates Whether to Use the Https Transport Data Plane Data. Valid values: `true`, `false`.
+    <dd>{{% md %}}Indicates whether to use the HTTPS protocol. Valid values: `true`, `false`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -942,7 +941,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Data Plane Data Access Point Type. Valid values: `CLASSIC`, `PUBLIC`, `VPC`.
+    <dd>{{% md %}}The data plane access point type. Valid values: `CLASSIC`, `PUBLIC`, `VPC`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dataproxysetting_csharp">
@@ -951,7 +950,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Data Plane Proxy Settings. Valid values: `CUSTOM`, `DISABLE`, `USE_CONTROL_PROXY`.
+    <dd>{{% md %}}The data plane proxy settings. Valid values: `CUSTOM`, `DISABLE`, `USE_CONTROL_PROXY`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instanceid_csharp">
@@ -960,7 +959,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ECS Instance Id.
+    <dd>{{% md %}}The ID of ECS instance.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxcpucore_csharp">
@@ -969,7 +968,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A Single Backup Task Uses for Example, Instances Can Be Grouped According to CPU Core Count, 0 Means No Restrictions.
+    <dd>{{% md %}}Number of CPU cores used by a single backup task, 0 means no restrictions.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxworker_csharp">
@@ -978,7 +977,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A Single Backup Task Parallel Work, the Number of 0 Means No Restrictions.
+    <dd>{{% md %}}Number of concurrent jobs for a single backup task, 0 means no restrictions.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_proxyhost_csharp">
@@ -987,7 +986,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Custom Data Plane Proxy Server Host Address.
+    <dd>{{% md %}}Custom data plane proxy server host address.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_proxypassword_csharp">
@@ -996,7 +995,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Custom Data Plane Proxy Password.
+    <dd>{{% md %}}Custom data plane proxy server password.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_proxyport_csharp">
@@ -1005,7 +1004,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Custom Data Plane Proxy Server Host Port.
+    <dd>{{% md %}}Custom data plane proxy server host port.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_proxyuser_csharp">
@@ -1014,7 +1013,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Custom Data Plane Proxy Server Username.
+    <dd>{{% md %}}Username of custom data plane proxy server.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_csharp">
@@ -1032,7 +1031,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates Whether to Use the Https Transport Data Plane Data. Valid values: `true`, `false`.
+    <dd>{{% md %}}Indicates whether to use the HTTPS protocol. Valid values: `true`, `false`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1045,7 +1044,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Data Plane Data Access Point Type. Valid values: `CLASSIC`, `PUBLIC`, `VPC`.
+    <dd>{{% md %}}The data plane access point type. Valid values: `CLASSIC`, `PUBLIC`, `VPC`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dataproxysetting_go">
@@ -1054,7 +1053,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Data Plane Proxy Settings. Valid values: `CUSTOM`, `DISABLE`, `USE_CONTROL_PROXY`.
+    <dd>{{% md %}}The data plane proxy settings. Valid values: `CUSTOM`, `DISABLE`, `USE_CONTROL_PROXY`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instanceid_go">
@@ -1063,7 +1062,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ECS Instance Id.
+    <dd>{{% md %}}The ID of ECS instance.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxcpucore_go">
@@ -1072,7 +1071,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A Single Backup Task Uses for Example, Instances Can Be Grouped According to CPU Core Count, 0 Means No Restrictions.
+    <dd>{{% md %}}Number of CPU cores used by a single backup task, 0 means no restrictions.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxworker_go">
@@ -1081,7 +1080,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A Single Backup Task Parallel Work, the Number of 0 Means No Restrictions.
+    <dd>{{% md %}}Number of concurrent jobs for a single backup task, 0 means no restrictions.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_proxyhost_go">
@@ -1090,7 +1089,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Custom Data Plane Proxy Server Host Address.
+    <dd>{{% md %}}Custom data plane proxy server host address.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_proxypassword_go">
@@ -1099,7 +1098,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Custom Data Plane Proxy Password.
+    <dd>{{% md %}}Custom data plane proxy server password.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_proxyport_go">
@@ -1108,7 +1107,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Custom Data Plane Proxy Server Host Port.
+    <dd>{{% md %}}Custom data plane proxy server host port.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_proxyuser_go">
@@ -1117,7 +1116,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Custom Data Plane Proxy Server Username.
+    <dd>{{% md %}}Username of custom data plane proxy server.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_go">
@@ -1135,7 +1134,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates Whether to Use the Https Transport Data Plane Data. Valid values: `true`, `false`.
+    <dd>{{% md %}}Indicates whether to use the HTTPS protocol. Valid values: `true`, `false`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1148,7 +1147,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Data Plane Data Access Point Type. Valid values: `CLASSIC`, `PUBLIC`, `VPC`.
+    <dd>{{% md %}}The data plane access point type. Valid values: `CLASSIC`, `PUBLIC`, `VPC`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dataproxysetting_nodejs">
@@ -1157,7 +1156,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Data Plane Proxy Settings. Valid values: `CUSTOM`, `DISABLE`, `USE_CONTROL_PROXY`.
+    <dd>{{% md %}}The data plane proxy settings. Valid values: `CUSTOM`, `DISABLE`, `USE_CONTROL_PROXY`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instanceid_nodejs">
@@ -1166,7 +1165,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ECS Instance Id.
+    <dd>{{% md %}}The ID of ECS instance.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxcpucore_nodejs">
@@ -1175,7 +1174,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A Single Backup Task Uses for Example, Instances Can Be Grouped According to CPU Core Count, 0 Means No Restrictions.
+    <dd>{{% md %}}Number of CPU cores used by a single backup task, 0 means no restrictions.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxworker_nodejs">
@@ -1184,7 +1183,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A Single Backup Task Parallel Work, the Number of 0 Means No Restrictions.
+    <dd>{{% md %}}Number of concurrent jobs for a single backup task, 0 means no restrictions.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_proxyhost_nodejs">
@@ -1193,7 +1192,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Custom Data Plane Proxy Server Host Address.
+    <dd>{{% md %}}Custom data plane proxy server host address.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_proxypassword_nodejs">
@@ -1202,7 +1201,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Custom Data Plane Proxy Password.
+    <dd>{{% md %}}Custom data plane proxy server password.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_proxyport_nodejs">
@@ -1211,7 +1210,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Custom Data Plane Proxy Server Host Port.
+    <dd>{{% md %}}Custom data plane proxy server host port.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_proxyuser_nodejs">
@@ -1220,7 +1219,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Custom Data Plane Proxy Server Username.
+    <dd>{{% md %}}Username of custom data plane proxy server.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_nodejs">
@@ -1238,7 +1237,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Indicates Whether to Use the Https Transport Data Plane Data. Valid values: `true`, `false`.
+    <dd>{{% md %}}Indicates whether to use the HTTPS protocol. Valid values: `true`, `false`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1251,7 +1250,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Data Plane Data Access Point Type. Valid values: `CLASSIC`, `PUBLIC`, `VPC`.
+    <dd>{{% md %}}The data plane access point type. Valid values: `CLASSIC`, `PUBLIC`, `VPC`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_data_proxy_setting_python">
@@ -1260,7 +1259,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Data Plane Proxy Settings. Valid values: `CUSTOM`, `DISABLE`, `USE_CONTROL_PROXY`.
+    <dd>{{% md %}}The data plane proxy settings. Valid values: `CUSTOM`, `DISABLE`, `USE_CONTROL_PROXY`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instance_id_python">
@@ -1269,7 +1268,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ECS Instance Id.
+    <dd>{{% md %}}The ID of ECS instance.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_max_cpu_core_python">
@@ -1278,7 +1277,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A Single Backup Task Uses for Example, Instances Can Be Grouped According to CPU Core Count, 0 Means No Restrictions.
+    <dd>{{% md %}}Number of CPU cores used by a single backup task, 0 means no restrictions.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_max_worker_python">
@@ -1287,7 +1286,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A Single Backup Task Parallel Work, the Number of 0 Means No Restrictions.
+    <dd>{{% md %}}Number of concurrent jobs for a single backup task, 0 means no restrictions.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_proxy_host_python">
@@ -1296,7 +1295,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Custom Data Plane Proxy Server Host Address.
+    <dd>{{% md %}}Custom data plane proxy server host address.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_proxy_password_python">
@@ -1305,7 +1304,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Custom Data Plane Proxy Password.
+    <dd>{{% md %}}Custom data plane proxy server password.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_proxy_port_python">
@@ -1314,7 +1313,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Custom Data Plane Proxy Server Host Port.
+    <dd>{{% md %}}Custom data plane proxy server host port.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_proxy_user_python">
@@ -1323,7 +1322,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Custom Data Plane Proxy Server Username.
+    <dd>{{% md %}}Username of custom data plane proxy server.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_python">
@@ -1341,7 +1340,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates Whether to Use the Https Transport Data Plane Data. Valid values: `true`, `false`.
+    <dd>{{% md %}}Indicates whether to use the HTTPS protocol. Valid values: `true`, `false`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

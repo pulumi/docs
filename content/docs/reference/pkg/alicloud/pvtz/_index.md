@@ -11,6 +11,7 @@ Explore the resources and functions of the alicloud.pvtz module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
+    <li><a href="uservpcauthorization" title="UserVpcAuthorization"><span class="symbol resource"></span>UserVpcAuthorization</a></li>
     <li><a href="zone" title="Zone"><span class="symbol resource"></span>Zone</a></li>
     <li><a href="zoneattachment" title="ZoneAttachment"><span class="symbol resource"></span>ZoneAttachment</a></li>
     <li><a href="zonerecord" title="ZoneRecord"><span class="symbol resource"></span>ZoneRecord</a></li>
@@ -32,6 +33,6 @@ Explore the resources and functions of the alicloud.pvtz module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>3.7.0</dd>
+	<dd>3.8.0</dd>
 </dl>
 

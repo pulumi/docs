@@ -12,6 +12,7 @@ Explore the resources and functions of the alicloud.expressconnect module.
 <h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="physicalconnection" title="PhysicalConnection"><span class="symbol resource"></span>PhysicalConnection</a></li>
+    <li><a href="virtualborderrouter" title="VirtualBorderRouter"><span class="symbol resource"></span>VirtualBorderRouter</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
@@ -19,6 +20,7 @@ Explore the resources and functions of the alicloud.expressconnect module.
     <li><a href="getaccesspoints" title="GetAccessPoints"><span class="symbol function"></span>GetAccessPoints</a></li>
     <li><a href="getphysicalconnectionservice" title="GetPhysicalConnectionService"><span class="symbol function"></span>GetPhysicalConnectionService</a></li>
     <li><a href="getphysicalconnections" title="GetPhysicalConnections"><span class="symbol function"></span>GetPhysicalConnections</a></li>
+    <li><a href="getvirtualborderrouters" title="GetVirtualBorderRouters"><span class="symbol function"></span>GetVirtualBorderRouters</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -30,6 +32,6 @@ Explore the resources and functions of the alicloud.expressconnect module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>3.7.0</dd>
+	<dd>3.8.0</dd>
 </dl>
 
