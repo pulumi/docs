@@ -357,6 +357,15 @@ The following output properties are available:
     <dd>{{% md %}}Whether the repository is archived.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="branches_csharp">
+<a href="#branches_csharp" style="color: inherit; text-decoration: inherit;">Branches</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getrepositorybranch">List&lt;Get<wbr>Repository<wbr>Branch&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The list of this repository's branches. Each element of `branches` has the following attributes:
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="defaultbranch_csharp">
 <a href="#defaultbranch_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Branch</a>
 </span>
@@ -452,7 +461,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Name of the branch.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nodeid_csharp">
 <a href="#nodeid_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Id</a>
@@ -584,6 +594,15 @@ The following output properties are available:
     <dd>{{% md %}}Whether the repository is archived.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="branches_go">
+<a href="#branches_go" style="color: inherit; text-decoration: inherit;">Branches</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getrepositorybranch">[]Get<wbr>Repository<wbr>Branch</a></span>
+    </dt>
+    <dd>{{% md %}}The list of this repository's branches. Each element of `branches` has the following attributes:
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="defaultbranch_go">
 <a href="#defaultbranch_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Branch</a>
 </span>
@@ -679,7 +698,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Name of the branch.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nodeid_go">
 <a href="#nodeid_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Id</a>
@@ -811,6 +831,15 @@ The following output properties are available:
     <dd>{{% md %}}Whether the repository is archived.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="branches_nodejs">
+<a href="#branches_nodejs" style="color: inherit; text-decoration: inherit;">branches</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getrepositorybranch">Get<wbr>Repository<wbr>Branch[]</a></span>
+    </dt>
+    <dd>{{% md %}}The list of this repository's branches. Each element of `branches` has the following attributes:
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="defaultbranch_nodejs">
 <a href="#defaultbranch_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Branch</a>
 </span>
@@ -906,7 +935,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Name of the branch.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nodeid_nodejs">
 <a href="#nodeid_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Id</a>
@@ -1038,6 +1068,15 @@ The following output properties are available:
     <dd>{{% md %}}Whether the repository is archived.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="branches_python">
+<a href="#branches_python" style="color: inherit; text-decoration: inherit;">branches</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getrepositorybranch">Sequence[Get<wbr>Repository<wbr>Branch]</a></span>
+    </dt>
+    <dd>{{% md %}}The list of this repository's branches. Each element of `branches` has the following attributes:
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="default_branch_python">
 <a href="#default_branch_python" style="color: inherit; text-decoration: inherit;">default_<wbr>branch</a>
 </span>
@@ -1133,7 +1172,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Name of the branch.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="node_id_python">
 <a href="#node_id_python" style="color: inherit; text-decoration: inherit;">node_<wbr>id</a>
@@ -1231,6 +1271,98 @@ The following output properties are available:
 
 ## Supporting Types
 
+
+<h4 id="getrepositorybranch">Get<wbr>Repository<wbr>Branch</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the repository.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="protected_csharp">
+<a href="#protected_csharp" style="color: inherit; text-decoration: inherit;">Protected</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the branch is protected.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the repository.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="protected_go">
+<a href="#protected_go" style="color: inherit; text-decoration: inherit;">Protected</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the branch is protected.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the repository.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="protected_nodejs">
+<a href="#protected_nodejs" style="color: inherit; text-decoration: inherit;">protected</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether the branch is protected.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the repository.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="protected_python">
+<a href="#protected_python" style="color: inherit; text-decoration: inherit;">protected</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the branch is protected.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
 
 <h4 id="getrepositorypage">Get<wbr>Repository<wbr>Page</h4>
 
