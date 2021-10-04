@@ -12,8 +12,8 @@ INSTALL_RESOURCE_PLUGIN=${2:-}
 # Pass a 3rd argument to override the resource plugin version installed by this script.
 INSTALL_RESOURCE_PLUGIN_VERSION=${3:-}
 
-PACKDIR="./content/docs/reference/pkg"
-ABSOLUTEPACKDIR="$(pwd)/content/docs/reference/pkg"
+PACKDIR="content/registry/packages/"
+ABSOLUTEPACKDIR="$(pwd)/$PACKDIR"
 PACKAGE_TREE_OUT_DIR="../../../registry/packages/data/navs"
 TOOL_RESDOCGEN="./tools/resourcedocsgen/"
 
@@ -96,7 +96,7 @@ generate_docs() {
 
     go build -o "${GOPATH}/bin/resourcedocsgen" .
     resourcedocsgen docs \
-      --docsOutDir "${ABSOLUTEPACKDIR}/${provider}" \
+      --docsOutDir "${ABSOLUTEPACKDIR}/${provider}/api-docs" \
       --schemaFile "${SCHEMA_FILE}" \
       --version "${plugin_version}" \
       --logtostderr \
