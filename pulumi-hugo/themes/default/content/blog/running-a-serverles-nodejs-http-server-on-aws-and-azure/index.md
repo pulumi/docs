@@ -242,6 +242,6 @@ the cloud at runtime! That magic, along with powerful components like
 the new HttpServer API can help make cloud applications dramatically
 simpler to write and maintain. Happy coding!
 
-You can dig in to [serverless coding with Pulumi here]({{< relref "/registry/packages/cloudfx/how-to-guides/rest-api" >}}),
+You can dig in to [serverless coding with Pulumi here]({{< relref "/docs/tutorials/cloudfx/rest-api" >}}),
 and join us on Wednesday 3rd October at 11am PDT to hear more about
 [serverless programming with Pulumi on our YouTube live stream](https://www.youtube.com/watch?v=k8ceyQuJiVM).

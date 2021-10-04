@@ -241,6 +241,6 @@ You also learned how to work with the Pulumi CLI. To recap:
 [pulumi.Input]: {{< relref "/docs/reference/pkg/nodejs/pulumi/pulumi#Input" >}}
 [pulumi.ComponentResource]: {{< relref "/docs/reference/pkg/nodejs/pulumi/pulumi#ComponentResource" >}}
 [Component]: {{< relref "/docs/intro/concepts/programming-model#components" >}}
-[Pulumi Cloud]: {{< relref "/registry/packages/cloudfx/how-to-guides" >}}
+[Pulumi Cloud]: {{< relref "/docs/tutorials/cloudfx" >}}
 [in Python]: https://github.com/pulumi/examples/tree/master/aws-py-s3-folder
 <!-- markdownlint-enable url -->

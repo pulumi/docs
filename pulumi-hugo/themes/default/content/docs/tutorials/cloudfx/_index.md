@@ -58,7 +58,7 @@ The Cloud Framework is open source and available in the [pulumi/pulumi-cloud](ht
 
 ## Authentication
 
-Authentication options must be set for the target cloud provider. See the [AWS setup page]({{< relref "/docs/intro/cloud-providers/aws/setup" >}}) for details (more providers for the Cloud Framework coming soon).
+Authentication options must be set for the target cloud provider. See the [AWS setup page]({{< relref "/registry/packages/aws/installation-configuration" >}}) for details (more providers for the Cloud Framework coming soon).
 
 ## Configuration
 
