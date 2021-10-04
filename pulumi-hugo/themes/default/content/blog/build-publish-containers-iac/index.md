@@ -1719,7 +1719,7 @@ At this stage, we can run `pulumi up` to check that the program works and to pro
 
 ## Build and Publish Your Container
 
-Now we are ready to build and publish your container image to the chosen registry. [The Docker provider's `Image` component]({{< relref "/docs/reference/pkg/docker" >}}) internally uses the Docker engine to perform the necessary steps to carry this out, including building, tagging, capturing, and streaming container build logs as progress is made and pushing the final result.
+Now we are ready to build and publish your container image to the chosen registry. [The Docker provider's `Image` component]({{< relref "/registry/packages/docker/api-docs" >}}) internally uses the Docker engine to perform the necessary steps to carry this out, including building, tagging, capturing, and streaming container build logs as progress is made and pushing the final result.
 
 Simply pass the path to your application's `Dockerfile` as the build context, the registry's URL as the image's name, and the registry configuration object built up earlier to facilitate authentication:
 

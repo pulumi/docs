@@ -157,7 +157,7 @@ class Program
 
 {{< /chooser >}}
 
-API documentation is available in our [API reference]({{< relref "/docs/reference/pkg/google-native">}}).
+API documentation is available in our [API reference]({{< relref "/registry/packages/google-native/api-docs">}}).
 
 ## Works side-by-side with the existing Pulumi GCP Provider
 
@@ -217,4 +217,4 @@ The preview of the Google Cloud Native provider is ready for you to try. It’s 
 The Google Cloud Native announcement is just one part of Pulumi’s Cloud Engineering Platform. Watch the PulumiUP event for more.
 
 👉 [PulumiUP]({{< relref "/pulumi-up" >}})
-👉 [Google Cloud Native API reference]({{< relref "/docs/reference/pkg/google-native" >}})
+👉 [Google Cloud Native API reference]({{< relref "/registry/packages/google-native/api-docs" >}})

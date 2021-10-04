@@ -66,9 +66,9 @@ A Pulumi Package is comprised of two inputs: a Pulumi schema, which describes th
 
 There are several different ways to author a Pulumi Package depending on the kind of cloud infrastructure you want to define:
 
-1. **Native Pulumi Provider Package:** Use the full features of the Pulumi resource model to create a provider for a new cloud platform. Examples: the [`kubernetes`]({{<relref "/docs/reference/pkg/kubernetes">}}), [`azure-native`]({{<relref "/docs/reference/pkg/azure-native">}}), and [`google-native`]({{<relref "/docs/reference/pkg/google-native">}}) packages.
-2. **Bridged Provider Package:** Take an existing resource provider from another supported ecosystem (like a Terraform provider), and bridge it to be exposed as a Pulumi Package. Examples: the [`aws`]({{<relref "/docs/reference/pkg/aws">}}), [`tls`]({{<relref "/docs/reference/pkg/tls">}}), and [`cloudflare`]({{<relref "/docs/reference/pkg/cloudflare">}}) packages.
-3. **Component Package:** Write a Pulumi Component in your language of choice and expose it to users in all Pulumi languages. Example: the [`eks`]({{<relref "/docs/reference/pkg/eks">}}) package.
+1. **Native Pulumi Provider Package:** Use the full features of the Pulumi resource model to create a provider for a new cloud platform. Examples: the [`kubernetes`]({{<relref "/registry/packages/kubernetes">}}), [`azure-native`]({{<relref /api-docs"/docs/reference/pkg/azure-native">}}), and [`google-native`]({{<relref "/registry/packages/google-native/api-docs">}}) packages.
+2. **Bridged Provider Package:** Take an existing resource provider from another supported ecosystem (like a Terraform provider), and bridge it to be exposed as a Pulumi Package. Examples: the [`aws`]({{<relref "/registry/packages/aws">}}), [`tls`]({{<relref /api-docs"/docs/reference/pkg/tls">}}), and [`cloudflare`]({{<relref "/registry/packages/cloudflare/api-docs">}}) packages.
+3. **Component Package:** Write a Pulumi Component in your language of choice and expose it to users in all Pulumi languages. Example: the [`eks`]({{<relref "/registry/packages/eks/api-docs">}}) package.
 
 Together, these options provide a combination of breadth and depth for the kinds of resources and components that can be exposed to Pulumi developers via Pulumi Packages. In the weeks ahead, we have [many improvements](https://github.com/pulumi/pulumi/issues/6804) underway to make the authoring and publishing of packages much easier. We also look forward to your feedback on the overall experience!
 

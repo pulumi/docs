@@ -119,7 +119,7 @@ export const repoEndpoint = repo.repositoryUrl;
 
 In this example, we create an [Azure Resource Group](https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/manage-resource-groups-portal#what-is-a-resource-group) to contain the resources for the registry, such as the [App Service](https://docs.microsoft.com/en-us/azure/app-service/) that hosts the registry.
 
-We instantiate a registry with the [containerservice module]({{< relref "/docs/reference/pkg/azure/containerservice" >}}) and use the [Image module]({{< relref "/docs/reference/pkg/docker/image" >}}) in the [Docker package]({{< relref "/docs/reference/pkg/docker" >}}) to build and push the image to the registry. We export the registry URL and the username and password in case we should want to push or pull and image using the Docker CLI.
+We instantiate a registry with the [containerservice module]({{< relref "/docs/reference/pkg/azure/containerservice" >}}) and use the [Image module]({{< relref "/docs/reference/pkg/docker/image" >}}) in the [Docker package]({{< relref "/registry/packages/docker/api-docs" >}}) to build and push the image to the registry. We export the registry URL and the username and password in case we should want to push or pull and image using the Docker CLI.
 
 ```typescript
 import * as azure from "@pulumi/azure";
@@ -174,7 +174,7 @@ $ gcloud auth login
 $ gcloud auth configure-docker
 ```
 
-We use the [Image module]({{< relref "/docs/reference/pkg/docker/image" >}}) in the [Docker package]({{< relref "/docs/reference/pkg/docker" >}}) to build and push the image to the registry. We export the registry URL and the username and password in case we should want to push or pull an image using the Docker CLI.
+We use the [Image module]({{< relref "/docs/reference/pkg/docker/image" >}}) in the [Docker package]({{< relref "/registry/packages/docker/api-docs" >}}) to build and push the image to the registry. We export the registry URL and the username and password in case we should want to push or pull an image using the Docker CLI.
 
 ```typescript
 import * as docker from "@pulumi/docker";

@@ -1500,7 +1500,7 @@ For a complete example of this in action, see
 
 ## Deploying Kubernetes Apps to Your EKS Cluster
 
-Pulumi supports the entire Kubernetes object model in the [@pulumi/kubernetes]({{< relref "/docs/reference/pkg/kubernetes" >}})
+Pulumi supports the entire Kubernetes object model in the [@pulumi/kubernetes]({{< relref "/registry/packages/kubernetes/api-docs" >}})
 package. For more information on these object types, including Deployments, Services, and Pods, see
 [Understanding Kubernetes Objects](https://kubernetes.io/docs/concepts/overview/working-with-objects/kubernetes-objects/).
 
@@ -2207,7 +2207,7 @@ class MyStack : Stack
 {{% /choosable %}}
 
 The `ConfigFile` and `ConfigGroup` classes both support a [`transformations` property](
-{{< relref "/docs/reference/pkg/kubernetes#transformations_nodejs" >}}) which can be used to ["monkey patch"](
+{{< relref "/registry/packages/kubernetes#transformations_nodejs" >}}) which can be used to ["monkey patch/api-docs"](
 https://en.wikipedia.org/wiki/Monkey_patch) Kubernetes configuration on the fly. This can be used to rewrite
 configuration to include additional services (like Envoy sidecars), inject tags, and so on.
 
@@ -3168,7 +3168,7 @@ For more information about ECR, see [the Pulumi Crosswalk for AWS ECR documentat
 
 For more information about Kubernetes and EKS, see the following:
 
-* [Pulumi Kubernetes API Documentation]({{< relref "/docs/reference/pkg/kubernetes" >}})
+* [Pulumi Kubernetes API Documentation]({{< relref "/registry/packages/kubernetes/api-docs" >}})
 * [Pulumi EKS API Documentation]({{< relref "/docs/reference/pkg/nodejs/pulumi/eks" >}})
 * [Amazon Elastic Kubernetes Service homepage](https://aws.amazon.com/eks/)
 * [Kubernetes Documentation](https://kubernetes.io)

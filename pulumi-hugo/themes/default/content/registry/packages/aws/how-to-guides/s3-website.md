@@ -229,7 +229,7 @@ You also learned how to work with the Pulumi CLI. To recap:
 - [API Gateways and Lambda]({{< relref "/registry/packages/aws/how-to-guides/rest-api" >}})
 
 <!-- markdownlint-disable url -->
-[@pulumi/aws]: {{< relref "/docs/reference/pkg/aws" >}}
+[@pulumi/aws]: {{< relref "/registry/packages/aws/api-docs" >}}
 [aws.s3.Bucket]: {{< relref "/docs/reference/pkg/aws/s3/bucket" >}}
 [aws.s3.Bucket.bucket]: {{< relref "/docs/reference/pkg/aws/s3/bucket#bucket_nodejs" >}}
 [aws.s3.BucketObject]: {{< relref "/docs/reference/pkg/aws/s3/bucketobject" >}}

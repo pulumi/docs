@@ -152,6 +152,6 @@ tbody tr td:first-child {
 For more information about using Pulumi with AWS, see the following:
 
 * [Pulumi AWS Get Started guide]({{< relref "/docs/get-started/aws" >}})
-* [Pulumi AWS API documentation]({{< relref "/docs/reference/pkg/aws" >}})
+* [Pulumi AWS API documentation]({{< relref "/registry/packages/aws/api-docs" >}})
 * [Pulumi Blog entries tagged with "AWS"](/blog/tag/aws/)
 * [Pulumi Examples repository](https://github.com/pulumi/examples)
