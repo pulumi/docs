@@ -136,10 +136,14 @@ const f1 = aiven.getMirrorMakerReplicationFlow({
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_mirror_maker_replication_flow(</span><span class="nx">enable</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_mirror_maker_replication_flow(</span><span class="nx">emit_heartbeats_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                                      <span class="nx">enable</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                                       <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                      <span class="nx">replication_policy_class</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                                       <span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                                       <span class="nx">source_cluster</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                      <span class="nx">sync_group_offsets_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                                      <span class="nx">sync_group_offsets_interval_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
                                       <span class="nx">target_cluster</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                                       <span class="nx">topics</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
                                       <span class="nx">topics_blacklists</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
@@ -205,6 +209,14 @@ Flow belongs to. They should be defined using reference as shown above to set up
     <dd>{{% md %}}is a target cluster alias.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="emitheartbeatsenabled_csharp">
+<a href="#emitheartbeatsenabled_csharp" style="color: inherit; text-decoration: inherit;">Emit<wbr>Heartbeats<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="enable_csharp">
 <a href="#enable_csharp" style="color: inherit; text-decoration: inherit;">Enable</a>
 </span>
@@ -213,6 +225,30 @@ Flow belongs to. They should be defined using reference as shown above to set up
     </dt>
     <dd>{{% md %}}enable of disable replication flows for a MirrorMaker service
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="replicationpolicyclass_csharp">
+<a href="#replicationpolicyclass_csharp" style="color: inherit; text-decoration: inherit;">Replication<wbr>Policy<wbr>Class</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="syncgroupoffsetsenabled_csharp">
+<a href="#syncgroupoffsetsenabled_csharp" style="color: inherit; text-decoration: inherit;">Sync<wbr>Group<wbr>Offsets<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="syncgroupoffsetsintervalseconds_csharp">
+<a href="#syncgroupoffsetsintervalseconds_csharp" style="color: inherit; text-decoration: inherit;">Sync<wbr>Group<wbr>Offsets<wbr>Interval<wbr>Seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="topics_csharp">
 <a href="#topics_csharp" style="color: inherit; text-decoration: inherit;">Topics</a>
@@ -272,6 +308,14 @@ Flow belongs to. They should be defined using reference as shown above to set up
     <dd>{{% md %}}is a target cluster alias.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="emitheartbeatsenabled_go">
+<a href="#emitheartbeatsenabled_go" style="color: inherit; text-decoration: inherit;">Emit<wbr>Heartbeats<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="enable_go">
 <a href="#enable_go" style="color: inherit; text-decoration: inherit;">Enable</a>
 </span>
@@ -280,6 +324,30 @@ Flow belongs to. They should be defined using reference as shown above to set up
     </dt>
     <dd>{{% md %}}enable of disable replication flows for a MirrorMaker service
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="replicationpolicyclass_go">
+<a href="#replicationpolicyclass_go" style="color: inherit; text-decoration: inherit;">Replication<wbr>Policy<wbr>Class</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="syncgroupoffsetsenabled_go">
+<a href="#syncgroupoffsetsenabled_go" style="color: inherit; text-decoration: inherit;">Sync<wbr>Group<wbr>Offsets<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="syncgroupoffsetsintervalseconds_go">
+<a href="#syncgroupoffsetsintervalseconds_go" style="color: inherit; text-decoration: inherit;">Sync<wbr>Group<wbr>Offsets<wbr>Interval<wbr>Seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="topics_go">
 <a href="#topics_go" style="color: inherit; text-decoration: inherit;">Topics</a>
@@ -339,6 +407,14 @@ Flow belongs to. They should be defined using reference as shown above to set up
     <dd>{{% md %}}is a target cluster alias.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="emitheartbeatsenabled_nodejs">
+<a href="#emitheartbeatsenabled_nodejs" style="color: inherit; text-decoration: inherit;">emit<wbr>Heartbeats<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="enable_nodejs">
 <a href="#enable_nodejs" style="color: inherit; text-decoration: inherit;">enable</a>
 </span>
@@ -347,6 +423,30 @@ Flow belongs to. They should be defined using reference as shown above to set up
     </dt>
     <dd>{{% md %}}enable of disable replication flows for a MirrorMaker service
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="replicationpolicyclass_nodejs">
+<a href="#replicationpolicyclass_nodejs" style="color: inherit; text-decoration: inherit;">replication<wbr>Policy<wbr>Class</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="syncgroupoffsetsenabled_nodejs">
+<a href="#syncgroupoffsetsenabled_nodejs" style="color: inherit; text-decoration: inherit;">sync<wbr>Group<wbr>Offsets<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="syncgroupoffsetsintervalseconds_nodejs">
+<a href="#syncgroupoffsetsintervalseconds_nodejs" style="color: inherit; text-decoration: inherit;">sync<wbr>Group<wbr>Offsets<wbr>Interval<wbr>Seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="topics_nodejs">
 <a href="#topics_nodejs" style="color: inherit; text-decoration: inherit;">topics</a>
@@ -406,6 +506,14 @@ Flow belongs to. They should be defined using reference as shown above to set up
     <dd>{{% md %}}is a target cluster alias.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="emit_heartbeats_enabled_python">
+<a href="#emit_heartbeats_enabled_python" style="color: inherit; text-decoration: inherit;">emit_<wbr>heartbeats_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="enable_python">
 <a href="#enable_python" style="color: inherit; text-decoration: inherit;">enable</a>
 </span>
@@ -414,6 +522,30 @@ Flow belongs to. They should be defined using reference as shown above to set up
     </dt>
     <dd>{{% md %}}enable of disable replication flows for a MirrorMaker service
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="replication_policy_class_python">
+<a href="#replication_policy_class_python" style="color: inherit; text-decoration: inherit;">replication_<wbr>policy_<wbr>class</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sync_group_offsets_enabled_python">
+<a href="#sync_group_offsets_enabled_python" style="color: inherit; text-decoration: inherit;">sync_<wbr>group_<wbr>offsets_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sync_group_offsets_interval_seconds_python">
+<a href="#sync_group_offsets_interval_seconds_python" style="color: inherit; text-decoration: inherit;">sync_<wbr>group_<wbr>offsets_<wbr>interval_<wbr>seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="topics_python">
 <a href="#topics_python" style="color: inherit; text-decoration: inherit;">topics</a>
@@ -487,6 +619,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="emitheartbeatsenabled_csharp">
+<a href="#emitheartbeatsenabled_csharp" style="color: inherit; text-decoration: inherit;">Emit<wbr>Heartbeats<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="enable_csharp">
 <a href="#enable_csharp" style="color: inherit; text-decoration: inherit;">Enable</a>
 </span>
@@ -495,6 +635,30 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}enable of disable replication flows for a MirrorMaker service
 {{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="replicationpolicyclass_csharp">
+<a href="#replicationpolicyclass_csharp" style="color: inherit; text-decoration: inherit;">Replication<wbr>Policy<wbr>Class</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="syncgroupoffsetsenabled_csharp">
+<a href="#syncgroupoffsetsenabled_csharp" style="color: inherit; text-decoration: inherit;">Sync<wbr>Group<wbr>Offsets<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="syncgroupoffsetsintervalseconds_csharp">
+<a href="#syncgroupoffsetsintervalseconds_csharp" style="color: inherit; text-decoration: inherit;">Sync<wbr>Group<wbr>Offsets<wbr>Interval<wbr>Seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="topics_csharp">
 <a href="#topics_csharp" style="color: inherit; text-decoration: inherit;">Topics</a>
@@ -559,6 +723,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="emitheartbeatsenabled_go">
+<a href="#emitheartbeatsenabled_go" style="color: inherit; text-decoration: inherit;">Emit<wbr>Heartbeats<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="enable_go">
 <a href="#enable_go" style="color: inherit; text-decoration: inherit;">Enable</a>
 </span>
@@ -567,6 +739,30 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}enable of disable replication flows for a MirrorMaker service
 {{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="replicationpolicyclass_go">
+<a href="#replicationpolicyclass_go" style="color: inherit; text-decoration: inherit;">Replication<wbr>Policy<wbr>Class</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="syncgroupoffsetsenabled_go">
+<a href="#syncgroupoffsetsenabled_go" style="color: inherit; text-decoration: inherit;">Sync<wbr>Group<wbr>Offsets<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="syncgroupoffsetsintervalseconds_go">
+<a href="#syncgroupoffsetsintervalseconds_go" style="color: inherit; text-decoration: inherit;">Sync<wbr>Group<wbr>Offsets<wbr>Interval<wbr>Seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="topics_go">
 <a href="#topics_go" style="color: inherit; text-decoration: inherit;">Topics</a>
@@ -631,6 +827,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="emitheartbeatsenabled_nodejs">
+<a href="#emitheartbeatsenabled_nodejs" style="color: inherit; text-decoration: inherit;">emit<wbr>Heartbeats<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="enable_nodejs">
 <a href="#enable_nodejs" style="color: inherit; text-decoration: inherit;">enable</a>
 </span>
@@ -639,6 +843,30 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}enable of disable replication flows for a MirrorMaker service
 {{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="replicationpolicyclass_nodejs">
+<a href="#replicationpolicyclass_nodejs" style="color: inherit; text-decoration: inherit;">replication<wbr>Policy<wbr>Class</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="syncgroupoffsetsenabled_nodejs">
+<a href="#syncgroupoffsetsenabled_nodejs" style="color: inherit; text-decoration: inherit;">sync<wbr>Group<wbr>Offsets<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="syncgroupoffsetsintervalseconds_nodejs">
+<a href="#syncgroupoffsetsintervalseconds_nodejs" style="color: inherit; text-decoration: inherit;">sync<wbr>Group<wbr>Offsets<wbr>Interval<wbr>Seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="topics_nodejs">
 <a href="#topics_nodejs" style="color: inherit; text-decoration: inherit;">topics</a>
@@ -703,6 +931,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="emit_heartbeats_enabled_python">
+<a href="#emit_heartbeats_enabled_python" style="color: inherit; text-decoration: inherit;">emit_<wbr>heartbeats_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="enable_python">
 <a href="#enable_python" style="color: inherit; text-decoration: inherit;">enable</a>
 </span>
@@ -711,6 +947,30 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}enable of disable replication flows for a MirrorMaker service
 {{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="replication_policy_class_python">
+<a href="#replication_policy_class_python" style="color: inherit; text-decoration: inherit;">replication_<wbr>policy_<wbr>class</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="sync_group_offsets_enabled_python">
+<a href="#sync_group_offsets_enabled_python" style="color: inherit; text-decoration: inherit;">sync_<wbr>group_<wbr>offsets_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="sync_group_offsets_interval_seconds_python">
+<a href="#sync_group_offsets_interval_seconds_python" style="color: inherit; text-decoration: inherit;">sync_<wbr>group_<wbr>offsets_<wbr>interval_<wbr>seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="topics_python">
 <a href="#topics_python" style="color: inherit; text-decoration: inherit;">topics</a>
