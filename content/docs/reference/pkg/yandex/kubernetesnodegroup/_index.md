@@ -58,10 +58,6 @@ class MyStack : Stack
                     new Yandex.Inputs.KubernetesNodeGroupInstanceTemplateNetworkInterfaceArgs
                     {
                         Nat = true,
-                        SecurityGroupIds = 
-                        {
-                            yandex_vpc_security_group.My_sg.Id,
-                        },
                         SubnetIds = 
                         {
                             yandex_vpc_subnet.My_subnet.Id,
@@ -149,7 +145,6 @@ my_node_group = yandex.KubernetesNodeGroup("myNodeGroup",
         },
         network_interfaces=[{
             "nat": True,
-            "security_group_ids": [yandex_vpc_security_group["my_sg"]["id"]],
             "subnet_ids": [yandex_vpc_subnet["my_subnet"]["id"]],
         }],
         platform_id="standard-v2",
@@ -214,7 +209,6 @@ const myNodeGroup = new yandex.KubernetesNodeGroup("my_node_group", {
         },
         networkInterfaces: [{
             nat: true,
-            securityGroupIds: [yandex_vpc_security_group_my_sg.id],
             subnetIds: [yandex_vpc_subnet_my_subnet.id],
         }],
         platformId: "standard-v2",

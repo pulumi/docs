@@ -174,7 +174,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ID of the folder that the Yandex Database serverless cluster belong to.
+    <dd>{{% md %}}ID of the folder that the Yandex Database serverless cluster belongs to.
 It will be deduced from provider configuration if not set explicitly.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -206,7 +206,7 @@ It will be deduced from provider configuration if not set explicitly.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ID of the folder that the Yandex Database serverless cluster belong to.
+    <dd>{{% md %}}ID of the folder that the Yandex Database serverless cluster belongs to.
 It will be deduced from provider configuration if not set explicitly.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -238,7 +238,7 @@ It will be deduced from provider configuration if not set explicitly.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ID of the folder that the Yandex Database serverless cluster belong to.
+    <dd>{{% md %}}ID of the folder that the Yandex Database serverless cluster belongs to.
 It will be deduced from provider configuration if not set explicitly.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -270,7 +270,7 @@ It will be deduced from provider configuration if not set explicitly.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}ID of the folder that the Yandex Database serverless cluster belong to.
+    <dd>{{% md %}}ID of the folder that the Yandex Database serverless cluster belongs to.
 It will be deduced from provider configuration if not set explicitly.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
