@@ -156,6 +156,8 @@ var titleLookup = map[string]string{
 func packageMetadataCmd() *cobra.Command {
 	var metadataOutDir string
 	var featured bool
+	var publisher string
+	var updatedOn int64
 
 	cmd := &cobra.Command{
 		Use:   "metadata <metadataOutDir> [featured]",
@@ -177,8 +179,8 @@ func packageMetadataCmd() *cobra.Command {
 			}
 			pm := pkg.PackageMeta{
 				Name:          mainSpec.Name,
-				UpdatedOn:     time.Now().Unix(),
-				Publisher:     "Pulumi",
+				UpdatedOn:     updatedOn,
+				Publisher:     publisher,
 				Title:         title,
 				Description:   mainSpec.Description,
 				Category:      category,
@@ -204,6 +206,8 @@ func packageMetadataCmd() *cobra.Command {
 
 	cmd.Flags().StringVar(&metadataOutDir, "metadataOutDir", "", "The directory path to where the docs will be written to")
 	cmd.Flags().BoolVar(&featured, "featured", false, "Whether or not this package should be marked as featured in its metadata")
+	cmd.Flags().StringVar(&publisher, "publisher", "Pulumi", "The publisher's display name to be shown in the package")
+	cmd.Flags().Int64Var(&updatedOn, "updatedOn", time.Now().Unix(), "The timestamp (epoch) to use for when the package was last updated")
 
 	cmd.MarkFlagRequired("metadataOutDir")
 
