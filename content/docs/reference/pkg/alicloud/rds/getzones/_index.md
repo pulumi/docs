@@ -28,8 +28,14 @@ This data source provides availability zones for RDS that can be accessed by an 
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_zones(</span><span class="nx">instance_charge_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_zones(</span><span class="nx">category</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">db_instance_class</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">db_instance_storage_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">engine</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">engine_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">instance_charge_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
               <span class="nx">multi</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+              <span class="nx">multi_zone</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
               <span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetZonesResult</code></pre></div>
 {{% /choosable %}}
@@ -57,6 +63,50 @@ The following arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="category_csharp">
+<a href="#category_csharp" style="color: inherit; text-decoration: inherit;">Category</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}DB Instance category. the value like [`Basic`, `HighAvailability`, `Finance`, `AlwaysOn`], [detail info](https://www.alibabacloud.com/help/doc-detail/69795.htm).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dbinstanceclass_csharp">
+<a href="#dbinstanceclass_csharp" style="color: inherit; text-decoration: inherit;">Db<wbr>Instance<wbr>Class</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dbinstancestoragetype_csharp">
+<a href="#dbinstancestoragetype_csharp" style="color: inherit; text-decoration: inherit;">Db<wbr>Instance<wbr>Storage<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The DB instance storage space required by the user. Valid values: "cloud_ssd", "local_ssd", "cloud_essd", "cloud_essd2", "cloud_essd3".
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="engine_csharp">
+<a href="#engine_csharp" style="color: inherit; text-decoration: inherit;">Engine</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Database type. Valid values: "MySQL", "SQLServer", "PostgreSQL", "PPAS", "MariaDB". If not set, it will match all of engines.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="engineversion_csharp">
+<a href="#engineversion_csharp" style="color: inherit; text-decoration: inherit;">Engine<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Database version required by the user. Value options can refer to the latest docs [detail info](https://www.alibabacloud.com/help/doc-detail/26228.htm) `EngineVersion`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="instancechargetype_csharp">
 <a href="#instancechargetype_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Charge<wbr>Type</a>
 </span>
@@ -68,6 +118,15 @@ The following arguments are supported:
             title="Optional">
         <span id="multi_csharp">
 <a href="#multi_csharp" style="color: inherit; text-decoration: inherit;">Multi</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}It has been deprecated from version 1.137.0 and using `multi_zone` instead.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="multizone_csharp">
+<a href="#multizone_csharp" style="color: inherit; text-decoration: inherit;">Multi<wbr>Zone</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
@@ -87,6 +146,50 @@ The following arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="category_go">
+<a href="#category_go" style="color: inherit; text-decoration: inherit;">Category</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}DB Instance category. the value like [`Basic`, `HighAvailability`, `Finance`, `AlwaysOn`], [detail info](https://www.alibabacloud.com/help/doc-detail/69795.htm).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dbinstanceclass_go">
+<a href="#dbinstanceclass_go" style="color: inherit; text-decoration: inherit;">Db<wbr>Instance<wbr>Class</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dbinstancestoragetype_go">
+<a href="#dbinstancestoragetype_go" style="color: inherit; text-decoration: inherit;">Db<wbr>Instance<wbr>Storage<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The DB instance storage space required by the user. Valid values: "cloud_ssd", "local_ssd", "cloud_essd", "cloud_essd2", "cloud_essd3".
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="engine_go">
+<a href="#engine_go" style="color: inherit; text-decoration: inherit;">Engine</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Database type. Valid values: "MySQL", "SQLServer", "PostgreSQL", "PPAS", "MariaDB". If not set, it will match all of engines.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="engineversion_go">
+<a href="#engineversion_go" style="color: inherit; text-decoration: inherit;">Engine<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Database version required by the user. Value options can refer to the latest docs [detail info](https://www.alibabacloud.com/help/doc-detail/26228.htm) `EngineVersion`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="instancechargetype_go">
 <a href="#instancechargetype_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Charge<wbr>Type</a>
 </span>
@@ -98,6 +201,15 @@ The following arguments are supported:
             title="Optional">
         <span id="multi_go">
 <a href="#multi_go" style="color: inherit; text-decoration: inherit;">Multi</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}It has been deprecated from version 1.137.0 and using `multi_zone` instead.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="multizone_go">
+<a href="#multizone_go" style="color: inherit; text-decoration: inherit;">Multi<wbr>Zone</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
@@ -117,6 +229,50 @@ The following arguments are supported:
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="category_nodejs">
+<a href="#category_nodejs" style="color: inherit; text-decoration: inherit;">category</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}DB Instance category. the value like [`Basic`, `HighAvailability`, `Finance`, `AlwaysOn`], [detail info](https://www.alibabacloud.com/help/doc-detail/69795.htm).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dbinstanceclass_nodejs">
+<a href="#dbinstanceclass_nodejs" style="color: inherit; text-decoration: inherit;">db<wbr>Instance<wbr>Class</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dbinstancestoragetype_nodejs">
+<a href="#dbinstancestoragetype_nodejs" style="color: inherit; text-decoration: inherit;">db<wbr>Instance<wbr>Storage<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The DB instance storage space required by the user. Valid values: "cloud_ssd", "local_ssd", "cloud_essd", "cloud_essd2", "cloud_essd3".
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="engine_nodejs">
+<a href="#engine_nodejs" style="color: inherit; text-decoration: inherit;">engine</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Database type. Valid values: "MySQL", "SQLServer", "PostgreSQL", "PPAS", "MariaDB". If not set, it will match all of engines.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="engineversion_nodejs">
+<a href="#engineversion_nodejs" style="color: inherit; text-decoration: inherit;">engine<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Database version required by the user. Value options can refer to the latest docs [detail info](https://www.alibabacloud.com/help/doc-detail/26228.htm) `EngineVersion`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="instancechargetype_nodejs">
 <a href="#instancechargetype_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Charge<wbr>Type</a>
 </span>
@@ -128,6 +284,15 @@ The following arguments are supported:
             title="Optional">
         <span id="multi_nodejs">
 <a href="#multi_nodejs" style="color: inherit; text-decoration: inherit;">multi</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}It has been deprecated from version 1.137.0 and using `multi_zone` instead.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="multizone_nodejs">
+<a href="#multizone_nodejs" style="color: inherit; text-decoration: inherit;">multi<wbr>Zone</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
@@ -147,6 +312,50 @@ The following arguments are supported:
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="category_python">
+<a href="#category_python" style="color: inherit; text-decoration: inherit;">category</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}DB Instance category. the value like [`Basic`, `HighAvailability`, `Finance`, `AlwaysOn`], [detail info](https://www.alibabacloud.com/help/doc-detail/69795.htm).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="db_instance_class_python">
+<a href="#db_instance_class_python" style="color: inherit; text-decoration: inherit;">db_<wbr>instance_<wbr>class</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="db_instance_storage_type_python">
+<a href="#db_instance_storage_type_python" style="color: inherit; text-decoration: inherit;">db_<wbr>instance_<wbr>storage_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The DB instance storage space required by the user. Valid values: "cloud_ssd", "local_ssd", "cloud_essd", "cloud_essd2", "cloud_essd3".
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="engine_python">
+<a href="#engine_python" style="color: inherit; text-decoration: inherit;">engine</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Database type. Valid values: "MySQL", "SQLServer", "PostgreSQL", "PPAS", "MariaDB". If not set, it will match all of engines.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="engine_version_python">
+<a href="#engine_version_python" style="color: inherit; text-decoration: inherit;">engine_<wbr>version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Database version required by the user. Value options can refer to the latest docs [detail info](https://www.alibabacloud.com/help/doc-detail/26228.htm) `EngineVersion`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="instance_charge_type_python">
 <a href="#instance_charge_type_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>charge_<wbr>type</a>
 </span>
@@ -158,6 +367,15 @@ The following arguments are supported:
             title="Optional">
         <span id="multi_python">
 <a href="#multi_python" style="color: inherit; text-decoration: inherit;">multi</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}It has been deprecated from version 1.137.0 and using `multi_zone` instead.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="multi_zone_python">
+<a href="#multi_zone_python" style="color: inherit; text-decoration: inherit;">multi_<wbr>zone</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
@@ -213,6 +431,46 @@ The following output properties are available:
     <dd>{{% md %}}A list of availability zones. Each element contains the following attributes:
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="category_csharp">
+<a href="#category_csharp" style="color: inherit; text-decoration: inherit;">Category</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="dbinstanceclass_csharp">
+<a href="#dbinstanceclass_csharp" style="color: inherit; text-decoration: inherit;">Db<wbr>Instance<wbr>Class</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="dbinstancestoragetype_csharp">
+<a href="#dbinstancestoragetype_csharp" style="color: inherit; text-decoration: inherit;">Db<wbr>Instance<wbr>Storage<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="engine_csharp">
+<a href="#engine_csharp" style="color: inherit; text-decoration: inherit;">Engine</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="engineversion_csharp">
+<a href="#engineversion_csharp" style="color: inherit; text-decoration: inherit;">Engine<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="instancechargetype_csharp">
 <a href="#instancechargetype_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Charge<wbr>Type</a>
 </span>
@@ -223,6 +481,14 @@ The following output properties are available:
             title="">
         <span id="multi_csharp">
 <a href="#multi_csharp" style="color: inherit; text-decoration: inherit;">Multi</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="multizone_csharp">
+<a href="#multizone_csharp" style="color: inherit; text-decoration: inherit;">Multi<wbr>Zone</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
@@ -268,6 +534,46 @@ The following output properties are available:
     <dd>{{% md %}}A list of availability zones. Each element contains the following attributes:
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="category_go">
+<a href="#category_go" style="color: inherit; text-decoration: inherit;">Category</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="dbinstanceclass_go">
+<a href="#dbinstanceclass_go" style="color: inherit; text-decoration: inherit;">Db<wbr>Instance<wbr>Class</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="dbinstancestoragetype_go">
+<a href="#dbinstancestoragetype_go" style="color: inherit; text-decoration: inherit;">Db<wbr>Instance<wbr>Storage<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="engine_go">
+<a href="#engine_go" style="color: inherit; text-decoration: inherit;">Engine</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="engineversion_go">
+<a href="#engineversion_go" style="color: inherit; text-decoration: inherit;">Engine<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="instancechargetype_go">
 <a href="#instancechargetype_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Charge<wbr>Type</a>
 </span>
@@ -278,6 +584,14 @@ The following output properties are available:
             title="">
         <span id="multi_go">
 <a href="#multi_go" style="color: inherit; text-decoration: inherit;">Multi</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="multizone_go">
+<a href="#multizone_go" style="color: inherit; text-decoration: inherit;">Multi<wbr>Zone</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
@@ -323,6 +637,46 @@ The following output properties are available:
     <dd>{{% md %}}A list of availability zones. Each element contains the following attributes:
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="category_nodejs">
+<a href="#category_nodejs" style="color: inherit; text-decoration: inherit;">category</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="dbinstanceclass_nodejs">
+<a href="#dbinstanceclass_nodejs" style="color: inherit; text-decoration: inherit;">db<wbr>Instance<wbr>Class</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="dbinstancestoragetype_nodejs">
+<a href="#dbinstancestoragetype_nodejs" style="color: inherit; text-decoration: inherit;">db<wbr>Instance<wbr>Storage<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="engine_nodejs">
+<a href="#engine_nodejs" style="color: inherit; text-decoration: inherit;">engine</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="engineversion_nodejs">
+<a href="#engineversion_nodejs" style="color: inherit; text-decoration: inherit;">engine<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="instancechargetype_nodejs">
 <a href="#instancechargetype_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Charge<wbr>Type</a>
 </span>
@@ -333,6 +687,14 @@ The following output properties are available:
             title="">
         <span id="multi_nodejs">
 <a href="#multi_nodejs" style="color: inherit; text-decoration: inherit;">multi</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="multizone_nodejs">
+<a href="#multizone_nodejs" style="color: inherit; text-decoration: inherit;">multi<wbr>Zone</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
@@ -378,6 +740,46 @@ The following output properties are available:
     <dd>{{% md %}}A list of availability zones. Each element contains the following attributes:
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="category_python">
+<a href="#category_python" style="color: inherit; text-decoration: inherit;">category</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="db_instance_class_python">
+<a href="#db_instance_class_python" style="color: inherit; text-decoration: inherit;">db_<wbr>instance_<wbr>class</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="db_instance_storage_type_python">
+<a href="#db_instance_storage_type_python" style="color: inherit; text-decoration: inherit;">db_<wbr>instance_<wbr>storage_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="engine_python">
+<a href="#engine_python" style="color: inherit; text-decoration: inherit;">engine</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="engine_version_python">
+<a href="#engine_version_python" style="color: inherit; text-decoration: inherit;">engine_<wbr>version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="instance_charge_type_python">
 <a href="#instance_charge_type_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>charge_<wbr>type</a>
 </span>
@@ -388,6 +790,14 @@ The following output properties are available:
             title="">
         <span id="multi_python">
 <a href="#multi_python" style="color: inherit; text-decoration: inherit;">multi</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="multi_zone_python">
+<a href="#multi_zone_python" style="color: inherit; text-decoration: inherit;">multi_<wbr>zone</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>

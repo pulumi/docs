@@ -156,7 +156,6 @@ export const albRuleId2 = nameRegex.then(nameRegex => nameRegex.rules[0].id);
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_rules(</span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
-              <span class="nx">listener_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
               <span class="nx">listener_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
               <span class="nx">load_balancer_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
               <span class="nx">name_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -196,15 +195,6 @@ The following arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of Rule IDs.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="listenerid_csharp">
-<a href="#listenerid_csharp" style="color: inherit; text-decoration: inherit;">Listener<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the listener to which the forwarding rule belongs.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="listenerids_csharp">
@@ -273,15 +263,6 @@ The following arguments are supported:
     <dd>{{% md %}}A list of Rule IDs.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="listenerid_go">
-<a href="#listenerid_go" style="color: inherit; text-decoration: inherit;">Listener<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the listener to which the forwarding rule belongs.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="listenerids_go">
 <a href="#listenerids_go" style="color: inherit; text-decoration: inherit;">Listener<wbr>Ids</a>
 </span>
@@ -348,15 +329,6 @@ The following arguments are supported:
     <dd>{{% md %}}A list of Rule IDs.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="listenerid_nodejs">
-<a href="#listenerid_nodejs" style="color: inherit; text-decoration: inherit;">listener<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the listener to which the forwarding rule belongs.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="listenerids_nodejs">
 <a href="#listenerids_nodejs" style="color: inherit; text-decoration: inherit;">listener<wbr>Ids</a>
 </span>
@@ -421,15 +393,6 @@ The following arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of Rule IDs.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="listener_id_python">
-<a href="#listener_id_python" style="color: inherit; text-decoration: inherit;">listener_<wbr>id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ID of the listener to which the forwarding rule belongs.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="listener_ids_python">
@@ -531,14 +494,6 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="listenerid_csharp">
-<a href="#listenerid_csharp" style="color: inherit; text-decoration: inherit;">Listener<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
-            title="">
         <span id="listenerids_csharp">
 <a href="#listenerids_csharp" style="color: inherit; text-decoration: inherit;">Listener<wbr>Ids</a>
 </span>
@@ -621,14 +576,6 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getrulesrule">[]Get<wbr>Rules<wbr>Rule</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="listenerid_go">
-<a href="#listenerid_go" style="color: inherit; text-decoration: inherit;">Listener<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
@@ -717,14 +664,6 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="listenerid_nodejs">
-<a href="#listenerid_nodejs" style="color: inherit; text-decoration: inherit;">listener<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
-            title="">
         <span id="listenerids_nodejs">
 <a href="#listenerids_nodejs" style="color: inherit; text-decoration: inherit;">listener<wbr>Ids</a>
 </span>
@@ -807,14 +746,6 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getrulesrule">Sequence[Get<wbr>Rules<wbr>Rule]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="listener_id_python">
-<a href="#listener_id_python" style="color: inherit; text-decoration: inherit;">listener_<wbr>id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">

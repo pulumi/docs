@@ -58,6 +58,10 @@ class MyStack : Stack
             CidrBlock = "172.16.0.0/24",
             ZoneId = defaultZones.Apply(defaultZones => defaultZones.Zones[0].Id),
         });
+        var defaultSecurityGroup = new AliCloud.Ecs.SecurityGroup("defaultSecurityGroup", new AliCloud.Ecs.SecurityGroupArgs
+        {
+            VpcId = defaultNetwork.Id,
+        });
         var defaultInstance = new AliCloud.AliKafka.Instance("defaultInstance", new AliCloud.AliKafka.InstanceArgs
         {
             TopicQuota = 50,
@@ -66,6 +70,7 @@ class MyStack : Stack
             DeployType = 4,
             IoMax = 20,
             VswitchId = defaultSwitch.Id,
+            SecurityGroup = defaultSecurityGroup.Id,
         });
     }
 
@@ -84,6 +89,7 @@ package main
 import (
 	"github.com/pulumi/pulumi-alicloud/sdk/v3/go/alicloud"
 	"github.com/pulumi/pulumi-alicloud/sdk/v3/go/alicloud/alikafka"
+	"github.com/pulumi/pulumi-alicloud/sdk/v3/go/alicloud/ecs"
 	"github.com/pulumi/pulumi-alicloud/sdk/v3/go/alicloud/vpc"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi/config"
@@ -117,13 +123,20 @@ func main() {
 		if err != nil {
 			return err
 		}
+		defaultSecurityGroup, err := ecs.NewSecurityGroup(ctx, "defaultSecurityGroup", &ecs.SecurityGroupArgs{
+			VpcId: defaultNetwork.ID(),
+		})
+		if err != nil {
+			return err
+		}
 		_, err = alikafka.NewInstance(ctx, "defaultInstance", &alikafka.InstanceArgs{
-			TopicQuota: pulumi.Int(50),
-			DiskType:   pulumi.Int(1),
-			DiskSize:   pulumi.Int(500),
-			DeployType: pulumi.Int(4),
-			IoMax:      pulumi.Int(20),
-			VswitchId:  defaultSwitch.ID(),
+			TopicQuota:    pulumi.Int(50),
+			DiskType:      pulumi.Int(1),
+			DiskSize:      pulumi.Int(500),
+			DeployType:    pulumi.Int(4),
+			IoMax:         pulumi.Int(20),
+			VswitchId:     defaultSwitch.ID(),
+			SecurityGroup: defaultSecurityGroup.ID(),
 		})
 		if err != nil {
 			return err
@@ -153,13 +166,15 @@ default_switch = alicloud.vpc.Switch("defaultSwitch",
     vpc_id=default_network.id,
     cidr_block="172.16.0.0/24",
     zone_id=default_zones.zones[0].id)
+default_security_group = alicloud.ecs.SecurityGroup("defaultSecurityGroup", vpc_id=default_network.id)
 default_instance = alicloud.alikafka.Instance("defaultInstance",
     topic_quota=50,
     disk_type=1,
     disk_size=500,
     deploy_type=4,
     io_max=20,
-    vswitch_id=default_switch.id)
+    vswitch_id=default_switch.id,
+    security_group=default_security_group.id)
 ```
 
 
@@ -184,6 +199,7 @@ const defaultSwitch = new alicloud.vpc.Switch("defaultSwitch", {
     cidrBlock: "172.16.0.0/24",
     zoneId: defaultZones.then(defaultZones => defaultZones.zones[0].id),
 });
+const defaultSecurityGroup = new alicloud.ecs.SecurityGroup("defaultSecurityGroup", {vpcId: defaultNetwork.id});
 const defaultInstance = new alicloud.alikafka.Instance("defaultInstance", {
     topicQuota: "50",
     diskType: "1",
@@ -191,6 +207,7 @@ const defaultInstance = new alicloud.alikafka.Instance("defaultInstance", {
     deployType: "4",
     ioMax: "20",
     vswitchId: defaultSwitch.id,
+    securityGroup: defaultSecurityGroup.id,
 });
 ```
 

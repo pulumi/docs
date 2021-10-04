@@ -176,7 +176,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ECS Instance Id. Must Have Installed the Client.
+    <dd>{{% md %}}The ID of ECS instance.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nameregex_csharp">
@@ -202,7 +202,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Vault ID.
+    <dd>{{% md %}}The ID of Backup vault.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -224,7 +224,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ECS Instance Id. Must Have Installed the Client.
+    <dd>{{% md %}}The ID of ECS instance.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nameregex_go">
@@ -250,7 +250,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Vault ID.
+    <dd>{{% md %}}The ID of Backup vault.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -272,7 +272,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ECS Instance Id. Must Have Installed the Client.
+    <dd>{{% md %}}The ID of ECS instance.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nameregex_nodejs">
@@ -298,7 +298,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Vault ID.
+    <dd>{{% md %}}The ID of Backup vault.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -320,7 +320,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ECS Instance Id. Must Have Installed the Client.
+    <dd>{{% md %}}The ID of ECS instance.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_regex_python">
@@ -346,7 +346,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Vault ID.
+    <dd>{{% md %}}The ID of Backup vault.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -654,7 +654,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Backup Type. Valid Values: * Complete. Valid values: `COMPLETE`.
+    <dd>{{% md %}}Backup type. Valid values: `COMPLETE`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="createtime_csharp">
@@ -695,7 +695,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Configuration Page of a Backup Plan Name. 1-64 Characters, requiring a Single Warehouse under Each of the Data Source Type Drop-down List of the Configuration Page of a Backup Plan Name Is Unique.
+    <dd>{{% md %}}The name of the backup plan.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="exclude_csharp">
@@ -704,7 +704,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Exclude Path. String of Json List, most 255 Characters. e.g. `"[\"/home/work\"]"`
+    <dd>{{% md %}}Exclude path. String of Json list. Up to 255 characters. e.g. `"[\"/home/work\"]"`
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_csharp">
@@ -721,7 +721,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Include Path. String of Json List, most 255 Characters. e.g. `"[\"/var\"]"`
+    <dd>{{% md %}}Include path. String of Json list. Up to 255 characters. e.g. `"[\"/var\"]"`
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="instanceid_csharp">
@@ -730,7 +730,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ECS Instance Id. Must Have Installed the Client.
+    <dd>{{% md %}}The ID of ECS instance.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="options_csharp">
@@ -739,7 +739,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Windows System with Application Consistency Using VSS. eg: {`UseVSS`:false}.
+    <dd>{{% md %}}Windows operating system with application consistency using VSS. eg: {`UseVSS`:false}.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="paths_csharp">
@@ -748,7 +748,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Backup Path. e.g. `["/home", "/var"]`
+    <dd>{{% md %}}Backup path. e.g. `["/home", "/var"]`
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="retention_csharp">
@@ -757,7 +757,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Backup Retention Period, the Minimum Value of 1.
+    <dd>{{% md %}}Backup retention days, the minimum is 1.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="schedule_csharp">
@@ -766,7 +766,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Backup strategy. Optional format: I|{startTime}|{interval} * startTime Backup start time, UNIX time, in seconds. * interval ISO8601 time interval. E.g: ** PT1H, one hour apart. ** P1D, one day apart. It means to execute a backup task every {interval} starting from {startTime}. The backup task for the elapsed time will not be compensated. If the last backup task is not completed, the next backup task will not be triggered.
+    <dd>{{% md %}}Backup strategy. Optional format: I|{startTime}|{interval}. It means to execute a backup task every {interval} starting from {startTime}. The backup task for the elapsed time will not be compensated. If the last backup task is not completed yet, the next backup task will not be triggered.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="speedlimit_csharp">
@@ -775,7 +775,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}flow control. The format is: {start}|{end}|{bandwidth} * start starting hour * end end hour * bandwidth limit rate, in KiB ** Use | to separate multiple flow control configurations; ** Multiple flow control configurations are not allowed to have overlapping times.
+    <dd>{{% md %}}Flow control. The format is: {start}|{end}|{bandwidth}. Use `|` to separate multiple flow control configurations, multiple flow control configurations not allowed to have overlapping times.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vaultid_csharp">
@@ -784,7 +784,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Vault ID.
+    <dd>{{% md %}}The ID of Backup vault.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -797,7 +797,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Backup Type. Valid Values: * Complete. Valid values: `COMPLETE`.
+    <dd>{{% md %}}Backup type. Valid values: `COMPLETE`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="createtime_go">
@@ -838,7 +838,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Configuration Page of a Backup Plan Name. 1-64 Characters, requiring a Single Warehouse under Each of the Data Source Type Drop-down List of the Configuration Page of a Backup Plan Name Is Unique.
+    <dd>{{% md %}}The name of the backup plan.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="exclude_go">
@@ -847,7 +847,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Exclude Path. String of Json List, most 255 Characters. e.g. `"[\"/home/work\"]"`
+    <dd>{{% md %}}Exclude path. String of Json list. Up to 255 characters. e.g. `"[\"/home/work\"]"`
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_go">
@@ -864,7 +864,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Include Path. String of Json List, most 255 Characters. e.g. `"[\"/var\"]"`
+    <dd>{{% md %}}Include path. String of Json list. Up to 255 characters. e.g. `"[\"/var\"]"`
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="instanceid_go">
@@ -873,7 +873,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ECS Instance Id. Must Have Installed the Client.
+    <dd>{{% md %}}The ID of ECS instance.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="options_go">
@@ -882,7 +882,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Windows System with Application Consistency Using VSS. eg: {`UseVSS`:false}.
+    <dd>{{% md %}}Windows operating system with application consistency using VSS. eg: {`UseVSS`:false}.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="paths_go">
@@ -891,7 +891,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Backup Path. e.g. `["/home", "/var"]`
+    <dd>{{% md %}}Backup path. e.g. `["/home", "/var"]`
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="retention_go">
@@ -900,7 +900,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Backup Retention Period, the Minimum Value of 1.
+    <dd>{{% md %}}Backup retention days, the minimum is 1.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="schedule_go">
@@ -909,7 +909,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Backup strategy. Optional format: I|{startTime}|{interval} * startTime Backup start time, UNIX time, in seconds. * interval ISO8601 time interval. E.g: ** PT1H, one hour apart. ** P1D, one day apart. It means to execute a backup task every {interval} starting from {startTime}. The backup task for the elapsed time will not be compensated. If the last backup task is not completed, the next backup task will not be triggered.
+    <dd>{{% md %}}Backup strategy. Optional format: I|{startTime}|{interval}. It means to execute a backup task every {interval} starting from {startTime}. The backup task for the elapsed time will not be compensated. If the last backup task is not completed yet, the next backup task will not be triggered.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="speedlimit_go">
@@ -918,7 +918,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}flow control. The format is: {start}|{end}|{bandwidth} * start starting hour * end end hour * bandwidth limit rate, in KiB ** Use | to separate multiple flow control configurations; ** Multiple flow control configurations are not allowed to have overlapping times.
+    <dd>{{% md %}}Flow control. The format is: {start}|{end}|{bandwidth}. Use `|` to separate multiple flow control configurations, multiple flow control configurations not allowed to have overlapping times.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vaultid_go">
@@ -927,7 +927,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Vault ID.
+    <dd>{{% md %}}The ID of Backup vault.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -940,7 +940,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Backup Type. Valid Values: * Complete. Valid values: `COMPLETE`.
+    <dd>{{% md %}}Backup type. Valid values: `COMPLETE`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="createtime_nodejs">
@@ -981,7 +981,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Configuration Page of a Backup Plan Name. 1-64 Characters, requiring a Single Warehouse under Each of the Data Source Type Drop-down List of the Configuration Page of a Backup Plan Name Is Unique.
+    <dd>{{% md %}}The name of the backup plan.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="exclude_nodejs">
@@ -990,7 +990,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Exclude Path. String of Json List, most 255 Characters. e.g. `"[\"/home/work\"]"`
+    <dd>{{% md %}}Exclude path. String of Json list. Up to 255 characters. e.g. `"[\"/home/work\"]"`
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_nodejs">
@@ -1007,7 +1007,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Include Path. String of Json List, most 255 Characters. e.g. `"[\"/var\"]"`
+    <dd>{{% md %}}Include path. String of Json list. Up to 255 characters. e.g. `"[\"/var\"]"`
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="instanceid_nodejs">
@@ -1016,7 +1016,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ECS Instance Id. Must Have Installed the Client.
+    <dd>{{% md %}}The ID of ECS instance.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="options_nodejs">
@@ -1025,7 +1025,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Windows System with Application Consistency Using VSS. eg: {`UseVSS`:false}.
+    <dd>{{% md %}}Windows operating system with application consistency using VSS. eg: {`UseVSS`:false}.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="paths_nodejs">
@@ -1034,7 +1034,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Backup Path. e.g. `["/home", "/var"]`
+    <dd>{{% md %}}Backup path. e.g. `["/home", "/var"]`
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="retention_nodejs">
@@ -1043,7 +1043,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Backup Retention Period, the Minimum Value of 1.
+    <dd>{{% md %}}Backup retention days, the minimum is 1.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="schedule_nodejs">
@@ -1052,7 +1052,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Backup strategy. Optional format: I|{startTime}|{interval} * startTime Backup start time, UNIX time, in seconds. * interval ISO8601 time interval. E.g: ** PT1H, one hour apart. ** P1D, one day apart. It means to execute a backup task every {interval} starting from {startTime}. The backup task for the elapsed time will not be compensated. If the last backup task is not completed, the next backup task will not be triggered.
+    <dd>{{% md %}}Backup strategy. Optional format: I|{startTime}|{interval}. It means to execute a backup task every {interval} starting from {startTime}. The backup task for the elapsed time will not be compensated. If the last backup task is not completed yet, the next backup task will not be triggered.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="speedlimit_nodejs">
@@ -1061,7 +1061,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}flow control. The format is: {start}|{end}|{bandwidth} * start starting hour * end end hour * bandwidth limit rate, in KiB ** Use | to separate multiple flow control configurations; ** Multiple flow control configurations are not allowed to have overlapping times.
+    <dd>{{% md %}}Flow control. The format is: {start}|{end}|{bandwidth}. Use `|` to separate multiple flow control configurations, multiple flow control configurations not allowed to have overlapping times.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vaultid_nodejs">
@@ -1070,7 +1070,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Vault ID.
+    <dd>{{% md %}}The ID of Backup vault.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1083,7 +1083,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Backup Type. Valid Values: * Complete. Valid values: `COMPLETE`.
+    <dd>{{% md %}}Backup type. Valid values: `COMPLETE`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="create_time_python">
@@ -1124,7 +1124,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Configuration Page of a Backup Plan Name. 1-64 Characters, requiring a Single Warehouse under Each of the Data Source Type Drop-down List of the Configuration Page of a Backup Plan Name Is Unique.
+    <dd>{{% md %}}The name of the backup plan.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="exclude_python">
@@ -1133,7 +1133,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Exclude Path. String of Json List, most 255 Characters. e.g. `"[\"/home/work\"]"`
+    <dd>{{% md %}}Exclude path. String of Json list. Up to 255 characters. e.g. `"[\"/home/work\"]"`
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_python">
@@ -1150,7 +1150,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Include Path. String of Json List, most 255 Characters. e.g. `"[\"/var\"]"`
+    <dd>{{% md %}}Include path. String of Json list. Up to 255 characters. e.g. `"[\"/var\"]"`
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="instance_id_python">
@@ -1159,7 +1159,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ECS Instance Id. Must Have Installed the Client.
+    <dd>{{% md %}}The ID of ECS instance.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="options_python">
@@ -1168,7 +1168,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Windows System with Application Consistency Using VSS. eg: {`UseVSS`:false}.
+    <dd>{{% md %}}Windows operating system with application consistency using VSS. eg: {`UseVSS`:false}.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="paths_python">
@@ -1177,7 +1177,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Backup Path. e.g. `["/home", "/var"]`
+    <dd>{{% md %}}Backup path. e.g. `["/home", "/var"]`
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="retention_python">
@@ -1186,7 +1186,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Backup Retention Period, the Minimum Value of 1.
+    <dd>{{% md %}}Backup retention days, the minimum is 1.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="schedule_python">
@@ -1195,7 +1195,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Backup strategy. Optional format: I|{startTime}|{interval} * startTime Backup start time, UNIX time, in seconds. * interval ISO8601 time interval. E.g: ** PT1H, one hour apart. ** P1D, one day apart. It means to execute a backup task every {interval} starting from {startTime}. The backup task for the elapsed time will not be compensated. If the last backup task is not completed, the next backup task will not be triggered.
+    <dd>{{% md %}}Backup strategy. Optional format: I|{startTime}|{interval}. It means to execute a backup task every {interval} starting from {startTime}. The backup task for the elapsed time will not be compensated. If the last backup task is not completed yet, the next backup task will not be triggered.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="speed_limit_python">
@@ -1204,7 +1204,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}flow control. The format is: {start}|{end}|{bandwidth} * start starting hour * end end hour * bandwidth limit rate, in KiB ** Use | to separate multiple flow control configurations; ** Multiple flow control configurations are not allowed to have overlapping times.
+    <dd>{{% md %}}Flow control. The format is: {start}|{end}|{bandwidth}. Use `|` to separate multiple flow control configurations, multiple flow control configurations not allowed to have overlapping times.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vault_id_python">
@@ -1213,7 +1213,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Vault ID.
+    <dd>{{% md %}}The ID of Backup vault.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

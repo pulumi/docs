@@ -13,12 +13,16 @@ Explore the resources and functions of the alicloud.arms module.
 <ul class="api">
     <li><a href="alertcontact" title="AlertContact"><span class="symbol resource"></span>AlertContact</a></li>
     <li><a href="alertcontactgroup" title="AlertContactGroup"><span class="symbol resource"></span>AlertContactGroup</a></li>
+    <li><a href="dispatchrule" title="DispatchRule"><span class="symbol resource"></span>DispatchRule</a></li>
+    <li><a href="prometheusalertrule" title="PrometheusAlertRule"><span class="symbol resource"></span>PrometheusAlertRule</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
     <li><a href="getalertcontactgroups" title="GetAlertContactGroups"><span class="symbol function"></span>GetAlertContactGroups</a></li>
     <li><a href="getalertcontacts" title="GetAlertContacts"><span class="symbol function"></span>GetAlertContacts</a></li>
+    <li><a href="getdispatchrules" title="GetDispatchRules"><span class="symbol function"></span>GetDispatchRules</a></li>
+    <li><a href="getprometheusalertrules" title="GetPrometheusAlertRules"><span class="symbol function"></span>GetPrometheusAlertRules</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -30,6 +34,6 @@ Explore the resources and functions of the alicloud.arms module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>3.7.0</dd>
+	<dd>3.8.0</dd>
 </dl>
 

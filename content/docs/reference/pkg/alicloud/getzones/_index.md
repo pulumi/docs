@@ -220,7 +220,6 @@ Valid values: `Instance`, `Disk`, `VSwitch`, `Rds`, `KVStore`, `FunctionCompute`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Filter the results by a slb instance address version. Can be either `ipv4`, or `ipv6`.
-> **NOTE:** The disk category `cloud` has been outdated and can only be used by non-I/O Optimized ECS instances. Many availability zones don't support it. It is recommended to use `cloud_efficiency` or `cloud_ssd`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="availableslbaddresstype_csharp">
@@ -324,7 +323,6 @@ Valid values: `Instance`, `Disk`, `VSwitch`, `Rds`, `KVStore`, `FunctionCompute`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Filter the results by a slb instance address version. Can be either `ipv4`, or `ipv6`.
-> **NOTE:** The disk category `cloud` has been outdated and can only be used by non-I/O Optimized ECS instances. Many availability zones don't support it. It is recommended to use `cloud_efficiency` or `cloud_ssd`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="availableslbaddresstype_go">
@@ -428,7 +426,6 @@ Valid values: `Instance`, `Disk`, `VSwitch`, `Rds`, `KVStore`, `FunctionCompute`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Filter the results by a slb instance address version. Can be either `ipv4`, or `ipv6`.
-> **NOTE:** The disk category `cloud` has been outdated and can only be used by non-I/O Optimized ECS instances. Many availability zones don't support it. It is recommended to use `cloud_efficiency` or `cloud_ssd`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="availableslbaddresstype_nodejs">
@@ -532,7 +529,6 @@ Valid values: `Instance`, `Disk`, `VSwitch`, `Rds`, `KVStore`, `FunctionCompute`
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Filter the results by a slb instance address version. Can be either `ipv4`, or `ipv6`.
-> **NOTE:** The disk category `cloud` has been outdated and can only be used by non-I/O Optimized ECS instances. Many availability zones don't support it. It is recommended to use `cloud_efficiency` or `cloud_ssd`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="available_slb_address_type_python">

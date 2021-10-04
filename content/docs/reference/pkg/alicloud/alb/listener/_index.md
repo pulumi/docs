@@ -32,6 +32,7 @@ For information about Application Load Balancer (ALB) Listener and how to use it
              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
              <span class="nx">access_log_record_customized_headers_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
              <span class="nx">access_log_tracing_config</span><span class="p">:</span> <span class="nx">Optional[ListenerAccessLogTracingConfigArgs]</span> = None<span class="p">,</span>
+             <span class="nx">acl_config</span><span class="p">:</span> <span class="nx">Optional[ListenerAclConfigArgs]</span> = None<span class="p">,</span>
              <span class="nx">certificates</span><span class="p">:</span> <span class="nx">Optional[Sequence[ListenerCertificateArgs]]</span> = None<span class="p">,</span>
              <span class="nx">default_actions</span><span class="p">:</span> <span class="nx">Optional[Sequence[ListenerDefaultActionArgs]]</span> = None<span class="p">,</span>
              <span class="nx">dry_run</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
@@ -182,7 +183,7 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The SLB Instance Front-End, and Those of the Ports Used. Value: 1~65535.
+    <dd>{{% md %}}The ALB Instance Front-End, and Those of the Ports Used. Value: `1` to `65535`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="listenerprotocol_csharp">
@@ -191,7 +192,7 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Snooping Protocols. Valid Values: HTTP, HTTPS Or QuIC.
+    <dd>{{% md %}}Snooping Protocols. Valid Values: `HTTP`, `HTTPS` Or `QUIC`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="loadbalancerid_csharp">
@@ -200,7 +201,7 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The SLB Instance Id.
+    <dd>{{% md %}}The ALB Instance Id.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accesslogrecordcustomizedheadersenabled_csharp">
@@ -219,6 +220,15 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#listeneraccesslogtracingconfig">Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Alb.<wbr>Inputs.<wbr>Listener<wbr>Access<wbr>Log<wbr>Tracing<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Xtrace Configuration Information. See the following `Block access_log_tracing_config`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="aclconfig_csharp">
+<a href="#aclconfig_csharp" style="color: inherit; text-decoration: inherit;">Acl<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#listeneraclconfig">Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Alb.<wbr>Inputs.<wbr>Listener<wbr>Acl<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The configurations of the access control lists (ACLs). See the following `Block acl_config`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificates_csharp">
@@ -263,7 +273,7 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether to Enable HTTP/2 Features. Valid Values: True Or False. Default Value: TRUE. Valid values: `false`, `true`.
+    <dd>{{% md %}}Whether to Enable HTTP/2 Features. Valid Values: `True` Or `False`. Default Value: `True`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="idletimeout_csharp">
@@ -272,7 +282,7 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Specify the Connection Idle Timeout Value: 1 to 60 miao.
+    <dd>{{% md %}}Specify the Connection Idle Timeout Value: `1` to `60`. Unit: Seconds.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="listenerdescription_csharp">
@@ -281,7 +291,7 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description of the listener. The description must be 2 to 256 characters in length. The name can contain only the characters in the following string: /^([^\x00-\xff]|[\w.,;/@-]){2,256}$/.
+    <dd>{{% md %}}The description of the listener. The description must be 2 to 256 characters in length. The name can contain only the characters in the following string: `/^([^\x00-\xff]|[\w.,;/@-]){2,256}$/`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="quicconfig_csharp">
@@ -299,7 +309,7 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The Specified Request Timeout Time. Value: 1~180 Seconds. Default Value: 60 miao. If the Timeout Time Within the Back-End Server Has Not Answered the SLB Will Give up Waiting, the Client Returns the HTTP 504 Error Code.
+    <dd>{{% md %}}The Specified Request Timeout Time. Value: `1` to `180`. Unit: Seconds. Default Value: `60`. If the Timeout Time Within the Back-End Server Has Not Answered the ALB Will Give up Waiting, the Client Returns the HTTP 504 Error Code.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="securitypolicyid_csharp">
@@ -339,7 +349,7 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The SLB Instance Front-End, and Those of the Ports Used. Value: 1~65535.
+    <dd>{{% md %}}The ALB Instance Front-End, and Those of the Ports Used. Value: `1` to `65535`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="listenerprotocol_go">
@@ -348,7 +358,7 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Snooping Protocols. Valid Values: HTTP, HTTPS Or QuIC.
+    <dd>{{% md %}}Snooping Protocols. Valid Values: `HTTP`, `HTTPS` Or `QUIC`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="loadbalancerid_go">
@@ -357,7 +367,7 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The SLB Instance Id.
+    <dd>{{% md %}}The ALB Instance Id.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accesslogrecordcustomizedheadersenabled_go">
@@ -376,6 +386,15 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#listeneraccesslogtracingconfig">Listener<wbr>Access<wbr>Log<wbr>Tracing<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Xtrace Configuration Information. See the following `Block access_log_tracing_config`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="aclconfig_go">
+<a href="#aclconfig_go" style="color: inherit; text-decoration: inherit;">Acl<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#listeneraclconfig">Listener<wbr>Acl<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The configurations of the access control lists (ACLs). See the following `Block acl_config`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificates_go">
@@ -420,7 +439,7 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether to Enable HTTP/2 Features. Valid Values: True Or False. Default Value: TRUE. Valid values: `false`, `true`.
+    <dd>{{% md %}}Whether to Enable HTTP/2 Features. Valid Values: `True` Or `False`. Default Value: `True`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="idletimeout_go">
@@ -429,7 +448,7 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Specify the Connection Idle Timeout Value: 1 to 60 miao.
+    <dd>{{% md %}}Specify the Connection Idle Timeout Value: `1` to `60`. Unit: Seconds.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="listenerdescription_go">
@@ -438,7 +457,7 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description of the listener. The description must be 2 to 256 characters in length. The name can contain only the characters in the following string: /^([^\x00-\xff]|[\w.,;/@-]){2,256}$/.
+    <dd>{{% md %}}The description of the listener. The description must be 2 to 256 characters in length. The name can contain only the characters in the following string: `/^([^\x00-\xff]|[\w.,;/@-]){2,256}$/`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="quicconfig_go">
@@ -456,7 +475,7 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The Specified Request Timeout Time. Value: 1~180 Seconds. Default Value: 60 miao. If the Timeout Time Within the Back-End Server Has Not Answered the SLB Will Give up Waiting, the Client Returns the HTTP 504 Error Code.
+    <dd>{{% md %}}The Specified Request Timeout Time. Value: `1` to `180`. Unit: Seconds. Default Value: `60`. If the Timeout Time Within the Back-End Server Has Not Answered the ALB Will Give up Waiting, the Client Returns the HTTP 504 Error Code.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="securitypolicyid_go">
@@ -496,7 +515,7 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The SLB Instance Front-End, and Those of the Ports Used. Value: 1~65535.
+    <dd>{{% md %}}The ALB Instance Front-End, and Those of the Ports Used. Value: `1` to `65535`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="listenerprotocol_nodejs">
@@ -505,7 +524,7 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Snooping Protocols. Valid Values: HTTP, HTTPS Or QuIC.
+    <dd>{{% md %}}Snooping Protocols. Valid Values: `HTTP`, `HTTPS` Or `QUIC`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="loadbalancerid_nodejs">
@@ -514,7 +533,7 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The SLB Instance Id.
+    <dd>{{% md %}}The ALB Instance Id.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accesslogrecordcustomizedheadersenabled_nodejs">
@@ -533,6 +552,15 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#listeneraccesslogtracingconfig">Listener<wbr>Access<wbr>Log<wbr>Tracing<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Xtrace Configuration Information. See the following `Block access_log_tracing_config`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="aclconfig_nodejs">
+<a href="#aclconfig_nodejs" style="color: inherit; text-decoration: inherit;">acl<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#listeneraclconfig">Listener<wbr>Acl<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The configurations of the access control lists (ACLs). See the following `Block acl_config`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificates_nodejs">
@@ -577,7 +605,7 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether to Enable HTTP/2 Features. Valid Values: True Or False. Default Value: TRUE. Valid values: `false`, `true`.
+    <dd>{{% md %}}Whether to Enable HTTP/2 Features. Valid Values: `True` Or `False`. Default Value: `True`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="idletimeout_nodejs">
@@ -586,7 +614,7 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Specify the Connection Idle Timeout Value: 1 to 60 miao.
+    <dd>{{% md %}}Specify the Connection Idle Timeout Value: `1` to `60`. Unit: Seconds.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="listenerdescription_nodejs">
@@ -595,7 +623,7 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description of the listener. The description must be 2 to 256 characters in length. The name can contain only the characters in the following string: /^([^\x00-\xff]|[\w.,;/@-]){2,256}$/.
+    <dd>{{% md %}}The description of the listener. The description must be 2 to 256 characters in length. The name can contain only the characters in the following string: `/^([^\x00-\xff]|[\w.,;/@-]){2,256}$/`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="quicconfig_nodejs">
@@ -613,7 +641,7 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The Specified Request Timeout Time. Value: 1~180 Seconds. Default Value: 60 miao. If the Timeout Time Within the Back-End Server Has Not Answered the SLB Will Give up Waiting, the Client Returns the HTTP 504 Error Code.
+    <dd>{{% md %}}The Specified Request Timeout Time. Value: `1` to `180`. Unit: Seconds. Default Value: `60`. If the Timeout Time Within the Back-End Server Has Not Answered the ALB Will Give up Waiting, the Client Returns the HTTP 504 Error Code.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="securitypolicyid_nodejs">
@@ -653,7 +681,7 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The SLB Instance Front-End, and Those of the Ports Used. Value: 1~65535.
+    <dd>{{% md %}}The ALB Instance Front-End, and Those of the Ports Used. Value: `1` to `65535`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="listener_protocol_python">
@@ -662,7 +690,7 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Snooping Protocols. Valid Values: HTTP, HTTPS Or QuIC.
+    <dd>{{% md %}}Snooping Protocols. Valid Values: `HTTP`, `HTTPS` Or `QUIC`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="load_balancer_id_python">
@@ -671,7 +699,7 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The SLB Instance Id.
+    <dd>{{% md %}}The ALB Instance Id.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="access_log_record_customized_headers_enabled_python">
@@ -690,6 +718,15 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#listeneraccesslogtracingconfig">Listener<wbr>Access<wbr>Log<wbr>Tracing<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Xtrace Configuration Information. See the following `Block access_log_tracing_config`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="acl_config_python">
+<a href="#acl_config_python" style="color: inherit; text-decoration: inherit;">acl_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#listeneraclconfig">Listener<wbr>Acl<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The configurations of the access control lists (ACLs). See the following `Block acl_config`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificates_python">
@@ -734,7 +771,7 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether to Enable HTTP/2 Features. Valid Values: True Or False. Default Value: TRUE. Valid values: `false`, `true`.
+    <dd>{{% md %}}Whether to Enable HTTP/2 Features. Valid Values: `True` Or `False`. Default Value: `True`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="idle_timeout_python">
@@ -743,7 +780,7 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Specify the Connection Idle Timeout Value: 1 to 60 miao.
+    <dd>{{% md %}}Specify the Connection Idle Timeout Value: `1` to `60`. Unit: Seconds.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="listener_description_python">
@@ -752,7 +789,7 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The description of the listener. The description must be 2 to 256 characters in length. The name can contain only the characters in the following string: /^([^\x00-\xff]|[\w.,;/@-]){2,256}$/.
+    <dd>{{% md %}}The description of the listener. The description must be 2 to 256 characters in length. The name can contain only the characters in the following string: `/^([^\x00-\xff]|[\w.,;/@-]){2,256}$/`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="quic_config_python">
@@ -770,7 +807,7 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The Specified Request Timeout Time. Value: 1~180 Seconds. Default Value: 60 miao. If the Timeout Time Within the Back-End Server Has Not Answered the SLB Will Give up Waiting, the Client Returns the HTTP 504 Error Code.
+    <dd>{{% md %}}The Specified Request Timeout Time. Value: `1` to `180`. Unit: Seconds. Default Value: `60`. If the Timeout Time Within the Back-End Server Has Not Answered the ALB Will Give up Waiting, the Client Returns the HTTP 504 Error Code.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="security_policy_id_python">
@@ -874,6 +911,7 @@ Get an existing Listener resource's state with the given name, ID, and optional 
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
         <span class="nx">access_log_record_customized_headers_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">access_log_tracing_config</span><span class="p">:</span> <span class="nx">Optional[ListenerAccessLogTracingConfigArgs]</span> = None<span class="p">,</span>
+        <span class="nx">acl_config</span><span class="p">:</span> <span class="nx">Optional[ListenerAclConfigArgs]</span> = None<span class="p">,</span>
         <span class="nx">certificates</span><span class="p">:</span> <span class="nx">Optional[Sequence[ListenerCertificateArgs]]</span> = None<span class="p">,</span>
         <span class="nx">default_actions</span><span class="p">:</span> <span class="nx">Optional[Sequence[ListenerDefaultActionArgs]]</span> = None<span class="p">,</span>
         <span class="nx">dry_run</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
@@ -1019,6 +1057,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Xtrace Configuration Information. See the following `Block access_log_tracing_config`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_aclconfig_csharp">
+<a href="#state_aclconfig_csharp" style="color: inherit; text-decoration: inherit;">Acl<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#listeneraclconfig">Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Alb.<wbr>Inputs.<wbr>Listener<wbr>Acl<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The configurations of the access control lists (ACLs). See the following `Block acl_config`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_certificates_csharp">
 <a href="#state_certificates_csharp" style="color: inherit; text-decoration: inherit;">Certificates</a>
 </span>
@@ -1061,7 +1108,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether to Enable HTTP/2 Features. Valid Values: True Or False. Default Value: TRUE. Valid values: `false`, `true`.
+    <dd>{{% md %}}Whether to Enable HTTP/2 Features. Valid Values: `True` Or `False`. Default Value: `True`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_idletimeout_csharp">
@@ -1070,7 +1117,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Specify the Connection Idle Timeout Value: 1 to 60 miao.
+    <dd>{{% md %}}Specify the Connection Idle Timeout Value: `1` to `60`. Unit: Seconds.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_listenerdescription_csharp">
@@ -1079,7 +1126,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description of the listener. The description must be 2 to 256 characters in length. The name can contain only the characters in the following string: /^([^\x00-\xff]|[\w.,;/@-]){2,256}$/.
+    <dd>{{% md %}}The description of the listener. The description must be 2 to 256 characters in length. The name can contain only the characters in the following string: `/^([^\x00-\xff]|[\w.,;/@-]){2,256}$/`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_listenerport_csharp">
@@ -1088,7 +1135,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The SLB Instance Front-End, and Those of the Ports Used. Value: 1~65535.
+    <dd>{{% md %}}The ALB Instance Front-End, and Those of the Ports Used. Value: `1` to `65535`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_listenerprotocol_csharp">
@@ -1097,7 +1144,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Snooping Protocols. Valid Values: HTTP, HTTPS Or QuIC.
+    <dd>{{% md %}}Snooping Protocols. Valid Values: `HTTP`, `HTTPS` Or `QUIC`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loadbalancerid_csharp">
@@ -1106,7 +1153,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The SLB Instance Id.
+    <dd>{{% md %}}The ALB Instance Id.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_quicconfig_csharp">
@@ -1124,7 +1171,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The Specified Request Timeout Time. Value: 1~180 Seconds. Default Value: 60 miao. If the Timeout Time Within the Back-End Server Has Not Answered the SLB Will Give up Waiting, the Client Returns the HTTP 504 Error Code.
+    <dd>{{% md %}}The Specified Request Timeout Time. Value: `1` to `180`. Unit: Seconds. Default Value: `60`. If the Timeout Time Within the Back-End Server Has Not Answered the ALB Will Give up Waiting, the Client Returns the HTTP 504 Error Code.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_securitypolicyid_csharp">
@@ -1176,6 +1223,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Xtrace Configuration Information. See the following `Block access_log_tracing_config`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_aclconfig_go">
+<a href="#state_aclconfig_go" style="color: inherit; text-decoration: inherit;">Acl<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#listeneraclconfig">Listener<wbr>Acl<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The configurations of the access control lists (ACLs). See the following `Block acl_config`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_certificates_go">
 <a href="#state_certificates_go" style="color: inherit; text-decoration: inherit;">Certificates</a>
 </span>
@@ -1218,7 +1274,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether to Enable HTTP/2 Features. Valid Values: True Or False. Default Value: TRUE. Valid values: `false`, `true`.
+    <dd>{{% md %}}Whether to Enable HTTP/2 Features. Valid Values: `True` Or `False`. Default Value: `True`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_idletimeout_go">
@@ -1227,7 +1283,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Specify the Connection Idle Timeout Value: 1 to 60 miao.
+    <dd>{{% md %}}Specify the Connection Idle Timeout Value: `1` to `60`. Unit: Seconds.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_listenerdescription_go">
@@ -1236,7 +1292,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description of the listener. The description must be 2 to 256 characters in length. The name can contain only the characters in the following string: /^([^\x00-\xff]|[\w.,;/@-]){2,256}$/.
+    <dd>{{% md %}}The description of the listener. The description must be 2 to 256 characters in length. The name can contain only the characters in the following string: `/^([^\x00-\xff]|[\w.,;/@-]){2,256}$/`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_listenerport_go">
@@ -1245,7 +1301,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The SLB Instance Front-End, and Those of the Ports Used. Value: 1~65535.
+    <dd>{{% md %}}The ALB Instance Front-End, and Those of the Ports Used. Value: `1` to `65535`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_listenerprotocol_go">
@@ -1254,7 +1310,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Snooping Protocols. Valid Values: HTTP, HTTPS Or QuIC.
+    <dd>{{% md %}}Snooping Protocols. Valid Values: `HTTP`, `HTTPS` Or `QUIC`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loadbalancerid_go">
@@ -1263,7 +1319,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The SLB Instance Id.
+    <dd>{{% md %}}The ALB Instance Id.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_quicconfig_go">
@@ -1281,7 +1337,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The Specified Request Timeout Time. Value: 1~180 Seconds. Default Value: 60 miao. If the Timeout Time Within the Back-End Server Has Not Answered the SLB Will Give up Waiting, the Client Returns the HTTP 504 Error Code.
+    <dd>{{% md %}}The Specified Request Timeout Time. Value: `1` to `180`. Unit: Seconds. Default Value: `60`. If the Timeout Time Within the Back-End Server Has Not Answered the ALB Will Give up Waiting, the Client Returns the HTTP 504 Error Code.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_securitypolicyid_go">
@@ -1333,6 +1389,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Xtrace Configuration Information. See the following `Block access_log_tracing_config`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_aclconfig_nodejs">
+<a href="#state_aclconfig_nodejs" style="color: inherit; text-decoration: inherit;">acl<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#listeneraclconfig">Listener<wbr>Acl<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The configurations of the access control lists (ACLs). See the following `Block acl_config`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_certificates_nodejs">
 <a href="#state_certificates_nodejs" style="color: inherit; text-decoration: inherit;">certificates</a>
 </span>
@@ -1375,7 +1440,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether to Enable HTTP/2 Features. Valid Values: True Or False. Default Value: TRUE. Valid values: `false`, `true`.
+    <dd>{{% md %}}Whether to Enable HTTP/2 Features. Valid Values: `True` Or `False`. Default Value: `True`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_idletimeout_nodejs">
@@ -1384,7 +1449,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Specify the Connection Idle Timeout Value: 1 to 60 miao.
+    <dd>{{% md %}}Specify the Connection Idle Timeout Value: `1` to `60`. Unit: Seconds.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_listenerdescription_nodejs">
@@ -1393,7 +1458,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description of the listener. The description must be 2 to 256 characters in length. The name can contain only the characters in the following string: /^([^\x00-\xff]|[\w.,;/@-]){2,256}$/.
+    <dd>{{% md %}}The description of the listener. The description must be 2 to 256 characters in length. The name can contain only the characters in the following string: `/^([^\x00-\xff]|[\w.,;/@-]){2,256}$/`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_listenerport_nodejs">
@@ -1402,7 +1467,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The SLB Instance Front-End, and Those of the Ports Used. Value: 1~65535.
+    <dd>{{% md %}}The ALB Instance Front-End, and Those of the Ports Used. Value: `1` to `65535`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_listenerprotocol_nodejs">
@@ -1411,7 +1476,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Snooping Protocols. Valid Values: HTTP, HTTPS Or QuIC.
+    <dd>{{% md %}}Snooping Protocols. Valid Values: `HTTP`, `HTTPS` Or `QUIC`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loadbalancerid_nodejs">
@@ -1420,7 +1485,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The SLB Instance Id.
+    <dd>{{% md %}}The ALB Instance Id.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_quicconfig_nodejs">
@@ -1438,7 +1503,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The Specified Request Timeout Time. Value: 1~180 Seconds. Default Value: 60 miao. If the Timeout Time Within the Back-End Server Has Not Answered the SLB Will Give up Waiting, the Client Returns the HTTP 504 Error Code.
+    <dd>{{% md %}}The Specified Request Timeout Time. Value: `1` to `180`. Unit: Seconds. Default Value: `60`. If the Timeout Time Within the Back-End Server Has Not Answered the ALB Will Give up Waiting, the Client Returns the HTTP 504 Error Code.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_securitypolicyid_nodejs">
@@ -1490,6 +1555,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Xtrace Configuration Information. See the following `Block access_log_tracing_config`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_acl_config_python">
+<a href="#state_acl_config_python" style="color: inherit; text-decoration: inherit;">acl_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#listeneraclconfig">Listener<wbr>Acl<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The configurations of the access control lists (ACLs). See the following `Block acl_config`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_certificates_python">
 <a href="#state_certificates_python" style="color: inherit; text-decoration: inherit;">certificates</a>
 </span>
@@ -1532,7 +1606,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether to Enable HTTP/2 Features. Valid Values: True Or False. Default Value: TRUE. Valid values: `false`, `true`.
+    <dd>{{% md %}}Whether to Enable HTTP/2 Features. Valid Values: `True` Or `False`. Default Value: `True`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_idle_timeout_python">
@@ -1541,7 +1615,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Specify the Connection Idle Timeout Value: 1 to 60 miao.
+    <dd>{{% md %}}Specify the Connection Idle Timeout Value: `1` to `60`. Unit: Seconds.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_listener_description_python">
@@ -1550,7 +1624,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The description of the listener. The description must be 2 to 256 characters in length. The name can contain only the characters in the following string: /^([^\x00-\xff]|[\w.,;/@-]){2,256}$/.
+    <dd>{{% md %}}The description of the listener. The description must be 2 to 256 characters in length. The name can contain only the characters in the following string: `/^([^\x00-\xff]|[\w.,;/@-]){2,256}$/`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_listener_port_python">
@@ -1559,7 +1633,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The SLB Instance Front-End, and Those of the Ports Used. Value: 1~65535.
+    <dd>{{% md %}}The ALB Instance Front-End, and Those of the Ports Used. Value: `1` to `65535`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_listener_protocol_python">
@@ -1568,7 +1642,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Snooping Protocols. Valid Values: HTTP, HTTPS Or QuIC.
+    <dd>{{% md %}}Snooping Protocols. Valid Values: `HTTP`, `HTTPS` Or `QUIC`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_load_balancer_id_python">
@@ -1577,7 +1651,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The SLB Instance Id.
+    <dd>{{% md %}}The ALB Instance Id.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_quic_config_python">
@@ -1595,7 +1669,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The Specified Request Timeout Time. Value: 1~180 Seconds. Default Value: 60 miao. If the Timeout Time Within the Back-End Server Has Not Answered the SLB Will Give up Waiting, the Client Returns the HTTP 504 Error Code.
+    <dd>{{% md %}}The Specified Request Timeout Time. Value: `1` to `180`. Unit: Seconds. Default Value: `60`. If the Timeout Time Within the Back-End Server Has Not Answered the ALB Will Give up Waiting, the Client Returns the HTTP 504 Error Code.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_security_policy_id_python">
@@ -1646,7 +1720,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Xtrace Function. Value: True Or False . Default Value: False.
+    <dd>{{% md %}}Xtrace Function. Value: `True` Or `False` . Default Value: `False`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tracingsample_csharp">
@@ -1655,7 +1729,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Xtrace Sampling Rate. Value: **1~10000**.
+    <dd>{{% md %}}Xtrace Sampling Rate. Value: `1` to `10000`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tracingtype_csharp">
@@ -1664,7 +1738,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Xtrace Type Value Is **Zipkin**.
+    <dd>{{% md %}}Xtrace Type Value Is `Zipkin`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1677,7 +1751,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Xtrace Function. Value: True Or False . Default Value: False.
+    <dd>{{% md %}}Xtrace Function. Value: `True` Or `False` . Default Value: `False`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tracingsample_go">
@@ -1686,7 +1760,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Xtrace Sampling Rate. Value: **1~10000**.
+    <dd>{{% md %}}Xtrace Sampling Rate. Value: `1` to `10000`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tracingtype_go">
@@ -1695,7 +1769,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Xtrace Type Value Is **Zipkin**.
+    <dd>{{% md %}}Xtrace Type Value Is `Zipkin`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1708,7 +1782,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Xtrace Function. Value: True Or False . Default Value: False.
+    <dd>{{% md %}}Xtrace Function. Value: `True` Or `False` . Default Value: `False`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tracingsample_nodejs">
@@ -1717,7 +1791,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Xtrace Sampling Rate. Value: **1~10000**.
+    <dd>{{% md %}}Xtrace Sampling Rate. Value: `1` to `10000`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tracingtype_nodejs">
@@ -1726,7 +1800,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Xtrace Type Value Is **Zipkin**.
+    <dd>{{% md %}}Xtrace Type Value Is `Zipkin`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1739,7 +1813,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Xtrace Function. Value: True Or False . Default Value: False.
+    <dd>{{% md %}}Xtrace Function. Value: `True` Or `False` . Default Value: `False`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tracing_sample_python">
@@ -1748,7 +1822,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Xtrace Sampling Rate. Value: **1~10000**.
+    <dd>{{% md %}}Xtrace Sampling Rate. Value: `1` to `10000`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tracing_type_python">
@@ -1757,7 +1831,187 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Xtrace Type Value Is **Zipkin**.
+    <dd>{{% md %}}Xtrace Type Value Is `Zipkin`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="listeneraclconfig">Listener<wbr>Acl<wbr>Config</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="aclrelations_csharp">
+<a href="#aclrelations_csharp" style="color: inherit; text-decoration: inherit;">Acl<wbr>Relations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#listeneraclconfigaclrelation">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Alb.<wbr>Inputs.<wbr>Listener<wbr>Acl<wbr>Config<wbr>Acl<wbr>Relation&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The ACLs that are associated with the listener.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="acltype_csharp">
+<a href="#acltype_csharp" style="color: inherit; text-decoration: inherit;">Acl<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of the ACL. Valid values: `White` Or `Black`. `White`: specifies the ACL as a whitelist. Only requests from the IP addresses or CIDR blocks in the ACL are forwarded. Whitelists apply to scenarios where only specific IP addresses are allowed to access an application. Risks may occur if the whitelist is improperly set. After you set a whitelist for an Application Load Balancer (ALB) listener, only requests from IP addresses that are added to the whitelist are distributed by the listener. If the whitelist is enabled without IP addresses specified, the ALB listener does not forward requests. `Black`: All requests from the IP addresses or CIDR blocks in the ACL are denied. The blacklist is used to prevent specified IP addresses from accessing an application. If the blacklist is enabled but the corresponding ACL does not contain IP addresses, the ALB listener forwards all requests.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="aclrelations_go">
+<a href="#aclrelations_go" style="color: inherit; text-decoration: inherit;">Acl<wbr>Relations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#listeneraclconfigaclrelation">[]Listener<wbr>Acl<wbr>Config<wbr>Acl<wbr>Relation</a></span>
+    </dt>
+    <dd>{{% md %}}The ACLs that are associated with the listener.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="acltype_go">
+<a href="#acltype_go" style="color: inherit; text-decoration: inherit;">Acl<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of the ACL. Valid values: `White` Or `Black`. `White`: specifies the ACL as a whitelist. Only requests from the IP addresses or CIDR blocks in the ACL are forwarded. Whitelists apply to scenarios where only specific IP addresses are allowed to access an application. Risks may occur if the whitelist is improperly set. After you set a whitelist for an Application Load Balancer (ALB) listener, only requests from IP addresses that are added to the whitelist are distributed by the listener. If the whitelist is enabled without IP addresses specified, the ALB listener does not forward requests. `Black`: All requests from the IP addresses or CIDR blocks in the ACL are denied. The blacklist is used to prevent specified IP addresses from accessing an application. If the blacklist is enabled but the corresponding ACL does not contain IP addresses, the ALB listener forwards all requests.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="aclrelations_nodejs">
+<a href="#aclrelations_nodejs" style="color: inherit; text-decoration: inherit;">acl<wbr>Relations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#listeneraclconfigaclrelation">Listener<wbr>Acl<wbr>Config<wbr>Acl<wbr>Relation[]</a></span>
+    </dt>
+    <dd>{{% md %}}The ACLs that are associated with the listener.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="acltype_nodejs">
+<a href="#acltype_nodejs" style="color: inherit; text-decoration: inherit;">acl<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of the ACL. Valid values: `White` Or `Black`. `White`: specifies the ACL as a whitelist. Only requests from the IP addresses or CIDR blocks in the ACL are forwarded. Whitelists apply to scenarios where only specific IP addresses are allowed to access an application. Risks may occur if the whitelist is improperly set. After you set a whitelist for an Application Load Balancer (ALB) listener, only requests from IP addresses that are added to the whitelist are distributed by the listener. If the whitelist is enabled without IP addresses specified, the ALB listener does not forward requests. `Black`: All requests from the IP addresses or CIDR blocks in the ACL are denied. The blacklist is used to prevent specified IP addresses from accessing an application. If the blacklist is enabled but the corresponding ACL does not contain IP addresses, the ALB listener forwards all requests.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="acl_relations_python">
+<a href="#acl_relations_python" style="color: inherit; text-decoration: inherit;">acl_<wbr>relations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#listeneraclconfigaclrelation">Sequence[Listener<wbr>Acl<wbr>Config<wbr>Acl<wbr>Relation]</a></span>
+    </dt>
+    <dd>{{% md %}}The ACLs that are associated with the listener.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="acl_type_python">
+<a href="#acl_type_python" style="color: inherit; text-decoration: inherit;">acl_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The type of the ACL. Valid values: `White` Or `Black`. `White`: specifies the ACL as a whitelist. Only requests from the IP addresses or CIDR blocks in the ACL are forwarded. Whitelists apply to scenarios where only specific IP addresses are allowed to access an application. Risks may occur if the whitelist is improperly set. After you set a whitelist for an Application Load Balancer (ALB) listener, only requests from IP addresses that are added to the whitelist are distributed by the listener. If the whitelist is enabled without IP addresses specified, the ALB listener does not forward requests. `Black`: All requests from the IP addresses or CIDR blocks in the ACL are denied. The blacklist is used to prevent specified IP addresses from accessing an application. If the blacklist is enabled but the corresponding ACL does not contain IP addresses, the ALB listener forwards all requests.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="listeneraclconfigaclrelation">Listener<wbr>Acl<wbr>Config<wbr>Acl<wbr>Relation</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="aclid_csharp">
+<a href="#aclid_csharp" style="color: inherit; text-decoration: inherit;">Acl<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Snooping Binding of the Access Policy Group ID List.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="status_csharp">
+<a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The state of the listener. Valid Values: `Running` Or `Stopped`. Valid values: `Running`: The listener is running. `Stopped`: The listener is stopped.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="aclid_go">
+<a href="#aclid_go" style="color: inherit; text-decoration: inherit;">Acl<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Snooping Binding of the Access Policy Group ID List.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="status_go">
+<a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The state of the listener. Valid Values: `Running` Or `Stopped`. Valid values: `Running`: The listener is running. `Stopped`: The listener is stopped.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="aclid_nodejs">
+<a href="#aclid_nodejs" style="color: inherit; text-decoration: inherit;">acl<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Snooping Binding of the Access Policy Group ID List.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="status_nodejs">
+<a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The state of the listener. Valid Values: `Running` Or `Stopped`. Valid values: `Running`: The listener is running. `Stopped`: The listener is stopped.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="acl_id_python">
+<a href="#acl_id_python" style="color: inherit; text-decoration: inherit;">acl_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Snooping Binding of the Access Policy Group ID List.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="status_python">
+<a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The state of the listener. Valid Values: `Running` Or `Stopped`. Valid values: `Running`: The listener is running. `Stopped`: The listener is stopped.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

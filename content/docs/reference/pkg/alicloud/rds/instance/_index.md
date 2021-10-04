@@ -308,6 +308,7 @@ const exampleInstance = new alicloud.rds.Instance("exampleInstance", {
              <span class="nx">db_instance_ip_array_attribute</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">db_instance_ip_array_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">db_instance_storage_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">db_time_zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">encryption_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">engine</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">engine_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -325,6 +326,7 @@ const exampleInstance = new alicloud.rds.Instance("exampleInstance", {
              <span class="nx">period</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
              <span class="nx">port</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">private_ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">released_keep_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">replication_acl</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">resource_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">security_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -655,6 +657,21 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
 - cloud_essd3: specifies to use enhanced SSDs (ESSDs).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="dbtimezone_csharp">
+<a href="#dbtimezone_csharp" style="color: inherit; text-decoration: inherit;">Db<wbr>Time<wbr>Zone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The time zone of the instance. This parameter takes effect only when you set the `Engine` parameter to MySQL or PostgreSQL.
+- If you set the `Engine` parameter to MySQL.
+- This time zone of the instance is in UTC. Valid values: -12:59 to +13:00.
+- You can specify this parameter when the instance is equipped with local SSDs. For example, you can specify the time zone to Asia/Hong_Kong. For more information about time zones, see [Time zones](https://www.alibabacloud.com/help/doc-detail/297356.htm).
+- If you set the `Engine` parameter to PostgreSQL.
+- This time zone of the instance is not in UTC. For more information about time zones, see [Time zones](https://www.alibabacloud.com/help/doc-detail/297356.htm).
+- You can specify this parameter only when the instance is equipped with standard SSDs or ESSDs.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="encryptionkey_csharp">
 <a href="#encryptionkey_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Key</a>
 </span>
@@ -773,6 +790,18 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private IP address of the instance. The private IP address must be within the Classless Inter-Domain Routing (CIDR) block of the vSwitch that is specified by the VSwitchId parameter.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="releasedkeeppolicy_csharp">
+<a href="#releasedkeeppolicy_csharp" style="color: inherit; text-decoration: inherit;">Released<wbr>Keep<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The policy based on which ApsaraDB RDS retains archived backup files after the instance is released. Valid values:
+- None: No archived backup files are retained.
+- Lastest: Only the last archived backup file is retained.
+- All: All the archived backup files are retained.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replicationacl_csharp">
@@ -1217,6 +1246,21 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
 - cloud_essd3: specifies to use enhanced SSDs (ESSDs).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="dbtimezone_go">
+<a href="#dbtimezone_go" style="color: inherit; text-decoration: inherit;">Db<wbr>Time<wbr>Zone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The time zone of the instance. This parameter takes effect only when you set the `Engine` parameter to MySQL or PostgreSQL.
+- If you set the `Engine` parameter to MySQL.
+- This time zone of the instance is in UTC. Valid values: -12:59 to +13:00.
+- You can specify this parameter when the instance is equipped with local SSDs. For example, you can specify the time zone to Asia/Hong_Kong. For more information about time zones, see [Time zones](https://www.alibabacloud.com/help/doc-detail/297356.htm).
+- If you set the `Engine` parameter to PostgreSQL.
+- This time zone of the instance is not in UTC. For more information about time zones, see [Time zones](https://www.alibabacloud.com/help/doc-detail/297356.htm).
+- You can specify this parameter only when the instance is equipped with standard SSDs or ESSDs.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="encryptionkey_go">
 <a href="#encryptionkey_go" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Key</a>
 </span>
@@ -1335,6 +1379,18 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private IP address of the instance. The private IP address must be within the Classless Inter-Domain Routing (CIDR) block of the vSwitch that is specified by the VSwitchId parameter.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="releasedkeeppolicy_go">
+<a href="#releasedkeeppolicy_go" style="color: inherit; text-decoration: inherit;">Released<wbr>Keep<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The policy based on which ApsaraDB RDS retains archived backup files after the instance is released. Valid values:
+- None: No archived backup files are retained.
+- Lastest: Only the last archived backup file is retained.
+- All: All the archived backup files are retained.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replicationacl_go">
@@ -1779,6 +1835,21 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
 - cloud_essd3: specifies to use enhanced SSDs (ESSDs).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="dbtimezone_nodejs">
+<a href="#dbtimezone_nodejs" style="color: inherit; text-decoration: inherit;">db<wbr>Time<wbr>Zone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The time zone of the instance. This parameter takes effect only when you set the `Engine` parameter to MySQL or PostgreSQL.
+- If you set the `Engine` parameter to MySQL.
+- This time zone of the instance is in UTC. Valid values: -12:59 to +13:00.
+- You can specify this parameter when the instance is equipped with local SSDs. For example, you can specify the time zone to Asia/Hong_Kong. For more information about time zones, see [Time zones](https://www.alibabacloud.com/help/doc-detail/297356.htm).
+- If you set the `Engine` parameter to PostgreSQL.
+- This time zone of the instance is not in UTC. For more information about time zones, see [Time zones](https://www.alibabacloud.com/help/doc-detail/297356.htm).
+- You can specify this parameter only when the instance is equipped with standard SSDs or ESSDs.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="encryptionkey_nodejs">
 <a href="#encryptionkey_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Key</a>
 </span>
@@ -1897,6 +1968,18 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private IP address of the instance. The private IP address must be within the Classless Inter-Domain Routing (CIDR) block of the vSwitch that is specified by the VSwitchId parameter.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="releasedkeeppolicy_nodejs">
+<a href="#releasedkeeppolicy_nodejs" style="color: inherit; text-decoration: inherit;">released<wbr>Keep<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The policy based on which ApsaraDB RDS retains archived backup files after the instance is released. Valid values:
+- None: No archived backup files are retained.
+- Lastest: Only the last archived backup file is retained.
+- All: All the archived backup files are retained.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replicationacl_nodejs">
@@ -2341,6 +2424,21 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
 - cloud_essd3: specifies to use enhanced SSDs (ESSDs).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="db_time_zone_python">
+<a href="#db_time_zone_python" style="color: inherit; text-decoration: inherit;">db_<wbr>time_<wbr>zone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The time zone of the instance. This parameter takes effect only when you set the `Engine` parameter to MySQL or PostgreSQL.
+- If you set the `Engine` parameter to MySQL.
+- This time zone of the instance is in UTC. Valid values: -12:59 to +13:00.
+- You can specify this parameter when the instance is equipped with local SSDs. For example, you can specify the time zone to Asia/Hong_Kong. For more information about time zones, see [Time zones](https://www.alibabacloud.com/help/doc-detail/297356.htm).
+- If you set the `Engine` parameter to PostgreSQL.
+- This time zone of the instance is not in UTC. For more information about time zones, see [Time zones](https://www.alibabacloud.com/help/doc-detail/297356.htm).
+- You can specify this parameter only when the instance is equipped with standard SSDs or ESSDs.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="encryption_key_python">
 <a href="#encryption_key_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>key</a>
 </span>
@@ -2459,6 +2557,18 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The private IP address of the instance. The private IP address must be within the Classless Inter-Domain Routing (CIDR) block of the vSwitch that is specified by the VSwitchId parameter.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="released_keep_policy_python">
+<a href="#released_keep_policy_python" style="color: inherit; text-decoration: inherit;">released_<wbr>keep_<wbr>policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The policy based on which ApsaraDB RDS retains archived backup files after the instance is released. Valid values:
+- None: No archived backup files are retained.
+- Lastest: Only the last archived backup file is retained.
+- All: All the archived backup files are retained.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replication_acl_python">
@@ -2882,6 +2992,7 @@ Get an existing Instance resource's state with the given name, ID, and optional 
         <span class="nx">db_instance_ip_array_attribute</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">db_instance_ip_array_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">db_instance_storage_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">db_time_zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">encryption_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">engine</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">engine_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -2899,6 +3010,7 @@ Get an existing Instance resource's state with the given name, ID, and optional 
         <span class="nx">period</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">port</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">private_ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">released_keep_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">replication_acl</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">resource_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">security_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -3180,6 +3292,21 @@ The following state arguments are supported:
 - cloud_essd3: specifies to use enhanced SSDs (ESSDs).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_dbtimezone_csharp">
+<a href="#state_dbtimezone_csharp" style="color: inherit; text-decoration: inherit;">Db<wbr>Time<wbr>Zone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The time zone of the instance. This parameter takes effect only when you set the `Engine` parameter to MySQL or PostgreSQL.
+- If you set the `Engine` parameter to MySQL.
+- This time zone of the instance is in UTC. Valid values: -12:59 to +13:00.
+- You can specify this parameter when the instance is equipped with local SSDs. For example, you can specify the time zone to Asia/Hong_Kong. For more information about time zones, see [Time zones](https://www.alibabacloud.com/help/doc-detail/297356.htm).
+- If you set the `Engine` parameter to PostgreSQL.
+- This time zone of the instance is not in UTC. For more information about time zones, see [Time zones](https://www.alibabacloud.com/help/doc-detail/297356.htm).
+- You can specify this parameter only when the instance is equipped with standard SSDs or ESSDs.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_encryptionkey_csharp">
 <a href="#state_encryptionkey_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Key</a>
 </span>
@@ -3340,6 +3467,18 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private IP address of the instance. The private IP address must be within the Classless Inter-Domain Routing (CIDR) block of the vSwitch that is specified by the VSwitchId parameter.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_releasedkeeppolicy_csharp">
+<a href="#state_releasedkeeppolicy_csharp" style="color: inherit; text-decoration: inherit;">Released<wbr>Keep<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The policy based on which ApsaraDB RDS retains archived backup files after the instance is released. Valid values:
+- None: No archived backup files are retained.
+- Lastest: Only the last archived backup file is retained.
+- All: All the archived backup files are retained.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_replicationacl_csharp">
@@ -3760,6 +3899,21 @@ The multiple zone ID can be retrieved by setting `multi` to "true" in the data s
 - cloud_essd3: specifies to use enhanced SSDs (ESSDs).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_dbtimezone_go">
+<a href="#state_dbtimezone_go" style="color: inherit; text-decoration: inherit;">Db<wbr>Time<wbr>Zone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The time zone of the instance. This parameter takes effect only when you set the `Engine` parameter to MySQL or PostgreSQL.
+- If you set the `Engine` parameter to MySQL.
+- This time zone of the instance is in UTC. Valid values: -12:59 to +13:00.
+- You can specify this parameter when the instance is equipped with local SSDs. For example, you can specify the time zone to Asia/Hong_Kong. For more information about time zones, see [Time zones](https://www.alibabacloud.com/help/doc-detail/297356.htm).
+- If you set the `Engine` parameter to PostgreSQL.
+- This time zone of the instance is not in UTC. For more information about time zones, see [Time zones](https://www.alibabacloud.com/help/doc-detail/297356.htm).
+- You can specify this parameter only when the instance is equipped with standard SSDs or ESSDs.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_encryptionkey_go">
 <a href="#state_encryptionkey_go" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Key</a>
 </span>
@@ -3920,6 +4074,18 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private IP address of the instance. The private IP address must be within the Classless Inter-Domain Routing (CIDR) block of the vSwitch that is specified by the VSwitchId parameter.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_releasedkeeppolicy_go">
+<a href="#state_releasedkeeppolicy_go" style="color: inherit; text-decoration: inherit;">Released<wbr>Keep<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The policy based on which ApsaraDB RDS retains archived backup files after the instance is released. Valid values:
+- None: No archived backup files are retained.
+- Lastest: Only the last archived backup file is retained.
+- All: All the archived backup files are retained.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_replicationacl_go">
@@ -4340,6 +4506,21 @@ The multiple zone ID can be retrieved by setting `multi` to "true" in the data s
 - cloud_essd3: specifies to use enhanced SSDs (ESSDs).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_dbtimezone_nodejs">
+<a href="#state_dbtimezone_nodejs" style="color: inherit; text-decoration: inherit;">db<wbr>Time<wbr>Zone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The time zone of the instance. This parameter takes effect only when you set the `Engine` parameter to MySQL or PostgreSQL.
+- If you set the `Engine` parameter to MySQL.
+- This time zone of the instance is in UTC. Valid values: -12:59 to +13:00.
+- You can specify this parameter when the instance is equipped with local SSDs. For example, you can specify the time zone to Asia/Hong_Kong. For more information about time zones, see [Time zones](https://www.alibabacloud.com/help/doc-detail/297356.htm).
+- If you set the `Engine` parameter to PostgreSQL.
+- This time zone of the instance is not in UTC. For more information about time zones, see [Time zones](https://www.alibabacloud.com/help/doc-detail/297356.htm).
+- You can specify this parameter only when the instance is equipped with standard SSDs or ESSDs.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_encryptionkey_nodejs">
 <a href="#state_encryptionkey_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Key</a>
 </span>
@@ -4500,6 +4681,18 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private IP address of the instance. The private IP address must be within the Classless Inter-Domain Routing (CIDR) block of the vSwitch that is specified by the VSwitchId parameter.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_releasedkeeppolicy_nodejs">
+<a href="#state_releasedkeeppolicy_nodejs" style="color: inherit; text-decoration: inherit;">released<wbr>Keep<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The policy based on which ApsaraDB RDS retains archived backup files after the instance is released. Valid values:
+- None: No archived backup files are retained.
+- Lastest: Only the last archived backup file is retained.
+- All: All the archived backup files are retained.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_replicationacl_nodejs">
@@ -4920,6 +5113,21 @@ The multiple zone ID can be retrieved by setting `multi` to "true" in the data s
 - cloud_essd3: specifies to use enhanced SSDs (ESSDs).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_db_time_zone_python">
+<a href="#state_db_time_zone_python" style="color: inherit; text-decoration: inherit;">db_<wbr>time_<wbr>zone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The time zone of the instance. This parameter takes effect only when you set the `Engine` parameter to MySQL or PostgreSQL.
+- If you set the `Engine` parameter to MySQL.
+- This time zone of the instance is in UTC. Valid values: -12:59 to +13:00.
+- You can specify this parameter when the instance is equipped with local SSDs. For example, you can specify the time zone to Asia/Hong_Kong. For more information about time zones, see [Time zones](https://www.alibabacloud.com/help/doc-detail/297356.htm).
+- If you set the `Engine` parameter to PostgreSQL.
+- This time zone of the instance is not in UTC. For more information about time zones, see [Time zones](https://www.alibabacloud.com/help/doc-detail/297356.htm).
+- You can specify this parameter only when the instance is equipped with standard SSDs or ESSDs.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_encryption_key_python">
 <a href="#state_encryption_key_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>key</a>
 </span>
@@ -5080,6 +5288,18 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The private IP address of the instance. The private IP address must be within the Classless Inter-Domain Routing (CIDR) block of the vSwitch that is specified by the VSwitchId parameter.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_released_keep_policy_python">
+<a href="#state_released_keep_policy_python" style="color: inherit; text-decoration: inherit;">released_<wbr>keep_<wbr>policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The policy based on which ApsaraDB RDS retains archived backup files after the instance is released. Valid values:
+- None: No archived backup files are retained.
+- Lastest: Only the last archived backup file is retained.
+- All: All the archived backup files are retained.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_replication_acl_python">

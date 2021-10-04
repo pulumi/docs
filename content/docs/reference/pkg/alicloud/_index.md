@@ -1,6 +1,6 @@
 ---
-title: "AliCloud"
-title_tag: "AliCloud Package"
+title: "Alibaba Cloud"
+title_tag: "Alibaba Cloud Package"
 meta_desc: "A Pulumi package for creating and managing AliCloud resources."
 menu:
     reference:
@@ -29,12 +29,17 @@ A Pulumi package for creating and managing AliCloud resources.
     <li><a href="cdn/" title="cdn"><span class="symbol module"></span>cdn</a></li>
     <li><a href="cen/" title="cen"><span class="symbol module"></span>cen</a></li>
     <li><a href="cfg/" title="cfg"><span class="symbol module"></span>cfg</a></li>
+    <li><a href="clickhouse/" title="clickhouse"><span class="symbol module"></span>clickhouse</a></li>
+    <li><a href="cloudauth/" title="cloudauth"><span class="symbol module"></span>cloudauth</a></li>
     <li><a href="cloudconnect/" title="cloudconnect"><span class="symbol module"></span>cloudconnect</a></li>
     <li><a href="cloudfirewall/" title="cloudfirewall"><span class="symbol module"></span>cloudfirewall</a></li>
+    <li><a href="cloudsso/" title="cloudsso"><span class="symbol module"></span>cloudsso</a></li>
     <li><a href="cloudstoragegateway/" title="cloudstoragegateway"><span class="symbol module"></span>cloudstoragegateway</a></li>
     <li><a href="cms/" title="cms"><span class="symbol module"></span>cms</a></li>
     <li><a href="cr/" title="cr"><span class="symbol module"></span>cr</a></li>
     <li><a href="cs/" title="cs"><span class="symbol module"></span>cs</a></li>
+    <li><a href="databasefilesystem/" title="databasefilesystem"><span class="symbol module"></span>databasefilesystem</a></li>
+    <li><a href="databasegateway/" title="databasegateway"><span class="symbol module"></span>databasegateway</a></li>
     <li><a href="datahub/" title="datahub"><span class="symbol module"></span>datahub</a></li>
     <li><a href="dataworks/" title="dataworks"><span class="symbol module"></span>dataworks</a></li>
     <li><a href="dcdn/" title="dcdn"><span class="symbol module"></span>dcdn</a></li>
@@ -45,6 +50,8 @@ A Pulumi package for creating and managing AliCloud resources.
     <li><a href="dms/" title="dms"><span class="symbol module"></span>dms</a></li>
     <li><a href="dns/" title="dns"><span class="symbol module"></span>dns</a></li>
     <li><a href="drds/" title="drds"><span class="symbol module"></span>drds</a></li>
+    <li><a href="dts/" title="dts"><span class="symbol module"></span>dts</a></li>
+    <li><a href="eais/" title="eais"><span class="symbol module"></span>eais</a></li>
     <li><a href="eci/" title="eci"><span class="symbol module"></span>eci</a></li>
     <li><a href="ecp/" title="ecp"><span class="symbol module"></span>ecp</a></li>
     <li><a href="ecs/" title="ecs"><span class="symbol module"></span>ecs</a></li>
@@ -62,8 +69,11 @@ A Pulumi package for creating and managing AliCloud resources.
     <li><a href="fnf/" title="fnf"><span class="symbol module"></span>fnf</a></li>
     <li><a href="ga/" title="ga"><span class="symbol module"></span>ga</a></li>
     <li><a href="gpdb/" title="gpdb"><span class="symbol module"></span>gpdb</a></li>
+    <li><a href="graphdatabase/" title="graphdatabase"><span class="symbol module"></span>graphdatabase</a></li>
     <li><a href="hbase/" title="hbase"><span class="symbol module"></span>hbase</a></li>
     <li><a href="hbr/" title="hbr"><span class="symbol module"></span>hbr</a></li>
+    <li><a href="imm/" title="imm"><span class="symbol module"></span>imm</a></li>
+    <li><a href="imp/" title="imp"><span class="symbol module"></span>imp</a></li>
     <li><a href="iot/" title="iot"><span class="symbol module"></span>iot</a></li>
     <li><a href="kms/" title="kms"><span class="symbol module"></span>kms</a></li>
     <li><a href="kvstore/" title="kvstore"><span class="symbol module"></span>kvstore</a></li>
@@ -71,18 +81,22 @@ A Pulumi package for creating and managing AliCloud resources.
     <li><a href="log/" title="log"><span class="symbol module"></span>log</a></li>
     <li><a href="marketplace/" title="marketplace"><span class="symbol module"></span>marketplace</a></li>
     <li><a href="maxcompute/" title="maxcompute"><span class="symbol module"></span>maxcompute</a></li>
+    <li><a href="mhub/" title="mhub"><span class="symbol module"></span>mhub</a></li>
     <li><a href="mns/" title="mns"><span class="symbol module"></span>mns</a></li>
     <li><a href="mongodb/" title="mongodb"><span class="symbol module"></span>mongodb</a></li>
     <li><a href="mse/" title="mse"><span class="symbol module"></span>mse</a></li>
     <li><a href="nas/" title="nas"><span class="symbol module"></span>nas</a></li>
     <li><a href="oos/" title="oos"><span class="symbol module"></span>oos</a></li>
+    <li><a href="opensearch/" title="opensearch"><span class="symbol module"></span>opensearch</a></li>
     <li><a href="oss/" title="oss"><span class="symbol module"></span>oss</a></li>
     <li><a href="ots/" title="ots"><span class="symbol module"></span>ots</a></li>
     <li><a href="polardb/" title="polardb"><span class="symbol module"></span>polardb</a></li>
     <li><a href="privatelink/" title="privatelink"><span class="symbol module"></span>privatelink</a></li>
     <li><a href="pvtz/" title="pvtz"><span class="symbol module"></span>pvtz</a></li>
+    <li><a href="quickbi/" title="quickbi"><span class="symbol module"></span>quickbi</a></li>
     <li><a href="quotas/" title="quotas"><span class="symbol module"></span>quotas</a></li>
     <li><a href="ram/" title="ram"><span class="symbol module"></span>ram</a></li>
+    <li><a href="rdc/" title="rdc"><span class="symbol module"></span>rdc</a></li>
     <li><a href="rds/" title="rds"><span class="symbol module"></span>rds</a></li>
     <li><a href="resourcemanager/" title="resourcemanager"><span class="symbol module"></span>resourcemanager</a></li>
     <li><a href="rocketmq/" title="rocketmq"><span class="symbol module"></span>rocketmq</a></li>
@@ -92,9 +106,12 @@ A Pulumi package for creating and managing AliCloud resources.
     <li><a href="scdn/" title="scdn"><span class="symbol module"></span>scdn</a></li>
     <li><a href="sddp/" title="sddp"><span class="symbol module"></span>sddp</a></li>
     <li><a href="securitycenter/" title="securitycenter"><span class="symbol module"></span>securitycenter</a></li>
+    <li><a href="servicemesh/" title="servicemesh"><span class="symbol module"></span>servicemesh</a></li>
+    <li><a href="simpleapplicationserver/" title="simpleapplicationserver"><span class="symbol module"></span>simpleapplicationserver</a></li>
     <li><a href="slb/" title="slb"><span class="symbol module"></span>slb</a></li>
     <li><a href="tsdb/" title="tsdb"><span class="symbol module"></span>tsdb</a></li>
     <li><a href="videosurveillance/" title="videosurveillance"><span class="symbol module"></span>videosurveillance</a></li>
+    <li><a href="vod/" title="vod"><span class="symbol module"></span>vod</a></li>
     <li><a href="vpc/" title="vpc"><span class="symbol module"></span>vpc</a></li>
     <li><a href="vpn/" title="vpn"><span class="symbol module"></span>vpn</a></li>
     <li><a href="waf/" title="waf"><span class="symbol module"></span>waf</a></li>
@@ -104,6 +121,7 @@ A Pulumi package for creating and managing AliCloud resources.
 <h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="mscsubcontract" title="MscSubContract"><span class="symbol resource"></span>MscSubContract</a></li>
+    <li><a href="mscsubsubscription" title="MscSubSubscription"><span class="symbol resource"></span>MscSubSubscription</a></li>
     <li><a href="provider" title="Provider"><span class="symbol resource"></span>Provider</a></li>
 </ul>
 
@@ -112,7 +130,8 @@ A Pulumi package for creating and managing AliCloud resources.
     <li><a href="getaccount" title="GetAccount"><span class="symbol function"></span>GetAccount</a></li>
     <li><a href="getcalleridentity" title="GetCallerIdentity"><span class="symbol function"></span>GetCallerIdentity</a></li>
     <li><a href="getfilecrc64checksum" title="GetFileCrc64Checksum"><span class="symbol function"></span>GetFileCrc64Checksum</a></li>
-    <li><a href="getmscsubcontracts" title="GetMscSubContracts"><span class="symbol function"></span>GetMscSubContracts</a></li>
+    <li><a href="getmscsubcontacts" title="GetMscSubContacts"><span class="symbol function"></span>GetMscSubContacts</a></li>
+    <li><a href="getmscsubsubscriptions" title="GetMscSubSubscriptions"><span class="symbol function"></span>GetMscSubSubscriptions</a></li>
     <li><a href="getregions" title="GetRegions"><span class="symbol function"></span>GetRegions</a></li>
     <li><a href="getzones" title="GetZones"><span class="symbol function"></span>GetZones</a></li>
 </ul>
@@ -126,6 +145,6 @@ A Pulumi package for creating and managing AliCloud resources.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>3.7.0</dd>
+	<dd>3.8.0</dd>
 </dl>
 

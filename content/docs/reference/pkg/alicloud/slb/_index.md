@@ -23,6 +23,7 @@ Explore the resources and functions of the alicloud.slb module.
     <li><a href="rule" title="Rule"><span class="symbol resource"></span>Rule</a></li>
     <li><a href="servercertificate" title="ServerCertificate"><span class="symbol resource"></span>ServerCertificate</a></li>
     <li><a href="servergroup" title="ServerGroup"><span class="symbol resource"></span>ServerGroup</a></li>
+    <li><a href="tlscipherpolicy" title="TlsCipherPolicy"><span class="symbol resource"></span>TlsCipherPolicy</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
@@ -39,6 +40,7 @@ Explore the resources and functions of the alicloud.slb module.
     <li><a href="getrules" title="GetRules"><span class="symbol function"></span>GetRules</a></li>
     <li><a href="getservercertificates" title="GetServerCertificates"><span class="symbol function"></span>GetServerCertificates</a></li>
     <li><a href="getservergroups" title="GetServerGroups"><span class="symbol function"></span>GetServerGroups</a></li>
+    <li><a href="gettlscipherpolicies" title="GetTlsCipherPolicies"><span class="symbol function"></span>GetTlsCipherPolicies</a></li>
     <li><a href="getzones" title="GetZones"><span class="symbol function"></span>GetZones</a></li>
 </ul>
 
@@ -51,6 +53,6 @@ Explore the resources and functions of the alicloud.slb module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>3.7.0</dd>
+	<dd>3.8.0</dd>
 </dl>
 

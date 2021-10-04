@@ -13,11 +13,14 @@ Explore the resources and functions of the alicloud.vpc module.
 <ul class="api">
     <li><a href="commonbandwithpackage" title="CommonBandwithPackage"><span class="symbol resource"></span>CommonBandwithPackage</a></li>
     <li><a href="commonbandwithpackageattachment" title="CommonBandwithPackageAttachment"><span class="symbol resource"></span>CommonBandwithPackageAttachment</a></li>
+    <li><a href="dhcpoptionsset" title="DhcpOptionsSet"><span class="symbol resource"></span>DhcpOptionsSet</a></li>
     <li><a href="flowlog" title="FlowLog"><span class="symbol resource"></span>FlowLog</a></li>
     <li><a href="forwardentry" title="ForwardEntry"><span class="symbol resource"></span>ForwardEntry</a></li>
     <li><a href="havip" title="HAVip"><span class="symbol resource"></span>HAVip</a></li>
     <li><a href="havipattachment" title="HAVipAttachment"><span class="symbol resource"></span>HAVipAttachment</a></li>
     <li><a href="natgateway" title="NatGateway"><span class="symbol resource"></span>NatGateway</a></li>
+    <li><a href="natip" title="NatIp"><span class="symbol resource"></span>NatIp</a></li>
+    <li><a href="natipcidr" title="NatIpCidr"><span class="symbol resource"></span>NatIpCidr</a></li>
     <li><a href="network" title="Network"><span class="symbol resource"></span>Network</a></li>
     <li><a href="networkacl" title="NetworkAcl"><span class="symbol resource"></span>NetworkAcl</a></li>
     <li><a href="networkaclattachment" title="NetworkAclAttachment"><span class="symbol resource"></span>NetworkAclAttachment</a></li>
@@ -37,10 +40,13 @@ Explore the resources and functions of the alicloud.vpc module.
 <h2 id="functions">Functions</h2>
 <ul class="api">
     <li><a href="getcommonbandwidthpackages" title="GetCommonBandwidthPackages"><span class="symbol function"></span>GetCommonBandwidthPackages</a></li>
+    <li><a href="getdhcpoptionssets" title="GetDhcpOptionsSets"><span class="symbol function"></span>GetDhcpOptionsSets</a></li>
     <li><a href="getenhancednatavailablezones" title="GetEnhancedNatAvailableZones"><span class="symbol function"></span>GetEnhancedNatAvailableZones</a></li>
     <li><a href="getforwardentries" title="GetForwardEntries"><span class="symbol function"></span>GetForwardEntries</a></li>
     <li><a href="gethavips" title="GetHavips"><span class="symbol function"></span>GetHavips</a></li>
     <li><a href="getnatgateways" title="GetNatGateways"><span class="symbol function"></span>GetNatGateways</a></li>
+    <li><a href="getnatipcidrs" title="GetNatIpCidrs"><span class="symbol function"></span>GetNatIpCidrs</a></li>
+    <li><a href="getnatips" title="GetNatIps"><span class="symbol function"></span>GetNatIps</a></li>
     <li><a href="getnetworkacls" title="GetNetworkAcls"><span class="symbol function"></span>GetNetworkAcls</a></li>
     <li><a href="getnetworks" title="GetNetworks"><span class="symbol function"></span>GetNetworks</a></li>
     <li><a href="getrouteentries" title="GetRouteEntries"><span class="symbol function"></span>GetRouteEntries</a></li>
@@ -62,6 +68,6 @@ Explore the resources and functions of the alicloud.vpc module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>3.7.0</dd>
+	<dd>3.8.0</dd>
 </dl>
 

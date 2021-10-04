@@ -12,12 +12,14 @@ Explore the resources and functions of the alicloud.sddp module.
 <h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="config" title="Config"><span class="symbol resource"></span>Config</a></li>
+    <li><a href="instance" title="Instance"><span class="symbol resource"></span>Instance</a></li>
     <li><a href="rule" title="Rule"><span class="symbol resource"></span>Rule</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
     <li><a href="getconfigs" title="GetConfigs"><span class="symbol function"></span>GetConfigs</a></li>
+    <li><a href="getinstances" title="GetInstances"><span class="symbol function"></span>GetInstances</a></li>
     <li><a href="getrules" title="GetRules"><span class="symbol function"></span>GetRules</a></li>
 </ul>
 
@@ -30,6 +32,6 @@ Explore the resources and functions of the alicloud.sddp module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>3.7.0</dd>
+	<dd>3.8.0</dd>
 </dl>
 

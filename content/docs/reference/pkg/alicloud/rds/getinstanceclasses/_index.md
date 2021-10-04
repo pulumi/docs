@@ -148,6 +148,7 @@ export const firstDbInstanceClass = resources.instanceClasses[0].instanceClass;
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_instance_classes(</span><span class="nx">category</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                          <span class="nx">db_instance_class</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                         <span class="nx">db_instance_storage_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                          <span class="nx">engine</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                          <span class="nx">engine_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                          <span class="nx">instance_charge_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -188,7 +189,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}DB Instance category. the value like [`Basic`, `HighAvailability`, `Finance`], [detail info](https://www.alibabacloud.com/help/doc-detail/69795.htm).
+    <dd>{{% md %}}DB Instance category. the value like [`Basic`, `HighAvailability`, `Finance`, `AlwaysOn`], [detail info](https://www.alibabacloud.com/help/doc-detail/69795.htm).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dbinstanceclass_csharp">
@@ -200,13 +201,22 @@ The following arguments are supported:
     <dd>{{% md %}}The DB instance class type by the user.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="dbinstancestoragetype_csharp">
+<a href="#dbinstancestoragetype_csharp" style="color: inherit; text-decoration: inherit;">Db<wbr>Instance<wbr>Storage<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The DB instance storage space required by the user. Valid values: "cloud_ssd", "local_ssd", "cloud_essd", "cloud_essd2", "cloud_essd3".
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="engine_csharp">
 <a href="#engine_csharp" style="color: inherit; text-decoration: inherit;">Engine</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Database type. Options are `MySQL`, `SQLServer`, `PostgreSQL` and `PPAS`. If no value is specified, all types are returned.
+    <dd>{{% md %}}Database type. Valid values:"MySQL", "SQLServer", "PostgreSQL", "PPAS", "MariaDB". If not set, it will match all of engines.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="engineversion_csharp">
@@ -258,7 +268,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The DB instance storage space required by the user. Valid values: `cloud_ssd` and `local_ssd`.
+    <dd>{{% md %}}It has been deprecated from verison 1.134.0+ and using `db_instance_storage_type` instead.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zoneid_csharp">
@@ -280,7 +290,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}DB Instance category. the value like [`Basic`, `HighAvailability`, `Finance`], [detail info](https://www.alibabacloud.com/help/doc-detail/69795.htm).
+    <dd>{{% md %}}DB Instance category. the value like [`Basic`, `HighAvailability`, `Finance`, `AlwaysOn`], [detail info](https://www.alibabacloud.com/help/doc-detail/69795.htm).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dbinstanceclass_go">
@@ -292,13 +302,22 @@ The following arguments are supported:
     <dd>{{% md %}}The DB instance class type by the user.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="dbinstancestoragetype_go">
+<a href="#dbinstancestoragetype_go" style="color: inherit; text-decoration: inherit;">Db<wbr>Instance<wbr>Storage<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The DB instance storage space required by the user. Valid values: "cloud_ssd", "local_ssd", "cloud_essd", "cloud_essd2", "cloud_essd3".
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="engine_go">
 <a href="#engine_go" style="color: inherit; text-decoration: inherit;">Engine</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Database type. Options are `MySQL`, `SQLServer`, `PostgreSQL` and `PPAS`. If no value is specified, all types are returned.
+    <dd>{{% md %}}Database type. Valid values:"MySQL", "SQLServer", "PostgreSQL", "PPAS", "MariaDB". If not set, it will match all of engines.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="engineversion_go">
@@ -350,7 +369,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The DB instance storage space required by the user. Valid values: `cloud_ssd` and `local_ssd`.
+    <dd>{{% md %}}It has been deprecated from verison 1.134.0+ and using `db_instance_storage_type` instead.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zoneid_go">
@@ -372,7 +391,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}DB Instance category. the value like [`Basic`, `HighAvailability`, `Finance`], [detail info](https://www.alibabacloud.com/help/doc-detail/69795.htm).
+    <dd>{{% md %}}DB Instance category. the value like [`Basic`, `HighAvailability`, `Finance`, `AlwaysOn`], [detail info](https://www.alibabacloud.com/help/doc-detail/69795.htm).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dbinstanceclass_nodejs">
@@ -384,13 +403,22 @@ The following arguments are supported:
     <dd>{{% md %}}The DB instance class type by the user.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="dbinstancestoragetype_nodejs">
+<a href="#dbinstancestoragetype_nodejs" style="color: inherit; text-decoration: inherit;">db<wbr>Instance<wbr>Storage<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The DB instance storage space required by the user. Valid values: "cloud_ssd", "local_ssd", "cloud_essd", "cloud_essd2", "cloud_essd3".
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="engine_nodejs">
 <a href="#engine_nodejs" style="color: inherit; text-decoration: inherit;">engine</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Database type. Options are `MySQL`, `SQLServer`, `PostgreSQL` and `PPAS`. If no value is specified, all types are returned.
+    <dd>{{% md %}}Database type. Valid values:"MySQL", "SQLServer", "PostgreSQL", "PPAS", "MariaDB". If not set, it will match all of engines.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="engineversion_nodejs">
@@ -442,7 +470,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The DB instance storage space required by the user. Valid values: `cloud_ssd` and `local_ssd`.
+    <dd>{{% md %}}It has been deprecated from verison 1.134.0+ and using `db_instance_storage_type` instead.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zoneid_nodejs">
@@ -464,7 +492,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}DB Instance category. the value like [`Basic`, `HighAvailability`, `Finance`], [detail info](https://www.alibabacloud.com/help/doc-detail/69795.htm).
+    <dd>{{% md %}}DB Instance category. the value like [`Basic`, `HighAvailability`, `Finance`, `AlwaysOn`], [detail info](https://www.alibabacloud.com/help/doc-detail/69795.htm).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="db_instance_class_python">
@@ -476,13 +504,22 @@ The following arguments are supported:
     <dd>{{% md %}}The DB instance class type by the user.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="db_instance_storage_type_python">
+<a href="#db_instance_storage_type_python" style="color: inherit; text-decoration: inherit;">db_<wbr>instance_<wbr>storage_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The DB instance storage space required by the user. Valid values: "cloud_ssd", "local_ssd", "cloud_essd", "cloud_essd2", "cloud_essd3".
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="engine_python">
 <a href="#engine_python" style="color: inherit; text-decoration: inherit;">engine</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Database type. Options are `MySQL`, `SQLServer`, `PostgreSQL` and `PPAS`. If no value is specified, all types are returned.
+    <dd>{{% md %}}Database type. Valid values:"MySQL", "SQLServer", "PostgreSQL", "PPAS", "MariaDB". If not set, it will match all of engines.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="engine_version_python">
@@ -534,7 +571,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The DB instance storage space required by the user. Valid values: `cloud_ssd` and `local_ssd`.
+    <dd>{{% md %}}It has been deprecated from verison 1.134.0+ and using `db_instance_storage_type` instead.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zone_id_python">
@@ -596,6 +633,14 @@ The following output properties are available:
             title="">
         <span id="dbinstanceclass_csharp">
 <a href="#dbinstanceclass_csharp" style="color: inherit; text-decoration: inherit;">Db<wbr>Instance<wbr>Class</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="dbinstancestoragetype_csharp">
+<a href="#dbinstancestoragetype_csharp" style="color: inherit; text-decoration: inherit;">Db<wbr>Instance<wbr>Storage<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -713,6 +758,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="dbinstancestoragetype_go">
+<a href="#dbinstancestoragetype_go" style="color: inherit; text-decoration: inherit;">Db<wbr>Instance<wbr>Storage<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="engine_go">
 <a href="#engine_go" style="color: inherit; text-decoration: inherit;">Engine</a>
 </span>
@@ -824,6 +877,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="dbinstancestoragetype_nodejs">
+<a href="#dbinstancestoragetype_nodejs" style="color: inherit; text-decoration: inherit;">db<wbr>Instance<wbr>Storage<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="engine_nodejs">
 <a href="#engine_nodejs" style="color: inherit; text-decoration: inherit;">engine</a>
 </span>
@@ -929,6 +990,14 @@ The following output properties are available:
             title="">
         <span id="db_instance_class_python">
 <a href="#db_instance_class_python" style="color: inherit; text-decoration: inherit;">db_<wbr>instance_<wbr>class</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="db_instance_storage_type_python">
+<a href="#db_instance_storage_type_python" style="color: inherit; text-decoration: inherit;">db_<wbr>instance_<wbr>storage_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>

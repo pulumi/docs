@@ -154,6 +154,7 @@ export const firstDbInstanceId = dbInstancesDs.instances[0].id;
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_instances(</span><span class="nx">connection_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                   <span class="nx">db_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                  <span class="nx">enable_details</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                   <span class="nx">engine</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                   <span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
                   <span class="nx">name_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -204,6 +205,15 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}`Primary` for primary instance, `Readonly` for read-only instance, `Guard` for disaster recovery instance, and `Temp` for temporary instance.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enabledetails_csharp">
+<a href="#enabledetails_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Default to `false`. Set it to `true` can output parameter template about resource attributes.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="engine_csharp">
@@ -300,6 +310,15 @@ Note: Before 1.60.0, the value's format is a `json` string which including `TagK
     <dd>{{% md %}}`Primary` for primary instance, `Readonly` for read-only instance, `Guard` for disaster recovery instance, and `Temp` for temporary instance.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="enabledetails_go">
+<a href="#enabledetails_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Default to `false`. Set it to `true` can output parameter template about resource attributes.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="engine_go">
 <a href="#engine_go" style="color: inherit; text-decoration: inherit;">Engine</a>
 </span>
@@ -394,6 +413,15 @@ Note: Before 1.60.0, the value's format is a `json` string which including `TagK
     <dd>{{% md %}}`Primary` for primary instance, `Readonly` for read-only instance, `Guard` for disaster recovery instance, and `Temp` for temporary instance.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="enabledetails_nodejs">
+<a href="#enabledetails_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Default to `false`. Set it to `true` can output parameter template about resource attributes.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="engine_nodejs">
 <a href="#engine_nodejs" style="color: inherit; text-decoration: inherit;">engine</a>
 </span>
@@ -486,6 +514,15 @@ Note: Before 1.60.0, the value's format is a `json` string which including `TagK
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}`Primary` for primary instance, `Readonly` for read-only instance, `Guard` for disaster recovery instance, and `Temp` for temporary instance.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enable_details_python">
+<a href="#enable_details_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Default to `false`. Set it to `true` can output parameter template about resource attributes.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="engine_python">
@@ -627,6 +664,14 @@ The following output properties are available:
     <dd>{{% md %}}`Primary` for primary instance, `Readonly` for read-only instance, `Guard` for disaster recovery instance, and `Temp` for temporary instance.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="enabledetails_csharp">
+<a href="#enabledetails_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="engine_csharp">
 <a href="#engine_csharp" style="color: inherit; text-decoration: inherit;">Engine</a>
 </span>
@@ -744,6 +789,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}`Primary` for primary instance, `Readonly` for read-only instance, `Guard` for disaster recovery instance, and `Temp` for temporary instance.
 {{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="enabledetails_go">
+<a href="#enabledetails_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="engine_go">
 <a href="#engine_go" style="color: inherit; text-decoration: inherit;">Engine</a>
@@ -863,6 +916,14 @@ The following output properties are available:
     <dd>{{% md %}}`Primary` for primary instance, `Readonly` for read-only instance, `Guard` for disaster recovery instance, and `Temp` for temporary instance.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="enabledetails_nodejs">
+<a href="#enabledetails_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="engine_nodejs">
 <a href="#engine_nodejs" style="color: inherit; text-decoration: inherit;">engine</a>
 </span>
@@ -980,6 +1041,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}`Primary` for primary instance, `Readonly` for read-only instance, `Guard` for disaster recovery instance, and `Temp` for temporary instance.
 {{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="enable_details_python">
+<a href="#enable_details_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="engine_python">
 <a href="#engine_python" style="color: inherit; text-decoration: inherit;">engine</a>
@@ -1360,6 +1429,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Available in 1.124.3+) The source of the encryption key.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="parameters_csharp">
+<a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getinstancesinstanceparameter">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Rds.<wbr>Inputs.<wbr>Get<wbr>Instances<wbr>Instance<wbr>Parameter&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}(Available in 1.135.0+) Parameter list.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="port_csharp">
@@ -1856,6 +1934,15 @@ The following output properties are available:
     <dd>{{% md %}}(Available in 1.124.3+) The source of the encryption key.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="parameters_go">
+<a href="#parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getinstancesinstanceparameter">[]Get<wbr>Instances<wbr>Instance<wbr>Parameter</a></span>
+    </dt>
+    <dd>{{% md %}}(Available in 1.135.0+) Parameter list.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="port_go">
 <a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
 </span>
@@ -2348,6 +2435,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Available in 1.124.3+) The source of the encryption key.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="parameters_nodejs">
+<a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getinstancesinstanceparameter">Get<wbr>Instances<wbr>Instance<wbr>Parameter[]</a></span>
+    </dt>
+    <dd>{{% md %}}(Available in 1.135.0+) Parameter list.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="port_nodejs">
@@ -2844,6 +2940,15 @@ The following output properties are available:
     <dd>{{% md %}}(Available in 1.124.3+) The source of the encryption key.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="parameters_python">
+<a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getinstancesinstanceparameter">Sequence[Get<wbr>Instances<wbr>Instance<wbr>Parameter]</a></span>
+    </dt>
+    <dd>{{% md %}}(Available in 1.135.0+) Parameter list.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="port_python">
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
@@ -3025,6 +3130,242 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Available in 1.101.0+) The region ID of the log instance if you create a log instance. If you set this parameter to the same value as the ZoneId parameter, the instance is deployed in a single zone. Otherwise, the instance is deployed in multiple zones.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="getinstancesinstanceparameter">Get<wbr>Instances<wbr>Instance<wbr>Parameter</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="checkingcode_csharp">
+<a href="#checkingcode_csharp" style="color: inherit; text-decoration: inherit;">Checking<wbr>Code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The value range of the parameter.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="forcemodify_csharp">
+<a href="#forcemodify_csharp" style="color: inherit; text-decoration: inherit;">Force<wbr>Modify</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether the parameter can be modified. Valid values: true | false
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="forcerestart_csharp">
+<a href="#forcerestart_csharp" style="color: inherit; text-decoration: inherit;">Force<wbr>Restart</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether the modified parameter takes effect only after a database restart. Valid values: true | false
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="parameterdescription_csharp">
+<a href="#parameterdescription_csharp" style="color: inherit; text-decoration: inherit;">Parameter<wbr>Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The description of the parameter.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="parametername_csharp">
+<a href="#parametername_csharp" style="color: inherit; text-decoration: inherit;">Parameter<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the parameter.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="parametervalue_csharp">
+<a href="#parametervalue_csharp" style="color: inherit; text-decoration: inherit;">Parameter<wbr>Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The default value of the parameter.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="checkingcode_go">
+<a href="#checkingcode_go" style="color: inherit; text-decoration: inherit;">Checking<wbr>Code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The value range of the parameter.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="forcemodify_go">
+<a href="#forcemodify_go" style="color: inherit; text-decoration: inherit;">Force<wbr>Modify</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether the parameter can be modified. Valid values: true | false
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="forcerestart_go">
+<a href="#forcerestart_go" style="color: inherit; text-decoration: inherit;">Force<wbr>Restart</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether the modified parameter takes effect only after a database restart. Valid values: true | false
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="parameterdescription_go">
+<a href="#parameterdescription_go" style="color: inherit; text-decoration: inherit;">Parameter<wbr>Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The description of the parameter.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="parametername_go">
+<a href="#parametername_go" style="color: inherit; text-decoration: inherit;">Parameter<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the parameter.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="parametervalue_go">
+<a href="#parametervalue_go" style="color: inherit; text-decoration: inherit;">Parameter<wbr>Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The default value of the parameter.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="checkingcode_nodejs">
+<a href="#checkingcode_nodejs" style="color: inherit; text-decoration: inherit;">checking<wbr>Code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The value range of the parameter.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="forcemodify_nodejs">
+<a href="#forcemodify_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Modify</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether the parameter can be modified. Valid values: true | false
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="forcerestart_nodejs">
+<a href="#forcerestart_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Restart</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether the modified parameter takes effect only after a database restart. Valid values: true | false
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="parameterdescription_nodejs">
+<a href="#parameterdescription_nodejs" style="color: inherit; text-decoration: inherit;">parameter<wbr>Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The description of the parameter.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="parametername_nodejs">
+<a href="#parametername_nodejs" style="color: inherit; text-decoration: inherit;">parameter<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the parameter.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="parametervalue_nodejs">
+<a href="#parametervalue_nodejs" style="color: inherit; text-decoration: inherit;">parameter<wbr>Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The default value of the parameter.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="checking_code_python">
+<a href="#checking_code_python" style="color: inherit; text-decoration: inherit;">checking_<wbr>code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The value range of the parameter.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="force_modify_python">
+<a href="#force_modify_python" style="color: inherit; text-decoration: inherit;">force_<wbr>modify</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether the parameter can be modified. Valid values: true | false
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="force_restart_python">
+<a href="#force_restart_python" style="color: inherit; text-decoration: inherit;">force_<wbr>restart</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether the modified parameter takes effect only after a database restart. Valid values: true | false
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="parameter_description_python">
+<a href="#parameter_description_python" style="color: inherit; text-decoration: inherit;">parameter_<wbr>description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The description of the parameter.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="parameter_name_python">
+<a href="#parameter_name_python" style="color: inherit; text-decoration: inherit;">parameter_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the parameter.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="parameter_value_python">
+<a href="#parameter_value_python" style="color: inherit; text-decoration: inherit;">parameter_<wbr>value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The default value of the parameter.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

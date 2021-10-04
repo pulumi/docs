@@ -1135,15 +1135,6 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="configruleparameters_csharp">
-<a href="#configruleparameters_csharp" style="color: inherit; text-decoration: inherit;">Config<wbr>Rule<wbr>Parameters</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aggregatecompliancepackconfigruleconfigruleparameter">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Cfg.<wbr>Inputs.<wbr>Aggregate<wbr>Compliance<wbr>Pack<wbr>Config<wbr>Rule<wbr>Config<wbr>Rule<wbr>Parameter&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}A list of parameter rules.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="managedruleidentifier_csharp">
 <a href="#managedruleidentifier_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Rule<wbr>Identifier</a>
 </span>
@@ -1151,20 +1142,20 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Managed Rule Identifier.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="configruleparameters_csharp">
+<a href="#configruleparameters_csharp" style="color: inherit; text-decoration: inherit;">Config<wbr>Rule<wbr>Parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#aggregatecompliancepackconfigruleconfigruleparameter">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Cfg.<wbr>Inputs.<wbr>Aggregate<wbr>Compliance<wbr>Pack<wbr>Config<wbr>Rule<wbr>Config<wbr>Rule<wbr>Parameter&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A list of parameter rules.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="configruleparameters_go">
-<a href="#configruleparameters_go" style="color: inherit; text-decoration: inherit;">Config<wbr>Rule<wbr>Parameters</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aggregatecompliancepackconfigruleconfigruleparameter">[]Aggregate<wbr>Compliance<wbr>Pack<wbr>Config<wbr>Rule<wbr>Config<wbr>Rule<wbr>Parameter</a></span>
-    </dt>
-    <dd>{{% md %}}A list of parameter rules.
-{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="managedruleidentifier_go">
 <a href="#managedruleidentifier_go" style="color: inherit; text-decoration: inherit;">Managed<wbr>Rule<wbr>Identifier</a>
@@ -1173,20 +1164,20 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Managed Rule Identifier.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="configruleparameters_go">
+<a href="#configruleparameters_go" style="color: inherit; text-decoration: inherit;">Config<wbr>Rule<wbr>Parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#aggregatecompliancepackconfigruleconfigruleparameter">[]Aggregate<wbr>Compliance<wbr>Pack<wbr>Config<wbr>Rule<wbr>Config<wbr>Rule<wbr>Parameter</a></span>
+    </dt>
+    <dd>{{% md %}}A list of parameter rules.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="configruleparameters_nodejs">
-<a href="#configruleparameters_nodejs" style="color: inherit; text-decoration: inherit;">config<wbr>Rule<wbr>Parameters</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aggregatecompliancepackconfigruleconfigruleparameter">Aggregate<wbr>Compliance<wbr>Pack<wbr>Config<wbr>Rule<wbr>Config<wbr>Rule<wbr>Parameter[]</a></span>
-    </dt>
-    <dd>{{% md %}}A list of parameter rules.
-{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="managedruleidentifier_nodejs">
 <a href="#managedruleidentifier_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Rule<wbr>Identifier</a>
@@ -1195,20 +1186,20 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Managed Rule Identifier.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="configruleparameters_nodejs">
+<a href="#configruleparameters_nodejs" style="color: inherit; text-decoration: inherit;">config<wbr>Rule<wbr>Parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#aggregatecompliancepackconfigruleconfigruleparameter">Aggregate<wbr>Compliance<wbr>Pack<wbr>Config<wbr>Rule<wbr>Config<wbr>Rule<wbr>Parameter[]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of parameter rules.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="config_rule_parameters_python">
-<a href="#config_rule_parameters_python" style="color: inherit; text-decoration: inherit;">config_<wbr>rule_<wbr>parameters</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aggregatecompliancepackconfigruleconfigruleparameter">Sequence[Aggregate<wbr>Compliance<wbr>Pack<wbr>Config<wbr>Rule<wbr>Config<wbr>Rule<wbr>Parameter]</a></span>
-    </dt>
-    <dd>{{% md %}}A list of parameter rules.
-{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="managed_rule_identifier_python">
 <a href="#managed_rule_identifier_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>rule_<wbr>identifier</a>
@@ -1217,14 +1208,23 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Managed Rule Identifier.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="config_rule_parameters_python">
+<a href="#config_rule_parameters_python" style="color: inherit; text-decoration: inherit;">config_<wbr>rule_<wbr>parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#aggregatecompliancepackconfigruleconfigruleparameter">Sequence[Aggregate<wbr>Compliance<wbr>Pack<wbr>Config<wbr>Rule<wbr>Config<wbr>Rule<wbr>Parameter]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of parameter rules.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="aggregatecompliancepackconfigruleconfigruleparameter">Aggregate<wbr>Compliance<wbr>Pack<wbr>Config<wbr>Rule<wbr>Config<wbr>Rule<wbr>Parameter</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
         <span id="parametername_csharp">
 <a href="#parametername_csharp" style="color: inherit; text-decoration: inherit;">Parameter<wbr>Name</a>
 </span>
@@ -1232,8 +1232,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Parameter Name.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="parametervalue_csharp">
 <a href="#parametervalue_csharp" style="color: inherit; text-decoration: inherit;">Parameter<wbr>Value</a>
 </span>
@@ -1245,8 +1245,8 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
         <span id="parametername_go">
 <a href="#parametername_go" style="color: inherit; text-decoration: inherit;">Parameter<wbr>Name</a>
 </span>
@@ -1254,8 +1254,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Parameter Name.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="parametervalue_go">
 <a href="#parametervalue_go" style="color: inherit; text-decoration: inherit;">Parameter<wbr>Value</a>
 </span>
@@ -1267,8 +1267,8 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
         <span id="parametername_nodejs">
 <a href="#parametername_nodejs" style="color: inherit; text-decoration: inherit;">parameter<wbr>Name</a>
 </span>
@@ -1276,8 +1276,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Parameter Name.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="parametervalue_nodejs">
 <a href="#parametervalue_nodejs" style="color: inherit; text-decoration: inherit;">parameter<wbr>Value</a>
 </span>
@@ -1289,8 +1289,8 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
         <span id="parameter_name_python">
 <a href="#parameter_name_python" style="color: inherit; text-decoration: inherit;">parameter_<wbr>name</a>
 </span>
@@ -1298,8 +1298,8 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Parameter Name.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="parameter_value_python">
 <a href="#parameter_value_python" style="color: inherit; text-decoration: inherit;">parameter_<wbr>value</a>
 </span>

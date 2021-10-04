@@ -1,8 +1,8 @@
 
 ---
-title: "getMscSubContracts"
-title_tag: "alicloud.getMscSubContracts"
-meta_desc: "Documentation for the alicloud.getMscSubContracts function with examples, input properties, output properties, and supporting types."
+title: "getMscSubContacts"
+title_tag: "alicloud.getMscSubContacts"
+meta_desc: "Documentation for the alicloud.getMscSubContacts function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -35,9 +35,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var ids = Output.Create(AliCloud.GetMscSubContracts.InvokeAsync());
+        var ids = Output.Create(AliCloud.GetMscSubContacts.InvokeAsync());
         this.MscSubContactId1 = ids.Apply(ids => ids.Contacts[0].Id);
-        var nameRegex = Output.Create(AliCloud.GetMscSubContracts.InvokeAsync(new AliCloud.GetMscSubContractsArgs
+        var nameRegex = Output.Create(AliCloud.GetMscSubContacts.InvokeAsync(new AliCloud.GetMscSubContactsArgs
         {
             NameRegex = "^my-Contact",
         }));
@@ -67,13 +67,13 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		ids, err := alicloud.GetMscSubContracts(ctx, nil, nil)
+		ids, err := alicloud.GetMscSubContacts(ctx, nil, nil)
 		if err != nil {
 			return err
 		}
 		ctx.Export("mscSubContactId1", ids.Contacts[0].Id)
 		opt0 := "^my-Contact"
-		nameRegex, err := alicloud.GetMscSubContracts(ctx, &alicloud.GetMscSubContractsArgs{
+		nameRegex, err := alicloud.GetMscSubContacts(ctx, &alicloud.GetMscSubContactsArgs{
 			NameRegex: &opt0,
 		}, nil)
 		if err != nil {
@@ -95,9 +95,9 @@ func main() {
 import pulumi
 import pulumi_alicloud as alicloud
 
-ids = alicloud.get_msc_sub_contracts()
+ids = alicloud.get_msc_sub_contacts()
 pulumi.export("mscSubContactId1", ids.contacts[0].id)
-name_regex = alicloud.get_msc_sub_contracts(name_regex="^my-Contact")
+name_regex = alicloud.get_msc_sub_contacts(name_regex="^my-Contact")
 pulumi.export("mscSubContactId2", name_regex.contacts[0].id)
 ```
 
@@ -112,9 +112,9 @@ pulumi.export("mscSubContactId2", name_regex.contacts[0].id)
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const ids = alicloud.getMscSubContracts({});
+const ids = alicloud.getMscSubContacts({});
 export const mscSubContactId1 = ids.then(ids => ids.contacts[0].id);
-const nameRegex = alicloud.getMscSubContracts({
+const nameRegex = alicloud.getMscSubContacts({
     nameRegex: "^my-Contact",
 });
 export const mscSubContactId2 = nameRegex.then(nameRegex => nameRegex.contacts[0].id);
@@ -132,35 +132,35 @@ export const mscSubContactId2 = nameRegex.then(nameRegex => nameRegex.contacts[0
 
 
 
-## Using getMscSubContracts {#using}
+## Using getMscSubContacts {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getMscSubContracts<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetMscSubContractsArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetMscSubContractsResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getMscSubContacts<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetMscSubContactsArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetMscSubContactsResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_msc_sub_contracts(</span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
-                          <span class="nx">name_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                          <span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetMscSubContractsResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_msc_sub_contacts(</span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+                         <span class="nx">name_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                         <span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetMscSubContactsResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetMscSubContracts<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">GetMscSubContractsArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetMscSubContractsResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetMscSubContacts<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">GetMscSubContactsArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetMscSubContactsResult</a></span>, error)</span></code></pre></div>
 
-> Note: This function is named `GetMscSubContracts` in the Go SDK.
+> Note: This function is named `GetMscSubContacts` in the Go SDK.
 
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetMscSubContracts </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetMscSubContractsResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetMscSubContractsArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetMscSubContacts </span><span class="p">{</span><span class="k">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetMscSubContactsResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetMscSubContactsArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -292,7 +292,7 @@ The following arguments are supported:
 
 
 
-## getMscSubContracts Result {#result}
+## getMscSubContacts Result {#result}
 
 The following output properties are available:
 
@@ -305,7 +305,7 @@ The following output properties are available:
 <a href="#contacts_csharp" style="color: inherit; text-decoration: inherit;">Contacts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getmscsubcontractscontact">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Outputs.<wbr>Get<wbr>Msc<wbr>Sub<wbr>Contracts<wbr>Contact&gt;</a></span>
+        <span class="property-type"><a href="#getmscsubcontactscontact">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Outputs.<wbr>Get<wbr>Msc<wbr>Sub<wbr>Contacts<wbr>Contact&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
@@ -358,7 +358,7 @@ The following output properties are available:
 <a href="#contacts_go" style="color: inherit; text-decoration: inherit;">Contacts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getmscsubcontractscontact">[]Get<wbr>Msc<wbr>Sub<wbr>Contracts<wbr>Contact</a></span>
+        <span class="property-type"><a href="#getmscsubcontactscontact">[]Get<wbr>Msc<wbr>Sub<wbr>Contacts<wbr>Contact</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
@@ -411,7 +411,7 @@ The following output properties are available:
 <a href="#contacts_nodejs" style="color: inherit; text-decoration: inherit;">contacts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getmscsubcontractscontact">Get<wbr>Msc<wbr>Sub<wbr>Contracts<wbr>Contact[]</a></span>
+        <span class="property-type"><a href="#getmscsubcontactscontact">Get<wbr>Msc<wbr>Sub<wbr>Contacts<wbr>Contact[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
@@ -464,7 +464,7 @@ The following output properties are available:
 <a href="#contacts_python" style="color: inherit; text-decoration: inherit;">contacts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getmscsubcontractscontact">Sequence[Get<wbr>Msc<wbr>Sub<wbr>Contracts<wbr>Contact]</a></span>
+        <span class="property-type"><a href="#getmscsubcontactscontact">Sequence[Get<wbr>Msc<wbr>Sub<wbr>Contacts<wbr>Contact]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
@@ -516,7 +516,7 @@ The following output properties are available:
 ## Supporting Types
 
 
-<h4 id="getmscsubcontractscontact">Get<wbr>Msc<wbr>Sub<wbr>Contracts<wbr>Contact</h4>
+<h4 id="getmscsubcontactscontact">Get<wbr>Msc<wbr>Sub<wbr>Contacts<wbr>Contact</h4>
 
 
 
@@ -637,7 +637,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The User's Position. Valid values: `CEO`, `Technical Director`, `Maintenance Director`, `Project Director`,`Finance Director` and `Other`.
+    <dd>{{% md %}}The User's Position. Valid values: `CEO`, `Technical Director`, `Maintenance Director`, `Project Director`,`Finance Director` and `Others`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -758,7 +758,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The User's Position. Valid values: `CEO`, `Technical Director`, `Maintenance Director`, `Project Director`,`Finance Director` and `Other`.
+    <dd>{{% md %}}The User's Position. Valid values: `CEO`, `Technical Director`, `Maintenance Director`, `Project Director`,`Finance Director` and `Others`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -879,7 +879,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The User's Position. Valid values: `CEO`, `Technical Director`, `Maintenance Director`, `Project Director`,`Finance Director` and `Other`.
+    <dd>{{% md %}}The User's Position. Valid values: `CEO`, `Technical Director`, `Maintenance Director`, `Project Director`,`Finance Director` and `Others`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1000,7 +1000,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The User's Position. Valid values: `CEO`, `Technical Director`, `Maintenance Director`, `Project Director`,`Finance Director` and `Other`.
+    <dd>{{% md %}}The User's Position. Valid values: `CEO`, `Technical Director`, `Maintenance Director`, `Project Director`,`Finance Director` and `Others`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

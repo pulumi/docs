@@ -335,6 +335,15 @@ The NasBackupPlan resource accepts the following [input]({{< relref "/docs/intro
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
+        <span id="backuptype_csharp">
+<a href="#backuptype_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Backup type. Valid values: `COMPLETE`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="createtime_csharp">
 <a href="#createtime_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Time</a>
 </span>
@@ -344,13 +353,22 @@ The NasBackupPlan resource accepts the following [input]({{< relref "/docs/intro
     <dd>{{% md %}}File System Creation Time. **Note** The time format of the API adopts the ISO 8601 format, such as `2021-07-09T15:45:30CST` or `2021-07-09T07:45:30Z`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="filesystemid_csharp">
+<a href="#filesystemid_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>System<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The File System ID of Nas.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="nasbackupplanname_csharp">
 <a href="#nasbackupplanname_csharp" style="color: inherit; text-decoration: inherit;">Nas<wbr>Backup<wbr>Plan<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource.
+    <dd>{{% md %}}The name of the backup plan. 1~64 characters, the backup plan name of each data source type in a single warehouse required to be unique.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="retention_csharp">
@@ -359,7 +377,7 @@ The NasBackupPlan resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Backup Retention Period, the Minimum Value of 1.
+    <dd>{{% md %}}Backup retention days, the minimum is 1.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="schedule_csharp">
@@ -368,16 +386,16 @@ The NasBackupPlan resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Backup Policy. Formats: I | {Range Specified by the StartTime }|{ Interval}\n* The Time Range Specified by the StartTime Backup Start Time in Unix Time Seconds.\n* Interval ISO8601 Time Intervals. For Example:\n**PT1H Interval for an Hour.\n**P1D Interval Day.\nMeaning from {Range Specified by the Starttime} Every {Interval} of the Time Where We Took Backups Once a Task. Does Not Compensate the Has Elapsed Time the Backup Task. If the Last Backup Has Not Been Completed without Triggering the next Backup.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="backuptype_csharp">
-<a href="#backuptype_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Type</a>
+    <dd>{{% md %}}Backup strategy. Optional format: I|{startTime}|{interval}. It means to execute a backup task every {interval} starting from {startTime}. The backup task for the elapsed time will not be compensated. If the last backup task is not completed yet, the next backup task will not be triggered.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="vaultid_csharp">
+<a href="#vaultid_csharp" style="color: inherit; text-decoration: inherit;">Vault<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Backup Type. Valid Values: * Complete. Valid values: `COMPLETE`.
+    <dd>{{% md %}}The ID of Backup vault.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="detail_csharp">
@@ -394,7 +412,7 @@ The NasBackupPlan resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether to Disable the Backup Task. Valid Values: true, false.
+    <dd>{{% md %}}Whether to disable the backup task. Valid values: `true`, `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="exclude_csharp">
@@ -403,16 +421,7 @@ The NasBackupPlan resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The exclude path. String of Json List, most 255 Characters. e.g. `"[\"/var\"]"`
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="filesystemid_csharp">
-<a href="#filesystemid_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>System<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The File System ID.
+    <dd>{{% md %}}The exclude path. String of Json list, up to 255 characters. e.g. `"[\"/var\"]"`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="include_csharp">
@@ -421,7 +430,7 @@ The NasBackupPlan resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The include path. String of Json List, most 255 Characters. e.g. `"[\"/home/work\"]"`
+    <dd>{{% md %}}The include path. String of Json list, up to 255 characters. e.g. `"[\"/home/work\"]"`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="options_csharp">
@@ -430,8 +439,7 @@ The NasBackupPlan resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Options. NAS Backup Plan Does Not Support Yet.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="paths_csharp">
 <a href="#paths_csharp" style="color: inherit; text-decoration: inherit;">Paths</a>
@@ -439,7 +447,7 @@ The NasBackupPlan resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Backup Path. Up to 65536 Characters. e.g.`["/home", "/var"]`
+    <dd>{{% md %}}Backup path. Up to 65536 characters. e.g.`["/home", "/var"]`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="speedlimit_csharp">
@@ -448,7 +456,7 @@ The NasBackupPlan resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}flow control. The format is: {start}|{end}|{bandwidth} * start starting hour * end end hour * bandwidth limit rate, in KiB ** Use | to separate multiple flow control configurations; ** Multiple flow control configurations are not allowed to have overlapping times.
+    <dd>{{% md %}}Flow control. The format is: {start}|{end}|{bandwidth}. Use `|` to separate multiple flow control configurations, multiple flow control configurations not allowed to have overlapping times.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="updatepaths_csharp">
@@ -457,19 +465,20 @@ The NasBackupPlan resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="vaultid_csharp">
-<a href="#vaultid_csharp" style="color: inherit; text-decoration: inherit;">Vault<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="backuptype_go">
+<a href="#backuptype_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Backup type. Valid values: `COMPLETE`.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="createtime_go">
 <a href="#createtime_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Time</a>
@@ -480,13 +489,22 @@ The NasBackupPlan resource accepts the following [input]({{< relref "/docs/intro
     <dd>{{% md %}}File System Creation Time. **Note** The time format of the API adopts the ISO 8601 format, such as `2021-07-09T15:45:30CST` or `2021-07-09T07:45:30Z`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="filesystemid_go">
+<a href="#filesystemid_go" style="color: inherit; text-decoration: inherit;">File<wbr>System<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The File System ID of Nas.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="nasbackupplanname_go">
 <a href="#nasbackupplanname_go" style="color: inherit; text-decoration: inherit;">Nas<wbr>Backup<wbr>Plan<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource.
+    <dd>{{% md %}}The name of the backup plan. 1~64 characters, the backup plan name of each data source type in a single warehouse required to be unique.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="retention_go">
@@ -495,7 +513,7 @@ The NasBackupPlan resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Backup Retention Period, the Minimum Value of 1.
+    <dd>{{% md %}}Backup retention days, the minimum is 1.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="schedule_go">
@@ -504,16 +522,16 @@ The NasBackupPlan resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Backup Policy. Formats: I | {Range Specified by the StartTime }|{ Interval}\n* The Time Range Specified by the StartTime Backup Start Time in Unix Time Seconds.\n* Interval ISO8601 Time Intervals. For Example:\n**PT1H Interval for an Hour.\n**P1D Interval Day.\nMeaning from {Range Specified by the Starttime} Every {Interval} of the Time Where We Took Backups Once a Task. Does Not Compensate the Has Elapsed Time the Backup Task. If the Last Backup Has Not Been Completed without Triggering the next Backup.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="backuptype_go">
-<a href="#backuptype_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Type</a>
+    <dd>{{% md %}}Backup strategy. Optional format: I|{startTime}|{interval}. It means to execute a backup task every {interval} starting from {startTime}. The backup task for the elapsed time will not be compensated. If the last backup task is not completed yet, the next backup task will not be triggered.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="vaultid_go">
+<a href="#vaultid_go" style="color: inherit; text-decoration: inherit;">Vault<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Backup Type. Valid Values: * Complete. Valid values: `COMPLETE`.
+    <dd>{{% md %}}The ID of Backup vault.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="detail_go">
@@ -530,7 +548,7 @@ The NasBackupPlan resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether to Disable the Backup Task. Valid Values: true, false.
+    <dd>{{% md %}}Whether to disable the backup task. Valid values: `true`, `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="exclude_go">
@@ -539,16 +557,7 @@ The NasBackupPlan resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The exclude path. String of Json List, most 255 Characters. e.g. `"[\"/var\"]"`
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="filesystemid_go">
-<a href="#filesystemid_go" style="color: inherit; text-decoration: inherit;">File<wbr>System<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The File System ID.
+    <dd>{{% md %}}The exclude path. String of Json list, up to 255 characters. e.g. `"[\"/var\"]"`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="include_go">
@@ -557,7 +566,7 @@ The NasBackupPlan resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The include path. String of Json List, most 255 Characters. e.g. `"[\"/home/work\"]"`
+    <dd>{{% md %}}The include path. String of Json list, up to 255 characters. e.g. `"[\"/home/work\"]"`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="options_go">
@@ -566,8 +575,7 @@ The NasBackupPlan resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Options. NAS Backup Plan Does Not Support Yet.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="paths_go">
 <a href="#paths_go" style="color: inherit; text-decoration: inherit;">Paths</a>
@@ -575,7 +583,7 @@ The NasBackupPlan resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Backup Path. Up to 65536 Characters. e.g.`["/home", "/var"]`
+    <dd>{{% md %}}Backup path. Up to 65536 characters. e.g.`["/home", "/var"]`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="speedlimit_go">
@@ -584,7 +592,7 @@ The NasBackupPlan resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}flow control. The format is: {start}|{end}|{bandwidth} * start starting hour * end end hour * bandwidth limit rate, in KiB ** Use | to separate multiple flow control configurations; ** Multiple flow control configurations are not allowed to have overlapping times.
+    <dd>{{% md %}}Flow control. The format is: {start}|{end}|{bandwidth}. Use `|` to separate multiple flow control configurations, multiple flow control configurations not allowed to have overlapping times.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="updatepaths_go">
@@ -593,19 +601,20 @@ The NasBackupPlan resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="vaultid_go">
-<a href="#vaultid_go" style="color: inherit; text-decoration: inherit;">Vault<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="backuptype_nodejs">
+<a href="#backuptype_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Backup type. Valid values: `COMPLETE`.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="createtime_nodejs">
 <a href="#createtime_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Time</a>
@@ -616,13 +625,22 @@ The NasBackupPlan resource accepts the following [input]({{< relref "/docs/intro
     <dd>{{% md %}}File System Creation Time. **Note** The time format of the API adopts the ISO 8601 format, such as `2021-07-09T15:45:30CST` or `2021-07-09T07:45:30Z`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="filesystemid_nodejs">
+<a href="#filesystemid_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>System<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The File System ID of Nas.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="nasbackupplanname_nodejs">
 <a href="#nasbackupplanname_nodejs" style="color: inherit; text-decoration: inherit;">nas<wbr>Backup<wbr>Plan<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource.
+    <dd>{{% md %}}The name of the backup plan. 1~64 characters, the backup plan name of each data source type in a single warehouse required to be unique.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="retention_nodejs">
@@ -631,7 +649,7 @@ The NasBackupPlan resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Backup Retention Period, the Minimum Value of 1.
+    <dd>{{% md %}}Backup retention days, the minimum is 1.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="schedule_nodejs">
@@ -640,16 +658,16 @@ The NasBackupPlan resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Backup Policy. Formats: I | {Range Specified by the StartTime }|{ Interval}\n* The Time Range Specified by the StartTime Backup Start Time in Unix Time Seconds.\n* Interval ISO8601 Time Intervals. For Example:\n**PT1H Interval for an Hour.\n**P1D Interval Day.\nMeaning from {Range Specified by the Starttime} Every {Interval} of the Time Where We Took Backups Once a Task. Does Not Compensate the Has Elapsed Time the Backup Task. If the Last Backup Has Not Been Completed without Triggering the next Backup.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="backuptype_nodejs">
-<a href="#backuptype_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Type</a>
+    <dd>{{% md %}}Backup strategy. Optional format: I|{startTime}|{interval}. It means to execute a backup task every {interval} starting from {startTime}. The backup task for the elapsed time will not be compensated. If the last backup task is not completed yet, the next backup task will not be triggered.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="vaultid_nodejs">
+<a href="#vaultid_nodejs" style="color: inherit; text-decoration: inherit;">vault<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Backup Type. Valid Values: * Complete. Valid values: `COMPLETE`.
+    <dd>{{% md %}}The ID of Backup vault.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="detail_nodejs">
@@ -666,7 +684,7 @@ The NasBackupPlan resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether to Disable the Backup Task. Valid Values: true, false.
+    <dd>{{% md %}}Whether to disable the backup task. Valid values: `true`, `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="exclude_nodejs">
@@ -675,16 +693,7 @@ The NasBackupPlan resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The exclude path. String of Json List, most 255 Characters. e.g. `"[\"/var\"]"`
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="filesystemid_nodejs">
-<a href="#filesystemid_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>System<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The File System ID.
+    <dd>{{% md %}}The exclude path. String of Json list, up to 255 characters. e.g. `"[\"/var\"]"`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="include_nodejs">
@@ -693,7 +702,7 @@ The NasBackupPlan resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The include path. String of Json List, most 255 Characters. e.g. `"[\"/home/work\"]"`
+    <dd>{{% md %}}The include path. String of Json list, up to 255 characters. e.g. `"[\"/home/work\"]"`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="options_nodejs">
@@ -702,8 +711,7 @@ The NasBackupPlan resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Options. NAS Backup Plan Does Not Support Yet.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="paths_nodejs">
 <a href="#paths_nodejs" style="color: inherit; text-decoration: inherit;">paths</a>
@@ -711,7 +719,7 @@ The NasBackupPlan resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Backup Path. Up to 65536 Characters. e.g.`["/home", "/var"]`
+    <dd>{{% md %}}Backup path. Up to 65536 characters. e.g.`["/home", "/var"]`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="speedlimit_nodejs">
@@ -720,7 +728,7 @@ The NasBackupPlan resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}flow control. The format is: {start}|{end}|{bandwidth} * start starting hour * end end hour * bandwidth limit rate, in KiB ** Use | to separate multiple flow control configurations; ** Multiple flow control configurations are not allowed to have overlapping times.
+    <dd>{{% md %}}Flow control. The format is: {start}|{end}|{bandwidth}. Use `|` to separate multiple flow control configurations, multiple flow control configurations not allowed to have overlapping times.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="updatepaths_nodejs">
@@ -729,19 +737,20 @@ The NasBackupPlan resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="vaultid_nodejs">
-<a href="#vaultid_nodejs" style="color: inherit; text-decoration: inherit;">vault<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="backup_type_python">
+<a href="#backup_type_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Backup type. Valid values: `COMPLETE`.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="create_time_python">
 <a href="#create_time_python" style="color: inherit; text-decoration: inherit;">create_<wbr>time</a>
@@ -752,13 +761,22 @@ The NasBackupPlan resource accepts the following [input]({{< relref "/docs/intro
     <dd>{{% md %}}File System Creation Time. **Note** The time format of the API adopts the ISO 8601 format, such as `2021-07-09T15:45:30CST` or `2021-07-09T07:45:30Z`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="file_system_id_python">
+<a href="#file_system_id_python" style="color: inherit; text-decoration: inherit;">file_<wbr>system_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The File System ID of Nas.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="nas_backup_plan_name_python">
 <a href="#nas_backup_plan_name_python" style="color: inherit; text-decoration: inherit;">nas_<wbr>backup_<wbr>plan_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource.
+    <dd>{{% md %}}The name of the backup plan. 1~64 characters, the backup plan name of each data source type in a single warehouse required to be unique.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="retention_python">
@@ -767,7 +785,7 @@ The NasBackupPlan resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Backup Retention Period, the Minimum Value of 1.
+    <dd>{{% md %}}Backup retention days, the minimum is 1.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="schedule_python">
@@ -776,16 +794,16 @@ The NasBackupPlan resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Backup Policy. Formats: I | {Range Specified by the StartTime }|{ Interval}\n* The Time Range Specified by the StartTime Backup Start Time in Unix Time Seconds.\n* Interval ISO8601 Time Intervals. For Example:\n**PT1H Interval for an Hour.\n**P1D Interval Day.\nMeaning from {Range Specified by the Starttime} Every {Interval} of the Time Where We Took Backups Once a Task. Does Not Compensate the Has Elapsed Time the Backup Task. If the Last Backup Has Not Been Completed without Triggering the next Backup.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="backup_type_python">
-<a href="#backup_type_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>type</a>
+    <dd>{{% md %}}Backup strategy. Optional format: I|{startTime}|{interval}. It means to execute a backup task every {interval} starting from {startTime}. The backup task for the elapsed time will not be compensated. If the last backup task is not completed yet, the next backup task will not be triggered.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="vault_id_python">
+<a href="#vault_id_python" style="color: inherit; text-decoration: inherit;">vault_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Backup Type. Valid Values: * Complete. Valid values: `COMPLETE`.
+    <dd>{{% md %}}The ID of Backup vault.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="detail_python">
@@ -802,7 +820,7 @@ The NasBackupPlan resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether to Disable the Backup Task. Valid Values: true, false.
+    <dd>{{% md %}}Whether to disable the backup task. Valid values: `true`, `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="exclude_python">
@@ -811,16 +829,7 @@ The NasBackupPlan resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The exclude path. String of Json List, most 255 Characters. e.g. `"[\"/var\"]"`
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="file_system_id_python">
-<a href="#file_system_id_python" style="color: inherit; text-decoration: inherit;">file_<wbr>system_<wbr>id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The File System ID.
+    <dd>{{% md %}}The exclude path. String of Json list, up to 255 characters. e.g. `"[\"/var\"]"`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="include_python">
@@ -829,7 +838,7 @@ The NasBackupPlan resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The include path. String of Json List, most 255 Characters. e.g. `"[\"/home/work\"]"`
+    <dd>{{% md %}}The include path. String of Json list, up to 255 characters. e.g. `"[\"/home/work\"]"`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="options_python">
@@ -838,8 +847,7 @@ The NasBackupPlan resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Options. NAS Backup Plan Does Not Support Yet.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="paths_python">
 <a href="#paths_python" style="color: inherit; text-decoration: inherit;">paths</a>
@@ -847,7 +855,7 @@ The NasBackupPlan resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Backup Path. Up to 65536 Characters. e.g.`["/home", "/var"]`
+    <dd>{{% md %}}Backup path. Up to 65536 characters. e.g.`["/home", "/var"]`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="speed_limit_python">
@@ -856,7 +864,7 @@ The NasBackupPlan resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}flow control. The format is: {start}|{end}|{bandwidth} * start starting hour * end end hour * bandwidth limit rate, in KiB ** Use | to separate multiple flow control configurations; ** Multiple flow control configurations are not allowed to have overlapping times.
+    <dd>{{% md %}}Flow control. The format is: {start}|{end}|{bandwidth}. Use `|` to separate multiple flow control configurations, multiple flow control configurations not allowed to have overlapping times.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="update_paths_python">
@@ -864,14 +872,6 @@ The NasBackupPlan resource accepts the following [input]({{< relref "/docs/intro
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="vault_id_python">
-<a href="#vault_id_python" style="color: inherit; text-decoration: inherit;">vault_<wbr>id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1080,7 +1080,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Backup Type. Valid Values: * Complete. Valid values: `COMPLETE`.
+    <dd>{{% md %}}Backup type. Valid values: `COMPLETE`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_createtime_csharp">
@@ -1106,7 +1106,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether to Disable the Backup Task. Valid Values: true, false.
+    <dd>{{% md %}}Whether to disable the backup task. Valid values: `true`, `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_exclude_csharp">
@@ -1115,7 +1115,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The exclude path. String of Json List, most 255 Characters. e.g. `"[\"/var\"]"`
+    <dd>{{% md %}}The exclude path. String of Json list, up to 255 characters. e.g. `"[\"/var\"]"`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_filesystemid_csharp">
@@ -1124,7 +1124,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The File System ID.
+    <dd>{{% md %}}The File System ID of Nas.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_include_csharp">
@@ -1133,7 +1133,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The include path. String of Json List, most 255 Characters. e.g. `"[\"/home/work\"]"`
+    <dd>{{% md %}}The include path. String of Json list, up to 255 characters. e.g. `"[\"/home/work\"]"`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nasbackupplanname_csharp">
@@ -1142,7 +1142,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource.
+    <dd>{{% md %}}The name of the backup plan. 1~64 characters, the backup plan name of each data source type in a single warehouse required to be unique.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_options_csharp">
@@ -1151,8 +1151,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Options. NAS Backup Plan Does Not Support Yet.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_paths_csharp">
 <a href="#state_paths_csharp" style="color: inherit; text-decoration: inherit;">Paths</a>
@@ -1160,7 +1159,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Backup Path. Up to 65536 Characters. e.g.`["/home", "/var"]`
+    <dd>{{% md %}}Backup path. Up to 65536 characters. e.g.`["/home", "/var"]`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_retention_csharp">
@@ -1169,7 +1168,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Backup Retention Period, the Minimum Value of 1.
+    <dd>{{% md %}}Backup retention days, the minimum is 1.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_schedule_csharp">
@@ -1178,7 +1177,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Backup Policy. Formats: I | {Range Specified by the StartTime }|{ Interval}\n* The Time Range Specified by the StartTime Backup Start Time in Unix Time Seconds.\n* Interval ISO8601 Time Intervals. For Example:\n**PT1H Interval for an Hour.\n**P1D Interval Day.\nMeaning from {Range Specified by the Starttime} Every {Interval} of the Time Where We Took Backups Once a Task. Does Not Compensate the Has Elapsed Time the Backup Task. If the Last Backup Has Not Been Completed without Triggering the next Backup.
+    <dd>{{% md %}}Backup strategy. Optional format: I|{startTime}|{interval}. It means to execute a backup task every {interval} starting from {startTime}. The backup task for the elapsed time will not be compensated. If the last backup task is not completed yet, the next backup task will not be triggered.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_speedlimit_csharp">
@@ -1187,7 +1186,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}flow control. The format is: {start}|{end}|{bandwidth} * start starting hour * end end hour * bandwidth limit rate, in KiB ** Use | to separate multiple flow control configurations; ** Multiple flow control configurations are not allowed to have overlapping times.
+    <dd>{{% md %}}Flow control. The format is: {start}|{end}|{bandwidth}. Use `|` to separate multiple flow control configurations, multiple flow control configurations not allowed to have overlapping times.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_updatepaths_csharp">
@@ -1204,7 +1203,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The ID of Backup vault.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1216,7 +1216,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Backup Type. Valid Values: * Complete. Valid values: `COMPLETE`.
+    <dd>{{% md %}}Backup type. Valid values: `COMPLETE`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_createtime_go">
@@ -1242,7 +1242,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether to Disable the Backup Task. Valid Values: true, false.
+    <dd>{{% md %}}Whether to disable the backup task. Valid values: `true`, `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_exclude_go">
@@ -1251,7 +1251,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The exclude path. String of Json List, most 255 Characters. e.g. `"[\"/var\"]"`
+    <dd>{{% md %}}The exclude path. String of Json list, up to 255 characters. e.g. `"[\"/var\"]"`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_filesystemid_go">
@@ -1260,7 +1260,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The File System ID.
+    <dd>{{% md %}}The File System ID of Nas.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_include_go">
@@ -1269,7 +1269,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The include path. String of Json List, most 255 Characters. e.g. `"[\"/home/work\"]"`
+    <dd>{{% md %}}The include path. String of Json list, up to 255 characters. e.g. `"[\"/home/work\"]"`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nasbackupplanname_go">
@@ -1278,7 +1278,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource.
+    <dd>{{% md %}}The name of the backup plan. 1~64 characters, the backup plan name of each data source type in a single warehouse required to be unique.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_options_go">
@@ -1287,8 +1287,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Options. NAS Backup Plan Does Not Support Yet.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_paths_go">
 <a href="#state_paths_go" style="color: inherit; text-decoration: inherit;">Paths</a>
@@ -1296,7 +1295,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Backup Path. Up to 65536 Characters. e.g.`["/home", "/var"]`
+    <dd>{{% md %}}Backup path. Up to 65536 characters. e.g.`["/home", "/var"]`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_retention_go">
@@ -1305,7 +1304,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Backup Retention Period, the Minimum Value of 1.
+    <dd>{{% md %}}Backup retention days, the minimum is 1.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_schedule_go">
@@ -1314,7 +1313,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Backup Policy. Formats: I | {Range Specified by the StartTime }|{ Interval}\n* The Time Range Specified by the StartTime Backup Start Time in Unix Time Seconds.\n* Interval ISO8601 Time Intervals. For Example:\n**PT1H Interval for an Hour.\n**P1D Interval Day.\nMeaning from {Range Specified by the Starttime} Every {Interval} of the Time Where We Took Backups Once a Task. Does Not Compensate the Has Elapsed Time the Backup Task. If the Last Backup Has Not Been Completed without Triggering the next Backup.
+    <dd>{{% md %}}Backup strategy. Optional format: I|{startTime}|{interval}. It means to execute a backup task every {interval} starting from {startTime}. The backup task for the elapsed time will not be compensated. If the last backup task is not completed yet, the next backup task will not be triggered.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_speedlimit_go">
@@ -1323,7 +1322,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}flow control. The format is: {start}|{end}|{bandwidth} * start starting hour * end end hour * bandwidth limit rate, in KiB ** Use | to separate multiple flow control configurations; ** Multiple flow control configurations are not allowed to have overlapping times.
+    <dd>{{% md %}}Flow control. The format is: {start}|{end}|{bandwidth}. Use `|` to separate multiple flow control configurations, multiple flow control configurations not allowed to have overlapping times.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_updatepaths_go">
@@ -1340,7 +1339,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The ID of Backup vault.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1352,7 +1352,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Backup Type. Valid Values: * Complete. Valid values: `COMPLETE`.
+    <dd>{{% md %}}Backup type. Valid values: `COMPLETE`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_createtime_nodejs">
@@ -1378,7 +1378,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether to Disable the Backup Task. Valid Values: true, false.
+    <dd>{{% md %}}Whether to disable the backup task. Valid values: `true`, `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_exclude_nodejs">
@@ -1387,7 +1387,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The exclude path. String of Json List, most 255 Characters. e.g. `"[\"/var\"]"`
+    <dd>{{% md %}}The exclude path. String of Json list, up to 255 characters. e.g. `"[\"/var\"]"`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_filesystemid_nodejs">
@@ -1396,7 +1396,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The File System ID.
+    <dd>{{% md %}}The File System ID of Nas.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_include_nodejs">
@@ -1405,7 +1405,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The include path. String of Json List, most 255 Characters. e.g. `"[\"/home/work\"]"`
+    <dd>{{% md %}}The include path. String of Json list, up to 255 characters. e.g. `"[\"/home/work\"]"`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nasbackupplanname_nodejs">
@@ -1414,7 +1414,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource.
+    <dd>{{% md %}}The name of the backup plan. 1~64 characters, the backup plan name of each data source type in a single warehouse required to be unique.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_options_nodejs">
@@ -1423,8 +1423,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Options. NAS Backup Plan Does Not Support Yet.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_paths_nodejs">
 <a href="#state_paths_nodejs" style="color: inherit; text-decoration: inherit;">paths</a>
@@ -1432,7 +1431,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Backup Path. Up to 65536 Characters. e.g.`["/home", "/var"]`
+    <dd>{{% md %}}Backup path. Up to 65536 characters. e.g.`["/home", "/var"]`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_retention_nodejs">
@@ -1441,7 +1440,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Backup Retention Period, the Minimum Value of 1.
+    <dd>{{% md %}}Backup retention days, the minimum is 1.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_schedule_nodejs">
@@ -1450,7 +1449,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Backup Policy. Formats: I | {Range Specified by the StartTime }|{ Interval}\n* The Time Range Specified by the StartTime Backup Start Time in Unix Time Seconds.\n* Interval ISO8601 Time Intervals. For Example:\n**PT1H Interval for an Hour.\n**P1D Interval Day.\nMeaning from {Range Specified by the Starttime} Every {Interval} of the Time Where We Took Backups Once a Task. Does Not Compensate the Has Elapsed Time the Backup Task. If the Last Backup Has Not Been Completed without Triggering the next Backup.
+    <dd>{{% md %}}Backup strategy. Optional format: I|{startTime}|{interval}. It means to execute a backup task every {interval} starting from {startTime}. The backup task for the elapsed time will not be compensated. If the last backup task is not completed yet, the next backup task will not be triggered.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_speedlimit_nodejs">
@@ -1459,7 +1458,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}flow control. The format is: {start}|{end}|{bandwidth} * start starting hour * end end hour * bandwidth limit rate, in KiB ** Use | to separate multiple flow control configurations; ** Multiple flow control configurations are not allowed to have overlapping times.
+    <dd>{{% md %}}Flow control. The format is: {start}|{end}|{bandwidth}. Use `|` to separate multiple flow control configurations, multiple flow control configurations not allowed to have overlapping times.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_updatepaths_nodejs">
@@ -1476,7 +1475,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The ID of Backup vault.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1488,7 +1488,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Backup Type. Valid Values: * Complete. Valid values: `COMPLETE`.
+    <dd>{{% md %}}Backup type. Valid values: `COMPLETE`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_create_time_python">
@@ -1514,7 +1514,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether to Disable the Backup Task. Valid Values: true, false.
+    <dd>{{% md %}}Whether to disable the backup task. Valid values: `true`, `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_exclude_python">
@@ -1523,7 +1523,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The exclude path. String of Json List, most 255 Characters. e.g. `"[\"/var\"]"`
+    <dd>{{% md %}}The exclude path. String of Json list, up to 255 characters. e.g. `"[\"/var\"]"`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_file_system_id_python">
@@ -1532,7 +1532,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The File System ID.
+    <dd>{{% md %}}The File System ID of Nas.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_include_python">
@@ -1541,7 +1541,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The include path. String of Json List, most 255 Characters. e.g. `"[\"/home/work\"]"`
+    <dd>{{% md %}}The include path. String of Json list, up to 255 characters. e.g. `"[\"/home/work\"]"`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nas_backup_plan_name_python">
@@ -1550,7 +1550,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource.
+    <dd>{{% md %}}The name of the backup plan. 1~64 characters, the backup plan name of each data source type in a single warehouse required to be unique.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_options_python">
@@ -1559,8 +1559,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Options. NAS Backup Plan Does Not Support Yet.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_paths_python">
 <a href="#state_paths_python" style="color: inherit; text-decoration: inherit;">paths</a>
@@ -1568,7 +1567,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Backup Path. Up to 65536 Characters. e.g.`["/home", "/var"]`
+    <dd>{{% md %}}Backup path. Up to 65536 characters. e.g.`["/home", "/var"]`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_retention_python">
@@ -1577,7 +1576,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Backup Retention Period, the Minimum Value of 1.
+    <dd>{{% md %}}Backup retention days, the minimum is 1.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_schedule_python">
@@ -1586,7 +1585,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Backup Policy. Formats: I | {Range Specified by the StartTime }|{ Interval}\n* The Time Range Specified by the StartTime Backup Start Time in Unix Time Seconds.\n* Interval ISO8601 Time Intervals. For Example:\n**PT1H Interval for an Hour.\n**P1D Interval Day.\nMeaning from {Range Specified by the Starttime} Every {Interval} of the Time Where We Took Backups Once a Task. Does Not Compensate the Has Elapsed Time the Backup Task. If the Last Backup Has Not Been Completed without Triggering the next Backup.
+    <dd>{{% md %}}Backup strategy. Optional format: I|{startTime}|{interval}. It means to execute a backup task every {interval} starting from {startTime}. The backup task for the elapsed time will not be compensated. If the last backup task is not completed yet, the next backup task will not be triggered.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_speed_limit_python">
@@ -1595,7 +1594,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}flow control. The format is: {start}|{end}|{bandwidth} * start starting hour * end end hour * bandwidth limit rate, in KiB ** Use | to separate multiple flow control configurations; ** Multiple flow control configurations are not allowed to have overlapping times.
+    <dd>{{% md %}}Flow control. The format is: {start}|{end}|{bandwidth}. Use `|` to separate multiple flow control configurations, multiple flow control configurations not allowed to have overlapping times.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_update_paths_python">
@@ -1612,7 +1611,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The ID of Backup vault.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

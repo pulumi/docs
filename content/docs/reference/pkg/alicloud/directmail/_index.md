@@ -11,11 +11,15 @@ Explore the resources and functions of the alicloud.directmail module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
+    <li><a href="domain" title="Domain"><span class="symbol resource"></span>Domain</a></li>
+    <li><a href="mailaddress" title="MailAddress"><span class="symbol resource"></span>MailAddress</a></li>
     <li><a href="receivers" title="Receivers"><span class="symbol resource"></span>Receivers</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
+    <li><a href="getdomains" title="GetDomains"><span class="symbol function"></span>GetDomains</a></li>
+    <li><a href="getmailaddresses" title="GetMailAddresses"><span class="symbol function"></span>GetMailAddresses</a></li>
     <li><a href="getreceivers" title="GetReceivers"><span class="symbol function"></span>GetReceivers</a></li>
 </ul>
 
@@ -28,6 +32,6 @@ Explore the resources and functions of the alicloud.directmail module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>3.7.0</dd>
+	<dd>3.8.0</dd>
 </dl>
 

@@ -55,6 +55,7 @@ ESS scaling configuration can be imported using the id, e.g.
                          <span class="nx">override</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                          <span class="nx">password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                          <span class="nx">password_inherit</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                         <span class="nx">resource_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                          <span class="nx">role_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                          <span class="nx">scaling_configuration_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                          <span class="nx">scaling_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -405,6 +406,15 @@ The ScalingConfiguration resource accepts the following [input]({{< relref "/doc
     <dd>{{% md %}}Specifies whether to use the password that is predefined in the image. If the PasswordInherit parameter is set to true, the `password` and `kms_encrypted_password` will be ignored. You must ensure that the selected image has a password configured.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="resourcegroupid_csharp">
+<a href="#resourcegroupid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ID of resource group.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="rolename_csharp">
 <a href="#rolename_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Name</a>
 </span>
@@ -733,6 +743,15 @@ The ScalingConfiguration resource accepts the following [input]({{< relref "/doc
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether to use the password that is predefined in the image. If the PasswordInherit parameter is set to true, the `password` and `kms_encrypted_password` will be ignored. You must ensure that the selected image has a password configured.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="resourcegroupid_go">
+<a href="#resourcegroupid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ID of resource group.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rolename_go">
@@ -1065,6 +1084,15 @@ The ScalingConfiguration resource accepts the following [input]({{< relref "/doc
     <dd>{{% md %}}Specifies whether to use the password that is predefined in the image. If the PasswordInherit parameter is set to true, the `password` and `kms_encrypted_password` will be ignored. You must ensure that the selected image has a password configured.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="resourcegroupid_nodejs">
+<a href="#resourcegroupid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ID of resource group.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="rolename_nodejs">
 <a href="#rolename_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Name</a>
 </span>
@@ -1395,6 +1423,15 @@ The ScalingConfiguration resource accepts the following [input]({{< relref "/doc
     <dd>{{% md %}}Specifies whether to use the password that is predefined in the image. If the PasswordInherit parameter is set to true, the `password` and `kms_encrypted_password` will be ignored. You must ensure that the selected image has a password configured.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="resource_group_id_python">
+<a href="#resource_group_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}ID of resource group.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="role_name_python">
 <a href="#role_name_python" style="color: inherit; text-decoration: inherit;">role_<wbr>name</a>
 </span>
@@ -1608,6 +1645,7 @@ Get an existing ScalingConfiguration resource's state with the given name, ID, a
         <span class="nx">override</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">password_inherit</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">resource_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">role_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">scaling_configuration_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">scaling_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -1930,6 +1968,15 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether to use the password that is predefined in the image. If the PasswordInherit parameter is set to true, the `password` and `kms_encrypted_password` will be ignored. You must ensure that the selected image has a password configured.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_resourcegroupid_csharp">
+<a href="#state_resourcegroupid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ID of resource group.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rolename_csharp">
@@ -2262,6 +2309,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Specifies whether to use the password that is predefined in the image. If the PasswordInherit parameter is set to true, the `password` and `kms_encrypted_password` will be ignored. You must ensure that the selected image has a password configured.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_resourcegroupid_go">
+<a href="#state_resourcegroupid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ID of resource group.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_rolename_go">
 <a href="#state_rolename_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Name</a>
 </span>
@@ -2592,6 +2648,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Specifies whether to use the password that is predefined in the image. If the PasswordInherit parameter is set to true, the `password` and `kms_encrypted_password` will be ignored. You must ensure that the selected image has a password configured.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_resourcegroupid_nodejs">
+<a href="#state_resourcegroupid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ID of resource group.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_rolename_nodejs">
 <a href="#state_rolename_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Name</a>
 </span>
@@ -2920,6 +2985,15 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether to use the password that is predefined in the image. If the PasswordInherit parameter is set to true, the `password` and `kms_encrypted_password` will be ignored. You must ensure that the selected image has a password configured.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_resource_group_id_python">
+<a href="#state_resource_group_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}ID of resource group.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_role_name_python">

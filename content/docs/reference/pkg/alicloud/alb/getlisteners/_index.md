@@ -226,7 +226,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The state of the listener. Valid Values: `Running` Or `Stopped`. `Running`: The listener is running. `Stopped`: The listener is stopped.
+    <dd>{{% md %}}The association status between the ACL and the listener.  Valid values: `Associating`, `Associated` Or `Dissociating`. `Associating`: The ACL is being associated with the listener. `Associated`: The ACL is associated with the listener. `Dissociating`: The ACL is being disassociated from the listener.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -292,7 +292,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The state of the listener. Valid Values: `Running` Or `Stopped`. `Running`: The listener is running. `Stopped`: The listener is stopped.
+    <dd>{{% md %}}The association status between the ACL and the listener.  Valid values: `Associating`, `Associated` Or `Dissociating`. `Associating`: The ACL is being associated with the listener. `Associated`: The ACL is associated with the listener. `Dissociating`: The ACL is being disassociated from the listener.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -358,7 +358,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The state of the listener. Valid Values: `Running` Or `Stopped`. `Running`: The listener is running. `Stopped`: The listener is stopped.
+    <dd>{{% md %}}The association status between the ACL and the listener.  Valid values: `Associating`, `Associated` Or `Dissociating`. `Associating`: The ACL is being associated with the listener. `Associated`: The ACL is associated with the listener. `Dissociating`: The ACL is being disassociated from the listener.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -424,7 +424,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The state of the listener. Valid Values: `Running` Or `Stopped`. `Running`: The listener is running. `Stopped`: The listener is stopped.
+    <dd>{{% md %}}The association status between the ACL and the listener.  Valid values: `Associating`, `Associated` Or `Dissociating`. `Associating`: The ACL is being associated with the listener. `Associated`: The ACL is associated with the listener. `Dissociating`: The ACL is being disassociated from the listener.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -776,22 +776,13 @@ The following output properties are available:
     <dd>{{% md %}}Xtrace Configuration Information.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="aclid_csharp">
-<a href="#aclid_csharp" style="color: inherit; text-decoration: inherit;">Acl<wbr>Id</a>
+        <span id="aclconfigs_csharp">
+<a href="#aclconfigs_csharp" style="color: inherit; text-decoration: inherit;">Acl<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#getlistenerslisteneraclconfig">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Alb.<wbr>Inputs.<wbr>Get<wbr>Listeners<wbr>Listener<wbr>Acl<wbr>Config&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Snooping Binding of the Access Policy Group ID List.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="acltype_csharp">
-<a href="#acltype_csharp" style="color: inherit; text-decoration: inherit;">Acl<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The type of the ACL. Valid values: White: specifies the ACL as a whitelist. Only requests from the IP addresses or CIDR blocks in the ACL are forwarded. Whitelists apply to scenarios where only specific IP addresses are allowed to access an application. Risks may occur if the whitelist is improperly set. After you set a whitelist for an Application Load Balancer (ALB) listener, only requests from IP addresses that are added to the whitelist are distributed by the listener. If the whitelist is enabled without IP addresses specified, the ALB listener does not forward requests. Black: All requests from the IP addresses or CIDR blocks in the ACL are denied. The blacklist is used to prevent specified IP addresses from accessing an application. If the blacklist is enabled but the corresponding ACL does not contain IP addresses, the ALB listener forwards all requests.
+    <dd>{{% md %}}The configurations of the access control lists (ACLs).
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="certificates_csharp">
@@ -845,7 +836,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Specify the Connection Idle Timeout Value: 1 to 60.
+    <dd>{{% md %}}Specify the Connection Idle Timeout Value: `1` to `60`. Unit: Seconds.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="listenerdescription_csharp">
@@ -854,7 +845,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Set the IP Address of the Listened Description. Length Is from 2 to 256 Characters. 	* `listener_id` - on Behalf of the Resource Level Id of the Resources Property Fields.
+    <dd>{{% md %}}Set the IP Address of the Listened Description. Length Is from 2 to 256 Characters.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="listenerid_csharp">
@@ -863,7 +854,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}on Behalf of the Resource Level Id of the Resources Property Fields.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="listenerport_csharp">
 <a href="#listenerport_csharp" style="color: inherit; text-decoration: inherit;">Listener<wbr>Port</a>
@@ -871,7 +863,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The SLB Instance Front-End, and Those of the Ports Used. Value: `1~65535`.
+    <dd>{{% md %}}The ALB Instance Front-End, and Those of the Ports Used. Value: `1~65535`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="listenerprotocol_csharp">
@@ -889,7 +881,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The SLB Instance Id.
+    <dd>{{% md %}}The ALB Instance Id.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="maxresults_csharp">
@@ -925,7 +917,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The Specified Request Timeout Time. Value: 1~180 Seconds. Default Value: 60. If the Timeout Time Within the Back-End Server Has Not Answered the SLB Will Give up Waiting, the Client Returns the HTTP 504 Error Code.
+    <dd>{{% md %}}The Specified Request Timeout Time. Value: `1` to `180`. Unit: Seconds. Default Value: 60. If the Timeout Time Within the Back-End Server Has Not Answered the ALB Will Give up Waiting, the Client Returns the HTTP 504 Error Code.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="securitypolicyid_csharp">
@@ -943,7 +935,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The state of the listener. Valid Values: `Running` Or `Stopped`. `Running`: The listener is running. `Stopped`: The listener is stopped.
+    <dd>{{% md %}}The association status between the ACL and the listener.  Valid values: `Associating`, `Associated` Or `Dissociating`. `Associating`: The ACL is being associated with the listener. `Associated`: The ACL is associated with the listener. `Dissociating`: The ACL is being disassociated from the listener.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="xforwardedforconfigs_csharp">
@@ -977,22 +969,13 @@ The following output properties are available:
     <dd>{{% md %}}Xtrace Configuration Information.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="aclid_go">
-<a href="#aclid_go" style="color: inherit; text-decoration: inherit;">Acl<wbr>Id</a>
+        <span id="aclconfigs_go">
+<a href="#aclconfigs_go" style="color: inherit; text-decoration: inherit;">Acl<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#getlistenerslisteneraclconfig">[]Get<wbr>Listeners<wbr>Listener<wbr>Acl<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Snooping Binding of the Access Policy Group ID List.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="acltype_go">
-<a href="#acltype_go" style="color: inherit; text-decoration: inherit;">Acl<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The type of the ACL. Valid values: White: specifies the ACL as a whitelist. Only requests from the IP addresses or CIDR blocks in the ACL are forwarded. Whitelists apply to scenarios where only specific IP addresses are allowed to access an application. Risks may occur if the whitelist is improperly set. After you set a whitelist for an Application Load Balancer (ALB) listener, only requests from IP addresses that are added to the whitelist are distributed by the listener. If the whitelist is enabled without IP addresses specified, the ALB listener does not forward requests. Black: All requests from the IP addresses or CIDR blocks in the ACL are denied. The blacklist is used to prevent specified IP addresses from accessing an application. If the blacklist is enabled but the corresponding ACL does not contain IP addresses, the ALB listener forwards all requests.
+    <dd>{{% md %}}The configurations of the access control lists (ACLs).
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="certificates_go">
@@ -1046,7 +1029,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Specify the Connection Idle Timeout Value: 1 to 60.
+    <dd>{{% md %}}Specify the Connection Idle Timeout Value: `1` to `60`. Unit: Seconds.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="listenerdescription_go">
@@ -1055,7 +1038,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Set the IP Address of the Listened Description. Length Is from 2 to 256 Characters. 	* `listener_id` - on Behalf of the Resource Level Id of the Resources Property Fields.
+    <dd>{{% md %}}Set the IP Address of the Listened Description. Length Is from 2 to 256 Characters.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="listenerid_go">
@@ -1064,7 +1047,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}on Behalf of the Resource Level Id of the Resources Property Fields.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="listenerport_go">
 <a href="#listenerport_go" style="color: inherit; text-decoration: inherit;">Listener<wbr>Port</a>
@@ -1072,7 +1056,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The SLB Instance Front-End, and Those of the Ports Used. Value: `1~65535`.
+    <dd>{{% md %}}The ALB Instance Front-End, and Those of the Ports Used. Value: `1~65535`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="listenerprotocol_go">
@@ -1090,7 +1074,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The SLB Instance Id.
+    <dd>{{% md %}}The ALB Instance Id.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="maxresults_go">
@@ -1126,7 +1110,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The Specified Request Timeout Time. Value: 1~180 Seconds. Default Value: 60. If the Timeout Time Within the Back-End Server Has Not Answered the SLB Will Give up Waiting, the Client Returns the HTTP 504 Error Code.
+    <dd>{{% md %}}The Specified Request Timeout Time. Value: `1` to `180`. Unit: Seconds. Default Value: 60. If the Timeout Time Within the Back-End Server Has Not Answered the ALB Will Give up Waiting, the Client Returns the HTTP 504 Error Code.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="securitypolicyid_go">
@@ -1144,7 +1128,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The state of the listener. Valid Values: `Running` Or `Stopped`. `Running`: The listener is running. `Stopped`: The listener is stopped.
+    <dd>{{% md %}}The association status between the ACL and the listener.  Valid values: `Associating`, `Associated` Or `Dissociating`. `Associating`: The ACL is being associated with the listener. `Associated`: The ACL is associated with the listener. `Dissociating`: The ACL is being disassociated from the listener.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="xforwardedforconfigs_go">
@@ -1178,22 +1162,13 @@ The following output properties are available:
     <dd>{{% md %}}Xtrace Configuration Information.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="aclid_nodejs">
-<a href="#aclid_nodejs" style="color: inherit; text-decoration: inherit;">acl<wbr>Id</a>
+        <span id="aclconfigs_nodejs">
+<a href="#aclconfigs_nodejs" style="color: inherit; text-decoration: inherit;">acl<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#getlistenerslisteneraclconfig">Get<wbr>Listeners<wbr>Listener<wbr>Acl<wbr>Config[]</a></span>
     </dt>
-    <dd>{{% md %}}Snooping Binding of the Access Policy Group ID List.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="acltype_nodejs">
-<a href="#acltype_nodejs" style="color: inherit; text-decoration: inherit;">acl<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The type of the ACL. Valid values: White: specifies the ACL as a whitelist. Only requests from the IP addresses or CIDR blocks in the ACL are forwarded. Whitelists apply to scenarios where only specific IP addresses are allowed to access an application. Risks may occur if the whitelist is improperly set. After you set a whitelist for an Application Load Balancer (ALB) listener, only requests from IP addresses that are added to the whitelist are distributed by the listener. If the whitelist is enabled without IP addresses specified, the ALB listener does not forward requests. Black: All requests from the IP addresses or CIDR blocks in the ACL are denied. The blacklist is used to prevent specified IP addresses from accessing an application. If the blacklist is enabled but the corresponding ACL does not contain IP addresses, the ALB listener forwards all requests.
+    <dd>{{% md %}}The configurations of the access control lists (ACLs).
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="certificates_nodejs">
@@ -1247,7 +1222,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Specify the Connection Idle Timeout Value: 1 to 60.
+    <dd>{{% md %}}Specify the Connection Idle Timeout Value: `1` to `60`. Unit: Seconds.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="listenerdescription_nodejs">
@@ -1256,7 +1231,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Set the IP Address of the Listened Description. Length Is from 2 to 256 Characters. 	* `listener_id` - on Behalf of the Resource Level Id of the Resources Property Fields.
+    <dd>{{% md %}}Set the IP Address of the Listened Description. Length Is from 2 to 256 Characters.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="listenerid_nodejs">
@@ -1265,7 +1240,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}on Behalf of the Resource Level Id of the Resources Property Fields.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="listenerport_nodejs">
 <a href="#listenerport_nodejs" style="color: inherit; text-decoration: inherit;">listener<wbr>Port</a>
@@ -1273,7 +1249,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The SLB Instance Front-End, and Those of the Ports Used. Value: `1~65535`.
+    <dd>{{% md %}}The ALB Instance Front-End, and Those of the Ports Used. Value: `1~65535`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="listenerprotocol_nodejs">
@@ -1291,7 +1267,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The SLB Instance Id.
+    <dd>{{% md %}}The ALB Instance Id.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="maxresults_nodejs">
@@ -1327,7 +1303,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The Specified Request Timeout Time. Value: 1~180 Seconds. Default Value: 60. If the Timeout Time Within the Back-End Server Has Not Answered the SLB Will Give up Waiting, the Client Returns the HTTP 504 Error Code.
+    <dd>{{% md %}}The Specified Request Timeout Time. Value: `1` to `180`. Unit: Seconds. Default Value: 60. If the Timeout Time Within the Back-End Server Has Not Answered the ALB Will Give up Waiting, the Client Returns the HTTP 504 Error Code.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="securitypolicyid_nodejs">
@@ -1345,7 +1321,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The state of the listener. Valid Values: `Running` Or `Stopped`. `Running`: The listener is running. `Stopped`: The listener is stopped.
+    <dd>{{% md %}}The association status between the ACL and the listener.  Valid values: `Associating`, `Associated` Or `Dissociating`. `Associating`: The ACL is being associated with the listener. `Associated`: The ACL is associated with the listener. `Dissociating`: The ACL is being disassociated from the listener.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="xforwardedforconfigs_nodejs">
@@ -1379,22 +1355,13 @@ The following output properties are available:
     <dd>{{% md %}}Xtrace Configuration Information.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="acl_id_python">
-<a href="#acl_id_python" style="color: inherit; text-decoration: inherit;">acl_<wbr>id</a>
+        <span id="acl_configs_python">
+<a href="#acl_configs_python" style="color: inherit; text-decoration: inherit;">acl_<wbr>configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#getlistenerslisteneraclconfig">Sequence[Get<wbr>Listeners<wbr>Listener<wbr>Acl<wbr>Config]</a></span>
     </dt>
-    <dd>{{% md %}}Snooping Binding of the Access Policy Group ID List.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="acl_type_python">
-<a href="#acl_type_python" style="color: inherit; text-decoration: inherit;">acl_<wbr>type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The type of the ACL. Valid values: White: specifies the ACL as a whitelist. Only requests from the IP addresses or CIDR blocks in the ACL are forwarded. Whitelists apply to scenarios where only specific IP addresses are allowed to access an application. Risks may occur if the whitelist is improperly set. After you set a whitelist for an Application Load Balancer (ALB) listener, only requests from IP addresses that are added to the whitelist are distributed by the listener. If the whitelist is enabled without IP addresses specified, the ALB listener does not forward requests. Black: All requests from the IP addresses or CIDR blocks in the ACL are denied. The blacklist is used to prevent specified IP addresses from accessing an application. If the blacklist is enabled but the corresponding ACL does not contain IP addresses, the ALB listener forwards all requests.
+    <dd>{{% md %}}The configurations of the access control lists (ACLs).
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="certificates_python">
@@ -1448,7 +1415,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Specify the Connection Idle Timeout Value: 1 to 60.
+    <dd>{{% md %}}Specify the Connection Idle Timeout Value: `1` to `60`. Unit: Seconds.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="listener_description_python">
@@ -1457,7 +1424,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Set the IP Address of the Listened Description. Length Is from 2 to 256 Characters. 	* `listener_id` - on Behalf of the Resource Level Id of the Resources Property Fields.
+    <dd>{{% md %}}Set the IP Address of the Listened Description. Length Is from 2 to 256 Characters.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="listener_id_python">
@@ -1466,7 +1433,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}on Behalf of the Resource Level Id of the Resources Property Fields.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="listener_port_python">
 <a href="#listener_port_python" style="color: inherit; text-decoration: inherit;">listener_<wbr>port</a>
@@ -1474,7 +1442,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The SLB Instance Front-End, and Those of the Ports Used. Value: `1~65535`.
+    <dd>{{% md %}}The ALB Instance Front-End, and Those of the Ports Used. Value: `1~65535`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="listener_protocol_python">
@@ -1492,7 +1460,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The SLB Instance Id.
+    <dd>{{% md %}}The ALB Instance Id.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="max_results_python">
@@ -1528,7 +1496,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The Specified Request Timeout Time. Value: 1~180 Seconds. Default Value: 60. If the Timeout Time Within the Back-End Server Has Not Answered the SLB Will Give up Waiting, the Client Returns the HTTP 504 Error Code.
+    <dd>{{% md %}}The Specified Request Timeout Time. Value: `1` to `180`. Unit: Seconds. Default Value: 60. If the Timeout Time Within the Back-End Server Has Not Answered the ALB Will Give up Waiting, the Client Returns the HTTP 504 Error Code.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="security_policy_id_python">
@@ -1546,7 +1514,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The state of the listener. Valid Values: `Running` Or `Stopped`. `Running`: The listener is running. `Stopped`: The listener is stopped.
+    <dd>{{% md %}}The association status between the ACL and the listener.  Valid values: `Associating`, `Associated` Or `Dissociating`. `Associating`: The ACL is being associated with the listener. `Associated`: The ACL is associated with the listener. `Dissociating`: The ACL is being disassociated from the listener.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="xforwarded_for_configs_python">
@@ -1684,6 +1652,190 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Xtrace Type Value Is **Zipkin**.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="getlistenerslisteneraclconfig">Get<wbr>Listeners<wbr>Listener<wbr>Acl<wbr>Config</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="aclrelations_csharp">
+<a href="#aclrelations_csharp" style="color: inherit; text-decoration: inherit;">Acl<wbr>Relations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getlistenerslisteneraclconfigaclrelation">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Alb.<wbr>Inputs.<wbr>Get<wbr>Listeners<wbr>Listener<wbr>Acl<wbr>Config<wbr>Acl<wbr>Relation&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The ACLs that are associated with the listener.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="acltype_csharp">
+<a href="#acltype_csharp" style="color: inherit; text-decoration: inherit;">Acl<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of the ACL. Valid values: `White` Or `Black`. `White`: specifies the ACL as a whitelist. Only requests from the IP addresses or CIDR blocks in the ACL are forwarded. Whitelists apply to scenarios where only specific IP addresses are allowed to access an application. Risks may occur if the whitelist is improperly set. After you set a whitelist for an Application Load Balancer (ALB) listener, only requests from IP addresses that are added to the whitelist are distributed by the listener. If the whitelist is enabled without IP addresses specified, the ALB listener does not forward requests. `Black`: All requests from the IP addresses or CIDR blocks in the ACL are denied. The blacklist is used to prevent specified IP addresses from accessing an application. If the blacklist is enabled but the corresponding ACL does not contain IP addresses, the ALB listener forwards all requests.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="aclrelations_go">
+<a href="#aclrelations_go" style="color: inherit; text-decoration: inherit;">Acl<wbr>Relations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getlistenerslisteneraclconfigaclrelation">[]Get<wbr>Listeners<wbr>Listener<wbr>Acl<wbr>Config<wbr>Acl<wbr>Relation</a></span>
+    </dt>
+    <dd>{{% md %}}The ACLs that are associated with the listener.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="acltype_go">
+<a href="#acltype_go" style="color: inherit; text-decoration: inherit;">Acl<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of the ACL. Valid values: `White` Or `Black`. `White`: specifies the ACL as a whitelist. Only requests from the IP addresses or CIDR blocks in the ACL are forwarded. Whitelists apply to scenarios where only specific IP addresses are allowed to access an application. Risks may occur if the whitelist is improperly set. After you set a whitelist for an Application Load Balancer (ALB) listener, only requests from IP addresses that are added to the whitelist are distributed by the listener. If the whitelist is enabled without IP addresses specified, the ALB listener does not forward requests. `Black`: All requests from the IP addresses or CIDR blocks in the ACL are denied. The blacklist is used to prevent specified IP addresses from accessing an application. If the blacklist is enabled but the corresponding ACL does not contain IP addresses, the ALB listener forwards all requests.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="aclrelations_nodejs">
+<a href="#aclrelations_nodejs" style="color: inherit; text-decoration: inherit;">acl<wbr>Relations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getlistenerslisteneraclconfigaclrelation">Get<wbr>Listeners<wbr>Listener<wbr>Acl<wbr>Config<wbr>Acl<wbr>Relation[]</a></span>
+    </dt>
+    <dd>{{% md %}}The ACLs that are associated with the listener.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="acltype_nodejs">
+<a href="#acltype_nodejs" style="color: inherit; text-decoration: inherit;">acl<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of the ACL. Valid values: `White` Or `Black`. `White`: specifies the ACL as a whitelist. Only requests from the IP addresses or CIDR blocks in the ACL are forwarded. Whitelists apply to scenarios where only specific IP addresses are allowed to access an application. Risks may occur if the whitelist is improperly set. After you set a whitelist for an Application Load Balancer (ALB) listener, only requests from IP addresses that are added to the whitelist are distributed by the listener. If the whitelist is enabled without IP addresses specified, the ALB listener does not forward requests. `Black`: All requests from the IP addresses or CIDR blocks in the ACL are denied. The blacklist is used to prevent specified IP addresses from accessing an application. If the blacklist is enabled but the corresponding ACL does not contain IP addresses, the ALB listener forwards all requests.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="acl_relations_python">
+<a href="#acl_relations_python" style="color: inherit; text-decoration: inherit;">acl_<wbr>relations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getlistenerslisteneraclconfigaclrelation">Sequence[Get<wbr>Listeners<wbr>Listener<wbr>Acl<wbr>Config<wbr>Acl<wbr>Relation]</a></span>
+    </dt>
+    <dd>{{% md %}}The ACLs that are associated with the listener.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="acl_type_python">
+<a href="#acl_type_python" style="color: inherit; text-decoration: inherit;">acl_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The type of the ACL. Valid values: `White` Or `Black`. `White`: specifies the ACL as a whitelist. Only requests from the IP addresses or CIDR blocks in the ACL are forwarded. Whitelists apply to scenarios where only specific IP addresses are allowed to access an application. Risks may occur if the whitelist is improperly set. After you set a whitelist for an Application Load Balancer (ALB) listener, only requests from IP addresses that are added to the whitelist are distributed by the listener. If the whitelist is enabled without IP addresses specified, the ALB listener does not forward requests. `Black`: All requests from the IP addresses or CIDR blocks in the ACL are denied. The blacklist is used to prevent specified IP addresses from accessing an application. If the blacklist is enabled but the corresponding ACL does not contain IP addresses, the ALB listener forwards all requests.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="getlistenerslisteneraclconfigaclrelation">Get<wbr>Listeners<wbr>Listener<wbr>Acl<wbr>Config<wbr>Acl<wbr>Relation</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="aclid_csharp">
+<a href="#aclid_csharp" style="color: inherit; text-decoration: inherit;">Acl<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Snooping Binding of the Access Policy Group ID List.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="status_csharp">
+<a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The association status between the ACL and the listener.  Valid values: `Associating`, `Associated` Or `Dissociating`. `Associating`: The ACL is being associated with the listener. `Associated`: The ACL is associated with the listener. `Dissociating`: The ACL is being disassociated from the listener.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="aclid_go">
+<a href="#aclid_go" style="color: inherit; text-decoration: inherit;">Acl<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Snooping Binding of the Access Policy Group ID List.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="status_go">
+<a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The association status between the ACL and the listener.  Valid values: `Associating`, `Associated` Or `Dissociating`. `Associating`: The ACL is being associated with the listener. `Associated`: The ACL is associated with the listener. `Dissociating`: The ACL is being disassociated from the listener.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="aclid_nodejs">
+<a href="#aclid_nodejs" style="color: inherit; text-decoration: inherit;">acl<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Snooping Binding of the Access Policy Group ID List.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="status_nodejs">
+<a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The association status between the ACL and the listener.  Valid values: `Associating`, `Associated` Or `Dissociating`. `Associating`: The ACL is being associated with the listener. `Associated`: The ACL is associated with the listener. `Dissociating`: The ACL is being disassociated from the listener.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="acl_id_python">
+<a href="#acl_id_python" style="color: inherit; text-decoration: inherit;">acl_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Snooping Binding of the Access Policy Group ID List.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="status_python">
+<a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The association status between the ACL and the listener.  Valid values: `Associating`, `Associated` Or `Dissociating`. `Associating`: The ACL is being associated with the listener. `Associated`: The ACL is associated with the listener. `Dissociating`: The ACL is being disassociated from the listener.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

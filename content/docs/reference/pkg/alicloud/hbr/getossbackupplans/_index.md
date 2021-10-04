@@ -167,7 +167,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The OSS Bucket Name.
+    <dd>{{% md %}}The name of OSS bucket.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ids_csharp">
@@ -202,7 +202,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Vault ID.
+    <dd>{{% md %}}The ID of backup vault.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -215,7 +215,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The OSS Bucket Name.
+    <dd>{{% md %}}The name of OSS bucket.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ids_go">
@@ -250,7 +250,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Vault ID.
+    <dd>{{% md %}}The ID of backup vault.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -263,7 +263,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The OSS Bucket Name.
+    <dd>{{% md %}}The name of OSS bucket.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ids_nodejs">
@@ -298,7 +298,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Vault ID.
+    <dd>{{% md %}}The ID of backup vault.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -311,7 +311,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The OSS Bucket Name.
+    <dd>{{% md %}}The name of OSS bucket.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ids_python">
@@ -346,7 +346,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Vault ID.
+    <dd>{{% md %}}The ID of backup vault.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -654,7 +654,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Backup Type. Valid Values: * Complete. Valid values: `COMPLETE`.
+    <dd>{{% md %}}Backup type. Valid values: `COMPLETE`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="bucket_csharp">
@@ -663,7 +663,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The OSS Bucket Name.
+    <dd>{{% md %}}The name of OSS bucket.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="disabled_csharp">
@@ -696,7 +696,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Configuration Page of a Backup Plan Name. 1-64 Characters, requiring a Single Warehouse under Each of the Data Source Type Drop-down List of the Configuration Page of a Backup Plan Name Is Unique.
+    <dd>{{% md %}}The name of the backup plan. 1~64 characters, the backup plan name of each data source type in a single warehouse required to be unique.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="prefix_csharp">
@@ -713,7 +713,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Backup Retention Period, the Minimum Value of 1.
+    <dd>{{% md %}}Backup retention days, the minimum is 1.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="schedule_csharp">
@@ -722,7 +722,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Backup strategy. Optional format: I|{startTime}|{interval} * startTime Backup start time, UNIX time, in seconds. * interval ISO8601 time interval. E.g: ** PT1H, one hour apart. ** P1D, one day apart. It means to execute a backup task every {interval} starting from {startTime}. The backup task for the elapsed time will not be compensated. If the last backup task is not completed, the next backup task will not be triggered.
+    <dd>{{% md %}}Backup strategy. Optional format: I|{startTime}|{interval}. It means to execute a backup task every {interval} starting from {startTime}. The backup task for the elapsed time will not be compensated. If the last backup task is not completed yet, the next backup task will not be triggered.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vaultid_csharp">
@@ -731,7 +731,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Vault ID.
+    <dd>{{% md %}}The ID of backup vault.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -744,7 +744,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Backup Type. Valid Values: * Complete. Valid values: `COMPLETE`.
+    <dd>{{% md %}}Backup type. Valid values: `COMPLETE`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="bucket_go">
@@ -753,7 +753,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The OSS Bucket Name.
+    <dd>{{% md %}}The name of OSS bucket.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="disabled_go">
@@ -786,7 +786,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Configuration Page of a Backup Plan Name. 1-64 Characters, requiring a Single Warehouse under Each of the Data Source Type Drop-down List of the Configuration Page of a Backup Plan Name Is Unique.
+    <dd>{{% md %}}The name of the backup plan. 1~64 characters, the backup plan name of each data source type in a single warehouse required to be unique.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="prefix_go">
@@ -803,7 +803,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Backup Retention Period, the Minimum Value of 1.
+    <dd>{{% md %}}Backup retention days, the minimum is 1.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="schedule_go">
@@ -812,7 +812,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Backup strategy. Optional format: I|{startTime}|{interval} * startTime Backup start time, UNIX time, in seconds. * interval ISO8601 time interval. E.g: ** PT1H, one hour apart. ** P1D, one day apart. It means to execute a backup task every {interval} starting from {startTime}. The backup task for the elapsed time will not be compensated. If the last backup task is not completed, the next backup task will not be triggered.
+    <dd>{{% md %}}Backup strategy. Optional format: I|{startTime}|{interval}. It means to execute a backup task every {interval} starting from {startTime}. The backup task for the elapsed time will not be compensated. If the last backup task is not completed yet, the next backup task will not be triggered.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vaultid_go">
@@ -821,7 +821,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Vault ID.
+    <dd>{{% md %}}The ID of backup vault.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -834,7 +834,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Backup Type. Valid Values: * Complete. Valid values: `COMPLETE`.
+    <dd>{{% md %}}Backup type. Valid values: `COMPLETE`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="bucket_nodejs">
@@ -843,7 +843,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The OSS Bucket Name.
+    <dd>{{% md %}}The name of OSS bucket.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="disabled_nodejs">
@@ -876,7 +876,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Configuration Page of a Backup Plan Name. 1-64 Characters, requiring a Single Warehouse under Each of the Data Source Type Drop-down List of the Configuration Page of a Backup Plan Name Is Unique.
+    <dd>{{% md %}}The name of the backup plan. 1~64 characters, the backup plan name of each data source type in a single warehouse required to be unique.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="prefix_nodejs">
@@ -893,7 +893,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Backup Retention Period, the Minimum Value of 1.
+    <dd>{{% md %}}Backup retention days, the minimum is 1.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="schedule_nodejs">
@@ -902,7 +902,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Backup strategy. Optional format: I|{startTime}|{interval} * startTime Backup start time, UNIX time, in seconds. * interval ISO8601 time interval. E.g: ** PT1H, one hour apart. ** P1D, one day apart. It means to execute a backup task every {interval} starting from {startTime}. The backup task for the elapsed time will not be compensated. If the last backup task is not completed, the next backup task will not be triggered.
+    <dd>{{% md %}}Backup strategy. Optional format: I|{startTime}|{interval}. It means to execute a backup task every {interval} starting from {startTime}. The backup task for the elapsed time will not be compensated. If the last backup task is not completed yet, the next backup task will not be triggered.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vaultid_nodejs">
@@ -911,7 +911,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Vault ID.
+    <dd>{{% md %}}The ID of backup vault.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -924,7 +924,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Backup Type. Valid Values: * Complete. Valid values: `COMPLETE`.
+    <dd>{{% md %}}Backup type. Valid values: `COMPLETE`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="bucket_python">
@@ -933,7 +933,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The OSS Bucket Name.
+    <dd>{{% md %}}The name of OSS bucket.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="disabled_python">
@@ -966,7 +966,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Configuration Page of a Backup Plan Name. 1-64 Characters, requiring a Single Warehouse under Each of the Data Source Type Drop-down List of the Configuration Page of a Backup Plan Name Is Unique.
+    <dd>{{% md %}}The name of the backup plan. 1~64 characters, the backup plan name of each data source type in a single warehouse required to be unique.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="prefix_python">
@@ -983,7 +983,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Backup Retention Period, the Minimum Value of 1.
+    <dd>{{% md %}}Backup retention days, the minimum is 1.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="schedule_python">
@@ -992,7 +992,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Backup strategy. Optional format: I|{startTime}|{interval} * startTime Backup start time, UNIX time, in seconds. * interval ISO8601 time interval. E.g: ** PT1H, one hour apart. ** P1D, one day apart. It means to execute a backup task every {interval} starting from {startTime}. The backup task for the elapsed time will not be compensated. If the last backup task is not completed, the next backup task will not be triggered.
+    <dd>{{% md %}}Backup strategy. Optional format: I|{startTime}|{interval}. It means to execute a backup task every {interval} starting from {startTime}. The backup task for the elapsed time will not be compensated. If the last backup task is not completed yet, the next backup task will not be triggered.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vault_id_python">
@@ -1001,7 +1001,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Vault ID.
+    <dd>{{% md %}}The ID of backup vault.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

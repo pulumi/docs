@@ -13,6 +13,7 @@ Explore the resources and functions of the alicloud.sae module.
 <ul class="api">
     <li><a href="application" title="Application"><span class="symbol resource"></span>Application</a></li>
     <li><a href="configmap" title="ConfigMap"><span class="symbol resource"></span>ConfigMap</a></li>
+    <li><a href="ingress" title="Ingress"><span class="symbol resource"></span>Ingress</a></li>
     <li><a href="namespace" title="Namespace"><span class="symbol resource"></span>Namespace</a></li>
 </ul>
 
@@ -20,6 +21,7 @@ Explore the resources and functions of the alicloud.sae module.
 <ul class="api">
     <li><a href="getapplications" title="GetApplications"><span class="symbol function"></span>GetApplications</a></li>
     <li><a href="getconfigmaps" title="GetConfigMaps"><span class="symbol function"></span>GetConfigMaps</a></li>
+    <li><a href="getingresses" title="GetIngresses"><span class="symbol function"></span>GetIngresses</a></li>
     <li><a href="getnamespaces" title="GetNamespaces"><span class="symbol function"></span>GetNamespaces</a></li>
     <li><a href="getservice" title="GetService"><span class="symbol function"></span>GetService</a></li>
 </ul>
@@ -33,6 +35,6 @@ Explore the resources and functions of the alicloud.sae module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>3.7.0</dd>
+	<dd>3.8.0</dd>
 </dl>
 

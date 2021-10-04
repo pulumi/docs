@@ -155,7 +155,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}InstanceId.
+    <dd>{{% md %}}The ID of ECS instance.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="limit_csharp">
@@ -282,7 +282,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}InstanceId.
+    <dd>{{% md %}}The ID of ECS instance.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="limit_go">
@@ -409,7 +409,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}InstanceId.
+    <dd>{{% md %}}The ID of ECS instance.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="limit_nodejs">
@@ -536,7 +536,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}InstanceId.
+    <dd>{{% md %}}The ID of ECS instance.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="limit_python">
@@ -1240,7 +1240,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}InstanceId.
+    <dd>{{% md %}}The ID of ECS instance.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="itemsdone_csharp">
@@ -1477,7 +1477,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}InstanceId.
+    <dd>{{% md %}}The ID of ECS instance.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="itemsdone_go">
@@ -1714,7 +1714,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}InstanceId.
+    <dd>{{% md %}}The ID of ECS instance.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="itemsdone_nodejs">
@@ -1951,7 +1951,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}InstanceId.
+    <dd>{{% md %}}The ID of ECS instance.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="items_done_python">

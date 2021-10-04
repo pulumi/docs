@@ -12,7 +12,7 @@ meta_desc: "Documentation for the alicloud.hbr.RestoreJob resource with examples
 
 Provides a Hybrid Backup Recovery (HBR) Restore Job resource.
 
-For information about Hybrid Backup Recovery (HBR) Restore Job and how to use it, see [What is Restore Job](https://help.aliyun.com/document_detail/62361.html).
+For information about Hybrid Backup Recovery (HBR) Restore Job and how to use it, see [What is Restore Job](https://www.alibabacloud.com/help/doc-detail/186575.htm).
 
 > **NOTE:** Available in v1.133.0+.
 
@@ -375,7 +375,7 @@ The RestoreJob resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Recovery Destination Types. Valid values: `ECS_FILE`, `NAS`, `OSS`. **Note**: Currently, there is a one-to-one correspondence between the data source type with the recovery destination type.
+    <dd>{{% md %}}The type of recovery destination. Valid values: `ECS_FILE`, `NAS`, `OSS`. **Note**: Currently, there is a one-to-one correspondence between the data source type with the recovery destination type.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="snapshothash_csharp">
@@ -384,7 +384,7 @@ The RestoreJob resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Restore Snapshot of HashCode.
+    <dd>{{% md %}}The hashcode of restore Snapshot.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="snapshotid_csharp">
@@ -402,7 +402,7 @@ The RestoreJob resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Type of Data Source. Valid values: `ECS_FILE`, `NAS`, `OSS`.
+    <dd>{{% md %}}The type of data source. Valid values: `ECS_FILE`, `NAS`, `OSS`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vaultid_csharp">
@@ -411,7 +411,7 @@ The RestoreJob resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of Vault.
+    <dd>{{% md %}}The ID of backup vault.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="exclude_csharp">
@@ -438,7 +438,7 @@ The RestoreJob resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Recovery Options. It's a json string with format:`"{"includes":[],"excludes":[]}",`.
+    <dd>{{% md %}}Recovery options. It's a json string with format:`"{"includes":[],"excludes":[]}",`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetbucket_csharp">
@@ -447,7 +447,7 @@ The RestoreJob resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Target ofo OSS Bucket Name.
+    <dd>{{% md %}}The target ofo OSS bucket name.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetclientid_csharp">
@@ -480,7 +480,7 @@ The RestoreJob resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Destination File System Creation Time.
+    <dd>{{% md %}}The creation Time of destination File System. While source_type equals `NAS`, this parameter must be set. **Note** The time format of the API adopts the ISO 8601 format, such as `2021-07-09T15:45:30CST` or `2021-07-09T07:45:30Z`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetdatasourceid_csharp">
@@ -497,7 +497,7 @@ The RestoreJob resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Destination File System ID.
+    <dd>{{% md %}}The ID of destination File System.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetinstanceid_csharp">
@@ -506,7 +506,7 @@ The RestoreJob resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Objective to ECS Instance Id.
+    <dd>{{% md %}}The target ID of ECS instance.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetpath_csharp">
@@ -515,7 +515,7 @@ The RestoreJob resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Target of (ECS) Instance Changes the ECS File Path.
+    <dd>{{% md %}}The target file path of (ECS) instance.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetprefix_csharp">
@@ -524,7 +524,7 @@ The RestoreJob resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Target of the OSS Object Prefix.
+    <dd>{{% md %}}The target of the OSS object prefix.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -546,7 +546,7 @@ The RestoreJob resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Recovery Destination Types. Valid values: `ECS_FILE`, `NAS`, `OSS`. **Note**: Currently, there is a one-to-one correspondence between the data source type with the recovery destination type.
+    <dd>{{% md %}}The type of recovery destination. Valid values: `ECS_FILE`, `NAS`, `OSS`. **Note**: Currently, there is a one-to-one correspondence between the data source type with the recovery destination type.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="snapshothash_go">
@@ -555,7 +555,7 @@ The RestoreJob resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Restore Snapshot of HashCode.
+    <dd>{{% md %}}The hashcode of restore Snapshot.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="snapshotid_go">
@@ -573,7 +573,7 @@ The RestoreJob resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Type of Data Source. Valid values: `ECS_FILE`, `NAS`, `OSS`.
+    <dd>{{% md %}}The type of data source. Valid values: `ECS_FILE`, `NAS`, `OSS`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vaultid_go">
@@ -582,7 +582,7 @@ The RestoreJob resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of Vault.
+    <dd>{{% md %}}The ID of backup vault.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="exclude_go">
@@ -609,7 +609,7 @@ The RestoreJob resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Recovery Options. It's a json string with format:`"{"includes":[],"excludes":[]}",`.
+    <dd>{{% md %}}Recovery options. It's a json string with format:`"{"includes":[],"excludes":[]}",`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetbucket_go">
@@ -618,7 +618,7 @@ The RestoreJob resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Target ofo OSS Bucket Name.
+    <dd>{{% md %}}The target ofo OSS bucket name.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetclientid_go">
@@ -651,7 +651,7 @@ The RestoreJob resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Destination File System Creation Time.
+    <dd>{{% md %}}The creation Time of destination File System. While source_type equals `NAS`, this parameter must be set. **Note** The time format of the API adopts the ISO 8601 format, such as `2021-07-09T15:45:30CST` or `2021-07-09T07:45:30Z`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetdatasourceid_go">
@@ -668,7 +668,7 @@ The RestoreJob resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Destination File System ID.
+    <dd>{{% md %}}The ID of destination File System.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetinstanceid_go">
@@ -677,7 +677,7 @@ The RestoreJob resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Objective to ECS Instance Id.
+    <dd>{{% md %}}The target ID of ECS instance.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetpath_go">
@@ -686,7 +686,7 @@ The RestoreJob resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Target of (ECS) Instance Changes the ECS File Path.
+    <dd>{{% md %}}The target file path of (ECS) instance.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetprefix_go">
@@ -695,7 +695,7 @@ The RestoreJob resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Target of the OSS Object Prefix.
+    <dd>{{% md %}}The target of the OSS object prefix.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -717,7 +717,7 @@ The RestoreJob resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Recovery Destination Types. Valid values: `ECS_FILE`, `NAS`, `OSS`. **Note**: Currently, there is a one-to-one correspondence between the data source type with the recovery destination type.
+    <dd>{{% md %}}The type of recovery destination. Valid values: `ECS_FILE`, `NAS`, `OSS`. **Note**: Currently, there is a one-to-one correspondence between the data source type with the recovery destination type.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="snapshothash_nodejs">
@@ -726,7 +726,7 @@ The RestoreJob resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Restore Snapshot of HashCode.
+    <dd>{{% md %}}The hashcode of restore Snapshot.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="snapshotid_nodejs">
@@ -744,7 +744,7 @@ The RestoreJob resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Type of Data Source. Valid values: `ECS_FILE`, `NAS`, `OSS`.
+    <dd>{{% md %}}The type of data source. Valid values: `ECS_FILE`, `NAS`, `OSS`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vaultid_nodejs">
@@ -753,7 +753,7 @@ The RestoreJob resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of Vault.
+    <dd>{{% md %}}The ID of backup vault.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="exclude_nodejs">
@@ -780,7 +780,7 @@ The RestoreJob resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Recovery Options. It's a json string with format:`"{"includes":[],"excludes":[]}",`.
+    <dd>{{% md %}}Recovery options. It's a json string with format:`"{"includes":[],"excludes":[]}",`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetbucket_nodejs">
@@ -789,7 +789,7 @@ The RestoreJob resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Target ofo OSS Bucket Name.
+    <dd>{{% md %}}The target ofo OSS bucket name.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetclientid_nodejs">
@@ -822,7 +822,7 @@ The RestoreJob resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Destination File System Creation Time.
+    <dd>{{% md %}}The creation Time of destination File System. While source_type equals `NAS`, this parameter must be set. **Note** The time format of the API adopts the ISO 8601 format, such as `2021-07-09T15:45:30CST` or `2021-07-09T07:45:30Z`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetdatasourceid_nodejs">
@@ -839,7 +839,7 @@ The RestoreJob resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Destination File System ID.
+    <dd>{{% md %}}The ID of destination File System.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetinstanceid_nodejs">
@@ -848,7 +848,7 @@ The RestoreJob resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Objective to ECS Instance Id.
+    <dd>{{% md %}}The target ID of ECS instance.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetpath_nodejs">
@@ -857,7 +857,7 @@ The RestoreJob resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Target of (ECS) Instance Changes the ECS File Path.
+    <dd>{{% md %}}The target file path of (ECS) instance.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetprefix_nodejs">
@@ -866,7 +866,7 @@ The RestoreJob resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Target of the OSS Object Prefix.
+    <dd>{{% md %}}The target of the OSS object prefix.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -888,7 +888,7 @@ The RestoreJob resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Recovery Destination Types. Valid values: `ECS_FILE`, `NAS`, `OSS`. **Note**: Currently, there is a one-to-one correspondence between the data source type with the recovery destination type.
+    <dd>{{% md %}}The type of recovery destination. Valid values: `ECS_FILE`, `NAS`, `OSS`. **Note**: Currently, there is a one-to-one correspondence between the data source type with the recovery destination type.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="snapshot_hash_python">
@@ -897,7 +897,7 @@ The RestoreJob resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Restore Snapshot of HashCode.
+    <dd>{{% md %}}The hashcode of restore Snapshot.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="snapshot_id_python">
@@ -915,7 +915,7 @@ The RestoreJob resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Type of Data Source. Valid values: `ECS_FILE`, `NAS`, `OSS`.
+    <dd>{{% md %}}The type of data source. Valid values: `ECS_FILE`, `NAS`, `OSS`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vault_id_python">
@@ -924,7 +924,7 @@ The RestoreJob resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ID of Vault.
+    <dd>{{% md %}}The ID of backup vault.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="exclude_python">
@@ -951,7 +951,7 @@ The RestoreJob resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Recovery Options. It's a json string with format:`"{"includes":[],"excludes":[]}",`.
+    <dd>{{% md %}}Recovery options. It's a json string with format:`"{"includes":[],"excludes":[]}",`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_bucket_python">
@@ -960,7 +960,7 @@ The RestoreJob resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Target ofo OSS Bucket Name.
+    <dd>{{% md %}}The target ofo OSS bucket name.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_client_id_python">
@@ -993,7 +993,7 @@ The RestoreJob resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Destination File System Creation Time.
+    <dd>{{% md %}}The creation Time of destination File System. While source_type equals `NAS`, this parameter must be set. **Note** The time format of the API adopts the ISO 8601 format, such as `2021-07-09T15:45:30CST` or `2021-07-09T07:45:30Z`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_data_source_id_python">
@@ -1010,7 +1010,7 @@ The RestoreJob resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Destination File System ID.
+    <dd>{{% md %}}The ID of destination File System.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_instance_id_python">
@@ -1019,7 +1019,7 @@ The RestoreJob resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Objective to ECS Instance Id.
+    <dd>{{% md %}}The target ID of ECS instance.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_path_python">
@@ -1028,7 +1028,7 @@ The RestoreJob resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Target of (ECS) Instance Changes the ECS File Path.
+    <dd>{{% md %}}The target file path of (ECS) instance.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_prefix_python">
@@ -1037,7 +1037,7 @@ The RestoreJob resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Target of the OSS Object Prefix.
+    <dd>{{% md %}}The target of the OSS object prefix.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1304,7 +1304,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Recovery Options. It's a json string with format:`"{"includes":[],"excludes":[]}",`.
+    <dd>{{% md %}}Recovery options. It's a json string with format:`"{"includes":[],"excludes":[]}",`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_restorejobid_csharp">
@@ -1322,7 +1322,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Recovery Destination Types. Valid values: `ECS_FILE`, `NAS`, `OSS`. **Note**: Currently, there is a one-to-one correspondence between the data source type with the recovery destination type.
+    <dd>{{% md %}}The type of recovery destination. Valid values: `ECS_FILE`, `NAS`, `OSS`. **Note**: Currently, there is a one-to-one correspondence between the data source type with the recovery destination type.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_snapshothash_csharp">
@@ -1331,7 +1331,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Restore Snapshot of HashCode.
+    <dd>{{% md %}}The hashcode of restore Snapshot.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_snapshotid_csharp">
@@ -1349,7 +1349,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Type of Data Source. Valid values: `ECS_FILE`, `NAS`, `OSS`.
+    <dd>{{% md %}}The type of data source. Valid values: `ECS_FILE`, `NAS`, `OSS`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_csharp">
@@ -1367,7 +1367,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Target ofo OSS Bucket Name.
+    <dd>{{% md %}}The target ofo OSS bucket name.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targetclientid_csharp">
@@ -1400,7 +1400,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Destination File System Creation Time.
+    <dd>{{% md %}}The creation Time of destination File System. While source_type equals `NAS`, this parameter must be set. **Note** The time format of the API adopts the ISO 8601 format, such as `2021-07-09T15:45:30CST` or `2021-07-09T07:45:30Z`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targetdatasourceid_csharp">
@@ -1417,7 +1417,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Destination File System ID.
+    <dd>{{% md %}}The ID of destination File System.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targetinstanceid_csharp">
@@ -1426,7 +1426,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Objective to ECS Instance Id.
+    <dd>{{% md %}}The target ID of ECS instance.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targetpath_csharp">
@@ -1435,7 +1435,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Target of (ECS) Instance Changes the ECS File Path.
+    <dd>{{% md %}}The target file path of (ECS) instance.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targetprefix_csharp">
@@ -1444,7 +1444,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Target of the OSS Object Prefix.
+    <dd>{{% md %}}The target of the OSS object prefix.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vaultid_csharp">
@@ -1453,7 +1453,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of Vault.
+    <dd>{{% md %}}The ID of backup vault.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1484,7 +1484,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Recovery Options. It's a json string with format:`"{"includes":[],"excludes":[]}",`.
+    <dd>{{% md %}}Recovery options. It's a json string with format:`"{"includes":[],"excludes":[]}",`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_restorejobid_go">
@@ -1502,7 +1502,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Recovery Destination Types. Valid values: `ECS_FILE`, `NAS`, `OSS`. **Note**: Currently, there is a one-to-one correspondence between the data source type with the recovery destination type.
+    <dd>{{% md %}}The type of recovery destination. Valid values: `ECS_FILE`, `NAS`, `OSS`. **Note**: Currently, there is a one-to-one correspondence between the data source type with the recovery destination type.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_snapshothash_go">
@@ -1511,7 +1511,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Restore Snapshot of HashCode.
+    <dd>{{% md %}}The hashcode of restore Snapshot.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_snapshotid_go">
@@ -1529,7 +1529,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Type of Data Source. Valid values: `ECS_FILE`, `NAS`, `OSS`.
+    <dd>{{% md %}}The type of data source. Valid values: `ECS_FILE`, `NAS`, `OSS`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_go">
@@ -1547,7 +1547,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Target ofo OSS Bucket Name.
+    <dd>{{% md %}}The target ofo OSS bucket name.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targetclientid_go">
@@ -1580,7 +1580,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Destination File System Creation Time.
+    <dd>{{% md %}}The creation Time of destination File System. While source_type equals `NAS`, this parameter must be set. **Note** The time format of the API adopts the ISO 8601 format, such as `2021-07-09T15:45:30CST` or `2021-07-09T07:45:30Z`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targetdatasourceid_go">
@@ -1597,7 +1597,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Destination File System ID.
+    <dd>{{% md %}}The ID of destination File System.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targetinstanceid_go">
@@ -1606,7 +1606,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Objective to ECS Instance Id.
+    <dd>{{% md %}}The target ID of ECS instance.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targetpath_go">
@@ -1615,7 +1615,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Target of (ECS) Instance Changes the ECS File Path.
+    <dd>{{% md %}}The target file path of (ECS) instance.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targetprefix_go">
@@ -1624,7 +1624,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Target of the OSS Object Prefix.
+    <dd>{{% md %}}The target of the OSS object prefix.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vaultid_go">
@@ -1633,7 +1633,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of Vault.
+    <dd>{{% md %}}The ID of backup vault.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1664,7 +1664,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Recovery Options. It's a json string with format:`"{"includes":[],"excludes":[]}",`.
+    <dd>{{% md %}}Recovery options. It's a json string with format:`"{"includes":[],"excludes":[]}",`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_restorejobid_nodejs">
@@ -1682,7 +1682,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Recovery Destination Types. Valid values: `ECS_FILE`, `NAS`, `OSS`. **Note**: Currently, there is a one-to-one correspondence between the data source type with the recovery destination type.
+    <dd>{{% md %}}The type of recovery destination. Valid values: `ECS_FILE`, `NAS`, `OSS`. **Note**: Currently, there is a one-to-one correspondence between the data source type with the recovery destination type.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_snapshothash_nodejs">
@@ -1691,7 +1691,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Restore Snapshot of HashCode.
+    <dd>{{% md %}}The hashcode of restore Snapshot.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_snapshotid_nodejs">
@@ -1709,7 +1709,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Type of Data Source. Valid values: `ECS_FILE`, `NAS`, `OSS`.
+    <dd>{{% md %}}The type of data source. Valid values: `ECS_FILE`, `NAS`, `OSS`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_nodejs">
@@ -1727,7 +1727,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Target ofo OSS Bucket Name.
+    <dd>{{% md %}}The target ofo OSS bucket name.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targetclientid_nodejs">
@@ -1760,7 +1760,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Destination File System Creation Time.
+    <dd>{{% md %}}The creation Time of destination File System. While source_type equals `NAS`, this parameter must be set. **Note** The time format of the API adopts the ISO 8601 format, such as `2021-07-09T15:45:30CST` or `2021-07-09T07:45:30Z`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targetdatasourceid_nodejs">
@@ -1777,7 +1777,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Destination File System ID.
+    <dd>{{% md %}}The ID of destination File System.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targetinstanceid_nodejs">
@@ -1786,7 +1786,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Objective to ECS Instance Id.
+    <dd>{{% md %}}The target ID of ECS instance.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targetpath_nodejs">
@@ -1795,7 +1795,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Target of (ECS) Instance Changes the ECS File Path.
+    <dd>{{% md %}}The target file path of (ECS) instance.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targetprefix_nodejs">
@@ -1804,7 +1804,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Target of the OSS Object Prefix.
+    <dd>{{% md %}}The target of the OSS object prefix.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vaultid_nodejs">
@@ -1813,7 +1813,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of Vault.
+    <dd>{{% md %}}The ID of backup vault.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1844,7 +1844,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Recovery Options. It's a json string with format:`"{"includes":[],"excludes":[]}",`.
+    <dd>{{% md %}}Recovery options. It's a json string with format:`"{"includes":[],"excludes":[]}",`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_restore_job_id_python">
@@ -1862,7 +1862,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Recovery Destination Types. Valid values: `ECS_FILE`, `NAS`, `OSS`. **Note**: Currently, there is a one-to-one correspondence between the data source type with the recovery destination type.
+    <dd>{{% md %}}The type of recovery destination. Valid values: `ECS_FILE`, `NAS`, `OSS`. **Note**: Currently, there is a one-to-one correspondence between the data source type with the recovery destination type.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_snapshot_hash_python">
@@ -1871,7 +1871,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Restore Snapshot of HashCode.
+    <dd>{{% md %}}The hashcode of restore Snapshot.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_snapshot_id_python">
@@ -1889,7 +1889,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Type of Data Source. Valid values: `ECS_FILE`, `NAS`, `OSS`.
+    <dd>{{% md %}}The type of data source. Valid values: `ECS_FILE`, `NAS`, `OSS`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_python">
@@ -1907,7 +1907,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Target ofo OSS Bucket Name.
+    <dd>{{% md %}}The target ofo OSS bucket name.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_target_client_id_python">
@@ -1940,7 +1940,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Destination File System Creation Time.
+    <dd>{{% md %}}The creation Time of destination File System. While source_type equals `NAS`, this parameter must be set. **Note** The time format of the API adopts the ISO 8601 format, such as `2021-07-09T15:45:30CST` or `2021-07-09T07:45:30Z`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_target_data_source_id_python">
@@ -1957,7 +1957,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Destination File System ID.
+    <dd>{{% md %}}The ID of destination File System.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_target_instance_id_python">
@@ -1966,7 +1966,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Objective to ECS Instance Id.
+    <dd>{{% md %}}The target ID of ECS instance.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_target_path_python">
@@ -1975,7 +1975,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Target of (ECS) Instance Changes the ECS File Path.
+    <dd>{{% md %}}The target file path of (ECS) instance.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_target_prefix_python">
@@ -1984,7 +1984,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Target of the OSS Object Prefix.
+    <dd>{{% md %}}The target of the OSS object prefix.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vault_id_python">
@@ -1993,7 +1993,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ID of Vault.
+    <dd>{{% md %}}The ID of backup vault.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
