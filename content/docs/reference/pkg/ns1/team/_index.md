@@ -633,7 +633,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#teamipwhitelist">List&lt;Team<wbr>Ip<wbr>Whitelist<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The IP addresses to whitelist for this key.
+    <dd>{{% md %}}Array of IP addresses objects to chich to grant the team access. Each object includes a **name** (string), and **values** (array of strings) associated to each "allow" list.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipammanageipam_csharp">
@@ -910,7 +910,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#teamipwhitelist">[]Team<wbr>Ip<wbr>Whitelist<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The IP addresses to whitelist for this key.
+    <dd>{{% md %}}Array of IP addresses objects to chich to grant the team access. Each object includes a **name** (string), and **values** (array of strings) associated to each "allow" list.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipammanageipam_go">
@@ -1187,7 +1187,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#teamipwhitelist">Team<wbr>Ip<wbr>Whitelist<wbr>Args[]</a></span>
     </dt>
-    <dd>{{% md %}}The IP addresses to whitelist for this key.
+    <dd>{{% md %}}Array of IP addresses objects to chich to grant the team access. Each object includes a **name** (string), and **values** (array of strings) associated to each "allow" list.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipammanageipam_nodejs">
@@ -1464,7 +1464,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#teamipwhitelist">Sequence[Team<wbr>Ip<wbr>Whitelist<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The IP addresses to whitelist for this key.
+    <dd>{{% md %}}Array of IP addresses objects to chich to grant the team access. Each object includes a **name** (string), and **values** (array of strings) associated to each "allow" list.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipam_manage_ipam_python">
@@ -1951,7 +1951,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#teamipwhitelist">List&lt;Team<wbr>Ip<wbr>Whitelist<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The IP addresses to whitelist for this key.
+    <dd>{{% md %}}Array of IP addresses objects to chich to grant the team access. Each object includes a **name** (string), and **values** (array of strings) associated to each "allow" list.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipammanageipam_csharp">
@@ -2228,7 +2228,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#teamipwhitelist">[]Team<wbr>Ip<wbr>Whitelist<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The IP addresses to whitelist for this key.
+    <dd>{{% md %}}Array of IP addresses objects to chich to grant the team access. Each object includes a **name** (string), and **values** (array of strings) associated to each "allow" list.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipammanageipam_go">
@@ -2505,7 +2505,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#teamipwhitelist">Team<wbr>Ip<wbr>Whitelist<wbr>Args[]</a></span>
     </dt>
-    <dd>{{% md %}}The IP addresses to whitelist for this key.
+    <dd>{{% md %}}Array of IP addresses objects to chich to grant the team access. Each object includes a **name** (string), and **values** (array of strings) associated to each "allow" list.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipammanageipam_nodejs">
@@ -2782,7 +2782,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#teamipwhitelist">Sequence[Team<wbr>Ip<wbr>Whitelist<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The IP addresses to whitelist for this key.
+    <dd>{{% md %}}Array of IP addresses objects to chich to grant the team access. Each object includes a **name** (string), and **values** (array of strings) associated to each "allow" list.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipam_manage_ipam_python">
