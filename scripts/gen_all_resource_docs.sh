@@ -55,6 +55,7 @@ REPOS=(
     "mongodbatlas"
     "mysql"
     "newrelic"
+    "nomad"
     "ns1"
     "okta"
     "openstack"
