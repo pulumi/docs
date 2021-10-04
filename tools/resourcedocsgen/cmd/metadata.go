@@ -14,6 +14,16 @@ import (
 	"github.com/pulumi/docs/tools/resourcedocsgen/pkg"
 )
 
+var categoryNameMap = map[string]pkg.PackageCategory{
+	"cloud":          pkg.PackageCategoryCloud,
+	"database":       pkg.PackageCategoryDatabase,
+	"infrastructure": pkg.PackageCategoryInfrastructure,
+	"monitoring":     pkg.PackageCategoryMonitoring,
+	"network":        pkg.PackageCategoryNetwork,
+	"utility":        pkg.PackageCategoryUtility,
+	"vcs":            pkg.PackageCategoryVCS,
+}
+
 var categoryLookup = map[string]pkg.PackageCategory{
 	"aiven":         pkg.PackageCategoryInfrastructure,
 	"akamai":        pkg.PackageCategoryNetwork,
@@ -155,8 +165,10 @@ var titleLookup = map[string]string{
 
 func packageMetadataCmd() *cobra.Command {
 	var metadataOutDir string
+	var categoryStr string
 	var featured bool
 	var publisher string
+	var title string
 	var updatedOn int64
 
 	cmd := &cobra.Command{
@@ -168,12 +180,26 @@ func packageMetadataCmd() *cobra.Command {
 				status = pkg.PackageStatusPublicPreview
 			}
 
-			category := pkg.PackageCategoryCloud
-			if c, ok := categoryLookup[mainSpec.Name]; ok {
+			var category pkg.PackageCategory
+			// If a category was passed-in, use that as the override.
+			if categoryStr != "" {
+				if n, ok := categoryNameMap[categoryStr]; !ok {
+					return errors.New(fmt.Sprintf("invalid category name %s", categoryStr))
+				} else {
+					category = n
+				}
+			} else if c, ok := categoryLookup[mainSpec.Name]; ok {
+				// Otherwise, try to lookup the package in our existing category
+				// lookup.
 				category = c
+			} else {
+				// The default is to categorize the package as "Cloud".
+				category = pkg.PackageCategoryCloud
 			}
 
-			title := mainSpec.Name
+			if title == "" {
+				title = mainSpec.Name
+			}
 			if v, ok := titleLookup[mainSpec.Name]; ok {
 				title = v
 			}
@@ -205,8 +231,10 @@ func packageMetadataCmd() *cobra.Command {
 	}
 
 	cmd.Flags().StringVar(&metadataOutDir, "metadataOutDir", "", "The directory path to where the docs will be written to")
+	cmd.Flags().StringVar(&categoryStr, "category", "", fmt.Sprintf("The category for the package. Value must match one of the keys in the map: %v", categoryNameMap))
 	cmd.Flags().BoolVar(&featured, "featured", false, "Whether or not this package should be marked as featured in its metadata")
 	cmd.Flags().StringVar(&publisher, "publisher", "Pulumi", "The publisher's display name to be shown in the package")
+	cmd.Flags().StringVar(&title, "title", "", "The display name of the package. If ommitted, the name of the package will be used")
 	cmd.Flags().Int64Var(&updatedOn, "updatedOn", time.Now().Unix(), "The timestamp (epoch) to use for when the package was last updated")
 
 	cmd.MarkFlagRequired("metadataOutDir")

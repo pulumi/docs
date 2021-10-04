@@ -10,20 +10,28 @@ METADATA_OUT_DIR=${1:-}
 # The second argument is the override for the package for which this script will generate the metadata.
 # Must not be passed without the "pulumi-" prefix.
 REPO_OVERRIDE=${2:-}
-# Pass a 3rd argument that is a non-empty string to override the package version used by this script.
+# Pass a non-empty string as the 3rd arg to override the package version used by this script.
 VERSION=${3:-}
-# Pass a 4th argument that is a non-empty string to override the default publisher name for the package.
+# Pass a non-empty string as the 4th arg to override the default publisher name for the package.
 PUBLISHER=${4:-Pulumi}
+# Pass a non-empty string as the 5th arg to set the display name of the package.
+TITLE=${5:-}
+# Pass a non-empty string as the 6th arg to set the category of the package.
+CATEGORY=${6:-cloud}
+
+if [ -z "${TITLE:-}" ]; then
+    TITLE=${REPO_OVERRIDE}
+fi
 
 TOOL_RESDOCGEN="./tools/resourcedocsgen/"
 
 if [ -z "${METADATA_OUT_DIR:-}" ]; then
-  echo "Specify an out dir for the metadata files. Usage is gen_package_metadata.sh <METADATA_OUT_DIR> <REPO_OVERRIDE> <VERSION>."
+  echo "Specify an out dir for the metadata files. Usage is gen_package_metadata.sh <METADATA_OUT_DIR> <REPO_OVERRIDE> <VERSION> [PUBLISHER] [TITLE] [CATEGORY]."
   exit 1
 fi
 
 if [ -z "${REPO_OVERRIDE:-}" ]; then
-  echo "Specify the repo name. Usage is gen_package_metadata.sh <METADATA_OUT_DIR> <REPO_OVERRIDE> <VERSION>."
+  echo "Specify the repo name. Usage is gen_package_metadata.sh <METADATA_OUT_DIR> <REPO_OVERRIDE> <VERSION> [PUBLISHER] [TITLE] [CATEGORY]."
   exit 1
 fi
 
@@ -53,7 +61,7 @@ generate_metadata() {
     provider=$1
     repository="pulumi-${provider}"
 
-    echo -e "\033[0;95m--- Updating repo pulumi/${repository} ---\033[0m"
+    echo -e "\033[0;95m--- Updating repo ${repository} ---\033[0m"
     pushd "../${repository}"
     git fetch --tags
 
@@ -73,7 +81,7 @@ generate_metadata() {
     # See https://git-scm.com/docs/git-for-each-ref#_field_names (search for `creatordate`).
     PKG_UPDATED_ON=$(git for-each-ref --format="%(creatordate:unix)" "refs/tags/${plugin_version}")
 
-    echo -e "\033[0;93mCheckout pulumi/${repository} at tag $plugin_version\033[0m"
+    echo -e "\033[0;93mCheckout ${repository} at tag $plugin_version\033[0m"
     git -c advice.detachedHead=false checkout "$plugin_version" >/dev/null
 
     # Go back to the docs repo.
@@ -124,6 +132,8 @@ generate_metadata() {
       --version "${plugin_version}" \
       --publisher "${PUBLISHER}" \
       --updatedOn "${PKG_UPDATED_ON}" \
+      --title "${TITLE}" \
+      --category "${CATEGORY}" \
       --logtostderr ${featured_flag} || exit 3
 
     popd
