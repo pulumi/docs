@@ -12,12 +12,13 @@ METADATA_OUT_DIR=${1:-}
 REPO_OVERRIDE=${2:-}
 # Pass a non-empty string as the 3rd arg to override the package version used by this script.
 VERSION=${3:-}
-# Pass a non-empty string as the 4th arg to override the default publisher name for the package.
+# Pass a non-empty string as the 4th arg to override the publisher name for the package.
+# Default is Pulumi.
 PUBLISHER=${4:-Pulumi}
-# Pass a non-empty string as the 5th arg to set the display name of the package.
+# Pass a non-empty string as the 5th arg to override the display name of the package.
 TITLE=${5:-}
-# Pass a non-empty string as the 6th arg to set the category of the package.
-CATEGORY=${6:-cloud}
+# Pass a non-empty string as the 6th arg to override the category of the package.
+CATEGORY=${6:-}
 
 if [ -z "${TITLE:-}" ]; then
     TITLE=${REPO_OVERRIDE}

@@ -173,7 +173,7 @@ func packageMetadataCmd() *cobra.Command {
 
 	cmd := &cobra.Command{
 		Use:   "metadata <metadataOutDir> [featured]",
-		Short: "Generate package metadata only",
+		Short: "Generate package metadata from Pulumi schema",
 		RunE: func(cmd *cobra.Command, args []string) error {
 			status := pkg.PackageStatusGA
 			if strings.HasPrefix(version, "v0.") {
