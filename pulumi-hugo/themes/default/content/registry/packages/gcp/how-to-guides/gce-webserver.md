@@ -55,7 +55,7 @@ In this tutorial, we'll use JavaScript to deploy a simple webserver Virtual Mach
     exports.instanceIP = computeInstance.networkInterfaces.apply(ni => ni[0].accessConfigs[0].natIp);
     ```
 
-    This example uses the [@pulumi/gcp]({{< relref "/registry/packages/gcp" >}}) package to create and manage three Google Cloud resources: a [gcp.compute.Network]({{< relref /api-docs"/docs/reference/pkg/gcp/compute/network" >}}) in which the virtual machine will run, a [gcp.compute.Firewall]({{< relref "/docs/reference/pkg/gcp/compute/firewall" >}}) which allows access for incoming SSH access, and a [gcp.compute.Instance]({{< relref "/docs/reference/pkg/gcp/compute/instance" >}}) which is created inside the network from the Debian 9 base image.
+    This example uses the [@pulumi/gcp]({{< relref "/registry/packages/gcp" >}}) package to create and manage three Google Cloud resources: a [gcp.compute.Network]({{< relref "/registry/packages/gcp/api-docs/compute/network" >}}) in which the virtual machine will run, a [gcp.compute.Firewall]({{< relref "/docs/reference/pkg/gcp/compute/firewall" >}}) which allows access for incoming SSH access, and a [gcp.compute.Instance]({{< relref "/docs/reference/pkg/gcp/compute/instance" >}}) which is created inside the network from the Debian 9 base image.
 
 1. To preview and deploy changes, run `pulumi up`. The command shows a preview of the resources that will be created and prompts on whether to proceed with the deployment.  Note that the stack itself is counted as a resource, though it does not correspond to a physical cloud resource.
 

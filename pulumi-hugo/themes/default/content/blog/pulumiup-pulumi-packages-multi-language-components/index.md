@@ -66,7 +66,7 @@ A Pulumi Package is comprised of two inputs: a Pulumi schema, which describes th
 
 There are several different ways to author a Pulumi Package depending on the kind of cloud infrastructure you want to define:
 
-1. **Native Pulumi Provider Package:** Use the full features of the Pulumi resource model to create a provider for a new cloud platform. Examples: the [`kubernetes`]({{<relref "/registry/packages/kubernetes">}}), [`azure-native`]({{<relref /api-docs"/docs/reference/pkg/azure-native">}}), and [`google-native`]({{<relref "/registry/packages/google-native/api-docs">}}) packages.
+1. **Native Pulumi Provider Package:** Use the full features of the Pulumi resource model to create a provider for a new cloud platform. Examples: the [`kubernetes`]({{<relref "/registry/packages/kubernetes">}}), [`azure-native`]({{<relref "/registry/packages/azure-native/api-docs">}}), and [`google-native`]({{<relref "/registry/packages/google-native/api-docs">}}) packages.
 2. **Bridged Provider Package:** Take an existing resource provider from another supported ecosystem (like a Terraform provider), and bridge it to be exposed as a Pulumi Package. Examples: the [`aws`]({{<relref "/registry/packages/aws">}}), [`tls`]({{<relref "/registry/packages/tls/api-docs">}}), and [`cloudflare`]({{<relref "/registry/packages/cloudflare/api-docs">}}) packages.
 3. **Component Package:** Write a Pulumi Component in your language of choice and expose it to users in all Pulumi languages. Example: the [`eks`]({{<relref "/registry/packages/eks/api-docs">}}) package.
 

@@ -177,7 +177,7 @@ In this tutorial, you'll use Python to deploy an instance of Azure Kubernetes Se
     pulumi.export("kubeconfig", kube_config)
     ```
 
-    This example uses the [@pulumi_azure_native]({{< relref "/registry/packages/azure-native" >}}) package to create and manage several Azure resources including a [ManagedCluster]({{< relref /api-docs"/docs/reference/pkg/azure-native/containerservice/managedcluster" >}}) resource, which defines your Kubernetes cluster, and a [VirtualNetwork]({{< relref "/docs/reference/pkg/azure-native/network/virtualnetwork" >}}) resource that contains AKS worker nodes.
+    This example uses the [@pulumi_azure_native]({{< relref "/registry/packages/azure-native" >}}) package to create and manage several Azure resources including a [ManagedCluster]({{< relref "/registry/packages/azure-native/api-docs/containerservice/managedcluster" >}}) resource, which defines your Kubernetes cluster, and a [VirtualNetwork]({{< relref "/docs/reference/pkg/azure-native/network/virtualnetwork" >}}) resource that contains AKS worker nodes.
 
     In addition, this example uses implicit and explicit dependencies. For example, resource outputs can be used as inputs to imply dependency between resources, but resources like the subnet RoleAssignment are explicitly declared as dependencies using [ResourceOptions]({{< relref "/docs/intro/concepts/resources#options" >}}) and passed to the resource as additional arguments.
 
