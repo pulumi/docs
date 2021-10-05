@@ -2,6 +2,9 @@ env:
   GITHUB_TOKEN: ${{ secrets.PULUMI_BOT_TOKEN }}
   PROVIDER_SHORT_NAME: ${{ github.event.client_payload.project-shortname }}
   PROVIDER_NAME: ${{ github.event.client_payload.project }}
+  PROVIDER_DISPLAY_NAME: ${{ github.event.client_payload.display-name }}
+  PROVIDER_PUBLISHER_NAME: ${{ github.event.client_payload.publisher }}
+  PROVIDER_CATEGORY: ${{ github.event.client_payload.category }}
   PROVIDER_VERSION: ${{ github.event.client_payload.ref }}
 
 name: provider docs build
@@ -14,6 +17,26 @@ on:
       # it's essentially anything that isn't using the resource based docs
 
 jobs:
+  registry-pull-request:
+    runs-on: ubuntu-18.04
+    needs: build-tfgen-provider-docs
+    steps:
+      - name: Configure Git
+        run: |
+          git config --global url."https://${{ secrets.PULUMI_BOT_TOKEN }}:x-oauth-basic@github.com/pulumi/registry".insteadOf "https://github.com/pulumi/registry"
+      - name: checkout registry repo
+        uses: actions/checkout@v2
+        with:
+          path: registry
+      - name: pull-request
+        uses: repo-sync/pull-request@v2
+        with:
+          source_branch: "${{ env.PROVIDER_SHORT_NAME }}/${{ github.run_id }}-${{ github.run_number }}"
+          destination_branch: "master"
+          pr_title: "Regen metadata for ${{ env.PROVIDER_SHORT_NAME }}@${{ env.PROVIDER_VERSION }}"
+          pr_body: ""
+          pr_label: "automation/tfgen-provider-docs,automation/merge"
+          github_token: ${{ secrets.PULUMI_BOT_TOKEN }}
   pull-request:
     runs-on: ubuntu-18.04
     needs: build-tfgen-provider-docs
@@ -42,6 +65,14 @@ jobs:
         uses: actions/checkout@v2
         with:
           path: docs
+      - name: Configure Git
+        run: |
+          git config --global url."https://${{ secrets.PULUMI_BOT_TOKEN }}:x-oauth-basic@github.com/pulumi/registry".insteadOf "https://github.com/pulumi/registry"
+      - if: github.event.action != 'non-resource-provider'
+        name: checkout registry repo
+        uses: actions/checkout@v2
+        with:
+          path: registry
       - name: checkout pulumi repo
         uses: actions/checkout@v2
         with:
@@ -99,6 +130,11 @@ jobs:
         name: generate resource docs
         run: ./scripts/gen_resource_docs.sh "${{ env.PROVIDER_SHORT_NAME }}" true "${{ env.PROVIDER_VERSION }}"
         working-directory: docs
+      # Generate the package metadata only for those packages for which we also generate resource docs.
+      - if: github.event.action != 'non-resource-provider'
+        name: generate package metadata
+        run: ./scripts/gen_package_metadata.sh ../../../registry/themes/default/data/registry/packages "${{ env.PROVIDER_SHORT_NAME }}" "${{ env.PROVIDER_VERSION }}"
+        working-directory: docs
       - name: git status
         run: git status && git diff
         working-directory: docs
@@ -109,11 +145,23 @@ jobs:
           author_name: pulumi-bot
           author_email: "bot@pulumi.com"
           cwd: docs
+      - if: github.event.action != 'non-resource-provider'
+        name: git status
+        run: git status && git diff
+        working-directory: registry
+      - if: github.event.action != 'non-resource-provider'
+        name: commit changes
+        uses: EndBug/add-and-commit@v4
+        with:
+          ref: "${{ env.PROVIDER_SHORT_NAME }}/${{ github.run_id }}-${{ github.run_number }}"
+          author_name: pulumi-bot
+          author_email: "bot@pulumi.com"
+          cwd: registry
     strategy:
       matrix:
         dotnetversion:
-        - 3.1.301
+          - 3.1.301
         goversion:
-        - 1.16.x
+          - 1.16.x
         pythonversion:
-        - "3.7"
+          - "3.7"
