@@ -14,6 +14,16 @@ import (
 	"github.com/pulumi/docs/tools/resourcedocsgen/pkg"
 )
 
+var categoryNameMap = map[string]pkg.PackageCategory{
+	"cloud":          pkg.PackageCategoryCloud,
+	"database":       pkg.PackageCategoryDatabase,
+	"infrastructure": pkg.PackageCategoryInfrastructure,
+	"monitoring":     pkg.PackageCategoryMonitoring,
+	"network":        pkg.PackageCategoryNetwork,
+	"utility":        pkg.PackageCategoryUtility,
+	"vcs":            pkg.PackageCategoryVCS,
+}
+
 var categoryLookup = map[string]pkg.PackageCategory{
 	"aiven":         pkg.PackageCategoryInfrastructure,
 	"akamai":        pkg.PackageCategoryNetwork,
@@ -28,12 +38,14 @@ var categoryLookup = map[string]pkg.PackageCategory{
 	"cloudamqp":     pkg.PackageCategoryCloud,
 	"cloudflare":    pkg.PackageCategoryNetwork,
 	"cloudinit":     pkg.PackageCategoryUtility,
+	"confluent":     pkg.PackageCategoryInfrastructure,
 	"consul":        pkg.PackageCategoryInfrastructure,
 	"datadog":       pkg.PackageCategoryMonitoring,
 	"digitalocean":  pkg.PackageCategoryCloud,
 	"dnsimple":      pkg.PackageCategoryNetwork,
 	"docker":        pkg.PackageCategoryInfrastructure,
 	"eks":           pkg.PackageCategoryCloud,
+	"equinix-metal": pkg.PackageCategoryCloud,
 	"f5bigip":       pkg.PackageCategoryNetwork,
 	"fastly":        pkg.PackageCategoryCloud,
 	"gcp":           pkg.PackageCategoryCloud,
@@ -45,11 +57,14 @@ var categoryLookup = map[string]pkg.PackageCategory{
 	"keycloak":      pkg.PackageCategoryInfrastructure,
 	"kong":          pkg.PackageCategoryInfrastructure,
 	"kubernetes":    pkg.PackageCategoryCloud,
+	"libvirt":       pkg.PackageCategoryUtility,
 	"linode":        pkg.PackageCategoryCloud,
 	"mailgun":       pkg.PackageCategoryInfrastructure,
+	"minio":         pkg.PackageCategoryInfrastructure,
 	"mongodbatlas":  pkg.PackageCategoryDatabase,
 	"mysql":         pkg.PackageCategoryDatabase,
 	"newrelic":      pkg.PackageCategoryMonitoring,
+	"nomad":         pkg.PackageCategoryInfrastructure,
 	"ns1":           pkg.PackageCategoryNetwork,
 	"okta":          pkg.PackageCategoryInfrastructure,
 	"openstack":     pkg.PackageCategoryCloud,
@@ -59,18 +74,18 @@ var categoryLookup = map[string]pkg.PackageCategory{
 	"rabbitmq":      pkg.PackageCategoryInfrastructure,
 	"rancher2":      pkg.PackageCategoryInfrastructure,
 	"random":        pkg.PackageCategoryUtility,
+	"rke":           pkg.PackageCategoryInfrastructure,
 	"signalfx":      pkg.PackageCategoryMonitoring,
+	"snowflake":     pkg.PackageCategoryInfrastructure,
+	"splunk":        pkg.PackageCategoryInfrastructure,
 	"spotinst":      pkg.PackageCategoryInfrastructure,
+	"sumologic":     pkg.PackageCategoryMonitoring,
 	"tls":           pkg.PackageCategoryUtility,
 	"vault":         pkg.PackageCategoryInfrastructure,
 	"venafi":        pkg.PackageCategoryInfrastructure,
 	"vsphere":       pkg.PackageCategoryCloud,
 	"wavefront":     pkg.PackageCategoryMonitoring,
-	"equinix-metal": pkg.PackageCategoryCloud,
-	"splunk":        pkg.PackageCategoryInfrastructure,
 	"yandex":        pkg.PackageCategoryCloud,
-	"rke":           pkg.PackageCategoryInfrastructure,
-	"sumologic":     pkg.PackageCategoryMonitoring,
 }
 
 // TODO[pulumi/pulumi#7813]: Remove this lookup once display name is available in
@@ -123,6 +138,7 @@ var titleLookup = map[string]string{
 	"mongodbatlas":  "MongoDB Atlas",
 	"mysql":         "MySQL",
 	"newrelic":      "New Relic",
+	"nomad":         "Nomad",
 	"ns1":           "NS1",
 	"okta":          "Okta",
 	"openstack":     "OpenStack",
@@ -149,30 +165,48 @@ var titleLookup = map[string]string{
 
 func packageMetadataCmd() *cobra.Command {
 	var metadataOutDir string
+	var categoryStr string
 	var featured bool
+	var publisher string
+	var title string
+	var updatedOn int64
 
 	cmd := &cobra.Command{
 		Use:   "metadata <metadataOutDir> [featured]",
-		Short: "Generate package metadata only",
+		Short: "Generate package metadata from Pulumi schema",
 		RunE: func(cmd *cobra.Command, args []string) error {
 			status := pkg.PackageStatusGA
 			if strings.HasPrefix(version, "v0.") {
 				status = pkg.PackageStatusPublicPreview
 			}
 
-			category := pkg.PackageCategoryCloud
-			if c, ok := categoryLookup[mainSpec.Name]; ok {
+			var category pkg.PackageCategory
+			// If a category was passed-in, use that as the override.
+			if categoryStr != "" {
+				if n, ok := categoryNameMap[categoryStr]; !ok {
+					return errors.New(fmt.Sprintf("invalid category name %s", categoryStr))
+				} else {
+					category = n
+				}
+			} else if c, ok := categoryLookup[mainSpec.Name]; ok {
+				// Otherwise, try to lookup the package in our existing category
+				// lookup.
 				category = c
+			} else {
+				// The default is to categorize the package as "Cloud".
+				category = pkg.PackageCategoryCloud
 			}
 
-			title := mainSpec.Name
+			if title == "" {
+				title = mainSpec.Name
+			}
 			if v, ok := titleLookup[mainSpec.Name]; ok {
 				title = v
 			}
 			pm := pkg.PackageMeta{
 				Name:          mainSpec.Name,
-				UpdatedOn:     time.Now().Unix(),
-				Publisher:     "Pulumi",
+				UpdatedOn:     updatedOn,
+				Publisher:     publisher,
 				Title:         title,
 				Description:   mainSpec.Description,
 				Category:      category,
@@ -197,7 +231,11 @@ func packageMetadataCmd() *cobra.Command {
 	}
 
 	cmd.Flags().StringVar(&metadataOutDir, "metadataOutDir", "", "The directory path to where the docs will be written to")
+	cmd.Flags().StringVar(&categoryStr, "category", "", fmt.Sprintf("The category for the package. Value must match one of the keys in the map: %v", categoryNameMap))
 	cmd.Flags().BoolVar(&featured, "featured", false, "Whether or not this package should be marked as featured in its metadata")
+	cmd.Flags().StringVar(&publisher, "publisher", "Pulumi", "The publisher's display name to be shown in the package")
+	cmd.Flags().StringVar(&title, "title", "", "The display name of the package. If ommitted, the name of the package will be used")
+	cmd.Flags().Int64Var(&updatedOn, "updatedOn", time.Now().Unix(), "The timestamp (epoch) to use for when the package was last updated")
 
 	cmd.MarkFlagRequired("metadataOutDir")
 
