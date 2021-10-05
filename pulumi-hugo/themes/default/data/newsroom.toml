@@ -1,4 +1,10 @@
 [[releases]]
+date = "30th September 2021"
+title = "Pulumi AWS Native Provider Speeds Users Into the Future of Modern Cloud Application Development on AWS"
+summary = "Pulumi now provides same-day support for new AWS Cloud Control API-supported services and features, allowing customers to harness modern cloud architectures using industry standard languages, software tools, and cloud engineering best practices"
+url = "https://info.pulumi.com/press-release/aws-native-provider"
+
+[[releases]]
 date = "3rd August 2021"
 title = "SANS Institute Selects Pulumi Cloud Engineering Platform to Radically Simplify and Automate Cloud Application and Infrastructure Delivery"
 summary = "Cybersecurity training and certification leader leverages cloud engineering best practices to increase deployment velocity by 3X"
@@ -87,6 +93,42 @@ date = "18th June 2018"
 title = "Pulumi Launches Cloud Development Platform to Help Teams Get Code to the Cloud Faster"
 summary = "Company funded by Madrona Venture Group and Tola Capital to help companies accelerate cloud application development and infrastructure delivery. "
 url = "https://info.pulumi.com/press-release/pulumi-launches-cloud-development-platform-to-help-teams-get-code-to-the-cloud-faster/"
+
+[[coverage]]
+date = "2nd July 2021"
+title = "The 10 Coolest Open-Source Software Tools Of 2021 (So Far)"
+img = "/logos/press/crn.png"
+url = "https://www.crn.com/slide-shows/applications-os/the-10-coolest-open-source-software-tools-of-2021-so-far-/8"
+
+[[coverage]]
+date = "3rd May 2021"
+title = "The Next Step after DevOps and GitOps Is Cloud Engineering, Pulumi Says"
+img = "/logos/press/newstack.png"
+url = "https://thenewstack.io/the-next-step-after-devops-and-gitops-is-cloud-engineering-pulumi-says/"
+
+[[coverage]]
+date = "28th April 2021"
+title = "Using Pulumi 3.0 to manage Azure infrastructure"
+img = "/logos/press/infoworld.png"
+url = "https://www.infoworld.com/article/3616605/using-pulumi-30-to-manage-azure-infrastructure.html"
+
+[[coverage]]
+date = "20th April 2021"
+title = "Pulumi launches version 3.0 of its infrastructure-as-code platform"
+img = "/logos/press/techcrunch.png"
+url = "https://techcrunch.com/2021/04/20/pulumi-launches-version-3-0-of-its-infrastructure-as-code-platform/"
+
+[[coverage]]
+date = "20th April 2021"
+title = "Pulumi updates its infrastructure-as-code cloud engineering platform"
+img = "/logos/press/siliconangle.png"
+url = "https://siliconangle.com/2021/04/20/pulumi-updates-infrastructure-based-cloud-engineering-platform/"
+
+[[coverage]]
+date = "8th March 2021"
+title = "You can’t escape Pulumi and other IaC tools"
+img = "/logos/press/infoworld.png"
+url = "https://www.infoworld.com/article/3610701/you-cant-escape-pulumi-and-other-iac-tools.html"
 
 [[coverage]]
 date = "13th August 2020"
