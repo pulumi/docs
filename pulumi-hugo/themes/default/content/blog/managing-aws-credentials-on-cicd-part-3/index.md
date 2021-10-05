@@ -75,7 +75,7 @@ And just to show a more real-world example, we'll do this using _multiple_ AWS a
 
 ### Creating the IAM Role
 
-The following snippet creates an [IAM Role]({{< ref "/docs/reference/pkg/aws/iam/role" >}}) resource using Pulumi. The
+The following snippet creates an [IAM Role]({{< ref "/registry/packages/aws/api-docs/iam/role" >}}) resource using Pulumi. The
 most important input property of which is the `assumeRolePolicy` document, which defines _who_ can assume this role.
 
 > This is a situation where Pulumi's ability to declare the policy document in code is super-useful, as it makes it

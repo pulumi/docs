@@ -117,7 +117,7 @@ SDK reference documentation, organized by language.
     </dd>
     <dt>AWS EKS Cluster</dt>
     <dd>
-        <a href="{{< relref "/registry/packages/eks" >}}/api-docs">@pulumi/eks</a>
+        <a href="{{< relref "/registry/packages/eks/api-docs" >}}/api-docs">@pulumi/eks</a>
         <p>Simpler interfaces for working with AWS EKS.</p>
     </dd>
     <dt>Kubernetes Extensions</dt>
@@ -133,7 +133,7 @@ SDK reference documentation, organized by language.
 <dl class="tabular">
     <dt>AWS EKS Cluster</dt>
     <dd>
-        <a href="{{< relref "/registry/packages/eks" >}}/api-docs">pulumi_eks</a>
+        <a href="{{< relref "/registry/packages/eks/api-docs" >}}/api-docs">pulumi_eks</a>
         <p>Simpler interfaces for working with AWS EKS.</p>
     </dd>
 </dl>
@@ -143,7 +143,7 @@ SDK reference documentation, organized by language.
 <dl class="tabular">
     <dt>AWS EKS Cluster</dt>
     <dd>
-        <a href="{{< relref "/registry/packages/eks" >}}/api-docs">eks</a>
+        <a href="{{< relref "/registry/packages/eks/api-docs" >}}/api-docs">eks</a>
         <p>Simpler interfaces for working with AWS EKS.</p>
     </dd>
 </dl>
@@ -153,7 +153,7 @@ SDK reference documentation, organized by language.
 <dl class="tabular">
     <dt>AWS EKS Cluster</dt>
     <dd>
-        <a href="{{< relref "/registry/packages/eks" >}}/api-docs">Pulumi.Eks</a>
+        <a href="{{< relref "/registry/packages/eks/api-docs" >}}/api-docs">Pulumi.Eks</a>
         <p>Simpler interfaces for working with AWS EKS.</p>
     </dd>
 </dl>

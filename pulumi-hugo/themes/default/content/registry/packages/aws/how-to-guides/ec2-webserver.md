@@ -237,7 +237,7 @@ class MyStack : Stack
 
 > **Note:** The example configuration is designed to work on most EC2 accounts, with access to a default VPC. For EC2 Classic users, please use t1.micro for `size`.
 
-This example uses the [`ec2` module of the `aws` package]({{< relref "/docs/reference/pkg/aws/ec2" >}}) to create two resources:
+This example uses the [`ec2` module of the `aws` package]({{< relref "/registry/packages/aws/api-docs/ec2" >}}) to create two resources:
 
 | AWS Resource | Description | Resource |
 |--------------|-------------|----------|
@@ -550,8 +550,8 @@ In this tutorial, we showed you how to use Pulumi programs to create and manage 
 {{< /summary >}}
 
 <!-- Common links -->
-[EC2 Instance]: {{< relref "/docs/reference/pkg/aws/ec2/instance" >}}
-[Security Group]: {{< relref "/docs/reference/pkg/aws/ec2/securitygroup" >}}
+[EC2 Instance]: {{< relref "/registry/packages/aws/api-docs/ec2/instance" >}}
+[Security Group]: {{< relref "/registry/packages/aws/api-docs/ec2/securitygroup" >}}
 <!-- End common links -->
 
 ## Next Steps

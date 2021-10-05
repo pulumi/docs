@@ -15,12 +15,12 @@ Kubernetes has been a significant focus of Pulumi since its very beginnings. Pul
 
 As Helm and its usage evolved over the years, Pulumi users using the `Chart` resource have often had to get very creative in order to get the desired functionality in their deployments.
 
-Today we are excited to announce the **public preview** of a new [Helm Release]({{< relref "/docs/reference/pkg/kubernetes/helm/v3/release" >}}) resource starting with [v3.7.0](https://github.com/pulumi/pulumi-kubernetes/releases/tag/v3.7.0) of the Pulumi Kubernetes Provider and SDK in all Pulumi supported languages. This new resource provides Pulumi users more options to choose the right tool for their use-case. The rest of this blog post will highlight how this resource differs from the existing [Helm Chart]({{< relref "/docs/reference/pkg/kubernetes/helm/v3/chart">}}) component resource and describe how and when to use the new resource.
+Today we are excited to announce the **public preview** of a new [Helm Release]({{< relref "/registry/packages/kubernetes/api-docs/helm/v3/release" >}}) resource starting with [v3.7.0](https://github.com/pulumi/pulumi-kubernetes/releases/tag/v3.7.0) of the Pulumi Kubernetes Provider and SDK in all Pulumi supported languages. This new resource provides Pulumi users more options to choose the right tool for their use-case. The rest of this blog post will highlight how this resource differs from the existing [Helm Chart]({{< relref "/registry/packages/kubernetes/api-docs/helm/v3/chart">}}) component resource and describe how and when to use the new resource.
 
 <!--more-->
 
 {{% notes %}}
-The existing [Helm Chart]({{< relref "/docs/reference/pkg/kubernetes/helm/v3/chart">}}) component resource, which extracts and converts Kubernetes resources into individual resources in the Pulumi program, will continue to be supported.
+The existing [Helm Chart]({{< relref "/registry/packages/kubernetes/api-docs/helm/v3/chart">}}) component resource, which extracts and converts Kubernetes resources into individual resources in the Pulumi program, will continue to be supported.
 {{% /notes %}}
 
 ## How is Helm Release resource different?
@@ -35,7 +35,7 @@ Unlike the existing Chart component resource, Helm Release directly offloads all
 
 ### Configurable Await Support
 
-By default, Pulumi's Helm Release resource waits for all resources installed by the release to be available, up to a configurable timeout that defaults to *5 minutes*. With a sufficient timeout, the resource can be reliably passed to `dependsOn` clauses in subsequent resources to encode ordering requirements. In addition, users can also require waiting on all Helm hooks to complete by setting `jobAwait` to true. However, if desired, all await behavior can be disabled by setting `skipAwait` option to true. See the [SDK documentation]({{< relref "/docs/reference/pkg/kubernetes/helm/v3/release/#inputs" >}}) for details for each of the above options.
+By default, Pulumi's Helm Release resource waits for all resources installed by the release to be available, up to a configurable timeout that defaults to *5 minutes*. With a sufficient timeout, the resource can be reliably passed to `dependsOn` clauses in subsequent resources to encode ordering requirements. In addition, users can also require waiting on all Helm hooks to complete by setting `jobAwait` to true. However, if desired, all await behavior can be disabled by setting `skipAwait` option to true. See the [SDK documentation]({{< relref "/registry/packages/kubernetes/api-docs/helm/v3/release/#inputs" >}}) for details for each of the above options.
 
 ### Helm State Management
 
@@ -57,8 +57,8 @@ Secondly, only the Release resource and the relevant Kubernetes resources read b
 If you aren't already familiar with using Pulumi with Kubernetes, head on over to [Pulumi's getting started guide for Kubernetes]({{< relref "/docs/get-started/kubernetes/" >}}) first.
 
 1. In your chosen Kubernetes Pulumi project, make sure the referenced version of the Pulumi-Kubernetes SDK is at least `v3.7.0`.
-2. Helm Release support is configured to target the relevant cluster pointed to by the Kubernetes provider associated with it and no additional configuration is required by default. However, more advanced configuration options are supported, see the provider configuration [documentation]({{< relref "/docs/reference/pkg/kubernetes/provider/#helmdriver_nodejs" >}}) for more details.
-3. Refer to the instructions for your chosen language in the [resource documentation]({{< relref "/docs/reference/pkg/kubernetes/helm/v3/release/#create" >}}) to create a Helm Release resource.
+2. Helm Release support is configured to target the relevant cluster pointed to by the Kubernetes provider associated with it and no additional configuration is required by default. However, more advanced configuration options are supported, see the provider configuration [documentation]({{< relref "/registry/packages/kubernetes/api-docs/provider/#helmdriver_nodejs" >}}) for more details.
+3. Refer to the instructions for your chosen language in the [resource documentation]({{< relref "/registry/packages/kubernetes/api-docs/helm/v3/release/#create" >}}) to create a Helm Release resource.
 
 Lets look at a concrete example of Helm Release in action. In the following snippet we install [Redis](https://redis.io/) through a Helm Chart in each of the supported Pulumi languages using the new Helm Release resource:
 

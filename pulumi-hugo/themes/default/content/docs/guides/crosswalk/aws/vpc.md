@@ -38,8 +38,8 @@ used for strong network isolation between endpoints and resources that are other
 
 ## Managing VPCs
 
-The [VPC resource]({{< relref "/docs/reference/pkg/aws/ec2/vpc" >}}) class provides full access to the
-AWS VPC API, and [aws.ec2]({{< relref "/docs/reference/pkg/aws/ec2" >}}) the entire AWS EC2 API. Using
+The [VPC resource]({{< relref "/registry/packages/aws/api-docs/ec2/vpc" >}}) class provides full access to the
+AWS VPC API, and [aws.ec2]({{< relref "/registry/packages/aws/api-docs/ec2" >}}) the entire AWS EC2 API. Using
 these packages, you can configure all aspects of AWS networks for your applications and infrastructure.
 
 The [awsx.ec2.Vpc]({{< relref "/docs/reference/pkg/nodejs/pulumi/awsx/ec2#Vpc" >}}) class encapsulates a complete
@@ -562,11 +562,11 @@ raw resource so that you can code directly to the underlying AWS resource types,
 
 For information about configuring each of these resources, refer to each type's API documentation:
 
-* [Vpc]({{< relref "/docs/reference/pkg/aws/ec2/vpc" >}})
-* [Subnet]({{< relref "/docs/reference/pkg/aws/ec2/subnet" >}})
-* [InternetGateway]({{< relref "/docs/reference/pkg/aws/ec2/internetgateway" >}})
-* [NatGateway]({{< relref "/docs/reference/pkg/aws/ec2/natgateway" >}})
-* [SecurityGroup]({{< relref "/docs/reference/pkg/aws/ec2/securitygroup" >}})
+* [Vpc]({{< relref "/registry/packages/aws/api-docs/ec2/vpc" >}})
+* [Subnet]({{< relref "/registry/packages/aws/api-docs/ec2/subnet" >}})
+* [InternetGateway]({{< relref "/registry/packages/aws/api-docs/ec2/internetgateway" >}})
+* [NatGateway]({{< relref "/registry/packages/aws/api-docs/ec2/natgateway" >}})
+* [SecurityGroup]({{< relref "/registry/packages/aws/api-docs/ec2/securitygroup" >}})
 
 These resources can be independently allocated, just as with the `Vpc` class shown above. They will need to be
 connected together manually, however, which can provide greater flexibility but at a greater implementation cost.

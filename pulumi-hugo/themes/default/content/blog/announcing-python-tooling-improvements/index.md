@@ -67,7 +67,7 @@ my_bucket = s3.Bucket("my-bucket",
 )
 ```
 
-You would likely have several questions if writing the above example from scratch. What keys can be set for `website` and `cors_rules`? Should the keys be camelCase or snake_case? Which keys are required? What are the types of values? To answer these questions, you'd need to refer to [`Bucket`]({{< relref "/docs/reference/pkg/aws/s3/bucket" >}})'s documentation.
+You would likely have several questions if writing the above example from scratch. What keys can be set for `website` and `cors_rules`? Should the keys be camelCase or snake_case? Which keys are required? What are the types of values? To answer these questions, you'd need to refer to [`Bucket`]({{< relref "/registry/packages/aws/api-docs/s3/bucket" >}})'s documentation.
 
 We now allow optionally passing nested values using data classes:
 

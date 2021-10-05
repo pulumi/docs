@@ -230,12 +230,12 @@ You also learned how to work with the Pulumi CLI. To recap:
 
 <!-- markdownlint-disable url -->
 [@pulumi/aws]: {{< relref "/registry/packages/aws/api-docs" >}}
-[aws.s3.Bucket]: {{< relref "/docs/reference/pkg/aws/s3/bucket" >}}
-[aws.s3.Bucket.bucket]: {{< relref "/docs/reference/pkg/aws/s3/bucket#bucket_nodejs" >}}
-[aws.s3.BucketObject]: {{< relref "/docs/reference/pkg/aws/s3/bucketobject" >}}
+[aws.s3.Bucket]: {{< relref "/registry/packages/aws/api-docs/s3/bucket" >}}
+[aws.s3.Bucket.bucket]: {{< relref "/registry/packages/aws/api-docs/s3/bucket#bucket_nodejs" >}}
+[aws.s3.BucketObject]: {{< relref "/registry/packages/aws/api-docs/s3/bucketobject" >}}
 [pulumi.asset.FileAsset]: {{< relref "/docs/reference/pkg/nodejs/pulumi/pulumi/asset#FileAsset" >}}
-[aws.s3.BucketPolicy]: {{< relref "/docs/reference/pkg/aws/s3/bucketpolicy" >}}
-[aws.s3.Bucket.website]: {{< relref "/docs/reference/pkg/aws/s3/bucket#state_website_nodejs" >}}
+[aws.s3.BucketPolicy]: {{< relref "/registry/packages/aws/api-docs/s3/bucketpolicy" >}}
+[aws.s3.Bucket.website]: {{< relref "/registry/packages/aws/api-docs/s3/bucket#state_website_nodejs" >}}
 [pulumi.Output]: {{< relref "/docs/reference/pkg/nodejs/pulumi/pulumi#Output" >}}
 [pulumi.Output.apply]: {{< relref "/docs/reference/pkg/nodejs/pulumi/pulumi#Output" >}}
 [pulumi.Input]: {{< relref "/docs/reference/pkg/nodejs/pulumi/pulumi#Input" >}}

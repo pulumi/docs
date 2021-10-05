@@ -465,12 +465,12 @@ join our [Community Slack](https://slack.pulumi.com/) channel if you have
 any questions, need support, or just want to say hello.
 
 <!-- markdownlint-disable url -->
-[apiextensions package]: {{< relref "/docs/reference/pkg/kubernetes/apiextensions" >}}
+[apiextensions package]: {{< relref "/registry/packages/kubernetes/api-docs/apiextensions" >}}
 [crd2pulumi]: https://github.com/pulumi/crd2pulumi
 [cert-manager]: https://github.com/jetstack/cert-manager/tree/master/deploy/crds
 [CronTab CRD]: https://kubernetes.io/docs/tasks/extend-kubernetes/custom-resources/custom-resource-definitions/#create-a-customresourcedefinition
-[CustomResource]: {{< relref "/docs/reference/pkg/kubernetes/apiextensions/customresource" >}}
-[CustomResourceDefinition]: {{< relref "docs/reference/pkg/kubernetes/apiextensions/v1/customresourcedefinition" >}}
+[CustomResource]: {{< relref "/registry/packages/kubernetes/api-docs/apiextensions/customresource" >}}
+[CustomResourceDefinition]: {{< relref "/registry/packages/kubernetes/api-docs/apiextensions/v1/customresourcedefinition" >}}
 [Istio]: https://github.com/istio/istio/tree/0321da58ca86fc786fb03a68afd29d082477e4f2/manifests/charts/base/crds
 [real-world cert-manager example]: https://docs.cert-manager.io/en/release-0.7/tasks/issuing-certificates/index.html#creating-certificate-resources
 [release page]: https://github.com/pulumi/crd2pulumi/releases

@@ -1130,7 +1130,7 @@ var imageName = Output.Format($"{registryUrl}/myapp");
 
 #### Learn More About GCR
 
-GCR uses Google Cloud Storage to store images, which may be configured separately, including configuring IAM and lifecycle policies. For more details on this, please refer to [Pulumi's Google Cloud API](https://www.pulumi.com/docs/reference/pkg/gcp/container/registry/) or [Google's own Container Registry](https://cloud.google.com/container-registry) documentation.
+GCR uses Google Cloud Storage to store images, which may be configured separately, including configuring IAM and lifecycle policies. For more details on this, please refer to [Pulumi's Google Cloud API](https://www.pulumi.com/registry/packages/gcp/api-docs/container/registry/) or [Google's own Container Registry](https://cloud.google.com/container-registry) documentation.
 
 > To view another cloud provider's registry details, [select a new cloud in the switcher above](#prepare-a-container-registry).
 
@@ -1909,7 +1909,7 @@ Outputs:
   ~ fullImageName: "...cloud-specific url.../my-repo-dc811b0:78d0fce7c2450c15a6153b6b11208fcb6b9edea7bb7ef3b7b6194f3fc101a170"
 ```
 
-The Pulumi Docker `Image` component supports a number of additional options to control its behavior, including passing build arguments, environment variables, extra options for the Docker build, as well as various controls for image caching. For full details on each of these, refer to [the API documentation]({{< relref "/docs/reference/pkg/docker/image" >}}).
+The Pulumi Docker `Image` component supports a number of additional options to control its behavior, including passing build arguments, environment variables, extra options for the Docker build, as well as various controls for image caching. For full details on each of these, refer to [the API documentation]({{< relref "/registry/packages/docker/api-docs/image" >}}).
 
 ## Consume the Container Image
 

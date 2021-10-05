@@ -2035,9 +2035,9 @@ Specifying your Kubernetes object configurations in Pulumi lets you take advanta
 like variables, loops, conditionals, functions, and classes. It is possible, however, to deploy existing Kubernetes
 YAML. The two approaches can be mixed, which is useful when converting an existing project.
 
-The [`ConfigFile` class]({{< relref "/docs/reference/pkg/kubernetes/yaml/configfile" >}}) can be
+The [`ConfigFile` class]({{< relref "/registry/packages/kubernetes/api-docs/yaml/configfile" >}}) can be
 used to deploy a single YAML file, whereas the [`ConfigGroup` class](
-{{< relref "/docs/reference/pkg/kubernetes/yaml/configgroup" >}}) can deploy
+{{< relref "/registry/packages/kubernetes/api-docs/yaml/configgroup" >}}) can deploy
 a collection of files, either from a set of files or in-memory representations.
 
 For example, imagine we have a directory, `yaml/`, containing the full YAML for the [Kubernetes Guestbook application](
