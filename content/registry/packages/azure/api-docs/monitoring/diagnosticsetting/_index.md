@@ -5,7 +5,7 @@ title_tag: "azure.monitoring.DiagnosticSetting"
 meta_desc: "Documentation for the azure.monitoring.DiagnosticSetting resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/DiagnosticSetting/"
-layout: api-doc-resource
+layout: api
 ---
 
 

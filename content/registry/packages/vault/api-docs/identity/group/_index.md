@@ -5,7 +5,7 @@ title_tag: "vault.identity.Group"
 meta_desc: "Documentation for the vault.identity.Group resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/vault/Group/"
-layout: api-doc-resource
+layout: api
 ---
 
 

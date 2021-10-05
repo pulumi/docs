@@ -5,7 +5,7 @@ title_tag: "azure-native.machinelearningservices.WorkspaceConnection"
 meta_desc: "Documentation for the azure-native.machinelearningservices.WorkspaceConnection resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/WorkspaceConnection/"
-layout: api-doc-resource
+layout: api
 ---
 
 

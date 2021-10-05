@@ -5,7 +5,7 @@ title_tag: "azuredevops.RepositoryPolicyAuthorEmailPattern"
 meta_desc: "Documentation for the azuredevops.RepositoryPolicyAuthorEmailPattern resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azuredevops/RepositoryPolicyAuthorEmailPattern/"
-layout: api-doc-resource
+layout: api
 ---
 
 

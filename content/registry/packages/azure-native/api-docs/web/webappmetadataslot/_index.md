@@ -5,7 +5,7 @@ title_tag: "azure-native.web.WebAppMetadataSlot"
 meta_desc: "Documentation for the azure-native.web.WebAppMetadataSlot resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/WebAppMetadataSlot/"
-layout: api-doc-resource
+layout: api
 ---
 
 

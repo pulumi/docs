@@ -5,7 +5,7 @@ title_tag: "azure.appservice.FunctionAppSlot"
 meta_desc: "Documentation for the azure.appservice.FunctionAppSlot resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/FunctionAppSlot/"
-layout: api-doc-resource
+layout: api
 ---
 
 

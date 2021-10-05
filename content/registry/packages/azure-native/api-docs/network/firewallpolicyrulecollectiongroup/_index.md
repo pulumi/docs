@@ -5,7 +5,7 @@ title_tag: "azure-native.network.FirewallPolicyRuleCollectionGroup"
 meta_desc: "Documentation for the azure-native.network.FirewallPolicyRuleCollectionGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/FirewallPolicyRuleCollectionGroup/"
-layout: api-doc-resource
+layout: api
 ---
 
 
@@ -1177,7 +1177,7 @@ The FirewallPolicyRuleCollectionGroup resource accepts the following [input]({{<
 <a href="#rulecollections_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Collections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Firewall<wbr>Policy<wbr>Filter<wbr>Rule<wbr>Collection<wbr>Args | Firewall<wbr>Policy<wbr>Nat<wbr>Rule<wbr>Collection<wbr>Args[]</span>
+        <span class="property-type">(Firewall<wbr>Policy<wbr>Filter<wbr>Rule<wbr>Collection<wbr>Args | Firewall<wbr>Policy<wbr>Nat<wbr>Rule<wbr>Collection<wbr>Args)[]</span>
     </dt>
     <dd>{{% md %}}Group of Firewall Policy rule collections.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2248,7 +2248,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Application<wbr>Rule | Nat<wbr>Rule | Network<wbr>Rule[]</span>
+        <span class="property-type">(Application<wbr>Rule | Nat<wbr>Rule | Network<wbr>Rule)[]</span>
     </dt>
     <dd>{{% md %}}List of rules included in a rule collection.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2520,7 +2520,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Application<wbr>Rule<wbr>Response | Nat<wbr>Rule<wbr>Response | Network<wbr>Rule<wbr>Response[]</span>
+        <span class="property-type">(Application<wbr>Rule<wbr>Response | Nat<wbr>Rule<wbr>Response | Network<wbr>Rule<wbr>Response)[]</span>
     </dt>
     <dd>{{% md %}}List of rules included in a rule collection.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2666,7 +2666,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Application<wbr>Rule | Nat<wbr>Rule | Network<wbr>Rule[]</span>
+        <span class="property-type">(Application<wbr>Rule | Nat<wbr>Rule | Network<wbr>Rule)[]</span>
     </dt>
     <dd>{{% md %}}List of rules included in a rule collection.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2934,7 +2934,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Application<wbr>Rule<wbr>Response | Nat<wbr>Rule<wbr>Response | Network<wbr>Rule<wbr>Response[]</span>
+        <span class="property-type">(Application<wbr>Rule<wbr>Response | Nat<wbr>Rule<wbr>Response | Network<wbr>Rule<wbr>Response)[]</span>
     </dt>
     <dd>{{% md %}}List of rules included in a rule collection.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3400,7 +3400,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipprotocols_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Firewall<wbr>Policy<wbr>Rule<wbr>Network<wbr>Protocol[]</span>
+        <span class="property-type">(string | Firewall<wbr>Policy<wbr>Rule<wbr>Network<wbr>Protocol)[]</span>
     </dt>
     <dd>{{% md %}}Array of FirewallPolicyRuleNetworkProtocols.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4076,7 +4076,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipprotocols_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Firewall<wbr>Policy<wbr>Rule<wbr>Network<wbr>Protocol[]</span>
+        <span class="property-type">(string | Firewall<wbr>Policy<wbr>Rule<wbr>Network<wbr>Protocol)[]</span>
     </dt>
     <dd>{{% md %}}Array of FirewallPolicyRuleNetworkProtocols.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

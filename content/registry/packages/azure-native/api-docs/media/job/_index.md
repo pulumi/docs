@@ -5,7 +5,7 @@ title_tag: "azure-native.media.Job"
 meta_desc: "Documentation for the azure-native.media.Job resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/Job/"
-layout: api-doc-resource
+layout: api
 ---
 
 
@@ -1238,7 +1238,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#includedtracks_nodejs" style="color: inherit; text-decoration: inherit;">included<wbr>Tracks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Audio<wbr>Track<wbr>Descriptor | Select<wbr>Audio<wbr>Track<wbr>By<wbr>Attribute | Select<wbr>Audio<wbr>Track<wbr>By<wbr>Id | Select<wbr>Video<wbr>Track<wbr>By<wbr>Attribute | Select<wbr>Video<wbr>Track<wbr>By<wbr>Id | Video<wbr>Track<wbr>Descriptor[]</span>
+        <span class="property-type">(Audio<wbr>Track<wbr>Descriptor | Select<wbr>Audio<wbr>Track<wbr>By<wbr>Attribute | Select<wbr>Audio<wbr>Track<wbr>By<wbr>Id | Select<wbr>Video<wbr>Track<wbr>By<wbr>Attribute | Select<wbr>Video<wbr>Track<wbr>By<wbr>Id | Video<wbr>Track<wbr>Descriptor)[]</span>
     </dt>
     <dd>{{% md %}}The list of TrackDescriptors which define the metadata and selection of tracks in the input.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1288,7 +1288,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#includedtracks_nodejs" style="color: inherit; text-decoration: inherit;">included<wbr>Tracks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Audio<wbr>Track<wbr>Descriptor<wbr>Response | Select<wbr>Audio<wbr>Track<wbr>By<wbr>Attribute<wbr>Response | Select<wbr>Audio<wbr>Track<wbr>By<wbr>Id<wbr>Response | Select<wbr>Video<wbr>Track<wbr>By<wbr>Attribute<wbr>Response | Select<wbr>Video<wbr>Track<wbr>By<wbr>Id<wbr>Response | Video<wbr>Track<wbr>Descriptor<wbr>Response[]</span>
+        <span class="property-type">(Audio<wbr>Track<wbr>Descriptor<wbr>Response | Select<wbr>Audio<wbr>Track<wbr>By<wbr>Attribute<wbr>Response | Select<wbr>Audio<wbr>Track<wbr>By<wbr>Id<wbr>Response | Select<wbr>Video<wbr>Track<wbr>By<wbr>Attribute<wbr>Response | Select<wbr>Video<wbr>Track<wbr>By<wbr>Id<wbr>Response | Video<wbr>Track<wbr>Descriptor<wbr>Response)[]</span>
     </dt>
     <dd>{{% md %}}The list of TrackDescriptors which define the metadata and selection of tracks in the input.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1338,7 +1338,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#includedtracks_nodejs" style="color: inherit; text-decoration: inherit;">included<wbr>Tracks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Audio<wbr>Track<wbr>Descriptor | Select<wbr>Audio<wbr>Track<wbr>By<wbr>Attribute | Select<wbr>Audio<wbr>Track<wbr>By<wbr>Id | Select<wbr>Video<wbr>Track<wbr>By<wbr>Attribute | Select<wbr>Video<wbr>Track<wbr>By<wbr>Id | Video<wbr>Track<wbr>Descriptor[]</span>
+        <span class="property-type">(Audio<wbr>Track<wbr>Descriptor | Select<wbr>Audio<wbr>Track<wbr>By<wbr>Attribute | Select<wbr>Audio<wbr>Track<wbr>By<wbr>Id | Select<wbr>Video<wbr>Track<wbr>By<wbr>Attribute | Select<wbr>Video<wbr>Track<wbr>By<wbr>Id | Video<wbr>Track<wbr>Descriptor)[]</span>
     </dt>
     <dd>{{% md %}}The list of TrackDescriptors which define the metadata and selection of tracks in the input.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1388,7 +1388,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#includedtracks_nodejs" style="color: inherit; text-decoration: inherit;">included<wbr>Tracks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Audio<wbr>Track<wbr>Descriptor<wbr>Response | Select<wbr>Audio<wbr>Track<wbr>By<wbr>Attribute<wbr>Response | Select<wbr>Audio<wbr>Track<wbr>By<wbr>Id<wbr>Response | Select<wbr>Video<wbr>Track<wbr>By<wbr>Attribute<wbr>Response | Select<wbr>Video<wbr>Track<wbr>By<wbr>Id<wbr>Response | Video<wbr>Track<wbr>Descriptor<wbr>Response[]</span>
+        <span class="property-type">(Audio<wbr>Track<wbr>Descriptor<wbr>Response | Select<wbr>Audio<wbr>Track<wbr>By<wbr>Attribute<wbr>Response | Select<wbr>Audio<wbr>Track<wbr>By<wbr>Id<wbr>Response | Select<wbr>Video<wbr>Track<wbr>By<wbr>Attribute<wbr>Response | Select<wbr>Video<wbr>Track<wbr>By<wbr>Id<wbr>Response | Video<wbr>Track<wbr>Descriptor<wbr>Response)[]</span>
     </dt>
     <dd>{{% md %}}The list of TrackDescriptors which define the metadata and selection of tracks in the input.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1462,7 +1462,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#includedtracks_nodejs" style="color: inherit; text-decoration: inherit;">included<wbr>Tracks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Audio<wbr>Track<wbr>Descriptor | Select<wbr>Audio<wbr>Track<wbr>By<wbr>Attribute | Select<wbr>Audio<wbr>Track<wbr>By<wbr>Id | Select<wbr>Video<wbr>Track<wbr>By<wbr>Attribute | Select<wbr>Video<wbr>Track<wbr>By<wbr>Id | Video<wbr>Track<wbr>Descriptor[]</span>
+        <span class="property-type">(Audio<wbr>Track<wbr>Descriptor | Select<wbr>Audio<wbr>Track<wbr>By<wbr>Attribute | Select<wbr>Audio<wbr>Track<wbr>By<wbr>Id | Select<wbr>Video<wbr>Track<wbr>By<wbr>Attribute | Select<wbr>Video<wbr>Track<wbr>By<wbr>Id | Video<wbr>Track<wbr>Descriptor)[]</span>
     </dt>
     <dd>{{% md %}}The list of TrackDescriptors which define the metadata and selection of tracks in the input.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1544,7 +1544,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#includedtracks_nodejs" style="color: inherit; text-decoration: inherit;">included<wbr>Tracks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Audio<wbr>Track<wbr>Descriptor<wbr>Response | Select<wbr>Audio<wbr>Track<wbr>By<wbr>Attribute<wbr>Response | Select<wbr>Audio<wbr>Track<wbr>By<wbr>Id<wbr>Response | Select<wbr>Video<wbr>Track<wbr>By<wbr>Attribute<wbr>Response | Select<wbr>Video<wbr>Track<wbr>By<wbr>Id<wbr>Response | Video<wbr>Track<wbr>Descriptor<wbr>Response[]</span>
+        <span class="property-type">(Audio<wbr>Track<wbr>Descriptor<wbr>Response | Select<wbr>Audio<wbr>Track<wbr>By<wbr>Attribute<wbr>Response | Select<wbr>Audio<wbr>Track<wbr>By<wbr>Id<wbr>Response | Select<wbr>Video<wbr>Track<wbr>By<wbr>Attribute<wbr>Response | Select<wbr>Video<wbr>Track<wbr>By<wbr>Id<wbr>Response | Video<wbr>Track<wbr>Descriptor<wbr>Response)[]</span>
     </dt>
     <dd>{{% md %}}The list of TrackDescriptors which define the metadata and selection of tracks in the input.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1966,7 +1966,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inputdefinitions_nodejs" style="color: inherit; text-decoration: inherit;">input<wbr>Definitions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">From<wbr>All<wbr>Input<wbr>File | From<wbr>Each<wbr>Input<wbr>File | Input<wbr>File[]</span>
+        <span class="property-type">(From<wbr>All<wbr>Input<wbr>File | From<wbr>Each<wbr>Input<wbr>File | Input<wbr>File)[]</span>
     </dt>
     <dd>{{% md %}}Defines a list of InputDefinitions. For each InputDefinition, it defines a list of track selections and related metadata.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2176,7 +2176,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inputdefinitions_nodejs" style="color: inherit; text-decoration: inherit;">input<wbr>Definitions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">From<wbr>All<wbr>Input<wbr>File<wbr>Response | From<wbr>Each<wbr>Input<wbr>File<wbr>Response | Input<wbr>File<wbr>Response[]</span>
+        <span class="property-type">(From<wbr>All<wbr>Input<wbr>File<wbr>Response | From<wbr>Each<wbr>Input<wbr>File<wbr>Response | Input<wbr>File<wbr>Response)[]</span>
     </dt>
     <dd>{{% md %}}Defines a list of InputDefinitions. For each InputDefinition, it defines a list of track selections and related metadata.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2362,7 +2362,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inputdefinitions_nodejs" style="color: inherit; text-decoration: inherit;">input<wbr>Definitions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">From<wbr>All<wbr>Input<wbr>File | From<wbr>Each<wbr>Input<wbr>File | Input<wbr>File[]</span>
+        <span class="property-type">(From<wbr>All<wbr>Input<wbr>File | From<wbr>Each<wbr>Input<wbr>File | Input<wbr>File)[]</span>
     </dt>
     <dd>{{% md %}}Defines a list of InputDefinitions. For each InputDefinition, it defines a list of track selections and related metadata.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2540,7 +2540,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inputdefinitions_nodejs" style="color: inherit; text-decoration: inherit;">input<wbr>Definitions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">From<wbr>All<wbr>Input<wbr>File<wbr>Response | From<wbr>Each<wbr>Input<wbr>File<wbr>Response | Input<wbr>File<wbr>Response[]</span>
+        <span class="property-type">(From<wbr>All<wbr>Input<wbr>File<wbr>Response | From<wbr>Each<wbr>Input<wbr>File<wbr>Response | Input<wbr>File<wbr>Response)[]</span>
     </dt>
     <dd>{{% md %}}Defines a list of InputDefinitions. For each InputDefinition, it defines a list of track selections and related metadata.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2742,7 +2742,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inputdefinitions_nodejs" style="color: inherit; text-decoration: inherit;">input<wbr>Definitions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">From<wbr>All<wbr>Input<wbr>File | From<wbr>Each<wbr>Input<wbr>File | Input<wbr>File[]</span>
+        <span class="property-type">(From<wbr>All<wbr>Input<wbr>File | From<wbr>Each<wbr>Input<wbr>File | Input<wbr>File)[]</span>
     </dt>
     <dd>{{% md %}}Defines a list of InputDefinitions. For each InputDefinition, it defines a list of track selections and related metadata.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2952,7 +2952,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inputdefinitions_nodejs" style="color: inherit; text-decoration: inherit;">input<wbr>Definitions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">From<wbr>All<wbr>Input<wbr>File<wbr>Response | From<wbr>Each<wbr>Input<wbr>File<wbr>Response | Input<wbr>File<wbr>Response[]</span>
+        <span class="property-type">(From<wbr>All<wbr>Input<wbr>File<wbr>Response | From<wbr>Each<wbr>Input<wbr>File<wbr>Response | Input<wbr>File<wbr>Response)[]</span>
     </dt>
     <dd>{{% md %}}Defines a list of InputDefinitions. For each InputDefinition, it defines a list of track selections and related metadata.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3158,7 +3158,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inputs_nodejs" style="color: inherit; text-decoration: inherit;">inputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Job<wbr>Input<wbr>Asset | Job<wbr>Input<wbr>Clip | Job<wbr>Input<wbr>Http | Job<wbr>Input<wbr>Sequence | Job<wbr>Inputs[]</span>
+        <span class="property-type">(Job<wbr>Input<wbr>Asset | Job<wbr>Input<wbr>Clip | Job<wbr>Input<wbr>Http | Job<wbr>Input<wbr>Sequence | Job<wbr>Inputs)[]</span>
     </dt>
     <dd>{{% md %}}List of inputs to a Job.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3208,7 +3208,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inputs_nodejs" style="color: inherit; text-decoration: inherit;">inputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Job<wbr>Input<wbr>Asset<wbr>Response | Job<wbr>Input<wbr>Clip<wbr>Response | Job<wbr>Input<wbr>Http<wbr>Response | Job<wbr>Input<wbr>Sequence<wbr>Response | Job<wbr>Inputs<wbr>Response[]</span>
+        <span class="property-type">(Job<wbr>Input<wbr>Asset<wbr>Response | Job<wbr>Input<wbr>Clip<wbr>Response | Job<wbr>Input<wbr>Http<wbr>Response | Job<wbr>Input<wbr>Sequence<wbr>Response | Job<wbr>Inputs<wbr>Response)[]</span>
     </dt>
     <dd>{{% md %}}List of inputs to a Job.{{% /md %}}</dd></dl>
 {{% /choosable %}}

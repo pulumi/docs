@@ -5,7 +5,7 @@ title_tag: "aws.redshift.SecurityGroup"
 meta_desc: "Documentation for the aws.redshift.SecurityGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/SecurityGroup/"
-layout: api-doc-resource
+layout: api
 ---
 
 

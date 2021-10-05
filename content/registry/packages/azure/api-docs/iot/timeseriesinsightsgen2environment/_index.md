@@ -5,7 +5,7 @@ title_tag: "azure.iot.TimeSeriesInsightsGen2Environment"
 meta_desc: "Documentation for the azure.iot.TimeSeriesInsightsGen2Environment resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/TimeSeriesInsightsGen2Environment/"
-layout: api-doc-resource
+layout: api
 ---
 
 

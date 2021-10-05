@@ -5,7 +5,7 @@ title_tag: "azure.iot.IotHubCertificate"
 meta_desc: "Documentation for the azure.iot.IotHubCertificate resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/IotHubCertificate/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "cloudamqp.Notification"
 meta_desc: "Documentation for the cloudamqp.Notification resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/cloudamqp/Notification/"
-layout: api-doc-resource
+layout: api
 ---
 
 

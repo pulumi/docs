@@ -5,7 +5,7 @@ title_tag: "google-native.composer/v1beta1.Environment"
 meta_desc: "Documentation for the google-native.composer/v1beta1.Environment resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/google-native/Environment/"
-layout: api-doc-resource
+layout: api
 ---
 
 

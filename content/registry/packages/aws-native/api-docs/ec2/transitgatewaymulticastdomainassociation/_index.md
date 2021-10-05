@@ -5,7 +5,7 @@ title_tag: "aws-native.ec2.TransitGatewayMulticastDomainAssociation"
 meta_desc: "Documentation for the aws-native.ec2.TransitGatewayMulticastDomainAssociation resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws-native/TransitGatewayMulticastDomainAssociation/"
-layout: api-doc-resource
+layout: api
 ---
 
 

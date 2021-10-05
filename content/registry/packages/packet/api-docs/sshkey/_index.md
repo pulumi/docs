@@ -5,7 +5,7 @@ title_tag: "packet.SshKey"
 meta_desc: "Documentation for the packet.SshKey resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/packet/SshKey/"
-layout: api-doc-resource
+layout: api
 ---
 
 

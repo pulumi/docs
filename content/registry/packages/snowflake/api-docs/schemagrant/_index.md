@@ -5,7 +5,7 @@ title_tag: "snowflake.SchemaGrant"
 meta_desc: "Documentation for the snowflake.SchemaGrant resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/snowflake/SchemaGrant/"
-layout: api-doc-resource
+layout: api
 ---
 
 

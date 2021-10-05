@@ -5,7 +5,7 @@ title_tag: "google-native.deploymentmanager/alpha.Deployment"
 meta_desc: "Documentation for the google-native.deploymentmanager/alpha.Deployment resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/google-native/Deployment/"
-layout: api-doc-resource
+layout: api
 ---
 
 

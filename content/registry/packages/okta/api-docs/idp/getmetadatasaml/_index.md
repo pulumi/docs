@@ -5,7 +5,7 @@ title_tag: "okta.idp.getMetadataSaml"
 meta_desc: "Documentation for the okta.idp.getMetadataSaml function with examples, input properties, output properties, and supporting types."
 aliases:
     - "/docs/reference/pkg///"
-layout: api-doc-resource
+layout: api
 ---
 
 

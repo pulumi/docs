@@ -5,7 +5,7 @@ title_tag: "azure-native.alertsmanagement.HealthAlert"
 meta_desc: "Documentation for the azure-native.alertsmanagement.HealthAlert resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/HealthAlert/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "google-native.dns/v1beta2.Change"
 meta_desc: "Documentation for the google-native.dns/v1beta2.Change resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/google-native/Change/"
-layout: api-doc-resource
+layout: api
 ---
 
 

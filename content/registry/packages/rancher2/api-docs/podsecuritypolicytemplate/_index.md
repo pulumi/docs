@@ -5,7 +5,7 @@ title_tag: "rancher2.PodSecurityPolicyTemplate"
 meta_desc: "Documentation for the rancher2.PodSecurityPolicyTemplate resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/rancher2/PodSecurityPolicyTemplate/"
-layout: api-doc-resource
+layout: api
 ---
 
 

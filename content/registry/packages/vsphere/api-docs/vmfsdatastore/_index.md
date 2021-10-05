@@ -5,7 +5,7 @@ title_tag: "vsphere.VmfsDatastore"
 meta_desc: "Documentation for the vsphere.VmfsDatastore resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/vsphere/VmfsDatastore/"
-layout: api-doc-resource
+layout: api
 ---
 
 

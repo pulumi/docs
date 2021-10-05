@@ -5,7 +5,7 @@ title_tag: "alicloud.dataworks.Folder"
 meta_desc: "Documentation for the alicloud.dataworks.Folder resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/alicloud/Folder/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "wavefront.CloudIntegrationAzureActivityLog"
 meta_desc: "Documentation for the wavefront.CloudIntegrationAzureActivityLog resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/wavefront/CloudIntegrationAzureActivityLog/"
-layout: api-doc-resource
+layout: api
 ---
 
 

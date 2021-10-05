@@ -5,7 +5,7 @@ title_tag: "cloudinit.getConfig"
 meta_desc: "Documentation for the cloudinit.getConfig function with examples, input properties, output properties, and supporting types."
 aliases:
     - "/docs/reference/pkg///"
-layout: api-doc-resource
+layout: api
 ---
 
 

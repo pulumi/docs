@@ -5,7 +5,7 @@ title_tag: "cloudflare.FirewallRule"
 meta_desc: "Documentation for the cloudflare.FirewallRule resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/cloudflare/FirewallRule/"
-layout: api-doc-resource
+layout: api
 ---
 
 

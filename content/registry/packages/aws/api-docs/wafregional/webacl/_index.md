@@ -5,7 +5,7 @@ title_tag: "aws.wafregional.WebAcl"
 meta_desc: "Documentation for the aws.wafregional.WebAcl resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/WebAcl/"
-layout: api-doc-resource
+layout: api
 ---
 
 

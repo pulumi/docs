@@ -5,7 +5,7 @@ title_tag: "alicloud.directmail.Receivers"
 meta_desc: "Documentation for the alicloud.directmail.Receivers resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/alicloud/Receivers/"
-layout: api-doc-resource
+layout: api
 ---
 
 

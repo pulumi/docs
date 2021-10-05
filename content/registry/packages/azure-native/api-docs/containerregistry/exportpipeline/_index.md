@@ -5,7 +5,7 @@ title_tag: "azure-native.containerregistry.ExportPipeline"
 meta_desc: "Documentation for the azure-native.containerregistry.ExportPipeline resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/ExportPipeline/"
-layout: api-doc-resource
+layout: api
 ---
 
 
@@ -495,7 +495,7 @@ The ExportPipeline resource accepts the following [input]({{< relref "/docs/intr
 <a href="#options_nodejs" style="color: inherit; text-decoration: inherit;">options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Pipeline<wbr>Options[]</span>
+        <span class="property-type">(string | Pipeline<wbr>Options)[]</span>
     </dt>
     <dd>{{% md %}}The list of all options configured for the pipeline.{{% /md %}}</dd></dl>
 {{% /choosable %}}

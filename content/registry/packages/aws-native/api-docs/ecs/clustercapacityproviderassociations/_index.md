@@ -5,7 +5,7 @@ title_tag: "aws-native.ecs.ClusterCapacityProviderAssociations"
 meta_desc: "Documentation for the aws-native.ecs.ClusterCapacityProviderAssociations resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws-native/ClusterCapacityProviderAssociations/"
-layout: api-doc-resource
+layout: api
 ---
 
 
@@ -569,7 +569,7 @@ The ClusterCapacityProviderAssociations resource accepts the following [input]({
 <a href="#capacityproviders_nodejs" style="color: inherit; text-decoration: inherit;">capacity<wbr>Providers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Cluster<wbr>Capacity<wbr>Provider<wbr>Associations<wbr>Capacity<wbr>Provider | string[]</span>
+        <span class="property-type">(Cluster<wbr>Capacity<wbr>Provider<wbr>Associations<wbr>Capacity<wbr>Provider | string)[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">

@@ -5,7 +5,7 @@ title_tag: "azure.eventhub.EventHubConsumerGroup"
 meta_desc: "Documentation for the azure.eventhub.EventHubConsumerGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/EventHubConsumerGroup/"
-layout: api-doc-resource
+layout: api
 ---
 
 

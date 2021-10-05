@@ -5,7 +5,7 @@ title_tag: "aws.cognito.IdentityProvider"
 meta_desc: "Documentation for the aws.cognito.IdentityProvider resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/IdentityProvider/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "kubernetes.core/v1.PersistentVolumeClaimList"
 meta_desc: "Documentation for the kubernetes.core/v1.PersistentVolumeClaimList resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/kubernetes/PersistentVolumeClaimList/"
-layout: api-doc-resource
+layout: api
 ---
 
 

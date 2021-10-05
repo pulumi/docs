@@ -5,7 +5,7 @@ title_tag: "azure.mssql.ServerExtendedAuditingPolicy"
 meta_desc: "Documentation for the azure.mssql.ServerExtendedAuditingPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/ServerExtendedAuditingPolicy/"
-layout: api-doc-resource
+layout: api
 ---
 
 

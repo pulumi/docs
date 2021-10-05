@@ -5,7 +5,7 @@ title_tag: "gcp.compute.RegionAutoscaler"
 meta_desc: "Documentation for the gcp.compute.RegionAutoscaler resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/gcp/RegionAutoscaler/"
-layout: api-doc-resource
+layout: api
 ---
 
 

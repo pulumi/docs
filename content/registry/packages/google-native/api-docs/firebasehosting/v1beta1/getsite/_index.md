@@ -5,7 +5,7 @@ title_tag: "google-native.firebasehosting/v1beta1.getSite"
 meta_desc: "Documentation for the google-native.firebasehosting/v1beta1.getSite function with examples, input properties, output properties, and supporting types."
 aliases:
     - "/docs/reference/pkg///"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "azure-native.azuredata.SqlServerRegistration"
 meta_desc: "Documentation for the azure-native.azuredata.SqlServerRegistration resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/SqlServerRegistration/"
-layout: api-doc-resource
+layout: api
 ---
 
 

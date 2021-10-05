@@ -5,7 +5,7 @@ title_tag: "azure.notificationhub.Namespace"
 meta_desc: "Documentation for the azure.notificationhub.Namespace resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/Namespace/"
-layout: api-doc-resource
+layout: api
 ---
 
 

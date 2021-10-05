@@ -5,7 +5,7 @@ title_tag: "gcp.apigee.Organization"
 meta_desc: "Documentation for the gcp.apigee.Organization resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/gcp/Organization/"
-layout: api-doc-resource
+layout: api
 ---
 
 

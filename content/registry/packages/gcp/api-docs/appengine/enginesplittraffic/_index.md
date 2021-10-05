@@ -5,7 +5,7 @@ title_tag: "gcp.appengine.EngineSplitTraffic"
 meta_desc: "Documentation for the gcp.appengine.EngineSplitTraffic resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/gcp/EngineSplitTraffic/"
-layout: api-doc-resource
+layout: api
 ---
 
 

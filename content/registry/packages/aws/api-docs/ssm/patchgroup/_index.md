@@ -5,7 +5,7 @@ title_tag: "aws.ssm.PatchGroup"
 meta_desc: "Documentation for the aws.ssm.PatchGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/PatchGroup/"
-layout: api-doc-resource
+layout: api
 ---
 
 

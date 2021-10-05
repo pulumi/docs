@@ -5,7 +5,7 @@ title_tag: "alicloud.nas.MountTarget"
 meta_desc: "Documentation for the alicloud.nas.MountTarget resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/alicloud/MountTarget/"
-layout: api-doc-resource
+layout: api
 ---
 
 

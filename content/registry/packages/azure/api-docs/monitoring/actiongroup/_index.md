@@ -5,7 +5,7 @@ title_tag: "azure.monitoring.ActionGroup"
 meta_desc: "Documentation for the azure.monitoring.ActionGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/ActionGroup/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "aws.ec2.NetworkAcl"
 meta_desc: "Documentation for the aws.ec2.NetworkAcl resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/NetworkAcl/"
-layout: api-doc-resource
+layout: api
 ---
 
 

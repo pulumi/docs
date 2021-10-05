@@ -5,7 +5,7 @@ title_tag: "aws.apigateway.DomainName"
 meta_desc: "Documentation for the aws.apigateway.DomainName resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/DomainName/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "google-native.healthcare/v1.getConsentStore"
 meta_desc: "Documentation for the google-native.healthcare/v1.getConsentStore function with examples, input properties, output properties, and supporting types."
 aliases:
     - "/docs/reference/pkg///"
-layout: api-doc-resource
+layout: api
 ---
 
 

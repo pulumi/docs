@@ -5,7 +5,7 @@ title_tag: "aws.efs.AccessPoint"
 meta_desc: "Documentation for the aws.efs.AccessPoint resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/AccessPoint/"
-layout: api-doc-resource
+layout: api
 ---
 
 

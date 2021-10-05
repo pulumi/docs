@@ -5,7 +5,7 @@ title_tag: "azure-native.security.getDeviceSecurityGroup"
 meta_desc: "Documentation for the azure-native.security.getDeviceSecurityGroup function with examples, input properties, output properties, and supporting types."
 aliases:
     - "/docs/reference/pkg///"
-layout: api-doc-resource
+layout: api
 ---
 
 

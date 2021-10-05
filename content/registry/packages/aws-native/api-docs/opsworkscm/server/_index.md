@@ -5,7 +5,7 @@ title_tag: "aws-native.opsworkscm.Server"
 meta_desc: "Documentation for the aws-native.opsworkscm.Server resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws-native/Server/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "google-native.compute/alpha.ReservationIamPolicy"
 meta_desc: "Documentation for the google-native.compute/alpha.ReservationIamPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/google-native/ReservationIamPolicy/"
-layout: api-doc-resource
+layout: api
 ---
 
 

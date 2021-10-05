@@ -5,7 +5,7 @@ title_tag: "aws-native.ce.CostCategory"
 meta_desc: "Documentation for the aws-native.ce.CostCategory resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws-native/CostCategory/"
-layout: api-doc-resource
+layout: api
 ---
 
 

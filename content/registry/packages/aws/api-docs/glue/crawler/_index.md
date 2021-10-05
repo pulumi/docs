@@ -5,7 +5,7 @@ title_tag: "aws.glue.Crawler"
 meta_desc: "Documentation for the aws.glue.Crawler resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/Crawler/"
-layout: api-doc-resource
+layout: api
 ---
 
 

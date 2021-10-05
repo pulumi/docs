@@ -5,7 +5,7 @@ title_tag: "azure.cosmosdb.NotebookWorkspace"
 meta_desc: "Documentation for the azure.cosmosdb.NotebookWorkspace resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/NotebookWorkspace/"
-layout: api-doc-resource
+layout: api
 ---
 
 

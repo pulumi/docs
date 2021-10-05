@@ -5,7 +5,7 @@ title_tag: "azure.storage.SyncCloudEndpoint"
 meta_desc: "Documentation for the azure.storage.SyncCloudEndpoint resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/SyncCloudEndpoint/"
-layout: api-doc-resource
+layout: api
 ---
 
 

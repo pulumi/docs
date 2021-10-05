@@ -5,7 +5,7 @@ title_tag: "aws.appmesh.Mesh"
 meta_desc: "Documentation for the aws.appmesh.Mesh resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/Mesh/"
-layout: api-doc-resource
+layout: api
 ---
 
 

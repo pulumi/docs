@@ -5,7 +5,7 @@ title_tag: "gcp.containeranalysis.Note"
 meta_desc: "Documentation for the gcp.containeranalysis.Note resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/gcp/Note/"
-layout: api-doc-resource
+layout: api
 ---
 
 

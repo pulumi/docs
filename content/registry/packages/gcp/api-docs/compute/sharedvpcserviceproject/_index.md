@@ -5,7 +5,7 @@ title_tag: "gcp.compute.SharedVPCServiceProject"
 meta_desc: "Documentation for the gcp.compute.SharedVPCServiceProject resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/gcp/SharedVPCServiceProject/"
-layout: api-doc-resource
+layout: api
 ---
 
 

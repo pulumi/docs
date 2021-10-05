@@ -5,7 +5,7 @@ title_tag: "azure-native.databoxedge.IoTRole"
 meta_desc: "Documentation for the azure-native.databoxedge.IoTRole resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/IoTRole/"
-layout: api-doc-resource
+layout: api
 ---
 
 

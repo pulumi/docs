@@ -5,7 +5,7 @@ title_tag: "alicloud.dms.EnterpriseInstance"
 meta_desc: "Documentation for the alicloud.dms.EnterpriseInstance resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/alicloud/EnterpriseInstance/"
-layout: api-doc-resource
+layout: api
 ---
 
 

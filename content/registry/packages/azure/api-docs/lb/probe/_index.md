@@ -5,7 +5,7 @@ title_tag: "azure.lb.Probe"
 meta_desc: "Documentation for the azure.lb.Probe resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/Probe/"
-layout: api-doc-resource
+layout: api
 ---
 
 

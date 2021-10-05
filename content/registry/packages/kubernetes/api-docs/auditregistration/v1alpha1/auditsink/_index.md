@@ -5,7 +5,7 @@ title_tag: "kubernetes.auditregistration.k8s.io/v1alpha1.AuditSink"
 meta_desc: "Documentation for the kubernetes.auditregistration.k8s.io/v1alpha1.AuditSink resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/kubernetes/AuditSink/"
-layout: api-doc-resource
+layout: api
 ---
 
 

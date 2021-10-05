@@ -5,7 +5,7 @@ title_tag: "gcp.billing.AccountIamBinding"
 meta_desc: "Documentation for the gcp.billing.AccountIamBinding resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/gcp/AccountIamBinding/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "yandex.ComputeSnapshot"
 meta_desc: "Documentation for the yandex.ComputeSnapshot resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/yandex/ComputeSnapshot/"
-layout: api-doc-resource
+layout: api
 ---
 
 

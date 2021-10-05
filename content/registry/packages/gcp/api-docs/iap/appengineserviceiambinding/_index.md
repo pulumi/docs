@@ -5,7 +5,7 @@ title_tag: "gcp.iap.AppEngineServiceIamBinding"
 meta_desc: "Documentation for the gcp.iap.AppEngineServiceIamBinding resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/gcp/AppEngineServiceIamBinding/"
-layout: api-doc-resource
+layout: api
 ---
 
 

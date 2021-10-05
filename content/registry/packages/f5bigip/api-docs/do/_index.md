@@ -5,7 +5,7 @@ title_tag: "f5bigip.Do"
 meta_desc: "Documentation for the f5bigip.Do resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/f5bigip/Do/"
-layout: api-doc-resource
+layout: api
 ---
 
 

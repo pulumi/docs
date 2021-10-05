@@ -5,7 +5,7 @@ title_tag: "alicloud.ram.RolePolicyAttachment"
 meta_desc: "Documentation for the alicloud.ram.RolePolicyAttachment resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/alicloud/RolePolicyAttachment/"
-layout: api-doc-resource
+layout: api
 ---
 
 

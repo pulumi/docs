@@ -5,7 +5,7 @@ title_tag: "cloudflare.LoadBalancerMonitor"
 meta_desc: "Documentation for the cloudflare.LoadBalancerMonitor resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/cloudflare/LoadBalancerMonitor/"
-layout: api-doc-resource
+layout: api
 ---
 
 

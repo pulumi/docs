@@ -5,7 +5,7 @@ title_tag: "civo.DnsDomainName"
 meta_desc: "Documentation for the civo.DnsDomainName resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/civo/DnsDomainName/"
-layout: api-doc-resource
+layout: api
 ---
 
 

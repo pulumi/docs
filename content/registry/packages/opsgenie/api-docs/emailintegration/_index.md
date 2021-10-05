@@ -5,7 +5,7 @@ title_tag: "opsgenie.EmailIntegration"
 meta_desc: "Documentation for the opsgenie.EmailIntegration resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/opsgenie/EmailIntegration/"
-layout: api-doc-resource
+layout: api
 ---
 
 

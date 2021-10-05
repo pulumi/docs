@@ -5,7 +5,7 @@ title_tag: "kubernetes.policy/v1beta1.PodDisruptionBudgetList"
 meta_desc: "Documentation for the kubernetes.policy/v1beta1.PodDisruptionBudgetList resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/kubernetes/PodDisruptionBudgetList/"
-layout: api-doc-resource
+layout: api
 ---
 
 

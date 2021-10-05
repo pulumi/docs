@@ -5,7 +5,7 @@ title_tag: "alicloud.pvtz.ZoneRecord"
 meta_desc: "Documentation for the alicloud.pvtz.ZoneRecord resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/alicloud/ZoneRecord/"
-layout: api-doc-resource
+layout: api
 ---
 
 

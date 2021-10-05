@@ -5,7 +5,7 @@ title_tag: "azure.redis.EnterpriseDatabase"
 meta_desc: "Documentation for the azure.redis.EnterpriseDatabase resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/EnterpriseDatabase/"
-layout: api-doc-resource
+layout: api
 ---
 
 

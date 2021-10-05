@@ -5,7 +5,7 @@ title_tag: "signalfx.HeatmapChart"
 meta_desc: "Documentation for the signalfx.HeatmapChart resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/signalfx/HeatmapChart/"
-layout: api-doc-resource
+layout: api
 ---
 
 

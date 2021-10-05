@@ -5,7 +5,7 @@ title_tag: "aws.eks.IdentityProviderConfig"
 meta_desc: "Documentation for the aws.eks.IdentityProviderConfig resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/IdentityProviderConfig/"
-layout: api-doc-resource
+layout: api
 ---
 
 

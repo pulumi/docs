@@ -5,7 +5,7 @@ title_tag: "azure-native.web.WebAppConnectionStrings"
 meta_desc: "Documentation for the azure-native.web.WebAppConnectionStrings resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/WebAppConnectionStrings/"
-layout: api-doc-resource
+layout: api
 ---
 
 

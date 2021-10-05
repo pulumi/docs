@@ -5,7 +5,7 @@ title_tag: "consul.PreparedQuery"
 meta_desc: "Documentation for the consul.PreparedQuery resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/consul/PreparedQuery/"
-layout: api-doc-resource
+layout: api
 ---
 
 

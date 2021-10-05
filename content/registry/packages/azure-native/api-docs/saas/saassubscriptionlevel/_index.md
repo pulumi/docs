@@ -5,7 +5,7 @@ title_tag: "azure-native.saas.SaasSubscriptionLevel"
 meta_desc: "Documentation for the azure-native.saas.SaasSubscriptionLevel resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/SaasSubscriptionLevel/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "consul.AclTokenRoleAttachment"
 meta_desc: "Documentation for the consul.AclTokenRoleAttachment resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/consul/AclTokenRoleAttachment/"
-layout: api-doc-resource
+layout: api
 ---
 
 

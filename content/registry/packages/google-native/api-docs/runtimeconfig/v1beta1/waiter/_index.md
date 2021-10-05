@@ -5,7 +5,7 @@ title_tag: "google-native.runtimeconfig/v1beta1.Waiter"
 meta_desc: "Documentation for the google-native.runtimeconfig/v1beta1.Waiter resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/google-native/Waiter/"
-layout: api-doc-resource
+layout: api
 ---
 
 

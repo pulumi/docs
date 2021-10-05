@@ -5,7 +5,7 @@ title_tag: "azure-native.netapp.BackupPolicy"
 meta_desc: "Documentation for the azure-native.netapp.BackupPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/BackupPolicy/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "wavefront.Dashboard"
 meta_desc: "Documentation for the wavefront.Dashboard resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/wavefront/Dashboard/"
-layout: api-doc-resource
+layout: api
 ---
 
 

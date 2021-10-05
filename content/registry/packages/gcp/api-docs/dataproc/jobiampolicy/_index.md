@@ -5,7 +5,7 @@ title_tag: "gcp.dataproc.JobIAMPolicy"
 meta_desc: "Documentation for the gcp.dataproc.JobIAMPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/gcp/JobIAMPolicy/"
-layout: api-doc-resource
+layout: api
 ---
 
 

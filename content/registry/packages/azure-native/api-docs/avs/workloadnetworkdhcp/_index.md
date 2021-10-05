@@ -5,7 +5,7 @@ title_tag: "azure-native.avs.WorkloadNetworkDhcp"
 meta_desc: "Documentation for the azure-native.avs.WorkloadNetworkDhcp resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/WorkloadNetworkDhcp/"
-layout: api-doc-resource
+layout: api
 ---
 
 

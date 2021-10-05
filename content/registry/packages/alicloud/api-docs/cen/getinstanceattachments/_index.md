@@ -5,7 +5,7 @@ title_tag: "alicloud.cen.getInstanceAttachments"
 meta_desc: "Documentation for the alicloud.cen.getInstanceAttachments function with examples, input properties, output properties, and supporting types."
 aliases:
     - "/docs/reference/pkg///"
-layout: api-doc-resource
+layout: api
 ---
 
 

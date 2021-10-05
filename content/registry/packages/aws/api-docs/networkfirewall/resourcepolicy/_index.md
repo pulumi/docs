@@ -5,7 +5,7 @@ title_tag: "aws.networkfirewall.ResourcePolicy"
 meta_desc: "Documentation for the aws.networkfirewall.ResourcePolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/ResourcePolicy/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "gcp.vertex.AiDataset"
 meta_desc: "Documentation for the gcp.vertex.AiDataset resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/gcp/AiDataset/"
-layout: api-doc-resource
+layout: api
 ---
 
 

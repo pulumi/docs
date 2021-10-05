@@ -5,7 +5,7 @@ title_tag: "azure-native.compute.DiskAccess"
 meta_desc: "Documentation for the azure-native.compute.DiskAccess resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/DiskAccess/"
-layout: api-doc-resource
+layout: api
 ---
 
 

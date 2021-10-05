@@ -5,7 +5,7 @@ title_tag: "vault.identity.getEntity"
 meta_desc: "Documentation for the vault.identity.getEntity function with examples, input properties, output properties, and supporting types."
 aliases:
     - "/docs/reference/pkg///"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "alicloud.vpc.NatIpCidr"
 meta_desc: "Documentation for the alicloud.vpc.NatIpCidr resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/alicloud/NatIpCidr/"
-layout: api-doc-resource
+layout: api
 ---
 
 

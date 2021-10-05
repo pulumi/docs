@@ -5,7 +5,7 @@ title_tag: "alicloud.kvstore.getConnections"
 meta_desc: "Documentation for the alicloud.kvstore.getConnections function with examples, input properties, output properties, and supporting types."
 aliases:
     - "/docs/reference/pkg///"
-layout: api-doc-resource
+layout: api
 ---
 
 

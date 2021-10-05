@@ -5,7 +5,7 @@ title_tag: "aws-native.stepfunctions.StateMachine"
 meta_desc: "Documentation for the aws-native.stepfunctions.StateMachine resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws-native/StateMachine/"
-layout: api-doc-resource
+layout: api
 ---
 
 

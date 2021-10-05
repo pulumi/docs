@@ -5,7 +5,7 @@ title_tag: "google-native.dialogflow/v3beta1.Page"
 meta_desc: "Documentation for the google-native.dialogflow/v3beta1.Page resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/google-native/Page/"
-layout: api-doc-resource
+layout: api
 ---
 
 

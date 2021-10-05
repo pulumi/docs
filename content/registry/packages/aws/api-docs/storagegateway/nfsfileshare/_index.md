@@ -5,7 +5,7 @@ title_tag: "aws.storagegateway.NfsFileShare"
 meta_desc: "Documentation for the aws.storagegateway.NfsFileShare resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/NfsFileShare/"
-layout: api-doc-resource
+layout: api
 ---
 
 

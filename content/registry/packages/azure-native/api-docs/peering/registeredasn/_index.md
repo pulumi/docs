@@ -5,7 +5,7 @@ title_tag: "azure-native.peering.RegisteredAsn"
 meta_desc: "Documentation for the azure-native.peering.RegisteredAsn resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/RegisteredAsn/"
-layout: api-doc-resource
+layout: api
 ---
 
 

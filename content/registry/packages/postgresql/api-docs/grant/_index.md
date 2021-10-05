@@ -5,7 +5,7 @@ title_tag: "postgresql.Grant"
 meta_desc: "Documentation for the postgresql.Grant resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/postgresql/Grant/"
-layout: api-doc-resource
+layout: api
 ---
 
 

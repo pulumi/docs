@@ -5,7 +5,7 @@ title_tag: "akamai.AppSecCustomRule"
 meta_desc: "Documentation for the akamai.AppSecCustomRule resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/akamai/AppSecCustomRule/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "azure-native.media.Transform"
 meta_desc: "Documentation for the azure-native.media.Transform resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/Transform/"
-layout: api-doc-resource
+layout: api
 ---
 
 
@@ -3170,7 +3170,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#overlays_nodejs" style="color: inherit; text-decoration: inherit;">overlays</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Audio<wbr>Overlay | Video<wbr>Overlay[]</span>
+        <span class="property-type">(Audio<wbr>Overlay | Video<wbr>Overlay)[]</span>
     </dt>
     <dd>{{% md %}}The properties of overlays to be applied to the input video. These could be audio, image or video overlays.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3316,7 +3316,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#overlays_nodejs" style="color: inherit; text-decoration: inherit;">overlays</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Audio<wbr>Overlay<wbr>Response | Video<wbr>Overlay<wbr>Response[]</span>
+        <span class="property-type">(Audio<wbr>Overlay<wbr>Response | Video<wbr>Overlay<wbr>Response)[]</span>
     </dt>
     <dd>{{% md %}}The properties of overlays to be applied to the input video. These could be audio, image or video overlays.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9638,7 +9638,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#codecs_nodejs" style="color: inherit; text-decoration: inherit;">codecs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Aac<wbr>Audio | Audio | Copy<wbr>Audio | Copy<wbr>Video | H264Video | H265Video | Image | Jpg<wbr>Image | Png<wbr>Image | Video[]</span>
+        <span class="property-type">(Aac<wbr>Audio | Audio | Copy<wbr>Audio | Copy<wbr>Video | H264Video | H265Video | Image | Jpg<wbr>Image | Png<wbr>Image | Video)[]</span>
     </dt>
     <dd>{{% md %}}The list of codecs to be used when encoding the input video.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9646,7 +9646,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#formats_nodejs" style="color: inherit; text-decoration: inherit;">formats</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Image<wbr>Format | Jpg<wbr>Format | Mp4Format | Multi<wbr>Bitrate<wbr>Format | Png<wbr>Format | Transport<wbr>Stream<wbr>Format[]</span>
+        <span class="property-type">(Image<wbr>Format | Jpg<wbr>Format | Mp4Format | Multi<wbr>Bitrate<wbr>Format | Png<wbr>Format | Transport<wbr>Stream<wbr>Format)[]</span>
     </dt>
     <dd>{{% md %}}The list of outputs to be produced by the encoder.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9752,7 +9752,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#codecs_nodejs" style="color: inherit; text-decoration: inherit;">codecs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Aac<wbr>Audio<wbr>Response | Audio<wbr>Response | Copy<wbr>Audio<wbr>Response | Copy<wbr>Video<wbr>Response | H264Video<wbr>Response | H265Video<wbr>Response | Image<wbr>Response | Jpg<wbr>Image<wbr>Response | Png<wbr>Image<wbr>Response | Video<wbr>Response[]</span>
+        <span class="property-type">(Aac<wbr>Audio<wbr>Response | Audio<wbr>Response | Copy<wbr>Audio<wbr>Response | Copy<wbr>Video<wbr>Response | H264Video<wbr>Response | H265Video<wbr>Response | Image<wbr>Response | Jpg<wbr>Image<wbr>Response | Png<wbr>Image<wbr>Response | Video<wbr>Response)[]</span>
     </dt>
     <dd>{{% md %}}The list of codecs to be used when encoding the input video.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9760,7 +9760,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#formats_nodejs" style="color: inherit; text-decoration: inherit;">formats</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Image<wbr>Format<wbr>Response | Jpg<wbr>Format<wbr>Response | Mp4Format<wbr>Response | Multi<wbr>Bitrate<wbr>Format<wbr>Response | Png<wbr>Format<wbr>Response | Transport<wbr>Stream<wbr>Format<wbr>Response[]</span>
+        <span class="property-type">(Image<wbr>Format<wbr>Response | Jpg<wbr>Format<wbr>Response | Mp4Format<wbr>Response | Multi<wbr>Bitrate<wbr>Format<wbr>Response | Png<wbr>Format<wbr>Response | Transport<wbr>Stream<wbr>Format<wbr>Response)[]</span>
     </dt>
     <dd>{{% md %}}The list of outputs to be produced by the encoder.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

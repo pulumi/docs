@@ -5,7 +5,7 @@ title_tag: "alicloud.pvtz.Zone"
 meta_desc: "Documentation for the alicloud.pvtz.Zone resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/alicloud/Zone/"
-layout: api-doc-resource
+layout: api
 ---
 
 

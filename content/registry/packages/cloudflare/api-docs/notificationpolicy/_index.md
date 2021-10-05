@@ -5,7 +5,7 @@ title_tag: "cloudflare.NotificationPolicy"
 meta_desc: "Documentation for the cloudflare.NotificationPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/cloudflare/NotificationPolicy/"
-layout: api-doc-resource
+layout: api
 ---
 
 

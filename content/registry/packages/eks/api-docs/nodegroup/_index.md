@@ -5,7 +5,7 @@ title_tag: "eks.NodeGroup"
 meta_desc: "Documentation for the eks.NodeGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/eks/NodeGroup/"
-layout: api-doc-resource
+layout: api
 ---
 
 

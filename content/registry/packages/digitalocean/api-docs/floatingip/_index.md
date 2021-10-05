@@ -5,7 +5,7 @@ title_tag: "digitalocean.FloatingIp"
 meta_desc: "Documentation for the digitalocean.FloatingIp resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/digitalocean/FloatingIp/"
-layout: api-doc-resource
+layout: api
 ---
 
 

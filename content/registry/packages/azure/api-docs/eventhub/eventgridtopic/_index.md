@@ -5,7 +5,7 @@ title_tag: "azure.eventhub.EventGridTopic"
 meta_desc: "Documentation for the azure.eventhub.EventGridTopic resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/EventGridTopic/"
-layout: api-doc-resource
+layout: api
 ---
 
 

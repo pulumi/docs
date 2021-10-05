@@ -5,7 +5,7 @@ title_tag: "azure.backup.PolicyVM"
 meta_desc: "Documentation for the azure.backup.PolicyVM resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/PolicyVM/"
-layout: api-doc-resource
+layout: api
 ---
 
 

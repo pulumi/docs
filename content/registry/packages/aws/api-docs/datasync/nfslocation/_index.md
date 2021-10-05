@@ -5,7 +5,7 @@ title_tag: "aws.datasync.NfsLocation"
 meta_desc: "Documentation for the aws.datasync.NfsLocation resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/NfsLocation/"
-layout: api-doc-resource
+layout: api
 ---
 
 

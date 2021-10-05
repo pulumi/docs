@@ -5,7 +5,7 @@ title_tag: "aws-native.databrew.Project"
 meta_desc: "Documentation for the aws-native.databrew.Project resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws-native/Project/"
-layout: api-doc-resource
+layout: api
 ---
 
 

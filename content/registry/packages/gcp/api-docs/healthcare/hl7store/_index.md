@@ -5,7 +5,7 @@ title_tag: "gcp.healthcare.Hl7Store"
 meta_desc: "Documentation for the gcp.healthcare.Hl7Store resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/gcp/Hl7Store/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "snowflake.Pipe"
 meta_desc: "Documentation for the snowflake.Pipe resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/snowflake/Pipe/"
-layout: api-doc-resource
+layout: api
 ---
 
 

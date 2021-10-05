@@ -5,7 +5,7 @@ title_tag: "google-native.dialogflow/v2beta1.KnowledgeBase"
 meta_desc: "Documentation for the google-native.dialogflow/v2beta1.KnowledgeBase resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/google-native/KnowledgeBase/"
-layout: api-doc-resource
+layout: api
 ---
 
 

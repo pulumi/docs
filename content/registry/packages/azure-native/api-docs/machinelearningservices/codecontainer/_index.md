@@ -5,7 +5,7 @@ title_tag: "azure-native.machinelearningservices.CodeContainer"
 meta_desc: "Documentation for the azure-native.machinelearningservices.CodeContainer resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/CodeContainer/"
-layout: api-doc-resource
+layout: api
 ---
 
 

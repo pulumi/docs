@@ -5,7 +5,7 @@ title_tag: "minio.Provider"
 meta_desc: "Documentation for the minio.Provider resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/minio/minio/"
-layout: api-doc-resource
+layout: api
 ---
 
 

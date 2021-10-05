@@ -5,7 +5,7 @@ title_tag: "f5bigip.sys.Ntp"
 meta_desc: "Documentation for the f5bigip.sys.Ntp resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/f5bigip/Ntp/"
-layout: api-doc-resource
+layout: api
 ---
 
 

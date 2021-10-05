@@ -5,7 +5,7 @@ title_tag: "gcp.serviceAccount.Key"
 meta_desc: "Documentation for the gcp.serviceAccount.Key resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/gcp/Key/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "alicloud.rocketmq.Topic"
 meta_desc: "Documentation for the alicloud.rocketmq.Topic resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/alicloud/Topic/"
-layout: api-doc-resource
+layout: api
 ---
 
 

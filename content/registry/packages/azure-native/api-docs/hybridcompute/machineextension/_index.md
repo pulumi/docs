@@ -5,7 +5,7 @@ title_tag: "azure-native.hybridcompute.MachineExtension"
 meta_desc: "Documentation for the azure-native.hybridcompute.MachineExtension resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/MachineExtension/"
-layout: api-doc-resource
+layout: api
 ---
 
 

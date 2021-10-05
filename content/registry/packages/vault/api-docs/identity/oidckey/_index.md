@@ -5,7 +5,7 @@ title_tag: "vault.identity.OidcKey"
 meta_desc: "Documentation for the vault.identity.OidcKey resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/vault/OidcKey/"
-layout: api-doc-resource
+layout: api
 ---
 
 

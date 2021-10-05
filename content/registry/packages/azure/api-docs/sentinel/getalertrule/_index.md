@@ -5,7 +5,7 @@ title_tag: "azure.sentinel.getAlertRule"
 meta_desc: "Documentation for the azure.sentinel.getAlertRule function with examples, input properties, output properties, and supporting types."
 aliases:
     - "/docs/reference/pkg///"
-layout: api-doc-resource
+layout: api
 ---
 
 

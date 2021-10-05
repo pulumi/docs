@@ -5,7 +5,7 @@ title_tag: "azure.redis.LinkedServer"
 meta_desc: "Documentation for the azure.redis.LinkedServer resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/LinkedServer/"
-layout: api-doc-resource
+layout: api
 ---
 
 

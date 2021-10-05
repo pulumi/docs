@@ -5,7 +5,7 @@ title_tag: "gcp.servicedirectory.Endpoint"
 meta_desc: "Documentation for the gcp.servicedirectory.Endpoint resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/gcp/Endpoint/"
-layout: api-doc-resource
+layout: api
 ---
 
 

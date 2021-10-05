@@ -5,7 +5,7 @@ title_tag: "sumologic.Content"
 meta_desc: "Documentation for the sumologic.Content resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/sumologic/Content/"
-layout: api-doc-resource
+layout: api
 ---
 
 

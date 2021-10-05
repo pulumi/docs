@@ -5,7 +5,7 @@ title_tag: "azure.cosmosdb.SqlStoredProcedure"
 meta_desc: "Documentation for the azure.cosmosdb.SqlStoredProcedure resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/SqlStoredProcedure/"
-layout: api-doc-resource
+layout: api
 ---
 
 

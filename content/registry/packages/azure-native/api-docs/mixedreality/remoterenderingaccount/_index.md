@@ -5,7 +5,7 @@ title_tag: "azure-native.mixedreality.RemoteRenderingAccount"
 meta_desc: "Documentation for the azure-native.mixedreality.RemoteRenderingAccount resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/RemoteRenderingAccount/"
-layout: api-doc-resource
+layout: api
 ---
 
 

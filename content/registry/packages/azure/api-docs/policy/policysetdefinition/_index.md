@@ -5,7 +5,7 @@ title_tag: "azure.policy.PolicySetDefinition"
 meta_desc: "Documentation for the azure.policy.PolicySetDefinition resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/PolicySetDefinition/"
-layout: api-doc-resource
+layout: api
 ---
 
 

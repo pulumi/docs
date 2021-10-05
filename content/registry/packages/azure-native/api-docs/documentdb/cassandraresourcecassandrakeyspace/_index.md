@@ -5,7 +5,7 @@ title_tag: "azure-native.documentdb.CassandraResourceCassandraKeyspace"
 meta_desc: "Documentation for the azure-native.documentdb.CassandraResourceCassandraKeyspace resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/CassandraResourceCassandraKeyspace/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "yandex.MdbMongodbCluster"
 meta_desc: "Documentation for the yandex.MdbMongodbCluster resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/yandex/MdbMongodbCluster/"
-layout: api-doc-resource
+layout: api
 ---
 
 

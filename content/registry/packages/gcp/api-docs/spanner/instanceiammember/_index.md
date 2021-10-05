@@ -5,7 +5,7 @@ title_tag: "gcp.spanner.InstanceIAMMember"
 meta_desc: "Documentation for the gcp.spanner.InstanceIAMMember resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/gcp/InstanceIAMMember/"
-layout: api-doc-resource
+layout: api
 ---
 
 

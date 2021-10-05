@@ -5,7 +5,7 @@ title_tag: "dnsimple.EmailForward"
 meta_desc: "Documentation for the dnsimple.EmailForward resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/dnsimple/EmailForward/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "datadog.ApplicationKey"
 meta_desc: "Documentation for the datadog.ApplicationKey resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/datadog/ApplicationKey/"
-layout: api-doc-resource
+layout: api
 ---
 
 

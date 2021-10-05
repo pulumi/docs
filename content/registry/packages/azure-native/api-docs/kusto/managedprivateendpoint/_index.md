@@ -5,7 +5,7 @@ title_tag: "azure-native.kusto.ManagedPrivateEndpoint"
 meta_desc: "Documentation for the azure-native.kusto.ManagedPrivateEndpoint resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/ManagedPrivateEndpoint/"
-layout: api-doc-resource
+layout: api
 ---
 
 

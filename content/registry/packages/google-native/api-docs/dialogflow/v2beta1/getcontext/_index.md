@@ -5,7 +5,7 @@ title_tag: "google-native.dialogflow/v2beta1.getContext"
 meta_desc: "Documentation for the google-native.dialogflow/v2beta1.getContext function with examples, input properties, output properties, and supporting types."
 aliases:
     - "/docs/reference/pkg///"
-layout: api-doc-resource
+layout: api
 ---
 
 

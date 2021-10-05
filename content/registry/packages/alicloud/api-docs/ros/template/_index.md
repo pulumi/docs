@@ -5,7 +5,7 @@ title_tag: "alicloud.ros.Template"
 meta_desc: "Documentation for the alicloud.ros.Template resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/alicloud/Template/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "azure-native.documentdb.SqlResourceSqlRoleAssignment"
 meta_desc: "Documentation for the azure-native.documentdb.SqlResourceSqlRoleAssignment resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/SqlResourceSqlRoleAssignment/"
-layout: api-doc-resource
+layout: api
 ---
 
 

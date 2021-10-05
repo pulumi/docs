@@ -5,7 +5,7 @@ title_tag: "snowflake.Provider"
 meta_desc: "Documentation for the snowflake.Provider resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/snowflake/snowflake/"
-layout: api-doc-resource
+layout: api
 ---
 
 

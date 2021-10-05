@@ -5,7 +5,7 @@ title_tag: "keycloak.openid.UserAttributeProtocolMapper"
 meta_desc: "Documentation for the keycloak.openid.UserAttributeProtocolMapper resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/keycloak/UserAttributeProtocolMapper/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "aws.autoscaling.Tag"
 meta_desc: "Documentation for the aws.autoscaling.Tag resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/Tag/"
-layout: api-doc-resource
+layout: api
 ---
 
 

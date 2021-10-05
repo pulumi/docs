@@ -5,7 +5,7 @@ title_tag: "azure.databoxedge.Order"
 meta_desc: "Documentation for the azure.databoxedge.Order resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/Order/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "spotinst.gke.OceanLaunchSpec"
 meta_desc: "Documentation for the spotinst.gke.OceanLaunchSpec resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/spotinst/OceanLaunchSpec/"
-layout: api-doc-resource
+layout: api
 ---
 
 

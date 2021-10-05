@@ -5,7 +5,7 @@ title_tag: "azure-native.storagecache.StorageTarget"
 meta_desc: "Documentation for the azure-native.storagecache.StorageTarget resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/StorageTarget/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "aws.s3outposts.Endpoint"
 meta_desc: "Documentation for the aws.s3outposts.Endpoint resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/Endpoint/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "vault.identity.GroupPolicies"
 meta_desc: "Documentation for the vault.identity.GroupPolicies resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/vault/GroupPolicies/"
-layout: api-doc-resource
+layout: api
 ---
 
 

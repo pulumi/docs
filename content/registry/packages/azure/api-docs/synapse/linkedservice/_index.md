@@ -5,7 +5,7 @@ title_tag: "azure.synapse.LinkedService"
 meta_desc: "Documentation for the azure.synapse.LinkedService resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/LinkedService/"
-layout: api-doc-resource
+layout: api
 ---
 
 

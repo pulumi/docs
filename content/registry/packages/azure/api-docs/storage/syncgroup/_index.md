@@ -5,7 +5,7 @@ title_tag: "azure.storage.SyncGroup"
 meta_desc: "Documentation for the azure.storage.SyncGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/SyncGroup/"
-layout: api-doc-resource
+layout: api
 ---
 
 

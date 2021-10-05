@@ -5,7 +5,7 @@ title_tag: "gcp.compute.GlobalNetworkEndpoint"
 meta_desc: "Documentation for the gcp.compute.GlobalNetworkEndpoint resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/gcp/GlobalNetworkEndpoint/"
-layout: api-doc-resource
+layout: api
 ---
 
 

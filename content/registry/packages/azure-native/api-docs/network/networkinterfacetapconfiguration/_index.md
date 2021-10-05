@@ -5,7 +5,7 @@ title_tag: "azure-native.network.NetworkInterfaceTapConfiguration"
 meta_desc: "Documentation for the azure-native.network.NetworkInterfaceTapConfiguration resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/NetworkInterfaceTapConfiguration/"
-layout: api-doc-resource
+layout: api
 ---
 
 

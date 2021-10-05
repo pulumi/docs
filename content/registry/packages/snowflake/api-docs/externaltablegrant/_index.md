@@ -5,7 +5,7 @@ title_tag: "snowflake.ExternalTableGrant"
 meta_desc: "Documentation for the snowflake.ExternalTableGrant resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/snowflake/ExternalTableGrant/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "azure-native.kusto.ReadOnlyFollowingDatabase"
 meta_desc: "Documentation for the azure-native.kusto.ReadOnlyFollowingDatabase resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/ReadOnlyFollowingDatabase/"
-layout: api-doc-resource
+layout: api
 ---
 
 

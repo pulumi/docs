@@ -5,7 +5,7 @@ title_tag: "keycloak.UserGroups"
 meta_desc: "Documentation for the keycloak.UserGroups resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/keycloak/UserGroups/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "gcp.compute.NodeGroup"
 meta_desc: "Documentation for the gcp.compute.NodeGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/gcp/NodeGroup/"
-layout: api-doc-resource
+layout: api
 ---
 
 

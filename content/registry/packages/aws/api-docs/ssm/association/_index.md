@@ -5,7 +5,7 @@ title_tag: "aws.ssm.Association"
 meta_desc: "Documentation for the aws.ssm.Association resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/Association/"
-layout: api-doc-resource
+layout: api
 ---
 
 

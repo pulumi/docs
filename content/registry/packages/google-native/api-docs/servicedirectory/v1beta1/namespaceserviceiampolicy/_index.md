@@ -5,7 +5,7 @@ title_tag: "google-native.servicedirectory/v1beta1.NamespaceServiceIamPolicy"
 meta_desc: "Documentation for the google-native.servicedirectory/v1beta1.NamespaceServiceIamPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/google-native/NamespaceServiceIamPolicy/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "gcp.compute.PacketMirroring"
 meta_desc: "Documentation for the gcp.compute.PacketMirroring resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/gcp/PacketMirroring/"
-layout: api-doc-resource
+layout: api
 ---
 
 

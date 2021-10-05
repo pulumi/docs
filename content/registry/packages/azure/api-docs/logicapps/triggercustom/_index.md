@@ -5,7 +5,7 @@ title_tag: "azure.logicapps.TriggerCustom"
 meta_desc: "Documentation for the azure.logicapps.TriggerCustom resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/TriggerCustom/"
-layout: api-doc-resource
+layout: api
 ---
 
 

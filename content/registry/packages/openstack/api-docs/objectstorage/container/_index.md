@@ -5,7 +5,7 @@ title_tag: "openstack.objectstorage.Container"
 meta_desc: "Documentation for the openstack.objectstorage.Container resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/openstack/Container/"
-layout: api-doc-resource
+layout: api
 ---
 
 

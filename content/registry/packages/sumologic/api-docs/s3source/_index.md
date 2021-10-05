@@ -5,7 +5,7 @@ title_tag: "sumologic.S3Source"
 meta_desc: "Documentation for the sumologic.S3Source resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/sumologic/S3Source/"
-layout: api-doc-resource
+layout: api
 ---
 
 

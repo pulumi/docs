@@ -5,7 +5,7 @@ title_tag: "okta.AppUserBaseSchemaProperty"
 meta_desc: "Documentation for the okta.AppUserBaseSchemaProperty resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/okta/AppUserBaseSchemaProperty/"
-layout: api-doc-resource
+layout: api
 ---
 
 

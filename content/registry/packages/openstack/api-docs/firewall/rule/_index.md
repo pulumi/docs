@@ -5,7 +5,7 @@ title_tag: "openstack.firewall.Rule"
 meta_desc: "Documentation for the openstack.firewall.Rule resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/openstack/Rule/"
-layout: api-doc-resource
+layout: api
 ---
 
 

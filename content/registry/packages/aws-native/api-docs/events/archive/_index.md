@@ -5,7 +5,7 @@ title_tag: "aws-native.events.Archive"
 meta_desc: "Documentation for the aws-native.events.Archive resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws-native/Archive/"
-layout: api-doc-resource
+layout: api
 ---
 
 

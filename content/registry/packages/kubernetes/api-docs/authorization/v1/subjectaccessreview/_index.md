@@ -5,7 +5,7 @@ title_tag: "kubernetes.authorization.k8s.io/v1.SubjectAccessReview"
 meta_desc: "Documentation for the kubernetes.authorization.k8s.io/v1.SubjectAccessReview resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/kubernetes/SubjectAccessReview/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "aws.ec2.VolumeAttachment"
 meta_desc: "Documentation for the aws.ec2.VolumeAttachment resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/VolumeAttachment/"
-layout: api-doc-resource
+layout: api
 ---
 
 

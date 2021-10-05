@@ -5,7 +5,7 @@ title_tag: "azure-native.insights.getDiagnosticServiceTokenReadWrite"
 meta_desc: "Documentation for the azure-native.insights.getDiagnosticServiceTokenReadWrite function with examples, input properties, output properties, and supporting types."
 aliases:
     - "/docs/reference/pkg///"
-layout: api-doc-resource
+layout: api
 ---
 
 

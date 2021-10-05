@@ -5,7 +5,7 @@ title_tag: "civo.Network"
 meta_desc: "Documentation for the civo.Network resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/civo/Network/"
-layout: api-doc-resource
+layout: api
 ---
 
 

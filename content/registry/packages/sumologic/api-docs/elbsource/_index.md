@@ -5,7 +5,7 @@ title_tag: "sumologic.ElbSource"
 meta_desc: "Documentation for the sumologic.ElbSource resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/sumologic/ElbSource/"
-layout: api-doc-resource
+layout: api
 ---
 
 

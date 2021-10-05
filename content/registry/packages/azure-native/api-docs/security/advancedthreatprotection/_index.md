@@ -5,7 +5,7 @@ title_tag: "azure-native.security.AdvancedThreatProtection"
 meta_desc: "Documentation for the azure-native.security.AdvancedThreatProtection resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/AdvancedThreatProtection/"
-layout: api-doc-resource
+layout: api
 ---
 
 

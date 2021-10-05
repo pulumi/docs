@@ -5,7 +5,7 @@ title_tag: "azure.network.VirtualNetworkGatewayConnection"
 meta_desc: "Documentation for the azure.network.VirtualNetworkGatewayConnection resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/VirtualNetworkGatewayConnection/"
-layout: api-doc-resource
+layout: api
 ---
 
 

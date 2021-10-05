@@ -5,7 +5,7 @@ title_tag: "azure-native.migrate.MoveCollection"
 meta_desc: "Documentation for the azure-native.migrate.MoveCollection resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/MoveCollection/"
-layout: api-doc-resource
+layout: api
 ---
 
 

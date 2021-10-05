@@ -5,7 +5,7 @@ title_tag: "gcp.bigtable.InstanceIamMember"
 meta_desc: "Documentation for the gcp.bigtable.InstanceIamMember resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/gcp/InstanceIamMember/"
-layout: api-doc-resource
+layout: api
 ---
 
 

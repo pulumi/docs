@@ -5,7 +5,7 @@ title_tag: "azure-native.authorization.RoleDefinition"
 meta_desc: "Documentation for the azure-native.authorization.RoleDefinition resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/RoleDefinition/"
-layout: api-doc-resource
+layout: api
 ---
 
 

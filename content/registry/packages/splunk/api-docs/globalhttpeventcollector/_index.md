@@ -5,7 +5,7 @@ title_tag: "splunk.GlobalHttpEventCollector"
 meta_desc: "Documentation for the splunk.GlobalHttpEventCollector resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/splunk/GlobalHttpEventCollector/"
-layout: api-doc-resource
+layout: api
 ---
 
 

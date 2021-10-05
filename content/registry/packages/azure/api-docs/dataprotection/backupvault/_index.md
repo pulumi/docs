@@ -5,7 +5,7 @@ title_tag: "azure.dataprotection.BackupVault"
 meta_desc: "Documentation for the azure.dataprotection.BackupVault resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/BackupVault/"
-layout: api-doc-resource
+layout: api
 ---
 
 

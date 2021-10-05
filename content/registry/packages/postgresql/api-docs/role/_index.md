@@ -5,7 +5,7 @@ title_tag: "postgresql.Role"
 meta_desc: "Documentation for the postgresql.Role resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/postgresql/Role/"
-layout: api-doc-resource
+layout: api
 ---
 
 

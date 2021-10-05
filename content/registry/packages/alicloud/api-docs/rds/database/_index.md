@@ -5,7 +5,7 @@ title_tag: "alicloud.rds.Database"
 meta_desc: "Documentation for the alicloud.rds.Database resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/alicloud/Database/"
-layout: api-doc-resource
+layout: api
 ---
 
 

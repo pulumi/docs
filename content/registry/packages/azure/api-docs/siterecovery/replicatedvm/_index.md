@@ -5,7 +5,7 @@ title_tag: "azure.siterecovery.ReplicatedVM"
 meta_desc: "Documentation for the azure.siterecovery.ReplicatedVM resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/ReplicatedVM/"
-layout: api-doc-resource
+layout: api
 ---
 
 

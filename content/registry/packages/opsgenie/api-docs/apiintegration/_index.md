@@ -5,7 +5,7 @@ title_tag: "opsgenie.ApiIntegration"
 meta_desc: "Documentation for the opsgenie.ApiIntegration resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/opsgenie/ApiIntegration/"
-layout: api-doc-resource
+layout: api
 ---
 
 

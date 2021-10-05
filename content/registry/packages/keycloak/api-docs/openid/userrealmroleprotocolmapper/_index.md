@@ -5,7 +5,7 @@ title_tag: "keycloak.openid.UserRealmRoleProtocolMapper"
 meta_desc: "Documentation for the keycloak.openid.UserRealmRoleProtocolMapper resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/keycloak/UserRealmRoleProtocolMapper/"
-layout: api-doc-resource
+layout: api
 ---
 
 

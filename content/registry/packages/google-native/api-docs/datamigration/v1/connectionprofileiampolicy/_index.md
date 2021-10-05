@@ -5,7 +5,7 @@ title_tag: "google-native.datamigration/v1.ConnectionProfileIamPolicy"
 meta_desc: "Documentation for the google-native.datamigration/v1.ConnectionProfileIamPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/google-native/ConnectionProfileIamPolicy/"
-layout: api-doc-resource
+layout: api
 ---
 
 

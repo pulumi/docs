@@ -5,7 +5,7 @@ title_tag: "gcp.dataproc.MetastoreService"
 meta_desc: "Documentation for the gcp.dataproc.MetastoreService resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/gcp/MetastoreService/"
-layout: api-doc-resource
+layout: api
 ---
 
 

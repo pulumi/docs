@@ -5,7 +5,7 @@ title_tag: "alicloud.eipanycast.AnycastEipAddressAttachment"
 meta_desc: "Documentation for the alicloud.eipanycast.AnycastEipAddressAttachment resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/alicloud/AnycastEipAddressAttachment/"
-layout: api-doc-resource
+layout: api
 ---
 
 

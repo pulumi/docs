@@ -5,7 +5,7 @@ title_tag: "google-native.networkconnectivity/v1alpha1.SpokeIamPolicy"
 meta_desc: "Documentation for the google-native.networkconnectivity/v1alpha1.SpokeIamPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/google-native/SpokeIamPolicy/"
-layout: api-doc-resource
+layout: api
 ---
 
 

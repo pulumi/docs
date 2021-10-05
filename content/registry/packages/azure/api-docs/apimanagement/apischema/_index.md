@@ -5,7 +5,7 @@ title_tag: "azure.apimanagement.ApiSchema"
 meta_desc: "Documentation for the azure.apimanagement.ApiSchema resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/ApiSchema/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "vault.ldap.AuthBackendGroup"
 meta_desc: "Documentation for the vault.ldap.AuthBackendGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/vault/AuthBackendGroup/"
-layout: api-doc-resource
+layout: api
 ---
 
 

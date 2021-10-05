@@ -5,7 +5,7 @@ title_tag: "azure-native.network.VirtualHub"
 meta_desc: "Documentation for the azure-native.network.VirtualHub resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/VirtualHub/"
-layout: api-doc-resource
+layout: api
 ---
 
 

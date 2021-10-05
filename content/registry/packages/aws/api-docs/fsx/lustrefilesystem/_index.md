@@ -5,7 +5,7 @@ title_tag: "aws.fsx.LustreFileSystem"
 meta_desc: "Documentation for the aws.fsx.LustreFileSystem resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/LustreFileSystem/"
-layout: api-doc-resource
+layout: api
 ---
 
 

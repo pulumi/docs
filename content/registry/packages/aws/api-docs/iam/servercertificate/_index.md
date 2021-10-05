@@ -5,7 +5,7 @@ title_tag: "aws.iam.ServerCertificate"
 meta_desc: "Documentation for the aws.iam.ServerCertificate resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/ServerCertificate/"
-layout: api-doc-resource
+layout: api
 ---
 
 

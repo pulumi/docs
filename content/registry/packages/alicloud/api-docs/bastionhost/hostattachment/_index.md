@@ -5,7 +5,7 @@ title_tag: "alicloud.bastionhost.HostAttachment"
 meta_desc: "Documentation for the alicloud.bastionhost.HostAttachment resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/alicloud/HostAttachment/"
-layout: api-doc-resource
+layout: api
 ---
 
 

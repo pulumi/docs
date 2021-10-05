@@ -5,7 +5,7 @@ title_tag: "alicloud.vpc.Network"
 meta_desc: "Documentation for the alicloud.vpc.Network resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/alicloud/Network/"
-layout: api-doc-resource
+layout: api
 ---
 
 

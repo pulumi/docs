@@ -5,7 +5,7 @@ title_tag: "gcp.folder.AccessApprovalSettings"
 meta_desc: "Documentation for the gcp.folder.AccessApprovalSettings resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/gcp/AccessApprovalSettings/"
-layout: api-doc-resource
+layout: api
 ---
 
 

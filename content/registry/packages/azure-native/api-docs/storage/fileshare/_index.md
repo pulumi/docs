@@ -5,7 +5,7 @@ title_tag: "azure-native.storage.FileShare"
 meta_desc: "Documentation for the azure-native.storage.FileShare resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/FileShare/"
-layout: api-doc-resource
+layout: api
 ---
 
 

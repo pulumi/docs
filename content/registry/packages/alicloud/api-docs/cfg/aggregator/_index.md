@@ -5,7 +5,7 @@ title_tag: "alicloud.cfg.Aggregator"
 meta_desc: "Documentation for the alicloud.cfg.Aggregator resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/alicloud/Aggregator/"
-layout: api-doc-resource
+layout: api
 ---
 
 

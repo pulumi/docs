@@ -5,7 +5,7 @@ title_tag: "aws.secretsmanager.SecretRotation"
 meta_desc: "Documentation for the aws.secretsmanager.SecretRotation resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/SecretRotation/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "aws.cloudwatch.LogSubscriptionFilter"
 meta_desc: "Documentation for the aws.cloudwatch.LogSubscriptionFilter resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/LogSubscriptionFilter/"
-layout: api-doc-resource
+layout: api
 ---
 
 

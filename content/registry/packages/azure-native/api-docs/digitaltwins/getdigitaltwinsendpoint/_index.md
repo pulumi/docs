@@ -5,7 +5,7 @@ title_tag: "azure-native.digitaltwins.getDigitalTwinsEndpoint"
 meta_desc: "Documentation for the azure-native.digitaltwins.getDigitalTwinsEndpoint function with examples, input properties, output properties, and supporting types."
 aliases:
     - "/docs/reference/pkg///"
-layout: api-doc-resource
+layout: api
 ---
 
 

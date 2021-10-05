@@ -5,7 +5,7 @@ title_tag: "azure.iot.EndpointEventhub"
 meta_desc: "Documentation for the azure.iot.EndpointEventhub resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/EndpointEventhub/"
-layout: api-doc-resource
+layout: api
 ---
 
 

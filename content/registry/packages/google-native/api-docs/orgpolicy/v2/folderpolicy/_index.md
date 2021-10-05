@@ -5,7 +5,7 @@ title_tag: "google-native.orgpolicy/v2.FolderPolicy"
 meta_desc: "Documentation for the google-native.orgpolicy/v2.FolderPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/google-native/FolderPolicy/"
-layout: api-doc-resource
+layout: api
 ---
 
 

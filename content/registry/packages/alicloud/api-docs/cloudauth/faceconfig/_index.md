@@ -5,7 +5,7 @@ title_tag: "alicloud.cloudauth.FaceConfig"
 meta_desc: "Documentation for the alicloud.cloudauth.FaceConfig resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/alicloud/FaceConfig/"
-layout: api-doc-resource
+layout: api
 ---
 
 

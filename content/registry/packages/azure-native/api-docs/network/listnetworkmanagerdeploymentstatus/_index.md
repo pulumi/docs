@@ -5,7 +5,7 @@ title_tag: "azure-native.network.listNetworkManagerDeploymentStatus"
 meta_desc: "Documentation for the azure-native.network.listNetworkManagerDeploymentStatus function with examples, input properties, output properties, and supporting types."
 aliases:
     - "/docs/reference/pkg///"
-layout: api-doc-resource
+layout: api
 ---
 
 
@@ -169,7 +169,7 @@ The following arguments are supported:
 <a href="#deploymenttypes_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Configuration<wbr>Type[]</span>
+        <span class="property-type">(string | Configuration<wbr>Type)[]</span>
     </dt>
     <dd>{{% md %}}List of deployment types.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

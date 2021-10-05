@@ -5,7 +5,7 @@ title_tag: "openstack.compute.Keypair"
 meta_desc: "Documentation for the openstack.compute.Keypair resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/openstack/Keypair/"
-layout: api-doc-resource
+layout: api
 ---
 
 

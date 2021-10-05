@@ -5,7 +5,7 @@ title_tag: "aws.ec2.AmiCopy"
 meta_desc: "Documentation for the aws.ec2.AmiCopy resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/AmiCopy/"
-layout: api-doc-resource
+layout: api
 ---
 
 

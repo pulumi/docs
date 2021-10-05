@@ -5,7 +5,7 @@ title_tag: "aws.rds.SubnetGroup"
 meta_desc: "Documentation for the aws.rds.SubnetGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/SubnetGroup/"
-layout: api-doc-resource
+layout: api
 ---
 
 

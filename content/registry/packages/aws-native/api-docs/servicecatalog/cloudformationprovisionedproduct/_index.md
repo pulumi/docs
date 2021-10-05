@@ -5,7 +5,7 @@ title_tag: "aws-native.servicecatalog.CloudFormationProvisionedProduct"
 meta_desc: "Documentation for the aws-native.servicecatalog.CloudFormationProvisionedProduct resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws-native/CloudFormationProvisionedProduct/"
-layout: api-doc-resource
+layout: api
 ---
 
 

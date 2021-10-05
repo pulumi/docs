@@ -5,7 +5,7 @@ title_tag: "azure-native.eventhub.ConsumerGroup"
 meta_desc: "Documentation for the azure-native.eventhub.ConsumerGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/ConsumerGroup/"
-layout: api-doc-resource
+layout: api
 ---
 
 

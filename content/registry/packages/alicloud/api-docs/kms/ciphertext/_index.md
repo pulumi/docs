@@ -5,7 +5,7 @@ title_tag: "alicloud.kms.Ciphertext"
 meta_desc: "Documentation for the alicloud.kms.Ciphertext resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/alicloud/Ciphertext/"
-layout: api-doc-resource
+layout: api
 ---
 
 

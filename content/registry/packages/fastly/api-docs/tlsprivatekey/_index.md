@@ -5,7 +5,7 @@ title_tag: "fastly.TlsPrivateKey"
 meta_desc: "Documentation for the fastly.TlsPrivateKey resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/fastly/TlsPrivateKey/"
-layout: api-doc-resource
+layout: api
 ---
 
 

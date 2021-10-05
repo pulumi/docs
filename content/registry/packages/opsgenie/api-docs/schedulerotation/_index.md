@@ -5,7 +5,7 @@ title_tag: "opsgenie.ScheduleRotation"
 meta_desc: "Documentation for the opsgenie.ScheduleRotation resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/opsgenie/ScheduleRotation/"
-layout: api-doc-resource
+layout: api
 ---
 
 

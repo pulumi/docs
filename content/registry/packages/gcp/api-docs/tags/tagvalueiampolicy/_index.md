@@ -5,7 +5,7 @@ title_tag: "gcp.tags.TagValueIamPolicy"
 meta_desc: "Documentation for the gcp.tags.TagValueIamPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/gcp/TagValueIamPolicy/"
-layout: api-doc-resource
+layout: api
 ---
 
 

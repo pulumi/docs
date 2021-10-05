@@ -5,7 +5,7 @@ title_tag: "kubernetes.batch/v1.CronJobList"
 meta_desc: "Documentation for the kubernetes.batch/v1.CronJobList resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/kubernetes/CronJobList/"
-layout: api-doc-resource
+layout: api
 ---
 
 

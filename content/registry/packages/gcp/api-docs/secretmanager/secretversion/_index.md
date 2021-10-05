@@ -5,7 +5,7 @@ title_tag: "gcp.secretmanager.SecretVersion"
 meta_desc: "Documentation for the gcp.secretmanager.SecretVersion resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/gcp/SecretVersion/"
-layout: api-doc-resource
+layout: api
 ---
 
 

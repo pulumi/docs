@@ -5,7 +5,7 @@ title_tag: "azure.automation.DateTimeVariable"
 meta_desc: "Documentation for the azure.automation.DateTimeVariable resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/DateTimeVariable/"
-layout: api-doc-resource
+layout: api
 ---
 
 

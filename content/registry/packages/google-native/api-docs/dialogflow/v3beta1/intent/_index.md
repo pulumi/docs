@@ -5,7 +5,7 @@ title_tag: "google-native.dialogflow/v3beta1.Intent"
 meta_desc: "Documentation for the google-native.dialogflow/v3beta1.Intent resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/google-native/Intent/"
-layout: api-doc-resource
+layout: api
 ---
 
 

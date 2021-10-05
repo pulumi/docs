@@ -5,7 +5,7 @@ title_tag: "google-native.compute/v1.TargetTcpProxy"
 meta_desc: "Documentation for the google-native.compute/v1.TargetTcpProxy resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/google-native/TargetTcpProxy/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "azure-native.web.StaticSiteUserProvidedFunctionAppForStaticSite"
 meta_desc: "Documentation for the azure-native.web.StaticSiteUserProvidedFunctionAppForStaticSite resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/StaticSiteUserProvidedFunctionAppForStaticSite/"
-layout: api-doc-resource
+layout: api
 ---
 
 

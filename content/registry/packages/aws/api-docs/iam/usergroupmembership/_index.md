@@ -5,7 +5,7 @@ title_tag: "aws.iam.UserGroupMembership"
 meta_desc: "Documentation for the aws.iam.UserGroupMembership resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/UserGroupMembership/"
-layout: api-doc-resource
+layout: api
 ---
 
 

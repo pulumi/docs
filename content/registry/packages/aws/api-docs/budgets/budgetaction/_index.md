@@ -5,7 +5,7 @@ title_tag: "aws.budgets.BudgetAction"
 meta_desc: "Documentation for the aws.budgets.BudgetAction resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/BudgetAction/"
-layout: api-doc-resource
+layout: api
 ---
 
 

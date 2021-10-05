@@ -5,7 +5,7 @@ title_tag: "splunk.InputsHttpEventCollector"
 meta_desc: "Documentation for the splunk.InputsHttpEventCollector resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/splunk/InputsHttpEventCollector/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "kubernetes.apps/v1beta2.ReplicaSet"
 meta_desc: "Documentation for the kubernetes.apps/v1beta2.ReplicaSet resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/kubernetes/ReplicaSet/"
-layout: api-doc-resource
+layout: api
 ---
 
 

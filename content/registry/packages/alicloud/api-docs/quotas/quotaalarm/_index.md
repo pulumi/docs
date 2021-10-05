@@ -5,7 +5,7 @@ title_tag: "alicloud.quotas.QuotaAlarm"
 meta_desc: "Documentation for the alicloud.quotas.QuotaAlarm resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/alicloud/QuotaAlarm/"
-layout: api-doc-resource
+layout: api
 ---
 
 

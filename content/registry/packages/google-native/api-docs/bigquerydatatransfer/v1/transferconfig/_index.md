@@ -5,7 +5,7 @@ title_tag: "google-native.bigquerydatatransfer/v1.TransferConfig"
 meta_desc: "Documentation for the google-native.bigquerydatatransfer/v1.TransferConfig resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/google-native/TransferConfig/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "signalfx.AlertMutingRule"
 meta_desc: "Documentation for the signalfx.AlertMutingRule resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/signalfx/AlertMutingRule/"
-layout: api-doc-resource
+layout: api
 ---
 
 

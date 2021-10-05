@@ -5,7 +5,7 @@ title_tag: "azure.appinsights.AnalyticsItem"
 meta_desc: "Documentation for the azure.appinsights.AnalyticsItem resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/AnalyticsItem/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "gcp.organizations.IAMPolicy"
 meta_desc: "Documentation for the gcp.organizations.IAMPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/gcp/IAMPolicy/"
-layout: api-doc-resource
+layout: api
 ---
 
 

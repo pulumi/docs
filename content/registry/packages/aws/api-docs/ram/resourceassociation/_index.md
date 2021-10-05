@@ -5,7 +5,7 @@ title_tag: "aws.ram.ResourceAssociation"
 meta_desc: "Documentation for the aws.ram.ResourceAssociation resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/ResourceAssociation/"
-layout: api-doc-resource
+layout: api
 ---
 
 

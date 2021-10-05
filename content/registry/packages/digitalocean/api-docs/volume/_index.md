@@ -5,7 +5,7 @@ title_tag: "digitalocean.Volume"
 meta_desc: "Documentation for the digitalocean.Volume resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/digitalocean/Volume/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "aws-native.s3.StorageLens"
 meta_desc: "Documentation for the aws-native.s3.StorageLens resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws-native/StorageLens/"
-layout: api-doc-resource
+layout: api
 ---
 
 

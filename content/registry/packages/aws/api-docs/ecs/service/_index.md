@@ -5,7 +5,7 @@ title_tag: "aws.ecs.Service"
 meta_desc: "Documentation for the aws.ecs.Service resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/Service/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "cloudflare.WorkersKv"
 meta_desc: "Documentation for the cloudflare.WorkersKv resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/cloudflare/WorkersKv/"
-layout: api-doc-resource
+layout: api
 ---
 
 

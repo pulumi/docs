@@ -5,7 +5,7 @@ title_tag: "azuread.ApplicationPassword"
 meta_desc: "Documentation for the azuread.ApplicationPassword resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azuread/ApplicationPassword/"
-layout: api-doc-resource
+layout: api
 ---
 
 

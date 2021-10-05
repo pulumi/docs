@@ -5,7 +5,7 @@ title_tag: "aws.opsworks.UserProfile"
 meta_desc: "Documentation for the aws.opsworks.UserProfile resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/UserProfile/"
-layout: api-doc-resource
+layout: api
 ---
 
 

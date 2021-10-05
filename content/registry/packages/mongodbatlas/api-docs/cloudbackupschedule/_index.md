@@ -5,7 +5,7 @@ title_tag: "mongodbatlas.CloudBackupSchedule"
 meta_desc: "Documentation for the mongodbatlas.CloudBackupSchedule resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/mongodbatlas/CloudBackupSchedule/"
-layout: api-doc-resource
+layout: api
 ---
 
 

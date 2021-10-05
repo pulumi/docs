@@ -5,7 +5,7 @@ title_tag: "aws-native.databrew.Recipe"
 meta_desc: "Documentation for the aws-native.databrew.Recipe resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws-native/Recipe/"
-layout: api-doc-resource
+layout: api
 ---
 
 

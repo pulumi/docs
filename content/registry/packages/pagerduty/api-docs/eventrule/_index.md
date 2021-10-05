@@ -5,7 +5,7 @@ title_tag: "pagerduty.EventRule"
 meta_desc: "Documentation for the pagerduty.EventRule resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/pagerduty/EventRule/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "aws.pinpoint.BaiduChannel"
 meta_desc: "Documentation for the aws.pinpoint.BaiduChannel resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/BaiduChannel/"
-layout: api-doc-resource
+layout: api
 ---
 
 

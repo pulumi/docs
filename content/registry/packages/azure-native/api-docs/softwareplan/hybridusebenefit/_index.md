@@ -5,7 +5,7 @@ title_tag: "azure-native.softwareplan.HybridUseBenefit"
 meta_desc: "Documentation for the azure-native.softwareplan.HybridUseBenefit resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/HybridUseBenefit/"
-layout: api-doc-resource
+layout: api
 ---
 
 

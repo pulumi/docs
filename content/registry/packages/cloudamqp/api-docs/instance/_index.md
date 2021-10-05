@@ -5,7 +5,7 @@ title_tag: "cloudamqp.Instance"
 meta_desc: "Documentation for the cloudamqp.Instance resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/cloudamqp/Instance/"
-layout: api-doc-resource
+layout: api
 ---
 
 

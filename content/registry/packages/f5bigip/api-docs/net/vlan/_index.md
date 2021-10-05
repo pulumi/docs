@@ -5,7 +5,7 @@ title_tag: "f5bigip.net.Vlan"
 meta_desc: "Documentation for the f5bigip.net.Vlan resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/f5bigip/Vlan/"
-layout: api-doc-resource
+layout: api
 ---
 
 

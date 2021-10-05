@@ -5,7 +5,7 @@ title_tag: "aws.appsync.Resolver"
 meta_desc: "Documentation for the aws.appsync.Resolver resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/Resolver/"
-layout: api-doc-resource
+layout: api
 ---
 
 

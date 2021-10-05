@@ -5,7 +5,7 @@ title_tag: "gcp.vpcaccess.Connector"
 meta_desc: "Documentation for the gcp.vpcaccess.Connector resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/gcp/Connector/"
-layout: api-doc-resource
+layout: api
 ---
 
 

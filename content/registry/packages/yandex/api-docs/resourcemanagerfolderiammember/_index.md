@@ -5,7 +5,7 @@ title_tag: "yandex.ResourcemanagerFolderIamMember"
 meta_desc: "Documentation for the yandex.ResourcemanagerFolderIamMember resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/yandex/ResourcemanagerFolderIamMember/"
-layout: api-doc-resource
+layout: api
 ---
 
 

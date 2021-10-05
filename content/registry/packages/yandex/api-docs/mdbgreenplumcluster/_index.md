@@ -5,7 +5,7 @@ title_tag: "yandex.MdbGreenplumCluster"
 meta_desc: "Documentation for the yandex.MdbGreenplumCluster resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/yandex/MdbGreenplumCluster/"
-layout: api-doc-resource
+layout: api
 ---
 
 

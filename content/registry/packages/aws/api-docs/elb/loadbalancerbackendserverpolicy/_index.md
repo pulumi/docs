@@ -5,7 +5,7 @@ title_tag: "aws.elb.LoadBalancerBackendServerPolicy"
 meta_desc: "Documentation for the aws.elb.LoadBalancerBackendServerPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/LoadBalancerBackendServerPolicy/"
-layout: api-doc-resource
+layout: api
 ---
 
 

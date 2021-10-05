@@ -5,7 +5,7 @@ title_tag: "azuread.Provider"
 meta_desc: "Documentation for the azuread.Provider resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azuread/azuread/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "openstack.loadbalancer.LoadBalancer"
 meta_desc: "Documentation for the openstack.loadbalancer.LoadBalancer resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/openstack/LoadBalancer/"
-layout: api-doc-resource
+layout: api
 ---
 
 

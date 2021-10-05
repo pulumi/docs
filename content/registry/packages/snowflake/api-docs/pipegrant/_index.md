@@ -5,7 +5,7 @@ title_tag: "snowflake.PipeGrant"
 meta_desc: "Documentation for the snowflake.PipeGrant resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/snowflake/PipeGrant/"
-layout: api-doc-resource
+layout: api
 ---
 
 

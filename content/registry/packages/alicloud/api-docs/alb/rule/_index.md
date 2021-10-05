@@ -5,7 +5,7 @@ title_tag: "alicloud.alb.Rule"
 meta_desc: "Documentation for the alicloud.alb.Rule resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/alicloud/Rule/"
-layout: api-doc-resource
+layout: api
 ---
 
 

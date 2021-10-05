@@ -5,7 +5,7 @@ title_tag: "gcp.firebase.Project"
 meta_desc: "Documentation for the gcp.firebase.Project resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/gcp/Project/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "snowflake.MaskingPolicy"
 meta_desc: "Documentation for the snowflake.MaskingPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/snowflake/MaskingPolicy/"
-layout: api-doc-resource
+layout: api
 ---
 
 

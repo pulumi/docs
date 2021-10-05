@@ -5,7 +5,7 @@ title_tag: "cloudflare.AccessGroup"
 meta_desc: "Documentation for the cloudflare.AccessGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/cloudflare/AccessGroup/"
-layout: api-doc-resource
+layout: api
 ---
 
 

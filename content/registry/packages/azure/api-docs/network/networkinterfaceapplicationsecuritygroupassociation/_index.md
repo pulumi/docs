@@ -5,7 +5,7 @@ title_tag: "azure.network.NetworkInterfaceApplicationSecurityGroupAssociation"
 meta_desc: "Documentation for the azure.network.NetworkInterfaceApplicationSecurityGroupAssociation resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/NetworkInterfaceApplicationSecurityGroupAssociation/"
-layout: api-doc-resource
+layout: api
 ---
 
 

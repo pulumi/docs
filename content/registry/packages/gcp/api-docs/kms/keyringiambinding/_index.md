@@ -5,7 +5,7 @@ title_tag: "gcp.kms.KeyRingIAMBinding"
 meta_desc: "Documentation for the gcp.kms.KeyRingIAMBinding resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/gcp/KeyRingIAMBinding/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "azure-native.securityinsights.Ueba"
 meta_desc: "Documentation for the azure-native.securityinsights.Ueba resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/Ueba/"
-layout: api-doc-resource
+layout: api
 ---
 
 
@@ -411,7 +411,7 @@ The Ueba resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#datasources_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Sources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Ueba<wbr>Data<wbr>Sources[]</span>
+        <span class="property-type">(string | Ueba<wbr>Data<wbr>Sources)[]</span>
     </dt>
     <dd>{{% md %}}The relevant data sources that enriched by ueba{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

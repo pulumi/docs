@@ -5,7 +5,7 @@ title_tag: "azure-native.powerbi.WorkspaceCollection"
 meta_desc: "Documentation for the azure-native.powerbi.WorkspaceCollection resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/WorkspaceCollection/"
-layout: api-doc-resource
+layout: api
 ---
 
 

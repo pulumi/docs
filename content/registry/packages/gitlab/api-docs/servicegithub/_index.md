@@ -5,7 +5,7 @@ title_tag: "gitlab.ServiceGithub"
 meta_desc: "Documentation for the gitlab.ServiceGithub resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/gitlab/ServiceGithub/"
-layout: api-doc-resource
+layout: api
 ---
 
 

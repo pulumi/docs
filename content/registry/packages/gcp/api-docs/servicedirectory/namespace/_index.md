@@ -5,7 +5,7 @@ title_tag: "gcp.servicedirectory.Namespace"
 meta_desc: "Documentation for the gcp.servicedirectory.Namespace resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/gcp/Namespace/"
-layout: api-doc-resource
+layout: api
 ---
 
 

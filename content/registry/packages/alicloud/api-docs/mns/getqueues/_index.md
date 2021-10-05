@@ -5,7 +5,7 @@ title_tag: "alicloud.mns.getQueues"
 meta_desc: "Documentation for the alicloud.mns.getQueues function with examples, input properties, output properties, and supporting types."
 aliases:
     - "/docs/reference/pkg///"
-layout: api-doc-resource
+layout: api
 ---
 
 

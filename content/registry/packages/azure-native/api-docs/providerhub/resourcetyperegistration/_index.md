@@ -5,7 +5,7 @@ title_tag: "azure-native.providerhub.ResourceTypeRegistration"
 meta_desc: "Documentation for the azure-native.providerhub.ResourceTypeRegistration resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/ResourceTypeRegistration/"
-layout: api-doc-resource
+layout: api
 ---
 
 
@@ -2829,7 +2829,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extensioncategories_nodejs" style="color: inherit; text-decoration: inherit;">extension<wbr>Categories</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Extension<wbr>Category[]</span>
+        <span class="property-type">(string | Extension<wbr>Category)[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2919,7 +2919,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#request_nodejs" style="color: inherit; text-decoration: inherit;">request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Extension<wbr>Option<wbr>Type[]</span>
+        <span class="property-type">(string | Extension<wbr>Option<wbr>Type)[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2927,7 +2927,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#response_nodejs" style="color: inherit; text-decoration: inherit;">response</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Extension<wbr>Option<wbr>Type[]</span>
+        <span class="property-type">(string | Extension<wbr>Option<wbr>Type)[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5245,7 +5245,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#preflightoptions_nodejs" style="color: inherit; text-decoration: inherit;">preflight<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Preflight<wbr>Option[]</span>
+        <span class="property-type">(string | Preflight<wbr>Option)[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

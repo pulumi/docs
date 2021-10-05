@@ -5,7 +5,7 @@ title_tag: "alicloud.mongodb.ShardingInstance"
 meta_desc: "Documentation for the alicloud.mongodb.ShardingInstance resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/alicloud/ShardingInstance/"
-layout: api-doc-resource
+layout: api
 ---
 
 

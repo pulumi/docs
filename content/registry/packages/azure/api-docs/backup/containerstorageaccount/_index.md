@@ -5,7 +5,7 @@ title_tag: "azure.backup.ContainerStorageAccount"
 meta_desc: "Documentation for the azure.backup.ContainerStorageAccount resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/ContainerStorageAccount/"
-layout: api-doc-resource
+layout: api
 ---
 
 

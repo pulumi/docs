@@ -5,7 +5,7 @@ title_tag: "aws.directconnect.GatewayAssociationProposal"
 meta_desc: "Documentation for the aws.directconnect.GatewayAssociationProposal resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/GatewayAssociationProposal/"
-layout: api-doc-resource
+layout: api
 ---
 
 

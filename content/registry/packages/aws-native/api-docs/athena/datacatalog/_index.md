@@ -5,7 +5,7 @@ title_tag: "aws-native.athena.DataCatalog"
 meta_desc: "Documentation for the aws-native.athena.DataCatalog resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws-native/DataCatalog/"
-layout: api-doc-resource
+layout: api
 ---
 
 

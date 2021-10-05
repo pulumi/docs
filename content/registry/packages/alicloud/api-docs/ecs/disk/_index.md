@@ -5,7 +5,7 @@ title_tag: "alicloud.ecs.Disk"
 meta_desc: "Documentation for the alicloud.ecs.Disk resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/alicloud/Disk/"
-layout: api-doc-resource
+layout: api
 ---
 
 

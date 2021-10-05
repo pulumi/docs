@@ -5,7 +5,7 @@ title_tag: "dnsimple.Record"
 meta_desc: "Documentation for the dnsimple.Record resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/dnsimple/Record/"
-layout: api-doc-resource
+layout: api
 ---
 
 

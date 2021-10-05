@@ -5,7 +5,7 @@ title_tag: "newrelic.Dashboard"
 meta_desc: "Documentation for the newrelic.Dashboard resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/newrelic/Dashboard/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "splunk.InputsUdp"
 meta_desc: "Documentation for the splunk.InputsUdp resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/splunk/InputsUdp/"
-layout: api-doc-resource
+layout: api
 ---
 
 

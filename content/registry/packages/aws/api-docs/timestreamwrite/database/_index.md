@@ -5,7 +5,7 @@ title_tag: "aws.timestreamwrite.Database"
 meta_desc: "Documentation for the aws.timestreamwrite.Database resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/Database/"
-layout: api-doc-resource
+layout: api
 ---
 
 

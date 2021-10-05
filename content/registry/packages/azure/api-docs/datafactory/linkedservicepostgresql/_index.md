@@ -5,7 +5,7 @@ title_tag: "azure.datafactory.LinkedServicePostgresql"
 meta_desc: "Documentation for the azure.datafactory.LinkedServicePostgresql resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/LinkedServicePostgresql/"
-layout: api-doc-resource
+layout: api
 ---
 
 

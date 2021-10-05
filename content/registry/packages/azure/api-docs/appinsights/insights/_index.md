@@ -5,7 +5,7 @@ title_tag: "azure.appinsights.Insights"
 meta_desc: "Documentation for the azure.appinsights.Insights resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/Insights/"
-layout: api-doc-resource
+layout: api
 ---
 
 

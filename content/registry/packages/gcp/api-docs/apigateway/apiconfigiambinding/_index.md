@@ -5,7 +5,7 @@ title_tag: "gcp.apigateway.ApiConfigIamBinding"
 meta_desc: "Documentation for the gcp.apigateway.ApiConfigIamBinding resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/gcp/ApiConfigIamBinding/"
-layout: api-doc-resource
+layout: api
 ---
 
 

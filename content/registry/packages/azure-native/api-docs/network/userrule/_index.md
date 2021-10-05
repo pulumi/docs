@@ -5,7 +5,7 @@ title_tag: "azure-native.network.UserRule"
 meta_desc: "Documentation for the azure-native.network.UserRule resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/UserRule/"
-layout: api-doc-resource
+layout: api
 ---
 
 

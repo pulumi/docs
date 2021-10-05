@@ -5,7 +5,7 @@ title_tag: "aws.ecs.TaskDefinition"
 meta_desc: "Documentation for the aws.ecs.TaskDefinition resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/TaskDefinition/"
-layout: api-doc-resource
+layout: api
 ---
 
 

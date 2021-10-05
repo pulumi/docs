@@ -5,7 +5,7 @@ title_tag: "azure-native.azurestack.CustomerSubscription"
 meta_desc: "Documentation for the azure-native.azurestack.CustomerSubscription resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/CustomerSubscription/"
-layout: api-doc-resource
+layout: api
 ---
 
 

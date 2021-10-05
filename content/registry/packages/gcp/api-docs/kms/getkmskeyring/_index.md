@@ -5,7 +5,7 @@ title_tag: "gcp.kms.getKMSKeyRing"
 meta_desc: "Documentation for the gcp.kms.getKMSKeyRing function with examples, input properties, output properties, and supporting types."
 aliases:
     - "/docs/reference/pkg///"
-layout: api-doc-resource
+layout: api
 ---
 
 

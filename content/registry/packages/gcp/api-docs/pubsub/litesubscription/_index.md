@@ -5,7 +5,7 @@ title_tag: "gcp.pubsub.LiteSubscription"
 meta_desc: "Documentation for the gcp.pubsub.LiteSubscription resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/gcp/LiteSubscription/"
-layout: api-doc-resource
+layout: api
 ---
 
 

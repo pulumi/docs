@@ -5,7 +5,7 @@ title_tag: "gcp.compute.TargetHttpProxy"
 meta_desc: "Documentation for the gcp.compute.TargetHttpProxy resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/gcp/TargetHttpProxy/"
-layout: api-doc-resource
+layout: api
 ---
 
 

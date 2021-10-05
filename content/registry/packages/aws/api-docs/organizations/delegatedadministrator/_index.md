@@ -5,7 +5,7 @@ title_tag: "aws.organizations.DelegatedAdministrator"
 meta_desc: "Documentation for the aws.organizations.DelegatedAdministrator resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/DelegatedAdministrator/"
-layout: api-doc-resource
+layout: api
 ---
 
 

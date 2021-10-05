@@ -5,7 +5,7 @@ title_tag: "gcp.compute.ProjectMetadataItem"
 meta_desc: "Documentation for the gcp.compute.ProjectMetadataItem resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/gcp/ProjectMetadataItem/"
-layout: api-doc-resource
+layout: api
 ---
 
 

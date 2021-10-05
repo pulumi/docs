@@ -5,7 +5,7 @@ title_tag: "openstack.images.ImageAccess"
 meta_desc: "Documentation for the openstack.images.ImageAccess resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/openstack/ImageAccess/"
-layout: api-doc-resource
+layout: api
 ---
 
 

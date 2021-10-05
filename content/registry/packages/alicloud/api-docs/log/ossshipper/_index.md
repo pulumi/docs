@@ -5,7 +5,7 @@ title_tag: "alicloud.log.OssShipper"
 meta_desc: "Documentation for the alicloud.log.OssShipper resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/alicloud/OssShipper/"
-layout: api-doc-resource
+layout: api
 ---
 
 

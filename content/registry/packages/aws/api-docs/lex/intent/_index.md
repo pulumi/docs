@@ -5,7 +5,7 @@ title_tag: "aws.lex.Intent"
 meta_desc: "Documentation for the aws.lex.Intent resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/Intent/"
-layout: api-doc-resource
+layout: api
 ---
 
 

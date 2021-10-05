@@ -5,7 +5,7 @@ title_tag: "kubernetes.kustomize.Directory"
 meta_desc: "Documentation for the kubernetes.kustomize.Directory resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/kubernetes/Directory/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "gitlab.User"
 meta_desc: "Documentation for the gitlab.User resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/gitlab/User/"
-layout: api-doc-resource
+layout: api
 ---
 
 

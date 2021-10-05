@@ -5,7 +5,7 @@ title_tag: "azure.datafactory.LinkedServiceAzureDatabricks"
 meta_desc: "Documentation for the azure.datafactory.LinkedServiceAzureDatabricks resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/LinkedServiceAzureDatabricks/"
-layout: api-doc-resource
+layout: api
 ---
 
 

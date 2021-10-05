@@ -5,7 +5,7 @@ title_tag: "azure-native.logic.IntegrationAccountSchema"
 meta_desc: "Documentation for the azure-native.logic.IntegrationAccountSchema resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/IntegrationAccountSchema/"
-layout: api-doc-resource
+layout: api
 ---
 
 

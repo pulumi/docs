@@ -5,7 +5,7 @@ title_tag: "keycloak.openid.ClientTimePolicy"
 meta_desc: "Documentation for the keycloak.openid.ClientTimePolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/keycloak/ClientTimePolicy/"
-layout: api-doc-resource
+layout: api
 ---
 
 

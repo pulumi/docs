@@ -5,7 +5,7 @@ title_tag: "openstack.identity.getEndpoint"
 meta_desc: "Documentation for the openstack.identity.getEndpoint function with examples, input properties, output properties, and supporting types."
 aliases:
     - "/docs/reference/pkg///"
-layout: api-doc-resource
+layout: api
 ---
 
 

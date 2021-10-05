@@ -5,7 +5,7 @@ title_tag: "azure-native.network.ApplicationSecurityGroup"
 meta_desc: "Documentation for the azure-native.network.ApplicationSecurityGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/ApplicationSecurityGroup/"
-layout: api-doc-resource
+layout: api
 ---
 
 

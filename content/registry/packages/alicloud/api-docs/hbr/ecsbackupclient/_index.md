@@ -5,7 +5,7 @@ title_tag: "alicloud.hbr.EcsBackupClient"
 meta_desc: "Documentation for the alicloud.hbr.EcsBackupClient resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/alicloud/EcsBackupClient/"
-layout: api-doc-resource
+layout: api
 ---
 
 

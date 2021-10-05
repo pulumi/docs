@@ -5,7 +5,7 @@ title_tag: "azure-native.web.CustomApi"
 meta_desc: "Documentation for the azure-native.web.CustomApi resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/CustomApi/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "azure-native.servicebus.TopicAuthorizationRule"
 meta_desc: "Documentation for the azure-native.servicebus.TopicAuthorizationRule resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/TopicAuthorizationRule/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "google-native.firestore/v1beta1.Index"
 meta_desc: "Documentation for the google-native.firestore/v1beta1.Index resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/google-native/Index/"
-layout: api-doc-resource
+layout: api
 ---
 
 

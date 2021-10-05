@@ -5,7 +5,7 @@ title_tag: "vsphere.ComputeClusterVmAffinityRule"
 meta_desc: "Documentation for the vsphere.ComputeClusterVmAffinityRule resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/vsphere/ComputeClusterVmAffinityRule/"
-layout: api-doc-resource
+layout: api
 ---
 
 

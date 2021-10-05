@@ -5,7 +5,7 @@ title_tag: "aws-native.iotsitewise.Portal"
 meta_desc: "Documentation for the aws-native.iotsitewise.Portal resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws-native/Portal/"
-layout: api-doc-resource
+layout: api
 ---
 
 

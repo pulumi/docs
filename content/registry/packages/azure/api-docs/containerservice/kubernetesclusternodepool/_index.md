@@ -5,7 +5,7 @@ title_tag: "azure.containerservice.KubernetesClusterNodePool"
 meta_desc: "Documentation for the azure.containerservice.KubernetesClusterNodePool resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/KubernetesClusterNodePool/"
-layout: api-doc-resource
+layout: api
 ---
 
 

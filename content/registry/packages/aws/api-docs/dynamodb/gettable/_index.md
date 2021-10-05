@@ -5,7 +5,7 @@ title_tag: "aws.dynamodb.getTable"
 meta_desc: "Documentation for the aws.dynamodb.getTable function with examples, input properties, output properties, and supporting types."
 aliases:
     - "/docs/reference/pkg///"
-layout: api-doc-resource
+layout: api
 ---
 
 

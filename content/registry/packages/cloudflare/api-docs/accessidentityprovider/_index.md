@@ -5,7 +5,7 @@ title_tag: "cloudflare.AccessIdentityProvider"
 meta_desc: "Documentation for the cloudflare.AccessIdentityProvider resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/cloudflare/AccessIdentityProvider/"
-layout: api-doc-resource
+layout: api
 ---
 
 

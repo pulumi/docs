@@ -5,7 +5,7 @@ title_tag: "aws.macie.S3BucketAssociation"
 meta_desc: "Documentation for the aws.macie.S3BucketAssociation resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/S3BucketAssociation/"
-layout: api-doc-resource
+layout: api
 ---
 
 

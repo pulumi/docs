@@ -5,7 +5,7 @@ title_tag: "civo.SshKey"
 meta_desc: "Documentation for the civo.SshKey resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/civo/SshKey/"
-layout: api-doc-resource
+layout: api
 ---
 
 

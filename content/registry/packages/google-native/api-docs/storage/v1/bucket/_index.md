@@ -5,7 +5,7 @@ title_tag: "google-native.storage/v1.Bucket"
 meta_desc: "Documentation for the google-native.storage/v1.Bucket resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/google-native/Bucket/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "google-native.spanner/v1.InstanceBackupIamPolicy"
 meta_desc: "Documentation for the google-native.spanner/v1.InstanceBackupIamPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/google-native/InstanceBackupIamPolicy/"
-layout: api-doc-resource
+layout: api
 ---
 
 

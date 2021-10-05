@@ -5,7 +5,7 @@ title_tag: "azure.videoanalyzer.EdgeModule"
 meta_desc: "Documentation for the azure.videoanalyzer.EdgeModule resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/EdgeModule/"
-layout: api-doc-resource
+layout: api
 ---
 
 

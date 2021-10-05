@@ -5,7 +5,7 @@ title_tag: "gcp.storage.HmacKey"
 meta_desc: "Documentation for the gcp.storage.HmacKey resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/gcp/HmacKey/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "aws.apigatewayv2.RouteResponse"
 meta_desc: "Documentation for the aws.apigatewayv2.RouteResponse resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/RouteResponse/"
-layout: api-doc-resource
+layout: api
 ---
 
 

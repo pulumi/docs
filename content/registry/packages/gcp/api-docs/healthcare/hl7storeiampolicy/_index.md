@@ -5,7 +5,7 @@ title_tag: "gcp.healthcare.Hl7StoreIamPolicy"
 meta_desc: "Documentation for the gcp.healthcare.Hl7StoreIamPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/gcp/Hl7StoreIamPolicy/"
-layout: api-doc-resource
+layout: api
 ---
 
 

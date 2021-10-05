@@ -5,7 +5,7 @@ title_tag: "aws.elasticbeanstalk.Environment"
 meta_desc: "Documentation for the aws.elasticbeanstalk.Environment resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/Environment/"
-layout: api-doc-resource
+layout: api
 ---
 
 

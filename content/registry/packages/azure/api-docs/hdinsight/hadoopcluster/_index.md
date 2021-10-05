@@ -5,7 +5,7 @@ title_tag: "azure.hdinsight.HadoopCluster"
 meta_desc: "Documentation for the azure.hdinsight.HadoopCluster resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/HadoopCluster/"
-layout: api-doc-resource
+layout: api
 ---
 
 

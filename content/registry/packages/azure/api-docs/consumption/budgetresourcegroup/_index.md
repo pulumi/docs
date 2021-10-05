@@ -5,7 +5,7 @@ title_tag: "azure.consumption.BudgetResourceGroup"
 meta_desc: "Documentation for the azure.consumption.BudgetResourceGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/BudgetResourceGroup/"
-layout: api-doc-resource
+layout: api
 ---
 
 

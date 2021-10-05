@@ -5,7 +5,7 @@ title_tag: "azure-native.timeseriesinsights.EventSource"
 meta_desc: "Documentation for the azure-native.timeseriesinsights.EventSource resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/EventSource/"
-layout: api-doc-resource
+layout: api
 ---
 
 

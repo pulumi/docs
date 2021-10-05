@@ -5,7 +5,7 @@ title_tag: "google-native.websecurityscanner/v1beta.getScanConfig"
 meta_desc: "Documentation for the google-native.websecurityscanner/v1beta.getScanConfig function with examples, input properties, output properties, and supporting types."
 aliases:
     - "/docs/reference/pkg///"
-layout: api-doc-resource
+layout: api
 ---
 
 

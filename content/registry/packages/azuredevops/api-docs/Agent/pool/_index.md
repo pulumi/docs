@@ -5,7 +5,7 @@ title_tag: "azuredevops.Agent.Pool"
 meta_desc: "Documentation for the azuredevops.Agent.Pool resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azuredevops/Pool/"
-layout: api-doc-resource
+layout: api
 ---
 
 

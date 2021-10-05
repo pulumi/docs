@@ -5,7 +5,7 @@ title_tag: "azure-native.machinelearningservices.OnlineEndpoint"
 meta_desc: "Documentation for the azure-native.machinelearningservices.OnlineEndpoint resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/OnlineEndpoint/"
-layout: api-doc-resource
+layout: api
 ---
 
 

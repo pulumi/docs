@@ -5,7 +5,7 @@ title_tag: "azure-native.powerbi.PowerBIResource"
 meta_desc: "Documentation for the azure-native.powerbi.PowerBIResource resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/PowerBIResource/"
-layout: api-doc-resource
+layout: api
 ---
 
 

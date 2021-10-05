@@ -5,7 +5,7 @@ title_tag: "datadog.pagerduty.Integration"
 meta_desc: "Documentation for the datadog.pagerduty.Integration resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/datadog/Integration/"
-layout: api-doc-resource
+layout: api
 ---
 
 

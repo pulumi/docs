@@ -5,7 +5,7 @@ title_tag: "gcp.bigquery.DatasetAccess"
 meta_desc: "Documentation for the gcp.bigquery.DatasetAccess resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/gcp/DatasetAccess/"
-layout: api-doc-resource
+layout: api
 ---
 
 

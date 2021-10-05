@@ -5,7 +5,7 @@ title_tag: "cloudflare.NotificationPolicyWebhooks"
 meta_desc: "Documentation for the cloudflare.NotificationPolicyWebhooks resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/cloudflare/NotificationPolicyWebhooks/"
-layout: api-doc-resource
+layout: api
 ---
 
 

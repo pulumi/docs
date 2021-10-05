@@ -5,7 +5,7 @@ title_tag: "openstack.loadbalancer.L7PolicyV2"
 meta_desc: "Documentation for the openstack.loadbalancer.L7PolicyV2 resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/openstack/L7PolicyV2/"
-layout: api-doc-resource
+layout: api
 ---
 
 

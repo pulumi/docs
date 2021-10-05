@@ -5,7 +5,7 @@ title_tag: "azure-native.servicefabric.listListUpgradableVersionPost"
 meta_desc: "Documentation for the azure-native.servicefabric.listListUpgradableVersionPost function with examples, input properties, output properties, and supporting types."
 aliases:
     - "/docs/reference/pkg///"
-layout: api-doc-resource
+layout: api
 ---
 
 

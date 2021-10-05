@@ -5,7 +5,7 @@ title_tag: "opsgenie.ServiceIncidentRule"
 meta_desc: "Documentation for the opsgenie.ServiceIncidentRule resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/opsgenie/ServiceIncidentRule/"
-layout: api-doc-resource
+layout: api
 ---
 
 

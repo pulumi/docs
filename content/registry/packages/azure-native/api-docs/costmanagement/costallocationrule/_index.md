@@ -5,7 +5,7 @@ title_tag: "azure-native.costmanagement.CostAllocationRule"
 meta_desc: "Documentation for the azure-native.costmanagement.CostAllocationRule resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/CostAllocationRule/"
-layout: api-doc-resource
+layout: api
 ---
 
 

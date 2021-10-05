@@ -5,7 +5,7 @@ title_tag: "azure.servicebus.NamespaceDisasterRecoveryConfig"
 meta_desc: "Documentation for the azure.servicebus.NamespaceDisasterRecoveryConfig resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/NamespaceDisasterRecoveryConfig/"
-layout: api-doc-resource
+layout: api
 ---
 
 

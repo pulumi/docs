@@ -5,7 +5,7 @@ title_tag: "alicloud.amqp.Binding"
 meta_desc: "Documentation for the alicloud.amqp.Binding resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/alicloud/Binding/"
-layout: api-doc-resource
+layout: api
 ---
 
 

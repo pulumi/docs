@@ -5,7 +5,7 @@ title_tag: "gcp.runtimeconfig.ConfigIamPolicy"
 meta_desc: "Documentation for the gcp.runtimeconfig.ConfigIamPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/gcp/ConfigIamPolicy/"
-layout: api-doc-resource
+layout: api
 ---
 
 

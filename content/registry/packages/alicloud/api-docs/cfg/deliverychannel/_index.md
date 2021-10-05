@@ -5,7 +5,7 @@ title_tag: "alicloud.cfg.DeliveryChannel"
 meta_desc: "Documentation for the alicloud.cfg.DeliveryChannel resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/alicloud/DeliveryChannel/"
-layout: api-doc-resource
+layout: api
 ---
 
 

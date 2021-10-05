@@ -5,7 +5,7 @@ title_tag: "azure-native.azuredata.SqlServer"
 meta_desc: "Documentation for the azure-native.azuredata.SqlServer resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/SqlServer/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "google-native.storage/v1.DefaultObjectAccessControl"
 meta_desc: "Documentation for the google-native.storage/v1.DefaultObjectAccessControl resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/google-native/DefaultObjectAccessControl/"
-layout: api-doc-resource
+layout: api
 ---
 
 

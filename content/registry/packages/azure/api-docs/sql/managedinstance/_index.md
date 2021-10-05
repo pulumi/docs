@@ -5,7 +5,7 @@ title_tag: "azure.sql.ManagedInstance"
 meta_desc: "Documentation for the azure.sql.ManagedInstance resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/ManagedInstance/"
-layout: api-doc-resource
+layout: api
 ---
 
 

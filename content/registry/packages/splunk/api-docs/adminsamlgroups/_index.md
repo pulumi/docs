@@ -5,7 +5,7 @@ title_tag: "splunk.AdminSamlGroups"
 meta_desc: "Documentation for the splunk.AdminSamlGroups resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/splunk/AdminSamlGroups/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "equinix-metal.getIpBlockRanges"
 meta_desc: "Documentation for the equinix-metal.getIpBlockRanges function with examples, input properties, output properties, and supporting types."
 aliases:
     - "/docs/reference/pkg///"
-layout: api-doc-resource
+layout: api
 ---
 
 

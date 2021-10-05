@@ -5,7 +5,7 @@ title_tag: "azure.batch.Job"
 meta_desc: "Documentation for the azure.batch.Job resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/Job/"
-layout: api-doc-resource
+layout: api
 ---
 
 

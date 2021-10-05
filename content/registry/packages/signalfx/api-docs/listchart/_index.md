@@ -5,7 +5,7 @@ title_tag: "signalfx.ListChart"
 meta_desc: "Documentation for the signalfx.ListChart resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/signalfx/ListChart/"
-layout: api-doc-resource
+layout: api
 ---
 
 

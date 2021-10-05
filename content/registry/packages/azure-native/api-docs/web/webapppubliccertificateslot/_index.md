@@ -5,7 +5,7 @@ title_tag: "azure-native.web.WebAppPublicCertificateSlot"
 meta_desc: "Documentation for the azure-native.web.WebAppPublicCertificateSlot resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/WebAppPublicCertificateSlot/"
-layout: api-doc-resource
+layout: api
 ---
 
 

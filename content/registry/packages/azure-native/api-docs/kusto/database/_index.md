@@ -5,7 +5,7 @@ title_tag: "azure-native.kusto.Database"
 meta_desc: "Documentation for the azure-native.kusto.Database resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/Database/"
-layout: api-doc-resource
+layout: api
 ---
 
 

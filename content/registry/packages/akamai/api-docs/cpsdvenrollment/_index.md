@@ -5,7 +5,7 @@ title_tag: "akamai.CpsDvEnrollment"
 meta_desc: "Documentation for the akamai.CpsDvEnrollment resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/akamai/CpsDvEnrollment/"
-layout: api-doc-resource
+layout: api
 ---
 
 

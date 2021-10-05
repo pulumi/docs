@@ -5,7 +5,7 @@ title_tag: "google-native.bigquery/v2.getDataset"
 meta_desc: "Documentation for the google-native.bigquery/v2.getDataset function with examples, input properties, output properties, and supporting types."
 aliases:
     - "/docs/reference/pkg///"
-layout: api-doc-resource
+layout: api
 ---
 
 

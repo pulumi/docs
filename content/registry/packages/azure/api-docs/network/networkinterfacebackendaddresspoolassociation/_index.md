@@ -5,7 +5,7 @@ title_tag: "azure.network.NetworkInterfaceBackendAddressPoolAssociation"
 meta_desc: "Documentation for the azure.network.NetworkInterfaceBackendAddressPoolAssociation resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/NetworkInterfaceBackendAddressPoolAssociation/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "azuredevops.ServiceEndpointAws"
 meta_desc: "Documentation for the azuredevops.ServiceEndpointAws resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azuredevops/ServiceEndpointAws/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "google-native.cloudiot/v1.RegistryIamPolicy"
 meta_desc: "Documentation for the google-native.cloudiot/v1.RegistryIamPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/google-native/RegistryIamPolicy/"
-layout: api-doc-resource
+layout: api
 ---
 
 

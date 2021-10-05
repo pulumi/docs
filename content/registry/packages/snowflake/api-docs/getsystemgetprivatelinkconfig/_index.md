@@ -5,7 +5,7 @@ title_tag: "snowflake.getSystemGetPrivateLinkConfig"
 meta_desc: "Documentation for the snowflake.getSystemGetPrivateLinkConfig function with examples, input properties, output properties, and supporting types."
 aliases:
     - "/docs/reference/pkg///"
-layout: api-doc-resource
+layout: api
 ---
 
 

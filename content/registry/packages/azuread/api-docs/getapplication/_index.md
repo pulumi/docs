@@ -5,7 +5,7 @@ title_tag: "azuread.getApplication"
 meta_desc: "Documentation for the azuread.getApplication function with examples, input properties, output properties, and supporting types."
 aliases:
     - "/docs/reference/pkg///"
-layout: api-doc-resource
+layout: api
 ---
 
 

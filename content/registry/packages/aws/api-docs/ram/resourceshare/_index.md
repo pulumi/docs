@@ -5,7 +5,7 @@ title_tag: "aws.ram.ResourceShare"
 meta_desc: "Documentation for the aws.ram.ResourceShare resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/ResourceShare/"
-layout: api-doc-resource
+layout: api
 ---
 
 

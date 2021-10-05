@@ -5,7 +5,7 @@ title_tag: "azure-native.blueprint.PolicyAssignmentArtifact"
 meta_desc: "Documentation for the azure-native.blueprint.PolicyAssignmentArtifact resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/PolicyAssignmentArtifact/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "consul.AclPolicy"
 meta_desc: "Documentation for the consul.AclPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/consul/AclPolicy/"
-layout: api-doc-resource
+layout: api
 ---
 
 

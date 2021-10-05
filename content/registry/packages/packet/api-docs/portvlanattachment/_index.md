@@ -5,7 +5,7 @@ title_tag: "packet.PortVlanAttachment"
 meta_desc: "Documentation for the packet.PortVlanAttachment resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/packet/PortVlanAttachment/"
-layout: api-doc-resource
+layout: api
 ---
 
 

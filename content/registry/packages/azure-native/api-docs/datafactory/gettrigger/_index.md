@@ -5,7 +5,7 @@ title_tag: "azure-native.datafactory.getTrigger"
 meta_desc: "Documentation for the azure-native.datafactory.getTrigger function with examples, input properties, output properties, and supporting types."
 aliases:
     - "/docs/reference/pkg///"
-layout: api-doc-resource
+layout: api
 ---
 
 
@@ -3458,7 +3458,7 @@ The following output properties are available:
 <a href="#dependson_nodejs" style="color: inherit; text-decoration: inherit;">depends<wbr>On</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Self<wbr>Dependency<wbr>Tumbling<wbr>Window<wbr>Trigger<wbr>Reference<wbr>Response | Trigger<wbr>Dependency<wbr>Reference<wbr>Response | Tumbling<wbr>Window<wbr>Trigger<wbr>Dependency<wbr>Reference<wbr>Response[]</span>
+        <span class="property-type">(Self<wbr>Dependency<wbr>Tumbling<wbr>Window<wbr>Trigger<wbr>Reference<wbr>Response | Trigger<wbr>Dependency<wbr>Reference<wbr>Response | Tumbling<wbr>Window<wbr>Trigger<wbr>Dependency<wbr>Reference<wbr>Response)[]</span>
     </dt>
     <dd>{{% md %}}Triggers that this trigger depends on. Only tumbling window triggers are supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

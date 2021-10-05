@@ -5,7 +5,7 @@ title_tag: "azure-native.labservices.getGlobalUserPersonalPreferences"
 meta_desc: "Documentation for the azure-native.labservices.getGlobalUserPersonalPreferences function with examples, input properties, output properties, and supporting types."
 aliases:
     - "/docs/reference/pkg///"
-layout: api-doc-resource
+layout: api
 ---
 
 

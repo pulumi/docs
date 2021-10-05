@@ -5,7 +5,7 @@ title_tag: "azure-native.network.VirtualRouter"
 meta_desc: "Documentation for the azure-native.network.VirtualRouter resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/VirtualRouter/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "google-native.jobs/v4.Tenant"
 meta_desc: "Documentation for the google-native.jobs/v4.Tenant resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/google-native/Tenant/"
-layout: api-doc-resource
+layout: api
 ---
 
 

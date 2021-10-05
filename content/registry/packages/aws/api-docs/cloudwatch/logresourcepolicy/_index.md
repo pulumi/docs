@@ -5,7 +5,7 @@ title_tag: "aws.cloudwatch.LogResourcePolicy"
 meta_desc: "Documentation for the aws.cloudwatch.LogResourcePolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/LogResourcePolicy/"
-layout: api-doc-resource
+layout: api
 ---
 
 

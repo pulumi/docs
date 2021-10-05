@@ -5,7 +5,7 @@ title_tag: "azure-native.subscription.Alias"
 meta_desc: "Documentation for the azure-native.subscription.Alias resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/Alias/"
-layout: api-doc-resource
+layout: api
 ---
 
 

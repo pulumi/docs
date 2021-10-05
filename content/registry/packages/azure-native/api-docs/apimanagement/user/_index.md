@@ -5,7 +5,7 @@ title_tag: "azure-native.apimanagement.User"
 meta_desc: "Documentation for the azure-native.apimanagement.User resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/User/"
-layout: api-doc-resource
+layout: api
 ---
 
 

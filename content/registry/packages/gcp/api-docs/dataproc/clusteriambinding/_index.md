@@ -5,7 +5,7 @@ title_tag: "gcp.dataproc.ClusterIAMBinding"
 meta_desc: "Documentation for the gcp.dataproc.ClusterIAMBinding resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/gcp/ClusterIAMBinding/"
-layout: api-doc-resource
+layout: api
 ---
 
 

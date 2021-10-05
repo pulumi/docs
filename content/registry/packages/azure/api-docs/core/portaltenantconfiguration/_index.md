@@ -5,7 +5,7 @@ title_tag: "azure.core.PortalTenantConfiguration"
 meta_desc: "Documentation for the azure.core.PortalTenantConfiguration resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/PortalTenantConfiguration/"
-layout: api-doc-resource
+layout: api
 ---
 
 

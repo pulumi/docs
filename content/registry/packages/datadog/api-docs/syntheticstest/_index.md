@@ -5,7 +5,7 @@ title_tag: "datadog.SyntheticsTest"
 meta_desc: "Documentation for the datadog.SyntheticsTest resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/datadog/SyntheticsTest/"
-layout: api-doc-resource
+layout: api
 ---
 
 

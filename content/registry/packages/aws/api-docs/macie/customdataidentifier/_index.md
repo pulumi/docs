@@ -5,7 +5,7 @@ title_tag: "aws.macie.CustomDataIdentifier"
 meta_desc: "Documentation for the aws.macie.CustomDataIdentifier resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/CustomDataIdentifier/"
-layout: api-doc-resource
+layout: api
 ---
 
 

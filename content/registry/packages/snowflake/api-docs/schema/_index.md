@@ -5,7 +5,7 @@ title_tag: "snowflake.Schema"
 meta_desc: "Documentation for the snowflake.Schema resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/snowflake/Schema/"
-layout: api-doc-resource
+layout: api
 ---
 
 

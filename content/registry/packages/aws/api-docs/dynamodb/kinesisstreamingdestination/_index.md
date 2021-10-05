@@ -5,7 +5,7 @@ title_tag: "aws.dynamodb.KinesisStreamingDestination"
 meta_desc: "Documentation for the aws.dynamodb.KinesisStreamingDestination resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/KinesisStreamingDestination/"
-layout: api-doc-resource
+layout: api
 ---
 
 

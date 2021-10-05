@@ -5,7 +5,7 @@ title_tag: "google-native.bigtableadmin/v2.Backup"
 meta_desc: "Documentation for the google-native.bigtableadmin/v2.Backup resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/google-native/Backup/"
-layout: api-doc-resource
+layout: api
 ---
 
 

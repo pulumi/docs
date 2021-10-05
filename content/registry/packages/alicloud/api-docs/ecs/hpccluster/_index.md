@@ -5,7 +5,7 @@ title_tag: "alicloud.ecs.HpcCluster"
 meta_desc: "Documentation for the alicloud.ecs.HpcCluster resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/alicloud/HpcCluster/"
-layout: api-doc-resource
+layout: api
 ---
 
 

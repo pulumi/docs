@@ -5,7 +5,7 @@ title_tag: "azure-native.security.SecurityContact"
 meta_desc: "Documentation for the azure-native.security.SecurityContact resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/SecurityContact/"
-layout: api-doc-resource
+layout: api
 ---
 
 
@@ -810,7 +810,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#roles_nodejs" style="color: inherit; text-decoration: inherit;">roles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Roles[]</span>
+        <span class="property-type">(string | Roles)[]</span>
     </dt>
     <dd>{{% md %}}Defines which RBAC roles will get email notifications from Azure Security Center. List of allowed RBAC roles: {{% /md %}}</dd><dt class="property-optional"
             title="Optional">

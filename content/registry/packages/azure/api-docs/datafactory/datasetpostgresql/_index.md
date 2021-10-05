@@ -5,7 +5,7 @@ title_tag: "azure.datafactory.DatasetPostgresql"
 meta_desc: "Documentation for the azure.datafactory.DatasetPostgresql resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/DatasetPostgresql/"
-layout: api-doc-resource
+layout: api
 ---
 
 

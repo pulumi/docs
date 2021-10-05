@@ -5,7 +5,7 @@ title_tag: "azure.devspace.Controller"
 meta_desc: "Documentation for the azure.devspace.Controller resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/Controller/"
-layout: api-doc-resource
+layout: api
 ---
 
 

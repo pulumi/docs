@@ -5,7 +5,7 @@ title_tag: "azure-native.apimanagement.DiagnosticLogger"
 meta_desc: "Documentation for the azure-native.apimanagement.DiagnosticLogger resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/DiagnosticLogger/"
-layout: api-doc-resource
+layout: api
 ---
 
 

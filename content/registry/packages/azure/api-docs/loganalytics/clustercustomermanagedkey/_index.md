@@ -5,7 +5,7 @@ title_tag: "azure.loganalytics.ClusterCustomerManagedKey"
 meta_desc: "Documentation for the azure.loganalytics.ClusterCustomerManagedKey resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/ClusterCustomerManagedKey/"
-layout: api-doc-resource
+layout: api
 ---
 
 

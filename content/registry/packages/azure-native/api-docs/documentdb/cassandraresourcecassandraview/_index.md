@@ -5,7 +5,7 @@ title_tag: "azure-native.documentdb.CassandraResourceCassandraView"
 meta_desc: "Documentation for the azure-native.documentdb.CassandraResourceCassandraView resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/CassandraResourceCassandraView/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "azure.cosmosdb.GremlinGraph"
 meta_desc: "Documentation for the azure.cosmosdb.GremlinGraph resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/GremlinGraph/"
-layout: api-doc-resource
+layout: api
 ---
 
 

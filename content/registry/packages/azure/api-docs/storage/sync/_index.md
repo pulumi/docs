@@ -5,7 +5,7 @@ title_tag: "azure.storage.Sync"
 meta_desc: "Documentation for the azure.storage.Sync resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/Sync/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "kubernetes.core/v1.ServiceAccountList"
 meta_desc: "Documentation for the kubernetes.core/v1.ServiceAccountList resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/kubernetes/ServiceAccountList/"
-layout: api-doc-resource
+layout: api
 ---
 
 

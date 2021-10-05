@@ -5,7 +5,7 @@ title_tag: "azure-native.customerinsights.ConnectorMapping"
 meta_desc: "Documentation for the azure-native.customerinsights.ConnectorMapping resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/ConnectorMapping/"
-layout: api-doc-resource
+layout: api
 ---
 
 

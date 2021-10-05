@@ -5,7 +5,7 @@ title_tag: "alicloud.log.StoreIndex"
 meta_desc: "Documentation for the alicloud.log.StoreIndex resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/alicloud/StoreIndex/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "alicloud.dcdn.getDomains"
 meta_desc: "Documentation for the alicloud.dcdn.getDomains function with examples, input properties, output properties, and supporting types."
 aliases:
     - "/docs/reference/pkg///"
-layout: api-doc-resource
+layout: api
 ---
 
 

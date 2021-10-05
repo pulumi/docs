@@ -5,7 +5,7 @@ title_tag: "datadog.User"
 meta_desc: "Documentation for the datadog.User resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/datadog/User/"
-layout: api-doc-resource
+layout: api
 ---
 
 

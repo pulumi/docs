@@ -5,7 +5,7 @@ title_tag: "mongodbatlas.NetworkContainer"
 meta_desc: "Documentation for the mongodbatlas.NetworkContainer resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/mongodbatlas/NetworkContainer/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "aws.pinpoint.App"
 meta_desc: "Documentation for the aws.pinpoint.App resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/App/"
-layout: api-doc-resource
+layout: api
 ---
 
 

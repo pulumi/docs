@@ -5,7 +5,7 @@ title_tag: "aws.elasticache.SecurityGroup"
 meta_desc: "Documentation for the aws.elasticache.SecurityGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/SecurityGroup/"
-layout: api-doc-resource
+layout: api
 ---
 
 

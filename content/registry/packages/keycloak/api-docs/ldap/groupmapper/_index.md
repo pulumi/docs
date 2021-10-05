@@ -5,7 +5,7 @@ title_tag: "keycloak.ldap.GroupMapper"
 meta_desc: "Documentation for the keycloak.ldap.GroupMapper resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/keycloak/GroupMapper/"
-layout: api-doc-resource
+layout: api
 ---
 
 

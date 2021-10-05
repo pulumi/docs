@@ -5,7 +5,7 @@ title_tag: "aws.athena.Workgroup"
 meta_desc: "Documentation for the aws.athena.Workgroup resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/Workgroup/"
-layout: api-doc-resource
+layout: api
 ---
 
 

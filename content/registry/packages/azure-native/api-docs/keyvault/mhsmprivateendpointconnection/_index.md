@@ -5,7 +5,7 @@ title_tag: "azure-native.keyvault.MHSMPrivateEndpointConnection"
 meta_desc: "Documentation for the azure-native.keyvault.MHSMPrivateEndpointConnection resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/MHSMPrivateEndpointConnection/"
-layout: api-doc-resource
+layout: api
 ---
 
 

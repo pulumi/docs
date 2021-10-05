@@ -5,7 +5,7 @@ title_tag: "yandex.KmsSecretCiphertext"
 meta_desc: "Documentation for the yandex.KmsSecretCiphertext resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/yandex/KmsSecretCiphertext/"
-layout: api-doc-resource
+layout: api
 ---
 
 

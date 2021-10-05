@@ -5,7 +5,7 @@ title_tag: "google-native.bigtableadmin/v2.Cluster"
 meta_desc: "Documentation for the google-native.bigtableadmin/v2.Cluster resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/google-native/Cluster/"
-layout: api-doc-resource
+layout: api
 ---
 
 

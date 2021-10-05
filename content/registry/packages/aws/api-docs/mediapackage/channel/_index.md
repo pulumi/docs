@@ -5,7 +5,7 @@ title_tag: "aws.mediapackage.Channel"
 meta_desc: "Documentation for the aws.mediapackage.Channel resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/Channel/"
-layout: api-doc-resource
+layout: api
 ---
 
 

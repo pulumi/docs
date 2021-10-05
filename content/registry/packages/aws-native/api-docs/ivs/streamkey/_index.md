@@ -5,7 +5,7 @@ title_tag: "aws-native.ivs.StreamKey"
 meta_desc: "Documentation for the aws-native.ivs.StreamKey resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws-native/StreamKey/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "azuread.Group"
 meta_desc: "Documentation for the azuread.Group resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azuread/Group/"
-layout: api-doc-resource
+layout: api
 ---
 
 

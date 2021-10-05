@@ -5,7 +5,7 @@ title_tag: "azuredevops.getPool"
 meta_desc: "Documentation for the azuredevops.getPool function with examples, input properties, output properties, and supporting types."
 aliases:
     - "/docs/reference/pkg///"
-layout: api-doc-resource
+layout: api
 ---
 
 

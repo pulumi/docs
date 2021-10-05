@@ -5,7 +5,7 @@ title_tag: "gcp.compute.InstanceIAMBinding"
 meta_desc: "Documentation for the gcp.compute.InstanceIAMBinding resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/gcp/InstanceIAMBinding/"
-layout: api-doc-resource
+layout: api
 ---
 
 

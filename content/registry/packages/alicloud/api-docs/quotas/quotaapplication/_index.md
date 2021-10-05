@@ -5,7 +5,7 @@ title_tag: "alicloud.quotas.QuotaApplication"
 meta_desc: "Documentation for the alicloud.quotas.QuotaApplication resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/alicloud/QuotaApplication/"
-layout: api-doc-resource
+layout: api
 ---
 
 

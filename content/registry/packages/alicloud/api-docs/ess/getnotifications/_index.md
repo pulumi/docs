@@ -5,7 +5,7 @@ title_tag: "alicloud.ess.getNotifications"
 meta_desc: "Documentation for the alicloud.ess.getNotifications function with examples, input properties, output properties, and supporting types."
 aliases:
     - "/docs/reference/pkg///"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "packet.SpotMarketRequest"
 meta_desc: "Documentation for the packet.SpotMarketRequest resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/packet/SpotMarketRequest/"
-layout: api-doc-resource
+layout: api
 ---
 
 

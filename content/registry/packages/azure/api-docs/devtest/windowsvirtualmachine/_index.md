@@ -5,7 +5,7 @@ title_tag: "azure.devtest.WindowsVirtualMachine"
 meta_desc: "Documentation for the azure.devtest.WindowsVirtualMachine resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/WindowsVirtualMachine/"
-layout: api-doc-resource
+layout: api
 ---
 
 

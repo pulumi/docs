@@ -5,7 +5,7 @@ title_tag: "aws.storagegateway.FileSystemAssociation"
 meta_desc: "Documentation for the aws.storagegateway.FileSystemAssociation resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/FileSystemAssociation/"
-layout: api-doc-resource
+layout: api
 ---
 
 

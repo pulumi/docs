@@ -5,7 +5,7 @@ title_tag: "snowflake.SequenceGrant"
 meta_desc: "Documentation for the snowflake.SequenceGrant resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/snowflake/SequenceGrant/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "azure-native.security.Assessment"
 meta_desc: "Documentation for the azure-native.security.Assessment resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/Assessment/"
-layout: api-doc-resource
+layout: api
 ---
 
 
@@ -2363,7 +2363,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#categories_nodejs" style="color: inherit; text-decoration: inherit;">categories</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Categories[]</span>
+        <span class="property-type">(string | Categories)[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2411,7 +2411,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#threats_nodejs" style="color: inherit; text-decoration: inherit;">threats</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Threats[]</span>
+        <span class="property-type">(string | Threats)[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

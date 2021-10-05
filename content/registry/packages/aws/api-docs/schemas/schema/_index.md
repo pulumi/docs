@@ -5,7 +5,7 @@ title_tag: "aws.schemas.Schema"
 meta_desc: "Documentation for the aws.schemas.Schema resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/Schema/"
-layout: api-doc-resource
+layout: api
 ---
 
 

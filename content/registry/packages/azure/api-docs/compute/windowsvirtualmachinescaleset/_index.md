@@ -5,7 +5,7 @@ title_tag: "azure.compute.WindowsVirtualMachineScaleSet"
 meta_desc: "Documentation for the azure.compute.WindowsVirtualMachineScaleSet resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/WindowsVirtualMachineScaleSet/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "snowflake.StreamGrant"
 meta_desc: "Documentation for the snowflake.StreamGrant resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/snowflake/StreamGrant/"
-layout: api-doc-resource
+layout: api
 ---
 
 

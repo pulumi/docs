@@ -5,7 +5,7 @@ title_tag: "alicloud.resourcemanager.PolicyAttachment"
 meta_desc: "Documentation for the alicloud.resourcemanager.PolicyAttachment resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/alicloud/PolicyAttachment/"
-layout: api-doc-resource
+layout: api
 ---
 
 

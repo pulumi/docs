@@ -5,7 +5,7 @@ title_tag: "azure-native.compute.Snapshot"
 meta_desc: "Documentation for the azure-native.compute.Snapshot resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/Snapshot/"
-layout: api-doc-resource
+layout: api
 ---
 
 

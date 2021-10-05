@@ -5,7 +5,7 @@ title_tag: "azure-native.storage.TableServiceProperties"
 meta_desc: "Documentation for the azure-native.storage.TableServiceProperties resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/TableServiceProperties/"
-layout: api-doc-resource
+layout: api
 ---
 
 

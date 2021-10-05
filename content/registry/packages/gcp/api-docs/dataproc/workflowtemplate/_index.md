@@ -5,7 +5,7 @@ title_tag: "gcp.dataproc.WorkflowTemplate"
 meta_desc: "Documentation for the gcp.dataproc.WorkflowTemplate resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/gcp/WorkflowTemplate/"
-layout: api-doc-resource
+layout: api
 ---
 
 

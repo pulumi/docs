@@ -5,7 +5,7 @@ title_tag: "sumologic.getRole"
 meta_desc: "Documentation for the sumologic.getRole function with examples, input properties, output properties, and supporting types."
 aliases:
     - "/docs/reference/pkg///"
-layout: api-doc-resource
+layout: api
 ---
 
 

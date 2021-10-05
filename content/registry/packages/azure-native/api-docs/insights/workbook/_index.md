@@ -5,7 +5,7 @@ title_tag: "azure-native.insights.Workbook"
 meta_desc: "Documentation for the azure-native.insights.Workbook resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/Workbook/"
-layout: api-doc-resource
+layout: api
 ---
 
 

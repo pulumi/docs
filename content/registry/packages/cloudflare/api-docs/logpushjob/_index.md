@@ -5,7 +5,7 @@ title_tag: "cloudflare.LogpushJob"
 meta_desc: "Documentation for the cloudflare.LogpushJob resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/cloudflare/LogpushJob/"
-layout: api-doc-resource
+layout: api
 ---
 
 

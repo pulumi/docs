@@ -5,7 +5,7 @@ title_tag: "aws.waf.ByteMatchSet"
 meta_desc: "Documentation for the aws.waf.ByteMatchSet resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/ByteMatchSet/"
-layout: api-doc-resource
+layout: api
 ---
 
 

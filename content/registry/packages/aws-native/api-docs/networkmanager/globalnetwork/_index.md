@@ -5,7 +5,7 @@ title_tag: "aws-native.networkmanager.GlobalNetwork"
 meta_desc: "Documentation for the aws-native.networkmanager.GlobalNetwork resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws-native/GlobalNetwork/"
-layout: api-doc-resource
+layout: api
 ---
 
 

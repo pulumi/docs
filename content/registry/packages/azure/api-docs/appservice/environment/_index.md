@@ -5,7 +5,7 @@ title_tag: "azure.appservice.Environment"
 meta_desc: "Documentation for the azure.appservice.Environment resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/Environment/"
-layout: api-doc-resource
+layout: api
 ---
 
 

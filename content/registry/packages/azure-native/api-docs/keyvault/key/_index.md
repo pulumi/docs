@@ -5,7 +5,7 @@ title_tag: "azure-native.keyvault.Key"
 meta_desc: "Documentation for the azure-native.keyvault.Key resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/Key/"
-layout: api-doc-resource
+layout: api
 ---
 
 
@@ -1396,7 +1396,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyops_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Ops</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Json<wbr>Web<wbr>Key<wbr>Operation[]</span>
+        <span class="property-type">(string | Json<wbr>Web<wbr>Key<wbr>Operation)[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

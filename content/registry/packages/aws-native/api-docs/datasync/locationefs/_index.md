@@ -5,7 +5,7 @@ title_tag: "aws-native.datasync.LocationEFS"
 meta_desc: "Documentation for the aws-native.datasync.LocationEFS resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws-native/LocationEFS/"
-layout: api-doc-resource
+layout: api
 ---
 
 

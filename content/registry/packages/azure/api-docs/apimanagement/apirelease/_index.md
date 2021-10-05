@@ -5,7 +5,7 @@ title_tag: "azure.apimanagement.ApiRelease"
 meta_desc: "Documentation for the azure.apimanagement.ApiRelease resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/ApiRelease/"
-layout: api-doc-resource
+layout: api
 ---
 
 

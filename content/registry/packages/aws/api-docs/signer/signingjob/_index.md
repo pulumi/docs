@@ -5,7 +5,7 @@ title_tag: "aws.signer.SigningJob"
 meta_desc: "Documentation for the aws.signer.SigningJob resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/SigningJob/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "azure-native.domainregistration.listDomainRecommendations"
 meta_desc: "Documentation for the azure-native.domainregistration.listDomainRecommendations function with examples, input properties, output properties, and supporting types."
 aliases:
     - "/docs/reference/pkg///"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "azuredevops.BuildDefinition"
 meta_desc: "Documentation for the azuredevops.BuildDefinition resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azuredevops/BuildDefinition/"
-layout: api-doc-resource
+layout: api
 ---
 
 

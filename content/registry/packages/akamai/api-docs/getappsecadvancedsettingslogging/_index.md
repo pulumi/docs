@@ -5,7 +5,7 @@ title_tag: "akamai.getAppSecAdvancedSettingsLogging"
 meta_desc: "Documentation for the akamai.getAppSecAdvancedSettingsLogging function with examples, input properties, output properties, and supporting types."
 aliases:
     - "/docs/reference/pkg///"
-layout: api-doc-resource
+layout: api
 ---
 
 

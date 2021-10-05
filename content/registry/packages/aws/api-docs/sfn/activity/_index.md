@@ -5,7 +5,7 @@ title_tag: "aws.sfn.Activity"
 meta_desc: "Documentation for the aws.sfn.Activity resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/Activity/"
-layout: api-doc-resource
+layout: api
 ---
 
 

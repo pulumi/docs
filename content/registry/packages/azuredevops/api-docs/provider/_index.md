@@ -5,7 +5,7 @@ title_tag: "azuredevops.Provider"
 meta_desc: "Documentation for the azuredevops.Provider resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azuredevops/azuredevops/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "azure.automation.BoolVariable"
 meta_desc: "Documentation for the azure.automation.BoolVariable resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/BoolVariable/"
-layout: api-doc-resource
+layout: api
 ---
 
 

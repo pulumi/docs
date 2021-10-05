@@ -5,7 +5,7 @@ title_tag: "fastly.ServiceCompute"
 meta_desc: "Documentation for the fastly.ServiceCompute resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/fastly/ServiceCompute/"
-layout: api-doc-resource
+layout: api
 ---
 
 

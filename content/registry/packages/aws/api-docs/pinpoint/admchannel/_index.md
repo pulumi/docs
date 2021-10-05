@@ -5,7 +5,7 @@ title_tag: "aws.pinpoint.AdmChannel"
 meta_desc: "Documentation for the aws.pinpoint.AdmChannel resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/AdmChannel/"
-layout: api-doc-resource
+layout: api
 ---
 
 

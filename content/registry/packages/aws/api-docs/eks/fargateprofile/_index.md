@@ -5,7 +5,7 @@ title_tag: "aws.eks.FargateProfile"
 meta_desc: "Documentation for the aws.eks.FargateProfile resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/FargateProfile/"
-layout: api-doc-resource
+layout: api
 ---
 
 

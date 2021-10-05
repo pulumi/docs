@@ -5,7 +5,7 @@ title_tag: "aws.ec2clientvpn.Route"
 meta_desc: "Documentation for the aws.ec2clientvpn.Route resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/Route/"
-layout: api-doc-resource
+layout: api
 ---
 
 

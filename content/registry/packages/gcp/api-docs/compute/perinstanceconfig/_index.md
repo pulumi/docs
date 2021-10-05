@@ -5,7 +5,7 @@ title_tag: "gcp.compute.PerInstanceConfig"
 meta_desc: "Documentation for the gcp.compute.PerInstanceConfig resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/gcp/PerInstanceConfig/"
-layout: api-doc-resource
+layout: api
 ---
 
 

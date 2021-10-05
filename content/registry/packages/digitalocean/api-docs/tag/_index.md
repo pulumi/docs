@@ -5,7 +5,7 @@ title_tag: "digitalocean.Tag"
 meta_desc: "Documentation for the digitalocean.Tag resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/digitalocean/Tag/"
-layout: api-doc-resource
+layout: api
 ---
 
 

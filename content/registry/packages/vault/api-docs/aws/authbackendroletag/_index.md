@@ -5,7 +5,7 @@ title_tag: "vault.aws.AuthBackendRoleTag"
 meta_desc: "Documentation for the vault.aws.AuthBackendRoleTag resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/vault/AuthBackendRoleTag/"
-layout: api-doc-resource
+layout: api
 ---
 
 

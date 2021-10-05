@@ -5,7 +5,7 @@ title_tag: "azure.databricks.WorkspaceCustomerManagedKey"
 meta_desc: "Documentation for the azure.databricks.WorkspaceCustomerManagedKey resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/WorkspaceCustomerManagedKey/"
-layout: api-doc-resource
+layout: api
 ---
 
 

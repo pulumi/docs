@@ -5,7 +5,7 @@ title_tag: "yandex.AlbHttpRouter"
 meta_desc: "Documentation for the yandex.AlbHttpRouter resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/yandex/AlbHttpRouter/"
-layout: api-doc-resource
+layout: api
 ---
 
 

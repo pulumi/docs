@@ -5,7 +5,7 @@ title_tag: "linode.getStackScript"
 meta_desc: "Documentation for the linode.getStackScript function with examples, input properties, output properties, and supporting types."
 aliases:
     - "/docs/reference/pkg///"
-layout: api-doc-resource
+layout: api
 ---
 
 

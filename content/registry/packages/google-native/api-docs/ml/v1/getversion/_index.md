@@ -5,7 +5,7 @@ title_tag: "google-native.ml/v1.getVersion"
 meta_desc: "Documentation for the google-native.ml/v1.getVersion function with examples, input properties, output properties, and supporting types."
 aliases:
     - "/docs/reference/pkg///"
-layout: api-doc-resource
+layout: api
 ---
 
 

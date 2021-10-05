@@ -5,7 +5,7 @@ title_tag: "hcloud.LoadBalancer"
 meta_desc: "Documentation for the hcloud.LoadBalancer resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/hcloud/LoadBalancer/"
-layout: api-doc-resource
+layout: api
 ---
 
 

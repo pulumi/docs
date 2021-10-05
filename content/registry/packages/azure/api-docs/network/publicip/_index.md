@@ -5,7 +5,7 @@ title_tag: "azure.network.PublicIp"
 meta_desc: "Documentation for the azure.network.PublicIp resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/PublicIp/"
-layout: api-doc-resource
+layout: api
 ---
 
 

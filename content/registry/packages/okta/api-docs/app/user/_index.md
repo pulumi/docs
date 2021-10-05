@@ -5,7 +5,7 @@ title_tag: "okta.app.User"
 meta_desc: "Documentation for the okta.app.User resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/okta/User/"
-layout: api-doc-resource
+layout: api
 ---
 
 

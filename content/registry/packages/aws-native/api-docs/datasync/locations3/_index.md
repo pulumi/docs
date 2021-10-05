@@ -5,7 +5,7 @@ title_tag: "aws-native.datasync.LocationS3"
 meta_desc: "Documentation for the aws-native.datasync.LocationS3 resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws-native/LocationS3/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "aws.servicediscovery.PrivateDnsNamespace"
 meta_desc: "Documentation for the aws.servicediscovery.PrivateDnsNamespace resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/PrivateDnsNamespace/"
-layout: api-doc-resource
+layout: api
 ---
 
 

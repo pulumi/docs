@@ -5,7 +5,7 @@ title_tag: "yandex.IotCoreRegistry"
 meta_desc: "Documentation for the yandex.IotCoreRegistry resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/yandex/IotCoreRegistry/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "okta.Provider"
 meta_desc: "Documentation for the okta.Provider resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/okta/okta/"
-layout: api-doc-resource
+layout: api
 ---
 
 

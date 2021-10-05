@@ -5,7 +5,7 @@ title_tag: "azure.datafactory.CustomDataset"
 meta_desc: "Documentation for the azure.datafactory.CustomDataset resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/CustomDataset/"
-layout: api-doc-resource
+layout: api
 ---
 
 

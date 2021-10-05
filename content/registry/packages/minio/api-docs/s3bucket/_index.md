@@ -5,7 +5,7 @@ title_tag: "minio.S3Bucket"
 meta_desc: "Documentation for the minio.S3Bucket resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/minio/S3Bucket/"
-layout: api-doc-resource
+layout: api
 ---
 
 

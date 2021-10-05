@@ -5,7 +5,7 @@ title_tag: "gcp.dataloss.PreventionInspectTemplate"
 meta_desc: "Documentation for the gcp.dataloss.PreventionInspectTemplate resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/gcp/PreventionInspectTemplate/"
-layout: api-doc-resource
+layout: api
 ---
 
 

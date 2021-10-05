@@ -5,7 +5,7 @@ title_tag: "kubernetes.core/v1.ResourceQuota"
 meta_desc: "Documentation for the kubernetes.core/v1.ResourceQuota resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/kubernetes/ResourceQuota/"
-layout: api-doc-resource
+layout: api
 ---
 
 

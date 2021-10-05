@@ -5,7 +5,7 @@ title_tag: "azure.kusto.ClusterPrincipalAssignment"
 meta_desc: "Documentation for the azure.kusto.ClusterPrincipalAssignment resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/ClusterPrincipalAssignment/"
-layout: api-doc-resource
+layout: api
 ---
 
 

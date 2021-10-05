@@ -5,7 +5,7 @@ title_tag: "yandex.ContainerRegistry"
 meta_desc: "Documentation for the yandex.ContainerRegistry resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/yandex/ContainerRegistry/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "azure.datafactory.IntegrationRuntimeSsis"
 meta_desc: "Documentation for the azure.datafactory.IntegrationRuntimeSsis resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/IntegrationRuntimeSsis/"
-layout: api-doc-resource
+layout: api
 ---
 
 

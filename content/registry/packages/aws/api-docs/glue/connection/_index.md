@@ -5,7 +5,7 @@ title_tag: "aws.glue.Connection"
 meta_desc: "Documentation for the aws.glue.Connection resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/Connection/"
-layout: api-doc-resource
+layout: api
 ---
 
 

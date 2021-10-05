@@ -5,7 +5,7 @@ title_tag: "gcp.folder.IAMMember"
 meta_desc: "Documentation for the gcp.folder.IAMMember resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/gcp/IAMMember/"
-layout: api-doc-resource
+layout: api
 ---
 
 

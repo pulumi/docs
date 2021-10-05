@@ -5,7 +5,7 @@ title_tag: "consul.Service"
 meta_desc: "Documentation for the consul.Service resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/consul/Service/"
-layout: api-doc-resource
+layout: api
 ---
 
 

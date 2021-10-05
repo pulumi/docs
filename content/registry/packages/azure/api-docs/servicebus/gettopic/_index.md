@@ -5,7 +5,7 @@ title_tag: "azure.servicebus.getTopic"
 meta_desc: "Documentation for the azure.servicebus.getTopic function with examples, input properties, output properties, and supporting types."
 aliases:
     - "/docs/reference/pkg///"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "gcp.appengine.DomainMapping"
 meta_desc: "Documentation for the gcp.appengine.DomainMapping resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/gcp/DomainMapping/"
-layout: api-doc-resource
+layout: api
 ---
 
 

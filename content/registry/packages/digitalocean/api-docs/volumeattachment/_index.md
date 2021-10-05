@@ -5,7 +5,7 @@ title_tag: "digitalocean.VolumeAttachment"
 meta_desc: "Documentation for the digitalocean.VolumeAttachment resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/digitalocean/VolumeAttachment/"
-layout: api-doc-resource
+layout: api
 ---
 
 

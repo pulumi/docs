@@ -5,7 +5,7 @@ title_tag: "azure-native.documentdb.CassandraCluster"
 meta_desc: "Documentation for the azure-native.documentdb.CassandraCluster resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/CassandraCluster/"
-layout: api-doc-resource
+layout: api
 ---
 
 

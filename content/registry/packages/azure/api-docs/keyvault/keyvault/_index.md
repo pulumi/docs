@@ -5,7 +5,7 @@ title_tag: "azure.keyvault.KeyVault"
 meta_desc: "Documentation for the azure.keyvault.KeyVault resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/KeyVault/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "gcp.compute.InstanceGroupManager"
 meta_desc: "Documentation for the gcp.compute.InstanceGroupManager resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/gcp/InstanceGroupManager/"
-layout: api-doc-resource
+layout: api
 ---
 
 

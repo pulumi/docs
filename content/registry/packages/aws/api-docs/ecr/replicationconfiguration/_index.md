@@ -5,7 +5,7 @@ title_tag: "aws.ecr.ReplicationConfiguration"
 meta_desc: "Documentation for the aws.ecr.ReplicationConfiguration resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/ReplicationConfiguration/"
-layout: api-doc-resource
+layout: api
 ---
 
 

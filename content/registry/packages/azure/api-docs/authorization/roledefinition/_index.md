@@ -5,7 +5,7 @@ title_tag: "azure.authorization.RoleDefinition"
 meta_desc: "Documentation for the azure.authorization.RoleDefinition resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/RoleDefinition/"
-layout: api-doc-resource
+layout: api
 ---
 
 

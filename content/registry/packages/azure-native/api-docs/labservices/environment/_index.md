@@ -5,7 +5,7 @@ title_tag: "azure-native.labservices.Environment"
 meta_desc: "Documentation for the azure-native.labservices.Environment resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/Environment/"
-layout: api-doc-resource
+layout: api
 ---
 
 

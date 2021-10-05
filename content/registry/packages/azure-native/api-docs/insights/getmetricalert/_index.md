@@ -5,7 +5,7 @@ title_tag: "azure-native.insights.getMetricAlert"
 meta_desc: "Documentation for the azure-native.insights.getMetricAlert function with examples, input properties, output properties, and supporting types."
 aliases:
     - "/docs/reference/pkg///"
-layout: api-doc-resource
+layout: api
 ---
 
 
@@ -1285,7 +1285,7 @@ The following output properties are available:
 <a href="#allof_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Of</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dynamic<wbr>Metric<wbr>Criteria<wbr>Response | Metric<wbr>Criteria<wbr>Response[]</span>
+        <span class="property-type">(Dynamic<wbr>Metric<wbr>Criteria<wbr>Response | Metric<wbr>Criteria<wbr>Response)[]</span>
     </dt>
     <dd>{{% md %}}the list of multiple metric criteria for this 'all of' operation. {{% /md %}}</dd></dl>
 {{% /choosable %}}

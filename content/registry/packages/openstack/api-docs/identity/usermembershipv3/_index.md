@@ -5,7 +5,7 @@ title_tag: "openstack.identity.UserMembershipV3"
 meta_desc: "Documentation for the openstack.identity.UserMembershipV3 resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/openstack/UserMembershipV3/"
-layout: api-doc-resource
+layout: api
 ---
 
 

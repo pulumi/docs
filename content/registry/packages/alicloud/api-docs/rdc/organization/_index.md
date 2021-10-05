@@ -5,7 +5,7 @@ title_tag: "alicloud.rdc.Organization"
 meta_desc: "Documentation for the alicloud.rdc.Organization resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/alicloud/Organization/"
-layout: api-doc-resource
+layout: api
 ---
 
 

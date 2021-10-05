@@ -5,7 +5,7 @@ title_tag: "aws.iam.AccountPasswordPolicy"
 meta_desc: "Documentation for the aws.iam.AccountPasswordPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/AccountPasswordPolicy/"
-layout: api-doc-resource
+layout: api
 ---
 
 

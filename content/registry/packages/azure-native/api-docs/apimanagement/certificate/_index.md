@@ -5,7 +5,7 @@ title_tag: "azure-native.apimanagement.Certificate"
 meta_desc: "Documentation for the azure-native.apimanagement.Certificate resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/Certificate/"
-layout: api-doc-resource
+layout: api
 ---
 
 

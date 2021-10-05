@@ -5,7 +5,7 @@ title_tag: "azure-native.kubernetesconfiguration.getExtension"
 meta_desc: "Documentation for the azure-native.kubernetesconfiguration.getExtension function with examples, input properties, output properties, and supporting types."
 aliases:
     - "/docs/reference/pkg///"
-layout: api-doc-resource
+layout: api
 ---
 
 

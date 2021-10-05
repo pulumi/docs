@@ -5,7 +5,7 @@ title_tag: "aws.securityhub.ProductSubscription"
 meta_desc: "Documentation for the aws.securityhub.ProductSubscription resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/ProductSubscription/"
-layout: api-doc-resource
+layout: api
 ---
 
 

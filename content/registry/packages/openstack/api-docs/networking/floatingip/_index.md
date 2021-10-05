@@ -5,7 +5,7 @@ title_tag: "openstack.networking.FloatingIp"
 meta_desc: "Documentation for the openstack.networking.FloatingIp resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/openstack/FloatingIp/"
-layout: api-doc-resource
+layout: api
 ---
 
 

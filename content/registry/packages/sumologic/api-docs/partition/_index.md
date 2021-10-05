@@ -5,7 +5,7 @@ title_tag: "sumologic.Partition"
 meta_desc: "Documentation for the sumologic.Partition resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/sumologic/Partition/"
-layout: api-doc-resource
+layout: api
 ---
 
 

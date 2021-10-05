@@ -5,7 +5,7 @@ title_tag: "vault.kubernetes.getAuthBackendConfig"
 meta_desc: "Documentation for the vault.kubernetes.getAuthBackendConfig function with examples, input properties, output properties, and supporting types."
 aliases:
     - "/docs/reference/pkg///"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "aws-native.wafv2.LoggingConfiguration"
 meta_desc: "Documentation for the aws-native.wafv2.LoggingConfiguration resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws-native/LoggingConfiguration/"
-layout: api-doc-resource
+layout: api
 ---
 
 

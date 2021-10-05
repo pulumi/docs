@@ -5,7 +5,7 @@ title_tag: "azure.servicebus.QueueAuthorizationRule"
 meta_desc: "Documentation for the azure.servicebus.QueueAuthorizationRule resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/QueueAuthorizationRule/"
-layout: api-doc-resource
+layout: api
 ---
 
 

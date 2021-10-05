@@ -5,7 +5,7 @@ title_tag: "google-native.iap/v1.IdentityAwareProxyClient"
 meta_desc: "Documentation for the google-native.iap/v1.IdentityAwareProxyClient resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/google-native/IdentityAwareProxyClient/"
-layout: api-doc-resource
+layout: api
 ---
 
 

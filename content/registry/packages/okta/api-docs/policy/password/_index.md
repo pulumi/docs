@@ -5,7 +5,7 @@ title_tag: "okta.policy.Password"
 meta_desc: "Documentation for the okta.policy.Password resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/okta/Password/"
-layout: api-doc-resource
+layout: api
 ---
 
 

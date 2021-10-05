@@ -5,7 +5,7 @@ title_tag: "azure-native.securityinsights.ProductSetting"
 meta_desc: "Documentation for the azure-native.securityinsights.ProductSetting resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/ProductSetting/"
-layout: api-doc-resource
+layout: api
 ---
 
 

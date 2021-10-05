@@ -5,7 +5,7 @@ title_tag: "gitlab.ProjectBadge"
 meta_desc: "Documentation for the gitlab.ProjectBadge resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/gitlab/ProjectBadge/"
-layout: api-doc-resource
+layout: api
 ---
 
 

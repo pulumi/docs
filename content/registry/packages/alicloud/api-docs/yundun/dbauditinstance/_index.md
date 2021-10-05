@@ -5,7 +5,7 @@ title_tag: "alicloud.yundun.DBAuditInstance"
 meta_desc: "Documentation for the alicloud.yundun.DBAuditInstance resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/alicloud/DBAuditInstance/"
-layout: api-doc-resource
+layout: api
 ---
 
 

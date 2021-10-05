@@ -5,7 +5,7 @@ title_tag: "gcp.organizations.IAMCustomRole"
 meta_desc: "Documentation for the gcp.organizations.IAMCustomRole resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/gcp/IAMCustomRole/"
-layout: api-doc-resource
+layout: api
 ---
 
 

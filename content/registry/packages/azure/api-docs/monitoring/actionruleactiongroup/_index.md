@@ -5,7 +5,7 @@ title_tag: "azure.monitoring.ActionRuleActionGroup"
 meta_desc: "Documentation for the azure.monitoring.ActionRuleActionGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/ActionRuleActionGroup/"
-layout: api-doc-resource
+layout: api
 ---
 
 

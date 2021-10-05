@@ -5,7 +5,7 @@ title_tag: "gcp.dataloss.PreventionStoredInfoType"
 meta_desc: "Documentation for the gcp.dataloss.PreventionStoredInfoType resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/gcp/PreventionStoredInfoType/"
-layout: api-doc-resource
+layout: api
 ---
 
 

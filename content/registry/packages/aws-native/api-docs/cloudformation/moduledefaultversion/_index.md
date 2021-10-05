@@ -5,7 +5,7 @@ title_tag: "aws-native.cloudformation.ModuleDefaultVersion"
 meta_desc: "Documentation for the aws-native.cloudformation.ModuleDefaultVersion resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws-native/ModuleDefaultVersion/"
-layout: api-doc-resource
+layout: api
 ---
 
 

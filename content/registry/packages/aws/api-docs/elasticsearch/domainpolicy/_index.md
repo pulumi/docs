@@ -5,7 +5,7 @@ title_tag: "aws.elasticsearch.DomainPolicy"
 meta_desc: "Documentation for the aws.elasticsearch.DomainPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/DomainPolicy/"
-layout: api-doc-resource
+layout: api
 ---
 
 

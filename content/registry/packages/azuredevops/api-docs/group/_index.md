@@ -5,7 +5,7 @@ title_tag: "azuredevops.Group"
 meta_desc: "Documentation for the azuredevops.Group resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azuredevops/Group/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "equinix-metal.VirtualCircuit"
 meta_desc: "Documentation for the equinix-metal.VirtualCircuit resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/equinix-metal/VirtualCircuit/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "aws-native.route53.HostedZone"
 meta_desc: "Documentation for the aws-native.route53.HostedZone resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws-native/HostedZone/"
-layout: api-doc-resource
+layout: api
 ---
 
 

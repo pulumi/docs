@@ -5,7 +5,7 @@ title_tag: "aws.appautoscaling.ScheduledAction"
 meta_desc: "Documentation for the aws.appautoscaling.ScheduledAction resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/ScheduledAction/"
-layout: api-doc-resource
+layout: api
 ---
 
 

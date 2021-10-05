@@ -5,7 +5,7 @@ title_tag: "azuredevops.Core.Project"
 meta_desc: "Documentation for the azuredevops.Core.Project resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azuredevops/Project/"
-layout: api-doc-resource
+layout: api
 ---
 
 

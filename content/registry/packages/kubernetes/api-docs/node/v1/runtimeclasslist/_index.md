@@ -5,7 +5,7 @@ title_tag: "kubernetes.node.k8s.io/v1.RuntimeClassList"
 meta_desc: "Documentation for the kubernetes.node.k8s.io/v1.RuntimeClassList resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/kubernetes/RuntimeClassList/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "alicloud.oss.BucketObject"
 meta_desc: "Documentation for the alicloud.oss.BucketObject resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/alicloud/BucketObject/"
-layout: api-doc-resource
+layout: api
 ---
 
 

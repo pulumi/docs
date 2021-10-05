@@ -5,7 +5,7 @@ title_tag: "google-native.dataproc/v1beta2.AutoscalingPolicy"
 meta_desc: "Documentation for the google-native.dataproc/v1beta2.AutoscalingPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/google-native/AutoscalingPolicy/"
-layout: api-doc-resource
+layout: api
 ---
 
 

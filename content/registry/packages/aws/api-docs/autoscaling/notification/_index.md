@@ -5,7 +5,7 @@ title_tag: "aws.autoscaling.Notification"
 meta_desc: "Documentation for the aws.autoscaling.Notification resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/Notification/"
-layout: api-doc-resource
+layout: api
 ---
 
 

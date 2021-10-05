@@ -5,7 +5,7 @@ title_tag: "azure-native.datashare.listShareSynchronizationDetails"
 meta_desc: "Documentation for the azure-native.datashare.listShareSynchronizationDetails function with examples, input properties, output properties, and supporting types."
 aliases:
     - "/docs/reference/pkg///"
-layout: api-doc-resource
+layout: api
 ---
 
 

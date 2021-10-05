@@ -5,7 +5,7 @@ title_tag: "packet.Device"
 meta_desc: "Documentation for the packet.Device resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/packet/Device/"
-layout: api-doc-resource
+layout: api
 ---
 
 

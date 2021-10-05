@@ -5,7 +5,7 @@ title_tag: "kubernetes.certificates.k8s.io/v1.CertificateSigningRequest"
 meta_desc: "Documentation for the kubernetes.certificates.k8s.io/v1.CertificateSigningRequest resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/kubernetes/CertificateSigningRequest/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "azure-native.iotsecurity.DefenderSetting"
 meta_desc: "Documentation for the azure-native.iotsecurity.DefenderSetting resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/DefenderSetting/"
-layout: api-doc-resource
+layout: api
 ---
 
 

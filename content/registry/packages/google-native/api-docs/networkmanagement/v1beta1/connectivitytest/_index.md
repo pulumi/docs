@@ -5,7 +5,7 @@ title_tag: "google-native.networkmanagement/v1beta1.ConnectivityTest"
 meta_desc: "Documentation for the google-native.networkmanagement/v1beta1.ConnectivityTest resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/google-native/ConnectivityTest/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "gcp.runtimeconfig.ConfigIamBinding"
 meta_desc: "Documentation for the gcp.runtimeconfig.ConfigIamBinding resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/gcp/ConfigIamBinding/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "azure.operationalinsights.AnalyticsWorkspace"
 meta_desc: "Documentation for the azure.operationalinsights.AnalyticsWorkspace resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/AnalyticsWorkspace/"
-layout: api-doc-resource
+layout: api
 ---
 
 

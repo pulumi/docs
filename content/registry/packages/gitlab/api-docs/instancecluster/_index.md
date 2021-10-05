@@ -5,7 +5,7 @@ title_tag: "gitlab.InstanceCluster"
 meta_desc: "Documentation for the gitlab.InstanceCluster resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/gitlab/InstanceCluster/"
-layout: api-doc-resource
+layout: api
 ---
 
 

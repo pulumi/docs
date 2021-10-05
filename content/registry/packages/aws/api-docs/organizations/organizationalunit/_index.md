@@ -5,7 +5,7 @@ title_tag: "aws.organizations.OrganizationalUnit"
 meta_desc: "Documentation for the aws.organizations.OrganizationalUnit resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/OrganizationalUnit/"
-layout: api-doc-resource
+layout: api
 ---
 
 

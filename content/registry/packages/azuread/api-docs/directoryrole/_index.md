@@ -5,7 +5,7 @@ title_tag: "azuread.DirectoryRole"
 meta_desc: "Documentation for the azuread.DirectoryRole resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azuread/DirectoryRole/"
-layout: api-doc-resource
+layout: api
 ---
 
 

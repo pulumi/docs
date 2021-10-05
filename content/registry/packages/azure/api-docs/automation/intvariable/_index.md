@@ -5,7 +5,7 @@ title_tag: "azure.automation.IntVariable"
 meta_desc: "Documentation for the azure.automation.IntVariable resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/IntVariable/"
-layout: api-doc-resource
+layout: api
 ---
 
 

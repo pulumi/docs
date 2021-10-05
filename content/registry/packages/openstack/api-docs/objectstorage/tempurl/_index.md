@@ -5,7 +5,7 @@ title_tag: "openstack.objectstorage.TempUrl"
 meta_desc: "Documentation for the openstack.objectstorage.TempUrl resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/openstack/TempUrl/"
-layout: api-doc-resource
+layout: api
 ---
 
 

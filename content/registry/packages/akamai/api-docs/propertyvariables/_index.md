@@ -5,7 +5,7 @@ title_tag: "akamai.PropertyVariables"
 meta_desc: "Documentation for the akamai.PropertyVariables resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/akamai/PropertyVariables/"
-layout: api-doc-resource
+layout: api
 ---
 
 

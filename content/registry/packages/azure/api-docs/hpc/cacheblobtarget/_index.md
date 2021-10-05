@@ -5,7 +5,7 @@ title_tag: "azure.hpc.CacheBlobTarget"
 meta_desc: "Documentation for the azure.hpc.CacheBlobTarget resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/CacheBlobTarget/"
-layout: api-doc-resource
+layout: api
 ---
 
 

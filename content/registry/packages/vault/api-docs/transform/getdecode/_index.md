@@ -5,7 +5,7 @@ title_tag: "vault.transform.getDecode"
 meta_desc: "Documentation for the vault.transform.getDecode function with examples, input properties, output properties, and supporting types."
 aliases:
     - "/docs/reference/pkg///"
-layout: api-doc-resource
+layout: api
 ---
 
 

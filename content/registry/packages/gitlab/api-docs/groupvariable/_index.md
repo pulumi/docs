@@ -5,7 +5,7 @@ title_tag: "gitlab.GroupVariable"
 meta_desc: "Documentation for the gitlab.GroupVariable resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/gitlab/GroupVariable/"
-layout: api-doc-resource
+layout: api
 ---
 
 

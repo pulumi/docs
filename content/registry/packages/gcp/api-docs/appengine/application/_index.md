@@ -5,7 +5,7 @@ title_tag: "gcp.appengine.Application"
 meta_desc: "Documentation for the gcp.appengine.Application resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/gcp/Application/"
-layout: api-doc-resource
+layout: api
 ---
 
 

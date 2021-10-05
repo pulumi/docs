@@ -5,7 +5,7 @@ title_tag: "azure-native.iotsecurity.LocationSite"
 meta_desc: "Documentation for the azure-native.iotsecurity.LocationSite resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/LocationSite/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "google-native.sqladmin/v1beta4.BackupRun"
 meta_desc: "Documentation for the google-native.sqladmin/v1beta4.BackupRun resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/google-native/BackupRun/"
-layout: api-doc-resource
+layout: api
 ---
 
 

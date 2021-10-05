@@ -5,7 +5,7 @@ title_tag: "google-native.cloudresourcemanager/v3.TagKeyIamPolicy"
 meta_desc: "Documentation for the google-native.cloudresourcemanager/v3.TagKeyIamPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/google-native/TagKeyIamPolicy/"
-layout: api-doc-resource
+layout: api
 ---
 
 

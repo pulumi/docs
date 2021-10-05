@@ -5,7 +5,7 @@ title_tag: "aws.elasticbeanstalk.Application"
 meta_desc: "Documentation for the aws.elasticbeanstalk.Application resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/Application/"
-layout: api-doc-resource
+layout: api
 ---
 
 

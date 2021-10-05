@@ -5,7 +5,7 @@ title_tag: "azure.datafactory.IntegrationRuntimeRule"
 meta_desc: "Documentation for the azure.datafactory.IntegrationRuntimeRule resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/IntegrationRuntimeRule/"
-layout: api-doc-resource
+layout: api
 ---
 
 

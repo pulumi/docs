@@ -5,7 +5,7 @@ title_tag: "gcp.workflows.Workflow"
 meta_desc: "Documentation for the gcp.workflows.Workflow resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/gcp/Workflow/"
-layout: api-doc-resource
+layout: api
 ---
 
 

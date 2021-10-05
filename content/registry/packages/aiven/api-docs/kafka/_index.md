@@ -5,7 +5,7 @@ title_tag: "aiven.Kafka"
 meta_desc: "Documentation for the aiven.Kafka resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aiven/Kafka/"
-layout: api-doc-resource
+layout: api
 ---
 
 

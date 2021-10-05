@@ -5,7 +5,7 @@ title_tag: "alicloud.dns.Record"
 meta_desc: "Documentation for the alicloud.dns.Record resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/alicloud/Record/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "aws.transfer.Access"
 meta_desc: "Documentation for the aws.transfer.Access resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/Access/"
-layout: api-doc-resource
+layout: api
 ---
 
 

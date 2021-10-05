@@ -5,7 +5,7 @@ title_tag: "f5bigip.As3"
 meta_desc: "Documentation for the f5bigip.As3 resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/f5bigip/As3/"
-layout: api-doc-resource
+layout: api
 ---
 
 

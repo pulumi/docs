@@ -5,7 +5,7 @@ title_tag: "azure-native.databox.getJob"
 meta_desc: "Documentation for the azure-native.databox.getJob function with examples, input properties, output properties, and supporting types."
 aliases:
     - "/docs/reference/pkg///"
-layout: api-doc-resource
+layout: api
 ---
 
 
@@ -2770,7 +2770,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#copylogdetails_nodejs" style="color: inherit; text-decoration: inherit;">copy<wbr>Log<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Data<wbr>Box<wbr>Account<wbr>Copy<wbr>Log<wbr>Details<wbr>Response | Data<wbr>Box<wbr>Disk<wbr>Copy<wbr>Log<wbr>Details<wbr>Response | Data<wbr>Box<wbr>Heavy<wbr>Account<wbr>Copy<wbr>Log<wbr>Details<wbr>Response[]</span>
+        <span class="property-type">(Data<wbr>Box<wbr>Account<wbr>Copy<wbr>Log<wbr>Details<wbr>Response | Data<wbr>Box<wbr>Disk<wbr>Copy<wbr>Log<wbr>Details<wbr>Response | Data<wbr>Box<wbr>Heavy<wbr>Account<wbr>Copy<wbr>Log<wbr>Details<wbr>Response)[]</span>
     </dt>
     <dd>{{% md %}}List of copy log details.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3418,7 +3418,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#copylogdetails_nodejs" style="color: inherit; text-decoration: inherit;">copy<wbr>Log<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Data<wbr>Box<wbr>Account<wbr>Copy<wbr>Log<wbr>Details<wbr>Response | Data<wbr>Box<wbr>Disk<wbr>Copy<wbr>Log<wbr>Details<wbr>Response | Data<wbr>Box<wbr>Heavy<wbr>Account<wbr>Copy<wbr>Log<wbr>Details<wbr>Response[]</span>
+        <span class="property-type">(Data<wbr>Box<wbr>Account<wbr>Copy<wbr>Log<wbr>Details<wbr>Response | Data<wbr>Box<wbr>Disk<wbr>Copy<wbr>Log<wbr>Details<wbr>Response | Data<wbr>Box<wbr>Heavy<wbr>Account<wbr>Copy<wbr>Log<wbr>Details<wbr>Response)[]</span>
     </dt>
     <dd>{{% md %}}List of copy log details.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3918,7 +3918,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#copylogdetails_nodejs" style="color: inherit; text-decoration: inherit;">copy<wbr>Log<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Data<wbr>Box<wbr>Account<wbr>Copy<wbr>Log<wbr>Details<wbr>Response | Data<wbr>Box<wbr>Disk<wbr>Copy<wbr>Log<wbr>Details<wbr>Response | Data<wbr>Box<wbr>Heavy<wbr>Account<wbr>Copy<wbr>Log<wbr>Details<wbr>Response[]</span>
+        <span class="property-type">(Data<wbr>Box<wbr>Account<wbr>Copy<wbr>Log<wbr>Details<wbr>Response | Data<wbr>Box<wbr>Disk<wbr>Copy<wbr>Log<wbr>Details<wbr>Response | Data<wbr>Box<wbr>Heavy<wbr>Account<wbr>Copy<wbr>Log<wbr>Details<wbr>Response)[]</span>
     </dt>
     <dd>{{% md %}}List of copy log details.{{% /md %}}</dd><dt class="property-required"
             title="Required">

@@ -5,7 +5,7 @@ title_tag: "google-native.binaryauthorization/v1.PolicyIamPolicy"
 meta_desc: "Documentation for the google-native.binaryauthorization/v1.PolicyIamPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/google-native/PolicyIamPolicy/"
-layout: api-doc-resource
+layout: api
 ---
 
 

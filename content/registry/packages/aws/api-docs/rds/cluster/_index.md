@@ -5,7 +5,7 @@ title_tag: "aws.rds.Cluster"
 meta_desc: "Documentation for the aws.rds.Cluster resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/Cluster/"
-layout: api-doc-resource
+layout: api
 ---
 
 

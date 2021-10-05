@@ -5,7 +5,7 @@ title_tag: "azure.frontdoor.FirewallPolicy"
 meta_desc: "Documentation for the azure.frontdoor.FirewallPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/FirewallPolicy/"
-layout: api-doc-resource
+layout: api
 ---
 
 

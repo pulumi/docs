@@ -5,7 +5,7 @@ title_tag: "yandex.MessageQueue"
 meta_desc: "Documentation for the yandex.MessageQueue resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/yandex/MessageQueue/"
-layout: api-doc-resource
+layout: api
 ---
 
 

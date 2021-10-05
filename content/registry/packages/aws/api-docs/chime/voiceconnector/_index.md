@@ -5,7 +5,7 @@ title_tag: "aws.chime.VoiceConnector"
 meta_desc: "Documentation for the aws.chime.VoiceConnector resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/VoiceConnector/"
-layout: api-doc-resource
+layout: api
 ---
 
 

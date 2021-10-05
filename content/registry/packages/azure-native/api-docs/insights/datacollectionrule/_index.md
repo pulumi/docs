@@ -5,7 +5,7 @@ title_tag: "azure-native.insights.DataCollectionRule"
 meta_desc: "Documentation for the azure-native.insights.DataCollectionRule resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/DataCollectionRule/"
-layout: api-doc-resource
+layout: api
 ---
 
 
@@ -1694,7 +1694,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#streams_nodejs" style="color: inherit; text-decoration: inherit;">streams</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Known<wbr>Data<wbr>Flow<wbr>Streams[]</span>
+        <span class="property-type">(string | Known<wbr>Data<wbr>Flow<wbr>Streams)[]</span>
     </dt>
     <dd>{{% md %}}List of streams for this data flow.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2043,7 +2043,7 @@ This name should be unique across all data sources (regardless of type) within t
 <a href="#streams_nodejs" style="color: inherit; text-decoration: inherit;">streams</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Known<wbr>Extension<wbr>Data<wbr>Source<wbr>Streams[]</span>
+        <span class="property-type">(string | Known<wbr>Extension<wbr>Data<wbr>Source<wbr>Streams)[]</span>
     </dt>
     <dd>{{% md %}}List of streams that this data source will be sent to.
 A stream indicates what schema will be used for this data and usually what table in Log Analytics the data will be sent to.{{% /md %}}</dd></dl>
@@ -2933,7 +2933,7 @@ This name should be unique across all data sources (regardless of type) within t
 <a href="#streams_nodejs" style="color: inherit; text-decoration: inherit;">streams</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Known<wbr>Perf<wbr>Counter<wbr>Data<wbr>Source<wbr>Streams[]</span>
+        <span class="property-type">(string | Known<wbr>Perf<wbr>Counter<wbr>Data<wbr>Source<wbr>Streams)[]</span>
     </dt>
     <dd>{{% md %}}List of streams that this data source will be sent to.
 A stream indicates what schema will be used for this data and usually what table in Log Analytics the data will be sent to.{{% /md %}}</dd></dl>
@@ -3226,7 +3226,7 @@ A stream indicates what schema will be used for this data and usually what table
 <a href="#facilitynames_nodejs" style="color: inherit; text-decoration: inherit;">facility<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Known<wbr>Syslog<wbr>Data<wbr>Source<wbr>Facility<wbr>Names[]</span>
+        <span class="property-type">(string | Known<wbr>Syslog<wbr>Data<wbr>Source<wbr>Facility<wbr>Names)[]</span>
     </dt>
     <dd>{{% md %}}The list of facility names.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3234,7 +3234,7 @@ A stream indicates what schema will be used for this data and usually what table
 <a href="#loglevels_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Levels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Known<wbr>Syslog<wbr>Data<wbr>Source<wbr>Log<wbr>Levels[]</span>
+        <span class="property-type">(string | Known<wbr>Syslog<wbr>Data<wbr>Source<wbr>Log<wbr>Levels)[]</span>
     </dt>
     <dd>{{% md %}}The log levels to collect.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3251,7 +3251,7 @@ This name should be unique across all data sources (regardless of type) within t
 <a href="#streams_nodejs" style="color: inherit; text-decoration: inherit;">streams</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Known<wbr>Syslog<wbr>Data<wbr>Source<wbr>Streams[]</span>
+        <span class="property-type">(string | Known<wbr>Syslog<wbr>Data<wbr>Source<wbr>Streams)[]</span>
     </dt>
     <dd>{{% md %}}List of streams that this data source will be sent to.
 A stream indicates what schema will be used for this data and usually what table in Log Analytics the data will be sent to.{{% /md %}}</dd></dl>
@@ -3527,7 +3527,7 @@ This name should be unique across all data sources (regardless of type) within t
 <a href="#streams_nodejs" style="color: inherit; text-decoration: inherit;">streams</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Known<wbr>Windows<wbr>Event<wbr>Log<wbr>Data<wbr>Source<wbr>Streams[]</span>
+        <span class="property-type">(string | Known<wbr>Windows<wbr>Event<wbr>Log<wbr>Data<wbr>Source<wbr>Streams)[]</span>
     </dt>
     <dd>{{% md %}}List of streams that this data source will be sent to.
 A stream indicates what schema will be used for this data and usually what table in Log Analytics the data will be sent to.{{% /md %}}</dd><dt class="property-optional"

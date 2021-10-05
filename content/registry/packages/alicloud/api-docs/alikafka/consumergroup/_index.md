@@ -5,7 +5,7 @@ title_tag: "alicloud.alikafka.ConsumerGroup"
 meta_desc: "Documentation for the alicloud.alikafka.ConsumerGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/alicloud/ConsumerGroup/"
-layout: api-doc-resource
+layout: api
 ---
 
 

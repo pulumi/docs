@@ -5,7 +5,7 @@ title_tag: "sumologic.S3AuditSource"
 meta_desc: "Documentation for the sumologic.S3AuditSource resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/sumologic/S3AuditSource/"
-layout: api-doc-resource
+layout: api
 ---
 
 

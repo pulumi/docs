@@ -5,7 +5,7 @@ title_tag: "splunk.SavedSearches"
 meta_desc: "Documentation for the splunk.SavedSearches resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/splunk/SavedSearches/"
-layout: api-doc-resource
+layout: api
 ---
 
 

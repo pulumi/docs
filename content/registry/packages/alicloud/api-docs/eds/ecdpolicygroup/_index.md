@@ -5,7 +5,7 @@ title_tag: "alicloud.eds.EcdPolicyGroup"
 meta_desc: "Documentation for the alicloud.eds.EcdPolicyGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/alicloud/EcdPolicyGroup/"
-layout: api-doc-resource
+layout: api
 ---
 
 

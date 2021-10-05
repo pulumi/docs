@@ -5,7 +5,7 @@ title_tag: "aws.directoryservice.LogService"
 meta_desc: "Documentation for the aws.directoryservice.LogService resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/LogService/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "azure.compute.DedicatedHostGroup"
 meta_desc: "Documentation for the azure.compute.DedicatedHostGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/DedicatedHostGroup/"
-layout: api-doc-resource
+layout: api
 ---
 
 

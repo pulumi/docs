@@ -5,7 +5,7 @@ title_tag: "aws-native.aps.Workspace"
 meta_desc: "Documentation for the aws-native.aps.Workspace resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws-native/Workspace/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "azure.bot.ChannelAlexa"
 meta_desc: "Documentation for the azure.bot.ChannelAlexa resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/ChannelAlexa/"
-layout: api-doc-resource
+layout: api
 ---
 
 

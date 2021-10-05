@@ -5,7 +5,7 @@ title_tag: "alicloud.directmail.MailAddress"
 meta_desc: "Documentation for the alicloud.directmail.MailAddress resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/alicloud/MailAddress/"
-layout: api-doc-resource
+layout: api
 ---
 
 

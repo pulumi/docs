@@ -5,7 +5,7 @@ title_tag: "aiven.AccountTeamMember"
 meta_desc: "Documentation for the aiven.AccountTeamMember resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aiven/AccountTeamMember/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "consul.AgentService"
 meta_desc: "Documentation for the consul.AgentService resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/consul/AgentService/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "gcp.deploymentmanager.Deployment"
 meta_desc: "Documentation for the gcp.deploymentmanager.Deployment resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/gcp/Deployment/"
-layout: api-doc-resource
+layout: api
 ---
 
 

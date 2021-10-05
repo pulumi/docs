@@ -5,7 +5,7 @@ title_tag: "alicloud.maxcompute.Project"
 meta_desc: "Documentation for the alicloud.maxcompute.Project resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/alicloud/Project/"
-layout: api-doc-resource
+layout: api
 ---
 
 

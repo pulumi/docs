@@ -5,7 +5,7 @@ title_tag: "aws.lakeformation.getPermissions"
 meta_desc: "Documentation for the aws.lakeformation.getPermissions function with examples, input properties, output properties, and supporting types."
 aliases:
     - "/docs/reference/pkg///"
-layout: api-doc-resource
+layout: api
 ---
 
 

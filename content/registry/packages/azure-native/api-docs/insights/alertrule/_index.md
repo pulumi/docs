@@ -5,7 +5,7 @@ title_tag: "azure-native.insights.AlertRule"
 meta_desc: "Documentation for the azure-native.insights.AlertRule resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/AlertRule/"
-layout: api-doc-resource
+layout: api
 ---
 
 
@@ -578,7 +578,7 @@ The AlertRule resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#actions_nodejs" style="color: inherit; text-decoration: inherit;">actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Rule<wbr>Email<wbr>Action<wbr>Args | Rule<wbr>Webhook<wbr>Action<wbr>Args[]</span>
+        <span class="property-type">(Rule<wbr>Email<wbr>Action<wbr>Args | Rule<wbr>Webhook<wbr>Action<wbr>Args)[]</span>
     </dt>
     <dd>{{% md %}}the array of actions that are performed when the alert rule becomes active, and when an alert condition is resolved.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

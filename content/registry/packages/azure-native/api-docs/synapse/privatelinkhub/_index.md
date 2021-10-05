@@ -5,7 +5,7 @@ title_tag: "azure-native.synapse.PrivateLinkHub"
 meta_desc: "Documentation for the azure-native.synapse.PrivateLinkHub resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/PrivateLinkHub/"
-layout: api-doc-resource
+layout: api
 ---
 
 

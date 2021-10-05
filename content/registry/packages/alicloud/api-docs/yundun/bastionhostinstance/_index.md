@@ -5,7 +5,7 @@ title_tag: "alicloud.yundun.BastionHostInstance"
 meta_desc: "Documentation for the alicloud.yundun.BastionHostInstance resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/alicloud/BastionHostInstance/"
-layout: api-doc-resource
+layout: api
 ---
 
 

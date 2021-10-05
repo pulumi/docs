@@ -5,7 +5,7 @@ title_tag: "akamai.AppSecCustomDeny"
 meta_desc: "Documentation for the akamai.AppSecCustomDeny resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/akamai/AppSecCustomDeny/"
-layout: api-doc-resource
+layout: api
 ---
 
 

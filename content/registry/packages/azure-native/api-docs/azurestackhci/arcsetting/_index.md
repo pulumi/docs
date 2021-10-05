@@ -5,7 +5,7 @@ title_tag: "azure-native.azurestackhci.ArcSetting"
 meta_desc: "Documentation for the azure-native.azurestackhci.ArcSetting resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/ArcSetting/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "azure-native.insights.MetricAlert"
 meta_desc: "Documentation for the azure-native.insights.MetricAlert resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/MetricAlert/"
-layout: api-doc-resource
+layout: api
 ---
 
 
@@ -3947,7 +3947,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allof_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Of</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dynamic<wbr>Metric<wbr>Criteria | Metric<wbr>Criteria[]</span>
+        <span class="property-type">(Dynamic<wbr>Metric<wbr>Criteria | Metric<wbr>Criteria)[]</span>
     </dt>
     <dd>{{% md %}}the list of multiple metric criteria for this 'all of' operation. {{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3997,7 +3997,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allof_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Of</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dynamic<wbr>Metric<wbr>Criteria<wbr>Response | Metric<wbr>Criteria<wbr>Response[]</span>
+        <span class="property-type">(Dynamic<wbr>Metric<wbr>Criteria<wbr>Response | Metric<wbr>Criteria<wbr>Response)[]</span>
     </dt>
     <dd>{{% md %}}the list of multiple metric criteria for this 'all of' operation. {{% /md %}}</dd></dl>
 {{% /choosable %}}

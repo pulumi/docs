@@ -5,7 +5,7 @@ title_tag: "azure-native.sql.ManagedInstanceAzureADOnlyAuthentication"
 meta_desc: "Documentation for the azure-native.sql.ManagedInstanceAzureADOnlyAuthentication resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/ManagedInstanceAzureADOnlyAuthentication/"
-layout: api-doc-resource
+layout: api
 ---
 
 

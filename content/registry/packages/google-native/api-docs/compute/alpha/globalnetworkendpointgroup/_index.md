@@ -5,7 +5,7 @@ title_tag: "google-native.compute/alpha.GlobalNetworkEndpointGroup"
 meta_desc: "Documentation for the google-native.compute/alpha.GlobalNetworkEndpointGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/google-native/GlobalNetworkEndpointGroup/"
-layout: api-doc-resource
+layout: api
 ---
 
 

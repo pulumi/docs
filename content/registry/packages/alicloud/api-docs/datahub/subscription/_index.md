@@ -5,7 +5,7 @@ title_tag: "alicloud.datahub.Subscription"
 meta_desc: "Documentation for the alicloud.datahub.Subscription resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/alicloud/Subscription/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "azure-native.avs.ScriptExecution"
 meta_desc: "Documentation for the azure-native.avs.ScriptExecution resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/ScriptExecution/"
-layout: api-doc-resource
+layout: api
 ---
 
 
@@ -589,7 +589,7 @@ The ScriptExecution resource accepts the following [input]({{< relref "/docs/int
 <a href="#hiddenparameters_nodejs" style="color: inherit; text-decoration: inherit;">hidden<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">PSCredential<wbr>Execution<wbr>Parameter<wbr>Args | Script<wbr>Secure<wbr>String<wbr>Execution<wbr>Parameter<wbr>Args | Script<wbr>String<wbr>Execution<wbr>Parameter<wbr>Args[]</span>
+        <span class="property-type">(PSCredential<wbr>Execution<wbr>Parameter<wbr>Args | Script<wbr>Secure<wbr>String<wbr>Execution<wbr>Parameter<wbr>Args | Script<wbr>String<wbr>Execution<wbr>Parameter<wbr>Args)[]</span>
     </dt>
     <dd>{{% md %}}Parameters that will be hidden/not visible to ARM, such as passwords and credentials{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -613,7 +613,7 @@ The ScriptExecution resource accepts the following [input]({{< relref "/docs/int
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">PSCredential<wbr>Execution<wbr>Parameter<wbr>Args | Script<wbr>Secure<wbr>String<wbr>Execution<wbr>Parameter<wbr>Args | Script<wbr>String<wbr>Execution<wbr>Parameter<wbr>Args[]</span>
+        <span class="property-type">(PSCredential<wbr>Execution<wbr>Parameter<wbr>Args | Script<wbr>Secure<wbr>String<wbr>Execution<wbr>Parameter<wbr>Args | Script<wbr>String<wbr>Execution<wbr>Parameter<wbr>Args)[]</span>
     </dt>
     <dd>{{% md %}}Parameters the script will accept{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

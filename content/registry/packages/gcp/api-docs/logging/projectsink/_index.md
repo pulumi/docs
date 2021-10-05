@@ -5,7 +5,7 @@ title_tag: "gcp.logging.ProjectSink"
 meta_desc: "Documentation for the gcp.logging.ProjectSink resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/gcp/ProjectSink/"
-layout: api-doc-resource
+layout: api
 ---
 
 

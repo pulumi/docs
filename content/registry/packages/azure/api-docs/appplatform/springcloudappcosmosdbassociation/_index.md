@@ -5,7 +5,7 @@ title_tag: "azure.appplatform.SpringCloudAppCosmosDBAssociation"
 meta_desc: "Documentation for the azure.appplatform.SpringCloudAppCosmosDBAssociation resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/SpringCloudAppCosmosDBAssociation/"
-layout: api-doc-resource
+layout: api
 ---
 
 

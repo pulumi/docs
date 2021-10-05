@@ -5,7 +5,7 @@ title_tag: "openstack.loadbalancer.Vip"
 meta_desc: "Documentation for the openstack.loadbalancer.Vip resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/openstack/Vip/"
-layout: api-doc-resource
+layout: api
 ---
 
 

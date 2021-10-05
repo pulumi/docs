@@ -5,7 +5,7 @@ title_tag: "okta.auth.ServerPolicyClaim"
 meta_desc: "Documentation for the okta.auth.ServerPolicyClaim resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/okta/ServerPolicyClaim/"
-layout: api-doc-resource
+layout: api
 ---
 
 

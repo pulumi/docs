@@ -5,7 +5,7 @@ title_tag: "aws-native.mediapackage.Asset"
 meta_desc: "Documentation for the aws-native.mediapackage.Asset resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws-native/Asset/"
-layout: api-doc-resource
+layout: api
 ---
 
 

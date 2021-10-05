@@ -5,7 +5,7 @@ title_tag: "azure-native.compute.RestorePoint"
 meta_desc: "Documentation for the azure-native.compute.RestorePoint resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/RestorePoint/"
-layout: api-doc-resource
+layout: api
 ---
 
 

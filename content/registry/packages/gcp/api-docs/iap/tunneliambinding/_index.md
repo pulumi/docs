@@ -5,7 +5,7 @@ title_tag: "gcp.iap.TunnelIamBinding"
 meta_desc: "Documentation for the gcp.iap.TunnelIamBinding resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/gcp/TunnelIamBinding/"
-layout: api-doc-resource
+layout: api
 ---
 
 

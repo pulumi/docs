@@ -5,7 +5,7 @@ title_tag: "gcp.gameservices.GameServerDeployment"
 meta_desc: "Documentation for the gcp.gameservices.GameServerDeployment resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/gcp/GameServerDeployment/"
-layout: api-doc-resource
+layout: api
 ---
 
 

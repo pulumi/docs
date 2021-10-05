@@ -5,7 +5,7 @@ title_tag: "azure-native.healthcareapis.FhirService"
 meta_desc: "Documentation for the azure-native.healthcareapis.FhirService resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/FhirService/"
-layout: api-doc-resource
+layout: api
 ---
 
 

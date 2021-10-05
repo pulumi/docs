@@ -5,7 +5,7 @@ title_tag: "vault.RgpPolicy"
 meta_desc: "Documentation for the vault.RgpPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/vault/RgpPolicy/"
-layout: api-doc-resource
+layout: api
 ---
 
 

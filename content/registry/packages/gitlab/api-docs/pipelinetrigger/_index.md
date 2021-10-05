@@ -5,7 +5,7 @@ title_tag: "gitlab.PipelineTrigger"
 meta_desc: "Documentation for the gitlab.PipelineTrigger resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/gitlab/PipelineTrigger/"
-layout: api-doc-resource
+layout: api
 ---
 
 

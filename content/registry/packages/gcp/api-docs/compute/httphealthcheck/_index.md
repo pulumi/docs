@@ -5,7 +5,7 @@ title_tag: "gcp.compute.HttpHealthCheck"
 meta_desc: "Documentation for the gcp.compute.HttpHealthCheck resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/gcp/HttpHealthCheck/"
-layout: api-doc-resource
+layout: api
 ---
 
 

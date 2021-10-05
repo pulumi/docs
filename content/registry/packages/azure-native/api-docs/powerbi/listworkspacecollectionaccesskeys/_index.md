@@ -5,7 +5,7 @@ title_tag: "azure-native.powerbi.listWorkspaceCollectionAccessKeys"
 meta_desc: "Documentation for the azure-native.powerbi.listWorkspaceCollectionAccessKeys function with examples, input properties, output properties, and supporting types."
 aliases:
     - "/docs/reference/pkg///"
-layout: api-doc-resource
+layout: api
 ---
 
 

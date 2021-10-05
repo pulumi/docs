@@ -5,7 +5,7 @@ title_tag: "okta.policy.RulePassword"
 meta_desc: "Documentation for the okta.policy.RulePassword resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/okta/RulePassword/"
-layout: api-doc-resource
+layout: api
 ---
 
 

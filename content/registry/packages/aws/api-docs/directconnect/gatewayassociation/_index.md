@@ -5,7 +5,7 @@ title_tag: "aws.directconnect.GatewayAssociation"
 meta_desc: "Documentation for the aws.directconnect.GatewayAssociation resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/GatewayAssociation/"
-layout: api-doc-resource
+layout: api
 ---
 
 

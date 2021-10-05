@@ -5,7 +5,7 @@ title_tag: "aws-native.ec2.TransitGatewayMulticastGroupSource"
 meta_desc: "Documentation for the aws-native.ec2.TransitGatewayMulticastGroupSource resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws-native/TransitGatewayMulticastGroupSource/"
-layout: api-doc-resource
+layout: api
 ---
 
 

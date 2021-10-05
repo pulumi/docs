@@ -5,7 +5,7 @@ title_tag: "azure.cosmosdb.MongoDatabase"
 meta_desc: "Documentation for the azure.cosmosdb.MongoDatabase resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/MongoDatabase/"
-layout: api-doc-resource
+layout: api
 ---
 
 

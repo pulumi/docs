@@ -5,7 +5,7 @@ title_tag: "f5bigip.Provider"
 meta_desc: "Documentation for the f5bigip.Provider resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/f5bigip/f5bigip/"
-layout: api-doc-resource
+layout: api
 ---
 
 

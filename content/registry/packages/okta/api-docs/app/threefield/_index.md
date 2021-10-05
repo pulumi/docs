@@ -5,7 +5,7 @@ title_tag: "okta.app.ThreeField"
 meta_desc: "Documentation for the okta.app.ThreeField resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/okta/ThreeField/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "azure.containerservice.Registry"
 meta_desc: "Documentation for the azure.containerservice.Registry resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/Registry/"
-layout: api-doc-resource
+layout: api
 ---
 
 

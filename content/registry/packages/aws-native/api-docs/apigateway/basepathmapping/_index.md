@@ -5,7 +5,7 @@ title_tag: "aws-native.apigateway.BasePathMapping"
 meta_desc: "Documentation for the aws-native.apigateway.BasePathMapping resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws-native/BasePathMapping/"
-layout: api-doc-resource
+layout: api
 ---
 
 

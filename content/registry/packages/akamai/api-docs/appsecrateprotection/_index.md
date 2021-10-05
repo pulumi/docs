@@ -5,7 +5,7 @@ title_tag: "akamai.AppSecRateProtection"
 meta_desc: "Documentation for the akamai.AppSecRateProtection resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/akamai/AppSecRateProtection/"
-layout: api-doc-resource
+layout: api
 ---
 
 

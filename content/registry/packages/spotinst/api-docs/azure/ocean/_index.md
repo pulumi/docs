@@ -5,7 +5,7 @@ title_tag: "spotinst.azure.Ocean"
 meta_desc: "Documentation for the spotinst.azure.Ocean resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/spotinst/Ocean/"
-layout: api-doc-resource
+layout: api
 ---
 
 

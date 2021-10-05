@@ -5,7 +5,7 @@ title_tag: "okta.deprecated.OauthAppRedirectUri"
 meta_desc: "Documentation for the okta.deprecated.OauthAppRedirectUri resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/okta/OauthAppRedirectUri/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "aws.apigateway.Deployment"
 meta_desc: "Documentation for the aws.apigateway.Deployment resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/Deployment/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "aws.ec2.VpcEndpoint"
 meta_desc: "Documentation for the aws.ec2.VpcEndpoint resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/VpcEndpoint/"
-layout: api-doc-resource
+layout: api
 ---
 
 

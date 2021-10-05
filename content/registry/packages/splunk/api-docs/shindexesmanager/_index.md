@@ -5,7 +5,7 @@ title_tag: "splunk.ShIndexesManager"
 meta_desc: "Documentation for the splunk.ShIndexesManager resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/splunk/ShIndexesManager/"
-layout: api-doc-resource
+layout: api
 ---
 
 

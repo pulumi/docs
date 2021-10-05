@@ -5,7 +5,7 @@ title_tag: "keycloak.UserTemplateImporterIdentityProviderMapper"
 meta_desc: "Documentation for the keycloak.UserTemplateImporterIdentityProviderMapper resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/keycloak/UserTemplateImporterIdentityProviderMapper/"
-layout: api-doc-resource
+layout: api
 ---
 
 

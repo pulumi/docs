@@ -5,7 +5,7 @@ title_tag: "azure-native.logz.SubAccount"
 meta_desc: "Documentation for the azure-native.logz.SubAccount resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/SubAccount/"
-layout: api-doc-resource
+layout: api
 ---
 
 

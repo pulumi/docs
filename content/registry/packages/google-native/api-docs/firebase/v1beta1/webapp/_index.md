@@ -5,7 +5,7 @@ title_tag: "google-native.firebase/v1beta1.WebApp"
 meta_desc: "Documentation for the google-native.firebase/v1beta1.WebApp resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/google-native/WebApp/"
-layout: api-doc-resource
+layout: api
 ---
 
 

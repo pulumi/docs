@@ -5,7 +5,7 @@ title_tag: "azure-native.containerregistry.Task"
 meta_desc: "Documentation for the azure-native.containerregistry.Task resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/Task/"
-layout: api-doc-resource
+layout: api
 ---
 
 
@@ -7296,7 +7296,7 @@ the source registry during the run.{{% /md %}}</dd></dl>
 <a href="#sourcetriggerevents_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Trigger<wbr>Events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Source<wbr>Trigger<wbr>Event[]</span>
+        <span class="property-type">(string | Source<wbr>Trigger<wbr>Event)[]</span>
     </dt>
     <dd>{{% md %}}The source event corresponding to the trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

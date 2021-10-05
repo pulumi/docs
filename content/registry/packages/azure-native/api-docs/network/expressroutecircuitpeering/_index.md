@@ -5,7 +5,7 @@ title_tag: "azure-native.network.ExpressRouteCircuitPeering"
 meta_desc: "Documentation for the azure-native.network.ExpressRouteCircuitPeering resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/ExpressRouteCircuitPeering/"
-layout: api-doc-resource
+layout: api
 ---
 
 

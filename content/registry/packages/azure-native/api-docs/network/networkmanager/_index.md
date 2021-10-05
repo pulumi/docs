@@ -5,7 +5,7 @@ title_tag: "azure-native.network.NetworkManager"
 meta_desc: "Documentation for the azure-native.network.NetworkManager resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/NetworkManager/"
-layout: api-doc-resource
+layout: api
 ---
 
 
@@ -522,7 +522,7 @@ The NetworkManager resource accepts the following [input]({{< relref "/docs/intr
 <a href="#networkmanagerscopeaccesses_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Manager<wbr>Scope<wbr>Accesses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Configuration<wbr>Type[]</span>
+        <span class="property-type">(string | Configuration<wbr>Type)[]</span>
     </dt>
     <dd>{{% md %}}Scope Access.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

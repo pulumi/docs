@@ -5,7 +5,7 @@ title_tag: "azure.cosmosdb.CassandraKeyspace"
 meta_desc: "Documentation for the azure.cosmosdb.CassandraKeyspace resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/CassandraKeyspace/"
-layout: api-doc-resource
+layout: api
 ---
 
 

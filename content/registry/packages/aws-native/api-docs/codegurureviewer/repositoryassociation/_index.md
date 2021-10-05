@@ -5,7 +5,7 @@ title_tag: "aws-native.codegurureviewer.RepositoryAssociation"
 meta_desc: "Documentation for the aws-native.codegurureviewer.RepositoryAssociation resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws-native/RepositoryAssociation/"
-layout: api-doc-resource
+layout: api
 ---
 
 

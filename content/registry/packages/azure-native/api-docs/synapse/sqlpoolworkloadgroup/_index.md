@@ -5,7 +5,7 @@ title_tag: "azure-native.synapse.SqlPoolWorkloadGroup"
 meta_desc: "Documentation for the azure-native.synapse.SqlPoolWorkloadGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/SqlPoolWorkloadGroup/"
-layout: api-doc-resource
+layout: api
 ---
 
 

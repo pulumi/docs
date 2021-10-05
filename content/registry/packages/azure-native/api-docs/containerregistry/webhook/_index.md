@@ -5,7 +5,7 @@ title_tag: "azure-native.containerregistry.Webhook"
 meta_desc: "Documentation for the azure-native.containerregistry.Webhook resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/Webhook/"
-layout: api-doc-resource
+layout: api
 ---
 
 
@@ -502,7 +502,7 @@ The Webhook resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#actions_nodejs" style="color: inherit; text-decoration: inherit;">actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Webhook<wbr>Action[]</span>
+        <span class="property-type">(string | Webhook<wbr>Action)[]</span>
     </dt>
     <dd>{{% md %}}The list of actions that trigger the webhook to post notifications.{{% /md %}}</dd><dt class="property-required"
             title="Required">

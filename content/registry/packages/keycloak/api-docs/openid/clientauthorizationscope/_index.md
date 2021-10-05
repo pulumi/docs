@@ -5,7 +5,7 @@ title_tag: "keycloak.openid.ClientAuthorizationScope"
 meta_desc: "Documentation for the keycloak.openid.ClientAuthorizationScope resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/keycloak/ClientAuthorizationScope/"
-layout: api-doc-resource
+layout: api
 ---
 
 

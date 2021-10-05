@@ -5,7 +5,7 @@ title_tag: "gcp.billing.SubAccount"
 meta_desc: "Documentation for the gcp.billing.SubAccount resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/gcp/SubAccount/"
-layout: api-doc-resource
+layout: api
 ---
 
 

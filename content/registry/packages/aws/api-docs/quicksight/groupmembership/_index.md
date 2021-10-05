@@ -5,7 +5,7 @@ title_tag: "aws.quicksight.GroupMembership"
 meta_desc: "Documentation for the aws.quicksight.GroupMembership resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/GroupMembership/"
-layout: api-doc-resource
+layout: api
 ---
 
 

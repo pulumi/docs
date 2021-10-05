@@ -5,7 +5,7 @@ title_tag: "aws-native.qldb.Stream"
 meta_desc: "Documentation for the aws-native.qldb.Stream resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws-native/Stream/"
-layout: api-doc-resource
+layout: api
 ---
 
 

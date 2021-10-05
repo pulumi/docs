@@ -5,7 +5,7 @@ title_tag: "google-native.essentialcontacts/v1.FolderContact"
 meta_desc: "Documentation for the google-native.essentialcontacts/v1.FolderContact resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/google-native/FolderContact/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "alicloud.rocketmq.ClientUser"
 meta_desc: "Documentation for the alicloud.rocketmq.ClientUser resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/alicloud/ClientUser/"
-layout: api-doc-resource
+layout: api
 ---
 
 

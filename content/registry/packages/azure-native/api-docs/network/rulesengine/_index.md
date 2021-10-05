@@ -5,7 +5,7 @@ title_tag: "azure-native.network.RulesEngine"
 meta_desc: "Documentation for the azure-native.network.RulesEngine resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/RulesEngine/"
-layout: api-doc-resource
+layout: api
 ---
 
 
@@ -2726,7 +2726,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transforms_nodejs" style="color: inherit; text-decoration: inherit;">transforms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Transform[]</span>
+        <span class="property-type">(string | Transform)[]</span>
     </dt>
     <dd>{{% md %}}List of transforms{{% /md %}}</dd></dl>
 {{% /choosable %}}

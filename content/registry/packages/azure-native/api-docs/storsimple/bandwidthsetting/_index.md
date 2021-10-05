@@ -5,7 +5,7 @@ title_tag: "azure-native.storsimple.BandwidthSetting"
 meta_desc: "Documentation for the azure-native.storsimple.BandwidthSetting resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/BandwidthSetting/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "aws-native.auditmanager.Assessment"
 meta_desc: "Documentation for the aws-native.auditmanager.Assessment resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws-native/Assessment/"
-layout: api-doc-resource
+layout: api
 ---
 
 

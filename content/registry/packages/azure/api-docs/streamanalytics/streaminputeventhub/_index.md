@@ -5,7 +5,7 @@ title_tag: "azure.streamanalytics.StreamInputEventHub"
 meta_desc: "Documentation for the azure.streamanalytics.StreamInputEventHub resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/StreamInputEventHub/"
-layout: api-doc-resource
+layout: api
 ---
 
 

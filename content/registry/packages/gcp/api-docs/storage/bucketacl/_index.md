@@ -5,7 +5,7 @@ title_tag: "gcp.storage.BucketACL"
 meta_desc: "Documentation for the gcp.storage.BucketACL resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/gcp/BucketACL/"
-layout: api-doc-resource
+layout: api
 ---
 
 

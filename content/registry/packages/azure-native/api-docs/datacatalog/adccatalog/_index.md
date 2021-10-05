@@ -5,7 +5,7 @@ title_tag: "azure-native.datacatalog.ADCCatalog"
 meta_desc: "Documentation for the azure-native.datacatalog.ADCCatalog resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/ADCCatalog/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "rancher2.Token"
 meta_desc: "Documentation for the rancher2.Token resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/rancher2/Token/"
-layout: api-doc-resource
+layout: api
 ---
 
 

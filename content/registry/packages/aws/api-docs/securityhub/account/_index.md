@@ -5,7 +5,7 @@ title_tag: "aws.securityhub.Account"
 meta_desc: "Documentation for the aws.securityhub.Account resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/Account/"
-layout: api-doc-resource
+layout: api
 ---
 
 

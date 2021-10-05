@@ -5,7 +5,7 @@ title_tag: "hcloud.FloatingIp"
 meta_desc: "Documentation for the hcloud.FloatingIp resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/hcloud/FloatingIp/"
-layout: api-doc-resource
+layout: api
 ---
 
 

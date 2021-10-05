@@ -5,7 +5,7 @@ title_tag: "openstack.blockstorage.VolumeAttachV2"
 meta_desc: "Documentation for the openstack.blockstorage.VolumeAttachV2 resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/openstack/VolumeAttachV2/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "digitalocean.ContainerRegistry"
 meta_desc: "Documentation for the digitalocean.ContainerRegistry resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/digitalocean/ContainerRegistry/"
-layout: api-doc-resource
+layout: api
 ---
 
 

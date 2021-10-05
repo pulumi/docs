@@ -5,7 +5,7 @@ title_tag: "google-native.policysimulator/v1beta1.FolderReplay"
 meta_desc: "Documentation for the google-native.policysimulator/v1beta1.FolderReplay resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/google-native/FolderReplay/"
-layout: api-doc-resource
+layout: api
 ---
 
 

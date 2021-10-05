@@ -5,7 +5,7 @@ title_tag: "azure.synapse.SqlPoolExtendedAuditingPolicy"
 meta_desc: "Documentation for the azure.synapse.SqlPoolExtendedAuditingPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/SqlPoolExtendedAuditingPolicy/"
-layout: api-doc-resource
+layout: api
 ---
 
 

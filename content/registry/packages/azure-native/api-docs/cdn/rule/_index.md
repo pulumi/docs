@@ -5,7 +5,7 @@ title_tag: "azure-native.cdn.Rule"
 meta_desc: "Documentation for the azure-native.cdn.Rule resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/Rule/"
-layout: api-doc-resource
+layout: api
 ---
 
 
@@ -516,7 +516,7 @@ The Rule resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#actions_nodejs" style="color: inherit; text-decoration: inherit;">actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Delivery<wbr>Rule<wbr>Cache<wbr>Expiration<wbr>Action<wbr>Args | Delivery<wbr>Rule<wbr>Cache<wbr>Key<wbr>Query<wbr>String<wbr>Action<wbr>Args | Delivery<wbr>Rule<wbr>Request<wbr>Header<wbr>Action<wbr>Args | Delivery<wbr>Rule<wbr>Response<wbr>Header<wbr>Action<wbr>Args | Origin<wbr>Group<wbr>Override<wbr>Action<wbr>Args | Url<wbr>Redirect<wbr>Action<wbr>Args | Url<wbr>Rewrite<wbr>Action<wbr>Args | Url<wbr>Signing<wbr>Action<wbr>Args[]</span>
+        <span class="property-type">(Delivery<wbr>Rule<wbr>Cache<wbr>Expiration<wbr>Action<wbr>Args | Delivery<wbr>Rule<wbr>Cache<wbr>Key<wbr>Query<wbr>String<wbr>Action<wbr>Args | Delivery<wbr>Rule<wbr>Request<wbr>Header<wbr>Action<wbr>Args | Delivery<wbr>Rule<wbr>Response<wbr>Header<wbr>Action<wbr>Args | Origin<wbr>Group<wbr>Override<wbr>Action<wbr>Args | Url<wbr>Redirect<wbr>Action<wbr>Args | Url<wbr>Rewrite<wbr>Action<wbr>Args | Url<wbr>Signing<wbr>Action<wbr>Args)[]</span>
     </dt>
     <dd>{{% md %}}A list of actions that are executed when all the conditions of a rule are satisfied.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -556,7 +556,7 @@ The Rule resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#conditions_nodejs" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Delivery<wbr>Rule<wbr>Cookies<wbr>Condition<wbr>Args | Delivery<wbr>Rule<wbr>Http<wbr>Version<wbr>Condition<wbr>Args | Delivery<wbr>Rule<wbr>Is<wbr>Device<wbr>Condition<wbr>Args | Delivery<wbr>Rule<wbr>Post<wbr>Args<wbr>Condition<wbr>Args | Delivery<wbr>Rule<wbr>Query<wbr>String<wbr>Condition<wbr>Args | Delivery<wbr>Rule<wbr>Remote<wbr>Address<wbr>Condition<wbr>Args | Delivery<wbr>Rule<wbr>Request<wbr>Body<wbr>Condition<wbr>Args | Delivery<wbr>Rule<wbr>Request<wbr>Header<wbr>Condition<wbr>Args | Delivery<wbr>Rule<wbr>Request<wbr>Method<wbr>Condition<wbr>Args | Delivery<wbr>Rule<wbr>Request<wbr>Scheme<wbr>Condition<wbr>Args | Delivery<wbr>Rule<wbr>Request<wbr>Uri<wbr>Condition<wbr>Args | Delivery<wbr>Rule<wbr>Url<wbr>File<wbr>Extension<wbr>Condition<wbr>Args | Delivery<wbr>Rule<wbr>Url<wbr>File<wbr>Name<wbr>Condition<wbr>Args | Delivery<wbr>Rule<wbr>Url<wbr>Path<wbr>Condition<wbr>Args[]</span>
+        <span class="property-type">(Delivery<wbr>Rule<wbr>Cookies<wbr>Condition<wbr>Args | Delivery<wbr>Rule<wbr>Http<wbr>Version<wbr>Condition<wbr>Args | Delivery<wbr>Rule<wbr>Is<wbr>Device<wbr>Condition<wbr>Args | Delivery<wbr>Rule<wbr>Post<wbr>Args<wbr>Condition<wbr>Args | Delivery<wbr>Rule<wbr>Query<wbr>String<wbr>Condition<wbr>Args | Delivery<wbr>Rule<wbr>Remote<wbr>Address<wbr>Condition<wbr>Args | Delivery<wbr>Rule<wbr>Request<wbr>Body<wbr>Condition<wbr>Args | Delivery<wbr>Rule<wbr>Request<wbr>Header<wbr>Condition<wbr>Args | Delivery<wbr>Rule<wbr>Request<wbr>Method<wbr>Condition<wbr>Args | Delivery<wbr>Rule<wbr>Request<wbr>Scheme<wbr>Condition<wbr>Args | Delivery<wbr>Rule<wbr>Request<wbr>Uri<wbr>Condition<wbr>Args | Delivery<wbr>Rule<wbr>Url<wbr>File<wbr>Extension<wbr>Condition<wbr>Args | Delivery<wbr>Rule<wbr>Url<wbr>File<wbr>Name<wbr>Condition<wbr>Args | Delivery<wbr>Rule<wbr>Url<wbr>Path<wbr>Condition<wbr>Args)[]</span>
     </dt>
     <dd>{{% md %}}A list of conditions that must be matched for the actions to be executed{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1617,7 +1617,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transforms_nodejs" style="color: inherit; text-decoration: inherit;">transforms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Transform[]</span>
+        <span class="property-type">(string | Transform)[]</span>
     </dt>
     <dd>{{% md %}}List of transforms{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4537,7 +4537,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transforms_nodejs" style="color: inherit; text-decoration: inherit;">transforms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Transform[]</span>
+        <span class="property-type">(string | Transform)[]</span>
     </dt>
     <dd>{{% md %}}List of transforms{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5259,7 +5259,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transforms_nodejs" style="color: inherit; text-decoration: inherit;">transforms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Transform[]</span>
+        <span class="property-type">(string | Transform)[]</span>
     </dt>
     <dd>{{% md %}}List of transforms{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5747,7 +5747,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transforms_nodejs" style="color: inherit; text-decoration: inherit;">transforms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Transform[]</span>
+        <span class="property-type">(string | Transform)[]</span>
     </dt>
     <dd>{{% md %}}List of transforms{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6195,7 +6195,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transforms_nodejs" style="color: inherit; text-decoration: inherit;">transforms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Transform[]</span>
+        <span class="property-type">(string | Transform)[]</span>
     </dt>
     <dd>{{% md %}}List of transforms{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6581,7 +6581,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transforms_nodejs" style="color: inherit; text-decoration: inherit;">transforms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Transform[]</span>
+        <span class="property-type">(string | Transform)[]</span>
     </dt>
     <dd>{{% md %}}List of transforms{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7019,7 +7019,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transforms_nodejs" style="color: inherit; text-decoration: inherit;">transforms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Transform[]</span>
+        <span class="property-type">(string | Transform)[]</span>
     </dt>
     <dd>{{% md %}}List of transforms{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8079,7 +8079,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transforms_nodejs" style="color: inherit; text-decoration: inherit;">transforms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Transform[]</span>
+        <span class="property-type">(string | Transform)[]</span>
     </dt>
     <dd>{{% md %}}List of transforms{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8829,7 +8829,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transforms_nodejs" style="color: inherit; text-decoration: inherit;">transforms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Transform[]</span>
+        <span class="property-type">(string | Transform)[]</span>
     </dt>
     <dd>{{% md %}}List of transforms{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9243,7 +9243,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transforms_nodejs" style="color: inherit; text-decoration: inherit;">transforms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Transform[]</span>
+        <span class="property-type">(string | Transform)[]</span>
     </dt>
     <dd>{{% md %}}List of transforms{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9657,7 +9657,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transforms_nodejs" style="color: inherit; text-decoration: inherit;">transforms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Transform[]</span>
+        <span class="property-type">(string | Transform)[]</span>
     </dt>
     <dd>{{% md %}}List of transforms{{% /md %}}</dd></dl>
 {{% /choosable %}}

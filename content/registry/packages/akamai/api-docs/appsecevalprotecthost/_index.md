@@ -5,7 +5,7 @@ title_tag: "akamai.AppSecEvalProtectHost"
 meta_desc: "Documentation for the akamai.AppSecEvalProtectHost resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/akamai/AppSecEvalProtectHost/"
-layout: api-doc-resource
+layout: api
 ---
 
 

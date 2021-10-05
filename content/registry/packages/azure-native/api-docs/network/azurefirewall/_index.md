@@ -5,7 +5,7 @@ title_tag: "azure-native.network.AzureFirewall"
 meta_desc: "Documentation for the azure-native.network.AzureFirewall resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/AzureFirewall/"
-layout: api-doc-resource
+layout: api
 ---
 
 
@@ -6296,7 +6296,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocols_nodejs" style="color: inherit; text-decoration: inherit;">protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Azure<wbr>Firewall<wbr>Network<wbr>Rule<wbr>Protocol[]</span>
+        <span class="property-type">(string | Azure<wbr>Firewall<wbr>Network<wbr>Rule<wbr>Protocol)[]</span>
     </dt>
     <dd>{{% md %}}Array of AzureFirewallNetworkRuleProtocols applicable to this NAT rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7392,7 +7392,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocols_nodejs" style="color: inherit; text-decoration: inherit;">protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Azure<wbr>Firewall<wbr>Network<wbr>Rule<wbr>Protocol[]</span>
+        <span class="property-type">(string | Azure<wbr>Firewall<wbr>Network<wbr>Rule<wbr>Protocol)[]</span>
     </dt>
     <dd>{{% md %}}Array of AzureFirewallNetworkRuleProtocols.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

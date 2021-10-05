@@ -5,7 +5,7 @@ title_tag: "aws.rds.ParameterGroup"
 meta_desc: "Documentation for the aws.rds.ParameterGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/ParameterGroup/"
-layout: api-doc-resource
+layout: api
 ---
 
 

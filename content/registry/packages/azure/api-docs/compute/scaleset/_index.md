@@ -5,7 +5,7 @@ title_tag: "azure.compute.ScaleSet"
 meta_desc: "Documentation for the azure.compute.ScaleSet resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/ScaleSet/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "rancher2.Notifier"
 meta_desc: "Documentation for the rancher2.Notifier resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/rancher2/Notifier/"
-layout: api-doc-resource
+layout: api
 ---
 
 

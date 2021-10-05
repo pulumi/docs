@@ -5,7 +5,7 @@ title_tag: "spotinst.multai.Target"
 meta_desc: "Documentation for the spotinst.multai.Target resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/spotinst/Target/"
-layout: api-doc-resource
+layout: api
 ---
 
 

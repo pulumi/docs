@@ -5,7 +5,7 @@ title_tag: "alicloud.cen.BandwidthLimit"
 meta_desc: "Documentation for the alicloud.cen.BandwidthLimit resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/alicloud/BandwidthLimit/"
-layout: api-doc-resource
+layout: api
 ---
 
 

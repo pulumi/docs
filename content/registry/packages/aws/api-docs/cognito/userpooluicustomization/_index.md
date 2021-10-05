@@ -5,7 +5,7 @@ title_tag: "aws.cognito.UserPoolUICustomization"
 meta_desc: "Documentation for the aws.cognito.UserPoolUICustomization resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/UserPoolUICustomization/"
-layout: api-doc-resource
+layout: api
 ---
 
 

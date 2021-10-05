@@ -5,7 +5,7 @@ title_tag: "openstack.compute.ServerGroup"
 meta_desc: "Documentation for the openstack.compute.ServerGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/openstack/ServerGroup/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "azure-native.servicefabricmesh.Secret"
 meta_desc: "Documentation for the azure-native.servicefabricmesh.Secret resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/Secret/"
-layout: api-doc-resource
+layout: api
 ---
 
 

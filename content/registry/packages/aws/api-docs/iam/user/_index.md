@@ -5,7 +5,7 @@ title_tag: "aws.iam.User"
 meta_desc: "Documentation for the aws.iam.User resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/User/"
-layout: api-doc-resource
+layout: api
 ---
 
 

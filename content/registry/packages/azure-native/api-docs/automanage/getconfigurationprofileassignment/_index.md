@@ -5,7 +5,7 @@ title_tag: "azure-native.automanage.getConfigurationProfileAssignment"
 meta_desc: "Documentation for the azure-native.automanage.getConfigurationProfileAssignment function with examples, input properties, output properties, and supporting types."
 aliases:
     - "/docs/reference/pkg///"
-layout: api-doc-resource
+layout: api
 ---
 
 

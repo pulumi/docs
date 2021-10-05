@@ -5,7 +5,7 @@ title_tag: "mailgun.Provider"
 meta_desc: "Documentation for the mailgun.Provider resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/mailgun/mailgun/"
-layout: api-doc-resource
+layout: api
 ---
 
 

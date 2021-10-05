@@ -5,7 +5,7 @@ title_tag: "yandex.KmsSymmetricKey"
 meta_desc: "Documentation for the yandex.KmsSymmetricKey resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/yandex/KmsSymmetricKey/"
-layout: api-doc-resource
+layout: api
 ---
 
 

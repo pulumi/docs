@@ -5,7 +5,7 @@ title_tag: "google-native.compute/alpha.RegionNetworkFirewallPolicyIamPolicy"
 meta_desc: "Documentation for the google-native.compute/alpha.RegionNetworkFirewallPolicyIamPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/google-native/RegionNetworkFirewallPolicyIamPolicy/"
-layout: api-doc-resource
+layout: api
 ---
 
 

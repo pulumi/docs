@@ -5,7 +5,7 @@ title_tag: "azure.apimanagement.ProductGroup"
 meta_desc: "Documentation for the azure.apimanagement.ProductGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/ProductGroup/"
-layout: api-doc-resource
+layout: api
 ---
 
 

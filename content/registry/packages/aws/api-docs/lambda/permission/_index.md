@@ -5,7 +5,7 @@ title_tag: "aws.lambda.Permission"
 meta_desc: "Documentation for the aws.lambda.Permission resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/Permission/"
-layout: api-doc-resource
+layout: api
 ---
 
 

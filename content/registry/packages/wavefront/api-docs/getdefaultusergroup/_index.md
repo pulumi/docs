@@ -5,7 +5,7 @@ title_tag: "wavefront.getDefaultUserGroup"
 meta_desc: "Documentation for the wavefront.getDefaultUserGroup function with examples, input properties, output properties, and supporting types."
 aliases:
     - "/docs/reference/pkg///"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "azure.desktopvirtualization.Workspace"
 meta_desc: "Documentation for the azure.desktopvirtualization.Workspace resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/Workspace/"
-layout: api-doc-resource
+layout: api
 ---
 
 

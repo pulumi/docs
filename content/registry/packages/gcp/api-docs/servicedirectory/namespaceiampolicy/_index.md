@@ -5,7 +5,7 @@ title_tag: "gcp.servicedirectory.NamespaceIamPolicy"
 meta_desc: "Documentation for the gcp.servicedirectory.NamespaceIamPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/gcp/NamespaceIamPolicy/"
-layout: api-doc-resource
+layout: api
 ---
 
 

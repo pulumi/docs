@@ -5,7 +5,7 @@ title_tag: "azure.appservice.Slot"
 meta_desc: "Documentation for the azure.appservice.Slot resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/Slot/"
-layout: api-doc-resource
+layout: api
 ---
 
 

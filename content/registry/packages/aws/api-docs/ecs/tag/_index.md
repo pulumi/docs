@@ -5,7 +5,7 @@ title_tag: "aws.ecs.Tag"
 meta_desc: "Documentation for the aws.ecs.Tag resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/Tag/"
-layout: api-doc-resource
+layout: api
 ---
 
 

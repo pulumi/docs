@@ -5,7 +5,7 @@ title_tag: "azure-native.purview.Account"
 meta_desc: "Documentation for the azure-native.purview.Account resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/Account/"
-layout: api-doc-resource
+layout: api
 ---
 
 

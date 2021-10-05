@@ -5,7 +5,7 @@ title_tag: "gcp.logging.OrganizationSink"
 meta_desc: "Documentation for the gcp.logging.OrganizationSink resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/gcp/OrganizationSink/"
-layout: api-doc-resource
+layout: api
 ---
 
 

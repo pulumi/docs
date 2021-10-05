@@ -5,7 +5,7 @@ title_tag: "azure.datalake.StoreFirewallRule"
 meta_desc: "Documentation for the azure.datalake.StoreFirewallRule resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/StoreFirewallRule/"
-layout: api-doc-resource
+layout: api
 ---
 
 

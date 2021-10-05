@@ -5,7 +5,7 @@ title_tag: "aws.elasticache.User"
 meta_desc: "Documentation for the aws.elasticache.User resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/User/"
-layout: api-doc-resource
+layout: api
 ---
 
 

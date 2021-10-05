@@ -5,7 +5,7 @@ title_tag: "cloudflare.ArgoTunnel"
 meta_desc: "Documentation for the cloudflare.ArgoTunnel resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/cloudflare/ArgoTunnel/"
-layout: api-doc-resource
+layout: api
 ---
 
 

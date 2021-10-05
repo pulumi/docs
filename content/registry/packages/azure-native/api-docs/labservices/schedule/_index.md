@@ -5,7 +5,7 @@ title_tag: "azure-native.labservices.Schedule"
 meta_desc: "Documentation for the azure-native.labservices.Schedule resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/Schedule/"
-layout: api-doc-resource
+layout: api
 ---
 
 

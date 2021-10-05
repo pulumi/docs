@@ -5,7 +5,7 @@ title_tag: "splunk.OutputsTcpServer"
 meta_desc: "Documentation for the splunk.OutputsTcpServer resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/splunk/OutputsTcpServer/"
-layout: api-doc-resource
+layout: api
 ---
 
 

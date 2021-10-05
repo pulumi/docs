@@ -5,7 +5,7 @@ title_tag: "ns1.Zone"
 meta_desc: "Documentation for the ns1.Zone resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/ns1/Zone/"
-layout: api-doc-resource
+layout: api
 ---
 
 

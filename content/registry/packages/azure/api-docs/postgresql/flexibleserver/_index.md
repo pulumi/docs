@@ -5,7 +5,7 @@ title_tag: "azure.postgresql.FlexibleServer"
 meta_desc: "Documentation for the azure.postgresql.FlexibleServer resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/FlexibleServer/"
-layout: api-doc-resource
+layout: api
 ---
 
 

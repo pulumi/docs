@@ -5,7 +5,7 @@ title_tag: "gcp.container.Cluster"
 meta_desc: "Documentation for the gcp.container.Cluster resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/gcp/Cluster/"
-layout: api-doc-resource
+layout: api
 ---
 
 

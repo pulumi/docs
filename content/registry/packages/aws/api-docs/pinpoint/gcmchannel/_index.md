@@ -5,7 +5,7 @@ title_tag: "aws.pinpoint.GcmChannel"
 meta_desc: "Documentation for the aws.pinpoint.GcmChannel resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/GcmChannel/"
-layout: api-doc-resource
+layout: api
 ---
 
 

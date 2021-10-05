@@ -5,7 +5,7 @@ title_tag: "azure-native.authorization.PolicyExemption"
 meta_desc: "Documentation for the azure-native.authorization.PolicyExemption resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/PolicyExemption/"
-layout: api-doc-resource
+layout: api
 ---
 
 

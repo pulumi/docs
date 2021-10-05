@@ -5,7 +5,7 @@ title_tag: "vault.pkiSecret.SecretBackendRootCert"
 meta_desc: "Documentation for the vault.pkiSecret.SecretBackendRootCert resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/vault/SecretBackendRootCert/"
-layout: api-doc-resource
+layout: api
 ---
 
 

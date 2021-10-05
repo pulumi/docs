@@ -5,7 +5,7 @@ title_tag: "alicloud.iot.getDeviceGroups"
 meta_desc: "Documentation for the alicloud.iot.getDeviceGroups function with examples, input properties, output properties, and supporting types."
 aliases:
     - "/docs/reference/pkg///"
-layout: api-doc-resource
+layout: api
 ---
 
 

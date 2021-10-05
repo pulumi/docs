@@ -5,7 +5,7 @@ title_tag: "azure-native.network.CustomIPPrefix"
 meta_desc: "Documentation for the azure-native.network.CustomIPPrefix resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/CustomIPPrefix/"
-layout: api-doc-resource
+layout: api
 ---
 
 

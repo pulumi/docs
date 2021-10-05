@@ -5,7 +5,7 @@ title_tag: "yandex.ResourcemanagerFolderIamPolicy"
 meta_desc: "Documentation for the yandex.ResourcemanagerFolderIamPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/yandex/ResourcemanagerFolderIamPolicy/"
-layout: api-doc-resource
+layout: api
 ---
 
 

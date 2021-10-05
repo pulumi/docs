@@ -5,7 +5,7 @@ title_tag: "azure.hpc.CacheNfsTarget"
 meta_desc: "Documentation for the azure.hpc.CacheNfsTarget resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/CacheNfsTarget/"
-layout: api-doc-resource
+layout: api
 ---
 
 

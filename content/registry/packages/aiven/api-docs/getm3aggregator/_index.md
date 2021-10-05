@@ -5,7 +5,7 @@ title_tag: "aiven.getM3Aggregator"
 meta_desc: "Documentation for the aiven.getM3Aggregator function with examples, input properties, output properties, and supporting types."
 aliases:
     - "/docs/reference/pkg///"
-layout: api-doc-resource
+layout: api
 ---
 
 

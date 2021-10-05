@@ -5,7 +5,7 @@ title_tag: "azure.datashare.DatasetDataLakeGen1"
 meta_desc: "Documentation for the azure.datashare.DatasetDataLakeGen1 resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/DatasetDataLakeGen1/"
-layout: api-doc-resource
+layout: api
 ---
 
 

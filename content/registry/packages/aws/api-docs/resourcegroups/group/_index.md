@@ -5,7 +5,7 @@ title_tag: "aws.resourcegroups.Group"
 meta_desc: "Documentation for the aws.resourcegroups.Group resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/Group/"
-layout: api-doc-resource
+layout: api
 ---
 
 

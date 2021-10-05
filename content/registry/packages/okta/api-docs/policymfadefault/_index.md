@@ -5,7 +5,7 @@ title_tag: "okta.PolicyMfaDefault"
 meta_desc: "Documentation for the okta.PolicyMfaDefault resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/okta/PolicyMfaDefault/"
-layout: api-doc-resource
+layout: api
 ---
 
 

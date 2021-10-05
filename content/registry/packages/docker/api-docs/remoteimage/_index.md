@@ -5,7 +5,7 @@ title_tag: "docker.RemoteImage"
 meta_desc: "Documentation for the docker.RemoteImage resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/docker/RemoteImage/"
-layout: api-doc-resource
+layout: api
 ---
 
 

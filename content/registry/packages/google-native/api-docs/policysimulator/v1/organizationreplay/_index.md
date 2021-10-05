@@ -5,7 +5,7 @@ title_tag: "google-native.policysimulator/v1.OrganizationReplay"
 meta_desc: "Documentation for the google-native.policysimulator/v1.OrganizationReplay resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/google-native/OrganizationReplay/"
-layout: api-doc-resource
+layout: api
 ---
 
 

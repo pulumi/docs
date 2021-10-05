@@ -5,7 +5,7 @@ title_tag: "spotinst.Subscription"
 meta_desc: "Documentation for the spotinst.Subscription resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/spotinst/Subscription/"
-layout: api-doc-resource
+layout: api
 ---
 
 

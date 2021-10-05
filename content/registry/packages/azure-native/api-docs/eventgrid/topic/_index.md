@@ -5,7 +5,7 @@ title_tag: "azure-native.eventgrid.Topic"
 meta_desc: "Documentation for the azure-native.eventgrid.Topic resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/Topic/"
-layout: api-doc-resource
+layout: api
 ---
 
 

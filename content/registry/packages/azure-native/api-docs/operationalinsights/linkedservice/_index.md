@@ -5,7 +5,7 @@ title_tag: "azure-native.operationalinsights.LinkedService"
 meta_desc: "Documentation for the azure-native.operationalinsights.LinkedService resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/LinkedService/"
-layout: api-doc-resource
+layout: api
 ---
 
 

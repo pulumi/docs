@@ -5,7 +5,7 @@ title_tag: "aws.sns.PlatformApplication"
 meta_desc: "Documentation for the aws.sns.PlatformApplication resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/PlatformApplication/"
-layout: api-doc-resource
+layout: api
 ---
 
 

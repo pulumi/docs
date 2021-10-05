@@ -5,7 +5,7 @@ title_tag: "azure-native.logz.SubAccountTagRule"
 meta_desc: "Documentation for the azure-native.logz.SubAccountTagRule resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/SubAccountTagRule/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "google-native.compute/beta.ImageIamPolicy"
 meta_desc: "Documentation for the google-native.compute/beta.ImageIamPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/google-native/ImageIamPolicy/"
-layout: api-doc-resource
+layout: api
 ---
 
 

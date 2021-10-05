@@ -5,7 +5,7 @@ title_tag: "aws.networkfirewall.Firewall"
 meta_desc: "Documentation for the aws.networkfirewall.Firewall resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/Firewall/"
-layout: api-doc-resource
+layout: api
 ---
 
 

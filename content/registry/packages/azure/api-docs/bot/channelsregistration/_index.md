@@ -5,7 +5,7 @@ title_tag: "azure.bot.ChannelsRegistration"
 meta_desc: "Documentation for the azure.bot.ChannelsRegistration resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/ChannelsRegistration/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "google-native.sourcerepo/v1.Repo"
 meta_desc: "Documentation for the google-native.sourcerepo/v1.Repo resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/google-native/Repo/"
-layout: api-doc-resource
+layout: api
 ---
 
 

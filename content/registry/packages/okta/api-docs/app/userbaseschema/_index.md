@@ -5,7 +5,7 @@ title_tag: "okta.app.UserBaseSchema"
 meta_desc: "Documentation for the okta.app.UserBaseSchema resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/okta/UserBaseSchema/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "gcp.cloudrun.IamPolicy"
 meta_desc: "Documentation for the gcp.cloudrun.IamPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/gcp/IamPolicy/"
-layout: api-doc-resource
+layout: api
 ---
 
 

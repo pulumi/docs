@@ -5,7 +5,7 @@ title_tag: "azure-native.securityinsights.SentinelOnboardingState"
 meta_desc: "Documentation for the azure-native.securityinsights.SentinelOnboardingState resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/SentinelOnboardingState/"
-layout: api-doc-resource
+layout: api
 ---
 
 

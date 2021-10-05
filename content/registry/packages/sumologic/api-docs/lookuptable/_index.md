@@ -5,7 +5,7 @@ title_tag: "sumologic.LookupTable"
 meta_desc: "Documentation for the sumologic.LookupTable resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/sumologic/LookupTable/"
-layout: api-doc-resource
+layout: api
 ---
 
 

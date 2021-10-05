@@ -5,7 +5,7 @@ title_tag: "aws.waf.RuleGroup"
 meta_desc: "Documentation for the aws.waf.RuleGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/RuleGroup/"
-layout: api-doc-resource
+layout: api
 ---
 
 

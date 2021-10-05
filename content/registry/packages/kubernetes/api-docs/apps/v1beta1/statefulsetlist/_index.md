@@ -5,7 +5,7 @@ title_tag: "kubernetes.apps/v1beta1.StatefulSetList"
 meta_desc: "Documentation for the kubernetes.apps/v1beta1.StatefulSetList resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/kubernetes/StatefulSetList/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "aws-native.elasticloadbalancingv2.ListenerRule"
 meta_desc: "Documentation for the aws-native.elasticloadbalancingv2.ListenerRule resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws-native/ListenerRule/"
-layout: api-doc-resource
+layout: api
 ---
 
 

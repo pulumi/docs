@@ -5,7 +5,7 @@ title_tag: "openstack.sharedfilesystem.getSnapshot"
 meta_desc: "Documentation for the openstack.sharedfilesystem.getSnapshot function with examples, input properties, output properties, and supporting types."
 aliases:
     - "/docs/reference/pkg///"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "aws.iam.Group"
 meta_desc: "Documentation for the aws.iam.Group resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/Group/"
-layout: api-doc-resource
+layout: api
 ---
 
 

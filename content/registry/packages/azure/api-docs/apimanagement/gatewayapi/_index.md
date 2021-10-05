@@ -5,7 +5,7 @@ title_tag: "azure.apimanagement.GatewayApi"
 meta_desc: "Documentation for the azure.apimanagement.GatewayApi resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/GatewayApi/"
-layout: api-doc-resource
+layout: api
 ---
 
 

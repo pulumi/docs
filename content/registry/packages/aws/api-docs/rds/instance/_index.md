@@ -5,7 +5,7 @@ title_tag: "aws.rds.Instance"
 meta_desc: "Documentation for the aws.rds.Instance resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/Instance/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "aws.amplify.BackendEnvironment"
 meta_desc: "Documentation for the aws.amplify.BackendEnvironment resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/BackendEnvironment/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "azure-native.providerhub.ProviderRegistration"
 meta_desc: "Documentation for the azure-native.providerhub.ProviderRegistration resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/ProviderRegistration/"
-layout: api-doc-resource
+layout: api
 ---
 
 
@@ -3994,7 +3994,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#preflightoptions_nodejs" style="color: inherit; text-decoration: inherit;">preflight<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Preflight<wbr>Option[]</span>
+        <span class="property-type">(string | Preflight<wbr>Option)[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

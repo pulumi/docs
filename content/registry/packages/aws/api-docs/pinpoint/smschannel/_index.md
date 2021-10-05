@@ -5,7 +5,7 @@ title_tag: "aws.pinpoint.SmsChannel"
 meta_desc: "Documentation for the aws.pinpoint.SmsChannel resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/SmsChannel/"
-layout: api-doc-resource
+layout: api
 ---
 
 

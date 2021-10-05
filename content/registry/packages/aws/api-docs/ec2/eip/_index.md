@@ -5,7 +5,7 @@ title_tag: "aws.ec2.Eip"
 meta_desc: "Documentation for the aws.ec2.Eip resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/Eip/"
-layout: api-doc-resource
+layout: api
 ---
 
 

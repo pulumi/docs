@@ -5,7 +5,7 @@ title_tag: "azure-native.cdn.Route"
 meta_desc: "Documentation for the azure-native.cdn.Route resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/Route/"
-layout: api-doc-resource
+layout: api
 ---
 
 
@@ -802,7 +802,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#supportedprotocols_nodejs" style="color: inherit; text-decoration: inherit;">supported<wbr>Protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | AFDEndpoint<wbr>Protocols[]</span>
+        <span class="property-type">(string | AFDEndpoint<wbr>Protocols)[]</span>
     </dt>
     <dd>{{% md %}}List of supported protocols for this route.{{% /md %}}</dd></dl>
 {{% /choosable %}}

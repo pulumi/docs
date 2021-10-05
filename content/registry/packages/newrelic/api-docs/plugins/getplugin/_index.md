@@ -5,7 +5,7 @@ title_tag: "newrelic.plugins.getPlugin"
 meta_desc: "Documentation for the newrelic.plugins.getPlugin function with examples, input properties, output properties, and supporting types."
 aliases:
     - "/docs/reference/pkg///"
-layout: api-doc-resource
+layout: api
 ---
 
 

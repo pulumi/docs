@@ -5,7 +5,7 @@ title_tag: "azure-native.synapse.BigDataPool"
 meta_desc: "Documentation for the azure-native.synapse.BigDataPool resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/BigDataPool/"
-layout: api-doc-resource
+layout: api
 ---
 
 

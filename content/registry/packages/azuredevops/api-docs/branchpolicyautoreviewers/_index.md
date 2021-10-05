@@ -5,7 +5,7 @@ title_tag: "azuredevops.BranchPolicyAutoReviewers"
 meta_desc: "Documentation for the azuredevops.BranchPolicyAutoReviewers resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azuredevops/BranchPolicyAutoReviewers/"
-layout: api-doc-resource
+layout: api
 ---
 
 

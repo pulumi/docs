@@ -5,7 +5,7 @@ title_tag: "f5bigip.sys.SnmpTraps"
 meta_desc: "Documentation for the f5bigip.sys.SnmpTraps resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/f5bigip/SnmpTraps/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "digitalocean.Vpc"
 meta_desc: "Documentation for the digitalocean.Vpc resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/digitalocean/Vpc/"
-layout: api-doc-resource
+layout: api
 ---
 
 

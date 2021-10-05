@@ -5,7 +5,7 @@ title_tag: "gcp.diagflow.CxIntent"
 meta_desc: "Documentation for the gcp.diagflow.CxIntent resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/gcp/CxIntent/"
-layout: api-doc-resource
+layout: api
 ---
 
 

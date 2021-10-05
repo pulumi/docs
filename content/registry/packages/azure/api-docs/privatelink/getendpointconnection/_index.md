@@ -5,7 +5,7 @@ title_tag: "azure.privatelink.getEndpointConnection"
 meta_desc: "Documentation for the azure.privatelink.getEndpointConnection function with examples, input properties, output properties, and supporting types."
 aliases:
     - "/docs/reference/pkg///"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "azure-native.sql.DisasterRecoveryConfiguration"
 meta_desc: "Documentation for the azure-native.sql.DisasterRecoveryConfiguration resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/DisasterRecoveryConfiguration/"
-layout: api-doc-resource
+layout: api
 ---
 
 

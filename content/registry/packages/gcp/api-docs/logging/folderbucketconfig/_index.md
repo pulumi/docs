@@ -5,7 +5,7 @@ title_tag: "gcp.logging.FolderBucketConfig"
 meta_desc: "Documentation for the gcp.logging.FolderBucketConfig resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/gcp/FolderBucketConfig/"
-layout: api-doc-resource
+layout: api
 ---
 
 

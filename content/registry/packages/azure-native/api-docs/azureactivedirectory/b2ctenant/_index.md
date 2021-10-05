@@ -5,7 +5,7 @@ title_tag: "azure-native.azureactivedirectory.B2CTenant"
 meta_desc: "Documentation for the azure-native.azureactivedirectory.B2CTenant resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/B2CTenant/"
-layout: api-doc-resource
+layout: api
 ---
 
 

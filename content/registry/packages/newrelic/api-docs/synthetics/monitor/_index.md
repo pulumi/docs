@@ -5,7 +5,7 @@ title_tag: "newrelic.synthetics.Monitor"
 meta_desc: "Documentation for the newrelic.synthetics.Monitor resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/newrelic/Monitor/"
-layout: api-doc-resource
+layout: api
 ---
 
 

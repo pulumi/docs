@@ -5,7 +5,7 @@ title_tag: "aiven.ElasticSearchAcl"
 meta_desc: "Documentation for the aiven.ElasticSearchAcl resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aiven/ElasticSearchAcl/"
-layout: api-doc-resource
+layout: api
 ---
 
 

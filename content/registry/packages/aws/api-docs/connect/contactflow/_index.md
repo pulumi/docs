@@ -5,7 +5,7 @@ title_tag: "aws.connect.ContactFlow"
 meta_desc: "Documentation for the aws.connect.ContactFlow resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/ContactFlow/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "aws.kinesis.Stream"
 meta_desc: "Documentation for the aws.kinesis.Stream resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/Stream/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "google-native.vpcaccess/v1.Connector"
 meta_desc: "Documentation for the google-native.vpcaccess/v1.Connector resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/google-native/Connector/"
-layout: api-doc-resource
+layout: api
 ---
 
 

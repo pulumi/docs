@@ -5,7 +5,7 @@ title_tag: "fastly.Userv1"
 meta_desc: "Documentation for the fastly.Userv1 resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/fastly/Userv1/"
-layout: api-doc-resource
+layout: api
 ---
 
 

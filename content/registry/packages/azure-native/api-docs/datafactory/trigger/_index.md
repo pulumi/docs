@@ -5,7 +5,7 @@ title_tag: "azure-native.datafactory.Trigger"
 meta_desc: "Documentation for the azure-native.datafactory.Trigger resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/Trigger/"
-layout: api-doc-resource
+layout: api
 ---
 
 
@@ -1031,7 +1031,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#events_nodejs" style="color: inherit; text-decoration: inherit;">events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Blob<wbr>Event<wbr>Types[]</span>
+        <span class="property-type">(string | Blob<wbr>Event<wbr>Types)[]</span>
     </dt>
     <dd>{{% md %}}The type of events that cause this trigger to fire.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6427,7 +6427,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dependson_nodejs" style="color: inherit; text-decoration: inherit;">depends<wbr>On</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Self<wbr>Dependency<wbr>Tumbling<wbr>Window<wbr>Trigger<wbr>Reference | Trigger<wbr>Dependency<wbr>Reference | Tumbling<wbr>Window<wbr>Trigger<wbr>Dependency<wbr>Reference[]</span>
+        <span class="property-type">(Self<wbr>Dependency<wbr>Tumbling<wbr>Window<wbr>Trigger<wbr>Reference | Trigger<wbr>Dependency<wbr>Reference | Tumbling<wbr>Window<wbr>Trigger<wbr>Dependency<wbr>Reference)[]</span>
     </dt>
     <dd>{{% md %}}Triggers that this trigger depends on. Only tumbling window triggers are supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7049,7 +7049,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dependson_nodejs" style="color: inherit; text-decoration: inherit;">depends<wbr>On</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Self<wbr>Dependency<wbr>Tumbling<wbr>Window<wbr>Trigger<wbr>Reference<wbr>Response | Trigger<wbr>Dependency<wbr>Reference<wbr>Response | Tumbling<wbr>Window<wbr>Trigger<wbr>Dependency<wbr>Reference<wbr>Response[]</span>
+        <span class="property-type">(Self<wbr>Dependency<wbr>Tumbling<wbr>Window<wbr>Trigger<wbr>Reference<wbr>Response | Trigger<wbr>Dependency<wbr>Reference<wbr>Response | Tumbling<wbr>Window<wbr>Trigger<wbr>Dependency<wbr>Reference<wbr>Response)[]</span>
     </dt>
     <dd>{{% md %}}Triggers that this trigger depends on. Only tumbling window triggers are supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

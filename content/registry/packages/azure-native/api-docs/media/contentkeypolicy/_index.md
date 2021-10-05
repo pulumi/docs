@@ -5,7 +5,7 @@ title_tag: "azure-native.media.ContentKeyPolicy"
 meta_desc: "Documentation for the azure-native.media.ContentKeyPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/ContentKeyPolicy/"
-layout: api-doc-resource
+layout: api
 ---
 
 
@@ -5108,7 +5108,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#alternateverificationkeys_nodejs" style="color: inherit; text-decoration: inherit;">alternate<wbr>Verification<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Content<wbr>Key<wbr>Policy<wbr>Rsa<wbr>Token<wbr>Key | Content<wbr>Key<wbr>Policy<wbr>Symmetric<wbr>Token<wbr>Key | Content<wbr>Key<wbr>Policy<wbr>X509Certificate<wbr>Token<wbr>Key[]</span>
+        <span class="property-type">(Content<wbr>Key<wbr>Policy<wbr>Rsa<wbr>Token<wbr>Key | Content<wbr>Key<wbr>Policy<wbr>Symmetric<wbr>Token<wbr>Key | Content<wbr>Key<wbr>Policy<wbr>X509Certificate<wbr>Token<wbr>Key)[]</span>
     </dt>
     <dd>{{% md %}}A list of alternative verification keys.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5350,7 +5350,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#alternateverificationkeys_nodejs" style="color: inherit; text-decoration: inherit;">alternate<wbr>Verification<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Content<wbr>Key<wbr>Policy<wbr>Rsa<wbr>Token<wbr>Key<wbr>Response | Content<wbr>Key<wbr>Policy<wbr>Symmetric<wbr>Token<wbr>Key<wbr>Response | Content<wbr>Key<wbr>Policy<wbr>X509Certificate<wbr>Token<wbr>Key<wbr>Response[]</span>
+        <span class="property-type">(Content<wbr>Key<wbr>Policy<wbr>Rsa<wbr>Token<wbr>Key<wbr>Response | Content<wbr>Key<wbr>Policy<wbr>Symmetric<wbr>Token<wbr>Key<wbr>Response | Content<wbr>Key<wbr>Policy<wbr>X509Certificate<wbr>Token<wbr>Key<wbr>Response)[]</span>
     </dt>
     <dd>{{% md %}}A list of alternative verification keys.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

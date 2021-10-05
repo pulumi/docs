@@ -5,7 +5,7 @@ title_tag: "gcp.datacatalog.EntryGroupIamPolicy"
 meta_desc: "Documentation for the gcp.datacatalog.EntryGroupIamPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/gcp/EntryGroupIamPolicy/"
-layout: api-doc-resource
+layout: api
 ---
 
 

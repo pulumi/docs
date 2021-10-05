@@ -5,7 +5,7 @@ title_tag: "azure.appservice.SlotVirtualNetworkSwiftConnection"
 meta_desc: "Documentation for the azure.appservice.SlotVirtualNetworkSwiftConnection resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/SlotVirtualNetworkSwiftConnection/"
-layout: api-doc-resource
+layout: api
 ---
 
 

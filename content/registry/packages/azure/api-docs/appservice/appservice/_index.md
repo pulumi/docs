@@ -5,7 +5,7 @@ title_tag: "azure.appservice.AppService"
 meta_desc: "Documentation for the azure.appservice.AppService resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/AppService/"
-layout: api-doc-resource
+layout: api
 ---
 
 

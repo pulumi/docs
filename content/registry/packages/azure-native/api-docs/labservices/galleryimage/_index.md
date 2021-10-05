@@ -5,7 +5,7 @@ title_tag: "azure-native.labservices.GalleryImage"
 meta_desc: "Documentation for the azure-native.labservices.GalleryImage resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/GalleryImage/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "azure-native.insights.SubscriptionDiagnosticSetting"
 meta_desc: "Documentation for the azure-native.insights.SubscriptionDiagnosticSetting resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/SubscriptionDiagnosticSetting/"
-layout: api-doc-resource
+layout: api
 ---
 
 

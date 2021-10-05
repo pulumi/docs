@@ -5,7 +5,7 @@ title_tag: "aws.sagemaker.Domain"
 meta_desc: "Documentation for the aws.sagemaker.Domain resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/Domain/"
-layout: api-doc-resource
+layout: api
 ---
 
 

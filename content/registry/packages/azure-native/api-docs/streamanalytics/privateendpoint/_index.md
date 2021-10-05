@@ -5,7 +5,7 @@ title_tag: "azure-native.streamanalytics.PrivateEndpoint"
 meta_desc: "Documentation for the azure-native.streamanalytics.PrivateEndpoint resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/PrivateEndpoint/"
-layout: api-doc-resource
+layout: api
 ---
 
 

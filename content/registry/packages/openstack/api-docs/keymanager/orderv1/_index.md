@@ -5,7 +5,7 @@ title_tag: "openstack.keymanager.OrderV1"
 meta_desc: "Documentation for the openstack.keymanager.OrderV1 resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/openstack/OrderV1/"
-layout: api-doc-resource
+layout: api
 ---
 
 

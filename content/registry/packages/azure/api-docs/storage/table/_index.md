@@ -5,7 +5,7 @@ title_tag: "azure.storage.Table"
 meta_desc: "Documentation for the azure.storage.Table resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/Table/"
-layout: api-doc-resource
+layout: api
 ---
 
 

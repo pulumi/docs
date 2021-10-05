@@ -5,7 +5,7 @@ title_tag: "azure-native.storagesync.SyncGroup"
 meta_desc: "Documentation for the azure-native.storagesync.SyncGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/SyncGroup/"
-layout: api-doc-resource
+layout: api
 ---
 
 

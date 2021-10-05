@@ -5,7 +5,7 @@ title_tag: "consul.AclToken"
 meta_desc: "Documentation for the consul.AclToken resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/consul/AclToken/"
-layout: api-doc-resource
+layout: api
 ---
 
 

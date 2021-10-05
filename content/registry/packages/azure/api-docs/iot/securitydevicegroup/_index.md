@@ -5,7 +5,7 @@ title_tag: "azure.iot.SecurityDeviceGroup"
 meta_desc: "Documentation for the azure.iot.SecurityDeviceGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/SecurityDeviceGroup/"
-layout: api-doc-resource
+layout: api
 ---
 
 

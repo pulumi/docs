@@ -5,7 +5,7 @@ title_tag: "alicloud.resourcemanager.getHandshakes"
 meta_desc: "Documentation for the alicloud.resourcemanager.getHandshakes function with examples, input properties, output properties, and supporting types."
 aliases:
     - "/docs/reference/pkg///"
-layout: api-doc-resource
+layout: api
 ---
 
 

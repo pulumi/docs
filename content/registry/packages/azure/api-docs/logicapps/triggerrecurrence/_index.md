@@ -5,7 +5,7 @@ title_tag: "azure.logicapps.TriggerRecurrence"
 meta_desc: "Documentation for the azure.logicapps.TriggerRecurrence resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/TriggerRecurrence/"
-layout: api-doc-resource
+layout: api
 ---
 
 

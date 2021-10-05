@@ -5,7 +5,7 @@ title_tag: "azure.servicebus.Topic"
 meta_desc: "Documentation for the azure.servicebus.Topic resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/Topic/"
-layout: api-doc-resource
+layout: api
 ---
 
 

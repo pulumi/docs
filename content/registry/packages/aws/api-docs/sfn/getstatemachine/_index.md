@@ -5,7 +5,7 @@ title_tag: "aws.sfn.getStateMachine"
 meta_desc: "Documentation for the aws.sfn.getStateMachine function with examples, input properties, output properties, and supporting types."
 aliases:
     - "/docs/reference/pkg///"
-layout: api-doc-resource
+layout: api
 ---
 
 

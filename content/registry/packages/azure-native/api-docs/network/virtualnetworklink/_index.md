@@ -5,7 +5,7 @@ title_tag: "azure-native.network.VirtualNetworkLink"
 meta_desc: "Documentation for the azure-native.network.VirtualNetworkLink resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/VirtualNetworkLink/"
-layout: api-doc-resource
+layout: api
 ---
 
 

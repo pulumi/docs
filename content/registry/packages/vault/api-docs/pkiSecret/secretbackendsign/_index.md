@@ -5,7 +5,7 @@ title_tag: "vault.pkiSecret.SecretBackendSign"
 meta_desc: "Documentation for the vault.pkiSecret.SecretBackendSign resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/vault/SecretBackendSign/"
-layout: api-doc-resource
+layout: api
 ---
 
 

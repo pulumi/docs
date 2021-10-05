@@ -5,7 +5,7 @@ title_tag: "alicloud.slb.ServerCertificate"
 meta_desc: "Documentation for the alicloud.slb.ServerCertificate resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/alicloud/ServerCertificate/"
-layout: api-doc-resource
+layout: api
 ---
 
 

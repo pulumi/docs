@@ -5,7 +5,7 @@ title_tag: "azure.apimanagement.ApiOperationPolicy"
 meta_desc: "Documentation for the azure.apimanagement.ApiOperationPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/ApiOperationPolicy/"
-layout: api-doc-resource
+layout: api
 ---
 
 

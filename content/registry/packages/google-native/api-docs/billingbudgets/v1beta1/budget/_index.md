@@ -5,7 +5,7 @@ title_tag: "google-native.billingbudgets/v1beta1.Budget"
 meta_desc: "Documentation for the google-native.billingbudgets/v1beta1.Budget resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/google-native/Budget/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "google-native.iap/v1beta1.getV1beta1IamPolicy"
 meta_desc: "Documentation for the google-native.iap/v1beta1.getV1beta1IamPolicy function with examples, input properties, output properties, and supporting types."
 aliases:
     - "/docs/reference/pkg///"
-layout: api-doc-resource
+layout: api
 ---
 
 

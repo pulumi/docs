@@ -5,7 +5,7 @@ title_tag: "aws.rds.ClusterEndpoint"
 meta_desc: "Documentation for the aws.rds.ClusterEndpoint resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/ClusterEndpoint/"
-layout: api-doc-resource
+layout: api
 ---
 
 

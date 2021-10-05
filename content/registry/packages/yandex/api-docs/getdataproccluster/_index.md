@@ -5,7 +5,7 @@ title_tag: "yandex.getDataprocCluster"
 meta_desc: "Documentation for the yandex.getDataprocCluster function with examples, input properties, output properties, and supporting types."
 aliases:
     - "/docs/reference/pkg///"
-layout: api-doc-resource
+layout: api
 ---
 
 

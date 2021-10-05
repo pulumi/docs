@@ -5,7 +5,7 @@ title_tag: "wavefront.MaintenanceWindow"
 meta_desc: "Documentation for the wavefront.MaintenanceWindow resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/wavefront/MaintenanceWindow/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "gcp.logging.ProjectBucketConfig"
 meta_desc: "Documentation for the gcp.logging.ProjectBucketConfig resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/gcp/ProjectBucketConfig/"
-layout: api-doc-resource
+layout: api
 ---
 
 

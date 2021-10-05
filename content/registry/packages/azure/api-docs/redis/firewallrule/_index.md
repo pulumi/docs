@@ -5,7 +5,7 @@ title_tag: "azure.redis.FirewallRule"
 meta_desc: "Documentation for the azure.redis.FirewallRule resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/FirewallRule/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "gcp.monitoring.AlertPolicy"
 meta_desc: "Documentation for the gcp.monitoring.AlertPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/gcp/AlertPolicy/"
-layout: api-doc-resource
+layout: api
 ---
 
 

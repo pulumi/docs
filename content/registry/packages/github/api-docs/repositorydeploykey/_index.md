@@ -5,7 +5,7 @@ title_tag: "github.RepositoryDeployKey"
 meta_desc: "Documentation for the github.RepositoryDeployKey resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/github/RepositoryDeployKey/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "aws.rds.EventSubscription"
 meta_desc: "Documentation for the aws.rds.EventSubscription resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/EventSubscription/"
-layout: api-doc-resource
+layout: api
 ---
 
 

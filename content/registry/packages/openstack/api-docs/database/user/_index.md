@@ -5,7 +5,7 @@ title_tag: "openstack.database.User"
 meta_desc: "Documentation for the openstack.database.User resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/openstack/User/"
-layout: api-doc-resource
+layout: api
 ---
 
 

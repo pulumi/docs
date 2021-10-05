@@ -5,7 +5,7 @@ title_tag: "aws.redshift.ParameterGroup"
 meta_desc: "Documentation for the aws.redshift.ParameterGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/ParameterGroup/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "mongodbatlas.EventTrigger"
 meta_desc: "Documentation for the mongodbatlas.EventTrigger resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/mongodbatlas/EventTrigger/"
-layout: api-doc-resource
+layout: api
 ---
 
 

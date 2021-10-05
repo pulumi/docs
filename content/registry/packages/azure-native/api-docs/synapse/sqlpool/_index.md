@@ -5,7 +5,7 @@ title_tag: "azure-native.synapse.SqlPool"
 meta_desc: "Documentation for the azure-native.synapse.SqlPool resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/SqlPool/"
-layout: api-doc-resource
+layout: api
 ---
 
 

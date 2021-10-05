@@ -5,7 +5,7 @@ title_tag: "azure-native.purview.getAccount"
 meta_desc: "Documentation for the azure-native.purview.getAccount function with examples, input properties, output properties, and supporting types."
 aliases:
     - "/docs/reference/pkg///"
-layout: api-doc-resource
+layout: api
 ---
 
 

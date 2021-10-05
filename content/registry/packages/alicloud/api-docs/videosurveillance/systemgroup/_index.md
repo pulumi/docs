@@ -5,7 +5,7 @@ title_tag: "alicloud.videosurveillance.SystemGroup"
 meta_desc: "Documentation for the alicloud.videosurveillance.SystemGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/alicloud/SystemGroup/"
-layout: api-doc-resource
+layout: api
 ---
 
 

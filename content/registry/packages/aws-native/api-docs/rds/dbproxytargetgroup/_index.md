@@ -5,7 +5,7 @@ title_tag: "aws-native.rds.DBProxyTargetGroup"
 meta_desc: "Documentation for the aws-native.rds.DBProxyTargetGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws-native/DBProxyTargetGroup/"
-layout: api-doc-resource
+layout: api
 ---
 
 

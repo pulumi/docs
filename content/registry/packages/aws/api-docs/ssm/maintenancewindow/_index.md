@@ -5,7 +5,7 @@ title_tag: "aws.ssm.MaintenanceWindow"
 meta_desc: "Documentation for the aws.ssm.MaintenanceWindow resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/MaintenanceWindow/"
-layout: api-doc-resource
+layout: api
 ---
 
 

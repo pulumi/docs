@@ -5,7 +5,7 @@ title_tag: "azure.media.Asset"
 meta_desc: "Documentation for the azure.media.Asset resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/Asset/"
-layout: api-doc-resource
+layout: api
 ---
 
 

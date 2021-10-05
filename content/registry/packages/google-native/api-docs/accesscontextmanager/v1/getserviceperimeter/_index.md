@@ -5,7 +5,7 @@ title_tag: "google-native.accesscontextmanager/v1.getServicePerimeter"
 meta_desc: "Documentation for the google-native.accesscontextmanager/v1.getServicePerimeter function with examples, input properties, output properties, and supporting types."
 aliases:
     - "/docs/reference/pkg///"
-layout: api-doc-resource
+layout: api
 ---
 
 

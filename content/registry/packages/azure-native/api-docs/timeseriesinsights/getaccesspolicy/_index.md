@@ -5,7 +5,7 @@ title_tag: "azure-native.timeseriesinsights.getAccessPolicy"
 meta_desc: "Documentation for the azure-native.timeseriesinsights.getAccessPolicy function with examples, input properties, output properties, and supporting types."
 aliases:
     - "/docs/reference/pkg///"
-layout: api-doc-resource
+layout: api
 ---
 
 

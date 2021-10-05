@@ -5,7 +5,7 @@ title_tag: "aws.storagegateway.TapePool"
 meta_desc: "Documentation for the aws.storagegateway.TapePool resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/TapePool/"
-layout: api-doc-resource
+layout: api
 ---
 
 

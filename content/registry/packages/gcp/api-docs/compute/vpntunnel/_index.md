@@ -5,7 +5,7 @@ title_tag: "gcp.compute.VPNTunnel"
 meta_desc: "Documentation for the gcp.compute.VPNTunnel resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/gcp/VPNTunnel/"
-layout: api-doc-resource
+layout: api
 ---
 
 

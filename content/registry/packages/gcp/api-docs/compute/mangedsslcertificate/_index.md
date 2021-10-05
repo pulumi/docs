@@ -5,7 +5,7 @@ title_tag: "gcp.compute.MangedSslCertificate"
 meta_desc: "Documentation for the gcp.compute.MangedSslCertificate resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/gcp/MangedSslCertificate/"
-layout: api-doc-resource
+layout: api
 ---
 
 

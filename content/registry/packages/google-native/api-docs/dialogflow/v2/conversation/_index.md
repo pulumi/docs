@@ -5,7 +5,7 @@ title_tag: "google-native.dialogflow/v2.Conversation"
 meta_desc: "Documentation for the google-native.dialogflow/v2.Conversation resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/google-native/Conversation/"
-layout: api-doc-resource
+layout: api
 ---
 
 

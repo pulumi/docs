@@ -5,7 +5,7 @@ title_tag: "aws.s3.Bucket"
 meta_desc: "Documentation for the aws.s3.Bucket resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/Bucket/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "azure.appservice.CertificateOrder"
 meta_desc: "Documentation for the azure.appservice.CertificateOrder resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/CertificateOrder/"
-layout: api-doc-resource
+layout: api
 ---
 
 

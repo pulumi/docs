@@ -5,7 +5,7 @@ title_tag: "opsgenie.TeamRoutingRule"
 meta_desc: "Documentation for the opsgenie.TeamRoutingRule resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/opsgenie/TeamRoutingRule/"
-layout: api-doc-resource
+layout: api
 ---
 
 

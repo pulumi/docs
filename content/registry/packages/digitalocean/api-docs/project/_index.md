@@ -5,7 +5,7 @@ title_tag: "digitalocean.Project"
 meta_desc: "Documentation for the digitalocean.Project resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/digitalocean/Project/"
-layout: api-doc-resource
+layout: api
 ---
 
 

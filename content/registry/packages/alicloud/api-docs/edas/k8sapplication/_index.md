@@ -5,7 +5,7 @@ title_tag: "alicloud.edas.K8sApplication"
 meta_desc: "Documentation for the alicloud.edas.K8sApplication resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/alicloud/K8sApplication/"
-layout: api-doc-resource
+layout: api
 ---
 
 

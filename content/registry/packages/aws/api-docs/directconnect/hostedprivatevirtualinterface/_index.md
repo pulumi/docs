@@ -5,7 +5,7 @@ title_tag: "aws.directconnect.HostedPrivateVirtualInterface"
 meta_desc: "Documentation for the aws.directconnect.HostedPrivateVirtualInterface resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/HostedPrivateVirtualInterface/"
-layout: api-doc-resource
+layout: api
 ---
 
 

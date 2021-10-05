@@ -5,7 +5,7 @@ title_tag: "aws.msk.Configuration"
 meta_desc: "Documentation for the aws.msk.Configuration resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/Configuration/"
-layout: api-doc-resource
+layout: api
 ---
 
 

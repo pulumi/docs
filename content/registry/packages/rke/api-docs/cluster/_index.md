@@ -5,7 +5,7 @@ title_tag: "rke.Cluster"
 meta_desc: "Documentation for the rke.Cluster resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/rke/Cluster/"
-layout: api-doc-resource
+layout: api
 ---
 
 

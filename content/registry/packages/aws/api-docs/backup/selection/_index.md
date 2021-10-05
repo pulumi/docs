@@ -5,7 +5,7 @@ title_tag: "aws.backup.Selection"
 meta_desc: "Documentation for the aws.backup.Selection resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/Selection/"
-layout: api-doc-resource
+layout: api
 ---
 
 

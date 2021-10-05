@@ -5,7 +5,7 @@ title_tag: "openstack.firewall.Firewall"
 meta_desc: "Documentation for the openstack.firewall.Firewall resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/openstack/Firewall/"
-layout: api-doc-resource
+layout: api
 ---
 
 

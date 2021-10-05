@@ -5,7 +5,7 @@ title_tag: "okta.Domain"
 meta_desc: "Documentation for the okta.Domain resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/okta/Domain/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "alicloud.ecs.LaunchTemplate"
 meta_desc: "Documentation for the alicloud.ecs.LaunchTemplate resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/alicloud/LaunchTemplate/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "yandex.IamServiceAccountIamBinding"
 meta_desc: "Documentation for the yandex.IamServiceAccountIamBinding resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/yandex/IamServiceAccountIamBinding/"
-layout: api-doc-resource
+layout: api
 ---
 
 

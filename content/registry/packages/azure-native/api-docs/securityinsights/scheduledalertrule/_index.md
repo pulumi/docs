@@ -5,7 +5,7 @@ title_tag: "azure-native.securityinsights.ScheduledAlertRule"
 meta_desc: "Documentation for the azure-native.securityinsights.ScheduledAlertRule resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/ScheduledAlertRule/"
-layout: api-doc-resource
+layout: api
 ---
 
 
@@ -965,7 +965,7 @@ The ScheduledAlertRule resource accepts the following [input]({{< relref "/docs/
 <a href="#tactics_nodejs" style="color: inherit; text-decoration: inherit;">tactics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Attack<wbr>Tactic[]</span>
+        <span class="property-type">(string | Attack<wbr>Tactic)[]</span>
     </dt>
     <dd>{{% md %}}The tactics of the alert rule{{% /md %}}</dd></dl>
 {{% /choosable %}}

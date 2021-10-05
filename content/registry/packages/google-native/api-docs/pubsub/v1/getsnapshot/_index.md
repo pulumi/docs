@@ -5,7 +5,7 @@ title_tag: "google-native.pubsub/v1.getSnapshot"
 meta_desc: "Documentation for the google-native.pubsub/v1.getSnapshot function with examples, input properties, output properties, and supporting types."
 aliases:
     - "/docs/reference/pkg///"
-layout: api-doc-resource
+layout: api
 ---
 
 

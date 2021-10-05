@@ -5,7 +5,7 @@ title_tag: "aws.sagemaker.NotebookInstance"
 meta_desc: "Documentation for the aws.sagemaker.NotebookInstance resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/NotebookInstance/"
-layout: api-doc-resource
+layout: api
 ---
 
 

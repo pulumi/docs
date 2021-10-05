@@ -5,7 +5,7 @@ title_tag: "aws-native.s3objectlambda.AccessPoint"
 meta_desc: "Documentation for the aws-native.s3objectlambda.AccessPoint resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws-native/AccessPoint/"
-layout: api-doc-resource
+layout: api
 ---
 
 

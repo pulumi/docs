@@ -5,7 +5,7 @@ title_tag: "alicloud.cen.TransitRouterVpcAttachment"
 meta_desc: "Documentation for the alicloud.cen.TransitRouterVpcAttachment resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/alicloud/TransitRouterVpcAttachment/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "kong.Certificate"
 meta_desc: "Documentation for the kong.Certificate resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/kong/Certificate/"
-layout: api-doc-resource
+layout: api
 ---
 
 

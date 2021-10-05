@@ -5,7 +5,7 @@ title_tag: "vault.ad.SecretRole"
 meta_desc: "Documentation for the vault.ad.SecretRole resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/vault/SecretRole/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "gitlab.ProjectHook"
 meta_desc: "Documentation for the gitlab.ProjectHook resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/gitlab/ProjectHook/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "linode.getNodeBalancerConfig"
 meta_desc: "Documentation for the linode.getNodeBalancerConfig function with examples, input properties, output properties, and supporting types."
 aliases:
     - "/docs/reference/pkg///"
-layout: api-doc-resource
+layout: api
 ---
 
 

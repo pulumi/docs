@@ -5,7 +5,7 @@ title_tag: "azure.network.NetworkSecurityGroup"
 meta_desc: "Documentation for the azure.network.NetworkSecurityGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/NetworkSecurityGroup/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "cloudflare.ApiToken"
 meta_desc: "Documentation for the cloudflare.ApiToken resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/cloudflare/ApiToken/"
-layout: api-doc-resource
+layout: api
 ---
 
 

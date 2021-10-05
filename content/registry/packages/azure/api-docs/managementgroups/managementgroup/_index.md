@@ -5,7 +5,7 @@ title_tag: "azure.managementgroups.ManagementGroup"
 meta_desc: "Documentation for the azure.managementgroups.ManagementGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/ManagementGroup/"
-layout: api-doc-resource
+layout: api
 ---
 
 

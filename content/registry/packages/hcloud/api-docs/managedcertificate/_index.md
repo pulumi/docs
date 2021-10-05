@@ -5,7 +5,7 @@ title_tag: "hcloud.ManagedCertificate"
 meta_desc: "Documentation for the hcloud.ManagedCertificate resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/hcloud/ManagedCertificate/"
-layout: api-doc-resource
+layout: api
 ---
 
 

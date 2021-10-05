@@ -5,7 +5,7 @@ title_tag: "google-native.ml/v1.JobIamPolicy"
 meta_desc: "Documentation for the google-native.ml/v1.JobIamPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/google-native/JobIamPolicy/"
-layout: api-doc-resource
+layout: api
 ---
 
 

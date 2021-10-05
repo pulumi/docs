@@ -5,7 +5,7 @@ title_tag: "azure.appservice.getFunctionAppHostKeys"
 meta_desc: "Documentation for the azure.appservice.getFunctionAppHostKeys function with examples, input properties, output properties, and supporting types."
 aliases:
     - "/docs/reference/pkg///"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "aws-native.iot.MitigationAction"
 meta_desc: "Documentation for the aws-native.iot.MitigationAction resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws-native/MitigationAction/"
-layout: api-doc-resource
+layout: api
 ---
 
 

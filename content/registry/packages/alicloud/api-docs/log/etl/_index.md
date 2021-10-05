@@ -5,7 +5,7 @@ title_tag: "alicloud.log.Etl"
 meta_desc: "Documentation for the alicloud.log.Etl resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/alicloud/Etl/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "akamai.GtmDatacenter"
 meta_desc: "Documentation for the akamai.GtmDatacenter resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/akamai/GtmDatacenter/"
-layout: api-doc-resource
+layout: api
 ---
 
 

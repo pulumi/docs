@@ -5,7 +5,7 @@ title_tag: "gcp.sourcerepo.Repository"
 meta_desc: "Documentation for the gcp.sourcerepo.Repository resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/gcp/Repository/"
-layout: api-doc-resource
+layout: api
 ---
 
 

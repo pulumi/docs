@@ -5,7 +5,7 @@ title_tag: "azure-native.apimanagement.AuthorizationServer"
 meta_desc: "Documentation for the azure-native.apimanagement.AuthorizationServer resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/AuthorizationServer/"
-layout: api-doc-resource
+layout: api
 ---
 
 
@@ -715,7 +715,7 @@ The AuthorizationServer resource accepts the following [input]({{< relref "/docs
 <a href="#granttypes_nodejs" style="color: inherit; text-decoration: inherit;">grant<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Grant<wbr>Type[]</span>
+        <span class="property-type">(string | Grant<wbr>Type)[]</span>
     </dt>
     <dd>{{% md %}}Form of an authorization grant, which the client uses to request the access token.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -755,7 +755,7 @@ The AuthorizationServer resource accepts the following [input]({{< relref "/docs
 <a href="#bearertokensendingmethods_nodejs" style="color: inherit; text-decoration: inherit;">bearer<wbr>Token<wbr>Sending<wbr>Methods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Bearer<wbr>Token<wbr>Sending<wbr>Method[]</span>
+        <span class="property-type">(string | Bearer<wbr>Token<wbr>Sending<wbr>Method)[]</span>
     </dt>
     <dd>{{% md %}}Specifies the mechanism by which access token is passed to the API. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -763,7 +763,7 @@ The AuthorizationServer resource accepts the following [input]({{< relref "/docs
 <a href="#clientauthenticationmethod_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Authentication<wbr>Method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Client<wbr>Authentication<wbr>Method[]</span>
+        <span class="property-type">(string | Client<wbr>Authentication<wbr>Method)[]</span>
     </dt>
     <dd>{{% md %}}Method of authentication supported by the token endpoint of this authorization server. Possible values are Basic and/or Body. When Body is specified, client credentials and other parameters are passed within the request body in the application/x-www-form-urlencoded format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

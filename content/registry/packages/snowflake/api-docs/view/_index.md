@@ -5,7 +5,7 @@ title_tag: "snowflake.View"
 meta_desc: "Documentation for the snowflake.View resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/snowflake/View/"
-layout: api-doc-resource
+layout: api
 ---
 
 

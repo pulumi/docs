@@ -5,7 +5,7 @@ title_tag: "azure.batch.Certificate"
 meta_desc: "Documentation for the azure.batch.Certificate resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/Certificate/"
-layout: api-doc-resource
+layout: api
 ---
 
 

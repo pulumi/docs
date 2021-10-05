@@ -5,7 +5,7 @@ title_tag: "azure-native.containerservice.AgentPool"
 meta_desc: "Documentation for the azure-native.containerservice.AgentPool resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/AgentPool/"
-layout: api-doc-resource
+layout: api
 ---
 
 

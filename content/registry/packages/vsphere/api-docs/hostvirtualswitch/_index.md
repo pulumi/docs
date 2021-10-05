@@ -5,7 +5,7 @@ title_tag: "vsphere.HostVirtualSwitch"
 meta_desc: "Documentation for the vsphere.HostVirtualSwitch resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/vsphere/HostVirtualSwitch/"
-layout: api-doc-resource
+layout: api
 ---
 
 

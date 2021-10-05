@@ -5,7 +5,7 @@ title_tag: "aws.inspector.ResourceGroup"
 meta_desc: "Documentation for the aws.inspector.ResourceGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/ResourceGroup/"
-layout: api-doc-resource
+layout: api
 ---
 
 

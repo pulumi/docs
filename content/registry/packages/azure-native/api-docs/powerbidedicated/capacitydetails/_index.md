@@ -5,7 +5,7 @@ title_tag: "azure-native.powerbidedicated.CapacityDetails"
 meta_desc: "Documentation for the azure-native.powerbidedicated.CapacityDetails resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/CapacityDetails/"
-layout: api-doc-resource
+layout: api
 ---
 
 

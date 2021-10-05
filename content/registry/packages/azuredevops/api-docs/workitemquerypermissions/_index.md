@@ -5,7 +5,7 @@ title_tag: "azuredevops.WorkItemQueryPermissions"
 meta_desc: "Documentation for the azuredevops.WorkItemQueryPermissions resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azuredevops/WorkItemQueryPermissions/"
-layout: api-doc-resource
+layout: api
 ---
 
 

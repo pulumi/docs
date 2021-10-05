@@ -5,7 +5,7 @@ title_tag: "kong.Provider"
 meta_desc: "Documentation for the kong.Provider resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/kong/kong/"
-layout: api-doc-resource
+layout: api
 ---
 
 

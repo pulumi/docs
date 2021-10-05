@@ -5,7 +5,7 @@ title_tag: "google-native.firebaserules/v1.Release"
 meta_desc: "Documentation for the google-native.firebaserules/v1.Release resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/google-native/Release/"
-layout: api-doc-resource
+layout: api
 ---
 
 

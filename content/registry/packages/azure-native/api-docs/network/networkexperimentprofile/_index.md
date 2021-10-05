@@ -5,7 +5,7 @@ title_tag: "azure-native.network.NetworkExperimentProfile"
 meta_desc: "Documentation for the azure-native.network.NetworkExperimentProfile resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/NetworkExperimentProfile/"
-layout: api-doc-resource
+layout: api
 ---
 
 

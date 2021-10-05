@@ -5,7 +5,7 @@ title_tag: "google-native.monitoring/v3.Group"
 meta_desc: "Documentation for the google-native.monitoring/v3.Group resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/google-native/Group/"
-layout: api-doc-resource
+layout: api
 ---
 
 

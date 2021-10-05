@@ -5,7 +5,7 @@ title_tag: "azure-native.servicefabric.NodeType"
 meta_desc: "Documentation for the azure-native.servicefabric.NodeType resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/NodeType/"
-layout: api-doc-resource
+layout: api
 ---
 
 

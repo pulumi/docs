@@ -5,7 +5,7 @@ title_tag: "github.TeamSyncGroupMapping"
 meta_desc: "Documentation for the github.TeamSyncGroupMapping resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/github/TeamSyncGroupMapping/"
-layout: api-doc-resource
+layout: api
 ---
 
 

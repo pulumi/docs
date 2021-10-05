@@ -5,7 +5,7 @@ title_tag: "alicloud.cdn.Domain"
 meta_desc: "Documentation for the alicloud.cdn.Domain resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/alicloud/Domain/"
-layout: api-doc-resource
+layout: api
 ---
 
 

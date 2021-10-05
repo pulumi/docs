@@ -5,7 +5,7 @@ title_tag: "azure-native.network.RouteFilter"
 meta_desc: "Documentation for the azure-native.network.RouteFilter resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/RouteFilter/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "azure-native.insights.AutoscaleSetting"
 meta_desc: "Documentation for the azure-native.insights.AutoscaleSetting resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/AutoscaleSetting/"
-layout: api-doc-resource
+layout: api
 ---
 
 

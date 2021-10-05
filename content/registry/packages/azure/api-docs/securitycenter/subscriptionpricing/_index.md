@@ -5,7 +5,7 @@ title_tag: "azure.securitycenter.SubscriptionPricing"
 meta_desc: "Documentation for the azure.securitycenter.SubscriptionPricing resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/SubscriptionPricing/"
-layout: api-doc-resource
+layout: api
 ---
 
 

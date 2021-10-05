@@ -5,7 +5,7 @@ title_tag: "okta.app.GroupAssignment"
 meta_desc: "Documentation for the okta.app.GroupAssignment resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/okta/GroupAssignment/"
-layout: api-doc-resource
+layout: api
 ---
 
 

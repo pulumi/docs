@@ -5,7 +5,7 @@ title_tag: "azure.network.NatGatewayPublicIpAssociation"
 meta_desc: "Documentation for the azure.network.NatGatewayPublicIpAssociation resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/NatGatewayPublicIpAssociation/"
-layout: api-doc-resource
+layout: api
 ---
 
 

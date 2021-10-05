@@ -5,7 +5,7 @@ title_tag: "okta.Behaviour"
 meta_desc: "Documentation for the okta.Behaviour resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/okta/Behaviour/"
-layout: api-doc-resource
+layout: api
 ---
 
 

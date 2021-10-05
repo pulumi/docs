@@ -5,7 +5,7 @@ title_tag: "azure-native.guestconfiguration.GuestConfigurationAssignment"
 meta_desc: "Documentation for the azure-native.guestconfiguration.GuestConfigurationAssignment resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/GuestConfigurationAssignment/"
-layout: api-doc-resource
+layout: api
 ---
 
 

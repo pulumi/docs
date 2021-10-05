@@ -5,7 +5,7 @@ title_tag: "gcp.apigateway.GatewayIamMember"
 meta_desc: "Documentation for the gcp.apigateway.GatewayIamMember resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/gcp/GatewayIamMember/"
-layout: api-doc-resource
+layout: api
 ---
 
 

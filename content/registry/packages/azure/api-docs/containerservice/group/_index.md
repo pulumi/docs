@@ -5,7 +5,7 @@ title_tag: "azure.containerservice.Group"
 meta_desc: "Documentation for the azure.containerservice.Group resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/Group/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "azure.network.BgpConnection"
 meta_desc: "Documentation for the azure.network.BgpConnection resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/BgpConnection/"
-layout: api-doc-resource
+layout: api
 ---
 
 

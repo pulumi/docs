@@ -5,7 +5,7 @@ title_tag: "azure.core.Subscription"
 meta_desc: "Documentation for the azure.core.Subscription resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/Subscription/"
-layout: api-doc-resource
+layout: api
 ---
 
 

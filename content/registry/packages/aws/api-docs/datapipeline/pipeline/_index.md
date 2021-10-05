@@ -5,7 +5,7 @@ title_tag: "aws.datapipeline.Pipeline"
 meta_desc: "Documentation for the aws.datapipeline.Pipeline resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/Pipeline/"
-layout: api-doc-resource
+layout: api
 ---
 
 

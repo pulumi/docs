@@ -5,7 +5,7 @@ title_tag: "google-native.tpu/v1alpha1.Node"
 meta_desc: "Documentation for the google-native.tpu/v1alpha1.Node resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/google-native/Node/"
-layout: api-doc-resource
+layout: api
 ---
 
 

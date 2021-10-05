@@ -5,7 +5,7 @@ title_tag: "gcp.sourcerepo.RepositoryIamBinding"
 meta_desc: "Documentation for the gcp.sourcerepo.RepositoryIamBinding resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/gcp/RepositoryIamBinding/"
-layout: api-doc-resource
+layout: api
 ---
 
 

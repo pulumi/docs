@@ -5,7 +5,7 @@ title_tag: "alicloud.cas.Certificate"
 meta_desc: "Documentation for the alicloud.cas.Certificate resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/alicloud/Certificate/"
-layout: api-doc-resource
+layout: api
 ---
 
 

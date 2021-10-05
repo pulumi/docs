@@ -5,7 +5,7 @@ title_tag: "splunk.DataUiViews"
 meta_desc: "Documentation for the splunk.DataUiViews resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/splunk/DataUiViews/"
-layout: api-doc-resource
+layout: api
 ---
 
 

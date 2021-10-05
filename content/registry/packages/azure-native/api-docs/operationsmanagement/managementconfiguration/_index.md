@@ -5,7 +5,7 @@ title_tag: "azure-native.operationsmanagement.ManagementConfiguration"
 meta_desc: "Documentation for the azure-native.operationsmanagement.ManagementConfiguration resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/ManagementConfiguration/"
-layout: api-doc-resource
+layout: api
 ---
 
 

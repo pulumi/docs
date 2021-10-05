@@ -5,7 +5,7 @@ title_tag: "azure.hdinsight.RServerCluster"
 meta_desc: "Documentation for the azure.hdinsight.RServerCluster resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/RServerCluster/"
-layout: api-doc-resource
+layout: api
 ---
 
 

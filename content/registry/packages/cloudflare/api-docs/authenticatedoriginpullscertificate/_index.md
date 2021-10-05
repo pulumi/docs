@@ -5,7 +5,7 @@ title_tag: "cloudflare.AuthenticatedOriginPullsCertificate"
 meta_desc: "Documentation for the cloudflare.AuthenticatedOriginPullsCertificate resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/cloudflare/AuthenticatedOriginPullsCertificate/"
-layout: api-doc-resource
+layout: api
 ---
 
 

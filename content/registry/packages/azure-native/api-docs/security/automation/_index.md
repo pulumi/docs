@@ -5,7 +5,7 @@ title_tag: "azure-native.security.Automation"
 meta_desc: "Documentation for the azure-native.security.Automation resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/Automation/"
-layout: api-doc-resource
+layout: api
 ---
 
 
@@ -1010,7 +1010,7 @@ The Automation resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#actions_nodejs" style="color: inherit; text-decoration: inherit;">actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Automation<wbr>Action<wbr>Event<wbr>Hub<wbr>Args | Automation<wbr>Action<wbr>Logic<wbr>App<wbr>Args | Automation<wbr>Action<wbr>Workspace<wbr>Args[]</span>
+        <span class="property-type">(Automation<wbr>Action<wbr>Event<wbr>Hub<wbr>Args | Automation<wbr>Action<wbr>Logic<wbr>App<wbr>Args | Automation<wbr>Action<wbr>Workspace<wbr>Args)[]</span>
     </dt>
     <dd>{{% md %}}A collection of the actions which are triggered if all the configured rules evaluations, within at least one rule set, are true.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

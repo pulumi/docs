@@ -5,7 +5,7 @@ title_tag: "gcp.secretmanager.SecretIamBinding"
 meta_desc: "Documentation for the gcp.secretmanager.SecretIamBinding resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/gcp/SecretIamBinding/"
-layout: api-doc-resource
+layout: api
 ---
 
 

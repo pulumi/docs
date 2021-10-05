@@ -5,7 +5,7 @@ title_tag: "google-native.sqladmin/v1beta4.getInstance"
 meta_desc: "Documentation for the google-native.sqladmin/v1beta4.getInstance function with examples, input properties, output properties, and supporting types."
 aliases:
     - "/docs/reference/pkg///"
-layout: api-doc-resource
+layout: api
 ---
 
 

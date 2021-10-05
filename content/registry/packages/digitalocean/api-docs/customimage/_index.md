@@ -5,7 +5,7 @@ title_tag: "digitalocean.CustomImage"
 meta_desc: "Documentation for the digitalocean.CustomImage resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/digitalocean/CustomImage/"
-layout: api-doc-resource
+layout: api
 ---
 
 

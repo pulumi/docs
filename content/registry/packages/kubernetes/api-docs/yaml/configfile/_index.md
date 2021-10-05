@@ -5,7 +5,7 @@ title_tag: "kubernetes.yaml.ConfigFile"
 meta_desc: "Documentation for the kubernetes.yaml.ConfigFile resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/kubernetes/ConfigFile/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "aws-native.robomaker.SimulationApplication"
 meta_desc: "Documentation for the aws-native.robomaker.SimulationApplication resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws-native/SimulationApplication/"
-layout: api-doc-resource
+layout: api
 ---
 
 

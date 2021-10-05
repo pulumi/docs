@@ -5,7 +5,7 @@ title_tag: "okta.app.Saml"
 meta_desc: "Documentation for the okta.app.Saml resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/okta/Saml/"
-layout: api-doc-resource
+layout: api
 ---
 
 

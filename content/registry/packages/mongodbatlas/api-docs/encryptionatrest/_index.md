@@ -5,7 +5,7 @@ title_tag: "mongodbatlas.EncryptionAtRest"
 meta_desc: "Documentation for the mongodbatlas.EncryptionAtRest resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/mongodbatlas/EncryptionAtRest/"
-layout: api-doc-resource
+layout: api
 ---
 
 

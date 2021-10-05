@@ -5,7 +5,7 @@ title_tag: "google-native.gameservices/v1.Config"
 meta_desc: "Documentation for the google-native.gameservices/v1.Config resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/google-native/Config/"
-layout: api-doc-resource
+layout: api
 ---
 
 

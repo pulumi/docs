@@ -5,7 +5,7 @@ title_tag: "azure-native.peering.Prefix"
 meta_desc: "Documentation for the azure-native.peering.Prefix resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/Prefix/"
-layout: api-doc-resource
+layout: api
 ---
 
 

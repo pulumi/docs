@@ -5,7 +5,7 @@ title_tag: "azure-native.appplatform.App"
 meta_desc: "Documentation for the azure-native.appplatform.App resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/App/"
-layout: api-doc-resource
+layout: api
 ---
 
 

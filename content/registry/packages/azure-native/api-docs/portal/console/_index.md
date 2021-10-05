@@ -5,7 +5,7 @@ title_tag: "azure-native.portal.Console"
 meta_desc: "Documentation for the azure-native.portal.Console resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/Console/"
-layout: api-doc-resource
+layout: api
 ---
 
 

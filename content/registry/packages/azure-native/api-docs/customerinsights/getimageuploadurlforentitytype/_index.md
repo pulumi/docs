@@ -5,7 +5,7 @@ title_tag: "azure-native.customerinsights.getImageUploadUrlForEntityType"
 meta_desc: "Documentation for the azure-native.customerinsights.getImageUploadUrlForEntityType function with examples, input properties, output properties, and supporting types."
 aliases:
     - "/docs/reference/pkg///"
-layout: api-doc-resource
+layout: api
 ---
 
 

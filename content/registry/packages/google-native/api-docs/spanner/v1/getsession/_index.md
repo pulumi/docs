@@ -5,7 +5,7 @@ title_tag: "google-native.spanner/v1.getSession"
 meta_desc: "Documentation for the google-native.spanner/v1.getSession function with examples, input properties, output properties, and supporting types."
 aliases:
     - "/docs/reference/pkg///"
-layout: api-doc-resource
+layout: api
 ---
 
 

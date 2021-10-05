@@ -5,7 +5,7 @@ title_tag: "aws.cloudwatch.EventTarget"
 meta_desc: "Documentation for the aws.cloudwatch.EventTarget resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/EventTarget/"
-layout: api-doc-resource
+layout: api
 ---
 
 

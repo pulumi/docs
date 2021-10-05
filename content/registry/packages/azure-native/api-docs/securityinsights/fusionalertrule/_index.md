@@ -5,7 +5,7 @@ title_tag: "azure-native.securityinsights.FusionAlertRule"
 meta_desc: "Documentation for the azure-native.securityinsights.FusionAlertRule resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/FusionAlertRule/"
-layout: api-doc-resource
+layout: api
 ---
 
 

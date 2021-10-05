@@ -5,7 +5,7 @@ title_tag: "azure-native.relay.HybridConnection"
 meta_desc: "Documentation for the azure-native.relay.HybridConnection resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/HybridConnection/"
-layout: api-doc-resource
+layout: api
 ---
 
 

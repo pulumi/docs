@@ -5,7 +5,7 @@ title_tag: "azure-native.azurestack.listProductDetails"
 meta_desc: "Documentation for the azure-native.azurestack.listProductDetails function with examples, input properties, output properties, and supporting types."
 aliases:
     - "/docs/reference/pkg///"
-layout: api-doc-resource
+layout: api
 ---
 
 

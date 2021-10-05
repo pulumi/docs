@@ -5,7 +5,7 @@ title_tag: "aws.ec2transitgateway.VpcAttachmentAccepter"
 meta_desc: "Documentation for the aws.ec2transitgateway.VpcAttachmentAccepter resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/VpcAttachmentAccepter/"
-layout: api-doc-resource
+layout: api
 ---
 
 

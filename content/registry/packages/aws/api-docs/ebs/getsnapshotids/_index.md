@@ -5,7 +5,7 @@ title_tag: "aws.ebs.getSnapshotIds"
 meta_desc: "Documentation for the aws.ebs.getSnapshotIds function with examples, input properties, output properties, and supporting types."
 aliases:
     - "/docs/reference/pkg///"
-layout: api-doc-resource
+layout: api
 ---
 
 

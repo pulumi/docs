@@ -5,7 +5,7 @@ title_tag: "azure.network.SubnetNetworkSecurityGroupAssociation"
 meta_desc: "Documentation for the azure.network.SubnetNetworkSecurityGroupAssociation resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/SubnetNetworkSecurityGroupAssociation/"
-layout: api-doc-resource
+layout: api
 ---
 
 

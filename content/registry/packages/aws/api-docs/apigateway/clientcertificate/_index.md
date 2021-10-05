@@ -5,7 +5,7 @@ title_tag: "aws.apigateway.ClientCertificate"
 meta_desc: "Documentation for the aws.apigateway.ClientCertificate resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/ClientCertificate/"
-layout: api-doc-resource
+layout: api
 ---
 
 

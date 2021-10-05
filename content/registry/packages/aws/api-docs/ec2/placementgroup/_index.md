@@ -5,7 +5,7 @@ title_tag: "aws.ec2.PlacementGroup"
 meta_desc: "Documentation for the aws.ec2.PlacementGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/PlacementGroup/"
-layout: api-doc-resource
+layout: api
 ---
 
 

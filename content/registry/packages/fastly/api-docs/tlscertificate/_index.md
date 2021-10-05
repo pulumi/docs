@@ -5,7 +5,7 @@ title_tag: "fastly.TlsCertificate"
 meta_desc: "Documentation for the fastly.TlsCertificate resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/fastly/TlsCertificate/"
-layout: api-doc-resource
+layout: api
 ---
 
 

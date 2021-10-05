@@ -5,7 +5,7 @@ title_tag: "google-native.compute/beta.SubnetworkIamPolicy"
 meta_desc: "Documentation for the google-native.compute/beta.SubnetworkIamPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/google-native/SubnetworkIamPolicy/"
-layout: api-doc-resource
+layout: api
 ---
 
 

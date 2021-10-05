@@ -5,7 +5,7 @@ title_tag: "openstack.networking.Network"
 meta_desc: "Documentation for the openstack.networking.Network resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/openstack/Network/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "azure-native.eventhub.Cluster"
 meta_desc: "Documentation for the azure-native.eventhub.Cluster resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/Cluster/"
-layout: api-doc-resource
+layout: api
 ---
 
 

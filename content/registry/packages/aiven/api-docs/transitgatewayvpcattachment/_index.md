@@ -5,7 +5,7 @@ title_tag: "aiven.TransitGatewayVpcAttachment"
 meta_desc: "Documentation for the aiven.TransitGatewayVpcAttachment resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aiven/TransitGatewayVpcAttachment/"
-layout: api-doc-resource
+layout: api
 ---
 
 

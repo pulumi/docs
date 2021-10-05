@@ -5,7 +5,7 @@ title_tag: "alicloud.ram.AccountPasswordPolicy"
 meta_desc: "Documentation for the alicloud.ram.AccountPasswordPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/alicloud/AccountPasswordPolicy/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "aws-native.ecs.TaskDefinition"
 meta_desc: "Documentation for the aws-native.ecs.TaskDefinition resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws-native/TaskDefinition/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "aws.lb.TargetGroup"
 meta_desc: "Documentation for the aws.lb.TargetGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/TargetGroup/"
-layout: api-doc-resource
+layout: api
 ---
 
 

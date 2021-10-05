@@ -5,7 +5,7 @@ title_tag: "alicloud.resourcemanager.Handshake"
 meta_desc: "Documentation for the alicloud.resourcemanager.Handshake resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/alicloud/Handshake/"
-layout: api-doc-resource
+layout: api
 ---
 
 

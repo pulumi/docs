@@ -5,7 +5,7 @@ title_tag: "gcp.logging.FolderSink"
 meta_desc: "Documentation for the gcp.logging.FolderSink resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/gcp/FolderSink/"
-layout: api-doc-resource
+layout: api
 ---
 
 

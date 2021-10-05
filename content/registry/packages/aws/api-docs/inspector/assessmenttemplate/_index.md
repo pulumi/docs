@@ -5,7 +5,7 @@ title_tag: "aws.inspector.AssessmentTemplate"
 meta_desc: "Documentation for the aws.inspector.AssessmentTemplate resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/AssessmentTemplate/"
-layout: api-doc-resource
+layout: api
 ---
 
 

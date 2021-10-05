@@ -5,7 +5,7 @@ title_tag: "azure-native.security.getAutomation"
 meta_desc: "Documentation for the azure-native.security.getAutomation function with examples, input properties, output properties, and supporting types."
 aliases:
     - "/docs/reference/pkg///"
-layout: api-doc-resource
+layout: api
 ---
 
 
@@ -375,7 +375,7 @@ The following output properties are available:
 <a href="#actions_nodejs" style="color: inherit; text-decoration: inherit;">actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Automation<wbr>Action<wbr>Event<wbr>Hub<wbr>Response | Automation<wbr>Action<wbr>Logic<wbr>App<wbr>Response | Automation<wbr>Action<wbr>Workspace<wbr>Response[]</span>
+        <span class="property-type">(Automation<wbr>Action<wbr>Event<wbr>Hub<wbr>Response | Automation<wbr>Action<wbr>Logic<wbr>App<wbr>Response | Automation<wbr>Action<wbr>Workspace<wbr>Response)[]</span>
     </dt>
     <dd>{{% md %}}A collection of the actions which are triggered if all the configured rules evaluations, within at least one rule set, are true.{{% /md %}}</dd><dt class="property-"
             title="">

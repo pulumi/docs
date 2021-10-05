@@ -5,7 +5,7 @@ title_tag: "aws.lakeformation.DataLakeSettings"
 meta_desc: "Documentation for the aws.lakeformation.DataLakeSettings resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/DataLakeSettings/"
-layout: api-doc-resource
+layout: api
 ---
 
 

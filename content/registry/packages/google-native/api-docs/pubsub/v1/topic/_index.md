@@ -5,7 +5,7 @@ title_tag: "google-native.pubsub/v1.Topic"
 meta_desc: "Documentation for the google-native.pubsub/v1.Topic resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/google-native/Topic/"
-layout: api-doc-resource
+layout: api
 ---
 
 

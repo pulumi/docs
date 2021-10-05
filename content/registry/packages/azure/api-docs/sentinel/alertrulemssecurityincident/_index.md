@@ -5,7 +5,7 @@ title_tag: "azure.sentinel.AlertRuleMsSecurityIncident"
 meta_desc: "Documentation for the azure.sentinel.AlertRuleMsSecurityIncident resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/AlertRuleMsSecurityIncident/"
-layout: api-doc-resource
+layout: api
 ---
 
 

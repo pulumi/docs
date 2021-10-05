@@ -5,7 +5,7 @@ title_tag: "gcp.compute.Route"
 meta_desc: "Documentation for the gcp.compute.Route resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/gcp/Route/"
-layout: api-doc-resource
+layout: api
 ---
 
 

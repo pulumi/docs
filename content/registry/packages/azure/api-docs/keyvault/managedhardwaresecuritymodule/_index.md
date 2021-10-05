@@ -5,7 +5,7 @@ title_tag: "azure.keyvault.ManagedHardwareSecurityModule"
 meta_desc: "Documentation for the azure.keyvault.ManagedHardwareSecurityModule resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/ManagedHardwareSecurityModule/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "vsphere.ContentLibrary"
 meta_desc: "Documentation for the vsphere.ContentLibrary resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/vsphere/ContentLibrary/"
-layout: api-doc-resource
+layout: api
 ---
 
 

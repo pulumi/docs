@@ -5,7 +5,7 @@ title_tag: "azure-native.maintenance.ConfigurationAssignment"
 meta_desc: "Documentation for the azure-native.maintenance.ConfigurationAssignment resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/ConfigurationAssignment/"
-layout: api-doc-resource
+layout: api
 ---
 
 

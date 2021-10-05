@@ -5,7 +5,7 @@ title_tag: "azure.network.Firewall"
 meta_desc: "Documentation for the azure.network.Firewall resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/Firewall/"
-layout: api-doc-resource
+layout: api
 ---
 
 

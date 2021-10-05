@@ -5,7 +5,7 @@ title_tag: "alicloud.log.Store"
 meta_desc: "Documentation for the alicloud.log.Store resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/alicloud/Store/"
-layout: api-doc-resource
+layout: api
 ---
 
 

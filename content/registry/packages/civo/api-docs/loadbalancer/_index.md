@@ -5,7 +5,7 @@ title_tag: "civo.LoadBalancer"
 meta_desc: "Documentation for the civo.LoadBalancer resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/civo/LoadBalancer/"
-layout: api-doc-resource
+layout: api
 ---
 
 

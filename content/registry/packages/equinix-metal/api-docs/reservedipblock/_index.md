@@ -5,7 +5,7 @@ title_tag: "equinix-metal.ReservedIpBlock"
 meta_desc: "Documentation for the equinix-metal.ReservedIpBlock resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/equinix-metal/ReservedIpBlock/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "google-native.tpu/v1alpha1.getNode"
 meta_desc: "Documentation for the google-native.tpu/v1alpha1.getNode function with examples, input properties, output properties, and supporting types."
 aliases:
     - "/docs/reference/pkg///"
-layout: api-doc-resource
+layout: api
 ---
 
 

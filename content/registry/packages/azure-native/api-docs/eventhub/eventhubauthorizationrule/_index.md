@@ -5,7 +5,7 @@ title_tag: "azure-native.eventhub.EventHubAuthorizationRule"
 meta_desc: "Documentation for the azure-native.eventhub.EventHubAuthorizationRule resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/EventHubAuthorizationRule/"
-layout: api-doc-resource
+layout: api
 ---
 
 
@@ -411,7 +411,7 @@ The EventHubAuthorizationRule resource accepts the following [input]({{< relref 
 <a href="#rights_nodejs" style="color: inherit; text-decoration: inherit;">rights</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Access<wbr>Rights[]</span>
+        <span class="property-type">(string | Access<wbr>Rights)[]</span>
     </dt>
     <dd>{{% md %}}The rights associated with the rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

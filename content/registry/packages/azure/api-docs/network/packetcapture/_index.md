@@ -5,7 +5,7 @@ title_tag: "azure.network.PacketCapture"
 meta_desc: "Documentation for the azure.network.PacketCapture resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/PacketCapture/"
-layout: api-doc-resource
+layout: api
 ---
 
 

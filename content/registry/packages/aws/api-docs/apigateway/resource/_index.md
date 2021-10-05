@@ -5,7 +5,7 @@ title_tag: "aws.apigateway.Resource"
 meta_desc: "Documentation for the aws.apigateway.Resource resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/Resource/"
-layout: api-doc-resource
+layout: api
 ---
 
 

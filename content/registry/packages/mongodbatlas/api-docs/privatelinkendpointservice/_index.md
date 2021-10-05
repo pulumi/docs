@@ -5,7 +5,7 @@ title_tag: "mongodbatlas.PrivateLinkEndpointService"
 meta_desc: "Documentation for the mongodbatlas.PrivateLinkEndpointService resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/mongodbatlas/PrivateLinkEndpointService/"
-layout: api-doc-resource
+layout: api
 ---
 
 

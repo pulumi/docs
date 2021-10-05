@@ -5,7 +5,7 @@ title_tag: "google-native.containeranalysis/v1alpha1.ProviderNoteIamPolicy"
 meta_desc: "Documentation for the google-native.containeranalysis/v1alpha1.ProviderNoteIamPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/google-native/ProviderNoteIamPolicy/"
-layout: api-doc-resource
+layout: api
 ---
 
 

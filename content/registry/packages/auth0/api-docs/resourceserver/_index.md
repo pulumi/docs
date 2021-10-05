@@ -5,7 +5,7 @@ title_tag: "auth0.ResourceServer"
 meta_desc: "Documentation for the auth0.ResourceServer resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/auth0/ResourceServer/"
-layout: api-doc-resource
+layout: api
 ---
 
 

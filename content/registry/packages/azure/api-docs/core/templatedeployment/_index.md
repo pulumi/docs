@@ -5,7 +5,7 @@ title_tag: "azure.core.TemplateDeployment"
 meta_desc: "Documentation for the azure.core.TemplateDeployment resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/TemplateDeployment/"
-layout: api-doc-resource
+layout: api
 ---
 
 

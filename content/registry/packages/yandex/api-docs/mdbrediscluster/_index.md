@@ -5,7 +5,7 @@ title_tag: "yandex.MdbRedisCluster"
 meta_desc: "Documentation for the yandex.MdbRedisCluster resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/yandex/MdbRedisCluster/"
-layout: api-doc-resource
+layout: api
 ---
 
 

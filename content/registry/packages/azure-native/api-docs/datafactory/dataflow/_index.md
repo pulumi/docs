@@ -5,7 +5,7 @@ title_tag: "azure-native.datafactory.DataFlow"
 meta_desc: "Documentation for the azure-native.datafactory.DataFlow resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/DataFlow/"
-layout: api-doc-resource
+layout: api
 ---
 
 

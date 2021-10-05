@@ -5,7 +5,7 @@ title_tag: "google-native.healthcare/v1beta1.getDatasetHl7V2StoreIamPolicy"
 meta_desc: "Documentation for the google-native.healthcare/v1beta1.getDatasetHl7V2StoreIamPolicy function with examples, input properties, output properties, and supporting types."
 aliases:
     - "/docs/reference/pkg///"
-layout: api-doc-resource
+layout: api
 ---
 
 

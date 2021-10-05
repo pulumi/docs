@@ -5,7 +5,7 @@ title_tag: "azure-native.synapse.KustoPoolPrincipalAssignment"
 meta_desc: "Documentation for the azure-native.synapse.KustoPoolPrincipalAssignment resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/KustoPoolPrincipalAssignment/"
-layout: api-doc-resource
+layout: api
 ---
 
 

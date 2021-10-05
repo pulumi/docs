@@ -5,7 +5,7 @@ title_tag: "azure-native.eventhub.NamespaceNetworkRuleSet"
 meta_desc: "Documentation for the azure-native.eventhub.NamespaceNetworkRuleSet resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/NamespaceNetworkRuleSet/"
-layout: api-doc-resource
+layout: api
 ---
 
 

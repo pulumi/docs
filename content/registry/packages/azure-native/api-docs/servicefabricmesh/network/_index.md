@@ -5,7 +5,7 @@ title_tag: "azure-native.servicefabricmesh.Network"
 meta_desc: "Documentation for the azure-native.servicefabricmesh.Network resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/Network/"
-layout: api-doc-resource
+layout: api
 ---
 
 

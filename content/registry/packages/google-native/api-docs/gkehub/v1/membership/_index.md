@@ -5,7 +5,7 @@ title_tag: "google-native.gkehub/v1.Membership"
 meta_desc: "Documentation for the google-native.gkehub/v1.Membership resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/google-native/Membership/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "gcp.runtimeconfig.Variable"
 meta_desc: "Documentation for the gcp.runtimeconfig.Variable resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/gcp/Variable/"
-layout: api-doc-resource
+layout: api
 ---
 
 

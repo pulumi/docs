@@ -5,7 +5,7 @@ title_tag: "aws.codebuild.Webhook"
 meta_desc: "Documentation for the aws.codebuild.Webhook resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/Webhook/"
-layout: api-doc-resource
+layout: api
 ---
 
 

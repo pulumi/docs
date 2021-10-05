@@ -5,7 +5,7 @@ title_tag: "azure.apimanagement.ProductPolicy"
 meta_desc: "Documentation for the azure.apimanagement.ProductPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/ProductPolicy/"
-layout: api-doc-resource
+layout: api
 ---
 
 

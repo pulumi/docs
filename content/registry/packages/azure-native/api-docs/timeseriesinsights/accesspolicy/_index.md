@@ -5,7 +5,7 @@ title_tag: "azure-native.timeseriesinsights.AccessPolicy"
 meta_desc: "Documentation for the azure-native.timeseriesinsights.AccessPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/AccessPolicy/"
-layout: api-doc-resource
+layout: api
 ---
 
 
@@ -440,7 +440,7 @@ The AccessPolicy resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#roles_nodejs" style="color: inherit; text-decoration: inherit;">roles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Access<wbr>Policy<wbr>Role[]</span>
+        <span class="property-type">(string | Access<wbr>Policy<wbr>Role)[]</span>
     </dt>
     <dd>{{% md %}}The list of roles the principal is assigned on the environment.{{% /md %}}</dd></dl>
 {{% /choosable %}}

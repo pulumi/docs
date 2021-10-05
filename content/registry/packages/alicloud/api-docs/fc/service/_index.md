@@ -5,7 +5,7 @@ title_tag: "alicloud.fc.Service"
 meta_desc: "Documentation for the alicloud.fc.Service resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/alicloud/Service/"
-layout: api-doc-resource
+layout: api
 ---
 
 

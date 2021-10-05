@@ -5,7 +5,7 @@ title_tag: "keycloak.openid.UserSessionNoteProtocolMapper"
 meta_desc: "Documentation for the keycloak.openid.UserSessionNoteProtocolMapper resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/keycloak/UserSessionNoteProtocolMapper/"
-layout: api-doc-resource
+layout: api
 ---
 
 

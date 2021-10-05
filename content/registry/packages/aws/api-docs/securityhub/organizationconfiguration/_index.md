@@ -5,7 +5,7 @@ title_tag: "aws.securityhub.OrganizationConfiguration"
 meta_desc: "Documentation for the aws.securityhub.OrganizationConfiguration resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/OrganizationConfiguration/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "signalfx.EventFeedChart"
 meta_desc: "Documentation for the signalfx.EventFeedChart resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/signalfx/EventFeedChart/"
-layout: api-doc-resource
+layout: api
 ---
 
 

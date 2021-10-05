@@ -5,7 +5,7 @@ title_tag: "aws.wafregional.getIpset"
 meta_desc: "Documentation for the aws.wafregional.getIpset function with examples, input properties, output properties, and supporting types."
 aliases:
     - "/docs/reference/pkg///"
-layout: api-doc-resource
+layout: api
 ---
 
 

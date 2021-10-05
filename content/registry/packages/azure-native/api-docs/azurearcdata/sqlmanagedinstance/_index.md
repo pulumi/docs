@@ -5,7 +5,7 @@ title_tag: "azure-native.azurearcdata.SqlManagedInstance"
 meta_desc: "Documentation for the azure-native.azurearcdata.SqlManagedInstance resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/SqlManagedInstance/"
-layout: api-doc-resource
+layout: api
 ---
 
 

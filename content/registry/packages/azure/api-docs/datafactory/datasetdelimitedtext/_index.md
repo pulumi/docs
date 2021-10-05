@@ -5,7 +5,7 @@ title_tag: "azure.datafactory.DatasetDelimitedText"
 meta_desc: "Documentation for the azure.datafactory.DatasetDelimitedText resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/DatasetDelimitedText/"
-layout: api-doc-resource
+layout: api
 ---
 
 

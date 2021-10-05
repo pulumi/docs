@@ -5,7 +5,7 @@ title_tag: "azure.trafficmanager.Endpoint"
 meta_desc: "Documentation for the azure.trafficmanager.Endpoint resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/Endpoint/"
-layout: api-doc-resource
+layout: api
 ---
 
 

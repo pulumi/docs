@@ -5,7 +5,7 @@ title_tag: "aws.apprunner.Connection"
 meta_desc: "Documentation for the aws.apprunner.Connection resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/Connection/"
-layout: api-doc-resource
+layout: api
 ---
 
 

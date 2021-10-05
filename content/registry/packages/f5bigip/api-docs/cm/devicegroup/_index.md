@@ -5,7 +5,7 @@ title_tag: "f5bigip.cm.DeviceGroup"
 meta_desc: "Documentation for the f5bigip.cm.DeviceGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/f5bigip/DeviceGroup/"
-layout: api-doc-resource
+layout: api
 ---
 
 

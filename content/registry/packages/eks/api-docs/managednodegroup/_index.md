@@ -5,7 +5,7 @@ title_tag: "eks.ManagedNodeGroup"
 meta_desc: "Documentation for the eks.ManagedNodeGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/eks/ManagedNodeGroup/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "gcp.compute.ResourcePolicy"
 meta_desc: "Documentation for the gcp.compute.ResourcePolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/gcp/ResourcePolicy/"
-layout: api-doc-resource
+layout: api
 ---
 
 

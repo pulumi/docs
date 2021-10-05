@@ -5,7 +5,7 @@ title_tag: "okta.app.Swa"
 meta_desc: "Documentation for the okta.app.Swa resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/okta/Swa/"
-layout: api-doc-resource
+layout: api
 ---
 
 

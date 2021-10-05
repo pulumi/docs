@@ -5,7 +5,7 @@ title_tag: "azure.mysql.VirtualNetworkRule"
 meta_desc: "Documentation for the azure.mysql.VirtualNetworkRule resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/VirtualNetworkRule/"
-layout: api-doc-resource
+layout: api
 ---
 
 

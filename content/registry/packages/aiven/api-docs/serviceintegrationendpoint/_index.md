@@ -5,7 +5,7 @@ title_tag: "aiven.ServiceIntegrationEndpoint"
 meta_desc: "Documentation for the aiven.ServiceIntegrationEndpoint resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aiven/ServiceIntegrationEndpoint/"
-layout: api-doc-resource
+layout: api
 ---
 
 

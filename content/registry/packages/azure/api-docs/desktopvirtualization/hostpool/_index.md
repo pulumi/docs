@@ -5,7 +5,7 @@ title_tag: "azure.desktopvirtualization.HostPool"
 meta_desc: "Documentation for the azure.desktopvirtualization.HostPool resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/HostPool/"
-layout: api-doc-resource
+layout: api
 ---
 
 

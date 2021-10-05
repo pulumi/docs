@@ -5,7 +5,7 @@ title_tag: "gcp.pubsub.LiteTopic"
 meta_desc: "Documentation for the gcp.pubsub.LiteTopic resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/gcp/LiteTopic/"
-layout: api-doc-resource
+layout: api
 ---
 
 

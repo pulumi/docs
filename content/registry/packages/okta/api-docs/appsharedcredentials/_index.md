@@ -5,7 +5,7 @@ title_tag: "okta.AppSharedCredentials"
 meta_desc: "Documentation for the okta.AppSharedCredentials resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/okta/AppSharedCredentials/"
-layout: api-doc-resource
+layout: api
 ---
 
 

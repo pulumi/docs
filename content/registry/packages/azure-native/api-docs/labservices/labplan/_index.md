@@ -5,7 +5,7 @@ title_tag: "azure-native.labservices.LabPlan"
 meta_desc: "Documentation for the azure-native.labservices.LabPlan resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/LabPlan/"
-layout: api-doc-resource
+layout: api
 ---
 
 

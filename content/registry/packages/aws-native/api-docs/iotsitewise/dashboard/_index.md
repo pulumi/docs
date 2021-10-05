@@ -5,7 +5,7 @@ title_tag: "aws-native.iotsitewise.Dashboard"
 meta_desc: "Documentation for the aws-native.iotsitewise.Dashboard resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws-native/Dashboard/"
-layout: api-doc-resource
+layout: api
 ---
 
 

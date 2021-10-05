@@ -5,7 +5,7 @@ title_tag: "openstack.containerinfra.Cluster"
 meta_desc: "Documentation for the openstack.containerinfra.Cluster resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/openstack/Cluster/"
-layout: api-doc-resource
+layout: api
 ---
 
 

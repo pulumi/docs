@@ -5,7 +5,7 @@ title_tag: "azure.managementresource.ManangementLock"
 meta_desc: "Documentation for the azure.managementresource.ManangementLock resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/ManangementLock/"
-layout: api-doc-resource
+layout: api
 ---
 
 

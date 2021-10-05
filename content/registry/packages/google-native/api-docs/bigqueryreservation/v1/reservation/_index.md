@@ -5,7 +5,7 @@ title_tag: "google-native.bigqueryreservation/v1.Reservation"
 meta_desc: "Documentation for the google-native.bigqueryreservation/v1.Reservation resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/google-native/Reservation/"
-layout: api-doc-resource
+layout: api
 ---
 
 

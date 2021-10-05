@@ -5,7 +5,7 @@ title_tag: "azure.appservice.ActiveSlot"
 meta_desc: "Documentation for the azure.appservice.ActiveSlot resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/ActiveSlot/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "azure.datafactory.LinkedServiceAzureSqlDatabase"
 meta_desc: "Documentation for the azure.datafactory.LinkedServiceAzureSqlDatabase resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/LinkedServiceAzureSqlDatabase/"
-layout: api-doc-resource
+layout: api
 ---
 
 

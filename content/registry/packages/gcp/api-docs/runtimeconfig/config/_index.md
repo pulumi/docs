@@ -5,7 +5,7 @@ title_tag: "gcp.runtimeconfig.Config"
 meta_desc: "Documentation for the gcp.runtimeconfig.Config resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/gcp/Config/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "azure.datashare.Share"
 meta_desc: "Documentation for the azure.datashare.Share resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/Share/"
-layout: api-doc-resource
+layout: api
 ---
 
 

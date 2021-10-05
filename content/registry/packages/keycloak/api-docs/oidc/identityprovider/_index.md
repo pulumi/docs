@@ -5,7 +5,7 @@ title_tag: "keycloak.oidc.IdentityProvider"
 meta_desc: "Documentation for the keycloak.oidc.IdentityProvider resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/keycloak/IdentityProvider/"
-layout: api-doc-resource
+layout: api
 ---
 
 

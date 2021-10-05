@@ -5,7 +5,7 @@ title_tag: "newrelic.EventsToMetricsRule"
 meta_desc: "Documentation for the newrelic.EventsToMetricsRule resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/newrelic/EventsToMetricsRule/"
-layout: api-doc-resource
+layout: api
 ---
 
 

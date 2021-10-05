@@ -5,7 +5,7 @@ title_tag: "openstack.loadbalancer.Listener"
 meta_desc: "Documentation for the openstack.loadbalancer.Listener resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/openstack/Listener/"
-layout: api-doc-resource
+layout: api
 ---
 
 

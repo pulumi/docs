@@ -5,7 +5,7 @@ title_tag: "google-native.networkmanagement/v1beta1.ConnectivityTestIamPolicy"
 meta_desc: "Documentation for the google-native.networkmanagement/v1beta1.ConnectivityTestIamPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/google-native/ConnectivityTestIamPolicy/"
-layout: api-doc-resource
+layout: api
 ---
 
 

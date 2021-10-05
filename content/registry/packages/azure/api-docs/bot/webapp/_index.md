@@ -5,7 +5,7 @@ title_tag: "azure.bot.WebApp"
 meta_desc: "Documentation for the azure.bot.WebApp resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/WebApp/"
-layout: api-doc-resource
+layout: api
 ---
 
 

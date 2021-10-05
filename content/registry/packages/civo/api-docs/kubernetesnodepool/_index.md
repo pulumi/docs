@@ -5,7 +5,7 @@ title_tag: "civo.KubernetesNodePool"
 meta_desc: "Documentation for the civo.KubernetesNodePool resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/civo/KubernetesNodePool/"
-layout: api-doc-resource
+layout: api
 ---
 
 

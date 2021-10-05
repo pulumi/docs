@@ -5,7 +5,7 @@ title_tag: "azure.apimanagement.IdentityProviderFacebook"
 meta_desc: "Documentation for the azure.apimanagement.IdentityProviderFacebook resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/IdentityProviderFacebook/"
-layout: api-doc-resource
+layout: api
 ---
 
 

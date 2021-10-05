@@ -5,7 +5,7 @@ title_tag: "aws.cloudtrail.getFunction"
 meta_desc: "Documentation for the aws.cloudtrail.getFunction function with examples, input properties, output properties, and supporting types."
 aliases:
     - "/docs/reference/pkg///"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "alicloud.cen.TransitRouterRouteTable"
 meta_desc: "Documentation for the alicloud.cen.TransitRouterRouteTable resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/alicloud/TransitRouterRouteTable/"
-layout: api-doc-resource
+layout: api
 ---
 
 

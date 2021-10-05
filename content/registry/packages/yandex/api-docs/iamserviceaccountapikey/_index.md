@@ -5,7 +5,7 @@ title_tag: "yandex.IamServiceAccountApiKey"
 meta_desc: "Documentation for the yandex.IamServiceAccountApiKey resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/yandex/IamServiceAccountApiKey/"
-layout: api-doc-resource
+layout: api
 ---
 
 

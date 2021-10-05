@@ -5,7 +5,7 @@ title_tag: "okta.GroupMemberships"
 meta_desc: "Documentation for the okta.GroupMemberships resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/okta/GroupMemberships/"
-layout: api-doc-resource
+layout: api
 ---
 
 

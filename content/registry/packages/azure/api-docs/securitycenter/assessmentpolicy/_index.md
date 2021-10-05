@@ -5,7 +5,7 @@ title_tag: "azure.securitycenter.AssessmentPolicy"
 meta_desc: "Documentation for the azure.securitycenter.AssessmentPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/AssessmentPolicy/"
-layout: api-doc-resource
+layout: api
 ---
 
 

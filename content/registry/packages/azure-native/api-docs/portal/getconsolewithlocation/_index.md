@@ -5,7 +5,7 @@ title_tag: "azure-native.portal.getConsoleWithLocation"
 meta_desc: "Documentation for the azure-native.portal.getConsoleWithLocation function with examples, input properties, output properties, and supporting types."
 aliases:
     - "/docs/reference/pkg///"
-layout: api-doc-resource
+layout: api
 ---
 
 

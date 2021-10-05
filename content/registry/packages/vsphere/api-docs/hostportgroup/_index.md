@@ -5,7 +5,7 @@ title_tag: "vsphere.HostPortGroup"
 meta_desc: "Documentation for the vsphere.HostPortGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/vsphere/HostPortGroup/"
-layout: api-doc-resource
+layout: api
 ---
 
 

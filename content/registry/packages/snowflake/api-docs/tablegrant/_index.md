@@ -5,7 +5,7 @@ title_tag: "snowflake.TableGrant"
 meta_desc: "Documentation for the snowflake.TableGrant resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/snowflake/TableGrant/"
-layout: api-doc-resource
+layout: api
 ---
 
 

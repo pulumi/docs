@@ -5,7 +5,7 @@ title_tag: "kubernetes.extensions/v1beta1.ReplicaSetList"
 meta_desc: "Documentation for the kubernetes.extensions/v1beta1.ReplicaSetList resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/kubernetes/ReplicaSetList/"
-layout: api-doc-resource
+layout: api
 ---
 
 

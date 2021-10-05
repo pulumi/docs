@@ -5,7 +5,7 @@ title_tag: "azure-native.cache.FirewallRule"
 meta_desc: "Documentation for the azure-native.cache.FirewallRule resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/FirewallRule/"
-layout: api-doc-resource
+layout: api
 ---
 
 

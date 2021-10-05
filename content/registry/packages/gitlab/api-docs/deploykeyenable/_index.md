@@ -5,7 +5,7 @@ title_tag: "gitlab.DeployKeyEnable"
 meta_desc: "Documentation for the gitlab.DeployKeyEnable resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/gitlab/DeployKeyEnable/"
-layout: api-doc-resource
+layout: api
 ---
 
 

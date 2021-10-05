@@ -5,7 +5,7 @@ title_tag: "azure-native.security.AssessmentMetadataInSubscription"
 meta_desc: "Documentation for the azure-native.security.AssessmentMetadataInSubscription resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/AssessmentMetadataInSubscription/"
-layout: api-doc-resource
+layout: api
 ---
 
 
@@ -567,7 +567,7 @@ The AssessmentMetadataInSubscription resource accepts the following [input]({{< 
 <a href="#categories_nodejs" style="color: inherit; text-decoration: inherit;">categories</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Categories[]</span>
+        <span class="property-type">(string | Categories)[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -615,7 +615,7 @@ The AssessmentMetadataInSubscription resource accepts the following [input]({{< 
 <a href="#threats_nodejs" style="color: inherit; text-decoration: inherit;">threats</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Threats[]</span>
+        <span class="property-type">(string | Threats)[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

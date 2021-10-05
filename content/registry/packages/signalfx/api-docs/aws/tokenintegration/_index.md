@@ -5,7 +5,7 @@ title_tag: "signalfx.aws.TokenIntegration"
 meta_desc: "Documentation for the signalfx.aws.TokenIntegration resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/signalfx/TokenIntegration/"
-layout: api-doc-resource
+layout: api
 ---
 
 

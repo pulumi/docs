@@ -5,7 +5,7 @@ title_tag: "kubernetes.helm.sh/v3.Release"
 meta_desc: "Documentation for the kubernetes.helm.sh/v3.Release resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/kubernetes/Release/"
-layout: api-doc-resource
+layout: api
 ---
 
 
@@ -912,7 +912,7 @@ The Release resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#valueyamlfiles_nodejs" style="color: inherit; text-decoration: inherit;">value<wbr>Yaml<wbr>Files</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.asset.<wbr>Asset | pulumi.asset.<wbr>Archive[]</span>
+        <span class="property-type">(pulumi.asset.<wbr>Asset | pulumi.asset.<wbr>Archive)[]</span>
     </dt>
     <dd>{{% md %}}List of assets (raw yaml files). Content is read and merged with values. Not yet supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

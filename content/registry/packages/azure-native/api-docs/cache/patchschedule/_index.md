@@ -5,7 +5,7 @@ title_tag: "azure-native.cache.PatchSchedule"
 meta_desc: "Documentation for the azure-native.cache.PatchSchedule resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/PatchSchedule/"
-layout: api-doc-resource
+layout: api
 ---
 
 

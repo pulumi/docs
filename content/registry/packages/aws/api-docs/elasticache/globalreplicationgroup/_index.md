@@ -5,7 +5,7 @@ title_tag: "aws.elasticache.GlobalReplicationGroup"
 meta_desc: "Documentation for the aws.elasticache.GlobalReplicationGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/GlobalReplicationGroup/"
-layout: api-doc-resource
+layout: api
 ---
 
 

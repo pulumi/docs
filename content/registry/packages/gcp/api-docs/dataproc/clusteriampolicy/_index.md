@@ -5,7 +5,7 @@ title_tag: "gcp.dataproc.ClusterIAMPolicy"
 meta_desc: "Documentation for the gcp.dataproc.ClusterIAMPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/gcp/ClusterIAMPolicy/"
-layout: api-doc-resource
+layout: api
 ---
 
 

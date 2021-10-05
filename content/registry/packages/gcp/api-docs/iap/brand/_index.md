@@ -5,7 +5,7 @@ title_tag: "gcp.iap.Brand"
 meta_desc: "Documentation for the gcp.iap.Brand resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/gcp/Brand/"
-layout: api-doc-resource
+layout: api
 ---
 
 

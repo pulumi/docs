@@ -5,7 +5,7 @@ title_tag: "libvirt.getNetworkDnsHostTemplate"
 meta_desc: "Documentation for the libvirt.getNetworkDnsHostTemplate function with examples, input properties, output properties, and supporting types."
 aliases:
     - "/docs/reference/pkg///"
-layout: api-doc-resource
+layout: api
 ---
 
 

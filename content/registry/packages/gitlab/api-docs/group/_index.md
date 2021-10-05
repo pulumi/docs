@@ -5,7 +5,7 @@ title_tag: "gitlab.Group"
 meta_desc: "Documentation for the gitlab.Group resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/gitlab/Group/"
-layout: api-doc-resource
+layout: api
 ---
 
 

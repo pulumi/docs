@@ -5,7 +5,7 @@ title_tag: "azure.healthcare.getService"
 meta_desc: "Documentation for the azure.healthcare.getService function with examples, input properties, output properties, and supporting types."
 aliases:
     - "/docs/reference/pkg///"
-layout: api-doc-resource
+layout: api
 ---
 
 

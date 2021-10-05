@@ -5,7 +5,7 @@ title_tag: "gcp.storage.getBucketObject"
 meta_desc: "Documentation for the gcp.storage.getBucketObject function with examples, input properties, output properties, and supporting types."
 aliases:
     - "/docs/reference/pkg///"
-layout: api-doc-resource
+layout: api
 ---
 
 

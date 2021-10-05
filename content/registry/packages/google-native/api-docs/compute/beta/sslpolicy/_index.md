@@ -5,7 +5,7 @@ title_tag: "google-native.compute/beta.SslPolicy"
 meta_desc: "Documentation for the google-native.compute/beta.SslPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/google-native/SslPolicy/"
-layout: api-doc-resource
+layout: api
 ---
 
 

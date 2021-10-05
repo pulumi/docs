@@ -5,7 +5,7 @@ title_tag: "aws-native.ec2.TransitGatewayConnect"
 meta_desc: "Documentation for the aws-native.ec2.TransitGatewayConnect resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws-native/TransitGatewayConnect/"
-layout: api-doc-resource
+layout: api
 ---
 
 

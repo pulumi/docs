@@ -5,7 +5,7 @@ title_tag: "gcp.iap.TunnelInstanceIAMPolicy"
 meta_desc: "Documentation for the gcp.iap.TunnelInstanceIAMPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/gcp/TunnelInstanceIAMPolicy/"
-layout: api-doc-resource
+layout: api
 ---
 
 

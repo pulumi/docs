@@ -5,7 +5,7 @@ title_tag: "azure-native.synapse.getIntegrationRuntimeObjectMetadatum"
 meta_desc: "Documentation for the azure-native.synapse.getIntegrationRuntimeObjectMetadatum function with examples, input properties, output properties, and supporting types."
 aliases:
     - "/docs/reference/pkg///"
-layout: api-doc-resource
+layout: api
 ---
 
 
@@ -265,7 +265,7 @@ The following output properties are available:
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Ssis<wbr>Environment<wbr>Response | Ssis<wbr>Folder<wbr>Response | Ssis<wbr>Package<wbr>Response | Ssis<wbr>Project<wbr>Response[]</span>
+        <span class="property-type">(Ssis<wbr>Environment<wbr>Response | Ssis<wbr>Folder<wbr>Response | Ssis<wbr>Package<wbr>Response | Ssis<wbr>Project<wbr>Response)[]</span>
     </dt>
     <dd>{{% md %}}List of SSIS object metadata.{{% /md %}}</dd></dl>
 {{% /choosable %}}

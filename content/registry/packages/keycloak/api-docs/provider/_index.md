@@ -5,7 +5,7 @@ title_tag: "keycloak.Provider"
 meta_desc: "Documentation for the keycloak.Provider resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/keycloak/keycloak/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "keycloak.openid.ClientOptionalScopes"
 meta_desc: "Documentation for the keycloak.openid.ClientOptionalScopes resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/keycloak/ClientOptionalScopes/"
-layout: api-doc-resource
+layout: api
 ---
 
 

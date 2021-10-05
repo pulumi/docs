@@ -5,7 +5,7 @@ title_tag: "gcp.compute.DiskResourcePolicyAttachment"
 meta_desc: "Documentation for the gcp.compute.DiskResourcePolicyAttachment resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/gcp/DiskResourcePolicyAttachment/"
-layout: api-doc-resource
+layout: api
 ---
 
 

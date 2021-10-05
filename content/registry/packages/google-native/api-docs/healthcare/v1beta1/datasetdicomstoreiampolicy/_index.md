@@ -5,7 +5,7 @@ title_tag: "google-native.healthcare/v1beta1.DatasetDicomStoreIamPolicy"
 meta_desc: "Documentation for the google-native.healthcare/v1beta1.DatasetDicomStoreIamPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/google-native/DatasetDicomStoreIamPolicy/"
-layout: api-doc-resource
+layout: api
 ---
 
 

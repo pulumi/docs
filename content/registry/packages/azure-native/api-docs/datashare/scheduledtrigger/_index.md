@@ -5,7 +5,7 @@ title_tag: "azure-native.datashare.ScheduledTrigger"
 meta_desc: "Documentation for the azure-native.datashare.ScheduledTrigger resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/ScheduledTrigger/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "azure.privatedns.AAAARecord"
 meta_desc: "Documentation for the azure.privatedns.AAAARecord resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/AAAARecord/"
-layout: api-doc-resource
+layout: api
 ---
 
 

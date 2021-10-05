@@ -5,7 +5,7 @@ title_tag: "docker.getRegistryImage"
 meta_desc: "Documentation for the docker.getRegistryImage function with examples, input properties, output properties, and supporting types."
 aliases:
     - "/docs/reference/pkg///"
-layout: api-doc-resource
+layout: api
 ---
 
 

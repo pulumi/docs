@@ -5,7 +5,7 @@ title_tag: "google-native.monitoring/v3.ServiceLevelObjective"
 meta_desc: "Documentation for the google-native.monitoring/v3.ServiceLevelObjective resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/google-native/ServiceLevelObjective/"
-layout: api-doc-resource
+layout: api
 ---
 
 

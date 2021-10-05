@@ -5,7 +5,7 @@ title_tag: "snowflake.ViewGrant"
 meta_desc: "Documentation for the snowflake.ViewGrant resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/snowflake/ViewGrant/"
-layout: api-doc-resource
+layout: api
 ---
 
 

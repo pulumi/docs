@@ -5,7 +5,7 @@ title_tag: "aws-native.cassandra.Keyspace"
 meta_desc: "Documentation for the aws-native.cassandra.Keyspace resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws-native/Keyspace/"
-layout: api-doc-resource
+layout: api
 ---
 
 

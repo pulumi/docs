@@ -5,7 +5,7 @@ title_tag: "aws.ssm.ResourceDataSync"
 meta_desc: "Documentation for the aws.ssm.ResourceDataSync resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/ResourceDataSync/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "google-native.secretmanager/v1.Secret"
 meta_desc: "Documentation for the google-native.secretmanager/v1.Secret resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/google-native/Secret/"
-layout: api-doc-resource
+layout: api
 ---
 
 

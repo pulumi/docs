@@ -5,7 +5,7 @@ title_tag: "aws.imagebuilder.Component"
 meta_desc: "Documentation for the aws.imagebuilder.Component resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/Component/"
-layout: api-doc-resource
+layout: api
 ---
 
 

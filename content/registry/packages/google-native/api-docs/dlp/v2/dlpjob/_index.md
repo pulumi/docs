@@ -5,7 +5,7 @@ title_tag: "google-native.dlp/v2.DlpJob"
 meta_desc: "Documentation for the google-native.dlp/v2.DlpJob resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/google-native/DlpJob/"
-layout: api-doc-resource
+layout: api
 ---
 
 

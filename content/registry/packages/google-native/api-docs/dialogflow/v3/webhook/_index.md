@@ -5,7 +5,7 @@ title_tag: "google-native.dialogflow/v3.Webhook"
 meta_desc: "Documentation for the google-native.dialogflow/v3.Webhook resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/google-native/Webhook/"
-layout: api-doc-resource
+layout: api
 ---
 
 

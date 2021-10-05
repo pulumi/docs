@@ -5,7 +5,7 @@ title_tag: "google-native.compute/v1.getRegionAutoscaler"
 meta_desc: "Documentation for the google-native.compute/v1.getRegionAutoscaler function with examples, input properties, output properties, and supporting types."
 aliases:
     - "/docs/reference/pkg///"
-layout: api-doc-resource
+layout: api
 ---
 
 

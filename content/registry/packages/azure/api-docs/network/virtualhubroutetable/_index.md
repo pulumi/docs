@@ -5,7 +5,7 @@ title_tag: "azure.network.VirtualHubRouteTable"
 meta_desc: "Documentation for the azure.network.VirtualHubRouteTable resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/VirtualHubRouteTable/"
-layout: api-doc-resource
+layout: api
 ---
 
 

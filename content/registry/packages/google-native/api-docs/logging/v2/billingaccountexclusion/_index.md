@@ -5,7 +5,7 @@ title_tag: "google-native.logging/v2.BillingAccountExclusion"
 meta_desc: "Documentation for the google-native.logging/v2.BillingAccountExclusion resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/google-native/BillingAccountExclusion/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "azure-native.dbforpostgresql.Configuration"
 meta_desc: "Documentation for the azure-native.dbforpostgresql.Configuration resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/Configuration/"
-layout: api-doc-resource
+layout: api
 ---
 
 

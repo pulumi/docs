@@ -5,7 +5,7 @@ title_tag: "rancher2.Namespace"
 meta_desc: "Documentation for the rancher2.Namespace resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/rancher2/Namespace/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "azure-native.apimanagement.TagByProduct"
 meta_desc: "Documentation for the azure-native.apimanagement.TagByProduct resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/TagByProduct/"
-layout: api-doc-resource
+layout: api
 ---
 
 

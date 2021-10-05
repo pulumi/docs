@@ -5,7 +5,7 @@ title_tag: "azure-native.videoanalyzer.getVideo"
 meta_desc: "Documentation for the azure-native.videoanalyzer.getVideo function with examples, input properties, output properties, and supporting types."
 aliases:
     - "/docs/reference/pkg///"
-layout: api-doc-resource
+layout: api
 ---
 
 

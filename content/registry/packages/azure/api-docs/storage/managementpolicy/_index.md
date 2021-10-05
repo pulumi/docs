@@ -5,7 +5,7 @@ title_tag: "azure.storage.ManagementPolicy"
 meta_desc: "Documentation for the azure.storage.ManagementPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/ManagementPolicy/"
-layout: api-doc-resource
+layout: api
 ---
 
 

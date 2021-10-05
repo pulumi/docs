@@ -5,7 +5,7 @@ title_tag: "gcp.compute.TargetGrpcProxy"
 meta_desc: "Documentation for the gcp.compute.TargetGrpcProxy resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/gcp/TargetGrpcProxy/"
-layout: api-doc-resource
+layout: api
 ---
 
 

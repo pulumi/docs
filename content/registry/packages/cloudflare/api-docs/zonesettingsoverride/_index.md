@@ -5,7 +5,7 @@ title_tag: "cloudflare.ZoneSettingsOverride"
 meta_desc: "Documentation for the cloudflare.ZoneSettingsOverride resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/cloudflare/ZoneSettingsOverride/"
-layout: api-doc-resource
+layout: api
 ---
 
 

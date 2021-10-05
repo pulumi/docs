@@ -5,7 +5,7 @@ title_tag: "google-native.remotebuildexecution/v1alpha.getWorkerPool"
 meta_desc: "Documentation for the google-native.remotebuildexecution/v1alpha.getWorkerPool function with examples, input properties, output properties, and supporting types."
 aliases:
     - "/docs/reference/pkg///"
-layout: api-doc-resource
+layout: api
 ---
 
 

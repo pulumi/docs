@@ -5,7 +5,7 @@ title_tag: "google-native.toolresults/v1beta3.Execution"
 meta_desc: "Documentation for the google-native.toolresults/v1beta3.Execution resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/google-native/Execution/"
-layout: api-doc-resource
+layout: api
 ---
 
 

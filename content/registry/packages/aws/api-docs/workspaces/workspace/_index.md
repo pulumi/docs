@@ -5,7 +5,7 @@ title_tag: "aws.workspaces.Workspace"
 meta_desc: "Documentation for the aws.workspaces.Workspace resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/Workspace/"
-layout: api-doc-resource
+layout: api
 ---
 
 

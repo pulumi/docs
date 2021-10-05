@@ -5,7 +5,7 @@ title_tag: "akamai.AppSecSiemSettings"
 meta_desc: "Documentation for the akamai.AppSecSiemSettings resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/akamai/AppSecSiemSettings/"
-layout: api-doc-resource
+layout: api
 ---
 
 

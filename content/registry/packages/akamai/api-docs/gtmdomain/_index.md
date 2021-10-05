@@ -5,7 +5,7 @@ title_tag: "akamai.GtmDomain"
 meta_desc: "Documentation for the akamai.GtmDomain resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/akamai/GtmDomain/"
-layout: api-doc-resource
+layout: api
 ---
 
 

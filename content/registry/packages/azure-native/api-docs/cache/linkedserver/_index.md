@@ -5,7 +5,7 @@ title_tag: "azure-native.cache.LinkedServer"
 meta_desc: "Documentation for the azure-native.cache.LinkedServer resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/LinkedServer/"
-layout: api-doc-resource
+layout: api
 ---
 
 

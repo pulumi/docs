@@ -5,7 +5,7 @@ title_tag: "azure.iot.IotHubDps"
 meta_desc: "Documentation for the azure.iot.IotHubDps resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/IotHubDps/"
-layout: api-doc-resource
+layout: api
 ---
 
 

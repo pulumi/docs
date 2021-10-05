@@ -5,7 +5,7 @@ title_tag: "aws.imagebuilder.getImagePipeline"
 meta_desc: "Documentation for the aws.imagebuilder.getImagePipeline function with examples, input properties, output properties, and supporting types."
 aliases:
     - "/docs/reference/pkg///"
-layout: api-doc-resource
+layout: api
 ---
 
 

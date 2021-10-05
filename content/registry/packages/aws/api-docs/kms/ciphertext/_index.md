@@ -5,7 +5,7 @@ title_tag: "aws.kms.Ciphertext"
 meta_desc: "Documentation for the aws.kms.Ciphertext resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/Ciphertext/"
-layout: api-doc-resource
+layout: api
 ---
 
 

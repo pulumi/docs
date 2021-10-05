@@ -5,7 +5,7 @@ title_tag: "azure-native.webpubsub.WebPubSub"
 meta_desc: "Documentation for the azure-native.webpubsub.WebPubSub resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/WebPubSub/"
-layout: api-doc-resource
+layout: api
 ---
 
 
@@ -2319,7 +2319,7 @@ It also appears in the aud (audience) claim of the issued token.{{% /md %}}</dd>
 <a href="#allow_nodejs" style="color: inherit; text-decoration: inherit;">allow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Web<wbr>Pub<wbr>Sub<wbr>Request<wbr>Type[]</span>
+        <span class="property-type">(string | Web<wbr>Pub<wbr>Sub<wbr>Request<wbr>Type)[]</span>
     </dt>
     <dd>{{% md %}}Allowed request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2327,7 +2327,7 @@ It also appears in the aud (audience) claim of the issued token.{{% /md %}}</dd>
 <a href="#deny_nodejs" style="color: inherit; text-decoration: inherit;">deny</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Web<wbr>Pub<wbr>Sub<wbr>Request<wbr>Type[]</span>
+        <span class="property-type">(string | Web<wbr>Pub<wbr>Sub<wbr>Request<wbr>Type)[]</span>
     </dt>
     <dd>{{% md %}}Denied request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2507,7 +2507,7 @@ It also appears in the aud (audience) claim of the issued token.{{% /md %}}</dd>
 <a href="#allow_nodejs" style="color: inherit; text-decoration: inherit;">allow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Web<wbr>Pub<wbr>Sub<wbr>Request<wbr>Type[]</span>
+        <span class="property-type">(string | Web<wbr>Pub<wbr>Sub<wbr>Request<wbr>Type)[]</span>
     </dt>
     <dd>{{% md %}}Allowed request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2515,7 +2515,7 @@ It also appears in the aud (audience) claim of the issued token.{{% /md %}}</dd>
 <a href="#deny_nodejs" style="color: inherit; text-decoration: inherit;">deny</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Web<wbr>Pub<wbr>Sub<wbr>Request<wbr>Type[]</span>
+        <span class="property-type">(string | Web<wbr>Pub<wbr>Sub<wbr>Request<wbr>Type)[]</span>
     </dt>
     <dd>{{% md %}}Denied request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.{{% /md %}}</dd></dl>
 {{% /choosable %}}

@@ -5,7 +5,7 @@ title_tag: "consul.getServiceHealth"
 meta_desc: "Documentation for the consul.getServiceHealth function with examples, input properties, output properties, and supporting types."
 aliases:
     - "/docs/reference/pkg///"
-layout: api-doc-resource
+layout: api
 ---
 
 

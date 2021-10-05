@@ -5,7 +5,7 @@ title_tag: "azure.sentinel.DataConnectorThreatIntelligence"
 meta_desc: "Documentation for the azure.sentinel.DataConnectorThreatIntelligence resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/DataConnectorThreatIntelligence/"
-layout: api-doc-resource
+layout: api
 ---
 
 

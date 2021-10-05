@@ -5,7 +5,7 @@ title_tag: "gcp.compute.NodeTemplate"
 meta_desc: "Documentation for the gcp.compute.NodeTemplate resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/gcp/NodeTemplate/"
-layout: api-doc-resource
+layout: api
 ---
 
 

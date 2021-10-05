@@ -5,7 +5,7 @@ title_tag: "azure.dns.NsRecord"
 meta_desc: "Documentation for the azure.dns.NsRecord resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/NsRecord/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "azuredevops.Security.ResourceAuthorization"
 meta_desc: "Documentation for the azuredevops.Security.ResourceAuthorization resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azuredevops/ResourceAuthorization/"
-layout: api-doc-resource
+layout: api
 ---
 
 

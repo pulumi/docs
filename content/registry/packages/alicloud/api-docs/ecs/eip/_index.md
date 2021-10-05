@@ -5,7 +5,7 @@ title_tag: "alicloud.ecs.Eip"
 meta_desc: "Documentation for the alicloud.ecs.Eip resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/alicloud/Eip/"
-layout: api-doc-resource
+layout: api
 ---
 
 

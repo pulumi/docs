@@ -5,7 +5,7 @@ title_tag: "vault.generic.Secret"
 meta_desc: "Documentation for the vault.generic.Secret resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/vault/Secret/"
-layout: api-doc-resource
+layout: api
 ---
 
 

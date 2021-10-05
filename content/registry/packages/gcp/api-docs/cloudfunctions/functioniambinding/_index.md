@@ -5,7 +5,7 @@ title_tag: "gcp.cloudfunctions.FunctionIamBinding"
 meta_desc: "Documentation for the gcp.cloudfunctions.FunctionIamBinding resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/gcp/FunctionIamBinding/"
-layout: api-doc-resource
+layout: api
 ---
 
 

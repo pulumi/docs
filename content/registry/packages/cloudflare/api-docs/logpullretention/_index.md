@@ -5,7 +5,7 @@ title_tag: "cloudflare.LogpullRetention"
 meta_desc: "Documentation for the cloudflare.LogpullRetention resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/cloudflare/LogpullRetention/"
-layout: api-doc-resource
+layout: api
 ---
 
 

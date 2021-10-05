@@ -5,7 +5,7 @@ title_tag: "hcloud.Certificate"
 meta_desc: "Documentation for the hcloud.Certificate resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/hcloud/Certificate/"
-layout: api-doc-resource
+layout: api
 ---
 
 

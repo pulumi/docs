@@ -5,7 +5,7 @@ title_tag: "azure-native.machinelearningservices.BatchEndpoint"
 meta_desc: "Documentation for the azure-native.machinelearningservices.BatchEndpoint resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/BatchEndpoint/"
-layout: api-doc-resource
+layout: api
 ---
 
 

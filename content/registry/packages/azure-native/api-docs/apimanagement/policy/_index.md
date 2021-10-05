@@ -5,7 +5,7 @@ title_tag: "azure-native.apimanagement.Policy"
 meta_desc: "Documentation for the azure-native.apimanagement.Policy resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/Policy/"
-layout: api-doc-resource
+layout: api
 ---
 
 

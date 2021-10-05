@@ -5,7 +5,7 @@ title_tag: "aws-native.robomaker.Fleet"
 meta_desc: "Documentation for the aws-native.robomaker.Fleet resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws-native/Fleet/"
-layout: api-doc-resource
+layout: api
 ---
 
 

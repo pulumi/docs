@@ -5,7 +5,7 @@ title_tag: "aws.servicecatalog.ProductPortfolioAssociation"
 meta_desc: "Documentation for the aws.servicecatalog.ProductPortfolioAssociation resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/ProductPortfolioAssociation/"
-layout: api-doc-resource
+layout: api
 ---
 
 

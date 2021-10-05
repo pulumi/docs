@@ -5,7 +5,7 @@ title_tag: "azure-native.kusto.DataConnection"
 meta_desc: "Documentation for the azure-native.kusto.DataConnection resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/DataConnection/"
-layout: api-doc-resource
+layout: api
 ---
 
 

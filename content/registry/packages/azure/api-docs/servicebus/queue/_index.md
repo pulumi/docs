@@ -5,7 +5,7 @@ title_tag: "azure.servicebus.Queue"
 meta_desc: "Documentation for the azure.servicebus.Queue resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/Queue/"
-layout: api-doc-resource
+layout: api
 ---
 
 

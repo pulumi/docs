@@ -5,7 +5,7 @@ title_tag: "gcp.compute.NetworkEndpointGroup"
 meta_desc: "Documentation for the gcp.compute.NetworkEndpointGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/gcp/NetworkEndpointGroup/"
-layout: api-doc-resource
+layout: api
 ---
 
 

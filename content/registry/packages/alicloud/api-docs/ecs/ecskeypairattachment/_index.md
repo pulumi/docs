@@ -5,7 +5,7 @@ title_tag: "alicloud.ecs.EcsKeyPairAttachment"
 meta_desc: "Documentation for the alicloud.ecs.EcsKeyPairAttachment resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/alicloud/EcsKeyPairAttachment/"
-layout: api-doc-resource
+layout: api
 ---
 
 

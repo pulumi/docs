@@ -5,7 +5,7 @@ title_tag: "google-native.apigee/v1.App"
 meta_desc: "Documentation for the google-native.apigee/v1.App resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/google-native/App/"
-layout: api-doc-resource
+layout: api
 ---
 
 

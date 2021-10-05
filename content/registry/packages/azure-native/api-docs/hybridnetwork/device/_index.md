@@ -5,7 +5,7 @@ title_tag: "azure-native.hybridnetwork.Device"
 meta_desc: "Documentation for the azure-native.hybridnetwork.Device resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/Device/"
-layout: api-doc-resource
+layout: api
 ---
 
 

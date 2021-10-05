@@ -5,7 +5,7 @@ title_tag: "azure.communication.Service"
 meta_desc: "Documentation for the azure.communication.Service resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/Service/"
-layout: api-doc-resource
+layout: api
 ---
 
 

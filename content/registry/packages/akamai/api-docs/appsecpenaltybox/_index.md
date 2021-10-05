@@ -5,7 +5,7 @@ title_tag: "akamai.AppSecPenaltyBox"
 meta_desc: "Documentation for the akamai.AppSecPenaltyBox resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/akamai/AppSecPenaltyBox/"
-layout: api-doc-resource
+layout: api
 ---
 
 

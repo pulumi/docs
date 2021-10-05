@@ -5,7 +5,7 @@ title_tag: "alicloud.privatelink.VpcEndpointServiceConnection"
 meta_desc: "Documentation for the alicloud.privatelink.VpcEndpointServiceConnection resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/alicloud/VpcEndpointServiceConnection/"
-layout: api-doc-resource
+layout: api
 ---
 
 

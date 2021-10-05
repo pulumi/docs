@@ -5,7 +5,7 @@ title_tag: "vault.tokenauth.AuthBackendRole"
 meta_desc: "Documentation for the vault.tokenauth.AuthBackendRole resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/vault/AuthBackendRole/"
-layout: api-doc-resource
+layout: api
 ---
 
 

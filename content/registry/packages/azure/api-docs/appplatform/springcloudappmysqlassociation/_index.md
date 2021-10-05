@@ -5,7 +5,7 @@ title_tag: "azure.appplatform.SpringCloudAppMysqlAssociation"
 meta_desc: "Documentation for the azure.appplatform.SpringCloudAppMysqlAssociation resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/SpringCloudAppMysqlAssociation/"
-layout: api-doc-resource
+layout: api
 ---
 
 

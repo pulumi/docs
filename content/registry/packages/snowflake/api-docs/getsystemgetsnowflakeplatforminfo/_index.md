@@ -5,7 +5,7 @@ title_tag: "snowflake.getSystemGetSnowflakePlatformInfo"
 meta_desc: "Documentation for the snowflake.getSystemGetSnowflakePlatformInfo function with examples, input properties, output properties, and supporting types."
 aliases:
     - "/docs/reference/pkg///"
-layout: api-doc-resource
+layout: api
 ---
 
 

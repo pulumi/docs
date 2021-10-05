@@ -5,7 +5,7 @@ title_tag: "alicloud.log.MachineGroup"
 meta_desc: "Documentation for the alicloud.log.MachineGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/alicloud/MachineGroup/"
-layout: api-doc-resource
+layout: api
 ---
 
 

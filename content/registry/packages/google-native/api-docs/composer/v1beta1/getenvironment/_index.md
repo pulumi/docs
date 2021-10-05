@@ -5,7 +5,7 @@ title_tag: "google-native.composer/v1beta1.getEnvironment"
 meta_desc: "Documentation for the google-native.composer/v1beta1.getEnvironment function with examples, input properties, output properties, and supporting types."
 aliases:
     - "/docs/reference/pkg///"
-layout: api-doc-resource
+layout: api
 ---
 
 

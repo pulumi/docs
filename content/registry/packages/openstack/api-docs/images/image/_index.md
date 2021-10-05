@@ -5,7 +5,7 @@ title_tag: "openstack.images.Image"
 meta_desc: "Documentation for the openstack.images.Image resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/openstack/Image/"
-layout: api-doc-resource
+layout: api
 ---
 
 

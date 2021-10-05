@@ -5,7 +5,7 @@ title_tag: "newrelic.synthetics.AlertCondition"
 meta_desc: "Documentation for the newrelic.synthetics.AlertCondition resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/newrelic/AlertCondition/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "gcp.composer.getImageVersions"
 meta_desc: "Documentation for the gcp.composer.getImageVersions function with examples, input properties, output properties, and supporting types."
 aliases:
     - "/docs/reference/pkg///"
-layout: api-doc-resource
+layout: api
 ---
 
 

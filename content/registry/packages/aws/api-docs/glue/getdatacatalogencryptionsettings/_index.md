@@ -5,7 +5,7 @@ title_tag: "aws.glue.getDataCatalogEncryptionSettings"
 meta_desc: "Documentation for the aws.glue.getDataCatalogEncryptionSettings function with examples, input properties, output properties, and supporting types."
 aliases:
     - "/docs/reference/pkg///"
-layout: api-doc-resource
+layout: api
 ---
 
 

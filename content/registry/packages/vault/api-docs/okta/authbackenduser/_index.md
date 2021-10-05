@@ -5,7 +5,7 @@ title_tag: "vault.okta.AuthBackendUser"
 meta_desc: "Documentation for the vault.okta.AuthBackendUser resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/vault/AuthBackendUser/"
-layout: api-doc-resource
+layout: api
 ---
 
 

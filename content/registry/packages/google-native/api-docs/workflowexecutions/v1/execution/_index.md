@@ -5,7 +5,7 @@ title_tag: "google-native.workflowexecutions/v1.Execution"
 meta_desc: "Documentation for the google-native.workflowexecutions/v1.Execution resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/google-native/Execution/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "gitlab.TagProtection"
 meta_desc: "Documentation for the gitlab.TagProtection resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/gitlab/TagProtection/"
-layout: api-doc-resource
+layout: api
 ---
 
 

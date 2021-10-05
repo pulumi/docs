@@ -5,7 +5,7 @@ title_tag: "azure.datafactory.DatasetCosmosDBApi"
 meta_desc: "Documentation for the azure.datafactory.DatasetCosmosDBApi resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/DatasetCosmosDBApi/"
-layout: api-doc-resource
+layout: api
 ---
 
 

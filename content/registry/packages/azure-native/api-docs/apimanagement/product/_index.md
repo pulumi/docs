@@ -5,7 +5,7 @@ title_tag: "azure-native.apimanagement.Product"
 meta_desc: "Documentation for the azure-native.apimanagement.Product resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/Product/"
-layout: api-doc-resource
+layout: api
 ---
 
 

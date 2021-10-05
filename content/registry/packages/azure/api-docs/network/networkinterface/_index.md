@@ -5,7 +5,7 @@ title_tag: "azure.network.NetworkInterface"
 meta_desc: "Documentation for the azure.network.NetworkInterface resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/NetworkInterface/"
-layout: api-doc-resource
+layout: api
 ---
 
 

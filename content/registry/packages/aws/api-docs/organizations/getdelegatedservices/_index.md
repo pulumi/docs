@@ -5,7 +5,7 @@ title_tag: "aws.organizations.getDelegatedServices"
 meta_desc: "Documentation for the aws.organizations.getDelegatedServices function with examples, input properties, output properties, and supporting types."
 aliases:
     - "/docs/reference/pkg///"
-layout: api-doc-resource
+layout: api
 ---
 
 

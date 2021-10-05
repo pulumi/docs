@@ -5,7 +5,7 @@ title_tag: "azure-native.avs.Datastore"
 meta_desc: "Documentation for the azure-native.avs.Datastore resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/Datastore/"
-layout: api-doc-resource
+layout: api
 ---
 
 

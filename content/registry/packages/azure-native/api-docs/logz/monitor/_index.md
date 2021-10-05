@@ -5,7 +5,7 @@ title_tag: "azure-native.logz.Monitor"
 meta_desc: "Documentation for the azure-native.logz.Monitor resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/Monitor/"
-layout: api-doc-resource
+layout: api
 ---
 
 

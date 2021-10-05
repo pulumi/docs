@@ -5,7 +5,7 @@ title_tag: "azure.sentinel.DataConnectorAzureActiveDirectory"
 meta_desc: "Documentation for the azure.sentinel.DataConnectorAzureActiveDirectory resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/DataConnectorAzureActiveDirectory/"
-layout: api-doc-resource
+layout: api
 ---
 
 

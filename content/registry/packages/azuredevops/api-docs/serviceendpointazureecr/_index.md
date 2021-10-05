@@ -5,7 +5,7 @@ title_tag: "azuredevops.ServiceEndpointAzureEcr"
 meta_desc: "Documentation for the azuredevops.ServiceEndpointAzureEcr resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azuredevops/ServiceEndpointAzureEcr/"
-layout: api-doc-resource
+layout: api
 ---
 
 

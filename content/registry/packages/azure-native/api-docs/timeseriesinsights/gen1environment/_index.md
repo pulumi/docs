@@ -5,7 +5,7 @@ title_tag: "azure-native.timeseriesinsights.Gen1Environment"
 meta_desc: "Documentation for the azure-native.timeseriesinsights.Gen1Environment resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/Gen1Environment/"
-layout: api-doc-resource
+layout: api
 ---
 
 

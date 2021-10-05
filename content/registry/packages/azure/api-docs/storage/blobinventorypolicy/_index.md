@@ -5,7 +5,7 @@ title_tag: "azure.storage.BlobInventoryPolicy"
 meta_desc: "Documentation for the azure.storage.BlobInventoryPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/BlobInventoryPolicy/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "fastly.TlsSubscriptionValidation"
 meta_desc: "Documentation for the fastly.TlsSubscriptionValidation resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/fastly/TlsSubscriptionValidation/"
-layout: api-doc-resource
+layout: api
 ---
 
 

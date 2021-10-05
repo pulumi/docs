@@ -5,7 +5,7 @@ title_tag: "akamai.AppSecReputationProfile"
 meta_desc: "Documentation for the akamai.AppSecReputationProfile resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/akamai/AppSecReputationProfile/"
-layout: api-doc-resource
+layout: api
 ---
 
 

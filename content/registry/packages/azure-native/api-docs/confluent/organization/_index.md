@@ -5,7 +5,7 @@ title_tag: "azure-native.confluent.Organization"
 meta_desc: "Documentation for the azure-native.confluent.Organization resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/Organization/"
-layout: api-doc-resource
+layout: api
 ---
 
 

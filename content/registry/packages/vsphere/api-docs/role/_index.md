@@ -5,7 +5,7 @@ title_tag: "vsphere.Role"
 meta_desc: "Documentation for the vsphere.Role resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/vsphere/Role/"
-layout: api-doc-resource
+layout: api
 ---
 
 

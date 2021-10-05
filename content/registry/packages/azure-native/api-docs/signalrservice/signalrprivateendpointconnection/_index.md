@@ -5,7 +5,7 @@ title_tag: "azure-native.signalrservice.SignalRPrivateEndpointConnection"
 meta_desc: "Documentation for the azure-native.signalrservice.SignalRPrivateEndpointConnection resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/SignalRPrivateEndpointConnection/"
-layout: api-doc-resource
+layout: api
 ---
 
 

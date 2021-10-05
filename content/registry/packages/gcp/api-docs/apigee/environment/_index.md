@@ -5,7 +5,7 @@ title_tag: "gcp.apigee.Environment"
 meta_desc: "Documentation for the gcp.apigee.Environment resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/gcp/Environment/"
-layout: api-doc-resource
+layout: api
 ---
 
 

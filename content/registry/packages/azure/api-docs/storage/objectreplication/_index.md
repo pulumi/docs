@@ -5,7 +5,7 @@ title_tag: "azure.storage.ObjectReplication"
 meta_desc: "Documentation for the azure.storage.ObjectReplication resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/ObjectReplication/"
-layout: api-doc-resource
+layout: api
 ---
 
 

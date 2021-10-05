@@ -5,7 +5,7 @@ title_tag: "azure.desktopvirtualization.WorkspaceApplicationGroupAssociation"
 meta_desc: "Documentation for the azure.desktopvirtualization.WorkspaceApplicationGroupAssociation resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/WorkspaceApplicationGroupAssociation/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "cloudflare.WorkerRoute"
 meta_desc: "Documentation for the cloudflare.WorkerRoute resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/cloudflare/WorkerRoute/"
-layout: api-doc-resource
+layout: api
 ---
 
 

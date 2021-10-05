@@ -5,7 +5,7 @@ title_tag: "azure-native.healthcareapis.DicomService"
 meta_desc: "Documentation for the azure-native.healthcareapis.DicomService resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/DicomService/"
-layout: api-doc-resource
+layout: api
 ---
 
 

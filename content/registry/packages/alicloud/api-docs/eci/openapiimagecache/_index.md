@@ -5,7 +5,7 @@ title_tag: "alicloud.eci.OpenApiImageCache"
 meta_desc: "Documentation for the alicloud.eci.OpenApiImageCache resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/alicloud/OpenApiImageCache/"
-layout: api-doc-resource
+layout: api
 ---
 
 

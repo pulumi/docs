@@ -5,7 +5,7 @@ title_tag: "aws.wafv2.WebAclAssociation"
 meta_desc: "Documentation for the aws.wafv2.WebAclAssociation resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/WebAclAssociation/"
-layout: api-doc-resource
+layout: api
 ---
 
 

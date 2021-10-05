@@ -5,7 +5,7 @@ title_tag: "azure-native.signalrservice.SignalRSharedPrivateLinkResource"
 meta_desc: "Documentation for the azure-native.signalrservice.SignalRSharedPrivateLinkResource resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/SignalRSharedPrivateLinkResource/"
-layout: api-doc-resource
+layout: api
 ---
 
 

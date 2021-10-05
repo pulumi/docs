@@ -5,7 +5,7 @@ title_tag: "azure-native.datashare.ShareSubscription"
 meta_desc: "Documentation for the azure-native.datashare.ShareSubscription resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/ShareSubscription/"
-layout: api-doc-resource
+layout: api
 ---
 
 

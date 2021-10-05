@@ -5,7 +5,7 @@ title_tag: "azure.postgresql.ServerKey"
 meta_desc: "Documentation for the azure.postgresql.ServerKey resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/ServerKey/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "aws.mediastore.ContainerPolicy"
 meta_desc: "Documentation for the aws.mediastore.ContainerPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/ContainerPolicy/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "aiven.Redis"
 meta_desc: "Documentation for the aiven.Redis resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aiven/Redis/"
-layout: api-doc-resource
+layout: api
 ---
 
 

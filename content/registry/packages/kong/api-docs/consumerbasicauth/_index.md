@@ -5,7 +5,7 @@ title_tag: "kong.ConsumerBasicAuth"
 meta_desc: "Documentation for the kong.ConsumerBasicAuth resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/kong/ConsumerBasicAuth/"
-layout: api-doc-resource
+layout: api
 ---
 
 

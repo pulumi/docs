@@ -5,7 +5,7 @@ title_tag: "aws.elasticloadbalancing.LoadBalancerPolicy"
 meta_desc: "Documentation for the aws.elasticloadbalancing.LoadBalancerPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/LoadBalancerPolicy/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "google-native.osconfig/v1beta.GuestPolicy"
 meta_desc: "Documentation for the google-native.osconfig/v1beta.GuestPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/google-native/GuestPolicy/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "openstack.dns.TransferRequest"
 meta_desc: "Documentation for the openstack.dns.TransferRequest resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/openstack/TransferRequest/"
-layout: api-doc-resource
+layout: api
 ---
 
 

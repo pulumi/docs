@@ -5,7 +5,7 @@ title_tag: "google-native.securitycenter/v1.Source"
 meta_desc: "Documentation for the google-native.securitycenter/v1.Source resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/google-native/Source/"
-layout: api-doc-resource
+layout: api
 ---
 
 

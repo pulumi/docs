@@ -5,7 +5,7 @@ title_tag: "kubernetes.core/v1.LimitRangeList"
 meta_desc: "Documentation for the kubernetes.core/v1.LimitRangeList resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/kubernetes/LimitRangeList/"
-layout: api-doc-resource
+layout: api
 ---
 
 

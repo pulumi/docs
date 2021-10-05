@@ -5,7 +5,7 @@ title_tag: "azure-native.devices.IotDpsResource"
 meta_desc: "Documentation for the azure-native.devices.IotDpsResource resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/IotDpsResource/"
-layout: api-doc-resource
+layout: api
 ---
 
 

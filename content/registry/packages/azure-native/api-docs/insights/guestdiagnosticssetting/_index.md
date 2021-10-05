@@ -5,7 +5,7 @@ title_tag: "azure-native.insights.GuestDiagnosticsSetting"
 meta_desc: "Documentation for the azure-native.insights.GuestDiagnosticsSetting resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/guestDiagnosticsSetting/"
-layout: api-doc-resource
+layout: api
 ---
 
 

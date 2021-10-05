@@ -5,7 +5,7 @@ title_tag: "alicloud.ram.UserPolicyAttachment"
 meta_desc: "Documentation for the alicloud.ram.UserPolicyAttachment resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/alicloud/UserPolicyAttachment/"
-layout: api-doc-resource
+layout: api
 ---
 
 

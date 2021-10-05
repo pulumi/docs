@@ -5,7 +5,7 @@ title_tag: "azure.datafactory.LinkedCustomService"
 meta_desc: "Documentation for the azure.datafactory.LinkedCustomService resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/LinkedCustomService/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "azure.iot.TimeSeriesInsightsStandardEnvironment"
 meta_desc: "Documentation for the azure.iot.TimeSeriesInsightsStandardEnvironment resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/TimeSeriesInsightsStandardEnvironment/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "signalfx.DataLink"
 meta_desc: "Documentation for the signalfx.DataLink resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/signalfx/DataLink/"
-layout: api-doc-resource
+layout: api
 ---
 
 

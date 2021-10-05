@@ -5,7 +5,7 @@ title_tag: "vsphere.ComputeClusterVmGroup"
 meta_desc: "Documentation for the vsphere.ComputeClusterVmGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/vsphere/ComputeClusterVmGroup/"
-layout: api-doc-resource
+layout: api
 ---
 
 

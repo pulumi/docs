@@ -5,7 +5,7 @@ title_tag: "equinix-metal.Device"
 meta_desc: "Documentation for the equinix-metal.Device resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/equinix-metal/Device/"
-layout: api-doc-resource
+layout: api
 ---
 
 
@@ -756,7 +756,7 @@ continue to boot via iPXE on reboots.
 <a href="#facilities_nodejs" style="color: inherit; text-decoration: inherit;">facilities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Facility[]</span>
+        <span class="property-type">(string | Facility)[]</span>
     </dt>
     <dd>{{% md %}}List of facility codes with deployment preferences. Equinix Metal API will go through the list and will deploy your device to first facility with free capacity. List items must be facility codes or `any` (a wildcard). To find the facility code, visit [Facilities API docs](https://metal.equinix.com/developers/api/facilities/), set your API auth token in the top of the page and see JSON from the API response. Conflicts with `metro`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2540,7 +2540,7 @@ continue to boot via iPXE on reboots.
 <a href="#state_facilities_nodejs" style="color: inherit; text-decoration: inherit;">facilities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Facility[]</span>
+        <span class="property-type">(string | Facility)[]</span>
     </dt>
     <dd>{{% md %}}List of facility codes with deployment preferences. Equinix Metal API will go through the list and will deploy your device to first facility with free capacity. List items must be facility codes or `any` (a wildcard). To find the facility code, visit [Facilities API docs](https://metal.equinix.com/developers/api/facilities/), set your API auth token in the top of the page and see JSON from the API response. Conflicts with `metro`.
 {{% /md %}}</dd><dt class="property-optional"

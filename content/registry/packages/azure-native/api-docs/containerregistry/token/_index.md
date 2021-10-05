@@ -5,7 +5,7 @@ title_tag: "azure-native.containerregistry.Token"
 meta_desc: "Documentation for the azure-native.containerregistry.Token resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/Token/"
-layout: api-doc-resource
+layout: api
 ---
 
 

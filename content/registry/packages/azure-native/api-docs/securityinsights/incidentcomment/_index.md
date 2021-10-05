@@ -5,7 +5,7 @@ title_tag: "azure-native.securityinsights.IncidentComment"
 meta_desc: "Documentation for the azure-native.securityinsights.IncidentComment resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/IncidentComment/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "aws-native.s3objectlambda.AccessPointPolicy"
 meta_desc: "Documentation for the aws-native.s3objectlambda.AccessPointPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws-native/AccessPointPolicy/"
-layout: api-doc-resource
+layout: api
 ---
 
 

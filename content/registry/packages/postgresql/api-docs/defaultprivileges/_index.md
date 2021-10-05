@@ -5,7 +5,7 @@ title_tag: "postgresql.DefaultPrivileges"
 meta_desc: "Documentation for the postgresql.DefaultPrivileges resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/postgresql/DefaultPrivileges/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "aws.ec2.TransitGatewayPeeringAttachmentAccepter"
 meta_desc: "Documentation for the aws.ec2.TransitGatewayPeeringAttachmentAccepter resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/TransitGatewayPeeringAttachmentAccepter/"
-layout: api-doc-resource
+layout: api
 ---
 
 

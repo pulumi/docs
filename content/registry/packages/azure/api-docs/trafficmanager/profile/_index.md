@@ -5,7 +5,7 @@ title_tag: "azure.trafficmanager.Profile"
 meta_desc: "Documentation for the azure.trafficmanager.Profile resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/Profile/"
-layout: api-doc-resource
+layout: api
 ---
 
 

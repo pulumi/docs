@@ -5,7 +5,7 @@ title_tag: "azure-native.apimanagement.NotificationRecipientEmail"
 meta_desc: "Documentation for the azure-native.apimanagement.NotificationRecipientEmail resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/NotificationRecipientEmail/"
-layout: api-doc-resource
+layout: api
 ---
 
 

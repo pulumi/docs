@@ -5,7 +5,7 @@ title_tag: "azure.media.StreamingPolicy"
 meta_desc: "Documentation for the azure.media.StreamingPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/StreamingPolicy/"
-layout: api-doc-resource
+layout: api
 ---
 
 

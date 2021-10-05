@@ -5,7 +5,7 @@ title_tag: "snowflake.NetworkPolicy"
 meta_desc: "Documentation for the snowflake.NetworkPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/snowflake/NetworkPolicy/"
-layout: api-doc-resource
+layout: api
 ---
 
 

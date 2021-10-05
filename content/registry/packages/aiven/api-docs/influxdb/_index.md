@@ -5,7 +5,7 @@ title_tag: "aiven.InfluxDb"
 meta_desc: "Documentation for the aiven.InfluxDb resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aiven/InfluxDb/"
-layout: api-doc-resource
+layout: api
 ---
 
 

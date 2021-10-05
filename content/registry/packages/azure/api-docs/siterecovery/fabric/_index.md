@@ -5,7 +5,7 @@ title_tag: "azure.siterecovery.Fabric"
 meta_desc: "Documentation for the azure.siterecovery.Fabric resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/Fabric/"
-layout: api-doc-resource
+layout: api
 ---
 
 

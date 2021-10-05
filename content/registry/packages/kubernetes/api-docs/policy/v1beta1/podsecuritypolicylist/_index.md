@@ -5,7 +5,7 @@ title_tag: "kubernetes.policy/v1beta1.PodSecurityPolicyList"
 meta_desc: "Documentation for the kubernetes.policy/v1beta1.PodSecurityPolicyList resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/kubernetes/PodSecurityPolicyList/"
-layout: api-doc-resource
+layout: api
 ---
 
 

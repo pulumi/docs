@@ -5,7 +5,7 @@ title_tag: "akamai.GtmProperty"
 meta_desc: "Documentation for the akamai.GtmProperty resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/akamai/GtmProperty/"
-layout: api-doc-resource
+layout: api
 ---
 
 

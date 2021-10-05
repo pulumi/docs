@@ -5,7 +5,7 @@ title_tag: "openstack.vpnaas.Service"
 meta_desc: "Documentation for the openstack.vpnaas.Service resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/openstack/Service/"
-layout: api-doc-resource
+layout: api
 ---
 
 

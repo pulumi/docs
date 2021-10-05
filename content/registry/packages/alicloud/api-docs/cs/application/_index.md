@@ -5,7 +5,7 @@ title_tag: "alicloud.cs.Application"
 meta_desc: "Documentation for the alicloud.cs.Application resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/alicloud/Application/"
-layout: api-doc-resource
+layout: api
 ---
 
 

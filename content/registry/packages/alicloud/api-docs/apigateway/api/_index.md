@@ -5,7 +5,7 @@ title_tag: "alicloud.apigateway.Api"
 meta_desc: "Documentation for the alicloud.apigateway.Api resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/alicloud/Api/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "gcp.monitoring.UptimeCheckConfig"
 meta_desc: "Documentation for the gcp.monitoring.UptimeCheckConfig resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/gcp/UptimeCheckConfig/"
-layout: api-doc-resource
+layout: api
 ---
 
 

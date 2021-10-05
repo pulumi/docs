@@ -5,7 +5,7 @@ title_tag: "alicloud.cfg.CompliancePack"
 meta_desc: "Documentation for the alicloud.cfg.CompliancePack resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/alicloud/CompliancePack/"
-layout: api-doc-resource
+layout: api
 ---
 
 

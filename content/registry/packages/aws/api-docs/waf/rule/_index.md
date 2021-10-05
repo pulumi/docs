@@ -5,7 +5,7 @@ title_tag: "aws.waf.Rule"
 meta_desc: "Documentation for the aws.waf.Rule resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/Rule/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "alicloud.mongodb.Instance"
 meta_desc: "Documentation for the alicloud.mongodb.Instance resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/alicloud/Instance/"
-layout: api-doc-resource
+layout: api
 ---
 
 

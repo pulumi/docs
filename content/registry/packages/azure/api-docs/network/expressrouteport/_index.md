@@ -5,7 +5,7 @@ title_tag: "azure.network.ExpressRoutePort"
 meta_desc: "Documentation for the azure.network.ExpressRoutePort resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/ExpressRoutePort/"
-layout: api-doc-resource
+layout: api
 ---
 
 

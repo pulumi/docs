@@ -5,7 +5,7 @@ title_tag: "alicloud.dfs.AccessGroup"
 meta_desc: "Documentation for the alicloud.dfs.AccessGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/alicloud/AccessGroup/"
-layout: api-doc-resource
+layout: api
 ---
 
 

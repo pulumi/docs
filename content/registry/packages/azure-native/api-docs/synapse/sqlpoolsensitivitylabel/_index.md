@@ -5,7 +5,7 @@ title_tag: "azure-native.synapse.SqlPoolSensitivityLabel"
 meta_desc: "Documentation for the azure-native.synapse.SqlPoolSensitivityLabel resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/SqlPoolSensitivityLabel/"
-layout: api-doc-resource
+layout: api
 ---
 
 

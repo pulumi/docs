@@ -5,7 +5,7 @@ title_tag: "gcp.bigquery.DataTransferConfig"
 meta_desc: "Documentation for the gcp.bigquery.DataTransferConfig resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/gcp/DataTransferConfig/"
-layout: api-doc-resource
+layout: api
 ---
 
 

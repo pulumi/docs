@@ -5,7 +5,7 @@ title_tag: "aws.s3.Inventory"
 meta_desc: "Documentation for the aws.s3.Inventory resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/Inventory/"
-layout: api-doc-resource
+layout: api
 ---
 
 

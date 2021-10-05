@@ -5,7 +5,7 @@ title_tag: "akamai.CpsDvValidation"
 meta_desc: "Documentation for the akamai.CpsDvValidation resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/akamai/CpsDvValidation/"
-layout: api-doc-resource
+layout: api
 ---
 
 

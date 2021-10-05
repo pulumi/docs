@@ -5,7 +5,7 @@ title_tag: "google-native.artifactregistry/v1beta2.getRepositoryIamPolicy"
 meta_desc: "Documentation for the google-native.artifactregistry/v1beta2.getRepositoryIamPolicy function with examples, input properties, output properties, and supporting types."
 aliases:
     - "/docs/reference/pkg///"
-layout: api-doc-resource
+layout: api
 ---
 
 

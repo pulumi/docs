@@ -5,7 +5,7 @@ title_tag: "aws-native.networkfirewall.Firewall"
 meta_desc: "Documentation for the aws-native.networkfirewall.Firewall resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws-native/Firewall/"
-layout: api-doc-resource
+layout: api
 ---
 
 

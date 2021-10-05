@@ -5,7 +5,7 @@ title_tag: "google-native.gkehub/v1.getMembershipIamPolicy"
 meta_desc: "Documentation for the google-native.gkehub/v1.getMembershipIamPolicy function with examples, input properties, output properties, and supporting types."
 aliases:
     - "/docs/reference/pkg///"
-layout: api-doc-resource
+layout: api
 ---
 
 

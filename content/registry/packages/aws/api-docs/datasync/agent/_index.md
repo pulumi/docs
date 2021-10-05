@@ -5,7 +5,7 @@ title_tag: "aws.datasync.Agent"
 meta_desc: "Documentation for the aws.datasync.Agent resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/Agent/"
-layout: api-doc-resource
+layout: api
 ---
 
 

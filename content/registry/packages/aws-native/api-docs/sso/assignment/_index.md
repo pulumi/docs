@@ -5,7 +5,7 @@ title_tag: "aws-native.sso.Assignment"
 meta_desc: "Documentation for the aws-native.sso.Assignment resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws-native/Assignment/"
-layout: api-doc-resource
+layout: api
 ---
 
 

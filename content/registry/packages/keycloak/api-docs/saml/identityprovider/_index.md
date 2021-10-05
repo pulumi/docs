@@ -5,7 +5,7 @@ title_tag: "keycloak.saml.IdentityProvider"
 meta_desc: "Documentation for the keycloak.saml.IdentityProvider resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/keycloak/IdentityProvider/"
-layout: api-doc-resource
+layout: api
 ---
 
 

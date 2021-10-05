@@ -5,7 +5,7 @@ title_tag: "equinix-metal.getProjectSshKey"
 meta_desc: "Documentation for the equinix-metal.getProjectSshKey function with examples, input properties, output properties, and supporting types."
 aliases:
     - "/docs/reference/pkg///"
-layout: api-doc-resource
+layout: api
 ---
 
 

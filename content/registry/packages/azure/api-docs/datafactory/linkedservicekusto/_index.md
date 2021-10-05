@@ -5,7 +5,7 @@ title_tag: "azure.datafactory.LinkedServiceKusto"
 meta_desc: "Documentation for the azure.datafactory.LinkedServiceKusto resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/LinkedServiceKusto/"
-layout: api-doc-resource
+layout: api
 ---
 
 

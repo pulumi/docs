@@ -5,7 +5,7 @@ title_tag: "newrelic.plugins.Workload"
 meta_desc: "Documentation for the newrelic.plugins.Workload resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/newrelic/Workload/"
-layout: api-doc-resource
+layout: api
 ---
 
 

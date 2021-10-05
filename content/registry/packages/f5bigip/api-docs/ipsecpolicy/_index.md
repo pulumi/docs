@@ -5,7 +5,7 @@ title_tag: "f5bigip.IpsecPolicy"
 meta_desc: "Documentation for the f5bigip.IpsecPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/f5bigip/IpsecPolicy/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "azure-native.network.NetworkWatcher"
 meta_desc: "Documentation for the azure-native.network.NetworkWatcher resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/NetworkWatcher/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "azure-native.databoxedge.BandwidthSchedule"
 meta_desc: "Documentation for the azure-native.databoxedge.BandwidthSchedule resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/BandwidthSchedule/"
-layout: api-doc-resource
+layout: api
 ---
 
 
@@ -429,7 +429,7 @@ The BandwidthSchedule resource accepts the following [input]({{< relref "/docs/i
 <a href="#days_nodejs" style="color: inherit; text-decoration: inherit;">days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Day<wbr>Of<wbr>Week[]</span>
+        <span class="property-type">(string | Day<wbr>Of<wbr>Week)[]</span>
     </dt>
     <dd>{{% md %}}The days of the week when this schedule is applicable.{{% /md %}}</dd><dt class="property-required"
             title="Required">

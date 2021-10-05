@@ -5,7 +5,7 @@ title_tag: "azure.apimanagement.ApiOperationTag"
 meta_desc: "Documentation for the azure.apimanagement.ApiOperationTag resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/ApiOperationTag/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "alicloud.opensearch.AppGroup"
 meta_desc: "Documentation for the alicloud.opensearch.AppGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/alicloud/AppGroup/"
-layout: api-doc-resource
+layout: api
 ---
 
 

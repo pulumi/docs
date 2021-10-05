@@ -5,7 +5,7 @@ title_tag: "vault.appRole.AuthBackendRoleSecretID"
 meta_desc: "Documentation for the vault.appRole.AuthBackendRoleSecretID resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/vault/AuthBackendRoleSecretID/"
-layout: api-doc-resource
+layout: api
 ---
 
 

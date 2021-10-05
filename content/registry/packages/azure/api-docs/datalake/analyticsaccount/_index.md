@@ -5,7 +5,7 @@ title_tag: "azure.datalake.AnalyticsAccount"
 meta_desc: "Documentation for the azure.datalake.AnalyticsAccount resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/AnalyticsAccount/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "cloudflare.StaticRoute"
 meta_desc: "Documentation for the cloudflare.StaticRoute resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/cloudflare/StaticRoute/"
-layout: api-doc-resource
+layout: api
 ---
 
 

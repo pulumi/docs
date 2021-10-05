@@ -5,7 +5,7 @@ title_tag: "aws.ram.PrincipalAssociation"
 meta_desc: "Documentation for the aws.ram.PrincipalAssociation resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/PrincipalAssociation/"
-layout: api-doc-resource
+layout: api
 ---
 
 

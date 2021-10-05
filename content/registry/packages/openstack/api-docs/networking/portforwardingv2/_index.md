@@ -5,7 +5,7 @@ title_tag: "openstack.networking.PortForwardingV2"
 meta_desc: "Documentation for the openstack.networking.PortForwardingV2 resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/openstack/PortForwardingV2/"
-layout: api-doc-resource
+layout: api
 ---
 
 

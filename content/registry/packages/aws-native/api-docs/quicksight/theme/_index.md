@@ -5,7 +5,7 @@ title_tag: "aws-native.quicksight.Theme"
 meta_desc: "Documentation for the aws-native.quicksight.Theme resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws-native/Theme/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "snowflake.WarehouseGrant"
 meta_desc: "Documentation for the snowflake.WarehouseGrant resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/snowflake/WarehouseGrant/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "alicloud.edas.ApplicationDeployment"
 meta_desc: "Documentation for the alicloud.edas.ApplicationDeployment resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/alicloud/ApplicationDeployment/"
-layout: api-doc-resource
+layout: api
 ---
 
 

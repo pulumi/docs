@@ -5,7 +5,7 @@ title_tag: "gcp.sql.SourceRepresentationInstance"
 meta_desc: "Documentation for the gcp.sql.SourceRepresentationInstance resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/gcp/SourceRepresentationInstance/"
-layout: api-doc-resource
+layout: api
 ---
 
 

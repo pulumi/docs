@@ -5,7 +5,7 @@ title_tag: "gcp.containeranalysis.Occurence"
 meta_desc: "Documentation for the gcp.containeranalysis.Occurence resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/gcp/Occurence/"
-layout: api-doc-resource
+layout: api
 ---
 
 

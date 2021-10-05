@@ -5,7 +5,7 @@ title_tag: "gcp.compute.RegionPerInstanceConfig"
 meta_desc: "Documentation for the gcp.compute.RegionPerInstanceConfig resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/gcp/RegionPerInstanceConfig/"
-layout: api-doc-resource
+layout: api
 ---
 
 

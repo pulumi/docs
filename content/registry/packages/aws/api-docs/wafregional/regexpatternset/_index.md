@@ -5,7 +5,7 @@ title_tag: "aws.wafregional.RegexPatternSet"
 meta_desc: "Documentation for the aws.wafregional.RegexPatternSet resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/RegexPatternSet/"
-layout: api-doc-resource
+layout: api
 ---
 
 

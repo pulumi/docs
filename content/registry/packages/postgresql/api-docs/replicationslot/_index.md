@@ -5,7 +5,7 @@ title_tag: "postgresql.ReplicationSlot"
 meta_desc: "Documentation for the postgresql.ReplicationSlot resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/postgresql/ReplicationSlot/"
-layout: api-doc-resource
+layout: api
 ---
 
 

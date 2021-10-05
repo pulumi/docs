@@ -5,7 +5,7 @@ title_tag: "aws-native.frauddetector.EventType"
 meta_desc: "Documentation for the aws-native.frauddetector.EventType resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws-native/EventType/"
-layout: api-doc-resource
+layout: api
 ---
 
 

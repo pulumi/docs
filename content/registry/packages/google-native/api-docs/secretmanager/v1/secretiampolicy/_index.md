@@ -5,7 +5,7 @@ title_tag: "google-native.secretmanager/v1.SecretIamPolicy"
 meta_desc: "Documentation for the google-native.secretmanager/v1.SecretIamPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/google-native/SecretIamPolicy/"
-layout: api-doc-resource
+layout: api
 ---
 
 

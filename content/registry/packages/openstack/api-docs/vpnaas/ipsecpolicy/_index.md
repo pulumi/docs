@@ -5,7 +5,7 @@ title_tag: "openstack.vpnaas.IpSecPolicy"
 meta_desc: "Documentation for the openstack.vpnaas.IpSecPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/openstack/IpSecPolicy/"
-layout: api-doc-resource
+layout: api
 ---
 
 

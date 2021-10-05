@@ -5,7 +5,7 @@ title_tag: "aws.iot.TopicRule"
 meta_desc: "Documentation for the aws.iot.TopicRule resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/TopicRule/"
-layout: api-doc-resource
+layout: api
 ---
 
 

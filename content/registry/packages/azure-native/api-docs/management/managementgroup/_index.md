@@ -5,7 +5,7 @@ title_tag: "azure-native.management.ManagementGroup"
 meta_desc: "Documentation for the azure-native.management.ManagementGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/ManagementGroup/"
-layout: api-doc-resource
+layout: api
 ---
 
 

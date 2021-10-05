@@ -5,7 +5,7 @@ title_tag: "azure-native.certificateregistration.AppServiceCertificateOrder"
 meta_desc: "Documentation for the azure-native.certificateregistration.AppServiceCertificateOrder resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/AppServiceCertificateOrder/"
-layout: api-doc-resource
+layout: api
 ---
 
 

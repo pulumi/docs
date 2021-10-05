@@ -5,7 +5,7 @@ title_tag: "yandex.ComputeDisk"
 meta_desc: "Documentation for the yandex.ComputeDisk resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/yandex/ComputeDisk/"
-layout: api-doc-resource
+layout: api
 ---
 
 

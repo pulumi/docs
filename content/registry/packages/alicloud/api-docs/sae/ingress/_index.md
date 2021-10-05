@@ -5,7 +5,7 @@ title_tag: "alicloud.sae.Ingress"
 meta_desc: "Documentation for the alicloud.sae.Ingress resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/alicloud/Ingress/"
-layout: api-doc-resource
+layout: api
 ---
 
 

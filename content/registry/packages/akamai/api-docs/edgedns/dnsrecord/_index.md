@@ -5,7 +5,7 @@ title_tag: "akamai.edgedns.DnsRecord"
 meta_desc: "Documentation for the akamai.edgedns.DnsRecord resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/akamai/DnsRecord/"
-layout: api-doc-resource
+layout: api
 ---
 
 

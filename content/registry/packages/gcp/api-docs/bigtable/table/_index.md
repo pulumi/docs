@@ -5,7 +5,7 @@ title_tag: "gcp.bigtable.Table"
 meta_desc: "Documentation for the gcp.bigtable.Table resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/gcp/Table/"
-layout: api-doc-resource
+layout: api
 ---
 
 

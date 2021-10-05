@@ -5,7 +5,7 @@ title_tag: "aws.servicecatalog.ProvisionedProduct"
 meta_desc: "Documentation for the aws.servicecatalog.ProvisionedProduct resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/ProvisionedProduct/"
-layout: api-doc-resource
+layout: api
 ---
 
 

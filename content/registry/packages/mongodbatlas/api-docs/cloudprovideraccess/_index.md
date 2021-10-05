@@ -5,7 +5,7 @@ title_tag: "mongodbatlas.CloudProviderAccess"
 meta_desc: "Documentation for the mongodbatlas.CloudProviderAccess resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/mongodbatlas/CloudProviderAccess/"
-layout: api-doc-resource
+layout: api
 ---
 
 

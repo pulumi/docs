@@ -5,7 +5,7 @@ title_tag: "github.UserGpgKey"
 meta_desc: "Documentation for the github.UserGpgKey resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/github/UserGpgKey/"
-layout: api-doc-resource
+layout: api
 ---
 
 

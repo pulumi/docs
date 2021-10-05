@@ -5,7 +5,7 @@ title_tag: "snowflake.ApiIntegration"
 meta_desc: "Documentation for the snowflake.ApiIntegration resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/snowflake/ApiIntegration/"
-layout: api-doc-resource
+layout: api
 ---
 
 

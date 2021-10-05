@@ -5,7 +5,7 @@ title_tag: "azure-native.recoveryservices.ReplicationRecoveryPlan"
 meta_desc: "Documentation for the azure-native.recoveryservices.ReplicationRecoveryPlan resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/ReplicationRecoveryPlan/"
-layout: api-doc-resource
+layout: api
 ---
 
 
@@ -1229,7 +1229,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#failoverdirections_nodejs" style="color: inherit; text-decoration: inherit;">failover<wbr>Directions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Possible<wbr>Operations<wbr>Directions[]</span>
+        <span class="property-type">(string | Possible<wbr>Operations<wbr>Directions)[]</span>
     </dt>
     <dd>{{% md %}}The list of failover directions.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1237,7 +1237,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#failovertypes_nodejs" style="color: inherit; text-decoration: inherit;">failover<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Replication<wbr>Protected<wbr>Item<wbr>Operation[]</span>
+        <span class="property-type">(string | Replication<wbr>Protected<wbr>Item<wbr>Operation)[]</span>
     </dt>
     <dd>{{% md %}}The list of failover types.{{% /md %}}</dd></dl>
 {{% /choosable %}}

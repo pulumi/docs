@@ -5,7 +5,7 @@ title_tag: "alicloud.vpn.CustomerGateway"
 meta_desc: "Documentation for the alicloud.vpn.CustomerGateway resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/alicloud/CustomerGateway/"
-layout: api-doc-resource
+layout: api
 ---
 
 

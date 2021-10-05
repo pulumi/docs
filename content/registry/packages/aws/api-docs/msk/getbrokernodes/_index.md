@@ -5,7 +5,7 @@ title_tag: "aws.msk.getBrokerNodes"
 meta_desc: "Documentation for the aws.msk.getBrokerNodes function with examples, input properties, output properties, and supporting types."
 aliases:
     - "/docs/reference/pkg///"
-layout: api-doc-resource
+layout: api
 ---
 
 

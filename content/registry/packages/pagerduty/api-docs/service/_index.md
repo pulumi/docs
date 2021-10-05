@@ -5,7 +5,7 @@ title_tag: "pagerduty.Service"
 meta_desc: "Documentation for the pagerduty.Service resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/pagerduty/Service/"
-layout: api-doc-resource
+layout: api
 ---
 
 

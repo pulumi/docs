@@ -5,7 +5,7 @@ title_tag: "azure-native.network.P2sVpnServerConfiguration"
 meta_desc: "Documentation for the azure-native.network.P2sVpnServerConfiguration resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/P2sVpnServerConfiguration/"
-layout: api-doc-resource
+layout: api
 ---
 
 
@@ -774,7 +774,7 @@ The P2sVpnServerConfiguration resource accepts the following [input]({{< relref 
 <a href="#vpnprotocols_nodejs" style="color: inherit; text-decoration: inherit;">vpn<wbr>Protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Vpn<wbr>Gateway<wbr>Tunneling<wbr>Protocol[]</span>
+        <span class="property-type">(string | Vpn<wbr>Gateway<wbr>Tunneling<wbr>Protocol)[]</span>
     </dt>
     <dd>{{% md %}}VPN protocols for the P2SVpnServerConfiguration.{{% /md %}}</dd></dl>
 {{% /choosable %}}

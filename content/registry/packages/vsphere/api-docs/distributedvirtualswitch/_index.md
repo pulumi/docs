@@ -5,7 +5,7 @@ title_tag: "vsphere.DistributedVirtualSwitch"
 meta_desc: "Documentation for the vsphere.DistributedVirtualSwitch resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/vsphere/DistributedVirtualSwitch/"
-layout: api-doc-resource
+layout: api
 ---
 
 

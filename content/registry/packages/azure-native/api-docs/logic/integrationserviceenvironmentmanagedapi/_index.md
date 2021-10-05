@@ -5,7 +5,7 @@ title_tag: "azure-native.logic.IntegrationServiceEnvironmentManagedApi"
 meta_desc: "Documentation for the azure-native.logic.IntegrationServiceEnvironmentManagedApi resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/IntegrationServiceEnvironmentManagedApi/"
-layout: api-doc-resource
+layout: api
 ---
 
 

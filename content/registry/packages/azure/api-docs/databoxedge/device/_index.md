@@ -5,7 +5,7 @@ title_tag: "azure.databoxedge.Device"
 meta_desc: "Documentation for the azure.databoxedge.Device resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/Device/"
-layout: api-doc-resource
+layout: api
 ---
 
 

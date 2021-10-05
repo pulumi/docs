@@ -5,7 +5,7 @@ title_tag: "wavefront.Alert"
 meta_desc: "Documentation for the wavefront.Alert resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/wavefront/Alert/"
-layout: api-doc-resource
+layout: api
 ---
 
 

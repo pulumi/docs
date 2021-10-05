@@ -5,7 +5,7 @@ title_tag: "azure.devtest.Schedule"
 meta_desc: "Documentation for the azure.devtest.Schedule resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/Schedule/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "gcp.pubsub.SubscriptionIAMBinding"
 meta_desc: "Documentation for the gcp.pubsub.SubscriptionIAMBinding resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/gcp/SubscriptionIAMBinding/"
-layout: api-doc-resource
+layout: api
 ---
 
 

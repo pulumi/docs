@@ -5,7 +5,7 @@ title_tag: "azure-native.dataprotection.getBackupPolicy"
 meta_desc: "Documentation for the azure-native.dataprotection.getBackupPolicy function with examples, input properties, output properties, and supporting types."
 aliases:
     - "/docs/reference/pkg///"
-layout: api-doc-resource
+layout: api
 ---
 
 
@@ -890,7 +890,7 @@ The following output properties are available:
 <a href="#policyrules_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Azure<wbr>Backup<wbr>Rule<wbr>Response | Azure<wbr>Retention<wbr>Rule<wbr>Response[]</span>
+        <span class="property-type">(Azure<wbr>Backup<wbr>Rule<wbr>Response | Azure<wbr>Retention<wbr>Rule<wbr>Response)[]</span>
     </dt>
     <dd>{{% md %}}Policy rule dictionary that contains rules for each backuptype i.e Full/Incremental/Logs etc{{% /md %}}</dd></dl>
 {{% /choosable %}}

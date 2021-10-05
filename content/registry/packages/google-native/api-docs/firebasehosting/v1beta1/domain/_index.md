@@ -5,7 +5,7 @@ title_tag: "google-native.firebasehosting/v1beta1.Domain"
 meta_desc: "Documentation for the google-native.firebasehosting/v1beta1.Domain resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/google-native/Domain/"
-layout: api-doc-resource
+layout: api
 ---
 
 

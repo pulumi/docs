@@ -5,7 +5,7 @@ title_tag: "aws-native.frauddetector.Detector"
 meta_desc: "Documentation for the aws-native.frauddetector.Detector resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws-native/Detector/"
-layout: api-doc-resource
+layout: api
 ---
 
 

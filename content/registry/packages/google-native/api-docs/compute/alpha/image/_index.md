@@ -5,7 +5,7 @@ title_tag: "google-native.compute/alpha.Image"
 meta_desc: "Documentation for the google-native.compute/alpha.Image resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/google-native/Image/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "azure-native.network.DdosProtectionPlan"
 meta_desc: "Documentation for the azure-native.network.DdosProtectionPlan resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/DdosProtectionPlan/"
-layout: api-doc-resource
+layout: api
 ---
 
 

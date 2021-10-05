@@ -5,7 +5,7 @@ title_tag: "aws.ec2.VpcDhcpOptionsAssociation"
 meta_desc: "Documentation for the aws.ec2.VpcDhcpOptionsAssociation resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/VpcDhcpOptionsAssociation/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "gcp.serviceAccount.IAMBinding"
 meta_desc: "Documentation for the gcp.serviceAccount.IAMBinding resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/gcp/IAMBinding/"
-layout: api-doc-resource
+layout: api
 ---
 
 

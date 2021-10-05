@@ -5,7 +5,7 @@ title_tag: "gcp.storage.BucketAccessControl"
 meta_desc: "Documentation for the gcp.storage.BucketAccessControl resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/gcp/BucketAccessControl/"
-layout: api-doc-resource
+layout: api
 ---
 
 

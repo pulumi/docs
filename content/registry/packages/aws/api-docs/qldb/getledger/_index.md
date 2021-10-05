@@ -5,7 +5,7 @@ title_tag: "aws.qldb.getLedger"
 meta_desc: "Documentation for the aws.qldb.getLedger function with examples, input properties, output properties, and supporting types."
 aliases:
     - "/docs/reference/pkg///"
-layout: api-doc-resource
+layout: api
 ---
 
 

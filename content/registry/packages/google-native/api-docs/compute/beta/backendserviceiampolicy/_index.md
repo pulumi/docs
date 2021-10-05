@@ -5,7 +5,7 @@ title_tag: "google-native.compute/beta.BackendServiceIamPolicy"
 meta_desc: "Documentation for the google-native.compute/beta.BackendServiceIamPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/google-native/BackendServiceIamPolicy/"
-layout: api-doc-resource
+layout: api
 ---
 
 

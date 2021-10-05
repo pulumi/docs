@@ -5,7 +5,7 @@ title_tag: "azure-native.managedservices.RegistrationAssignment"
 meta_desc: "Documentation for the azure-native.managedservices.RegistrationAssignment resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/RegistrationAssignment/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "aws.iam.UserLoginProfile"
 meta_desc: "Documentation for the aws.iam.UserLoginProfile resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/UserLoginProfile/"
-layout: api-doc-resource
+layout: api
 ---
 
 

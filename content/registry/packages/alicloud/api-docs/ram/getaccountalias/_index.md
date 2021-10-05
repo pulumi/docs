@@ -5,7 +5,7 @@ title_tag: "alicloud.ram.getAccountAlias"
 meta_desc: "Documentation for the alicloud.ram.getAccountAlias function with examples, input properties, output properties, and supporting types."
 aliases:
     - "/docs/reference/pkg///"
-layout: api-doc-resource
+layout: api
 ---
 
 

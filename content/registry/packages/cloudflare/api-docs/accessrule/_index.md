@@ -5,7 +5,7 @@ title_tag: "cloudflare.AccessRule"
 meta_desc: "Documentation for the cloudflare.AccessRule resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/cloudflare/AccessRule/"
-layout: api-doc-resource
+layout: api
 ---
 
 

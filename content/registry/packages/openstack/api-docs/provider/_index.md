@@ -5,7 +5,7 @@ title_tag: "openstack.Provider"
 meta_desc: "Documentation for the openstack.Provider resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/openstack/openstack/"
-layout: api-doc-resource
+layout: api
 ---
 
 

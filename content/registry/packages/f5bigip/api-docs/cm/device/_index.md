@@ -5,7 +5,7 @@ title_tag: "f5bigip.cm.Device"
 meta_desc: "Documentation for the f5bigip.cm.Device resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/f5bigip/Device/"
-layout: api-doc-resource
+layout: api
 ---
 
 

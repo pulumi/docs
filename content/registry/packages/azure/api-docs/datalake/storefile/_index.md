@@ -5,7 +5,7 @@ title_tag: "azure.datalake.StoreFile"
 meta_desc: "Documentation for the azure.datalake.StoreFile resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/StoreFile/"
-layout: api-doc-resource
+layout: api
 ---
 
 

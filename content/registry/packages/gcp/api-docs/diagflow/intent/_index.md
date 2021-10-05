@@ -5,7 +5,7 @@ title_tag: "gcp.diagflow.Intent"
 meta_desc: "Documentation for the gcp.diagflow.Intent resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/gcp/Intent/"
-layout: api-doc-resource
+layout: api
 ---
 
 

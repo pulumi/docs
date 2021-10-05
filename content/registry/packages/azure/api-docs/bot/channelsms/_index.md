@@ -5,7 +5,7 @@ title_tag: "azure.bot.ChannelSms"
 meta_desc: "Documentation for the azure.bot.ChannelSms resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/ChannelSms/"
-layout: api-doc-resource
+layout: api
 ---
 
 

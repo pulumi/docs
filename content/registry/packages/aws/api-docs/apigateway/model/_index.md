@@ -5,7 +5,7 @@ title_tag: "aws.apigateway.Model"
 meta_desc: "Documentation for the aws.apigateway.Model resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/Model/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "alicloud.amqp.Exchange"
 meta_desc: "Documentation for the alicloud.amqp.Exchange resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/alicloud/Exchange/"
-layout: api-doc-resource
+layout: api
 ---
 
 

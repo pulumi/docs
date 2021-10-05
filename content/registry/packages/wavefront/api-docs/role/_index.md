@@ -5,7 +5,7 @@ title_tag: "wavefront.Role"
 meta_desc: "Documentation for the wavefront.Role resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/wavefront/Role/"
-layout: api-doc-resource
+layout: api
 ---
 
 

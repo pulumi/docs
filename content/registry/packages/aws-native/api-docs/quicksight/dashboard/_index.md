@@ -5,7 +5,7 @@ title_tag: "aws-native.quicksight.Dashboard"
 meta_desc: "Documentation for the aws-native.quicksight.Dashboard resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws-native/Dashboard/"
-layout: api-doc-resource
+layout: api
 ---
 
 

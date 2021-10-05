@@ -5,7 +5,7 @@ title_tag: "gcp.appengine.StandardAppVersion"
 meta_desc: "Documentation for the gcp.appengine.StandardAppVersion resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/gcp/StandardAppVersion/"
-layout: api-doc-resource
+layout: api
 ---
 
 

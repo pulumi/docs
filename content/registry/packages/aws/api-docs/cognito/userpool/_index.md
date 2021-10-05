@@ -5,7 +5,7 @@ title_tag: "aws.cognito.UserPool"
 meta_desc: "Documentation for the aws.cognito.UserPool resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/UserPool/"
-layout: api-doc-resource
+layout: api
 ---
 
 

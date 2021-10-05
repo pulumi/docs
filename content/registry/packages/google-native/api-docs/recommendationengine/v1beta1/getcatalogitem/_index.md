@@ -5,7 +5,7 @@ title_tag: "google-native.recommendationengine/v1beta1.getCatalogItem"
 meta_desc: "Documentation for the google-native.recommendationengine/v1beta1.getCatalogItem function with examples, input properties, output properties, and supporting types."
 aliases:
     - "/docs/reference/pkg///"
-layout: api-doc-resource
+layout: api
 ---
 
 

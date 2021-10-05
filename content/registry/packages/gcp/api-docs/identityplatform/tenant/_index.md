@@ -5,7 +5,7 @@ title_tag: "gcp.identityplatform.Tenant"
 meta_desc: "Documentation for the gcp.identityplatform.Tenant resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/gcp/Tenant/"
-layout: api-doc-resource
+layout: api
 ---
 
 

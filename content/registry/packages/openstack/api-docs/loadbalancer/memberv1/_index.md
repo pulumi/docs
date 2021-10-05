@@ -5,7 +5,7 @@ title_tag: "openstack.loadbalancer.MemberV1"
 meta_desc: "Documentation for the openstack.loadbalancer.MemberV1 resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/openstack/MemberV1/"
-layout: api-doc-resource
+layout: api
 ---
 
 

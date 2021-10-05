@@ -5,7 +5,7 @@ title_tag: "azure-native.logic.IntegrationAccountPartner"
 meta_desc: "Documentation for the azure-native.logic.IntegrationAccountPartner resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/IntegrationAccountPartner/"
-layout: api-doc-resource
+layout: api
 ---
 
 

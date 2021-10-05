@@ -5,7 +5,7 @@ title_tag: "azure-native.synapse.KustoPoolAttachedDatabaseConfiguration"
 meta_desc: "Documentation for the azure-native.synapse.KustoPoolAttachedDatabaseConfiguration resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/KustoPoolAttachedDatabaseConfiguration/"
-layout: api-doc-resource
+layout: api
 ---
 
 

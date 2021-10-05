@@ -5,7 +5,7 @@ title_tag: "aws.autoscaling.Attachment"
 meta_desc: "Documentation for the aws.autoscaling.Attachment resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/Attachment/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "gcp.compute.SubnetworkIAMPolicy"
 meta_desc: "Documentation for the gcp.compute.SubnetworkIAMPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/gcp/SubnetworkIAMPolicy/"
-layout: api-doc-resource
+layout: api
 ---
 
 

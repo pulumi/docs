@@ -5,7 +5,7 @@ title_tag: "aws.cloudfront.Function"
 meta_desc: "Documentation for the aws.cloudfront.Function resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/Function/"
-layout: api-doc-resource
+layout: api
 ---
 
 

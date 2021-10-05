@@ -5,7 +5,7 @@ title_tag: "aws.iam.InstanceProfile"
 meta_desc: "Documentation for the aws.iam.InstanceProfile resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/InstanceProfile/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "azure-native.streamanalytics.Input"
 meta_desc: "Documentation for the azure-native.streamanalytics.Input resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/Input/"
-layout: api-doc-resource
+layout: api
 ---
 
 

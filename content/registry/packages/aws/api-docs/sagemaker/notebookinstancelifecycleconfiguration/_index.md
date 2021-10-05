@@ -5,7 +5,7 @@ title_tag: "aws.sagemaker.NotebookInstanceLifecycleConfiguration"
 meta_desc: "Documentation for the aws.sagemaker.NotebookInstanceLifecycleConfiguration resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/NotebookInstanceLifecycleConfiguration/"
-layout: api-doc-resource
+layout: api
 ---
 
 

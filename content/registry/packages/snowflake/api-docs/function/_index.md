@@ -5,7 +5,7 @@ title_tag: "snowflake.Function"
 meta_desc: "Documentation for the snowflake.Function resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/snowflake/Function/"
-layout: api-doc-resource
+layout: api
 ---
 
 

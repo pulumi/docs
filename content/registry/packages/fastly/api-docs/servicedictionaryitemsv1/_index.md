@@ -5,7 +5,7 @@ title_tag: "fastly.ServiceDictionaryItemsv1"
 meta_desc: "Documentation for the fastly.ServiceDictionaryItemsv1 resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/fastly/ServiceDictionaryItemsv1/"
-layout: api-doc-resource
+layout: api
 ---
 
 

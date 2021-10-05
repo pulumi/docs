@@ -5,7 +5,7 @@ title_tag: "kubernetes.autoscaling/v2beta2.HorizontalPodAutoscalerList"
 meta_desc: "Documentation for the kubernetes.autoscaling/v2beta2.HorizontalPodAutoscalerList resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/kubernetes/HorizontalPodAutoscalerList/"
-layout: api-doc-resource
+layout: api
 ---
 
 

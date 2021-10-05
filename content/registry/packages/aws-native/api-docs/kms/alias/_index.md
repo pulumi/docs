@@ -5,7 +5,7 @@ title_tag: "aws-native.kms.Alias"
 meta_desc: "Documentation for the aws-native.kms.Alias resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws-native/Alias/"
-layout: api-doc-resource
+layout: api
 ---
 
 

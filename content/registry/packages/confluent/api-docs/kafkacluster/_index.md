@@ -5,7 +5,7 @@ title_tag: "confluent.KafkaCluster"
 meta_desc: "Documentation for the confluent.KafkaCluster resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/confluent/KafkaCluster/"
-layout: api-doc-resource
+layout: api
 ---
 
 

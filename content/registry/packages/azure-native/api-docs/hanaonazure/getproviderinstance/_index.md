@@ -5,7 +5,7 @@ title_tag: "azure-native.hanaonazure.getProviderInstance"
 meta_desc: "Documentation for the azure-native.hanaonazure.getProviderInstance function with examples, input properties, output properties, and supporting types."
 aliases:
     - "/docs/reference/pkg///"
-layout: api-doc-resource
+layout: api
 ---
 
 

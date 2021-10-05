@@ -5,7 +5,7 @@ title_tag: "gcp.bigtable.TableIamBinding"
 meta_desc: "Documentation for the gcp.bigtable.TableIamBinding resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/gcp/TableIamBinding/"
-layout: api-doc-resource
+layout: api
 ---
 
 

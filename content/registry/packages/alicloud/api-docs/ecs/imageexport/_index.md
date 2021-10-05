@@ -5,7 +5,7 @@ title_tag: "alicloud.ecs.ImageExport"
 meta_desc: "Documentation for the alicloud.ecs.ImageExport resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/alicloud/ImageExport/"
-layout: api-doc-resource
+layout: api
 ---
 
 

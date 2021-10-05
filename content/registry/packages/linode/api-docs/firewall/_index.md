@@ -5,7 +5,7 @@ title_tag: "linode.Firewall"
 meta_desc: "Documentation for the linode.Firewall resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/linode/Firewall/"
-layout: api-doc-resource
+layout: api
 ---
 
 

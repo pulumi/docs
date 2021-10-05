@@ -5,7 +5,7 @@ title_tag: "azure.cosmosdb.Table"
 meta_desc: "Documentation for the azure.cosmosdb.Table resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/Table/"
-layout: api-doc-resource
+layout: api
 ---
 
 

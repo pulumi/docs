@@ -5,7 +5,7 @@ title_tag: "azure-native.desktopvirtualization.getApplicationGroup"
 meta_desc: "Documentation for the azure-native.desktopvirtualization.getApplicationGroup function with examples, input properties, output properties, and supporting types."
 aliases:
     - "/docs/reference/pkg///"
-layout: api-doc-resource
+layout: api
 ---
 
 

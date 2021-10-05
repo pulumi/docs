@@ -5,7 +5,7 @@ title_tag: "google-native.dns/v1.ResourceRecordSet"
 meta_desc: "Documentation for the google-native.dns/v1.ResourceRecordSet resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/google-native/ResourceRecordSet/"
-layout: api-doc-resource
+layout: api
 ---
 
 

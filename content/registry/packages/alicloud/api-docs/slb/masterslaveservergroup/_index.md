@@ -5,7 +5,7 @@ title_tag: "alicloud.slb.MasterSlaveServerGroup"
 meta_desc: "Documentation for the alicloud.slb.MasterSlaveServerGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/alicloud/MasterSlaveServerGroup/"
-layout: api-doc-resource
+layout: api
 ---
 
 

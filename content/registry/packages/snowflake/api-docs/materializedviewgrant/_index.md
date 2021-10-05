@@ -5,7 +5,7 @@ title_tag: "snowflake.MaterializedViewGrant"
 meta_desc: "Documentation for the snowflake.MaterializedViewGrant resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/snowflake/MaterializedViewGrant/"
-layout: api-doc-resource
+layout: api
 ---
 
 

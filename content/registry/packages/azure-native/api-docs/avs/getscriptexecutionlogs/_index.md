@@ -5,7 +5,7 @@ title_tag: "azure-native.avs.getScriptExecutionLogs"
 meta_desc: "Documentation for the azure-native.avs.getScriptExecutionLogs function with examples, input properties, output properties, and supporting types."
 aliases:
     - "/docs/reference/pkg///"
-layout: api-doc-resource
+layout: api
 ---
 
 
@@ -576,7 +576,7 @@ The following output properties are available:
 <a href="#hiddenparameters_nodejs" style="color: inherit; text-decoration: inherit;">hidden<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">PSCredential<wbr>Execution<wbr>Parameter<wbr>Response | Script<wbr>Secure<wbr>String<wbr>Execution<wbr>Parameter<wbr>Response | Script<wbr>String<wbr>Execution<wbr>Parameter<wbr>Response[]</span>
+        <span class="property-type">(PSCredential<wbr>Execution<wbr>Parameter<wbr>Response | Script<wbr>Secure<wbr>String<wbr>Execution<wbr>Parameter<wbr>Response | Script<wbr>String<wbr>Execution<wbr>Parameter<wbr>Response)[]</span>
     </dt>
     <dd>{{% md %}}Parameters that will be hidden/not visible to ARM, such as passwords and credentials{{% /md %}}</dd><dt class="property-"
             title="">
@@ -600,7 +600,7 @@ The following output properties are available:
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">PSCredential<wbr>Execution<wbr>Parameter<wbr>Response | Script<wbr>Secure<wbr>String<wbr>Execution<wbr>Parameter<wbr>Response | Script<wbr>String<wbr>Execution<wbr>Parameter<wbr>Response[]</span>
+        <span class="property-type">(PSCredential<wbr>Execution<wbr>Parameter<wbr>Response | Script<wbr>Secure<wbr>String<wbr>Execution<wbr>Parameter<wbr>Response | Script<wbr>String<wbr>Execution<wbr>Parameter<wbr>Response)[]</span>
     </dt>
     <dd>{{% md %}}Parameters the script will accept{{% /md %}}</dd><dt class="property-"
             title="">

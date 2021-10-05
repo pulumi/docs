@@ -5,7 +5,7 @@ title_tag: "azure-native.botservice.listBotConnectionWithSecrets"
 meta_desc: "Documentation for the azure-native.botservice.listBotConnectionWithSecrets function with examples, input properties, output properties, and supporting types."
 aliases:
     - "/docs/reference/pkg///"
-layout: api-doc-resource
+layout: api
 ---
 
 

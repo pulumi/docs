@@ -5,7 +5,7 @@ title_tag: "azure-native.apimanagement.getTagByApi"
 meta_desc: "Documentation for the azure-native.apimanagement.getTagByApi function with examples, input properties, output properties, and supporting types."
 aliases:
     - "/docs/reference/pkg///"
-layout: api-doc-resource
+layout: api
 ---
 
 

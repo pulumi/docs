@@ -5,7 +5,7 @@ title_tag: "aws.opsworks.HaproxyLayer"
 meta_desc: "Documentation for the aws.opsworks.HaproxyLayer resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/HaproxyLayer/"
-layout: api-doc-resource
+layout: api
 ---
 
 

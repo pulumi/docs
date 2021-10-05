@@ -5,7 +5,7 @@ title_tag: "azure-native.customerinsights.View"
 meta_desc: "Documentation for the azure-native.customerinsights.View resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/View/"
-layout: api-doc-resource
+layout: api
 ---
 
 

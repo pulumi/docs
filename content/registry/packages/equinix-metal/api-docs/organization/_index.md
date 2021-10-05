@@ -5,7 +5,7 @@ title_tag: "equinix-metal.Organization"
 meta_desc: "Documentation for the equinix-metal.Organization resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/equinix-metal/Organization/"
-layout: api-doc-resource
+layout: api
 ---
 
 

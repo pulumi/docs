@@ -5,7 +5,7 @@ title_tag: "azure-native.keyvault.Vault"
 meta_desc: "Documentation for the azure-native.keyvault.Vault resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/Vault/"
-layout: api-doc-resource
+layout: api
 ---
 
 
@@ -2054,7 +2054,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certificates_nodejs" style="color: inherit; text-decoration: inherit;">certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Certificate<wbr>Permissions[]</span>
+        <span class="property-type">(string | Certificate<wbr>Permissions)[]</span>
     </dt>
     <dd>{{% md %}}Permissions to certificates{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2062,7 +2062,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keys_nodejs" style="color: inherit; text-decoration: inherit;">keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Key<wbr>Permissions[]</span>
+        <span class="property-type">(string | Key<wbr>Permissions)[]</span>
     </dt>
     <dd>{{% md %}}Permissions to keys{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2070,7 +2070,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secrets_nodejs" style="color: inherit; text-decoration: inherit;">secrets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Secret<wbr>Permissions[]</span>
+        <span class="property-type">(string | Secret<wbr>Permissions)[]</span>
     </dt>
     <dd>{{% md %}}Permissions to secrets{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2078,7 +2078,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_nodejs" style="color: inherit; text-decoration: inherit;">storage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Storage<wbr>Permissions[]</span>
+        <span class="property-type">(string | Storage<wbr>Permissions)[]</span>
     </dt>
     <dd>{{% md %}}Permissions to storage accounts{{% /md %}}</dd></dl>
 {{% /choosable %}}

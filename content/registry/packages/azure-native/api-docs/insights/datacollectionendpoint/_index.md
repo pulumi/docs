@@ -5,7 +5,7 @@ title_tag: "azure-native.insights.DataCollectionEndpoint"
 meta_desc: "Documentation for the azure-native.insights.DataCollectionEndpoint resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/DataCollectionEndpoint/"
-layout: api-doc-resource
+layout: api
 ---
 
 

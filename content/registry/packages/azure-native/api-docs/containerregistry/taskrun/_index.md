@@ -5,7 +5,7 @@ title_tag: "azure-native.containerregistry.TaskRun"
 meta_desc: "Documentation for the azure-native.containerregistry.TaskRun resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/TaskRun/"
-layout: api-doc-resource
+layout: api
 ---
 
 

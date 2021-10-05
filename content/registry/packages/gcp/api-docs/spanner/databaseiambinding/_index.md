@@ -5,7 +5,7 @@ title_tag: "gcp.spanner.DatabaseIAMBinding"
 meta_desc: "Documentation for the gcp.spanner.DatabaseIAMBinding resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/gcp/DatabaseIAMBinding/"
-layout: api-doc-resource
+layout: api
 ---
 
 

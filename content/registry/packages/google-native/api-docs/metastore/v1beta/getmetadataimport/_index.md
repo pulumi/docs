@@ -5,7 +5,7 @@ title_tag: "google-native.metastore/v1beta.getMetadataImport"
 meta_desc: "Documentation for the google-native.metastore/v1beta.getMetadataImport function with examples, input properties, output properties, and supporting types."
 aliases:
     - "/docs/reference/pkg///"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "aws-native.iotevents.DetectorModel"
 meta_desc: "Documentation for the aws-native.iotevents.DetectorModel resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws-native/DetectorModel/"
-layout: api-doc-resource
+layout: api
 ---
 
 

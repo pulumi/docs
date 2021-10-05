@@ -5,7 +5,7 @@ title_tag: "azure.dataprotection.BackupPolicyBlobStorage"
 meta_desc: "Documentation for the azure.dataprotection.BackupPolicyBlobStorage resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/BackupPolicyBlobStorage/"
-layout: api-doc-resource
+layout: api
 ---
 
 

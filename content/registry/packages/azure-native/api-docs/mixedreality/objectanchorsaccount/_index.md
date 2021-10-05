@@ -5,7 +5,7 @@ title_tag: "azure-native.mixedreality.ObjectAnchorsAccount"
 meta_desc: "Documentation for the azure-native.mixedreality.ObjectAnchorsAccount resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/ObjectAnchorsAccount/"
-layout: api-doc-resource
+layout: api
 ---
 
 

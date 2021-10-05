@@ -5,7 +5,7 @@ title_tag: "azure-native.batch.ApplicationPackage"
 meta_desc: "Documentation for the azure-native.batch.ApplicationPackage resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/ApplicationPackage/"
-layout: api-doc-resource
+layout: api
 ---
 
 

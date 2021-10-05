@@ -5,7 +5,7 @@ title_tag: "gcp.projects.DefaultServiceAccounts"
 meta_desc: "Documentation for the gcp.projects.DefaultServiceAccounts resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/gcp/DefaultServiceAccounts/"
-layout: api-doc-resource
+layout: api
 ---
 
 

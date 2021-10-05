@@ -5,7 +5,7 @@ title_tag: "alicloud.cddc.DedicatedHostGroup"
 meta_desc: "Documentation for the alicloud.cddc.DedicatedHostGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/alicloud/DedicatedHostGroup/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "aws.opsworks.PhpAppLayer"
 meta_desc: "Documentation for the aws.opsworks.PhpAppLayer resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/PhpAppLayer/"
-layout: api-doc-resource
+layout: api
 ---
 
 

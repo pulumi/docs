@@ -5,7 +5,7 @@ title_tag: "alicloud.ros.Stack"
 meta_desc: "Documentation for the alicloud.ros.Stack resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/alicloud/Stack/"
-layout: api-doc-resource
+layout: api
 ---
 
 

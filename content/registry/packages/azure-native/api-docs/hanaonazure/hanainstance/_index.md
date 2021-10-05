@@ -5,7 +5,7 @@ title_tag: "azure-native.hanaonazure.HanaInstance"
 meta_desc: "Documentation for the azure-native.hanaonazure.HanaInstance resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/HanaInstance/"
-layout: api-doc-resource
+layout: api
 ---
 
 

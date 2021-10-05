@@ -5,7 +5,7 @@ title_tag: "mongodbatlas.getPrivateLinkEndpoint"
 meta_desc: "Documentation for the mongodbatlas.getPrivateLinkEndpoint function with examples, input properties, output properties, and supporting types."
 aliases:
     - "/docs/reference/pkg///"
-layout: api-doc-resource
+layout: api
 ---
 
 

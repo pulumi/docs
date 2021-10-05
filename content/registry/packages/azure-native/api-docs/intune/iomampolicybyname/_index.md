@@ -5,7 +5,7 @@ title_tag: "azure-native.intune.IoMAMPolicyByName"
 meta_desc: "Documentation for the azure-native.intune.IoMAMPolicyByName resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/IoMAMPolicyByName/"
-layout: api-doc-resource
+layout: api
 ---
 
 

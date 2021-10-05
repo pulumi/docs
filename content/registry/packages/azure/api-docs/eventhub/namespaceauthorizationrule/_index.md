@@ -5,7 +5,7 @@ title_tag: "azure.eventhub.NamespaceAuthorizationRule"
 meta_desc: "Documentation for the azure.eventhub.NamespaceAuthorizationRule resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/NamespaceAuthorizationRule/"
-layout: api-doc-resource
+layout: api
 ---
 
 

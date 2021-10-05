@@ -5,7 +5,7 @@ title_tag: "azure-native.devtestlab.getGlobalSchedule"
 meta_desc: "Documentation for the azure-native.devtestlab.getGlobalSchedule function with examples, input properties, output properties, and supporting types."
 aliases:
     - "/docs/reference/pkg///"
-layout: api-doc-resource
+layout: api
 ---
 
 

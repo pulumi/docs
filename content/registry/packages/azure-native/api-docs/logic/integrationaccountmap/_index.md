@@ -5,7 +5,7 @@ title_tag: "azure-native.logic.IntegrationAccountMap"
 meta_desc: "Documentation for the azure-native.logic.IntegrationAccountMap resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/IntegrationAccountMap/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "azure-native.securityinsights.AutomationRule"
 meta_desc: "Documentation for the azure-native.securityinsights.AutomationRule resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/AutomationRule/"
-layout: api-doc-resource
+layout: api
 ---
 
 
@@ -533,7 +533,7 @@ The AutomationRule resource accepts the following [input]({{< relref "/docs/intr
 <a href="#actions_nodejs" style="color: inherit; text-decoration: inherit;">actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Automation<wbr>Rule<wbr>Modify<wbr>Properties<wbr>Action<wbr>Args | Automation<wbr>Rule<wbr>Run<wbr>Playbook<wbr>Action<wbr>Args[]</span>
+        <span class="property-type">(Automation<wbr>Rule<wbr>Modify<wbr>Properties<wbr>Action<wbr>Args | Automation<wbr>Rule<wbr>Run<wbr>Playbook<wbr>Action<wbr>Args)[]</span>
     </dt>
     <dd>{{% md %}}The actions to execute when the automation rule is triggered{{% /md %}}</dd><dt class="property-required"
             title="Required">

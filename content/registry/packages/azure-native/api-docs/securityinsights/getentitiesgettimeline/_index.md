@@ -5,7 +5,7 @@ title_tag: "azure-native.securityinsights.getEntitiesGetTimeline"
 meta_desc: "Documentation for the azure-native.securityinsights.getEntitiesGetTimeline function with examples, input properties, output properties, and supporting types."
 aliases:
     - "/docs/reference/pkg///"
-layout: api-doc-resource
+layout: api
 ---
 
 
@@ -252,7 +252,7 @@ The following arguments are supported:
 <a href="#kinds_nodejs" style="color: inherit; text-decoration: inherit;">kinds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Entity<wbr>Timeline<wbr>Kind[]</span>
+        <span class="property-type">(string | Entity<wbr>Timeline<wbr>Kind)[]</span>
     </dt>
     <dd>{{% md %}}Array of timeline Item kinds.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -397,7 +397,7 @@ The following output properties are available:
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Activity<wbr>Timeline<wbr>Item<wbr>Response | Bookmark<wbr>Timeline<wbr>Item<wbr>Response | Security<wbr>Alert<wbr>Timeline<wbr>Item<wbr>Response[]</span>
+        <span class="property-type">(Activity<wbr>Timeline<wbr>Item<wbr>Response | Bookmark<wbr>Timeline<wbr>Item<wbr>Response | Security<wbr>Alert<wbr>Timeline<wbr>Item<wbr>Response)[]</span>
     </dt>
     <dd>{{% md %}}The timeline result values.{{% /md %}}</dd></dl>
 {{% /choosable %}}

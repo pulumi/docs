@@ -5,7 +5,7 @@ title_tag: "vault.pkiSecret.SecretBackendConfigCa"
 meta_desc: "Documentation for the vault.pkiSecret.SecretBackendConfigCa resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/vault/SecretBackendConfigCa/"
-layout: api-doc-resource
+layout: api
 ---
 
 

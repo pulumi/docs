@@ -5,7 +5,7 @@ title_tag: "azuredevops.IterativePermissions"
 meta_desc: "Documentation for the azuredevops.IterativePermissions resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azuredevops/IterativePermissions/"
-layout: api-doc-resource
+layout: api
 ---
 
 

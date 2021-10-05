@@ -5,7 +5,7 @@ title_tag: "azure-native.eventgrid.SystemTopic"
 meta_desc: "Documentation for the azure-native.eventgrid.SystemTopic resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/SystemTopic/"
-layout: api-doc-resource
+layout: api
 ---
 
 

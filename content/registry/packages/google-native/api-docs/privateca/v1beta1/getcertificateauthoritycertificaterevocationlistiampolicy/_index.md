@@ -5,7 +5,7 @@ title_tag: "google-native.privateca/v1beta1.getCertificateAuthorityCertificateRe
 meta_desc: "Documentation for the google-native.privateca/v1beta1.getCertificateAuthorityCertificateRevocationListIamPolicy function with examples, input properties, output properties, and supporting types."
 aliases:
     - "/docs/reference/pkg///"
-layout: api-doc-resource
+layout: api
 ---
 
 

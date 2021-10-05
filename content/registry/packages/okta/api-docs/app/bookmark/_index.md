@@ -5,7 +5,7 @@ title_tag: "okta.app.Bookmark"
 meta_desc: "Documentation for the okta.app.Bookmark resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/okta/Bookmark/"
-layout: api-doc-resource
+layout: api
 ---
 
 

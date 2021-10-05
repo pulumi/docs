@@ -5,7 +5,7 @@ title_tag: "google-native.containeranalysis/v1alpha1.getNoteIamPolicy"
 meta_desc: "Documentation for the google-native.containeranalysis/v1alpha1.getNoteIamPolicy function with examples, input properties, output properties, and supporting types."
 aliases:
     - "/docs/reference/pkg///"
-layout: api-doc-resource
+layout: api
 ---
 
 

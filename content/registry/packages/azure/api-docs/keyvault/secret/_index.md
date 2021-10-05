@@ -5,7 +5,7 @@ title_tag: "azure.keyvault.Secret"
 meta_desc: "Documentation for the azure.keyvault.Secret resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/Secret/"
-layout: api-doc-resource
+layout: api
 ---
 
 

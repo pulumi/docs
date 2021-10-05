@@ -5,7 +5,7 @@ title_tag: "gcp.compute.RegionDiskIamMember"
 meta_desc: "Documentation for the gcp.compute.RegionDiskIamMember resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/gcp/RegionDiskIamMember/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "mongodbatlas.DatabaseUser"
 meta_desc: "Documentation for the mongodbatlas.DatabaseUser resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/mongodbatlas/DatabaseUser/"
-layout: api-doc-resource
+layout: api
 ---
 
 

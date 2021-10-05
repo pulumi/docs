@@ -5,7 +5,7 @@ title_tag: "azure.media.LiveEvent"
 meta_desc: "Documentation for the azure.media.LiveEvent resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/LiveEvent/"
-layout: api-doc-resource
+layout: api
 ---
 
 

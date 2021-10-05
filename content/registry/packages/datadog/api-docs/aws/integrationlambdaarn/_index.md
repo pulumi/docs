@@ -5,7 +5,7 @@ title_tag: "datadog.aws.IntegrationLambdaArn"
 meta_desc: "Documentation for the datadog.aws.IntegrationLambdaArn resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/datadog/IntegrationLambdaArn/"
-layout: api-doc-resource
+layout: api
 ---
 
 

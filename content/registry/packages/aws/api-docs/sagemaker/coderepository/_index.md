@@ -5,7 +5,7 @@ title_tag: "aws.sagemaker.CodeRepository"
 meta_desc: "Documentation for the aws.sagemaker.CodeRepository resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/CodeRepository/"
-layout: api-doc-resource
+layout: api
 ---
 
 

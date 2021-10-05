@@ -5,7 +5,7 @@ title_tag: "gcp.bigquery.DatasetIamPolicy"
 meta_desc: "Documentation for the gcp.bigquery.DatasetIamPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/gcp/DatasetIamPolicy/"
-layout: api-doc-resource
+layout: api
 ---
 
 

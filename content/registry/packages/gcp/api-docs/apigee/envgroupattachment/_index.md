@@ -5,7 +5,7 @@ title_tag: "gcp.apigee.EnvGroupAttachment"
 meta_desc: "Documentation for the gcp.apigee.EnvGroupAttachment resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/gcp/EnvGroupAttachment/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "alicloud.kms.Alias"
 meta_desc: "Documentation for the alicloud.kms.Alias resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/alicloud/Alias/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "gcp.bigquery.IamMember"
 meta_desc: "Documentation for the gcp.bigquery.IamMember resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/gcp/IamMember/"
-layout: api-doc-resource
+layout: api
 ---
 
 

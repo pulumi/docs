@@ -5,7 +5,7 @@ title_tag: "azure-native.security.IngestionSetting"
 meta_desc: "Documentation for the azure-native.security.IngestionSetting resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/IngestionSetting/"
-layout: api-doc-resource
+layout: api
 ---
 
 

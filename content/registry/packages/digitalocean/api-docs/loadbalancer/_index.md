@@ -5,7 +5,7 @@ title_tag: "digitalocean.LoadBalancer"
 meta_desc: "Documentation for the digitalocean.LoadBalancer resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/digitalocean/LoadBalancer/"
-layout: api-doc-resource
+layout: api
 ---
 
 

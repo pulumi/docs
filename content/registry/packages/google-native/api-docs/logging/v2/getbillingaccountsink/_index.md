@@ -5,7 +5,7 @@ title_tag: "google-native.logging/v2.getBillingAccountSink"
 meta_desc: "Documentation for the google-native.logging/v2.getBillingAccountSink function with examples, input properties, output properties, and supporting types."
 aliases:
     - "/docs/reference/pkg///"
-layout: api-doc-resource
+layout: api
 ---
 
 

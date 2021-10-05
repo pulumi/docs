@@ -5,7 +5,7 @@ title_tag: "signalfx.aws.getServices"
 meta_desc: "Documentation for the signalfx.aws.getServices function with examples, input properties, output properties, and supporting types."
 aliases:
     - "/docs/reference/pkg///"
-layout: api-doc-resource
+layout: api
 ---
 
 

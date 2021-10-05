@@ -5,7 +5,7 @@ title_tag: "azure.synapse.WorkspaceKey"
 meta_desc: "Documentation for the azure.synapse.WorkspaceKey resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/WorkspaceKey/"
-layout: api-doc-resource
+layout: api
 ---
 
 

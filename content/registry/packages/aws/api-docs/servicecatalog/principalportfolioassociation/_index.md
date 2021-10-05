@@ -5,7 +5,7 @@ title_tag: "aws.servicecatalog.PrincipalPortfolioAssociation"
 meta_desc: "Documentation for the aws.servicecatalog.PrincipalPortfolioAssociation resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/PrincipalPortfolioAssociation/"
-layout: api-doc-resource
+layout: api
 ---
 
 

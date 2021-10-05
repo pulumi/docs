@@ -5,7 +5,7 @@ title_tag: "aws.ec2.getLaunchConfiguration"
 meta_desc: "Documentation for the aws.ec2.getLaunchConfiguration function with examples, input properties, output properties, and supporting types."
 aliases:
     - "/docs/reference/pkg///"
-layout: api-doc-resource
+layout: api
 ---
 
 

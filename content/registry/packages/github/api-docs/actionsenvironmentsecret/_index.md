@@ -5,7 +5,7 @@ title_tag: "github.ActionsEnvironmentSecret"
 meta_desc: "Documentation for the github.ActionsEnvironmentSecret resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/github/ActionsEnvironmentSecret/"
-layout: api-doc-resource
+layout: api
 ---
 
 

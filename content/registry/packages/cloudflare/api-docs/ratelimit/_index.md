@@ -5,7 +5,7 @@ title_tag: "cloudflare.RateLimit"
 meta_desc: "Documentation for the cloudflare.RateLimit resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/cloudflare/RateLimit/"
-layout: api-doc-resource
+layout: api
 ---
 
 

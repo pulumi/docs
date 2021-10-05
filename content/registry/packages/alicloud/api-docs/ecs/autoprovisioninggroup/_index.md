@@ -5,7 +5,7 @@ title_tag: "alicloud.ecs.AutoProvisioningGroup"
 meta_desc: "Documentation for the alicloud.ecs.AutoProvisioningGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/alicloud/AutoProvisioningGroup/"
-layout: api-doc-resource
+layout: api
 ---
 
 

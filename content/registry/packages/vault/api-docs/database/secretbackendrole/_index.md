@@ -5,7 +5,7 @@ title_tag: "vault.database.SecretBackendRole"
 meta_desc: "Documentation for the vault.database.SecretBackendRole resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/vault/SecretBackendRole/"
-layout: api-doc-resource
+layout: api
 ---
 
 

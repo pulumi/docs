@@ -5,7 +5,7 @@ title_tag: "azure.logicapps.IntegrationAccountAgreement"
 meta_desc: "Documentation for the azure.logicapps.IntegrationAccountAgreement resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/IntegrationAccountAgreement/"
-layout: api-doc-resource
+layout: api
 ---
 
 

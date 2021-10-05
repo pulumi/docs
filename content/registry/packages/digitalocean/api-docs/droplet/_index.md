@@ -5,7 +5,7 @@ title_tag: "digitalocean.Droplet"
 meta_desc: "Documentation for the digitalocean.Droplet resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/digitalocean/Droplet/"
-layout: api-doc-resource
+layout: api
 ---
 
 

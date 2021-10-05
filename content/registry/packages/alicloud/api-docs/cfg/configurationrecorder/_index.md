@@ -5,7 +5,7 @@ title_tag: "alicloud.cfg.ConfigurationRecorder"
 meta_desc: "Documentation for the alicloud.cfg.ConfigurationRecorder resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/alicloud/ConfigurationRecorder/"
-layout: api-doc-resource
+layout: api
 ---
 
 

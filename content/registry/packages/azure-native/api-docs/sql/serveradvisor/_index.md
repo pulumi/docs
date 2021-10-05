@@ -5,7 +5,7 @@ title_tag: "azure-native.sql.ServerAdvisor"
 meta_desc: "Documentation for the azure-native.sql.ServerAdvisor resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/ServerAdvisor/"
-layout: api-doc-resource
+layout: api
 ---
 
 

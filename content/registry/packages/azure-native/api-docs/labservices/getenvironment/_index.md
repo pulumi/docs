@@ -5,7 +5,7 @@ title_tag: "azure-native.labservices.getEnvironment"
 meta_desc: "Documentation for the azure-native.labservices.getEnvironment function with examples, input properties, output properties, and supporting types."
 aliases:
     - "/docs/reference/pkg///"
-layout: api-doc-resource
+layout: api
 ---
 
 

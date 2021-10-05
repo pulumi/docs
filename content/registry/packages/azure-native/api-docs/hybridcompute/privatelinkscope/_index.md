@@ -5,7 +5,7 @@ title_tag: "azure-native.hybridcompute.PrivateLinkScope"
 meta_desc: "Documentation for the azure-native.hybridcompute.PrivateLinkScope resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/PrivateLinkScope/"
-layout: api-doc-resource
+layout: api
 ---
 
 

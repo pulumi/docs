@@ -5,7 +5,7 @@ title_tag: "opsgenie.IncidentTemplate"
 meta_desc: "Documentation for the opsgenie.IncidentTemplate resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/opsgenie/IncidentTemplate/"
-layout: api-doc-resource
+layout: api
 ---
 
 

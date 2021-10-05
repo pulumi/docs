@@ -5,7 +5,7 @@ title_tag: "gcp.sourcerepo.RepositoryIamPolicy"
 meta_desc: "Documentation for the gcp.sourcerepo.RepositoryIamPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/gcp/RepositoryIamPolicy/"
-layout: api-doc-resource
+layout: api
 ---
 
 

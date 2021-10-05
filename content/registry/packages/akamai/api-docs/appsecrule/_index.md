@@ -5,7 +5,7 @@ title_tag: "akamai.AppSecRule"
 meta_desc: "Documentation for the akamai.AppSecRule resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/akamai/AppSecRule/"
-layout: api-doc-resource
+layout: api
 ---
 
 

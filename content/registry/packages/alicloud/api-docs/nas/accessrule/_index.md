@@ -5,7 +5,7 @@ title_tag: "alicloud.nas.AccessRule"
 meta_desc: "Documentation for the alicloud.nas.AccessRule resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/alicloud/AccessRule/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "aws.appconfig.HostedConfigurationVersion"
 meta_desc: "Documentation for the aws.appconfig.HostedConfigurationVersion resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/HostedConfigurationVersion/"
-layout: api-doc-resource
+layout: api
 ---
 
 

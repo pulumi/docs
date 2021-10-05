@@ -5,7 +5,7 @@ title_tag: "gcp.cloudidentity.GroupMembership"
 meta_desc: "Documentation for the gcp.cloudidentity.GroupMembership resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/gcp/GroupMembership/"
-layout: api-doc-resource
+layout: api
 ---
 
 

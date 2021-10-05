@@ -5,7 +5,7 @@ title_tag: "azure.lb.BackendAddressPool"
 meta_desc: "Documentation for the azure.lb.BackendAddressPool resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/BackendAddressPool/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "google-native.compute/v1.PacketMirroring"
 meta_desc: "Documentation for the google-native.compute/v1.PacketMirroring resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/google-native/PacketMirroring/"
-layout: api-doc-resource
+layout: api
 ---
 
 

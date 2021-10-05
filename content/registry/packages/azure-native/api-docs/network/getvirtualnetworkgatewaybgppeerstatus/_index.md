@@ -5,7 +5,7 @@ title_tag: "azure-native.network.getVirtualNetworkGatewayBgpPeerStatus"
 meta_desc: "Documentation for the azure-native.network.getVirtualNetworkGatewayBgpPeerStatus function with examples, input properties, output properties, and supporting types."
 aliases:
     - "/docs/reference/pkg///"
-layout: api-doc-resource
+layout: api
 ---
 
 

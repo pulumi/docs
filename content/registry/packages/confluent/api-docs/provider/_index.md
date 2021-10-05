@@ -5,7 +5,7 @@ title_tag: "confluent.Provider"
 meta_desc: "Documentation for the confluent.Provider resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/confluent/confluent/"
-layout: api-doc-resource
+layout: api
 ---
 
 

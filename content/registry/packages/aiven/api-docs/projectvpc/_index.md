@@ -5,7 +5,7 @@ title_tag: "aiven.ProjectVpc"
 meta_desc: "Documentation for the aiven.ProjectVpc resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aiven/ProjectVpc/"
-layout: api-doc-resource
+layout: api
 ---
 
 

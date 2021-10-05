@@ -5,7 +5,7 @@ title_tag: "openstack.compute.InterfaceAttach"
 meta_desc: "Documentation for the openstack.compute.InterfaceAttach resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/openstack/InterfaceAttach/"
-layout: api-doc-resource
+layout: api
 ---
 
 

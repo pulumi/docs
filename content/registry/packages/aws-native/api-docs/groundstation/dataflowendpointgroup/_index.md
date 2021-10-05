@@ -5,7 +5,7 @@ title_tag: "aws-native.groundstation.DataflowEndpointGroup"
 meta_desc: "Documentation for the aws-native.groundstation.DataflowEndpointGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws-native/DataflowEndpointGroup/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "alicloud.bastionhost.HostGroupAccountUserAttachment"
 meta_desc: "Documentation for the alicloud.bastionhost.HostGroupAccountUserAttachment resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/alicloud/HostGroupAccountUserAttachment/"
-layout: api-doc-resource
+layout: api
 ---
 
 

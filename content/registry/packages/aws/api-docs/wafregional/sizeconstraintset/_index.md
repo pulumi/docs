@@ -5,7 +5,7 @@ title_tag: "aws.wafregional.SizeConstraintSet"
 meta_desc: "Documentation for the aws.wafregional.SizeConstraintSet resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/SizeConstraintSet/"
-layout: api-doc-resource
+layout: api
 ---
 
 

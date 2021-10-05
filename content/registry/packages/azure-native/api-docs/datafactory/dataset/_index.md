@@ -5,7 +5,7 @@ title_tag: "azure-native.datafactory.Dataset"
 meta_desc: "Documentation for the azure-native.datafactory.Dataset resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/Dataset/"
-layout: api-doc-resource
+layout: api
 ---
 
 

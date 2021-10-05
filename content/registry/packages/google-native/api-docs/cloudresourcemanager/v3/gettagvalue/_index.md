@@ -5,7 +5,7 @@ title_tag: "google-native.cloudresourcemanager/v3.getTagValue"
 meta_desc: "Documentation for the google-native.cloudresourcemanager/v3.getTagValue function with examples, input properties, output properties, and supporting types."
 aliases:
     - "/docs/reference/pkg///"
-layout: api-doc-resource
+layout: api
 ---
 
 

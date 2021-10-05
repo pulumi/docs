@@ -5,7 +5,7 @@ title_tag: "aws.cfg.AggregateAuthorization"
 meta_desc: "Documentation for the aws.cfg.AggregateAuthorization resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/AggregateAuthorization/"
-layout: api-doc-resource
+layout: api
 ---
 
 

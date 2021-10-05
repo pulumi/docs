@@ -5,7 +5,7 @@ title_tag: "azure.synapse.SparkPool"
 meta_desc: "Documentation for the azure.synapse.SparkPool resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/SparkPool/"
-layout: api-doc-resource
+layout: api
 ---
 
 

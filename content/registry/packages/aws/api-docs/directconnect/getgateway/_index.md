@@ -5,7 +5,7 @@ title_tag: "aws.directconnect.getGateway"
 meta_desc: "Documentation for the aws.directconnect.getGateway function with examples, input properties, output properties, and supporting types."
 aliases:
     - "/docs/reference/pkg///"
-layout: api-doc-resource
+layout: api
 ---
 
 

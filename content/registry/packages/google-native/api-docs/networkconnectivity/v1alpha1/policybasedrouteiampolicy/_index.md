@@ -5,7 +5,7 @@ title_tag: "google-native.networkconnectivity/v1alpha1.PolicyBasedRouteIamPolicy
 meta_desc: "Documentation for the google-native.networkconnectivity/v1alpha1.PolicyBasedRouteIamPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/google-native/PolicyBasedRouteIamPolicy/"
-layout: api-doc-resource
+layout: api
 ---
 
 

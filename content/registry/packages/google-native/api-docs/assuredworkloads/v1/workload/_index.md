@@ -5,7 +5,7 @@ title_tag: "google-native.assuredworkloads/v1.Workload"
 meta_desc: "Documentation for the google-native.assuredworkloads/v1.Workload resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/google-native/Workload/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "gitlab.ProjectLevelMrApprovals"
 meta_desc: "Documentation for the gitlab.ProjectLevelMrApprovals resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/gitlab/ProjectLevelMrApprovals/"
-layout: api-doc-resource
+layout: api
 ---
 
 

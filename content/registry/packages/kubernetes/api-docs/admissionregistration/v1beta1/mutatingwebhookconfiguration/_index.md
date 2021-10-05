@@ -5,7 +5,7 @@ title_tag: "kubernetes.admissionregistration.k8s.io/v1beta1.MutatingWebhookConfi
 meta_desc: "Documentation for the kubernetes.admissionregistration.k8s.io/v1beta1.MutatingWebhookConfiguration resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/kubernetes/MutatingWebhookConfiguration/"
-layout: api-doc-resource
+layout: api
 ---
 
 

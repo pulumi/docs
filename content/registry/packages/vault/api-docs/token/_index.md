@@ -5,7 +5,7 @@ title_tag: "vault.Token"
 meta_desc: "Documentation for the vault.Token resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/vault/Token/"
-layout: api-doc-resource
+layout: api
 ---
 
 

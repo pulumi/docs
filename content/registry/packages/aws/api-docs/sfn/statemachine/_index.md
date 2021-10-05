@@ -5,7 +5,7 @@ title_tag: "aws.sfn.StateMachine"
 meta_desc: "Documentation for the aws.sfn.StateMachine resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/StateMachine/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "alicloud.rocketmq.AclRule"
 meta_desc: "Documentation for the alicloud.rocketmq.AclRule resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/alicloud/AclRule/"
-layout: api-doc-resource
+layout: api
 ---
 
 

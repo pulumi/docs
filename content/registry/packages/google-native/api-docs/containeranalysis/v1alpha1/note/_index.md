@@ -5,7 +5,7 @@ title_tag: "google-native.containeranalysis/v1alpha1.Note"
 meta_desc: "Documentation for the google-native.containeranalysis/v1alpha1.Note resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/google-native/Note/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "aws.fsx.Backup"
 meta_desc: "Documentation for the aws.fsx.Backup resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/Backup/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "gcp.dataproc.ClusterIAMMember"
 meta_desc: "Documentation for the gcp.dataproc.ClusterIAMMember resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/gcp/ClusterIAMMember/"
-layout: api-doc-resource
+layout: api
 ---
 
 

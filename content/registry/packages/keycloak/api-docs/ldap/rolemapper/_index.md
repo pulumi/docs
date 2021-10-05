@@ -5,7 +5,7 @@ title_tag: "keycloak.ldap.RoleMapper"
 meta_desc: "Documentation for the keycloak.ldap.RoleMapper resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/keycloak/RoleMapper/"
-layout: api-doc-resource
+layout: api
 ---
 
 

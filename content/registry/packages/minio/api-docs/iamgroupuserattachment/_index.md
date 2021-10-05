@@ -5,7 +5,7 @@ title_tag: "minio.IamGroupUserAttachment"
 meta_desc: "Documentation for the minio.IamGroupUserAttachment resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/minio/IamGroupUserAttachment/"
-layout: api-doc-resource
+layout: api
 ---
 
 

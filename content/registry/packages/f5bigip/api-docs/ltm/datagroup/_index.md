@@ -5,7 +5,7 @@ title_tag: "f5bigip.ltm.DataGroup"
 meta_desc: "Documentation for the f5bigip.ltm.DataGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/f5bigip/DataGroup/"
-layout: api-doc-resource
+layout: api
 ---
 
 

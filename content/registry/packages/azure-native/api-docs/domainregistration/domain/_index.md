@@ -5,7 +5,7 @@ title_tag: "azure-native.domainregistration.Domain"
 meta_desc: "Documentation for the azure-native.domainregistration.Domain resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/Domain/"
-layout: api-doc-resource
+layout: api
 ---
 
 

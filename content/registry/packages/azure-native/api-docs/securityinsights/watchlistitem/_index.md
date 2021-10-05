@@ -5,7 +5,7 @@ title_tag: "azure-native.securityinsights.WatchlistItem"
 meta_desc: "Documentation for the azure-native.securityinsights.WatchlistItem resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/WatchlistItem/"
-layout: api-doc-resource
+layout: api
 ---
 
 

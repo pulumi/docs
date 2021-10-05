@@ -5,7 +5,7 @@ title_tag: "aws.lambda.ProvisionedConcurrencyConfig"
 meta_desc: "Documentation for the aws.lambda.ProvisionedConcurrencyConfig resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/ProvisionedConcurrencyConfig/"
-layout: api-doc-resource
+layout: api
 ---
 
 

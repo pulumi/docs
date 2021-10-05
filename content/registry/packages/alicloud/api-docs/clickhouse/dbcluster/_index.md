@@ -5,7 +5,7 @@ title_tag: "alicloud.clickhouse.DbCluster"
 meta_desc: "Documentation for the alicloud.clickhouse.DbCluster resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/alicloud/DbCluster/"
-layout: api-doc-resource
+layout: api
 ---
 
 

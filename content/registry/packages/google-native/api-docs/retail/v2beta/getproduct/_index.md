@@ -5,7 +5,7 @@ title_tag: "google-native.retail/v2beta.getProduct"
 meta_desc: "Documentation for the google-native.retail/v2beta.getProduct function with examples, input properties, output properties, and supporting types."
 aliases:
     - "/docs/reference/pkg///"
-layout: api-doc-resource
+layout: api
 ---
 
 

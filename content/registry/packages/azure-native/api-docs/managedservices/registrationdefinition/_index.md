@@ -5,7 +5,7 @@ title_tag: "azure-native.managedservices.RegistrationDefinition"
 meta_desc: "Documentation for the azure-native.managedservices.RegistrationDefinition resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/RegistrationDefinition/"
-layout: api-doc-resource
+layout: api
 ---
 
 

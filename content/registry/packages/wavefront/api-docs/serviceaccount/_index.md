@@ -5,7 +5,7 @@ title_tag: "wavefront.ServiceAccount"
 meta_desc: "Documentation for the wavefront.ServiceAccount resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/wavefront/ServiceAccount/"
-layout: api-doc-resource
+layout: api
 ---
 
 

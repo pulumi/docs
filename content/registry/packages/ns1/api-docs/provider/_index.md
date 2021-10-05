@@ -5,7 +5,7 @@ title_tag: "ns1.Provider"
 meta_desc: "Documentation for the ns1.Provider resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/ns1/ns1/"
-layout: api-doc-resource
+layout: api
 ---
 
 

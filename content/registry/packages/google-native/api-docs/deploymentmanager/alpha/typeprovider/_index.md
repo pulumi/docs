@@ -5,7 +5,7 @@ title_tag: "google-native.deploymentmanager/alpha.TypeProvider"
 meta_desc: "Documentation for the google-native.deploymentmanager/alpha.TypeProvider resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/google-native/TypeProvider/"
-layout: api-doc-resource
+layout: api
 ---
 
 

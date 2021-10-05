@@ -5,7 +5,7 @@ title_tag: "azure.datafactory.DatasetSqlServerTable"
 meta_desc: "Documentation for the azure.datafactory.DatasetSqlServerTable resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/DatasetSqlServerTable/"
-layout: api-doc-resource
+layout: api
 ---
 
 

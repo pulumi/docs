@@ -5,7 +5,7 @@ title_tag: "google-native.metastore/v1beta.Service"
 meta_desc: "Documentation for the google-native.metastore/v1beta.Service resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/google-native/Service/"
-layout: api-doc-resource
+layout: api
 ---
 
 

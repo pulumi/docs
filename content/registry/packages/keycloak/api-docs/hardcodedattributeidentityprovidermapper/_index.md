@@ -5,7 +5,7 @@ title_tag: "keycloak.HardcodedAttributeIdentityProviderMapper"
 meta_desc: "Documentation for the keycloak.HardcodedAttributeIdentityProviderMapper resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/keycloak/HardcodedAttributeIdentityProviderMapper/"
-layout: api-doc-resource
+layout: api
 ---
 
 

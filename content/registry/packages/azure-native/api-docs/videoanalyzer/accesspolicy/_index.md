@@ -5,7 +5,7 @@ title_tag: "azure-native.videoanalyzer.AccessPolicy"
 meta_desc: "Documentation for the azure-native.videoanalyzer.AccessPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/AccessPolicy/"
-layout: api-doc-resource
+layout: api
 ---
 
 
@@ -1179,7 +1179,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keys_nodejs" style="color: inherit; text-decoration: inherit;">keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Ecc<wbr>Token<wbr>Key | Rsa<wbr>Token<wbr>Key[]</span>
+        <span class="property-type">(Ecc<wbr>Token<wbr>Key | Rsa<wbr>Token<wbr>Key)[]</span>
     </dt>
     <dd>{{% md %}}List of keys which can be used to validate access tokens. Having multiple keys allow for seamless key rotation of the token signing key. Token signature must match exactly one key.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1325,7 +1325,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keys_nodejs" style="color: inherit; text-decoration: inherit;">keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Ecc<wbr>Token<wbr>Key<wbr>Response | Rsa<wbr>Token<wbr>Key<wbr>Response[]</span>
+        <span class="property-type">(Ecc<wbr>Token<wbr>Key<wbr>Response | Rsa<wbr>Token<wbr>Key<wbr>Response)[]</span>
     </dt>
     <dd>{{% md %}}List of keys which can be used to validate access tokens. Having multiple keys allow for seamless key rotation of the token signing key. Token signature must match exactly one key.{{% /md %}}</dd></dl>
 {{% /choosable %}}

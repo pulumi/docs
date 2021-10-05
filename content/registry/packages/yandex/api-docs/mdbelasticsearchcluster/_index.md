@@ -5,7 +5,7 @@ title_tag: "yandex.MdbElasticSearchCluster"
 meta_desc: "Documentation for the yandex.MdbElasticSearchCluster resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/yandex/MdbElasticSearchCluster/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "azure.monitoring.AutoscaleSetting"
 meta_desc: "Documentation for the azure.monitoring.AutoscaleSetting resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/AutoscaleSetting/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "alicloud.eventbridge.EventBus"
 meta_desc: "Documentation for the alicloud.eventbridge.EventBus resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/alicloud/EventBus/"
-layout: api-doc-resource
+layout: api
 ---
 
 

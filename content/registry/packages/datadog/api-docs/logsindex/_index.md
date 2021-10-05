@@ -5,7 +5,7 @@ title_tag: "datadog.LogsIndex"
 meta_desc: "Documentation for the datadog.LogsIndex resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/datadog/LogsIndex/"
-layout: api-doc-resource
+layout: api
 ---
 
 

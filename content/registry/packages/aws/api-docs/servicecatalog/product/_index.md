@@ -5,7 +5,7 @@ title_tag: "aws.servicecatalog.Product"
 meta_desc: "Documentation for the aws.servicecatalog.Product resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/Product/"
-layout: api-doc-resource
+layout: api
 ---
 
 

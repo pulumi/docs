@@ -5,7 +5,7 @@ title_tag: "okta.PolicyPasswordDefault"
 meta_desc: "Documentation for the okta.PolicyPasswordDefault resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/okta/PolicyPasswordDefault/"
-layout: api-doc-resource
+layout: api
 ---
 
 

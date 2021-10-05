@@ -5,7 +5,7 @@ title_tag: "auth0.Prompt"
 meta_desc: "Documentation for the auth0.Prompt resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/auth0/Prompt/"
-layout: api-doc-resource
+layout: api
 ---
 
 

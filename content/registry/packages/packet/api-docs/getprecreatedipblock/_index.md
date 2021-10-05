@@ -5,7 +5,7 @@ title_tag: "packet.getPrecreatedIpBlock"
 meta_desc: "Documentation for the packet.getPrecreatedIpBlock function with examples, input properties, output properties, and supporting types."
 aliases:
     - "/docs/reference/pkg///"
-layout: api-doc-resource
+layout: api
 ---
 
 

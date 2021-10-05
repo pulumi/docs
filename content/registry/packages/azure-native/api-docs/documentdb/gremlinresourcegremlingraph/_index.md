@@ -5,7 +5,7 @@ title_tag: "azure-native.documentdb.GremlinResourceGremlinGraph"
 meta_desc: "Documentation for the azure-native.documentdb.GremlinResourceGremlinGraph resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/GremlinResourceGremlinGraph/"
-layout: api-doc-resource
+layout: api
 ---
 
 
@@ -3454,7 +3454,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#types_nodejs" style="color: inherit; text-decoration: inherit;">types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Spatial<wbr>Type[]</span>
+        <span class="property-type">(string | Spatial<wbr>Type)[]</span>
     </dt>
     <dd>{{% md %}}List of path's spatial type{{% /md %}}</dd></dl>
 {{% /choosable %}}

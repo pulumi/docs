@@ -5,7 +5,7 @@ title_tag: "alicloud.kms.Key"
 meta_desc: "Documentation for the alicloud.kms.Key resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/alicloud/Key/"
-layout: api-doc-resource
+layout: api
 ---
 
 

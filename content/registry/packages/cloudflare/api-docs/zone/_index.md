@@ -5,7 +5,7 @@ title_tag: "cloudflare.Zone"
 meta_desc: "Documentation for the cloudflare.Zone resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/cloudflare/Zone/"
-layout: api-doc-resource
+layout: api
 ---
 
 

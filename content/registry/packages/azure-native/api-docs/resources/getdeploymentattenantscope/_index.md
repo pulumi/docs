@@ -5,7 +5,7 @@ title_tag: "azure-native.resources.getDeploymentAtTenantScope"
 meta_desc: "Documentation for the azure-native.resources.getDeploymentAtTenantScope function with examples, input properties, output properties, and supporting types."
 aliases:
     - "/docs/reference/pkg///"
-layout: api-doc-resource
+layout: api
 ---
 
 

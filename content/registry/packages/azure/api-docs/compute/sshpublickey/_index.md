@@ -5,7 +5,7 @@ title_tag: "azure.compute.SshPublicKey"
 meta_desc: "Documentation for the azure.compute.SshPublicKey resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/SshPublicKey/"
-layout: api-doc-resource
+layout: api
 ---
 
 

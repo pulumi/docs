@@ -5,7 +5,7 @@ title_tag: "azure.eventhub.NamespaceCustomerManagedKey"
 meta_desc: "Documentation for the azure.eventhub.NamespaceCustomerManagedKey resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/NamespaceCustomerManagedKey/"
-layout: api-doc-resource
+layout: api
 ---
 
 

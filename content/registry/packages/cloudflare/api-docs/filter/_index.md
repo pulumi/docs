@@ -5,7 +5,7 @@ title_tag: "cloudflare.Filter"
 meta_desc: "Documentation for the cloudflare.Filter resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/cloudflare/Filter/"
-layout: api-doc-resource
+layout: api
 ---
 
 

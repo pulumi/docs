@@ -5,7 +5,7 @@ title_tag: "azure-native.datafactory.IntegrationRuntime"
 meta_desc: "Documentation for the azure-native.datafactory.IntegrationRuntime resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/IntegrationRuntime/"
-layout: api-doc-resource
+layout: api
 ---
 
 
@@ -3691,7 +3691,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expresscustomsetupproperties_nodejs" style="color: inherit; text-decoration: inherit;">express<wbr>Custom<wbr>Setup<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Az<wbr>Power<wbr>Shell<wbr>Setup | Cmdkey<wbr>Setup | Component<wbr>Setup | Environment<wbr>Variable<wbr>Setup[]</span>
+        <span class="property-type">(Az<wbr>Power<wbr>Shell<wbr>Setup | Cmdkey<wbr>Setup | Component<wbr>Setup | Environment<wbr>Variable<wbr>Setup)[]</span>
     </dt>
     <dd>{{% md %}}Custom setup without script properties for a SSIS integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3965,7 +3965,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expresscustomsetupproperties_nodejs" style="color: inherit; text-decoration: inherit;">express<wbr>Custom<wbr>Setup<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Az<wbr>Power<wbr>Shell<wbr>Setup<wbr>Response | Cmdkey<wbr>Setup<wbr>Response | Component<wbr>Setup<wbr>Response | Environment<wbr>Variable<wbr>Setup<wbr>Response[]</span>
+        <span class="property-type">(Az<wbr>Power<wbr>Shell<wbr>Setup<wbr>Response | Cmdkey<wbr>Setup<wbr>Response | Component<wbr>Setup<wbr>Response | Environment<wbr>Variable<wbr>Setup<wbr>Response)[]</span>
     </dt>
     <dd>{{% md %}}Custom setup without script properties for a SSIS integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

@@ -5,7 +5,7 @@ title_tag: "consul.NamespaceRoleAttachment"
 meta_desc: "Documentation for the consul.NamespaceRoleAttachment resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/consul/NamespaceRoleAttachment/"
-layout: api-doc-resource
+layout: api
 ---
 
 

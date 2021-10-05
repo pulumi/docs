@@ -5,7 +5,7 @@ title_tag: "azure.datafactory.TriggerBlobEvent"
 meta_desc: "Documentation for the azure.datafactory.TriggerBlobEvent resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/TriggerBlobEvent/"
-layout: api-doc-resource
+layout: api
 ---
 
 

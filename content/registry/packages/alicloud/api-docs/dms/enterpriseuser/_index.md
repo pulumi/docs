@@ -5,7 +5,7 @@ title_tag: "alicloud.dms.EnterpriseUser"
 meta_desc: "Documentation for the alicloud.dms.EnterpriseUser resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/alicloud/EnterpriseUser/"
-layout: api-doc-resource
+layout: api
 ---
 
 

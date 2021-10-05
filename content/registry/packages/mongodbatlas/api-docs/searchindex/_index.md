@@ -5,7 +5,7 @@ title_tag: "mongodbatlas.SearchIndex"
 meta_desc: "Documentation for the mongodbatlas.SearchIndex resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/mongodbatlas/SearchIndex/"
-layout: api-doc-resource
+layout: api
 ---
 
 

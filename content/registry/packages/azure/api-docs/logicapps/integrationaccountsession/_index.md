@@ -5,7 +5,7 @@ title_tag: "azure.logicapps.IntegrationAccountSession"
 meta_desc: "Documentation for the azure.logicapps.IntegrationAccountSession resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/IntegrationAccountSession/"
-layout: api-doc-resource
+layout: api
 ---
 
 

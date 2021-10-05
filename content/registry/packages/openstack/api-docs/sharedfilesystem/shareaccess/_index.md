@@ -5,7 +5,7 @@ title_tag: "openstack.sharedfilesystem.ShareAccess"
 meta_desc: "Documentation for the openstack.sharedfilesystem.ShareAccess resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/openstack/ShareAccess/"
-layout: api-doc-resource
+layout: api
 ---
 
 

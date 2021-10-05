@@ -5,7 +5,7 @@ title_tag: "alicloud.kvstore.BackupPolicy"
 meta_desc: "Documentation for the alicloud.kvstore.BackupPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/alicloud/BackupPolicy/"
-layout: api-doc-resource
+layout: api
 ---
 
 

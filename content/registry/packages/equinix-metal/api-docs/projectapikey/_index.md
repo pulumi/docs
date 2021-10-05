@@ -5,7 +5,7 @@ title_tag: "equinix-metal.ProjectApiKey"
 meta_desc: "Documentation for the equinix-metal.ProjectApiKey resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/equinix-metal/ProjectApiKey/"
-layout: api-doc-resource
+layout: api
 ---
 
 

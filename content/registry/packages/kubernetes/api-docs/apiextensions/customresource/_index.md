@@ -5,7 +5,7 @@ title_tag: "kubernetes.apiextensions.CustomResource"
 meta_desc: "Documentation for the kubernetes.apiextensions.CustomResource resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/kubernetes/CustomResource/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "azure-native.securityinsights.ASCDataConnector"
 meta_desc: "Documentation for the azure-native.securityinsights.ASCDataConnector resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/ASCDataConnector/"
-layout: api-doc-resource
+layout: api
 ---
 
 

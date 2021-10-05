@@ -5,7 +5,7 @@ title_tag: "gitlab.GroupMembership"
 meta_desc: "Documentation for the gitlab.GroupMembership resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/gitlab/GroupMembership/"
-layout: api-doc-resource
+layout: api
 ---
 
 

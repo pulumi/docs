@@ -5,7 +5,7 @@ title_tag: "azuredevops.Repository.Git"
 meta_desc: "Documentation for the azuredevops.Repository.Git resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azuredevops/Git/"
-layout: api-doc-resource
+layout: api
 ---
 
 

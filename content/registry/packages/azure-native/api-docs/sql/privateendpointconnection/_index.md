@@ -5,7 +5,7 @@ title_tag: "azure-native.sql.PrivateEndpointConnection"
 meta_desc: "Documentation for the azure-native.sql.PrivateEndpointConnection resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/PrivateEndpointConnection/"
-layout: api-doc-resource
+layout: api
 ---
 
 

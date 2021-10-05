@@ -5,7 +5,7 @@ title_tag: "newrelic.AlertChannel"
 meta_desc: "Documentation for the newrelic.AlertChannel resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/newrelic/AlertChannel/"
-layout: api-doc-resource
+layout: api
 ---
 
 

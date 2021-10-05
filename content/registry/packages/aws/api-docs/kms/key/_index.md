@@ -5,7 +5,7 @@ title_tag: "aws.kms.Key"
 meta_desc: "Documentation for the aws.kms.Key resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/Key/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "keycloak.ldap.FullNameMapper"
 meta_desc: "Documentation for the keycloak.ldap.FullNameMapper resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/keycloak/FullNameMapper/"
-layout: api-doc-resource
+layout: api
 ---
 
 

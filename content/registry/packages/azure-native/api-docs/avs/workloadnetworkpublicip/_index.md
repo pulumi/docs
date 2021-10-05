@@ -5,7 +5,7 @@ title_tag: "azure-native.avs.WorkloadNetworkPublicIP"
 meta_desc: "Documentation for the azure-native.avs.WorkloadNetworkPublicIP resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/WorkloadNetworkPublicIP/"
-layout: api-doc-resource
+layout: api
 ---
 
 

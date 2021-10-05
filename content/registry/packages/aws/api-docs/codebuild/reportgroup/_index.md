@@ -5,7 +5,7 @@ title_tag: "aws.codebuild.ReportGroup"
 meta_desc: "Documentation for the aws.codebuild.ReportGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/ReportGroup/"
-layout: api-doc-resource
+layout: api
 ---
 
 

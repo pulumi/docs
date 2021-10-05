@@ -5,7 +5,7 @@ title_tag: "azure-native.windowsesu.MultipleActivationKey"
 meta_desc: "Documentation for the azure-native.windowsesu.MultipleActivationKey resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/MultipleActivationKey/"
-layout: api-doc-resource
+layout: api
 ---
 
 

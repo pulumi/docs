@@ -5,7 +5,7 @@ title_tag: "aws.sns.TopicPolicy"
 meta_desc: "Documentation for the aws.sns.TopicPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/TopicPolicy/"
-layout: api-doc-resource
+layout: api
 ---
 
 

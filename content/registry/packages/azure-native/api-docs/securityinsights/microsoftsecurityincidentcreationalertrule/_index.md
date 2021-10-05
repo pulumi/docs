@@ -5,7 +5,7 @@ title_tag: "azure-native.securityinsights.MicrosoftSecurityIncidentCreationAlert
 meta_desc: "Documentation for the azure-native.securityinsights.MicrosoftSecurityIncidentCreationAlertRule resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/MicrosoftSecurityIncidentCreationAlertRule/"
-layout: api-doc-resource
+layout: api
 ---
 
 
@@ -791,7 +791,7 @@ The MicrosoftSecurityIncidentCreationAlertRule resource accepts the following [i
 <a href="#severitiesfilter_nodejs" style="color: inherit; text-decoration: inherit;">severities<wbr>Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Alert<wbr>Severity[]</span>
+        <span class="property-type">(string | Alert<wbr>Severity)[]</span>
     </dt>
     <dd>{{% md %}}the alerts' severities on which the cases will be generated{{% /md %}}</dd></dl>
 {{% /choosable %}}

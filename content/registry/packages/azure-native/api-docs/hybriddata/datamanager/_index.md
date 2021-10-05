@@ -5,7 +5,7 @@ title_tag: "azure-native.hybriddata.DataManager"
 meta_desc: "Documentation for the azure-native.hybriddata.DataManager resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/DataManager/"
-layout: api-doc-resource
+layout: api
 ---
 
 

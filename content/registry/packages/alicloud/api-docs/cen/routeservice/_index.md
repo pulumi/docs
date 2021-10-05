@@ -5,7 +5,7 @@ title_tag: "alicloud.cen.RouteService"
 meta_desc: "Documentation for the alicloud.cen.RouteService resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/alicloud/RouteService/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "snowflake.TaskGrant"
 meta_desc: "Documentation for the snowflake.TaskGrant resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/snowflake/TaskGrant/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "random.RandomPassword"
 meta_desc: "Documentation for the random.RandomPassword resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/random/RandomPassword/"
-layout: api-doc-resource
+layout: api
 ---
 
 

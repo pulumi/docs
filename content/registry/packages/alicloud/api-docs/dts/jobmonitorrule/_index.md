@@ -5,7 +5,7 @@ title_tag: "alicloud.dts.JobMonitorRule"
 meta_desc: "Documentation for the alicloud.dts.JobMonitorRule resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/alicloud/JobMonitorRule/"
-layout: api-doc-resource
+layout: api
 ---
 
 

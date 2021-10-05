@@ -5,7 +5,7 @@ title_tag: "alicloud.actiontrail.Trail"
 meta_desc: "Documentation for the alicloud.actiontrail.Trail resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/alicloud/Trail/"
-layout: api-doc-resource
+layout: api
 ---
 
 

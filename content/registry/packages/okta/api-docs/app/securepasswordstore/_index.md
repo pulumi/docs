@@ -5,7 +5,7 @@ title_tag: "okta.app.SecurePasswordStore"
 meta_desc: "Documentation for the okta.app.SecurePasswordStore resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/okta/SecurePasswordStore/"
-layout: api-doc-resource
+layout: api
 ---
 
 

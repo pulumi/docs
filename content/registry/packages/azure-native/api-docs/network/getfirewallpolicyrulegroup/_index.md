@@ -5,7 +5,7 @@ title_tag: "azure-native.network.getFirewallPolicyRuleGroup"
 meta_desc: "Documentation for the azure-native.network.getFirewallPolicyRuleGroup function with examples, input properties, output properties, and supporting types."
 aliases:
     - "/docs/reference/pkg///"
-layout: api-doc-resource
+layout: api
 ---
 
 
@@ -352,7 +352,7 @@ The following output properties are available:
 <a href="#rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Firewall<wbr>Policy<wbr>Filter<wbr>Rule<wbr>Response | Firewall<wbr>Policy<wbr>Nat<wbr>Rule<wbr>Response[]</span>
+        <span class="property-type">(Firewall<wbr>Policy<wbr>Filter<wbr>Rule<wbr>Response | Firewall<wbr>Policy<wbr>Nat<wbr>Rule<wbr>Response)[]</span>
     </dt>
     <dd>{{% md %}}Group of Firewall Policy rules.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -858,7 +858,7 @@ The following output properties are available:
 <a href="#ruleconditions_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Application<wbr>Rule<wbr>Condition<wbr>Response | Nat<wbr>Rule<wbr>Condition<wbr>Response | Network<wbr>Rule<wbr>Condition<wbr>Response[]</span>
+        <span class="property-type">(Application<wbr>Rule<wbr>Condition<wbr>Response | Nat<wbr>Rule<wbr>Condition<wbr>Response | Network<wbr>Rule<wbr>Condition<wbr>Response)[]</span>
     </dt>
     <dd>{{% md %}}Collection of rule conditions used by a rule.{{% /md %}}</dd></dl>
 {{% /choosable %}}

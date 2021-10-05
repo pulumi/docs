@@ -5,7 +5,7 @@ title_tag: "aws.efs.MountTarget"
 meta_desc: "Documentation for the aws.efs.MountTarget resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/MountTarget/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "aws-native.networkfirewall.FirewallPolicy"
 meta_desc: "Documentation for the aws-native.networkfirewall.FirewallPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws-native/FirewallPolicy/"
-layout: api-doc-resource
+layout: api
 ---
 
 

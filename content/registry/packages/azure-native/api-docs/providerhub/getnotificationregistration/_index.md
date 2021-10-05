@@ -5,7 +5,7 @@ title_tag: "azure-native.providerhub.getNotificationRegistration"
 meta_desc: "Documentation for the azure-native.providerhub.getNotificationRegistration function with examples, input properties, output properties, and supporting types."
 aliases:
     - "/docs/reference/pkg///"
-layout: api-doc-resource
+layout: api
 ---
 
 

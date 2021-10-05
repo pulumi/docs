@@ -5,7 +5,7 @@ title_tag: "packet.Organization"
 meta_desc: "Documentation for the packet.Organization resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/packet/Organization/"
-layout: api-doc-resource
+layout: api
 ---
 
 

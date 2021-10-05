@@ -5,7 +5,7 @@ title_tag: "aws.timestreamwrite.Table"
 meta_desc: "Documentation for the aws.timestreamwrite.Table resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/Table/"
-layout: api-doc-resource
+layout: api
 ---
 
 

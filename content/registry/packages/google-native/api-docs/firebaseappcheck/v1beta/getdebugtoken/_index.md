@@ -5,7 +5,7 @@ title_tag: "google-native.firebaseappcheck/v1beta.getDebugToken"
 meta_desc: "Documentation for the google-native.firebaseappcheck/v1beta.getDebugToken function with examples, input properties, output properties, and supporting types."
 aliases:
     - "/docs/reference/pkg///"
-layout: api-doc-resource
+layout: api
 ---
 
 

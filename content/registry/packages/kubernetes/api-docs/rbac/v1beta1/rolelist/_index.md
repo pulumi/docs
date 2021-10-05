@@ -5,7 +5,7 @@ title_tag: "kubernetes.rbac.authorization.k8s.io/v1beta1.RoleList"
 meta_desc: "Documentation for the kubernetes.rbac.authorization.k8s.io/v1beta1.RoleList resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/kubernetes/RoleList/"
-layout: api-doc-resource
+layout: api
 ---
 
 

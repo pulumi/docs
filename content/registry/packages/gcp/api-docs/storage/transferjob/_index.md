@@ -5,7 +5,7 @@ title_tag: "gcp.storage.TransferJob"
 meta_desc: "Documentation for the gcp.storage.TransferJob resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/gcp/TransferJob/"
-layout: api-doc-resource
+layout: api
 ---
 
 

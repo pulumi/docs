@@ -5,7 +5,7 @@ title_tag: "aws.autoscaling.LifecycleHook"
 meta_desc: "Documentation for the aws.autoscaling.LifecycleHook resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/LifecycleHook/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "alicloud.eci.ContainerGroup"
 meta_desc: "Documentation for the alicloud.eci.ContainerGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/alicloud/ContainerGroup/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "aws-native.servicecatalog.ServiceAction"
 meta_desc: "Documentation for the aws-native.servicecatalog.ServiceAction resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws-native/ServiceAction/"
-layout: api-doc-resource
+layout: api
 ---
 
 

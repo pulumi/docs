@@ -5,7 +5,7 @@ title_tag: "google-native.iam/v1.Provider"
 meta_desc: "Documentation for the google-native.iam/v1.Provider resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/google-native/Provider/"
-layout: api-doc-resource
+layout: api
 ---
 
 

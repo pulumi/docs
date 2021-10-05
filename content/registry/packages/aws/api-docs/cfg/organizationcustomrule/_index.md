@@ -5,7 +5,7 @@ title_tag: "aws.cfg.OrganizationCustomRule"
 meta_desc: "Documentation for the aws.cfg.OrganizationCustomRule resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/OrganizationCustomRule/"
-layout: api-doc-resource
+layout: api
 ---
 
 

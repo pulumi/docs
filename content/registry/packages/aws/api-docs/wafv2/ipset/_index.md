@@ -5,7 +5,7 @@ title_tag: "aws.wafv2.IpSet"
 meta_desc: "Documentation for the aws.wafv2.IpSet resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/IpSet/"
-layout: api-doc-resource
+layout: api
 ---
 
 

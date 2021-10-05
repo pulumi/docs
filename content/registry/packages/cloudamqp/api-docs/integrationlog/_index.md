@@ -5,7 +5,7 @@ title_tag: "cloudamqp.IntegrationLog"
 meta_desc: "Documentation for the cloudamqp.IntegrationLog resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/cloudamqp/IntegrationLog/"
-layout: api-doc-resource
+layout: api
 ---
 
 

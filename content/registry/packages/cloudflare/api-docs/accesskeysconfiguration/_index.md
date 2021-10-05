@@ -5,7 +5,7 @@ title_tag: "cloudflare.AccessKeysConfiguration"
 meta_desc: "Documentation for the cloudflare.AccessKeysConfiguration resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/cloudflare/AccessKeysConfiguration/"
-layout: api-doc-resource
+layout: api
 ---
 
 

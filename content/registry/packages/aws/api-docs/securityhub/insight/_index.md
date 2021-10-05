@@ -5,7 +5,7 @@ title_tag: "aws.securityhub.Insight"
 meta_desc: "Documentation for the aws.securityhub.Insight resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/aws/Insight/"
-layout: api-doc-resource
+layout: api
 ---
 
 

@@ -5,7 +5,7 @@ title_tag: "azuread.ApplicationPreAuthorized"
 meta_desc: "Documentation for the azuread.ApplicationPreAuthorized resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azuread/ApplicationPreAuthorized/"
-layout: api-doc-resource
+layout: api
 ---
 
 

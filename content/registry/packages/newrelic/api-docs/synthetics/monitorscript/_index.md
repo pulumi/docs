@@ -5,7 +5,7 @@ title_tag: "newrelic.synthetics.MonitorScript"
 meta_desc: "Documentation for the newrelic.synthetics.MonitorScript resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/newrelic/MonitorScript/"
-layout: api-doc-resource
+layout: api
 ---
 
 

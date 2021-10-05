@@ -5,7 +5,7 @@ title_tag: "azure-native.policyinsights.RemediationAtResource"
 meta_desc: "Documentation for the azure-native.policyinsights.RemediationAtResource resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure-native/RemediationAtResource/"
-layout: api-doc-resource
+layout: api
 ---
 
 

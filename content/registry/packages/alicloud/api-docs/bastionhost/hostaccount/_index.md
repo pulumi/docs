@@ -5,7 +5,7 @@ title_tag: "alicloud.bastionhost.HostAccount"
 meta_desc: "Documentation for the alicloud.bastionhost.HostAccount resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/alicloud/HostAccount/"
-layout: api-doc-resource
+layout: api
 ---
 
 

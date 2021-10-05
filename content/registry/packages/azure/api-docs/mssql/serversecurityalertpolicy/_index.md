@@ -5,7 +5,7 @@ title_tag: "azure.mssql.ServerSecurityAlertPolicy"
 meta_desc: "Documentation for the azure.mssql.ServerSecurityAlertPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
 aliases:
     - "/docs/reference/pkg/azure/ServerSecurityAlertPolicy/"
-layout: api-doc-resource
+layout: api
 ---
 
 
