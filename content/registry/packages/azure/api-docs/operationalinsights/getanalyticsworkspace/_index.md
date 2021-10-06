@@ -3,8 +3,6 @@
 title: "getAnalyticsWorkspace"
 title_tag: "azure.operationalinsights.getAnalyticsWorkspace"
 meta_desc: "Documentation for the azure.operationalinsights.getAnalyticsWorkspace function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

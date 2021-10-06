@@ -3,8 +3,6 @@
 title: "LogProfile"
 title_tag: "azure.monitoring.LogProfile"
 meta_desc: "Documentation for the azure.monitoring.LogProfile resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/LogProfile/"
 layout: api
 ---
 

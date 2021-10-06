@@ -3,8 +3,6 @@
 title: "getSsmParameterString"
 title_tag: "aws-native.getSsmParameterString"
 meta_desc: "Documentation for the aws-native.getSsmParameterString function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

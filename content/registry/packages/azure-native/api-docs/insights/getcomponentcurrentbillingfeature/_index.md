@@ -3,8 +3,6 @@
 title: "getComponentCurrentBillingFeature"
 title_tag: "azure-native.insights.getComponentCurrentBillingFeature"
 meta_desc: "Documentation for the azure-native.insights.getComponentCurrentBillingFeature function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "getAclTokenSecretId"
 title_tag: "consul.getAclTokenSecretId"
 meta_desc: "Documentation for the consul.getAclTokenSecretId function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

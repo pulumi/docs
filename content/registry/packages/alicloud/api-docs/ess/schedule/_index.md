@@ -3,8 +3,6 @@
 title: "Schedule"
 title_tag: "alicloud.ess.Schedule"
 meta_desc: "Documentation for the alicloud.ess.Schedule resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/alicloud/Schedule/"
 layout: api
 ---
 

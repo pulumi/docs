@@ -3,8 +3,6 @@
 title: "SyntheticsGlobalVariable"
 title_tag: "datadog.SyntheticsGlobalVariable"
 meta_desc: "Documentation for the datadog.SyntheticsGlobalVariable resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/datadog/SyntheticsGlobalVariable/"
 layout: api
 ---
 

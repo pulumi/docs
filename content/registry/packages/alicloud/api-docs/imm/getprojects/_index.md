@@ -3,8 +3,6 @@
 title: "getProjects"
 title_tag: "alicloud.imm.getProjects"
 meta_desc: "Documentation for the alicloud.imm.getProjects function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

@@ -2,8 +2,6 @@
 title: "metastore"
 title_tag: "metastore Package"
 meta_desc: ""
-aliases:
-    - "docs/reference/pkg/google-native/"
 layout: api
 ---
 

@@ -2,8 +2,6 @@
 title: "PostgreSQL"
 title_tag: "postgresql.PostgreSQL"
 meta_desc: "A Pulumi package for creating and managing postgresql cloud resources."
-aliases:
-    - "docs/reference/pkg/postgresql/"
 menu:
     reference:
         parent: API Reference

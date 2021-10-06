@@ -3,8 +3,6 @@
 title: "Role"
 title_tag: "okta.group.Role"
 meta_desc: "Documentation for the okta.group.Role resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/okta/Role/"
 layout: api
 ---
 

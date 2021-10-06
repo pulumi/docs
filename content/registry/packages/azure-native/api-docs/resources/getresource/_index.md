@@ -3,8 +3,6 @@
 title: "getResource"
 title_tag: "azure-native.resources.getResource"
 meta_desc: "Documentation for the azure-native.resources.getResource function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

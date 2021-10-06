@@ -3,8 +3,6 @@
 title: "EventChannel"
 title_tag: "azure-native.eventgrid.EventChannel"
 meta_desc: "Documentation for the azure-native.eventgrid.EventChannel resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/EventChannel/"
 layout: api
 ---
 

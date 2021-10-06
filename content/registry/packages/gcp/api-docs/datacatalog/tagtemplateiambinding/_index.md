@@ -3,8 +3,6 @@
 title: "TagTemplateIamBinding"
 title_tag: "gcp.datacatalog.TagTemplateIamBinding"
 meta_desc: "Documentation for the gcp.datacatalog.TagTemplateIamBinding resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/TagTemplateIamBinding/"
 layout: api
 ---
 

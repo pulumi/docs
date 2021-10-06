@@ -3,8 +3,6 @@
 title: "Instance"
 title_tag: "azure-native.deviceupdate.Instance"
 meta_desc: "Documentation for the azure-native.deviceupdate.Instance resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/Instance/"
 layout: api
 ---
 

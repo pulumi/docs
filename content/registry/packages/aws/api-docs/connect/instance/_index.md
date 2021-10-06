@@ -3,8 +3,6 @@
 title: "Instance"
 title_tag: "aws.connect.Instance"
 meta_desc: "Documentation for the aws.connect.Instance resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/Instance/"
 layout: api
 ---
 

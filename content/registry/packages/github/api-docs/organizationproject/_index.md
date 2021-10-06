@@ -3,8 +3,6 @@
 title: "OrganizationProject"
 title_tag: "github.OrganizationProject"
 meta_desc: "Documentation for the github.OrganizationProject resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/github/OrganizationProject/"
 layout: api
 ---
 

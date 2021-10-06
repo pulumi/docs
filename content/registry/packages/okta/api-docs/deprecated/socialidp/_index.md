@@ -3,8 +3,6 @@
 title: "SocialIdp"
 title_tag: "okta.deprecated.SocialIdp"
 meta_desc: "Documentation for the okta.deprecated.SocialIdp resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/okta/SocialIdp/"
 layout: api
 ---
 

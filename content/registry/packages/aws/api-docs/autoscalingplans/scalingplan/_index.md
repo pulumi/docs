@@ -3,8 +3,6 @@
 title: "ScalingPlan"
 title_tag: "aws.autoscalingplans.ScalingPlan"
 meta_desc: "Documentation for the aws.autoscalingplans.ScalingPlan resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/ScalingPlan/"
 layout: api
 ---
 

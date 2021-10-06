@@ -3,8 +3,6 @@
 title: "IntegrationRuntimeSelfHosted"
 title_tag: "azure.synapse.IntegrationRuntimeSelfHosted"
 meta_desc: "Documentation for the azure.synapse.IntegrationRuntimeSelfHosted resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/IntegrationRuntimeSelfHosted/"
 layout: api
 ---
 

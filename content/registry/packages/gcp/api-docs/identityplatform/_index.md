@@ -2,8 +2,6 @@
 title: "identityplatform"
 title_tag: "gcp.identityplatform"
 meta_desc: "Explore the resources and functions of the gcp.identityplatform module."
-aliases:
-    - "docs/reference/pkg/gcp/"
 layout: api
 ---
 

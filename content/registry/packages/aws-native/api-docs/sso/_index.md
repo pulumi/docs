@@ -2,8 +2,6 @@
 title: "sso"
 title_tag: "aws-native.sso"
 meta_desc: "Explore the resources and functions of the aws-native.sso module."
-aliases:
-    - "docs/reference/pkg/aws-native/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "OrganizationSourceIamPolicy"
 title_tag: "google-native.securitycenter/v1.OrganizationSourceIamPolicy"
 meta_desc: "Documentation for the google-native.securitycenter/v1.OrganizationSourceIamPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/google-native/OrganizationSourceIamPolicy/"
 layout: api
 ---
 

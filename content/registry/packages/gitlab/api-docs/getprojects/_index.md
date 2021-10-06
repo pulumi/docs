@@ -3,8 +3,6 @@
 title: "getProjects"
 title_tag: "gitlab.getProjects"
 meta_desc: "Documentation for the gitlab.getProjects function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

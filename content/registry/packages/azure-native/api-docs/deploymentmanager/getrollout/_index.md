@@ -3,8 +3,6 @@
 title: "getRollout"
 title_tag: "azure-native.deploymentmanager.getRollout"
 meta_desc: "Documentation for the azure-native.deploymentmanager.getRollout function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

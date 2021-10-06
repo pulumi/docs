@@ -3,8 +3,6 @@
 title: "Role"
 title_tag: "datadog.Role"
 meta_desc: "Documentation for the datadog.Role resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/datadog/Role/"
 layout: api
 ---
 

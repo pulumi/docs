@@ -3,8 +3,6 @@
 title: "Account"
 title_tag: "aws.macie2.Account"
 meta_desc: "Documentation for the aws.macie2.Account resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/Account/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "ActionTarget"
 title_tag: "aws.securityhub.ActionTarget"
 meta_desc: "Documentation for the aws.securityhub.ActionTarget resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/ActionTarget/"
 layout: api
 ---
 

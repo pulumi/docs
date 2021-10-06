@@ -3,8 +3,6 @@
 title: "WorkflowTemplate"
 title_tag: "google-native.dataproc/v1.WorkflowTemplate"
 meta_desc: "Documentation for the google-native.dataproc/v1.WorkflowTemplate resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/google-native/WorkflowTemplate/"
 layout: api
 ---
 

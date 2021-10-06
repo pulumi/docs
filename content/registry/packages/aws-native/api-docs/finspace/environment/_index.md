@@ -3,8 +3,6 @@
 title: "Environment"
 title_tag: "aws-native.finspace.Environment"
 meta_desc: "Documentation for the aws-native.finspace.Environment resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws-native/Environment/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "TrafficManagerProfile"
 title_tag: "azure.network.TrafficManagerProfile"
 meta_desc: "Documentation for the azure.network.TrafficManagerProfile resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/TrafficManagerProfile/"
 layout: api
 ---
 

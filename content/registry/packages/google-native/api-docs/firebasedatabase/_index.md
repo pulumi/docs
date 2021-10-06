@@ -2,8 +2,6 @@
 title: "firebasedatabase"
 title_tag: "firebasedatabase Package"
 meta_desc: ""
-aliases:
-    - "docs/reference/pkg/google-native/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "getFloatingIp"
 title_tag: "digitalocean.getFloatingIp"
 meta_desc: "Documentation for the digitalocean.getFloatingIp function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "DomainIdentityVerification"
 title_tag: "aws.ses.DomainIdentityVerification"
 meta_desc: "Documentation for the aws.ses.DomainIdentityVerification resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/DomainIdentityVerification/"
 layout: api
 ---
 

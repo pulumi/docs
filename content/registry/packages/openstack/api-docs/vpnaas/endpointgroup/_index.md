@@ -3,8 +3,6 @@
 title: "EndpointGroup"
 title_tag: "openstack.vpnaas.EndpointGroup"
 meta_desc: "Documentation for the openstack.vpnaas.EndpointGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/openstack/EndpointGroup/"
 layout: api
 ---
 

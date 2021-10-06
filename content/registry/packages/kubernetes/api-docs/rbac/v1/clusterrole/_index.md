@@ -3,8 +3,6 @@
 title: "ClusterRole"
 title_tag: "kubernetes.rbac.authorization.k8s.io/v1.ClusterRole"
 meta_desc: "Documentation for the kubernetes.rbac.authorization.k8s.io/v1.ClusterRole resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/kubernetes/ClusterRole/"
 layout: api
 ---
 

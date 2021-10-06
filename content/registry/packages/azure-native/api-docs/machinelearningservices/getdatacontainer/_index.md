@@ -3,8 +3,6 @@
 title: "getDataContainer"
 title_tag: "azure-native.machinelearningservices.getDataContainer"
 meta_desc: "Documentation for the azure-native.machinelearningservices.getDataContainer function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

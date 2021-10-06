@@ -3,8 +3,6 @@
 title: "getComputeImage"
 title_tag: "yandex.getComputeImage"
 meta_desc: "Documentation for the yandex.getComputeImage function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "RegionCommitment"
 title_tag: "google-native.compute/alpha.RegionCommitment"
 meta_desc: "Documentation for the google-native.compute/alpha.RegionCommitment resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/google-native/RegionCommitment/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "getJob"
 title_tag: "google-native.jobs/v3.getJob"
 meta_desc: "Documentation for the google-native.jobs/v3.getJob function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "RobotApplicationVersion"
 title_tag: "aws-native.robomaker.RobotApplicationVersion"
 meta_desc: "Documentation for the aws-native.robomaker.RobotApplicationVersion resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws-native/RobotApplicationVersion/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "getUserSecurityQuestions"
 title_tag: "okta.getUserSecurityQuestions"
 meta_desc: "Documentation for the okta.getUserSecurityQuestions function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

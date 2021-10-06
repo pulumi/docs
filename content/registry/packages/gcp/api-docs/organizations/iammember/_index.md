@@ -3,8 +3,6 @@
 title: "IAMMember"
 title_tag: "gcp.organizations.IAMMember"
 meta_desc: "Documentation for the gcp.organizations.IAMMember resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/IAMMember/"
 layout: api
 ---
 

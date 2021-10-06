@@ -3,8 +3,6 @@
 title: "NomadSecretRole"
 title_tag: "vault.NomadSecretRole"
 meta_desc: "Documentation for the vault.NomadSecretRole resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/vault/NomadSecretRole/"
 layout: api
 ---
 

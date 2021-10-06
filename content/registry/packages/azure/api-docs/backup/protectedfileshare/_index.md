@@ -3,8 +3,6 @@
 title: "ProtectedFileShare"
 title_tag: "azure.backup.ProtectedFileShare"
 meta_desc: "Documentation for the azure.backup.ProtectedFileShare resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/ProtectedFileShare/"
 layout: api
 ---
 

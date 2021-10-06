@@ -2,8 +2,6 @@
 title: "datashare"
 title_tag: "azure-native.datashare"
 meta_desc: "Explore the resources and functions of the azure-native.datashare module."
-aliases:
-    - "docs/reference/pkg/azure-native/"
 layout: api
 ---
 

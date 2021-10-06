@@ -3,8 +3,6 @@
 title: "getEventHubDataConnection"
 title_tag: "azure-native.kusto.getEventHubDataConnection"
 meta_desc: "Documentation for the azure-native.kusto.getEventHubDataConnection function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

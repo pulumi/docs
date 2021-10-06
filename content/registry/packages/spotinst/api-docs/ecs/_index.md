@@ -2,8 +2,6 @@
 title: "ecs"
 title_tag: "spotinst.ecs"
 meta_desc: "Explore the resources and functions of the spotinst.ecs module."
-aliases:
-    - "docs/reference/pkg/spotinst/"
 layout: api
 ---
 

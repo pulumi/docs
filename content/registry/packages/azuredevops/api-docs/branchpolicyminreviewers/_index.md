@@ -3,8 +3,6 @@
 title: "BranchPolicyMinReviewers"
 title_tag: "azuredevops.BranchPolicyMinReviewers"
 meta_desc: "Documentation for the azuredevops.BranchPolicyMinReviewers resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azuredevops/BranchPolicyMinReviewers/"
 layout: api
 ---
 

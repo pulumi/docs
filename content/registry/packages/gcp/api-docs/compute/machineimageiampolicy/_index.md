@@ -3,8 +3,6 @@
 title: "MachineImageIamPolicy"
 title_tag: "gcp.compute.MachineImageIamPolicy"
 meta_desc: "Documentation for the gcp.compute.MachineImageIamPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/MachineImageIamPolicy/"
 layout: api
 ---
 

@@ -2,8 +2,6 @@
 title: "digitaltwins"
 title_tag: "azure-native.digitaltwins"
 meta_desc: "Explore the resources and functions of the azure-native.digitaltwins module."
-aliases:
-    - "docs/reference/pkg/azure-native/"
 layout: api
 ---
 

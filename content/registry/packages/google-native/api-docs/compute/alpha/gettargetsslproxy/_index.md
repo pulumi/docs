@@ -3,8 +3,6 @@
 title: "getTargetSslProxy"
 title_tag: "google-native.compute/alpha.getTargetSslProxy"
 meta_desc: "Documentation for the google-native.compute/alpha.getTargetSslProxy function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

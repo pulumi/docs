@@ -2,8 +2,6 @@
 title: "operationsmanagement"
 title_tag: "azure-native.operationsmanagement"
 meta_desc: "Explore the resources and functions of the azure-native.operationsmanagement module."
-aliases:
-    - "docs/reference/pkg/azure-native/"
 layout: api
 ---
 

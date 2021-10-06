@@ -3,8 +3,6 @@
 title: "AccountAssignment"
 title_tag: "aws.ssoadmin.AccountAssignment"
 meta_desc: "Documentation for the aws.ssoadmin.AccountAssignment resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/AccountAssignment/"
 layout: api
 ---
 

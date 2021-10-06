@@ -3,8 +3,6 @@
 title: "getCustomIPPrefix"
 title_tag: "azure-native.network.getCustomIPPrefix"
 meta_desc: "Documentation for the azure-native.network.getCustomIPPrefix function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

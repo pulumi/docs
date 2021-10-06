@@ -3,8 +3,6 @@
 title: "TargetInstance"
 title_tag: "gcp.compute.TargetInstance"
 meta_desc: "Documentation for the gcp.compute.TargetInstance resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/TargetInstance/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "GroupShareGroup"
 title_tag: "gitlab.GroupShareGroup"
 meta_desc: "Documentation for the gitlab.GroupShareGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gitlab/GroupShareGroup/"
 layout: api
 ---
 

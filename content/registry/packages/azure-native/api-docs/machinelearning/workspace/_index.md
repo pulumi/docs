@@ -3,8 +3,6 @@
 title: "Workspace"
 title_tag: "azure-native.machinelearning.Workspace"
 meta_desc: "Documentation for the azure-native.machinelearning.Workspace resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/Workspace/"
 layout: api
 ---
 

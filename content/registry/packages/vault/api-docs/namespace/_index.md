@@ -3,8 +3,6 @@
 title: "Namespace"
 title_tag: "vault.Namespace"
 meta_desc: "Documentation for the vault.Namespace resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/vault/Namespace/"
 layout: api
 ---
 

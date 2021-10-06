@@ -3,8 +3,6 @@
 title: "ConnectionIamPolicy"
 title_tag: "google-native.bigqueryconnection/v1beta1.ConnectionIamPolicy"
 meta_desc: "Documentation for the google-native.bigqueryconnection/v1beta1.ConnectionIamPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/google-native/ConnectionIamPolicy/"
 layout: api
 ---
 

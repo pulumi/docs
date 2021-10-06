@@ -3,8 +3,6 @@
 title: "Permissions"
 title_tag: "rabbitmq.Permissions"
 meta_desc: "Documentation for the rabbitmq.Permissions resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/rabbitmq/Permissions/"
 layout: api
 ---
 

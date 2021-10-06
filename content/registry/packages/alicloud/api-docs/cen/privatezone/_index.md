@@ -3,8 +3,6 @@
 title: "PrivateZone"
 title_tag: "alicloud.cen.PrivateZone"
 meta_desc: "Documentation for the alicloud.cen.PrivateZone resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/alicloud/PrivateZone/"
 layout: api
 ---
 

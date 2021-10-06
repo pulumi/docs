@@ -3,8 +3,6 @@
 title: "getFunction"
 title_tag: "gcp.cloudfunctions.getFunction"
 meta_desc: "Documentation for the gcp.cloudfunctions.getFunction function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

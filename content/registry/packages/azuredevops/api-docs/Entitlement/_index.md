@@ -2,8 +2,6 @@
 title: "Entitlement"
 title_tag: "azuredevops.Entitlement"
 meta_desc: "Explore the resources and functions of the azuredevops.Entitlement module."
-aliases:
-    - "docs/reference/pkg/azuredevops/"
 layout: api
 ---
 

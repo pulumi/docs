@@ -3,8 +3,6 @@
 title: "ConnectivityConfiguration"
 title_tag: "azure-native.network.ConnectivityConfiguration"
 meta_desc: "Documentation for the azure-native.network.ConnectivityConfiguration resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/ConnectivityConfiguration/"
 layout: api
 ---
 

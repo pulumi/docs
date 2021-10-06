@@ -3,8 +3,6 @@
 title: "NetworkInterfaceApplicationGatewayBackendAddressPoolAssociation"
 title_tag: "azure.network.NetworkInterfaceApplicationGatewayBackendAddressPoolAssociation"
 meta_desc: "Documentation for the azure.network.NetworkInterfaceApplicationGatewayBackendAddressPoolAssociation resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/NetworkInterfaceApplicationGatewayBackendAddressPoolAssociation/"
 layout: api
 ---
 

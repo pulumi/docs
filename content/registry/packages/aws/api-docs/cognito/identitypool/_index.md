@@ -3,8 +3,6 @@
 title: "IdentityPool"
 title_tag: "aws.cognito.IdentityPool"
 meta_desc: "Documentation for the aws.cognito.IdentityPool resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/IdentityPool/"
 layout: api
 ---
 

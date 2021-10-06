@@ -2,8 +2,6 @@
 title: "azurestack"
 title_tag: "azure-native.azurestack"
 meta_desc: "Explore the resources and functions of the azure-native.azurestack module."
-aliases:
-    - "docs/reference/pkg/azure-native/"
 layout: api
 ---
 

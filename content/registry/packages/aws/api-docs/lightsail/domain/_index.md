@@ -3,8 +3,6 @@
 title: "Domain"
 title_tag: "aws.lightsail.Domain"
 meta_desc: "Documentation for the aws.lightsail.Domain resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/Domain/"
 layout: api
 ---
 

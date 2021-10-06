@@ -3,8 +3,6 @@
 title: "getNotificationChannel"
 title_tag: "gcp.monitoring.getNotificationChannel"
 meta_desc: "Documentation for the gcp.monitoring.getNotificationChannel function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

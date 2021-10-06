@@ -3,8 +3,6 @@
 title: "Trial"
 title_tag: "google-native.ml/v1.Trial"
 meta_desc: "Documentation for the google-native.ml/v1.Trial resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/google-native/Trial/"
 layout: api
 ---
 

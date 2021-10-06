@@ -2,8 +2,6 @@
 title: "gpdb"
 title_tag: "alicloud.gpdb"
 meta_desc: "Explore the resources and functions of the alicloud.gpdb module."
-aliases:
-    - "docs/reference/pkg/alicloud/"
 layout: api
 ---
 

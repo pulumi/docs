@@ -3,8 +3,6 @@
 title: "KafkaAcl"
 title_tag: "aiven.KafkaAcl"
 meta_desc: "Documentation for the aiven.KafkaAcl resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aiven/KafkaAcl/"
 layout: api
 ---
 

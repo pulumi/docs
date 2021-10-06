@@ -3,8 +3,6 @@
 title: "AlidnsInstance"
 title_tag: "alicloud.dns.AlidnsInstance"
 meta_desc: "Documentation for the alicloud.dns.AlidnsInstance resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/alicloud/AlidnsInstance/"
 layout: api
 ---
 

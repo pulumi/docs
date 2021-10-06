@@ -2,8 +2,6 @@
 title: "runtimeconfig"
 title_tag: "runtimeconfig Package"
 meta_desc: ""
-aliases:
-    - "docs/reference/pkg/google-native/"
 layout: api
 ---
 

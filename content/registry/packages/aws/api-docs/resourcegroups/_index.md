@@ -2,8 +2,6 @@
 title: "resourcegroups"
 title_tag: "aws.resourcegroups"
 meta_desc: "Explore the resources and functions of the aws.resourcegroups module."
-aliases:
-    - "docs/reference/pkg/aws/"
 layout: api
 ---
 

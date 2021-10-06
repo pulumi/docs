@@ -3,8 +3,6 @@
 title: "Entitlement"
 title_tag: "google-native.cloudchannel/v1.Entitlement"
 meta_desc: "Documentation for the google-native.cloudchannel/v1.Entitlement resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/google-native/Entitlement/"
 layout: api
 ---
 

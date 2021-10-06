@@ -3,8 +3,6 @@
 title: "UserType"
 title_tag: "okta.user.UserType"
 meta_desc: "Documentation for the okta.user.UserType resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/okta/UserType/"
 layout: api
 ---
 

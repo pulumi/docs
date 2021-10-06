@@ -2,8 +2,6 @@
 title: "identitystore"
 title_tag: "aws.identitystore"
 meta_desc: "Explore the resources and functions of the aws.identitystore module."
-aliases:
-    - "docs/reference/pkg/aws/"
 layout: api
 ---
 

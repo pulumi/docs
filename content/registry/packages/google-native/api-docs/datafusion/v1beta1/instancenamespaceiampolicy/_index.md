@@ -3,8 +3,6 @@
 title: "InstanceNamespaceIamPolicy"
 title_tag: "google-native.datafusion/v1beta1.InstanceNamespaceIamPolicy"
 meta_desc: "Documentation for the google-native.datafusion/v1beta1.InstanceNamespaceIamPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/google-native/InstanceNamespaceIamPolicy/"
 layout: api
 ---
 

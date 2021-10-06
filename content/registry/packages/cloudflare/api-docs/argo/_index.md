@@ -3,8 +3,6 @@
 title: "Argo"
 title_tag: "cloudflare.Argo"
 meta_desc: "Documentation for the cloudflare.Argo resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/cloudflare/Argo/"
 layout: api
 ---
 

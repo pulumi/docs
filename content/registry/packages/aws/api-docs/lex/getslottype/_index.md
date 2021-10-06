@@ -3,8 +3,6 @@
 title: "getSlotType"
 title_tag: "aws.lex.getSlotType"
 meta_desc: "Documentation for the aws.lex.getSlotType function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

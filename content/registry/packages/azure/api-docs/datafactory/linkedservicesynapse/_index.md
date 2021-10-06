@@ -3,8 +3,6 @@
 title: "LinkedServiceSynapse"
 title_tag: "azure.datafactory.LinkedServiceSynapse"
 meta_desc: "Documentation for the azure.datafactory.LinkedServiceSynapse resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/LinkedServiceSynapse/"
 layout: api
 ---
 

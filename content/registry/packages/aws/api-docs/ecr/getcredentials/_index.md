@@ -3,8 +3,6 @@
 title: "getCredentials"
 title_tag: "aws.ecr.getCredentials"
 meta_desc: "Documentation for the aws.ecr.getCredentials function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "getGameServerCluster"
 title_tag: "google-native.gameservices/v1beta.getGameServerCluster"
 meta_desc: "Documentation for the google-native.gameservices/v1beta.getGameServerCluster function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

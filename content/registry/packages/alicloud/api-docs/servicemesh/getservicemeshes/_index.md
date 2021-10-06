@@ -3,8 +3,6 @@
 title: "getServiceMeshes"
 title_tag: "alicloud.servicemesh.getServiceMeshes"
 meta_desc: "Documentation for the alicloud.servicemesh.getServiceMeshes function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

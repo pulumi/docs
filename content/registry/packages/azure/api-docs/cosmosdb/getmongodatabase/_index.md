@@ -3,8 +3,6 @@
 title: "getMongoDatabase"
 title_tag: "azure.cosmosdb.getMongoDatabase"
 meta_desc: "Documentation for the azure.cosmosdb.getMongoDatabase function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

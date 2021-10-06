@@ -3,8 +3,6 @@
 title: "getOrderableCluster"
 title_tag: "aws.redshift.getOrderableCluster"
 meta_desc: "Documentation for the aws.redshift.getOrderableCluster function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

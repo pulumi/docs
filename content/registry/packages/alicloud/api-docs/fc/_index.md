@@ -2,8 +2,6 @@
 title: "fc"
 title_tag: "alicloud.fc"
 meta_desc: "Explore the resources and functions of the alicloud.fc module."
-aliases:
-    - "docs/reference/pkg/alicloud/"
 layout: api
 ---
 

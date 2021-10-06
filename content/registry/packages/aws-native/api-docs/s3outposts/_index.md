@@ -2,8 +2,6 @@
 title: "s3outposts"
 title_tag: "aws-native.s3outposts"
 meta_desc: "Explore the resources and functions of the aws-native.s3outposts module."
-aliases:
-    - "docs/reference/pkg/aws-native/"
 layout: api
 ---
 

@@ -2,8 +2,6 @@
 title: "dbformariadb"
 title_tag: "azure-native.dbformariadb"
 meta_desc: "Explore the resources and functions of the azure-native.dbformariadb module."
-aliases:
-    - "docs/reference/pkg/azure-native/"
 layout: api
 ---
 

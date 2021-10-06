@@ -2,8 +2,6 @@
 title: "Security"
 title_tag: "azuredevops.Security"
 meta_desc: "Explore the resources and functions of the azuredevops.Security module."
-aliases:
-    - "docs/reference/pkg/azuredevops/"
 layout: api
 ---
 

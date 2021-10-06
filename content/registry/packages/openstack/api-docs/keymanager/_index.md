@@ -2,8 +2,6 @@
 title: "keymanager"
 title_tag: "openstack.keymanager"
 meta_desc: "Explore the resources and functions of the openstack.keymanager module."
-aliases:
-    - "docs/reference/pkg/openstack/"
 layout: api
 ---
 

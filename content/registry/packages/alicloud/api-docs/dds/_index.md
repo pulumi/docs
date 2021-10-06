@@ -2,8 +2,6 @@
 title: "dds"
 title_tag: "alicloud.dds"
 meta_desc: "Explore the resources and functions of the alicloud.dds module."
-aliases:
-    - "docs/reference/pkg/alicloud/"
 layout: api
 ---
 

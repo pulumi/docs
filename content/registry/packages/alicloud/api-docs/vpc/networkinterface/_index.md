@@ -3,8 +3,6 @@
 title: "NetworkInterface"
 title_tag: "alicloud.vpc.NetworkInterface"
 meta_desc: "Documentation for the alicloud.vpc.NetworkInterface resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/alicloud/NetworkInterface/"
 layout: api
 ---
 

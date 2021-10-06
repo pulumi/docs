@@ -3,8 +3,6 @@
 title: "getTransferProjectServieAccount"
 title_tag: "gcp.storage.getTransferProjectServieAccount"
 meta_desc: "Documentation for the gcp.storage.getTransferProjectServieAccount function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "Policy"
 title_tag: "alicloud.resourcemanager.Policy"
 meta_desc: "Documentation for the alicloud.resourcemanager.Policy resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/alicloud/Policy/"
 layout: api
 ---
 

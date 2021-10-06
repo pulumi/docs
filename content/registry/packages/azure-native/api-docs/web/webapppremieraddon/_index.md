@@ -3,8 +3,6 @@
 title: "WebAppPremierAddOn"
 title_tag: "azure-native.web.WebAppPremierAddOn"
 meta_desc: "Documentation for the azure-native.web.WebAppPremierAddOn resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/WebAppPremierAddOn/"
 layout: api
 ---
 

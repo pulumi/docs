@@ -3,8 +3,6 @@
 title: "Lease"
 title_tag: "kubernetes.coordination.k8s.io/v1.Lease"
 meta_desc: "Documentation for the kubernetes.coordination.k8s.io/v1.Lease resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/kubernetes/Lease/"
 layout: api
 ---
 

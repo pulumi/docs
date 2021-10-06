@@ -2,8 +2,6 @@
 title: "Linode"
 title_tag: "linode.Linode"
 meta_desc: "A Pulumi package for creating and managing linode cloud resources."
-aliases:
-    - "docs/reference/pkg/linode/"
 menu:
     reference:
         parent: API Reference

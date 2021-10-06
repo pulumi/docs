@@ -3,8 +3,6 @@
 title: "OIDCProvider"
 title_tag: "aws-native.iam.OIDCProvider"
 meta_desc: "Documentation for the aws-native.iam.OIDCProvider resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws-native/OIDCProvider/"
 layout: api
 ---
 

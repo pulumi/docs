@@ -2,8 +2,6 @@
 title: "workflows"
 title_tag: "workflows Package"
 meta_desc: ""
-aliases:
-    - "docs/reference/pkg/google-native/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "StaticSite"
 title_tag: "azure.appservice.StaticSite"
 meta_desc: "Documentation for the azure.appservice.StaticSite resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/StaticSite/"
 layout: api
 ---
 

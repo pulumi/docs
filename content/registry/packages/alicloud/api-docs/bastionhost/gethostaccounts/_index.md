@@ -3,8 +3,6 @@
 title: "getHostAccounts"
 title_tag: "alicloud.bastionhost.getHostAccounts"
 meta_desc: "Documentation for the alicloud.bastionhost.getHostAccounts function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

@@ -2,8 +2,6 @@
 title: "iot"
 title_tag: "azure.iot"
 meta_desc: "Explore the resources and functions of the azure.iot module."
-aliases:
-    - "docs/reference/pkg/azure/"
 layout: api
 ---
 

@@ -2,8 +2,6 @@
 title: "serviceAccount"
 title_tag: "gcp.serviceAccount"
 meta_desc: "Explore the resources and functions of the gcp.serviceAccount module."
-aliases:
-    - "docs/reference/pkg/gcp/"
 layout: api
 ---
 

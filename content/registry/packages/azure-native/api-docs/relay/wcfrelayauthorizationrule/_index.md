@@ -3,8 +3,6 @@
 title: "WCFRelayAuthorizationRule"
 title_tag: "azure-native.relay.WCFRelayAuthorizationRule"
 meta_desc: "Documentation for the azure-native.relay.WCFRelayAuthorizationRule resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/WCFRelayAuthorizationRule/"
 layout: api
 ---
 

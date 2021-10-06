@@ -2,8 +2,6 @@
 title: "delegatednetwork"
 title_tag: "azure-native.delegatednetwork"
 meta_desc: "Explore the resources and functions of the azure-native.delegatednetwork module."
-aliases:
-    - "docs/reference/pkg/azure-native/"
 layout: api
 ---
 

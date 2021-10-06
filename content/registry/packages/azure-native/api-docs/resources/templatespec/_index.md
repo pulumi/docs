@@ -3,8 +3,6 @@
 title: "TemplateSpec"
 title_tag: "azure-native.resources.TemplateSpec"
 meta_desc: "Documentation for the azure-native.resources.TemplateSpec resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/TemplateSpec/"
 layout: api
 ---
 

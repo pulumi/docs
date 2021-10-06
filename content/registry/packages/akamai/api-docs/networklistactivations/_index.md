@@ -3,8 +3,6 @@
 title: "NetworkListActivations"
 title_tag: "akamai.NetworkListActivations"
 meta_desc: "Documentation for the akamai.NetworkListActivations resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/akamai/NetworkListActivations/"
 layout: api
 ---
 

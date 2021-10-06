@@ -3,8 +3,6 @@
 title: "NetworkPacketCapture"
 title_tag: "azure.network.NetworkPacketCapture"
 meta_desc: "Documentation for the azure.network.NetworkPacketCapture resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/NetworkPacketCapture/"
 layout: api
 ---
 

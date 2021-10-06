@@ -3,8 +3,6 @@
 title: "SshKey"
 title_tag: "digitalocean.SshKey"
 meta_desc: "Documentation for the digitalocean.SshKey resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/digitalocean/SshKey/"
 layout: api
 ---
 

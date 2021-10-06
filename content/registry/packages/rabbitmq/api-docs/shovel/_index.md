@@ -3,8 +3,6 @@
 title: "Shovel"
 title_tag: "rabbitmq.Shovel"
 meta_desc: "Documentation for the rabbitmq.Shovel resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/rabbitmq/Shovel/"
 layout: api
 ---
 

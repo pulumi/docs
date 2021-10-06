@@ -2,8 +2,6 @@
 title: "quickbi"
 title_tag: "alicloud.quickbi"
 meta_desc: "Explore the resources and functions of the alicloud.quickbi module."
-aliases:
-    - "docs/reference/pkg/alicloud/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "CSINode"
 title_tag: "kubernetes.storage.k8s.io/v1.CSINode"
 meta_desc: "Documentation for the kubernetes.storage.k8s.io/v1.CSINode resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/kubernetes/CSINode/"
 layout: api
 ---
 

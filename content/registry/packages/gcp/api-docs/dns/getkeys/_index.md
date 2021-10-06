@@ -3,8 +3,6 @@
 title: "getKeys"
 title_tag: "gcp.dns.getKeys"
 meta_desc: "Documentation for the gcp.dns.getKeys function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

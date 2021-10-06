@@ -3,8 +3,6 @@
 title: "User"
 title_tag: "azuredevops.User"
 meta_desc: "Documentation for the azuredevops.User resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azuredevops/User/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "TargetSSLProxy"
 title_tag: "gcp.compute.TargetSSLProxy"
 meta_desc: "Documentation for the gcp.compute.TargetSSLProxy resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/TargetSSLProxy/"
 layout: api
 ---
 

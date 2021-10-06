@@ -2,8 +2,6 @@
 title: "importexport"
 title_tag: "azure-native.importexport"
 meta_desc: "Explore the resources and functions of the azure-native.importexport module."
-aliases:
-    - "docs/reference/pkg/azure-native/"
 layout: api
 ---
 

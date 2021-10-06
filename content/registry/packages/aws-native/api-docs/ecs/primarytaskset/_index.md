@@ -3,8 +3,6 @@
 title: "PrimaryTaskSet"
 title_tag: "aws-native.ecs.PrimaryTaskSet"
 meta_desc: "Documentation for the aws-native.ecs.PrimaryTaskSet resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws-native/PrimaryTaskSet/"
 layout: api
 ---
 

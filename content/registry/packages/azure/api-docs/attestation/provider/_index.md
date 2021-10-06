@@ -3,8 +3,6 @@
 title: "Provider"
 title_tag: "azure.attestation.Provider"
 meta_desc: "Documentation for the azure.attestation.Provider resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/Provider/"
 layout: api
 ---
 

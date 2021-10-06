@@ -2,8 +2,6 @@
 title: "deploymentmanager/alpha"
 title_tag: "google-native.deploymentmanager/alpha"
 meta_desc: "Explore the resources and functions of the google-native.deploymentmanager/alpha module."
-aliases:
-    - "docs/reference/pkg/google-native/"
 layout: api
 ---
 

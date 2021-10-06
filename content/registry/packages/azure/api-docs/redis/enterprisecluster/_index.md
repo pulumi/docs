@@ -3,8 +3,6 @@
 title: "EnterpriseCluster"
 title_tag: "azure.redis.EnterpriseCluster"
 meta_desc: "Documentation for the azure.redis.EnterpriseCluster resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/EnterpriseCluster/"
 layout: api
 ---
 

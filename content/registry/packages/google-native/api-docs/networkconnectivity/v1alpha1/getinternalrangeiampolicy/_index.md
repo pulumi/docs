@@ -3,8 +3,6 @@
 title: "getInternalRangeIamPolicy"
 title_tag: "google-native.networkconnectivity/v1alpha1.getInternalRangeIamPolicy"
 meta_desc: "Documentation for the google-native.networkconnectivity/v1alpha1.getInternalRangeIamPolicy function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

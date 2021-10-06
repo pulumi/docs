@@ -3,8 +3,6 @@
 title: "Entry"
 title_tag: "google-native.datacatalog/v1beta1.Entry"
 meta_desc: "Documentation for the google-native.datacatalog/v1beta1.Entry resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/google-native/Entry/"
 layout: api
 ---
 

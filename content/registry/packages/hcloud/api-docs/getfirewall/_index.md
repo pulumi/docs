@@ -3,8 +3,6 @@
 title: "getFirewall"
 title_tag: "hcloud.getFirewall"
 meta_desc: "Documentation for the hcloud.getFirewall function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

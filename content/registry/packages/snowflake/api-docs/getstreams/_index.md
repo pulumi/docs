@@ -3,8 +3,6 @@
 title: "getStreams"
 title_tag: "snowflake.getStreams"
 meta_desc: "Documentation for the snowflake.getStreams function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

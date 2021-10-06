@@ -3,8 +3,6 @@
 title: "getClientDescriptionConverter"
 title_tag: "keycloak.getClientDescriptionConverter"
 meta_desc: "Documentation for the keycloak.getClientDescriptionConverter function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

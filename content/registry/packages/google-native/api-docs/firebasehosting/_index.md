@@ -2,8 +2,6 @@
 title: "firebasehosting"
 title_tag: "firebasehosting Package"
 meta_desc: ""
-aliases:
-    - "docs/reference/pkg/google-native/"
 layout: api
 ---
 

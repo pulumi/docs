@@ -3,8 +3,6 @@
 title: "User"
 title_tag: "rancher2.User"
 meta_desc: "Documentation for the rancher2.User resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/rancher2/User/"
 layout: api
 ---
 

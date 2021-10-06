@@ -3,8 +3,6 @@
 title: "SecurityPolicy"
 title_tag: "gcp.compute.SecurityPolicy"
 meta_desc: "Documentation for the gcp.compute.SecurityPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/SecurityPolicy/"
 layout: api
 ---
 

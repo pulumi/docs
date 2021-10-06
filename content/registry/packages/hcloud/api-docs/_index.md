@@ -2,8 +2,6 @@
 title: "Hetzner Cloud"
 title_tag: "hcloud.Hetzner Cloud"
 meta_desc: "A Pulumi package for creating and managing hcloud cloud resources."
-aliases:
-    - "docs/reference/pkg/hcloud/"
 menu:
     reference:
         parent: API Reference

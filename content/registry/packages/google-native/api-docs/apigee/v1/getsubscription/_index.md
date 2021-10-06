@@ -3,8 +3,6 @@
 title: "getSubscription"
 title_tag: "google-native.apigee/v1.getSubscription"
 meta_desc: "Documentation for the google-native.apigee/v1.getSubscription function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

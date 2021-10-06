@@ -3,8 +3,6 @@
 title: "ConfigurationStore"
 title_tag: "azure-native.appconfiguration.ConfigurationStore"
 meta_desc: "Documentation for the azure-native.appconfiguration.ConfigurationStore resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/ConfigurationStore/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "VpcCni"
 title_tag: "eks.VpcCni"
 meta_desc: "Documentation for the eks.VpcCni resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/eks/VpcCni/"
 layout: api
 ---
 

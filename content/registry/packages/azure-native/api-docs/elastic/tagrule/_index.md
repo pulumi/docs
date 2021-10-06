@@ -3,8 +3,6 @@
 title: "TagRule"
 title_tag: "azure-native.elastic.TagRule"
 meta_desc: "Documentation for the azure-native.elastic.TagRule resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/TagRule/"
 layout: api
 ---
 

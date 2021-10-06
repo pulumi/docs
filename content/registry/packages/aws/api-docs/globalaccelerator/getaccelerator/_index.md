@@ -3,8 +3,6 @@
 title: "getAccelerator"
 title_tag: "aws.globalaccelerator.getAccelerator"
 meta_desc: "Documentation for the aws.globalaccelerator.getAccelerator function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

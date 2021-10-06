@@ -3,8 +3,6 @@
 title: "Origin"
 title_tag: "okta.trustedorigin.Origin"
 meta_desc: "Documentation for the okta.trustedorigin.Origin resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/okta/Origin/"
 layout: api
 ---
 

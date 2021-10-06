@@ -3,8 +3,6 @@
 title: "ClusterCapacityProviderAssociations"
 title_tag: "aws-native.ecs.ClusterCapacityProviderAssociations"
 meta_desc: "Documentation for the aws-native.ecs.ClusterCapacityProviderAssociations resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws-native/ClusterCapacityProviderAssociations/"
 layout: api
 ---
 

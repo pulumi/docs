@@ -3,8 +3,6 @@
 title: "SqlResourceSqlRoleDefinition"
 title_tag: "azure-native.documentdb.SqlResourceSqlRoleDefinition"
 meta_desc: "Documentation for the azure-native.documentdb.SqlResourceSqlRoleDefinition resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/SqlResourceSqlRoleDefinition/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "SubnetNatGatewayAssociation"
 title_tag: "azure.network.SubnetNatGatewayAssociation"
 meta_desc: "Documentation for the azure.network.SubnetNatGatewayAssociation resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/SubnetNatGatewayAssociation/"
 layout: api
 ---
 

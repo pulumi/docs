@@ -3,8 +3,6 @@
 title: "CloudFormationStack"
 title_tag: "aws.serverlessrepository.CloudFormationStack"
 meta_desc: "Documentation for the aws.serverlessrepository.CloudFormationStack resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/CloudFormationStack/"
 layout: api
 ---
 

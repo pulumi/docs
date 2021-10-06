@@ -3,8 +3,6 @@
 title: "DomainTrust"
 title_tag: "gcp.activedirectory.DomainTrust"
 meta_desc: "Documentation for the gcp.activedirectory.DomainTrust resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/DomainTrust/"
 layout: api
 ---
 

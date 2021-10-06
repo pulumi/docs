@@ -3,8 +3,6 @@
 title: "listActiveSecurityAdminRule"
 title_tag: "azure-native.network.listActiveSecurityAdminRule"
 meta_desc: "Documentation for the azure-native.network.listActiveSecurityAdminRule function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

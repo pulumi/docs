@@ -2,8 +2,6 @@
 title: "dts"
 title_tag: "alicloud.dts"
 meta_desc: "Explore the resources and functions of the alicloud.dts module."
-aliases:
-    - "docs/reference/pkg/alicloud/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "getPolicy"
 title_tag: "azure-native.apimanagement.getPolicy"
 meta_desc: "Documentation for the azure-native.apimanagement.getPolicy function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

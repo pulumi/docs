@@ -3,8 +3,6 @@
 title: "DeployGroup"
 title_tag: "alicloud.edas.DeployGroup"
 meta_desc: "Documentation for the alicloud.edas.DeployGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/alicloud/DeployGroup/"
 layout: api
 ---
 

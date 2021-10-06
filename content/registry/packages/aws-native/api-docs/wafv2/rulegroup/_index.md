@@ -3,8 +3,6 @@
 title: "RuleGroup"
 title_tag: "aws-native.wafv2.RuleGroup"
 meta_desc: "Documentation for the aws-native.wafv2.RuleGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws-native/RuleGroup/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "Account"
 title_tag: "aiven.Account"
 meta_desc: "Documentation for the aiven.Account resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aiven/Account/"
 layout: api
 ---
 

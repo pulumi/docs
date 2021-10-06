@@ -3,8 +3,6 @@
 title: "TransactionNode"
 title_tag: "azure-native.blockchain.TransactionNode"
 meta_desc: "Documentation for the azure-native.blockchain.TransactionNode resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/TransactionNode/"
 layout: api
 ---
 

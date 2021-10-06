@@ -2,8 +2,6 @@
 title: "automation"
 title_tag: "azure.automation"
 meta_desc: "Explore the resources and functions of the azure.automation module."
-aliases:
-    - "docs/reference/pkg/azure/"
 layout: api
 ---
 

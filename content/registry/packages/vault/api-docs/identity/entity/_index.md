@@ -3,8 +3,6 @@
 title: "Entity"
 title_tag: "vault.identity.Entity"
 meta_desc: "Documentation for the vault.identity.Entity resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/vault/Entity/"
 layout: api
 ---
 

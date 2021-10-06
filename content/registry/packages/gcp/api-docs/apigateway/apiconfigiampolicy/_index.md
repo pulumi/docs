@@ -3,8 +3,6 @@
 title: "ApiConfigIamPolicy"
 title_tag: "gcp.apigateway.ApiConfigIamPolicy"
 meta_desc: "Documentation for the gcp.apigateway.ApiConfigIamPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/ApiConfigIamPolicy/"
 layout: api
 ---
 

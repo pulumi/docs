@@ -3,8 +3,6 @@
 title: "Firewall"
 title_tag: "digitalocean.Firewall"
 meta_desc: "Documentation for the digitalocean.Firewall resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/digitalocean/Firewall/"
 layout: api
 ---
 

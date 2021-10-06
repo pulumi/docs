@@ -3,8 +3,6 @@
 title: "ServiceRunner"
 title_tag: "azure-native.devtestlab.ServiceRunner"
 meta_desc: "Documentation for the azure-native.devtestlab.ServiceRunner resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/ServiceRunner/"
 layout: api
 ---
 

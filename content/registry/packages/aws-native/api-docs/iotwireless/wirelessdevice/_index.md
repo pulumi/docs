@@ -3,8 +3,6 @@
 title: "WirelessDevice"
 title_tag: "aws-native.iotwireless.WirelessDevice"
 meta_desc: "Documentation for the aws-native.iotwireless.WirelessDevice resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws-native/WirelessDevice/"
 layout: api
 ---
 

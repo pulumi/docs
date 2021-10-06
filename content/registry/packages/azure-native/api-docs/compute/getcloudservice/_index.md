@@ -3,8 +3,6 @@
 title: "getCloudService"
 title_tag: "azure-native.compute.getCloudService"
 meta_desc: "Documentation for the azure-native.compute.getCloudService function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

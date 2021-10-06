@@ -2,8 +2,6 @@
 title: "peering"
 title_tag: "azure-native.peering"
 meta_desc: "Explore the resources and functions of the azure-native.peering module."
-aliases:
-    - "docs/reference/pkg/azure-native/"
 layout: api
 ---
 

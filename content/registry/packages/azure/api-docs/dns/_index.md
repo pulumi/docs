@@ -2,8 +2,6 @@
 title: "dns"
 title_tag: "azure.dns"
 meta_desc: "Explore the resources and functions of the azure.dns module."
-aliases:
-    - "docs/reference/pkg/azure/"
 layout: api
 ---
 

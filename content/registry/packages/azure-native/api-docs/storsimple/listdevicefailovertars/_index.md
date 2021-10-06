@@ -3,8 +3,6 @@
 title: "listDeviceFailoverTars"
 title_tag: "azure-native.storsimple.listDeviceFailoverTars"
 meta_desc: "Documentation for the azure-native.storsimple.listDeviceFailoverTars function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

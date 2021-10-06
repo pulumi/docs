@@ -3,8 +3,6 @@
 title: "InstanceIp"
 title_tag: "linode.InstanceIp"
 meta_desc: "Documentation for the linode.InstanceIp resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/linode/InstanceIp/"
 layout: api
 ---
 

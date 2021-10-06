@@ -3,8 +3,6 @@
 title: "getLoadBalancers"
 title_tag: "hcloud.getLoadBalancers"
 meta_desc: "Documentation for the hcloud.getLoadBalancers function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

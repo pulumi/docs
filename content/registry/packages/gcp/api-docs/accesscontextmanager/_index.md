@@ -2,8 +2,6 @@
 title: "accesscontextmanager"
 title_tag: "gcp.accesscontextmanager"
 meta_desc: "Explore the resources and functions of the gcp.accesscontextmanager module."
-aliases:
-    - "docs/reference/pkg/gcp/"
 layout: api
 ---
 

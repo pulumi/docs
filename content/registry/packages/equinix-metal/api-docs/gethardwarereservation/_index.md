@@ -3,8 +3,6 @@
 title: "getHardwareReservation"
 title_tag: "equinix-metal.getHardwareReservation"
 meta_desc: "Documentation for the equinix-metal.getHardwareReservation function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

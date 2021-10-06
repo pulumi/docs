@@ -2,8 +2,6 @@
 title: "purview"
 title_tag: "azure.purview"
 meta_desc: "Explore the resources and functions of the azure.purview module."
-aliases:
-    - "docs/reference/pkg/azure/"
 layout: api
 ---
 

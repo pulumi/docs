@@ -3,8 +3,6 @@
 title: "Setting"
 title_tag: "azure.securitycenter.Setting"
 meta_desc: "Documentation for the azure.securitycenter.Setting resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/Setting/"
 layout: api
 ---
 

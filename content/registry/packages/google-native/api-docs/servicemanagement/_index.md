@@ -2,8 +2,6 @@
 title: "servicemanagement"
 title_tag: "servicemanagement Package"
 meta_desc: ""
-aliases:
-    - "docs/reference/pkg/google-native/"
 layout: api
 ---
 

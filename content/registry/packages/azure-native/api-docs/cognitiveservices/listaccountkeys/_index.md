@@ -3,8 +3,6 @@
 title: "listAccountKeys"
 title_tag: "azure-native.cognitiveservices.listAccountKeys"
 meta_desc: "Documentation for the azure-native.cognitiveservices.listAccountKeys function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

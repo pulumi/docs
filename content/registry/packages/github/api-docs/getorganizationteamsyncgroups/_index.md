@@ -3,8 +3,6 @@
 title: "getOrganizationTeamSyncGroups"
 title_tag: "github.getOrganizationTeamSyncGroups"
 meta_desc: "Documentation for the github.getOrganizationTeamSyncGroups function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

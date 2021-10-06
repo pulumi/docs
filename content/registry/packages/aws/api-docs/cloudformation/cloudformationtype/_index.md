@@ -3,8 +3,6 @@
 title: "CloudFormationType"
 title_tag: "aws.cloudformation.CloudFormationType"
 meta_desc: "Documentation for the aws.cloudformation.CloudFormationType resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/CloudFormationType/"
 layout: api
 ---
 

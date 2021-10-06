@@ -3,8 +3,6 @@
 title: "Mount"
 title_tag: "vault.Mount"
 meta_desc: "Documentation for the vault.Mount resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/vault/Mount/"
 layout: api
 ---
 

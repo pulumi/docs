@@ -3,8 +3,6 @@
 title: "DomainSamlOptions"
 title_tag: "aws.elasticsearch.DomainSamlOptions"
 meta_desc: "Documentation for the aws.elasticsearch.DomainSamlOptions resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/DomainSamlOptions/"
 layout: api
 ---
 

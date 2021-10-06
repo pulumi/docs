@@ -3,8 +3,6 @@
 title: "Subscription"
 title_tag: "google-native.pubsub/v1.Subscription"
 meta_desc: "Documentation for the google-native.pubsub/v1.Subscription resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/google-native/Subscription/"
 layout: api
 ---
 

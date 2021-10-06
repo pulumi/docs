@@ -2,8 +2,6 @@
 title: "projects"
 title_tag: "gcp.projects"
 meta_desc: "Explore the resources and functions of the gcp.projects module."
-aliases:
-    - "docs/reference/pkg/gcp/"
 layout: api
 ---
 

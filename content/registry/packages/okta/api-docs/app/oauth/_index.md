@@ -3,8 +3,6 @@
 title: "OAuth"
 title_tag: "okta.app.OAuth"
 meta_desc: "Documentation for the okta.app.OAuth resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/okta/OAuth/"
 layout: api
 ---
 

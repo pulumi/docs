@@ -3,8 +3,6 @@
 title: "getOrganizations"
 title_tag: "alicloud.rdc.getOrganizations"
 meta_desc: "Documentation for the alicloud.rdc.getOrganizations function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

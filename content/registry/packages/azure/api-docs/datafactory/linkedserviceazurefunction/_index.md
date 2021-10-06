@@ -3,8 +3,6 @@
 title: "LinkedServiceAzureFunction"
 title_tag: "azure.datafactory.LinkedServiceAzureFunction"
 meta_desc: "Documentation for the azure.datafactory.LinkedServiceAzureFunction resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/LinkedServiceAzureFunction/"
 layout: api
 ---
 

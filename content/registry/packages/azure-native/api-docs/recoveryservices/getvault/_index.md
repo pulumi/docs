@@ -3,8 +3,6 @@
 title: "getVault"
 title_tag: "azure-native.recoveryservices.getVault"
 meta_desc: "Documentation for the azure-native.recoveryservices.getVault function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

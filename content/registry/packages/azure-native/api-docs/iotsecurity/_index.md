@@ -2,8 +2,6 @@
 title: "iotsecurity"
 title_tag: "azure-native.iotsecurity"
 meta_desc: "Explore the resources and functions of the azure-native.iotsecurity module."
-aliases:
-    - "docs/reference/pkg/azure-native/"
 layout: api
 ---
 

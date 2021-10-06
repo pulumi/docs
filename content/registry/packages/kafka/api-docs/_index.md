@@ -2,8 +2,6 @@
 title: "Kafka"
 title_tag: "kafka.Kafka"
 meta_desc: "A Pulumi package for creating and managing Kafka."
-aliases:
-    - "docs/reference/pkg/kafka/"
 menu:
     reference:
         parent: API Reference

@@ -3,8 +3,6 @@
 title: "Instance"
 title_tag: "google-native.file/v1beta1.Instance"
 meta_desc: "Documentation for the google-native.file/v1beta1.Instance resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/google-native/Instance/"
 layout: api
 ---
 

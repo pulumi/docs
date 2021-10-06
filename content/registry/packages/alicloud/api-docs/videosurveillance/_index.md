@@ -2,8 +2,6 @@
 title: "videosurveillance"
 title_tag: "alicloud.videosurveillance"
 meta_desc: "Explore the resources and functions of the alicloud.videosurveillance module."
-aliases:
-    - "docs/reference/pkg/alicloud/"
 layout: api
 ---
 

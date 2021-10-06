@@ -3,8 +3,6 @@
 title: "DatabaseGrant"
 title_tag: "snowflake.DatabaseGrant"
 meta_desc: "Documentation for the snowflake.DatabaseGrant resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/snowflake/DatabaseGrant/"
 layout: api
 ---
 

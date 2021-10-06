@@ -2,8 +2,6 @@
 title: "autoscaling"
 title_tag: "autoscaling Package"
 meta_desc: ""
-aliases:
-    - "docs/reference/pkg/kubernetes/"
 layout: api
 ---
 

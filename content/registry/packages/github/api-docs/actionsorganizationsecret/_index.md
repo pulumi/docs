@@ -3,8 +3,6 @@
 title: "ActionsOrganizationSecret"
 title_tag: "github.ActionsOrganizationSecret"
 meta_desc: "Documentation for the github.ActionsOrganizationSecret resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/github/ActionsOrganizationSecret/"
 layout: api
 ---
 

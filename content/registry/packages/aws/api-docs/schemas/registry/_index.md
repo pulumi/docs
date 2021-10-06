@@ -3,8 +3,6 @@
 title: "Registry"
 title_tag: "aws.schemas.Registry"
 meta_desc: "Documentation for the aws.schemas.Registry resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/Registry/"
 layout: api
 ---
 

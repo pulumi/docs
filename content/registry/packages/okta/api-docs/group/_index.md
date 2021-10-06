@@ -2,8 +2,6 @@
 title: "group"
 title_tag: "okta.group"
 meta_desc: "Explore the resources and functions of the okta.group module."
-aliases:
-    - "docs/reference/pkg/okta/"
 layout: api
 ---
 

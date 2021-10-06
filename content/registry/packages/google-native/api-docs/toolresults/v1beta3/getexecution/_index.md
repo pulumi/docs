@@ -3,8 +3,6 @@
 title: "getExecution"
 title_tag: "google-native.toolresults/v1beta3.getExecution"
 meta_desc: "Documentation for the google-native.toolresults/v1beta3.getExecution function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

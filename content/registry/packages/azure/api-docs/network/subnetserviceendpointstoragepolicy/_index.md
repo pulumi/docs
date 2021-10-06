@@ -3,8 +3,6 @@
 title: "SubnetServiceEndpointStoragePolicy"
 title_tag: "azure.network.SubnetServiceEndpointStoragePolicy"
 meta_desc: "Documentation for the azure.network.SubnetServiceEndpointStoragePolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/SubnetServiceEndpointStoragePolicy/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "ManagedHsm"
 title_tag: "azure-native.keyvault.ManagedHsm"
 meta_desc: "Documentation for the azure-native.keyvault.ManagedHsm resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/ManagedHsm/"
 layout: api
 ---
 

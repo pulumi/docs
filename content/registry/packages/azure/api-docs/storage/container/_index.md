@@ -3,8 +3,6 @@
 title: "Container"
 title_tag: "azure.storage.Container"
 meta_desc: "Documentation for the azure.storage.Container resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/Container/"
 layout: api
 ---
 

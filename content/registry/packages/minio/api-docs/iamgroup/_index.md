@@ -3,8 +3,6 @@
 title: "IamGroup"
 title_tag: "minio.IamGroup"
 meta_desc: "Documentation for the minio.IamGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/minio/IamGroup/"
 layout: api
 ---
 

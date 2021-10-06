@@ -3,8 +3,6 @@
 title: "Subflow"
 title_tag: "keycloak.authentication.Subflow"
 meta_desc: "Documentation for the keycloak.authentication.Subflow resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/keycloak/Subflow/"
 layout: api
 ---
 

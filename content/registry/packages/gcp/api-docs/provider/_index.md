@@ -3,8 +3,6 @@
 title: "Provider"
 title_tag: "gcp.Provider"
 meta_desc: "Documentation for the gcp.Provider resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/gcp/"
 layout: api
 ---
 

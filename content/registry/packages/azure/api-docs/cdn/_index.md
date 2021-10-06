@@ -2,8 +2,6 @@
 title: "cdn"
 title_tag: "azure.cdn"
 meta_desc: "Explore the resources and functions of the azure.cdn module."
-aliases:
-    - "docs/reference/pkg/azure/"
 layout: api
 ---
 

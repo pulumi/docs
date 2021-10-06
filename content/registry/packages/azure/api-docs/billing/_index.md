@@ -2,8 +2,6 @@
 title: "billing"
 title_tag: "azure.billing"
 meta_desc: "Explore the resources and functions of the azure.billing module."
-aliases:
-    - "docs/reference/pkg/azure/"
 layout: api
 ---
 

@@ -2,8 +2,6 @@
 title: "ecrpublic"
 title_tag: "aws.ecrpublic"
 meta_desc: "Explore the resources and functions of the aws.ecrpublic module."
-aliases:
-    - "docs/reference/pkg/aws/"
 layout: api
 ---
 

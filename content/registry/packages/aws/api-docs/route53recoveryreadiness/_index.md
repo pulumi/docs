@@ -2,8 +2,6 @@
 title: "route53recoveryreadiness"
 title_tag: "aws.route53recoveryreadiness"
 meta_desc: "Explore the resources and functions of the aws.route53recoveryreadiness module."
-aliases:
-    - "docs/reference/pkg/aws/"
 layout: api
 ---
 

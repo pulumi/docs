@@ -3,8 +3,6 @@
 title: "CustomSsl"
 title_tag: "cloudflare.CustomSsl"
 meta_desc: "Documentation for the cloudflare.CustomSsl resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/cloudflare/CustomSsl/"
 layout: api
 ---
 

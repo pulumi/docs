@@ -3,8 +3,6 @@
 title: "ActionCustom"
 title_tag: "azure.logicapps.ActionCustom"
 meta_desc: "Documentation for the azure.logicapps.ActionCustom resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/ActionCustom/"
 layout: api
 ---
 

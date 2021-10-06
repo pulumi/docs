@@ -2,8 +2,6 @@
 title: "wafv2"
 title_tag: "aws.wafv2"
 meta_desc: "Explore the resources and functions of the aws.wafv2 module."
-aliases:
-    - "docs/reference/pkg/aws/"
 layout: api
 ---
 

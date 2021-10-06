@@ -3,8 +3,6 @@
 title: "RegionUrlMap"
 title_tag: "gcp.compute.RegionUrlMap"
 meta_desc: "Documentation for the gcp.compute.RegionUrlMap resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/RegionUrlMap/"
 layout: api
 ---
 

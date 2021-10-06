@@ -3,8 +3,6 @@
 title: "Module"
 title_tag: "azure.automation.Module"
 meta_desc: "Documentation for the azure.automation.Module resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/Module/"
 layout: api
 ---
 

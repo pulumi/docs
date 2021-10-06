@@ -2,8 +2,6 @@
 title: "customproviders"
 title_tag: "azure-native.customproviders"
 meta_desc: "Explore the resources and functions of the azure-native.customproviders module."
-aliases:
-    - "docs/reference/pkg/azure-native/"
 layout: api
 ---
 

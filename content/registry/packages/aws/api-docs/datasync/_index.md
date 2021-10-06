@@ -2,8 +2,6 @@
 title: "datasync"
 title_tag: "aws.datasync"
 meta_desc: "Explore the resources and functions of the aws.datasync module."
-aliases:
-    - "docs/reference/pkg/aws/"
 layout: api
 ---
 

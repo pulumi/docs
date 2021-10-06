@@ -2,8 +2,6 @@
 title: "gameservices"
 title_tag: "gcp.gameservices"
 meta_desc: "Explore the resources and functions of the gcp.gameservices module."
-aliases:
-    - "docs/reference/pkg/gcp/"
 layout: api
 ---
 

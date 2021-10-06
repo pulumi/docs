@@ -3,8 +3,6 @@
 title: "getCertificate"
 title_tag: "azure-native.web.getCertificate"
 meta_desc: "Documentation for the azure-native.web.getCertificate function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "getReadWriteDatabase"
 title_tag: "azure-native.synapse.getReadWriteDatabase"
 meta_desc: "Documentation for the azure-native.synapse.getReadWriteDatabase function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

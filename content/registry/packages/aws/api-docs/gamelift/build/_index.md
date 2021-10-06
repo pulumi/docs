@@ -3,8 +3,6 @@
 title: "Build"
 title_tag: "aws.gamelift.Build"
 meta_desc: "Documentation for the aws.gamelift.Build resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/Build/"
 layout: api
 ---
 

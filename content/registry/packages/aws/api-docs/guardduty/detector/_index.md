@@ -3,8 +3,6 @@
 title: "Detector"
 title_tag: "aws.guardduty.Detector"
 meta_desc: "Documentation for the aws.guardduty.Detector resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/Detector/"
 layout: api
 ---
 

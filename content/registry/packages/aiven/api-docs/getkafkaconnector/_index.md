@@ -3,8 +3,6 @@
 title: "getKafkaConnector"
 title_tag: "aiven.getKafkaConnector"
 meta_desc: "Documentation for the aiven.getKafkaConnector function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

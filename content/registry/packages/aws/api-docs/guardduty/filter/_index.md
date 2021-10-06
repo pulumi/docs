@@ -3,8 +3,6 @@
 title: "Filter"
 title_tag: "aws.guardduty.Filter"
 meta_desc: "Documentation for the aws.guardduty.Filter resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/Filter/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "AccountFilter"
 title_tag: "azure-native.media.AccountFilter"
 meta_desc: "Documentation for the azure-native.media.AccountFilter resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/AccountFilter/"
 layout: api
 ---
 

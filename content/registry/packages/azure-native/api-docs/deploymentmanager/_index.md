@@ -2,8 +2,6 @@
 title: "deploymentmanager"
 title_tag: "azure-native.deploymentmanager"
 meta_desc: "Explore the resources and functions of the azure-native.deploymentmanager module."
-aliases:
-    - "docs/reference/pkg/azure-native/"
 layout: api
 ---
 

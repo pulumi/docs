@@ -3,8 +3,6 @@
 title: "Zone"
 title_tag: "azure-native.network.Zone"
 meta_desc: "Documentation for the azure-native.network.Zone resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/Zone/"
 layout: api
 ---
 

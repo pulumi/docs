@@ -3,8 +3,6 @@
 title: "Subnet"
 title_tag: "openstack.networking.Subnet"
 meta_desc: "Documentation for the openstack.networking.Subnet resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/openstack/Subnet/"
 layout: api
 ---
 

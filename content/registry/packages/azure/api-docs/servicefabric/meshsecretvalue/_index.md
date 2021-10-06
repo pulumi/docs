@@ -3,8 +3,6 @@
 title: "MeshSecretValue"
 title_tag: "azure.servicefabric.MeshSecretValue"
 meta_desc: "Documentation for the azure.servicefabric.MeshSecretValue resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/MeshSecretValue/"
 layout: api
 ---
 

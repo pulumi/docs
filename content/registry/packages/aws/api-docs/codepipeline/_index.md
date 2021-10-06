@@ -2,8 +2,6 @@
 title: "codepipeline"
 title_tag: "aws.codepipeline"
 meta_desc: "Explore the resources and functions of the aws.codepipeline module."
-aliases:
-    - "docs/reference/pkg/aws/"
 layout: api
 ---
 

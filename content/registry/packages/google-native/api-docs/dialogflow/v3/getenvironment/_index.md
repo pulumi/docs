@@ -3,8 +3,6 @@
 title: "getEnvironment"
 title_tag: "google-native.dialogflow/v3.getEnvironment"
 meta_desc: "Documentation for the google-native.dialogflow/v3.getEnvironment function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "MetadataSource"
 title_tag: "sumologic.MetadataSource"
 meta_desc: "Documentation for the sumologic.MetadataSource resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/sumologic/MetadataSource/"
 layout: api
 ---
 

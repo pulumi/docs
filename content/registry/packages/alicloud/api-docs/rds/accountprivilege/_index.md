@@ -3,8 +3,6 @@
 title: "AccountPrivilege"
 title_tag: "alicloud.rds.AccountPrivilege"
 meta_desc: "Documentation for the alicloud.rds.AccountPrivilege resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/alicloud/AccountPrivilege/"
 layout: api
 ---
 

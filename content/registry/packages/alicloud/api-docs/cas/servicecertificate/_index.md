@@ -3,8 +3,6 @@
 title: "ServiceCertificate"
 title_tag: "alicloud.cas.ServiceCertificate"
 meta_desc: "Documentation for the alicloud.cas.ServiceCertificate resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/alicloud/ServiceCertificate/"
 layout: api
 ---
 

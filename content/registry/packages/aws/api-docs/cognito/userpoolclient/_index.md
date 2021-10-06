@@ -3,8 +3,6 @@
 title: "UserPoolClient"
 title_tag: "aws.cognito.UserPoolClient"
 meta_desc: "Documentation for the aws.cognito.UserPoolClient resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/UserPoolClient/"
 layout: api
 ---
 

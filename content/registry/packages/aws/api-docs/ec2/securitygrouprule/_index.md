@@ -3,8 +3,6 @@
 title: "SecurityGroupRule"
 title_tag: "aws.ec2.SecurityGroupRule"
 meta_desc: "Documentation for the aws.ec2.SecurityGroupRule resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/SecurityGroupRule/"
 layout: api
 ---
 

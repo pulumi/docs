@@ -3,8 +3,6 @@
 title: "DataConnectorMicrosoftDefenderAdvancedThreatProtection"
 title_tag: "azure.sentinel.DataConnectorMicrosoftDefenderAdvancedThreatProtection"
 meta_desc: "Documentation for the azure.sentinel.DataConnectorMicrosoftDefenderAdvancedThreatProtection resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/DataConnectorMicrosoftDefenderAdvancedThreatProtection/"
 layout: api
 ---
 

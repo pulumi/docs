@@ -3,8 +3,6 @@
 title: "GatewayIamBinding"
 title_tag: "gcp.apigateway.GatewayIamBinding"
 meta_desc: "Documentation for the gcp.apigateway.GatewayIamBinding resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/GatewayIamBinding/"
 layout: api
 ---
 

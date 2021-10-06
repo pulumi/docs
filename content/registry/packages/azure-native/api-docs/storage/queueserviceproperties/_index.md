@@ -3,8 +3,6 @@
 title: "QueueServiceProperties"
 title_tag: "azure-native.storage.QueueServiceProperties"
 meta_desc: "Documentation for the azure-native.storage.QueueServiceProperties resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/QueueServiceProperties/"
 layout: api
 ---
 

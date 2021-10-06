@@ -3,8 +3,6 @@
 title: "PasswordPolicy"
 title_tag: "sumologic.PasswordPolicy"
 meta_desc: "Documentation for the sumologic.PasswordPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/sumologic/PasswordPolicy/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "getScriptExecution"
 title_tag: "azure-native.avs.getScriptExecution"
 meta_desc: "Documentation for the azure-native.avs.getScriptExecution function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

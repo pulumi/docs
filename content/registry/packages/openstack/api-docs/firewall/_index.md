@@ -2,8 +2,6 @@
 title: "firewall"
 title_tag: "openstack.firewall"
 meta_desc: "Explore the resources and functions of the openstack.firewall module."
-aliases:
-    - "docs/reference/pkg/openstack/"
 layout: api
 ---
 

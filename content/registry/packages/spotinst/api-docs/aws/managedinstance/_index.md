@@ -3,8 +3,6 @@
 title: "ManagedInstance"
 title_tag: "spotinst.aws.ManagedInstance"
 meta_desc: "Documentation for the spotinst.aws.ManagedInstance resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/spotinst/ManagedInstance/"
 layout: api
 ---
 

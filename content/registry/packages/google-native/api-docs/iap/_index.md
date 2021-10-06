@@ -2,8 +2,6 @@
 title: "iap"
 title_tag: "iap Package"
 meta_desc: ""
-aliases:
-    - "docs/reference/pkg/google-native/"
 layout: api
 ---
 

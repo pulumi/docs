@@ -3,8 +3,6 @@
 title: "NetworkPeeringRoutesConfig"
 title_tag: "gcp.compute.NetworkPeeringRoutesConfig"
 meta_desc: "Documentation for the gcp.compute.NetworkPeeringRoutesConfig resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/NetworkPeeringRoutesConfig/"
 layout: api
 ---
 

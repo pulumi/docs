@@ -2,8 +2,6 @@
 title: "Core"
 title_tag: "azuredevops.Core"
 meta_desc: "Explore the resources and functions of the azuredevops.Core module."
-aliases:
-    - "docs/reference/pkg/azuredevops/"
 layout: api
 ---
 

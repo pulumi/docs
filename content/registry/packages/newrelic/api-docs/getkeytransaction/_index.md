@@ -3,8 +3,6 @@
 title: "getKeyTransaction"
 title_tag: "newrelic.getKeyTransaction"
 meta_desc: "Documentation for the newrelic.getKeyTransaction function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

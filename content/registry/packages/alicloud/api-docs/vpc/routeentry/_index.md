@@ -3,8 +3,6 @@
 title: "RouteEntry"
 title_tag: "alicloud.vpc.RouteEntry"
 meta_desc: "Documentation for the alicloud.vpc.RouteEntry resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/alicloud/RouteEntry/"
 layout: api
 ---
 

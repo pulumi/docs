@@ -3,8 +3,6 @@
 title: "Connection"
 title_tag: "gcp.servicenetworking.Connection"
 meta_desc: "Documentation for the gcp.servicenetworking.Connection resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/Connection/"
 layout: api
 ---
 

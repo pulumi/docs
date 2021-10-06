@@ -2,8 +2,6 @@
 title: "rbac"
 title_tag: "rbac Package"
 meta_desc: ""
-aliases:
-    - "docs/reference/pkg/kubernetes/"
 layout: api
 ---
 

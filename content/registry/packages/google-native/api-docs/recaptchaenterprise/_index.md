@@ -2,8 +2,6 @@
 title: "recaptchaenterprise"
 title_tag: "recaptchaenterprise Package"
 meta_desc: ""
-aliases:
-    - "docs/reference/pkg/google-native/"
 layout: api
 ---
 

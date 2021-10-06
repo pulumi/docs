@@ -3,8 +3,6 @@
 title: "Provider"
 title_tag: "mysql.Provider"
 meta_desc: "Documentation for the mysql.Provider resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/mysql/mysql/"
 layout: api
 ---
 

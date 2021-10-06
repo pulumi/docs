@@ -3,8 +3,6 @@
 title: "getPage"
 title_tag: "google-native.dialogflow/v3.getPage"
 meta_desc: "Documentation for the google-native.dialogflow/v3.getPage function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

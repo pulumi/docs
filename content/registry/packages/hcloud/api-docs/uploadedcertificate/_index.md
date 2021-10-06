@@ -3,8 +3,6 @@
 title: "UploadedCertificate"
 title_tag: "hcloud.UploadedCertificate"
 meta_desc: "Documentation for the hcloud.UploadedCertificate resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/hcloud/UploadedCertificate/"
 layout: api
 ---
 

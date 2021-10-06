@@ -3,8 +3,6 @@
 title: "Policy"
 title_tag: "gcp.dns.Policy"
 meta_desc: "Documentation for the gcp.dns.Policy resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/Policy/"
 layout: api
 ---
 

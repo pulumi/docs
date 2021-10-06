@@ -2,8 +2,6 @@
 title: "docdb"
 title_tag: "aws.docdb"
 meta_desc: "Explore the resources and functions of the aws.docdb module."
-aliases:
-    - "docs/reference/pkg/aws/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "getOperationalizationCluster"
 title_tag: "azure-native.machinelearningcompute.getOperationalizationCluster"
 meta_desc: "Documentation for the azure-native.machinelearningcompute.getOperationalizationCluster function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "Idp"
 title_tag: "okta.deprecated.Idp"
 meta_desc: "Documentation for the okta.deprecated.Idp resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/okta/Idp/"
 layout: api
 ---
 

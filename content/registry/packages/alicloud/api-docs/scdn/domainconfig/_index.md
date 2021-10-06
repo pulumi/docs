@@ -3,8 +3,6 @@
 title: "DomainConfig"
 title_tag: "alicloud.scdn.DomainConfig"
 meta_desc: "Documentation for the alicloud.scdn.DomainConfig resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/alicloud/DomainConfig/"
 layout: api
 ---
 

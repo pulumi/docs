@@ -2,8 +2,6 @@
 title: "eventschemas"
 title_tag: "aws-native.eventschemas"
 meta_desc: "Explore the resources and functions of the aws-native.eventschemas module."
-aliases:
-    - "docs/reference/pkg/aws-native/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "Cluster"
 title_tag: "azure-native.avs.Cluster"
 meta_desc: "Documentation for the azure-native.avs.Cluster resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/Cluster/"
 layout: api
 ---
 

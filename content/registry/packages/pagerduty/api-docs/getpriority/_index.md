@@ -3,8 +3,6 @@
 title: "getPriority"
 title_tag: "pagerduty.getPriority"
 meta_desc: "Documentation for the pagerduty.getPriority function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

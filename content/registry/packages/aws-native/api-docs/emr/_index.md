@@ -2,8 +2,6 @@
 title: "emr"
 title_tag: "aws-native.emr"
 meta_desc: "Explore the resources and functions of the aws-native.emr module."
-aliases:
-    - "docs/reference/pkg/aws-native/"
 layout: api
 ---
 

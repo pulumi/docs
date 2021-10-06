@@ -3,8 +3,6 @@
 title: "InterationServiceEnvironment"
 title_tag: "azure.logicapps.InterationServiceEnvironment"
 meta_desc: "Documentation for the azure.logicapps.InterationServiceEnvironment resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/InterationServiceEnvironment/"
 layout: api
 ---
 

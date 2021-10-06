@@ -3,8 +3,6 @@
 title: "HubRouteTable"
 title_tag: "azure-native.network.HubRouteTable"
 meta_desc: "Documentation for the azure-native.network.HubRouteTable resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/HubRouteTable/"
 layout: api
 ---
 

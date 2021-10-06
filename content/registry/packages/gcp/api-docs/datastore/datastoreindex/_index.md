@@ -3,8 +3,6 @@
 title: "DataStoreIndex"
 title_tag: "gcp.datastore.DataStoreIndex"
 meta_desc: "Documentation for the gcp.datastore.DataStoreIndex resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/DataStoreIndex/"
 layout: api
 ---
 

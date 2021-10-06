@@ -3,8 +3,6 @@
 title: "Team"
 title_tag: "opsgenie.Team"
 meta_desc: "Documentation for the opsgenie.Team resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/opsgenie/Team/"
 layout: api
 ---
 

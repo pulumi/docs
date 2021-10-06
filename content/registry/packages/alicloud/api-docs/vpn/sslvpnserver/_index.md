@@ -3,8 +3,6 @@
 title: "SslVpnServer"
 title_tag: "alicloud.vpn.SslVpnServer"
 meta_desc: "Documentation for the alicloud.vpn.SslVpnServer resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/alicloud/SslVpnServer/"
 layout: api
 ---
 

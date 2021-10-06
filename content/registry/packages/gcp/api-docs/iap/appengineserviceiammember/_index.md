@@ -3,8 +3,6 @@
 title: "AppEngineServiceIamMember"
 title_tag: "gcp.iap.AppEngineServiceIamMember"
 meta_desc: "Documentation for the gcp.iap.AppEngineServiceIamMember resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/AppEngineServiceIamMember/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "Gateway"
 title_tag: "google-native.apigateway/v1beta.Gateway"
 meta_desc: "Documentation for the google-native.apigateway/v1beta.Gateway resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/google-native/Gateway/"
 layout: api
 ---
 

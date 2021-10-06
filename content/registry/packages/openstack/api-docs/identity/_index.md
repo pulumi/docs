@@ -2,8 +2,6 @@
 title: "identity"
 title_tag: "openstack.identity"
 meta_desc: "Explore the resources and functions of the openstack.identity module."
-aliases:
-    - "docs/reference/pkg/openstack/"
 layout: api
 ---
 

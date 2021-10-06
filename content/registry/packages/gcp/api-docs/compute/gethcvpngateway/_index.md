@@ -3,8 +3,6 @@
 title: "getHcVpnGateway"
 title_tag: "gcp.compute.getHcVpnGateway"
 meta_desc: "Documentation for the gcp.compute.getHcVpnGateway function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

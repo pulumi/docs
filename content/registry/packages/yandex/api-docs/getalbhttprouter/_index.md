@@ -3,8 +3,6 @@
 title: "getAlbHttpRouter"
 title_tag: "yandex.getAlbHttpRouter"
 meta_desc: "Documentation for the yandex.getAlbHttpRouter function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

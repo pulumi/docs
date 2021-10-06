@@ -2,8 +2,6 @@
 title: "kendra"
 title_tag: "aws-native.kendra"
 meta_desc: "Explore the resources and functions of the aws-native.kendra module."
-aliases:
-    - "docs/reference/pkg/aws-native/"
 layout: api
 ---
 

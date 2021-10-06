@@ -3,8 +3,6 @@
 title: "Downtime"
 title_tag: "datadog.Downtime"
 meta_desc: "Documentation for the datadog.Downtime resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/datadog/Downtime/"
 layout: api
 ---
 

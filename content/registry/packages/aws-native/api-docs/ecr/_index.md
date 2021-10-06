@@ -2,8 +2,6 @@
 title: "ecr"
 title_tag: "aws-native.ecr"
 meta_desc: "Explore the resources and functions of the aws-native.ecr module."
-aliases:
-    - "docs/reference/pkg/aws-native/"
 layout: api
 ---
 

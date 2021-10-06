@@ -3,8 +3,6 @@
 title: "getIndustrialSerice"
 title_tag: "alicloud.brain.getIndustrialSerice"
 meta_desc: "Documentation for the alicloud.brain.getIndustrialSerice function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

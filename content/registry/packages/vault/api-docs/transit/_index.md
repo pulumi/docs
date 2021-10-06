@@ -2,8 +2,6 @@
 title: "transit"
 title_tag: "vault.transit"
 meta_desc: "Explore the resources and functions of the vault.transit module."
-aliases:
-    - "docs/reference/pkg/vault/"
 layout: api
 ---
 

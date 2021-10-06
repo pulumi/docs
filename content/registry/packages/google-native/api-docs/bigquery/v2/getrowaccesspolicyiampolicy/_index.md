@@ -3,8 +3,6 @@
 title: "getRowAccessPolicyIamPolicy"
 title_tag: "google-native.bigquery/v2.getRowAccessPolicyIamPolicy"
 meta_desc: "Documentation for the google-native.bigquery/v2.getRowAccessPolicyIamPolicy function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

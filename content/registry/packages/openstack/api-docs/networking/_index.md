@@ -2,8 +2,6 @@
 title: "networking"
 title_tag: "openstack.networking"
 meta_desc: "Explore the resources and functions of the openstack.networking module."
-aliases:
-    - "docs/reference/pkg/openstack/"
 layout: api
 ---
 

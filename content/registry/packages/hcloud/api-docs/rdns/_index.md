@@ -3,8 +3,6 @@
 title: "Rdns"
 title_tag: "hcloud.Rdns"
 meta_desc: "Documentation for the hcloud.Rdns resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/hcloud/Rdns/"
 layout: api
 ---
 

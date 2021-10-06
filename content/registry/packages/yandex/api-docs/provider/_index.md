@@ -3,8 +3,6 @@
 title: "Provider"
 title_tag: "yandex.Provider"
 meta_desc: "Documentation for the yandex.Provider resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/yandex/yandex/"
 layout: api
 ---
 

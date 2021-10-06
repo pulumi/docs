@@ -3,8 +3,6 @@
 title: "Model"
 title_tag: "google-native.ml/v1.Model"
 meta_desc: "Documentation for the google-native.ml/v1.Model resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/google-native/Model/"
 layout: api
 ---
 

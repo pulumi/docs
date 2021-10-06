@@ -3,8 +3,6 @@
 title: "Controller"
 title_tag: "azure-native.devspaces.Controller"
 meta_desc: "Documentation for the azure-native.devspaces.Controller resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/Controller/"
 layout: api
 ---
 

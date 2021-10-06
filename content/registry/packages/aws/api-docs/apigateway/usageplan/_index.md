@@ -3,8 +3,6 @@
 title: "UsagePlan"
 title_tag: "aws.apigateway.UsagePlan"
 meta_desc: "Documentation for the aws.apigateway.UsagePlan resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/UsagePlan/"
 layout: api
 ---
 

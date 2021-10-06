@@ -3,8 +3,6 @@
 title: "TagBinding"
 title_tag: "gcp.tags.TagBinding"
 meta_desc: "Documentation for the gcp.tags.TagBinding resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/TagBinding/"
 layout: api
 ---
 

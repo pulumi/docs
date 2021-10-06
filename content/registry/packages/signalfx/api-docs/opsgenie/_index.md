@@ -2,8 +2,6 @@
 title: "opsgenie"
 title_tag: "signalfx.opsgenie"
 meta_desc: "Explore the resources and functions of the signalfx.opsgenie module."
-aliases:
-    - "docs/reference/pkg/signalfx/"
 layout: api
 ---
 

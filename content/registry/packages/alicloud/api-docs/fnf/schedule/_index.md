@@ -3,8 +3,6 @@
 title: "Schedule"
 title_tag: "alicloud.fnf.Schedule"
 meta_desc: "Documentation for the alicloud.fnf.Schedule resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/alicloud/Schedule/"
 layout: api
 ---
 

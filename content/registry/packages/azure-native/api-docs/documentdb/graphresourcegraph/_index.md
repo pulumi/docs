@@ -3,8 +3,6 @@
 title: "GraphResourceGraph"
 title_tag: "azure-native.documentdb.GraphResourceGraph"
 meta_desc: "Documentation for the azure-native.documentdb.GraphResourceGraph resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/GraphResourceGraph/"
 layout: api
 ---
 

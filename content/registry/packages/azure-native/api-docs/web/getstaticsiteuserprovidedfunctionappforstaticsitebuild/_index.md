@@ -3,8 +3,6 @@
 title: "getStaticSiteUserProvidedFunctionAppForStaticSiteBuild"
 title_tag: "azure-native.web.getStaticSiteUserProvidedFunctionAppForStaticSiteBuild"
 meta_desc: "Documentation for the azure-native.web.getStaticSiteUserProvidedFunctionAppForStaticSiteBuild function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "Role"
 title_tag: "azure-native.databoxedge.Role"
 meta_desc: "Documentation for the azure-native.databoxedge.Role resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/Role/"
 layout: api
 ---
 

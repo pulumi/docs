@@ -3,8 +3,6 @@
 title: "getFlavor"
 title_tag: "openstack.compute.getFlavor"
 meta_desc: "Documentation for the openstack.compute.getFlavor function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

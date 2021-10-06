@@ -3,8 +3,6 @@
 title: "getAccountKey"
 title_tag: "gcp.serviceAccount.getAccountKey"
 meta_desc: "Documentation for the gcp.serviceAccount.getAccountKey function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

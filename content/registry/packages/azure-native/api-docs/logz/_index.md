@@ -2,8 +2,6 @@
 title: "logz"
 title_tag: "azure-native.logz"
 meta_desc: "Explore the resources and functions of the azure-native.logz module."
-aliases:
-    - "docs/reference/pkg/azure-native/"
 layout: api
 ---
 

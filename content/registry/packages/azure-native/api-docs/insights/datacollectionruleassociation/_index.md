@@ -3,8 +3,6 @@
 title: "DataCollectionRuleAssociation"
 title_tag: "azure-native.insights.DataCollectionRuleAssociation"
 meta_desc: "Documentation for the azure-native.insights.DataCollectionRuleAssociation resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/DataCollectionRuleAssociation/"
 layout: api
 ---
 

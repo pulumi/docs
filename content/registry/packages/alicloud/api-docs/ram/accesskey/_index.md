@@ -3,8 +3,6 @@
 title: "AccessKey"
 title_tag: "alicloud.ram.AccessKey"
 meta_desc: "Documentation for the alicloud.ram.AccessKey resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/alicloud/AccessKey/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "listWebAppHostKeysSlot"
 title_tag: "azure-native.web.listWebAppHostKeysSlot"
 meta_desc: "Documentation for the azure-native.web.listWebAppHostKeysSlot function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

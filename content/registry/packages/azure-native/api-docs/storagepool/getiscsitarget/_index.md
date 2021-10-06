@@ -3,8 +3,6 @@
 title: "getIscsiTarget"
 title_tag: "azure-native.storagepool.getIscsiTarget"
 meta_desc: "Documentation for the azure-native.storagepool.getIscsiTarget function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

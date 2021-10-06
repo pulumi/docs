@@ -3,8 +3,6 @@
 title: "AuthorizationRule"
 title_tag: "azure.eventhub.AuthorizationRule"
 meta_desc: "Documentation for the azure.eventhub.AuthorizationRule resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/AuthorizationRule/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "SecurityPolicy"
 title_tag: "alicloud.alb.SecurityPolicy"
 meta_desc: "Documentation for the alicloud.alb.SecurityPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/alicloud/SecurityPolicy/"
 layout: api
 ---
 

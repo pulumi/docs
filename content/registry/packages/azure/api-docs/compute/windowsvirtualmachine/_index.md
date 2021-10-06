@@ -3,8 +3,6 @@
 title: "WindowsVirtualMachine"
 title_tag: "azure.compute.WindowsVirtualMachine"
 meta_desc: "Documentation for the azure.compute.WindowsVirtualMachine resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/WindowsVirtualMachine/"
 layout: api
 ---
 

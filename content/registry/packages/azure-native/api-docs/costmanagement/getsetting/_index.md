@@ -3,8 +3,6 @@
 title: "getSetting"
 title_tag: "azure-native.costmanagement.getSetting"
 meta_desc: "Documentation for the azure-native.costmanagement.getSetting function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

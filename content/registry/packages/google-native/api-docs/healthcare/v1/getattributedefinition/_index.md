@@ -3,8 +3,6 @@
 title: "getAttributeDefinition"
 title_tag: "google-native.healthcare/v1.getAttributeDefinition"
 meta_desc: "Documentation for the google-native.healthcare/v1.getAttributeDefinition function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

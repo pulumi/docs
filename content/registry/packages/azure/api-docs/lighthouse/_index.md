@@ -2,8 +2,6 @@
 title: "lighthouse"
 title_tag: "azure.lighthouse"
 meta_desc: "Explore the resources and functions of the azure.lighthouse module."
-aliases:
-    - "docs/reference/pkg/azure/"
 layout: api
 ---
 

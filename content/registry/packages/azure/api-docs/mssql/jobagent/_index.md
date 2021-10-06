@@ -3,8 +3,6 @@
 title: "JobAgent"
 title_tag: "azure.mssql.JobAgent"
 meta_desc: "Documentation for the azure.mssql.JobAgent resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/JobAgent/"
 layout: api
 ---
 

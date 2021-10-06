@@ -2,8 +2,6 @@
 title: "containerservice"
 title_tag: "azure-native.containerservice"
 meta_desc: "Explore the resources and functions of the azure-native.containerservice module."
-aliases:
-    - "docs/reference/pkg/azure-native/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "ConfigMap"
 title_tag: "kubernetes.core/v1.ConfigMap"
 meta_desc: "Documentation for the kubernetes.core/v1.ConfigMap resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/kubernetes/ConfigMap/"
 layout: api
 ---
 

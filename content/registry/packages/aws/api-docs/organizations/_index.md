@@ -2,8 +2,6 @@
 title: "organizations"
 title_tag: "aws.organizations"
 meta_desc: "Explore the resources and functions of the aws.organizations module."
-aliases:
-    - "docs/reference/pkg/aws/"
 layout: api
 ---
 

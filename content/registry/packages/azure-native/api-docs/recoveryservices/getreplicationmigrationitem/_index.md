@@ -3,8 +3,6 @@
 title: "getReplicationMigrationItem"
 title_tag: "azure-native.recoveryservices.getReplicationMigrationItem"
 meta_desc: "Documentation for the azure-native.recoveryservices.getReplicationMigrationItem function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

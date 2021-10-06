@@ -3,8 +3,6 @@
 title: "ServerSecurityAlertPolicy"
 title_tag: "azure-native.dbforpostgresql.ServerSecurityAlertPolicy"
 meta_desc: "Documentation for the azure-native.dbforpostgresql.ServerSecurityAlertPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/ServerSecurityAlertPolicy/"
 layout: api
 ---
 

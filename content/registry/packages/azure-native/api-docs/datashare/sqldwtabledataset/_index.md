@@ -3,8 +3,6 @@
 title: "SqlDWTableDataSet"
 title_tag: "azure-native.datashare.SqlDWTableDataSet"
 meta_desc: "Documentation for the azure-native.datashare.SqlDWTableDataSet resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/SqlDWTableDataSet/"
 layout: api
 ---
 

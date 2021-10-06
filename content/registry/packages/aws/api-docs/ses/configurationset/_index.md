@@ -3,8 +3,6 @@
 title: "ConfigurationSet"
 title_tag: "aws.ses.ConfigurationSet"
 meta_desc: "Documentation for the aws.ses.ConfigurationSet resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/ConfigurationSet/"
 layout: api
 ---
 

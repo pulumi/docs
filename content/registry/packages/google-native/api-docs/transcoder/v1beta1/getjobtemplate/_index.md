@@ -3,8 +3,6 @@
 title: "getJobTemplate"
 title_tag: "google-native.transcoder/v1beta1.getJobTemplate"
 meta_desc: "Documentation for the google-native.transcoder/v1beta1.getJobTemplate function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

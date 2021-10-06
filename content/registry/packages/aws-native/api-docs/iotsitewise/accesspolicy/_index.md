@@ -3,8 +3,6 @@
 title: "AccessPolicy"
 title_tag: "aws-native.iotsitewise.AccessPolicy"
 meta_desc: "Documentation for the aws-native.iotsitewise.AccessPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws-native/AccessPolicy/"
 layout: api
 ---
 

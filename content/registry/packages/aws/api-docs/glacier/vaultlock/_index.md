@@ -3,8 +3,6 @@
 title: "VaultLock"
 title_tag: "aws.glacier.VaultLock"
 meta_desc: "Documentation for the aws.glacier.VaultLock resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/VaultLock/"
 layout: api
 ---
 

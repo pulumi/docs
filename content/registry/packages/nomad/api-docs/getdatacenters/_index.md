@@ -3,9 +3,7 @@
 title: "getDatacenters"
 title_tag: "nomad.getDatacenters"
 meta_desc: "Documentation for the nomad.getDatacenters function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
-layout: api-doc-resource
+layout: api
 ---
 
 

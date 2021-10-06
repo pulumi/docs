@@ -2,8 +2,6 @@
 title: "artifactregistry"
 title_tag: "gcp.artifactregistry"
 meta_desc: "Explore the resources and functions of the gcp.artifactregistry module."
-aliases:
-    - "docs/reference/pkg/gcp/"
 layout: api
 ---
 

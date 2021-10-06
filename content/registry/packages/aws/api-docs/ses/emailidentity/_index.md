@@ -3,8 +3,6 @@
 title: "EmailIdentity"
 title_tag: "aws.ses.EmailIdentity"
 meta_desc: "Documentation for the aws.ses.EmailIdentity resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/EmailIdentity/"
 layout: api
 ---
 

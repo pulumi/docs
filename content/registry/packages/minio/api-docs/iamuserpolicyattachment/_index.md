@@ -3,8 +3,6 @@
 title: "IamUserPolicyAttachment"
 title_tag: "minio.IamUserPolicyAttachment"
 meta_desc: "Documentation for the minio.IamUserPolicyAttachment resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/minio/IamUserPolicyAttachment/"
 layout: api
 ---
 

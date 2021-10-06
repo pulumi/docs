@@ -3,8 +3,6 @@
 title: "Cache"
 title_tag: "aws.storagegateway.Cache"
 meta_desc: "Documentation for the aws.storagegateway.Cache resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/Cache/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "Profile"
 title_tag: "azure-native.customerinsights.Profile"
 meta_desc: "Documentation for the azure-native.customerinsights.Profile resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/Profile/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "getApplicationType"
 title_tag: "azure-native.servicefabric.getApplicationType"
 meta_desc: "Documentation for the azure-native.servicefabric.getApplicationType function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

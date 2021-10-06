@@ -3,8 +3,6 @@
 title: "AccountPublicAccessBlock"
 title_tag: "aws.s3.AccountPublicAccessBlock"
 meta_desc: "Documentation for the aws.s3.AccountPublicAccessBlock resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/AccountPublicAccessBlock/"
 layout: api
 ---
 

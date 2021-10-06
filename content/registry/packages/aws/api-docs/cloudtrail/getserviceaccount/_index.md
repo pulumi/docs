@@ -3,8 +3,6 @@
 title: "getServiceAccount"
 title_tag: "aws.cloudtrail.getServiceAccount"
 meta_desc: "Documentation for the aws.cloudtrail.getServiceAccount function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

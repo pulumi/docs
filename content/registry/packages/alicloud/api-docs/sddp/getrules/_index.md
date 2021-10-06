@@ -3,8 +3,6 @@
 title: "getRules"
 title_tag: "alicloud.sddp.getRules"
 meta_desc: "Documentation for the alicloud.sddp.getRules function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

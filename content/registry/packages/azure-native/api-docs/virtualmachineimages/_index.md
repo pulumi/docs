@@ -2,8 +2,6 @@
 title: "virtualmachineimages"
 title_tag: "azure-native.virtualmachineimages"
 meta_desc: "Explore the resources and functions of the azure-native.virtualmachineimages module."
-aliases:
-    - "docs/reference/pkg/azure-native/"
 layout: api
 ---
 

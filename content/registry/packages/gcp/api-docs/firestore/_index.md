@@ -2,8 +2,6 @@
 title: "firestore"
 title_tag: "gcp.firestore"
 meta_desc: "Explore the resources and functions of the gcp.firestore module."
-aliases:
-    - "docs/reference/pkg/gcp/"
 layout: api
 ---
 

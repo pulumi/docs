@@ -3,8 +3,6 @@
 title: "ManagedZone"
 title_tag: "google-native.dns/v1.ManagedZone"
 meta_desc: "Documentation for the google-native.dns/v1.ManagedZone resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/google-native/ManagedZone/"
 layout: api
 ---
 

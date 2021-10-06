@@ -3,8 +3,6 @@
 title: "AutoscalingPolicyIamPolicy"
 title_tag: "google-native.dataproc/v1beta2.AutoscalingPolicyIamPolicy"
 meta_desc: "Documentation for the google-native.dataproc/v1beta2.AutoscalingPolicyIamPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/google-native/AutoscalingPolicyIamPolicy/"
 layout: api
 ---
 

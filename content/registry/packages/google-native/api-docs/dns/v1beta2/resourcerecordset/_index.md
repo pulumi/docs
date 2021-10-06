@@ -3,8 +3,6 @@
 title: "ResourceRecordSet"
 title_tag: "google-native.dns/v1beta2.ResourceRecordSet"
 meta_desc: "Documentation for the google-native.dns/v1beta2.ResourceRecordSet resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/google-native/ResourceRecordSet/"
 layout: api
 ---
 

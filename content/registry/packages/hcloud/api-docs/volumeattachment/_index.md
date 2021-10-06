@@ -3,8 +3,6 @@
 title: "VolumeAttachment"
 title_tag: "hcloud.VolumeAttachment"
 meta_desc: "Documentation for the hcloud.VolumeAttachment resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/hcloud/VolumeAttachment/"
 layout: api
 ---
 

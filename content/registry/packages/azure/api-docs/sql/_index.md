@@ -2,8 +2,6 @@
 title: "sql"
 title_tag: "azure.sql"
 meta_desc: "Explore the resources and functions of the azure.sql module."
-aliases:
-    - "docs/reference/pkg/azure/"
 layout: api
 ---
 

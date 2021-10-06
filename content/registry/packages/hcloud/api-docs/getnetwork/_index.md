@@ -3,8 +3,6 @@
 title: "getNetwork"
 title_tag: "hcloud.getNetwork"
 meta_desc: "Documentation for the hcloud.getNetwork function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "getResources"
 title_tag: "aws.resourcegroupstaggingapi.getResources"
 meta_desc: "Documentation for the aws.resourcegroupstaggingapi.getResources function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

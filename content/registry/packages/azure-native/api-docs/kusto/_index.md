@@ -2,8 +2,6 @@
 title: "kusto"
 title_tag: "azure-native.kusto"
 meta_desc: "Explore the resources and functions of the azure-native.kusto module."
-aliases:
-    - "docs/reference/pkg/azure-native/"
 layout: api
 ---
 

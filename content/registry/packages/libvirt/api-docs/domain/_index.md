@@ -3,8 +3,6 @@
 title: "Domain"
 title_tag: "libvirt.Domain"
 meta_desc: "Documentation for the libvirt.Domain resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/libvirt/Domain/"
 layout: api
 ---
 

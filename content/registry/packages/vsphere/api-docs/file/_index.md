@@ -3,8 +3,6 @@
 title: "File"
 title_tag: "vsphere.File"
 meta_desc: "Documentation for the vsphere.File resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/vsphere/File/"
 layout: api
 ---
 

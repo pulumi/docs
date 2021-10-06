@@ -3,8 +3,6 @@
 title: "getRuleset"
 title_tag: "google-native.firebaserules/v1.getRuleset"
 meta_desc: "Documentation for the google-native.firebaserules/v1.getRuleset function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

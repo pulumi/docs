@@ -3,8 +3,6 @@
 title: "VpcSecurityGroup"
 title_tag: "yandex.VpcSecurityGroup"
 meta_desc: "Documentation for the yandex.VpcSecurityGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/yandex/VpcSecurityGroup/"
 layout: api
 ---
 

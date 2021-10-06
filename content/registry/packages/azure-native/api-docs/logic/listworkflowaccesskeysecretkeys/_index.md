@@ -3,8 +3,6 @@
 title: "listWorkflowAccessKeySecretKeys"
 title_tag: "azure-native.logic.listWorkflowAccessKeySecretKeys"
 meta_desc: "Documentation for the azure-native.logic.listWorkflowAccessKeySecretKeys function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "AuditSinkList"
 title_tag: "kubernetes.auditregistration.k8s.io/v1alpha1.AuditSinkList"
 meta_desc: "Documentation for the kubernetes.auditregistration.k8s.io/v1alpha1.AuditSinkList resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/kubernetes/AuditSinkList/"
 layout: api
 ---
 

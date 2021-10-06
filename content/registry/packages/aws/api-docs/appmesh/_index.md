@@ -2,8 +2,6 @@
 title: "appmesh"
 title_tag: "aws.appmesh"
 meta_desc: "Explore the resources and functions of the aws.appmesh module."
-aliases:
-    - "docs/reference/pkg/aws/"
 layout: api
 ---
 

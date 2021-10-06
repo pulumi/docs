@@ -3,8 +3,6 @@
 title: "VpcNetwork"
 title_tag: "yandex.VpcNetwork"
 meta_desc: "Documentation for the yandex.VpcNetwork resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/yandex/VpcNetwork/"
 layout: api
 ---
 

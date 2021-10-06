@@ -3,8 +3,6 @@
 title: "RegionDiskIamBinding"
 title_tag: "gcp.compute.RegionDiskIamBinding"
 meta_desc: "Documentation for the gcp.compute.RegionDiskIamBinding resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/RegionDiskIamBinding/"
 layout: api
 ---
 

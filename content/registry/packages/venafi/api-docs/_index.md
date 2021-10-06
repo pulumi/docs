@@ -2,8 +2,6 @@
 title: "Venafi"
 title_tag: "venafi.Venafi"
 meta_desc: "A Pulumi package for creating and managing venafi cloud resources."
-aliases:
-    - "docs/reference/pkg/venafi/"
 menu:
     reference:
         parent: API Reference

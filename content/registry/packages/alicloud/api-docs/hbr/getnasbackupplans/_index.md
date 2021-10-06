@@ -3,8 +3,6 @@
 title: "getNasBackupPlans"
 title_tag: "alicloud.hbr.getNasBackupPlans"
 meta_desc: "Documentation for the alicloud.hbr.getNasBackupPlans function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

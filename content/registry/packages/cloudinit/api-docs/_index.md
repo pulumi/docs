@@ -2,8 +2,6 @@
 title: "cloud-init"
 title_tag: "cloudinit.cloud-init"
 meta_desc: "A Pulumi package for creating and managing cloudinit cloud resources."
-aliases:
-    - "docs/reference/pkg/cloudinit/"
 menu:
     reference:
         parent: API Reference

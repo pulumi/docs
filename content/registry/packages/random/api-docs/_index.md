@@ -2,8 +2,6 @@
 title: "random"
 title_tag: "random.random"
 meta_desc: "A Pulumi package to safely use randomness in Pulumi programs."
-aliases:
-    - "docs/reference/pkg/random/"
 menu:
     reference:
         parent: API Reference

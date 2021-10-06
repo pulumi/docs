@@ -3,8 +3,6 @@
 title: "RouterPeer"
 title_tag: "gcp.compute.RouterPeer"
 meta_desc: "Documentation for the gcp.compute.RouterPeer resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/RouterPeer/"
 layout: api
 ---
 

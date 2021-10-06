@@ -2,8 +2,6 @@
 title: "vpc"
 title_tag: "alicloud.vpc"
 meta_desc: "Explore the resources and functions of the alicloud.vpc module."
-aliases:
-    - "docs/reference/pkg/alicloud/"
 layout: api
 ---
 

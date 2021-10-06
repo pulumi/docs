@@ -3,8 +3,6 @@
 title: "getFirewallRule"
 title_tag: "azure-native.sql.getFirewallRule"
 meta_desc: "Documentation for the azure-native.sql.getFirewallRule function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

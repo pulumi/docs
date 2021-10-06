@@ -3,8 +3,6 @@
 title: "WebBackendServiceIamBinding"
 title_tag: "gcp.iap.WebBackendServiceIamBinding"
 meta_desc: "Documentation for the gcp.iap.WebBackendServiceIamBinding resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/WebBackendServiceIamBinding/"
 layout: api
 ---
 

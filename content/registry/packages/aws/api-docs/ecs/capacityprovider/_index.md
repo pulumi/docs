@@ -3,8 +3,6 @@
 title: "CapacityProvider"
 title_tag: "aws.ecs.CapacityProvider"
 meta_desc: "Documentation for the aws.ecs.CapacityProvider resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/CapacityProvider/"
 layout: api
 ---
 

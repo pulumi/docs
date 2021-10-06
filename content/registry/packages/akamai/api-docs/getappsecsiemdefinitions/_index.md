@@ -3,8 +3,6 @@
 title: "getAppSecSiemDefinitions"
 title_tag: "akamai.getAppSecSiemDefinitions"
 meta_desc: "Documentation for the akamai.getAppSecSiemDefinitions function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

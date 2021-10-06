@@ -2,8 +2,6 @@
 title: "cloudbuild"
 title_tag: "cloudbuild Package"
 meta_desc: ""
-aliases:
-    - "docs/reference/pkg/google-native/"
 layout: api
 ---
 

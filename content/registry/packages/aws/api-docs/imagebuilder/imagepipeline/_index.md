@@ -3,8 +3,6 @@
 title: "ImagePipeline"
 title_tag: "aws.imagebuilder.ImagePipeline"
 meta_desc: "Documentation for the aws.imagebuilder.ImagePipeline resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/ImagePipeline/"
 layout: api
 ---
 

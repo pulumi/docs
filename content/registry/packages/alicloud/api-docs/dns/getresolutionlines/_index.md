@@ -3,8 +3,6 @@
 title: "getResolutionLines"
 title_tag: "alicloud.dns.getResolutionLines"
 meta_desc: "Documentation for the alicloud.dns.getResolutionLines function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

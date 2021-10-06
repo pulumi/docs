@@ -3,8 +3,6 @@
 title: "OrganizationBlock"
 title_tag: "github.OrganizationBlock"
 meta_desc: "Documentation for the github.OrganizationBlock resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/github/OrganizationBlock/"
 layout: api
 ---
 

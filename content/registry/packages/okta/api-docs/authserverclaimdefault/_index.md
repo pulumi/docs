@@ -3,8 +3,6 @@
 title: "AuthServerClaimDefault"
 title_tag: "okta.AuthServerClaimDefault"
 meta_desc: "Documentation for the okta.AuthServerClaimDefault resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/okta/AuthServerClaimDefault/"
 layout: api
 ---
 

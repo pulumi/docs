@@ -2,8 +2,6 @@
 title: "cloudresourcemanager"
 title_tag: "cloudresourcemanager Package"
 meta_desc: ""
-aliases:
-    - "docs/reference/pkg/google-native/"
 layout: api
 ---
 

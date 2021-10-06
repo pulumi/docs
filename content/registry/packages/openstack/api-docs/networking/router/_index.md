@@ -3,8 +3,6 @@
 title: "Router"
 title_tag: "openstack.networking.Router"
 meta_desc: "Documentation for the openstack.networking.Router resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/openstack/Router/"
 layout: api
 ---
 

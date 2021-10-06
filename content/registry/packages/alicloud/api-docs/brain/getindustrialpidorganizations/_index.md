@@ -3,8 +3,6 @@
 title: "getIndustrialPidOrganizations"
 title_tag: "alicloud.brain.getIndustrialPidOrganizations"
 meta_desc: "Documentation for the alicloud.brain.getIndustrialPidOrganizations function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

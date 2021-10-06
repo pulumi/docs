@@ -2,8 +2,6 @@
 title: "cloudhsmv2"
 title_tag: "aws.cloudhsmv2"
 meta_desc: "Explore the resources and functions of the aws.cloudhsmv2 module."
-aliases:
-    - "docs/reference/pkg/aws/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "GlobalPublicDelegatedPrefix"
 title_tag: "google-native.compute/alpha.GlobalPublicDelegatedPrefix"
 meta_desc: "Documentation for the google-native.compute/alpha.GlobalPublicDelegatedPrefix resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/google-native/GlobalPublicDelegatedPrefix/"
 layout: api
 ---
 

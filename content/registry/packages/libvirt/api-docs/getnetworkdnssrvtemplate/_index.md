@@ -3,8 +3,6 @@
 title: "getNetworkDnsSrvTemplate"
 title_tag: "libvirt.getNetworkDnsSrvTemplate"
 meta_desc: "Documentation for the libvirt.getNetworkDnsSrvTemplate function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

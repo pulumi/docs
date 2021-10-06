@@ -3,8 +3,6 @@
 title: "getEscalation"
 title_tag: "opsgenie.getEscalation"
 meta_desc: "Documentation for the opsgenie.getEscalation function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

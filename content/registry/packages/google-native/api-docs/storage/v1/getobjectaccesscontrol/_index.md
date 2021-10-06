@@ -3,8 +3,6 @@
 title: "getObjectAccessControl"
 title_tag: "google-native.storage/v1.getObjectAccessControl"
 meta_desc: "Documentation for the google-native.storage/v1.getObjectAccessControl function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

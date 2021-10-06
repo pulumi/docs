@@ -2,8 +2,6 @@
 title: "aws"
 title_tag: "signalfx.aws"
 meta_desc: "Explore the resources and functions of the signalfx.aws module."
-aliases:
-    - "docs/reference/pkg/signalfx/"
 layout: api
 ---
 

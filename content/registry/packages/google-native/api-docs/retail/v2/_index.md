@@ -2,8 +2,6 @@
 title: "retail/v2"
 title_tag: "google-native.retail/v2"
 meta_desc: "Explore the resources and functions of the google-native.retail/v2 module."
-aliases:
-    - "docs/reference/pkg/google-native/"
 layout: api
 ---
 

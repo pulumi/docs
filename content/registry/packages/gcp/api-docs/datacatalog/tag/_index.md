@@ -3,8 +3,6 @@
 title: "Tag"
 title_tag: "gcp.datacatalog.Tag"
 meta_desc: "Documentation for the gcp.datacatalog.Tag resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/Tag/"
 layout: api
 ---
 

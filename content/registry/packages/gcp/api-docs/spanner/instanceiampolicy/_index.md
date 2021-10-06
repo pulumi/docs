@@ -3,8 +3,6 @@
 title: "InstanceIAMPolicy"
 title_tag: "gcp.spanner.InstanceIAMPolicy"
 meta_desc: "Documentation for the gcp.spanner.InstanceIAMPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/InstanceIAMPolicy/"
 layout: api
 ---
 

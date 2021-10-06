@@ -3,8 +3,6 @@
 title: "getNotificationConfig"
 title_tag: "google-native.securitycenter/v1.getNotificationConfig"
 meta_desc: "Documentation for the google-native.securitycenter/v1.getNotificationConfig function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "InstanceIamPolicy"
 title_tag: "gcp.bigtable.InstanceIamPolicy"
 meta_desc: "Documentation for the gcp.bigtable.InstanceIamPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/InstanceIamPolicy/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "getPolicySetDefinition"
 title_tag: "azure.policy.getPolicySetDefinition"
 meta_desc: "Documentation for the azure.policy.getPolicySetDefinition function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

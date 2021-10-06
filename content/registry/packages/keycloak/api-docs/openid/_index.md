@@ -2,8 +2,6 @@
 title: "openid"
 title_tag: "keycloak.openid"
 meta_desc: "Explore the resources and functions of the keycloak.openid module."
-aliases:
-    - "docs/reference/pkg/keycloak/"
 layout: api
 ---
 

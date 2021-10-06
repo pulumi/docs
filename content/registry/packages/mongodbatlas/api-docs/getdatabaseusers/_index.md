@@ -3,8 +3,6 @@
 title: "getDatabaseUsers"
 title_tag: "mongodbatlas.getDatabaseUsers"
 meta_desc: "Documentation for the mongodbatlas.getDatabaseUsers function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

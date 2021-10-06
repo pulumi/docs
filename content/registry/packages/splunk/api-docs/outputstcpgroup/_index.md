@@ -3,8 +3,6 @@
 title: "OutputsTcpGroup"
 title_tag: "splunk.OutputsTcpGroup"
 meta_desc: "Documentation for the splunk.OutputsTcpGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/splunk/OutputsTcpGroup/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "InviteAccepter"
 title_tag: "aws.securityhub.InviteAccepter"
 meta_desc: "Documentation for the aws.securityhub.InviteAccepter resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/InviteAccepter/"
 layout: api
 ---
 

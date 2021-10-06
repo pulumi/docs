@@ -3,8 +3,6 @@
 title: "WebAppSiteExtension"
 title_tag: "azure-native.web.WebAppSiteExtension"
 meta_desc: "Documentation for the azure-native.web.WebAppSiteExtension resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/WebAppSiteExtension/"
 layout: api
 ---
 

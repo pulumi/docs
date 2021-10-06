@@ -3,8 +3,6 @@
 title: "getOrderItemByName"
 title_tag: "azure-native.edgeorder.getOrderItemByName"
 meta_desc: "Documentation for the azure-native.edgeorder.getOrderItemByName function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

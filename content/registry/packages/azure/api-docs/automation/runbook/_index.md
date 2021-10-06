@@ -3,8 +3,6 @@
 title: "RunBook"
 title_tag: "azure.automation.RunBook"
 meta_desc: "Documentation for the azure.automation.RunBook resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/RunBook/"
 layout: api
 ---
 

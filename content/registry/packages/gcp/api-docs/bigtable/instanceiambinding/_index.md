@@ -3,8 +3,6 @@
 title: "InstanceIamBinding"
 title_tag: "gcp.bigtable.InstanceIamBinding"
 meta_desc: "Documentation for the gcp.bigtable.InstanceIamBinding resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/InstanceIamBinding/"
 layout: api
 ---
 

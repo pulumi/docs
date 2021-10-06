@@ -3,8 +3,6 @@
 title: "WebApp"
 title_tag: "azure-native.web.WebApp"
 meta_desc: "Documentation for the azure-native.web.WebApp resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/WebApp/"
 layout: api
 ---
 

@@ -2,8 +2,6 @@
 title: "waf"
 title_tag: "alicloud.waf"
 meta_desc: "Explore the resources and functions of the alicloud.waf module."
-aliases:
-    - "docs/reference/pkg/alicloud/"
 layout: api
 ---
 

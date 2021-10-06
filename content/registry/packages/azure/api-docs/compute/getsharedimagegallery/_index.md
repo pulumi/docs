@@ -3,8 +3,6 @@
 title: "getSharedImageGallery"
 title_tag: "azure.compute.getSharedImageGallery"
 meta_desc: "Documentation for the azure.compute.getSharedImageGallery function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

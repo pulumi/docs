@@ -2,8 +2,6 @@
 title: "lakeformation"
 title_tag: "aws.lakeformation"
 meta_desc: "Explore the resources and functions of the aws.lakeformation module."
-aliases:
-    - "docs/reference/pkg/aws/"
 layout: api
 ---
 

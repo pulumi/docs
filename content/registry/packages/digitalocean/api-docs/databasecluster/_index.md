@@ -3,8 +3,6 @@
 title: "DatabaseCluster"
 title_tag: "digitalocean.DatabaseCluster"
 meta_desc: "Documentation for the digitalocean.DatabaseCluster resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/digitalocean/DatabaseCluster/"
 layout: api
 ---
 

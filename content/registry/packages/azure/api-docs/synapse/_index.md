@@ -2,8 +2,6 @@
 title: "synapse"
 title_tag: "azure.synapse"
 meta_desc: "Explore the resources and functions of the azure.synapse module."
-aliases:
-    - "docs/reference/pkg/azure/"
 layout: api
 ---
 

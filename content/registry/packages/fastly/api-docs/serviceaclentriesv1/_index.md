@@ -3,8 +3,6 @@
 title: "ServiceACLEntriesv1"
 title_tag: "fastly.ServiceACLEntriesv1"
 meta_desc: "Documentation for the fastly.ServiceACLEntriesv1 resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/fastly/ServiceACLEntriesv1/"
 layout: api
 ---
 

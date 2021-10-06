@@ -2,8 +2,6 @@
 title: "ram"
 title_tag: "alicloud.ram"
 meta_desc: "Explore the resources and functions of the alicloud.ram module."
-aliases:
-    - "docs/reference/pkg/alicloud/"
 layout: api
 ---
 

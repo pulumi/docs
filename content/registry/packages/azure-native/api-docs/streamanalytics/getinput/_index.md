@@ -3,8 +3,6 @@
 title: "getInput"
 title_tag: "azure-native.streamanalytics.getInput"
 meta_desc: "Documentation for the azure-native.streamanalytics.getInput function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "getSearchIndex"
 title_tag: "mongodbatlas.getSearchIndex"
 meta_desc: "Documentation for the mongodbatlas.getSearchIndex function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

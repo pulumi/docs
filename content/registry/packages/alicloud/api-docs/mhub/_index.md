@@ -2,8 +2,6 @@
 title: "mhub"
 title_tag: "alicloud.mhub"
 meta_desc: "Explore the resources and functions of the alicloud.mhub module."
-aliases:
-    - "docs/reference/pkg/alicloud/"
 layout: api
 ---
 

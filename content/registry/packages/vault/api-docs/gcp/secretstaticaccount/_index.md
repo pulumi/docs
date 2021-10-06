@@ -3,8 +3,6 @@
 title: "SecretStaticAccount"
 title_tag: "vault.gcp.SecretStaticAccount"
 meta_desc: "Documentation for the vault.gcp.SecretStaticAccount resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/vault/SecretStaticAccount/"
 layout: api
 ---
 

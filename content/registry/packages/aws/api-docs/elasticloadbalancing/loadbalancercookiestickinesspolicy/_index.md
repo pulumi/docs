@@ -3,8 +3,6 @@
 title: "LoadBalancerCookieStickinessPolicy"
 title_tag: "aws.elasticloadbalancing.LoadBalancerCookieStickinessPolicy"
 meta_desc: "Documentation for the aws.elasticloadbalancing.LoadBalancerCookieStickinessPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/LoadBalancerCookieStickinessPolicy/"
 layout: api
 ---
 

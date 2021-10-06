@@ -2,8 +2,6 @@
 title: "Spotinst"
 title_tag: "Spotinst Package"
 meta_desc: "A Pulumi package for creating and managing spotinst cloud resources."
-aliases:
-    - "docs/reference/pkg/spotinst/"
 menu:
     reference:
         parent: API Reference

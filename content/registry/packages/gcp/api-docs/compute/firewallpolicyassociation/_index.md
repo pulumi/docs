@@ -3,8 +3,6 @@
 title: "FirewallPolicyAssociation"
 title_tag: "gcp.compute.FirewallPolicyAssociation"
 meta_desc: "Documentation for the gcp.compute.FirewallPolicyAssociation resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/FirewallPolicyAssociation/"
 layout: api
 ---
 

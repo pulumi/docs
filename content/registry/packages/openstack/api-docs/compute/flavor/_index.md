@@ -3,8 +3,6 @@
 title: "Flavor"
 title_tag: "openstack.compute.Flavor"
 meta_desc: "Documentation for the openstack.compute.Flavor resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/openstack/Flavor/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "ProjectMembership"
 title_tag: "gitlab.ProjectMembership"
 meta_desc: "Documentation for the gitlab.ProjectMembership resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gitlab/ProjectMembership/"
 layout: api
 ---
 

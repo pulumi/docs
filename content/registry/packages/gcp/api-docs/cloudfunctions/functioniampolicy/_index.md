@@ -3,8 +3,6 @@
 title: "FunctionIamPolicy"
 title_tag: "gcp.cloudfunctions.FunctionIamPolicy"
 meta_desc: "Documentation for the gcp.cloudfunctions.FunctionIamPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/FunctionIamPolicy/"
 layout: api
 ---
 

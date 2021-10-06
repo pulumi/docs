@@ -3,8 +3,6 @@
 title: "getGroup"
 title_tag: "azure-native.apimanagement.getGroup"
 meta_desc: "Documentation for the azure-native.apimanagement.getGroup function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

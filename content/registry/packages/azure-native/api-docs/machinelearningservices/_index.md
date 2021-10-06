@@ -2,8 +2,6 @@
 title: "machinelearningservices"
 title_tag: "azure-native.machinelearningservices"
 meta_desc: "Explore the resources and functions of the azure-native.machinelearningservices module."
-aliases:
-    - "docs/reference/pkg/azure-native/"
 layout: api
 ---
 

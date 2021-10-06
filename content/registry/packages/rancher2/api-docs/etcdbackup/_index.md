@@ -3,8 +3,6 @@
 title: "EtcdBackup"
 title_tag: "rancher2.EtcdBackup"
 meta_desc: "Documentation for the rancher2.EtcdBackup resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/rancher2/EtcdBackup/"
 layout: api
 ---
 

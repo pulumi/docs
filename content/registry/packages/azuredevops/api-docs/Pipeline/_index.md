@@ -2,8 +2,6 @@
 title: "Pipeline"
 title_tag: "azuredevops.Pipeline"
 meta_desc: "Explore the resources and functions of the azuredevops.Pipeline module."
-aliases:
-    - "docs/reference/pkg/azuredevops/"
 layout: api
 ---
 

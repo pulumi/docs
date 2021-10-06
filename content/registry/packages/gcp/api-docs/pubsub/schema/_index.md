@@ -3,8 +3,6 @@
 title: "Schema"
 title_tag: "gcp.pubsub.Schema"
 meta_desc: "Documentation for the gcp.pubsub.Schema resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/Schema/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "DomainExtension"
 title_tag: "alicloud.slb.DomainExtension"
 meta_desc: "Documentation for the alicloud.slb.DomainExtension resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/alicloud/DomainExtension/"
 layout: api
 ---
 

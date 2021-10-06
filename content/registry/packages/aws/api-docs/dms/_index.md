@@ -2,8 +2,6 @@
 title: "dms"
 title_tag: "aws.dms"
 meta_desc: "Explore the resources and functions of the aws.dms module."
-aliases:
-    - "docs/reference/pkg/aws/"
 layout: api
 ---
 

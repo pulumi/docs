@@ -3,8 +3,6 @@
 title: "QuoteSetV3"
 title_tag: "openstack.blockstorage.QuoteSetV3"
 meta_desc: "Documentation for the openstack.blockstorage.QuoteSetV3 resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/openstack/QuoteSetV3/"
 layout: api
 ---
 

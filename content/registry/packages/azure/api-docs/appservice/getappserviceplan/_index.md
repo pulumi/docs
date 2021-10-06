@@ -3,8 +3,6 @@
 title: "getAppServicePlan"
 title_tag: "azure.appservice.getAppServicePlan"
 meta_desc: "Documentation for the azure.appservice.getAppServicePlan function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

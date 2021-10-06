@@ -3,8 +3,6 @@
 title: "getElasticSearchAclConfig"
 title_tag: "aiven.getElasticSearchAclConfig"
 meta_desc: "Documentation for the aiven.getElasticSearchAclConfig function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

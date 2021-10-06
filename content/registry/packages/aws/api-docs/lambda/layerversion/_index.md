@@ -3,8 +3,6 @@
 title: "LayerVersion"
 title_tag: "aws.lambda.LayerVersion"
 meta_desc: "Documentation for the aws.lambda.LayerVersion resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/LayerVersion/"
 layout: api
 ---
 

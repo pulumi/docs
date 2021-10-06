@@ -3,8 +3,6 @@
 title: "InstanceGroup"
 title_tag: "google-native.compute/alpha.InstanceGroup"
 meta_desc: "Documentation for the google-native.compute/alpha.InstanceGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/google-native/InstanceGroup/"
 layout: api
 ---
 

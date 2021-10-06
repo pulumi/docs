@@ -3,8 +3,6 @@
 title: "getNetworks"
 title_tag: "alicloud.cloudconnect.getNetworks"
 meta_desc: "Documentation for the alicloud.cloudconnect.getNetworks function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

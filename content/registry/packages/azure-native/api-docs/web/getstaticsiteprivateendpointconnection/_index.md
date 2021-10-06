@@ -3,8 +3,6 @@
 title: "getStaticSitePrivateEndpointConnection"
 title_tag: "azure-native.web.getStaticSitePrivateEndpointConnection"
 meta_desc: "Documentation for the azure-native.web.getStaticSitePrivateEndpointConnection function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

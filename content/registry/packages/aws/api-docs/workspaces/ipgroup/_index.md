@@ -3,8 +3,6 @@
 title: "IpGroup"
 title_tag: "aws.workspaces.IpGroup"
 meta_desc: "Documentation for the aws.workspaces.IpGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/IpGroup/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "getMdbMongodbCluster"
 title_tag: "yandex.getMdbMongodbCluster"
 meta_desc: "Documentation for the yandex.getMdbMongodbCluster function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

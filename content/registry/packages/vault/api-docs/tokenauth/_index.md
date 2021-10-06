@@ -2,8 +2,6 @@
 title: "tokenauth"
 title_tag: "vault.tokenauth"
 meta_desc: "Explore the resources and functions of the vault.tokenauth module."
-aliases:
-    - "docs/reference/pkg/vault/"
 layout: api
 ---
 

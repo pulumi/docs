@@ -3,8 +3,6 @@
 title: "getShare"
 title_tag: "openstack.sharedfilesystem.getShare"
 meta_desc: "Documentation for the openstack.sharedfilesystem.getShare function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

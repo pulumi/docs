@@ -3,8 +3,6 @@
 title: "getVariable"
 title_tag: "azure-native.automation.getVariable"
 meta_desc: "Documentation for the azure-native.automation.getVariable function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

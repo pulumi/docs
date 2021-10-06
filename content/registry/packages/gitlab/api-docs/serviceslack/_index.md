@@ -3,8 +3,6 @@
 title: "ServiceSlack"
 title_tag: "gitlab.ServiceSlack"
 meta_desc: "Documentation for the gitlab.ServiceSlack resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gitlab/ServiceSlack/"
 layout: api
 ---
 

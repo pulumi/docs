@@ -3,8 +3,6 @@
 title: "RegionTargetHttpsProxy"
 title_tag: "google-native.compute/beta.RegionTargetHttpsProxy"
 meta_desc: "Documentation for the google-native.compute/beta.RegionTargetHttpsProxy resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/google-native/RegionTargetHttpsProxy/"
 layout: api
 ---
 

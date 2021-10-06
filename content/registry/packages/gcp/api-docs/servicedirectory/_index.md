@@ -2,8 +2,6 @@
 title: "servicedirectory"
 title_tag: "gcp.servicedirectory"
 meta_desc: "Explore the resources and functions of the gcp.servicedirectory module."
-aliases:
-    - "docs/reference/pkg/gcp/"
 layout: api
 ---
 

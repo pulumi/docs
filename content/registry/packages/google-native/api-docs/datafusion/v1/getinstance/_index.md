@@ -3,8 +3,6 @@
 title: "getInstance"
 title_tag: "google-native.datafusion/v1.getInstance"
 meta_desc: "Documentation for the google-native.datafusion/v1.getInstance function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

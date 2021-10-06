@@ -3,8 +3,6 @@
 title: "getExecutions"
 title_tag: "alicloud.oos.getExecutions"
 meta_desc: "Documentation for the alicloud.oos.getExecutions function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

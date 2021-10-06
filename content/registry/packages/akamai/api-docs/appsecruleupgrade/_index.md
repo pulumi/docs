@@ -3,8 +3,6 @@
 title: "AppSecRuleUpgrade"
 title_tag: "akamai.AppSecRuleUpgrade"
 meta_desc: "Documentation for the akamai.AppSecRuleUpgrade resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/akamai/AppSecRuleUpgrade/"
 layout: api
 ---
 

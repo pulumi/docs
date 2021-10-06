@@ -3,8 +3,6 @@
 title: "FhirStoreIamPolicy"
 title_tag: "gcp.healthcare.FhirStoreIamPolicy"
 meta_desc: "Documentation for the gcp.healthcare.FhirStoreIamPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/FhirStoreIamPolicy/"
 layout: api
 ---
 

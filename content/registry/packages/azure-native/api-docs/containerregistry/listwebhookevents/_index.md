@@ -3,8 +3,6 @@
 title: "listWebhookEvents"
 title_tag: "azure-native.containerregistry.listWebhookEvents"
 meta_desc: "Documentation for the azure-native.containerregistry.listWebhookEvents function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

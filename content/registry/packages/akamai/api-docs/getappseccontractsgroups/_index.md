@@ -3,8 +3,6 @@
 title: "getAppSecContractsGroups"
 title_tag: "akamai.getAppSecContractsGroups"
 meta_desc: "Documentation for the akamai.getAppSecContractsGroups function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

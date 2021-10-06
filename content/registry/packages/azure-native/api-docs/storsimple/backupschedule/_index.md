@@ -3,8 +3,6 @@
 title: "BackupSchedule"
 title_tag: "azure-native.storsimple.BackupSchedule"
 meta_desc: "Documentation for the azure-native.storsimple.BackupSchedule resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/BackupSchedule/"
 layout: api
 ---
 

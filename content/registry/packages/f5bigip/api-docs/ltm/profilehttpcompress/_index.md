@@ -3,8 +3,6 @@
 title: "ProfileHttpCompress"
 title_tag: "f5bigip.ltm.ProfileHttpCompress"
 meta_desc: "Documentation for the f5bigip.ltm.ProfileHttpCompress resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/f5bigip/ProfileHttpCompress/"
 layout: api
 ---
 

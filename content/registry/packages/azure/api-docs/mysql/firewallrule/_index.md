@@ -3,8 +3,6 @@
 title: "FirewallRule"
 title_tag: "azure.mysql.FirewallRule"
 meta_desc: "Documentation for the azure.mysql.FirewallRule resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/FirewallRule/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "getExperiment"
 title_tag: "google-native.dialogflow/v3beta1.getExperiment"
 meta_desc: "Documentation for the google-native.dialogflow/v3beta1.getExperiment function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

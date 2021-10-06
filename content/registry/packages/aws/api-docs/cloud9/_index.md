@@ -2,8 +2,6 @@
 title: "cloud9"
 title_tag: "aws.cloud9"
 meta_desc: "Explore the resources and functions of the aws.cloud9 module."
-aliases:
-    - "docs/reference/pkg/aws/"
 layout: api
 ---
 

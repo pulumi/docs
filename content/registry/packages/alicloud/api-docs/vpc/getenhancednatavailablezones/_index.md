@@ -3,8 +3,6 @@
 title: "getEnhancedNatAvailableZones"
 title_tag: "alicloud.vpc.getEnhancedNatAvailableZones"
 meta_desc: "Documentation for the alicloud.vpc.getEnhancedNatAvailableZones function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

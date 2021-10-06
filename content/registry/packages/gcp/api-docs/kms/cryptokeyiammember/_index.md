@@ -3,8 +3,6 @@
 title: "CryptoKeyIAMMember"
 title_tag: "gcp.kms.CryptoKeyIAMMember"
 meta_desc: "Documentation for the gcp.kms.CryptoKeyIAMMember resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/CryptoKeyIAMMember/"
 layout: api
 ---
 

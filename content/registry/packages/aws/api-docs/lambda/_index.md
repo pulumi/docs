@@ -2,8 +2,6 @@
 title: "lambda"
 title_tag: "aws.lambda"
 meta_desc: "Explore the resources and functions of the aws.lambda module."
-aliases:
-    - "docs/reference/pkg/aws/"
 layout: api
 ---
 

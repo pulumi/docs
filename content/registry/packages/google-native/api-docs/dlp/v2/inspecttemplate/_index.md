@@ -3,8 +3,6 @@
 title: "InspectTemplate"
 title_tag: "google-native.dlp/v2.InspectTemplate"
 meta_desc: "Documentation for the google-native.dlp/v2.InspectTemplate resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/google-native/InspectTemplate/"
 layout: api
 ---
 

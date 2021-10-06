@@ -3,8 +3,6 @@
 title: "ReplicationConfiguration"
 title_tag: "aws-native.ecr.ReplicationConfiguration"
 meta_desc: "Documentation for the aws-native.ecr.ReplicationConfiguration resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws-native/ReplicationConfiguration/"
 layout: api
 ---
 

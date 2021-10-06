@@ -2,8 +2,6 @@
 title: "analysisservices"
 title_tag: "azure-native.analysisservices"
 meta_desc: "Explore the resources and functions of the azure-native.analysisservices module."
-aliases:
-    - "docs/reference/pkg/azure-native/"
 layout: api
 ---
 

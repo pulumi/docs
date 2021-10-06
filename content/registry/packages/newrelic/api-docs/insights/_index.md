@@ -2,8 +2,6 @@
 title: "insights"
 title_tag: "newrelic.insights"
 meta_desc: "Explore the resources and functions of the newrelic.insights module."
-aliases:
-    - "docs/reference/pkg/newrelic/"
 layout: api
 ---
 

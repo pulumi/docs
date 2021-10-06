@@ -3,8 +3,6 @@
 title: "getBudget"
 title_tag: "azure-native.consumption.getBudget"
 meta_desc: "Documentation for the azure-native.consumption.getBudget function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

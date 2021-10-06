@@ -3,8 +3,6 @@
 title: "ManagedAccount"
 title_tag: "snowflake.ManagedAccount"
 meta_desc: "Documentation for the snowflake.ManagedAccount resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/snowflake/ManagedAccount/"
 layout: api
 ---
 

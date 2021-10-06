@@ -3,8 +3,6 @@
 title: "getAppSecCustomDeny"
 title_tag: "akamai.getAppSecCustomDeny"
 meta_desc: "Documentation for the akamai.getAppSecCustomDeny function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

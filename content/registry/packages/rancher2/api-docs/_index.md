@@ -2,8 +2,6 @@
 title: "Rancher 2"
 title_tag: "rancher2.Rancher 2"
 meta_desc: "A Pulumi package for creating and managing rancher2 resources."
-aliases:
-    - "docs/reference/pkg/rancher2/"
 menu:
     reference:
         parent: API Reference

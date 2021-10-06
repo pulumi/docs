@@ -2,8 +2,6 @@
 title: "appRole"
 title_tag: "vault.appRole"
 meta_desc: "Explore the resources and functions of the vault.appRole module."
-aliases:
-    - "docs/reference/pkg/vault/"
 layout: api
 ---
 

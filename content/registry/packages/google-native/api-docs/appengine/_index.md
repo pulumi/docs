@@ -2,8 +2,6 @@
 title: "appengine"
 title_tag: "appengine Package"
 meta_desc: ""
-aliases:
-    - "docs/reference/pkg/google-native/"
 layout: api
 ---
 

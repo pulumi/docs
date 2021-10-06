@@ -3,8 +3,6 @@
 title: "GcpSource"
 title_tag: "sumologic.GcpSource"
 meta_desc: "Documentation for the sumologic.GcpSource resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/sumologic/GcpSource/"
 layout: api
 ---
 

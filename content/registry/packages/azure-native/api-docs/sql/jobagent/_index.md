@@ -3,8 +3,6 @@
 title: "JobAgent"
 title_tag: "azure-native.sql.JobAgent"
 meta_desc: "Documentation for the azure-native.sql.JobAgent resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/JobAgent/"
 layout: api
 ---
 

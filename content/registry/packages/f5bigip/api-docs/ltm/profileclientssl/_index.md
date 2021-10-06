@@ -3,8 +3,6 @@
 title: "ProfileClientSsl"
 title_tag: "f5bigip.ltm.ProfileClientSsl"
 meta_desc: "Documentation for the f5bigip.ltm.ProfileClientSsl resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/f5bigip/ProfileClientSsl/"
 layout: api
 ---
 

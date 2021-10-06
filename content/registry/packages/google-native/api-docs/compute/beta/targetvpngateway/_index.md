@@ -3,8 +3,6 @@
 title: "TargetVpnGateway"
 title_tag: "google-native.compute/beta.TargetVpnGateway"
 meta_desc: "Documentation for the google-native.compute/beta.TargetVpnGateway resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/google-native/TargetVpnGateway/"
 layout: api
 ---
 

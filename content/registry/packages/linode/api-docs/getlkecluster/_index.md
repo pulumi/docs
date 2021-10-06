@@ -3,8 +3,6 @@
 title: "getLkeCluster"
 title_tag: "linode.getLkeCluster"
 meta_desc: "Documentation for the linode.getLkeCluster function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

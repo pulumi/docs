@@ -3,8 +3,6 @@
 title: "CertificateAuthority"
 title_tag: "google-native.privateca/v1.CertificateAuthority"
 meta_desc: "Documentation for the google-native.privateca/v1.CertificateAuthority resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/google-native/CertificateAuthority/"
 layout: api
 ---
 

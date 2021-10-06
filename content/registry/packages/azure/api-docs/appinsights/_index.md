@@ -2,8 +2,6 @@
 title: "appinsights"
 title_tag: "azure.appinsights"
 meta_desc: "Explore the resources and functions of the azure.appinsights module."
-aliases:
-    - "docs/reference/pkg/azure/"
 layout: api
 ---
 

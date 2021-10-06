@@ -3,8 +3,6 @@
 title: "CacheAccessPolicy"
 title_tag: "azure.hpc.CacheAccessPolicy"
 meta_desc: "Documentation for the azure.hpc.CacheAccessPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/CacheAccessPolicy/"
 layout: api
 ---
 

@@ -2,8 +2,6 @@
 title: "emrcontainers"
 title_tag: "aws-native.emrcontainers"
 meta_desc: "Explore the resources and functions of the aws-native.emrcontainers module."
-aliases:
-    - "docs/reference/pkg/aws-native/"
 layout: api
 ---
 

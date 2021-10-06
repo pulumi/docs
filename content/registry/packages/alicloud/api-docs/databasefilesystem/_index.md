@@ -2,8 +2,6 @@
 title: "databasefilesystem"
 title_tag: "alicloud.databasefilesystem"
 meta_desc: "Explore the resources and functions of the alicloud.databasefilesystem module."
-aliases:
-    - "docs/reference/pkg/alicloud/"
 layout: api
 ---
 

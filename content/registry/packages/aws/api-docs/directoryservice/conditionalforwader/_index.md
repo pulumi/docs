@@ -3,8 +3,6 @@
 title: "ConditionalForwader"
 title_tag: "aws.directoryservice.ConditionalForwader"
 meta_desc: "Documentation for the aws.directoryservice.ConditionalForwader resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/ConditionalForwader/"
 layout: api
 ---
 

@@ -2,8 +2,6 @@
 title: "clickhouse"
 title_tag: "alicloud.clickhouse"
 meta_desc: "Explore the resources and functions of the alicloud.clickhouse module."
-aliases:
-    - "docs/reference/pkg/alicloud/"
 layout: api
 ---
 

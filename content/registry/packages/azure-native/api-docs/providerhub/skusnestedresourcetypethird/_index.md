@@ -3,8 +3,6 @@
 title: "SkusNestedResourceTypeThird"
 title_tag: "azure-native.providerhub.SkusNestedResourceTypeThird"
 meta_desc: "Documentation for the azure-native.providerhub.SkusNestedResourceTypeThird resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/SkusNestedResourceTypeThird/"
 layout: api
 ---
 

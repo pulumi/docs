@@ -3,8 +3,6 @@
 title: "getAddressScope"
 title_tag: "openstack.networking.getAddressScope"
 meta_desc: "Documentation for the openstack.networking.getAddressScope function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

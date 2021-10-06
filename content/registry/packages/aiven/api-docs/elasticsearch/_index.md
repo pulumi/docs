@@ -3,8 +3,6 @@
 title: "ElasticSearch"
 title_tag: "aiven.ElasticSearch"
 meta_desc: "Documentation for the aiven.ElasticSearch resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aiven/ElasticSearch/"
 layout: api
 ---
 

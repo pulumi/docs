@@ -3,8 +3,6 @@
 title: "ComputeInstance"
 title_tag: "azure.machinelearning.ComputeInstance"
 meta_desc: "Documentation for the azure.machinelearning.ComputeInstance resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/ComputeInstance/"
 layout: api
 ---
 

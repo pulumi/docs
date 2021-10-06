@@ -2,8 +2,6 @@
 title: "batch/v1"
 title_tag: "kubernetes.batch/v1"
 meta_desc: "Explore the resources and functions of the kubernetes.batch/v1 module."
-aliases:
-    - "docs/reference/pkg/kubernetes/"
 layout: api
 ---
 

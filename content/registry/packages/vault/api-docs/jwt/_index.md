@@ -2,8 +2,6 @@
 title: "jwt"
 title_tag: "vault.jwt"
 meta_desc: "Explore the resources and functions of the vault.jwt module."
-aliases:
-    - "docs/reference/pkg/vault/"
 layout: api
 ---
 

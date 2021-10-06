@@ -3,8 +3,6 @@
 title: "ServicePrincipalPassword"
 title_tag: "azuread.ServicePrincipalPassword"
 meta_desc: "Documentation for the azuread.ServicePrincipalPassword resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azuread/ServicePrincipalPassword/"
 layout: api
 ---
 

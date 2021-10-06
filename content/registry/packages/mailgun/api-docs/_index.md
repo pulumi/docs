@@ -2,8 +2,6 @@
 title: "Mailgun"
 title_tag: "mailgun.Mailgun"
 meta_desc: "A Pulumi package for creating and managing Mailgun resources."
-aliases:
-    - "docs/reference/pkg/mailgun/"
 menu:
     reference:
         parent: API Reference

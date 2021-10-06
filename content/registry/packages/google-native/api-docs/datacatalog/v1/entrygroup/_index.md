@@ -3,8 +3,6 @@
 title: "EntryGroup"
 title_tag: "google-native.datacatalog/v1.EntryGroup"
 meta_desc: "Documentation for the google-native.datacatalog/v1.EntryGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/google-native/EntryGroup/"
 layout: api
 ---
 

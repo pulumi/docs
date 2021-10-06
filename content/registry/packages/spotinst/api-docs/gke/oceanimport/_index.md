@@ -3,8 +3,6 @@
 title: "OceanImport"
 title_tag: "spotinst.gke.OceanImport"
 meta_desc: "Documentation for the spotinst.gke.OceanImport resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/spotinst/OceanImport/"
 layout: api
 ---
 

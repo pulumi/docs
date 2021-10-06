@@ -3,8 +3,6 @@
 title: "AttestorIamPolicy"
 title_tag: "gcp.binaryauthorization.AttestorIamPolicy"
 meta_desc: "Documentation for the gcp.binaryauthorization.AttestorIamPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/AttestorIamPolicy/"
 layout: api
 ---
 

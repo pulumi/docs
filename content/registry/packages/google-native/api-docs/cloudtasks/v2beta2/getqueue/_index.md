@@ -3,8 +3,6 @@
 title: "getQueue"
 title_tag: "google-native.cloudtasks/v2beta2.getQueue"
 meta_desc: "Documentation for the google-native.cloudtasks/v2beta2.getQueue function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

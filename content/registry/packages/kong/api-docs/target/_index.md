@@ -3,8 +3,6 @@
 title: "Target"
 title_tag: "kong.Target"
 meta_desc: "Documentation for the kong.Target resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/kong/Target/"
 layout: api
 ---
 

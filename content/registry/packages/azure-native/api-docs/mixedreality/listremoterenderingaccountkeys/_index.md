@@ -3,8 +3,6 @@
 title: "listRemoteRenderingAccountKeys"
 title_tag: "azure-native.mixedreality.listRemoteRenderingAccountKeys"
 meta_desc: "Documentation for the azure-native.mixedreality.listRemoteRenderingAccountKeys function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

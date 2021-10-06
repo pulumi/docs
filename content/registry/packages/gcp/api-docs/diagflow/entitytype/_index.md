@@ -3,8 +3,6 @@
 title: "EntityType"
 title_tag: "gcp.diagflow.EntityType"
 meta_desc: "Documentation for the gcp.diagflow.EntityType resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/EntityType/"
 layout: api
 ---
 

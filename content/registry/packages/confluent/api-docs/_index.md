@@ -2,8 +2,6 @@
 title: "Confluent Cloud"
 title_tag: "confluent.Confluent Cloud"
 meta_desc: "A Pulumi package for creating and managing confluent cloud resources."
-aliases:
-    - "docs/reference/pkg/confluent/"
 menu:
     reference:
         parent: API Reference

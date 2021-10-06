@@ -3,8 +3,6 @@
 title: "Method"
 title_tag: "aws.apigateway.Method"
 meta_desc: "Documentation for the aws.apigateway.Method resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/Method/"
 layout: api
 ---
 

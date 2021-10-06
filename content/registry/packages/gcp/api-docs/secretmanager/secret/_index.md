@@ -3,8 +3,6 @@
 title: "Secret"
 title_tag: "gcp.secretmanager.Secret"
 meta_desc: "Documentation for the gcp.secretmanager.Secret resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/Secret/"
 layout: api
 ---
 

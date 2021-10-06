@@ -3,8 +3,6 @@
 title: "DdosProtectionPlan"
 title_tag: "azure.network.DdosProtectionPlan"
 meta_desc: "Documentation for the azure.network.DdosProtectionPlan resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/DdosProtectionPlan/"
 layout: api
 ---
 

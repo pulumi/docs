@@ -3,8 +3,6 @@
 title: "RequestValidator"
 title_tag: "aws-native.apigateway.RequestValidator"
 meta_desc: "Documentation for the aws-native.apigateway.RequestValidator resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws-native/RequestValidator/"
 layout: api
 ---
 

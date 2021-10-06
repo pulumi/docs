@@ -3,8 +3,6 @@
 title: "getBatchEndpoint"
 title_tag: "azure-native.machinelearningservices.getBatchEndpoint"
 meta_desc: "Documentation for the azure-native.machinelearningservices.getBatchEndpoint function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

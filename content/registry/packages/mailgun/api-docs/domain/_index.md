@@ -3,8 +3,6 @@
 title: "Domain"
 title_tag: "mailgun.Domain"
 meta_desc: "Documentation for the mailgun.Domain resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/mailgun/Domain/"
 layout: api
 ---
 

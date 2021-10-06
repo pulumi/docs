@@ -3,8 +3,6 @@
 title: "Plan"
 title_tag: "aws.backup.Plan"
 meta_desc: "Documentation for the aws.backup.Plan resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/Plan/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "Task"
 title_tag: "azure-native.datamigration.Task"
 meta_desc: "Documentation for the azure-native.datamigration.Task resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/Task/"
 layout: api
 ---
 

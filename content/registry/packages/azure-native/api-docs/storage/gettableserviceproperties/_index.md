@@ -3,8 +3,6 @@
 title: "getTableServiceProperties"
 title_tag: "azure-native.storage.getTableServiceProperties"
 meta_desc: "Documentation for the azure-native.storage.getTableServiceProperties function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

@@ -2,8 +2,6 @@
 title: "kms"
 title_tag: "gcp.kms"
 meta_desc: "Explore the resources and functions of the gcp.kms module."
-aliases:
-    - "docs/reference/pkg/gcp/"
 layout: api
 ---
 

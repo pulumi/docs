@@ -3,8 +3,6 @@
 title: "ProvisioningArtifact"
 title_tag: "aws.servicecatalog.ProvisioningArtifact"
 meta_desc: "Documentation for the aws.servicecatalog.ProvisioningArtifact resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/ProvisioningArtifact/"
 layout: api
 ---
 

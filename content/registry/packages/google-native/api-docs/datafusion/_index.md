@@ -2,8 +2,6 @@
 title: "datafusion"
 title_tag: "datafusion Package"
 meta_desc: ""
-aliases:
-    - "docs/reference/pkg/google-native/"
 layout: api
 ---
 

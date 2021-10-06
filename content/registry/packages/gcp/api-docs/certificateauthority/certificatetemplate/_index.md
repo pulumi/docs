@@ -3,8 +3,6 @@
 title: "CertificateTemplate"
 title_tag: "gcp.certificateauthority.CertificateTemplate"
 meta_desc: "Documentation for the gcp.certificateauthority.CertificateTemplate resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/CertificateTemplate/"
 layout: api
 ---
 

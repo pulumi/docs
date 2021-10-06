@@ -3,8 +3,6 @@
 title: "ServiceIamPolicy"
 title_tag: "google-native.metastore/v1beta.ServiceIamPolicy"
 meta_desc: "Documentation for the google-native.metastore/v1beta.ServiceIamPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/google-native/ServiceIamPolicy/"
 layout: api
 ---
 

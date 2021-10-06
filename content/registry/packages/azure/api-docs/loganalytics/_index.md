@@ -2,8 +2,6 @@
 title: "loganalytics"
 title_tag: "azure.loganalytics"
 meta_desc: "Explore the resources and functions of the azure.loganalytics module."
-aliases:
-    - "docs/reference/pkg/azure/"
 layout: api
 ---
 

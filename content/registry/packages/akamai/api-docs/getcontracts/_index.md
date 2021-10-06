@@ -3,8 +3,6 @@
 title: "getContracts"
 title_tag: "akamai.getContracts"
 meta_desc: "Documentation for the akamai.getContracts function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

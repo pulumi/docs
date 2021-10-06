@@ -2,8 +2,6 @@
 title: "ecr"
 title_tag: "aws.ecr"
 meta_desc: "Explore the resources and functions of the aws.ecr module."
-aliases:
-    - "docs/reference/pkg/aws/"
 layout: api
 ---
 

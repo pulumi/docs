@@ -3,8 +3,6 @@
 title: "AzurePowerShellScript"
 title_tag: "azure-native.resources.AzurePowerShellScript"
 meta_desc: "Documentation for the azure-native.resources.AzurePowerShellScript resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/AzurePowerShellScript/"
 layout: api
 ---
 

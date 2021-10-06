@@ -3,8 +3,6 @@
 title: "ReplicaKey"
 title_tag: "aws-native.kms.ReplicaKey"
 meta_desc: "Documentation for the aws-native.kms.ReplicaKey resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws-native/ReplicaKey/"
 layout: api
 ---
 

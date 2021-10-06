@@ -3,8 +3,6 @@
 title: "ConditionalAccessPolicy"
 title_tag: "azuread.ConditionalAccessPolicy"
 meta_desc: "Documentation for the azuread.ConditionalAccessPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azuread/ConditionalAccessPolicy/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "ResourcemanagerFolder"
 title_tag: "yandex.ResourcemanagerFolder"
 meta_desc: "Documentation for the yandex.ResourcemanagerFolder resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/yandex/ResourcemanagerFolder/"
 layout: api
 ---
 

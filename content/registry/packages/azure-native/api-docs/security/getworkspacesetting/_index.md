@@ -3,8 +3,6 @@
 title: "getWorkspaceSetting"
 title_tag: "azure-native.security.getWorkspaceSetting"
 meta_desc: "Documentation for the azure-native.security.getWorkspaceSetting function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

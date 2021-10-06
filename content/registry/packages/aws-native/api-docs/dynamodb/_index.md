@@ -2,8 +2,6 @@
 title: "dynamodb"
 title_tag: "aws-native.dynamodb"
 meta_desc: "Explore the resources and functions of the aws-native.dynamodb module."
-aliases:
-    - "docs/reference/pkg/aws-native/"
 layout: api
 ---
 

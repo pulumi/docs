@@ -2,8 +2,6 @@
 title: "shield"
 title_tag: "aws.shield"
 meta_desc: "Explore the resources and functions of the aws.shield module."
-aliases:
-    - "docs/reference/pkg/aws/"
 layout: api
 ---
 

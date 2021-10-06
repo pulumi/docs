@@ -3,8 +3,6 @@
 title: "TeamAdministrators"
 title_tag: "azuredevops.TeamAdministrators"
 meta_desc: "Documentation for the azuredevops.TeamAdministrators resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azuredevops/TeamAdministrators/"
 layout: api
 ---
 

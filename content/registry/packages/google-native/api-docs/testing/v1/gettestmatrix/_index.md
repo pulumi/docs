@@ -3,8 +3,6 @@
 title: "getTestMatrix"
 title_tag: "google-native.testing/v1.getTestMatrix"
 meta_desc: "Documentation for the google-native.testing/v1.getTestMatrix function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

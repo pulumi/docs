@@ -3,8 +3,6 @@
 title: "getVolumeSnapshot"
 title_tag: "digitalocean.getVolumeSnapshot"
 meta_desc: "Documentation for the digitalocean.getVolumeSnapshot function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

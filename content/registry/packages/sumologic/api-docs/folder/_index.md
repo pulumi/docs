@@ -3,8 +3,6 @@
 title: "Folder"
 title_tag: "sumologic.Folder"
 meta_desc: "Documentation for the sumologic.Folder resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/sumologic/Folder/"
 layout: api
 ---
 

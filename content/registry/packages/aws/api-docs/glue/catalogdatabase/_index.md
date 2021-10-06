@@ -3,8 +3,6 @@
 title: "CatalogDatabase"
 title_tag: "aws.glue.CatalogDatabase"
 meta_desc: "Documentation for the aws.glue.CatalogDatabase resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/CatalogDatabase/"
 layout: api
 ---
 

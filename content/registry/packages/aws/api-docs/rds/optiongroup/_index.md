@@ -3,8 +3,6 @@
 title: "OptionGroup"
 title_tag: "aws.rds.OptionGroup"
 meta_desc: "Documentation for the aws.rds.OptionGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/OptionGroup/"
 layout: api
 ---
 

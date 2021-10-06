@@ -3,8 +3,6 @@
 title: "Function"
 title_tag: "aws.appsync.Function"
 meta_desc: "Documentation for the aws.appsync.Function resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/Function/"
 layout: api
 ---
 

@@ -2,8 +2,6 @@
 title: "discovery"
 title_tag: "discovery Package"
 meta_desc: ""
-aliases:
-    - "docs/reference/pkg/kubernetes/"
 layout: api
 ---
 

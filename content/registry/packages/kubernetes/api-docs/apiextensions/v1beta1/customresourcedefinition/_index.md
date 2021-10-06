@@ -3,8 +3,6 @@
 title: "CustomResourceDefinition"
 title_tag: "kubernetes.apiextensions.k8s.io/v1beta1.CustomResourceDefinition"
 meta_desc: "Documentation for the kubernetes.apiextensions.k8s.io/v1beta1.CustomResourceDefinition resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/kubernetes/CustomResourceDefinition/"
 layout: api
 ---
 

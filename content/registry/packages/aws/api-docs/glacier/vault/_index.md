@@ -3,8 +3,6 @@
 title: "Vault"
 title_tag: "aws.glacier.Vault"
 meta_desc: "Documentation for the aws.glacier.Vault resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/Vault/"
 layout: api
 ---
 

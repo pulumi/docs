@@ -3,8 +3,6 @@
 title: "AuditLogConfig"
 title_tag: "alicloud.kvstore.AuditLogConfig"
 meta_desc: "Documentation for the alicloud.kvstore.AuditLogConfig resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/alicloud/AuditLogConfig/"
 layout: api
 ---
 

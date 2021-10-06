@@ -3,8 +3,6 @@
 title: "getSecret"
 title_tag: "azure-native.servicefabricmesh.getSecret"
 meta_desc: "Documentation for the azure-native.servicefabricmesh.getSecret function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

@@ -2,8 +2,6 @@
 title: "iap"
 title_tag: "gcp.iap"
 meta_desc: "Explore the resources and functions of the gcp.iap module."
-aliases:
-    - "docs/reference/pkg/gcp/"
 layout: api
 ---
 

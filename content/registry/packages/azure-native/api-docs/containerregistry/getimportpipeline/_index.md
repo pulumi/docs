@@ -3,8 +3,6 @@
 title: "getImportPipeline"
 title_tag: "azure-native.containerregistry.getImportPipeline"
 meta_desc: "Documentation for the azure-native.containerregistry.getImportPipeline function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

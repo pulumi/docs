@@ -3,8 +3,6 @@
 title: "KafkaCluster"
 title_tag: "azure.hdinsight.KafkaCluster"
 meta_desc: "Documentation for the azure.hdinsight.KafkaCluster resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/KafkaCluster/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "ProjectSshKey"
 title_tag: "packet.ProjectSshKey"
 meta_desc: "Documentation for the packet.ProjectSshKey resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/packet/ProjectSshKey/"
 layout: api
 ---
 

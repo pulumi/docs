@@ -3,8 +3,6 @@
 title: "MigrationJob"
 title_tag: "google-native.datamigration/v1beta1.MigrationJob"
 meta_desc: "Documentation for the google-native.datamigration/v1beta1.MigrationJob resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/google-native/MigrationJob/"
 layout: api
 ---
 

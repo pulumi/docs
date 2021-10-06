@@ -3,8 +3,6 @@
 title: "ActiveReceiptRuleSet"
 title_tag: "aws.ses.ActiveReceiptRuleSet"
 meta_desc: "Documentation for the aws.ses.ActiveReceiptRuleSet resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/ActiveReceiptRuleSet/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "GameServerConfig"
 title_tag: "gcp.gameservices.GameServerConfig"
 meta_desc: "Documentation for the gcp.gameservices.GameServerConfig resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/GameServerConfig/"
 layout: api
 ---
 

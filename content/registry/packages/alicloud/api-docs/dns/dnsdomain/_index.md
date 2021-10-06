@@ -3,8 +3,6 @@
 title: "DnsDomain"
 title_tag: "alicloud.dns.DnsDomain"
 meta_desc: "Documentation for the alicloud.dns.DnsDomain resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/alicloud/DnsDomain/"
 layout: api
 ---
 

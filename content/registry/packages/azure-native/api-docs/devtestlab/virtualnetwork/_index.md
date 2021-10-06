@@ -3,8 +3,6 @@
 title: "VirtualNetwork"
 title_tag: "azure-native.devtestlab.VirtualNetwork"
 meta_desc: "Documentation for the azure-native.devtestlab.VirtualNetwork resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/VirtualNetwork/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "listAdminKey"
 title_tag: "azure-native.search.listAdminKey"
 meta_desc: "Documentation for the azure-native.search.listAdminKey function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

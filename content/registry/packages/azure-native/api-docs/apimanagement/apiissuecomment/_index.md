@@ -3,8 +3,6 @@
 title: "ApiIssueComment"
 title_tag: "azure-native.apimanagement.ApiIssueComment"
 meta_desc: "Documentation for the azure-native.apimanagement.ApiIssueComment resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/ApiIssueComment/"
 layout: api
 ---
 

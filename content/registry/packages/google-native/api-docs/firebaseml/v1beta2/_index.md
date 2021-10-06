@@ -2,8 +2,6 @@
 title: "firebaseml/v1beta2"
 title_tag: "google-native.firebaseml/v1beta2"
 meta_desc: "Explore the resources and functions of the google-native.firebaseml/v1beta2 module."
-aliases:
-    - "docs/reference/pkg/google-native/"
 layout: api
 ---
 

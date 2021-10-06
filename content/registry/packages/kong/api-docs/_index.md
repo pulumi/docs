@@ -2,8 +2,6 @@
 title: "Kong"
 title_tag: "kong.Kong"
 meta_desc: "A Pulumi package for creating and managing Kong resources."
-aliases:
-    - "docs/reference/pkg/kong/"
 menu:
     reference:
         parent: API Reference

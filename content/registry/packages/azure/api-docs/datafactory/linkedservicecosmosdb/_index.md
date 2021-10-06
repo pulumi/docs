@@ -3,8 +3,6 @@
 title: "LinkedServiceCosmosDb"
 title_tag: "azure.datafactory.LinkedServiceCosmosDb"
 meta_desc: "Documentation for the azure.datafactory.LinkedServiceCosmosDb resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/LinkedServiceCosmosDb/"
 layout: api
 ---
 

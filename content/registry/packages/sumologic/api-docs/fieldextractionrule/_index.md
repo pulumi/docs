@@ -3,8 +3,6 @@
 title: "FieldExtractionRule"
 title_tag: "sumologic.FieldExtractionRule"
 meta_desc: "Documentation for the sumologic.FieldExtractionRule resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/sumologic/FieldExtractionRule/"
 layout: api
 ---
 

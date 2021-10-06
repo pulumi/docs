@@ -3,8 +3,6 @@
 title: "Application"
 title_tag: "azure-native.servicefabricmesh.Application"
 meta_desc: "Documentation for the azure-native.servicefabricmesh.Application resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/Application/"
 layout: api
 ---
 

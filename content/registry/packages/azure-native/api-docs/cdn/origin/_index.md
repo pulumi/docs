@@ -3,8 +3,6 @@
 title: "Origin"
 title_tag: "azure-native.cdn.Origin"
 meta_desc: "Documentation for the azure-native.cdn.Origin resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/Origin/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "getBuild"
 title_tag: "google-native.cloudbuild/v1.getBuild"
 meta_desc: "Documentation for the google-native.cloudbuild/v1.getBuild function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

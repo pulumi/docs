@@ -3,8 +3,6 @@
 title: "DomainCredential"
 title_tag: "mailgun.DomainCredential"
 meta_desc: "Documentation for the mailgun.DomainCredential resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/mailgun/DomainCredential/"
 layout: api
 ---
 

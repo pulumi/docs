@@ -3,8 +3,6 @@
 title: "RepositoryFile"
 title_tag: "github.RepositoryFile"
 meta_desc: "Documentation for the github.RepositoryFile resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/github/RepositoryFile/"
 layout: api
 ---
 

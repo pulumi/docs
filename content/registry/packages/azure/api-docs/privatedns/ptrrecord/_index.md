@@ -3,8 +3,6 @@
 title: "PTRRecord"
 title_tag: "azure.privatedns.PTRRecord"
 meta_desc: "Documentation for the azure.privatedns.PTRRecord resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/PTRRecord/"
 layout: api
 ---
 

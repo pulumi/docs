@@ -2,8 +2,6 @@
 title: "maps"
 title_tag: "azure.maps"
 meta_desc: "Explore the resources and functions of the azure.maps module."
-aliases:
-    - "docs/reference/pkg/azure/"
 layout: api
 ---
 

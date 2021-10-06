@@ -3,8 +3,6 @@
 title: "GraphQLApi"
 title_tag: "aws.appsync.GraphQLApi"
 meta_desc: "Documentation for the aws.appsync.GraphQLApi resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/GraphQLApi/"
 layout: api
 ---
 

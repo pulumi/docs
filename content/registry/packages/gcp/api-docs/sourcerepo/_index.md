@@ -2,8 +2,6 @@
 title: "sourcerepo"
 title_tag: "gcp.sourcerepo"
 meta_desc: "Explore the resources and functions of the gcp.sourcerepo module."
-aliases:
-    - "docs/reference/pkg/gcp/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "AnnotationSpecSet"
 title_tag: "google-native.datalabeling/v1beta1.AnnotationSpecSet"
 meta_desc: "Documentation for the google-native.datalabeling/v1beta1.AnnotationSpecSet resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/google-native/AnnotationSpecSet/"
 layout: api
 ---
 

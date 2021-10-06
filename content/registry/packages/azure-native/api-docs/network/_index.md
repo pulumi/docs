@@ -2,8 +2,6 @@
 title: "network"
 title_tag: "azure-native.network"
 meta_desc: "Explore the resources and functions of the azure-native.network module."
-aliases:
-    - "docs/reference/pkg/azure-native/"
 layout: api
 ---
 

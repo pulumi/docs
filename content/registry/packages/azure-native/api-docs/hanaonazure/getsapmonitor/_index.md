@@ -3,8 +3,6 @@
 title: "getSapMonitor"
 title_tag: "azure-native.hanaonazure.getSapMonitor"
 meta_desc: "Documentation for the azure-native.hanaonazure.getSapMonitor function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

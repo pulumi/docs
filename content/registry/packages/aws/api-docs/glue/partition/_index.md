@@ -3,8 +3,6 @@
 title: "Partition"
 title_tag: "aws.glue.Partition"
 meta_desc: "Documentation for the aws.glue.Partition resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/Partition/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "Event"
 title_tag: "kubernetes.events.k8s.io/v1beta1.Event"
 meta_desc: "Documentation for the kubernetes.events.k8s.io/v1beta1.Event resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/kubernetes/Event/"
 layout: api
 ---
 

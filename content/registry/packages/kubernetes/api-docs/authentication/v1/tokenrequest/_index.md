@@ -3,8 +3,6 @@
 title: "TokenRequest"
 title_tag: "kubernetes.authentication.k8s.io/v1.TokenRequest"
 meta_desc: "Documentation for the kubernetes.authentication.k8s.io/v1.TokenRequest resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/kubernetes/TokenRequest/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "NatIp"
 title_tag: "alicloud.vpc.NatIp"
 meta_desc: "Documentation for the alicloud.vpc.NatIp resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/alicloud/NatIp/"
 layout: api
 ---
 

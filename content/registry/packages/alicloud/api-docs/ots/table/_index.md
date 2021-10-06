@@ -3,8 +3,6 @@
 title: "Table"
 title_tag: "alicloud.ots.Table"
 meta_desc: "Documentation for the alicloud.ots.Table resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/alicloud/Table/"
 layout: api
 ---
 

@@ -2,8 +2,6 @@
 title: "azure"
 title_tag: "datadog.azure"
 meta_desc: "Explore the resources and functions of the datadog.azure module."
-aliases:
-    - "docs/reference/pkg/datadog/"
 layout: api
 ---
 

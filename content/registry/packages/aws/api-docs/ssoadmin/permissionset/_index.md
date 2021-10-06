@@ -3,8 +3,6 @@
 title: "PermissionSet"
 title_tag: "aws.ssoadmin.PermissionSet"
 meta_desc: "Documentation for the aws.ssoadmin.PermissionSet resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/PermissionSet/"
 layout: api
 ---
 

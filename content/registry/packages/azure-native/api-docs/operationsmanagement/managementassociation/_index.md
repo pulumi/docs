@@ -3,8 +3,6 @@
 title: "ManagementAssociation"
 title_tag: "azure-native.operationsmanagement.ManagementAssociation"
 meta_desc: "Documentation for the azure-native.operationsmanagement.ManagementAssociation resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/ManagementAssociation/"
 layout: api
 ---
 

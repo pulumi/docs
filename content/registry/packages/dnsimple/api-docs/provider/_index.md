@@ -3,8 +3,6 @@
 title: "Provider"
 title_tag: "dnsimple.Provider"
 meta_desc: "Documentation for the dnsimple.Provider resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/dnsimple/dnsimple/"
 layout: api
 ---
 

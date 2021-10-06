@@ -3,8 +3,6 @@
 title: "DataDiskAttachment"
 title_tag: "azure.compute.DataDiskAttachment"
 meta_desc: "Documentation for the azure.compute.DataDiskAttachment resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/DataDiskAttachment/"
 layout: api
 ---
 

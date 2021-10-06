@@ -2,8 +2,6 @@
 title: "sourcerepo"
 title_tag: "sourcerepo Package"
 meta_desc: ""
-aliases:
-    - "docs/reference/pkg/google-native/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "Function"
 title_tag: "aws.lambda.Function"
 meta_desc: "Documentation for the aws.lambda.Function resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/Function/"
 layout: api
 ---
 

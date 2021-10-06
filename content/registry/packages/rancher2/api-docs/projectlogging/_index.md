@@ -3,8 +3,6 @@
 title: "ProjectLogging"
 title_tag: "rancher2.ProjectLogging"
 meta_desc: "Documentation for the rancher2.ProjectLogging resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/rancher2/ProjectLogging/"
 layout: api
 ---
 

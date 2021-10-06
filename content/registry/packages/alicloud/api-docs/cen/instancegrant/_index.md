@@ -3,8 +3,6 @@
 title: "InstanceGrant"
 title_tag: "alicloud.cen.InstanceGrant"
 meta_desc: "Documentation for the alicloud.cen.InstanceGrant resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/alicloud/InstanceGrant/"
 layout: api
 ---
 

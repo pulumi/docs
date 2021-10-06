@@ -3,8 +3,6 @@
 title: "getVirtualHub"
 title_tag: "azure.network.getVirtualHub"
 meta_desc: "Documentation for the azure.network.getVirtualHub function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

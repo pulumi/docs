@@ -3,8 +3,6 @@
 title: "SecretBackendCa"
 title_tag: "vault.ssh.SecretBackendCa"
 meta_desc: "Documentation for the vault.ssh.SecretBackendCa resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/vault/SecretBackendCa/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "getApplication"
 title_tag: "azure-native.servicefabricmesh.getApplication"
 meta_desc: "Documentation for the azure-native.servicefabricmesh.getApplication function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

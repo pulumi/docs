@@ -2,8 +2,6 @@
 title: "fnf"
 title_tag: "alicloud.fnf"
 meta_desc: "Explore the resources and functions of the alicloud.fnf module."
-aliases:
-    - "docs/reference/pkg/alicloud/"
 layout: api
 ---
 

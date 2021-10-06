@@ -3,8 +3,6 @@
 title: "Setting"
 title_tag: "azure-native.costmanagement.Setting"
 meta_desc: "Documentation for the azure-native.costmanagement.Setting resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/Setting/"
 layout: api
 ---
 

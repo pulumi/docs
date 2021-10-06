@@ -2,8 +2,6 @@
 title: "sae"
 title_tag: "alicloud.sae"
 meta_desc: "Explore the resources and functions of the alicloud.sae module."
-aliases:
-    - "docs/reference/pkg/alicloud/"
 layout: api
 ---
 

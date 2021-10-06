@@ -3,8 +3,6 @@
 title: "Configuration"
 title_tag: "azure.postgresql.Configuration"
 meta_desc: "Documentation for the azure.postgresql.Configuration resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/Configuration/"
 layout: api
 ---
 

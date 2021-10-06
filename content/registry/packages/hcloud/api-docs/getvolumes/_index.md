@@ -3,8 +3,6 @@
 title: "getVolumes"
 title_tag: "hcloud.getVolumes"
 meta_desc: "Documentation for the hcloud.getVolumes function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

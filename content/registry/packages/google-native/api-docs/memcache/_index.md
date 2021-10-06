@@ -2,8 +2,6 @@
 title: "memcache"
 title_tag: "memcache Package"
 meta_desc: ""
-aliases:
-    - "docs/reference/pkg/google-native/"
 layout: api
 ---
 

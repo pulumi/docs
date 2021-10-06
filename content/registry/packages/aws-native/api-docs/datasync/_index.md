@@ -2,8 +2,6 @@
 title: "datasync"
 title_tag: "aws-native.datasync"
 meta_desc: "Explore the resources and functions of the aws-native.datasync module."
-aliases:
-    - "docs/reference/pkg/aws-native/"
 layout: api
 ---
 

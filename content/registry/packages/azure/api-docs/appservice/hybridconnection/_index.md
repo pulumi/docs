@@ -3,8 +3,6 @@
 title: "HybridConnection"
 title_tag: "azure.appservice.HybridConnection"
 meta_desc: "Documentation for the azure.appservice.HybridConnection resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/HybridConnection/"
 layout: api
 ---
 

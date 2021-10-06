@@ -2,8 +2,6 @@
 title: "managementpartner"
 title_tag: "azure-native.managementpartner"
 meta_desc: "Explore the resources and functions of the azure-native.managementpartner module."
-aliases:
-    - "docs/reference/pkg/azure-native/"
 layout: api
 ---
 

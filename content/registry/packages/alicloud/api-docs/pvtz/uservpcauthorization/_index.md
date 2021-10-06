@@ -3,8 +3,6 @@
 title: "UserVpcAuthorization"
 title_tag: "alicloud.pvtz.UserVpcAuthorization"
 meta_desc: "Documentation for the alicloud.pvtz.UserVpcAuthorization resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/alicloud/UserVpcAuthorization/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "getNetworks"
 title_tag: "alicloud.vpc.getNetworks"
 meta_desc: "Documentation for the alicloud.vpc.getNetworks function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

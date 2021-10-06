@@ -2,8 +2,6 @@
 title: "Google Cloud Native"
 title_tag: "Google Cloud Native Package"
 meta_desc: "A native Pulumi package for creating and managing Google Cloud resources."
-aliases:
-    - "docs/reference/pkg/google-native/"
 menu:
     reference:
         parent: API Reference

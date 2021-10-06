@@ -3,8 +3,6 @@
 title: "getSoftwareUpdateConfigurationByName"
 title_tag: "azure-native.automation.getSoftwareUpdateConfigurationByName"
 meta_desc: "Documentation for the azure-native.automation.getSoftwareUpdateConfigurationByName function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "TagAtScope"
 title_tag: "azure-native.resources.TagAtScope"
 meta_desc: "Documentation for the azure-native.resources.TagAtScope resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/TagAtScope/"
 layout: api
 ---
 

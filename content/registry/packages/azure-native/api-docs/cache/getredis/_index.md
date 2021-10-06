@@ -3,8 +3,6 @@
 title: "getRedis"
 title_tag: "azure-native.cache.getRedis"
 meta_desc: "Documentation for the azure-native.cache.getRedis function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

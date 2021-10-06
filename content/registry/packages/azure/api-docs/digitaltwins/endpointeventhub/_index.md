@@ -3,8 +3,6 @@
 title: "EndpointEventHub"
 title_tag: "azure.digitaltwins.EndpointEventHub"
 meta_desc: "Documentation for the azure.digitaltwins.EndpointEventHub resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/EndpointEventHub/"
 layout: api
 ---
 

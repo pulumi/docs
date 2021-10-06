@@ -2,8 +2,6 @@
 title: "appengine/v1alpha"
 title_tag: "google-native.appengine/v1alpha"
 meta_desc: "Explore the resources and functions of the google-native.appengine/v1alpha module."
-aliases:
-    - "docs/reference/pkg/google-native/"
 layout: api
 ---
 

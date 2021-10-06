@@ -3,8 +3,6 @@
 title: "Cluster"
 title_tag: "aws-native.eks.Cluster"
 meta_desc: "Documentation for the aws-native.eks.Cluster resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws-native/Cluster/"
 layout: api
 ---
 

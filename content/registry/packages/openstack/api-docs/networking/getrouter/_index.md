@@ -3,8 +3,6 @@
 title: "getRouter"
 title_tag: "openstack.networking.getRouter"
 meta_desc: "Documentation for the openstack.networking.getRouter function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "RepositoryIamMember"
 title_tag: "gcp.sourcerepo.RepositoryIamMember"
 meta_desc: "Documentation for the gcp.sourcerepo.RepositoryIamMember resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/RepositoryIamMember/"
 layout: api
 ---
 

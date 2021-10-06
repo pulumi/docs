@@ -2,8 +2,6 @@
 title: "opensearchservice"
 title_tag: "aws-native.opensearchservice"
 meta_desc: "Explore the resources and functions of the aws-native.opensearchservice module."
-aliases:
-    - "docs/reference/pkg/aws-native/"
 layout: api
 ---
 

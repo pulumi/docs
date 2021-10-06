@@ -3,8 +3,6 @@
 title: "AppSecVersionNodes"
 title_tag: "akamai.AppSecVersionNodes"
 meta_desc: "Documentation for the akamai.AppSecVersionNodes resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/akamai/AppSecVersionNodes/"
 layout: api
 ---
 

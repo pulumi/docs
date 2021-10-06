@@ -3,8 +3,6 @@
 title: "getConnectionType"
 title_tag: "azure-native.automation.getConnectionType"
 meta_desc: "Documentation for the azure-native.automation.getConnectionType function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

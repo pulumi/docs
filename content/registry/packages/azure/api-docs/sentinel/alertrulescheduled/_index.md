@@ -3,8 +3,6 @@
 title: "AlertRuleScheduled"
 title_tag: "azure.sentinel.AlertRuleScheduled"
 meta_desc: "Documentation for the azure.sentinel.AlertRuleScheduled resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/AlertRuleScheduled/"
 layout: api
 ---
 

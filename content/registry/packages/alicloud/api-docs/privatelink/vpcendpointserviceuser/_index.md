@@ -3,8 +3,6 @@
 title: "VpcEndpointServiceUser"
 title_tag: "alicloud.privatelink.VpcEndpointServiceUser"
 meta_desc: "Documentation for the alicloud.privatelink.VpcEndpointServiceUser resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/alicloud/VpcEndpointServiceUser/"
 layout: api
 ---
 

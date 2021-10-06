@@ -3,8 +3,6 @@
 title: "IdentityProviderMicrosoft"
 title_tag: "azure.apimanagement.IdentityProviderMicrosoft"
 meta_desc: "Documentation for the azure.apimanagement.IdentityProviderMicrosoft resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/IdentityProviderMicrosoft/"
 layout: api
 ---
 

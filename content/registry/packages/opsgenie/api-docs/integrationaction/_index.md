@@ -3,8 +3,6 @@
 title: "IntegrationAction"
 title_tag: "opsgenie.IntegrationAction"
 meta_desc: "Documentation for the opsgenie.IntegrationAction resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/opsgenie/IntegrationAction/"
 layout: api
 ---
 

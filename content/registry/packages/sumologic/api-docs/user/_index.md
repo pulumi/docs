@@ -3,8 +3,6 @@
 title: "User"
 title_tag: "sumologic.User"
 meta_desc: "Documentation for the sumologic.User resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/sumologic/User/"
 layout: api
 ---
 

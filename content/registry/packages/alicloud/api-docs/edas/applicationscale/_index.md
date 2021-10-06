@@ -3,8 +3,6 @@
 title: "ApplicationScale"
 title_tag: "alicloud.edas.ApplicationScale"
 meta_desc: "Documentation for the alicloud.edas.ApplicationScale resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/alicloud/ApplicationScale/"
 layout: api
 ---
 

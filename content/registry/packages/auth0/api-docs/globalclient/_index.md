@@ -3,8 +3,6 @@
 title: "GlobalClient"
 title_tag: "auth0.GlobalClient"
 meta_desc: "Documentation for the auth0.GlobalClient resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/auth0/GlobalClient/"
 layout: api
 ---
 

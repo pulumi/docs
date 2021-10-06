@@ -3,8 +3,6 @@
 title: "ConsentStoreIamBinding"
 title_tag: "gcp.healthcare.ConsentStoreIamBinding"
 meta_desc: "Documentation for the gcp.healthcare.ConsentStoreIamBinding resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/ConsentStoreIamBinding/"
 layout: api
 ---
 

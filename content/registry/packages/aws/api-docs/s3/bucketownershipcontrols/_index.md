@@ -3,8 +3,6 @@
 title: "BucketOwnershipControls"
 title_tag: "aws.s3.BucketOwnershipControls"
 meta_desc: "Documentation for the aws.s3.BucketOwnershipControls resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/BucketOwnershipControls/"
 layout: api
 ---
 

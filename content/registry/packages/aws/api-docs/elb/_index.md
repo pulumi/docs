@@ -2,8 +2,6 @@
 title: "elb"
 title_tag: "aws.elb"
 meta_desc: "Explore the resources and functions of the aws.elb module."
-aliases:
-    - "docs/reference/pkg/aws/"
 layout: api
 ---
 

@@ -2,8 +2,6 @@
 title: "azuredata"
 title_tag: "azure-native.azuredata"
 meta_desc: "Explore the resources and functions of the azure-native.azuredata module."
-aliases:
-    - "docs/reference/pkg/azure-native/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "DomainPermissions"
 title_tag: "aws.codeartifact.DomainPermissions"
 meta_desc: "Documentation for the aws.codeartifact.DomainPermissions resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/DomainPermissions/"
 layout: api
 ---
 

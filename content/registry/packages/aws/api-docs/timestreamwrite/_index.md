@@ -2,8 +2,6 @@
 title: "timestreamwrite"
 title_tag: "aws.timestreamwrite"
 meta_desc: "Explore the resources and functions of the aws.timestreamwrite module."
-aliases:
-    - "docs/reference/pkg/aws/"
 layout: api
 ---
 

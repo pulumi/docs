@@ -2,8 +2,6 @@
 title: "node"
 title_tag: "node Package"
 meta_desc: ""
-aliases:
-    - "docs/reference/pkg/kubernetes/"
 layout: api
 ---
 

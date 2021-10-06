@@ -3,8 +3,6 @@
 title: "getConnectionProfile"
 title_tag: "google-native.datamigration/v1beta1.getConnectionProfile"
 meta_desc: "Documentation for the google-native.datamigration/v1beta1.getConnectionProfile function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

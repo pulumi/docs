@@ -3,8 +3,6 @@
 title: "NetworkGroup"
 title_tag: "azure-native.network.NetworkGroup"
 meta_desc: "Documentation for the azure-native.network.NetworkGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/NetworkGroup/"
 layout: api
 ---
 

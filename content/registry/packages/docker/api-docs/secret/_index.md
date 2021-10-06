@@ -3,8 +3,6 @@
 title: "Secret"
 title_tag: "docker.Secret"
 meta_desc: "Documentation for the docker.Secret resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/docker/Secret/"
 layout: api
 ---
 

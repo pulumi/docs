@@ -3,8 +3,6 @@
 title: "ImportPipeline"
 title_tag: "azure-native.containerregistry.ImportPipeline"
 meta_desc: "Documentation for the azure-native.containerregistry.ImportPipeline resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/ImportPipeline/"
 layout: api
 ---
 

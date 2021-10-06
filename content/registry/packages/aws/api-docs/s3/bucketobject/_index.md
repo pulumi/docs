@@ -3,8 +3,6 @@
 title: "BucketObject"
 title_tag: "aws.s3.BucketObject"
 meta_desc: "Documentation for the aws.s3.BucketObject resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/BucketObject/"
 layout: api
 ---
 

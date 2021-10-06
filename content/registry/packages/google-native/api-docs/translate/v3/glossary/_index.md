@@ -3,8 +3,6 @@
 title: "Glossary"
 title_tag: "google-native.translate/v3.Glossary"
 meta_desc: "Documentation for the google-native.translate/v3.Glossary resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/google-native/Glossary/"
 layout: api
 ---
 

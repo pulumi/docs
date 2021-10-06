@@ -3,8 +3,6 @@
 title: "DataConnectorOffice365"
 title_tag: "azure.sentinel.DataConnectorOffice365"
 meta_desc: "Documentation for the azure.sentinel.DataConnectorOffice365 resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/DataConnectorOffice365/"
 layout: api
 ---
 

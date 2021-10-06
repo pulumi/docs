@@ -3,8 +3,6 @@
 title: "RouteFilterRule"
 title_tag: "azure-native.network.RouteFilterRule"
 meta_desc: "Documentation for the azure-native.network.RouteFilterRule resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/RouteFilterRule/"
 layout: api
 ---
 

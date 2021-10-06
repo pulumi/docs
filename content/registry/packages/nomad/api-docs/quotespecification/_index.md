@@ -3,9 +3,7 @@
 title: "QuoteSpecification"
 title_tag: "nomad.QuoteSpecification"
 meta_desc: "Documentation for the nomad.QuoteSpecification resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/nomad/QuoteSpecification/"
-layout: api-doc-resource
+layout: api
 ---
 
 

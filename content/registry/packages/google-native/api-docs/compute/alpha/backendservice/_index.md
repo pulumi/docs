@@ -3,8 +3,6 @@
 title: "BackendService"
 title_tag: "google-native.compute/alpha.BackendService"
 meta_desc: "Documentation for the google-native.compute/alpha.BackendService resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/google-native/BackendService/"
 layout: api
 ---
 

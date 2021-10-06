@@ -3,8 +3,6 @@
 title: "getMachineLearningDataset"
 title_tag: "azure-native.machinelearningservices.getMachineLearningDataset"
 meta_desc: "Documentation for the azure-native.machinelearningservices.getMachineLearningDataset function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

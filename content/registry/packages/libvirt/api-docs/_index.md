@@ -2,8 +2,6 @@
 title: "libvirt"
 title_tag: "libvirt.libvirt"
 meta_desc: "A Pulumi package for creating and managing libvirt cloud resources."
-aliases:
-    - "docs/reference/pkg/libvirt/"
 menu:
     reference:
         parent: API Reference

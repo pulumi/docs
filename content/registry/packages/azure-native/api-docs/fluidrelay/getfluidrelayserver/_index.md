@@ -3,8 +3,6 @@
 title: "getFluidRelayServer"
 title_tag: "azure-native.fluidrelay.getFluidRelayServer"
 meta_desc: "Documentation for the azure-native.fluidrelay.getFluidRelayServer function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

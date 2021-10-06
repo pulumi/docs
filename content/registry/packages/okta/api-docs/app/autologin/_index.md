@@ -3,8 +3,6 @@
 title: "AutoLogin"
 title_tag: "okta.app.AutoLogin"
 meta_desc: "Documentation for the okta.app.AutoLogin resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/okta/AutoLogin/"
 layout: api
 ---
 

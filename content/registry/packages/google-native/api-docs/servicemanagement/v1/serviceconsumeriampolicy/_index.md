@@ -3,8 +3,6 @@
 title: "ServiceConsumerIamPolicy"
 title_tag: "google-native.servicemanagement/v1.ServiceConsumerIamPolicy"
 meta_desc: "Documentation for the google-native.servicemanagement/v1.ServiceConsumerIamPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/google-native/ServiceConsumerIamPolicy/"
 layout: api
 ---
 

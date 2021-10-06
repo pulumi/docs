@@ -3,8 +3,6 @@
 title: "GroupMetricRule"
 title_tag: "alicloud.cms.GroupMetricRule"
 meta_desc: "Documentation for the alicloud.cms.GroupMetricRule resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/alicloud/GroupMetricRule/"
 layout: api
 ---
 

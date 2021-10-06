@@ -3,8 +3,6 @@
 title: "Service"
 title_tag: "aiven.Service"
 meta_desc: "Documentation for the aiven.Service resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aiven/Service/"
 layout: api
 ---
 

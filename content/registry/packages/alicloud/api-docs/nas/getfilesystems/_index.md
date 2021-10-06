@@ -3,8 +3,6 @@
 title: "getFileSystems"
 title_tag: "alicloud.nas.getFileSystems"
 meta_desc: "Documentation for the alicloud.nas.getFileSystems function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

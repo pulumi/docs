@@ -2,8 +2,6 @@
 title: "events"
 title_tag: "events Package"
 meta_desc: ""
-aliases:
-    - "docs/reference/pkg/kubernetes/"
 layout: api
 ---
 

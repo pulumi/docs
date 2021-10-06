@@ -3,8 +3,6 @@
 title: "getResourcePolicy"
 title_tag: "gcp.compute.getResourcePolicy"
 meta_desc: "Documentation for the gcp.compute.getResourcePolicy function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

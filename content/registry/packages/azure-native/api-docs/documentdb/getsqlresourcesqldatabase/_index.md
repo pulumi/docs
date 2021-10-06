@@ -3,8 +3,6 @@
 title: "getSqlResourceSqlDatabase"
 title_tag: "azure-native.documentdb.getSqlResourceSqlDatabase"
 meta_desc: "Documentation for the azure-native.documentdb.getSqlResourceSqlDatabase function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

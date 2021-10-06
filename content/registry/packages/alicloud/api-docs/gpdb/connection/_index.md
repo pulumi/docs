@@ -3,8 +3,6 @@
 title: "Connection"
 title_tag: "alicloud.gpdb.Connection"
 meta_desc: "Documentation for the alicloud.gpdb.Connection resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/alicloud/Connection/"
 layout: api
 ---
 

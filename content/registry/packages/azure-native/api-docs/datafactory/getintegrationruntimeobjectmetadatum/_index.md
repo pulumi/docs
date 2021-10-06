@@ -3,8 +3,6 @@
 title: "getIntegrationRuntimeObjectMetadatum"
 title_tag: "azure-native.datafactory.getIntegrationRuntimeObjectMetadatum"
 meta_desc: "Documentation for the azure-native.datafactory.getIntegrationRuntimeObjectMetadatum function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

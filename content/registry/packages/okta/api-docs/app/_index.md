@@ -2,8 +2,6 @@
 title: "app"
 title_tag: "okta.app"
 meta_desc: "Explore the resources and functions of the okta.app module."
-aliases:
-    - "docs/reference/pkg/okta/"
 layout: api
 ---
 

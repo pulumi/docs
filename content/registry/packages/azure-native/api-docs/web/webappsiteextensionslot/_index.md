@@ -3,8 +3,6 @@
 title: "WebAppSiteExtensionSlot"
 title_tag: "azure-native.web.WebAppSiteExtensionSlot"
 meta_desc: "Documentation for the azure-native.web.WebAppSiteExtensionSlot resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/WebAppSiteExtensionSlot/"
 layout: api
 ---
 

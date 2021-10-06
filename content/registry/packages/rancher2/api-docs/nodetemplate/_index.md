@@ -3,8 +3,6 @@
 title: "NodeTemplate"
 title_tag: "rancher2.NodeTemplate"
 meta_desc: "Documentation for the rancher2.NodeTemplate resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/rancher2/NodeTemplate/"
 layout: api
 ---
 

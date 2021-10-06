@@ -3,8 +3,6 @@
 title: "getPrivateLinkScopedResource"
 title_tag: "azure-native.hybridcompute.getPrivateLinkScopedResource"
 meta_desc: "Documentation for the azure-native.hybridcompute.getPrivateLinkScopedResource function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

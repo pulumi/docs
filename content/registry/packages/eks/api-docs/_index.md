@@ -2,8 +2,6 @@
 title: "Amazon EKS"
 title_tag: "eks.Amazon EKS"
 meta_desc: "Pulumi Amazon Web Services (AWS) EKS Components."
-aliases:
-    - "docs/reference/pkg/eks/"
 menu:
     reference:
         parent: API Reference

@@ -2,8 +2,6 @@
 title: "swf"
 title_tag: "aws.swf"
 meta_desc: "Explore the resources and functions of the aws.swf module."
-aliases:
-    - "docs/reference/pkg/aws/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "getBackupVault"
 title_tag: "azure-native.dataprotection.getBackupVault"
 meta_desc: "Documentation for the azure-native.dataprotection.getBackupVault function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

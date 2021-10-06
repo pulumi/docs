@@ -2,8 +2,6 @@
 title: "groundstation"
 title_tag: "aws-native.groundstation"
 meta_desc: "Explore the resources and functions of the aws-native.groundstation module."
-aliases:
-    - "docs/reference/pkg/aws-native/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "getAggregateConfigRules"
 title_tag: "alicloud.cfg.getAggregateConfigRules"
 meta_desc: "Documentation for the alicloud.cfg.getAggregateConfigRules function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

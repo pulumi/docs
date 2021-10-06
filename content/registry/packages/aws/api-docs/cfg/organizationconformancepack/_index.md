@@ -3,8 +3,6 @@
 title: "OrganizationConformancePack"
 title_tag: "aws.cfg.OrganizationConformancePack"
 meta_desc: "Documentation for the aws.cfg.OrganizationConformancePack resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/OrganizationConformancePack/"
 layout: api
 ---
 

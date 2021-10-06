@@ -2,8 +2,6 @@
 title: "ram"
 title_tag: "aws.ram"
 meta_desc: "Explore the resources and functions of the aws.ram module."
-aliases:
-    - "docs/reference/pkg/aws/"
 layout: api
 ---
 

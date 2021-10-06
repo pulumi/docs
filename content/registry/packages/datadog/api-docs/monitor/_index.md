@@ -3,8 +3,6 @@
 title: "Monitor"
 title_tag: "datadog.Monitor"
 meta_desc: "Documentation for the datadog.Monitor resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/datadog/Monitor/"
 layout: api
 ---
 

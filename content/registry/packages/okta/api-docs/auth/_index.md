@@ -2,8 +2,6 @@
 title: "auth"
 title_tag: "okta.auth"
 meta_desc: "Explore the resources and functions of the okta.auth module."
-aliases:
-    - "docs/reference/pkg/okta/"
 layout: api
 ---
 

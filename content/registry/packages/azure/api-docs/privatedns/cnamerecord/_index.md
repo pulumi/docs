@@ -3,8 +3,6 @@
 title: "CnameRecord"
 title_tag: "azure.privatedns.CnameRecord"
 meta_desc: "Documentation for the azure.privatedns.CnameRecord resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/CnameRecord/"
 layout: api
 ---
 

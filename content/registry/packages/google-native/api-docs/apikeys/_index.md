@@ -2,8 +2,6 @@
 title: "apikeys"
 title_tag: "apikeys Package"
 meta_desc: ""
-aliases:
-    - "docs/reference/pkg/google-native/"
 layout: api
 ---
 

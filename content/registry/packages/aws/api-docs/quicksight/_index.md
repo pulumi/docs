@@ -2,8 +2,6 @@
 title: "quicksight"
 title_tag: "aws.quicksight"
 meta_desc: "Explore the resources and functions of the aws.quicksight module."
-aliases:
-    - "docs/reference/pkg/aws/"
 layout: api
 ---
 

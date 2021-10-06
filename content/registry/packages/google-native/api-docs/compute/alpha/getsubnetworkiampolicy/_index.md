@@ -3,8 +3,6 @@
 title: "getSubnetworkIamPolicy"
 title_tag: "google-native.compute/alpha.getSubnetworkIamPolicy"
 meta_desc: "Documentation for the google-native.compute/alpha.getSubnetworkIamPolicy function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

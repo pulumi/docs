@@ -2,8 +2,6 @@
 title: "cloudfunctions"
 title_tag: "cloudfunctions Package"
 meta_desc: ""
-aliases:
-    - "docs/reference/pkg/google-native/"
 layout: api
 ---
 

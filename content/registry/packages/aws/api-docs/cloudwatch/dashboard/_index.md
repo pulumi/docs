@@ -3,8 +3,6 @@
 title: "Dashboard"
 title_tag: "aws.cloudwatch.Dashboard"
 meta_desc: "Documentation for the aws.cloudwatch.Dashboard resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/Dashboard/"
 layout: api
 ---
 

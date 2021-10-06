@@ -3,8 +3,6 @@
 title: "EventSubscription"
 title_tag: "aws.redshift.EventSubscription"
 meta_desc: "Documentation for the aws.redshift.EventSubscription resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/EventSubscription/"
 layout: api
 ---
 

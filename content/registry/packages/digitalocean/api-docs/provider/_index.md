@@ -3,8 +3,6 @@
 title: "Provider"
 title_tag: "digitalocean.Provider"
 meta_desc: "Documentation for the digitalocean.Provider resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/digitalocean/digitalocean/"
 layout: api
 ---
 

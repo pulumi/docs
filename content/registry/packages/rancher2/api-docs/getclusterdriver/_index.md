@@ -3,8 +3,6 @@
 title: "getClusterDriver"
 title_tag: "rancher2.getClusterDriver"
 meta_desc: "Documentation for the rancher2.getClusterDriver function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

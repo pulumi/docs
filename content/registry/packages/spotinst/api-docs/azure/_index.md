@@ -2,8 +2,6 @@
 title: "azure"
 title_tag: "spotinst.azure"
 meta_desc: "Explore the resources and functions of the spotinst.azure module."
-aliases:
-    - "docs/reference/pkg/spotinst/"
 layout: api
 ---
 

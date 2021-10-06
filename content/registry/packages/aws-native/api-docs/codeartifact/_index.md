@@ -2,8 +2,6 @@
 title: "codeartifact"
 title_tag: "aws-native.codeartifact"
 meta_desc: "Explore the resources and functions of the aws-native.codeartifact module."
-aliases:
-    - "docs/reference/pkg/aws-native/"
 layout: api
 ---
 

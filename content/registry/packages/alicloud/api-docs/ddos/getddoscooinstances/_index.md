@@ -3,8 +3,6 @@
 title: "getDdosCooInstances"
 title_tag: "alicloud.ddos.getDdosCooInstances"
 meta_desc: "Documentation for the alicloud.ddos.getDdosCooInstances function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

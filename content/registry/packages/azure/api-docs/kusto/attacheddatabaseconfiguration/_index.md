@@ -3,8 +3,6 @@
 title: "AttachedDatabaseConfiguration"
 title_tag: "azure.kusto.AttachedDatabaseConfiguration"
 meta_desc: "Documentation for the azure.kusto.AttachedDatabaseConfiguration resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/AttachedDatabaseConfiguration/"
 layout: api
 ---
 

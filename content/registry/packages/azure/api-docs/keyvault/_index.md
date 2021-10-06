@@ -2,8 +2,6 @@
 title: "keyvault"
 title_tag: "azure.keyvault"
 meta_desc: "Explore the resources and functions of the azure.keyvault module."
-aliases:
-    - "docs/reference/pkg/azure/"
 layout: api
 ---
 

@@ -2,8 +2,6 @@
 title: "mwaa"
 title_tag: "aws.mwaa"
 meta_desc: "Explore the resources and functions of the aws.mwaa module."
-aliases:
-    - "docs/reference/pkg/aws/"
 layout: api
 ---
 

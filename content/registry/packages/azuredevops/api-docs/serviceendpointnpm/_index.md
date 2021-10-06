@@ -3,8 +3,6 @@
 title: "ServiceEndpointNpm"
 title_tag: "azuredevops.ServiceEndpointNpm"
 meta_desc: "Documentation for the azuredevops.ServiceEndpointNpm resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azuredevops/ServiceEndpointNpm/"
 layout: api
 ---
 

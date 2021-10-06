@@ -3,8 +3,6 @@
 title: "getSyncGroup"
 title_tag: "azure-native.sql.getSyncGroup"
 meta_desc: "Documentation for the azure-native.sql.getSyncGroup function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

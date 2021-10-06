@@ -3,8 +3,6 @@
 title: "WebIamBinding"
 title_tag: "gcp.iap.WebIamBinding"
 meta_desc: "Documentation for the gcp.iap.WebIamBinding resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/WebIamBinding/"
 layout: api
 ---
 

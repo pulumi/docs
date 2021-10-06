@@ -2,8 +2,6 @@
 title: "redis"
 title_tag: "azure.redis"
 meta_desc: "Explore the resources and functions of the azure.redis module."
-aliases:
-    - "docs/reference/pkg/azure/"
 layout: api
 ---
 

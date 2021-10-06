@@ -2,8 +2,6 @@
 title: "policysimulator"
 title_tag: "policysimulator Package"
 meta_desc: ""
-aliases:
-    - "docs/reference/pkg/google-native/"
 layout: api
 ---
 

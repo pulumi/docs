@@ -3,8 +3,6 @@
 title: "getTrigger"
 title_tag: "google-native.cloudbuild/v1.getTrigger"
 meta_desc: "Documentation for the google-native.cloudbuild/v1.getTrigger function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

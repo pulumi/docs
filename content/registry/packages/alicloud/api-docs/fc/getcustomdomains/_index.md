@@ -3,8 +3,6 @@
 title: "getCustomDomains"
 title_tag: "alicloud.fc.getCustomDomains"
 meta_desc: "Documentation for the alicloud.fc.getCustomDomains function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

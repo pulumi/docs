@@ -3,8 +3,6 @@
 title: "getUserRealmRoles"
 title_tag: "keycloak.getUserRealmRoles"
 meta_desc: "Documentation for the keycloak.getUserRealmRoles function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

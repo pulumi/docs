@@ -3,8 +3,6 @@
 title: "PasswordPolicyRule"
 title_tag: "okta.deprecated.PasswordPolicyRule"
 meta_desc: "Documentation for the okta.deprecated.PasswordPolicyRule resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/okta/PasswordPolicyRule/"
 layout: api
 ---
 

@@ -2,8 +2,6 @@
 title: "cloudchannel"
 title_tag: "cloudchannel Package"
 meta_desc: ""
-aliases:
-    - "docs/reference/pkg/google-native/"
 layout: api
 ---
 

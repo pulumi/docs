@@ -3,8 +3,6 @@
 title: "File"
 title_tag: "azure-native.datamigration.File"
 meta_desc: "Documentation for the azure-native.datamigration.File resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/File/"
 layout: api
 ---
 

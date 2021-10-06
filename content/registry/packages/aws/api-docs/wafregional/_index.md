@@ -2,8 +2,6 @@
 title: "wafregional"
 title_tag: "aws.wafregional"
 meta_desc: "Explore the resources and functions of the aws.wafregional module."
-aliases:
-    - "docs/reference/pkg/aws/"
 layout: api
 ---
 

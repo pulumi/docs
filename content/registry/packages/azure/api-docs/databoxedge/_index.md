@@ -2,8 +2,6 @@
 title: "databoxedge"
 title_tag: "azure.databoxedge"
 meta_desc: "Explore the resources and functions of the azure.databoxedge module."
-aliases:
-    - "docs/reference/pkg/azure/"
 layout: api
 ---
 

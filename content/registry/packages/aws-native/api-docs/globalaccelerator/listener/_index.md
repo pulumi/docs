@@ -3,8 +3,6 @@
 title: "Listener"
 title_tag: "aws-native.globalaccelerator.Listener"
 meta_desc: "Documentation for the aws-native.globalaccelerator.Listener resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws-native/Listener/"
 layout: api
 ---
 

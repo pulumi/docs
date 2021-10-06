@@ -3,8 +3,6 @@
 title: "SpacesBucket"
 title_tag: "digitalocean.SpacesBucket"
 meta_desc: "Documentation for the digitalocean.SpacesBucket resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/digitalocean/SpacesBucket/"
 layout: api
 ---
 

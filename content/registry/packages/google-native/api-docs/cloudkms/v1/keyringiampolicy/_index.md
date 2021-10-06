@@ -3,8 +3,6 @@
 title: "KeyRingIamPolicy"
 title_tag: "google-native.cloudkms/v1.KeyRingIamPolicy"
 meta_desc: "Documentation for the google-native.cloudkms/v1.KeyRingIamPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/google-native/KeyRingIamPolicy/"
 layout: api
 ---
 

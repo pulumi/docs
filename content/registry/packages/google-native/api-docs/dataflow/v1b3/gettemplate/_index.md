@@ -3,8 +3,6 @@
 title: "getTemplate"
 title_tag: "google-native.dataflow/v1b3.getTemplate"
 meta_desc: "Documentation for the google-native.dataflow/v1b3.getTemplate function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

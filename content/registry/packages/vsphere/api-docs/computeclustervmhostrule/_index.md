@@ -3,8 +3,6 @@
 title: "ComputeClusterVmHostRule"
 title_tag: "vsphere.ComputeClusterVmHostRule"
 meta_desc: "Documentation for the vsphere.ComputeClusterVmHostRule resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/vsphere/ComputeClusterVmHostRule/"
 layout: api
 ---
 

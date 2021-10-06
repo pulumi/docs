@@ -3,8 +3,6 @@
 title: "ManagedZone"
 title_tag: "gcp.dns.ManagedZone"
 meta_desc: "Documentation for the gcp.dns.ManagedZone resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/ManagedZone/"
 layout: api
 ---
 

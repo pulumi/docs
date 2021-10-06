@@ -3,8 +3,6 @@
 title: "Registry"
 title_tag: "azure-native.containerregistry.Registry"
 meta_desc: "Documentation for the azure-native.containerregistry.Registry resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/Registry/"
 layout: api
 ---
 

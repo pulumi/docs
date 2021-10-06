@@ -3,8 +3,6 @@
 title: "NoteIamPolicy"
 title_tag: "google-native.containeranalysis/v1beta1.NoteIamPolicy"
 meta_desc: "Documentation for the google-native.containeranalysis/v1beta1.NoteIamPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/google-native/NoteIamPolicy/"
 layout: api
 ---
 

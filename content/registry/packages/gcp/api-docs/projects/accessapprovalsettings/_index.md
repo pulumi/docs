@@ -3,8 +3,6 @@
 title: "AccessApprovalSettings"
 title_tag: "gcp.projects.AccessApprovalSettings"
 meta_desc: "Documentation for the gcp.projects.AccessApprovalSettings resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/AccessApprovalSettings/"
 layout: api
 ---
 

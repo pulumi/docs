@@ -3,8 +3,6 @@
 title: "getFlow"
 title_tag: "google-native.dialogflow/v3.getFlow"
 meta_desc: "Documentation for the google-native.dialogflow/v3.getFlow function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

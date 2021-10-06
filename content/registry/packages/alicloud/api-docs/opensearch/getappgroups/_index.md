@@ -3,8 +3,6 @@
 title: "getAppGroups"
 title_tag: "alicloud.opensearch.getAppGroups"
 meta_desc: "Documentation for the alicloud.opensearch.getAppGroups function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

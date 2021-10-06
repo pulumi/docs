@@ -2,8 +2,6 @@
 title: "eais"
 title_tag: "alicloud.eais"
 meta_desc: "Explore the resources and functions of the alicloud.eais module."
-aliases:
-    - "docs/reference/pkg/alicloud/"
 layout: api
 ---
 

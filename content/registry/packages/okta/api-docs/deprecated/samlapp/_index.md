@@ -3,8 +3,6 @@
 title: "SamlApp"
 title_tag: "okta.deprecated.SamlApp"
 meta_desc: "Documentation for the okta.deprecated.SamlApp resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/okta/SamlApp/"
 layout: api
 ---
 

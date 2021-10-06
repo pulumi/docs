@@ -3,8 +3,6 @@
 title: "getZones"
 title_tag: "gcp.compute.getZones"
 meta_desc: "Documentation for the gcp.compute.getZones function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "WebAppDomainOwnershipIdentifierSlot"
 title_tag: "azure-native.web.WebAppDomainOwnershipIdentifierSlot"
 meta_desc: "Documentation for the azure-native.web.WebAppDomainOwnershipIdentifierSlot resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/WebAppDomainOwnershipIdentifierSlot/"
 layout: api
 ---
 

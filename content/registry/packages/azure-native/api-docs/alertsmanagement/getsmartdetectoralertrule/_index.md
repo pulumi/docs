@@ -3,8 +3,6 @@
 title: "getSmartDetectorAlertRule"
 title_tag: "azure-native.alertsmanagement.getSmartDetectorAlertRule"
 meta_desc: "Documentation for the azure-native.alertsmanagement.getSmartDetectorAlertRule function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "CSIDriverList"
 title_tag: "kubernetes.storage.k8s.io/v1.CSIDriverList"
 meta_desc: "Documentation for the kubernetes.storage.k8s.io/v1.CSIDriverList resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/kubernetes/CSIDriverList/"
 layout: api
 ---
 

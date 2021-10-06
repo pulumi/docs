@@ -3,8 +3,6 @@
 title: "GeoMatchSet"
 title_tag: "aws.wafregional.GeoMatchSet"
 meta_desc: "Documentation for the aws.wafregional.GeoMatchSet resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/GeoMatchSet/"
 layout: api
 ---
 

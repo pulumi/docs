@@ -3,8 +3,6 @@
 title: "Connection"
 title_tag: "azure.automation.Connection"
 meta_desc: "Documentation for the azure.automation.Connection resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/Connection/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "Authorization"
 title_tag: "azure-native.avs.Authorization"
 meta_desc: "Documentation for the azure-native.avs.Authorization resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/Authorization/"
 layout: api
 ---
 

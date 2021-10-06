@@ -3,8 +3,6 @@
 title: "AppSecActivations"
 title_tag: "akamai.AppSecActivations"
 meta_desc: "Documentation for the akamai.AppSecActivations resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/akamai/AppSecActivations/"
 layout: api
 ---
 

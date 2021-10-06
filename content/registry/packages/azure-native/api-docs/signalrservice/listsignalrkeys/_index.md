@@ -3,8 +3,6 @@
 title: "listSignalRKeys"
 title_tag: "azure-native.signalrservice.listSignalRKeys"
 meta_desc: "Documentation for the azure-native.signalrservice.listSignalRKeys function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

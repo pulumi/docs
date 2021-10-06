@@ -3,8 +3,6 @@
 title: "ProductApi"
 title_tag: "azure-native.apimanagement.ProductApi"
 meta_desc: "Documentation for the azure-native.apimanagement.ProductApi resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/ProductApi/"
 layout: api
 ---
 

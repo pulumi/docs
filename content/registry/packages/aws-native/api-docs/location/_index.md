@@ -2,8 +2,6 @@
 title: "location"
 title_tag: "aws-native.location"
 meta_desc: "Explore the resources and functions of the aws-native.location module."
-aliases:
-    - "docs/reference/pkg/aws-native/"
 layout: api
 ---
 

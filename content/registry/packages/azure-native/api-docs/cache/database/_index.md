@@ -3,8 +3,6 @@
 title: "Database"
 title_tag: "azure-native.cache.Database"
 meta_desc: "Documentation for the azure-native.cache.Database resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/Database/"
 layout: api
 ---
 

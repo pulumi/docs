@@ -3,8 +3,6 @@
 title: "MdbClickhouseCluster"
 title_tag: "yandex.MdbClickhouseCluster"
 meta_desc: "Documentation for the yandex.MdbClickhouseCluster resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/yandex/MdbClickhouseCluster/"
 layout: api
 ---
 

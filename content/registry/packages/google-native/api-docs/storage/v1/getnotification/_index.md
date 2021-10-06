@@ -3,8 +3,6 @@
 title: "getNotification"
 title_tag: "google-native.storage/v1.getNotification"
 meta_desc: "Documentation for the google-native.storage/v1.getNotification function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

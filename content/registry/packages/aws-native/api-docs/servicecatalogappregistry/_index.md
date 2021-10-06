@@ -2,8 +2,6 @@
 title: "servicecatalogappregistry"
 title_tag: "aws-native.servicecatalogappregistry"
 meta_desc: "Explore the resources and functions of the aws-native.servicecatalogappregistry module."
-aliases:
-    - "docs/reference/pkg/aws-native/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "CloudIntegrationTesla"
 title_tag: "wavefront.CloudIntegrationTesla"
 meta_desc: "Documentation for the wavefront.CloudIntegrationTesla resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/wavefront/CloudIntegrationTesla/"
 layout: api
 ---
 

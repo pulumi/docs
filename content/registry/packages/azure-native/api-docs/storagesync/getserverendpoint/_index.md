@@ -3,8 +3,6 @@
 title: "getServerEndpoint"
 title_tag: "azure-native.storagesync.getServerEndpoint"
 meta_desc: "Documentation for the azure-native.storagesync.getServerEndpoint function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

@@ -2,8 +2,6 @@
 title: "Alibaba Cloud"
 title_tag: "Alibaba Cloud Package"
 meta_desc: "A Pulumi package for creating and managing AliCloud resources."
-aliases:
-    - "docs/reference/pkg/alicloud/"
 menu:
     reference:
         parent: API Reference

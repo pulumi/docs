@@ -3,8 +3,6 @@
 title: "getDataGroup"
 title_tag: "f5bigip.ltm.getDataGroup"
 meta_desc: "Documentation for the f5bigip.ltm.getDataGroup function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

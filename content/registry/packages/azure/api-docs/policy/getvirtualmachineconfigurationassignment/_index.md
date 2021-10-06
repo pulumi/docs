@@ -3,8 +3,6 @@
 title: "getVirtualMachineConfigurationAssignment"
 title_tag: "azure.policy.getVirtualMachineConfigurationAssignment"
 meta_desc: "Documentation for the azure.policy.getVirtualMachineConfigurationAssignment function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

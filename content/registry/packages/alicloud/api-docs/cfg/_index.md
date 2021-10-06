@@ -2,8 +2,6 @@
 title: "cfg"
 title_tag: "alicloud.cfg"
 meta_desc: "Explore the resources and functions of the alicloud.cfg module."
-aliases:
-    - "docs/reference/pkg/alicloud/"
 layout: api
 ---
 

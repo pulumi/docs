@@ -2,8 +2,6 @@
 title: "dfs"
 title_tag: "alicloud.dfs"
 meta_desc: "Explore the resources and functions of the alicloud.dfs module."
-aliases:
-    - "docs/reference/pkg/alicloud/"
 layout: api
 ---
 

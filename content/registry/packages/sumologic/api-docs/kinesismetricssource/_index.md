@@ -3,8 +3,6 @@
 title: "KinesisMetricsSource"
 title_tag: "sumologic.KinesisMetricsSource"
 meta_desc: "Documentation for the sumologic.KinesisMetricsSource resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/sumologic/KinesisMetricsSource/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "DatabaseReplica"
 title_tag: "digitalocean.DatabaseReplica"
 meta_desc: "Documentation for the digitalocean.DatabaseReplica resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/digitalocean/DatabaseReplica/"
 layout: api
 ---
 

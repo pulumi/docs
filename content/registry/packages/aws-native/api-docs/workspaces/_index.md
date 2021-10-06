@@ -2,8 +2,6 @@
 title: "workspaces"
 title_tag: "aws-native.workspaces"
 meta_desc: "Explore the resources and functions of the aws-native.workspaces module."
-aliases:
-    - "docs/reference/pkg/aws-native/"
 layout: api
 ---
 

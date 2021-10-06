@@ -2,8 +2,6 @@
 title: "dataproc"
 title_tag: "dataproc Package"
 meta_desc: ""
-aliases:
-    - "docs/reference/pkg/google-native/"
 layout: api
 ---
 

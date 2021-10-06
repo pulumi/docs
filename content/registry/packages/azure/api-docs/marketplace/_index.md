@@ -2,8 +2,6 @@
 title: "marketplace"
 title_tag: "azure.marketplace"
 meta_desc: "Explore the resources and functions of the azure.marketplace module."
-aliases:
-    - "docs/reference/pkg/azure/"
 layout: api
 ---
 

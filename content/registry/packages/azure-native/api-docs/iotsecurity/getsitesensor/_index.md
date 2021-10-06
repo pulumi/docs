@@ -3,8 +3,6 @@
 title: "getSiteSensor"
 title_tag: "azure-native.iotsecurity.getSiteSensor"
 meta_desc: "Documentation for the azure-native.iotsecurity.getSiteSensor function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

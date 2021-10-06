@@ -3,8 +3,6 @@
 title: "XssMatchSet"
 title_tag: "aws.wafregional.XssMatchSet"
 meta_desc: "Documentation for the aws.wafregional.XssMatchSet resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/XssMatchSet/"
 layout: api
 ---
 

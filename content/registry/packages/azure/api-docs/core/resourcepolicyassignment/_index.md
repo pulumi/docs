@@ -3,8 +3,6 @@
 title: "ResourcePolicyAssignment"
 title_tag: "azure.core.ResourcePolicyAssignment"
 meta_desc: "Documentation for the azure.core.ResourcePolicyAssignment resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/ResourcePolicyAssignment/"
 layout: api
 ---
 

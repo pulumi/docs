@@ -3,8 +3,6 @@
 title: "BucketIamPolicy"
 title_tag: "google-native.storage/v1.BucketIamPolicy"
 meta_desc: "Documentation for the google-native.storage/v1.BucketIamPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/google-native/BucketIamPolicy/"
 layout: api
 ---
 

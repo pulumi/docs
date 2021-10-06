@@ -3,8 +3,6 @@
 title: "RoleAttachment"
 title_tag: "alicloud.ram.RoleAttachment"
 meta_desc: "Documentation for the alicloud.ram.RoleAttachment resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/alicloud/RoleAttachment/"
 layout: api
 ---
 

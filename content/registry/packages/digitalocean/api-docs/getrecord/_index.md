@@ -3,8 +3,6 @@
 title: "getRecord"
 title_tag: "digitalocean.getRecord"
 meta_desc: "Documentation for the digitalocean.getRecord function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

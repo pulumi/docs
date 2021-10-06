@@ -2,8 +2,6 @@
 title: "filestore"
 title_tag: "gcp.filestore"
 meta_desc: "Explore the resources and functions of the gcp.filestore module."
-aliases:
-    - "docs/reference/pkg/gcp/"
 layout: api
 ---
 

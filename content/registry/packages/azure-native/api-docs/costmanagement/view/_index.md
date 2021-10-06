@@ -3,8 +3,6 @@
 title: "View"
 title_tag: "azure-native.costmanagement.View"
 meta_desc: "Documentation for the azure-native.costmanagement.View resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/View/"
 layout: api
 ---
 

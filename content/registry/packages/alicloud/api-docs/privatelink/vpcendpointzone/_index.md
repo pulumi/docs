@@ -3,8 +3,6 @@
 title: "VpcEndpointZone"
 title_tag: "alicloud.privatelink.VpcEndpointZone"
 meta_desc: "Documentation for the alicloud.privatelink.VpcEndpointZone resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/alicloud/VpcEndpointZone/"
 layout: api
 ---
 

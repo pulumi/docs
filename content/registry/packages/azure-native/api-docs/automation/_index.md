@@ -2,8 +2,6 @@
 title: "automation"
 title_tag: "azure-native.automation"
 meta_desc: "Explore the resources and functions of the azure-native.automation module."
-aliases:
-    - "docs/reference/pkg/azure-native/"
 layout: api
 ---
 

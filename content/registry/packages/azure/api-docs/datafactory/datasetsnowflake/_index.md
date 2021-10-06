@@ -3,8 +3,6 @@
 title: "DatasetSnowflake"
 title_tag: "azure.datafactory.DatasetSnowflake"
 meta_desc: "Documentation for the azure.datafactory.DatasetSnowflake resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/DatasetSnowflake/"
 layout: api
 ---
 

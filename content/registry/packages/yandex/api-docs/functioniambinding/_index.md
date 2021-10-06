@@ -3,8 +3,6 @@
 title: "FunctionIamBinding"
 title_tag: "yandex.FunctionIamBinding"
 meta_desc: "Documentation for the yandex.FunctionIamBinding resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/yandex/FunctionIamBinding/"
 layout: api
 ---
 

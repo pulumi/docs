@@ -3,8 +3,6 @@
 title: "getClusters"
 title_tag: "alicloud.adb.getClusters"
 meta_desc: "Documentation for the alicloud.adb.getClusters function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

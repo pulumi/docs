@@ -3,8 +3,6 @@
 title: "StreamInputBlob"
 title_tag: "azure.streamanalytics.StreamInputBlob"
 meta_desc: "Documentation for the azure.streamanalytics.StreamInputBlob resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/StreamInputBlob/"
 layout: api
 ---
 

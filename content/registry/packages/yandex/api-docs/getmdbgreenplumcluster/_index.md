@@ -3,8 +3,6 @@
 title: "getMdbGreenplumCluster"
 title_tag: "yandex.getMdbGreenplumCluster"
 meta_desc: "Documentation for the yandex.getMdbGreenplumCluster function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

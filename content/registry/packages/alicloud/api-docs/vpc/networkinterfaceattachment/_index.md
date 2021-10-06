@@ -3,8 +3,6 @@
 title: "NetworkInterfaceAttachment"
 title_tag: "alicloud.vpc.NetworkInterfaceAttachment"
 meta_desc: "Documentation for the alicloud.vpc.NetworkInterfaceAttachment resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/alicloud/NetworkInterfaceAttachment/"
 layout: api
 ---
 

@@ -2,8 +2,6 @@
 title: "dynamics365fraudprotection"
 title_tag: "azure-native.dynamics365fraudprotection"
 meta_desc: "Explore the resources and functions of the azure-native.dynamics365fraudprotection module."
-aliases:
-    - "docs/reference/pkg/azure-native/"
 layout: api
 ---
 

@@ -2,8 +2,6 @@
 title: "sddp"
 title_tag: "alicloud.sddp"
 meta_desc: "Explore the resources and functions of the alicloud.sddp module."
-aliases:
-    - "docs/reference/pkg/alicloud/"
 layout: api
 ---
 

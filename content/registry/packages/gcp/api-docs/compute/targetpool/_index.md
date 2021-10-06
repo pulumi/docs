@@ -3,8 +3,6 @@
 title: "TargetPool"
 title_tag: "gcp.compute.TargetPool"
 meta_desc: "Documentation for the gcp.compute.TargetPool resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/TargetPool/"
 layout: api
 ---
 

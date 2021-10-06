@@ -3,8 +3,6 @@
 title: "getDpsCertificate"
 title_tag: "azure-native.devices.getDpsCertificate"
 meta_desc: "Documentation for the azure-native.devices.getDpsCertificate function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "getBranch"
 title_tag: "github.getBranch"
 meta_desc: "Documentation for the github.getBranch function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

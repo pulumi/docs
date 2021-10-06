@@ -3,8 +3,6 @@
 title: "SqlPoolSecurityAlertPolicy"
 title_tag: "azure.synapse.SqlPoolSecurityAlertPolicy"
 meta_desc: "Documentation for the azure.synapse.SqlPoolSecurityAlertPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/SqlPoolSecurityAlertPolicy/"
 layout: api
 ---
 

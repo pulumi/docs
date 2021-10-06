@@ -3,8 +3,6 @@
 title: "KeyValue"
 title_tag: "azure-native.appconfiguration.KeyValue"
 meta_desc: "Documentation for the azure-native.appconfiguration.KeyValue resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/KeyValue/"
 layout: api
 ---
 

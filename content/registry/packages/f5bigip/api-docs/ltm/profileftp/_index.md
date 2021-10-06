@@ -3,8 +3,6 @@
 title: "ProfileFtp"
 title_tag: "f5bigip.ltm.ProfileFtp"
 meta_desc: "Documentation for the f5bigip.ltm.ProfileFtp resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/f5bigip/ProfileFtp/"
 layout: api
 ---
 

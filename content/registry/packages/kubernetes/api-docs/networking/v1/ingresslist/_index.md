@@ -3,8 +3,6 @@
 title: "IngressList"
 title_tag: "kubernetes.networking.k8s.io/v1.IngressList"
 meta_desc: "Documentation for the kubernetes.networking.k8s.io/v1.IngressList resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/kubernetes/IngressList/"
 layout: api
 ---
 

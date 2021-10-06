@@ -2,8 +2,6 @@
 title: "arms"
 title_tag: "alicloud.arms"
 meta_desc: "Explore the resources and functions of the alicloud.arms module."
-aliases:
-    - "docs/reference/pkg/alicloud/"
 layout: api
 ---
 

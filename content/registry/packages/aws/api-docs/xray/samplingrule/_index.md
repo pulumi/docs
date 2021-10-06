@@ -3,8 +3,6 @@
 title: "SamplingRule"
 title_tag: "aws.xray.SamplingRule"
 meta_desc: "Documentation for the aws.xray.SamplingRule resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/SamplingRule/"
 layout: api
 ---
 

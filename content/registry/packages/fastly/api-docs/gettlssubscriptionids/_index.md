@@ -3,8 +3,6 @@
 title: "getTlsSubscriptionIds"
 title_tag: "fastly.getTlsSubscriptionIds"
 meta_desc: "Documentation for the fastly.getTlsSubscriptionIds function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "KubernetesAutoscaler"
 title_tag: "alicloud.cs.KubernetesAutoscaler"
 meta_desc: "Documentation for the alicloud.cs.KubernetesAutoscaler resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/alicloud/KubernetesAutoscaler/"
 layout: api
 ---
 

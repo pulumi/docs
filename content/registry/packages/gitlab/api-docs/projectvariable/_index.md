@@ -3,8 +3,6 @@
 title: "ProjectVariable"
 title_tag: "gitlab.ProjectVariable"
 meta_desc: "Documentation for the gitlab.ProjectVariable resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gitlab/ProjectVariable/"
 layout: api
 ---
 

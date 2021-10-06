@@ -3,8 +3,6 @@
 title: "CloudwatchSource"
 title_tag: "sumologic.CloudwatchSource"
 meta_desc: "Documentation for the sumologic.CloudwatchSource resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/sumologic/CloudwatchSource/"
 layout: api
 ---
 

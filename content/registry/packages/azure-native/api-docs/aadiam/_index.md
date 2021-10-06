@@ -2,8 +2,6 @@
 title: "aadiam"
 title_tag: "azure-native.aadiam"
 meta_desc: "Explore the resources and functions of the azure-native.aadiam module."
-aliases:
-    - "docs/reference/pkg/azure-native/"
 layout: api
 ---
 

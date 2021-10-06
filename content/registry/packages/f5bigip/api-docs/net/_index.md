@@ -2,8 +2,6 @@
 title: "net"
 title_tag: "f5bigip.net"
 meta_desc: "Explore the resources and functions of the f5bigip.net module."
-aliases:
-    - "docs/reference/pkg/f5bigip/"
 layout: api
 ---
 

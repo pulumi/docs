@@ -2,8 +2,6 @@
 title: "customerprofiles"
 title_tag: "aws-native.customerprofiles"
 meta_desc: "Explore the resources and functions of the aws-native.customerprofiles module."
-aliases:
-    - "docs/reference/pkg/aws-native/"
 layout: api
 ---
 

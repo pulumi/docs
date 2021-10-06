@@ -3,8 +3,6 @@
 title: "WorkerCronTrigger"
 title_tag: "cloudflare.WorkerCronTrigger"
 meta_desc: "Documentation for the cloudflare.WorkerCronTrigger resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/cloudflare/WorkerCronTrigger/"
 layout: api
 ---
 

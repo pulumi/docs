@@ -3,8 +3,6 @@
 title: "getRegistrationActivationKey"
 title_tag: "azure-native.azurestack.getRegistrationActivationKey"
 meta_desc: "Documentation for the azure-native.azurestack.getRegistrationActivationKey function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

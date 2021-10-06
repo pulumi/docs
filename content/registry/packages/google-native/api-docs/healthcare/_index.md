@@ -2,8 +2,6 @@
 title: "healthcare"
 title_tag: "healthcare Package"
 meta_desc: ""
-aliases:
-    - "docs/reference/pkg/google-native/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "Partner"
 title_tag: "azure-native.managementpartner.Partner"
 meta_desc: "Documentation for the azure-native.managementpartner.Partner resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/Partner/"
 layout: api
 ---
 

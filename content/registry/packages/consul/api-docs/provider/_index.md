@@ -3,8 +3,6 @@
 title: "Provider"
 title_tag: "consul.Provider"
 meta_desc: "Documentation for the consul.Provider resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/consul/consul/"
 layout: api
 ---
 

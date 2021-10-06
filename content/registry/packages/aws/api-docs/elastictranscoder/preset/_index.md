@@ -3,8 +3,6 @@
 title: "Preset"
 title_tag: "aws.elastictranscoder.Preset"
 meta_desc: "Documentation for the aws.elastictranscoder.Preset resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/Preset/"
 layout: api
 ---
 

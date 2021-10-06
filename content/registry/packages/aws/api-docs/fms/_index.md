@@ -2,8 +2,6 @@
 title: "fms"
 title_tag: "aws.fms"
 meta_desc: "Explore the resources and functions of the aws.fms module."
-aliases:
-    - "docs/reference/pkg/aws/"
 layout: api
 ---
 

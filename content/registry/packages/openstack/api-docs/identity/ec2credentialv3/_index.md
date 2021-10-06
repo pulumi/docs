@@ -3,8 +3,6 @@
 title: "Ec2CredentialV3"
 title_tag: "openstack.identity.Ec2CredentialV3"
 meta_desc: "Documentation for the openstack.identity.Ec2CredentialV3 resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/openstack/Ec2CredentialV3/"
 layout: api
 ---
 

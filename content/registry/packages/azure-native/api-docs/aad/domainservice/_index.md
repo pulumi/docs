@@ -3,8 +3,6 @@
 title: "DomainService"
 title_tag: "azure-native.aad.DomainService"
 meta_desc: "Documentation for the azure-native.aad.DomainService resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/DomainService/"
 layout: api
 ---
 

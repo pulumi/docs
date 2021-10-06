@@ -3,8 +3,6 @@
 title: "Grafana"
 title_tag: "aiven.Grafana"
 meta_desc: "Documentation for the aiven.Grafana resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aiven/Grafana/"
 layout: api
 ---
 

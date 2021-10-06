@@ -3,8 +3,6 @@
 title: "getDimensionValues"
 title_tag: "signalfx.getDimensionValues"
 meta_desc: "Documentation for the signalfx.getDimensionValues function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

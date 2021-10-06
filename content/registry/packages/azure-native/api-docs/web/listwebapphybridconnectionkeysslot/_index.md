@@ -3,8 +3,6 @@
 title: "listWebAppHybridConnectionKeysSlot"
 title_tag: "azure-native.web.listWebAppHybridConnectionKeysSlot"
 meta_desc: "Documentation for the azure-native.web.listWebAppHybridConnectionKeysSlot function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

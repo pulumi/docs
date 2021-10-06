@@ -3,8 +3,6 @@
 title: "CatalogEntry"
 title_tag: "consul.CatalogEntry"
 meta_desc: "Documentation for the consul.CatalogEntry resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/consul/CatalogEntry/"
 layout: api
 ---
 

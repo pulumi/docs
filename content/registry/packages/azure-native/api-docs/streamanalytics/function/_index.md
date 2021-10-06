@@ -3,8 +3,6 @@
 title: "Function"
 title_tag: "azure-native.streamanalytics.Function"
 meta_desc: "Documentation for the azure-native.streamanalytics.Function resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/Function/"
 layout: api
 ---
 

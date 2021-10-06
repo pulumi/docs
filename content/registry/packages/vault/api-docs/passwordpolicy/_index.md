@@ -3,8 +3,6 @@
 title: "PasswordPolicy"
 title_tag: "vault.PasswordPolicy"
 meta_desc: "Documentation for the vault.PasswordPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/vault/PasswordPolicy/"
 layout: api
 ---
 

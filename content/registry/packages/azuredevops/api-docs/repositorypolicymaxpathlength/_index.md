@@ -3,8 +3,6 @@
 title: "RepositoryPolicyMaxPathLength"
 title_tag: "azuredevops.RepositoryPolicyMaxPathLength"
 meta_desc: "Documentation for the azuredevops.RepositoryPolicyMaxPathLength resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azuredevops/RepositoryPolicyMaxPathLength/"
 layout: api
 ---
 

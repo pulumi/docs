@@ -3,8 +3,6 @@
 title: "getvNetPeering"
 title_tag: "azure-native.databricks.getvNetPeering"
 meta_desc: "Documentation for the azure-native.databricks.getvNetPeering function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

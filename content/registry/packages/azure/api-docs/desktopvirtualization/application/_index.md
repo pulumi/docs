@@ -3,8 +3,6 @@
 title: "Application"
 title_tag: "azure.desktopvirtualization.Application"
 meta_desc: "Documentation for the azure.desktopvirtualization.Application resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/Application/"
 layout: api
 ---
 

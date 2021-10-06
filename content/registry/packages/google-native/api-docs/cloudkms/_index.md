@@ -2,8 +2,6 @@
 title: "cloudkms"
 title_tag: "cloudkms Package"
 meta_desc: ""
-aliases:
-    - "docs/reference/pkg/google-native/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "getApplicationSecurityGroup"
 title_tag: "azure-native.network.getApplicationSecurityGroup"
 meta_desc: "Documentation for the azure-native.network.getApplicationSecurityGroup function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

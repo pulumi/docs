@@ -3,8 +3,6 @@
 title: "AdaptiveApplicationControl"
 title_tag: "azure-native.security.AdaptiveApplicationControl"
 meta_desc: "Documentation for the azure-native.security.AdaptiveApplicationControl resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/AdaptiveApplicationControl/"
 layout: api
 ---
 

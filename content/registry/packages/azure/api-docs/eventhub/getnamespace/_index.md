@@ -3,8 +3,6 @@
 title: "getNamespace"
 title_tag: "azure.eventhub.getNamespace"
 meta_desc: "Documentation for the azure.eventhub.getNamespace function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

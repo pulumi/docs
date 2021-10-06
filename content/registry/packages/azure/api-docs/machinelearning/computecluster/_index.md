@@ -3,8 +3,6 @@
 title: "ComputeCluster"
 title_tag: "azure.machinelearning.ComputeCluster"
 meta_desc: "Documentation for the azure.machinelearning.ComputeCluster resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/ComputeCluster/"
 layout: api
 ---
 

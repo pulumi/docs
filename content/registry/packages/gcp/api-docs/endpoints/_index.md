@@ -2,8 +2,6 @@
 title: "endpoints"
 title_tag: "gcp.endpoints"
 meta_desc: "Explore the resources and functions of the gcp.endpoints module."
-aliases:
-    - "docs/reference/pkg/gcp/"
 layout: api
 ---
 

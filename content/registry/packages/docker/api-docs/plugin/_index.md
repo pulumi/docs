@@ -3,8 +3,6 @@
 title: "Plugin"
 title_tag: "docker.Plugin"
 meta_desc: "Documentation for the docker.Plugin resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/docker/Plugin/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "Switch"
 title_tag: "alicloud.vpc.Switch"
 meta_desc: "Documentation for the alicloud.vpc.Switch resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/alicloud/Switch/"
 layout: api
 ---
 

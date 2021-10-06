@@ -3,8 +3,6 @@
 title: "StaticWebLayer"
 title_tag: "aws.opsworks.StaticWebLayer"
 meta_desc: "Documentation for the aws.opsworks.StaticWebLayer resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/StaticWebLayer/"
 layout: api
 ---
 

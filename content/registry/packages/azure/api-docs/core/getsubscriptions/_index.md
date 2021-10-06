@@ -3,8 +3,6 @@
 title: "getSubscriptions"
 title_tag: "azure.core.getSubscriptions"
 meta_desc: "Documentation for the azure.core.getSubscriptions function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

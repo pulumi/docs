@@ -2,8 +2,6 @@
 title: "kubernetes"
 title_tag: "azure-native.kubernetes"
 meta_desc: "Explore the resources and functions of the azure-native.kubernetes module."
-aliases:
-    - "docs/reference/pkg/azure-native/"
 layout: api
 ---
 

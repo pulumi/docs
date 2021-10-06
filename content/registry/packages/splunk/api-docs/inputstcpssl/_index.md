@@ -3,8 +3,6 @@
 title: "InputsTcpSsl"
 title_tag: "splunk.InputsTcpSsl"
 meta_desc: "Documentation for the splunk.InputsTcpSsl resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/splunk/InputsTcpSsl/"
 layout: api
 ---
 

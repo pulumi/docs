@@ -3,8 +3,6 @@
 title: "Config"
 title_tag: "cloudinit.Config"
 meta_desc: "Documentation for the cloudinit.Config resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/cloudinit/Config/"
 layout: api
 ---
 

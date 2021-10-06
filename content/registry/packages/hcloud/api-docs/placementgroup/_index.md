@@ -3,8 +3,6 @@
 title: "PlacementGroup"
 title_tag: "hcloud.PlacementGroup"
 meta_desc: "Documentation for the hcloud.PlacementGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/hcloud/PlacementGroup/"
 layout: api
 ---
 

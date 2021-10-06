@@ -3,8 +3,6 @@
 title: "getCanonicalUserId"
 title_tag: "aws.s3.getCanonicalUserId"
 meta_desc: "Documentation for the aws.s3.getCanonicalUserId function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

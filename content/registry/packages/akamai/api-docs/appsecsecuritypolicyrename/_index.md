@@ -3,8 +3,6 @@
 title: "AppSecSecurityPolicyRename"
 title_tag: "akamai.AppSecSecurityPolicyRename"
 meta_desc: "Documentation for the akamai.AppSecSecurityPolicyRename resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/akamai/AppSecSecurityPolicyRename/"
 layout: api
 ---
 

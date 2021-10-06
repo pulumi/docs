@@ -3,8 +3,6 @@
 title: "UsageExportBucket"
 title_tag: "gcp.projects.UsageExportBucket"
 meta_desc: "Documentation for the gcp.projects.UsageExportBucket resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/UsageExportBucket/"
 layout: api
 ---
 

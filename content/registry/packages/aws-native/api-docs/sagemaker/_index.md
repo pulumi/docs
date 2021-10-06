@@ -2,8 +2,6 @@
 title: "sagemaker"
 title_tag: "aws-native.sagemaker"
 meta_desc: "Explore the resources and functions of the aws-native.sagemaker module."
-aliases:
-    - "docs/reference/pkg/aws-native/"
 layout: api
 ---
 

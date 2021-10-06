@@ -3,8 +3,6 @@
 title: "ClusterAlertRule"
 title_tag: "rancher2.ClusterAlertRule"
 meta_desc: "Documentation for the rancher2.ClusterAlertRule resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/rancher2/ClusterAlertRule/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "IamServiceAccount"
 title_tag: "yandex.IamServiceAccount"
 meta_desc: "Documentation for the yandex.IamServiceAccount resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/yandex/IamServiceAccount/"
 layout: api
 ---
 

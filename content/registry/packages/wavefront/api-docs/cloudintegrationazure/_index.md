@@ -3,8 +3,6 @@
 title: "CloudIntegrationAzure"
 title_tag: "wavefront.CloudIntegrationAzure"
 meta_desc: "Documentation for the wavefront.CloudIntegrationAzure resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/wavefront/CloudIntegrationAzure/"
 layout: api
 ---
 

@@ -2,8 +2,6 @@
 title: "desktopvirtualization"
 title_tag: "azure.desktopvirtualization"
 meta_desc: "Explore the resources and functions of the azure.desktopvirtualization module."
-aliases:
-    - "docs/reference/pkg/azure/"
 layout: api
 ---
 

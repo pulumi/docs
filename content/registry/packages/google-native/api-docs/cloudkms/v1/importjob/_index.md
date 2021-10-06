@@ -3,8 +3,6 @@
 title: "ImportJob"
 title_tag: "google-native.cloudkms/v1.ImportJob"
 meta_desc: "Documentation for the google-native.cloudkms/v1.ImportJob resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/google-native/ImportJob/"
 layout: api
 ---
 

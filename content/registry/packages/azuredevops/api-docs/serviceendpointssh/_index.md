@@ -3,8 +3,6 @@
 title: "ServiceEndpointSsh"
 title_tag: "azuredevops.ServiceEndpointSsh"
 meta_desc: "Documentation for the azuredevops.ServiceEndpointSsh resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azuredevops/ServiceEndpointSsh/"
 layout: api
 ---
 

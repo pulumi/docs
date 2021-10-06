@@ -3,8 +3,6 @@
 title: "MigrateProject"
 title_tag: "azure-native.migrate.MigrateProject"
 meta_desc: "Documentation for the azure-native.migrate.MigrateProject resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/MigrateProject/"
 layout: api
 ---
 

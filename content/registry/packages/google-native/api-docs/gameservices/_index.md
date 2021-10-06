@@ -2,8 +2,6 @@
 title: "gameservices"
 title_tag: "gameservices Package"
 meta_desc: ""
-aliases:
-    - "docs/reference/pkg/google-native/"
 layout: api
 ---
 

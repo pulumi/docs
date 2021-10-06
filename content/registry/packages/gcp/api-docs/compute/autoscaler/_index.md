@@ -3,8 +3,6 @@
 title: "Autoscaler"
 title_tag: "gcp.compute.Autoscaler"
 meta_desc: "Documentation for the gcp.compute.Autoscaler resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/Autoscaler/"
 layout: api
 ---
 

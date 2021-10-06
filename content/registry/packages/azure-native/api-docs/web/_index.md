@@ -2,8 +2,6 @@
 title: "web"
 title_tag: "azure-native.web"
 meta_desc: "Explore the resources and functions of the azure-native.web module."
-aliases:
-    - "docs/reference/pkg/azure-native/"
 layout: api
 ---
 

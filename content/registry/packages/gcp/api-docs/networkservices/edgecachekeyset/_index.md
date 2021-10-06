@@ -3,8 +3,6 @@
 title: "EdgeCacheKeyset"
 title_tag: "gcp.networkservices.EdgeCacheKeyset"
 meta_desc: "Documentation for the gcp.networkservices.EdgeCacheKeyset resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/EdgeCacheKeyset/"
 layout: api
 ---
 

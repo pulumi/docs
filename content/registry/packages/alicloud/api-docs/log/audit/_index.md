@@ -3,8 +3,6 @@
 title: "Audit"
 title_tag: "alicloud.log.Audit"
 meta_desc: "Documentation for the alicloud.log.Audit resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/alicloud/Audit/"
 layout: api
 ---
 

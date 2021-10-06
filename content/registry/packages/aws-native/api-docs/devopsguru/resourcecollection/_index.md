@@ -3,8 +3,6 @@
 title: "ResourceCollection"
 title_tag: "aws-native.devopsguru.ResourceCollection"
 meta_desc: "Documentation for the aws-native.devopsguru.ResourceCollection resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws-native/ResourceCollection/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "VariableGroup"
 title_tag: "azuredevops.Pipeline.VariableGroup"
 meta_desc: "Documentation for the azuredevops.Pipeline.VariableGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azuredevops/VariableGroup/"
 layout: api
 ---
 

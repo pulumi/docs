@@ -3,8 +3,6 @@
 title: "SchemaVersionMetadata"
 title_tag: "aws-native.glue.SchemaVersionMetadata"
 meta_desc: "Documentation for the aws-native.glue.SchemaVersionMetadata resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws-native/SchemaVersionMetadata/"
 layout: api
 ---
 

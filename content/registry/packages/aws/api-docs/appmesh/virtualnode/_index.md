@@ -3,8 +3,6 @@
 title: "VirtualNode"
 title_tag: "aws.appmesh.VirtualNode"
 meta_desc: "Documentation for the aws.appmesh.VirtualNode resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/VirtualNode/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "Anomalies"
 title_tag: "azure-native.securityinsights.Anomalies"
 meta_desc: "Documentation for the azure-native.securityinsights.Anomalies resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/Anomalies/"
 layout: api
 ---
 

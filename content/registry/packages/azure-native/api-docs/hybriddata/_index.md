@@ -2,8 +2,6 @@
 title: "hybriddata"
 title_tag: "azure-native.hybriddata"
 meta_desc: "Explore the resources and functions of the azure-native.hybriddata module."
-aliases:
-    - "docs/reference/pkg/azure-native/"
 layout: api
 ---
 

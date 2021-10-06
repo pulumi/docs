@@ -3,8 +3,6 @@
 title: "getAssociation"
 title_tag: "azure-native.customproviders.getAssociation"
 meta_desc: "Documentation for the azure-native.customproviders.getAssociation function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "getSnapshotIamPolicy"
 title_tag: "google-native.compute/beta.getSnapshotIamPolicy"
 meta_desc: "Documentation for the google-native.compute/beta.getSnapshotIamPolicy function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

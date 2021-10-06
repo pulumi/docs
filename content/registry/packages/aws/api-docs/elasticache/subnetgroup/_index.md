@@ -3,8 +3,6 @@
 title: "SubnetGroup"
 title_tag: "aws.elasticache.SubnetGroup"
 meta_desc: "Documentation for the aws.elasticache.SubnetGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/SubnetGroup/"
 layout: api
 ---
 

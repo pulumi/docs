@@ -3,8 +3,6 @@
 title: "LoadBalancer"
 title_tag: "cloudflare.LoadBalancer"
 meta_desc: "Documentation for the cloudflare.LoadBalancer resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/cloudflare/LoadBalancer/"
 layout: api
 ---
 

@@ -2,8 +2,6 @@
 title: "pubsub"
 title_tag: "pubsub Package"
 meta_desc: ""
-aliases:
-    - "docs/reference/pkg/google-native/"
 layout: api
 ---
 

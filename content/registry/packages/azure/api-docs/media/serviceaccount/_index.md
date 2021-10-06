@@ -3,8 +3,6 @@
 title: "ServiceAccount"
 title_tag: "azure.media.ServiceAccount"
 meta_desc: "Documentation for the azure.media.ServiceAccount resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/ServiceAccount/"
 layout: api
 ---
 

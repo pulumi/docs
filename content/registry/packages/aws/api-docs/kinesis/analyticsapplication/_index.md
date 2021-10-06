@@ -3,8 +3,6 @@
 title: "AnalyticsApplication"
 title_tag: "aws.kinesis.AnalyticsApplication"
 meta_desc: "Documentation for the aws.kinesis.AnalyticsApplication resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/AnalyticsApplication/"
 layout: api
 ---
 

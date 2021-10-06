@@ -2,8 +2,6 @@
 title: "elasticbeanstalk"
 title_tag: "aws.elasticbeanstalk"
 meta_desc: "Explore the resources and functions of the aws.elasticbeanstalk module."
-aliases:
-    - "docs/reference/pkg/aws/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "Alarm"
 title_tag: "alicloud.ess.Alarm"
 meta_desc: "Documentation for the alicloud.ess.Alarm resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/alicloud/Alarm/"
 layout: api
 ---
 

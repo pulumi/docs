@@ -3,8 +3,6 @@
 title: "Config"
 title_tag: "google-native.gameservices/v1beta.Config"
 meta_desc: "Documentation for the google-native.gameservices/v1beta.Config resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/google-native/Config/"
 layout: api
 ---
 

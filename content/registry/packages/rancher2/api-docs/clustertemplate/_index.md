@@ -3,8 +3,6 @@
 title: "ClusterTemplate"
 title_tag: "rancher2.ClusterTemplate"
 meta_desc: "Documentation for the rancher2.ClusterTemplate resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/rancher2/ClusterTemplate/"
 layout: api
 ---
 

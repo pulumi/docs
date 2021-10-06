@@ -3,8 +3,6 @@
 title: "getSshKey"
 title_tag: "hcloud.getSshKey"
 meta_desc: "Documentation for the hcloud.getSshKey function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

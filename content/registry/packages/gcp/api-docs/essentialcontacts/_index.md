@@ -2,8 +2,6 @@
 title: "essentialcontacts"
 title_tag: "gcp.essentialcontacts"
 meta_desc: "Explore the resources and functions of the gcp.essentialcontacts module."
-aliases:
-    - "docs/reference/pkg/gcp/"
 layout: api
 ---
 

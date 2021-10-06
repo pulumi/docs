@@ -3,8 +3,6 @@
 title: "ServiceEndpointGenericGit"
 title_tag: "azuredevops.ServiceEndpointGenericGit"
 meta_desc: "Documentation for the azuredevops.ServiceEndpointGenericGit resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azuredevops/ServiceEndpointGenericGit/"
 layout: api
 ---
 

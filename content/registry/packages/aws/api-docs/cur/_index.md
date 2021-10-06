@@ -2,8 +2,6 @@
 title: "cur"
 title_tag: "aws.cur"
 meta_desc: "Explore the resources and functions of the aws.cur module."
-aliases:
-    - "docs/reference/pkg/aws/"
 layout: api
 ---
 

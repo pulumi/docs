@@ -3,8 +3,6 @@
 title: "ScriptExecution"
 title_tag: "azure-native.avs.ScriptExecution"
 meta_desc: "Documentation for the azure-native.avs.ScriptExecution resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/ScriptExecution/"
 layout: api
 ---
 

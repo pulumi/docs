@@ -3,8 +3,6 @@
 title: "AppCookieStickinessPolicy"
 title_tag: "aws.elb.AppCookieStickinessPolicy"
 meta_desc: "Documentation for the aws.elb.AppCookieStickinessPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/AppCookieStickinessPolicy/"
 layout: api
 ---
 

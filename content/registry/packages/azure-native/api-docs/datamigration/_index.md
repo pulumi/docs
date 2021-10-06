@@ -2,8 +2,6 @@
 title: "datamigration"
 title_tag: "azure-native.datamigration"
 meta_desc: "Explore the resources and functions of the azure-native.datamigration module."
-aliases:
-    - "docs/reference/pkg/azure-native/"
 layout: api
 ---
 

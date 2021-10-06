@@ -2,8 +2,6 @@
 title: "MySQL"
 title_tag: "mysql.MySQL"
 meta_desc: "A Pulumi package for creating and managing mysql cloud resources."
-aliases:
-    - "docs/reference/pkg/mysql/"
 menu:
     reference:
         parent: API Reference

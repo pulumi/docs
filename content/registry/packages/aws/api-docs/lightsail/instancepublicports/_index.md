@@ -3,8 +3,6 @@
 title: "InstancePublicPorts"
 title_tag: "aws.lightsail.InstancePublicPorts"
 meta_desc: "Documentation for the aws.lightsail.InstancePublicPorts resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/InstancePublicPorts/"
 layout: api
 ---
 

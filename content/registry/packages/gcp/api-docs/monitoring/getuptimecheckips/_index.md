@@ -3,8 +3,6 @@
 title: "getUptimeCheckIPs"
 title_tag: "gcp.monitoring.getUptimeCheckIPs"
 meta_desc: "Documentation for the gcp.monitoring.getUptimeCheckIPs function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

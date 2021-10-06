@@ -3,8 +3,6 @@
 title: "getPrecreatedIpBlock"
 title_tag: "equinix-metal.getPrecreatedIpBlock"
 meta_desc: "Documentation for the equinix-metal.getPrecreatedIpBlock function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

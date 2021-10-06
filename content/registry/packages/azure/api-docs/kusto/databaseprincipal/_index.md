@@ -3,8 +3,6 @@
 title: "DatabasePrincipal"
 title_tag: "azure.kusto.DatabasePrincipal"
 meta_desc: "Documentation for the azure.kusto.DatabasePrincipal resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/DatabasePrincipal/"
 layout: api
 ---
 

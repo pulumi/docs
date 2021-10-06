@@ -2,8 +2,6 @@
 title: "sharedfilesystem"
 title_tag: "openstack.sharedfilesystem"
 meta_desc: "Explore the resources and functions of the openstack.sharedfilesystem module."
-aliases:
-    - "docs/reference/pkg/openstack/"
 layout: api
 ---
 

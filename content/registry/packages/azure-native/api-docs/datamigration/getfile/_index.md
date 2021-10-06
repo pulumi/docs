@@ -3,8 +3,6 @@
 title: "getFile"
 title_tag: "azure-native.datamigration.getFile"
 meta_desc: "Documentation for the azure-native.datamigration.getFile function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

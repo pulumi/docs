@@ -2,8 +2,6 @@
 title: "engagementfabric"
 title_tag: "azure-native.engagementfabric"
 meta_desc: "Explore the resources and functions of the azure-native.engagementfabric module."
-aliases:
-    - "docs/reference/pkg/azure-native/"
 layout: api
 ---
 

@@ -2,8 +2,6 @@
 title: "ros"
 title_tag: "alicloud.ros"
 meta_desc: "Explore the resources and functions of the alicloud.ros module."
-aliases:
-    - "docs/reference/pkg/alicloud/"
 layout: api
 ---
 

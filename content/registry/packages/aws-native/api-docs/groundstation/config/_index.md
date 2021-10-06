@@ -3,8 +3,6 @@
 title: "Config"
 title_tag: "aws-native.groundstation.Config"
 meta_desc: "Documentation for the aws-native.groundstation.Config resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws-native/Config/"
 layout: api
 ---
 

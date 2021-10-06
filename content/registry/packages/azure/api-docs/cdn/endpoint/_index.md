@@ -3,8 +3,6 @@
 title: "Endpoint"
 title_tag: "azure.cdn.Endpoint"
 meta_desc: "Documentation for the azure.cdn.Endpoint resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/Endpoint/"
 layout: api
 ---
 

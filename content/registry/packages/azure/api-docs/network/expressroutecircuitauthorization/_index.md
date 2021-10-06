@@ -3,8 +3,6 @@
 title: "ExpressRouteCircuitAuthorization"
 title_tag: "azure.network.ExpressRouteCircuitAuthorization"
 meta_desc: "Documentation for the azure.network.ExpressRouteCircuitAuthorization resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/ExpressRouteCircuitAuthorization/"
 layout: api
 ---
 

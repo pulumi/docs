@@ -3,8 +3,6 @@
 title: "CloudProviderSnapshot"
 title_tag: "mongodbatlas.CloudProviderSnapshot"
 meta_desc: "Documentation for the mongodbatlas.CloudProviderSnapshot resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/mongodbatlas/CloudProviderSnapshot/"
 layout: api
 ---
 

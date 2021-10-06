@@ -3,8 +3,6 @@
 title: "getEyesOn"
 title_tag: "azure-native.securityinsights.getEyesOn"
 meta_desc: "Documentation for the azure-native.securityinsights.getEyesOn function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

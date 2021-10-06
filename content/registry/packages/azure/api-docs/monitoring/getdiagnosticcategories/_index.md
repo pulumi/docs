@@ -3,8 +3,6 @@
 title: "getDiagnosticCategories"
 title_tag: "azure.monitoring.getDiagnosticCategories"
 meta_desc: "Documentation for the azure.monitoring.getDiagnosticCategories function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

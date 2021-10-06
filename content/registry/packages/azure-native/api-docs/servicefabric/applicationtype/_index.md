@@ -3,8 +3,6 @@
 title: "ApplicationType"
 title_tag: "azure-native.servicefabric.ApplicationType"
 meta_desc: "Documentation for the azure-native.servicefabric.ApplicationType resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/ApplicationType/"
 layout: api
 ---
 

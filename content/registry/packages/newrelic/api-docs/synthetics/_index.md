@@ -2,8 +2,6 @@
 title: "synthetics"
 title_tag: "newrelic.synthetics"
 meta_desc: "Explore the resources and functions of the newrelic.synthetics module."
-aliases:
-    - "docs/reference/pkg/newrelic/"
 layout: api
 ---
 

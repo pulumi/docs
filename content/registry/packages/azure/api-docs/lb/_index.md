@@ -2,8 +2,6 @@
 title: "lb"
 title_tag: "azure.lb"
 meta_desc: "Explore the resources and functions of the azure.lb module."
-aliases:
-    - "docs/reference/pkg/azure/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "getWorkspace"
 title_tag: "aws.workspaces.getWorkspace"
 meta_desc: "Documentation for the aws.workspaces.getWorkspace function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

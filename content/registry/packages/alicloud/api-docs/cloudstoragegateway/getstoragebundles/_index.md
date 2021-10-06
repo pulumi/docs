@@ -3,8 +3,6 @@
 title: "getStorageBundles"
 title_tag: "alicloud.cloudstoragegateway.getStorageBundles"
 meta_desc: "Documentation for the alicloud.cloudstoragegateway.getStorageBundles function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

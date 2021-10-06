@@ -2,8 +2,6 @@
 title: "GitLab"
 title_tag: "gitlab.GitLab"
 meta_desc: "A Pulumi package for creating and managing GitLab resources."
-aliases:
-    - "docs/reference/pkg/gitlab/"
 menu:
     reference:
         parent: API Reference

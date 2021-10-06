@@ -3,8 +3,6 @@
 title: "Service"
 title_tag: "aws-native.ecs.Service"
 meta_desc: "Documentation for the aws-native.ecs.Service resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws-native/Service/"
 layout: api
 ---
 

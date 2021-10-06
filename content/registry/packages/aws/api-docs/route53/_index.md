@@ -2,8 +2,6 @@
 title: "route53"
 title_tag: "aws.route53"
 meta_desc: "Explore the resources and functions of the aws.route53 module."
-aliases:
-    - "docs/reference/pkg/aws/"
 layout: api
 ---
 

@@ -2,8 +2,6 @@
 title: "ehpc"
 title_tag: "alicloud.ehpc"
 meta_desc: "Explore the resources and functions of the alicloud.ehpc module."
-aliases:
-    - "docs/reference/pkg/alicloud/"
 layout: api
 ---
 

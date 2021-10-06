@@ -3,8 +3,6 @@
 title: "NetworkInterface"
 title_tag: "azure-native.network.NetworkInterface"
 meta_desc: "Documentation for the azure-native.network.NetworkInterface resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/NetworkInterface/"
 layout: api
 ---
 

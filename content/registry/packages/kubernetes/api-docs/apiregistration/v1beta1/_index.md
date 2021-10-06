@@ -2,8 +2,6 @@
 title: "apiregistration/v1beta1"
 title_tag: "kubernetes.apiregistration/v1beta1"
 meta_desc: "Explore the resources and functions of the kubernetes.apiregistration/v1beta1 module."
-aliases:
-    - "docs/reference/pkg/kubernetes/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "Resource"
 title_tag: "aws-native.apigateway.Resource"
 meta_desc: "Documentation for the aws-native.apigateway.Resource resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws-native/Resource/"
 layout: api
 ---
 

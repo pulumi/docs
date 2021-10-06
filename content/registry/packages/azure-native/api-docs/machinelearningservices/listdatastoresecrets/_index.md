@@ -3,8 +3,6 @@
 title: "listDatastoreSecrets"
 title_tag: "azure-native.machinelearningservices.listDatastoreSecrets"
 meta_desc: "Documentation for the azure-native.machinelearningservices.listDatastoreSecrets function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

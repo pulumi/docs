@@ -3,8 +3,6 @@
 title: "VpnConnection"
 title_tag: "aws.ec2.VpnConnection"
 meta_desc: "Documentation for the aws.ec2.VpnConnection resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/VpnConnection/"
 layout: api
 ---
 

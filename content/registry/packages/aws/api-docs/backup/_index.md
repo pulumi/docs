@@ -2,8 +2,6 @@
 title: "backup"
 title_tag: "aws.backup"
 meta_desc: "Explore the resources and functions of the aws.backup module."
-aliases:
-    - "docs/reference/pkg/aws/"
 layout: api
 ---
 

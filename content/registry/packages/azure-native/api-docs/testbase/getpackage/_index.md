@@ -3,8 +3,6 @@
 title: "getPackage"
 title_tag: "azure-native.testbase.getPackage"
 meta_desc: "Documentation for the azure-native.testbase.getPackage function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "AlertRuleFusion"
 title_tag: "azure.sentinel.AlertRuleFusion"
 meta_desc: "Documentation for the azure.sentinel.AlertRuleFusion resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/AlertRuleFusion/"
 layout: api
 ---
 

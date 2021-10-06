@@ -3,8 +3,6 @@
 title: "BackupInstanceDisk"
 title_tag: "azure.dataprotection.BackupInstanceDisk"
 meta_desc: "Documentation for the azure.dataprotection.BackupInstanceDisk resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/BackupInstanceDisk/"
 layout: api
 ---
 

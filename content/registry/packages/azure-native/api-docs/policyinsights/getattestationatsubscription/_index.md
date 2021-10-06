@@ -3,8 +3,6 @@
 title: "getAttestationAtSubscription"
 title_tag: "azure-native.policyinsights.getAttestationAtSubscription"
 meta_desc: "Documentation for the azure-native.policyinsights.getAttestationAtSubscription function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

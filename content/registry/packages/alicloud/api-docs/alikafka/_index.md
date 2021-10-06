@@ -2,8 +2,6 @@
 title: "alikafka"
 title_tag: "alicloud.alikafka"
 meta_desc: "Explore the resources and functions of the alicloud.alikafka module."
-aliases:
-    - "docs/reference/pkg/alicloud/"
 layout: api
 ---
 

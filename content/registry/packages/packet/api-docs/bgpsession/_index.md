@@ -3,8 +3,6 @@
 title: "BgpSession"
 title_tag: "packet.BgpSession"
 meta_desc: "Documentation for the packet.BgpSession resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/packet/BgpSession/"
 layout: api
 ---
 

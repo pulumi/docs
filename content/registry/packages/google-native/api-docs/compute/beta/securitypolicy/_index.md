@@ -3,8 +3,6 @@
 title: "SecurityPolicy"
 title_tag: "google-native.compute/beta.SecurityPolicy"
 meta_desc: "Documentation for the google-native.compute/beta.SecurityPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/google-native/SecurityPolicy/"
 layout: api
 ---
 

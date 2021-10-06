@@ -3,8 +3,6 @@
 title: "Subnetwork"
 title_tag: "gcp.compute.Subnetwork"
 meta_desc: "Documentation for the gcp.compute.Subnetwork resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/Subnetwork/"
 layout: api
 ---
 

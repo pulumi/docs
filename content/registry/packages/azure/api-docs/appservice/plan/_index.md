@@ -3,8 +3,6 @@
 title: "Plan"
 title_tag: "azure.appservice.Plan"
 meta_desc: "Documentation for the azure.appservice.Plan resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/Plan/"
 layout: api
 ---
 

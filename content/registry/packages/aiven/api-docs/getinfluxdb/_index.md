@@ -3,8 +3,6 @@
 title: "getInfluxDb"
 title_tag: "aiven.getInfluxDb"
 meta_desc: "Documentation for the aiven.getInfluxDb function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

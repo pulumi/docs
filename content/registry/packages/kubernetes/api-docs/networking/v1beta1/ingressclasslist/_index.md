@@ -3,8 +3,6 @@
 title: "IngressClassList"
 title_tag: "kubernetes.networking.k8s.io/v1beta1.IngressClassList"
 meta_desc: "Documentation for the kubernetes.networking.k8s.io/v1beta1.IngressClassList resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/kubernetes/IngressClassList/"
 layout: api
 ---
 

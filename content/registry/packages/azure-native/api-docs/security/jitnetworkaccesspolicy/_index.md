@@ -3,8 +3,6 @@
 title: "JitNetworkAccessPolicy"
 title_tag: "azure-native.security.JitNetworkAccessPolicy"
 meta_desc: "Documentation for the azure-native.security.JitNetworkAccessPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/JitNetworkAccessPolicy/"
 layout: api
 ---
 

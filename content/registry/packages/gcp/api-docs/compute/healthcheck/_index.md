@@ -3,8 +3,6 @@
 title: "HealthCheck"
 title_tag: "gcp.compute.HealthCheck"
 meta_desc: "Documentation for the gcp.compute.HealthCheck resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/HealthCheck/"
 layout: api
 ---
 

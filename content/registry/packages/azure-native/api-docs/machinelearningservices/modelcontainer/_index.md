@@ -3,8 +3,6 @@
 title: "ModelContainer"
 title_tag: "azure-native.machinelearningservices.ModelContainer"
 meta_desc: "Documentation for the azure-native.machinelearningservices.ModelContainer resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/ModelContainer/"
 layout: api
 ---
 

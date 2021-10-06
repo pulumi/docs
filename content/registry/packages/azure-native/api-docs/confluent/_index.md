@@ -2,8 +2,6 @@
 title: "confluent"
 title_tag: "azure-native.confluent"
 meta_desc: "Explore the resources and functions of the azure-native.confluent module."
-aliases:
-    - "docs/reference/pkg/azure-native/"
 layout: api
 ---
 

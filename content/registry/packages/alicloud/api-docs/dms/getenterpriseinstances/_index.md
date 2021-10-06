@@ -3,8 +3,6 @@
 title: "getEnterpriseInstances"
 title_tag: "alicloud.dms.getEnterpriseInstances"
 meta_desc: "Documentation for the alicloud.dms.getEnterpriseInstances function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

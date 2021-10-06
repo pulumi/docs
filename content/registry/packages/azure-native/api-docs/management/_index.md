@@ -2,8 +2,6 @@
 title: "management"
 title_tag: "azure-native.management"
 meta_desc: "Explore the resources and functions of the azure-native.management module."
-aliases:
-    - "docs/reference/pkg/azure-native/"
 layout: api
 ---
 

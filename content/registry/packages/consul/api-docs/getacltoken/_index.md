@@ -3,8 +3,6 @@
 title: "getAclToken"
 title_tag: "consul.getAclToken"
 meta_desc: "Documentation for the consul.getAclToken function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

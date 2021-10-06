@@ -2,8 +2,6 @@
 title: "management"
 title_tag: "azure.management"
 meta_desc: "Explore the resources and functions of the azure.management module."
-aliases:
-    - "docs/reference/pkg/azure/"
 layout: api
 ---
 

@@ -2,8 +2,6 @@
 title: "plugins"
 title_tag: "newrelic.plugins"
 meta_desc: "Explore the resources and functions of the newrelic.plugins module."
-aliases:
-    - "docs/reference/pkg/newrelic/"
 layout: api
 ---
 

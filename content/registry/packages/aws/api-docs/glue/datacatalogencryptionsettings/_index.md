@@ -3,8 +3,6 @@
 title: "DataCatalogEncryptionSettings"
 title_tag: "aws.glue.DataCatalogEncryptionSettings"
 meta_desc: "Documentation for the aws.glue.DataCatalogEncryptionSettings resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/DataCatalogEncryptionSettings/"
 layout: api
 ---
 

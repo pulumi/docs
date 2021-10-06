@@ -3,8 +3,6 @@
 title: "getSecretIamPolicy"
 title_tag: "google-native.secretmanager/v1beta1.getSecretIamPolicy"
 meta_desc: "Documentation for the google-native.secretmanager/v1beta1.getSecretIamPolicy function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

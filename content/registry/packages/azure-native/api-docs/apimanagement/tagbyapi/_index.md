@@ -3,8 +3,6 @@
 title: "TagByApi"
 title_tag: "azure-native.apimanagement.TagByApi"
 meta_desc: "Documentation for the azure-native.apimanagement.TagByApi resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/TagByApi/"
 layout: api
 ---
 

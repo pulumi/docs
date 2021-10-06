@@ -2,8 +2,6 @@
 title: "notificationhubs"
 title_tag: "azure-native.notificationhubs"
 meta_desc: "Explore the resources and functions of the azure-native.notificationhubs module."
-aliases:
-    - "docs/reference/pkg/azure-native/"
 layout: api
 ---
 

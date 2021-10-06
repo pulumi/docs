@@ -3,8 +3,6 @@
 title: "EventSourceMapping"
 title_tag: "aws.lambda.EventSourceMapping"
 meta_desc: "Documentation for the aws.lambda.EventSourceMapping resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/EventSourceMapping/"
 layout: api
 ---
 

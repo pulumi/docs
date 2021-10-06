@@ -3,8 +3,6 @@
 title: "SynchronizationSetting"
 title_tag: "azure-native.datashare.SynchronizationSetting"
 meta_desc: "Documentation for the azure-native.datashare.SynchronizationSetting resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/SynchronizationSetting/"
 layout: api
 ---
 

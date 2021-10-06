@@ -2,8 +2,6 @@
 title: "folder"
 title_tag: "gcp.folder"
 meta_desc: "Explore the resources and functions of the gcp.folder module."
-aliases:
-    - "docs/reference/pkg/gcp/"
 layout: api
 ---
 

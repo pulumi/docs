@@ -3,8 +3,6 @@
 title: "getKeyValue"
 title_tag: "azure-native.appconfiguration.getKeyValue"
 meta_desc: "Documentation for the azure-native.appconfiguration.getKeyValue function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "HybridConnectionAuthorizationRule"
 title_tag: "azure-native.relay.HybridConnectionAuthorizationRule"
 meta_desc: "Documentation for the azure-native.relay.HybridConnectionAuthorizationRule resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/HybridConnectionAuthorizationRule/"
 layout: api
 ---
 

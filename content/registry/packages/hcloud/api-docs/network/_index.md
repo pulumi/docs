@@ -3,8 +3,6 @@
 title: "Network"
 title_tag: "hcloud.Network"
 meta_desc: "Documentation for the hcloud.Network resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/hcloud/Network/"
 layout: api
 ---
 

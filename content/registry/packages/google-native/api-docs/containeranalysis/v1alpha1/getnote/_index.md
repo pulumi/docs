@@ -3,8 +3,6 @@
 title: "getNote"
 title_tag: "google-native.containeranalysis/v1alpha1.getNote"
 meta_desc: "Documentation for the google-native.containeranalysis/v1alpha1.getNote function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

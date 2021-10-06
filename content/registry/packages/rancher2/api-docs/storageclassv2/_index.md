@@ -3,8 +3,6 @@
 title: "StorageClassV2"
 title_tag: "rancher2.StorageClassV2"
 meta_desc: "Documentation for the rancher2.StorageClassV2 resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/rancher2/StorageClassV2/"
 layout: api
 ---
 

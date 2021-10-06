@@ -3,8 +3,6 @@
 title: "Workflow"
 title_tag: "azure.logicapps.Workflow"
 meta_desc: "Documentation for the azure.logicapps.Workflow resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/Workflow/"
 layout: api
 ---
 

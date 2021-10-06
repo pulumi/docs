@@ -3,8 +3,6 @@
 title: "getCodeContainer"
 title_tag: "azure-native.machinelearningservices.getCodeContainer"
 meta_desc: "Documentation for the azure-native.machinelearningservices.getCodeContainer function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

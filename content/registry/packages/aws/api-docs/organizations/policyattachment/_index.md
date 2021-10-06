@@ -3,8 +3,6 @@
 title: "PolicyAttachment"
 title_tag: "aws.organizations.PolicyAttachment"
 meta_desc: "Documentation for the aws.organizations.PolicyAttachment resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/PolicyAttachment/"
 layout: api
 ---
 

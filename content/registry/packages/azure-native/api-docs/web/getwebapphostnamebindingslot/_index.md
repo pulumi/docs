@@ -3,8 +3,6 @@
 title: "getWebAppHostNameBindingSlot"
 title_tag: "azure-native.web.getWebAppHostNameBindingSlot"
 meta_desc: "Documentation for the azure-native.web.getWebAppHostNameBindingSlot function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

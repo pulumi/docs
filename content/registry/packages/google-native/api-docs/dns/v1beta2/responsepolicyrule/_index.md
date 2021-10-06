@@ -3,8 +3,6 @@
 title: "ResponsePolicyRule"
 title_tag: "google-native.dns/v1beta2.ResponsePolicyRule"
 meta_desc: "Documentation for the google-native.dns/v1beta2.ResponsePolicyRule resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/google-native/ResponsePolicyRule/"
 layout: api
 ---
 

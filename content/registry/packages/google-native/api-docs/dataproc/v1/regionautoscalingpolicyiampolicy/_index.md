@@ -3,8 +3,6 @@
 title: "RegionAutoscalingPolicyIamPolicy"
 title_tag: "google-native.dataproc/v1.RegionAutoscalingPolicyIamPolicy"
 meta_desc: "Documentation for the google-native.dataproc/v1.RegionAutoscalingPolicyIamPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/google-native/RegionAutoscalingPolicyIamPolicy/"
 layout: api
 ---
 

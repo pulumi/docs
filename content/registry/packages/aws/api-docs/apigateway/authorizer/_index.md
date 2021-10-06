@@ -3,8 +3,6 @@
 title: "Authorizer"
 title_tag: "aws.apigateway.Authorizer"
 meta_desc: "Documentation for the aws.apigateway.Authorizer resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/Authorizer/"
 layout: api
 ---
 

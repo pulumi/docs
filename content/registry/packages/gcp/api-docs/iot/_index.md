@@ -2,8 +2,6 @@
 title: "iot"
 title_tag: "gcp.iot"
 meta_desc: "Explore the resources and functions of the gcp.iot module."
-aliases:
-    - "docs/reference/pkg/gcp/"
 layout: api
 ---
 

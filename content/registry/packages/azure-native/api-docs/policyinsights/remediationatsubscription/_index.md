@@ -3,8 +3,6 @@
 title: "RemediationAtSubscription"
 title_tag: "azure-native.policyinsights.RemediationAtSubscription"
 meta_desc: "Documentation for the azure-native.policyinsights.RemediationAtSubscription resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/RemediationAtSubscription/"
 layout: api
 ---
 

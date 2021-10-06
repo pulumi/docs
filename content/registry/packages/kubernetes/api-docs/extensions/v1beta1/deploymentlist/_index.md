@@ -3,8 +3,6 @@
 title: "DeploymentList"
 title_tag: "kubernetes.extensions/v1beta1.DeploymentList"
 meta_desc: "Documentation for the kubernetes.extensions/v1beta1.DeploymentList resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/kubernetes/DeploymentList/"
 layout: api
 ---
 

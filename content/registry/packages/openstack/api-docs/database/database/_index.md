@@ -3,8 +3,6 @@
 title: "Database"
 title_tag: "openstack.database.Database"
 meta_desc: "Documentation for the openstack.database.Database resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/openstack/Database/"
 layout: api
 ---
 

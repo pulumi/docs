@@ -2,8 +2,6 @@
 title: "binaryauthorization"
 title_tag: "binaryauthorization Package"
 meta_desc: ""
-aliases:
-    - "docs/reference/pkg/google-native/"
 layout: api
 ---
 

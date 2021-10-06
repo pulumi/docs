@@ -3,8 +3,6 @@
 title: "getHanaInstance"
 title_tag: "azure-native.hanaonazure.getHanaInstance"
 meta_desc: "Documentation for the azure-native.hanaonazure.getHanaInstance function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

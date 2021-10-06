@@ -3,8 +3,6 @@
 title: "ServiceDynamicSnippetContentv1"
 title_tag: "fastly.ServiceDynamicSnippetContentv1"
 meta_desc: "Documentation for the fastly.ServiceDynamicSnippetContentv1 resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/fastly/ServiceDynamicSnippetContentv1/"
 layout: api
 ---
 

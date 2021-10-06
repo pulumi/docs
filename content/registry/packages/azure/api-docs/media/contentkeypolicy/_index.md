@@ -3,8 +3,6 @@
 title: "ContentKeyPolicy"
 title_tag: "azure.media.ContentKeyPolicy"
 meta_desc: "Documentation for the azure.media.ContentKeyPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/ContentKeyPolicy/"
 layout: api
 ---
 

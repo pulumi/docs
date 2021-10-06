@@ -3,8 +3,6 @@
 title: "SlotType"
 title_tag: "aws.lex.SlotType"
 meta_desc: "Documentation for the aws.lex.SlotType resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/SlotType/"
 layout: api
 ---
 

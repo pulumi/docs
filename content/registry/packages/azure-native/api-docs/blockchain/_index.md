@@ -2,8 +2,6 @@
 title: "blockchain"
 title_tag: "azure-native.blockchain"
 meta_desc: "Explore the resources and functions of the azure-native.blockchain module."
-aliases:
-    - "docs/reference/pkg/azure-native/"
 layout: api
 ---
 

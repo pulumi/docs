@@ -3,8 +3,6 @@
 title: "Field"
 title_tag: "sumologic.Field"
 meta_desc: "Documentation for the sumologic.Field resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/sumologic/Field/"
 layout: api
 ---
 

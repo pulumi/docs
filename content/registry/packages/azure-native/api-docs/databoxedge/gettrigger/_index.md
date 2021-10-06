@@ -3,8 +3,6 @@
 title: "getTrigger"
 title_tag: "azure-native.databoxedge.getTrigger"
 meta_desc: "Documentation for the azure-native.databoxedge.getTrigger function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "getExtension"
 title_tag: "azure-native.azurestackhci.getExtension"
 meta_desc: "Documentation for the azure-native.azurestackhci.getExtension function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

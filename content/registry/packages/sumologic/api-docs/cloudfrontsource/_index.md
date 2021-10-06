@@ -3,8 +3,6 @@
 title: "CloudfrontSource"
 title_tag: "sumologic.CloudfrontSource"
 meta_desc: "Documentation for the sumologic.CloudfrontSource resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/sumologic/CloudfrontSource/"
 layout: api
 ---
 

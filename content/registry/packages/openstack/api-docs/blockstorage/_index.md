@@ -2,8 +2,6 @@
 title: "blockstorage"
 title_tag: "openstack.blockstorage"
 meta_desc: "Explore the resources and functions of the openstack.blockstorage module."
-aliases:
-    - "docs/reference/pkg/openstack/"
 layout: api
 ---
 

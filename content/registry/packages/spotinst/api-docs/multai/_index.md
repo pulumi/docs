@@ -2,8 +2,6 @@
 title: "multai"
 title_tag: "spotinst.multai"
 meta_desc: "Explore the resources and functions of the spotinst.multai module."
-aliases:
-    - "docs/reference/pkg/spotinst/"
 layout: api
 ---
 

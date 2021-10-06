@@ -3,8 +3,6 @@
 title: "DataFlow"
 title_tag: "azure.datafactory.DataFlow"
 meta_desc: "Documentation for the azure.datafactory.DataFlow resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/DataFlow/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "FirewallPolicy"
 title_tag: "google-native.compute/alpha.FirewallPolicy"
 meta_desc: "Documentation for the google-native.compute/alpha.FirewallPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/google-native/FirewallPolicy/"
 layout: api
 ---
 

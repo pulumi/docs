@@ -2,8 +2,6 @@
 title: "servicebus"
 title_tag: "azure-native.servicebus"
 meta_desc: "Explore the resources and functions of the azure-native.servicebus module."
-aliases:
-    - "docs/reference/pkg/azure-native/"
 layout: api
 ---
 

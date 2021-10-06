@@ -2,8 +2,6 @@
 title: "bigtable"
 title_tag: "gcp.bigtable"
 meta_desc: "Explore the resources and functions of the gcp.bigtable module."
-aliases:
-    - "docs/reference/pkg/gcp/"
 layout: api
 ---
 

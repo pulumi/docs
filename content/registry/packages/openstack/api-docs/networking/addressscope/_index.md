@@ -3,8 +3,6 @@
 title: "AddressScope"
 title_tag: "openstack.networking.AddressScope"
 meta_desc: "Documentation for the openstack.networking.AddressScope resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/openstack/AddressScope/"
 layout: api
 ---
 

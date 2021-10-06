@@ -3,8 +3,6 @@
 title: "TxtRecord"
 title_tag: "azure.privatedns.TxtRecord"
 meta_desc: "Documentation for the azure.privatedns.TxtRecord resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/TxtRecord/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "getSecretV2"
 title_tag: "rancher2.getSecretV2"
 meta_desc: "Documentation for the rancher2.getSecretV2 function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

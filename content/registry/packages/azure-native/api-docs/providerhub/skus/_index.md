@@ -3,8 +3,6 @@
 title: "Skus"
 title_tag: "azure-native.providerhub.Skus"
 meta_desc: "Documentation for the azure-native.providerhub.Skus resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/Skus/"
 layout: api
 ---
 

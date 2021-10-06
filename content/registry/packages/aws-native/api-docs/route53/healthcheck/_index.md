@@ -3,8 +3,6 @@
 title: "HealthCheck"
 title_tag: "aws-native.route53.HealthCheck"
 meta_desc: "Documentation for the aws-native.route53.HealthCheck resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws-native/HealthCheck/"
 layout: api
 ---
 

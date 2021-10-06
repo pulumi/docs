@@ -2,8 +2,6 @@
 title: "gke"
 title_tag: "spotinst.gke"
 meta_desc: "Explore the resources and functions of the spotinst.gke module."
-aliases:
-    - "docs/reference/pkg/spotinst/"
 layout: api
 ---
 

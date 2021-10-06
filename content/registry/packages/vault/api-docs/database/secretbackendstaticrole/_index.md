@@ -3,8 +3,6 @@
 title: "SecretBackendStaticRole"
 title_tag: "vault.database.SecretBackendStaticRole"
 meta_desc: "Documentation for the vault.database.SecretBackendStaticRole resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/vault/SecretBackendStaticRole/"
 layout: api
 ---
 

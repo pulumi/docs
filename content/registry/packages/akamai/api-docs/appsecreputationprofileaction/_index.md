@@ -3,8 +3,6 @@
 title: "AppSecReputationProfileAction"
 title_tag: "akamai.AppSecReputationProfileAction"
 meta_desc: "Documentation for the akamai.AppSecReputationProfileAction resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/akamai/AppSecReputationProfileAction/"
 layout: api
 ---
 

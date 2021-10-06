@@ -3,8 +3,6 @@
 title: "getEncryptionScope"
 title_tag: "azure-native.storage.getEncryptionScope"
 meta_desc: "Documentation for the azure-native.storage.getEncryptionScope function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

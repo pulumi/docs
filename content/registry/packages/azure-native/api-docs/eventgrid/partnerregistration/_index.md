@@ -3,8 +3,6 @@
 title: "PartnerRegistration"
 title_tag: "azure-native.eventgrid.PartnerRegistration"
 meta_desc: "Documentation for the azure-native.eventgrid.PartnerRegistration resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/PartnerRegistration/"
 layout: api
 ---
 

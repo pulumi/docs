@@ -3,8 +3,6 @@
 title: "getDomain"
 title_tag: "google-native.firebasehosting/v1beta1.getDomain"
 meta_desc: "Documentation for the google-native.firebasehosting/v1beta1.getDomain function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

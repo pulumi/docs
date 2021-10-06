@@ -3,8 +3,6 @@
 title: "App"
 title_tag: "rancher2.App"
 meta_desc: "Documentation for the rancher2.App resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/rancher2/App/"
 layout: api
 ---
 

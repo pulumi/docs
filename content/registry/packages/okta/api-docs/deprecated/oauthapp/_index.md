@@ -3,8 +3,6 @@
 title: "OauthApp"
 title_tag: "okta.deprecated.OauthApp"
 meta_desc: "Documentation for the okta.deprecated.OauthApp resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/okta/OauthApp/"
 layout: api
 ---
 

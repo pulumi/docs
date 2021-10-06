@@ -3,8 +3,6 @@
 title: "WorkspaceExtendedAuditingPolicy"
 title_tag: "azure.synapse.WorkspaceExtendedAuditingPolicy"
 meta_desc: "Documentation for the azure.synapse.WorkspaceExtendedAuditingPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/WorkspaceExtendedAuditingPolicy/"
 layout: api
 ---
 

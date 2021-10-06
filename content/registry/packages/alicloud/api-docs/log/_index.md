@@ -2,8 +2,6 @@
 title: "log"
 title_tag: "alicloud.log"
 meta_desc: "Explore the resources and functions of the alicloud.log module."
-aliases:
-    - "docs/reference/pkg/alicloud/"
 layout: api
 ---
 

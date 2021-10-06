@@ -3,8 +3,6 @@
 title: "FirewallPolicyRule"
 title_tag: "gcp.compute.FirewallPolicyRule"
 meta_desc: "Documentation for the gcp.compute.FirewallPolicyRule resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/FirewallPolicyRule/"
 layout: api
 ---
 

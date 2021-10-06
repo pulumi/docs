@@ -3,8 +3,6 @@
 title: "Discoverer"
 title_tag: "aws.schemas.Discoverer"
 meta_desc: "Documentation for the aws.schemas.Discoverer resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/Discoverer/"
 layout: api
 ---
 

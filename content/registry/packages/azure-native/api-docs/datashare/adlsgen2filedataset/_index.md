@@ -3,8 +3,6 @@
 title: "ADLSGen2FileDataSet"
 title_tag: "azure-native.datashare.ADLSGen2FileDataSet"
 meta_desc: "Documentation for the azure-native.datashare.ADLSGen2FileDataSet resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/ADLSGen2FileDataSet/"
 layout: api
 ---
 

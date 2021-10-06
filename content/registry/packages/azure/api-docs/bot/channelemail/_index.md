@@ -3,8 +3,6 @@
 title: "ChannelEmail"
 title_tag: "azure.bot.ChannelEmail"
 meta_desc: "Documentation for the azure.bot.ChannelEmail resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/ChannelEmail/"
 layout: api
 ---
 

@@ -2,8 +2,6 @@
 title: "machinelearningcompute"
 title_tag: "azure-native.machinelearningcompute"
 meta_desc: "Explore the resources and functions of the azure-native.machinelearningcompute module."
-aliases:
-    - "docs/reference/pkg/azure-native/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "CloudIntegrationGcpBilling"
 title_tag: "wavefront.CloudIntegrationGcpBilling"
 meta_desc: "Documentation for the wavefront.CloudIntegrationGcpBilling resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/wavefront/CloudIntegrationGcpBilling/"
 layout: api
 ---
 

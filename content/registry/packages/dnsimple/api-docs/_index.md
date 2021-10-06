@@ -2,8 +2,6 @@
 title: "DNSimple"
 title_tag: "dnsimple.DNSimple"
 meta_desc: "A Pulumi package for creating and managing dnsimple cloud resources."
-aliases:
-    - "docs/reference/pkg/dnsimple/"
 menu:
     reference:
         parent: API Reference

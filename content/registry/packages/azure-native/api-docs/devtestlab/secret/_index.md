@@ -3,8 +3,6 @@
 title: "Secret"
 title_tag: "azure-native.devtestlab.Secret"
 meta_desc: "Documentation for the azure-native.devtestlab.Secret resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/Secret/"
 layout: api
 ---
 

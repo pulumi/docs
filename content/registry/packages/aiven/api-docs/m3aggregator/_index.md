@@ -3,8 +3,6 @@
 title: "M3Aggregator"
 title_tag: "aiven.M3Aggregator"
 meta_desc: "Documentation for the aiven.M3Aggregator resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aiven/M3Aggregator/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "getDdosCooPorts"
 title_tag: "alicloud.ddos.getDdosCooPorts"
 meta_desc: "Documentation for the alicloud.ddos.getDdosCooPorts function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

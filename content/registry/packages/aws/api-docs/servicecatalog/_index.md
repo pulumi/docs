@@ -2,8 +2,6 @@
 title: "servicecatalog"
 title_tag: "aws.servicecatalog"
 meta_desc: "Explore the resources and functions of the aws.servicecatalog module."
-aliases:
-    - "docs/reference/pkg/aws/"
 layout: api
 ---
 

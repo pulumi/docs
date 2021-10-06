@@ -3,8 +3,6 @@
 title: "GlobalReplicationGroup"
 title_tag: "aws-native.elasticache.GlobalReplicationGroup"
 meta_desc: "Documentation for the aws-native.elasticache.GlobalReplicationGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws-native/GlobalReplicationGroup/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "AlertPolicy"
 title_tag: "newrelic.AlertPolicy"
 meta_desc: "Documentation for the newrelic.AlertPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/newrelic/AlertPolicy/"
 layout: api
 ---
 

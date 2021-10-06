@@ -3,8 +3,6 @@
 title: "RoleTemplate"
 title_tag: "rancher2.RoleTemplate"
 meta_desc: "Documentation for the rancher2.RoleTemplate resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/rancher2/RoleTemplate/"
 layout: api
 ---
 

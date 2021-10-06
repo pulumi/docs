@@ -2,8 +2,6 @@
 title: "Google Cloud Classic"
 title_tag: "Google Cloud Classic Package"
 meta_desc: "A Pulumi package for creating and managing Google Cloud Platform resources."
-aliases:
-    - "docs/reference/pkg/gcp/"
 menu:
     reference:
         parent: API Reference

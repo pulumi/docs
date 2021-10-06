@@ -3,8 +3,6 @@
 title: "Runtime"
 title_tag: "google-native.notebooks/v1.Runtime"
 meta_desc: "Documentation for the google-native.notebooks/v1.Runtime resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/google-native/Runtime/"
 layout: api
 ---
 

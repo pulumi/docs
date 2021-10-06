@@ -3,8 +3,6 @@
 title: "VoiceConnectorOrganization"
 title_tag: "aws.chime.VoiceConnectorOrganization"
 meta_desc: "Documentation for the aws.chime.VoiceConnectorOrganization resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/VoiceConnectorOrganization/"
 layout: api
 ---
 

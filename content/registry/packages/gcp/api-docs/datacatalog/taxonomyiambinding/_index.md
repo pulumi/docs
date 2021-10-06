@@ -3,8 +3,6 @@
 title: "TaxonomyIamBinding"
 title_tag: "gcp.datacatalog.TaxonomyIamBinding"
 meta_desc: "Documentation for the gcp.datacatalog.TaxonomyIamBinding resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/TaxonomyIamBinding/"
 layout: api
 ---
 

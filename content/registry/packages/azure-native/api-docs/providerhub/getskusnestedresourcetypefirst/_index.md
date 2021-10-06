@@ -3,8 +3,6 @@
 title: "getSkusNestedResourceTypeFirst"
 title_tag: "azure-native.providerhub.getSkusNestedResourceTypeFirst"
 meta_desc: "Documentation for the azure-native.providerhub.getSkusNestedResourceTypeFirst function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

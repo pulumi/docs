@@ -3,8 +3,6 @@
 title: "Subscription"
 title_tag: "azure.servicebus.Subscription"
 meta_desc: "Documentation for the azure.servicebus.Subscription resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/Subscription/"
 layout: api
 ---
 

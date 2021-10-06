@@ -2,8 +2,6 @@
 title: "changeanalysis"
 title_tag: "azure-native.changeanalysis"
 meta_desc: "Explore the resources and functions of the azure-native.changeanalysis module."
-aliases:
-    - "docs/reference/pkg/azure-native/"
 layout: api
 ---
 

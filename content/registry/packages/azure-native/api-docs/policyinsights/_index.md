@@ -2,8 +2,6 @@
 title: "policyinsights"
 title_tag: "azure-native.policyinsights"
 meta_desc: "Explore the resources and functions of the azure-native.policyinsights module."
-aliases:
-    - "docs/reference/pkg/azure-native/"
 layout: api
 ---
 

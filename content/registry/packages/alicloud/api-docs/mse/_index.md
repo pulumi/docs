@@ -2,8 +2,6 @@
 title: "mse"
 title_tag: "alicloud.mse"
 meta_desc: "Explore the resources and functions of the alicloud.mse module."
-aliases:
-    - "docs/reference/pkg/alicloud/"
 layout: api
 ---
 

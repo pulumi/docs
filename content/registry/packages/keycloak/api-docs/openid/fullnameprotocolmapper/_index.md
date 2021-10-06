@@ -3,8 +3,6 @@
 title: "FullNameProtocolMapper"
 title_tag: "keycloak.openid.FullNameProtocolMapper"
 meta_desc: "Documentation for the keycloak.openid.FullNameProtocolMapper resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/keycloak/FullNameProtocolMapper/"
 layout: api
 ---
 

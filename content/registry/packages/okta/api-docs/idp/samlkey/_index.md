@@ -3,8 +3,6 @@
 title: "SamlKey"
 title_tag: "okta.idp.SamlKey"
 meta_desc: "Documentation for the okta.idp.SamlKey resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/okta/SamlKey/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "getSecretVersion"
 title_tag: "aws.secretsmanager.getSecretVersion"
 meta_desc: "Documentation for the aws.secretsmanager.getSecretVersion function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

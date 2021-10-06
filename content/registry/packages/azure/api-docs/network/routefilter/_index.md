@@ -3,8 +3,6 @@
 title: "RouteFilter"
 title_tag: "azure.network.RouteFilter"
 meta_desc: "Documentation for the azure.network.RouteFilter resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/RouteFilter/"
 layout: api
 ---
 

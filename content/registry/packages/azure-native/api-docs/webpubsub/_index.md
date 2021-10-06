@@ -2,8 +2,6 @@
 title: "webpubsub"
 title_tag: "azure-native.webpubsub"
 meta_desc: "Explore the resources and functions of the azure-native.webpubsub module."
-aliases:
-    - "docs/reference/pkg/azure-native/"
 layout: api
 ---
 

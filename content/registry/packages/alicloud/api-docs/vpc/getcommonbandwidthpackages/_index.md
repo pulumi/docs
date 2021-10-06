@@ -3,8 +3,6 @@
 title: "getCommonBandwidthPackages"
 title_tag: "alicloud.vpc.getCommonBandwidthPackages"
 meta_desc: "Documentation for the alicloud.vpc.getCommonBandwidthPackages function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "ShareNetwork"
 title_tag: "openstack.sharedfilesystem.ShareNetwork"
 meta_desc: "Documentation for the openstack.sharedfilesystem.ShareNetwork resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/openstack/ShareNetwork/"
 layout: api
 ---
 

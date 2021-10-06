@@ -3,8 +3,6 @@
 title: "AppSecByPassNetworkList"
 title_tag: "akamai.AppSecByPassNetworkList"
 meta_desc: "Documentation for the akamai.AppSecByPassNetworkList resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/akamai/AppSecByPassNetworkList/"
 layout: api
 ---
 

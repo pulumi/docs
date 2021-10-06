@@ -3,8 +3,6 @@
 title: "getAccessCredentials"
 title_tag: "vault.azure.getAccessCredentials"
 meta_desc: "Documentation for the vault.azure.getAccessCredentials function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

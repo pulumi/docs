@@ -3,8 +3,6 @@
 title: "CommonBandwithPackageAttachment"
 title_tag: "alicloud.vpc.CommonBandwithPackageAttachment"
 meta_desc: "Documentation for the alicloud.vpc.CommonBandwithPackageAttachment resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/alicloud/CommonBandwithPackageAttachment/"
 layout: api
 ---
 

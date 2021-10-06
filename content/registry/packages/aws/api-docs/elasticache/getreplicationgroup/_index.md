@@ -3,8 +3,6 @@
 title: "getReplicationGroup"
 title_tag: "aws.elasticache.getReplicationGroup"
 meta_desc: "Documentation for the aws.elasticache.getReplicationGroup function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

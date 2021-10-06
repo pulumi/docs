@@ -3,8 +3,6 @@
 title: "DomainNew"
 title_tag: "alicloud.cdn.DomainNew"
 meta_desc: "Documentation for the alicloud.cdn.DomainNew resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/alicloud/DomainNew/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "RegionInstantSnapshot"
 title_tag: "google-native.compute/alpha.RegionInstantSnapshot"
 meta_desc: "Documentation for the google-native.compute/alpha.RegionInstantSnapshot resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/google-native/RegionInstantSnapshot/"
 layout: api
 ---
 

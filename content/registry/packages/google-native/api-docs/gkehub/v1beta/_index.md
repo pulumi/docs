@@ -2,8 +2,6 @@
 title: "gkehub/v1beta"
 title_tag: "google-native.gkehub/v1beta"
 meta_desc: "Explore the resources and functions of the google-native.gkehub/v1beta module."
-aliases:
-    - "docs/reference/pkg/google-native/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "StackSet"
 title_tag: "aws.cloudformation.StackSet"
 meta_desc: "Documentation for the aws.cloudformation.StackSet resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/StackSet/"
 layout: api
 ---
 

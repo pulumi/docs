@@ -3,8 +3,6 @@
 title: "getClusterSnapshot"
 title_tag: "aws.rds.getClusterSnapshot"
 meta_desc: "Documentation for the aws.rds.getClusterSnapshot function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "listIntegrationRuntimeAuthKeys"
 title_tag: "azure-native.datafactory.listIntegrationRuntimeAuthKeys"
 meta_desc: "Documentation for the azure-native.datafactory.listIntegrationRuntimeAuthKeys function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "BuildDefinitionPermissions"
 title_tag: "azuredevops.BuildDefinitionPermissions"
 meta_desc: "Documentation for the azuredevops.BuildDefinitionPermissions resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azuredevops/BuildDefinitionPermissions/"
 layout: api
 ---
 

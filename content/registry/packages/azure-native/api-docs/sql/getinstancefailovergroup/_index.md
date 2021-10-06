@@ -3,8 +3,6 @@
 title: "getInstanceFailoverGroup"
 title_tag: "azure-native.sql.getInstanceFailoverGroup"
 meta_desc: "Documentation for the azure-native.sql.getInstanceFailoverGroup function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

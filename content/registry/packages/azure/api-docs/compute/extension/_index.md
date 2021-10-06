@@ -3,8 +3,6 @@
 title: "Extension"
 title_tag: "azure.compute.Extension"
 meta_desc: "Documentation for the azure.compute.Extension resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/Extension/"
 layout: api
 ---
 

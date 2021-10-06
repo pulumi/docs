@@ -3,8 +3,6 @@
 title: "AuthBackendGroup"
 title_tag: "vault.okta.AuthBackendGroup"
 meta_desc: "Documentation for the vault.okta.AuthBackendGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/vault/AuthBackendGroup/"
 layout: api
 ---
 

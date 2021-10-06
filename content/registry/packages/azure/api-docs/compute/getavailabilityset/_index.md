@@ -3,8 +3,6 @@
 title: "getAvailabilitySet"
 title_tag: "azure.compute.getAvailabilitySet"
 meta_desc: "Documentation for the azure.compute.getAvailabilitySet function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

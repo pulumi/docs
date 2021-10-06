@@ -3,8 +3,6 @@
 title: "listDatabaseAccountKeys"
 title_tag: "azure-native.documentdb.listDatabaseAccountKeys"
 meta_desc: "Documentation for the azure-native.documentdb.listDatabaseAccountKeys function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

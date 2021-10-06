@@ -3,8 +3,6 @@
 title: "TrailDeprecated"
 title_tag: "alicloud.actiontrail.TrailDeprecated"
 meta_desc: "Documentation for the alicloud.actiontrail.TrailDeprecated resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/alicloud/TrailDeprecated/"
 layout: api
 ---
 

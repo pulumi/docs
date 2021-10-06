@@ -3,8 +3,6 @@
 title: "DataLakeGen2Filesystem"
 title_tag: "azure.storage.DataLakeGen2Filesystem"
 meta_desc: "Documentation for the azure.storage.DataLakeGen2Filesystem resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/DataLakeGen2Filesystem/"
 layout: api
 ---
 

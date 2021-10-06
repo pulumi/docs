@@ -3,8 +3,6 @@
 title: "Extension"
 title_tag: "pagerduty.Extension"
 meta_desc: "Documentation for the pagerduty.Extension resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/pagerduty/Extension/"
 layout: api
 ---
 

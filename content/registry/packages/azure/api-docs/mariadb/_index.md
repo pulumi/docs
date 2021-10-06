@@ -2,8 +2,6 @@
 title: "mariadb"
 title_tag: "azure.mariadb"
 meta_desc: "Explore the resources and functions of the azure.mariadb module."
-aliases:
-    - "docs/reference/pkg/azure/"
 layout: api
 ---
 

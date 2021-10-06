@@ -3,8 +3,6 @@
 title: "PlacementGroup"
 title_tag: "azure.proximity.PlacementGroup"
 meta_desc: "Documentation for the azure.proximity.PlacementGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/PlacementGroup/"
 layout: api
 ---
 

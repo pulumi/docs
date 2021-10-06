@@ -3,8 +3,6 @@
 title: "QosCar"
 title_tag: "alicloud.rocketmq.QosCar"
 meta_desc: "Documentation for the alicloud.rocketmq.QosCar resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/alicloud/QosCar/"
 layout: api
 ---
 

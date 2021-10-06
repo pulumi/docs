@@ -3,8 +3,6 @@
 title: "getCustomDbRole"
 title_tag: "mongodbatlas.getCustomDbRole"
 meta_desc: "Documentation for the mongodbatlas.getCustomDbRole function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

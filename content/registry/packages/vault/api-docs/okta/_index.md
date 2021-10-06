@@ -2,8 +2,6 @@
 title: "okta"
 title_tag: "vault.okta"
 meta_desc: "Explore the resources and functions of the vault.okta module."
-aliases:
-    - "docs/reference/pkg/vault/"
 layout: api
 ---
 

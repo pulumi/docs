@@ -3,8 +3,6 @@
 title: "User"
 title_tag: "rabbitmq.User"
 meta_desc: "Documentation for the rabbitmq.User resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/rabbitmq/User/"
 layout: api
 ---
 

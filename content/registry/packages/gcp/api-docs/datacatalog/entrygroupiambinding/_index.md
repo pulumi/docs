@@ -3,8 +3,6 @@
 title: "EntryGroupIamBinding"
 title_tag: "gcp.datacatalog.EntryGroupIamBinding"
 meta_desc: "Documentation for the gcp.datacatalog.EntryGroupIamBinding resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/EntryGroupIamBinding/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "RecordSet"
 title_tag: "openstack.dns.RecordSet"
 meta_desc: "Documentation for the openstack.dns.RecordSet resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/openstack/RecordSet/"
 layout: api
 ---
 

@@ -2,8 +2,6 @@
 title: "batch"
 title_tag: "azure-native.batch"
 meta_desc: "Explore the resources and functions of the azure-native.batch module."
-aliases:
-    - "docs/reference/pkg/azure-native/"
 layout: api
 ---
 

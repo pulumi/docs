@@ -3,8 +3,6 @@
 title: "getSecrets"
 title_tag: "azure.keyvault.getSecrets"
 meta_desc: "Documentation for the azure.keyvault.getSecrets function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

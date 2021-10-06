@@ -3,8 +3,6 @@
 title: "ServiceBackupIamPolicy"
 title_tag: "google-native.metastore/v1alpha.ServiceBackupIamPolicy"
 meta_desc: "Documentation for the google-native.metastore/v1alpha.ServiceBackupIamPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/google-native/ServiceBackupIamPolicy/"
 layout: api
 ---
 

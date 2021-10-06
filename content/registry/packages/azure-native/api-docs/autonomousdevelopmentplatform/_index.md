@@ -2,8 +2,6 @@
 title: "autonomousdevelopmentplatform"
 title_tag: "azure-native.autonomousdevelopmentplatform"
 meta_desc: "Explore the resources and functions of the azure-native.autonomousdevelopmentplatform module."
-aliases:
-    - "docs/reference/pkg/azure-native/"
 layout: api
 ---
 

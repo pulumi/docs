@@ -2,8 +2,6 @@
 title: "recoveryservices"
 title_tag: "azure-native.recoveryservices"
 meta_desc: "Explore the resources and functions of the azure-native.recoveryservices module."
-aliases:
-    - "docs/reference/pkg/azure-native/"
 layout: api
 ---
 

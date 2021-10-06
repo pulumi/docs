@@ -2,8 +2,6 @@
 title: "macie2"
 title_tag: "aws.macie2"
 meta_desc: "Explore the resources and functions of the aws.macie2 module."
-aliases:
-    - "docs/reference/pkg/aws/"
 layout: api
 ---
 

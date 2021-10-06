@@ -2,8 +2,6 @@
 title: "core/v1"
 title_tag: "kubernetes.core/v1"
 meta_desc: "Explore the resources and functions of the kubernetes.core/v1 module."
-aliases:
-    - "docs/reference/pkg/kubernetes/"
 layout: api
 ---
 

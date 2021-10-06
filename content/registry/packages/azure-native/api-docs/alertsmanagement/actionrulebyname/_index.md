@@ -3,8 +3,6 @@
 title: "ActionRuleByName"
 title_tag: "azure-native.alertsmanagement.ActionRuleByName"
 meta_desc: "Documentation for the azure-native.alertsmanagement.ActionRuleByName resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/ActionRuleByName/"
 layout: api
 ---
 

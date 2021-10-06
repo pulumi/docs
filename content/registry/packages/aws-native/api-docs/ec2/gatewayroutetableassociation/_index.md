@@ -3,8 +3,6 @@
 title: "GatewayRouteTableAssociation"
 title_tag: "aws-native.ec2.GatewayRouteTableAssociation"
 meta_desc: "Documentation for the aws-native.ec2.GatewayRouteTableAssociation resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws-native/GatewayRouteTableAssociation/"
 layout: api
 ---
 

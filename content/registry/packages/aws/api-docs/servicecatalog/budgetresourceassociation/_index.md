@@ -3,8 +3,6 @@
 title: "BudgetResourceAssociation"
 title_tag: "aws.servicecatalog.BudgetResourceAssociation"
 meta_desc: "Documentation for the aws.servicecatalog.BudgetResourceAssociation resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/BudgetResourceAssociation/"
 layout: api
 ---
 

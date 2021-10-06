@@ -2,8 +2,6 @@
 title: "gkehub"
 title_tag: "gcp.gkehub"
 meta_desc: "Explore the resources and functions of the gcp.gkehub module."
-aliases:
-    - "docs/reference/pkg/gcp/"
 layout: api
 ---
 

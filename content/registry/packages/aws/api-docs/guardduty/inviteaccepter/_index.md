@@ -3,8 +3,6 @@
 title: "InviteAccepter"
 title_tag: "aws.guardduty.InviteAccepter"
 meta_desc: "Documentation for the aws.guardduty.InviteAccepter resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/InviteAccepter/"
 layout: api
 ---
 

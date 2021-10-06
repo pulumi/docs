@@ -3,8 +3,6 @@
 title: "ResolverDNSSECConfig"
 title_tag: "aws-native.route53resolver.ResolverDNSSECConfig"
 meta_desc: "Documentation for the aws-native.route53resolver.ResolverDNSSECConfig resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws-native/ResolverDNSSECConfig/"
 layout: api
 ---
 

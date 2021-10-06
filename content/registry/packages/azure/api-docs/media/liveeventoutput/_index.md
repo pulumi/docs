@@ -3,8 +3,6 @@
 title: "LiveEventOutput"
 title_tag: "azure.media.LiveEventOutput"
 meta_desc: "Documentation for the azure.media.LiveEventOutput resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/LiveEventOutput/"
 layout: api
 ---
 

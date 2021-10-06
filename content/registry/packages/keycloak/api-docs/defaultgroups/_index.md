@@ -3,8 +3,6 @@
 title: "DefaultGroups"
 title_tag: "keycloak.DefaultGroups"
 meta_desc: "Documentation for the keycloak.DefaultGroups resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/keycloak/DefaultGroups/"
 layout: api
 ---
 

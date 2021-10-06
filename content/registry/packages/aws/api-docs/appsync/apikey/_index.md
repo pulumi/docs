@@ -3,8 +3,6 @@
 title: "ApiKey"
 title_tag: "aws.appsync.ApiKey"
 meta_desc: "Documentation for the aws.appsync.ApiKey resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/ApiKey/"
 layout: api
 ---
 

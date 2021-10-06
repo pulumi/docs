@@ -3,8 +3,6 @@
 title: "getAuthoritiesSet"
 title_tag: "akamai.edgedns.getAuthoritiesSet"
 meta_desc: "Documentation for the akamai.edgedns.getAuthoritiesSet function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

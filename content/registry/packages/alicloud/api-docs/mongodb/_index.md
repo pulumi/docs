@@ -2,8 +2,6 @@
 title: "mongodb"
 title_tag: "alicloud.mongodb"
 meta_desc: "Explore the resources and functions of the alicloud.mongodb module."
-aliases:
-    - "docs/reference/pkg/alicloud/"
 layout: api
 ---
 

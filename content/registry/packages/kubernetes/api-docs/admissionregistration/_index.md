@@ -2,8 +2,6 @@
 title: "admissionregistration"
 title_tag: "admissionregistration Package"
 meta_desc: ""
-aliases:
-    - "docs/reference/pkg/kubernetes/"
 layout: api
 ---
 

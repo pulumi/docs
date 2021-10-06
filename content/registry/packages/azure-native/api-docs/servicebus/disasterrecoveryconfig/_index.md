@@ -3,8 +3,6 @@
 title: "DisasterRecoveryConfig"
 title_tag: "azure-native.servicebus.DisasterRecoveryConfig"
 meta_desc: "Documentation for the azure-native.servicebus.DisasterRecoveryConfig resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/DisasterRecoveryConfig/"
 layout: api
 ---
 

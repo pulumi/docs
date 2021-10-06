@@ -3,8 +3,6 @@
 title: "getFileEventTrigger"
 title_tag: "azure-native.databoxedge.getFileEventTrigger"
 meta_desc: "Documentation for the azure-native.databoxedge.getFileEventTrigger function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

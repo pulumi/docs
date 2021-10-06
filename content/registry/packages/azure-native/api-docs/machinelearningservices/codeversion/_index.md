@@ -3,8 +3,6 @@
 title: "CodeVersion"
 title_tag: "azure-native.machinelearningservices.CodeVersion"
 meta_desc: "Documentation for the azure-native.machinelearningservices.CodeVersion resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/CodeVersion/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "WorkloadNetworkDnsZone"
 title_tag: "azure-native.avs.WorkloadNetworkDnsZone"
 meta_desc: "Documentation for the azure-native.avs.WorkloadNetworkDnsZone resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/WorkloadNetworkDnsZone/"
 layout: api
 ---
 

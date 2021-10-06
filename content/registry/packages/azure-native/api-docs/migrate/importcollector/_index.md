@@ -3,8 +3,6 @@
 title: "ImportCollector"
 title_tag: "azure-native.migrate.ImportCollector"
 meta_desc: "Documentation for the azure-native.migrate.ImportCollector resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/ImportCollector/"
 layout: api
 ---
 

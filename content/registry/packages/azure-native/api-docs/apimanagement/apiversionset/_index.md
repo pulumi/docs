@@ -3,8 +3,6 @@
 title: "ApiVersionSet"
 title_tag: "azure-native.apimanagement.ApiVersionSet"
 meta_desc: "Documentation for the azure-native.apimanagement.ApiVersionSet resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/ApiVersionSet/"
 layout: api
 ---
 

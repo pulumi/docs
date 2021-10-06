@@ -3,8 +3,6 @@
 title: "DedicatedCloudService"
 title_tag: "azure-native.vmwarecloudsimple.DedicatedCloudService"
 meta_desc: "Documentation for the azure-native.vmwarecloudsimple.DedicatedCloudService resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/DedicatedCloudService/"
 layout: api
 ---
 

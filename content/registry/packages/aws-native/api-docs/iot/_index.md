@@ -2,8 +2,6 @@
 title: "iot"
 title_tag: "aws-native.iot"
 meta_desc: "Explore the resources and functions of the aws-native.iot module."
-aliases:
-    - "docs/reference/pkg/aws-native/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "OneDashboardRaw"
 title_tag: "newrelic.OneDashboardRaw"
 meta_desc: "Documentation for the newrelic.OneDashboardRaw resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/newrelic/OneDashboardRaw/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "FailoverGroup"
 title_tag: "azure.sql.FailoverGroup"
 meta_desc: "Documentation for the azure.sql.FailoverGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/FailoverGroup/"
 layout: api
 ---
 

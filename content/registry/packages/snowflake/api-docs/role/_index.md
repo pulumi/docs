@@ -3,8 +3,6 @@
 title: "Role"
 title_tag: "snowflake.Role"
 meta_desc: "Documentation for the snowflake.Role resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/snowflake/Role/"
 layout: api
 ---
 

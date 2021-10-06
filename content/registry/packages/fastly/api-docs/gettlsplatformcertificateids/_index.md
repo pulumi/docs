@@ -3,8 +3,6 @@
 title: "getTlsPlatformCertificateIds"
 title_tag: "fastly.getTlsPlatformCertificateIds"
 meta_desc: "Documentation for the fastly.getTlsPlatformCertificateIds function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

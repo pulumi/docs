@@ -3,8 +3,6 @@
 title: "KeyPair"
 title_tag: "alicloud.ecs.KeyPair"
 meta_desc: "Documentation for the alicloud.ecs.KeyPair resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/alicloud/KeyPair/"
 layout: api
 ---
 

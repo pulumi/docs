@@ -3,8 +3,6 @@
 title: "ApiPolicy"
 title_tag: "azure.apimanagement.ApiPolicy"
 meta_desc: "Documentation for the azure.apimanagement.ApiPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/ApiPolicy/"
 layout: api
 ---
 

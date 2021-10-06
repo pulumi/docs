@@ -3,8 +3,6 @@
 title: "GtmDomain"
 title_tag: "akamai.trafficmanagement.GtmDomain"
 meta_desc: "Documentation for the akamai.trafficmanagement.GtmDomain resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/akamai/GtmDomain/"
 layout: api
 ---
 

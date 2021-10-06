@@ -3,8 +3,6 @@
 title: "TableResourceTable"
 title_tag: "azure-native.documentdb.TableResourceTable"
 meta_desc: "Documentation for the azure-native.documentdb.TableResourceTable resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/TableResourceTable/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "AppSecAdvancedSettingsPragmaHeader"
 title_tag: "akamai.AppSecAdvancedSettingsPragmaHeader"
 meta_desc: "Documentation for the akamai.AppSecAdvancedSettingsPragmaHeader resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/akamai/AppSecAdvancedSettingsPragmaHeader/"
 layout: api
 ---
 

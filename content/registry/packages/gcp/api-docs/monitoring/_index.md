@@ -2,8 +2,6 @@
 title: "monitoring"
 title_tag: "gcp.monitoring"
 meta_desc: "Explore the resources and functions of the gcp.monitoring module."
-aliases:
-    - "docs/reference/pkg/gcp/"
 layout: api
 ---
 

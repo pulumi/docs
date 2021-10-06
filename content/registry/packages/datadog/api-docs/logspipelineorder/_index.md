@@ -3,8 +3,6 @@
 title: "LogsPipelineOrder"
 title_tag: "datadog.LogsPipelineOrder"
 meta_desc: "Documentation for the datadog.LogsPipelineOrder resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/datadog/LogsPipelineOrder/"
 layout: api
 ---
 

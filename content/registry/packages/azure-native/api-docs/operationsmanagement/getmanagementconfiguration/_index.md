@@ -3,8 +3,6 @@
 title: "getManagementConfiguration"
 title_tag: "azure-native.operationsmanagement.getManagementConfiguration"
 meta_desc: "Documentation for the azure-native.operationsmanagement.getManagementConfiguration function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

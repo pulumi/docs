@@ -3,8 +3,6 @@
 title: "getSqlPoolTransparentDataEncryption"
 title_tag: "azure-native.synapse.getSqlPoolTransparentDataEncryption"
 meta_desc: "Documentation for the azure-native.synapse.getSqlPoolTransparentDataEncryption function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

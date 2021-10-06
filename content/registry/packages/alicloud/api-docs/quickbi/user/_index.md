@@ -3,8 +3,6 @@
 title: "User"
 title_tag: "alicloud.quickbi.User"
 meta_desc: "Documentation for the alicloud.quickbi.User resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/alicloud/User/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "DataConnection"
 title_tag: "azure-native.synapse.DataConnection"
 meta_desc: "Documentation for the azure-native.synapse.DataConnection resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/DataConnection/"
 layout: api
 ---
 

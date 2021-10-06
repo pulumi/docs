@@ -3,8 +3,6 @@
 title: "ManagedPrivateEndpoint"
 title_tag: "azure.datafactory.ManagedPrivateEndpoint"
 meta_desc: "Documentation for the azure.datafactory.ManagedPrivateEndpoint resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/ManagedPrivateEndpoint/"
 layout: api
 ---
 

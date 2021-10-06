@@ -3,8 +3,6 @@
 title: "getMembership"
 title_tag: "google-native.cloudidentity/v1.getMembership"
 meta_desc: "Documentation for the google-native.cloudidentity/v1.getMembership function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

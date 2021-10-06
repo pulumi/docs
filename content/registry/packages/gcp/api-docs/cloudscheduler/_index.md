@@ -2,8 +2,6 @@
 title: "cloudscheduler"
 title_tag: "gcp.cloudscheduler"
 meta_desc: "Explore the resources and functions of the gcp.cloudscheduler module."
-aliases:
-    - "docs/reference/pkg/gcp/"
 layout: api
 ---
 

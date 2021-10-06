@@ -3,8 +3,6 @@
 title: "Provider"
 title_tag: "postgresql.Provider"
 meta_desc: "Documentation for the postgresql.Provider resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/postgresql/postgresql/"
 layout: api
 ---
 

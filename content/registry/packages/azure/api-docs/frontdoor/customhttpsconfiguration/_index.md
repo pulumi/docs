@@ -3,8 +3,6 @@
 title: "CustomHttpsConfiguration"
 title_tag: "azure.frontdoor.CustomHttpsConfiguration"
 meta_desc: "Documentation for the azure.frontdoor.CustomHttpsConfiguration resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/CustomHttpsConfiguration/"
 layout: api
 ---
 

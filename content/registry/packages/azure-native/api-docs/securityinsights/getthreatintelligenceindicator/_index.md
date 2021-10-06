@@ -3,8 +3,6 @@
 title: "getThreatIntelligenceIndicator"
 title_tag: "azure-native.securityinsights.getThreatIntelligenceIndicator"
 meta_desc: "Documentation for the azure-native.securityinsights.getThreatIntelligenceIndicator function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

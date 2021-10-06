@@ -3,8 +3,6 @@
 title: "Collector"
 title_tag: "sumologic.Collector"
 meta_desc: "Documentation for the sumologic.Collector resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/sumologic/Collector/"
 layout: api
 ---
 

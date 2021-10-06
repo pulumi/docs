@@ -2,8 +2,6 @@
 title: "pricing"
 title_tag: "aws.pricing"
 meta_desc: "Explore the resources and functions of the aws.pricing module."
-aliases:
-    - "docs/reference/pkg/aws/"
 layout: api
 ---
 

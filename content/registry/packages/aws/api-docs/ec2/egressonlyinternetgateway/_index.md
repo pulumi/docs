@@ -3,8 +3,6 @@
 title: "EgressOnlyInternetGateway"
 title_tag: "aws.ec2.EgressOnlyInternetGateway"
 meta_desc: "Documentation for the aws.ec2.EgressOnlyInternetGateway resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/EgressOnlyInternetGateway/"
 layout: api
 ---
 

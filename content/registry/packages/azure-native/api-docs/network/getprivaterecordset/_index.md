@@ -3,8 +3,6 @@
 title: "getPrivateRecordSet"
 title_tag: "azure-native.network.getPrivateRecordSet"
 meta_desc: "Documentation for the azure-native.network.getPrivateRecordSet function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

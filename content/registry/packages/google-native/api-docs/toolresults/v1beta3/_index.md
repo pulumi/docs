@@ -2,8 +2,6 @@
 title: "toolresults/v1beta3"
 title_tag: "google-native.toolresults/v1beta3"
 meta_desc: "Explore the resources and functions of the google-native.toolresults/v1beta3 module."
-aliases:
-    - "docs/reference/pkg/google-native/"
 layout: api
 ---
 

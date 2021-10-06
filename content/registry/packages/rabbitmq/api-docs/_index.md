@@ -2,8 +2,6 @@
 title: "RabbitMQ"
 title_tag: "rabbitmq.RabbitMQ"
 meta_desc: "A Pulumi package for creating and managing RabbitMQ resources."
-aliases:
-    - "docs/reference/pkg/rabbitmq/"
 menu:
     reference:
         parent: API Reference

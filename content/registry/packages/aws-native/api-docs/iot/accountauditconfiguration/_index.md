@@ -3,8 +3,6 @@
 title: "AccountAuditConfiguration"
 title_tag: "aws-native.iot.AccountAuditConfiguration"
 meta_desc: "Documentation for the aws-native.iot.AccountAuditConfiguration resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws-native/AccountAuditConfiguration/"
 layout: api
 ---
 

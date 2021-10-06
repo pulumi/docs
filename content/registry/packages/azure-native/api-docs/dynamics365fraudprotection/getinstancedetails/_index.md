@@ -3,8 +3,6 @@
 title: "getInstanceDetails"
 title_tag: "azure-native.dynamics365fraudprotection.getInstanceDetails"
 meta_desc: "Documentation for the azure-native.dynamics365fraudprotection.getInstanceDetails function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

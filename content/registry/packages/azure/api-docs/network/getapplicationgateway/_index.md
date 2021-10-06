@@ -3,8 +3,6 @@
 title: "getApplicationGateway"
 title_tag: "azure.network.getApplicationGateway"
 meta_desc: "Documentation for the azure.network.getApplicationGateway function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

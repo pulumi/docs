@@ -3,8 +3,6 @@
 title: "WafOverride"
 title_tag: "cloudflare.WafOverride"
 meta_desc: "Documentation for the cloudflare.WafOverride resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/cloudflare/WafOverride/"
 layout: api
 ---
 

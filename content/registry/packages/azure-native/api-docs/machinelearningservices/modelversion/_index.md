@@ -3,8 +3,6 @@
 title: "ModelVersion"
 title_tag: "azure-native.machinelearningservices.ModelVersion"
 meta_desc: "Documentation for the azure-native.machinelearningservices.ModelVersion resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/ModelVersion/"
 layout: api
 ---
 

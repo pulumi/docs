@@ -2,8 +2,6 @@
 title: "appengine"
 title_tag: "gcp.appengine"
 meta_desc: "Explore the resources and functions of the gcp.appengine module."
-aliases:
-    - "docs/reference/pkg/gcp/"
 layout: api
 ---
 

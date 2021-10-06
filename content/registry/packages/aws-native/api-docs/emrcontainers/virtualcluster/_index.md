@@ -3,8 +3,6 @@
 title: "VirtualCluster"
 title_tag: "aws-native.emrcontainers.VirtualCluster"
 meta_desc: "Documentation for the aws-native.emrcontainers.VirtualCluster resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws-native/VirtualCluster/"
 layout: api
 ---
 

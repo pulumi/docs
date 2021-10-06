@@ -3,8 +3,6 @@
 title: "AuthServerDefault"
 title_tag: "okta.AuthServerDefault"
 meta_desc: "Documentation for the okta.AuthServerDefault resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/okta/AuthServerDefault/"
 layout: api
 ---
 

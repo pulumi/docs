@@ -3,8 +3,6 @@
 title: "SecretList"
 title_tag: "kubernetes.core/v1.SecretList"
 meta_desc: "Documentation for the kubernetes.core/v1.SecretList resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/kubernetes/SecretList/"
 layout: api
 ---
 

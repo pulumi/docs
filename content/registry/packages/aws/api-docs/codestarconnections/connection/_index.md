@@ -3,8 +3,6 @@
 title: "Connection"
 title_tag: "aws.codestarconnections.Connection"
 meta_desc: "Documentation for the aws.codestarconnections.Connection resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/Connection/"
 layout: api
 ---
 

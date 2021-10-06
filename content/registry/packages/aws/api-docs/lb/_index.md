@@ -2,8 +2,6 @@
 title: "lb"
 title_tag: "aws.lb"
 meta_desc: "Explore the resources and functions of the aws.lb module."
-aliases:
-    - "docs/reference/pkg/aws/"
 layout: api
 ---
 

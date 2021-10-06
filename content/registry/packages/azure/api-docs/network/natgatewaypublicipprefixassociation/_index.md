@@ -3,8 +3,6 @@
 title: "NatGatewayPublicIpPrefixAssociation"
 title_tag: "azure.network.NatGatewayPublicIpPrefixAssociation"
 meta_desc: "Documentation for the azure.network.NatGatewayPublicIpPrefixAssociation resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/NatGatewayPublicIpPrefixAssociation/"
 layout: api
 ---
 

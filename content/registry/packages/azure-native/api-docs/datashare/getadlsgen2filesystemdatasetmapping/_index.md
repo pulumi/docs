@@ -3,8 +3,6 @@
 title: "getADLSGen2FileSystemDataSetMapping"
 title_tag: "azure-native.datashare.getADLSGen2FileSystemDataSetMapping"
 meta_desc: "Documentation for the azure-native.datashare.getADLSGen2FileSystemDataSetMapping function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

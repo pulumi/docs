@@ -3,8 +3,6 @@
 title: "Association"
 title_tag: "azure-native.customproviders.Association"
 meta_desc: "Documentation for the azure-native.customproviders.Association resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/Association/"
 layout: api
 ---
 

@@ -2,8 +2,6 @@
 title: "deploymentmanager/v2"
 title_tag: "google-native.deploymentmanager/v2"
 meta_desc: "Explore the resources and functions of the google-native.deploymentmanager/v2 module."
-aliases:
-    - "docs/reference/pkg/google-native/"
 layout: api
 ---
 

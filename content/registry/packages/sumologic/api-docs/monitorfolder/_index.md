@@ -3,8 +3,6 @@
 title: "MonitorFolder"
 title_tag: "sumologic.MonitorFolder"
 meta_desc: "Documentation for the sumologic.MonitorFolder resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/sumologic/MonitorFolder/"
 layout: api
 ---
 

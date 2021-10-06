@@ -2,8 +2,6 @@
 title: "eks"
 title_tag: "aws.eks"
 meta_desc: "Explore the resources and functions of the aws.eks module."
-aliases:
-    - "docs/reference/pkg/aws/"
 layout: api
 ---
 

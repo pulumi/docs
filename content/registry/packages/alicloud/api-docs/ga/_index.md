@@ -2,8 +2,6 @@
 title: "ga"
 title_tag: "alicloud.ga"
 meta_desc: "Explore the resources and functions of the alicloud.ga module."
-aliases:
-    - "docs/reference/pkg/alicloud/"
 layout: api
 ---
 

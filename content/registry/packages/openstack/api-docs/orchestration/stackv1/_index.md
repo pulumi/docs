@@ -3,8 +3,6 @@
 title: "StackV1"
 title_tag: "openstack.orchestration.StackV1"
 meta_desc: "Documentation for the openstack.orchestration.StackV1 resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/openstack/StackV1/"
 layout: api
 ---
 

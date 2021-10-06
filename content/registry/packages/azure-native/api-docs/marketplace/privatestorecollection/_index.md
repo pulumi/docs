@@ -3,8 +3,6 @@
 title: "PrivateStoreCollection"
 title_tag: "azure-native.marketplace.PrivateStoreCollection"
 meta_desc: "Documentation for the azure-native.marketplace.PrivateStoreCollection resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/PrivateStoreCollection/"
 layout: api
 ---
 

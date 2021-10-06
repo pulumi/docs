@@ -2,8 +2,6 @@
 title: "s3control"
 title_tag: "aws.s3control"
 meta_desc: "Explore the resources and functions of the aws.s3control module."
-aliases:
-    - "docs/reference/pkg/aws/"
 layout: api
 ---
 

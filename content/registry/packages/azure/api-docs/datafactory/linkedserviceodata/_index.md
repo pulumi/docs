@@ -3,8 +3,6 @@
 title: "LinkedServiceOdata"
 title_tag: "azure.datafactory.LinkedServiceOdata"
 meta_desc: "Documentation for the azure.datafactory.LinkedServiceOdata resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/LinkedServiceOdata/"
 layout: api
 ---
 

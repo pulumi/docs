@@ -2,8 +2,6 @@
 title: "attestation"
 title_tag: "azure.attestation"
 meta_desc: "Explore the resources and functions of the azure.attestation module."
-aliases:
-    - "docs/reference/pkg/azure/"
 layout: api
 ---
 

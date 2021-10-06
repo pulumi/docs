@@ -3,8 +3,6 @@
 title: "ThreatIntelSet"
 title_tag: "aws.guardduty.ThreatIntelSet"
 meta_desc: "Documentation for the aws.guardduty.ThreatIntelSet resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/ThreatIntelSet/"
 layout: api
 ---
 

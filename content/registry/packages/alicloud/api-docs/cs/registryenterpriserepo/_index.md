@@ -3,8 +3,6 @@
 title: "RegistryEnterpriseRepo"
 title_tag: "alicloud.cs.RegistryEnterpriseRepo"
 meta_desc: "Documentation for the alicloud.cs.RegistryEnterpriseRepo resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/alicloud/RegistryEnterpriseRepo/"
 layout: api
 ---
 

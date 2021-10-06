@@ -3,8 +3,6 @@
 title: "DatabaseUser"
 title_tag: "digitalocean.DatabaseUser"
 meta_desc: "Documentation for the digitalocean.DatabaseUser resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/digitalocean/DatabaseUser/"
 layout: api
 ---
 

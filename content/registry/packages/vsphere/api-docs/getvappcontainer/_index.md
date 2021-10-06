@@ -3,8 +3,6 @@
 title: "getVappContainer"
 title_tag: "vsphere.getVappContainer"
 meta_desc: "Documentation for the vsphere.getVappContainer function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

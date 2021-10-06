@@ -3,8 +3,6 @@
 title: "ExpressRouteCrossConnectionPeering"
 title_tag: "azure-native.network.ExpressRouteCrossConnectionPeering"
 meta_desc: "Documentation for the azure-native.network.ExpressRouteCrossConnectionPeering resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/ExpressRouteCrossConnectionPeering/"
 layout: api
 ---
 

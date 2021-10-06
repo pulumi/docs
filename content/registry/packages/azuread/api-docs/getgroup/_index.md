@@ -3,8 +3,6 @@
 title: "getGroup"
 title_tag: "azuread.getGroup"
 meta_desc: "Documentation for the azuread.getGroup function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

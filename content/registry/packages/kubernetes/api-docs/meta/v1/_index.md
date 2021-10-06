@@ -2,8 +2,6 @@
 title: "meta/v1"
 title_tag: "kubernetes.meta/v1"
 meta_desc: "Explore the resources and functions of the kubernetes.meta/v1 module."
-aliases:
-    - "docs/reference/pkg/kubernetes/"
 layout: api
 ---
 

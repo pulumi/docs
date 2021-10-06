@@ -2,8 +2,6 @@
 title: "appconfiguration"
 title_tag: "azure-native.appconfiguration"
 meta_desc: "Explore the resources and functions of the azure-native.appconfiguration module."
-aliases:
-    - "docs/reference/pkg/azure-native/"
 layout: api
 ---
 

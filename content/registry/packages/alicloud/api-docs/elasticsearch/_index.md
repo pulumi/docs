@@ -2,8 +2,6 @@
 title: "elasticsearch"
 title_tag: "alicloud.elasticsearch"
 meta_desc: "Explore the resources and functions of the alicloud.elasticsearch module."
-aliases:
-    - "docs/reference/pkg/alicloud/"
 layout: api
 ---
 

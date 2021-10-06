@@ -3,8 +3,6 @@
 title: "getDeploymentAtScope"
 title_tag: "azure-native.resources.getDeploymentAtScope"
 meta_desc: "Documentation for the azure-native.resources.getDeploymentAtScope function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

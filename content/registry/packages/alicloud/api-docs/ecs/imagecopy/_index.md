@@ -3,8 +3,6 @@
 title: "ImageCopy"
 title_tag: "alicloud.ecs.ImageCopy"
 meta_desc: "Documentation for the alicloud.ecs.ImageCopy resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/alicloud/ImageCopy/"
 layout: api
 ---
 

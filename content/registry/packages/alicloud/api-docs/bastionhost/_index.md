@@ -2,8 +2,6 @@
 title: "bastionhost"
 title_tag: "alicloud.bastionhost"
 meta_desc: "Explore the resources and functions of the alicloud.bastionhost module."
-aliases:
-    - "docs/reference/pkg/alicloud/"
 layout: api
 ---
 

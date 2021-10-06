@@ -3,8 +3,6 @@
 title: "Link"
 title_tag: "aws-native.networkmanager.Link"
 meta_desc: "Documentation for the aws-native.networkmanager.Link resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws-native/Link/"
 layout: api
 ---
 

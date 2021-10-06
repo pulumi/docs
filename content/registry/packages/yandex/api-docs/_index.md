@@ -2,8 +2,6 @@
 title: "Yandex"
 title_tag: "yandex.Yandex"
 meta_desc: "A Pulumi package for creating and managing yandex cloud resources."
-aliases:
-    - "docs/reference/pkg/yandex/"
 menu:
     reference:
         parent: API Reference

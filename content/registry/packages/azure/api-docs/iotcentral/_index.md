@@ -2,8 +2,6 @@
 title: "iotcentral"
 title_tag: "azure.iotcentral"
 meta_desc: "Explore the resources and functions of the azure.iotcentral module."
-aliases:
-    - "docs/reference/pkg/azure/"
 layout: api
 ---
 

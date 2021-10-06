@@ -2,8 +2,6 @@
 title: "dbformysql"
 title_tag: "azure-native.dbformysql"
 meta_desc: "Explore the resources and functions of the azure-native.dbformysql module."
-aliases:
-    - "docs/reference/pkg/azure-native/"
 layout: api
 ---
 

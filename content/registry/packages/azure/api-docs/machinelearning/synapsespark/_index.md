@@ -3,8 +3,6 @@
 title: "SynapseSpark"
 title_tag: "azure.machinelearning.SynapseSpark"
 meta_desc: "Documentation for the azure.machinelearning.SynapseSpark resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/SynapseSpark/"
 layout: api
 ---
 

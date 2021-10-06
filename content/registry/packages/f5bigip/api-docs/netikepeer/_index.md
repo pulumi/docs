@@ -3,8 +3,6 @@
 title: "NetIkePeer"
 title_tag: "f5bigip.NetIkePeer"
 meta_desc: "Documentation for the f5bigip.NetIkePeer resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/f5bigip/NetIkePeer/"
 layout: api
 ---
 

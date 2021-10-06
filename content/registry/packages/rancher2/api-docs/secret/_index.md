@@ -3,8 +3,6 @@
 title: "Secret"
 title_tag: "rancher2.Secret"
 meta_desc: "Documentation for the rancher2.Secret resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/rancher2/Secret/"
 layout: api
 ---
 

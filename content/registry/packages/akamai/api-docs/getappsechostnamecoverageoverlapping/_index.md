@@ -3,8 +3,6 @@
 title: "getAppSecHostnameCoverageOverlapping"
 title_tag: "akamai.getAppSecHostnameCoverageOverlapping"
 meta_desc: "Documentation for the akamai.getAppSecHostnameCoverageOverlapping function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

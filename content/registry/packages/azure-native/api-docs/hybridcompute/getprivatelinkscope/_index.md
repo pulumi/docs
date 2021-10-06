@@ -3,8 +3,6 @@
 title: "getPrivateLinkScope"
 title_tag: "azure-native.hybridcompute.getPrivateLinkScope"
 meta_desc: "Documentation for the azure-native.hybridcompute.getPrivateLinkScope function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

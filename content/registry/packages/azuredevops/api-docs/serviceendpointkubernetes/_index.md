@@ -3,8 +3,6 @@
 title: "ServiceEndpointKubernetes"
 title_tag: "azuredevops.ServiceEndpointKubernetes"
 meta_desc: "Documentation for the azuredevops.ServiceEndpointKubernetes resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azuredevops/ServiceEndpointKubernetes/"
 layout: api
 ---
 

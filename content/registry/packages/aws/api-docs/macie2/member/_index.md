@@ -3,8 +3,6 @@
 title: "Member"
 title_tag: "aws.macie2.Member"
 meta_desc: "Documentation for the aws.macie2.Member resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/Member/"
 layout: api
 ---
 

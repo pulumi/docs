@@ -3,8 +3,6 @@
 title: "Job"
 title_tag: "gcp.dataflow.Job"
 meta_desc: "Documentation for the gcp.dataflow.Job resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/Job/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "Stack"
 title_tag: "aws.opsworks.Stack"
 meta_desc: "Documentation for the aws.opsworks.Stack resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/Stack/"
 layout: api
 ---
 

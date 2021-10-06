@@ -3,8 +3,6 @@
 title: "getRepoIamPolicy"
 title_tag: "google-native.sourcerepo/v1.getRepoIamPolicy"
 meta_desc: "Documentation for the google-native.sourcerepo/v1.getRepoIamPolicy function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

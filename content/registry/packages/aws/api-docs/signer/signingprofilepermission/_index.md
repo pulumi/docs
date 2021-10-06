@@ -3,8 +3,6 @@
 title: "SigningProfilePermission"
 title_tag: "aws.signer.SigningProfilePermission"
 meta_desc: "Documentation for the aws.signer.SigningProfilePermission resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/SigningProfilePermission/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "Provider"
 title_tag: "opsgenie.Provider"
 meta_desc: "Documentation for the opsgenie.Provider resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/opsgenie/opsgenie/"
 layout: api
 ---
 

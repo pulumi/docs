@@ -3,8 +3,6 @@
 title: "ScanConfig"
 title_tag: "google-native.websecurityscanner/v1alpha.ScanConfig"
 meta_desc: "Documentation for the google-native.websecurityscanner/v1alpha.ScanConfig resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/google-native/ScanConfig/"
 layout: api
 ---
 

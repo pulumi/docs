@@ -3,8 +3,6 @@
 title: "UserClientRoleProtocolMapper"
 title_tag: "keycloak.openid.UserClientRoleProtocolMapper"
 meta_desc: "Documentation for the keycloak.openid.UserClientRoleProtocolMapper resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/keycloak/UserClientRoleProtocolMapper/"
 layout: api
 ---
 

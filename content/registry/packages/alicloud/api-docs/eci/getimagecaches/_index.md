@@ -3,8 +3,6 @@
 title: "getImageCaches"
 title_tag: "alicloud.eci.getImageCaches"
 meta_desc: "Documentation for the alicloud.eci.getImageCaches function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "ConsentStore"
 title_tag: "google-native.healthcare/v1beta1.ConsentStore"
 meta_desc: "Documentation for the google-native.healthcare/v1beta1.ConsentStore resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/google-native/ConsentStore/"
 layout: api
 ---
 

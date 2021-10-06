@@ -3,8 +3,6 @@
 title: "FirewallNetworkRuleCollection"
 title_tag: "azure.network.FirewallNetworkRuleCollection"
 meta_desc: "Documentation for the azure.network.FirewallNetworkRuleCollection resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/FirewallNetworkRuleCollection/"
 layout: api
 ---
 

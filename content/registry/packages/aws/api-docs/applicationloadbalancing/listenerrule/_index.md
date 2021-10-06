@@ -3,8 +3,6 @@
 title: "ListenerRule"
 title_tag: "aws.applicationloadbalancing.ListenerRule"
 meta_desc: "Documentation for the aws.applicationloadbalancing.ListenerRule resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/ListenerRule/"
 layout: api
 ---
 

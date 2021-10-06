@@ -3,8 +3,6 @@
 title: "FirewallPolicy"
 title_tag: "azure-native.network.FirewallPolicy"
 meta_desc: "Documentation for the azure-native.network.FirewallPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/FirewallPolicy/"
 layout: api
 ---
 

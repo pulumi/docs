@@ -2,8 +2,6 @@
 title: "iotcoredeviceadvisor"
 title_tag: "aws-native.iotcoredeviceadvisor"
 meta_desc: "Explore the resources and functions of the aws-native.iotcoredeviceadvisor module."
-aliases:
-    - "docs/reference/pkg/aws-native/"
 layout: api
 ---
 

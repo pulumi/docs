@@ -3,8 +3,6 @@
 title: "TagCategory"
 title_tag: "vsphere.TagCategory"
 meta_desc: "Documentation for the vsphere.TagCategory resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/vsphere/TagCategory/"
 layout: api
 ---
 

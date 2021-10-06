@@ -3,8 +3,6 @@
 title: "getBoolVariable"
 title_tag: "azure.automation.getBoolVariable"
 meta_desc: "Documentation for the azure.automation.getBoolVariable function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

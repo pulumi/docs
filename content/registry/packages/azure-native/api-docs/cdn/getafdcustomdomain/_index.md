@@ -3,8 +3,6 @@
 title: "getAFDCustomDomain"
 title_tag: "azure-native.cdn.getAFDCustomDomain"
 meta_desc: "Documentation for the azure-native.cdn.getAFDCustomDomain function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

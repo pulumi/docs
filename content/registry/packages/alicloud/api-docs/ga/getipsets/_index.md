@@ -3,8 +3,6 @@
 title: "getIpSets"
 title_tag: "alicloud.ga.getIpSets"
 meta_desc: "Documentation for the alicloud.ga.getIpSets function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

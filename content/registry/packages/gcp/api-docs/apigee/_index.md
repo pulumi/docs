@@ -2,8 +2,6 @@
 title: "apigee"
 title_tag: "gcp.apigee"
 meta_desc: "Explore the resources and functions of the gcp.apigee module."
-aliases:
-    - "docs/reference/pkg/gcp/"
 layout: api
 ---
 

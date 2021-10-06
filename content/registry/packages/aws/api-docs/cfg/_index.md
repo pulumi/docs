@@ -2,8 +2,6 @@
 title: "cfg"
 title_tag: "aws.cfg"
 meta_desc: "Explore the resources and functions of the aws.cfg module."
-aliases:
-    - "docs/reference/pkg/aws/"
 layout: api
 ---
 

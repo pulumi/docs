@@ -3,8 +3,6 @@
 title: "BlobServiceProperties"
 title_tag: "azure-native.storage.BlobServiceProperties"
 meta_desc: "Documentation for the azure-native.storage.BlobServiceProperties resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/BlobServiceProperties/"
 layout: api
 ---
 

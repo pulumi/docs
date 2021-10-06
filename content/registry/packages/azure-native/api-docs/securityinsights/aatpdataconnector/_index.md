@@ -3,8 +3,6 @@
 title: "AATPDataConnector"
 title_tag: "azure-native.securityinsights.AATPDataConnector"
 meta_desc: "Documentation for the azure-native.securityinsights.AATPDataConnector resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/AATPDataConnector/"
 layout: api
 ---
 

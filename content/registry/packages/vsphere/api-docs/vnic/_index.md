@@ -3,8 +3,6 @@
 title: "Vnic"
 title_tag: "vsphere.Vnic"
 meta_desc: "Documentation for the vsphere.Vnic resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/vsphere/Vnic/"
 layout: api
 ---
 

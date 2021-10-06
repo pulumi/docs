@@ -3,8 +3,6 @@
 title: "Hub"
 title_tag: "azure.notificationhub.Hub"
 meta_desc: "Documentation for the azure.notificationhub.Hub resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/Hub/"
 layout: api
 ---
 

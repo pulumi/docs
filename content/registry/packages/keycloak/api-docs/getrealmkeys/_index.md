@@ -3,8 +3,6 @@
 title: "getRealmKeys"
 title_tag: "keycloak.getRealmKeys"
 meta_desc: "Documentation for the keycloak.getRealmKeys function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

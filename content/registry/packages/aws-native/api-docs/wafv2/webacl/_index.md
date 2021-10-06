@@ -3,8 +3,6 @@
 title: "WebACL"
 title_tag: "aws-native.wafv2.WebACL"
 meta_desc: "Documentation for the aws-native.wafv2.WebACL resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws-native/WebACL/"
 layout: api
 ---
 

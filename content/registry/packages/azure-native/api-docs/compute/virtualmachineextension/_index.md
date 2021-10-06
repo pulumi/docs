@@ -3,8 +3,6 @@
 title: "VirtualMachineExtension"
 title_tag: "azure-native.compute.VirtualMachineExtension"
 meta_desc: "Documentation for the azure-native.compute.VirtualMachineExtension resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/VirtualMachineExtension/"
 layout: api
 ---
 

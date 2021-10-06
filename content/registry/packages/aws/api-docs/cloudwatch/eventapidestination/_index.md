@@ -3,8 +3,6 @@
 title: "EventApiDestination"
 title_tag: "aws.cloudwatch.EventApiDestination"
 meta_desc: "Documentation for the aws.cloudwatch.EventApiDestination resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/EventApiDestination/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "IntegrationAccountSchema"
 title_tag: "azure.logicapps.IntegrationAccountSchema"
 meta_desc: "Documentation for the azure.logicapps.IntegrationAccountSchema resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/IntegrationAccountSchema/"
 layout: api
 ---
 

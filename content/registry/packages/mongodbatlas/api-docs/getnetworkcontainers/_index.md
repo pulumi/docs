@@ -3,8 +3,6 @@
 title: "getNetworkContainers"
 title_tag: "mongodbatlas.getNetworkContainers"
 meta_desc: "Documentation for the mongodbatlas.getNetworkContainers function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "GroupMembership"
 title_tag: "azuredevops.GroupMembership"
 meta_desc: "Documentation for the azuredevops.GroupMembership resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azuredevops/GroupMembership/"
 layout: api
 ---
 

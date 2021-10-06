@@ -2,8 +2,6 @@
 title: "maxcompute"
 title_tag: "alicloud.maxcompute"
 meta_desc: "Explore the resources and functions of the alicloud.maxcompute module."
-aliases:
-    - "docs/reference/pkg/alicloud/"
 layout: api
 ---
 

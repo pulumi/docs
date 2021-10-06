@@ -2,8 +2,6 @@
 title: "Rancher RKE"
 title_tag: "rke.Rancher RKE"
 meta_desc: "A Pulumi package for creating and managing rke cloud resources."
-aliases:
-    - "docs/reference/pkg/rke/"
 menu:
     reference:
         parent: API Reference

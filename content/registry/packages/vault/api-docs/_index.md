@@ -2,8 +2,6 @@
 title: "Vault"
 title_tag: "Vault Package"
 meta_desc: "A Pulumi package for creating and managing vault cloud resources."
-aliases:
-    - "docs/reference/pkg/vault/"
 menu:
     reference:
         parent: API Reference

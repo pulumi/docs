@@ -3,8 +3,6 @@
 title: "AuthBackendLogin"
 title_tag: "vault.aws.AuthBackendLogin"
 meta_desc: "Documentation for the vault.aws.AuthBackendLogin resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/vault/AuthBackendLogin/"
 layout: api
 ---
 

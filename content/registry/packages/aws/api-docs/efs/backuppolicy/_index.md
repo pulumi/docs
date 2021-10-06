@@ -3,8 +3,6 @@
 title: "BackupPolicy"
 title_tag: "aws.efs.BackupPolicy"
 meta_desc: "Documentation for the aws.efs.BackupPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/BackupPolicy/"
 layout: api
 ---
 

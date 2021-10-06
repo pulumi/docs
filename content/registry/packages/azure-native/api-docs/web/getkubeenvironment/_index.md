@@ -3,8 +3,6 @@
 title: "getKubeEnvironment"
 title_tag: "azure-native.web.getKubeEnvironment"
 meta_desc: "Documentation for the azure-native.web.getKubeEnvironment function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

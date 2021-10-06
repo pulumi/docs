@@ -3,8 +3,6 @@
 title: "VpnGateway"
 title_tag: "aws.ec2.VpnGateway"
 meta_desc: "Documentation for the aws.ec2.VpnGateway resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/VpnGateway/"
 layout: api
 ---
 

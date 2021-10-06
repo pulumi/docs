@@ -3,8 +3,6 @@
 title: "LinkedStorageAccount"
 title_tag: "azure.loganalytics.LinkedStorageAccount"
 meta_desc: "Documentation for the azure.loganalytics.LinkedStorageAccount resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/LinkedStorageAccount/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "SharedAccessPolicy"
 title_tag: "azure.iot.SharedAccessPolicy"
 meta_desc: "Documentation for the azure.iot.SharedAccessPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/SharedAccessPolicy/"
 layout: api
 ---
 

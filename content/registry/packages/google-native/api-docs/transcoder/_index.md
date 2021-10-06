@@ -2,8 +2,6 @@
 title: "transcoder"
 title_tag: "transcoder Package"
 meta_desc: ""
-aliases:
-    - "docs/reference/pkg/google-native/"
 layout: api
 ---
 

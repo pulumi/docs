@@ -2,8 +2,6 @@
 title: "dns"
 title_tag: "dns Package"
 meta_desc: ""
-aliases:
-    - "docs/reference/pkg/google-native/"
 layout: api
 ---
 

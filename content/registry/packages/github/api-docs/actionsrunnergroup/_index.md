@@ -3,8 +3,6 @@
 title: "ActionsRunnerGroup"
 title_tag: "github.ActionsRunnerGroup"
 meta_desc: "Documentation for the github.ActionsRunnerGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/github/ActionsRunnerGroup/"
 layout: api
 ---
 

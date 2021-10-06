@@ -3,8 +3,6 @@
 title: "getGatewayIamPolicy"
 title_tag: "google-native.apigateway/v1beta.getGatewayIamPolicy"
 meta_desc: "Documentation for the google-native.apigateway/v1beta.getGatewayIamPolicy function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

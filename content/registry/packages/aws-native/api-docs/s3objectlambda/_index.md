@@ -2,8 +2,6 @@
 title: "s3objectlambda"
 title_tag: "aws-native.s3objectlambda"
 meta_desc: "Explore the resources and functions of the aws-native.s3objectlambda module."
-aliases:
-    - "docs/reference/pkg/aws-native/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "getComputeDiskPlacementGroup"
 title_tag: "yandex.getComputeDiskPlacementGroup"
 meta_desc: "Documentation for the yandex.getComputeDiskPlacementGroup function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

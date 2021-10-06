@@ -3,8 +3,6 @@
 title: "getTemplateSpecVersion"
 title_tag: "azure.core.getTemplateSpecVersion"
 meta_desc: "Documentation for the azure.core.getTemplateSpecVersion function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

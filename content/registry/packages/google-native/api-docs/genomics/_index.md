@@ -2,8 +2,6 @@
 title: "genomics"
 title_tag: "genomics Package"
 meta_desc: ""
-aliases:
-    - "docs/reference/pkg/google-native/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "getClusterAuth"
 title_tag: "aws.eks.getClusterAuth"
 meta_desc: "Documentation for the aws.eks.getClusterAuth function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

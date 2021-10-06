@@ -3,8 +3,6 @@
 title: "getMachineLearningDatastore"
 title_tag: "azure-native.machinelearningservices.getMachineLearningDatastore"
 meta_desc: "Documentation for the azure-native.machinelearningservices.getMachineLearningDatastore function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "DatasetIamPolicy"
 title_tag: "google-native.healthcare/v1.DatasetIamPolicy"
 meta_desc: "Documentation for the google-native.healthcare/v1.DatasetIamPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/google-native/DatasetIamPolicy/"
 layout: api
 ---
 

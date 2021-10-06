@@ -3,8 +3,6 @@
 title: "LiveOutput"
 title_tag: "azure-native.media.LiveOutput"
 meta_desc: "Documentation for the azure-native.media.LiveOutput resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/LiveOutput/"
 layout: api
 ---
 

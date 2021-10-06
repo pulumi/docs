@@ -3,8 +3,6 @@
 title: "getSecurityGroupRules"
 title_tag: "alicloud.ecs.getSecurityGroupRules"
 meta_desc: "Documentation for the alicloud.ecs.getSecurityGroupRules function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

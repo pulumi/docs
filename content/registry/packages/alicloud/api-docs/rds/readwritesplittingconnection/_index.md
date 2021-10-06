@@ -3,8 +3,6 @@
 title: "ReadWriteSplittingConnection"
 title_tag: "alicloud.rds.ReadWriteSplittingConnection"
 meta_desc: "Documentation for the alicloud.rds.ReadWriteSplittingConnection resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/alicloud/ReadWriteSplittingConnection/"
 layout: api
 ---
 

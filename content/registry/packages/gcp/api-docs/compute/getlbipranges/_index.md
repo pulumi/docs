@@ -3,8 +3,6 @@
 title: "getLBIPRanges"
 title_tag: "gcp.compute.getLBIPRanges"
 meta_desc: "Documentation for the gcp.compute.getLBIPRanges function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

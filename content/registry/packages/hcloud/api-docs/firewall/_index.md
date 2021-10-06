@@ -3,8 +3,6 @@
 title: "Firewall"
 title_tag: "hcloud.Firewall"
 meta_desc: "Documentation for the hcloud.Firewall resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/hcloud/Firewall/"
 layout: api
 ---
 

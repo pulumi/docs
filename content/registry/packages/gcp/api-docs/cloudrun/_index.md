@@ -2,8 +2,6 @@
 title: "cloudrun"
 title_tag: "gcp.cloudrun"
 meta_desc: "Explore the resources and functions of the gcp.cloudrun module."
-aliases:
-    - "docs/reference/pkg/gcp/"
 layout: api
 ---
 

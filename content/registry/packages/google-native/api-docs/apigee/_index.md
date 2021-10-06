@@ -2,8 +2,6 @@
 title: "apigee"
 title_tag: "apigee Package"
 meta_desc: ""
-aliases:
-    - "docs/reference/pkg/google-native/"
 layout: api
 ---
 

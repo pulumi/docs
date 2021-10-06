@@ -2,8 +2,6 @@
 title: "datahub"
 title_tag: "alicloud.datahub"
 meta_desc: "Explore the resources and functions of the alicloud.datahub module."
-aliases:
-    - "docs/reference/pkg/alicloud/"
 layout: api
 ---
 

@@ -2,8 +2,6 @@
 title: "alicloud"
 title_tag: "vault.alicloud"
 meta_desc: "Explore the resources and functions of the vault.alicloud module."
-aliases:
-    - "docs/reference/pkg/vault/"
 layout: api
 ---
 

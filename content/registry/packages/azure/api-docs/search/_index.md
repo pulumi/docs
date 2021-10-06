@@ -2,8 +2,6 @@
 title: "search"
 title_tag: "azure.search"
 meta_desc: "Explore the resources and functions of the azure.search module."
-aliases:
-    - "docs/reference/pkg/azure/"
 layout: api
 ---
 

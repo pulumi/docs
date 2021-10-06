@@ -3,8 +3,6 @@
 title: "getPredictionTrainingResults"
 title_tag: "azure-native.customerinsights.getPredictionTrainingResults"
 meta_desc: "Documentation for the azure-native.customerinsights.getPredictionTrainingResults function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

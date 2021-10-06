@@ -3,8 +3,6 @@
 title: "DatabaseExtendedAuditingPolicy"
 title_tag: "azure.mssql.DatabaseExtendedAuditingPolicy"
 meta_desc: "Documentation for the azure.mssql.DatabaseExtendedAuditingPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/DatabaseExtendedAuditingPolicy/"
 layout: api
 ---
 

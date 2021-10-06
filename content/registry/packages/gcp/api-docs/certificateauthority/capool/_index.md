@@ -3,8 +3,6 @@
 title: "CaPool"
 title_tag: "gcp.certificateauthority.CaPool"
 meta_desc: "Documentation for the gcp.certificateauthority.CaPool resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/CaPool/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "getInstances"
 title_tag: "alicloud.mongodb.getInstances"
 meta_desc: "Documentation for the alicloud.mongodb.getInstances function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

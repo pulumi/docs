@@ -3,8 +3,6 @@
 title: "OpenSearchAclConfig"
 title_tag: "aiven.OpenSearchAclConfig"
 meta_desc: "Documentation for the aiven.OpenSearchAclConfig resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aiven/OpenSearchAclConfig/"
 layout: api
 ---
 

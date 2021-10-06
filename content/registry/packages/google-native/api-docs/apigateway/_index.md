@@ -2,8 +2,6 @@
 title: "apigateway"
 title_tag: "apigateway Package"
 meta_desc: ""
-aliases:
-    - "docs/reference/pkg/google-native/"
 layout: api
 ---
 

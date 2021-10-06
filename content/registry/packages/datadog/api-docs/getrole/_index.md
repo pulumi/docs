@@ -3,8 +3,6 @@
 title: "getRole"
 title_tag: "datadog.getRole"
 meta_desc: "Documentation for the datadog.getRole function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

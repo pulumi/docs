@@ -3,8 +3,6 @@
 title: "FlowSource"
 title_tag: "aws-native.mediaconnect.FlowSource"
 meta_desc: "Documentation for the aws-native.mediaconnect.FlowSource resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws-native/FlowSource/"
 layout: api
 ---
 

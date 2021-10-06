@@ -3,8 +3,6 @@
 title: "SecGroup"
 title_tag: "openstack.networking.SecGroup"
 meta_desc: "Documentation for the openstack.networking.SecGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/openstack/SecGroup/"
 layout: api
 ---
 

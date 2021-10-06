@@ -3,8 +3,6 @@
 title: "getAccounts"
 title_tag: "alicloud.kvstore.getAccounts"
 meta_desc: "Documentation for the alicloud.kvstore.getAccounts function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

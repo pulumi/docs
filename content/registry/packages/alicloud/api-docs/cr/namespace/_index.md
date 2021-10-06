@@ -3,8 +3,6 @@
 title: "Namespace"
 title_tag: "alicloud.cr.Namespace"
 meta_desc: "Documentation for the alicloud.cr.Namespace resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/alicloud/Namespace/"
 layout: api
 ---
 

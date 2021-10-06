@@ -3,8 +3,6 @@
 title: "LocationSmb"
 title_tag: "aws.datasync.LocationSmb"
 meta_desc: "Documentation for the aws.datasync.LocationSmb resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/LocationSmb/"
 layout: api
 ---
 

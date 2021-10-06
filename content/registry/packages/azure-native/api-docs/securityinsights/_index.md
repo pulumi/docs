@@ -2,8 +2,6 @@
 title: "securityinsights"
 title_tag: "azure-native.securityinsights"
 meta_desc: "Explore the resources and functions of the azure-native.securityinsights module."
-aliases:
-    - "docs/reference/pkg/azure-native/"
 layout: api
 ---
 

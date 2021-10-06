@@ -3,8 +3,6 @@
 title: "getReportByDepartment"
 title_tag: "azure-native.costmanagement.getReportByDepartment"
 meta_desc: "Documentation for the azure-native.costmanagement.getReportByDepartment function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

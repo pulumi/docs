@@ -3,8 +3,6 @@
 title: "TagValue"
 title_tag: "google-native.cloudresourcemanager/v3.TagValue"
 meta_desc: "Documentation for the google-native.cloudresourcemanager/v3.TagValue resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/google-native/TagValue/"
 layout: api
 ---
 

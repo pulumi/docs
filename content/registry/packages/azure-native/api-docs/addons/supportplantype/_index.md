@@ -3,8 +3,6 @@
 title: "SupportPlanType"
 title_tag: "azure-native.addons.SupportPlanType"
 meta_desc: "Documentation for the azure-native.addons.SupportPlanType resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/SupportPlanType/"
 layout: api
 ---
 

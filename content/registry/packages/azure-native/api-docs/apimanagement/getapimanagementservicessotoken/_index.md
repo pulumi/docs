@@ -3,8 +3,6 @@
 title: "getApiManagementServiceSsoToken"
 title_tag: "azure-native.apimanagement.getApiManagementServiceSsoToken"
 meta_desc: "Documentation for the azure-native.apimanagement.getApiManagementServiceSsoToken function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

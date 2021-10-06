@@ -3,8 +3,6 @@
 title: "FloatingIpAssociate"
 title_tag: "openstack.compute.FloatingIpAssociate"
 meta_desc: "Documentation for the openstack.compute.FloatingIpAssociate resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/openstack/FloatingIpAssociate/"
 layout: api
 ---
 

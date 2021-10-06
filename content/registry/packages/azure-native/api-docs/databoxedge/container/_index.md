@@ -3,8 +3,6 @@
 title: "Container"
 title_tag: "azure-native.databoxedge.Container"
 meta_desc: "Documentation for the azure-native.databoxedge.Container resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/Container/"
 layout: api
 ---
 

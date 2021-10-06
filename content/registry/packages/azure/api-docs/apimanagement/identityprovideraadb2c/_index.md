@@ -3,8 +3,6 @@
 title: "IdentityProviderAadb2c"
 title_tag: "azure.apimanagement.IdentityProviderAadb2c"
 meta_desc: "Documentation for the azure.apimanagement.IdentityProviderAadb2c resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/IdentityProviderAadb2c/"
 layout: api
 ---
 

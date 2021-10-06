@@ -3,8 +3,6 @@
 title: "getSshKey"
 title_tag: "linode.getSshKey"
 meta_desc: "Documentation for the linode.getSshKey function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

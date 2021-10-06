@@ -3,8 +3,6 @@
 title: "getWarehouses"
 title_tag: "snowflake.getWarehouses"
 meta_desc: "Documentation for the snowflake.getWarehouses function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

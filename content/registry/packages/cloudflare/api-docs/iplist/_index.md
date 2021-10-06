@@ -3,8 +3,6 @@
 title: "IpList"
 title_tag: "cloudflare.IpList"
 meta_desc: "Documentation for the cloudflare.IpList resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/cloudflare/IpList/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "Queue"
 title_tag: "azuredevops.Agent.Queue"
 meta_desc: "Documentation for the azuredevops.Agent.Queue resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azuredevops/Queue/"
 layout: api
 ---
 

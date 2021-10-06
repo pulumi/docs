@@ -3,8 +3,6 @@
 title: "Function"
 title_tag: "aws-native.cloudfront.Function"
 meta_desc: "Documentation for the aws-native.cloudfront.Function resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws-native/Function/"
 layout: api
 ---
 

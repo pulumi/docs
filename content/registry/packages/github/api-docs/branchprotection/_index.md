@@ -3,8 +3,6 @@
 title: "BranchProtection"
 title_tag: "github.BranchProtection"
 meta_desc: "Documentation for the github.BranchProtection resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/github/BranchProtection/"
 layout: api
 ---
 

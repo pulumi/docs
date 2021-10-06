@@ -2,8 +2,6 @@
 title: "imp"
 title_tag: "alicloud.imp"
 meta_desc: "Explore the resources and functions of the alicloud.imp module."
-aliases:
-    - "docs/reference/pkg/alicloud/"
 layout: api
 ---
 

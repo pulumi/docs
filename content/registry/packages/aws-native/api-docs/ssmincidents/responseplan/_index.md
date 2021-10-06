@@ -3,8 +3,6 @@
 title: "ResponsePlan"
 title_tag: "aws-native.ssmincidents.ResponsePlan"
 meta_desc: "Documentation for the aws-native.ssmincidents.ResponsePlan resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws-native/ResponsePlan/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "Keys"
 title_tag: "consul.Keys"
 meta_desc: "Documentation for the consul.Keys resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/consul/Keys/"
 layout: api
 ---
 

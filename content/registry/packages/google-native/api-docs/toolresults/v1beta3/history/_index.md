@@ -3,8 +3,6 @@
 title: "History"
 title_tag: "google-native.toolresults/v1beta3.History"
 meta_desc: "Documentation for the google-native.toolresults/v1beta3.History resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/google-native/History/"
 layout: api
 ---
 

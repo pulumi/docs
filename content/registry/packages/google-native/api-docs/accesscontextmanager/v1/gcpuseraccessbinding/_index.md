@@ -3,8 +3,6 @@
 title: "GcpUserAccessBinding"
 title_tag: "google-native.accesscontextmanager/v1.GcpUserAccessBinding"
 meta_desc: "Documentation for the google-native.accesscontextmanager/v1.GcpUserAccessBinding resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/google-native/GcpUserAccessBinding/"
 layout: api
 ---
 

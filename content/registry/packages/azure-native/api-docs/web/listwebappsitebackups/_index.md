@@ -3,8 +3,6 @@
 title: "listWebAppSiteBackups"
 title_tag: "azure-native.web.listWebAppSiteBackups"
 meta_desc: "Documentation for the azure-native.web.listWebAppSiteBackups function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

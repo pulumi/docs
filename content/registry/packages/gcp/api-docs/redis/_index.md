@@ -2,8 +2,6 @@
 title: "redis"
 title_tag: "gcp.redis"
 meta_desc: "Explore the resources and functions of the gcp.redis module."
-aliases:
-    - "docs/reference/pkg/gcp/"
 layout: api
 ---
 

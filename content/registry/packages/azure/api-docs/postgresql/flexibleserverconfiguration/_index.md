@@ -3,8 +3,6 @@
 title: "FlexibleServerConfiguration"
 title_tag: "azure.postgresql.FlexibleServerConfiguration"
 meta_desc: "Documentation for the azure.postgresql.FlexibleServerConfiguration resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/FlexibleServerConfiguration/"
 layout: api
 ---
 

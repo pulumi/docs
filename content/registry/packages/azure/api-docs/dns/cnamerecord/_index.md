@@ -3,8 +3,6 @@
 title: "CNameRecord"
 title_tag: "azure.dns.CNameRecord"
 meta_desc: "Documentation for the azure.dns.CNameRecord resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/CNameRecord/"
 layout: api
 ---
 

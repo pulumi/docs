@@ -3,8 +3,6 @@
 title: "SqlContainer"
 title_tag: "azure.cosmosdb.SqlContainer"
 meta_desc: "Documentation for the azure.cosmosdb.SqlContainer resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/SqlContainer/"
 layout: api
 ---
 

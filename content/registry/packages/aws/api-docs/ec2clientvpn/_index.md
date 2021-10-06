@@ -2,8 +2,6 @@
 title: "ec2clientvpn"
 title_tag: "aws.ec2clientvpn"
 meta_desc: "Explore the resources and functions of the aws.ec2clientvpn module."
-aliases:
-    - "docs/reference/pkg/aws/"
 layout: api
 ---
 

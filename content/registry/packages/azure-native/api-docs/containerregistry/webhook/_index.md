@@ -3,8 +3,6 @@
 title: "Webhook"
 title_tag: "azure-native.containerregistry.Webhook"
 meta_desc: "Documentation for the azure-native.containerregistry.Webhook resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/Webhook/"
 layout: api
 ---
 

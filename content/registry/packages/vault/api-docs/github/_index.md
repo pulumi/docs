@@ -2,8 +2,6 @@
 title: "github"
 title_tag: "vault.github"
 meta_desc: "Explore the resources and functions of the vault.github module."
-aliases:
-    - "docs/reference/pkg/vault/"
 layout: api
 ---
 

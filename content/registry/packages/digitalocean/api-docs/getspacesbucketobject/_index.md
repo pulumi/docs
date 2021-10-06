@@ -3,8 +3,6 @@
 title: "getSpacesBucketObject"
 title_tag: "digitalocean.getSpacesBucketObject"
 meta_desc: "Documentation for the digitalocean.getSpacesBucketObject function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

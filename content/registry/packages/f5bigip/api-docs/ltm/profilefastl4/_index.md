@@ -3,8 +3,6 @@
 title: "ProfileFastL4"
 title_tag: "f5bigip.ltm.ProfileFastL4"
 meta_desc: "Documentation for the f5bigip.ltm.ProfileFastL4 resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/f5bigip/ProfileFastL4/"
 layout: api
 ---
 

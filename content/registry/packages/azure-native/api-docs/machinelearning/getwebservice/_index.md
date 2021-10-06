@@ -3,8 +3,6 @@
 title: "getWebService"
 title_tag: "azure-native.machinelearning.getWebService"
 meta_desc: "Documentation for the azure-native.machinelearning.getWebService function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

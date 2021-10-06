@@ -3,8 +3,6 @@
 title: "Budget"
 title_tag: "aws.budgets.Budget"
 meta_desc: "Documentation for the aws.budgets.Budget resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/Budget/"
 layout: api
 ---
 

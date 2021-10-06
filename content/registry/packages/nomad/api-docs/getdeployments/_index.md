@@ -3,9 +3,7 @@
 title: "getDeployments"
 title_tag: "nomad.getDeployments"
 meta_desc: "Documentation for the nomad.getDeployments function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
-layout: api-doc-resource
+layout: api
 ---
 
 

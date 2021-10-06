@@ -3,8 +3,6 @@
 title: "RegisteredServer"
 title_tag: "azure-native.storagesync.RegisteredServer"
 meta_desc: "Documentation for the azure-native.storagesync.RegisteredServer resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/RegisteredServer/"
 layout: api
 ---
 

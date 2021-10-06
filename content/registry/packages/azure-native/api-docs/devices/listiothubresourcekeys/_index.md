@@ -3,8 +3,6 @@
 title: "listIotHubResourceKeys"
 title_tag: "azure-native.devices.listIotHubResourceKeys"
 meta_desc: "Documentation for the azure-native.devices.listIotHubResourceKeys function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

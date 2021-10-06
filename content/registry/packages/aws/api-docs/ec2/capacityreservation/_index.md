@@ -3,8 +3,6 @@
 title: "CapacityReservation"
 title_tag: "aws.ec2.CapacityReservation"
 meta_desc: "Documentation for the aws.ec2.CapacityReservation resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/CapacityReservation/"
 layout: api
 ---
 

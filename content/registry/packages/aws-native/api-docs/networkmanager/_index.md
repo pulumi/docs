@@ -2,8 +2,6 @@
 title: "networkmanager"
 title_tag: "aws-native.networkmanager"
 meta_desc: "Explore the resources and functions of the aws-native.networkmanager module."
-aliases:
-    - "docs/reference/pkg/aws-native/"
 layout: api
 ---
 

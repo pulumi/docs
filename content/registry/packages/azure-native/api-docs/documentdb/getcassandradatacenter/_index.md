@@ -3,8 +3,6 @@
 title: "getCassandraDataCenter"
 title_tag: "azure-native.documentdb.getCassandraDataCenter"
 meta_desc: "Documentation for the azure-native.documentdb.getCassandraDataCenter function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

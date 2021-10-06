@@ -2,8 +2,6 @@
 title: "iam"
 title_tag: "gcp.iam"
 meta_desc: "Explore the resources and functions of the gcp.iam module."
-aliases:
-    - "docs/reference/pkg/gcp/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "MetricAlert"
 title_tag: "azure.monitoring.MetricAlert"
 meta_desc: "Documentation for the azure.monitoring.MetricAlert resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/MetricAlert/"
 layout: api
 ---
 

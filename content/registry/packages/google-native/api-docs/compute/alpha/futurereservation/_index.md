@@ -3,8 +3,6 @@
 title: "FutureReservation"
 title_tag: "google-native.compute/alpha.FutureReservation"
 meta_desc: "Documentation for the google-native.compute/alpha.FutureReservation resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/google-native/FutureReservation/"
 layout: api
 ---
 

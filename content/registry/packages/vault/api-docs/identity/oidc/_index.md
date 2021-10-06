@@ -3,8 +3,6 @@
 title: "Oidc"
 title_tag: "vault.identity.Oidc"
 meta_desc: "Documentation for the vault.identity.Oidc resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/vault/Oidc/"
 layout: api
 ---
 

@@ -3,9 +3,7 @@
 title: "getJobParser"
 title_tag: "nomad.getJobParser"
 meta_desc: "Documentation for the nomad.getJobParser function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
-layout: api-doc-resource
+layout: api
 ---
 
 

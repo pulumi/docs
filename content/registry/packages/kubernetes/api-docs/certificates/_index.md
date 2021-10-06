@@ -2,8 +2,6 @@
 title: "certificates"
 title_tag: "certificates Package"
 meta_desc: ""
-aliases:
-    - "docs/reference/pkg/kubernetes/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "Server"
 title_tag: "azure.postgresql.Server"
 meta_desc: "Documentation for the azure.postgresql.Server resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/Server/"
 layout: api
 ---
 

@@ -2,8 +2,6 @@
 title: "compute"
 title_tag: "openstack.compute"
 meta_desc: "Explore the resources and functions of the openstack.compute module."
-aliases:
-    - "docs/reference/pkg/openstack/"
 layout: api
 ---
 

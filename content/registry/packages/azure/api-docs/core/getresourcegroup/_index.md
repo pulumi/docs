@@ -3,8 +3,6 @@
 title: "getResourceGroup"
 title_tag: "azure.core.getResourceGroup"
 meta_desc: "Documentation for the azure.core.getResourceGroup function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

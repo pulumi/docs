@@ -2,8 +2,6 @@
 title: "Aiven"
 title_tag: "aiven.Aiven"
 meta_desc: "A Pulumi package for creating and managing Aiven cloud resources."
-aliases:
-    - "docs/reference/pkg/aiven/"
 menu:
     reference:
         parent: API Reference

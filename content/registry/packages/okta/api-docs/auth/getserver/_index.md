@@ -3,8 +3,6 @@
 title: "getServer"
 title_tag: "okta.auth.getServer"
 meta_desc: "Documentation for the okta.auth.getServer function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

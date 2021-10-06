@@ -3,8 +3,6 @@
 title: "VirtualRouter"
 title_tag: "aws.appmesh.VirtualRouter"
 meta_desc: "Documentation for the aws.appmesh.VirtualRouter resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/VirtualRouter/"
 layout: api
 ---
 

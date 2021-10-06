@@ -3,8 +3,6 @@
 title: "Database"
 title_tag: "postgresql.Database"
 meta_desc: "Documentation for the postgresql.Database resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/postgresql/Database/"
 layout: api
 ---
 

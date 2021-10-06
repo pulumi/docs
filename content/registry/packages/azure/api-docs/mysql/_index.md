@@ -2,8 +2,6 @@
 title: "mysql"
 title_tag: "azure.mysql"
 meta_desc: "Explore the resources and functions of the azure.mysql module."
-aliases:
-    - "docs/reference/pkg/azure/"
 layout: api
 ---
 

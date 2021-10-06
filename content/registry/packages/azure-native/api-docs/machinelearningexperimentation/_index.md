@@ -2,8 +2,6 @@
 title: "machinelearningexperimentation"
 title_tag: "azure-native.machinelearningexperimentation"
 meta_desc: "Explore the resources and functions of the azure-native.machinelearningexperimentation module."
-aliases:
-    - "docs/reference/pkg/azure-native/"
 layout: api
 ---
 

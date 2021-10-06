@@ -3,8 +3,6 @@
 title: "UserFederation"
 title_tag: "keycloak.ldap.UserFederation"
 meta_desc: "Documentation for the keycloak.ldap.UserFederation resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/keycloak/UserFederation/"
 layout: api
 ---
 

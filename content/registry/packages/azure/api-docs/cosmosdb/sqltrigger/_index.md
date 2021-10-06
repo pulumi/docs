@@ -3,8 +3,6 @@
 title: "SqlTrigger"
 title_tag: "azure.cosmosdb.SqlTrigger"
 meta_desc: "Documentation for the azure.cosmosdb.SqlTrigger resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/SqlTrigger/"
 layout: api
 ---
 

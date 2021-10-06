@@ -2,8 +2,6 @@
 title: "deploymentmanager"
 title_tag: "deploymentmanager Package"
 meta_desc: ""
-aliases:
-    - "docs/reference/pkg/google-native/"
 layout: api
 ---
 

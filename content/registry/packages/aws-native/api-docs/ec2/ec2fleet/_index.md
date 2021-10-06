@@ -3,8 +3,6 @@
 title: "EC2Fleet"
 title_tag: "aws-native.ec2.EC2Fleet"
 meta_desc: "Documentation for the aws-native.ec2.EC2Fleet resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws-native/EC2Fleet/"
 layout: api
 ---
 

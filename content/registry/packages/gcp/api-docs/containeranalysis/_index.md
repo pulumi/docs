@@ -2,8 +2,6 @@
 title: "containeranalysis"
 title_tag: "gcp.containeranalysis"
 meta_desc: "Explore the resources and functions of the gcp.containeranalysis module."
-aliases:
-    - "docs/reference/pkg/gcp/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "TransitGateway"
 title_tag: "aws.ec2transitgateway.TransitGateway"
 meta_desc: "Documentation for the aws.ec2transitgateway.TransitGateway resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/TransitGateway/"
 layout: api
 ---
 

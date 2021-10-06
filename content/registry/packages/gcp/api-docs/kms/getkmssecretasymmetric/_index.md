@@ -3,8 +3,6 @@
 title: "getKMSSecretAsymmetric"
 title_tag: "gcp.kms.getKMSSecretAsymmetric"
 meta_desc: "Documentation for the gcp.kms.getKMSSecretAsymmetric function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

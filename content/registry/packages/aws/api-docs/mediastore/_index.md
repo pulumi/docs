@@ -2,8 +2,6 @@
 title: "mediastore"
 title_tag: "aws.mediastore"
 meta_desc: "Explore the resources and functions of the aws.mediastore module."
-aliases:
-    - "docs/reference/pkg/aws/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "Index"
 title_tag: "gcp.firestore.Index"
 meta_desc: "Documentation for the gcp.firestore.Index resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/Index/"
 layout: api
 ---
 

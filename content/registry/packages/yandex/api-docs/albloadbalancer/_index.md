@@ -3,8 +3,6 @@
 title: "AlbLoadBalancer"
 title_tag: "yandex.AlbLoadBalancer"
 meta_desc: "Documentation for the yandex.AlbLoadBalancer resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/yandex/AlbLoadBalancer/"
 layout: api
 ---
 

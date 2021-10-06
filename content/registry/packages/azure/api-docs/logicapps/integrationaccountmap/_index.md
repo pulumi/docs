@@ -3,8 +3,6 @@
 title: "IntegrationAccountMap"
 title_tag: "azure.logicapps.IntegrationAccountMap"
 meta_desc: "Documentation for the azure.logicapps.IntegrationAccountMap resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/IntegrationAccountMap/"
 layout: api
 ---
 

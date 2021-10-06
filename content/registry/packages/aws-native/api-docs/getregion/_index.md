@@ -3,8 +3,6 @@
 title: "getRegion"
 title_tag: "aws-native.getRegion"
 meta_desc: "Documentation for the aws-native.getRegion function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

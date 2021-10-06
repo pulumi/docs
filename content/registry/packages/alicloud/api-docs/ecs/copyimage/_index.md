@@ -3,8 +3,6 @@
 title: "CopyImage"
 title_tag: "alicloud.ecs.CopyImage"
 meta_desc: "Documentation for the alicloud.ecs.CopyImage resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/alicloud/CopyImage/"
 layout: api
 ---
 

@@ -2,8 +2,6 @@
 title: "dataprotection"
 title_tag: "azure-native.dataprotection"
 meta_desc: "Explore the resources and functions of the azure-native.dataprotection module."
-aliases:
-    - "docs/reference/pkg/azure-native/"
 layout: api
 ---
 

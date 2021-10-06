@@ -2,8 +2,6 @@
 title: "GitHub"
 title_tag: "github.GitHub"
 meta_desc: "A Pulumi package for creating and managing github cloud resources."
-aliases:
-    - "docs/reference/pkg/github/"
 menu:
     reference:
         parent: API Reference

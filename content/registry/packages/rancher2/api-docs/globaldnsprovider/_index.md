@@ -3,8 +3,6 @@
 title: "GlobalDnsProvider"
 title_tag: "rancher2.GlobalDnsProvider"
 meta_desc: "Documentation for the rancher2.GlobalDnsProvider resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/rancher2/GlobalDnsProvider/"
 layout: api
 ---
 

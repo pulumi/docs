@@ -3,8 +3,6 @@
 title: "BlobContainer"
 title_tag: "azure-native.storage.BlobContainer"
 meta_desc: "Documentation for the azure-native.storage.BlobContainer resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/BlobContainer/"
 layout: api
 ---
 

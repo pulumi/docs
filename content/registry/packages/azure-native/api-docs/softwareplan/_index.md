@@ -2,8 +2,6 @@
 title: "softwareplan"
 title_tag: "azure-native.softwareplan"
 meta_desc: "Explore the resources and functions of the azure-native.softwareplan module."
-aliases:
-    - "docs/reference/pkg/azure-native/"
 layout: api
 ---
 

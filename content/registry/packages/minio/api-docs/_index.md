@@ -2,8 +2,6 @@
 title: "MinIO"
 title_tag: "minio.MinIO"
 meta_desc: "A Pulumi package for creating and managing minio cloud resources."
-aliases:
-    - "docs/reference/pkg/minio/"
 menu:
     reference:
         parent: API Reference

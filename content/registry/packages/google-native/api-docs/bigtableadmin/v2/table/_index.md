@@ -3,8 +3,6 @@
 title: "Table"
 title_tag: "google-native.bigtableadmin/v2.Table"
 meta_desc: "Documentation for the google-native.bigtableadmin/v2.Table resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/google-native/Table/"
 layout: api
 ---
 

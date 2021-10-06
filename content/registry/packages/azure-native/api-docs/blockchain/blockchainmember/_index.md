@@ -3,8 +3,6 @@
 title: "BlockchainMember"
 title_tag: "azure-native.blockchain.BlockchainMember"
 meta_desc: "Documentation for the azure-native.blockchain.BlockchainMember resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/BlockchainMember/"
 layout: api
 ---
 

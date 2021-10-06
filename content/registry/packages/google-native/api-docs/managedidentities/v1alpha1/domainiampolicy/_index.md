@@ -3,8 +3,6 @@
 title: "DomainIamPolicy"
 title_tag: "google-native.managedidentities/v1alpha1.DomainIamPolicy"
 meta_desc: "Documentation for the google-native.managedidentities/v1alpha1.DomainIamPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/google-native/DomainIamPolicy/"
 layout: api
 ---
 

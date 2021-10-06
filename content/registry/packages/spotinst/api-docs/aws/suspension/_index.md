@@ -3,8 +3,6 @@
 title: "Suspension"
 title_tag: "spotinst.aws.Suspension"
 meta_desc: "Documentation for the spotinst.aws.Suspension resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/spotinst/Suspension/"
 layout: api
 ---
 

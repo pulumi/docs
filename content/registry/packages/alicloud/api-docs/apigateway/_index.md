@@ -2,8 +2,6 @@
 title: "apigateway"
 title_tag: "alicloud.apigateway"
 meta_desc: "Explore the resources and functions of the alicloud.apigateway module."
-aliases:
-    - "docs/reference/pkg/alicloud/"
 layout: api
 ---
 

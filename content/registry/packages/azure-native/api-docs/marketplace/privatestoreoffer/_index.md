@@ -3,8 +3,6 @@
 title: "PrivateStoreOffer"
 title_tag: "azure-native.marketplace.PrivateStoreOffer"
 meta_desc: "Documentation for the azure-native.marketplace.PrivateStoreOffer resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/PrivateStoreOffer/"
 layout: api
 ---
 

@@ -2,8 +2,6 @@
 title: "stepfunctions"
 title_tag: "aws-native.stepfunctions"
 meta_desc: "Explore the resources and functions of the aws-native.stepfunctions module."
-aliases:
-    - "docs/reference/pkg/aws-native/"
 layout: api
 ---
 

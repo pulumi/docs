@@ -3,8 +3,6 @@
 title: "getWafGroups"
 title_tag: "cloudflare.getWafGroups"
 meta_desc: "Documentation for the cloudflare.getWafGroups function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

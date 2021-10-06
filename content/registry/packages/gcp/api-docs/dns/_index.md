@@ -2,8 +2,6 @@
 title: "dns"
 title_tag: "gcp.dns"
 meta_desc: "Explore the resources and functions of the gcp.dns module."
-aliases:
-    - "docs/reference/pkg/gcp/"
 layout: api
 ---
 

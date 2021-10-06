@@ -3,8 +3,6 @@
 title: "SchemaRegistry"
 title_tag: "confluent.SchemaRegistry"
 meta_desc: "Documentation for the confluent.SchemaRegistry resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/confluent/SchemaRegistry/"
 layout: api
 ---
 

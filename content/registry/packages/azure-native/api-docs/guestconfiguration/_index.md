@@ -2,8 +2,6 @@
 title: "guestconfiguration"
 title_tag: "azure-native.guestconfiguration"
 meta_desc: "Explore the resources and functions of the azure-native.guestconfiguration module."
-aliases:
-    - "docs/reference/pkg/azure-native/"
 layout: api
 ---
 

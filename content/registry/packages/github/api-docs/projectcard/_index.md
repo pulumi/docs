@@ -3,8 +3,6 @@
 title: "ProjectCard"
 title_tag: "github.ProjectCard"
 meta_desc: "Documentation for the github.ProjectCard resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/github/ProjectCard/"
 layout: api
 ---
 

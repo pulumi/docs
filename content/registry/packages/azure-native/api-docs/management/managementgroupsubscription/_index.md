@@ -3,8 +3,6 @@
 title: "ManagementGroupSubscription"
 title_tag: "azure-native.management.ManagementGroupSubscription"
 meta_desc: "Documentation for the azure-native.management.ManagementGroupSubscription resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/ManagementGroupSubscription/"
 layout: api
 ---
 

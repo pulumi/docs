@@ -3,8 +3,6 @@
 title: "Trigger"
 title_tag: "aws.glue.Trigger"
 meta_desc: "Documentation for the aws.glue.Trigger resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/Trigger/"
 layout: api
 ---
 

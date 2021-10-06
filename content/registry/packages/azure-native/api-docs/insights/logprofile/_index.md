@@ -3,8 +3,6 @@
 title: "LogProfile"
 title_tag: "azure-native.insights.LogProfile"
 meta_desc: "Documentation for the azure-native.insights.LogProfile resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/LogProfile/"
 layout: api
 ---
 

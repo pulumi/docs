@@ -2,8 +2,6 @@
 title: "azurestackhci"
 title_tag: "azure-native.azurestackhci"
 meta_desc: "Explore the resources and functions of the azure-native.azurestackhci module."
-aliases:
-    - "docs/reference/pkg/azure-native/"
 layout: api
 ---
 

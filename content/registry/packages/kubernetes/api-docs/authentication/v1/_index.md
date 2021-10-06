@@ -2,8 +2,6 @@
 title: "authentication/v1"
 title_tag: "kubernetes.authentication/v1"
 meta_desc: "Explore the resources and functions of the kubernetes.authentication/v1 module."
-aliases:
-    - "docs/reference/pkg/kubernetes/"
 layout: api
 ---
 

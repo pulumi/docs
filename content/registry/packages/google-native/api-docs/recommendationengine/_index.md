@@ -2,8 +2,6 @@
 title: "recommendationengine"
 title_tag: "recommendationengine Package"
 meta_desc: ""
-aliases:
-    - "docs/reference/pkg/google-native/"
 layout: api
 ---
 

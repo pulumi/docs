@@ -3,8 +3,6 @@
 title: "Pool"
 title_tag: "azure-native.netapp.Pool"
 meta_desc: "Documentation for the azure-native.netapp.Pool resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/Pool/"
 layout: api
 ---
 

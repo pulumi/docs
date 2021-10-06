@@ -3,8 +3,6 @@
 title: "ApiKey"
 title_tag: "datadog.ApiKey"
 meta_desc: "Documentation for the datadog.ApiKey resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/datadog/ApiKey/"
 layout: api
 ---
 

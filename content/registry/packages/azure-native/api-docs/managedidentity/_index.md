@@ -2,8 +2,6 @@
 title: "managedidentity"
 title_tag: "azure-native.managedidentity"
 meta_desc: "Explore the resources and functions of the azure-native.managedidentity module."
-aliases:
-    - "docs/reference/pkg/azure-native/"
 layout: api
 ---
 

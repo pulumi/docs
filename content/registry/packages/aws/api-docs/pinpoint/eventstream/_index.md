@@ -3,8 +3,6 @@
 title: "EventStream"
 title_tag: "aws.pinpoint.EventStream"
 meta_desc: "Documentation for the aws.pinpoint.EventStream resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/EventStream/"
 layout: api
 ---
 

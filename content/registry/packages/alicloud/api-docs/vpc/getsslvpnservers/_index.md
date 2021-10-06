@@ -3,8 +3,6 @@
 title: "getSslVpnServers"
 title_tag: "alicloud.vpc.getSslVpnServers"
 meta_desc: "Documentation for the alicloud.vpc.getSslVpnServers function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

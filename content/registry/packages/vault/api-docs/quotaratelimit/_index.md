@@ -3,8 +3,6 @@
 title: "QuotaRateLimit"
 title_tag: "vault.QuotaRateLimit"
 meta_desc: "Documentation for the vault.QuotaRateLimit resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/vault/QuotaRateLimit/"
 layout: api
 ---
 

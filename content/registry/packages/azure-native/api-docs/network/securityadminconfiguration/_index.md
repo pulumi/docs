@@ -3,8 +3,6 @@
 title: "SecurityAdminConfiguration"
 title_tag: "azure-native.network.SecurityAdminConfiguration"
 meta_desc: "Documentation for the azure-native.network.SecurityAdminConfiguration resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/SecurityAdminConfiguration/"
 layout: api
 ---
 

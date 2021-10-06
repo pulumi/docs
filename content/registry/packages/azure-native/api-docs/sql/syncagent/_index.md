@@ -3,8 +3,6 @@
 title: "SyncAgent"
 title_tag: "azure-native.sql.SyncAgent"
 meta_desc: "Documentation for the azure-native.sql.SyncAgent resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/SyncAgent/"
 layout: api
 ---
 

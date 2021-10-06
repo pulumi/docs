@@ -3,8 +3,6 @@
 title: "GtmCidrmap"
 title_tag: "akamai.GtmCidrmap"
 meta_desc: "Documentation for the akamai.GtmCidrmap resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/akamai/GtmCidrmap/"
 layout: api
 ---
 

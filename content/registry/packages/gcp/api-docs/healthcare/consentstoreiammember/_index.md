@@ -3,8 +3,6 @@
 title: "ConsentStoreIamMember"
 title_tag: "gcp.healthcare.ConsentStoreIamMember"
 meta_desc: "Documentation for the gcp.healthcare.ConsentStoreIamMember resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/ConsentStoreIamMember/"
 layout: api
 ---
 

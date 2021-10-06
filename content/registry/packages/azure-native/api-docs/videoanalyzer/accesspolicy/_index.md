@@ -3,8 +3,6 @@
 title: "AccessPolicy"
 title_tag: "azure-native.videoanalyzer.AccessPolicy"
 meta_desc: "Documentation for the azure-native.videoanalyzer.AccessPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/AccessPolicy/"
 layout: api
 ---
 

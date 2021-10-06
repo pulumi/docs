@@ -3,8 +3,6 @@
 title: "RepositoryWebhook"
 title_tag: "github.RepositoryWebhook"
 meta_desc: "Documentation for the github.RepositoryWebhook resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/github/RepositoryWebhook/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "ReplicationController"
 title_tag: "kubernetes.core/v1.ReplicationController"
 meta_desc: "Documentation for the kubernetes.core/v1.ReplicationController resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/kubernetes/ReplicationController/"
 layout: api
 ---
 

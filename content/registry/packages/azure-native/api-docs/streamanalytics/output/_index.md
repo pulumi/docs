@@ -3,8 +3,6 @@
 title: "Output"
 title_tag: "azure-native.streamanalytics.Output"
 meta_desc: "Documentation for the azure-native.streamanalytics.Output resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/Output/"
 layout: api
 ---
 

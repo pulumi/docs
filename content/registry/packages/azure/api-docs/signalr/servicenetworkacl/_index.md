@@ -3,8 +3,6 @@
 title: "ServiceNetworkAcl"
 title_tag: "azure.signalr.ServiceNetworkAcl"
 meta_desc: "Documentation for the azure.signalr.ServiceNetworkAcl resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/ServiceNetworkAcl/"
 layout: api
 ---
 

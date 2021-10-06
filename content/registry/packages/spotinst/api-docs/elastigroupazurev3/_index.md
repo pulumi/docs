@@ -3,8 +3,6 @@
 title: "ElastigroupAzureV3"
 title_tag: "spotinst.ElastigroupAzureV3"
 meta_desc: "Documentation for the spotinst.ElastigroupAzureV3 resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/spotinst/ElastigroupAzureV3/"
 layout: api
 ---
 

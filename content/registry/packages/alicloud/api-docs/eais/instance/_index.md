@@ -3,8 +3,6 @@
 title: "Instance"
 title_tag: "alicloud.eais.Instance"
 meta_desc: "Documentation for the alicloud.eais.Instance resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/alicloud/Instance/"
 layout: api
 ---
 

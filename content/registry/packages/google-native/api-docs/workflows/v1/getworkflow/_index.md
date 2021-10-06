@@ -3,8 +3,6 @@
 title: "getWorkflow"
 title_tag: "google-native.workflows/v1.getWorkflow"
 meta_desc: "Documentation for the google-native.workflows/v1.getWorkflow function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

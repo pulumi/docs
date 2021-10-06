@@ -2,8 +2,6 @@
 title: "containerregistry"
 title_tag: "azure-native.containerregistry"
 meta_desc: "Explore the resources and functions of the azure-native.containerregistry module."
-aliases:
-    - "docs/reference/pkg/azure-native/"
 layout: api
 ---
 

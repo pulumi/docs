@@ -3,8 +3,6 @@
 title: "getNetworkAreaMembers"
 title_tag: "consul.getNetworkAreaMembers"
 meta_desc: "Documentation for the consul.getNetworkAreaMembers function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

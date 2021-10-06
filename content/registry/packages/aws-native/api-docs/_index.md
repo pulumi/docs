@@ -2,8 +2,6 @@
 title: "AWS Native"
 title_tag: "AWS Native Package"
 meta_desc: "A native Pulumi package for creating and managing Amazon Web Services (AWS) resources."
-aliases:
-    - "docs/reference/pkg/aws-native/"
 menu:
     reference:
         parent: API Reference

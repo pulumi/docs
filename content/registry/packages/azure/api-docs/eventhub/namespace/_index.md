@@ -3,8 +3,6 @@
 title: "Namespace"
 title_tag: "azure.eventhub.Namespace"
 meta_desc: "Documentation for the azure.eventhub.Namespace resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/Namespace/"
 layout: api
 ---
 

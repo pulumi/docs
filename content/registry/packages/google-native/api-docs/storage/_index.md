@@ -2,8 +2,6 @@
 title: "storage"
 title_tag: "storage Package"
 meta_desc: ""
-aliases:
-    - "docs/reference/pkg/google-native/"
 layout: api
 ---
 

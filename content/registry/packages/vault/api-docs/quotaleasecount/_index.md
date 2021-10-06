@@ -3,8 +3,6 @@
 title: "QuotaLeaseCount"
 title_tag: "vault.QuotaLeaseCount"
 meta_desc: "Documentation for the vault.QuotaLeaseCount resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/vault/QuotaLeaseCount/"
 layout: api
 ---
 

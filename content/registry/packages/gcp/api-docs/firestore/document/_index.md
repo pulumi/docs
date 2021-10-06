@@ -3,8 +3,6 @@
 title: "Document"
 title_tag: "gcp.firestore.Document"
 meta_desc: "Documentation for the gcp.firestore.Document resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/Document/"
 layout: api
 ---
 

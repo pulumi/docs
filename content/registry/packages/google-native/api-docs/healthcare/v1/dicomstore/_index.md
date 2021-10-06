@@ -3,8 +3,6 @@
 title: "DicomStore"
 title_tag: "google-native.healthcare/v1.DicomStore"
 meta_desc: "Documentation for the google-native.healthcare/v1.DicomStore resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/google-native/DicomStore/"
 layout: api
 ---
 

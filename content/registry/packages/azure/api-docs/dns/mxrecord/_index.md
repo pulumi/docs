@@ -3,8 +3,6 @@
 title: "MxRecord"
 title_tag: "azure.dns.MxRecord"
 meta_desc: "Documentation for the azure.dns.MxRecord resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/MxRecord/"
 layout: api
 ---
 

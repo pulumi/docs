@@ -3,8 +3,6 @@
 title: "getInstance"
 title_tag: "google-native.remotebuildexecution/v1alpha.getInstance"
 meta_desc: "Documentation for the google-native.remotebuildexecution/v1alpha.getInstance function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

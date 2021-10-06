@@ -3,8 +3,6 @@
 title: "PreventionDeidentifyTemplate"
 title_tag: "gcp.dataloss.PreventionDeidentifyTemplate"
 meta_desc: "Documentation for the gcp.dataloss.PreventionDeidentifyTemplate resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/PreventionDeidentifyTemplate/"
 layout: api
 ---
 

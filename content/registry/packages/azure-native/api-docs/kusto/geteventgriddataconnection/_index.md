@@ -3,8 +3,6 @@
 title: "getEventGridDataConnection"
 title_tag: "azure-native.kusto.getEventGridDataConnection"
 meta_desc: "Documentation for the azure-native.kusto.getEventGridDataConnection function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

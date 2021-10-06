@@ -2,8 +2,6 @@
 title: "extendedlocation"
 title_tag: "azure-native.extendedlocation"
 meta_desc: "Explore the resources and functions of the azure-native.extendedlocation module."
-aliases:
-    - "docs/reference/pkg/azure-native/"
 layout: api
 ---
 

@@ -2,8 +2,6 @@
 title: "images"
 title_tag: "openstack.images"
 meta_desc: "Explore the resources and functions of the openstack.images module."
-aliases:
-    - "docs/reference/pkg/openstack/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "BackupPolicy"
 title_tag: "azure-native.dataprotection.BackupPolicy"
 meta_desc: "Documentation for the azure-native.dataprotection.BackupPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/BackupPolicy/"
 layout: api
 ---
 

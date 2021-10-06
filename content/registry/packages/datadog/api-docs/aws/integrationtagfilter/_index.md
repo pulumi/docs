@@ -3,8 +3,6 @@
 title: "IntegrationTagFilter"
 title_tag: "datadog.aws.IntegrationTagFilter"
 meta_desc: "Documentation for the datadog.aws.IntegrationTagFilter resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/datadog/IntegrationTagFilter/"
 layout: api
 ---
 

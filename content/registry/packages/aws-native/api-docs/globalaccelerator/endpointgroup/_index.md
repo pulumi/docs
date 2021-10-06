@@ -3,8 +3,6 @@
 title: "EndpointGroup"
 title_tag: "aws-native.globalaccelerator.EndpointGroup"
 meta_desc: "Documentation for the aws-native.globalaccelerator.EndpointGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws-native/EndpointGroup/"
 layout: api
 ---
 

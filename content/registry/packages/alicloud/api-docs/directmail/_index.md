@@ -2,8 +2,6 @@
 title: "directmail"
 title_tag: "alicloud.directmail"
 meta_desc: "Explore the resources and functions of the alicloud.directmail module."
-aliases:
-    - "docs/reference/pkg/alicloud/"
 layout: api
 ---
 

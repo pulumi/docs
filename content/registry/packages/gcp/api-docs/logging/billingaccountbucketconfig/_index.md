@@ -3,8 +3,6 @@
 title: "BillingAccountBucketConfig"
 title_tag: "gcp.logging.BillingAccountBucketConfig"
 meta_desc: "Documentation for the gcp.logging.BillingAccountBucketConfig resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/BillingAccountBucketConfig/"
 layout: api
 ---
 

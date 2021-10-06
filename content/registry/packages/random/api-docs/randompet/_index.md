@@ -3,8 +3,6 @@
 title: "RandomPet"
 title_tag: "random.RandomPet"
 meta_desc: "Documentation for the random.RandomPet resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/random/RandomPet/"
 layout: api
 ---
 

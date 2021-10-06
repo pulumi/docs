@@ -3,8 +3,6 @@
 title: "VpnSite"
 title_tag: "azure.network.VpnSite"
 meta_desc: "Documentation for the azure.network.VpnSite resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/VpnSite/"
 layout: api
 ---
 

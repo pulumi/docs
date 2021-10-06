@@ -3,8 +3,6 @@
 title: "Monitor"
 title_tag: "sumologic.Monitor"
 meta_desc: "Documentation for the sumologic.Monitor resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/sumologic/Monitor/"
 layout: api
 ---
 

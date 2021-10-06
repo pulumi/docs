@@ -3,8 +3,6 @@
 title: "CloudInitDisk"
 title_tag: "libvirt.CloudInitDisk"
 meta_desc: "Documentation for the libvirt.CloudInitDisk resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/libvirt/CloudInitDisk/"
 layout: api
 ---
 

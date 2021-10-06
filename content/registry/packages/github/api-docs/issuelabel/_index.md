@@ -3,8 +3,6 @@
 title: "IssueLabel"
 title_tag: "github.IssueLabel"
 meta_desc: "Documentation for the github.IssueLabel resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/github/IssueLabel/"
 layout: api
 ---
 

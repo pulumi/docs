@@ -3,8 +3,6 @@
 title: "ClientAggregatePolicy"
 title_tag: "keycloak.openid.ClientAggregatePolicy"
 meta_desc: "Documentation for the keycloak.openid.ClientAggregatePolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/keycloak/ClientAggregatePolicy/"
 layout: api
 ---
 

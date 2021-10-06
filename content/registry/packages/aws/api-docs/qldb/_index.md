@@ -2,8 +2,6 @@
 title: "qldb"
 title_tag: "aws.qldb"
 meta_desc: "Explore the resources and functions of the aws.qldb module."
-aliases:
-    - "docs/reference/pkg/aws/"
 layout: api
 ---
 

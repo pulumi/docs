@@ -3,8 +3,6 @@
 title: "Registry"
 title_tag: "rancher2.Registry"
 meta_desc: "Documentation for the rancher2.Registry resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/rancher2/Registry/"
 layout: api
 ---
 

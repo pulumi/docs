@@ -2,8 +2,6 @@
 title: "servicefabric"
 title_tag: "azure-native.servicefabric"
 meta_desc: "Explore the resources and functions of the azure-native.servicefabric module."
-aliases:
-    - "docs/reference/pkg/azure-native/"
 layout: api
 ---
 

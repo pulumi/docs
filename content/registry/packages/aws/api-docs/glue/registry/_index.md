@@ -3,8 +3,6 @@
 title: "Registry"
 title_tag: "aws.glue.Registry"
 meta_desc: "Documentation for the aws.glue.Registry resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/Registry/"
 layout: api
 ---
 

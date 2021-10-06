@@ -3,8 +3,6 @@
 title: "AuthConfigActiveDirectory"
 title_tag: "rancher2.AuthConfigActiveDirectory"
 meta_desc: "Documentation for the rancher2.AuthConfigActiveDirectory resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/rancher2/AuthConfigActiveDirectory/"
 layout: api
 ---
 

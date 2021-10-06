@@ -3,8 +3,6 @@
 title: "CloudIntegrationEc2"
 title_tag: "wavefront.CloudIntegrationEc2"
 meta_desc: "Documentation for the wavefront.CloudIntegrationEc2 resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/wavefront/CloudIntegrationEc2/"
 layout: api
 ---
 

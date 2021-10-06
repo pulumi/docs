@@ -3,8 +3,6 @@
 title: "TagKeyIamMember"
 title_tag: "gcp.tags.TagKeyIamMember"
 meta_desc: "Documentation for the gcp.tags.TagKeyIamMember resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/TagKeyIamMember/"
 layout: api
 ---
 

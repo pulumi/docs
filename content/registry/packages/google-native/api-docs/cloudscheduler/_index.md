@@ -2,8 +2,6 @@
 title: "cloudscheduler"
 title_tag: "cloudscheduler Package"
 meta_desc: ""
-aliases:
-    - "docs/reference/pkg/google-native/"
 layout: api
 ---
 

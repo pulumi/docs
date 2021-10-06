@@ -2,8 +2,6 @@
 title: "artifactregistry/v1beta2"
 title_tag: "google-native.artifactregistry/v1beta2"
 meta_desc: "Explore the resources and functions of the google-native.artifactregistry/v1beta2 module."
-aliases:
-    - "docs/reference/pkg/google-native/"
 layout: api
 ---
 

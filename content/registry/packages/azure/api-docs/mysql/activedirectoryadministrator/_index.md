@@ -3,8 +3,6 @@
 title: "ActiveDirectoryAdministrator"
 title_tag: "azure.mysql.ActiveDirectoryAdministrator"
 meta_desc: "Documentation for the azure.mysql.ActiveDirectoryAdministrator resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/ActiveDirectoryAdministrator/"
 layout: api
 ---
 

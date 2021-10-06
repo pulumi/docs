@@ -3,8 +3,6 @@
 title: "NodeGroupIamPolicy"
 title_tag: "google-native.compute/alpha.NodeGroupIamPolicy"
 meta_desc: "Documentation for the google-native.compute/alpha.NodeGroupIamPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/google-native/NodeGroupIamPolicy/"
 layout: api
 ---
 

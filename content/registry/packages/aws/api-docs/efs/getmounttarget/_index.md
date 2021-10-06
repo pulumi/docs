@@ -3,8 +3,6 @@
 title: "getMountTarget"
 title_tag: "aws.efs.getMountTarget"
 meta_desc: "Documentation for the aws.efs.getMountTarget function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

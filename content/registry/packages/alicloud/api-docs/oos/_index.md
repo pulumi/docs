@@ -2,8 +2,6 @@
 title: "oos"
 title_tag: "alicloud.oos"
 meta_desc: "Explore the resources and functions of the alicloud.oos module."
-aliases:
-    - "docs/reference/pkg/alicloud/"
 layout: api
 ---
 

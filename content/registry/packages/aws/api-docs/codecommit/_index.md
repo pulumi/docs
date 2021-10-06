@@ -2,8 +2,6 @@
 title: "codecommit"
 title_tag: "aws.codecommit"
 meta_desc: "Explore the resources and functions of the aws.codecommit module."
-aliases:
-    - "docs/reference/pkg/aws/"
 layout: api
 ---
 

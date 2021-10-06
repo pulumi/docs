@@ -3,8 +3,6 @@
 title: "RegisteredPrefix"
 title_tag: "azure-native.peering.RegisteredPrefix"
 meta_desc: "Documentation for the azure-native.peering.RegisteredPrefix resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/RegisteredPrefix/"
 layout: api
 ---
 

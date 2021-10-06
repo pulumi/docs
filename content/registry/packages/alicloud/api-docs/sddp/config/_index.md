@@ -3,8 +3,6 @@
 title: "Config"
 title_tag: "alicloud.sddp.Config"
 meta_desc: "Documentation for the alicloud.sddp.Config resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/alicloud/Config/"
 layout: api
 ---
 

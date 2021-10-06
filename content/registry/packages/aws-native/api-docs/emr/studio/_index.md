@@ -3,8 +3,6 @@
 title: "Studio"
 title_tag: "aws-native.emr.Studio"
 meta_desc: "Documentation for the aws-native.emr.Studio resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws-native/Studio/"
 layout: api
 ---
 

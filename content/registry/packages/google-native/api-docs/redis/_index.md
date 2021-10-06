@@ -2,8 +2,6 @@
 title: "redis"
 title_tag: "redis Package"
 meta_desc: ""
-aliases:
-    - "docs/reference/pkg/google-native/"
 layout: api
 ---
 

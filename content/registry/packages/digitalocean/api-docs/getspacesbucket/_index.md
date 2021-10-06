@@ -3,8 +3,6 @@
 title: "getSpacesBucket"
 title_tag: "digitalocean.getSpacesBucket"
 meta_desc: "Documentation for the digitalocean.getSpacesBucket function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

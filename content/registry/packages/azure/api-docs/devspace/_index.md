@@ -2,8 +2,6 @@
 title: "devspace"
 title_tag: "azure.devspace"
 meta_desc: "Explore the resources and functions of the azure.devspace module."
-aliases:
-    - "docs/reference/pkg/azure/"
 layout: api
 ---
 

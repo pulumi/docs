@@ -3,8 +3,6 @@
 title: "ApiDestination"
 title_tag: "aws-native.events.ApiDestination"
 meta_desc: "Documentation for the aws-native.events.ApiDestination resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws-native/ApiDestination/"
 layout: api
 ---
 

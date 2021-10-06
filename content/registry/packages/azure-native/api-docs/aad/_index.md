@@ -2,8 +2,6 @@
 title: "aad"
 title_tag: "azure-native.aad"
 meta_desc: "Explore the resources and functions of the azure-native.aad module."
-aliases:
-    - "docs/reference/pkg/azure-native/"
 layout: api
 ---
 

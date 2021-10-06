@@ -3,8 +3,6 @@
 title: "getSubnetGroup"
 title_tag: "aws.rds.getSubnetGroup"
 meta_desc: "Documentation for the aws.rds.getSubnetGroup function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

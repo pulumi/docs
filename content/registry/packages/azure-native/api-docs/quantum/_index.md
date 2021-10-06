@@ -2,8 +2,6 @@
 title: "quantum"
 title_tag: "azure-native.quantum"
 meta_desc: "Explore the resources and functions of the azure-native.quantum module."
-aliases:
-    - "docs/reference/pkg/azure-native/"
 layout: api
 ---
 

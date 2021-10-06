@@ -3,8 +3,6 @@
 title: "DiagnosticSetting"
 title_tag: "azure-native.aadiam.DiagnosticSetting"
 meta_desc: "Documentation for the azure-native.aadiam.DiagnosticSetting resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/DiagnosticSetting/"
 layout: api
 ---
 

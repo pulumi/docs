@@ -3,8 +3,6 @@
 title: "ProjectResources"
 title_tag: "digitalocean.ProjectResources"
 meta_desc: "Documentation for the digitalocean.ProjectResources resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/digitalocean/ProjectResources/"
 layout: api
 ---
 

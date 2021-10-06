@@ -3,8 +3,6 @@
 title: "getAutoScaleVCore"
 title_tag: "azure-native.powerbidedicated.getAutoScaleVCore"
 meta_desc: "Documentation for the azure-native.powerbidedicated.getAutoScaleVCore function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

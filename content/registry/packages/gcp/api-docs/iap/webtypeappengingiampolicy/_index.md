@@ -3,8 +3,6 @@
 title: "WebTypeAppEngingIamPolicy"
 title_tag: "gcp.iap.WebTypeAppEngingIamPolicy"
 meta_desc: "Documentation for the gcp.iap.WebTypeAppEngingIamPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/WebTypeAppEngingIamPolicy/"
 layout: api
 ---
 

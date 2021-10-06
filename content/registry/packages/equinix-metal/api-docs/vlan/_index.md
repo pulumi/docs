@@ -3,8 +3,6 @@
 title: "Vlan"
 title_tag: "equinix-metal.Vlan"
 meta_desc: "Documentation for the equinix-metal.Vlan resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/equinix-metal/Vlan/"
 layout: api
 ---
 

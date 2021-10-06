@@ -3,8 +3,6 @@
 title: "RuleGroupsNamespace"
 title_tag: "aws-native.aps.RuleGroupsNamespace"
 meta_desc: "Documentation for the aws-native.aps.RuleGroupsNamespace resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws-native/RuleGroupsNamespace/"
 layout: api
 ---
 

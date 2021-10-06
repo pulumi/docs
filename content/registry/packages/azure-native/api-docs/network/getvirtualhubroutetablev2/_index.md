@@ -3,8 +3,6 @@
 title: "getVirtualHubRouteTableV2"
 title_tag: "azure-native.network.getVirtualHubRouteTableV2"
 meta_desc: "Documentation for the azure-native.network.getVirtualHubRouteTableV2 function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

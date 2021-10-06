@@ -2,8 +2,6 @@
 title: "appflow"
 title_tag: "aws-native.appflow"
 meta_desc: "Explore the resources and functions of the aws-native.appflow module."
-aliases:
-    - "docs/reference/pkg/aws-native/"
 layout: api
 ---
 

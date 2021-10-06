@@ -2,8 +2,6 @@
 title: "cognito"
 title_tag: "aws.cognito"
 meta_desc: "Explore the resources and functions of the aws.cognito module."
-aliases:
-    - "docs/reference/pkg/aws/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "getNetworkSecurityGroup"
 title_tag: "azure.network.getNetworkSecurityGroup"
 meta_desc: "Documentation for the azure.network.getNetworkSecurityGroup function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

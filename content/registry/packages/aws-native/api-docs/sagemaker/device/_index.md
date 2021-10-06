@@ -3,8 +3,6 @@
 title: "Device"
 title_tag: "aws-native.sagemaker.Device"
 meta_desc: "Documentation for the aws-native.sagemaker.Device resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws-native/Device/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "getLbTargetGroup"
 title_tag: "yandex.getLbTargetGroup"
 meta_desc: "Documentation for the yandex.getLbTargetGroup function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

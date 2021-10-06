@@ -3,8 +3,6 @@
 title: "Incident"
 title_tag: "azure-native.securityinsights.Incident"
 meta_desc: "Documentation for the azure-native.securityinsights.Incident resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/Incident/"
 layout: api
 ---
 

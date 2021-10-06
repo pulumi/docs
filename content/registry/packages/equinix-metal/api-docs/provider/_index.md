@@ -3,8 +3,6 @@
 title: "Provider"
 title_tag: "equinix-metal.Provider"
 meta_desc: "Documentation for the equinix-metal.Provider resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/equinix-metal/equinix-metal/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "getProperty"
 title_tag: "akamai.properties.getProperty"
 meta_desc: "Documentation for the akamai.properties.getProperty function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

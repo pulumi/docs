@@ -3,8 +3,6 @@
 title: "listAccountKeys"
 title_tag: "azure-native.engagementfabric.listAccountKeys"
 meta_desc: "Documentation for the azure-native.engagementfabric.listAccountKeys function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

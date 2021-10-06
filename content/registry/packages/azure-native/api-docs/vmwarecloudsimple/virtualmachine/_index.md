@@ -3,8 +3,6 @@
 title: "VirtualMachine"
 title_tag: "azure-native.vmwarecloudsimple.VirtualMachine"
 meta_desc: "Documentation for the azure-native.vmwarecloudsimple.VirtualMachine resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/VirtualMachine/"
 layout: api
 ---
 

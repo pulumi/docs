@@ -2,8 +2,6 @@
 title: "kms"
 title_tag: "alicloud.kms"
 meta_desc: "Explore the resources and functions of the alicloud.kms module."
-aliases:
-    - "docs/reference/pkg/alicloud/"
 layout: api
 ---
 

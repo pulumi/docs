@@ -3,8 +3,6 @@
 title: "GroupMembership"
 title_tag: "aws.iam.GroupMembership"
 meta_desc: "Documentation for the aws.iam.GroupMembership resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/GroupMembership/"
 layout: api
 ---
 

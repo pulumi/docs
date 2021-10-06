@@ -2,8 +2,6 @@
 title: "cosmosdb"
 title_tag: "azure.cosmosdb"
 meta_desc: "Explore the resources and functions of the azure.cosmosdb module."
-aliases:
-    - "docs/reference/pkg/azure/"
 layout: api
 ---
 

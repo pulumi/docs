@@ -3,8 +3,6 @@
 title: "AppSecAttackGroup"
 title_tag: "akamai.AppSecAttackGroup"
 meta_desc: "Documentation for the akamai.AppSecAttackGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/akamai/AppSecAttackGroup/"
 layout: api
 ---
 

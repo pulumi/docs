@@ -3,8 +3,6 @@
 title: "ServerDetails"
 title_tag: "azure-native.analysisservices.ServerDetails"
 meta_desc: "Documentation for the azure-native.analysisservices.ServerDetails resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/ServerDetails/"
 layout: api
 ---
 

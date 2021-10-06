@@ -3,8 +3,6 @@
 title: "getTraceSink"
 title_tag: "google-native.cloudtrace/v2beta1.getTraceSink"
 meta_desc: "Documentation for the google-native.cloudtrace/v2beta1.getTraceSink function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

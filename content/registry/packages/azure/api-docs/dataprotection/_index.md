@@ -2,8 +2,6 @@
 title: "dataprotection"
 title_tag: "azure.dataprotection"
 meta_desc: "Explore the resources and functions of the azure.dataprotection module."
-aliases:
-    - "docs/reference/pkg/azure/"
 layout: api
 ---
 

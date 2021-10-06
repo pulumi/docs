@@ -3,8 +3,6 @@
 title: "Api"
 title_tag: "azure-native.apimanagement.Api"
 meta_desc: "Documentation for the azure-native.apimanagement.Api resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/Api/"
 layout: api
 ---
 

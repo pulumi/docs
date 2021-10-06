@@ -2,8 +2,6 @@
 title: "backup"
 title_tag: "aws-native.backup"
 meta_desc: "Explore the resources and functions of the aws-native.backup module."
-aliases:
-    - "docs/reference/pkg/aws-native/"
 layout: api
 ---
 

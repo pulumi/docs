@@ -2,8 +2,6 @@
 title: "properties"
 title_tag: "akamai.properties"
 meta_desc: "Explore the resources and functions of the akamai.properties module."
-aliases:
-    - "docs/reference/pkg/akamai/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "ByoIpPrefix"
 title_tag: "cloudflare.ByoIpPrefix"
 meta_desc: "Documentation for the cloudflare.ByoIpPrefix resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/cloudflare/ByoIpPrefix/"
 layout: api
 ---
 

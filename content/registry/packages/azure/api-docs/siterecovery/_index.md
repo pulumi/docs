@@ -2,8 +2,6 @@
 title: "siterecovery"
 title_tag: "azure.siterecovery"
 meta_desc: "Explore the resources and functions of the azure.siterecovery module."
-aliases:
-    - "docs/reference/pkg/azure/"
 layout: api
 ---
 

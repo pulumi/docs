@@ -3,8 +3,6 @@
 title: "ProjectAlertGroup"
 title_tag: "rancher2.ProjectAlertGroup"
 meta_desc: "Documentation for the rancher2.ProjectAlertGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/rancher2/ProjectAlertGroup/"
 layout: api
 ---
 

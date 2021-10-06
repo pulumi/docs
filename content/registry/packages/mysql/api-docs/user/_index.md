@@ -3,8 +3,6 @@
 title: "User"
 title_tag: "mysql.User"
 meta_desc: "Documentation for the mysql.User resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/mysql/User/"
 layout: api
 ---
 

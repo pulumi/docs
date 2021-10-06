@@ -3,8 +3,6 @@
 title: "VpcIpv4CidrBlockAssociation"
 title_tag: "aws.ec2.VpcIpv4CidrBlockAssociation"
 meta_desc: "Documentation for the aws.ec2.VpcIpv4CidrBlockAssociation resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/VpcIpv4CidrBlockAssociation/"
 layout: api
 ---
 

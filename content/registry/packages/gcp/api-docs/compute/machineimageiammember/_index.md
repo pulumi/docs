@@ -3,8 +3,6 @@
 title: "MachineImageIamMember"
 title_tag: "gcp.compute.MachineImageIamMember"
 meta_desc: "Documentation for the gcp.compute.MachineImageIamMember resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/MachineImageIamMember/"
 layout: api
 ---
 

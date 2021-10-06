@@ -3,8 +3,6 @@
 title: "getJobTemplates"
 title_tag: "alicloud.ehpc.getJobTemplates"
 meta_desc: "Documentation for the alicloud.ehpc.getJobTemplates function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

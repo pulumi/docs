@@ -2,8 +2,6 @@
 title: "billing"
 title_tag: "gcp.billing"
 meta_desc: "Explore the resources and functions of the gcp.billing module."
-aliases:
-    - "docs/reference/pkg/gcp/"
 layout: api
 ---
 

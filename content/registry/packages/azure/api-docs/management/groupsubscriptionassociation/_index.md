@@ -3,8 +3,6 @@
 title: "GroupSubscriptionAssociation"
 title_tag: "azure.management.GroupSubscriptionAssociation"
 meta_desc: "Documentation for the azure.management.GroupSubscriptionAssociation resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/GroupSubscriptionAssociation/"
 layout: api
 ---
 

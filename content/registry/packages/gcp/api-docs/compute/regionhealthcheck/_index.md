@@ -3,8 +3,6 @@
 title: "RegionHealthCheck"
 title_tag: "gcp.compute.RegionHealthCheck"
 meta_desc: "Documentation for the gcp.compute.RegionHealthCheck resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/RegionHealthCheck/"
 layout: api
 ---
 

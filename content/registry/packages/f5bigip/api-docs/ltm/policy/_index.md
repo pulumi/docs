@@ -3,8 +3,6 @@
 title: "Policy"
 title_tag: "f5bigip.ltm.Policy"
 meta_desc: "Documentation for the f5bigip.ltm.Policy resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/f5bigip/Policy/"
 layout: api
 ---
 

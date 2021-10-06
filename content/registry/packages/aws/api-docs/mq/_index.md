@@ -2,8 +2,6 @@
 title: "mq"
 title_tag: "aws.mq"
 meta_desc: "Explore the resources and functions of the aws.mq module."
-aliases:
-    - "docs/reference/pkg/aws/"
 layout: api
 ---
 

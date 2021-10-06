@@ -3,8 +3,6 @@
 title: "getStep"
 title_tag: "google-native.toolresults/v1beta3.getStep"
 meta_desc: "Documentation for the google-native.toolresults/v1beta3.getStep function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

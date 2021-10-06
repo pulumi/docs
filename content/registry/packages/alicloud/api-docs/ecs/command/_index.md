@@ -3,8 +3,6 @@
 title: "Command"
 title_tag: "alicloud.ecs.Command"
 meta_desc: "Documentation for the alicloud.ecs.Command resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/alicloud/Command/"
 layout: api
 ---
 

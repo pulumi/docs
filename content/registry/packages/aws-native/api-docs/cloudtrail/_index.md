@@ -2,8 +2,6 @@
 title: "cloudtrail"
 title_tag: "aws-native.cloudtrail"
 meta_desc: "Explore the resources and functions of the aws-native.cloudtrail module."
-aliases:
-    - "docs/reference/pkg/aws-native/"
 layout: api
 ---
 

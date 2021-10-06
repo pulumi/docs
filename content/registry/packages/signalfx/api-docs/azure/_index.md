@@ -2,8 +2,6 @@
 title: "azure"
 title_tag: "signalfx.azure"
 meta_desc: "Explore the resources and functions of the signalfx.azure module."
-aliases:
-    - "docs/reference/pkg/signalfx/"
 layout: api
 ---
 

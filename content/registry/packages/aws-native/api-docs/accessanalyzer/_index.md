@@ -2,8 +2,6 @@
 title: "accessanalyzer"
 title_tag: "aws-native.accessanalyzer"
 meta_desc: "Explore the resources and functions of the aws-native.accessanalyzer module."
-aliases:
-    - "docs/reference/pkg/aws-native/"
 layout: api
 ---
 

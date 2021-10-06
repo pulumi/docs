@@ -3,8 +3,6 @@
 title: "AuthBackendUser"
 title_tag: "vault.ldap.AuthBackendUser"
 meta_desc: "Documentation for the vault.ldap.AuthBackendUser resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/vault/AuthBackendUser/"
 layout: api
 ---
 

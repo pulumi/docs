@@ -3,8 +3,6 @@
 title: "Rule"
 title_tag: "azure-native.cdn.Rule"
 meta_desc: "Documentation for the azure-native.cdn.Rule resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/Rule/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "VpcSubnet"
 title_tag: "yandex.VpcSubnet"
 meta_desc: "Documentation for the yandex.VpcSubnet resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/yandex/VpcSubnet/"
 layout: api
 ---
 

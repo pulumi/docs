@@ -3,8 +3,6 @@
 title: "getBackendService"
 title_tag: "gcp.compute.getBackendService"
 meta_desc: "Documentation for the gcp.compute.getBackendService function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

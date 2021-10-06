@@ -3,8 +3,6 @@
 title: "MySql"
 title_tag: "aiven.MySql"
 meta_desc: "Documentation for the aiven.MySql resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aiven/MySql/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "getEnterprisePolicy"
 title_tag: "azure-native.powerplatform.getEnterprisePolicy"
 meta_desc: "Documentation for the azure-native.powerplatform.getEnterprisePolicy function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

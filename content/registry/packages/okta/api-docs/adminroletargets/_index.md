@@ -3,8 +3,6 @@
 title: "AdminRoleTargets"
 title_tag: "okta.AdminRoleTargets"
 meta_desc: "Documentation for the okta.AdminRoleTargets resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/okta/AdminRoleTargets/"
 layout: api
 ---
 

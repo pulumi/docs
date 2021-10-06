@@ -3,8 +3,6 @@
 title: "GroupTemplateDeployment"
 title_tag: "azure.management.GroupTemplateDeployment"
 meta_desc: "Documentation for the azure.management.GroupTemplateDeployment resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/GroupTemplateDeployment/"
 layout: api
 ---
 

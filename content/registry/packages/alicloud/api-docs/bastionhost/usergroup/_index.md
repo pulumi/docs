@@ -3,8 +3,6 @@
 title: "UserGroup"
 title_tag: "alicloud.bastionhost.UserGroup"
 meta_desc: "Documentation for the alicloud.bastionhost.UserGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/alicloud/UserGroup/"
 layout: api
 ---
 

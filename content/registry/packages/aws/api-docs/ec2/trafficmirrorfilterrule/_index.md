@@ -3,8 +3,6 @@
 title: "TrafficMirrorFilterRule"
 title_tag: "aws.ec2.TrafficMirrorFilterRule"
 meta_desc: "Documentation for the aws.ec2.TrafficMirrorFilterRule resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/TrafficMirrorFilterRule/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "Cluster"
 title_tag: "gcp.dataproc.Cluster"
 meta_desc: "Documentation for the gcp.dataproc.Cluster resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/Cluster/"
 layout: api
 ---
 

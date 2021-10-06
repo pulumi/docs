@@ -2,8 +2,6 @@
 title: "greengrassv2"
 title_tag: "aws-native.greengrassv2"
 meta_desc: "Explore the resources and functions of the aws-native.greengrassv2 module."
-aliases:
-    - "docs/reference/pkg/aws-native/"
 layout: api
 ---
 

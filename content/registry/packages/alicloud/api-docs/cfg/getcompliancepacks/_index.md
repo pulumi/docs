@@ -3,8 +3,6 @@
 title: "getCompliancePacks"
 title_tag: "alicloud.cfg.getCompliancePacks"
 meta_desc: "Documentation for the alicloud.cfg.getCompliancePacks function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

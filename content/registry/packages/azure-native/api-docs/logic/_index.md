@@ -2,8 +2,6 @@
 title: "logic"
 title_tag: "azure-native.logic"
 meta_desc: "Explore the resources and functions of the azure-native.logic module."
-aliases:
-    - "docs/reference/pkg/azure-native/"
 layout: api
 ---
 

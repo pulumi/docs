@@ -2,8 +2,6 @@
 title: "orchestration"
 title_tag: "openstack.orchestration"
 meta_desc: "Explore the resources and functions of the openstack.orchestration module."
-aliases:
-    - "docs/reference/pkg/openstack/"
 layout: api
 ---
 

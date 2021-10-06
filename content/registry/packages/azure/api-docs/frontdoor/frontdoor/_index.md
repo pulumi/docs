@@ -3,8 +3,6 @@
 title: "Frontdoor"
 title_tag: "azure.frontdoor.Frontdoor"
 meta_desc: "Documentation for the azure.frontdoor.Frontdoor resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/Frontdoor/"
 layout: api
 ---
 

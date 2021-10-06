@@ -3,8 +3,6 @@
 title: "VirtualMachineSchedule"
 title_tag: "azure-native.devtestlab.VirtualMachineSchedule"
 meta_desc: "Documentation for the azure-native.devtestlab.VirtualMachineSchedule resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/VirtualMachineSchedule/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "Service"
 title_tag: "kong.Service"
 meta_desc: "Documentation for the kong.Service resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/kong/Service/"
 layout: api
 ---
 

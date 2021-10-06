@@ -3,8 +3,6 @@
 title: "IpAttachment"
 title_tag: "packet.IpAttachment"
 meta_desc: "Documentation for the packet.IpAttachment resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/packet/IpAttachment/"
 layout: api
 ---
 

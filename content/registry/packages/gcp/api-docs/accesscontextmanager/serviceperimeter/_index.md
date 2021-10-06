@@ -3,8 +3,6 @@
 title: "ServicePerimeter"
 title_tag: "gcp.accesscontextmanager.ServicePerimeter"
 meta_desc: "Documentation for the gcp.accesscontextmanager.ServicePerimeter resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/ServicePerimeter/"
 layout: api
 ---
 

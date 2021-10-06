@@ -3,8 +3,6 @@
 title: "ResourceGroupTemplateDeployment"
 title_tag: "azure.core.ResourceGroupTemplateDeployment"
 meta_desc: "Documentation for the azure.core.ResourceGroupTemplateDeployment resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/ResourceGroupTemplateDeployment/"
 layout: api
 ---
 

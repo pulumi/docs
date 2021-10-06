@@ -3,8 +3,6 @@
 title: "getPrivateEndpoint"
 title_tag: "azure-native.streamanalytics.getPrivateEndpoint"
 meta_desc: "Documentation for the azure-native.streamanalytics.getPrivateEndpoint function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

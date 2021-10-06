@@ -3,8 +3,6 @@
 title: "Namespace"
 title_tag: "azure-native.notificationhubs.Namespace"
 meta_desc: "Documentation for the azure-native.notificationhubs.Namespace resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/Namespace/"
 layout: api
 ---
 

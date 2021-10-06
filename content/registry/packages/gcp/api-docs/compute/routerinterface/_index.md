@@ -3,8 +3,6 @@
 title: "RouterInterface"
 title_tag: "gcp.compute.RouterInterface"
 meta_desc: "Documentation for the gcp.compute.RouterInterface resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/RouterInterface/"
 layout: api
 ---
 

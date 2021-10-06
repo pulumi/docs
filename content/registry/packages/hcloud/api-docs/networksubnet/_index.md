@@ -3,8 +3,6 @@
 title: "NetworkSubnet"
 title_tag: "hcloud.NetworkSubnet"
 meta_desc: "Documentation for the hcloud.NetworkSubnet resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/hcloud/NetworkSubnet/"
 layout: api
 ---
 

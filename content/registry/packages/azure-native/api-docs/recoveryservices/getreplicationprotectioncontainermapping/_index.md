@@ -3,8 +3,6 @@
 title: "getReplicationProtectionContainerMapping"
 title_tag: "azure-native.recoveryservices.getReplicationProtectionContainerMapping"
 meta_desc: "Documentation for the azure-native.recoveryservices.getReplicationProtectionContainerMapping function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

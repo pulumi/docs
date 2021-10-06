@@ -3,8 +3,6 @@
 title: "getUserProfileMappingSource"
 title_tag: "okta.user.getUserProfileMappingSource"
 meta_desc: "Documentation for the okta.user.getUserProfileMappingSource function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

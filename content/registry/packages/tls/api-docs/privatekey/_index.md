@@ -3,8 +3,6 @@
 title: "PrivateKey"
 title_tag: "tls.PrivateKey"
 meta_desc: "Documentation for the tls.PrivateKey resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/tls/PrivateKey/"
 layout: api
 ---
 

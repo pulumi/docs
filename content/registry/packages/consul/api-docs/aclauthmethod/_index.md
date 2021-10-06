@@ -3,8 +3,6 @@
 title: "AclAuthMethod"
 title_tag: "consul.AclAuthMethod"
 meta_desc: "Documentation for the consul.AclAuthMethod resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/consul/AclAuthMethod/"
 layout: api
 ---
 

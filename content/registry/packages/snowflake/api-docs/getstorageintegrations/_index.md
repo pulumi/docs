@@ -3,8 +3,6 @@
 title: "getStorageIntegrations"
 title_tag: "snowflake.getStorageIntegrations"
 meta_desc: "Documentation for the snowflake.getStorageIntegrations function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

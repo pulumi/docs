@@ -3,8 +3,6 @@
 title: "getKafkaConnect"
 title_tag: "aiven.getKafkaConnect"
 meta_desc: "Documentation for the aiven.getKafkaConnect function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

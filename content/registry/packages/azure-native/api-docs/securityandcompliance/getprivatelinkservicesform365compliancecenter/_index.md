@@ -3,8 +3,6 @@
 title: "getprivateLinkServicesForM365ComplianceCenter"
 title_tag: "azure-native.securityandcompliance.getprivateLinkServicesForM365ComplianceCenter"
 meta_desc: "Documentation for the azure-native.securityandcompliance.getprivateLinkServicesForM365ComplianceCenter function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

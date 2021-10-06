@@ -2,8 +2,6 @@
 title: "powerplatform"
 title_tag: "azure-native.powerplatform"
 meta_desc: "Explore the resources and functions of the azure-native.powerplatform module."
-aliases:
-    - "docs/reference/pkg/azure-native/"
 layout: api
 ---
 

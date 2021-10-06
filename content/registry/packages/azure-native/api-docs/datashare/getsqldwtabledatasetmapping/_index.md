@@ -3,8 +3,6 @@
 title: "getSqlDWTableDataSetMapping"
 title_tag: "azure-native.datashare.getSqlDWTableDataSetMapping"
 meta_desc: "Documentation for the azure-native.datashare.getSqlDWTableDataSetMapping function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

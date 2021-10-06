@@ -3,8 +3,6 @@
 title: "getPrivateLinkHub"
 title_tag: "azure-native.synapse.getPrivateLinkHub"
 meta_desc: "Documentation for the azure-native.synapse.getPrivateLinkHub function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

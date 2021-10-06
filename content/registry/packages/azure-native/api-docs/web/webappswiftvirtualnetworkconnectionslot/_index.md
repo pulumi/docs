@@ -3,8 +3,6 @@
 title: "WebAppSwiftVirtualNetworkConnectionSlot"
 title_tag: "azure-native.web.WebAppSwiftVirtualNetworkConnectionSlot"
 meta_desc: "Documentation for the azure-native.web.WebAppSwiftVirtualNetworkConnectionSlot resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/WebAppSwiftVirtualNetworkConnectionSlot/"
 layout: api
 ---
 

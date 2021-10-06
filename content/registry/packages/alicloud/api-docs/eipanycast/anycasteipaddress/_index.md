@@ -3,8 +3,6 @@
 title: "AnycastEipAddress"
 title_tag: "alicloud.eipanycast.AnycastEipAddress"
 meta_desc: "Documentation for the alicloud.eipanycast.AnycastEipAddress resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/alicloud/AnycastEipAddress/"
 layout: api
 ---
 

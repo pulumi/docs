@@ -3,8 +3,6 @@
 title: "getRouter"
 title_tag: "google-native.compute/v1.getRouter"
 meta_desc: "Documentation for the google-native.compute/v1.getRouter function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

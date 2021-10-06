@@ -3,8 +3,6 @@
 title: "SecretVersion"
 title_tag: "aws.secretsmanager.SecretVersion"
 meta_desc: "Documentation for the aws.secretsmanager.SecretVersion resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/SecretVersion/"
 layout: api
 ---
 

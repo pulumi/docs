@@ -3,8 +3,6 @@
 title: "Lab"
 title_tag: "azure-native.devtestlab.Lab"
 meta_desc: "Documentation for the azure-native.devtestlab.Lab resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/Lab/"
 layout: api
 ---
 

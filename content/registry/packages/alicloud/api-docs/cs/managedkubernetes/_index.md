@@ -3,8 +3,6 @@
 title: "ManagedKubernetes"
 title_tag: "alicloud.cs.ManagedKubernetes"
 meta_desc: "Documentation for the alicloud.cs.ManagedKubernetes resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/alicloud/ManagedKubernetes/"
 layout: api
 ---
 

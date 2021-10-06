@@ -2,8 +2,6 @@
 title: "apprunner"
 title_tag: "aws.apprunner"
 meta_desc: "Explore the resources and functions of the aws.apprunner module."
-aliases:
-    - "docs/reference/pkg/aws/"
 layout: api
 ---
 

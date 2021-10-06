@@ -3,8 +3,6 @@
 title: "VappEntity"
 title_tag: "vsphere.VappEntity"
 meta_desc: "Documentation for the vsphere.VappEntity resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/vsphere/VappEntity/"
 layout: api
 ---
 

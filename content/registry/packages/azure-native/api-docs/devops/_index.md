@@ -2,8 +2,6 @@
 title: "devops"
 title_tag: "azure-native.devops"
 meta_desc: "Explore the resources and functions of the azure-native.devops module."
-aliases:
-    - "docs/reference/pkg/azure-native/"
 layout: api
 ---
 

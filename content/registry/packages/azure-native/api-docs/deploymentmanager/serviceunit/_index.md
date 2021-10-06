@@ -3,8 +3,6 @@
 title: "ServiceUnit"
 title_tag: "azure-native.deploymentmanager.ServiceUnit"
 meta_desc: "Documentation for the azure-native.deploymentmanager.ServiceUnit resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/ServiceUnit/"
 layout: api
 ---
 

@@ -2,8 +2,6 @@
 title: "storage"
 title_tag: "gcp.storage"
 meta_desc: "Explore the resources and functions of the gcp.storage module."
-aliases:
-    - "docs/reference/pkg/gcp/"
 layout: api
 ---
 

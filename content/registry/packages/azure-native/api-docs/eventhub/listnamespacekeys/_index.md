@@ -3,8 +3,6 @@
 title: "listNamespaceKeys"
 title_tag: "azure-native.eventhub.listNamespaceKeys"
 meta_desc: "Documentation for the azure-native.eventhub.listNamespaceKeys function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

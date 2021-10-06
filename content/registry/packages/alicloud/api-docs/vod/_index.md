@@ -2,8 +2,6 @@
 title: "vod"
 title_tag: "alicloud.vod"
 meta_desc: "Explore the resources and functions of the alicloud.vod module."
-aliases:
-    - "docs/reference/pkg/alicloud/"
 layout: api
 ---
 

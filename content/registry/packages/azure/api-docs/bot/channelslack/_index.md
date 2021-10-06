@@ -3,8 +3,6 @@
 title: "ChannelSlack"
 title_tag: "azure.bot.ChannelSlack"
 meta_desc: "Documentation for the azure.bot.ChannelSlack resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/ChannelSlack/"
 layout: api
 ---
 

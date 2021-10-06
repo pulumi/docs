@@ -2,8 +2,6 @@
 title: "inline"
 title_tag: "okta.inline"
 meta_desc: "Explore the resources and functions of the okta.inline module."
-aliases:
-    - "docs/reference/pkg/okta/"
 layout: api
 ---
 

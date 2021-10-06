@@ -2,8 +2,6 @@
 title: "cloudfirewall"
 title_tag: "alicloud.cloudfirewall"
 meta_desc: "Explore the resources and functions of the alicloud.cloudfirewall module."
-aliases:
-    - "docs/reference/pkg/alicloud/"
 layout: api
 ---
 

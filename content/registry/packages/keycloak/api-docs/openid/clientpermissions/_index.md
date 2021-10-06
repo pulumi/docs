@@ -3,8 +3,6 @@
 title: "ClientPermissions"
 title_tag: "keycloak.openid.ClientPermissions"
 meta_desc: "Documentation for the keycloak.openid.ClientPermissions resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/keycloak/ClientPermissions/"
 layout: api
 ---
 

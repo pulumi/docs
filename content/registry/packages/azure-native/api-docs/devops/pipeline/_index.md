@@ -3,8 +3,6 @@
 title: "Pipeline"
 title_tag: "azure-native.devops.Pipeline"
 meta_desc: "Documentation for the azure-native.devops.Pipeline resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/Pipeline/"
 layout: api
 ---
 

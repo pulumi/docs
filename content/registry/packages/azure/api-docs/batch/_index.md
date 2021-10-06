@@ -2,8 +2,6 @@
 title: "batch"
 title_tag: "azure.batch"
 meta_desc: "Explore the resources and functions of the azure.batch module."
-aliases:
-    - "docs/reference/pkg/azure/"
 layout: api
 ---
 

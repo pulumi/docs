@@ -3,8 +3,6 @@
 title: "ApplicationCredential"
 title_tag: "openstack.identity.ApplicationCredential"
 meta_desc: "Documentation for the openstack.identity.ApplicationCredential resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/openstack/ApplicationCredential/"
 layout: api
 ---
 

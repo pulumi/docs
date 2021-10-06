@@ -3,8 +3,6 @@
 title: "Service"
 title_tag: "gcp.servicedirectory.Service"
 meta_desc: "Documentation for the gcp.servicedirectory.Service resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/Service/"
 layout: api
 ---
 

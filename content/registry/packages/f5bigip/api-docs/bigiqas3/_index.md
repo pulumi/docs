@@ -3,8 +3,6 @@
 title: "BigIqAs3"
 title_tag: "f5bigip.BigIqAs3"
 meta_desc: "Documentation for the f5bigip.BigIqAs3 resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/f5bigip/BigIqAs3/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "getVpcSubnet"
 title_tag: "yandex.getVpcSubnet"
 meta_desc: "Documentation for the yandex.getVpcSubnet function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "SubscriptionRule"
 title_tag: "azure.servicebus.SubscriptionRule"
 meta_desc: "Documentation for the azure.servicebus.SubscriptionRule resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/SubscriptionRule/"
 layout: api
 ---
 

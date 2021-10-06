@@ -3,8 +3,6 @@
 title: "ServiceIntegration"
 title_tag: "pagerduty.ServiceIntegration"
 meta_desc: "Documentation for the pagerduty.ServiceIntegration resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/pagerduty/ServiceIntegration/"
 layout: api
 ---
 

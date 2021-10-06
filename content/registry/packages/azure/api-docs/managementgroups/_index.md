@@ -2,8 +2,6 @@
 title: "managementgroups"
 title_tag: "azure.managementgroups"
 meta_desc: "Explore the resources and functions of the azure.managementgroups module."
-aliases:
-    - "docs/reference/pkg/azure/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "getGateway"
 title_tag: "google-native.apigateway/v1.getGateway"
 meta_desc: "Documentation for the google-native.apigateway/v1.getGateway function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

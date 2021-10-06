@@ -2,8 +2,6 @@
 title: "signer"
 title_tag: "aws.signer"
 meta_desc: "Explore the resources and functions of the aws.signer module."
-aliases:
-    - "docs/reference/pkg/aws/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "LogsArchive"
 title_tag: "datadog.LogsArchive"
 meta_desc: "Documentation for the datadog.LogsArchive resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/datadog/LogsArchive/"
 layout: api
 ---
 

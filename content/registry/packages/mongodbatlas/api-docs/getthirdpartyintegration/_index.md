@@ -3,8 +3,6 @@
 title: "getThirdPartyIntegration"
 title_tag: "mongodbatlas.getThirdPartyIntegration"
 meta_desc: "Documentation for the mongodbatlas.getThirdPartyIntegration function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

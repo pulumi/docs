@@ -3,8 +3,6 @@
 title: "listKustoPoolFollowerDatabases"
 title_tag: "azure-native.synapse.listKustoPoolFollowerDatabases"
 meta_desc: "Documentation for the azure-native.synapse.listKustoPoolFollowerDatabases function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

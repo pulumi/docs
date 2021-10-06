@@ -3,8 +3,6 @@
 title: "getArtifact"
 title_tag: "azure-native.blueprint.getArtifact"
 meta_desc: "Documentation for the azure-native.blueprint.getArtifact function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

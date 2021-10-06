@@ -2,8 +2,6 @@
 title: "fms"
 title_tag: "aws-native.fms"
 meta_desc: "Explore the resources and functions of the aws-native.fms module."
-aliases:
-    - "docs/reference/pkg/aws-native/"
 layout: api
 ---
 

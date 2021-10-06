@@ -3,8 +3,6 @@
 title: "ApplicationGroup"
 title_tag: "azure.desktopvirtualization.ApplicationGroup"
 meta_desc: "Documentation for the azure.desktopvirtualization.ApplicationGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/ApplicationGroup/"
 layout: api
 ---
 

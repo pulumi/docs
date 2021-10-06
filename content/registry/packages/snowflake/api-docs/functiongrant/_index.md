@@ -3,8 +3,6 @@
 title: "FunctionGrant"
 title_tag: "snowflake.FunctionGrant"
 meta_desc: "Documentation for the snowflake.FunctionGrant resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/snowflake/FunctionGrant/"
 layout: api
 ---
 

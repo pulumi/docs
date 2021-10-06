@@ -3,8 +3,6 @@
 title: "TransferJob"
 title_tag: "google-native.storagetransfer/v1.TransferJob"
 meta_desc: "Documentation for the google-native.storagetransfer/v1.TransferJob resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/google-native/TransferJob/"
 layout: api
 ---
 

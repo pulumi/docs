@@ -3,8 +3,6 @@
 title: "getServiceLevelObjective"
 title_tag: "datadog.getServiceLevelObjective"
 meta_desc: "Documentation for the datadog.getServiceLevelObjective function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "OssBackupPlan"
 title_tag: "alicloud.hbr.OssBackupPlan"
 meta_desc: "Documentation for the alicloud.hbr.OssBackupPlan resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/alicloud/OssBackupPlan/"
 layout: api
 ---
 

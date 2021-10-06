@@ -3,8 +3,6 @@
 title: "CustomPages"
 title_tag: "cloudflare.CustomPages"
 meta_desc: "Documentation for the cloudflare.CustomPages resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/cloudflare/CustomPages/"
 layout: api
 ---
 

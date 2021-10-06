@@ -3,8 +3,6 @@
 title: "getService"
 title_tag: "alicloud.log.getService"
 meta_desc: "Documentation for the alicloud.log.getService function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

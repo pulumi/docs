@@ -3,8 +3,6 @@
 title: "getSqlServerInstance"
 title_tag: "azure-native.azurearcdata.getSqlServerInstance"
 meta_desc: "Documentation for the azure-native.azurearcdata.getSqlServerInstance function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

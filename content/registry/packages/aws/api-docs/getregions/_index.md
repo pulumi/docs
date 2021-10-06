@@ -3,8 +3,6 @@
 title: "getRegions"
 title_tag: "aws.getRegions"
 meta_desc: "Documentation for the aws.getRegions function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

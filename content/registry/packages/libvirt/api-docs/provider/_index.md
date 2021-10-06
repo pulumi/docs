@@ -3,8 +3,6 @@
 title: "Provider"
 title_tag: "libvirt.Provider"
 meta_desc: "Documentation for the libvirt.Provider resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/libvirt/libvirt/"
 layout: api
 ---
 

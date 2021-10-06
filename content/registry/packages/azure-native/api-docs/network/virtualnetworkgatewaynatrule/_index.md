@@ -3,8 +3,6 @@
 title: "VirtualNetworkGatewayNatRule"
 title_tag: "azure-native.network.VirtualNetworkGatewayNatRule"
 meta_desc: "Documentation for the azure-native.network.VirtualNetworkGatewayNatRule resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/VirtualNetworkGatewayNatRule/"
 layout: api
 ---
 

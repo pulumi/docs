@@ -3,8 +3,6 @@
 title: "getBatchDeployment"
 title_tag: "azure-native.machinelearningservices.getBatchDeployment"
 meta_desc: "Documentation for the azure-native.machinelearningservices.getBatchDeployment function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

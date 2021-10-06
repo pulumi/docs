@@ -3,8 +3,6 @@
 title: "Schema"
 title_tag: "aws-native.glue.Schema"
 meta_desc: "Documentation for the aws-native.glue.Schema resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws-native/Schema/"
 layout: api
 ---
 

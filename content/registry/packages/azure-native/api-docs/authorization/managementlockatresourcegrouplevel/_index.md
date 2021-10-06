@@ -3,8 +3,6 @@
 title: "ManagementLockAtResourceGroupLevel"
 title_tag: "azure-native.authorization.ManagementLockAtResourceGroupLevel"
 meta_desc: "Documentation for the azure-native.authorization.ManagementLockAtResourceGroupLevel resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/ManagementLockAtResourceGroupLevel/"
 layout: api
 ---
 

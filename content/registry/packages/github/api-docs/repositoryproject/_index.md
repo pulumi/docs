@@ -3,8 +3,6 @@
 title: "RepositoryProject"
 title_tag: "github.RepositoryProject"
 meta_desc: "Documentation for the github.RepositoryProject resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/github/RepositoryProject/"
 layout: api
 ---
 

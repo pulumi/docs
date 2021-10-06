@@ -3,8 +3,6 @@
 title: "Tag"
 title_tag: "azure.apimanagement.Tag"
 meta_desc: "Documentation for the azure.apimanagement.Tag resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/Tag/"
 layout: api
 ---
 

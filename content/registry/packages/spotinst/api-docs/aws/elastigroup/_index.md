@@ -3,8 +3,6 @@
 title: "Elastigroup"
 title_tag: "spotinst.aws.Elastigroup"
 meta_desc: "Documentation for the spotinst.aws.Elastigroup resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/spotinst/Elastigroup/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "MonitoringSchedule"
 title_tag: "aws-native.sagemaker.MonitoringSchedule"
 meta_desc: "Documentation for the aws-native.sagemaker.MonitoringSchedule resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws-native/MonitoringSchedule/"
 layout: api
 ---
 

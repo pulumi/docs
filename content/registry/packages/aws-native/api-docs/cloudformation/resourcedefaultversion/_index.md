@@ -3,8 +3,6 @@
 title: "ResourceDefaultVersion"
 title_tag: "aws-native.cloudformation.ResourceDefaultVersion"
 meta_desc: "Documentation for the aws-native.cloudformation.ResourceDefaultVersion resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws-native/ResourceDefaultVersion/"
 layout: api
 ---
 

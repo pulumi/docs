@@ -3,8 +3,6 @@
 title: "JavaAppLayer"
 title_tag: "aws.opsworks.JavaAppLayer"
 meta_desc: "Documentation for the aws.opsworks.JavaAppLayer resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/JavaAppLayer/"
 layout: api
 ---
 

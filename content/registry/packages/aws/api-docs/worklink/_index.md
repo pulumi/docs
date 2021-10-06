@@ -2,8 +2,6 @@
 title: "worklink"
 title_tag: "aws.worklink"
 meta_desc: "Explore the resources and functions of the aws.worklink module."
-aliases:
-    - "docs/reference/pkg/aws/"
 layout: api
 ---
 

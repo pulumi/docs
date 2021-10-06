@@ -3,8 +3,6 @@
 title: "EntityQuery"
 title_tag: "azure-native.securityinsights.EntityQuery"
 meta_desc: "Documentation for the azure-native.securityinsights.EntityQuery resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/EntityQuery/"
 layout: api
 ---
 

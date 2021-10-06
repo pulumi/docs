@@ -3,8 +3,6 @@
 title: "getHybridRunbookWorker"
 title_tag: "azure-native.automation.getHybridRunbookWorker"
 meta_desc: "Documentation for the azure-native.automation.getHybridRunbookWorker function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

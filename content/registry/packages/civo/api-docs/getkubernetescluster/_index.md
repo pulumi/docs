@@ -3,8 +3,6 @@
 title: "getKubernetesCluster"
 title_tag: "civo.getKubernetesCluster"
 meta_desc: "Documentation for the civo.getKubernetesCluster function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

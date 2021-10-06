@@ -3,8 +3,6 @@
 title: "listRegistryCredentials"
 title_tag: "azure-native.containerregistry.listRegistryCredentials"
 meta_desc: "Documentation for the azure-native.containerregistry.listRegistryCredentials function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

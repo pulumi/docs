@@ -3,8 +3,6 @@
 title: "TeamMembership"
 title_tag: "pagerduty.TeamMembership"
 meta_desc: "Documentation for the pagerduty.TeamMembership resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/pagerduty/TeamMembership/"
 layout: api
 ---
 

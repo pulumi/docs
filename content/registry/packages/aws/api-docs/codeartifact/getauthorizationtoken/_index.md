@@ -3,8 +3,6 @@
 title: "getAuthorizationToken"
 title_tag: "aws.codeartifact.getAuthorizationToken"
 meta_desc: "Documentation for the aws.codeartifact.getAuthorizationToken function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

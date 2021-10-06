@@ -3,8 +3,6 @@
 title: "getWorkspace"
 title_tag: "azure.synapse.getWorkspace"
 meta_desc: "Documentation for the azure.synapse.getWorkspace function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

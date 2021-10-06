@@ -2,8 +2,6 @@
 title: "kvstore"
 title_tag: "alicloud.kvstore"
 meta_desc: "Explore the resources and functions of the alicloud.kvstore module."
-aliases:
-    - "docs/reference/pkg/alicloud/"
 layout: api
 ---
 

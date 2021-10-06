@@ -3,8 +3,6 @@
 title: "JobTrigger"
 title_tag: "google-native.dlp/v2.JobTrigger"
 meta_desc: "Documentation for the google-native.dlp/v2.JobTrigger resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/google-native/JobTrigger/"
 layout: api
 ---
 

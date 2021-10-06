@@ -3,8 +3,6 @@
 title: "getBillingAccount"
 title_tag: "gcp.organizations.getBillingAccount"
 meta_desc: "Documentation for the gcp.organizations.getBillingAccount function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

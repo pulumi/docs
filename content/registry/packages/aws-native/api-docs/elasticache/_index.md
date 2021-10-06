@@ -2,8 +2,6 @@
 title: "elasticache"
 title_tag: "aws-native.elasticache"
 meta_desc: "Explore the resources and functions of the aws-native.elasticache module."
-aliases:
-    - "docs/reference/pkg/aws-native/"
 layout: api
 ---
 

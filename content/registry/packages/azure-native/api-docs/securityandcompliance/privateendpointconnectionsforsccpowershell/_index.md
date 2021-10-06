@@ -3,8 +3,6 @@
 title: "PrivateEndpointConnectionsForSCCPowershell"
 title_tag: "azure-native.securityandcompliance.PrivateEndpointConnectionsForSCCPowershell"
 meta_desc: "Documentation for the azure-native.securityandcompliance.PrivateEndpointConnectionsForSCCPowershell resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/PrivateEndpointConnectionsForSCCPowershell/"
 layout: api
 ---
 

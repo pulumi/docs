@@ -3,8 +3,6 @@
 title: "EdgeCacheService"
 title_tag: "gcp.networkservices.EdgeCacheService"
 meta_desc: "Documentation for the gcp.networkservices.EdgeCacheService resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/EdgeCacheService/"
 layout: api
 ---
 

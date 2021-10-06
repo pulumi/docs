@@ -3,8 +3,6 @@
 title: "Bucket"
 title_tag: "gcp.storage.Bucket"
 meta_desc: "Documentation for the gcp.storage.Bucket resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/Bucket/"
 layout: api
 ---
 

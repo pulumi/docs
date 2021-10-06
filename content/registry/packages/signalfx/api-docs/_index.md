@@ -2,8 +2,6 @@
 title: "SignalFx"
 title_tag: "SignalFx Package"
 meta_desc: "A Pulumi package for creating and managing SignalFx resources."
-aliases:
-    - "docs/reference/pkg/signalfx/"
 menu:
     reference:
         parent: API Reference

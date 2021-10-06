@@ -3,8 +3,6 @@
 title: "Document"
 title_tag: "aws.ssm.Document"
 meta_desc: "Documentation for the aws.ssm.Document resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/Document/"
 layout: api
 ---
 

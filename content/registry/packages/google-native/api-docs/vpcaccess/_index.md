@@ -2,8 +2,6 @@
 title: "vpcaccess"
 title_tag: "vpcaccess Package"
 meta_desc: ""
-aliases:
-    - "docs/reference/pkg/google-native/"
 layout: api
 ---
 

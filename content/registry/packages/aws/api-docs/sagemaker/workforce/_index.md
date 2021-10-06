@@ -3,8 +3,6 @@
 title: "Workforce"
 title_tag: "aws.sagemaker.Workforce"
 meta_desc: "Documentation for the aws.sagemaker.Workforce resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/Workforce/"
 layout: api
 ---
 

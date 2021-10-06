@@ -3,8 +3,6 @@
 title: "getClientInstallationProvider"
 title_tag: "keycloak.saml.getClientInstallationProvider"
 meta_desc: "Documentation for the keycloak.saml.getClientInstallationProvider function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

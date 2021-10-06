@@ -3,8 +3,6 @@
 title: "LocalSubjectAccessReview"
 title_tag: "kubernetes.authorization.k8s.io/v1.LocalSubjectAccessReview"
 meta_desc: "Documentation for the kubernetes.authorization.k8s.io/v1.LocalSubjectAccessReview resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/kubernetes/LocalSubjectAccessReview/"
 layout: api
 ---
 

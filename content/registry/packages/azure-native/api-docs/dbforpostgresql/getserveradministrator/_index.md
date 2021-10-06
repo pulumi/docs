@@ -3,8 +3,6 @@
 title: "getServerAdministrator"
 title_tag: "azure-native.dbforpostgresql.getServerAdministrator"
 meta_desc: "Documentation for the azure-native.dbforpostgresql.getServerAdministrator function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

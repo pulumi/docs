@@ -2,8 +2,6 @@
 title: "database"
 title_tag: "vault.database"
 meta_desc: "Explore the resources and functions of the vault.database module."
-aliases:
-    - "docs/reference/pkg/vault/"
 layout: api
 ---
 

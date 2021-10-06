@@ -3,8 +3,6 @@
 title: "getAppService"
 title_tag: "azure.appservice.getAppService"
 meta_desc: "Documentation for the azure.appservice.getAppService function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

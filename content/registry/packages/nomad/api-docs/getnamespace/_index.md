@@ -3,9 +3,7 @@
 title: "getNamespace"
 title_tag: "nomad.getNamespace"
 meta_desc: "Documentation for the nomad.getNamespace function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
-layout: api-doc-resource
+layout: api
 ---
 
 

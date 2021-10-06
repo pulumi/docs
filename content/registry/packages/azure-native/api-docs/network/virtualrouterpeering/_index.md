@@ -3,8 +3,6 @@
 title: "VirtualRouterPeering"
 title_tag: "azure-native.network.VirtualRouterPeering"
 meta_desc: "Documentation for the azure-native.network.VirtualRouterPeering resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/VirtualRouterPeering/"
 layout: api
 ---
 

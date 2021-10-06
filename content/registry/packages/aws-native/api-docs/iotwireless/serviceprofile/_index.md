@@ -3,8 +3,6 @@
 title: "ServiceProfile"
 title_tag: "aws-native.iotwireless.ServiceProfile"
 meta_desc: "Documentation for the aws-native.iotwireless.ServiceProfile resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws-native/ServiceProfile/"
 layout: api
 ---
 

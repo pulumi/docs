@@ -3,8 +3,6 @@
 title: "getDomainRecords"
 title_tag: "alicloud.dns.getDomainRecords"
 meta_desc: "Documentation for the alicloud.dns.getDomainRecords function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "CacheBlobNfsTarget"
 title_tag: "azure.hpc.CacheBlobNfsTarget"
 meta_desc: "Documentation for the azure.hpc.CacheBlobNfsTarget resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/CacheBlobNfsTarget/"
 layout: api
 ---
 

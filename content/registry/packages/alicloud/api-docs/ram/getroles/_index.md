@@ -3,8 +3,6 @@
 title: "getRoles"
 title_tag: "alicloud.ram.getRoles"
 meta_desc: "Documentation for the alicloud.ram.getRoles function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

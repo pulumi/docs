@@ -3,8 +3,6 @@
 title: "getAuthScope"
 title_tag: "openstack.identity.getAuthScope"
 meta_desc: "Documentation for the openstack.identity.getAuthScope function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

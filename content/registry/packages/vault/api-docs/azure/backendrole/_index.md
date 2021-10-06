@@ -3,8 +3,6 @@
 title: "BackendRole"
 title_tag: "vault.azure.BackendRole"
 meta_desc: "Documentation for the vault.azure.BackendRole resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/vault/BackendRole/"
 layout: api
 ---
 

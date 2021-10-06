@@ -3,8 +3,6 @@
 title: "PipelineScheduleVariable"
 title_tag: "gitlab.PipelineScheduleVariable"
 meta_desc: "Documentation for the gitlab.PipelineScheduleVariable resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gitlab/PipelineScheduleVariable/"
 layout: api
 ---
 

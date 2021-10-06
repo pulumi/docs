@@ -3,8 +3,6 @@
 title: "TrafficMirrorSession"
 title_tag: "aws.ec2.TrafficMirrorSession"
 meta_desc: "Documentation for the aws.ec2.TrafficMirrorSession resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/TrafficMirrorSession/"
 layout: api
 ---
 

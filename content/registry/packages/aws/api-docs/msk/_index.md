@@ -2,8 +2,6 @@
 title: "msk"
 title_tag: "aws.msk"
 meta_desc: "Explore the resources and functions of the aws.msk module."
-aliases:
-    - "docs/reference/pkg/aws/"
 layout: api
 ---
 

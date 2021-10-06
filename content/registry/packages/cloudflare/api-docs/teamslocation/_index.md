@@ -3,8 +3,6 @@
 title: "TeamsLocation"
 title_tag: "cloudflare.TeamsLocation"
 meta_desc: "Documentation for the cloudflare.TeamsLocation resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/cloudflare/TeamsLocation/"
 layout: api
 ---
 

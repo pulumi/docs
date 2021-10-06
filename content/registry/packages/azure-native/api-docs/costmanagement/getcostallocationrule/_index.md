@@ -3,8 +3,6 @@
 title: "getCostAllocationRule"
 title_tag: "azure-native.costmanagement.getCostAllocationRule"
 meta_desc: "Documentation for the azure-native.costmanagement.getCostAllocationRule function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

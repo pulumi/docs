@@ -3,8 +3,6 @@
 title: "getResourcePool"
 title_tag: "vsphere.getResourcePool"
 meta_desc: "Documentation for the vsphere.getResourcePool function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "OrganizationPolicy"
 title_tag: "gcp.folder.OrganizationPolicy"
 meta_desc: "Documentation for the gcp.folder.OrganizationPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/OrganizationPolicy/"
 layout: api
 ---
 

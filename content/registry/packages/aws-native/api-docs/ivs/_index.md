@@ -2,8 +2,6 @@
 title: "ivs"
 title_tag: "aws-native.ivs"
 meta_desc: "Explore the resources and functions of the aws-native.ivs module."
-aliases:
-    - "docs/reference/pkg/aws-native/"
 layout: api
 ---
 

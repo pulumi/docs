@@ -3,8 +3,6 @@
 title: "Firewall"
 title_tag: "civo.Firewall"
 meta_desc: "Documentation for the civo.Firewall resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/civo/Firewall/"
 layout: api
 ---
 

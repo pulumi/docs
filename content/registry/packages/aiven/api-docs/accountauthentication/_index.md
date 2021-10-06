@@ -3,8 +3,6 @@
 title: "AccountAuthentication"
 title_tag: "aiven.AccountAuthentication"
 meta_desc: "Documentation for the aiven.AccountAuthentication resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aiven/AccountAuthentication/"
 layout: api
 ---
 

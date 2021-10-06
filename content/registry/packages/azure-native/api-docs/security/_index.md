@@ -2,8 +2,6 @@
 title: "security"
 title_tag: "azure-native.security"
 meta_desc: "Explore the resources and functions of the azure-native.security module."
-aliases:
-    - "docs/reference/pkg/azure-native/"
 layout: api
 ---
 

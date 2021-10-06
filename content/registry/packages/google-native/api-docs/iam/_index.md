@@ -2,8 +2,6 @@
 title: "iam"
 title_tag: "iam Package"
 meta_desc: ""
-aliases:
-    - "docs/reference/pkg/google-native/"
 layout: api
 ---
 

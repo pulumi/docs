@@ -3,8 +3,6 @@
 title: "LifecycleHook"
 title_tag: "alicloud.ess.LifecycleHook"
 meta_desc: "Documentation for the alicloud.ess.LifecycleHook resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/alicloud/LifecycleHook/"
 layout: api
 ---
 

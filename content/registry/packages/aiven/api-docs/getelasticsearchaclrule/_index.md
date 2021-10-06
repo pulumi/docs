@@ -3,8 +3,6 @@
 title: "getElasticSearchAclRule"
 title_tag: "aiven.getElasticSearchAclRule"
 meta_desc: "Documentation for the aiven.getElasticSearchAclRule function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

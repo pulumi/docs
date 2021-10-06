@@ -3,8 +3,6 @@
 title: "getImages"
 title_tag: "hcloud.getImages"
 meta_desc: "Documentation for the hcloud.getImages function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

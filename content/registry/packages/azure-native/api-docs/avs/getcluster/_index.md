@@ -3,8 +3,6 @@
 title: "getCluster"
 title_tag: "azure-native.avs.getCluster"
 meta_desc: "Documentation for the azure-native.avs.getCluster function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

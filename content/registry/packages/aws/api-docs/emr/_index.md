@@ -2,8 +2,6 @@
 title: "emr"
 title_tag: "aws.emr"
 meta_desc: "Explore the resources and functions of the aws.emr module."
-aliases:
-    - "docs/reference/pkg/aws/"
 layout: api
 ---
 

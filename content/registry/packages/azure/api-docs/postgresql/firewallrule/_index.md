@@ -3,8 +3,6 @@
 title: "FirewallRule"
 title_tag: "azure.postgresql.FirewallRule"
 meta_desc: "Documentation for the azure.postgresql.FirewallRule resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/FirewallRule/"
 layout: api
 ---
 

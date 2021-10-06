@@ -3,8 +3,6 @@
 title: "ServicePrincipal"
 title_tag: "azuread.ServicePrincipal"
 meta_desc: "Documentation for the azuread.ServicePrincipal resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azuread/ServicePrincipal/"
 layout: api
 ---
 

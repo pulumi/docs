@@ -3,8 +3,6 @@
 title: "Dataset"
 title_tag: "google-native.healthcare/v1beta1.Dataset"
 meta_desc: "Documentation for the google-native.healthcare/v1beta1.Dataset resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/google-native/Dataset/"
 layout: api
 ---
 

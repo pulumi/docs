@@ -3,8 +3,6 @@
 title: "DatastoreCluster"
 title_tag: "vsphere.DatastoreCluster"
 meta_desc: "Documentation for the vsphere.DatastoreCluster resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/vsphere/DatastoreCluster/"
 layout: api
 ---
 

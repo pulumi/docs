@@ -3,8 +3,6 @@
 title: "Disk"
 title_tag: "azure-native.compute.Disk"
 meta_desc: "Documentation for the azure-native.compute.Disk resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/Disk/"
 layout: api
 ---
 

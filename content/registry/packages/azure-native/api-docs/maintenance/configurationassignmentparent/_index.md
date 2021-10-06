@@ -3,8 +3,6 @@
 title: "ConfigurationAssignmentParent"
 title_tag: "azure-native.maintenance.ConfigurationAssignmentParent"
 meta_desc: "Documentation for the azure-native.maintenance.ConfigurationAssignmentParent resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/ConfigurationAssignmentParent/"
 layout: api
 ---
 

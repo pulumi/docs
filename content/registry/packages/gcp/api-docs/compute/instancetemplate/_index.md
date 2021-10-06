@@ -3,8 +3,6 @@
 title: "InstanceTemplate"
 title_tag: "gcp.compute.InstanceTemplate"
 meta_desc: "Documentation for the gcp.compute.InstanceTemplate resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/InstanceTemplate/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "Assignment"
 title_tag: "azure.lighthouse.Assignment"
 meta_desc: "Documentation for the azure.lighthouse.Assignment resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/Assignment/"
 layout: api
 ---
 

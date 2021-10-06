@@ -1,9 +1,7 @@
 ---
-title: "nomad"
-title_tag: "nomad.nomad"
+title: "Nomad"
+title_tag: "nomad.Nomad"
 meta_desc: "A Pulumi package for creating and managing nomad cloud resources."
-aliases:
-    - "docs/reference/pkg/nomad/"
 menu:
     reference:
         parent: API Reference

@@ -3,8 +3,6 @@
 title: "IamMember"
 title_tag: "gcp.cloudrun.IamMember"
 meta_desc: "Documentation for the gcp.cloudrun.IamMember resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/IamMember/"
 layout: api
 ---
 

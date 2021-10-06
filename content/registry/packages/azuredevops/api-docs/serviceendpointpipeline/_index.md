@@ -3,8 +3,6 @@
 title: "ServiceEndpointPipeline"
 title_tag: "azuredevops.ServiceEndpointPipeline"
 meta_desc: "Documentation for the azuredevops.ServiceEndpointPipeline resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azuredevops/ServiceEndpointPipeline/"
 layout: api
 ---
 

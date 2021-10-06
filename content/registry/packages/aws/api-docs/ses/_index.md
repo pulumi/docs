@@ -2,8 +2,6 @@
 title: "ses"
 title_tag: "aws.ses"
 meta_desc: "Explore the resources and functions of the aws.ses module."
-aliases:
-    - "docs/reference/pkg/aws/"
 layout: api
 ---
 

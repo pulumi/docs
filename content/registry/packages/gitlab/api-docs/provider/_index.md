@@ -3,8 +3,6 @@
 title: "Provider"
 title_tag: "gitlab.Provider"
 meta_desc: "Documentation for the gitlab.Provider resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gitlab/gitlab/"
 layout: api
 ---
 

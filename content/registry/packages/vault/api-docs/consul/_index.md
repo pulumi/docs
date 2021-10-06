@@ -2,8 +2,6 @@
 title: "consul"
 title_tag: "vault.consul"
 meta_desc: "Explore the resources and functions of the vault.consul module."
-aliases:
-    - "docs/reference/pkg/vault/"
 layout: api
 ---
 

@@ -2,8 +2,6 @@
 title: "deploymentmanager"
 title_tag: "gcp.deploymentmanager"
 meta_desc: "Explore the resources and functions of the gcp.deploymentmanager module."
-aliases:
-    - "docs/reference/pkg/gcp/"
 layout: api
 ---
 

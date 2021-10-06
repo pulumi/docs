@@ -3,8 +3,6 @@
 title: "MetadataImport"
 title_tag: "google-native.metastore/v1beta.MetadataImport"
 meta_desc: "Documentation for the google-native.metastore/v1beta.MetadataImport resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/google-native/MetadataImport/"
 layout: api
 ---
 

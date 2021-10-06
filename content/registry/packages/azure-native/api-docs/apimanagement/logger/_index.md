@@ -3,8 +3,6 @@
 title: "Logger"
 title_tag: "azure-native.apimanagement.Logger"
 meta_desc: "Documentation for the azure-native.apimanagement.Logger resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/Logger/"
 layout: api
 ---
 

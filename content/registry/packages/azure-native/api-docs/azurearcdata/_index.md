@@ -2,8 +2,6 @@
 title: "azurearcdata"
 title_tag: "azure-native.azurearcdata"
 meta_desc: "Explore the resources and functions of the azure-native.azurearcdata module."
-aliases:
-    - "docs/reference/pkg/azure-native/"
 layout: api
 ---
 

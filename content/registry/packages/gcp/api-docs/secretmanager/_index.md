@@ -2,8 +2,6 @@
 title: "secretmanager"
 title_tag: "gcp.secretmanager"
 meta_desc: "Explore the resources and functions of the gcp.secretmanager module."
-aliases:
-    - "docs/reference/pkg/gcp/"
 layout: api
 ---
 

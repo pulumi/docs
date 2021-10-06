@@ -3,8 +3,6 @@
 title: "getApi"
 title_tag: "google-native.apigateway/v1beta.getApi"
 meta_desc: "Documentation for the google-native.apigateway/v1beta.getApi function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

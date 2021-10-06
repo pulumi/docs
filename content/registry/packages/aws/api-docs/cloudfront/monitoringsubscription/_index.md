@@ -3,8 +3,6 @@
 title: "MonitoringSubscription"
 title_tag: "aws.cloudfront.MonitoringSubscription"
 meta_desc: "Documentation for the aws.cloudfront.MonitoringSubscription resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/MonitoringSubscription/"
 layout: api
 ---
 

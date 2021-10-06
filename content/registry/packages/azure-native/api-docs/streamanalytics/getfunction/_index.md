@@ -3,8 +3,6 @@
 title: "getFunction"
 title_tag: "azure-native.streamanalytics.getFunction"
 meta_desc: "Documentation for the azure-native.streamanalytics.getFunction function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

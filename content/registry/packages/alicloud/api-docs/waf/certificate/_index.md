@@ -3,8 +3,6 @@
 title: "Certificate"
 title_tag: "alicloud.waf.Certificate"
 meta_desc: "Documentation for the alicloud.waf.Certificate resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/alicloud/Certificate/"
 layout: api
 ---
 

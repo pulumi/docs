@@ -3,8 +3,6 @@
 title: "PrivateCloud"
 title_tag: "azure.avs.PrivateCloud"
 meta_desc: "Documentation for the azure.avs.PrivateCloud resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/PrivateCloud/"
 layout: api
 ---
 

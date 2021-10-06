@@ -3,8 +3,6 @@
 title: "getZones"
 title_tag: "alicloud.hbase.getZones"
 meta_desc: "Documentation for the alicloud.hbase.getZones function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

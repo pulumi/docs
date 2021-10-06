@@ -3,8 +3,6 @@
 title: "ScalingRule"
 title_tag: "alicloud.ess.ScalingRule"
 meta_desc: "Documentation for the alicloud.ess.ScalingRule resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/alicloud/ScalingRule/"
 layout: api
 ---
 

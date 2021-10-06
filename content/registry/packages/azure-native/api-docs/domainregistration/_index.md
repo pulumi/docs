@@ -2,8 +2,6 @@
 title: "domainregistration"
 title_tag: "azure-native.domainregistration"
 meta_desc: "Explore the resources and functions of the azure-native.domainregistration module."
-aliases:
-    - "docs/reference/pkg/azure-native/"
 layout: api
 ---
 

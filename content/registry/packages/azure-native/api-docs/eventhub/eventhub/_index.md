@@ -3,8 +3,6 @@
 title: "EventHub"
 title_tag: "azure-native.eventhub.EventHub"
 meta_desc: "Documentation for the azure-native.eventhub.EventHub resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/EventHub/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "Certificate"
 title_tag: "venafi.Certificate"
 meta_desc: "Documentation for the venafi.Certificate resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/venafi/Certificate/"
 layout: api
 ---
 

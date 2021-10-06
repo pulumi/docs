@@ -2,8 +2,6 @@
 title: "Sumo Logic"
 title_tag: "sumologic.Sumo Logic"
 meta_desc: "A Pulumi package for creating and managing sumologic cloud resources."
-aliases:
-    - "docs/reference/pkg/sumologic/"
 menu:
     reference:
         parent: API Reference

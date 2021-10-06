@@ -3,8 +3,6 @@
 title: "Monitor"
 title_tag: "openstack.loadbalancer.Monitor"
 meta_desc: "Documentation for the openstack.loadbalancer.Monitor resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/openstack/Monitor/"
 layout: api
 ---
 

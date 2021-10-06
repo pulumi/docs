@@ -2,8 +2,6 @@
 title: "Consul"
 title_tag: "consul.Consul"
 meta_desc: "A Pulumi package for creating and managing consul resources."
-aliases:
-    - "docs/reference/pkg/consul/"
 menu:
     reference:
         parent: API Reference

@@ -3,8 +3,6 @@
 title: "EntryGroupIamMember"
 title_tag: "gcp.datacatalog.EntryGroupIamMember"
 meta_desc: "Documentation for the gcp.datacatalog.EntryGroupIamMember resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/EntryGroupIamMember/"
 layout: api
 ---
 

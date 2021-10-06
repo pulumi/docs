@@ -3,8 +3,6 @@
 title: "getEventSubscriptionDeliveryAttributes"
 title_tag: "azure-native.eventgrid.getEventSubscriptionDeliveryAttributes"
 meta_desc: "Documentation for the azure-native.eventgrid.getEventSubscriptionDeliveryAttributes function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

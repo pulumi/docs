@@ -3,8 +3,6 @@
 title: "getProjectServiceAccount"
 title_tag: "gcp.storage.getProjectServiceAccount"
 meta_desc: "Documentation for the gcp.storage.getProjectServiceAccount function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

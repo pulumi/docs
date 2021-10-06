@@ -3,8 +3,6 @@
 title: "ServiceIamBinding"
 title_tag: "gcp.servicedirectory.ServiceIamBinding"
 meta_desc: "Documentation for the gcp.servicedirectory.ServiceIamBinding resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/ServiceIamBinding/"
 layout: api
 ---
 

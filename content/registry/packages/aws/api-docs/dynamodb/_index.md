@@ -2,8 +2,6 @@
 title: "dynamodb"
 title_tag: "aws.dynamodb"
 meta_desc: "Explore the resources and functions of the aws.dynamodb module."
-aliases:
-    - "docs/reference/pkg/aws/"
 layout: api
 ---
 

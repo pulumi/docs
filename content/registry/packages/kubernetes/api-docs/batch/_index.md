@@ -2,8 +2,6 @@
 title: "batch"
 title_tag: "batch Package"
 meta_desc: ""
-aliases:
-    - "docs/reference/pkg/kubernetes/"
 layout: api
 ---
 

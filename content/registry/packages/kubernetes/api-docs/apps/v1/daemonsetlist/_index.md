@@ -3,8 +3,6 @@
 title: "DaemonSetList"
 title_tag: "kubernetes.apps/v1.DaemonSetList"
 meta_desc: "Documentation for the kubernetes.apps/v1.DaemonSetList resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/kubernetes/DaemonSetList/"
 layout: api
 ---
 

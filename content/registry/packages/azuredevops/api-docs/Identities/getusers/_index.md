@@ -3,8 +3,6 @@
 title: "getUsers"
 title_tag: "azuredevops.Identities.getUsers"
 meta_desc: "Documentation for the azuredevops.Identities.getUsers function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

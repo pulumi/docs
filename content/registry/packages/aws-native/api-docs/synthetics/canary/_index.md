@@ -3,8 +3,6 @@
 title: "Canary"
 title_tag: "aws-native.synthetics.Canary"
 meta_desc: "Documentation for the aws-native.synthetics.Canary resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws-native/Canary/"
 layout: api
 ---
 

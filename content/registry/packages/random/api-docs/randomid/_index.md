@@ -3,8 +3,6 @@
 title: "RandomId"
 title_tag: "random.RandomId"
 meta_desc: "Documentation for the random.RandomId resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/random/RandomId/"
 layout: api
 ---
 

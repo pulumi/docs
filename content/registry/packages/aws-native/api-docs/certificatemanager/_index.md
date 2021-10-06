@@ -2,8 +2,6 @@
 title: "certificatemanager"
 title_tag: "aws-native.certificatemanager"
 meta_desc: "Explore the resources and functions of the aws-native.certificatemanager module."
-aliases:
-    - "docs/reference/pkg/aws-native/"
 layout: api
 ---
 

@@ -2,8 +2,6 @@
 title: "machinelearning"
 title_tag: "azure.machinelearning"
 meta_desc: "Explore the resources and functions of the azure.machinelearning module."
-aliases:
-    - "docs/reference/pkg/azure/"
 layout: api
 ---
 

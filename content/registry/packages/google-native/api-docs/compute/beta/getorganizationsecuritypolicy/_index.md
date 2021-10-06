@@ -3,8 +3,6 @@
 title: "getOrganizationSecurityPolicy"
 title_tag: "google-native.compute/beta.getOrganizationSecurityPolicy"
 meta_desc: "Documentation for the google-native.compute/beta.getOrganizationSecurityPolicy function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "getAgent"
 title_tag: "google-native.dialogflow/v3beta1.getAgent"
 meta_desc: "Documentation for the google-native.dialogflow/v3beta1.getAgent function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

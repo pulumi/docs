@@ -3,8 +3,6 @@
 title: "Table"
 title_tag: "snowflake.Table"
 meta_desc: "Documentation for the snowflake.Table resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/snowflake/Table/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "PriorityLevelConfigurationList"
 title_tag: "kubernetes.flowcontrol.apiserver.k8s.io/v1beta1.PriorityLevelConfigurationList"
 meta_desc: "Documentation for the kubernetes.flowcontrol.apiserver.k8s.io/v1beta1.PriorityLevelConfigurationList resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/kubernetes/PriorityLevelConfigurationList/"
 layout: api
 ---
 

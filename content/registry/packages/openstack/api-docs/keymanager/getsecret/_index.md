@@ -3,8 +3,6 @@
 title: "getSecret"
 title_tag: "openstack.keymanager.getSecret"
 meta_desc: "Documentation for the openstack.keymanager.getSecret function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

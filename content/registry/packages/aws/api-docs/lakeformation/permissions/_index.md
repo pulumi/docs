@@ -3,8 +3,6 @@
 title: "Permissions"
 title_tag: "aws.lakeformation.Permissions"
 meta_desc: "Documentation for the aws.lakeformation.Permissions resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/Permissions/"
 layout: api
 ---
 

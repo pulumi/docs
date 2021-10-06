@@ -2,8 +2,6 @@
 title: "directoryservice"
 title_tag: "aws.directoryservice"
 meta_desc: "Explore the resources and functions of the aws.directoryservice module."
-aliases:
-    - "docs/reference/pkg/aws/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "CommonLicenseManageBigIq"
 title_tag: "f5bigip.CommonLicenseManageBigIq"
 meta_desc: "Documentation for the f5bigip.CommonLicenseManageBigIq resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/f5bigip/CommonLicenseManageBigIq/"
 layout: api
 ---
 

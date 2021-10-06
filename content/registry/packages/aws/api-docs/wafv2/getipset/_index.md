@@ -3,8 +3,6 @@
 title: "getIpSet"
 title_tag: "aws.wafv2.getIpSet"
 meta_desc: "Documentation for the aws.wafv2.getIpSet function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

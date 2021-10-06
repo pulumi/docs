@@ -3,8 +3,6 @@
 title: "Template"
 title_tag: "alicloud.oos.Template"
 meta_desc: "Documentation for the alicloud.oos.Template resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/alicloud/Template/"
 layout: api
 ---
 

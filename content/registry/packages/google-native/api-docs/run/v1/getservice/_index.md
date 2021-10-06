@@ -3,8 +3,6 @@
 title: "getService"
 title_tag: "google-native.run/v1.getService"
 meta_desc: "Documentation for the google-native.run/v1.getService function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

@@ -2,8 +2,6 @@
 title: "cloudformation"
 title_tag: "aws-native.cloudformation"
 meta_desc: "Explore the resources and functions of the aws-native.cloudformation module."
-aliases:
-    - "docs/reference/pkg/aws-native/"
 layout: api
 ---
 

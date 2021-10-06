@@ -3,8 +3,6 @@
 title: "listActiveConnectivityConfiguration"
 title_tag: "azure-native.network.listActiveConnectivityConfiguration"
 meta_desc: "Documentation for the azure-native.network.listActiveConnectivityConfiguration function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

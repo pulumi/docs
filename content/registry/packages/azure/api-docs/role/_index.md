@@ -2,8 +2,6 @@
 title: "role"
 title_tag: "azure.role"
 meta_desc: "Explore the resources and functions of the azure.role module."
-aliases:
-    - "docs/reference/pkg/azure/"
 layout: api
 ---
 

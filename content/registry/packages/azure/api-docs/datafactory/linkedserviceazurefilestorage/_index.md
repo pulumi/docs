@@ -3,8 +3,6 @@
 title: "LinkedServiceAzureFileStorage"
 title_tag: "azure.datafactory.LinkedServiceAzureFileStorage"
 meta_desc: "Documentation for the azure.datafactory.LinkedServiceAzureFileStorage resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/LinkedServiceAzureFileStorage/"
 layout: api
 ---
 

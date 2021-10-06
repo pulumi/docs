@@ -3,8 +3,6 @@
 title: "RuleConfig"
 title_tag: "auth0.RuleConfig"
 meta_desc: "Documentation for the auth0.RuleConfig resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/auth0/RuleConfig/"
 layout: api
 ---
 

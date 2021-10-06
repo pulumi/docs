@@ -3,8 +3,6 @@
 title: "getNetworkWatcher"
 title_tag: "azure-native.network.getNetworkWatcher"
 meta_desc: "Documentation for the azure-native.network.getNetworkWatcher function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

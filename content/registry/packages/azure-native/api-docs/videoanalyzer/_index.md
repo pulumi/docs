@@ -2,8 +2,6 @@
 title: "videoanalyzer"
 title_tag: "azure-native.videoanalyzer"
 meta_desc: "Explore the resources and functions of the azure-native.videoanalyzer module."
-aliases:
-    - "docs/reference/pkg/azure-native/"
 layout: api
 ---
 

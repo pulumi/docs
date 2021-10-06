@@ -2,8 +2,6 @@
 title: "marketplace"
 title_tag: "azure-native.marketplace"
 meta_desc: "Explore the resources and functions of the azure-native.marketplace module."
-aliases:
-    - "docs/reference/pkg/azure-native/"
 layout: api
 ---
 

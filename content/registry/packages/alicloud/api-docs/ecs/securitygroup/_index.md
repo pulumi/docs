@@ -3,8 +3,6 @@
 title: "SecurityGroup"
 title_tag: "alicloud.ecs.SecurityGroup"
 meta_desc: "Documentation for the alicloud.ecs.SecurityGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/alicloud/SecurityGroup/"
 layout: api
 ---
 

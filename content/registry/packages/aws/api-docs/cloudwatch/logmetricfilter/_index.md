@@ -3,8 +3,6 @@
 title: "LogMetricFilter"
 title_tag: "aws.cloudwatch.LogMetricFilter"
 meta_desc: "Documentation for the aws.cloudwatch.LogMetricFilter resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/LogMetricFilter/"
 layout: api
 ---
 

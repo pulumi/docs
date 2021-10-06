@@ -3,8 +3,6 @@
 title: "listTopicSharedAccessKeys"
 title_tag: "azure-native.eventgrid.listTopicSharedAccessKeys"
 meta_desc: "Documentation for the azure-native.eventgrid.listTopicSharedAccessKeys function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

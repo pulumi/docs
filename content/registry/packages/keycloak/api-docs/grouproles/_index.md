@@ -3,8 +3,6 @@
 title: "GroupRoles"
 title_tag: "keycloak.GroupRoles"
 meta_desc: "Documentation for the keycloak.GroupRoles resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/keycloak/GroupRoles/"
 layout: api
 ---
 

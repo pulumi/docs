@@ -2,8 +2,6 @@
 title: "managednetwork"
 title_tag: "azure-native.managednetwork"
 meta_desc: "Explore the resources and functions of the azure-native.managednetwork module."
-aliases:
-    - "docs/reference/pkg/azure-native/"
 layout: api
 ---
 

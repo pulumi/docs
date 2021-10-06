@@ -3,8 +3,6 @@
 title: "ContainerGroup"
 title_tag: "azure-native.containerinstance.ContainerGroup"
 meta_desc: "Documentation for the azure-native.containerinstance.ContainerGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/ContainerGroup/"
 layout: api
 ---
 

@@ -2,8 +2,6 @@
 title: "authorization"
 title_tag: "azure.authorization"
 meta_desc: "Explore the resources and functions of the azure.authorization module."
-aliases:
-    - "docs/reference/pkg/azure/"
 layout: api
 ---
 

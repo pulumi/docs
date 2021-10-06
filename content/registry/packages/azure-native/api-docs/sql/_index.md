@@ -2,8 +2,6 @@
 title: "sql"
 title_tag: "azure-native.sql"
 meta_desc: "Explore the resources and functions of the azure-native.sql module."
-aliases:
-    - "docs/reference/pkg/azure-native/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "VirtualBorderRouter"
 title_tag: "alicloud.expressconnect.VirtualBorderRouter"
 meta_desc: "Documentation for the alicloud.expressconnect.VirtualBorderRouter resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/alicloud/VirtualBorderRouter/"
 layout: api
 ---
 

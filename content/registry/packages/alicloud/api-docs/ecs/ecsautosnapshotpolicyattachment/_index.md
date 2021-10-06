@@ -3,8 +3,6 @@
 title: "EcsAutoSnapshotPolicyAttachment"
 title_tag: "alicloud.ecs.EcsAutoSnapshotPolicyAttachment"
 meta_desc: "Documentation for the alicloud.ecs.EcsAutoSnapshotPolicyAttachment resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/alicloud/EcsAutoSnapshotPolicyAttachment/"
 layout: api
 ---
 

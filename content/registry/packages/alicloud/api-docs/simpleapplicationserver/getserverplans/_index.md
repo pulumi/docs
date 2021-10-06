@@ -3,8 +3,6 @@
 title: "getServerPlans"
 title_tag: "alicloud.simpleapplicationserver.getServerPlans"
 meta_desc: "Documentation for the alicloud.simpleapplicationserver.getServerPlans function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

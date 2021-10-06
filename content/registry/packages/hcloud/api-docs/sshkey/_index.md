@@ -3,8 +3,6 @@
 title: "SshKey"
 title_tag: "hcloud.SshKey"
 meta_desc: "Documentation for the hcloud.SshKey resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/hcloud/SshKey/"
 layout: api
 ---
 

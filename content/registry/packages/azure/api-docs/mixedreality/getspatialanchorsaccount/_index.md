@@ -3,8 +3,6 @@
 title: "getSpatialAnchorsAccount"
 title_tag: "azure.mixedreality.getSpatialAnchorsAccount"
 meta_desc: "Documentation for the azure.mixedreality.getSpatialAnchorsAccount function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

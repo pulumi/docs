@@ -2,8 +2,6 @@
 title: "appintegrations"
 title_tag: "aws-native.appintegrations"
 meta_desc: "Explore the resources and functions of the aws-native.appintegrations module."
-aliases:
-    - "docs/reference/pkg/aws-native/"
 layout: api
 ---
 

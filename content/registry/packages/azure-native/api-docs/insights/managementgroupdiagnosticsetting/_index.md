@@ -3,8 +3,6 @@
 title: "ManagementGroupDiagnosticSetting"
 title_tag: "azure-native.insights.ManagementGroupDiagnosticSetting"
 meta_desc: "Documentation for the azure-native.insights.ManagementGroupDiagnosticSetting resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/ManagementGroupDiagnosticSetting/"
 layout: api
 ---
 

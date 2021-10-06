@@ -3,8 +3,6 @@
 title: "getAcls"
 title_tag: "alicloud.alb.getAcls"
 meta_desc: "Documentation for the alicloud.alb.getAcls function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

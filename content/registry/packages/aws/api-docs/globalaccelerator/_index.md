@@ -2,8 +2,6 @@
 title: "globalaccelerator"
 title_tag: "aws.globalaccelerator"
 meta_desc: "Explore the resources and functions of the aws.globalaccelerator module."
-aliases:
-    - "docs/reference/pkg/aws/"
 layout: api
 ---
 

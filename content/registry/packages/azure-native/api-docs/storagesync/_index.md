@@ -2,8 +2,6 @@
 title: "storagesync"
 title_tag: "azure-native.storagesync"
 meta_desc: "Explore the resources and functions of the azure-native.storagesync module."
-aliases:
-    - "docs/reference/pkg/azure-native/"
 layout: api
 ---
 

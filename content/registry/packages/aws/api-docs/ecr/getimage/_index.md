@@ -3,8 +3,6 @@
 title: "getImage"
 title_tag: "aws.ecr.getImage"
 meta_desc: "Documentation for the aws.ecr.getImage function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

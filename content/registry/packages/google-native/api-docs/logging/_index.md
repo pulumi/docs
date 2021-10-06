@@ -2,8 +2,6 @@
 title: "logging"
 title_tag: "logging Package"
 meta_desc: ""
-aliases:
-    - "docs/reference/pkg/google-native/"
 layout: api
 ---
 

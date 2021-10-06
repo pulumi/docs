@@ -3,8 +3,6 @@
 title: "getGlobalAddress"
 title_tag: "google-native.compute/v1.getGlobalAddress"
 meta_desc: "Documentation for the google-native.compute/v1.getGlobalAddress function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

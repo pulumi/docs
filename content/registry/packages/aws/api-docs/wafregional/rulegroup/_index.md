@@ -3,8 +3,6 @@
 title: "RuleGroup"
 title_tag: "aws.wafregional.RuleGroup"
 meta_desc: "Documentation for the aws.wafregional.RuleGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/RuleGroup/"
 layout: api
 ---
 

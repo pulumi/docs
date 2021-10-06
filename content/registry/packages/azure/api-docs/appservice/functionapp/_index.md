@@ -3,8 +3,6 @@
 title: "FunctionApp"
 title_tag: "azure.appservice.FunctionApp"
 meta_desc: "Documentation for the azure.appservice.FunctionApp resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/FunctionApp/"
 layout: api
 ---
 

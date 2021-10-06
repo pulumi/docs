@@ -3,8 +3,6 @@
 title: "getFileSystem"
 title_tag: "aws.efs.getFileSystem"
 meta_desc: "Documentation for the aws.efs.getFileSystem function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

@@ -2,8 +2,6 @@
 title: "meta"
 title_tag: "meta Package"
 meta_desc: ""
-aliases:
-    - "docs/reference/pkg/kubernetes/"
 layout: api
 ---
 

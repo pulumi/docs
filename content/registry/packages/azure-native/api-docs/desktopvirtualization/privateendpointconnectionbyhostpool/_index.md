@@ -3,8 +3,6 @@
 title: "PrivateEndpointConnectionByHostPool"
 title_tag: "azure-native.desktopvirtualization.PrivateEndpointConnectionByHostPool"
 meta_desc: "Documentation for the azure-native.desktopvirtualization.PrivateEndpointConnectionByHostPool resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/PrivateEndpointConnectionByHostPool/"
 layout: api
 ---
 

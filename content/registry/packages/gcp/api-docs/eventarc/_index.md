@@ -2,8 +2,6 @@
 title: "eventarc"
 title_tag: "gcp.eventarc"
 meta_desc: "Explore the resources and functions of the gcp.eventarc module."
-aliases:
-    - "docs/reference/pkg/gcp/"
 layout: api
 ---
 

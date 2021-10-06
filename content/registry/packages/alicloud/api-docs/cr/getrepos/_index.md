@@ -3,8 +3,6 @@
 title: "getRepos"
 title_tag: "alicloud.cr.getRepos"
 meta_desc: "Documentation for the alicloud.cr.getRepos function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

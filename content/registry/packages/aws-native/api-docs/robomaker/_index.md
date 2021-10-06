@@ -2,8 +2,6 @@
 title: "robomaker"
 title_tag: "aws-native.robomaker"
 meta_desc: "Explore the resources and functions of the aws-native.robomaker module."
-aliases:
-    - "docs/reference/pkg/aws-native/"
 layout: api
 ---
 

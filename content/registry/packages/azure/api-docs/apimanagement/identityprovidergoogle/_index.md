@@ -3,8 +3,6 @@
 title: "IdentityProviderGoogle"
 title_tag: "azure.apimanagement.IdentityProviderGoogle"
 meta_desc: "Documentation for the azure.apimanagement.IdentityProviderGoogle resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/IdentityProviderGoogle/"
 layout: api
 ---
 

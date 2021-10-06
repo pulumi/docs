@@ -3,8 +3,6 @@
 title: "getAttestorIamPolicy"
 title_tag: "google-native.binaryauthorization/v1.getAttestorIamPolicy"
 meta_desc: "Documentation for the google-native.binaryauthorization/v1.getAttestorIamPolicy function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

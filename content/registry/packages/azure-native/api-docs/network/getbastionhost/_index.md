@@ -3,8 +3,6 @@
 title: "getBastionHost"
 title_tag: "azure-native.network.getBastionHost"
 meta_desc: "Documentation for the azure-native.network.getBastionHost function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

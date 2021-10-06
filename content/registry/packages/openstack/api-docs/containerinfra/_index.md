@@ -2,8 +2,6 @@
 title: "containerinfra"
 title_tag: "openstack.containerinfra"
 meta_desc: "Explore the resources and functions of the openstack.containerinfra module."
-aliases:
-    - "docs/reference/pkg/openstack/"
 layout: api
 ---
 

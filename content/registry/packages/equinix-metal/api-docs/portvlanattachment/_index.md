@@ -3,8 +3,6 @@
 title: "PortVlanAttachment"
 title_tag: "equinix-metal.PortVlanAttachment"
 meta_desc: "Documentation for the equinix-metal.PortVlanAttachment resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/equinix-metal/PortVlanAttachment/"
 layout: api
 ---
 

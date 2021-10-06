@@ -2,8 +2,6 @@
 title: "intune"
 title_tag: "azure-native.intune"
 meta_desc: "Explore the resources and functions of the azure-native.intune module."
-aliases:
-    - "docs/reference/pkg/azure-native/"
 layout: api
 ---
 

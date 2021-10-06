@@ -3,8 +3,6 @@
 title: "getScheduledQueryRulesLog"
 title_tag: "azure.monitoring.getScheduledQueryRulesLog"
 meta_desc: "Documentation for the azure.monitoring.getScheduledQueryRulesLog function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

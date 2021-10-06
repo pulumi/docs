@@ -3,8 +3,6 @@
 title: "OrchestratorInstanceServiceDetails"
 title_tag: "azure-native.delegatednetwork.OrchestratorInstanceServiceDetails"
 meta_desc: "Documentation for the azure-native.delegatednetwork.OrchestratorInstanceServiceDetails resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/OrchestratorInstanceServiceDetails/"
 layout: api
 ---
 

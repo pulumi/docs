@@ -3,8 +3,6 @@
 title: "getModelIamPolicy"
 title_tag: "google-native.ml/v1.getModelIamPolicy"
 meta_desc: "Documentation for the google-native.ml/v1.getModelIamPolicy function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

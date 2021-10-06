@@ -3,8 +3,6 @@
 title: "Servicev1"
 title_tag: "fastly.Servicev1"
 meta_desc: "Documentation for the fastly.Servicev1 resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/fastly/Servicev1/"
 layout: api
 ---
 

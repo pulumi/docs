@@ -3,8 +3,6 @@
 title: "listSpatialAnchorsAccountKeys"
 title_tag: "azure-native.mixedreality.listSpatialAnchorsAccountKeys"
 meta_desc: "Documentation for the azure-native.mixedreality.listSpatialAnchorsAccountKeys function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

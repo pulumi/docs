@@ -2,8 +2,6 @@
 title: "Build"
 title_tag: "azuredevops.Build"
 meta_desc: "Explore the resources and functions of the azuredevops.Build module."
-aliases:
-    - "docs/reference/pkg/azuredevops/"
 layout: api
 ---
 

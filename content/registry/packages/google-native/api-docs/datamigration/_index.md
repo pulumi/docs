@@ -2,8 +2,6 @@
 title: "datamigration"
 title_tag: "datamigration Package"
 meta_desc: ""
-aliases:
-    - "docs/reference/pkg/google-native/"
 layout: api
 ---
 

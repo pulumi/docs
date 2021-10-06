@@ -3,8 +3,6 @@
 title: "getLB"
 title_tag: "azure.lb.getLB"
 meta_desc: "Documentation for the azure.lb.getLB function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "Bucket"
 title_tag: "alicloud.oss.Bucket"
 meta_desc: "Documentation for the alicloud.oss.Bucket resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/alicloud/Bucket/"
 layout: api
 ---
 

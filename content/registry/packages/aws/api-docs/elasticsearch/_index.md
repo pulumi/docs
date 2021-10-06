@@ -2,8 +2,6 @@
 title: "elasticsearch"
 title_tag: "aws.elasticsearch"
 meta_desc: "Explore the resources and functions of the aws.elasticsearch module."
-aliases:
-    - "docs/reference/pkg/aws/"
 layout: api
 ---
 

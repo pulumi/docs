@@ -2,8 +2,6 @@
 title: "amqp"
 title_tag: "alicloud.amqp"
 meta_desc: "Explore the resources and functions of the alicloud.amqp module."
-aliases:
-    - "docs/reference/pkg/alicloud/"
 layout: api
 ---
 

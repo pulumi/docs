@@ -3,8 +3,6 @@
 title: "FunctionJavaScriptUDF"
 title_tag: "azure.streamanalytics.FunctionJavaScriptUDF"
 meta_desc: "Documentation for the azure.streamanalytics.FunctionJavaScriptUDF resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/FunctionJavaScriptUDF/"
 layout: api
 ---
 

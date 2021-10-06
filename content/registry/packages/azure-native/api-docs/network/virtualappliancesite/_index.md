@@ -3,8 +3,6 @@
 title: "VirtualApplianceSite"
 title_tag: "azure-native.network.VirtualApplianceSite"
 meta_desc: "Documentation for the azure-native.network.VirtualApplianceSite resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/VirtualApplianceSite/"
 layout: api
 ---
 

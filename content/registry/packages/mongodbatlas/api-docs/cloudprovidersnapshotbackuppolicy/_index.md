@@ -3,8 +3,6 @@
 title: "CloudProviderSnapshotBackupPolicy"
 title_tag: "mongodbatlas.CloudProviderSnapshotBackupPolicy"
 meta_desc: "Documentation for the mongodbatlas.CloudProviderSnapshotBackupPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/mongodbatlas/CloudProviderSnapshotBackupPolicy/"
 layout: api
 ---
 

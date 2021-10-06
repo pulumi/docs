@@ -2,8 +2,6 @@
 title: "dataflow/v1b3"
 title_tag: "google-native.dataflow/v1b3"
 meta_desc: "Explore the resources and functions of the google-native.dataflow/v1b3 module."
-aliases:
-    - "docs/reference/pkg/google-native/"
 layout: api
 ---
 

@@ -2,8 +2,6 @@
 title: "neptune"
 title_tag: "aws.neptune"
 meta_desc: "Explore the resources and functions of the aws.neptune module."
-aliases:
-    - "docs/reference/pkg/aws/"
 layout: api
 ---
 

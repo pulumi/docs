@@ -2,8 +2,6 @@
 title: "mediapackage"
 title_tag: "aws.mediapackage"
 meta_desc: "Explore the resources and functions of the aws.mediapackage module."
-aliases:
-    - "docs/reference/pkg/aws/"
 layout: api
 ---
 

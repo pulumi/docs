@@ -3,8 +3,6 @@
 title: "Table"
 title_tag: "gcp.bigquery.Table"
 meta_desc: "Documentation for the gcp.bigquery.Table resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/Table/"
 layout: api
 ---
 

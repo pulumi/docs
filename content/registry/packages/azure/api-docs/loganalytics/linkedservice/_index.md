@@ -3,8 +3,6 @@
 title: "LinkedService"
 title_tag: "azure.loganalytics.LinkedService"
 meta_desc: "Documentation for the azure.loganalytics.LinkedService resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/LinkedService/"
 layout: api
 ---
 

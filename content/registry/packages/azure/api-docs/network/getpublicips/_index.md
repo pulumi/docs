@@ -3,8 +3,6 @@
 title: "getPublicIPs"
 title_tag: "azure.network.getPublicIPs"
 meta_desc: "Documentation for the azure.network.getPublicIPs function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "VendorSkuPreview"
 title_tag: "azure-native.hybridnetwork.VendorSkuPreview"
 meta_desc: "Documentation for the azure-native.hybridnetwork.VendorSkuPreview resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/VendorSkuPreview/"
 layout: api
 ---
 

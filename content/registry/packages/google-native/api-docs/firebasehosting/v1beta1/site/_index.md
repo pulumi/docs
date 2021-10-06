@@ -3,8 +3,6 @@
 title: "Site"
 title_tag: "google-native.firebasehosting/v1beta1.Site"
 meta_desc: "Documentation for the google-native.firebasehosting/v1beta1.Site resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/google-native/Site/"
 layout: api
 ---
 

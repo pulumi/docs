@@ -3,8 +3,6 @@
 title: "getRegionOperationIamPolicy"
 title_tag: "google-native.dataproc/v1.getRegionOperationIamPolicy"
 meta_desc: "Documentation for the google-native.dataproc/v1.getRegionOperationIamPolicy function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

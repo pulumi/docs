@@ -3,8 +3,6 @@
 title: "Route"
 title_tag: "azure.iot.Route"
 meta_desc: "Documentation for the azure.iot.Route resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/Route/"
 layout: api
 ---
 

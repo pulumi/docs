@@ -3,8 +3,6 @@
 title: "DatabasePrincipalAssignment"
 title_tag: "azure-native.kusto.DatabasePrincipalAssignment"
 meta_desc: "Documentation for the azure-native.kusto.DatabasePrincipalAssignment resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/DatabasePrincipalAssignment/"
 layout: api
 ---
 

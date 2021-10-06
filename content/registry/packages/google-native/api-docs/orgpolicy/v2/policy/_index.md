@@ -3,8 +3,6 @@
 title: "Policy"
 title_tag: "google-native.orgpolicy/v2.Policy"
 meta_desc: "Documentation for the google-native.orgpolicy/v2.Policy resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/google-native/Policy/"
 layout: api
 ---
 

@@ -2,8 +2,6 @@
 title: "saas"
 title_tag: "azure-native.saas"
 meta_desc: "Explore the resources and functions of the azure-native.saas module."
-aliases:
-    - "docs/reference/pkg/azure-native/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "NamedLocation"
 title_tag: "azuread.NamedLocation"
 meta_desc: "Documentation for the azuread.NamedLocation resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azuread/NamedLocation/"
 layout: api
 ---
 

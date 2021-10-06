@@ -3,8 +3,6 @@
 title: "Queue"
 title_tag: "azure.storage.Queue"
 meta_desc: "Documentation for the azure.storage.Queue resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/Queue/"
 layout: api
 ---
 

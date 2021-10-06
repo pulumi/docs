@@ -2,8 +2,6 @@
 title: "quotas"
 title_tag: "alicloud.quotas"
 meta_desc: "Explore the resources and functions of the alicloud.quotas module."
-aliases:
-    - "docs/reference/pkg/alicloud/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "ScalingPlan"
 title_tag: "azure-native.desktopvirtualization.ScalingPlan"
 meta_desc: "Documentation for the azure-native.desktopvirtualization.ScalingPlan resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/ScalingPlan/"
 layout: api
 ---
 

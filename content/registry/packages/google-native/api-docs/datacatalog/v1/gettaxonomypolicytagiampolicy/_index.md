@@ -3,8 +3,6 @@
 title: "getTaxonomyPolicyTagIamPolicy"
 title_tag: "google-native.datacatalog/v1.getTaxonomyPolicyTagIamPolicy"
 meta_desc: "Documentation for the google-native.datacatalog/v1.getTaxonomyPolicyTagIamPolicy function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

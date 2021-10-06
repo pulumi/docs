@@ -3,8 +3,6 @@
 title: "RegionDiskResourcePolicyAttachment"
 title_tag: "gcp.compute.RegionDiskResourcePolicyAttachment"
 meta_desc: "Documentation for the gcp.compute.RegionDiskResourcePolicyAttachment resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/RegionDiskResourcePolicyAttachment/"
 layout: api
 ---
 

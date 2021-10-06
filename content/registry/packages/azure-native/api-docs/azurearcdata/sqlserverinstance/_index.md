@@ -3,8 +3,6 @@
 title: "SqlServerInstance"
 title_tag: "azure-native.azurearcdata.SqlServerInstance"
 meta_desc: "Documentation for the azure-native.azurearcdata.SqlServerInstance resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/SqlServerInstance/"
 layout: api
 ---
 

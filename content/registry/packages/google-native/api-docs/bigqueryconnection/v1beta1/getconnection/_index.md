@@ -3,8 +3,6 @@
 title: "getConnection"
 title_tag: "google-native.bigqueryconnection/v1beta1.getConnection"
 meta_desc: "Documentation for the google-native.bigqueryconnection/v1beta1.getConnection function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "Role"
 title_tag: "vault.transform.Role"
 meta_desc: "Documentation for the vault.transform.Role resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/vault/Role/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "FloatingIpAssignment"
 title_tag: "hcloud.FloatingIpAssignment"
 meta_desc: "Documentation for the hcloud.FloatingIpAssignment resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/hcloud/FloatingIpAssignment/"
 layout: api
 ---
 

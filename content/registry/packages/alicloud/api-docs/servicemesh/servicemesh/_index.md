@@ -3,8 +3,6 @@
 title: "ServiceMesh"
 title_tag: "alicloud.servicemesh.ServiceMesh"
 meta_desc: "Documentation for the alicloud.servicemesh.ServiceMesh resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/alicloud/ServiceMesh/"
 layout: api
 ---
 

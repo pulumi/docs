@@ -3,8 +3,6 @@
 title: "Trigger"
 title_tag: "alicloud.fc.Trigger"
 meta_desc: "Documentation for the alicloud.fc.Trigger resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/alicloud/Trigger/"
 layout: api
 ---
 

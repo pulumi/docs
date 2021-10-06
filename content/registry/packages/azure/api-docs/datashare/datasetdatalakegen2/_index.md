@@ -3,8 +3,6 @@
 title: "DatasetDataLakeGen2"
 title_tag: "azure.datashare.DatasetDataLakeGen2"
 meta_desc: "Documentation for the azure.datashare.DatasetDataLakeGen2 resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/DatasetDataLakeGen2/"
 layout: api
 ---
 

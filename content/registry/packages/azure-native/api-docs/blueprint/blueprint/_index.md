@@ -3,8 +3,6 @@
 title: "Blueprint"
 title_tag: "azure-native.blueprint.Blueprint"
 meta_desc: "Documentation for the azure-native.blueprint.Blueprint resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/Blueprint/"
 layout: api
 ---
 

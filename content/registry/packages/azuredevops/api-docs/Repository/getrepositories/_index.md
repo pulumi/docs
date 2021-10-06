@@ -3,8 +3,6 @@
 title: "getRepositories"
 title_tag: "azuredevops.Repository.getRepositories"
 meta_desc: "Documentation for the azuredevops.Repository.getRepositories function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

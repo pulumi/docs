@@ -3,8 +3,6 @@
 title: "getNetwork"
 title_tag: "gcp.compute.getNetwork"
 meta_desc: "Documentation for the gcp.compute.getNetwork function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

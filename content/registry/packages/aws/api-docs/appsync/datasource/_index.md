@@ -3,8 +3,6 @@
 title: "DataSource"
 title_tag: "aws.appsync.DataSource"
 meta_desc: "Documentation for the aws.appsync.DataSource resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/DataSource/"
 layout: api
 ---
 

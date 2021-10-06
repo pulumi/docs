@@ -3,8 +3,6 @@
 title: "Session"
 title_tag: "google-native.spanner/v1.Session"
 meta_desc: "Documentation for the google-native.spanner/v1.Session resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/google-native/Session/"
 layout: api
 ---
 

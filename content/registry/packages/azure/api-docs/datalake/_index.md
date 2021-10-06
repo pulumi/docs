@@ -2,8 +2,6 @@
 title: "datalake"
 title_tag: "azure.datalake"
 meta_desc: "Explore the resources and functions of the azure.datalake module."
-aliases:
-    - "docs/reference/pkg/azure/"
 layout: api
 ---
 

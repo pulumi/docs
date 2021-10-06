@@ -3,8 +3,6 @@
 title: "ScheduledTask"
 title_tag: "alicloud.ess.ScheduledTask"
 meta_desc: "Documentation for the alicloud.ess.ScheduledTask resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/alicloud/ScheduledTask/"
 layout: api
 ---
 

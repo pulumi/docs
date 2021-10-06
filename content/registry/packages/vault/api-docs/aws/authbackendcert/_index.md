@@ -3,8 +3,6 @@
 title: "AuthBackendCert"
 title_tag: "vault.aws.AuthBackendCert"
 meta_desc: "Documentation for the vault.aws.AuthBackendCert resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/vault/AuthBackendCert/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "VolumeAttachment"
 title_tag: "civo.VolumeAttachment"
 meta_desc: "Documentation for the civo.VolumeAttachment resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/civo/VolumeAttachment/"
 layout: api
 ---
 

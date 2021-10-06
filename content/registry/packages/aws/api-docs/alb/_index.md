@@ -2,8 +2,6 @@
 title: "alb"
 title_tag: "aws.alb"
 meta_desc: "Explore the resources and functions of the aws.alb module."
-aliases:
-    - "docs/reference/pkg/aws/"
 layout: api
 ---
 

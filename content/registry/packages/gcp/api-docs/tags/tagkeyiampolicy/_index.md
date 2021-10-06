@@ -3,8 +3,6 @@
 title: "TagKeyIamPolicy"
 title_tag: "gcp.tags.TagKeyIamPolicy"
 meta_desc: "Documentation for the gcp.tags.TagKeyIamPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/TagKeyIamPolicy/"
 layout: api
 ---
 

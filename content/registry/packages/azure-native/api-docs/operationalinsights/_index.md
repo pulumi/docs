@@ -2,8 +2,6 @@
 title: "operationalinsights"
 title_tag: "azure-native.operationalinsights"
 meta_desc: "Explore the resources and functions of the azure-native.operationalinsights module."
-aliases:
-    - "docs/reference/pkg/azure-native/"
 layout: api
 ---
 

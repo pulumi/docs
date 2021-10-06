@@ -3,8 +3,6 @@
 title: "NodeBalancer"
 title_tag: "linode.NodeBalancer"
 meta_desc: "Documentation for the linode.NodeBalancer resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/linode/NodeBalancer/"
 layout: api
 ---
 

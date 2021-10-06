@@ -3,9 +3,7 @@
 title: "SchedulerConfig"
 title_tag: "nomad.SchedulerConfig"
 meta_desc: "Documentation for the nomad.SchedulerConfig resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/nomad/SchedulerConfig/"
-layout: api-doc-resource
+layout: api
 ---
 
 

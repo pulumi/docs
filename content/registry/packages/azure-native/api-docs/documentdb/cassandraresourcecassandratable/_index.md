@@ -3,8 +3,6 @@
 title: "CassandraResourceCassandraTable"
 title_tag: "azure-native.documentdb.CassandraResourceCassandraTable"
 meta_desc: "Documentation for the azure-native.documentdb.CassandraResourceCassandraTable resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/CassandraResourceCassandraTable/"
 layout: api
 ---
 

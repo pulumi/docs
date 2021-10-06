@@ -2,8 +2,6 @@
 title: "sentinel"
 title_tag: "azure.sentinel"
 meta_desc: "Explore the resources and functions of the azure.sentinel module."
-aliases:
-    - "docs/reference/pkg/azure/"
 layout: api
 ---
 

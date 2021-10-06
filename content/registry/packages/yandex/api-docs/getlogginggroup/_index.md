@@ -3,8 +3,6 @@
 title: "getLoggingGroup"
 title_tag: "yandex.getLoggingGroup"
 meta_desc: "Documentation for the yandex.getLoggingGroup function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

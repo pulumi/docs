@@ -3,8 +3,6 @@
 title: "Schema"
 title_tag: "okta.user.Schema"
 meta_desc: "Documentation for the okta.user.Schema resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/okta/Schema/"
 layout: api
 ---
 

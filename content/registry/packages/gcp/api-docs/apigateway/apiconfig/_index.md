@@ -3,8 +3,6 @@
 title: "ApiConfig"
 title_tag: "gcp.apigateway.ApiConfig"
 meta_desc: "Documentation for the gcp.apigateway.ApiConfig resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/ApiConfig/"
 layout: api
 ---
 

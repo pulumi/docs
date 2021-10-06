@@ -3,8 +3,6 @@
 title: "ConnectorProfile"
 title_tag: "aws-native.appflow.ConnectorProfile"
 meta_desc: "Documentation for the aws-native.appflow.ConnectorProfile resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws-native/ConnectorProfile/"
 layout: api
 ---
 

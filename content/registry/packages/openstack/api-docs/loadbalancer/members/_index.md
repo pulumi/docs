@@ -3,8 +3,6 @@
 title: "Members"
 title_tag: "openstack.loadbalancer.Members"
 meta_desc: "Documentation for the openstack.loadbalancer.Members resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/openstack/Members/"
 layout: api
 ---
 

@@ -2,8 +2,6 @@
 title: "cloudbilling"
 title_tag: "cloudbilling Package"
 meta_desc: ""
-aliases:
-    - "docs/reference/pkg/google-native/"
 layout: api
 ---
 
