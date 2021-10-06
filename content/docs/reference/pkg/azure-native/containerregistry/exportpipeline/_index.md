@@ -492,7 +492,7 @@ The ExportPipeline resource accepts the following [input]({{< relref "/docs/intr
 <a href="#options_nodejs" style="color: inherit; text-decoration: inherit;">options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Pipeline<wbr>Options[]</span>
+        <span class="property-type">(string | Pipeline<wbr>Options)[]</span>
     </dt>
     <dd>{{% md %}}The list of all options configured for the pipeline.{{% /md %}}</dd></dl>
 {{% /choosable %}}

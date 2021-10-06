@@ -2928,7 +2928,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expresscustomsetupproperties_nodejs" style="color: inherit; text-decoration: inherit;">express<wbr>Custom<wbr>Setup<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Cmdkey<wbr>Setup | Component<wbr>Setup | Environment<wbr>Variable<wbr>Setup[]</span>
+        <span class="property-type">(Cmdkey<wbr>Setup | Component<wbr>Setup | Environment<wbr>Variable<wbr>Setup)[]</span>
     </dt>
     <dd>{{% md %}}Custom setup without script properties for a SSIS integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3138,7 +3138,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expresscustomsetupproperties_nodejs" style="color: inherit; text-decoration: inherit;">express<wbr>Custom<wbr>Setup<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Cmdkey<wbr>Setup<wbr>Response | Component<wbr>Setup<wbr>Response | Environment<wbr>Variable<wbr>Setup<wbr>Response[]</span>
+        <span class="property-type">(Cmdkey<wbr>Setup<wbr>Response | Component<wbr>Setup<wbr>Response | Environment<wbr>Variable<wbr>Setup<wbr>Response)[]</span>
     </dt>
     <dd>{{% md %}}Custom setup without script properties for a SSIS integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

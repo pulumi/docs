@@ -837,7 +837,7 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
 <a href="#vpnauthenticationtypes_nodejs" style="color: inherit; text-decoration: inherit;">vpn<wbr>Authentication<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Vpn<wbr>Authentication<wbr>Type[]</span>
+        <span class="property-type">(string | Vpn<wbr>Authentication<wbr>Type)[]</span>
     </dt>
     <dd>{{% md %}}VPN authentication types for the VpnServerConfiguration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -869,7 +869,7 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
 <a href="#vpnprotocols_nodejs" style="color: inherit; text-decoration: inherit;">vpn<wbr>Protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Vpn<wbr>Gateway<wbr>Tunneling<wbr>Protocol[]</span>
+        <span class="property-type">(string | Vpn<wbr>Gateway<wbr>Tunneling<wbr>Protocol)[]</span>
     </dt>
     <dd>{{% md %}}VPN protocols for the VpnServerConfiguration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

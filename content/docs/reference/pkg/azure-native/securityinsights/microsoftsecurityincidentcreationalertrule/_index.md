@@ -788,7 +788,7 @@ The MicrosoftSecurityIncidentCreationAlertRule resource accepts the following [i
 <a href="#severitiesfilter_nodejs" style="color: inherit; text-decoration: inherit;">severities<wbr>Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Alert<wbr>Severity[]</span>
+        <span class="property-type">(string | Alert<wbr>Severity)[]</span>
     </dt>
     <dd>{{% md %}}the alerts' severities on which the cases will be generated{{% /md %}}</dd></dl>
 {{% /choosable %}}

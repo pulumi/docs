@@ -1690,7 +1690,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#allowedendpointrecordtypes_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Endpoint<wbr>Record<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Allowed<wbr>Endpoint<wbr>Record<wbr>Type[]</span>
+        <span class="property-type">(string | Allowed<wbr>Endpoint<wbr>Record<wbr>Type)[]</span>
     </dt>
     <dd>{{% md %}}The list of allowed endpoint record types.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

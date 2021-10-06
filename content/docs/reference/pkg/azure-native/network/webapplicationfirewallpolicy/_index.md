@@ -15117,7 +15117,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transforms_nodejs" style="color: inherit; text-decoration: inherit;">transforms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Web<wbr>Application<wbr>Firewall<wbr>Transform[]</span>
+        <span class="property-type">(string | Web<wbr>Application<wbr>Firewall<wbr>Transform)[]</span>
     </dt>
     <dd>{{% md %}}List of transforms.{{% /md %}}</dd></dl>
 {{% /choosable %}}

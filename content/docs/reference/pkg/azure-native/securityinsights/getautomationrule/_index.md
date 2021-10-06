@@ -414,7 +414,7 @@ The following output properties are available:
 <a href="#actions_nodejs" style="color: inherit; text-decoration: inherit;">actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Automation<wbr>Rule<wbr>Modify<wbr>Properties<wbr>Action<wbr>Response | Automation<wbr>Rule<wbr>Run<wbr>Playbook<wbr>Action<wbr>Response[]</span>
+        <span class="property-type">(Automation<wbr>Rule<wbr>Modify<wbr>Properties<wbr>Action<wbr>Response | Automation<wbr>Rule<wbr>Run<wbr>Playbook<wbr>Action<wbr>Response)[]</span>
     </dt>
     <dd>{{% md %}}The actions to execute when the automation rule is triggered{{% /md %}}</dd><dt class="property-"
             title="">

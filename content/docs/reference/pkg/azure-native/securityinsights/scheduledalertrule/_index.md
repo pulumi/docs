@@ -962,7 +962,7 @@ The ScheduledAlertRule resource accepts the following [input]({{< relref "/docs/
 <a href="#tactics_nodejs" style="color: inherit; text-decoration: inherit;">tactics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Attack<wbr>Tactic[]</span>
+        <span class="property-type">(string | Attack<wbr>Tactic)[]</span>
     </dt>
     <dd>{{% md %}}The tactics of the alert rule{{% /md %}}</dd></dl>
 {{% /choosable %}}

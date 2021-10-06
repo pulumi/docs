@@ -14403,7 +14403,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ciphersuites_nodejs" style="color: inherit; text-decoration: inherit;">cipher<wbr>Suites</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Application<wbr>Gateway<wbr>Ssl<wbr>Cipher<wbr>Suite[]</span>
+        <span class="property-type">(string | Application<wbr>Gateway<wbr>Ssl<wbr>Cipher<wbr>Suite)[]</span>
     </dt>
     <dd>{{% md %}}Ssl cipher suites to be enabled in the specified order to application gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14411,7 +14411,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disabledsslprotocols_nodejs" style="color: inherit; text-decoration: inherit;">disabled<wbr>Ssl<wbr>Protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Application<wbr>Gateway<wbr>Ssl<wbr>Protocol[]</span>
+        <span class="property-type">(string | Application<wbr>Gateway<wbr>Ssl<wbr>Protocol)[]</span>
     </dt>
     <dd>{{% md %}}Ssl protocols to be disabled on application gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

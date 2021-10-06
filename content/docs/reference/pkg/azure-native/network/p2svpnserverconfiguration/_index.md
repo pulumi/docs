@@ -771,7 +771,7 @@ The P2sVpnServerConfiguration resource accepts the following [input]({{< relref 
 <a href="#vpnprotocols_nodejs" style="color: inherit; text-decoration: inherit;">vpn<wbr>Protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Vpn<wbr>Gateway<wbr>Tunneling<wbr>Protocol[]</span>
+        <span class="property-type">(string | Vpn<wbr>Gateway<wbr>Tunneling<wbr>Protocol)[]</span>
     </dt>
     <dd>{{% md %}}VPN protocols for the P2SVpnServerConfiguration.{{% /md %}}</dd></dl>
 {{% /choosable %}}

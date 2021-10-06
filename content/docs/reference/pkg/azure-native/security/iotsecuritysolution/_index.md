@@ -650,7 +650,7 @@ The IotSecuritySolution resource accepts the following [input]({{< relref "/docs
 <a href="#disableddatasources_nodejs" style="color: inherit; text-decoration: inherit;">disabled<wbr>Data<wbr>Sources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Data<wbr>Source[]</span>
+        <span class="property-type">(string | Data<wbr>Source)[]</span>
     </dt>
     <dd>{{% md %}}Disabled data sources. Disabling these data sources compromises the system.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -658,7 +658,7 @@ The IotSecuritySolution resource accepts the following [input]({{< relref "/docs
 <a href="#export_nodejs" style="color: inherit; text-decoration: inherit;">export</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Export<wbr>Data[]</span>
+        <span class="property-type">(string | Export<wbr>Data)[]</span>
     </dt>
     <dd>{{% md %}}List of additional options for exporting to workspace data.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1149,7 +1149,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datatypes_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Additional<wbr>Workspace<wbr>Data<wbr>Type[]</span>
+        <span class="property-type">(string | Additional<wbr>Workspace<wbr>Data<wbr>Type)[]</span>
     </dt>
     <dd>{{% md %}}List of data types sent to workspace{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

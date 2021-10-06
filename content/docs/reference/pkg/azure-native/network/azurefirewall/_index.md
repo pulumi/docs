@@ -6293,7 +6293,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocols_nodejs" style="color: inherit; text-decoration: inherit;">protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Azure<wbr>Firewall<wbr>Network<wbr>Rule<wbr>Protocol[]</span>
+        <span class="property-type">(string | Azure<wbr>Firewall<wbr>Network<wbr>Rule<wbr>Protocol)[]</span>
     </dt>
     <dd>{{% md %}}Array of AzureFirewallNetworkRuleProtocols applicable to this NAT rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7389,7 +7389,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocols_nodejs" style="color: inherit; text-decoration: inherit;">protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Azure<wbr>Firewall<wbr>Network<wbr>Rule<wbr>Protocol[]</span>
+        <span class="property-type">(string | Azure<wbr>Firewall<wbr>Network<wbr>Rule<wbr>Protocol)[]</span>
     </dt>
     <dd>{{% md %}}Array of AzureFirewallNetworkRuleProtocols.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

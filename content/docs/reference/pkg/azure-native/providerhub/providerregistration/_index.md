@@ -3991,7 +3991,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#preflightoptions_nodejs" style="color: inherit; text-decoration: inherit;">preflight<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Preflight<wbr>Option[]</span>
+        <span class="property-type">(string | Preflight<wbr>Option)[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

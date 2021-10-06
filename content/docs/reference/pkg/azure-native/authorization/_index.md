@@ -20,6 +20,7 @@ Explore the resources and functions of the azure-native.authorization module.
     <li><a href="policydefinition" title="PolicyDefinition"><span class="symbol resource"></span>PolicyDefinition</a></li>
     <li><a href="policydefinitionatmanagementgroup" title="PolicyDefinitionAtManagementGroup"><span class="symbol resource"></span>PolicyDefinitionAtManagementGroup</a></li>
     <li><a href="policyexemption" title="PolicyExemption"><span class="symbol resource"></span>PolicyExemption</a></li>
+    <li><a href="policypricing" title="PolicyPricing"><span class="symbol resource"></span>PolicyPricing</a></li>
     <li><a href="policysetdefinition" title="PolicySetDefinition"><span class="symbol resource"></span>PolicySetDefinition</a></li>
     <li><a href="policysetdefinitionatmanagementgroup" title="PolicySetDefinitionAtManagementGroup"><span class="symbol resource"></span>PolicySetDefinitionAtManagementGroup</a></li>
     <li><a href="resourcemanagementprivatelink" title="ResourceManagementPrivateLink"><span class="symbol resource"></span>ResourceManagementPrivateLink</a></li>
@@ -41,6 +42,7 @@ Explore the resources and functions of the azure-native.authorization module.
     <li><a href="getpolicydefinition" title="GetPolicyDefinition"><span class="symbol function"></span>GetPolicyDefinition</a></li>
     <li><a href="getpolicydefinitionatmanagementgroup" title="GetPolicyDefinitionAtManagementGroup"><span class="symbol function"></span>GetPolicyDefinitionAtManagementGroup</a></li>
     <li><a href="getpolicyexemption" title="GetPolicyExemption"><span class="symbol function"></span>GetPolicyExemption</a></li>
+    <li><a href="getpolicypricing" title="GetPolicyPricing"><span class="symbol function"></span>GetPolicyPricing</a></li>
     <li><a href="getpolicysetdefinition" title="GetPolicySetDefinition"><span class="symbol function"></span>GetPolicySetDefinition</a></li>
     <li><a href="getpolicysetdefinitionatmanagementgroup" title="GetPolicySetDefinitionAtManagementGroup"><span class="symbol function"></span>GetPolicySetDefinitionAtManagementGroup</a></li>
     <li><a href="getresourcemanagementprivatelink" title="GetResourceManagementPrivateLink"><span class="symbol function"></span>GetResourceManagementPrivateLink</a></li>
@@ -56,6 +58,6 @@ Explore the resources and functions of the azure-native.authorization module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.34.0</dd>
+	<dd>1.35.0</dd>
 </dl>
 

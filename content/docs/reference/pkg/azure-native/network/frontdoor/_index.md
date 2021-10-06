@@ -6302,7 +6302,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#acceptedprotocols_nodejs" style="color: inherit; text-decoration: inherit;">accepted<wbr>Protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Front<wbr>Door<wbr>Protocol[]</span>
+        <span class="property-type">(string | Front<wbr>Door<wbr>Protocol)[]</span>
     </dt>
     <dd>{{% md %}}Protocol schemes to match for this rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

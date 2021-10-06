@@ -545,7 +545,7 @@ The SourceControl resource accepts the following [input]({{< relref "/docs/intro
 <a href="#contenttypes_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Content<wbr>Type[]</span>
+        <span class="property-type">(string | Content<wbr>Type)[]</span>
     </dt>
     <dd>{{% md %}}Array of source control content types.{{% /md %}}</dd><dt class="property-required"
             title="Required">

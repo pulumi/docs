@@ -380,7 +380,7 @@ The following output properties are available:
 <a href="#distribute_nodejs" style="color: inherit; text-decoration: inherit;">distribute</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Image<wbr>Template<wbr>Managed<wbr>Image<wbr>Distributor<wbr>Response | Image<wbr>Template<wbr>Shared<wbr>Image<wbr>Distributor<wbr>Response | Image<wbr>Template<wbr>Vhd<wbr>Distributor<wbr>Response[]</span>
+        <span class="property-type">(Image<wbr>Template<wbr>Managed<wbr>Image<wbr>Distributor<wbr>Response | Image<wbr>Template<wbr>Shared<wbr>Image<wbr>Distributor<wbr>Response | Image<wbr>Template<wbr>Vhd<wbr>Distributor<wbr>Response)[]</span>
     </dt>
     <dd>{{% md %}}The distribution targets where the image output needs to go to.{{% /md %}}</dd><dt class="property-"
             title="">
@@ -468,7 +468,7 @@ The following output properties are available:
 <a href="#customize_nodejs" style="color: inherit; text-decoration: inherit;">customize</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Image<wbr>Template<wbr>File<wbr>Customizer<wbr>Response | Image<wbr>Template<wbr>Power<wbr>Shell<wbr>Customizer<wbr>Response | Image<wbr>Template<wbr>Restart<wbr>Customizer<wbr>Response | Image<wbr>Template<wbr>Shell<wbr>Customizer<wbr>Response | Image<wbr>Template<wbr>Windows<wbr>Update<wbr>Customizer<wbr>Response[]</span>
+        <span class="property-type">(Image<wbr>Template<wbr>File<wbr>Customizer<wbr>Response | Image<wbr>Template<wbr>Power<wbr>Shell<wbr>Customizer<wbr>Response | Image<wbr>Template<wbr>Restart<wbr>Customizer<wbr>Response | Image<wbr>Template<wbr>Shell<wbr>Customizer<wbr>Response | Image<wbr>Template<wbr>Windows<wbr>Update<wbr>Customizer<wbr>Response)[]</span>
     </dt>
     <dd>{{% md %}}Specifies the properties used to describe the customization steps of the image, like Image source etc{{% /md %}}</dd><dt class="property-"
             title="">

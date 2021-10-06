@@ -519,7 +519,7 @@ The NetworkManager resource accepts the following [input]({{< relref "/docs/intr
 <a href="#networkmanagerscopeaccesses_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Manager<wbr>Scope<wbr>Accesses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Configuration<wbr>Type[]</span>
+        <span class="property-type">(string | Configuration<wbr>Type)[]</span>
     </dt>
     <dd>{{% md %}}Scope Access.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

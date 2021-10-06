@@ -1356,7 +1356,7 @@ The hostname will be of format: &lt;hostNamePrefix&gt;.service.signalr.net.{{% /
 <a href="#allow_nodejs" style="color: inherit; text-decoration: inherit;">allow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Signal<wbr>RRequest<wbr>Type[]</span>
+        <span class="property-type">(string | Signal<wbr>RRequest<wbr>Type)[]</span>
     </dt>
     <dd>{{% md %}}Allowed request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1364,7 +1364,7 @@ The hostname will be of format: &lt;hostNamePrefix&gt;.service.signalr.net.{{% /
 <a href="#deny_nodejs" style="color: inherit; text-decoration: inherit;">deny</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Signal<wbr>RRequest<wbr>Type[]</span>
+        <span class="property-type">(string | Signal<wbr>RRequest<wbr>Type)[]</span>
     </dt>
     <dd>{{% md %}}Denied request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1544,7 +1544,7 @@ The hostname will be of format: &lt;hostNamePrefix&gt;.service.signalr.net.{{% /
 <a href="#allow_nodejs" style="color: inherit; text-decoration: inherit;">allow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Signal<wbr>RRequest<wbr>Type[]</span>
+        <span class="property-type">(string | Signal<wbr>RRequest<wbr>Type)[]</span>
     </dt>
     <dd>{{% md %}}Allowed request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1552,7 +1552,7 @@ The hostname will be of format: &lt;hostNamePrefix&gt;.service.signalr.net.{{% /
 <a href="#deny_nodejs" style="color: inherit; text-decoration: inherit;">deny</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Signal<wbr>RRequest<wbr>Type[]</span>
+        <span class="property-type">(string | Signal<wbr>RRequest<wbr>Type)[]</span>
     </dt>
     <dd>{{% md %}}Denied request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.{{% /md %}}</dd></dl>
 {{% /choosable %}}

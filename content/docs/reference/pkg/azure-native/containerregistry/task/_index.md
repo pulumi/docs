@@ -7293,7 +7293,7 @@ the source registry during the run.{{% /md %}}</dd></dl>
 <a href="#sourcetriggerevents_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Trigger<wbr>Events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Source<wbr>Trigger<wbr>Event[]</span>
+        <span class="property-type">(string | Source<wbr>Trigger<wbr>Event)[]</span>
     </dt>
     <dd>{{% md %}}The source event corresponding to the trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
