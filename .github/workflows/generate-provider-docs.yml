@@ -2,7 +2,7 @@ env:
   GITHUB_TOKEN: ${{ secrets.PULUMI_BOT_TOKEN }}
   PROVIDER_CATEGORY: ${{ github.event.client_payload.category }}
   PROVIDER_DISPLAY_NAME: ${{ github.event.client_payload.display-name }}
-  PROVIDER_IS_COMPONENT: ${{ github.event.client_payload.is_component }}
+  PROVIDER_IS_COMPONENT: ${{ github.event.client_payload.is-component }}
   PROVIDER_NAME: ${{ github.event.client_payload.project }}
   PROVIDER_SHORT_NAME: ${{ github.event.client_payload.project-shortname }}
   PROVIDER_PUBLISHER_NAME: ${{ github.event.client_payload.publisher }}
