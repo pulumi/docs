@@ -10,17 +10,27 @@ METADATA_OUT_DIR=${1:-}
 # The second argument is the override for the package for which this script will generate the metadata.
 # Must not be passed without the "pulumi-" prefix.
 REPO_OVERRIDE=${2:-}
-# Pass a non-empty string as the 3rd arg to override the package version used by this script.
-VERSION=${3:-}
-# Pass a non-empty string as the 4th arg to override the publisher name for the package.
+# Pass a non-empty string as the 3rd arg to override the path to the Pulumi schema file.
+# The path must start from the root of the package's repository.
+# For example, if the schema is in the root of the package repo, then
+# this value should be set to `/schema.json` (if using a JSON schema, .yaml otherwise)
+# And if the schema is in a folder called provider, then this would be set to
+# `/provider/schema.json` (or .yaml).
+#
+# If not set, the default location for the schema will be used which is
+# /provider/cmd/pulumi-resource-${provider}/schema.[json|yaml].
+SCHEMA_FILE_PATH=${3:-}
+# Pass a non-empty string as the 4th arg to override the package version used by this script.
+VERSION=${4:-}
+# Pass a non-empty string as the 5th arg to override the publisher name for the package.
 # Default is Pulumi.
-PUBLISHER=${4:-Pulumi}
-# Pass a non-empty string as the 5th arg to override the display name of the package.
-TITLE=${5:-}
-# Pass a non-empty string as the 6th arg to override the category of the package.
-CATEGORY=${6:-}
-# Pass true as the 7th arg if the package is a component.
-COMPONENT=${7:-}
+PUBLISHER=${5:-Pulumi}
+# Pass a non-empty string as the 6th arg to override the display name of the package.
+TITLE=${6:-}
+# Pass a non-empty string as the 7th arg to override the category of the package.
+CATEGORY=${7:-}
+# Pass true as the 8th arg if the package is a component.
+COMPONENT=${8:-}
 
 if [ -z "${TITLE:-}" ]; then
     TITLE=${REPO_OVERRIDE}
@@ -61,9 +71,6 @@ component_packages=(
     "eks"
 )
 
-# The timestamp when the package was last updated.
-PKG_UPDATED_ON=""
-
 generate_metadata() {
     provider=$1
     repository="pulumi-${provider}"
@@ -94,23 +101,20 @@ generate_metadata() {
     # Go back to the docs repo.
     popd
 
-    EXISTING_SCHEMA_FILE="../${repository}/provider/cmd/pulumi-resource-${provider}/schema.json"
-
-    # Use a previously generated schema.json file if it exists.
-    if [ -f "${EXISTING_SCHEMA_FILE}" ]; then
-        echo "Will use the previously generated schema.json for generating resource docs..."
+    EXISTING_SCHEMA_FILE=""
+    # If the schema file path was overridden, then just use that.
+    if [ -n "${SCHEMA_FILE_PATH:-}" ]; then
+        EXISTING_SCHEMA_FILE="../${repository}${SCHEMA_FILE_PATH}"
+        if [ ! -f "${EXISTING_SCHEMA_FILE}" ]; then
+            echo "Error: Pulumi schema file at path ${SCHEMA_FILE_PATH} does not exist."
+            exit 1
+        fi
     else
-        echo "Could not find a previously generated schema.json file. Will generate schema..."
-
-        echo "Installing resource plugin for ${provider}. Version: ${plugin_version}"
-        pulumi plugin install resource "${provider}" "${plugin_version}"
-
-        pushd "../${repository}"
-        make generate_schema
-        popd
+        EXISTING_SCHEMA_FILE=$(get_schema_file_path "${repository}" "${provider}")
     fi
 
-    SCHEMA_FILE="../../../${repository}/provider/cmd/pulumi-resource-${provider}/schema.json"
+    # This path should be relative to the tools/resourcedocsgen tool.
+    SCHEMA_FILE="../../${EXISTING_SCHEMA_FILE}"
 
     echo "Running package metadata generator from schema for ${provider}..."
     pushd ${TOOL_RESDOCGEN}
