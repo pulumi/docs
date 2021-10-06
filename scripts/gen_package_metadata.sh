@@ -5,12 +5,10 @@
 
 set -o nounset -o errexit -o pipefail
 
-# The first argument is for the output dir (required).
-METADATA_OUT_DIR=${1:-}
-# The second argument is the override for the package for which this script will generate the metadata.
+# The first argument is the override for the package for which this script will generate the metadata.
 # Must not be passed without the "pulumi-" prefix.
-REPO_OVERRIDE=${2:-}
-# Pass a non-empty string as the 3rd arg to override the path to the Pulumi schema file.
+REPO_OVERRIDE=${1:-}
+# Pass a non-empty string as the 2nd arg to override the path to the Pulumi schema file.
 # The path must start from the root of the package's repository.
 # For example, if the schema is in the root of the package repo, then
 # this value should be set to `/schema.json` (if using a JSON schema, .yaml otherwise)
@@ -19,28 +17,26 @@ REPO_OVERRIDE=${2:-}
 #
 # If not set, the default location for the schema will be used which is
 # /provider/cmd/pulumi-resource-${provider}/schema.[json|yaml].
-SCHEMA_FILE_PATH=${3:-}
-# Pass a non-empty string as the 4th arg to override the package version used by this script.
-VERSION=${4:-}
-# Pass a non-empty string as the 5th arg to override the publisher name for the package.
+SCHEMA_FILE_PATH=${2:-}
+# Pass a non-empty string as the 3rd arg to override the package version used by this script.
+VERSION=${3:-}
+# Pass a non-empty string as the 4th arg to override the publisher name for the package.
 # Default is Pulumi.
-PUBLISHER=${5:-Pulumi}
-# Pass a non-empty string as the 6th arg to override the display name of the package.
-TITLE=${6:-}
-# Pass a non-empty string as the 7th arg to override the category of the package.
-CATEGORY=${7:-}
-# Pass true as the 8th arg if the package is a component.
-COMPONENT=${8:-}
+PUBLISHER=${4:-Pulumi}
+# Pass a non-empty string as the 5th arg to override the display name of the package.
+TITLE=${5:-}
+# Pass a non-empty string as the 6th arg to override the category of the package.
+CATEGORY=${6:-}
+# Pass true as the 7th arg if the package is a component.
+COMPONENT=${7:-}
+
+# The path relative to the resourcedocsgen tool where the metadata file should be
+# written.
+METADATA_OUT_DIR=../../../registry/themes/default/data/registry/packages
+TOOL_RESDOCGEN="./tools/resourcedocsgen/"
 
 if [ -z "${TITLE:-}" ]; then
     TITLE=${REPO_OVERRIDE}
-fi
-
-TOOL_RESDOCGEN="./tools/resourcedocsgen/"
-
-if [ -z "${METADATA_OUT_DIR:-}" ]; then
-  echo "Specify an out dir for the metadata files. Usage is gen_package_metadata.sh <METADATA_OUT_DIR> <REPO_OVERRIDE> <VERSION> [PUBLISHER] [TITLE] [CATEGORY]."
-  exit 1
 fi
 
 if [ -z "${REPO_OVERRIDE:-}" ]; then
