@@ -434,7 +434,7 @@ The Redis resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Static IP address. Required when deploying a Redis cache inside an existing Azure Virtual Network.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Static IP address. Optionally, may be specified when deploying a Redis cache inside an existing Azure Virtual Network; auto assigned by default.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnetid_csharp">
 <a href="#subnetid_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
@@ -558,7 +558,7 @@ The Redis resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Static IP address. Required when deploying a Redis cache inside an existing Azure Virtual Network.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Static IP address. Optionally, may be specified when deploying a Redis cache inside an existing Azure Virtual Network; auto assigned by default.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnetid_go">
 <a href="#subnetid_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
@@ -682,7 +682,7 @@ The Redis resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Static IP address. Required when deploying a Redis cache inside an existing Azure Virtual Network.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Static IP address. Optionally, may be specified when deploying a Redis cache inside an existing Azure Virtual Network; auto assigned by default.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnetid_nodejs">
 <a href="#subnetid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Id</a>
@@ -806,7 +806,7 @@ The Redis resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Static IP address. Required when deploying a Redis cache inside an existing Azure Virtual Network.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Static IP address. Optionally, may be specified when deploying a Redis cache inside an existing Azure Virtual Network; auto assigned by default.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnet_id_python">
 <a href="#subnet_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>id</a>

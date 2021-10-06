@@ -166,7 +166,7 @@ The following arguments are supported:
 <a href="#deploymenttypes_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Configuration<wbr>Type[]</span>
+        <span class="property-type">(string | Configuration<wbr>Type)[]</span>
     </dt>
     <dd>{{% md %}}List of deployment types.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

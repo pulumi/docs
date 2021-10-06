@@ -1377,7 +1377,7 @@ The following output properties are available:
 <a href="#commands_nodejs" style="color: inherit; text-decoration: inherit;">commands</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response | Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response[]</span>
+        <span class="property-type">(Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response | Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response)[]</span>
     </dt>
     <dd>{{% md %}}Array of command properties.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1557,7 +1557,7 @@ The following output properties are available:
 <a href="#commands_nodejs" style="color: inherit; text-decoration: inherit;">commands</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response | Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response[]</span>
+        <span class="property-type">(Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response | Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response)[]</span>
     </dt>
     <dd>{{% md %}}Array of command properties.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1573,7 +1573,7 @@ The following output properties are available:
 <a href="#output_nodejs" style="color: inherit; text-decoration: inherit;">output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Connect<wbr>To<wbr>Source<wbr>Sql<wbr>Server<wbr>Task<wbr>Output<wbr>Agent<wbr>Job<wbr>Level<wbr>Response | Connect<wbr>To<wbr>Source<wbr>Sql<wbr>Server<wbr>Task<wbr>Output<wbr>Database<wbr>Level<wbr>Response | Connect<wbr>To<wbr>Source<wbr>Sql<wbr>Server<wbr>Task<wbr>Output<wbr>Login<wbr>Level<wbr>Response | Connect<wbr>To<wbr>Source<wbr>Sql<wbr>Server<wbr>Task<wbr>Output<wbr>Task<wbr>Level<wbr>Response[]</span>
+        <span class="property-type">(Connect<wbr>To<wbr>Source<wbr>Sql<wbr>Server<wbr>Task<wbr>Output<wbr>Agent<wbr>Job<wbr>Level<wbr>Response | Connect<wbr>To<wbr>Source<wbr>Sql<wbr>Server<wbr>Task<wbr>Output<wbr>Database<wbr>Level<wbr>Response | Connect<wbr>To<wbr>Source<wbr>Sql<wbr>Server<wbr>Task<wbr>Output<wbr>Login<wbr>Level<wbr>Response | Connect<wbr>To<wbr>Source<wbr>Sql<wbr>Server<wbr>Task<wbr>Output<wbr>Task<wbr>Level<wbr>Response)[]</span>
     </dt>
     <dd>{{% md %}}Task output. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2797,7 +2797,7 @@ The following output properties are available:
 <a href="#commands_nodejs" style="color: inherit; text-decoration: inherit;">commands</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response | Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response[]</span>
+        <span class="property-type">(Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response | Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response)[]</span>
     </dt>
     <dd>{{% md %}}Array of command properties.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2813,7 +2813,7 @@ The following output properties are available:
 <a href="#output_nodejs" style="color: inherit; text-decoration: inherit;">output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Connect<wbr>To<wbr>Source<wbr>Sql<wbr>Server<wbr>Task<wbr>Output<wbr>Agent<wbr>Job<wbr>Level<wbr>Response | Connect<wbr>To<wbr>Source<wbr>Sql<wbr>Server<wbr>Task<wbr>Output<wbr>Database<wbr>Level<wbr>Response | Connect<wbr>To<wbr>Source<wbr>Sql<wbr>Server<wbr>Task<wbr>Output<wbr>Login<wbr>Level<wbr>Response | Connect<wbr>To<wbr>Source<wbr>Sql<wbr>Server<wbr>Task<wbr>Output<wbr>Task<wbr>Level<wbr>Response[]</span>
+        <span class="property-type">(Connect<wbr>To<wbr>Source<wbr>Sql<wbr>Server<wbr>Task<wbr>Output<wbr>Agent<wbr>Job<wbr>Level<wbr>Response | Connect<wbr>To<wbr>Source<wbr>Sql<wbr>Server<wbr>Task<wbr>Output<wbr>Database<wbr>Level<wbr>Response | Connect<wbr>To<wbr>Source<wbr>Sql<wbr>Server<wbr>Task<wbr>Output<wbr>Login<wbr>Level<wbr>Response | Connect<wbr>To<wbr>Source<wbr>Sql<wbr>Server<wbr>Task<wbr>Output<wbr>Task<wbr>Level<wbr>Response)[]</span>
     </dt>
     <dd>{{% md %}}Task output. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3241,7 +3241,7 @@ The following output properties are available:
 <a href="#commands_nodejs" style="color: inherit; text-decoration: inherit;">commands</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response | Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response[]</span>
+        <span class="property-type">(Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response | Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response)[]</span>
     </dt>
     <dd>{{% md %}}Array of command properties.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3685,7 +3685,7 @@ The following output properties are available:
 <a href="#commands_nodejs" style="color: inherit; text-decoration: inherit;">commands</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response | Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response[]</span>
+        <span class="property-type">(Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response | Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response)[]</span>
     </dt>
     <dd>{{% md %}}Array of command properties.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4065,7 +4065,7 @@ The following output properties are available:
 <a href="#commands_nodejs" style="color: inherit; text-decoration: inherit;">commands</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response | Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response[]</span>
+        <span class="property-type">(Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response | Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response)[]</span>
     </dt>
     <dd>{{% md %}}Array of command properties.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4445,7 +4445,7 @@ The following output properties are available:
 <a href="#commands_nodejs" style="color: inherit; text-decoration: inherit;">commands</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response | Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response[]</span>
+        <span class="property-type">(Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response | Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response)[]</span>
     </dt>
     <dd>{{% md %}}Array of command properties.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4889,7 +4889,7 @@ The following output properties are available:
 <a href="#commands_nodejs" style="color: inherit; text-decoration: inherit;">commands</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response | Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response[]</span>
+        <span class="property-type">(Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response | Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response)[]</span>
     </dt>
     <dd>{{% md %}}Array of command properties.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5153,7 +5153,7 @@ The following output properties are available:
 <a href="#commands_nodejs" style="color: inherit; text-decoration: inherit;">commands</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response | Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response[]</span>
+        <span class="property-type">(Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response | Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response)[]</span>
     </dt>
     <dd>{{% md %}}Array of command properties.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7197,7 +7197,7 @@ The following output properties are available:
 <a href="#commands_nodejs" style="color: inherit; text-decoration: inherit;">commands</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response | Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response[]</span>
+        <span class="property-type">(Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response | Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response)[]</span>
     </dt>
     <dd>{{% md %}}Array of command properties.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7673,7 +7673,7 @@ The following output properties are available:
 <a href="#commands_nodejs" style="color: inherit; text-decoration: inherit;">commands</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response | Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response[]</span>
+        <span class="property-type">(Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response | Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response)[]</span>
     </dt>
     <dd>{{% md %}}Array of command properties.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8053,7 +8053,7 @@ The following output properties are available:
 <a href="#commands_nodejs" style="color: inherit; text-decoration: inherit;">commands</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response | Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response[]</span>
+        <span class="property-type">(Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response | Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response)[]</span>
     </dt>
     <dd>{{% md %}}Array of command properties.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10341,7 +10341,7 @@ The following output properties are available:
 <a href="#commands_nodejs" style="color: inherit; text-decoration: inherit;">commands</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response | Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response[]</span>
+        <span class="property-type">(Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response | Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response)[]</span>
     </dt>
     <dd>{{% md %}}Array of command properties.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10357,7 +10357,7 @@ The following output properties are available:
 <a href="#output_nodejs" style="color: inherit; text-decoration: inherit;">output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Migrate<wbr>My<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Database<wbr>Error<wbr>Response | Migrate<wbr>My<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Database<wbr>Level<wbr>Response | Migrate<wbr>My<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Error<wbr>Response | Migrate<wbr>My<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Migration<wbr>Level<wbr>Response | Migrate<wbr>My<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Table<wbr>Level<wbr>Response[]</span>
+        <span class="property-type">(Migrate<wbr>My<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Database<wbr>Error<wbr>Response | Migrate<wbr>My<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Database<wbr>Level<wbr>Response | Migrate<wbr>My<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Error<wbr>Response | Migrate<wbr>My<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Migration<wbr>Level<wbr>Response | Migrate<wbr>My<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Table<wbr>Level<wbr>Response)[]</span>
     </dt>
     <dd>{{% md %}}Task output. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -12261,7 +12261,7 @@ The following output properties are available:
 <a href="#commands_nodejs" style="color: inherit; text-decoration: inherit;">commands</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response | Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response[]</span>
+        <span class="property-type">(Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response | Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response)[]</span>
     </dt>
     <dd>{{% md %}}Array of command properties.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -12277,7 +12277,7 @@ The following output properties are available:
 <a href="#output_nodejs" style="color: inherit; text-decoration: inherit;">output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Migrate<wbr>Postgre<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Database<wbr>Error<wbr>Response | Migrate<wbr>Postgre<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Database<wbr>Level<wbr>Response | Migrate<wbr>Postgre<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Error<wbr>Response | Migrate<wbr>Postgre<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Migration<wbr>Level<wbr>Response | Migrate<wbr>Postgre<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Table<wbr>Level<wbr>Response[]</span>
+        <span class="property-type">(Migrate<wbr>Postgre<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Database<wbr>Error<wbr>Response | Migrate<wbr>Postgre<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Database<wbr>Level<wbr>Response | Migrate<wbr>Postgre<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Error<wbr>Response | Migrate<wbr>Postgre<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Migration<wbr>Level<wbr>Response | Migrate<wbr>Postgre<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Table<wbr>Level<wbr>Response)[]</span>
     </dt>
     <dd>{{% md %}}Task output. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -14489,7 +14489,7 @@ The following output properties are available:
 <a href="#commands_nodejs" style="color: inherit; text-decoration: inherit;">commands</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response | Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response[]</span>
+        <span class="property-type">(Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response | Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response)[]</span>
     </dt>
     <dd>{{% md %}}Array of command properties.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -14505,7 +14505,7 @@ The following output properties are available:
 <a href="#output_nodejs" style="color: inherit; text-decoration: inherit;">output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Sync<wbr>Task<wbr>Output<wbr>Database<wbr>Error<wbr>Response | Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Sync<wbr>Task<wbr>Output<wbr>Database<wbr>Level<wbr>Response | Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Sync<wbr>Task<wbr>Output<wbr>Error<wbr>Response | Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Sync<wbr>Task<wbr>Output<wbr>Migration<wbr>Level<wbr>Response | Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Sync<wbr>Task<wbr>Output<wbr>Table<wbr>Level<wbr>Response[]</span>
+        <span class="property-type">(Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Sync<wbr>Task<wbr>Output<wbr>Database<wbr>Error<wbr>Response | Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Sync<wbr>Task<wbr>Output<wbr>Database<wbr>Level<wbr>Response | Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Sync<wbr>Task<wbr>Output<wbr>Error<wbr>Response | Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Sync<wbr>Task<wbr>Output<wbr>Migration<wbr>Level<wbr>Response | Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Sync<wbr>Task<wbr>Output<wbr>Table<wbr>Level<wbr>Response)[]</span>
     </dt>
     <dd>{{% md %}}Task output. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -16737,7 +16737,7 @@ The following output properties are available:
 <a href="#commands_nodejs" style="color: inherit; text-decoration: inherit;">commands</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response | Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response[]</span>
+        <span class="property-type">(Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response | Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response)[]</span>
     </dt>
     <dd>{{% md %}}Array of command properties.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -16753,7 +16753,7 @@ The following output properties are available:
 <a href="#output_nodejs" style="color: inherit; text-decoration: inherit;">output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Task<wbr>Output<wbr>Database<wbr>Level<wbr>Response | Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Task<wbr>Output<wbr>Database<wbr>Level<wbr>Validation<wbr>Result<wbr>Response | Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Task<wbr>Output<wbr>Error<wbr>Response | Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Task<wbr>Output<wbr>Migration<wbr>Level<wbr>Response | Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Task<wbr>Output<wbr>Table<wbr>Level<wbr>Response | Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Task<wbr>Output<wbr>Validation<wbr>Result<wbr>Response[]</span>
+        <span class="property-type">(Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Task<wbr>Output<wbr>Database<wbr>Level<wbr>Response | Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Task<wbr>Output<wbr>Database<wbr>Level<wbr>Validation<wbr>Result<wbr>Response | Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Task<wbr>Output<wbr>Error<wbr>Response | Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Task<wbr>Output<wbr>Migration<wbr>Level<wbr>Response | Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Task<wbr>Output<wbr>Table<wbr>Level<wbr>Response | Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Task<wbr>Output<wbr>Validation<wbr>Result<wbr>Response)[]</span>
     </dt>
     <dd>{{% md %}}Task output. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -18169,7 +18169,7 @@ The following output properties are available:
 <a href="#commands_nodejs" style="color: inherit; text-decoration: inherit;">commands</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response | Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response[]</span>
+        <span class="property-type">(Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response | Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response)[]</span>
     </dt>
     <dd>{{% md %}}Array of command properties.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -18185,7 +18185,7 @@ The following output properties are available:
 <a href="#output_nodejs" style="color: inherit; text-decoration: inherit;">output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MISync<wbr>Task<wbr>Output<wbr>Database<wbr>Level<wbr>Response | Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MISync<wbr>Task<wbr>Output<wbr>Error<wbr>Response | Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MISync<wbr>Task<wbr>Output<wbr>Migration<wbr>Level<wbr>Response[]</span>
+        <span class="property-type">(Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MISync<wbr>Task<wbr>Output<wbr>Database<wbr>Level<wbr>Response | Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MISync<wbr>Task<wbr>Output<wbr>Error<wbr>Response | Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MISync<wbr>Task<wbr>Output<wbr>Migration<wbr>Level<wbr>Response)[]</span>
     </dt>
     <dd>{{% md %}}Task output. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -20101,7 +20101,7 @@ The following output properties are available:
 <a href="#commands_nodejs" style="color: inherit; text-decoration: inherit;">commands</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response | Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response[]</span>
+        <span class="property-type">(Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response | Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response)[]</span>
     </dt>
     <dd>{{% md %}}Array of command properties.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -20117,7 +20117,7 @@ The following output properties are available:
 <a href="#output_nodejs" style="color: inherit; text-decoration: inherit;">output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MITask<wbr>Output<wbr>Agent<wbr>Job<wbr>Level<wbr>Response | Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MITask<wbr>Output<wbr>Database<wbr>Level<wbr>Response | Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MITask<wbr>Output<wbr>Error<wbr>Response | Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MITask<wbr>Output<wbr>Login<wbr>Level<wbr>Response | Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MITask<wbr>Output<wbr>Migration<wbr>Level<wbr>Response[]</span>
+        <span class="property-type">(Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MITask<wbr>Output<wbr>Agent<wbr>Job<wbr>Level<wbr>Response | Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MITask<wbr>Output<wbr>Database<wbr>Level<wbr>Response | Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MITask<wbr>Output<wbr>Error<wbr>Response | Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MITask<wbr>Output<wbr>Login<wbr>Level<wbr>Response | Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MITask<wbr>Output<wbr>Migration<wbr>Level<wbr>Response)[]</span>
     </dt>
     <dd>{{% md %}}Task output. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -22953,7 +22953,7 @@ The following output properties are available:
 <a href="#commands_nodejs" style="color: inherit; text-decoration: inherit;">commands</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response | Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response[]</span>
+        <span class="property-type">(Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response | Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response)[]</span>
     </dt>
     <dd>{{% md %}}Array of command properties.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -23461,7 +23461,7 @@ The following output properties are available:
 <a href="#commands_nodejs" style="color: inherit; text-decoration: inherit;">commands</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response | Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response[]</span>
+        <span class="property-type">(Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response | Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response)[]</span>
     </dt>
     <dd>{{% md %}}Array of command properties.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -24161,7 +24161,7 @@ The following output properties are available:
 <a href="#commands_nodejs" style="color: inherit; text-decoration: inherit;">commands</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response | Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response[]</span>
+        <span class="property-type">(Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response | Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response)[]</span>
     </dt>
     <dd>{{% md %}}Array of command properties.{{% /md %}}</dd><dt class="property-required"
             title="Required">

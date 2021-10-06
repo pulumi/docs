@@ -1830,7 +1830,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policyrules_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Azure<wbr>Backup<wbr>Rule | Azure<wbr>Retention<wbr>Rule[]</span>
+        <span class="property-type">(Azure<wbr>Backup<wbr>Rule | Azure<wbr>Retention<wbr>Rule)[]</span>
     </dt>
     <dd>{{% md %}}Policy rule dictionary that contains rules for each backuptype i.e Full/Incremental/Logs etc{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1912,7 +1912,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policyrules_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Azure<wbr>Backup<wbr>Rule<wbr>Response | Azure<wbr>Retention<wbr>Rule<wbr>Response[]</span>
+        <span class="property-type">(Azure<wbr>Backup<wbr>Rule<wbr>Response | Azure<wbr>Retention<wbr>Rule<wbr>Response)[]</span>
     </dt>
     <dd>{{% md %}}Policy rule dictionary that contains rules for each backuptype i.e Full/Incremental/Logs etc{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2958,7 +2958,7 @@ and should be part of AbsoluteMarker enum{{% /md %}}</dd><dt class="property-opt
 <a href="#absolutecriteria_nodejs" style="color: inherit; text-decoration: inherit;">absolute<wbr>Criteria</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Absolute<wbr>Marker[]</span>
+        <span class="property-type">(string | Absolute<wbr>Marker)[]</span>
     </dt>
     <dd>{{% md %}}it contains absolute values like "AllBackup" / "FirstOfDay" / "FirstOfWeek" / "FirstOfMonth"
 and should be part of AbsoluteMarker enum{{% /md %}}</dd><dt class="property-optional"
@@ -2975,7 +2975,7 @@ and should be part of AbsoluteMarker enum{{% /md %}}</dd><dt class="property-opt
 <a href="#daysoftheweek_nodejs" style="color: inherit; text-decoration: inherit;">days<wbr>Of<wbr>The<wbr>Week</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Day<wbr>Of<wbr>Week[]</span>
+        <span class="property-type">(string | Day<wbr>Of<wbr>Week)[]</span>
     </dt>
     <dd>{{% md %}}It should be Sunday/Monday/T..../Saturday{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2983,7 +2983,7 @@ and should be part of AbsoluteMarker enum{{% /md %}}</dd><dt class="property-opt
 <a href="#monthsofyear_nodejs" style="color: inherit; text-decoration: inherit;">months<wbr>Of<wbr>Year</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Month[]</span>
+        <span class="property-type">(string | Month)[]</span>
     </dt>
     <dd>{{% md %}}It should be January/February/....../December{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2999,7 +2999,7 @@ and should be part of AbsoluteMarker enum{{% /md %}}</dd><dt class="property-opt
 <a href="#weeksofthemonth_nodejs" style="color: inherit; text-decoration: inherit;">weeks<wbr>Of<wbr>The<wbr>Month</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Week<wbr>Number[]</span>
+        <span class="property-type">(string | Week<wbr>Number)[]</span>
     </dt>
     <dd>{{% md %}}It should be First/Second/Third/Fourth/Last{{% /md %}}</dd></dl>
 {{% /choosable %}}

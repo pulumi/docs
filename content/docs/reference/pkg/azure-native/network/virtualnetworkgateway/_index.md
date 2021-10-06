@@ -4505,7 +4505,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vpnauthenticationtypes_nodejs" style="color: inherit; text-decoration: inherit;">vpn<wbr>Authentication<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Vpn<wbr>Authentication<wbr>Type[]</span>
+        <span class="property-type">(string | Vpn<wbr>Authentication<wbr>Type)[]</span>
     </dt>
     <dd>{{% md %}}VPN authentication types for the virtual network gateway..{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4529,7 +4529,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vpnclientprotocols_nodejs" style="color: inherit; text-decoration: inherit;">vpn<wbr>Client<wbr>Protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Vpn<wbr>Client<wbr>Protocol[]</span>
+        <span class="property-type">(string | Vpn<wbr>Client<wbr>Protocol)[]</span>
     </dt>
     <dd>{{% md %}}VpnClientProtocols for Virtual network gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

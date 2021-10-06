@@ -3944,7 +3944,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allof_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Of</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dynamic<wbr>Metric<wbr>Criteria | Metric<wbr>Criteria[]</span>
+        <span class="property-type">(Dynamic<wbr>Metric<wbr>Criteria | Metric<wbr>Criteria)[]</span>
     </dt>
     <dd>{{% md %}}the list of multiple metric criteria for this 'all of' operation. {{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3994,7 +3994,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allof_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Of</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dynamic<wbr>Metric<wbr>Criteria<wbr>Response | Metric<wbr>Criteria<wbr>Response[]</span>
+        <span class="property-type">(Dynamic<wbr>Metric<wbr>Criteria<wbr>Response | Metric<wbr>Criteria<wbr>Response)[]</span>
     </dt>
     <dd>{{% md %}}the list of multiple metric criteria for this 'all of' operation. {{% /md %}}</dd></dl>
 {{% /choosable %}}

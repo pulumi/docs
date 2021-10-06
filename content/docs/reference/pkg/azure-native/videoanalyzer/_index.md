@@ -13,6 +13,10 @@ Explore the resources and functions of the azure-native.videoanalyzer module.
 <ul class="api">
     <li><a href="accesspolicy" title="AccessPolicy"><span class="symbol resource"></span>AccessPolicy</a></li>
     <li><a href="edgemodule" title="EdgeModule"><span class="symbol resource"></span>EdgeModule</a></li>
+    <li><a href="livepipeline" title="LivePipeline"><span class="symbol resource"></span>LivePipeline</a></li>
+    <li><a href="pipelinejob" title="PipelineJob"><span class="symbol resource"></span>PipelineJob</a></li>
+    <li><a href="pipelinetopology" title="PipelineTopology"><span class="symbol resource"></span>PipelineTopology</a></li>
+    <li><a href="privateendpointconnection" title="PrivateEndpointConnection"><span class="symbol resource"></span>PrivateEndpointConnection</a></li>
     <li><a href="video" title="Video"><span class="symbol resource"></span>Video</a></li>
     <li><a href="videoanalyzer" title="VideoAnalyzer"><span class="symbol resource"></span>VideoAnalyzer</a></li>
 </ul>
@@ -21,9 +25,14 @@ Explore the resources and functions of the azure-native.videoanalyzer module.
 <ul class="api">
     <li><a href="getaccesspolicy" title="GetAccessPolicy"><span class="symbol function"></span>GetAccessPolicy</a></li>
     <li><a href="getedgemodule" title="GetEdgeModule"><span class="symbol function"></span>GetEdgeModule</a></li>
+    <li><a href="getlivepipeline" title="GetLivePipeline"><span class="symbol function"></span>GetLivePipeline</a></li>
+    <li><a href="getpipelinejob" title="GetPipelineJob"><span class="symbol function"></span>GetPipelineJob</a></li>
+    <li><a href="getpipelinetopology" title="GetPipelineTopology"><span class="symbol function"></span>GetPipelineTopology</a></li>
+    <li><a href="getprivateendpointconnection" title="GetPrivateEndpointConnection"><span class="symbol function"></span>GetPrivateEndpointConnection</a></li>
     <li><a href="getvideo" title="GetVideo"><span class="symbol function"></span>GetVideo</a></li>
     <li><a href="getvideoanalyzer" title="GetVideoAnalyzer"><span class="symbol function"></span>GetVideoAnalyzer</a></li>
     <li><a href="listedgemoduleprovisioningtoken" title="ListEdgeModuleProvisioningToken"><span class="symbol function"></span>ListEdgeModuleProvisioningToken</a></li>
+    <li><a href="listvideocontenttoken" title="ListVideoContentToken"><span class="symbol function"></span>ListVideoContentToken</a></li>
     <li><a href="listvideostreamingtoken" title="ListVideoStreamingToken"><span class="symbol function"></span>ListVideoStreamingToken</a></li>
 </ul>
 
@@ -34,6 +43,6 @@ Explore the resources and functions of the azure-native.videoanalyzer module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.34.0</dd>
+	<dd>1.35.0</dd>
 </dl>
 

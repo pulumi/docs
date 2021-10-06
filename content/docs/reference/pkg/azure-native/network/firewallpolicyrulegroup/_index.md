@@ -738,7 +738,7 @@ The FirewallPolicyRuleGroup resource accepts the following [input]({{< relref "/
 <a href="#rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Firewall<wbr>Policy<wbr>Filter<wbr>Rule<wbr>Args | Firewall<wbr>Policy<wbr>Nat<wbr>Rule<wbr>Args[]</span>
+        <span class="property-type">(Firewall<wbr>Policy<wbr>Filter<wbr>Rule<wbr>Args | Firewall<wbr>Policy<wbr>Nat<wbr>Rule<wbr>Args)[]</span>
     </dt>
     <dd>{{% md %}}Group of Firewall Policy rules.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1617,7 +1617,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ruleconditions_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Application<wbr>Rule<wbr>Condition | Nat<wbr>Rule<wbr>Condition | Network<wbr>Rule<wbr>Condition[]</span>
+        <span class="property-type">(Application<wbr>Rule<wbr>Condition | Nat<wbr>Rule<wbr>Condition | Network<wbr>Rule<wbr>Condition)[]</span>
     </dt>
     <dd>{{% md %}}Collection of rule conditions used by a rule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1889,7 +1889,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ruleconditions_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Application<wbr>Rule<wbr>Condition<wbr>Response | Nat<wbr>Rule<wbr>Condition<wbr>Response | Network<wbr>Rule<wbr>Condition<wbr>Response[]</span>
+        <span class="property-type">(Application<wbr>Rule<wbr>Condition<wbr>Response | Nat<wbr>Rule<wbr>Condition<wbr>Response | Network<wbr>Rule<wbr>Condition<wbr>Response)[]</span>
     </dt>
     <dd>{{% md %}}Collection of rule conditions used by a rule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2849,7 +2849,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipprotocols_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Firewall<wbr>Policy<wbr>Rule<wbr>Condition<wbr>Network<wbr>Protocol[]</span>
+        <span class="property-type">(string | Firewall<wbr>Policy<wbr>Rule<wbr>Condition<wbr>Network<wbr>Protocol)[]</span>
     </dt>
     <dd>{{% md %}}Array of FirewallPolicyRuleConditionNetworkProtocols.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3357,7 +3357,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipprotocols_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Firewall<wbr>Policy<wbr>Rule<wbr>Condition<wbr>Network<wbr>Protocol[]</span>
+        <span class="property-type">(string | Firewall<wbr>Policy<wbr>Rule<wbr>Condition<wbr>Network<wbr>Protocol)[]</span>
     </dt>
     <dd>{{% md %}}Array of FirewallPolicyRuleConditionNetworkProtocols.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

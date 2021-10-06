@@ -1393,7 +1393,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyops_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Ops</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Json<wbr>Web<wbr>Key<wbr>Operation[]</span>
+        <span class="property-type">(string | Json<wbr>Web<wbr>Key<wbr>Operation)[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

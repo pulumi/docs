@@ -760,7 +760,7 @@ The LiveEvent resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#streamoptions_nodejs" style="color: inherit; text-decoration: inherit;">stream<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Stream<wbr>Options<wbr>Flag[]</span>
+        <span class="property-type">(string | Stream<wbr>Options<wbr>Flag)[]</span>
     </dt>
     <dd>{{% md %}}The options to use for the LiveEvent. This value is specified at creation time and cannot be updated. The valid values for the array entry values are 'Default' and 'LowLatency'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

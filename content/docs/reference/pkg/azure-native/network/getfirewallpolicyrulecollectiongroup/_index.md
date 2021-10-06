@@ -349,7 +349,7 @@ The following output properties are available:
 <a href="#rulecollections_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Collections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Firewall<wbr>Policy<wbr>Filter<wbr>Rule<wbr>Collection<wbr>Response | Firewall<wbr>Policy<wbr>Nat<wbr>Rule<wbr>Collection<wbr>Response[]</span>
+        <span class="property-type">(Firewall<wbr>Policy<wbr>Filter<wbr>Rule<wbr>Collection<wbr>Response | Firewall<wbr>Policy<wbr>Nat<wbr>Rule<wbr>Collection<wbr>Response)[]</span>
     </dt>
     <dd>{{% md %}}Group of Firewall Policy rule collections.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -951,7 +951,7 @@ The following output properties are available:
 <a href="#rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Application<wbr>Rule<wbr>Response | Nat<wbr>Rule<wbr>Response | Network<wbr>Rule<wbr>Response[]</span>
+        <span class="property-type">(Application<wbr>Rule<wbr>Response | Nat<wbr>Rule<wbr>Response | Network<wbr>Rule<wbr>Response)[]</span>
     </dt>
     <dd>{{% md %}}List of rules included in a rule collection.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1151,7 +1151,7 @@ The following output properties are available:
 <a href="#rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Application<wbr>Rule<wbr>Response | Nat<wbr>Rule<wbr>Response | Network<wbr>Rule<wbr>Response[]</span>
+        <span class="property-type">(Application<wbr>Rule<wbr>Response | Nat<wbr>Rule<wbr>Response | Network<wbr>Rule<wbr>Response)[]</span>
     </dt>
     <dd>{{% md %}}List of rules included in a rule collection.{{% /md %}}</dd></dl>
 {{% /choosable %}}

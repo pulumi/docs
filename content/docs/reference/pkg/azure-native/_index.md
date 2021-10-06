@@ -49,6 +49,7 @@ A native Pulumi package for creating and managing Azure resources.
     <li><a href="compute/" title="compute"><span class="symbol module"></span>compute</a></li>
     <li><a href="confidentialledger/" title="confidentialledger"><span class="symbol module"></span>confidentialledger</a></li>
     <li><a href="confluent/" title="confluent"><span class="symbol module"></span>confluent</a></li>
+    <li><a href="connectedvmwarevsphere/" title="connectedvmwarevsphere"><span class="symbol module"></span>connectedvmwarevsphere</a></li>
     <li><a href="consumption/" title="consumption"><span class="symbol module"></span>consumption</a></li>
     <li><a href="containerinstance/" title="containerinstance"><span class="symbol module"></span>containerinstance</a></li>
     <li><a href="containerregistry/" title="containerregistry"><span class="symbol module"></span>containerregistry</a></li>
@@ -197,6 +198,6 @@ A native Pulumi package for creating and managing Azure resources.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.34.0</dd>
+	<dd>1.35.0</dd>
 </dl>
 

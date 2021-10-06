@@ -229,7 +229,7 @@ The following output properties are available:
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Effective<wbr>Default<wbr>Security<wbr>Admin<wbr>Rule<wbr>Response | Effective<wbr>Security<wbr>Admin<wbr>Rule<wbr>Response[]</span>
+        <span class="property-type">(Effective<wbr>Default<wbr>Security<wbr>Admin<wbr>Rule<wbr>Response | Effective<wbr>Security<wbr>Admin<wbr>Rule<wbr>Response)[]</span>
     </dt>
     <dd>{{% md %}}Gets a page of NetworkManagerEffectiveSecurityAdminRules{{% /md %}}</dd></dl>
 {{% /choosable %}}

@@ -3596,7 +3596,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bearertokensendingmethods_nodejs" style="color: inherit; text-decoration: inherit;">bearer<wbr>Token<wbr>Sending<wbr>Methods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Bearer<wbr>Token<wbr>Sending<wbr>Methods[]</span>
+        <span class="property-type">(string | Bearer<wbr>Token<wbr>Sending<wbr>Methods)[]</span>
     </dt>
     <dd>{{% md %}}How to send token to the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

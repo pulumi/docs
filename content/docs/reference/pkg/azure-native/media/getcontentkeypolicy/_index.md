@@ -2367,7 +2367,7 @@ The following output properties are available:
 <a href="#alternateverificationkeys_nodejs" style="color: inherit; text-decoration: inherit;">alternate<wbr>Verification<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Content<wbr>Key<wbr>Policy<wbr>Rsa<wbr>Token<wbr>Key<wbr>Response | Content<wbr>Key<wbr>Policy<wbr>Symmetric<wbr>Token<wbr>Key<wbr>Response | Content<wbr>Key<wbr>Policy<wbr>X509Certificate<wbr>Token<wbr>Key<wbr>Response[]</span>
+        <span class="property-type">(Content<wbr>Key<wbr>Policy<wbr>Rsa<wbr>Token<wbr>Key<wbr>Response | Content<wbr>Key<wbr>Policy<wbr>Symmetric<wbr>Token<wbr>Key<wbr>Response | Content<wbr>Key<wbr>Policy<wbr>X509Certificate<wbr>Token<wbr>Key<wbr>Response)[]</span>
     </dt>
     <dd>{{% md %}}A list of alternative verification keys.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

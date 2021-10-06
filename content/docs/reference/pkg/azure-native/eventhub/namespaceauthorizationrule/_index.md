@@ -379,7 +379,7 @@ The NamespaceAuthorizationRule resource accepts the following [input]({{< relref
 <a href="#rights_nodejs" style="color: inherit; text-decoration: inherit;">rights</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Access<wbr>Rights[]</span>
+        <span class="property-type">(string | Access<wbr>Rights)[]</span>
     </dt>
     <dd>{{% md %}}The rights associated with the rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

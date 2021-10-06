@@ -3451,7 +3451,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#types_nodejs" style="color: inherit; text-decoration: inherit;">types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Spatial<wbr>Type[]</span>
+        <span class="property-type">(string | Spatial<wbr>Type)[]</span>
     </dt>
     <dd>{{% md %}}List of path's spatial type{{% /md %}}</dd></dl>
 {{% /choosable %}}

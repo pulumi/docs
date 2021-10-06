@@ -172,7 +172,7 @@ The following output properties are available:
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dynamic<wbr>Delivery<wbr>Attribute<wbr>Mapping<wbr>Response | Static<wbr>Delivery<wbr>Attribute<wbr>Mapping<wbr>Response[]</span>
+        <span class="property-type">(Dynamic<wbr>Delivery<wbr>Attribute<wbr>Mapping<wbr>Response | Static<wbr>Delivery<wbr>Attribute<wbr>Mapping<wbr>Response)[]</span>
     </dt>
     <dd>{{% md %}}A collection of DeliveryAttributeMapping{{% /md %}}</dd></dl>
 {{% /choosable %}}

@@ -1078,7 +1078,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azurevmfamilies_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Vm<wbr>Families</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Azure<wbr>Vm<wbr>Family[]</span>
+        <span class="property-type">(string | Azure<wbr>Vm<wbr>Family)[]</span>
     </dt>
     <dd>{{% md %}}List of azure VM families.{{% /md %}}</dd><dt class="property-required"
             title="Required">

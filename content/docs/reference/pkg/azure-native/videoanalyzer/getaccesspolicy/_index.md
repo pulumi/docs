@@ -643,7 +643,7 @@ The following output properties are available:
 <a href="#keys_nodejs" style="color: inherit; text-decoration: inherit;">keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Ecc<wbr>Token<wbr>Key<wbr>Response | Rsa<wbr>Token<wbr>Key<wbr>Response[]</span>
+        <span class="property-type">(Ecc<wbr>Token<wbr>Key<wbr>Response | Rsa<wbr>Token<wbr>Key<wbr>Response)[]</span>
     </dt>
     <dd>{{% md %}}List of keys which can be used to validate access tokens. Having multiple keys allow for seamless key rotation of the token signing key. Token signature must match exactly one key.{{% /md %}}</dd></dl>
 {{% /choosable %}}

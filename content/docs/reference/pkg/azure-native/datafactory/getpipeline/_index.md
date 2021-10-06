@@ -429,7 +429,7 @@ The following output properties are available:
 <a href="#activities_nodejs" style="color: inherit; text-decoration: inherit;">activities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Append<wbr>Variable<wbr>Activity<wbr>Response | Azure<wbr>Data<wbr>Explorer<wbr>Command<wbr>Activity<wbr>Response | Azure<wbr>Function<wbr>Activity<wbr>Response | Azure<wbr>MLBatch<wbr>Execution<wbr>Activity<wbr>Response | Azure<wbr>MLExecute<wbr>Pipeline<wbr>Activity<wbr>Response | Azure<wbr>MLUpdate<wbr>Resource<wbr>Activity<wbr>Response | Control<wbr>Activity<wbr>Response | Copy<wbr>Activity<wbr>Response | Custom<wbr>Activity<wbr>Response | Data<wbr>Lake<wbr>Analytics<wbr>USQLActivity<wbr>Response | Databricks<wbr>Notebook<wbr>Activity<wbr>Response | Databricks<wbr>Spark<wbr>Jar<wbr>Activity<wbr>Response | Databricks<wbr>Spark<wbr>Python<wbr>Activity<wbr>Response | Delete<wbr>Activity<wbr>Response | Execute<wbr>Data<wbr>Flow<wbr>Activity<wbr>Response | Execute<wbr>Pipeline<wbr>Activity<wbr>Response | Execute<wbr>SSISPackage<wbr>Activity<wbr>Response | Execute<wbr>Wrangling<wbr>Dataflow<wbr>Activity<wbr>Response | Execution<wbr>Activity<wbr>Response | Filter<wbr>Activity<wbr>Response | For<wbr>Each<wbr>Activity<wbr>Response | Get<wbr>Metadata<wbr>Activity<wbr>Response | HDInsight<wbr>Hive<wbr>Activity<wbr>Response | HDInsight<wbr>Map<wbr>Reduce<wbr>Activity<wbr>Response | HDInsight<wbr>Pig<wbr>Activity<wbr>Response | HDInsight<wbr>Spark<wbr>Activity<wbr>Response | HDInsight<wbr>Streaming<wbr>Activity<wbr>Response | If<wbr>Condition<wbr>Activity<wbr>Response | Lookup<wbr>Activity<wbr>Response | Set<wbr>Variable<wbr>Activity<wbr>Response | Sql<wbr>Server<wbr>Stored<wbr>Procedure<wbr>Activity<wbr>Response | Switch<wbr>Activity<wbr>Response | Until<wbr>Activity<wbr>Response | Validation<wbr>Activity<wbr>Response | Wait<wbr>Activity<wbr>Response | Web<wbr>Activity<wbr>Response | Web<wbr>Hook<wbr>Activity<wbr>Response[]</span>
+        <span class="property-type">(Append<wbr>Variable<wbr>Activity<wbr>Response | Azure<wbr>Data<wbr>Explorer<wbr>Command<wbr>Activity<wbr>Response | Azure<wbr>Function<wbr>Activity<wbr>Response | Azure<wbr>MLBatch<wbr>Execution<wbr>Activity<wbr>Response | Azure<wbr>MLExecute<wbr>Pipeline<wbr>Activity<wbr>Response | Azure<wbr>MLUpdate<wbr>Resource<wbr>Activity<wbr>Response | Control<wbr>Activity<wbr>Response | Copy<wbr>Activity<wbr>Response | Custom<wbr>Activity<wbr>Response | Data<wbr>Lake<wbr>Analytics<wbr>USQLActivity<wbr>Response | Databricks<wbr>Notebook<wbr>Activity<wbr>Response | Databricks<wbr>Spark<wbr>Jar<wbr>Activity<wbr>Response | Databricks<wbr>Spark<wbr>Python<wbr>Activity<wbr>Response | Delete<wbr>Activity<wbr>Response | Execute<wbr>Data<wbr>Flow<wbr>Activity<wbr>Response | Execute<wbr>Pipeline<wbr>Activity<wbr>Response | Execute<wbr>SSISPackage<wbr>Activity<wbr>Response | Execute<wbr>Wrangling<wbr>Dataflow<wbr>Activity<wbr>Response | Execution<wbr>Activity<wbr>Response | Filter<wbr>Activity<wbr>Response | For<wbr>Each<wbr>Activity<wbr>Response | Get<wbr>Metadata<wbr>Activity<wbr>Response | HDInsight<wbr>Hive<wbr>Activity<wbr>Response | HDInsight<wbr>Map<wbr>Reduce<wbr>Activity<wbr>Response | HDInsight<wbr>Pig<wbr>Activity<wbr>Response | HDInsight<wbr>Spark<wbr>Activity<wbr>Response | HDInsight<wbr>Streaming<wbr>Activity<wbr>Response | If<wbr>Condition<wbr>Activity<wbr>Response | Lookup<wbr>Activity<wbr>Response | Set<wbr>Variable<wbr>Activity<wbr>Response | Sql<wbr>Server<wbr>Stored<wbr>Procedure<wbr>Activity<wbr>Response | Switch<wbr>Activity<wbr>Response | Until<wbr>Activity<wbr>Response | Validation<wbr>Activity<wbr>Response | Wait<wbr>Activity<wbr>Response | Web<wbr>Activity<wbr>Response | Web<wbr>Hook<wbr>Activity<wbr>Response)[]</span>
     </dt>
     <dd>{{% md %}}List of activities in pipeline.{{% /md %}}</dd><dt class="property-"
             title="">
@@ -25863,6 +25863,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Activity policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="queries_csharp">
+<a href="#queries_csharp" style="color: inherit; text-decoration: inherit;">Queries</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#powerquerysinkmappingresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Power<wbr>Query<wbr>Sink<wbr>Mapping<wbr>Response&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}List of mapping for Power Query mashup query to sink dataset(s).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="runconcurrently_csharp">
 <a href="#runconcurrently_csharp" style="color: inherit; text-decoration: inherit;">Run<wbr>Concurrently</a>
 </span>
@@ -25877,7 +25885,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Power<wbr>Query<wbr>Sink<wbr>Response&gt;</span>
     </dt>
-    <dd>{{% md %}}List of Power Query activity sinks mapped to a queryName.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Deprecated. Please use Queries). List of Power Query activity sinks mapped to a queryName.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="staging_csharp">
 <a href="#staging_csharp" style="color: inherit; text-decoration: inherit;">Staging</a>
@@ -25971,6 +25979,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Activity policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="queries_go">
+<a href="#queries_go" style="color: inherit; text-decoration: inherit;">Queries</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#powerquerysinkmappingresponse">[]Power<wbr>Query<wbr>Sink<wbr>Mapping<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}List of mapping for Power Query mashup query to sink dataset(s).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="runconcurrently_go">
 <a href="#runconcurrently_go" style="color: inherit; text-decoration: inherit;">Run<wbr>Concurrently</a>
 </span>
@@ -25985,7 +26001,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]Power<wbr>Query<wbr>Sink<wbr>Response</span>
     </dt>
-    <dd>{{% md %}}List of Power Query activity sinks mapped to a queryName.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Deprecated. Please use Queries). List of Power Query activity sinks mapped to a queryName.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="staging_go">
 <a href="#staging_go" style="color: inherit; text-decoration: inherit;">Staging</a>
@@ -26079,6 +26095,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Activity policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="queries_nodejs">
+<a href="#queries_nodejs" style="color: inherit; text-decoration: inherit;">queries</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#powerquerysinkmappingresponse">Power<wbr>Query<wbr>Sink<wbr>Mapping<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}List of mapping for Power Query mashup query to sink dataset(s).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="runconcurrently_nodejs">
 <a href="#runconcurrently_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>Concurrently</a>
 </span>
@@ -26093,7 +26117,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: Power<wbr>Query<wbr>Sink<wbr>Response}</span>
     </dt>
-    <dd>{{% md %}}List of Power Query activity sinks mapped to a queryName.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Deprecated. Please use Queries). List of Power Query activity sinks mapped to a queryName.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="staging_nodejs">
 <a href="#staging_nodejs" style="color: inherit; text-decoration: inherit;">staging</a>
@@ -26187,6 +26211,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Activity policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="queries_python">
+<a href="#queries_python" style="color: inherit; text-decoration: inherit;">queries</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#powerquerysinkmappingresponse">Sequence[Power<wbr>Query<wbr>Sink<wbr>Mapping<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}List of mapping for Power Query mashup query to sink dataset(s).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="run_concurrently_python">
 <a href="#run_concurrently_python" style="color: inherit; text-decoration: inherit;">run_<wbr>concurrently</a>
 </span>
@@ -26201,7 +26233,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Power<wbr>Query<wbr>Sink<wbr>Response]</span>
     </dt>
-    <dd>{{% md %}}List of Power Query activity sinks mapped to a queryName.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Deprecated. Please use Queries). List of Power Query activity sinks mapped to a queryName.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="staging_python">
 <a href="#staging_python" style="color: inherit; text-decoration: inherit;">staging</a>
@@ -27859,7 +27891,7 @@ The following output properties are available:
 <a href="#activities_nodejs" style="color: inherit; text-decoration: inherit;">activities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Append<wbr>Variable<wbr>Activity<wbr>Response | Azure<wbr>Data<wbr>Explorer<wbr>Command<wbr>Activity<wbr>Response | Azure<wbr>Function<wbr>Activity<wbr>Response | Azure<wbr>MLBatch<wbr>Execution<wbr>Activity<wbr>Response | Azure<wbr>MLExecute<wbr>Pipeline<wbr>Activity<wbr>Response | Azure<wbr>MLUpdate<wbr>Resource<wbr>Activity<wbr>Response | Control<wbr>Activity<wbr>Response | Copy<wbr>Activity<wbr>Response | Custom<wbr>Activity<wbr>Response | Data<wbr>Lake<wbr>Analytics<wbr>USQLActivity<wbr>Response | Databricks<wbr>Notebook<wbr>Activity<wbr>Response | Databricks<wbr>Spark<wbr>Jar<wbr>Activity<wbr>Response | Databricks<wbr>Spark<wbr>Python<wbr>Activity<wbr>Response | Delete<wbr>Activity<wbr>Response | Execute<wbr>Data<wbr>Flow<wbr>Activity<wbr>Response | Execute<wbr>Pipeline<wbr>Activity<wbr>Response | Execute<wbr>SSISPackage<wbr>Activity<wbr>Response | Execute<wbr>Wrangling<wbr>Dataflow<wbr>Activity<wbr>Response | Execution<wbr>Activity<wbr>Response | Filter<wbr>Activity<wbr>Response | For<wbr>Each<wbr>Activity<wbr>Response | Get<wbr>Metadata<wbr>Activity<wbr>Response | HDInsight<wbr>Hive<wbr>Activity<wbr>Response | HDInsight<wbr>Map<wbr>Reduce<wbr>Activity<wbr>Response | HDInsight<wbr>Pig<wbr>Activity<wbr>Response | HDInsight<wbr>Spark<wbr>Activity<wbr>Response | HDInsight<wbr>Streaming<wbr>Activity<wbr>Response | If<wbr>Condition<wbr>Activity<wbr>Response | Lookup<wbr>Activity<wbr>Response | Set<wbr>Variable<wbr>Activity<wbr>Response | Sql<wbr>Server<wbr>Stored<wbr>Procedure<wbr>Activity<wbr>Response | Switch<wbr>Activity<wbr>Response | Until<wbr>Activity<wbr>Response | Validation<wbr>Activity<wbr>Response | Wait<wbr>Activity<wbr>Response | Web<wbr>Activity<wbr>Response | Web<wbr>Hook<wbr>Activity<wbr>Response[]</span>
+        <span class="property-type">(Append<wbr>Variable<wbr>Activity<wbr>Response | Azure<wbr>Data<wbr>Explorer<wbr>Command<wbr>Activity<wbr>Response | Azure<wbr>Function<wbr>Activity<wbr>Response | Azure<wbr>MLBatch<wbr>Execution<wbr>Activity<wbr>Response | Azure<wbr>MLExecute<wbr>Pipeline<wbr>Activity<wbr>Response | Azure<wbr>MLUpdate<wbr>Resource<wbr>Activity<wbr>Response | Control<wbr>Activity<wbr>Response | Copy<wbr>Activity<wbr>Response | Custom<wbr>Activity<wbr>Response | Data<wbr>Lake<wbr>Analytics<wbr>USQLActivity<wbr>Response | Databricks<wbr>Notebook<wbr>Activity<wbr>Response | Databricks<wbr>Spark<wbr>Jar<wbr>Activity<wbr>Response | Databricks<wbr>Spark<wbr>Python<wbr>Activity<wbr>Response | Delete<wbr>Activity<wbr>Response | Execute<wbr>Data<wbr>Flow<wbr>Activity<wbr>Response | Execute<wbr>Pipeline<wbr>Activity<wbr>Response | Execute<wbr>SSISPackage<wbr>Activity<wbr>Response | Execute<wbr>Wrangling<wbr>Dataflow<wbr>Activity<wbr>Response | Execution<wbr>Activity<wbr>Response | Filter<wbr>Activity<wbr>Response | For<wbr>Each<wbr>Activity<wbr>Response | Get<wbr>Metadata<wbr>Activity<wbr>Response | HDInsight<wbr>Hive<wbr>Activity<wbr>Response | HDInsight<wbr>Map<wbr>Reduce<wbr>Activity<wbr>Response | HDInsight<wbr>Pig<wbr>Activity<wbr>Response | HDInsight<wbr>Spark<wbr>Activity<wbr>Response | HDInsight<wbr>Streaming<wbr>Activity<wbr>Response | If<wbr>Condition<wbr>Activity<wbr>Response | Lookup<wbr>Activity<wbr>Response | Set<wbr>Variable<wbr>Activity<wbr>Response | Sql<wbr>Server<wbr>Stored<wbr>Procedure<wbr>Activity<wbr>Response | Switch<wbr>Activity<wbr>Response | Until<wbr>Activity<wbr>Response | Validation<wbr>Activity<wbr>Response | Wait<wbr>Activity<wbr>Response | Web<wbr>Activity<wbr>Response | Web<wbr>Hook<wbr>Activity<wbr>Response)[]</span>
     </dt>
     <dd>{{% md %}}List of activities to execute .{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -34175,7 +34207,7 @@ The following output properties are available:
 <a href="#iffalseactivities_nodejs" style="color: inherit; text-decoration: inherit;">if<wbr>False<wbr>Activities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Append<wbr>Variable<wbr>Activity<wbr>Response | Azure<wbr>Data<wbr>Explorer<wbr>Command<wbr>Activity<wbr>Response | Azure<wbr>Function<wbr>Activity<wbr>Response | Azure<wbr>MLBatch<wbr>Execution<wbr>Activity<wbr>Response | Azure<wbr>MLExecute<wbr>Pipeline<wbr>Activity<wbr>Response | Azure<wbr>MLUpdate<wbr>Resource<wbr>Activity<wbr>Response | Control<wbr>Activity<wbr>Response | Copy<wbr>Activity<wbr>Response | Custom<wbr>Activity<wbr>Response | Data<wbr>Lake<wbr>Analytics<wbr>USQLActivity<wbr>Response | Databricks<wbr>Notebook<wbr>Activity<wbr>Response | Databricks<wbr>Spark<wbr>Jar<wbr>Activity<wbr>Response | Databricks<wbr>Spark<wbr>Python<wbr>Activity<wbr>Response | Delete<wbr>Activity<wbr>Response | Execute<wbr>Data<wbr>Flow<wbr>Activity<wbr>Response | Execute<wbr>Pipeline<wbr>Activity<wbr>Response | Execute<wbr>SSISPackage<wbr>Activity<wbr>Response | Execute<wbr>Wrangling<wbr>Dataflow<wbr>Activity<wbr>Response | Execution<wbr>Activity<wbr>Response | Filter<wbr>Activity<wbr>Response | For<wbr>Each<wbr>Activity<wbr>Response | Get<wbr>Metadata<wbr>Activity<wbr>Response | HDInsight<wbr>Hive<wbr>Activity<wbr>Response | HDInsight<wbr>Map<wbr>Reduce<wbr>Activity<wbr>Response | HDInsight<wbr>Pig<wbr>Activity<wbr>Response | HDInsight<wbr>Spark<wbr>Activity<wbr>Response | HDInsight<wbr>Streaming<wbr>Activity<wbr>Response | If<wbr>Condition<wbr>Activity<wbr>Response | Lookup<wbr>Activity<wbr>Response | Set<wbr>Variable<wbr>Activity<wbr>Response | Sql<wbr>Server<wbr>Stored<wbr>Procedure<wbr>Activity<wbr>Response | Switch<wbr>Activity<wbr>Response | Until<wbr>Activity<wbr>Response | Validation<wbr>Activity<wbr>Response | Wait<wbr>Activity<wbr>Response | Web<wbr>Activity<wbr>Response | Web<wbr>Hook<wbr>Activity<wbr>Response[]</span>
+        <span class="property-type">(Append<wbr>Variable<wbr>Activity<wbr>Response | Azure<wbr>Data<wbr>Explorer<wbr>Command<wbr>Activity<wbr>Response | Azure<wbr>Function<wbr>Activity<wbr>Response | Azure<wbr>MLBatch<wbr>Execution<wbr>Activity<wbr>Response | Azure<wbr>MLExecute<wbr>Pipeline<wbr>Activity<wbr>Response | Azure<wbr>MLUpdate<wbr>Resource<wbr>Activity<wbr>Response | Control<wbr>Activity<wbr>Response | Copy<wbr>Activity<wbr>Response | Custom<wbr>Activity<wbr>Response | Data<wbr>Lake<wbr>Analytics<wbr>USQLActivity<wbr>Response | Databricks<wbr>Notebook<wbr>Activity<wbr>Response | Databricks<wbr>Spark<wbr>Jar<wbr>Activity<wbr>Response | Databricks<wbr>Spark<wbr>Python<wbr>Activity<wbr>Response | Delete<wbr>Activity<wbr>Response | Execute<wbr>Data<wbr>Flow<wbr>Activity<wbr>Response | Execute<wbr>Pipeline<wbr>Activity<wbr>Response | Execute<wbr>SSISPackage<wbr>Activity<wbr>Response | Execute<wbr>Wrangling<wbr>Dataflow<wbr>Activity<wbr>Response | Execution<wbr>Activity<wbr>Response | Filter<wbr>Activity<wbr>Response | For<wbr>Each<wbr>Activity<wbr>Response | Get<wbr>Metadata<wbr>Activity<wbr>Response | HDInsight<wbr>Hive<wbr>Activity<wbr>Response | HDInsight<wbr>Map<wbr>Reduce<wbr>Activity<wbr>Response | HDInsight<wbr>Pig<wbr>Activity<wbr>Response | HDInsight<wbr>Spark<wbr>Activity<wbr>Response | HDInsight<wbr>Streaming<wbr>Activity<wbr>Response | If<wbr>Condition<wbr>Activity<wbr>Response | Lookup<wbr>Activity<wbr>Response | Set<wbr>Variable<wbr>Activity<wbr>Response | Sql<wbr>Server<wbr>Stored<wbr>Procedure<wbr>Activity<wbr>Response | Switch<wbr>Activity<wbr>Response | Until<wbr>Activity<wbr>Response | Validation<wbr>Activity<wbr>Response | Wait<wbr>Activity<wbr>Response | Web<wbr>Activity<wbr>Response | Web<wbr>Hook<wbr>Activity<wbr>Response)[]</span>
     </dt>
     <dd>{{% md %}}List of activities to execute if expression is evaluated to false. This is an optional property and if not provided, the activity will exit without any action.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -34183,7 +34215,7 @@ The following output properties are available:
 <a href="#iftrueactivities_nodejs" style="color: inherit; text-decoration: inherit;">if<wbr>True<wbr>Activities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Append<wbr>Variable<wbr>Activity<wbr>Response | Azure<wbr>Data<wbr>Explorer<wbr>Command<wbr>Activity<wbr>Response | Azure<wbr>Function<wbr>Activity<wbr>Response | Azure<wbr>MLBatch<wbr>Execution<wbr>Activity<wbr>Response | Azure<wbr>MLExecute<wbr>Pipeline<wbr>Activity<wbr>Response | Azure<wbr>MLUpdate<wbr>Resource<wbr>Activity<wbr>Response | Control<wbr>Activity<wbr>Response | Copy<wbr>Activity<wbr>Response | Custom<wbr>Activity<wbr>Response | Data<wbr>Lake<wbr>Analytics<wbr>USQLActivity<wbr>Response | Databricks<wbr>Notebook<wbr>Activity<wbr>Response | Databricks<wbr>Spark<wbr>Jar<wbr>Activity<wbr>Response | Databricks<wbr>Spark<wbr>Python<wbr>Activity<wbr>Response | Delete<wbr>Activity<wbr>Response | Execute<wbr>Data<wbr>Flow<wbr>Activity<wbr>Response | Execute<wbr>Pipeline<wbr>Activity<wbr>Response | Execute<wbr>SSISPackage<wbr>Activity<wbr>Response | Execute<wbr>Wrangling<wbr>Dataflow<wbr>Activity<wbr>Response | Execution<wbr>Activity<wbr>Response | Filter<wbr>Activity<wbr>Response | For<wbr>Each<wbr>Activity<wbr>Response | Get<wbr>Metadata<wbr>Activity<wbr>Response | HDInsight<wbr>Hive<wbr>Activity<wbr>Response | HDInsight<wbr>Map<wbr>Reduce<wbr>Activity<wbr>Response | HDInsight<wbr>Pig<wbr>Activity<wbr>Response | HDInsight<wbr>Spark<wbr>Activity<wbr>Response | HDInsight<wbr>Streaming<wbr>Activity<wbr>Response | If<wbr>Condition<wbr>Activity<wbr>Response | Lookup<wbr>Activity<wbr>Response | Set<wbr>Variable<wbr>Activity<wbr>Response | Sql<wbr>Server<wbr>Stored<wbr>Procedure<wbr>Activity<wbr>Response | Switch<wbr>Activity<wbr>Response | Until<wbr>Activity<wbr>Response | Validation<wbr>Activity<wbr>Response | Wait<wbr>Activity<wbr>Response | Web<wbr>Activity<wbr>Response | Web<wbr>Hook<wbr>Activity<wbr>Response[]</span>
+        <span class="property-type">(Append<wbr>Variable<wbr>Activity<wbr>Response | Azure<wbr>Data<wbr>Explorer<wbr>Command<wbr>Activity<wbr>Response | Azure<wbr>Function<wbr>Activity<wbr>Response | Azure<wbr>MLBatch<wbr>Execution<wbr>Activity<wbr>Response | Azure<wbr>MLExecute<wbr>Pipeline<wbr>Activity<wbr>Response | Azure<wbr>MLUpdate<wbr>Resource<wbr>Activity<wbr>Response | Control<wbr>Activity<wbr>Response | Copy<wbr>Activity<wbr>Response | Custom<wbr>Activity<wbr>Response | Data<wbr>Lake<wbr>Analytics<wbr>USQLActivity<wbr>Response | Databricks<wbr>Notebook<wbr>Activity<wbr>Response | Databricks<wbr>Spark<wbr>Jar<wbr>Activity<wbr>Response | Databricks<wbr>Spark<wbr>Python<wbr>Activity<wbr>Response | Delete<wbr>Activity<wbr>Response | Execute<wbr>Data<wbr>Flow<wbr>Activity<wbr>Response | Execute<wbr>Pipeline<wbr>Activity<wbr>Response | Execute<wbr>SSISPackage<wbr>Activity<wbr>Response | Execute<wbr>Wrangling<wbr>Dataflow<wbr>Activity<wbr>Response | Execution<wbr>Activity<wbr>Response | Filter<wbr>Activity<wbr>Response | For<wbr>Each<wbr>Activity<wbr>Response | Get<wbr>Metadata<wbr>Activity<wbr>Response | HDInsight<wbr>Hive<wbr>Activity<wbr>Response | HDInsight<wbr>Map<wbr>Reduce<wbr>Activity<wbr>Response | HDInsight<wbr>Pig<wbr>Activity<wbr>Response | HDInsight<wbr>Spark<wbr>Activity<wbr>Response | HDInsight<wbr>Streaming<wbr>Activity<wbr>Response | If<wbr>Condition<wbr>Activity<wbr>Response | Lookup<wbr>Activity<wbr>Response | Set<wbr>Variable<wbr>Activity<wbr>Response | Sql<wbr>Server<wbr>Stored<wbr>Procedure<wbr>Activity<wbr>Response | Switch<wbr>Activity<wbr>Response | Until<wbr>Activity<wbr>Response | Validation<wbr>Activity<wbr>Response | Wait<wbr>Activity<wbr>Response | Web<wbr>Activity<wbr>Response | Web<wbr>Hook<wbr>Activity<wbr>Response)[]</span>
     </dt>
     <dd>{{% md %}}List of activities to execute if expression is evaluated to true. This is an optional property and if not provided, the activity will exit without any action.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -44946,6 +44978,90 @@ The following output properties are available:
         <span class="property-type">Any</span>
     </dt>
     <dd>{{% md %}}Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="powerquerysinkmappingresponse">Power<wbr>Query<wbr>Sink<wbr>Mapping<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="dataflowsinks_csharp">
+<a href="#dataflowsinks_csharp" style="color: inherit; text-decoration: inherit;">Dataflow<wbr>Sinks</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#powerquerysinkresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Power<wbr>Query<wbr>Sink<wbr>Response&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}List of sinks mapped to Power Query mashup query.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="queryname_csharp">
+<a href="#queryname_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the query in Power Query mashup document.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="dataflowsinks_go">
+<a href="#dataflowsinks_go" style="color: inherit; text-decoration: inherit;">Dataflow<wbr>Sinks</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#powerquerysinkresponse">[]Power<wbr>Query<wbr>Sink<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}List of sinks mapped to Power Query mashup query.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="queryname_go">
+<a href="#queryname_go" style="color: inherit; text-decoration: inherit;">Query<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the query in Power Query mashup document.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="dataflowsinks_nodejs">
+<a href="#dataflowsinks_nodejs" style="color: inherit; text-decoration: inherit;">dataflow<wbr>Sinks</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#powerquerysinkresponse">Power<wbr>Query<wbr>Sink<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}List of sinks mapped to Power Query mashup query.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="queryname_nodejs">
+<a href="#queryname_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the query in Power Query mashup document.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="dataflow_sinks_python">
+<a href="#dataflow_sinks_python" style="color: inherit; text-decoration: inherit;">dataflow_<wbr>sinks</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#powerquerysinkresponse">Sequence[Power<wbr>Query<wbr>Sink<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}List of sinks mapped to Power Query mashup query.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="query_name_python">
+<a href="#query_name_python" style="color: inherit; text-decoration: inherit;">query_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Name of the query in Power Query mashup document.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="powerquerysinkresponse">Power<wbr>Query<wbr>Sink<wbr>Response</h4>
@@ -59127,7 +59243,7 @@ The following output properties are available:
 <a href="#defaultactivities_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Activities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Append<wbr>Variable<wbr>Activity<wbr>Response | Azure<wbr>Data<wbr>Explorer<wbr>Command<wbr>Activity<wbr>Response | Azure<wbr>Function<wbr>Activity<wbr>Response | Azure<wbr>MLBatch<wbr>Execution<wbr>Activity<wbr>Response | Azure<wbr>MLExecute<wbr>Pipeline<wbr>Activity<wbr>Response | Azure<wbr>MLUpdate<wbr>Resource<wbr>Activity<wbr>Response | Control<wbr>Activity<wbr>Response | Copy<wbr>Activity<wbr>Response | Custom<wbr>Activity<wbr>Response | Data<wbr>Lake<wbr>Analytics<wbr>USQLActivity<wbr>Response | Databricks<wbr>Notebook<wbr>Activity<wbr>Response | Databricks<wbr>Spark<wbr>Jar<wbr>Activity<wbr>Response | Databricks<wbr>Spark<wbr>Python<wbr>Activity<wbr>Response | Delete<wbr>Activity<wbr>Response | Execute<wbr>Data<wbr>Flow<wbr>Activity<wbr>Response | Execute<wbr>Pipeline<wbr>Activity<wbr>Response | Execute<wbr>SSISPackage<wbr>Activity<wbr>Response | Execute<wbr>Wrangling<wbr>Dataflow<wbr>Activity<wbr>Response | Execution<wbr>Activity<wbr>Response | Filter<wbr>Activity<wbr>Response | For<wbr>Each<wbr>Activity<wbr>Response | Get<wbr>Metadata<wbr>Activity<wbr>Response | HDInsight<wbr>Hive<wbr>Activity<wbr>Response | HDInsight<wbr>Map<wbr>Reduce<wbr>Activity<wbr>Response | HDInsight<wbr>Pig<wbr>Activity<wbr>Response | HDInsight<wbr>Spark<wbr>Activity<wbr>Response | HDInsight<wbr>Streaming<wbr>Activity<wbr>Response | If<wbr>Condition<wbr>Activity<wbr>Response | Lookup<wbr>Activity<wbr>Response | Set<wbr>Variable<wbr>Activity<wbr>Response | Sql<wbr>Server<wbr>Stored<wbr>Procedure<wbr>Activity<wbr>Response | Switch<wbr>Activity<wbr>Response | Until<wbr>Activity<wbr>Response | Validation<wbr>Activity<wbr>Response | Wait<wbr>Activity<wbr>Response | Web<wbr>Activity<wbr>Response | Web<wbr>Hook<wbr>Activity<wbr>Response[]</span>
+        <span class="property-type">(Append<wbr>Variable<wbr>Activity<wbr>Response | Azure<wbr>Data<wbr>Explorer<wbr>Command<wbr>Activity<wbr>Response | Azure<wbr>Function<wbr>Activity<wbr>Response | Azure<wbr>MLBatch<wbr>Execution<wbr>Activity<wbr>Response | Azure<wbr>MLExecute<wbr>Pipeline<wbr>Activity<wbr>Response | Azure<wbr>MLUpdate<wbr>Resource<wbr>Activity<wbr>Response | Control<wbr>Activity<wbr>Response | Copy<wbr>Activity<wbr>Response | Custom<wbr>Activity<wbr>Response | Data<wbr>Lake<wbr>Analytics<wbr>USQLActivity<wbr>Response | Databricks<wbr>Notebook<wbr>Activity<wbr>Response | Databricks<wbr>Spark<wbr>Jar<wbr>Activity<wbr>Response | Databricks<wbr>Spark<wbr>Python<wbr>Activity<wbr>Response | Delete<wbr>Activity<wbr>Response | Execute<wbr>Data<wbr>Flow<wbr>Activity<wbr>Response | Execute<wbr>Pipeline<wbr>Activity<wbr>Response | Execute<wbr>SSISPackage<wbr>Activity<wbr>Response | Execute<wbr>Wrangling<wbr>Dataflow<wbr>Activity<wbr>Response | Execution<wbr>Activity<wbr>Response | Filter<wbr>Activity<wbr>Response | For<wbr>Each<wbr>Activity<wbr>Response | Get<wbr>Metadata<wbr>Activity<wbr>Response | HDInsight<wbr>Hive<wbr>Activity<wbr>Response | HDInsight<wbr>Map<wbr>Reduce<wbr>Activity<wbr>Response | HDInsight<wbr>Pig<wbr>Activity<wbr>Response | HDInsight<wbr>Spark<wbr>Activity<wbr>Response | HDInsight<wbr>Streaming<wbr>Activity<wbr>Response | If<wbr>Condition<wbr>Activity<wbr>Response | Lookup<wbr>Activity<wbr>Response | Set<wbr>Variable<wbr>Activity<wbr>Response | Sql<wbr>Server<wbr>Stored<wbr>Procedure<wbr>Activity<wbr>Response | Switch<wbr>Activity<wbr>Response | Until<wbr>Activity<wbr>Response | Validation<wbr>Activity<wbr>Response | Wait<wbr>Activity<wbr>Response | Web<wbr>Activity<wbr>Response | Web<wbr>Hook<wbr>Activity<wbr>Response)[]</span>
     </dt>
     <dd>{{% md %}}List of activities to execute if no case condition is satisfied. This is an optional property and if not provided, the activity will exit without any action.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -59267,7 +59383,7 @@ The following output properties are available:
 <a href="#activities_nodejs" style="color: inherit; text-decoration: inherit;">activities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Append<wbr>Variable<wbr>Activity<wbr>Response | Azure<wbr>Data<wbr>Explorer<wbr>Command<wbr>Activity<wbr>Response | Azure<wbr>Function<wbr>Activity<wbr>Response | Azure<wbr>MLBatch<wbr>Execution<wbr>Activity<wbr>Response | Azure<wbr>MLExecute<wbr>Pipeline<wbr>Activity<wbr>Response | Azure<wbr>MLUpdate<wbr>Resource<wbr>Activity<wbr>Response | Control<wbr>Activity<wbr>Response | Copy<wbr>Activity<wbr>Response | Custom<wbr>Activity<wbr>Response | Data<wbr>Lake<wbr>Analytics<wbr>USQLActivity<wbr>Response | Databricks<wbr>Notebook<wbr>Activity<wbr>Response | Databricks<wbr>Spark<wbr>Jar<wbr>Activity<wbr>Response | Databricks<wbr>Spark<wbr>Python<wbr>Activity<wbr>Response | Delete<wbr>Activity<wbr>Response | Execute<wbr>Data<wbr>Flow<wbr>Activity<wbr>Response | Execute<wbr>Pipeline<wbr>Activity<wbr>Response | Execute<wbr>SSISPackage<wbr>Activity<wbr>Response | Execute<wbr>Wrangling<wbr>Dataflow<wbr>Activity<wbr>Response | Execution<wbr>Activity<wbr>Response | Filter<wbr>Activity<wbr>Response | For<wbr>Each<wbr>Activity<wbr>Response | Get<wbr>Metadata<wbr>Activity<wbr>Response | HDInsight<wbr>Hive<wbr>Activity<wbr>Response | HDInsight<wbr>Map<wbr>Reduce<wbr>Activity<wbr>Response | HDInsight<wbr>Pig<wbr>Activity<wbr>Response | HDInsight<wbr>Spark<wbr>Activity<wbr>Response | HDInsight<wbr>Streaming<wbr>Activity<wbr>Response | If<wbr>Condition<wbr>Activity<wbr>Response | Lookup<wbr>Activity<wbr>Response | Set<wbr>Variable<wbr>Activity<wbr>Response | Sql<wbr>Server<wbr>Stored<wbr>Procedure<wbr>Activity<wbr>Response | Switch<wbr>Activity<wbr>Response | Until<wbr>Activity<wbr>Response | Validation<wbr>Activity<wbr>Response | Wait<wbr>Activity<wbr>Response | Web<wbr>Activity<wbr>Response | Web<wbr>Hook<wbr>Activity<wbr>Response[]</span>
+        <span class="property-type">(Append<wbr>Variable<wbr>Activity<wbr>Response | Azure<wbr>Data<wbr>Explorer<wbr>Command<wbr>Activity<wbr>Response | Azure<wbr>Function<wbr>Activity<wbr>Response | Azure<wbr>MLBatch<wbr>Execution<wbr>Activity<wbr>Response | Azure<wbr>MLExecute<wbr>Pipeline<wbr>Activity<wbr>Response | Azure<wbr>MLUpdate<wbr>Resource<wbr>Activity<wbr>Response | Control<wbr>Activity<wbr>Response | Copy<wbr>Activity<wbr>Response | Custom<wbr>Activity<wbr>Response | Data<wbr>Lake<wbr>Analytics<wbr>USQLActivity<wbr>Response | Databricks<wbr>Notebook<wbr>Activity<wbr>Response | Databricks<wbr>Spark<wbr>Jar<wbr>Activity<wbr>Response | Databricks<wbr>Spark<wbr>Python<wbr>Activity<wbr>Response | Delete<wbr>Activity<wbr>Response | Execute<wbr>Data<wbr>Flow<wbr>Activity<wbr>Response | Execute<wbr>Pipeline<wbr>Activity<wbr>Response | Execute<wbr>SSISPackage<wbr>Activity<wbr>Response | Execute<wbr>Wrangling<wbr>Dataflow<wbr>Activity<wbr>Response | Execution<wbr>Activity<wbr>Response | Filter<wbr>Activity<wbr>Response | For<wbr>Each<wbr>Activity<wbr>Response | Get<wbr>Metadata<wbr>Activity<wbr>Response | HDInsight<wbr>Hive<wbr>Activity<wbr>Response | HDInsight<wbr>Map<wbr>Reduce<wbr>Activity<wbr>Response | HDInsight<wbr>Pig<wbr>Activity<wbr>Response | HDInsight<wbr>Spark<wbr>Activity<wbr>Response | HDInsight<wbr>Streaming<wbr>Activity<wbr>Response | If<wbr>Condition<wbr>Activity<wbr>Response | Lookup<wbr>Activity<wbr>Response | Set<wbr>Variable<wbr>Activity<wbr>Response | Sql<wbr>Server<wbr>Stored<wbr>Procedure<wbr>Activity<wbr>Response | Switch<wbr>Activity<wbr>Response | Until<wbr>Activity<wbr>Response | Validation<wbr>Activity<wbr>Response | Wait<wbr>Activity<wbr>Response | Web<wbr>Activity<wbr>Response | Web<wbr>Hook<wbr>Activity<wbr>Response)[]</span>
     </dt>
     <dd>{{% md %}}List of activities to execute for satisfied case condition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -60415,7 +60531,7 @@ The following output properties are available:
 <a href="#activities_nodejs" style="color: inherit; text-decoration: inherit;">activities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Append<wbr>Variable<wbr>Activity<wbr>Response | Azure<wbr>Data<wbr>Explorer<wbr>Command<wbr>Activity<wbr>Response | Azure<wbr>Function<wbr>Activity<wbr>Response | Azure<wbr>MLBatch<wbr>Execution<wbr>Activity<wbr>Response | Azure<wbr>MLExecute<wbr>Pipeline<wbr>Activity<wbr>Response | Azure<wbr>MLUpdate<wbr>Resource<wbr>Activity<wbr>Response | Control<wbr>Activity<wbr>Response | Copy<wbr>Activity<wbr>Response | Custom<wbr>Activity<wbr>Response | Data<wbr>Lake<wbr>Analytics<wbr>USQLActivity<wbr>Response | Databricks<wbr>Notebook<wbr>Activity<wbr>Response | Databricks<wbr>Spark<wbr>Jar<wbr>Activity<wbr>Response | Databricks<wbr>Spark<wbr>Python<wbr>Activity<wbr>Response | Delete<wbr>Activity<wbr>Response | Execute<wbr>Data<wbr>Flow<wbr>Activity<wbr>Response | Execute<wbr>Pipeline<wbr>Activity<wbr>Response | Execute<wbr>SSISPackage<wbr>Activity<wbr>Response | Execute<wbr>Wrangling<wbr>Dataflow<wbr>Activity<wbr>Response | Execution<wbr>Activity<wbr>Response | Filter<wbr>Activity<wbr>Response | For<wbr>Each<wbr>Activity<wbr>Response | Get<wbr>Metadata<wbr>Activity<wbr>Response | HDInsight<wbr>Hive<wbr>Activity<wbr>Response | HDInsight<wbr>Map<wbr>Reduce<wbr>Activity<wbr>Response | HDInsight<wbr>Pig<wbr>Activity<wbr>Response | HDInsight<wbr>Spark<wbr>Activity<wbr>Response | HDInsight<wbr>Streaming<wbr>Activity<wbr>Response | If<wbr>Condition<wbr>Activity<wbr>Response | Lookup<wbr>Activity<wbr>Response | Set<wbr>Variable<wbr>Activity<wbr>Response | Sql<wbr>Server<wbr>Stored<wbr>Procedure<wbr>Activity<wbr>Response | Switch<wbr>Activity<wbr>Response | Until<wbr>Activity<wbr>Response | Validation<wbr>Activity<wbr>Response | Wait<wbr>Activity<wbr>Response | Web<wbr>Activity<wbr>Response | Web<wbr>Hook<wbr>Activity<wbr>Response[]</span>
+        <span class="property-type">(Append<wbr>Variable<wbr>Activity<wbr>Response | Azure<wbr>Data<wbr>Explorer<wbr>Command<wbr>Activity<wbr>Response | Azure<wbr>Function<wbr>Activity<wbr>Response | Azure<wbr>MLBatch<wbr>Execution<wbr>Activity<wbr>Response | Azure<wbr>MLExecute<wbr>Pipeline<wbr>Activity<wbr>Response | Azure<wbr>MLUpdate<wbr>Resource<wbr>Activity<wbr>Response | Control<wbr>Activity<wbr>Response | Copy<wbr>Activity<wbr>Response | Custom<wbr>Activity<wbr>Response | Data<wbr>Lake<wbr>Analytics<wbr>USQLActivity<wbr>Response | Databricks<wbr>Notebook<wbr>Activity<wbr>Response | Databricks<wbr>Spark<wbr>Jar<wbr>Activity<wbr>Response | Databricks<wbr>Spark<wbr>Python<wbr>Activity<wbr>Response | Delete<wbr>Activity<wbr>Response | Execute<wbr>Data<wbr>Flow<wbr>Activity<wbr>Response | Execute<wbr>Pipeline<wbr>Activity<wbr>Response | Execute<wbr>SSISPackage<wbr>Activity<wbr>Response | Execute<wbr>Wrangling<wbr>Dataflow<wbr>Activity<wbr>Response | Execution<wbr>Activity<wbr>Response | Filter<wbr>Activity<wbr>Response | For<wbr>Each<wbr>Activity<wbr>Response | Get<wbr>Metadata<wbr>Activity<wbr>Response | HDInsight<wbr>Hive<wbr>Activity<wbr>Response | HDInsight<wbr>Map<wbr>Reduce<wbr>Activity<wbr>Response | HDInsight<wbr>Pig<wbr>Activity<wbr>Response | HDInsight<wbr>Spark<wbr>Activity<wbr>Response | HDInsight<wbr>Streaming<wbr>Activity<wbr>Response | If<wbr>Condition<wbr>Activity<wbr>Response | Lookup<wbr>Activity<wbr>Response | Set<wbr>Variable<wbr>Activity<wbr>Response | Sql<wbr>Server<wbr>Stored<wbr>Procedure<wbr>Activity<wbr>Response | Switch<wbr>Activity<wbr>Response | Until<wbr>Activity<wbr>Response | Validation<wbr>Activity<wbr>Response | Wait<wbr>Activity<wbr>Response | Web<wbr>Activity<wbr>Response | Web<wbr>Hook<wbr>Activity<wbr>Response)[]</span>
     </dt>
     <dd>{{% md %}}List of activities to execute.{{% /md %}}</dd><dt class="property-required"
             title="Required">

@@ -437,7 +437,7 @@ The AccessPolicy resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#roles_nodejs" style="color: inherit; text-decoration: inherit;">roles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Access<wbr>Policy<wbr>Role[]</span>
+        <span class="property-type">(string | Access<wbr>Policy<wbr>Role)[]</span>
     </dt>
     <dd>{{% md %}}The list of roles the principal is assigned on the environment.{{% /md %}}</dd></dl>
 {{% /choosable %}}
