@@ -981,7 +981,7 @@ dependency graph’ to be created, which properly tracks the relationship betwee
 <dl class="py method">
 <dt id="pulumi.Output.apply">
 <code class="sig-name descname">apply</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">func</span><span class="p">:</span> <span class="n">Callable<span class="p">[</span><span class="p">[</span>T_co<span class="p">]</span><span class="p">, </span>Union<span class="p">[</span>U<span class="p">, </span>Awaitable<span class="p">[</span>U<span class="p">]</span><span class="p">, </span>pulumi.output.Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">run_with_unknowns</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>bool<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi.output.Output<span class="p">[</span>U<span class="p">]</span><a class="headerlink" href="#pulumi.Output.apply" title="Permalink to this definition"></a></dt>
-<dd><p>Transforms the data of the output with the provided func.  The result remains a
+<dd><p>Transforms the data of the output with the provided func.  The result remains an
 Output so that dependent resources can be properly tracked.</p>
 <p>‘func’ is not allowed to make resources.</p>
 <p>‘func’ can return other Outputs.  This can be handy if you have a Output<span class="raw-html-m2r"><SomeVal></span>
