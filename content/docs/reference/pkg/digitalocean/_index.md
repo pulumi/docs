@@ -36,6 +36,7 @@ A Pulumi package for creating and managing Digital Ocean cloud resources.
     <li><a href="kubernetescluster" title="KubernetesCluster"><span class="symbol resource"></span>KubernetesCluster</a></li>
     <li><a href="kubernetesnodepool" title="KubernetesNodePool"><span class="symbol resource"></span>KubernetesNodePool</a></li>
     <li><a href="loadbalancer" title="LoadBalancer"><span class="symbol resource"></span>LoadBalancer</a></li>
+    <li><a href="monitoralert" title="MonitorAlert"><span class="symbol resource"></span>MonitorAlert</a></li>
     <li><a href="project" title="Project"><span class="symbol resource"></span>Project</a></li>
     <li><a href="projectresources" title="ProjectResources"><span class="symbol resource"></span>ProjectResources</a></li>
     <li><a href="provider" title="Provider"><span class="symbol resource"></span>Provider</a></li>
@@ -98,6 +99,6 @@ A Pulumi package for creating and managing Digital Ocean cloud resources.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`digitalocean` Terraform Provider](https://github.com/digitalocean/terraform-provider-digitalocean).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.6.1</dd>
+	<dd>4.7.0</dd>
 </dl>
 

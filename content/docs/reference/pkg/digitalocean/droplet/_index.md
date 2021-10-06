@@ -345,7 +345,8 @@ set it to `true`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean controlling whether monitoring agent is installed.
-Defaults to false.
+Defaults to false. If set to `true`, you can configure monitor alert policies
+[monitor alert resource](https://www.terraform.io/providers/digitalocean/digitalocean/latest/docs/resources/monitor_alert)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
@@ -355,19 +356,17 @@ Defaults to false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Droplet name.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="privatenetworking_csharp">
 <a href="#privatenetworking_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Networking</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Boolean controlling if private networking
-is enabled. When VPC is enabled on an account, this will provision the
-Droplet inside of your account's default VPC for the region. Use the
-`vpc_uuid` attribute to specify a different VPC.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}**Deprecated** Boolean controlling if private networking
+is enabled. This parameter has been deprecated. Use `vpc_uuid` instead to specify a VPC network for the Droplet. If no `vpc_uuid` is provided, the Droplet will be placed in your account's default VPC for the region.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter has been deprecated. Use `vpc_uuid` instead to specify a VPC network for the Droplet. If no `vpc_uuid` is provided, the Droplet will be placed in your account&#39;s default VPC for the region.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="resizedisk_csharp">
 <a href="#resizedisk_csharp" style="color: inherit; text-decoration: inherit;">Resize<wbr>Disk</a>
@@ -502,7 +501,8 @@ set it to `true`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean controlling whether monitoring agent is installed.
-Defaults to false.
+Defaults to false. If set to `true`, you can configure monitor alert policies
+[monitor alert resource](https://www.terraform.io/providers/digitalocean/digitalocean/latest/docs/resources/monitor_alert)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
@@ -512,19 +512,17 @@ Defaults to false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Droplet name.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="privatenetworking_go">
 <a href="#privatenetworking_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Networking</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Boolean controlling if private networking
-is enabled. When VPC is enabled on an account, this will provision the
-Droplet inside of your account's default VPC for the region. Use the
-`vpc_uuid` attribute to specify a different VPC.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}**Deprecated** Boolean controlling if private networking
+is enabled. This parameter has been deprecated. Use `vpc_uuid` instead to specify a VPC network for the Droplet. If no `vpc_uuid` is provided, the Droplet will be placed in your account's default VPC for the region.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter has been deprecated. Use `vpc_uuid` instead to specify a VPC network for the Droplet. If no `vpc_uuid` is provided, the Droplet will be placed in your account&#39;s default VPC for the region.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="resizedisk_go">
 <a href="#resizedisk_go" style="color: inherit; text-decoration: inherit;">Resize<wbr>Disk</a>
@@ -659,7 +657,8 @@ set it to `true`.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean controlling whether monitoring agent is installed.
-Defaults to false.
+Defaults to false. If set to `true`, you can configure monitor alert policies
+[monitor alert resource](https://www.terraform.io/providers/digitalocean/digitalocean/latest/docs/resources/monitor_alert)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
@@ -669,19 +668,17 @@ Defaults to false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Droplet name.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="privatenetworking_nodejs">
 <a href="#privatenetworking_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Networking</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Boolean controlling if private networking
-is enabled. When VPC is enabled on an account, this will provision the
-Droplet inside of your account's default VPC for the region. Use the
-`vpc_uuid` attribute to specify a different VPC.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}**Deprecated** Boolean controlling if private networking
+is enabled. This parameter has been deprecated. Use `vpc_uuid` instead to specify a VPC network for the Droplet. If no `vpc_uuid` is provided, the Droplet will be placed in your account's default VPC for the region.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter has been deprecated. Use `vpc_uuid` instead to specify a VPC network for the Droplet. If no `vpc_uuid` is provided, the Droplet will be placed in your account&#39;s default VPC for the region.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="resizedisk_nodejs">
 <a href="#resizedisk_nodejs" style="color: inherit; text-decoration: inherit;">resize<wbr>Disk</a>
@@ -816,7 +813,8 @@ set it to `true`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean controlling whether monitoring agent is installed.
-Defaults to false.
+Defaults to false. If set to `true`, you can configure monitor alert policies
+[monitor alert resource](https://www.terraform.io/providers/digitalocean/digitalocean/latest/docs/resources/monitor_alert)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
@@ -826,19 +824,17 @@ Defaults to false.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Droplet name.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="private_networking_python">
 <a href="#private_networking_python" style="color: inherit; text-decoration: inherit;">private_<wbr>networking</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Boolean controlling if private networking
-is enabled. When VPC is enabled on an account, this will provision the
-Droplet inside of your account's default VPC for the region. Use the
-`vpc_uuid` attribute to specify a different VPC.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}**Deprecated** Boolean controlling if private networking
+is enabled. This parameter has been deprecated. Use `vpc_uuid` instead to specify a VPC network for the Droplet. If no `vpc_uuid` is provided, the Droplet will be placed in your account's default VPC for the region.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter has been deprecated. Use `vpc_uuid` instead to specify a VPC network for the Droplet. If no `vpc_uuid` is provided, the Droplet will be placed in your account&#39;s default VPC for the region.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="resize_disk_python">
 <a href="#resize_disk_python" style="color: inherit; text-decoration: inherit;">resize_<wbr>disk</a>
@@ -1661,7 +1657,8 @@ set it to `true`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean controlling whether monitoring agent is installed.
-Defaults to false.
+Defaults to false. If set to `true`, you can configure monitor alert policies
+[monitor alert resource](https://www.terraform.io/providers/digitalocean/digitalocean/latest/docs/resources/monitor_alert)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
@@ -1689,19 +1686,17 @@ Defaults to false.
         <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Droplet monthly price
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_privatenetworking_csharp">
 <a href="#state_privatenetworking_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Networking</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Boolean controlling if private networking
-is enabled. When VPC is enabled on an account, this will provision the
-Droplet inside of your account's default VPC for the region. Use the
-`vpc_uuid` attribute to specify a different VPC.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}**Deprecated** Boolean controlling if private networking
+is enabled. This parameter has been deprecated. Use `vpc_uuid` instead to specify a VPC network for the Droplet. If no `vpc_uuid` is provided, the Droplet will be placed in your account's default VPC for the region.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter has been deprecated. Use `vpc_uuid` instead to specify a VPC network for the Droplet. If no `vpc_uuid` is provided, the Droplet will be placed in your account&#39;s default VPC for the region.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_csharp">
 <a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -1925,7 +1920,8 @@ set it to `true`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean controlling whether monitoring agent is installed.
-Defaults to false.
+Defaults to false. If set to `true`, you can configure monitor alert policies
+[monitor alert resource](https://www.terraform.io/providers/digitalocean/digitalocean/latest/docs/resources/monitor_alert)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
@@ -1953,19 +1949,17 @@ Defaults to false.
         <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Droplet monthly price
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_privatenetworking_go">
 <a href="#state_privatenetworking_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Networking</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Boolean controlling if private networking
-is enabled. When VPC is enabled on an account, this will provision the
-Droplet inside of your account's default VPC for the region. Use the
-`vpc_uuid` attribute to specify a different VPC.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}**Deprecated** Boolean controlling if private networking
+is enabled. This parameter has been deprecated. Use `vpc_uuid` instead to specify a VPC network for the Droplet. If no `vpc_uuid` is provided, the Droplet will be placed in your account's default VPC for the region.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter has been deprecated. Use `vpc_uuid` instead to specify a VPC network for the Droplet. If no `vpc_uuid` is provided, the Droplet will be placed in your account&#39;s default VPC for the region.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_go">
 <a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -2189,7 +2183,8 @@ set it to `true`.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean controlling whether monitoring agent is installed.
-Defaults to false.
+Defaults to false. If set to `true`, you can configure monitor alert policies
+[monitor alert resource](https://www.terraform.io/providers/digitalocean/digitalocean/latest/docs/resources/monitor_alert)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
@@ -2217,19 +2212,17 @@ Defaults to false.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Droplet monthly price
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_privatenetworking_nodejs">
 <a href="#state_privatenetworking_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Networking</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Boolean controlling if private networking
-is enabled. When VPC is enabled on an account, this will provision the
-Droplet inside of your account's default VPC for the region. Use the
-`vpc_uuid` attribute to specify a different VPC.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}**Deprecated** Boolean controlling if private networking
+is enabled. This parameter has been deprecated. Use `vpc_uuid` instead to specify a VPC network for the Droplet. If no `vpc_uuid` is provided, the Droplet will be placed in your account's default VPC for the region.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter has been deprecated. Use `vpc_uuid` instead to specify a VPC network for the Droplet. If no `vpc_uuid` is provided, the Droplet will be placed in your account&#39;s default VPC for the region.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_nodejs">
 <a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -2453,7 +2446,8 @@ set it to `true`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean controlling whether monitoring agent is installed.
-Defaults to false.
+Defaults to false. If set to `true`, you can configure monitor alert policies
+[monitor alert resource](https://www.terraform.io/providers/digitalocean/digitalocean/latest/docs/resources/monitor_alert)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
@@ -2481,19 +2475,17 @@ Defaults to false.
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Droplet monthly price
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_private_networking_python">
 <a href="#state_private_networking_python" style="color: inherit; text-decoration: inherit;">private_<wbr>networking</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Boolean controlling if private networking
-is enabled. When VPC is enabled on an account, this will provision the
-Droplet inside of your account's default VPC for the region. Use the
-`vpc_uuid` attribute to specify a different VPC.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}**Deprecated** Boolean controlling if private networking
+is enabled. This parameter has been deprecated. Use `vpc_uuid` instead to specify a VPC network for the Droplet. If no `vpc_uuid` is provided, the Droplet will be placed in your account's default VPC for the region.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter has been deprecated. Use `vpc_uuid` instead to specify a VPC network for the Droplet. If no `vpc_uuid` is provided, the Droplet will be placed in your account&#39;s default VPC for the region.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_python">
 <a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
