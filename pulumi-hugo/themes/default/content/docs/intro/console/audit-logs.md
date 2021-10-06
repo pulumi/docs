@@ -47,14 +47,14 @@ also filter logs by a particular user by selecting their profile picture.
 ## Automated Export
 
 {{% notes "info" %}}
-[Contact us]({{< relref "/contact" >}}) if you would like to activate this feature for your enterprise organization.
+This feature is only available to some Pulumi Enterprise editions. If you don't see it in your organization, [contact sales]({{< relref "/contact?form=sales" >}}).
 {{% /notes %}}
 
 To configure the export of audit logs to AWS S3 using the console:
 
 1. Navigate to the organization's **Settings**.
 1. Navigate to **Audit Logs**.
-1. Use the three dot menu and select **Configure Audit Logs to S3**. [Contact us]({{< relref "/contact" >}}) to activate this feature in your enterprise organization.
+1. Use the three dot menu and select **Configure Audit Logs to S3**.
 
 <img src="/images/docs/reference/console/ale-menu.png">
 
