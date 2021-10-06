@@ -3,8 +3,6 @@
 title: "getSpotMarketRequest"
 title_tag: "equinix-metal.getSpotMarketRequest"
 meta_desc: "Documentation for the equinix-metal.getSpotMarketRequest function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

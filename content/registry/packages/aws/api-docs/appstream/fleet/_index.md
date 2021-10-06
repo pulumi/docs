@@ -3,8 +3,6 @@
 title: "Fleet"
 title_tag: "aws.appstream.Fleet"
 meta_desc: "Documentation for the aws.appstream.Fleet resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/Fleet/"
 layout: api
 ---
 

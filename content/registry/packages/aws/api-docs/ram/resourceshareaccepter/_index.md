@@ -3,8 +3,6 @@
 title: "ResourceShareAccepter"
 title_tag: "aws.ram.ResourceShareAccepter"
 meta_desc: "Documentation for the aws.ram.ResourceShareAccepter resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/ResourceShareAccepter/"
 layout: api
 ---
 

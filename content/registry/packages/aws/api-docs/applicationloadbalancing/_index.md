@@ -2,8 +2,6 @@
 title: "applicationloadbalancing"
 title_tag: "aws.applicationloadbalancing"
 meta_desc: "Explore the resources and functions of the aws.applicationloadbalancing module."
-aliases:
-    - "docs/reference/pkg/aws/"
 layout: api
 ---
 

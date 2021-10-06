@@ -2,8 +2,6 @@
 title: "cloudconnect"
 title_tag: "alicloud.cloudconnect"
 meta_desc: "Explore the resources and functions of the alicloud.cloudconnect module."
-aliases:
-    - "docs/reference/pkg/alicloud/"
 layout: api
 ---
 

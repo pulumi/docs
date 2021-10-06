@@ -3,8 +3,6 @@
 title: "AutoScaleVCore"
 title_tag: "azure-native.powerbidedicated.AutoScaleVCore"
 meta_desc: "Documentation for the azure-native.powerbidedicated.AutoScaleVCore resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/AutoScaleVCore/"
 layout: api
 ---
 

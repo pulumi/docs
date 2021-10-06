@@ -3,8 +3,6 @@
 title: "KeyRingImportJob"
 title_tag: "gcp.kms.KeyRingImportJob"
 meta_desc: "Documentation for the gcp.kms.KeyRingImportJob resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/KeyRingImportJob/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "TimeSeriesInsightsAccessPolicy"
 title_tag: "azure.iot.TimeSeriesInsightsAccessPolicy"
 meta_desc: "Documentation for the azure.iot.TimeSeriesInsightsAccessPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/TimeSeriesInsightsAccessPolicy/"
 layout: api
 ---
 

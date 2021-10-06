@@ -3,8 +3,6 @@
 title: "ExternalFunction"
 title_tag: "snowflake.ExternalFunction"
 meta_desc: "Documentation for the snowflake.ExternalFunction resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/snowflake/ExternalFunction/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "LiveEvent"
 title_tag: "azure-native.media.LiveEvent"
 meta_desc: "Documentation for the azure-native.media.LiveEvent resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/LiveEvent/"
 layout: api
 ---
 

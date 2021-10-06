@@ -3,8 +3,6 @@
 title: "TagTemplateIamMember"
 title_tag: "gcp.datacatalog.TagTemplateIamMember"
 meta_desc: "Documentation for the gcp.datacatalog.TagTemplateIamMember resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/TagTemplateIamMember/"
 layout: api
 ---
 

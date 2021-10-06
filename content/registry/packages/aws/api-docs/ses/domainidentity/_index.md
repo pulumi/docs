@@ -3,8 +3,6 @@
 title: "DomainIdentity"
 title_tag: "aws.ses.DomainIdentity"
 meta_desc: "Documentation for the aws.ses.DomainIdentity resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/DomainIdentity/"
 layout: api
 ---
 

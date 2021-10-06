@@ -3,8 +3,6 @@
 title: "getInstruction"
 title_tag: "google-native.datalabeling/v1beta1.getInstruction"
 meta_desc: "Documentation for the google-native.datalabeling/v1beta1.getInstruction function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

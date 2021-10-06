@@ -3,8 +3,6 @@
 title: "ScheduledAlertRule"
 title_tag: "azure-native.securityinsights.ScheduledAlertRule"
 meta_desc: "Documentation for the azure-native.securityinsights.ScheduledAlertRule resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/ScheduledAlertRule/"
 layout: api
 ---
 

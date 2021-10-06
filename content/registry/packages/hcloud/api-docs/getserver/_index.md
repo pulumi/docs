@@ -3,8 +3,6 @@
 title: "getServer"
 title_tag: "hcloud.getServer"
 meta_desc: "Documentation for the hcloud.getServer function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

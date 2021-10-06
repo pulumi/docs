@@ -3,8 +3,6 @@
 title: "getTables"
 title_tag: "alicloud.ots.getTables"
 meta_desc: "Documentation for the alicloud.ots.getTables function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

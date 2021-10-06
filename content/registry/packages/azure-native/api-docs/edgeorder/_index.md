@@ -2,8 +2,6 @@
 title: "edgeorder"
 title_tag: "azure-native.edgeorder"
 meta_desc: "Explore the resources and functions of the azure-native.edgeorder module."
-aliases:
-    - "docs/reference/pkg/azure-native/"
 layout: api
 ---
 

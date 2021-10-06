@@ -3,8 +3,6 @@
 title: "getRegionWorkflowTemplateIamPolicy"
 title_tag: "google-native.dataproc/v1beta2.getRegionWorkflowTemplateIamPolicy"
 meta_desc: "Documentation for the google-native.dataproc/v1beta2.getRegionWorkflowTemplateIamPolicy function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

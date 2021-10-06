@@ -2,8 +2,6 @@
 title: "azure"
 title_tag: "vault.azure"
 meta_desc: "Explore the resources and functions of the vault.azure module."
-aliases:
-    - "docs/reference/pkg/vault/"
 layout: api
 ---
 

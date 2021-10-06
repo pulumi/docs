@@ -3,8 +3,6 @@
 title: "InstanceIAMBinding"
 title_tag: "gcp.spanner.InstanceIAMBinding"
 meta_desc: "Documentation for the gcp.spanner.InstanceIAMBinding resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/InstanceIAMBinding/"
 layout: api
 ---
 

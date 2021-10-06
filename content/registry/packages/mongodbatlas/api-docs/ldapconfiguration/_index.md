@@ -3,8 +3,6 @@
 title: "LdapConfiguration"
 title_tag: "mongodbatlas.LdapConfiguration"
 meta_desc: "Documentation for the mongodbatlas.LdapConfiguration resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/mongodbatlas/LdapConfiguration/"
 layout: api
 ---
 

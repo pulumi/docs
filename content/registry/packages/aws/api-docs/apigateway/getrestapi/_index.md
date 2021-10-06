@@ -3,8 +3,6 @@
 title: "getRestApi"
 title_tag: "aws.apigateway.getRestApi"
 meta_desc: "Documentation for the aws.apigateway.getRestApi function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "getLBRule"
 title_tag: "azure.lb.getLBRule"
 meta_desc: "Documentation for the azure.lb.getLBRule function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "getCertificate"
 title_tag: "f5bigip.ssl.getCertificate"
 meta_desc: "Documentation for the f5bigip.ssl.getCertificate function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

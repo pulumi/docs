@@ -2,8 +2,6 @@
 title: "firebaserules"
 title_tag: "firebaserules Package"
 meta_desc: ""
-aliases:
-    - "docs/reference/pkg/google-native/"
 layout: api
 ---
 

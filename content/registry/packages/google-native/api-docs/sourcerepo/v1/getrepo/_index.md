@@ -3,8 +3,6 @@
 title: "getRepo"
 title_tag: "google-native.sourcerepo/v1.getRepo"
 meta_desc: "Documentation for the google-native.sourcerepo/v1.getRepo function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

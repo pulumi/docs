@@ -3,8 +3,6 @@
 title: "getRouteTable"
 title_tag: "aws.ec2.getRouteTable"
 meta_desc: "Documentation for the aws.ec2.getRouteTable function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

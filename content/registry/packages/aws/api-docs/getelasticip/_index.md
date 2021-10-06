@@ -3,8 +3,6 @@
 title: "getElasticIp"
 title_tag: "aws.getElasticIp"
 meta_desc: "Documentation for the aws.getElasticIp function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

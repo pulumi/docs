@@ -3,8 +3,6 @@
 title: "TagOption"
 title_tag: "aws.servicecatalog.TagOption"
 meta_desc: "Documentation for the aws.servicecatalog.TagOption resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/TagOption/"
 layout: api
 ---
 

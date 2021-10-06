@@ -3,8 +3,6 @@
 title: "NotificationHub"
 title_tag: "azure-native.notificationhubs.NotificationHub"
 meta_desc: "Documentation for the azure-native.notificationhubs.NotificationHub resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/NotificationHub/"
 layout: api
 ---
 

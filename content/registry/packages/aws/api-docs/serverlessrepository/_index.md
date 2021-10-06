@@ -2,8 +2,6 @@
 title: "serverlessrepository"
 title_tag: "aws.serverlessrepository"
 meta_desc: "Explore the resources and functions of the aws.serverlessrepository module."
-aliases:
-    - "docs/reference/pkg/aws/"
 layout: api
 ---
 

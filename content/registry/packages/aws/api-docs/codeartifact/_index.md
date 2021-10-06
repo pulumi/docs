@@ -2,8 +2,6 @@
 title: "codeartifact"
 title_tag: "aws.codeartifact"
 meta_desc: "Explore the resources and functions of the aws.codeartifact module."
-aliases:
-    - "docs/reference/pkg/aws/"
 layout: api
 ---
 

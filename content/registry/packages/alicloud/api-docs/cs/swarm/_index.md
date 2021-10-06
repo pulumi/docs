@@ -3,8 +3,6 @@
 title: "Swarm"
 title_tag: "alicloud.cs.Swarm"
 meta_desc: "Documentation for the alicloud.cs.Swarm resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/alicloud/Swarm/"
 layout: api
 ---
 

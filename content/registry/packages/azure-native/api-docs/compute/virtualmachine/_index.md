@@ -3,8 +3,6 @@
 title: "VirtualMachine"
 title_tag: "azure-native.compute.VirtualMachine"
 meta_desc: "Documentation for the azure-native.compute.VirtualMachine resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/VirtualMachine/"
 layout: api
 ---
 

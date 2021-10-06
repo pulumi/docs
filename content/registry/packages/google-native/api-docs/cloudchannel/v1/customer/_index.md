@@ -3,8 +3,6 @@
 title: "Customer"
 title_tag: "google-native.cloudchannel/v1.Customer"
 meta_desc: "Documentation for the google-native.cloudchannel/v1.Customer resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/google-native/Customer/"
 layout: api
 ---
 

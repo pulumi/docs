@@ -3,8 +3,6 @@
 title: "Lien"
 title_tag: "gcp.resourcemanager.Lien"
 meta_desc: "Documentation for the gcp.resourcemanager.Lien resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/Lien/"
 layout: api
 ---
 

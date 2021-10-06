@@ -2,8 +2,6 @@
 title: "container"
 title_tag: "container Package"
 meta_desc: ""
-aliases:
-    - "docs/reference/pkg/google-native/"
 layout: api
 ---
 

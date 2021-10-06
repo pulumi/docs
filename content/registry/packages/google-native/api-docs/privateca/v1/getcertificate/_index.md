@@ -3,8 +3,6 @@
 title: "getCertificate"
 title_tag: "google-native.privateca/v1.getCertificate"
 meta_desc: "Documentation for the google-native.privateca/v1.getCertificate function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

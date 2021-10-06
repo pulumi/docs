@@ -2,8 +2,6 @@
 title: "resourcegroupstaggingapi"
 title_tag: "aws.resourcegroupstaggingapi"
 meta_desc: "Explore the resources and functions of the aws.resourcegroupstaggingapi module."
-aliases:
-    - "docs/reference/pkg/aws/"
 layout: api
 ---
 

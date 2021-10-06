@@ -3,8 +3,6 @@
 title: "OrganizationAdminAccount"
 title_tag: "aws.guardduty.OrganizationAdminAccount"
 meta_desc: "Documentation for the aws.guardduty.OrganizationAdminAccount resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/OrganizationAdminAccount/"
 layout: api
 ---
 

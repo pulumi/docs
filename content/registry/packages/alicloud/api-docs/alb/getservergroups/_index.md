@@ -3,8 +3,6 @@
 title: "getServerGroups"
 title_tag: "alicloud.alb.getServerGroups"
 meta_desc: "Documentation for the alicloud.alb.getServerGroups function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

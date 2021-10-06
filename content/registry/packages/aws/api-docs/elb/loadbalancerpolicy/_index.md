@@ -3,8 +3,6 @@
 title: "LoadBalancerPolicy"
 title_tag: "aws.elb.LoadBalancerPolicy"
 meta_desc: "Documentation for the aws.elb.LoadBalancerPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/LoadBalancerPolicy/"
 layout: api
 ---
 

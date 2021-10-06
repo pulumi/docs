@@ -3,9 +3,7 @@
 title: "Provider"
 title_tag: "nomad.Provider"
 meta_desc: "Documentation for the nomad.Provider resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/nomad/nomad/"
-layout: api-doc-resource
+layout: api
 ---
 
 

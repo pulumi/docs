@@ -3,8 +3,6 @@
 title: "getTransitRouterPeerAttachments"
 title_tag: "alicloud.cen.getTransitRouterPeerAttachments"
 meta_desc: "Documentation for the alicloud.cen.getTransitRouterPeerAttachments function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

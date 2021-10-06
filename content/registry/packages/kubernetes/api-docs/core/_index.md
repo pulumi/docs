@@ -2,8 +2,6 @@
 title: "core"
 title_tag: "core Package"
 meta_desc: ""
-aliases:
-    - "docs/reference/pkg/kubernetes/"
 layout: api
 ---
 

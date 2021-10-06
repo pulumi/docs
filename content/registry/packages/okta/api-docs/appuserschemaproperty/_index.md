@@ -3,8 +3,6 @@
 title: "AppUserSchemaProperty"
 title_tag: "okta.AppUserSchemaProperty"
 meta_desc: "Documentation for the okta.AppUserSchemaProperty resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/okta/AppUserSchemaProperty/"
 layout: api
 ---
 

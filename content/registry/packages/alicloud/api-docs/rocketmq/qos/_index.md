@@ -3,8 +3,6 @@
 title: "Qos"
 title_tag: "alicloud.rocketmq.Qos"
 meta_desc: "Documentation for the alicloud.rocketmq.Qos resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/alicloud/Qos/"
 layout: api
 ---
 

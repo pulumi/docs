@@ -3,8 +3,6 @@
 title: "Integration"
 title_tag: "aws-native.customerprofiles.Integration"
 meta_desc: "Documentation for the aws-native.customerprofiles.Integration resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws-native/Integration/"
 layout: api
 ---
 

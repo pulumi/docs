@@ -3,8 +3,6 @@
 title: "IdentityProviderAad"
 title_tag: "azure.apimanagement.IdentityProviderAad"
 meta_desc: "Documentation for the azure.apimanagement.IdentityProviderAad resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/IdentityProviderAad/"
 layout: api
 ---
 

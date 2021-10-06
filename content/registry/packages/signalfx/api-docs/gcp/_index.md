@@ -2,8 +2,6 @@
 title: "gcp"
 title_tag: "signalfx.gcp"
 meta_desc: "Explore the resources and functions of the signalfx.gcp module."
-aliases:
-    - "docs/reference/pkg/signalfx/"
 layout: api
 ---
 

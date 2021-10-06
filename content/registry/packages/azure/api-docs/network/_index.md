@@ -2,8 +2,6 @@
 title: "network"
 title_tag: "azure.network"
 meta_desc: "Explore the resources and functions of the azure.network module."
-aliases:
-    - "docs/reference/pkg/azure/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "ApiTagDescription"
 title_tag: "azure-native.apimanagement.ApiTagDescription"
 meta_desc: "Documentation for the azure-native.apimanagement.ApiTagDescription resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/ApiTagDescription/"
 layout: api
 ---
 

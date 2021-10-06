@@ -3,8 +3,6 @@
 title: "getDashboard"
 title_tag: "datadog.getDashboard"
 meta_desc: "Documentation for the datadog.getDashboard function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

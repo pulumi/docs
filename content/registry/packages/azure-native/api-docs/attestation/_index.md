@@ -2,8 +2,6 @@
 title: "attestation"
 title_tag: "azure-native.attestation"
 meta_desc: "Explore the resources and functions of the azure-native.attestation module."
-aliases:
-    - "docs/reference/pkg/azure-native/"
 layout: api
 ---
 

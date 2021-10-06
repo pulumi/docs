@@ -3,8 +3,6 @@
 title: "UserGroup"
 title_tag: "wavefront.UserGroup"
 meta_desc: "Documentation for the wavefront.UserGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/wavefront/UserGroup/"
 layout: api
 ---
 

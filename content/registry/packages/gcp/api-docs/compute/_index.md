@@ -2,8 +2,6 @@
 title: "compute"
 title_tag: "gcp.compute"
 meta_desc: "Explore the resources and functions of the gcp.compute module."
-aliases:
-    - "docs/reference/pkg/gcp/"
 layout: api
 ---
 

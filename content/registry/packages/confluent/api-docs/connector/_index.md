@@ -3,8 +3,6 @@
 title: "Connector"
 title_tag: "confluent.Connector"
 meta_desc: "Documentation for the confluent.Connector resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/confluent/Connector/"
 layout: api
 ---
 

@@ -2,8 +2,6 @@
 title: "efs"
 title_tag: "aws-native.efs"
 meta_desc: "Explore the resources and functions of the aws-native.efs module."
-aliases:
-    - "docs/reference/pkg/aws-native/"
 layout: api
 ---
 

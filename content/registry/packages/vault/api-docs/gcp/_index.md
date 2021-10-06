@@ -2,8 +2,6 @@
 title: "gcp"
 title_tag: "vault.gcp"
 meta_desc: "Explore the resources and functions of the vault.gcp module."
-aliases:
-    - "docs/reference/pkg/vault/"
 layout: api
 ---
 

@@ -2,8 +2,6 @@
 title: "dataworks"
 title_tag: "alicloud.dataworks"
 meta_desc: "Explore the resources and functions of the alicloud.dataworks module."
-aliases:
-    - "docs/reference/pkg/alicloud/"
 layout: api
 ---
 

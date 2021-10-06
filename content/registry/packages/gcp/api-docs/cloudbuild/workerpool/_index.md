@@ -3,8 +3,6 @@
 title: "WorkerPool"
 title_tag: "gcp.cloudbuild.WorkerPool"
 meta_desc: "Documentation for the gcp.cloudbuild.WorkerPool resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/WorkerPool/"
 layout: api
 ---
 

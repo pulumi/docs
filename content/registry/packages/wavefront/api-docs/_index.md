@@ -2,8 +2,6 @@
 title: "Wavefront"
 title_tag: "wavefront.Wavefront"
 meta_desc: "A Pulumi package for creating and managing wavefront cloud resources."
-aliases:
-    - "docs/reference/pkg/wavefront/"
 menu:
     reference:
         parent: API Reference

@@ -2,8 +2,6 @@
 title: "datacatalog"
 title_tag: "gcp.datacatalog"
 meta_desc: "Explore the resources and functions of the gcp.datacatalog module."
-aliases:
-    - "docs/reference/pkg/gcp/"
 layout: api
 ---
 

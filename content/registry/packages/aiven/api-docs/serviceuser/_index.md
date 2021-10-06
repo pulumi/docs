@@ -3,8 +3,6 @@
 title: "ServiceUser"
 title_tag: "aiven.ServiceUser"
 meta_desc: "Documentation for the aiven.ServiceUser resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aiven/ServiceUser/"
 layout: api
 ---
 

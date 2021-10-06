@@ -3,8 +3,6 @@
 title: "StorageClass"
 title_tag: "kubernetes.storage.k8s.io/v1.StorageClass"
 meta_desc: "Documentation for the kubernetes.storage.k8s.io/v1.StorageClass resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/kubernetes/StorageClass/"
 layout: api
 ---
 

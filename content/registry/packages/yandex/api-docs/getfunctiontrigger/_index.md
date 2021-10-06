@@ -3,8 +3,6 @@
 title: "getFunctionTrigger"
 title_tag: "yandex.getFunctionTrigger"
 meta_desc: "Documentation for the yandex.getFunctionTrigger function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

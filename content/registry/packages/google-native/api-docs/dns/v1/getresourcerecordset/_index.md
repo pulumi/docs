@@ -3,8 +3,6 @@
 title: "getResourceRecordSet"
 title_tag: "google-native.dns/v1.getResourceRecordSet"
 meta_desc: "Documentation for the google-native.dns/v1.getResourceRecordSet function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

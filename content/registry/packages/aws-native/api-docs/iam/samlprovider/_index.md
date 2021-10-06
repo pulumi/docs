@@ -3,8 +3,6 @@
 title: "SAMLProvider"
 title_tag: "aws-native.iam.SAMLProvider"
 meta_desc: "Documentation for the aws-native.iam.SAMLProvider resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws-native/SAMLProvider/"
 layout: api
 ---
 

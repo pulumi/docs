@@ -2,8 +2,6 @@
 title: "datashare"
 title_tag: "azure.datashare"
 meta_desc: "Explore the resources and functions of the azure.datashare module."
-aliases:
-    - "docs/reference/pkg/azure/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "Route"
 title_tag: "mailgun.Route"
 meta_desc: "Documentation for the mailgun.Route resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/mailgun/Route/"
 layout: api
 ---
 

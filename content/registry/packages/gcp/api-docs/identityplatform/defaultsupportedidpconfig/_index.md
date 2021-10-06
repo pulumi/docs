@@ -3,8 +3,6 @@
 title: "DefaultSupportedIdpConfig"
 title_tag: "gcp.identityplatform.DefaultSupportedIdpConfig"
 meta_desc: "Documentation for the gcp.identityplatform.DefaultSupportedIdpConfig resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/DefaultSupportedIdpConfig/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "DatasetBinary"
 title_tag: "azure.datafactory.DatasetBinary"
 meta_desc: "Documentation for the azure.datafactory.DatasetBinary resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/DatasetBinary/"
 layout: api
 ---
 

@@ -2,8 +2,6 @@
 title: "iot"
 title_tag: "alicloud.iot"
 meta_desc: "Explore the resources and functions of the alicloud.iot module."
-aliases:
-    - "docs/reference/pkg/alicloud/"
 layout: api
 ---
 

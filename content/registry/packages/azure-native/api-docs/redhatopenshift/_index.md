@@ -2,8 +2,6 @@
 title: "redhatopenshift"
 title_tag: "azure-native.redhatopenshift"
 meta_desc: "Explore the resources and functions of the azure-native.redhatopenshift module."
-aliases:
-    - "docs/reference/pkg/azure-native/"
 layout: api
 ---
 

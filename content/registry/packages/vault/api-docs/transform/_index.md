@@ -2,8 +2,6 @@
 title: "transform"
 title_tag: "vault.transform"
 meta_desc: "Explore the resources and functions of the vault.transform module."
-aliases:
-    - "docs/reference/pkg/vault/"
 layout: api
 ---
 

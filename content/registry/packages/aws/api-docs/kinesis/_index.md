@@ -2,8 +2,6 @@
 title: "kinesis"
 title_tag: "aws.kinesis"
 meta_desc: "Explore the resources and functions of the aws.kinesis module."
-aliases:
-    - "docs/reference/pkg/aws/"
 layout: api
 ---
 

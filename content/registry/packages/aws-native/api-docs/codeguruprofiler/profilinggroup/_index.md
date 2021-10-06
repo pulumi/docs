@@ -3,8 +3,6 @@
 title: "ProfilingGroup"
 title_tag: "aws-native.codeguruprofiler.ProfilingGroup"
 meta_desc: "Documentation for the aws-native.codeguruprofiler.ProfilingGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws-native/ProfilingGroup/"
 layout: api
 ---
 

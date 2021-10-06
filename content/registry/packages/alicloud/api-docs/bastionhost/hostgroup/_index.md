@@ -3,8 +3,6 @@
 title: "HostGroup"
 title_tag: "alicloud.bastionhost.HostGroup"
 meta_desc: "Documentation for the alicloud.bastionhost.HostGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/alicloud/HostGroup/"
 layout: api
 ---
 

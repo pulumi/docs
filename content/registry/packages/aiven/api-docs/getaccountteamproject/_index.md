@@ -3,8 +3,6 @@
 title: "getAccountTeamProject"
 title_tag: "aiven.getAccountTeamProject"
 meta_desc: "Documentation for the aiven.getAccountTeamProject function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

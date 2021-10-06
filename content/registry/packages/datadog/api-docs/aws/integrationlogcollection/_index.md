@@ -3,8 +3,6 @@
 title: "IntegrationLogCollection"
 title_tag: "datadog.aws.IntegrationLogCollection"
 meta_desc: "Documentation for the datadog.aws.IntegrationLogCollection resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/datadog/IntegrationLogCollection/"
 layout: api
 ---
 

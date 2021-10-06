@@ -3,8 +3,6 @@
 title: "ExpressRouteConnection"
 title_tag: "azure-native.network.ExpressRouteConnection"
 meta_desc: "Documentation for the azure-native.network.ExpressRouteConnection resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/ExpressRouteConnection/"
 layout: api
 ---
 

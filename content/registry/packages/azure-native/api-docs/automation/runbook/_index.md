@@ -3,8 +3,6 @@
 title: "Runbook"
 title_tag: "azure-native.automation.Runbook"
 meta_desc: "Documentation for the azure-native.automation.Runbook resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/Runbook/"
 layout: api
 ---
 

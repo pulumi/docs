@@ -2,8 +2,6 @@
 title: "cm"
 title_tag: "f5bigip.cm"
 meta_desc: "Explore the resources and functions of the f5bigip.cm module."
-aliases:
-    - "docs/reference/pkg/f5bigip/"
 layout: api
 ---
 

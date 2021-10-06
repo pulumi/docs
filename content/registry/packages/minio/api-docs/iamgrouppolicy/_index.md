@@ -3,8 +3,6 @@
 title: "IamGroupPolicy"
 title_tag: "minio.IamGroupPolicy"
 meta_desc: "Documentation for the minio.IamGroupPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/minio/IamGroupPolicy/"
 layout: api
 ---
 

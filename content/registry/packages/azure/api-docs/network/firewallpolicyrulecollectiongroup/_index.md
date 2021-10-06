@@ -3,8 +3,6 @@
 title: "FirewallPolicyRuleCollectionGroup"
 title_tag: "azure.network.FirewallPolicyRuleCollectionGroup"
 meta_desc: "Documentation for the azure.network.FirewallPolicyRuleCollectionGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/FirewallPolicyRuleCollectionGroup/"
 layout: api
 ---
 

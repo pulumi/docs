@@ -3,8 +3,6 @@
 title: "getInsights"
 title_tag: "azure.appinsights.getInsights"
 meta_desc: "Documentation for the azure.appinsights.getInsights function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

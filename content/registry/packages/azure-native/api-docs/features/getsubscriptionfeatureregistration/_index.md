@@ -3,8 +3,6 @@
 title: "getSubscriptionFeatureRegistration"
 title_tag: "azure-native.features.getSubscriptionFeatureRegistration"
 meta_desc: "Documentation for the azure-native.features.getSubscriptionFeatureRegistration function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

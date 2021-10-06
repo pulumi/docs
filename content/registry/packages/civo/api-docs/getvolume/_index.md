@@ -3,8 +3,6 @@
 title: "getVolume"
 title_tag: "civo.getVolume"
 meta_desc: "Documentation for the civo.getVolume function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

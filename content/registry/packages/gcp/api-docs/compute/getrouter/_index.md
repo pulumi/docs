@@ -3,8 +3,6 @@
 title: "getRouter"
 title_tag: "gcp.compute.getRouter"
 meta_desc: "Documentation for the gcp.compute.getRouter function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

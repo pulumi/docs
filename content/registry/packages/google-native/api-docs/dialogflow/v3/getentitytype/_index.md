@@ -3,8 +3,6 @@
 title: "getEntityType"
 title_tag: "google-native.dialogflow/v3.getEntityType"
 meta_desc: "Documentation for the google-native.dialogflow/v3.getEntityType function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "ConfigurationTemplate"
 title_tag: "aws.elasticbeanstalk.ConfigurationTemplate"
 meta_desc: "Documentation for the aws.elasticbeanstalk.ConfigurationTemplate resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/ConfigurationTemplate/"
 layout: api
 ---
 

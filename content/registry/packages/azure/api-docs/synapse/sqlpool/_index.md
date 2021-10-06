@@ -3,8 +3,6 @@
 title: "SqlPool"
 title_tag: "azure.synapse.SqlPool"
 meta_desc: "Documentation for the azure.synapse.SqlPool resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/SqlPool/"
 layout: api
 ---
 

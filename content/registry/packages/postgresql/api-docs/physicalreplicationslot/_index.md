@@ -3,8 +3,6 @@
 title: "PhysicalReplicationSlot"
 title_tag: "postgresql.PhysicalReplicationSlot"
 meta_desc: "Documentation for the postgresql.PhysicalReplicationSlot resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/postgresql/PhysicalReplicationSlot/"
 layout: api
 ---
 

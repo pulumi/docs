@@ -3,8 +3,6 @@
 title: "TargetGroupAttachment"
 title_tag: "aws.lb.TargetGroupAttachment"
 meta_desc: "Documentation for the aws.lb.TargetGroupAttachment resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/TargetGroupAttachment/"
 layout: api
 ---
 

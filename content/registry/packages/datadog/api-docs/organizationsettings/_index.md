@@ -3,8 +3,6 @@
 title: "OrganizationSettings"
 title_tag: "datadog.OrganizationSettings"
 meta_desc: "Documentation for the datadog.OrganizationSettings resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/datadog/OrganizationSettings/"
 layout: api
 ---
 

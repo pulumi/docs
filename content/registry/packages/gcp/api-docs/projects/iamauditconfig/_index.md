@@ -3,8 +3,6 @@
 title: "IAMAuditConfig"
 title_tag: "gcp.projects.IAMAuditConfig"
 meta_desc: "Documentation for the gcp.projects.IAMAuditConfig resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/IAMAuditConfig/"
 layout: api
 ---
 

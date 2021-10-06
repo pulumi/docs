@@ -3,8 +3,6 @@
 title: "GameSessionQueue"
 title_tag: "aws.gamelift.GameSessionQueue"
 meta_desc: "Documentation for the aws.gamelift.GameSessionQueue resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/GameSessionQueue/"
 layout: api
 ---
 

@@ -2,8 +2,6 @@
 title: "datacatalog"
 title_tag: "datacatalog Package"
 meta_desc: ""
-aliases:
-    - "docs/reference/pkg/google-native/"
 layout: api
 ---
 

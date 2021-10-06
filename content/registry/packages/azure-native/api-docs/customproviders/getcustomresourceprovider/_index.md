@@ -3,8 +3,6 @@
 title: "getCustomResourceProvider"
 title_tag: "azure-native.customproviders.getCustomResourceProvider"
 meta_desc: "Documentation for the azure-native.customproviders.getCustomResourceProvider function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

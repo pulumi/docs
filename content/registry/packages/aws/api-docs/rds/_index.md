@@ -2,8 +2,6 @@
 title: "rds"
 title_tag: "aws.rds"
 meta_desc: "Explore the resources and functions of the aws.rds module."
-aliases:
-    - "docs/reference/pkg/aws/"
 layout: api
 ---
 

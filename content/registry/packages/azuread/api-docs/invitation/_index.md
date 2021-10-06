@@ -3,8 +3,6 @@
 title: "Invitation"
 title_tag: "azuread.Invitation"
 meta_desc: "Documentation for the azuread.Invitation resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azuread/Invitation/"
 layout: api
 ---
 

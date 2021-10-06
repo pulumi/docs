@@ -3,8 +3,6 @@
 title: "getNamedValue"
 title_tag: "azure-native.apimanagement.getNamedValue"
 meta_desc: "Documentation for the azure-native.apimanagement.getNamedValue function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

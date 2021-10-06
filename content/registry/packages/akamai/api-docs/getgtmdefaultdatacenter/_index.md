@@ -3,8 +3,6 @@
 title: "getGtmDefaultDatacenter"
 title_tag: "akamai.getGtmDefaultDatacenter"
 meta_desc: "Documentation for the akamai.getGtmDefaultDatacenter function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "getCassandraCluster"
 title_tag: "azure-native.documentdb.getCassandraCluster"
 meta_desc: "Documentation for the azure-native.documentdb.getCassandraCluster function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

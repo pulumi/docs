@@ -3,8 +3,6 @@
 title: "LogTailConfig"
 title_tag: "alicloud.log.LogTailConfig"
 meta_desc: "Documentation for the alicloud.log.LogTailConfig resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/alicloud/LogTailConfig/"
 layout: api
 ---
 

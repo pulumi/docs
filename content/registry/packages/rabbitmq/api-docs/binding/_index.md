@@ -3,8 +3,6 @@
 title: "Binding"
 title_tag: "rabbitmq.Binding"
 meta_desc: "Documentation for the rabbitmq.Binding resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/rabbitmq/Binding/"
 layout: api
 ---
 

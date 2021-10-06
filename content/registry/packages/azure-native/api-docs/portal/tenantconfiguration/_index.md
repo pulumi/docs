@@ -3,8 +3,6 @@
 title: "TenantConfiguration"
 title_tag: "azure-native.portal.TenantConfiguration"
 meta_desc: "Documentation for the azure-native.portal.TenantConfiguration resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/TenantConfiguration/"
 layout: api
 ---
 

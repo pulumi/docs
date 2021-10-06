@@ -3,8 +3,6 @@
 title: "Account"
 title_tag: "azure.batch.Account"
 meta_desc: "Documentation for the azure.batch.Account resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/Account/"
 layout: api
 ---
 

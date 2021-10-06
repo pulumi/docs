@@ -2,8 +2,6 @@
 title: "Kubernetes"
 title_tag: "Kubernetes Package"
 meta_desc: "A Pulumi package for creating and managing Kubernetes resources."
-aliases:
-    - "docs/reference/pkg/kubernetes/"
 menu:
     reference:
         parent: API Reference

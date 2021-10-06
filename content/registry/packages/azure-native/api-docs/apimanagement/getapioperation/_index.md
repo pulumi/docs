@@ -3,8 +3,6 @@
 title: "getApiOperation"
 title_tag: "azure-native.apimanagement.getApiOperation"
 meta_desc: "Documentation for the azure-native.apimanagement.getApiOperation function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

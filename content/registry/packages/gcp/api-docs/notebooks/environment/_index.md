@@ -3,8 +3,6 @@
 title: "Environment"
 title_tag: "gcp.notebooks.Environment"
 meta_desc: "Documentation for the gcp.notebooks.Environment resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/Environment/"
 layout: api
 ---
 

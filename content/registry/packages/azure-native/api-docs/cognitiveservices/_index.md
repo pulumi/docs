@@ -2,8 +2,6 @@
 title: "cognitiveservices"
 title_tag: "azure-native.cognitiveservices"
 meta_desc: "Explore the resources and functions of the azure-native.cognitiveservices module."
-aliases:
-    - "docs/reference/pkg/azure-native/"
 layout: api
 ---
 

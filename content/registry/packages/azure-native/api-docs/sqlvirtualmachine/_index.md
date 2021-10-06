@@ -2,8 +2,6 @@
 title: "sqlvirtualmachine"
 title_tag: "azure-native.sqlvirtualmachine"
 meta_desc: "Explore the resources and functions of the azure-native.sqlvirtualmachine module."
-aliases:
-    - "docs/reference/pkg/azure-native/"
 layout: api
 ---
 

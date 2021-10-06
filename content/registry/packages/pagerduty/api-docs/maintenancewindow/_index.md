@@ -3,8 +3,6 @@
 title: "MaintenanceWindow"
 title_tag: "pagerduty.MaintenanceWindow"
 meta_desc: "Documentation for the pagerduty.MaintenanceWindow resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/pagerduty/MaintenanceWindow/"
 layout: api
 ---
 

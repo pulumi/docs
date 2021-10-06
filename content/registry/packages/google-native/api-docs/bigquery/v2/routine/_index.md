@@ -3,8 +3,6 @@
 title: "Routine"
 title_tag: "google-native.bigquery/v2.Routine"
 meta_desc: "Documentation for the google-native.bigquery/v2.Routine resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/google-native/Routine/"
 layout: api
 ---
 

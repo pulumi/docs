@@ -2,8 +2,6 @@
 title: "dataloss"
 title_tag: "gcp.dataloss"
 meta_desc: "Explore the resources and functions of the gcp.dataloss module."
-aliases:
-    - "docs/reference/pkg/gcp/"
 layout: api
 ---
 

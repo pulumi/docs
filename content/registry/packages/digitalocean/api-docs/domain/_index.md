@@ -3,8 +3,6 @@
 title: "Domain"
 title_tag: "digitalocean.Domain"
 meta_desc: "Documentation for the digitalocean.Domain resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/digitalocean/Domain/"
 layout: api
 ---
 

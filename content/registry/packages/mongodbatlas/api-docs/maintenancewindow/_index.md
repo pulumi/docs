@@ -3,8 +3,6 @@
 title: "MaintenanceWindow"
 title_tag: "mongodbatlas.MaintenanceWindow"
 meta_desc: "Documentation for the mongodbatlas.MaintenanceWindow resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/mongodbatlas/MaintenanceWindow/"
 layout: api
 ---
 

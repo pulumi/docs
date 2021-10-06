@@ -3,8 +3,6 @@
 title: "AggregationAuthorization"
 title_tag: "aws-native.configuration.AggregationAuthorization"
 meta_desc: "Documentation for the aws-native.configuration.AggregationAuthorization resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws-native/AggregationAuthorization/"
 layout: api
 ---
 

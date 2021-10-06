@@ -3,8 +3,6 @@
 title: "SpotFleetRequest"
 title_tag: "aws.ec2.SpotFleetRequest"
 meta_desc: "Documentation for the aws.ec2.SpotFleetRequest resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/SpotFleetRequest/"
 layout: api
 ---
 

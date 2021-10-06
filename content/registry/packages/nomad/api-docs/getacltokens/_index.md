@@ -3,9 +3,7 @@
 title: "getAclTokens"
 title_tag: "nomad.getAclTokens"
 meta_desc: "Documentation for the nomad.getAclTokens function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
-layout: api-doc-resource
+layout: api
 ---
 
 

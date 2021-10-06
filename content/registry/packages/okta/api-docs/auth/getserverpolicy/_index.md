@@ -3,8 +3,6 @@
 title: "getServerPolicy"
 title_tag: "okta.auth.getServerPolicy"
 meta_desc: "Documentation for the okta.auth.getServerPolicy function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

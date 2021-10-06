@@ -2,8 +2,6 @@
 title: "healthcare"
 title_tag: "gcp.healthcare"
 meta_desc: "Explore the resources and functions of the gcp.healthcare module."
-aliases:
-    - "docs/reference/pkg/gcp/"
 layout: api
 ---
 

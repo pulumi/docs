@@ -2,8 +2,6 @@
 title: "frauddetector"
 title_tag: "aws-native.frauddetector"
 meta_desc: "Explore the resources and functions of the aws-native.frauddetector module."
-aliases:
-    - "docs/reference/pkg/aws-native/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "Route"
 title_tag: "aws.apigatewayv2.Route"
 meta_desc: "Documentation for the aws.apigatewayv2.Route resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/Route/"
 layout: api
 ---
 

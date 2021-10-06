@@ -3,8 +3,6 @@
 title: "StackSetInstance"
 title_tag: "aws.cloudformation.StackSetInstance"
 meta_desc: "Documentation for the aws.cloudformation.StackSetInstance resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/StackSetInstance/"
 layout: api
 ---
 

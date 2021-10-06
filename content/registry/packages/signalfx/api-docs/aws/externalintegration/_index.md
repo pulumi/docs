@@ -3,8 +3,6 @@
 title: "ExternalIntegration"
 title_tag: "signalfx.aws.ExternalIntegration"
 meta_desc: "Documentation for the signalfx.aws.ExternalIntegration resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/signalfx/ExternalIntegration/"
 layout: api
 ---
 

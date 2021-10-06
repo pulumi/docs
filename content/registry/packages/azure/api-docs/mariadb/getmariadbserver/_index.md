@@ -3,8 +3,6 @@
 title: "getMariaDbServer"
 title_tag: "azure.mariadb.getMariaDbServer"
 meta_desc: "Documentation for the azure.mariadb.getMariaDbServer function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

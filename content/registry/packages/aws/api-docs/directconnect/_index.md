@@ -2,8 +2,6 @@
 title: "directconnect"
 title_tag: "aws.directconnect"
 meta_desc: "Explore the resources and functions of the aws.directconnect module."
-aliases:
-    - "docs/reference/pkg/aws/"
 layout: api
 ---
 

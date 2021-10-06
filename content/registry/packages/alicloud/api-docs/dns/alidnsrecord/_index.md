@@ -3,8 +3,6 @@
 title: "AlidnsRecord"
 title_tag: "alicloud.dns.AlidnsRecord"
 meta_desc: "Documentation for the alicloud.dns.AlidnsRecord resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/alicloud/AlidnsRecord/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "ListenerPolicy"
 title_tag: "aws.elasticloadbalancing.ListenerPolicy"
 meta_desc: "Documentation for the aws.elasticloadbalancing.ListenerPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/ListenerPolicy/"
 layout: api
 ---
 

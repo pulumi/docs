@@ -3,8 +3,6 @@
 title: "SpringCloudAppRedisAssociation"
 title_tag: "azure.appplatform.SpringCloudAppRedisAssociation"
 meta_desc: "Documentation for the azure.appplatform.SpringCloudAppRedisAssociation resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/SpringCloudAppRedisAssociation/"
 layout: api
 ---
 

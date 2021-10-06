@@ -3,8 +3,6 @@
 title: "VirtualService"
 title_tag: "aws.appmesh.VirtualService"
 meta_desc: "Documentation for the aws.appmesh.VirtualService resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/VirtualService/"
 layout: api
 ---
 

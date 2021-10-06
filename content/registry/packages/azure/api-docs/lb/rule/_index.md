@@ -3,8 +3,6 @@
 title: "Rule"
 title_tag: "azure.lb.Rule"
 meta_desc: "Documentation for the azure.lb.Rule resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/Rule/"
 layout: api
 ---
 

@@ -2,8 +2,6 @@
 title: "cloudtrail"
 title_tag: "aws.cloudtrail"
 meta_desc: "Explore the resources and functions of the aws.cloudtrail module."
-aliases:
-    - "docs/reference/pkg/aws/"
 layout: api
 ---
 

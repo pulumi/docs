@@ -2,8 +2,6 @@
 title: "trafficmanager"
 title_tag: "azure.trafficmanager"
 meta_desc: "Explore the resources and functions of the azure.trafficmanager module."
-aliases:
-    - "docs/reference/pkg/azure/"
 layout: api
 ---
 

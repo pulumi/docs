@@ -3,8 +3,6 @@
 title: "PolicyTagIamBinding"
 title_tag: "gcp.datacatalog.PolicyTagIamBinding"
 meta_desc: "Documentation for the gcp.datacatalog.PolicyTagIamBinding resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/PolicyTagIamBinding/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "MultiLocationAlertCondition"
 title_tag: "newrelic.synthetics.MultiLocationAlertCondition"
 meta_desc: "Documentation for the newrelic.synthetics.MultiLocationAlertCondition resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/newrelic/MultiLocationAlertCondition/"
 layout: api
 ---
 

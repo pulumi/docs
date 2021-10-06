@@ -3,8 +3,6 @@
 title: "getMetro"
 title_tag: "equinix-metal.getMetro"
 meta_desc: "Documentation for the equinix-metal.getMetro function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

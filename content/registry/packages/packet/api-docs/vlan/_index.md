@@ -3,8 +3,6 @@
 title: "Vlan"
 title_tag: "packet.Vlan"
 meta_desc: "Documentation for the packet.Vlan resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/packet/Vlan/"
 layout: api
 ---
 

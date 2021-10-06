@@ -3,8 +3,6 @@
 title: "DataPool"
 title_tag: "azure-native.autonomousdevelopmentplatform.DataPool"
 meta_desc: "Documentation for the azure-native.autonomousdevelopmentplatform.DataPool resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/DataPool/"
 layout: api
 ---
 

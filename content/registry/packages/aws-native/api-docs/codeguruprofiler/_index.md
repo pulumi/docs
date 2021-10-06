@@ -2,8 +2,6 @@
 title: "codeguruprofiler"
 title_tag: "aws-native.codeguruprofiler"
 meta_desc: "Explore the resources and functions of the aws-native.codeguruprofiler module."
-aliases:
-    - "docs/reference/pkg/aws-native/"
 layout: api
 ---
 

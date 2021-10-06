@@ -3,8 +3,6 @@
 title: "getPublicIpPrefix"
 title_tag: "azure.network.getPublicIpPrefix"
 meta_desc: "Documentation for the azure.network.getPublicIpPrefix function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

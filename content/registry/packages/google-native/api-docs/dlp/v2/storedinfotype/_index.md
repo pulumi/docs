@@ -3,8 +3,6 @@
 title: "StoredInfoType"
 title_tag: "google-native.dlp/v2.StoredInfoType"
 meta_desc: "Documentation for the google-native.dlp/v2.StoredInfoType resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/google-native/StoredInfoType/"
 layout: api
 ---
 

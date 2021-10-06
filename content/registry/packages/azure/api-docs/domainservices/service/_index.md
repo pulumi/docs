@@ -3,8 +3,6 @@
 title: "Service"
 title_tag: "azure.domainservices.Service"
 meta_desc: "Documentation for the azure.domainservices.Service resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/Service/"
 layout: api
 ---
 

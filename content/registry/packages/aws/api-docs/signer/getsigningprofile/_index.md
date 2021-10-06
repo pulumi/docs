@@ -3,8 +3,6 @@
 title: "getSigningProfile"
 title_tag: "aws.signer.getSigningProfile"
 meta_desc: "Documentation for the aws.signer.getSigningProfile function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

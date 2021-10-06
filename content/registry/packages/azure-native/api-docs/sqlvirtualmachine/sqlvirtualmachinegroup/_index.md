@@ -3,8 +3,6 @@
 title: "SqlVirtualMachineGroup"
 title_tag: "azure-native.sqlvirtualmachine.SqlVirtualMachineGroup"
 meta_desc: "Documentation for the azure-native.sqlvirtualmachine.SqlVirtualMachineGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/SqlVirtualMachineGroup/"
 layout: api
 ---
 

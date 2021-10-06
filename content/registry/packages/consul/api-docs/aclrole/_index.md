@@ -3,8 +3,6 @@
 title: "AclRole"
 title_tag: "consul.AclRole"
 meta_desc: "Documentation for the consul.AclRole resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/consul/AclRole/"
 layout: api
 ---
 

@@ -2,8 +2,6 @@
 title: "TLS"
 title_tag: "tls.TLS"
 meta_desc: "A Pulumi package to create TLS resources in Pulumi programs."
-aliases:
-    - "docs/reference/pkg/tls/"
 menu:
     reference:
         parent: API Reference

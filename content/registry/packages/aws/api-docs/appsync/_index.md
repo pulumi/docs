@@ -2,8 +2,6 @@
 title: "appsync"
 title_tag: "aws.appsync"
 meta_desc: "Explore the resources and functions of the aws.appsync module."
-aliases:
-    - "docs/reference/pkg/aws/"
 layout: api
 ---
 

@@ -2,8 +2,6 @@
 title: "bigquerydatatransfer"
 title_tag: "bigquerydatatransfer Package"
 meta_desc: ""
-aliases:
-    - "docs/reference/pkg/google-native/"
 layout: api
 ---
 

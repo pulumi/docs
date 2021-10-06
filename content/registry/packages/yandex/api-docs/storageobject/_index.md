@@ -3,8 +3,6 @@
 title: "StorageObject"
 title_tag: "yandex.StorageObject"
 meta_desc: "Documentation for the yandex.StorageObject resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/yandex/StorageObject/"
 layout: api
 ---
 

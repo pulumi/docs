@@ -2,8 +2,6 @@
 title: "runtimeconfig"
 title_tag: "gcp.runtimeconfig"
 meta_desc: "Explore the resources and functions of the gcp.runtimeconfig module."
-aliases:
-    - "docs/reference/pkg/gcp/"
 layout: api
 ---
 

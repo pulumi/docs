@@ -2,8 +2,6 @@
 title: "iotevents"
 title_tag: "aws-native.iotevents"
 meta_desc: "Explore the resources and functions of the aws-native.iotevents module."
-aliases:
-    - "docs/reference/pkg/aws-native/"
 layout: api
 ---
 

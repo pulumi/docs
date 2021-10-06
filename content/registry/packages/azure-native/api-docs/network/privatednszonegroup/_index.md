@@ -3,8 +3,6 @@
 title: "PrivateDnsZoneGroup"
 title_tag: "azure-native.network.PrivateDnsZoneGroup"
 meta_desc: "Documentation for the azure-native.network.PrivateDnsZoneGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/PrivateDnsZoneGroup/"
 layout: api
 ---
 

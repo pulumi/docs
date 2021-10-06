@@ -3,8 +3,6 @@
 title: "listStaticSiteUsers"
 title_tag: "azure-native.web.listStaticSiteUsers"
 meta_desc: "Documentation for the azure-native.web.listStaticSiteUsers function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

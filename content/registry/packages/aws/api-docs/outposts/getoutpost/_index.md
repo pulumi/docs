@@ -3,8 +3,6 @@
 title: "getOutpost"
 title_tag: "aws.outposts.getOutpost"
 meta_desc: "Documentation for the aws.outposts.getOutpost function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

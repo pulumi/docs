@@ -2,8 +2,6 @@
 title: "spanner"
 title_tag: "gcp.spanner"
 meta_desc: "Explore the resources and functions of the gcp.spanner module."
-aliases:
-    - "docs/reference/pkg/gcp/"
 layout: api
 ---
 

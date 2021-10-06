@@ -3,8 +3,6 @@
 title: "DiskIamMember"
 title_tag: "gcp.compute.DiskIamMember"
 meta_desc: "Documentation for the gcp.compute.DiskIamMember resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/DiskIamMember/"
 layout: api
 ---
 

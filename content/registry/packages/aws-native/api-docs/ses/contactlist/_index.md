@@ -3,8 +3,6 @@
 title: "ContactList"
 title_tag: "aws-native.ses.ContactList"
 meta_desc: "Documentation for the aws-native.ses.ContactList resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws-native/ContactList/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "PartnerNamespace"
 title_tag: "azure-native.eventgrid.PartnerNamespace"
 meta_desc: "Documentation for the azure-native.eventgrid.PartnerNamespace resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/PartnerNamespace/"
 layout: api
 ---
 

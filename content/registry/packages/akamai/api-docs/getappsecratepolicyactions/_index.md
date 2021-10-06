@@ -3,8 +3,6 @@
 title: "getAppSecRatePolicyActions"
 title_tag: "akamai.getAppSecRatePolicyActions"
 meta_desc: "Documentation for the akamai.getAppSecRatePolicyActions function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

@@ -2,8 +2,6 @@
 title: "compute"
 title_tag: "azure.compute"
 meta_desc: "Explore the resources and functions of the azure.compute module."
-aliases:
-    - "docs/reference/pkg/azure/"
 layout: api
 ---
 

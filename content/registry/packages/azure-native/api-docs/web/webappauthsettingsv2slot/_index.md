@@ -3,8 +3,6 @@
 title: "WebAppAuthSettingsV2Slot"
 title_tag: "azure-native.web.WebAppAuthSettingsV2Slot"
 meta_desc: "Documentation for the azure-native.web.WebAppAuthSettingsV2Slot resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/WebAppAuthSettingsV2Slot/"
 layout: api
 ---
 

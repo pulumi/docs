@@ -3,8 +3,6 @@
 title: "ARecord"
 title_tag: "azure.privatedns.ARecord"
 meta_desc: "Documentation for the azure.privatedns.ARecord resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/ARecord/"
 layout: api
 ---
 

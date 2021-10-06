@@ -3,8 +3,6 @@
 title: "GlobalForwardingRule"
 title_tag: "gcp.compute.GlobalForwardingRule"
 meta_desc: "Documentation for the gcp.compute.GlobalForwardingRule resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/GlobalForwardingRule/"
 layout: api
 ---
 

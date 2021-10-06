@@ -3,8 +3,6 @@
 title: "getKeyRing"
 title_tag: "google-native.cloudkms/v1.getKeyRing"
 meta_desc: "Documentation for the google-native.cloudkms/v1.getKeyRing function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

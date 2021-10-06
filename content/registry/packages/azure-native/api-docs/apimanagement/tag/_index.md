@@ -3,8 +3,6 @@
 title: "Tag"
 title_tag: "azure-native.apimanagement.Tag"
 meta_desc: "Documentation for the azure-native.apimanagement.Tag resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/Tag/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "DiskEncryptionSet"
 title_tag: "azure-native.compute.DiskEncryptionSet"
 meta_desc: "Documentation for the azure-native.compute.DiskEncryptionSet resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/DiskEncryptionSet/"
 layout: api
 ---
 

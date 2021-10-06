@@ -3,8 +3,6 @@
 title: "getMachineImage"
 title_tag: "google-native.compute/alpha.getMachineImage"
 meta_desc: "Documentation for the google-native.compute/alpha.getMachineImage function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

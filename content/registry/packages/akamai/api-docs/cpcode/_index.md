@@ -3,8 +3,6 @@
 title: "CpCode"
 title_tag: "akamai.CpCode"
 meta_desc: "Documentation for the akamai.CpCode resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/akamai/CpCode/"
 layout: api
 ---
 

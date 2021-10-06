@@ -2,8 +2,6 @@
 title: "loadbalancer"
 title_tag: "openstack.loadbalancer"
 meta_desc: "Explore the resources and functions of the openstack.loadbalancer module."
-aliases:
-    - "docs/reference/pkg/openstack/"
 layout: api
 ---
 

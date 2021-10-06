@@ -2,8 +2,6 @@
 title: "databasemigration"
 title_tag: "azure.databasemigration"
 meta_desc: "Explore the resources and functions of the azure.databasemigration module."
-aliases:
-    - "docs/reference/pkg/azure/"
 layout: api
 ---
 

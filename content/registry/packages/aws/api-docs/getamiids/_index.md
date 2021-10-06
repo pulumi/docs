@@ -3,8 +3,6 @@
 title: "getAmiIds"
 title_tag: "aws.getAmiIds"
 meta_desc: "Documentation for the aws.getAmiIds function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

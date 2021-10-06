@@ -3,8 +3,6 @@
 title: "HciCluster"
 title_tag: "azure.stack.HciCluster"
 meta_desc: "Documentation for the azure.stack.HciCluster resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/HciCluster/"
 layout: api
 ---
 

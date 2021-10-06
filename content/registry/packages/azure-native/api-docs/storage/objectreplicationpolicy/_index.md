@@ -3,8 +3,6 @@
 title: "ObjectReplicationPolicy"
 title_tag: "azure-native.storage.ObjectReplicationPolicy"
 meta_desc: "Documentation for the azure-native.storage.ObjectReplicationPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/ObjectReplicationPolicy/"
 layout: api
 ---
 

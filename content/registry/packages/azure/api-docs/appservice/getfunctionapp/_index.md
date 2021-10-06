@@ -3,8 +3,6 @@
 title: "getFunctionApp"
 title_tag: "azure.appservice.getFunctionApp"
 meta_desc: "Documentation for the azure.appservice.getFunctionApp function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

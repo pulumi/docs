@@ -2,8 +2,6 @@
 title: "datacatalog"
 title_tag: "azure-native.datacatalog"
 meta_desc: "Explore the resources and functions of the azure-native.datacatalog module."
-aliases:
-    - "docs/reference/pkg/azure-native/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "BaseSchema"
 title_tag: "okta.user.BaseSchema"
 meta_desc: "Documentation for the okta.user.BaseSchema resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/okta/BaseSchema/"
 layout: api
 ---
 

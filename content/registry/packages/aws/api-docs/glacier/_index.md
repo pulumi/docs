@@ -2,8 +2,6 @@
 title: "glacier"
 title_tag: "aws.glacier"
 meta_desc: "Explore the resources and functions of the aws.glacier module."
-aliases:
-    - "docs/reference/pkg/aws/"
 layout: api
 ---
 

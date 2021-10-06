@@ -3,8 +3,6 @@
 title: "WebAppDeployment"
 title_tag: "azure-native.web.WebAppDeployment"
 meta_desc: "Documentation for the azure-native.web.WebAppDeployment resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/WebAppDeployment/"
 layout: api
 ---
 

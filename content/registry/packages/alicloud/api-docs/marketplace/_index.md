@@ -2,8 +2,6 @@
 title: "marketplace"
 title_tag: "alicloud.marketplace"
 meta_desc: "Explore the resources and functions of the alicloud.marketplace module."
-aliases:
-    - "docs/reference/pkg/alicloud/"
 layout: api
 ---
 

@@ -2,8 +2,6 @@
 title: "emr"
 title_tag: "alicloud.emr"
 meta_desc: "Explore the resources and functions of the alicloud.emr module."
-aliases:
-    - "docs/reference/pkg/alicloud/"
 layout: api
 ---
 

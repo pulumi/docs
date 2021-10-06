@@ -3,8 +3,6 @@
 title: "getNetworkManager"
 title_tag: "azure-native.network.getNetworkManager"
 meta_desc: "Documentation for the azure-native.network.getNetworkManager function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "getInstance"
 title_tag: "gcp.redis.getInstance"
 meta_desc: "Documentation for the gcp.redis.getInstance function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

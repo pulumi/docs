@@ -3,8 +3,6 @@
 title: "Gateway"
 title_tag: "gcp.apigateway.Gateway"
 meta_desc: "Documentation for the gcp.apigateway.Gateway resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/Gateway/"
 layout: api
 ---
 

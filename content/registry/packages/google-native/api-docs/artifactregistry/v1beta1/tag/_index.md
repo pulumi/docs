@@ -3,8 +3,6 @@
 title: "Tag"
 title_tag: "google-native.artifactregistry/v1beta1.Tag"
 meta_desc: "Documentation for the google-native.artifactregistry/v1beta1.Tag resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/google-native/Tag/"
 layout: api
 ---
 

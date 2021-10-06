@@ -2,8 +2,6 @@
 title: "container"
 title_tag: "gcp.container"
 meta_desc: "Explore the resources and functions of the gcp.container module."
-aliases:
-    - "docs/reference/pkg/gcp/"
 layout: api
 ---
 

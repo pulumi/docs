@@ -3,8 +3,6 @@
 title: "Connection"
 title_tag: "equinix-metal.Connection"
 meta_desc: "Documentation for the equinix-metal.Connection resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/equinix-metal/Connection/"
 layout: api
 ---
 

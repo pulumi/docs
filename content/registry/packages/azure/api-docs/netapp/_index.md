@@ -2,8 +2,6 @@
 title: "netapp"
 title_tag: "azure.netapp"
 meta_desc: "Explore the resources and functions of the azure.netapp module."
-aliases:
-    - "docs/reference/pkg/azure/"
 layout: api
 ---
 

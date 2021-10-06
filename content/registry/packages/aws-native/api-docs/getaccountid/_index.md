@@ -3,8 +3,6 @@
 title: "getAccountId"
 title_tag: "aws-native.getAccountId"
 meta_desc: "Documentation for the aws-native.getAccountId function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

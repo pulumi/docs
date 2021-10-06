@@ -3,8 +3,6 @@
 title: "NetworkVirtualAppliance"
 title_tag: "azure-native.network.NetworkVirtualAppliance"
 meta_desc: "Documentation for the azure-native.network.NetworkVirtualAppliance resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/NetworkVirtualAppliance/"
 layout: api
 ---
 

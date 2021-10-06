@@ -3,8 +3,6 @@
 title: "Team"
 title_tag: "azuredevops.Team"
 meta_desc: "Documentation for the azuredevops.Team resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azuredevops/Team/"
 layout: api
 ---
 

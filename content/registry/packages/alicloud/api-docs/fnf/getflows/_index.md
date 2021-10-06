@@ -3,8 +3,6 @@
 title: "getFlows"
 title_tag: "alicloud.fnf.getFlows"
 meta_desc: "Documentation for the alicloud.fnf.getFlows function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

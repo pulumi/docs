@@ -3,8 +3,6 @@
 title: "AppImageConfig"
 title_tag: "aws-native.sagemaker.AppImageConfig"
 meta_desc: "Documentation for the aws-native.sagemaker.AppImageConfig resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws-native/AppImageConfig/"
 layout: api
 ---
 

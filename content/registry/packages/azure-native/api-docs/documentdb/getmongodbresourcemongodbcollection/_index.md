@@ -3,8 +3,6 @@
 title: "getMongoDBResourceMongoDBCollection"
 title_tag: "azure-native.documentdb.getMongoDBResourceMongoDBCollection"
 meta_desc: "Documentation for the azure-native.documentdb.getMongoDBResourceMongoDBCollection function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

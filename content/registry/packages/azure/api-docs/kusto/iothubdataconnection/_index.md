@@ -3,8 +3,6 @@
 title: "IotHubDataConnection"
 title_tag: "azure.kusto.IotHubDataConnection"
 meta_desc: "Documentation for the azure.kusto.IotHubDataConnection resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/IotHubDataConnection/"
 layout: api
 ---
 

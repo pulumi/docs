@@ -3,8 +3,6 @@
 title: "getCanaryEvaluation"
 title_tag: "google-native.apigee/v1.getCanaryEvaluation"
 meta_desc: "Documentation for the google-native.apigee/v1.getCanaryEvaluation function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

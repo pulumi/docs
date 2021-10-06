@@ -2,8 +2,6 @@
 title: "powerbi"
 title_tag: "azure.powerbi"
 meta_desc: "Explore the resources and functions of the azure.powerbi module."
-aliases:
-    - "docs/reference/pkg/azure/"
 layout: api
 ---
 

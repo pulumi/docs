@@ -3,8 +3,6 @@
 title: "CryptoKey"
 title_tag: "google-native.cloudkms/v1.CryptoKey"
 meta_desc: "Documentation for the google-native.cloudkms/v1.CryptoKey resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/google-native/CryptoKey/"
 layout: api
 ---
 

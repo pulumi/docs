@@ -3,8 +3,6 @@
 title: "Role"
 title_tag: "mysql.Role"
 meta_desc: "Documentation for the mysql.Role resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/mysql/Role/"
 layout: api
 ---
 

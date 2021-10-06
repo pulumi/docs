@@ -3,8 +3,6 @@
 title: "getStreamingPolicy"
 title_tag: "azure-native.media.getStreamingPolicy"
 meta_desc: "Documentation for the azure-native.media.getStreamingPolicy function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

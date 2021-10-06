@@ -2,8 +2,6 @@
 title: "timestream"
 title_tag: "aws-native.timestream"
 meta_desc: "Explore the resources and functions of the aws-native.timestream module."
-aliases:
-    - "docs/reference/pkg/aws-native/"
 layout: api
 ---
 

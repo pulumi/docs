@@ -3,8 +3,6 @@
 title: "DnsRecordSet"
 title_tag: "yandex.DnsRecordSet"
 meta_desc: "Documentation for the yandex.DnsRecordSet resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/yandex/DnsRecordSet/"
 layout: api
 ---
 

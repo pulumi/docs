@@ -3,8 +3,6 @@
 title: "ObjectIamPolicy"
 title_tag: "google-native.storage/v1.ObjectIamPolicy"
 meta_desc: "Documentation for the google-native.storage/v1.ObjectIamPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/google-native/ObjectIamPolicy/"
 layout: api
 ---
 

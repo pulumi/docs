@@ -3,8 +3,6 @@
 title: "Export"
 title_tag: "azure-native.costmanagement.Export"
 meta_desc: "Documentation for the azure-native.costmanagement.Export resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/Export/"
 layout: api
 ---
 

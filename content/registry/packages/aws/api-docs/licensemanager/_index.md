@@ -2,8 +2,6 @@
 title: "licensemanager"
 title_tag: "aws.licensemanager"
 meta_desc: "Explore the resources and functions of the aws.licensemanager module."
-aliases:
-    - "docs/reference/pkg/aws/"
 layout: api
 ---
 

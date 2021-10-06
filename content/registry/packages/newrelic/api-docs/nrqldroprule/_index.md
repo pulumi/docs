@@ -3,8 +3,6 @@
 title: "NrqlDropRule"
 title_tag: "newrelic.NrqlDropRule"
 meta_desc: "Documentation for the newrelic.NrqlDropRule resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/newrelic/NrqlDropRule/"
 layout: api
 ---
 

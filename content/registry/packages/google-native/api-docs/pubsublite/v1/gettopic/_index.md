@@ -3,8 +3,6 @@
 title: "getTopic"
 title_tag: "google-native.pubsublite/v1.getTopic"
 meta_desc: "Documentation for the google-native.pubsublite/v1.getTopic function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "SamlConfiguration"
 title_tag: "sumologic.SamlConfiguration"
 meta_desc: "Documentation for the sumologic.SamlConfiguration resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/sumologic/SamlConfiguration/"
 layout: api
 ---
 

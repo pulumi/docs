@@ -3,8 +3,6 @@
 title: "EntityTags"
 title_tag: "newrelic.EntityTags"
 meta_desc: "Documentation for the newrelic.EntityTags resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/newrelic/EntityTags/"
 layout: api
 ---
 

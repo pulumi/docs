@@ -3,8 +3,6 @@
 title: "DatabaseSecurityAlertPolicy"
 title_tag: "azure-native.sql.DatabaseSecurityAlertPolicy"
 meta_desc: "Documentation for the azure-native.sql.DatabaseSecurityAlertPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/DatabaseSecurityAlertPolicy/"
 layout: api
 ---
 

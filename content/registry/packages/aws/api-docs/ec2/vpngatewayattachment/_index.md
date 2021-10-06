@@ -3,8 +3,6 @@
 title: "VpnGatewayAttachment"
 title_tag: "aws.ec2.VpnGatewayAttachment"
 meta_desc: "Documentation for the aws.ec2.VpnGatewayAttachment resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/VpnGatewayAttachment/"
 layout: api
 ---
 

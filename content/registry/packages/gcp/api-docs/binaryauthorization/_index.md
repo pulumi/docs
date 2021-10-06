@@ -2,8 +2,6 @@
 title: "binaryauthorization"
 title_tag: "gcp.binaryauthorization"
 meta_desc: "Explore the resources and functions of the gcp.binaryauthorization module."
-aliases:
-    - "docs/reference/pkg/gcp/"
 layout: api
 ---
 

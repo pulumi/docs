@@ -2,8 +2,6 @@
 title: "networksecurity/v1beta1"
 title_tag: "google-native.networksecurity/v1beta1"
 meta_desc: "Explore the resources and functions of the google-native.networksecurity/v1beta1 module."
-aliases:
-    - "docs/reference/pkg/google-native/"
 layout: api
 ---
 

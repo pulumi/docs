@@ -3,8 +3,6 @@
 title: "ProjectRoleTemplateBinding"
 title_tag: "rancher2.ProjectRoleTemplateBinding"
 meta_desc: "Documentation for the rancher2.ProjectRoleTemplateBinding resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/rancher2/ProjectRoleTemplateBinding/"
 layout: api
 ---
 

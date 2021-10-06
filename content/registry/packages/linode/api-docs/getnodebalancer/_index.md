@@ -3,8 +3,6 @@
 title: "getNodeBalancer"
 title_tag: "linode.getNodeBalancer"
 meta_desc: "Documentation for the linode.getNodeBalancer function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "PrivateLinkService"
 title_tag: "azure-native.network.PrivateLinkService"
 meta_desc: "Documentation for the azure-native.network.PrivateLinkService resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/PrivateLinkService/"
 layout: api
 ---
 

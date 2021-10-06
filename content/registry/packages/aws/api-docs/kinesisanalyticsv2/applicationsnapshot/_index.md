@@ -3,8 +3,6 @@
 title: "ApplicationSnapshot"
 title_tag: "aws.kinesisanalyticsv2.ApplicationSnapshot"
 meta_desc: "Documentation for the aws.kinesisanalyticsv2.ApplicationSnapshot resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/ApplicationSnapshot/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "ActionHttp"
 title_tag: "azure.logicapps.ActionHttp"
 meta_desc: "Documentation for the azure.logicapps.ActionHttp resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/ActionHttp/"
 layout: api
 ---
 

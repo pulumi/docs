@@ -3,8 +3,6 @@
 title: "TopicAuthorizationRule"
 title_tag: "azure.eventhub.TopicAuthorizationRule"
 meta_desc: "Documentation for the azure.eventhub.TopicAuthorizationRule resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/TopicAuthorizationRule/"
 layout: api
 ---
 

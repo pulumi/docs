@@ -3,8 +3,6 @@
 title: "getFunction"
 title_tag: "yandex.getFunction"
 meta_desc: "Documentation for the yandex.getFunction function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

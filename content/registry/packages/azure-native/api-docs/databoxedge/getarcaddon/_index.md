@@ -3,8 +3,6 @@
 title: "getArcAddon"
 title_tag: "azure-native.databoxedge.getArcAddon"
 meta_desc: "Documentation for the azure-native.databoxedge.getArcAddon function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

@@ -2,8 +2,6 @@
 title: "tags"
 title_tag: "gcp.tags"
 meta_desc: "Explore the resources and functions of the gcp.tags module."
-aliases:
-    - "docs/reference/pkg/gcp/"
 layout: api
 ---
 

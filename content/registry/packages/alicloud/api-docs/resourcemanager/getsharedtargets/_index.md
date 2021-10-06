@@ -3,8 +3,6 @@
 title: "getSharedTargets"
 title_tag: "alicloud.resourcemanager.getSharedTargets"
 meta_desc: "Documentation for the alicloud.resourcemanager.getSharedTargets function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

@@ -2,8 +2,6 @@
 title: "privateca"
 title_tag: "privateca Package"
 meta_desc: ""
-aliases:
-    - "docs/reference/pkg/google-native/"
 layout: api
 ---
 

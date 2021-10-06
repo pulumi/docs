@@ -3,8 +3,6 @@
 title: "ManagedCertificate"
 title_tag: "azure.appservice.ManagedCertificate"
 meta_desc: "Documentation for the azure.appservice.ManagedCertificate resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/ManagedCertificate/"
 layout: api
 ---
 

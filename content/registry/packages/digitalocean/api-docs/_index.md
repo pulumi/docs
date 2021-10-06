@@ -2,8 +2,6 @@
 title: "DigitalOcean"
 title_tag: "digitalocean.DigitalOcean"
 meta_desc: "A Pulumi package for creating and managing Digital Ocean cloud resources."
-aliases:
-    - "docs/reference/pkg/digitalocean/"
 menu:
     reference:
         parent: API Reference

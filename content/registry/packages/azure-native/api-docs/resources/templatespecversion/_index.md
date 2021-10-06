@@ -3,8 +3,6 @@
 title: "TemplateSpecVersion"
 title_tag: "azure-native.resources.TemplateSpecVersion"
 meta_desc: "Documentation for the azure-native.resources.TemplateSpecVersion resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/TemplateSpecVersion/"
 layout: api
 ---
 

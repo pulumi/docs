@@ -3,8 +3,6 @@
 title: "Provider"
 title_tag: "aws-native.Provider"
 meta_desc: "Documentation for the aws-native.Provider resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws-native/aws-native/"
 layout: api
 ---
 

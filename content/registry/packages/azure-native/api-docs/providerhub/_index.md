@@ -2,8 +2,6 @@
 title: "providerhub"
 title_tag: "azure-native.providerhub"
 meta_desc: "Explore the resources and functions of the azure-native.providerhub module."
-aliases:
-    - "docs/reference/pkg/azure-native/"
 layout: api
 ---
 

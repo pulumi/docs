@@ -3,8 +3,6 @@
 title: "LoadBalancer"
 title_tag: "aws.alb.LoadBalancer"
 meta_desc: "Documentation for the aws.alb.LoadBalancer resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/LoadBalancer/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "ServicePrincipalCertificate"
 title_tag: "azuread.ServicePrincipalCertificate"
 meta_desc: "Documentation for the azuread.ServicePrincipalCertificate resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azuread/ServicePrincipalCertificate/"
 layout: api
 ---
 

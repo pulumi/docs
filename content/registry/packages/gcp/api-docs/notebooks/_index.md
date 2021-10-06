@@ -2,8 +2,6 @@
 title: "notebooks"
 title_tag: "gcp.notebooks"
 meta_desc: "Explore the resources and functions of the gcp.notebooks module."
-aliases:
-    - "docs/reference/pkg/gcp/"
 layout: api
 ---
 

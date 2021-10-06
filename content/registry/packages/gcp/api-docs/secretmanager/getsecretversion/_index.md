@@ -3,8 +3,6 @@
 title: "getSecretVersion"
 title_tag: "gcp.secretmanager.getSecretVersion"
 meta_desc: "Documentation for the gcp.secretmanager.getSecretVersion function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

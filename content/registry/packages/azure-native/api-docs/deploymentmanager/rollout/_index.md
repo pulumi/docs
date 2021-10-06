@@ -3,8 +3,6 @@
 title: "Rollout"
 title_tag: "azure-native.deploymentmanager.Rollout"
 meta_desc: "Documentation for the azure-native.deploymentmanager.Rollout resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/Rollout/"
 layout: api
 ---
 

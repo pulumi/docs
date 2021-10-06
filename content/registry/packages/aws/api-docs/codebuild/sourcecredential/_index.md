@@ -3,8 +3,6 @@
 title: "SourceCredential"
 title_tag: "aws.codebuild.SourceCredential"
 meta_desc: "Documentation for the aws.codebuild.SourceCredential resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/SourceCredential/"
 layout: api
 ---
 

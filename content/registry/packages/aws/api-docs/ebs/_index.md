@@ -2,8 +2,6 @@
 title: "ebs"
 title_tag: "aws.ebs"
 meta_desc: "Explore the resources and functions of the aws.ebs module."
-aliases:
-    - "docs/reference/pkg/aws/"
 layout: api
 ---
 

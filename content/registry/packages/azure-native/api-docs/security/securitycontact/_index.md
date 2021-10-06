@@ -3,8 +3,6 @@
 title: "SecurityContact"
 title_tag: "azure-native.security.SecurityContact"
 meta_desc: "Documentation for the azure-native.security.SecurityContact resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/SecurityContact/"
 layout: api
 ---
 

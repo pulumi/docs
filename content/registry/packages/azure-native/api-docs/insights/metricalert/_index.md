@@ -3,8 +3,6 @@
 title: "MetricAlert"
 title_tag: "azure-native.insights.MetricAlert"
 meta_desc: "Documentation for the azure-native.insights.MetricAlert resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/MetricAlert/"
 layout: api
 ---
 

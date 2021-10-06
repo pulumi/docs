@@ -3,8 +3,6 @@
 title: "NetworkFirewallPolicyIamPolicy"
 title_tag: "google-native.compute/alpha.NetworkFirewallPolicyIamPolicy"
 meta_desc: "Documentation for the google-native.compute/alpha.NetworkFirewallPolicyIamPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/google-native/NetworkFirewallPolicyIamPolicy/"
 layout: api
 ---
 

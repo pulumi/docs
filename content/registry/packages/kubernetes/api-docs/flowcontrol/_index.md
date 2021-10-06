@@ -2,8 +2,6 @@
 title: "flowcontrol"
 title_tag: "flowcontrol Package"
 meta_desc: ""
-aliases:
-    - "docs/reference/pkg/kubernetes/"
 layout: api
 ---
 

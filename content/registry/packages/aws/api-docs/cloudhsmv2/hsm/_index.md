@@ -3,8 +3,6 @@
 title: "Hsm"
 title_tag: "aws.cloudhsmv2.Hsm"
 meta_desc: "Documentation for the aws.cloudhsmv2.Hsm resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/Hsm/"
 layout: api
 ---
 

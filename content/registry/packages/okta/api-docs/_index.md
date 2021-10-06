@@ -2,8 +2,6 @@
 title: "Okta"
 title_tag: "Okta Package"
 meta_desc: "A Pulumi package for creating and managing okta resources."
-aliases:
-    - "docs/reference/pkg/okta/"
 menu:
     reference:
         parent: API Reference

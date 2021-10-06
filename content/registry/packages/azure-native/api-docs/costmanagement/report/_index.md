@@ -3,8 +3,6 @@
 title: "Report"
 title_tag: "azure-native.costmanagement.Report"
 meta_desc: "Documentation for the azure-native.costmanagement.Report resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/Report/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "getPrivateEndpointConnectionsForSCCPowershell"
 title_tag: "azure-native.m365securityandcompliance.getPrivateEndpointConnectionsForSCCPowershell"
 meta_desc: "Documentation for the azure-native.m365securityandcompliance.getPrivateEndpointConnectionsForSCCPowershell function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

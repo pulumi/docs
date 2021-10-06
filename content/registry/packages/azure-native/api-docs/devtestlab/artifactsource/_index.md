@@ -3,8 +3,6 @@
 title: "ArtifactSource"
 title_tag: "azure-native.devtestlab.ArtifactSource"
 meta_desc: "Documentation for the azure-native.devtestlab.ArtifactSource resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/ArtifactSource/"
 layout: api
 ---
 

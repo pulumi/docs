@@ -3,8 +3,6 @@
 title: "Certificate"
 title_tag: "azure.keyvault.Certificate"
 meta_desc: "Documentation for the azure.keyvault.Certificate resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/Certificate/"
 layout: api
 ---
 

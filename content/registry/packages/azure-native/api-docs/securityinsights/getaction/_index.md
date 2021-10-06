@@ -3,8 +3,6 @@
 title: "getAction"
 title_tag: "azure-native.securityinsights.getAction"
 meta_desc: "Documentation for the azure-native.securityinsights.getAction function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

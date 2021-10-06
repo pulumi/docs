@@ -3,8 +3,6 @@
 title: "getPublicAdvertisedPrefix"
 title_tag: "google-native.compute/beta.getPublicAdvertisedPrefix"
 meta_desc: "Documentation for the google-native.compute/beta.getPublicAdvertisedPrefix function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

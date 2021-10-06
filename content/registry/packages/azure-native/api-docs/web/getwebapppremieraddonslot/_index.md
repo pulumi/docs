@@ -3,8 +3,6 @@
 title: "getWebAppPremierAddOnSlot"
 title_tag: "azure-native.web.getWebAppPremierAddOnSlot"
 meta_desc: "Documentation for the azure-native.web.getWebAppPremierAddOnSlot function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "getAppSecReputationProfiles"
 title_tag: "akamai.getAppSecReputationProfiles"
 meta_desc: "Documentation for the akamai.getAppSecReputationProfiles function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

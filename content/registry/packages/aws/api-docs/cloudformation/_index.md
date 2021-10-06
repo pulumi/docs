@@ -2,8 +2,6 @@
 title: "cloudformation"
 title_tag: "aws.cloudformation"
 meta_desc: "Explore the resources and functions of the aws.cloudformation module."
-aliases:
-    - "docs/reference/pkg/aws/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "getDeviceBgpNeighbors"
 title_tag: "equinix-metal.getDeviceBgpNeighbors"
 meta_desc: "Documentation for the equinix-metal.getDeviceBgpNeighbors function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

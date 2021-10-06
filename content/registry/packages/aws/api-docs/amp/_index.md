@@ -2,8 +2,6 @@
 title: "amp"
 title_tag: "aws.amp"
 meta_desc: "Explore the resources and functions of the aws.amp module."
-aliases:
-    - "docs/reference/pkg/aws/"
 layout: api
 ---
 

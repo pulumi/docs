@@ -3,8 +3,6 @@
 title: "DevEndpoint"
 title_tag: "aws.glue.DevEndpoint"
 meta_desc: "Documentation for the aws.glue.DevEndpoint resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/DevEndpoint/"
 layout: api
 ---
 

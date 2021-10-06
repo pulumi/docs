@@ -3,8 +3,6 @@
 title: "Image"
 title_tag: "docker.Image"
 meta_desc: "Documentation for the docker.Image resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/docker/Image/"
 layout: api
 ---
 

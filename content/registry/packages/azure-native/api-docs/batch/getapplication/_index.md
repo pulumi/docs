@@ -3,8 +3,6 @@
 title: "getApplication"
 title_tag: "azure-native.batch.getApplication"
 meta_desc: "Documentation for the azure-native.batch.getApplication function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

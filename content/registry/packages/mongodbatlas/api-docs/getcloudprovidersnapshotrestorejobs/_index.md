@@ -3,8 +3,6 @@
 title: "getCloudProviderSnapshotRestoreJobs"
 title_tag: "mongodbatlas.getCloudProviderSnapshotRestoreJobs"
 meta_desc: "Documentation for the mongodbatlas.getCloudProviderSnapshotRestoreJobs function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

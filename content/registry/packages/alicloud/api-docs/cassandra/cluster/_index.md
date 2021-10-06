@@ -3,8 +3,6 @@
 title: "Cluster"
 title_tag: "alicloud.cassandra.Cluster"
 meta_desc: "Documentation for the alicloud.cassandra.Cluster resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/alicloud/Cluster/"
 layout: api
 ---
 

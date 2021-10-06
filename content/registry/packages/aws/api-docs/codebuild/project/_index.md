@@ -3,8 +3,6 @@
 title: "Project"
 title_tag: "aws.codebuild.Project"
 meta_desc: "Documentation for the aws.codebuild.Project resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/Project/"
 layout: api
 ---
 

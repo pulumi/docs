@@ -3,8 +3,6 @@
 title: "EscalationPolicy"
 title_tag: "pagerduty.EscalationPolicy"
 meta_desc: "Documentation for the pagerduty.EscalationPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/pagerduty/EscalationPolicy/"
 layout: api
 ---
 

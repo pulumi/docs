@@ -3,8 +3,6 @@
 title: "SaslUser"
 title_tag: "alicloud.alikafka.SaslUser"
 meta_desc: "Documentation for the alicloud.alikafka.SaslUser resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/alicloud/SaslUser/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "getInstances"
 title_tag: "alicloud.waf.getInstances"
 meta_desc: "Documentation for the alicloud.waf.getInstances function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

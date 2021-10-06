@@ -3,8 +3,6 @@
 title: "getGuestConfigurationHCRPAssignment"
 title_tag: "azure-native.guestconfiguration.getGuestConfigurationHCRPAssignment"
 meta_desc: "Documentation for the azure-native.guestconfiguration.getGuestConfigurationHCRPAssignment function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

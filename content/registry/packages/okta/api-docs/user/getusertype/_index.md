@@ -3,8 +3,6 @@
 title: "getUserType"
 title_tag: "okta.user.getUserType"
 meta_desc: "Documentation for the okta.user.getUserType function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

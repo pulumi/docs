@@ -2,8 +2,6 @@
 title: "vpn"
 title_tag: "alicloud.vpn"
 meta_desc: "Explore the resources and functions of the alicloud.vpn module."
-aliases:
-    - "docs/reference/pkg/alicloud/"
 layout: api
 ---
 

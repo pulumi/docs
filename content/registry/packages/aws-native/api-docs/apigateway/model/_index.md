@@ -3,8 +3,6 @@
 title: "Model"
 title_tag: "aws-native.apigateway.Model"
 meta_desc: "Documentation for the aws-native.apigateway.Model resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws-native/Model/"
 layout: api
 ---
 

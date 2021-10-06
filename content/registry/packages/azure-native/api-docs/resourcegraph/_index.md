@@ -2,8 +2,6 @@
 title: "resourcegraph"
 title_tag: "azure-native.resourcegraph"
 meta_desc: "Explore the resources and functions of the azure-native.resourcegraph module."
-aliases:
-    - "docs/reference/pkg/azure-native/"
 layout: api
 ---
 

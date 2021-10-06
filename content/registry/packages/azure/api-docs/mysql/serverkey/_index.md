@@ -3,8 +3,6 @@
 title: "ServerKey"
 title_tag: "azure.mysql.ServerKey"
 meta_desc: "Documentation for the azure.mysql.ServerKey resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/ServerKey/"
 layout: api
 ---
 

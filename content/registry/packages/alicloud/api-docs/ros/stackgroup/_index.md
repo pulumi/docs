@@ -3,8 +3,6 @@
 title: "StackGroup"
 title_tag: "alicloud.ros.StackGroup"
 meta_desc: "Documentation for the alicloud.ros.StackGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/alicloud/StackGroup/"
 layout: api
 ---
 

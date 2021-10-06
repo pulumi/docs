@@ -3,8 +3,6 @@
 title: "CxAgent"
 title_tag: "gcp.diagflow.CxAgent"
 meta_desc: "Documentation for the gcp.diagflow.CxAgent resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/CxAgent/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "AssessmentMetadata"
 title_tag: "azure.securitycenter.AssessmentMetadata"
 meta_desc: "Documentation for the azure.securitycenter.AssessmentMetadata resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/AssessmentMetadata/"
 layout: api
 ---
 

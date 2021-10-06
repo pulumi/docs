@@ -2,8 +2,6 @@
 title: "enterpriseknowledgegraph"
 title_tag: "azure-native.enterpriseknowledgegraph"
 meta_desc: "Explore the resources and functions of the azure-native.enterpriseknowledgegraph module."
-aliases:
-    - "docs/reference/pkg/azure-native/"
 layout: api
 ---
 

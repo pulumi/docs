@@ -2,8 +2,6 @@
 title: "videoanalyzer"
 title_tag: "azure.videoanalyzer"
 meta_desc: "Explore the resources and functions of the azure.videoanalyzer module."
-aliases:
-    - "docs/reference/pkg/azure/"
 layout: api
 ---
 

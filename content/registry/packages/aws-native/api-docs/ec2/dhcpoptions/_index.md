@@ -3,8 +3,6 @@
 title: "DHCPOptions"
 title_tag: "aws-native.ec2.DHCPOptions"
 meta_desc: "Documentation for the aws-native.ec2.DHCPOptions resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws-native/DHCPOptions/"
 layout: api
 ---
 

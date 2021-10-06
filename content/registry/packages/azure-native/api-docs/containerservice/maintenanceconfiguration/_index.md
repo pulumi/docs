@@ -3,8 +3,6 @@
 title: "MaintenanceConfiguration"
 title_tag: "azure-native.containerservice.MaintenanceConfiguration"
 meta_desc: "Documentation for the azure-native.containerservice.MaintenanceConfiguration resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/MaintenanceConfiguration/"
 layout: api
 ---
 

@@ -2,8 +2,6 @@
 title: "scheduling"
 title_tag: "scheduling Package"
 meta_desc: ""
-aliases:
-    - "docs/reference/pkg/kubernetes/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "Instance"
 title_tag: "alicloud.dns.Instance"
 meta_desc: "Documentation for the alicloud.dns.Instance resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/alicloud/Instance/"
 layout: api
 ---
 

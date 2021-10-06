@@ -3,8 +3,6 @@
 title: "Registration"
 title_tag: "azure-native.azurestack.Registration"
 meta_desc: "Documentation for the azure-native.azurestack.Registration resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/Registration/"
 layout: api
 ---
 

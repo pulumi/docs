@@ -2,8 +2,6 @@
 title: "apiregistration"
 title_tag: "apiregistration Package"
 meta_desc: ""
-aliases:
-    - "docs/reference/pkg/kubernetes/"
 layout: api
 ---
 

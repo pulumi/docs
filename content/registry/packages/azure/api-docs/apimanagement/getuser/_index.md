@@ -3,8 +3,6 @@
 title: "getUser"
 title_tag: "azure.apimanagement.getUser"
 meta_desc: "Documentation for the azure.apimanagement.getUser function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

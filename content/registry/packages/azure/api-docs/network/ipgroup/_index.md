@@ -3,8 +3,6 @@
 title: "IPGroup"
 title_tag: "azure.network.IPGroup"
 meta_desc: "Documentation for the azure.network.IPGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/IPGroup/"
 layout: api
 ---
 

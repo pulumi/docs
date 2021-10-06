@@ -3,8 +3,6 @@
 title: "Schema"
 title_tag: "postgresql.Schema"
 meta_desc: "Documentation for the postgresql.Schema resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/postgresql/Schema/"
 layout: api
 ---
 

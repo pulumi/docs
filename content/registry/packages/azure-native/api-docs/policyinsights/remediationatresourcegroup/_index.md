@@ -3,8 +3,6 @@
 title: "RemediationAtResourceGroup"
 title_tag: "azure-native.policyinsights.RemediationAtResourceGroup"
 meta_desc: "Documentation for the azure-native.policyinsights.RemediationAtResourceGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/RemediationAtResourceGroup/"
 layout: api
 ---
 

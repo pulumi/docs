@@ -3,8 +3,6 @@
 title: "getClient"
 title_tag: "keycloak.saml.getClient"
 meta_desc: "Documentation for the keycloak.saml.getClient function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

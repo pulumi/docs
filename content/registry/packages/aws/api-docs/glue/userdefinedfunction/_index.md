@@ -3,8 +3,6 @@
 title: "UserDefinedFunction"
 title_tag: "aws.glue.UserDefinedFunction"
 meta_desc: "Documentation for the aws.glue.UserDefinedFunction resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/UserDefinedFunction/"
 layout: api
 ---
 

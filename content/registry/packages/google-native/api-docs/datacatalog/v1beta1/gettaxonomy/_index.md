@@ -3,8 +3,6 @@
 title: "getTaxonomy"
 title_tag: "google-native.datacatalog/v1beta1.getTaxonomy"
 meta_desc: "Documentation for the google-native.datacatalog/v1beta1.getTaxonomy function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

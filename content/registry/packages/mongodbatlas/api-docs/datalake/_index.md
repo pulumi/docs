@@ -3,8 +3,6 @@
 title: "DataLake"
 title_tag: "mongodbatlas.DataLake"
 meta_desc: "Documentation for the mongodbatlas.DataLake resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/mongodbatlas/DataLake/"
 layout: api
 ---
 

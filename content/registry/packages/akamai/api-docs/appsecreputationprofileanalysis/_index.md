@@ -3,8 +3,6 @@
 title: "AppSecReputationProfileAnalysis"
 title_tag: "akamai.AppSecReputationProfileAnalysis"
 meta_desc: "Documentation for the akamai.AppSecReputationProfileAnalysis resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/akamai/AppSecReputationProfileAnalysis/"
 layout: api
 ---
 

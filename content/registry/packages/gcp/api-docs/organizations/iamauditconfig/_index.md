@@ -3,8 +3,6 @@
 title: "IamAuditConfig"
 title_tag: "gcp.organizations.IamAuditConfig"
 meta_desc: "Documentation for the gcp.organizations.IamAuditConfig resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/IamAuditConfig/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "getVpnGateway"
 title_tag: "azure-native.network.getVpnGateway"
 meta_desc: "Documentation for the azure-native.network.getVpnGateway function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

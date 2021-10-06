@@ -3,8 +3,6 @@
 title: "OrganizationManagerOrganizationIamMember"
 title_tag: "yandex.OrganizationManagerOrganizationIamMember"
 meta_desc: "Documentation for the yandex.OrganizationManagerOrganizationIamMember resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/yandex/OrganizationManagerOrganizationIamMember/"
 layout: api
 ---
 

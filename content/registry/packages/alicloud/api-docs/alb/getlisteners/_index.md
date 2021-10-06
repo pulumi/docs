@@ -3,8 +3,6 @@
 title: "getListeners"
 title_tag: "alicloud.alb.getListeners"
 meta_desc: "Documentation for the alicloud.alb.getListeners function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

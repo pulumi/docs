@@ -3,8 +3,6 @@
 title: "Registry"
 title_tag: "gcp.kms.Registry"
 meta_desc: "Documentation for the gcp.kms.Registry resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/Registry/"
 layout: api
 ---
 

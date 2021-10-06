@@ -2,8 +2,6 @@
 title: "OpenStack"
 title_tag: "OpenStack Package"
 meta_desc: "A Pulumi package for creating and managing OpenStack cloud resources."
-aliases:
-    - "docs/reference/pkg/openstack/"
 menu:
     reference:
         parent: API Reference

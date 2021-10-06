@@ -3,8 +3,6 @@
 title: "getAlertPolicy"
 title_tag: "google-native.monitoring/v3.getAlertPolicy"
 meta_desc: "Documentation for the google-native.monitoring/v3.getAlertPolicy function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

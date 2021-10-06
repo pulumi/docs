@@ -3,8 +3,6 @@
 title: "UserGroup"
 title_tag: "aws.cognito.UserGroup"
 meta_desc: "Documentation for the aws.cognito.UserGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/UserGroup/"
 layout: api
 ---
 

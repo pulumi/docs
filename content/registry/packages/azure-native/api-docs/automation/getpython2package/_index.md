@@ -3,8 +3,6 @@
 title: "getPython2Package"
 title_tag: "azure-native.automation.getPython2Package"
 meta_desc: "Documentation for the azure-native.automation.getPython2Package function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

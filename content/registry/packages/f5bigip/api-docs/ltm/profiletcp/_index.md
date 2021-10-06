@@ -3,8 +3,6 @@
 title: "ProfileTcp"
 title_tag: "f5bigip.ltm.ProfileTcp"
 meta_desc: "Documentation for the f5bigip.ltm.ProfileTcp resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/f5bigip/ProfileTcp/"
 layout: api
 ---
 

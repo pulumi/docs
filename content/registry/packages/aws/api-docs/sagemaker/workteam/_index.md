@@ -3,8 +3,6 @@
 title: "Workteam"
 title_tag: "aws.sagemaker.Workteam"
 meta_desc: "Documentation for the aws.sagemaker.Workteam resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/Workteam/"
 layout: api
 ---
 

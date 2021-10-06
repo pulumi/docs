@@ -3,8 +3,6 @@
 title: "getPeering"
 title_tag: "google-native.managedidentities/v1beta1.getPeering"
 meta_desc: "Documentation for the google-native.managedidentities/v1beta1.getPeering function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

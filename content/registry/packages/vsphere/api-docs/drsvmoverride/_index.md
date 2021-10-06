@@ -3,8 +3,6 @@
 title: "DrsVmOverride"
 title_tag: "vsphere.DrsVmOverride"
 meta_desc: "Documentation for the vsphere.DrsVmOverride resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/vsphere/DrsVmOverride/"
 layout: api
 ---
 

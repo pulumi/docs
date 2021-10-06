@@ -3,8 +3,6 @@
 title: "LinuxVirtualMachine"
 title_tag: "azure.devtest.LinuxVirtualMachine"
 meta_desc: "Documentation for the azure.devtest.LinuxVirtualMachine resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/LinuxVirtualMachine/"
 layout: api
 ---
 

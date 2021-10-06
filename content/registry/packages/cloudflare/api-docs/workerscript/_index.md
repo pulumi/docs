@@ -3,8 +3,6 @@
 title: "WorkerScript"
 title_tag: "cloudflare.WorkerScript"
 meta_desc: "Documentation for the cloudflare.WorkerScript resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/cloudflare/WorkerScript/"
 layout: api
 ---
 

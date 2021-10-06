@@ -3,8 +3,6 @@
 title: "Rule"
 title_tag: "alicloud.sddp.Rule"
 meta_desc: "Documentation for the alicloud.sddp.Rule resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/alicloud/Rule/"
 layout: api
 ---
 

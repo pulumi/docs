@@ -3,8 +3,6 @@
 title: "AccessPolicy"
 title_tag: "azure.keyvault.AccessPolicy"
 meta_desc: "Documentation for the azure.keyvault.AccessPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/AccessPolicy/"
 layout: api
 ---
 

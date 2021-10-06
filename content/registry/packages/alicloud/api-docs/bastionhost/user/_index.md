@@ -3,8 +3,6 @@
 title: "User"
 title_tag: "alicloud.bastionhost.User"
 meta_desc: "Documentation for the alicloud.bastionhost.User resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/alicloud/User/"
 layout: api
 ---
 

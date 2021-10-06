@@ -3,8 +3,6 @@
 title: "getService"
 title_tag: "azure.apimanagement.getService"
 meta_desc: "Documentation for the azure.apimanagement.getService function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

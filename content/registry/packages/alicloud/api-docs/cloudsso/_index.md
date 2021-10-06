@@ -2,8 +2,6 @@
 title: "cloudsso"
 title_tag: "alicloud.cloudsso"
 meta_desc: "Explore the resources and functions of the alicloud.cloudsso module."
-aliases:
-    - "docs/reference/pkg/alicloud/"
 layout: api
 ---
 

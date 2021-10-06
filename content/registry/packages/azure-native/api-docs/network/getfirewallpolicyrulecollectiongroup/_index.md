@@ -3,8 +3,6 @@
 title: "getFirewallPolicyRuleCollectionGroup"
 title_tag: "azure-native.network.getFirewallPolicyRuleCollectionGroup"
 meta_desc: "Documentation for the azure-native.network.getFirewallPolicyRuleCollectionGroup function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

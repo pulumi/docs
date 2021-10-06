@@ -3,8 +3,6 @@
 title: "getNetworkInterface"
 title_tag: "azure.network.getNetworkInterface"
 meta_desc: "Documentation for the azure.network.getNetworkInterface function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

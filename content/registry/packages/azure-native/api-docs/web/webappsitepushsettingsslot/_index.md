@@ -3,8 +3,6 @@
 title: "WebAppSitePushSettingsSlot"
 title_tag: "azure-native.web.WebAppSitePushSettingsSlot"
 meta_desc: "Documentation for the azure-native.web.WebAppSitePushSettingsSlot resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/WebAppSitePushSettingsSlot/"
 layout: api
 ---
 

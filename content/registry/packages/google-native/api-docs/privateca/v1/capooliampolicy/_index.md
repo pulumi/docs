@@ -3,8 +3,6 @@
 title: "CaPoolIamPolicy"
 title_tag: "google-native.privateca/v1.CaPoolIamPolicy"
 meta_desc: "Documentation for the google-native.privateca/v1.CaPoolIamPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/google-native/CaPoolIamPolicy/"
 layout: api
 ---
 

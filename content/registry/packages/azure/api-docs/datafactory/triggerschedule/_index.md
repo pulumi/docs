@@ -3,8 +3,6 @@
 title: "TriggerSchedule"
 title_tag: "azure.datafactory.TriggerSchedule"
 meta_desc: "Documentation for the azure.datafactory.TriggerSchedule resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/TriggerSchedule/"
 layout: api
 ---
 

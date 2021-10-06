@@ -2,8 +2,6 @@
 title: "policy"
 title_tag: "okta.policy"
 meta_desc: "Explore the resources and functions of the okta.policy module."
-aliases:
-    - "docs/reference/pkg/okta/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "Snapshot"
 title_tag: "alicloud.ecs.Snapshot"
 meta_desc: "Documentation for the alicloud.ecs.Snapshot resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/alicloud/Snapshot/"
 layout: api
 ---
 

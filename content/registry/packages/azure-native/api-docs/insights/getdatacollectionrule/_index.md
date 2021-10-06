@@ -3,8 +3,6 @@
 title: "getDataCollectionRule"
 title_tag: "azure-native.insights.getDataCollectionRule"
 meta_desc: "Documentation for the azure-native.insights.getDataCollectionRule function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

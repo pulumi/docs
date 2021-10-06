@@ -3,8 +3,6 @@
 title: "TopicIAMMember"
 title_tag: "gcp.pubsub.TopicIAMMember"
 meta_desc: "Documentation for the gcp.pubsub.TopicIAMMember resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/TopicIAMMember/"
 layout: api
 ---
 

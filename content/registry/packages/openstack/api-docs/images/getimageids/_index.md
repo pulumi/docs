@@ -3,8 +3,6 @@
 title: "getImageIds"
 title_tag: "openstack.images.getImageIds"
 meta_desc: "Documentation for the openstack.images.getImageIds function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

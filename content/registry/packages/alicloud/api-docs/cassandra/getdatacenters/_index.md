@@ -3,8 +3,6 @@
 title: "getDataCenters"
 title_tag: "alicloud.cassandra.getDataCenters"
 meta_desc: "Documentation for the alicloud.cassandra.getDataCenters function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

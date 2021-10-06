@@ -3,8 +3,6 @@
 title: "DiskEncryptionSet"
 title_tag: "azure.compute.DiskEncryptionSet"
 meta_desc: "Documentation for the azure.compute.DiskEncryptionSet resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/DiskEncryptionSet/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "OutputsTcpDefault"
 title_tag: "splunk.OutputsTcpDefault"
 meta_desc: "Documentation for the splunk.OutputsTcpDefault resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/splunk/OutputsTcpDefault/"
 layout: api
 ---
 

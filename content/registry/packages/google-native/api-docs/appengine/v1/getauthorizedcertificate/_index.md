@@ -3,8 +3,6 @@
 title: "getAuthorizedCertificate"
 title_tag: "google-native.appengine/v1.getAuthorizedCertificate"
 meta_desc: "Documentation for the google-native.appengine/v1.getAuthorizedCertificate function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

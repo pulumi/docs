@@ -3,8 +3,6 @@
 title: "AssignmentVirtualMachineScaleSet"
 title_tag: "azure.maintenance.AssignmentVirtualMachineScaleSet"
 meta_desc: "Documentation for the azure.maintenance.AssignmentVirtualMachineScaleSet resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/AssignmentVirtualMachineScaleSet/"
 layout: api
 ---
 

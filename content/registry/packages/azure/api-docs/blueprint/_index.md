@@ -2,8 +2,6 @@
 title: "blueprint"
 title_tag: "azure.blueprint"
 meta_desc: "Explore the resources and functions of the azure.blueprint module."
-aliases:
-    - "docs/reference/pkg/azure/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "getUrlMap"
 title_tag: "google-native.compute/beta.getUrlMap"
 meta_desc: "Documentation for the google-native.compute/beta.getUrlMap function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

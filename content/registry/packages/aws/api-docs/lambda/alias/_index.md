@@ -3,8 +3,6 @@
 title: "Alias"
 title_tag: "aws.lambda.Alias"
 meta_desc: "Documentation for the aws.lambda.Alias resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/Alias/"
 layout: api
 ---
 

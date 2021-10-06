@@ -2,8 +2,6 @@
 title: "datastore"
 title_tag: "gcp.datastore"
 meta_desc: "Explore the resources and functions of the gcp.datastore module."
-aliases:
-    - "docs/reference/pkg/gcp/"
 layout: api
 ---
 

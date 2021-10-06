@@ -3,8 +3,6 @@
 title: "ConformancePack"
 title_tag: "aws.cfg.ConformancePack"
 meta_desc: "Documentation for the aws.cfg.ConformancePack resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/ConformancePack/"
 layout: api
 ---
 

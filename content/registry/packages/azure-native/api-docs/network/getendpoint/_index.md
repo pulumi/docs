@@ -3,8 +3,6 @@
 title: "getEndpoint"
 title_tag: "azure-native.network.getEndpoint"
 meta_desc: "Documentation for the azure-native.network.getEndpoint function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

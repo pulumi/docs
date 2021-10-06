@@ -3,8 +3,6 @@
 title: "getSqlPool"
 title_tag: "azure-native.synapse.getSqlPool"
 meta_desc: "Documentation for the azure-native.synapse.getSqlPool function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

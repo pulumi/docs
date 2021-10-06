@@ -2,8 +2,6 @@
 title: "codestarconnections"
 title_tag: "aws-native.codestarconnections"
 meta_desc: "Explore the resources and functions of the aws-native.codestarconnections module."
-aliases:
-    - "docs/reference/pkg/aws-native/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "getConnection"
 title_tag: "azure-native.automation.getConnection"
 meta_desc: "Documentation for the azure-native.automation.getConnection function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

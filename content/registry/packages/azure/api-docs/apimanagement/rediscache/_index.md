@@ -3,8 +3,6 @@
 title: "RedisCache"
 title_tag: "azure.apimanagement.RedisCache"
 meta_desc: "Documentation for the azure.apimanagement.RedisCache resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/RedisCache/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "RouterRoute"
 title_tag: "openstack.networking.RouterRoute"
 meta_desc: "Documentation for the openstack.networking.RouterRoute resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/openstack/RouterRoute/"
 layout: api
 ---
 

@@ -2,8 +2,6 @@
 title: "servicefabric"
 title_tag: "azure.servicefabric"
 meta_desc: "Explore the resources and functions of the azure.servicefabric module."
-aliases:
-    - "docs/reference/pkg/azure/"
 layout: api
 ---
 

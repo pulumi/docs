@@ -3,8 +3,6 @@
 title: "getAgentQueue"
 title_tag: "azuredevops.getAgentQueue"
 meta_desc: "Documentation for the azuredevops.getAgentQueue function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

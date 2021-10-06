@@ -2,8 +2,6 @@
 title: "NS1"
 title_tag: "ns1.NS1"
 meta_desc: "A Pulumi package for creating and managing ns1 cloud resources."
-aliases:
-    - "docs/reference/pkg/ns1/"
 menu:
     reference:
         parent: API Reference

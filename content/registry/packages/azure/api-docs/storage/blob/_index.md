@@ -3,8 +3,6 @@
 title: "Blob"
 title_tag: "azure.storage.Blob"
 meta_desc: "Documentation for the azure.storage.Blob resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/Blob/"
 layout: api
 ---
 

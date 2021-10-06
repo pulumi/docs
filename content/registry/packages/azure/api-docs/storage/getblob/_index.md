@@ -3,8 +3,6 @@
 title: "getBlob"
 title_tag: "azure.storage.getBlob"
 meta_desc: "Documentation for the azure.storage.getBlob function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "getQuery"
 title_tag: "google-native.apigee/v1.getQuery"
 meta_desc: "Documentation for the google-native.apigee/v1.getQuery function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

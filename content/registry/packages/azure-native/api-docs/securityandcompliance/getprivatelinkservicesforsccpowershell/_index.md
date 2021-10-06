@@ -3,8 +3,6 @@
 title: "getprivateLinkServicesForSCCPowershell"
 title_tag: "azure-native.securityandcompliance.getprivateLinkServicesForSCCPowershell"
 meta_desc: "Documentation for the azure-native.securityandcompliance.getprivateLinkServicesForSCCPowershell function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

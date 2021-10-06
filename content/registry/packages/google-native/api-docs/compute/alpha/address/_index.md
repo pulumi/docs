@@ -3,8 +3,6 @@
 title: "Address"
 title_tag: "google-native.compute/alpha.Address"
 meta_desc: "Documentation for the google-native.compute/alpha.Address resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/google-native/Address/"
 layout: api
 ---
 

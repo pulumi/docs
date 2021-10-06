@@ -2,8 +2,6 @@
 title: "cloudwatch"
 title_tag: "aws.cloudwatch"
 meta_desc: "Explore the resources and functions of the aws.cloudwatch module."
-aliases:
-    - "docs/reference/pkg/aws/"
 layout: api
 ---
 

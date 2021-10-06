@@ -3,8 +3,6 @@
 title: "ClientAuthorizationPermission"
 title_tag: "keycloak.openid.ClientAuthorizationPermission"
 meta_desc: "Documentation for the keycloak.openid.ClientAuthorizationPermission resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/keycloak/ClientAuthorizationPermission/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "ApiMapping"
 title_tag: "aws.apigatewayv2.ApiMapping"
 meta_desc: "Documentation for the aws.apigatewayv2.ApiMapping resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/ApiMapping/"
 layout: api
 ---
 

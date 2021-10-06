@@ -3,8 +3,6 @@
 title: "DdosCooInstance"
 title_tag: "alicloud.dns.DdosCooInstance"
 meta_desc: "Documentation for the alicloud.dns.DdosCooInstance resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/alicloud/DdosCooInstance/"
 layout: api
 ---
 

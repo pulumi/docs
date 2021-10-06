@@ -3,8 +3,6 @@
 title: "VpnServerConfiguration"
 title_tag: "azure.network.VpnServerConfiguration"
 meta_desc: "Documentation for the azure.network.VpnServerConfiguration resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/VpnServerConfiguration/"
 layout: api
 ---
 

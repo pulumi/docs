@@ -3,8 +3,6 @@
 title: "ComputeImage"
 title_tag: "yandex.ComputeImage"
 meta_desc: "Documentation for the yandex.ComputeImage resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/yandex/ComputeImage/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "DatasetIamBinding"
 title_tag: "gcp.bigquery.DatasetIamBinding"
 meta_desc: "Documentation for the gcp.bigquery.DatasetIamBinding resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/DatasetIamBinding/"
 layout: api
 ---
 

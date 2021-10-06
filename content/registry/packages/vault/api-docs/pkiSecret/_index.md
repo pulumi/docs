@@ -2,8 +2,6 @@
 title: "pkiSecret"
 title_tag: "vault.pkiSecret"
 meta_desc: "Explore the resources and functions of the vault.pkiSecret module."
-aliases:
-    - "docs/reference/pkg/vault/"
 layout: api
 ---
 

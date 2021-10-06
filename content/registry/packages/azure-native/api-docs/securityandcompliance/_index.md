@@ -2,8 +2,6 @@
 title: "securityandcompliance"
 title_tag: "azure-native.securityandcompliance"
 meta_desc: "Explore the resources and functions of the azure-native.securityandcompliance module."
-aliases:
-    - "docs/reference/pkg/azure-native/"
 layout: api
 ---
 

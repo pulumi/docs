@@ -3,8 +3,6 @@
 title: "ServiceFabricSchedule"
 title_tag: "azure-native.devtestlab.ServiceFabricSchedule"
 meta_desc: "Documentation for the azure-native.devtestlab.ServiceFabricSchedule resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/ServiceFabricSchedule/"
 layout: api
 ---
 

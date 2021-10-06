@@ -3,8 +3,6 @@
 title: "getRepositoryPullRequests"
 title_tag: "github.getRepositoryPullRequests"
 meta_desc: "Documentation for the github.getRepositoryPullRequests function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

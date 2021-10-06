@@ -3,8 +3,6 @@
 title: "Organization"
 title_tag: "aws.organizations.Organization"
 meta_desc: "Documentation for the aws.organizations.Organization resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/Organization/"
 layout: api
 ---
 

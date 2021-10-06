@@ -3,8 +3,6 @@
 title: "MdbSqlServerCluster"
 title_tag: "yandex.MdbSqlServerCluster"
 meta_desc: "Documentation for the yandex.MdbSqlServerCluster resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/yandex/MdbSqlServerCluster/"
 layout: api
 ---
 

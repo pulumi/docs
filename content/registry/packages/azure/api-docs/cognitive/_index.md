@@ -2,8 +2,6 @@
 title: "cognitive"
 title_tag: "azure.cognitive"
 meta_desc: "Explore the resources and functions of the azure.cognitive module."
-aliases:
-    - "docs/reference/pkg/azure/"
 layout: api
 ---
 

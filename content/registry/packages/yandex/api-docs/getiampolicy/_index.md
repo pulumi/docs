@@ -3,8 +3,6 @@
 title: "getIamPolicy"
 title_tag: "yandex.getIamPolicy"
 meta_desc: "Documentation for the yandex.getIamPolicy function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

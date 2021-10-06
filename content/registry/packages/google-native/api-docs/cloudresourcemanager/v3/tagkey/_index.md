@@ -3,8 +3,6 @@
 title: "TagKey"
 title_tag: "google-native.cloudresourcemanager/v3.TagKey"
 meta_desc: "Documentation for the google-native.cloudresourcemanager/v3.TagKey resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/google-native/TagKey/"
 layout: api
 ---
 

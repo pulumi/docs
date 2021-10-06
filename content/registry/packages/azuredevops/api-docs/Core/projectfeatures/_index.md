@@ -3,8 +3,6 @@
 title: "ProjectFeatures"
 title_tag: "azuredevops.Core.ProjectFeatures"
 meta_desc: "Documentation for the azuredevops.Core.ProjectFeatures resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azuredevops/ProjectFeatures/"
 layout: api
 ---
 

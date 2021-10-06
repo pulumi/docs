@@ -3,8 +3,6 @@
 title: "Bookmark"
 title_tag: "azure-native.securityinsights.Bookmark"
 meta_desc: "Documentation for the azure-native.securityinsights.Bookmark resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/Bookmark/"
 layout: api
 ---
 

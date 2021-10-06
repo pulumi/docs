@@ -3,8 +3,6 @@
 title: "Node"
 title_tag: "kubernetes.core/v1.Node"
 meta_desc: "Documentation for the kubernetes.core/v1.Node resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/kubernetes/Node/"
 layout: api
 ---
 

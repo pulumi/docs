@@ -3,8 +3,6 @@
 title: "UserPropertyProtocolMapper"
 title_tag: "keycloak.saml.UserPropertyProtocolMapper"
 meta_desc: "Documentation for the keycloak.saml.UserPropertyProtocolMapper resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/keycloak/UserPropertyProtocolMapper/"
 layout: api
 ---
 

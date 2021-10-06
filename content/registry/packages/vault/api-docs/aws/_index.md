@@ -2,8 +2,6 @@
 title: "aws"
 title_tag: "vault.aws"
 meta_desc: "Explore the resources and functions of the vault.aws module."
-aliases:
-    - "docs/reference/pkg/vault/"
 layout: api
 ---
 

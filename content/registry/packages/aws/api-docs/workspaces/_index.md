@@ -2,8 +2,6 @@
 title: "workspaces"
 title_tag: "aws.workspaces"
 meta_desc: "Explore the resources and functions of the aws.workspaces module."
-aliases:
-    - "docs/reference/pkg/aws/"
 layout: api
 ---
 

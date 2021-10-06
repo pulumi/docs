@@ -3,8 +3,6 @@
 title: "getStages"
 title_tag: "snowflake.getStages"
 meta_desc: "Documentation for the snowflake.getStages function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

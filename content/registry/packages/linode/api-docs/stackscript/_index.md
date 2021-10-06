@@ -3,8 +3,6 @@
 title: "StackScript"
 title_tag: "linode.StackScript"
 meta_desc: "Documentation for the linode.StackScript resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/linode/StackScript/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "getCaPool"
 title_tag: "google-native.privateca/v1.getCaPool"
 meta_desc: "Documentation for the google-native.privateca/v1.getCaPool function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

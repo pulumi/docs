@@ -2,8 +2,6 @@
 title: "settings"
 title_tag: "settings Package"
 meta_desc: ""
-aliases:
-    - "docs/reference/pkg/kubernetes/"
 layout: api
 ---
 

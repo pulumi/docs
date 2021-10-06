@@ -3,8 +3,6 @@
 title: "FlowSchemaList"
 title_tag: "kubernetes.flowcontrol.apiserver.k8s.io/v1beta1.FlowSchemaList"
 meta_desc: "Documentation for the kubernetes.flowcontrol.apiserver.k8s.io/v1beta1.FlowSchemaList resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/kubernetes/FlowSchemaList/"
 layout: api
 ---
 

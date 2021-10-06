@@ -3,8 +3,6 @@
 title: "SingleValueChart"
 title_tag: "signalfx.SingleValueChart"
 meta_desc: "Documentation for the signalfx.SingleValueChart resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/signalfx/SingleValueChart/"
 layout: api
 ---
 

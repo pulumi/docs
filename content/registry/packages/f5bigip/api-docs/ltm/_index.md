@@ -2,8 +2,6 @@
 title: "ltm"
 title_tag: "f5bigip.ltm"
 meta_desc: "Explore the resources and functions of the f5bigip.ltm module."
-aliases:
-    - "docs/reference/pkg/f5bigip/"
 layout: api
 ---
 

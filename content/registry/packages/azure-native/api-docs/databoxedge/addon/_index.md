@@ -3,8 +3,6 @@
 title: "Addon"
 title_tag: "azure-native.databoxedge.Addon"
 meta_desc: "Documentation for the azure-native.databoxedge.Addon resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/Addon/"
 layout: api
 ---
 

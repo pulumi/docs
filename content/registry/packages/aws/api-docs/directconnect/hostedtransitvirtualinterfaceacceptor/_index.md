@@ -3,8 +3,6 @@
 title: "HostedTransitVirtualInterfaceAcceptor"
 title_tag: "aws.directconnect.HostedTransitVirtualInterfaceAcceptor"
 meta_desc: "Documentation for the aws.directconnect.HostedTransitVirtualInterfaceAcceptor resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/HostedTransitVirtualInterfaceAcceptor/"
 layout: api
 ---
 

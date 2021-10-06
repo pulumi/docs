@@ -3,8 +3,6 @@
 title: "EnvironmentV3"
 title_tag: "azure.appservice.EnvironmentV3"
 meta_desc: "Documentation for the azure.appservice.EnvironmentV3 resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/EnvironmentV3/"
 layout: api
 ---
 

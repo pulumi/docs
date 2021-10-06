@@ -3,8 +3,6 @@
 title: "ElasticPool"
 title_tag: "azure.sql.ElasticPool"
 meta_desc: "Documentation for the azure.sql.ElasticPool resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/ElasticPool/"
 layout: api
 ---
 

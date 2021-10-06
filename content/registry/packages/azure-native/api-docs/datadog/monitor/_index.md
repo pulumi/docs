@@ -3,8 +3,6 @@
 title: "Monitor"
 title_tag: "azure-native.datadog.Monitor"
 meta_desc: "Documentation for the azure-native.datadog.Monitor resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/Monitor/"
 layout: api
 ---
 

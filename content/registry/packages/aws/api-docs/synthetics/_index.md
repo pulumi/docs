@@ -2,8 +2,6 @@
 title: "synthetics"
 title_tag: "aws.synthetics"
 meta_desc: "Explore the resources and functions of the aws.synthetics module."
-aliases:
-    - "docs/reference/pkg/aws/"
 layout: api
 ---
 

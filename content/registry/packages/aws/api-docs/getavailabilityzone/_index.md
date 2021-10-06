@@ -3,8 +3,6 @@
 title: "getAvailabilityZone"
 title_tag: "aws.getAvailabilityZone"
 meta_desc: "Documentation for the aws.getAvailabilityZone function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

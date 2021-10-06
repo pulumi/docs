@@ -3,8 +3,6 @@
 title: "Listener"
 title_tag: "aws.applicationloadbalancing.Listener"
 meta_desc: "Documentation for the aws.applicationloadbalancing.Listener resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/Listener/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "getGroup"
 title_tag: "azuredevops.Identities.getGroup"
 meta_desc: "Documentation for the azuredevops.Identities.getGroup function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

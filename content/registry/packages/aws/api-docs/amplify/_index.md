@@ -2,8 +2,6 @@
 title: "amplify"
 title_tag: "aws.amplify"
 meta_desc: "Explore the resources and functions of the aws.amplify module."
-aliases:
-    - "docs/reference/pkg/aws/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "Host"
 title_tag: "vsphere.Host"
 meta_desc: "Documentation for the vsphere.Host resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/vsphere/Host/"
 layout: api
 ---
 

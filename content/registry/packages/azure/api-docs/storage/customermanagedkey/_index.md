@@ -3,8 +3,6 @@
 title: "CustomerManagedKey"
 title_tag: "azure.storage.CustomerManagedKey"
 meta_desc: "Documentation for the azure.storage.CustomerManagedKey resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/CustomerManagedKey/"
 layout: api
 ---
 

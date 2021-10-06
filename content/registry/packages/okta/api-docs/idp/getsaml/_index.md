@@ -3,8 +3,6 @@
 title: "getSaml"
 title_tag: "okta.idp.getSaml"
 meta_desc: "Documentation for the okta.idp.getSaml function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

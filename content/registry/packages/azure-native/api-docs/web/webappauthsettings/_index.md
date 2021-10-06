@@ -3,8 +3,6 @@
 title: "WebAppAuthSettings"
 title_tag: "azure-native.web.WebAppAuthSettings"
 meta_desc: "Documentation for the azure-native.web.WebAppAuthSettings resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/WebAppAuthSettings/"
 layout: api
 ---
 

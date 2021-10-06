@@ -3,8 +3,6 @@
 title: "Provision"
 title_tag: "f5bigip.sys.Provision"
 meta_desc: "Documentation for the f5bigip.sys.Provision resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/f5bigip/Provision/"
 layout: api
 ---
 

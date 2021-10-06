@@ -3,8 +3,6 @@
 title: "EventDestination"
 title_tag: "aws.ses.EventDestination"
 meta_desc: "Documentation for the aws.ses.EventDestination resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/EventDestination/"
 layout: api
 ---
 

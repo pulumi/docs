@@ -3,8 +3,6 @@
 title: "Image"
 title_tag: "google-native.compute/v1.Image"
 meta_desc: "Documentation for the google-native.compute/v1.Image resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/google-native/Image/"
 layout: api
 ---
 

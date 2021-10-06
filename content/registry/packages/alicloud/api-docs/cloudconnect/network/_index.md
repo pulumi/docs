@@ -3,8 +3,6 @@
 title: "Network"
 title_tag: "alicloud.cloudconnect.Network"
 meta_desc: "Documentation for the alicloud.cloudconnect.Network resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/alicloud/Network/"
 layout: api
 ---
 

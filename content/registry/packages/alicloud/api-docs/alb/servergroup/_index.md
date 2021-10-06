@@ -3,8 +3,6 @@
 title: "ServerGroup"
 title_tag: "alicloud.alb.ServerGroup"
 meta_desc: "Documentation for the alicloud.alb.ServerGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/alicloud/ServerGroup/"
 layout: api
 ---
 

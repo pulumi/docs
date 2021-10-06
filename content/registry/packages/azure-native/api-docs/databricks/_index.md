@@ -2,8 +2,6 @@
 title: "databricks"
 title_tag: "azure-native.databricks"
 meta_desc: "Explore the resources and functions of the azure-native.databricks module."
-aliases:
-    - "docs/reference/pkg/azure-native/"
 layout: api
 ---
 

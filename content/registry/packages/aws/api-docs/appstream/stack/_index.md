@@ -3,8 +3,6 @@
 title: "Stack"
 title_tag: "aws.appstream.Stack"
 meta_desc: "Documentation for the aws.appstream.Stack resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/Stack/"
 layout: api
 ---
 

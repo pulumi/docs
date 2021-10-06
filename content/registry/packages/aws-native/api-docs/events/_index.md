@@ -2,8 +2,6 @@
 title: "events"
 title_tag: "aws-native.events"
 meta_desc: "Explore the resources and functions of the aws-native.events module."
-aliases:
-    - "docs/reference/pkg/aws-native/"
 layout: api
 ---
 

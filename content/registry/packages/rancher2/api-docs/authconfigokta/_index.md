@@ -3,8 +3,6 @@
 title: "AuthConfigOkta"
 title_tag: "rancher2.AuthConfigOkta"
 meta_desc: "Documentation for the rancher2.AuthConfigOkta resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/rancher2/AuthConfigOkta/"
 layout: api
 ---
 

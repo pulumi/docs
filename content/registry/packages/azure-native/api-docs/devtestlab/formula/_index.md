@@ -3,8 +3,6 @@
 title: "Formula"
 title_tag: "azure-native.devtestlab.Formula"
 meta_desc: "Documentation for the azure-native.devtestlab.Formula resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/Formula/"
 layout: api
 ---
 

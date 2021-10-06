@@ -2,8 +2,6 @@
 title: "cloudtasks"
 title_tag: "gcp.cloudtasks"
 meta_desc: "Explore the resources and functions of the gcp.cloudtasks module."
-aliases:
-    - "docs/reference/pkg/gcp/"
 layout: api
 ---
 

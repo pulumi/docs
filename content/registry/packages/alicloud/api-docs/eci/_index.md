@@ -2,8 +2,6 @@
 title: "eci"
 title_tag: "alicloud.eci"
 meta_desc: "Explore the resources and functions of the alicloud.eci module."
-aliases:
-    - "docs/reference/pkg/alicloud/"
 layout: api
 ---
 

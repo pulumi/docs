@@ -3,8 +3,6 @@
 title: "getSnapshotV3"
 title_tag: "openstack.blockstorage.getSnapshotV3"
 meta_desc: "Documentation for the openstack.blockstorage.getSnapshotV3 function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

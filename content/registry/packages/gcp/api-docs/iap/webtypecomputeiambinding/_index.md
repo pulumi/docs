@@ -3,8 +3,6 @@
 title: "WebTypeComputeIamBinding"
 title_tag: "gcp.iap.WebTypeComputeIamBinding"
 meta_desc: "Documentation for the gcp.iap.WebTypeComputeIamBinding resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/WebTypeComputeIamBinding/"
 layout: api
 ---
 

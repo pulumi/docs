@@ -3,8 +3,6 @@
 title: "ServiceActionAssociation"
 title_tag: "aws-native.servicecatalog.ServiceActionAssociation"
 meta_desc: "Documentation for the aws-native.servicecatalog.ServiceActionAssociation resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws-native/ServiceActionAssociation/"
 layout: api
 ---
 

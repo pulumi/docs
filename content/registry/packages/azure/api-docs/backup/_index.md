@@ -2,8 +2,6 @@
 title: "backup"
 title_tag: "azure.backup"
 meta_desc: "Explore the resources and functions of the azure.backup module."
-aliases:
-    - "docs/reference/pkg/azure/"
 layout: api
 ---
 

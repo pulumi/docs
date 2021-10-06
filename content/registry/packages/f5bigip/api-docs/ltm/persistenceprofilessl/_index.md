@@ -3,8 +3,6 @@
 title: "PersistenceProfileSsl"
 title_tag: "f5bigip.ltm.PersistenceProfileSsl"
 meta_desc: "Documentation for the f5bigip.ltm.PersistenceProfileSsl resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/f5bigip/PersistenceProfileSsl/"
 layout: api
 ---
 

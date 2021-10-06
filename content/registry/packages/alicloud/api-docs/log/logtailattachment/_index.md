@@ -3,8 +3,6 @@
 title: "LogTailAttachment"
 title_tag: "alicloud.log.LogTailAttachment"
 meta_desc: "Documentation for the alicloud.log.LogTailAttachment resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/alicloud/LogTailAttachment/"
 layout: api
 ---
 

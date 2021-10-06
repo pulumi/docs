@@ -3,8 +3,6 @@
 title: "RoleBinding"
 title_tag: "kubernetes.rbac.authorization.k8s.io/v1alpha1.RoleBinding"
 meta_desc: "Documentation for the kubernetes.rbac.authorization.k8s.io/v1alpha1.RoleBinding resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/kubernetes/RoleBinding/"
 layout: api
 ---
 

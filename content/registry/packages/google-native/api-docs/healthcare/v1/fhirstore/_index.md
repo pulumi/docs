@@ -3,8 +3,6 @@
 title: "FhirStore"
 title_tag: "google-native.healthcare/v1.FhirStore"
 meta_desc: "Documentation for the google-native.healthcare/v1.FhirStore resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/google-native/FhirStore/"
 layout: api
 ---
 

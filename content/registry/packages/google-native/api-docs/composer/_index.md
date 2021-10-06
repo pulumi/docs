@@ -2,8 +2,6 @@
 title: "composer"
 title_tag: "composer Package"
 meta_desc: ""
-aliases:
-    - "docs/reference/pkg/google-native/"
 layout: api
 ---
 

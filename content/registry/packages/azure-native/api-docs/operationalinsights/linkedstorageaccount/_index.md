@@ -3,8 +3,6 @@
 title: "LinkedStorageAccount"
 title_tag: "azure-native.operationalinsights.LinkedStorageAccount"
 meta_desc: "Documentation for the azure-native.operationalinsights.LinkedStorageAccount resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/LinkedStorageAccount/"
 layout: api
 ---
 

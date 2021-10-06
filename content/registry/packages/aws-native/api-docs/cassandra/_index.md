@@ -2,8 +2,6 @@
 title: "cassandra"
 title_tag: "aws-native.cassandra"
 meta_desc: "Explore the resources and functions of the aws-native.cassandra module."
-aliases:
-    - "docs/reference/pkg/aws-native/"
 layout: api
 ---
 

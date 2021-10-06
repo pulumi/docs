@@ -3,8 +3,6 @@
 title: "MfaPolicy"
 title_tag: "okta.deprecated.MfaPolicy"
 meta_desc: "Documentation for the okta.deprecated.MfaPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/okta/MfaPolicy/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "FunctionIamMember"
 title_tag: "gcp.cloudfunctions.FunctionIamMember"
 meta_desc: "Documentation for the gcp.cloudfunctions.FunctionIamMember resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/FunctionIamMember/"
 layout: api
 ---
 

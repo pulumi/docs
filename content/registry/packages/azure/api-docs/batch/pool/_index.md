@@ -3,8 +3,6 @@
 title: "Pool"
 title_tag: "azure.batch.Pool"
 meta_desc: "Documentation for the azure.batch.Pool resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/Pool/"
 layout: api
 ---
 

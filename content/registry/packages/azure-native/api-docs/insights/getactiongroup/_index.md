@@ -3,8 +3,6 @@
 title: "getActionGroup"
 title_tag: "azure-native.insights.getActionGroup"
 meta_desc: "Documentation for the azure-native.insights.getActionGroup function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

@@ -2,8 +2,6 @@
 title: "cloudbuild"
 title_tag: "gcp.cloudbuild"
 meta_desc: "Explore the resources and functions of the gcp.cloudbuild module."
-aliases:
-    - "docs/reference/pkg/gcp/"
 layout: api
 ---
 

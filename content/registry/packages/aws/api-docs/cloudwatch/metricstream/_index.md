@@ -3,8 +3,6 @@
 title: "MetricStream"
 title_tag: "aws.cloudwatch.MetricStream"
 meta_desc: "Documentation for the aws.cloudwatch.MetricStream resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/MetricStream/"
 layout: api
 ---
 

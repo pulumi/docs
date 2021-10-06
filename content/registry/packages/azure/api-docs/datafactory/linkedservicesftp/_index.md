@@ -3,8 +3,6 @@
 title: "LinkedServiceSftp"
 title_tag: "azure.datafactory.LinkedServiceSftp"
 meta_desc: "Documentation for the azure.datafactory.LinkedServiceSftp resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/LinkedServiceSftp/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "Agreement"
 title_tag: "azure.marketplace.Agreement"
 meta_desc: "Documentation for the azure.marketplace.Agreement resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/Agreement/"
 layout: api
 ---
 

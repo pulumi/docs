@@ -2,8 +2,6 @@
 title: "servicefabricmesh"
 title_tag: "azure-native.servicefabricmesh"
 meta_desc: "Explore the resources and functions of the azure-native.servicefabricmesh module."
-aliases:
-    - "docs/reference/pkg/azure-native/"
 layout: api
 ---
 

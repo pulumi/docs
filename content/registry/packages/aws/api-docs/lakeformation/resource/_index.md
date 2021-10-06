@@ -3,8 +3,6 @@
 title: "Resource"
 title_tag: "aws.lakeformation.Resource"
 meta_desc: "Documentation for the aws.lakeformation.Resource resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/Resource/"
 layout: api
 ---
 

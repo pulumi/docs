@@ -2,8 +2,6 @@
 title: "lookoutmetrics"
 title_tag: "aws-native.lookoutmetrics"
 meta_desc: "Explore the resources and functions of the aws-native.lookoutmetrics module."
-aliases:
-    - "docs/reference/pkg/aws-native/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "FirewallPolicy"
 title_tag: "aws.networkfirewall.FirewallPolicy"
 meta_desc: "Documentation for the aws.networkfirewall.FirewallPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/FirewallPolicy/"
 layout: api
 ---
 

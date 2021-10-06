@@ -3,8 +3,6 @@
 title: "getTags"
 title_tag: "digitalocean.getTags"
 meta_desc: "Documentation for the digitalocean.getTags function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

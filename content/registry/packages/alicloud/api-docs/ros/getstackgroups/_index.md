@@ -3,8 +3,6 @@
 title: "getStackGroups"
 title_tag: "alicloud.ros.getStackGroups"
 meta_desc: "Documentation for the alicloud.ros.getStackGroups function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

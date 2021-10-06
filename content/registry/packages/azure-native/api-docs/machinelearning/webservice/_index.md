@@ -3,8 +3,6 @@
 title: "WebService"
 title_tag: "azure-native.machinelearning.WebService"
 meta_desc: "Documentation for the azure-native.machinelearning.WebService resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/WebService/"
 layout: api
 ---
 

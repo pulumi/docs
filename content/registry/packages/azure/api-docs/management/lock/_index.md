@@ -3,8 +3,6 @@
 title: "Lock"
 title_tag: "azure.management.Lock"
 meta_desc: "Documentation for the azure.management.Lock resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/Lock/"
 layout: api
 ---
 

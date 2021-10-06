@@ -3,8 +3,6 @@
 title: "FlexibleServerDatabase"
 title_tag: "azure.postgresql.FlexibleServerDatabase"
 meta_desc: "Documentation for the azure.postgresql.FlexibleServerDatabase resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/FlexibleServerDatabase/"
 layout: api
 ---
 

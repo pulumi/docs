@@ -3,8 +3,6 @@
 title: "getManagedKubernetesClusters"
 title_tag: "alicloud.cs.getManagedKubernetesClusters"
 meta_desc: "Documentation for the alicloud.cs.getManagedKubernetesClusters function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

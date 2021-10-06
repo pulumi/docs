@@ -3,8 +3,6 @@
 title: "ServiceIntegration"
 title_tag: "aiven.ServiceIntegration"
 meta_desc: "Documentation for the aiven.ServiceIntegration resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aiven/ServiceIntegration/"
 layout: api
 ---
 

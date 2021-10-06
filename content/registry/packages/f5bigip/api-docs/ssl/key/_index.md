@@ -3,8 +3,6 @@
 title: "Key"
 title_tag: "f5bigip.ssl.Key"
 meta_desc: "Documentation for the f5bigip.ssl.Key resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/f5bigip/Key/"
 layout: api
 ---
 

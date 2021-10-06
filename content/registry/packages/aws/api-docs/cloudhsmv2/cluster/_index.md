@@ -3,8 +3,6 @@
 title: "Cluster"
 title_tag: "aws.cloudhsmv2.Cluster"
 meta_desc: "Documentation for the aws.cloudhsmv2.Cluster resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/Cluster/"
 layout: api
 ---
 

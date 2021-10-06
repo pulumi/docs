@@ -3,8 +3,6 @@
 title: "ReusableConfigIamPolicy"
 title_tag: "google-native.privateca/v1beta1.ReusableConfigIamPolicy"
 meta_desc: "Documentation for the google-native.privateca/v1beta1.ReusableConfigIamPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/google-native/ReusableConfigIamPolicy/"
 layout: api
 ---
 

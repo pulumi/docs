@@ -2,8 +2,6 @@
 title: "rdc"
 title_tag: "alicloud.rdc"
 meta_desc: "Explore the resources and functions of the alicloud.rdc module."
-aliases:
-    - "docs/reference/pkg/alicloud/"
 layout: api
 ---
 

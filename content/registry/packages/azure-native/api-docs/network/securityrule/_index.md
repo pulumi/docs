@@ -3,8 +3,6 @@
 title: "SecurityRule"
 title_tag: "azure-native.network.SecurityRule"
 meta_desc: "Documentation for the azure-native.network.SecurityRule resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/SecurityRule/"
 layout: api
 ---
 

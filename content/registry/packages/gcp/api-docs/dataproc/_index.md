@@ -2,8 +2,6 @@
 title: "dataproc"
 title_tag: "gcp.dataproc"
 meta_desc: "Explore the resources and functions of the gcp.dataproc module."
-aliases:
-    - "docs/reference/pkg/gcp/"
 layout: api
 ---
 

@@ -2,8 +2,6 @@
 title: "advisor"
 title_tag: "azure-native.advisor"
 meta_desc: "Explore the resources and functions of the azure-native.advisor module."
-aliases:
-    - "docs/reference/pkg/azure-native/"
 layout: api
 ---
 

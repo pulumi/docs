@@ -3,8 +3,6 @@
 title: "getClient"
 title_tag: "gcp.iap.getClient"
 meta_desc: "Documentation for the gcp.iap.getClient function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

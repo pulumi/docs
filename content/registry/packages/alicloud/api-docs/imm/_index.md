@@ -2,8 +2,6 @@
 title: "imm"
 title_tag: "alicloud.imm"
 meta_desc: "Explore the resources and functions of the alicloud.imm module."
-aliases:
-    - "docs/reference/pkg/alicloud/"
 layout: api
 ---
 

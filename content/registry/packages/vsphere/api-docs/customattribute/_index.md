@@ -3,8 +3,6 @@
 title: "CustomAttribute"
 title_tag: "vsphere.CustomAttribute"
 meta_desc: "Documentation for the vsphere.CustomAttribute resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/vsphere/CustomAttribute/"
 layout: api
 ---
 

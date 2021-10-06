@@ -3,8 +3,6 @@
 title: "Record"
 title_tag: "cloudflare.Record"
 meta_desc: "Documentation for the cloudflare.Record resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/cloudflare/Record/"
 layout: api
 ---
 

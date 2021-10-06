@@ -2,8 +2,6 @@
 title: "acmpca"
 title_tag: "aws-native.acmpca"
 meta_desc: "Explore the resources and functions of the aws-native.acmpca module."
-aliases:
-    - "docs/reference/pkg/aws-native/"
 layout: api
 ---
 

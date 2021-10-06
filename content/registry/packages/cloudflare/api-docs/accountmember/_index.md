@@ -3,8 +3,6 @@
 title: "AccountMember"
 title_tag: "cloudflare.AccountMember"
 meta_desc: "Documentation for the cloudflare.AccountMember resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/cloudflare/AccountMember/"
 layout: api
 ---
 

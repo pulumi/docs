@@ -3,8 +3,6 @@
 title: "getTargetTcpProxy"
 title_tag: "google-native.compute/beta.getTargetTcpProxy"
 meta_desc: "Documentation for the google-native.compute/beta.getTargetTcpProxy function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

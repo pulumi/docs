@@ -3,8 +3,6 @@
 title: "ServiceEndpointPolicyDefinition"
 title_tag: "azure-native.network.ServiceEndpointPolicyDefinition"
 meta_desc: "Documentation for the azure-native.network.ServiceEndpointPolicyDefinition resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/ServiceEndpointPolicyDefinition/"
 layout: api
 ---
 

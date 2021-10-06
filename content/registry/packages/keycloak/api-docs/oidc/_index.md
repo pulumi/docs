@@ -2,8 +2,6 @@
 title: "oidc"
 title_tag: "keycloak.oidc"
 meta_desc: "Explore the resources and functions of the keycloak.oidc module."
-aliases:
-    - "docs/reference/pkg/keycloak/"
 layout: api
 ---
 

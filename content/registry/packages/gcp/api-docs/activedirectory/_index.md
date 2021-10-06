@@ -2,8 +2,6 @@
 title: "activedirectory"
 title_tag: "gcp.activedirectory"
 meta_desc: "Explore the resources and functions of the gcp.activedirectory module."
-aliases:
-    - "docs/reference/pkg/gcp/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "AclBindingRule"
 title_tag: "consul.AclBindingRule"
 meta_desc: "Documentation for the consul.AclBindingRule resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/consul/AclBindingRule/"
 layout: api
 ---
 

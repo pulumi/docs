@@ -3,8 +3,6 @@
 title: "TagValueIamBinding"
 title_tag: "gcp.tags.TagValueIamBinding"
 meta_desc: "Documentation for the gcp.tags.TagValueIamBinding resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/TagValueIamBinding/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "getAccount"
 title_tag: "linode.getAccount"
 meta_desc: "Documentation for the linode.getAccount function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

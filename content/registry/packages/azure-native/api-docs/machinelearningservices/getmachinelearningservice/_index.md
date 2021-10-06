@@ -3,8 +3,6 @@
 title: "getMachineLearningService"
 title_tag: "azure-native.machinelearningservices.getMachineLearningService"
 meta_desc: "Documentation for the azure-native.machinelearningservices.getMachineLearningService function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "DefaultNetworkAcl"
 title_tag: "aws.ec2.DefaultNetworkAcl"
 meta_desc: "Documentation for the aws.ec2.DefaultNetworkAcl resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/DefaultNetworkAcl/"
 layout: api
 ---
 

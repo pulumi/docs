@@ -2,8 +2,6 @@
 title: "autoscaling"
 title_tag: "aws-native.autoscaling"
 meta_desc: "Explore the resources and functions of the aws-native.autoscaling module."
-aliases:
-    - "docs/reference/pkg/aws-native/"
 layout: api
 ---
 

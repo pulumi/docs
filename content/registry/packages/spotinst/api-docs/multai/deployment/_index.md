@@ -3,8 +3,6 @@
 title: "Deployment"
 title_tag: "spotinst.multai.Deployment"
 meta_desc: "Documentation for the spotinst.multai.Deployment resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/spotinst/Deployment/"
 layout: api
 ---
 

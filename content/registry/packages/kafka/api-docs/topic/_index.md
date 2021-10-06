@@ -3,8 +3,6 @@
 title: "Topic"
 title_tag: "kafka.Topic"
 meta_desc: "Documentation for the kafka.Topic resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/kafka/Topic/"
 layout: api
 ---
 

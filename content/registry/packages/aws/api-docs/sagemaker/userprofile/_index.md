@@ -3,8 +3,6 @@
 title: "UserProfile"
 title_tag: "aws.sagemaker.UserProfile"
 meta_desc: "Documentation for the aws.sagemaker.UserProfile resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/UserProfile/"
 layout: api
 ---
 

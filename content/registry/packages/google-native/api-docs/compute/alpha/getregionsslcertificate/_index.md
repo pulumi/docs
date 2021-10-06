@@ -3,8 +3,6 @@
 title: "getRegionSslCertificate"
 title_tag: "google-native.compute/alpha.getRegionSslCertificate"
 meta_desc: "Documentation for the google-native.compute/alpha.getRegionSslCertificate function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

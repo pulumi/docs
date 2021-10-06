@@ -2,8 +2,6 @@
 title: "schemas"
 title_tag: "aws.schemas"
 meta_desc: "Explore the resources and functions of the aws.schemas module."
-aliases:
-    - "docs/reference/pkg/aws/"
 layout: api
 ---
 

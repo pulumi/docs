@@ -3,8 +3,6 @@
 title: "CustomHostnameFallbackOrigin"
 title_tag: "cloudflare.CustomHostnameFallbackOrigin"
 meta_desc: "Documentation for the cloudflare.CustomHostnameFallbackOrigin resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/cloudflare/CustomHostnameFallbackOrigin/"
 layout: api
 ---
 

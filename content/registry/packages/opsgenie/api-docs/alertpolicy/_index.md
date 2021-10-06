@@ -3,8 +3,6 @@
 title: "AlertPolicy"
 title_tag: "opsgenie.AlertPolicy"
 meta_desc: "Documentation for the opsgenie.AlertPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/opsgenie/AlertPolicy/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "AppSecSelectedHostnames"
 title_tag: "akamai.AppSecSelectedHostnames"
 meta_desc: "Documentation for the akamai.AppSecSelectedHostnames resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/akamai/AppSecSelectedHostnames/"
 layout: api
 ---
 

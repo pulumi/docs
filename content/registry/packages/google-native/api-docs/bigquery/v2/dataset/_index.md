@@ -3,8 +3,6 @@
 title: "Dataset"
 title_tag: "google-native.bigquery/v2.Dataset"
 meta_desc: "Documentation for the google-native.bigquery/v2.Dataset resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/google-native/Dataset/"
 layout: api
 ---
 

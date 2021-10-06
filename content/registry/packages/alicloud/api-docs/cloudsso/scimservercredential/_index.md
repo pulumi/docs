@@ -3,8 +3,6 @@
 title: "ScimServerCredential"
 title_tag: "alicloud.cloudsso.ScimServerCredential"
 meta_desc: "Documentation for the alicloud.cloudsso.ScimServerCredential resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/alicloud/ScimServerCredential/"
 layout: api
 ---
 

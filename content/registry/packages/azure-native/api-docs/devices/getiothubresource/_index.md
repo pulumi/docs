@@ -3,8 +3,6 @@
 title: "getIotHubResource"
 title_tag: "azure-native.devices.getIotHubResource"
 meta_desc: "Documentation for the azure-native.devices.getIotHubResource function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "RegionBackendService"
 title_tag: "gcp.compute.RegionBackendService"
 meta_desc: "Documentation for the gcp.compute.RegionBackendService resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/RegionBackendService/"
 layout: api
 ---
 

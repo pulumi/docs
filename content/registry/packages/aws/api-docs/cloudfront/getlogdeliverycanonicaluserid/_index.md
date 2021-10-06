@@ -3,8 +3,6 @@
 title: "getLogDeliveryCanonicalUserId"
 title_tag: "aws.cloudfront.getLogDeliveryCanonicalUserId"
 meta_desc: "Documentation for the aws.cloudfront.getLogDeliveryCanonicalUserId function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

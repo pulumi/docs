@@ -3,8 +3,6 @@
 title: "RouteMap"
 title_tag: "alicloud.cen.RouteMap"
 meta_desc: "Documentation for the alicloud.cen.RouteMap resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/alicloud/RouteMap/"
 layout: api
 ---
 

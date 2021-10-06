@@ -3,8 +3,6 @@
 title: "BlobContainerImmutabilityPolicy"
 title_tag: "azure-native.storage.BlobContainerImmutabilityPolicy"
 meta_desc: "Documentation for the azure-native.storage.BlobContainerImmutabilityPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/BlobContainerImmutabilityPolicy/"
 layout: api
 ---
 

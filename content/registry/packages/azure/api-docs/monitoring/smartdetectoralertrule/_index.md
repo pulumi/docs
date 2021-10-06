@@ -3,8 +3,6 @@
 title: "SmartDetectorAlertRule"
 title_tag: "azure.monitoring.SmartDetectorAlertRule"
 meta_desc: "Documentation for the azure.monitoring.SmartDetectorAlertRule resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/SmartDetectorAlertRule/"
 layout: api
 ---
 

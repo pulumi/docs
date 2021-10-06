@@ -3,8 +3,6 @@
 title: "Job"
 title_tag: "google-native.dataflow/v1b3.Job"
 meta_desc: "Documentation for the google-native.dataflow/v1b3.Job resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/google-native/Job/"
 layout: api
 ---
 

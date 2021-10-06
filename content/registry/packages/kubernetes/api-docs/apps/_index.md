@@ -2,8 +2,6 @@
 title: "apps"
 title_tag: "apps Package"
 meta_desc: ""
-aliases:
-    - "docs/reference/pkg/kubernetes/"
 layout: api
 ---
 

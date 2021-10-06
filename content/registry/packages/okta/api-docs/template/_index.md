@@ -2,8 +2,6 @@
 title: "template"
 title_tag: "okta.template"
 meta_desc: "Explore the resources and functions of the okta.template module."
-aliases:
-    - "docs/reference/pkg/okta/"
 layout: api
 ---
 

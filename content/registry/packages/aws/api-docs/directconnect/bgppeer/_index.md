@@ -3,8 +3,6 @@
 title: "BgpPeer"
 title_tag: "aws.directconnect.BgpPeer"
 meta_desc: "Documentation for the aws.directconnect.BgpPeer resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/BgpPeer/"
 layout: api
 ---
 

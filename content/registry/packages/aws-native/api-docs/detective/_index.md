@@ -2,8 +2,6 @@
 title: "detective"
 title_tag: "aws-native.detective"
 meta_desc: "Explore the resources and functions of the aws-native.detective module."
-aliases:
-    - "docs/reference/pkg/aws-native/"
 layout: api
 ---
 

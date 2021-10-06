@@ -3,8 +3,6 @@
 title: "getSubnet"
 title_tag: "aws.ec2.getSubnet"
 meta_desc: "Documentation for the aws.ec2.getSubnet function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

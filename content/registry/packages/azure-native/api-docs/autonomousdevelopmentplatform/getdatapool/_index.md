@@ -3,8 +3,6 @@
 title: "getDataPool"
 title_tag: "azure-native.autonomousdevelopmentplatform.getDataPool"
 meta_desc: "Documentation for the azure-native.autonomousdevelopmentplatform.getDataPool function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

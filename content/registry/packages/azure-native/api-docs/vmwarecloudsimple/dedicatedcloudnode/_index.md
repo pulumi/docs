@@ -3,8 +3,6 @@
 title: "DedicatedCloudNode"
 title_tag: "azure-native.vmwarecloudsimple.DedicatedCloudNode"
 meta_desc: "Documentation for the azure-native.vmwarecloudsimple.DedicatedCloudNode resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/DedicatedCloudNode/"
 layout: api
 ---
 

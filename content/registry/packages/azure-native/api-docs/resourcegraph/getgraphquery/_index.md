@@ -3,8 +3,6 @@
 title: "getGraphQuery"
 title_tag: "azure-native.resourcegraph.getGraphQuery"
 meta_desc: "Documentation for the azure-native.resourcegraph.getGraphQuery function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

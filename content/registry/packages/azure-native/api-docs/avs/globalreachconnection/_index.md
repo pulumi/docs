@@ -3,8 +3,6 @@
 title: "GlobalReachConnection"
 title_tag: "azure-native.avs.GlobalReachConnection"
 meta_desc: "Documentation for the azure-native.avs.GlobalReachConnection resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/GlobalReachConnection/"
 layout: api
 ---
 

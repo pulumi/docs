@@ -3,8 +3,6 @@
 title: "getKubernetesVersion"
 title_tag: "civo.getKubernetesVersion"
 meta_desc: "Documentation for the civo.getKubernetesVersion function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

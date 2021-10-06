@@ -3,8 +3,6 @@
 title: "Channel"
 title_tag: "azure-native.botservice.Channel"
 meta_desc: "Documentation for the azure-native.botservice.Channel resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/Channel/"
 layout: api
 ---
 

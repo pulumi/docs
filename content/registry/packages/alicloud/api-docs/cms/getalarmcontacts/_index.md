@@ -3,8 +3,6 @@
 title: "getAlarmContacts"
 title_tag: "alicloud.cms.getAlarmContacts"
 meta_desc: "Documentation for the alicloud.cms.getAlarmContacts function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

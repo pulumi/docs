@@ -2,8 +2,6 @@
 title: "hybridcompute"
 title_tag: "azure-native.hybridcompute"
 meta_desc: "Explore the resources and functions of the azure-native.hybridcompute module."
-aliases:
-    - "docs/reference/pkg/azure-native/"
 layout: api
 ---
 

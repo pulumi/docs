@@ -3,8 +3,6 @@
 title: "getDicomService"
 title_tag: "azure-native.healthcareapis.getDicomService"
 meta_desc: "Documentation for the azure-native.healthcareapis.getDicomService function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

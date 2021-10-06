@@ -2,8 +2,6 @@
 title: "offazure"
 title_tag: "azure-native.offazure"
 meta_desc: "Explore the resources and functions of the azure-native.offazure module."
-aliases:
-    - "docs/reference/pkg/azure-native/"
 layout: api
 ---
 

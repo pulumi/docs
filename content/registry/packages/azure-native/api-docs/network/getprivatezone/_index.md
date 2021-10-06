@@ -3,8 +3,6 @@
 title: "getPrivateZone"
 title_tag: "azure-native.network.getPrivateZone"
 meta_desc: "Documentation for the azure-native.network.getPrivateZone function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

@@ -2,8 +2,6 @@
 title: "resourcemanager"
 title_tag: "alicloud.resourcemanager"
 meta_desc: "Explore the resources and functions of the alicloud.resourcemanager module."
-aliases:
-    - "docs/reference/pkg/alicloud/"
 layout: api
 ---
 

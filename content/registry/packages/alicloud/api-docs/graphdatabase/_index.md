@@ -2,8 +2,6 @@
 title: "graphdatabase"
 title_tag: "alicloud.graphdatabase"
 meta_desc: "Explore the resources and functions of the alicloud.graphdatabase module."
-aliases:
-    - "docs/reference/pkg/alicloud/"
 layout: api
 ---
 

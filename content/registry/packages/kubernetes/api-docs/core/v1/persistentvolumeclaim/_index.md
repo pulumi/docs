@@ -3,8 +3,6 @@
 title: "PersistentVolumeClaim"
 title_tag: "kubernetes.core/v1.PersistentVolumeClaim"
 meta_desc: "Documentation for the kubernetes.core/v1.PersistentVolumeClaim resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/kubernetes/PersistentVolumeClaim/"
 layout: api
 ---
 

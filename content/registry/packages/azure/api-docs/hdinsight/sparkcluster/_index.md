@@ -3,8 +3,6 @@
 title: "SparkCluster"
 title_tag: "azure.hdinsight.SparkCluster"
 meta_desc: "Documentation for the azure.hdinsight.SparkCluster resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/SparkCluster/"
 layout: api
 ---
 

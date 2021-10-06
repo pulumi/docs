@@ -3,8 +3,6 @@
 title: "TimeChart"
 title_tag: "signalfx.TimeChart"
 meta_desc: "Documentation for the signalfx.TimeChart resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/signalfx/TimeChart/"
 layout: api
 ---
 

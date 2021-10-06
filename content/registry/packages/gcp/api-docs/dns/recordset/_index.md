@@ -3,8 +3,6 @@
 title: "RecordSet"
 title_tag: "gcp.dns.RecordSet"
 meta_desc: "Documentation for the gcp.dns.RecordSet resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/RecordSet/"
 layout: api
 ---
 

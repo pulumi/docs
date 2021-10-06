@@ -3,8 +3,6 @@
 title: "AccountNetworkRules"
 title_tag: "azure.storage.AccountNetworkRules"
 meta_desc: "Documentation for the azure.storage.AccountNetworkRules resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/AccountNetworkRules/"
 layout: api
 ---
 

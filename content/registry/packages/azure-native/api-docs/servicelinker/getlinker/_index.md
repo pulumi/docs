@@ -3,8 +3,6 @@
 title: "getLinker"
 title_tag: "azure-native.servicelinker.getLinker"
 meta_desc: "Documentation for the azure-native.servicelinker.getLinker function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

@@ -2,8 +2,6 @@
 title: "managementresource"
 title_tag: "azure.managementresource"
 meta_desc: "Explore the resources and functions of the azure.managementresource module."
-aliases:
-    - "docs/reference/pkg/azure/"
 layout: api
 ---
 

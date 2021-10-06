@@ -3,8 +3,6 @@
 title: "Address"
 title_tag: "gcp.compute.Address"
 meta_desc: "Documentation for the gcp.compute.Address resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/Address/"
 layout: api
 ---
 

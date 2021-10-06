@@ -2,8 +2,6 @@
 title: "bigquerydatatransfer/v1"
 title_tag: "google-native.bigquerydatatransfer/v1"
 meta_desc: "Explore the resources and functions of the google-native.bigquerydatatransfer/v1 module."
-aliases:
-    - "docs/reference/pkg/google-native/"
 layout: api
 ---
 

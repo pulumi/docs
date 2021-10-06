@@ -3,8 +3,6 @@
 title: "getTopics"
 title_tag: "alicloud.rocketmq.getTopics"
 meta_desc: "Documentation for the alicloud.rocketmq.getTopics function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

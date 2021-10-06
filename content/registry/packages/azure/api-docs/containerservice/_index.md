@@ -2,8 +2,6 @@
 title: "containerservice"
 title_tag: "azure.containerservice"
 meta_desc: "Explore the resources and functions of the azure.containerservice module."
-aliases:
-    - "docs/reference/pkg/azure/"
 layout: api
 ---
 

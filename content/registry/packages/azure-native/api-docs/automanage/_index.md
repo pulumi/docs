@@ -2,8 +2,6 @@
 title: "automanage"
 title_tag: "azure-native.automanage"
 meta_desc: "Explore the resources and functions of the azure-native.automanage module."
-aliases:
-    - "docs/reference/pkg/azure-native/"
 layout: api
 ---
 

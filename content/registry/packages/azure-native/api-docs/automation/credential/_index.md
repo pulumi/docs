@@ -3,8 +3,6 @@
 title: "Credential"
 title_tag: "azure-native.automation.Credential"
 meta_desc: "Documentation for the azure-native.automation.Credential resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/Credential/"
 layout: api
 ---
 

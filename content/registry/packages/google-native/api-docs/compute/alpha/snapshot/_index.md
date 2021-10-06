@@ -3,8 +3,6 @@
 title: "Snapshot"
 title_tag: "google-native.compute/alpha.Snapshot"
 meta_desc: "Documentation for the google-native.compute/alpha.Snapshot resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/google-native/Snapshot/"
 layout: api
 ---
 

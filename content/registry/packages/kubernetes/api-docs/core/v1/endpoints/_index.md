@@ -3,8 +3,6 @@
 title: "Endpoints"
 title_tag: "kubernetes.core/v1.Endpoints"
 meta_desc: "Documentation for the kubernetes.core/v1.Endpoints resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/kubernetes/Endpoints/"
 layout: api
 ---
 

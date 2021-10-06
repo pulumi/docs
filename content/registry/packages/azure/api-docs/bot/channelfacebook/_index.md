@@ -3,8 +3,6 @@
 title: "ChannelFacebook"
 title_tag: "azure.bot.ChannelFacebook"
 meta_desc: "Documentation for the azure.bot.ChannelFacebook resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/ChannelFacebook/"
 layout: api
 ---
 

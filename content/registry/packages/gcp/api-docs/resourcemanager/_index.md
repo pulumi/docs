@@ -2,8 +2,6 @@
 title: "resourcemanager"
 title_tag: "gcp.resourcemanager"
 meta_desc: "Explore the resources and functions of the gcp.resourcemanager module."
-aliases:
-    - "docs/reference/pkg/gcp/"
 layout: api
 ---
 

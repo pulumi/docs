@@ -2,8 +2,6 @@
 title: "websecurityscanner"
 title_tag: "websecurityscanner Package"
 meta_desc: ""
-aliases:
-    - "docs/reference/pkg/google-native/"
 layout: api
 ---
 

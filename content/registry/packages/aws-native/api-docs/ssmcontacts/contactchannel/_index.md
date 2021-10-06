@@ -3,8 +3,6 @@
 title: "ContactChannel"
 title_tag: "aws-native.ssmcontacts.ContactChannel"
 meta_desc: "Documentation for the aws-native.ssmcontacts.ContactChannel resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws-native/ContactChannel/"
 layout: api
 ---
 

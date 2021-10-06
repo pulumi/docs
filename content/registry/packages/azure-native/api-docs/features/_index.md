@@ -2,8 +2,6 @@
 title: "features"
 title_tag: "azure-native.features"
 meta_desc: "Explore the resources and functions of the azure-native.features module."
-aliases:
-    - "docs/reference/pkg/azure-native/"
 layout: api
 ---
 

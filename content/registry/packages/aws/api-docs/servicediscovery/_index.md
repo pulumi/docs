@@ -2,8 +2,6 @@
 title: "servicediscovery"
 title_tag: "aws.servicediscovery"
 meta_desc: "Explore the resources and functions of the aws.servicediscovery module."
-aliases:
-    - "docs/reference/pkg/aws/"
 layout: api
 ---
 

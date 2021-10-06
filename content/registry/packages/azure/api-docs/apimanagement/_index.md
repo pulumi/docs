@@ -2,8 +2,6 @@
 title: "apimanagement"
 title_tag: "azure.apimanagement"
 meta_desc: "Explore the resources and functions of the azure.apimanagement module."
-aliases:
-    - "docs/reference/pkg/azure/"
 layout: api
 ---
 

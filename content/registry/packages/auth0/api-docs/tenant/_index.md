@@ -3,8 +3,6 @@
 title: "Tenant"
 title_tag: "auth0.Tenant"
 meta_desc: "Documentation for the auth0.Tenant resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/auth0/Tenant/"
 layout: api
 ---
 

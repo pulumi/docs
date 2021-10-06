@@ -2,8 +2,6 @@
 title: "connect"
 title_tag: "aws-native.connect"
 meta_desc: "Explore the resources and functions of the aws-native.connect module."
-aliases:
-    - "docs/reference/pkg/aws-native/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "getArcSetting"
 title_tag: "azure-native.azurestackhci.getArcSetting"
 meta_desc: "Documentation for the azure-native.azurestackhci.getArcSetting function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "Account"
 title_tag: "azure.datashare.Account"
 meta_desc: "Documentation for the azure.datashare.Account resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/Account/"
 layout: api
 ---
 

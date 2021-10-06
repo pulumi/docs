@@ -3,8 +3,6 @@
 title: "SslCert"
 title_tag: "gcp.sql.SslCert"
 meta_desc: "Documentation for the gcp.sql.SslCert resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/SslCert/"
 layout: api
 ---
 

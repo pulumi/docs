@@ -3,8 +3,6 @@
 title: "getRegistrationIamPolicy"
 title_tag: "google-native.domains/v1alpha2.getRegistrationIamPolicy"
 meta_desc: "Documentation for the google-native.domains/v1alpha2.getRegistrationIamPolicy function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

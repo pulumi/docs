@@ -3,8 +3,6 @@
 title: "Table"
 title_tag: "azure-native.storage.Table"
 meta_desc: "Documentation for the azure-native.storage.Table resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/Table/"
 layout: api
 ---
 

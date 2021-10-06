@@ -3,8 +3,6 @@
 title: "Queue"
 title_tag: "rabbitmq.Queue"
 meta_desc: "Documentation for the rabbitmq.Queue resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/rabbitmq/Queue/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "Container"
 title_tag: "aws.mediastore.Container"
 meta_desc: "Documentation for the aws.mediastore.Container resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/Container/"
 layout: api
 ---
 

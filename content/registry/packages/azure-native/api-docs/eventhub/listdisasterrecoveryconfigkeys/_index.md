@@ -3,8 +3,6 @@
 title: "listDisasterRecoveryConfigKeys"
 title_tag: "azure-native.eventhub.listDisasterRecoveryConfigKeys"
 meta_desc: "Documentation for the azure-native.eventhub.listDisasterRecoveryConfigKeys function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

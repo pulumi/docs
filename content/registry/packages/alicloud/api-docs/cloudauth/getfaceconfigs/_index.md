@@ -3,8 +3,6 @@
 title: "getFaceConfigs"
 title_tag: "alicloud.cloudauth.getFaceConfigs"
 meta_desc: "Documentation for the alicloud.cloudauth.getFaceConfigs function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

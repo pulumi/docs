@@ -2,8 +2,6 @@
 title: "ddos"
 title_tag: "alicloud.ddos"
 meta_desc: "Explore the resources and functions of the alicloud.ddos module."
-aliases:
-    - "docs/reference/pkg/alicloud/"
 layout: api
 ---
 

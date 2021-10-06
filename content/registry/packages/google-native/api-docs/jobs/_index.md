@@ -2,8 +2,6 @@
 title: "jobs"
 title_tag: "jobs Package"
 meta_desc: ""
-aliases:
-    - "docs/reference/pkg/google-native/"
 layout: api
 ---
 

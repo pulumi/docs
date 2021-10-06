@@ -3,8 +3,6 @@
 title: "FavoriteProcess"
 title_tag: "azure-native.testbase.FavoriteProcess"
 meta_desc: "Documentation for the azure-native.testbase.FavoriteProcess resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/FavoriteProcess/"
 layout: api
 ---
 

@@ -2,8 +2,6 @@
 title: "bigquery"
 title_tag: "bigquery Package"
 meta_desc: ""
-aliases:
-    - "docs/reference/pkg/google-native/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "Endpoint"
 title_tag: "google-native.servicedirectory/v1beta1.Endpoint"
 meta_desc: "Documentation for the google-native.servicedirectory/v1beta1.Endpoint resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/google-native/Endpoint/"
 layout: api
 ---
 

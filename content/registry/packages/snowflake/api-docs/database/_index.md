@@ -3,8 +3,6 @@
 title: "Database"
 title_tag: "snowflake.Database"
 meta_desc: "Documentation for the snowflake.Database resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/snowflake/Database/"
 layout: api
 ---
 

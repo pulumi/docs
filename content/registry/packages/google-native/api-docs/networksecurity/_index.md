@@ -2,8 +2,6 @@
 title: "networksecurity"
 title_tag: "networksecurity Package"
 meta_desc: ""
-aliases:
-    - "docs/reference/pkg/google-native/"
 layout: api
 ---
 

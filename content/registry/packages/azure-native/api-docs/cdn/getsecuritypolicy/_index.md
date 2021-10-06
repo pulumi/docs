@@ -3,8 +3,6 @@
 title: "getSecurityPolicy"
 title_tag: "azure-native.cdn.getSecurityPolicy"
 meta_desc: "Documentation for the azure-native.cdn.getSecurityPolicy function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

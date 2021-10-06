@@ -3,8 +3,6 @@
 title: "PrivateEndpointConnectionByName"
 title_tag: "azure-native.apimanagement.PrivateEndpointConnectionByName"
 meta_desc: "Documentation for the azure-native.apimanagement.PrivateEndpointConnectionByName resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/PrivateEndpointConnectionByName/"
 layout: api
 ---
 

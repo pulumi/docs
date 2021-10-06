@@ -3,8 +3,6 @@
 title: "VpnGateway"
 title_tag: "azure.network.VpnGateway"
 meta_desc: "Documentation for the azure.network.VpnGateway resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/VpnGateway/"
 layout: api
 ---
 

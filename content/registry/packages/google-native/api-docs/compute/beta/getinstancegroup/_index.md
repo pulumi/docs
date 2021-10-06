@@ -3,8 +3,6 @@
 title: "getInstanceGroup"
 title_tag: "google-native.compute/beta.getInstanceGroup"
 meta_desc: "Documentation for the google-native.compute/beta.getInstanceGroup function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

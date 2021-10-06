@@ -3,8 +3,6 @@
 title: "RepositoryIamPolicy"
 title_tag: "gcp.artifactregistry.RepositoryIamPolicy"
 meta_desc: "Documentation for the gcp.artifactregistry.RepositoryIamPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/RepositoryIamPolicy/"
 layout: api
 ---
 

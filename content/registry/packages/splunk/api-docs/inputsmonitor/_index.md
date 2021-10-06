@@ -3,8 +3,6 @@
 title: "InputsMonitor"
 title_tag: "splunk.InputsMonitor"
 meta_desc: "Documentation for the splunk.InputsMonitor resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/splunk/InputsMonitor/"
 layout: api
 ---
 

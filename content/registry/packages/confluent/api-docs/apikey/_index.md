@@ -3,8 +3,6 @@
 title: "ApiKey"
 title_tag: "confluent.ApiKey"
 meta_desc: "Documentation for the confluent.ApiKey resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/confluent/ApiKey/"
 layout: api
 ---
 

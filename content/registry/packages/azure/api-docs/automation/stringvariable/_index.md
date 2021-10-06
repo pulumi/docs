@@ -3,8 +3,6 @@
 title: "StringVariable"
 title_tag: "azure.automation.StringVariable"
 meta_desc: "Documentation for the azure.automation.StringVariable resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/StringVariable/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "Deployment"
 title_tag: "aws.appconfig.Deployment"
 meta_desc: "Documentation for the aws.appconfig.Deployment resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/Deployment/"
 layout: api
 ---
 

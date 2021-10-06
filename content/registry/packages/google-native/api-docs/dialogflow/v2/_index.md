@@ -2,8 +2,6 @@
 title: "dialogflow/v2"
 title_tag: "google-native.dialogflow/v2"
 meta_desc: "Explore the resources and functions of the google-native.dialogflow/v2 module."
-aliases:
-    - "docs/reference/pkg/google-native/"
 layout: api
 ---
 

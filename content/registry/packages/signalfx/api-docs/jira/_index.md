@@ -2,8 +2,6 @@
 title: "jira"
 title_tag: "signalfx.jira"
 meta_desc: "Explore the resources and functions of the signalfx.jira module."
-aliases:
-    - "docs/reference/pkg/signalfx/"
 layout: api
 ---
 

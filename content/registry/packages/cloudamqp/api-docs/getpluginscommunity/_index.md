@@ -3,8 +3,6 @@
 title: "getPluginsCommunity"
 title_tag: "cloudamqp.getPluginsCommunity"
 meta_desc: "Documentation for the cloudamqp.getPluginsCommunity function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

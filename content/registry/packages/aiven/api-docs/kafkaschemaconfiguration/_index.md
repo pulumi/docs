@@ -3,8 +3,6 @@
 title: "KafkaSchemaConfiguration"
 title_tag: "aiven.KafkaSchemaConfiguration"
 meta_desc: "Documentation for the aiven.KafkaSchemaConfiguration resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aiven/KafkaSchemaConfiguration/"
 layout: api
 ---
 

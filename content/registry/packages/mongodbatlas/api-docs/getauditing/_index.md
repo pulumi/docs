@@ -3,8 +3,6 @@
 title: "getAuditing"
 title_tag: "mongodbatlas.getAuditing"
 meta_desc: "Documentation for the mongodbatlas.getAuditing function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "getRole"
 title_tag: "keycloak.getRole"
 meta_desc: "Documentation for the keycloak.getRole function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

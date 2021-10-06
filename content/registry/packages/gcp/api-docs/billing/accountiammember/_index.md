@@ -3,8 +3,6 @@
 title: "AccountIamMember"
 title_tag: "gcp.billing.AccountIamMember"
 meta_desc: "Documentation for the gcp.billing.AccountIamMember resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/AccountIamMember/"
 layout: api
 ---
 

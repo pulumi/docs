@@ -2,8 +2,6 @@
 title: "datastore"
 title_tag: "datastore Package"
 meta_desc: ""
-aliases:
-    - "docs/reference/pkg/google-native/"
 layout: api
 ---
 

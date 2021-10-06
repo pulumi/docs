@@ -3,8 +3,6 @@
 title: "Dashboard"
 title_tag: "gcp.monitoring.Dashboard"
 meta_desc: "Documentation for the gcp.monitoring.Dashboard resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/Dashboard/"
 layout: api
 ---
 

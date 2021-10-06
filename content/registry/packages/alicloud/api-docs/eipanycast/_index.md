@@ -2,8 +2,6 @@
 title: "eipanycast"
 title_tag: "alicloud.eipanycast"
 meta_desc: "Explore the resources and functions of the alicloud.eipanycast module."
-aliases:
-    - "docs/reference/pkg/alicloud/"
 layout: api
 ---
 

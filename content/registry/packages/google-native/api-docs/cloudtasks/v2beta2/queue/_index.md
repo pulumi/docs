@@ -3,8 +3,6 @@
 title: "Queue"
 title_tag: "google-native.cloudtasks/v2beta2.Queue"
 meta_desc: "Documentation for the google-native.cloudtasks/v2beta2.Queue resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/google-native/Queue/"
 layout: api
 ---
 

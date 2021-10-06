@@ -3,8 +3,6 @@
 title: "ServiceEventRule"
 title_tag: "pagerduty.ServiceEventRule"
 meta_desc: "Documentation for the pagerduty.ServiceEventRule resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/pagerduty/ServiceEventRule/"
 layout: api
 ---
 

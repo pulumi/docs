@@ -3,8 +3,6 @@
 title: "RegionInstantSnapshotIamPolicy"
 title_tag: "google-native.compute/alpha.RegionInstantSnapshotIamPolicy"
 meta_desc: "Documentation for the google-native.compute/alpha.RegionInstantSnapshotIamPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/google-native/RegionInstantSnapshotIamPolicy/"
 layout: api
 ---
 

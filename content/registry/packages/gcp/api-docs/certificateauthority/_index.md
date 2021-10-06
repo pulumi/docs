@@ -2,8 +2,6 @@
 title: "certificateauthority"
 title_tag: "gcp.certificateauthority"
 meta_desc: "Explore the resources and functions of the gcp.certificateauthority module."
-aliases:
-    - "docs/reference/pkg/gcp/"
 layout: api
 ---
 

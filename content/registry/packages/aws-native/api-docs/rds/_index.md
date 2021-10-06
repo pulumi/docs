@@ -2,8 +2,6 @@
 title: "rds"
 title_tag: "aws-native.rds"
 meta_desc: "Explore the resources and functions of the aws-native.rds module."
-aliases:
-    - "docs/reference/pkg/aws-native/"
 layout: api
 ---
 

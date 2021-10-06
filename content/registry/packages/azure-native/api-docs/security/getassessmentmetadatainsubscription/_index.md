@@ -3,8 +3,6 @@
 title: "getAssessmentMetadataInSubscription"
 title_tag: "azure-native.security.getAssessmentMetadataInSubscription"
 meta_desc: "Documentation for the azure-native.security.getAssessmentMetadataInSubscription function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

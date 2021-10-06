@@ -3,8 +3,6 @@
 title: "getRecord"
 title_tag: "ns1.getRecord"
 meta_desc: "Documentation for the ns1.getRecord function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "SecurityPolicy"
 title_tag: "azure-native.cdn.SecurityPolicy"
 meta_desc: "Documentation for the azure-native.cdn.SecurityPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/SecurityPolicy/"
 layout: api
 ---
 

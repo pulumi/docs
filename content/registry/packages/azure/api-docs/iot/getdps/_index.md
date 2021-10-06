@@ -3,8 +3,6 @@
 title: "getDps"
 title_tag: "azure.iot.getDps"
 meta_desc: "Documentation for the azure.iot.getDps function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "getDbInstances"
 title_tag: "alicloud.graphdatabase.getDbInstances"
 meta_desc: "Documentation for the alicloud.graphdatabase.getDbInstances function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

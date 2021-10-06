@@ -3,8 +3,6 @@
 title: "FeatureIamPolicy"
 title_tag: "google-native.gkehub/v1.FeatureIamPolicy"
 meta_desc: "Documentation for the google-native.gkehub/v1.FeatureIamPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/google-native/FeatureIamPolicy/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "AlertRuleMachineLearningBehaviorAnalytics"
 title_tag: "azure.sentinel.AlertRuleMachineLearningBehaviorAnalytics"
 meta_desc: "Documentation for the azure.sentinel.AlertRuleMachineLearningBehaviorAnalytics resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/AlertRuleMachineLearningBehaviorAnalytics/"
 layout: api
 ---
 

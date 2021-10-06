@@ -3,8 +3,6 @@
 title: "getKMSSecret"
 title_tag: "gcp.kms.getKMSSecret"
 meta_desc: "Documentation for the gcp.kms.getKMSSecret function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "BucketNotification"
 title_tag: "aws.s3.BucketNotification"
 meta_desc: "Documentation for the aws.s3.BucketNotification resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/BucketNotification/"
 layout: api
 ---
 

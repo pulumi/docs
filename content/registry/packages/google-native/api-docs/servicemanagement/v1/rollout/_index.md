@@ -3,8 +3,6 @@
 title: "Rollout"
 title_tag: "google-native.servicemanagement/v1.Rollout"
 meta_desc: "Documentation for the google-native.servicemanagement/v1.Rollout resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/google-native/Rollout/"
 layout: api
 ---
 

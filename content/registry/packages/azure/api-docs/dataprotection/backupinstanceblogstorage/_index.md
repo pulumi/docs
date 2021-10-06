@@ -3,8 +3,6 @@
 title: "BackupInstanceBlogStorage"
 title_tag: "azure.dataprotection.BackupInstanceBlogStorage"
 meta_desc: "Documentation for the azure.dataprotection.BackupInstanceBlogStorage resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/BackupInstanceBlogStorage/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "getImage"
 title_tag: "azure.compute.getImage"
 meta_desc: "Documentation for the azure.compute.getImage function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

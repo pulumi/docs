@@ -3,8 +3,6 @@
 title: "RoleAssignment"
 title_tag: "azure.synapse.RoleAssignment"
 meta_desc: "Documentation for the azure.synapse.RoleAssignment resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/RoleAssignment/"
 layout: api
 ---
 

@@ -2,8 +2,6 @@
 title: "codestarnotifications"
 title_tag: "aws.codestarnotifications"
 meta_desc: "Explore the resources and functions of the aws.codestarnotifications module."
-aliases:
-    - "docs/reference/pkg/aws/"
 layout: api
 ---
 

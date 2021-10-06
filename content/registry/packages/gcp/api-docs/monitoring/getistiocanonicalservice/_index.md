@@ -3,8 +3,6 @@
 title: "getIstioCanonicalService"
 title_tag: "gcp.monitoring.getIstioCanonicalService"
 meta_desc: "Documentation for the gcp.monitoring.getIstioCanonicalService function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

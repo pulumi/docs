@@ -3,8 +3,6 @@
 title: "getFirewall"
 title_tag: "digitalocean.getFirewall"
 meta_desc: "Documentation for the digitalocean.getFirewall function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

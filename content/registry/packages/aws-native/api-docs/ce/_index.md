@@ -2,8 +2,6 @@
 title: "ce"
 title_tag: "aws-native.ce"
 meta_desc: "Explore the resources and functions of the aws-native.ce module."
-aliases:
-    - "docs/reference/pkg/aws-native/"
 layout: api
 ---
 

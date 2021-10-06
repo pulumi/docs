@@ -3,8 +3,6 @@
 title: "ZoneVirtualNetworkLink"
 title_tag: "azure.privatedns.ZoneVirtualNetworkLink"
 meta_desc: "Documentation for the azure.privatedns.ZoneVirtualNetworkLink resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/ZoneVirtualNetworkLink/"
 layout: api
 ---
 

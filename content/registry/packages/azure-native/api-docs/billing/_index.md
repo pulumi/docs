@@ -2,8 +2,6 @@
 title: "billing"
 title_tag: "azure-native.billing"
 meta_desc: "Explore the resources and functions of the azure-native.billing module."
-aliases:
-    - "docs/reference/pkg/azure-native/"
 layout: api
 ---
 

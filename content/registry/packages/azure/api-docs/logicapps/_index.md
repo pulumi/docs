@@ -2,8 +2,6 @@
 title: "logicapps"
 title_tag: "azure.logicapps"
 meta_desc: "Explore the resources and functions of the azure.logicapps module."
-aliases:
-    - "docs/reference/pkg/azure/"
 layout: api
 ---
 

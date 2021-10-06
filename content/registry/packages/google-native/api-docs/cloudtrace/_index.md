@@ -2,8 +2,6 @@
 title: "cloudtrace"
 title_tag: "cloudtrace Package"
 meta_desc: ""
-aliases:
-    - "docs/reference/pkg/google-native/"
 layout: api
 ---
 

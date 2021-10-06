@@ -3,8 +3,6 @@
 title: "AzureRM"
 title_tag: "azuredevops.ServiceEndpoint.AzureRM"
 meta_desc: "Documentation for the azuredevops.ServiceEndpoint.AzureRM resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azuredevops/AzureRM/"
 layout: api
 ---
 

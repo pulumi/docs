@@ -3,8 +3,6 @@
 title: "getPrivateEndpointConnectionsComp"
 title_tag: "azure-native.securityandcompliance.getPrivateEndpointConnectionsComp"
 meta_desc: "Documentation for the azure-native.securityandcompliance.getPrivateEndpointConnectionsComp function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

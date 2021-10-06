@@ -3,8 +3,6 @@
 title: "LinkedServiceAzureTableStorage"
 title_tag: "azure.datafactory.LinkedServiceAzureTableStorage"
 meta_desc: "Documentation for the azure.datafactory.LinkedServiceAzureTableStorage resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/LinkedServiceAzureTableStorage/"
 layout: api
 ---
 

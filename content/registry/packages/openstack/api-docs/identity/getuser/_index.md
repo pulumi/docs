@@ -3,8 +3,6 @@
 title: "getUser"
 title_tag: "openstack.identity.getUser"
 meta_desc: "Documentation for the openstack.identity.getUser function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

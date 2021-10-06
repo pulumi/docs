@@ -2,8 +2,6 @@
 title: "acmpca"
 title_tag: "aws.acmpca"
 meta_desc: "Explore the resources and functions of the aws.acmpca module."
-aliases:
-    - "docs/reference/pkg/aws/"
 layout: api
 ---
 

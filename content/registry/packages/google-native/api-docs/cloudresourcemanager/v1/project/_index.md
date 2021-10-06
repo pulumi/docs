@@ -3,8 +3,6 @@
 title: "Project"
 title_tag: "google-native.cloudresourcemanager/v1.Project"
 meta_desc: "Documentation for the google-native.cloudresourcemanager/v1.Project resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/google-native/Project/"
 layout: api
 ---
 

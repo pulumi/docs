@@ -3,8 +3,6 @@
 title: "getImageRecipe"
 title_tag: "aws.imagebuilder.getImageRecipe"
 meta_desc: "Documentation for the aws.imagebuilder.getImageRecipe function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

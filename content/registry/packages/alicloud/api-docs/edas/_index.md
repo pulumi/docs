@@ -2,8 +2,6 @@
 title: "edas"
 title_tag: "alicloud.edas"
 meta_desc: "Explore the resources and functions of the alicloud.edas module."
-aliases:
-    - "docs/reference/pkg/alicloud/"
 layout: api
 ---
 

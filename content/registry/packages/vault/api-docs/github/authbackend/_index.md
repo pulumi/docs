@@ -3,8 +3,6 @@
 title: "AuthBackend"
 title_tag: "vault.github.AuthBackend"
 meta_desc: "Documentation for the vault.github.AuthBackend resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/vault/AuthBackend/"
 layout: api
 ---
 

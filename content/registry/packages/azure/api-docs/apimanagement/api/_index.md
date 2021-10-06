@@ -3,8 +3,6 @@
 title: "Api"
 title_tag: "azure.apimanagement.Api"
 meta_desc: "Documentation for the azure.apimanagement.Api resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/Api/"
 layout: api
 ---
 

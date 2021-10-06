@@ -3,8 +3,6 @@
 title: "Image"
 title_tag: "gcp.compute.Image"
 meta_desc: "Documentation for the gcp.compute.Image resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/Image/"
 layout: api
 ---
 

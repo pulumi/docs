@@ -3,8 +3,6 @@
 title: "Listener"
 title_tag: "aws.elasticloadbalancingv2.Listener"
 meta_desc: "Documentation for the aws.elasticloadbalancingv2.Listener resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/Listener/"
 layout: api
 ---
 

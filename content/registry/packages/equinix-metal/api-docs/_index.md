@@ -2,8 +2,6 @@
 title: "Equinix Metal"
 title_tag: "equinix-metal.Equinix Metal"
 meta_desc: "A Pulumi package for creating and managing equinix-metal cloud resources."
-aliases:
-    - "docs/reference/pkg/equinix-metal/"
 menu:
     reference:
         parent: API Reference

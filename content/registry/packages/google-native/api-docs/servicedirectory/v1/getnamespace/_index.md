@@ -3,8 +3,6 @@
 title: "getNamespace"
 title_tag: "google-native.servicedirectory/v1.getNamespace"
 meta_desc: "Documentation for the google-native.servicedirectory/v1.getNamespace function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

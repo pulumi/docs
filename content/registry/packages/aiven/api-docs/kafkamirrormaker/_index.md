@@ -3,8 +3,6 @@
 title: "KafkaMirrorMaker"
 title_tag: "aiven.KafkaMirrorMaker"
 meta_desc: "Documentation for the aiven.KafkaMirrorMaker resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aiven/KafkaMirrorMaker/"
 layout: api
 ---
 

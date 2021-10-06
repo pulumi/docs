@@ -3,8 +3,6 @@
 title: "listConnectionConsentLinks"
 title_tag: "azure-native.web.listConnectionConsentLinks"
 meta_desc: "Documentation for the azure-native.web.listConnectionConsentLinks function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

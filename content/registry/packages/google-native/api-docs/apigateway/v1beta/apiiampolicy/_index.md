@@ -3,8 +3,6 @@
 title: "ApiIamPolicy"
 title_tag: "google-native.apigateway/v1beta.ApiIamPolicy"
 meta_desc: "Documentation for the google-native.apigateway/v1beta.ApiIamPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/google-native/ApiIamPolicy/"
 layout: api
 ---
 

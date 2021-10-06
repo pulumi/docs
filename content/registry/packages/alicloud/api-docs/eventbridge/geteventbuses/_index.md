@@ -3,8 +3,6 @@
 title: "getEventBuses"
 title_tag: "alicloud.eventbridge.getEventBuses"
 meta_desc: "Documentation for the alicloud.eventbridge.getEventBuses function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

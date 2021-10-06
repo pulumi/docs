@@ -3,8 +3,6 @@
 title: "NatRule"
 title_tag: "azure.lb.NatRule"
 meta_desc: "Documentation for the azure.lb.NatRule resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/NatRule/"
 layout: api
 ---
 

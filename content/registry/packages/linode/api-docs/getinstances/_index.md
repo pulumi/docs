@@ -3,8 +3,6 @@
 title: "getInstances"
 title_tag: "linode.getInstances"
 meta_desc: "Documentation for the linode.getInstances function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

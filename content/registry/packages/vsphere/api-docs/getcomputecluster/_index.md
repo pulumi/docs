@@ -3,8 +3,6 @@
 title: "getComputeCluster"
 title_tag: "vsphere.getComputeCluster"
 meta_desc: "Documentation for the vsphere.getComputeCluster function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

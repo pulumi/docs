@@ -3,8 +3,6 @@
 title: "getTemplates"
 title_tag: "alicloud.oos.getTemplates"
 meta_desc: "Documentation for the alicloud.oos.getTemplates function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "User"
 title_tag: "ns1.User"
 meta_desc: "Documentation for the ns1.User resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/ns1/User/"
 layout: api
 ---
 

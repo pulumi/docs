@@ -3,8 +3,6 @@
 title: "WebTest"
 title_tag: "azure.appinsights.WebTest"
 meta_desc: "Documentation for the azure.appinsights.WebTest resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/WebTest/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "Repository"
 title_tag: "aws-native.ecr.Repository"
 meta_desc: "Documentation for the aws-native.ecr.Repository resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws-native/Repository/"
 layout: api
 ---
 

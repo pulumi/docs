@@ -3,8 +3,6 @@
 title: "ComputeClusterVmDependencyRule"
 title_tag: "vsphere.ComputeClusterVmDependencyRule"
 meta_desc: "Documentation for the vsphere.ComputeClusterVmDependencyRule resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/vsphere/ComputeClusterVmDependencyRule/"
 layout: api
 ---
 

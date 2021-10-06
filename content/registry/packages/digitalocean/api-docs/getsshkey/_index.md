@@ -3,8 +3,6 @@
 title: "getSshKey"
 title_tag: "digitalocean.getSshKey"
 meta_desc: "Documentation for the digitalocean.getSshKey function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

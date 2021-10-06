@@ -3,8 +3,6 @@
 title: "getTrial"
 title_tag: "google-native.ml/v1.getTrial"
 meta_desc: "Documentation for the google-native.ml/v1.getTrial function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

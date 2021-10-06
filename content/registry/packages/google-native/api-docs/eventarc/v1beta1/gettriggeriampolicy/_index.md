@@ -3,8 +3,6 @@
 title: "getTriggerIamPolicy"
 title_tag: "google-native.eventarc/v1beta1.getTriggerIamPolicy"
 meta_desc: "Documentation for the google-native.eventarc/v1beta1.getTriggerIamPolicy function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

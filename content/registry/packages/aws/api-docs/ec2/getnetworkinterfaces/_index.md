@@ -3,8 +3,6 @@
 title: "getNetworkInterfaces"
 title_tag: "aws.ec2.getNetworkInterfaces"
 meta_desc: "Documentation for the aws.ec2.getNetworkInterfaces function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

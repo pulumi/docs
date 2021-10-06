@@ -2,8 +2,6 @@
 title: "sagemaker"
 title_tag: "aws.sagemaker"
 meta_desc: "Explore the resources and functions of the aws.sagemaker module."
-aliases:
-    - "docs/reference/pkg/aws/"
 layout: api
 ---
 

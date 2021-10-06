@@ -2,8 +2,6 @@
 title: "Fastly"
 title_tag: "fastly.Fastly"
 meta_desc: "A Pulumi package for creating and managing fastly cloud resources."
-aliases:
-    - "docs/reference/pkg/fastly/"
 menu:
     reference:
         parent: API Reference

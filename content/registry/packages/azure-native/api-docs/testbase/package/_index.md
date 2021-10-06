@@ -3,8 +3,6 @@
 title: "Package"
 title_tag: "azure-native.testbase.Package"
 meta_desc: "Documentation for the azure-native.testbase.Package resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/Package/"
 layout: api
 ---
 

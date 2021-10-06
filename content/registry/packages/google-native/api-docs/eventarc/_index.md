@@ -2,8 +2,6 @@
 title: "eventarc"
 title_tag: "eventarc Package"
 meta_desc: ""
-aliases:
-    - "docs/reference/pkg/google-native/"
 layout: api
 ---
 

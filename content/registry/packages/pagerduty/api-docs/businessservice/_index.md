@@ -3,8 +3,6 @@
 title: "BusinessService"
 title_tag: "pagerduty.BusinessService"
 meta_desc: "Documentation for the pagerduty.BusinessService resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/pagerduty/BusinessService/"
 layout: api
 ---
 

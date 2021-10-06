@@ -2,8 +2,6 @@
 title: "ecs"
 title_tag: "aws-native.ecs"
 meta_desc: "Explore the resources and functions of the aws-native.ecs module."
-aliases:
-    - "docs/reference/pkg/aws-native/"
 layout: api
 ---
 

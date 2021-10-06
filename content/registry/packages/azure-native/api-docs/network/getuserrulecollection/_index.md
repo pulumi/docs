@@ -3,8 +3,6 @@
 title: "getUserRuleCollection"
 title_tag: "azure-native.network.getUserRuleCollection"
 meta_desc: "Documentation for the azure-native.network.getUserRuleCollection function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

@@ -2,8 +2,6 @@
 title: "frontdoor"
 title_tag: "azure.frontdoor"
 meta_desc: "Explore the resources and functions of the azure.frontdoor module."
-aliases:
-    - "docs/reference/pkg/azure/"
 layout: api
 ---
 

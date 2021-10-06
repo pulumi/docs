@@ -3,8 +3,6 @@
 title: "Addon"
 title_tag: "azure-native.avs.Addon"
 meta_desc: "Documentation for the azure-native.avs.Addon resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/Addon/"
 layout: api
 ---
 

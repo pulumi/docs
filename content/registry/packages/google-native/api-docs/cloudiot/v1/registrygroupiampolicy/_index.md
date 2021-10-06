@@ -3,8 +3,6 @@
 title: "RegistryGroupIamPolicy"
 title_tag: "google-native.cloudiot/v1.RegistryGroupIamPolicy"
 meta_desc: "Documentation for the google-native.cloudiot/v1.RegistryGroupIamPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/google-native/RegistryGroupIamPolicy/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "getNodeGroupIamPolicy"
 title_tag: "google-native.compute/beta.getNodeGroupIamPolicy"
 meta_desc: "Documentation for the google-native.compute/beta.getNodeGroupIamPolicy function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "AppSecEvalRule"
 title_tag: "akamai.AppSecEvalRule"
 meta_desc: "Documentation for the akamai.AppSecEvalRule resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/akamai/AppSecEvalRule/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "NetworkInterfaceAttachment"
 title_tag: "aws.ec2.NetworkInterfaceAttachment"
 meta_desc: "Documentation for the aws.ec2.NetworkInterfaceAttachment resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/NetworkInterfaceAttachment/"
 layout: api
 ---
 

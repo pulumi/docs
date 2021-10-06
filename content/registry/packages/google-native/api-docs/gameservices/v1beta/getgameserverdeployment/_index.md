@@ -3,8 +3,6 @@
 title: "getGameServerDeployment"
 title_tag: "google-native.gameservices/v1beta.getGameServerDeployment"
 meta_desc: "Documentation for the google-native.gameservices/v1beta.getGameServerDeployment function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

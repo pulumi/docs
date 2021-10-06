@@ -3,8 +3,6 @@
 title: "IntegrationRuntimeAzure"
 title_tag: "azure.synapse.IntegrationRuntimeAzure"
 meta_desc: "Documentation for the azure.synapse.IntegrationRuntimeAzure resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/IntegrationRuntimeAzure/"
 layout: api
 ---
 

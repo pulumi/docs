@@ -3,8 +3,6 @@
 title: "Pipeline"
 title_tag: "aws.elastictranscoder.Pipeline"
 meta_desc: "Documentation for the aws.elastictranscoder.Pipeline resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/Pipeline/"
 layout: api
 ---
 

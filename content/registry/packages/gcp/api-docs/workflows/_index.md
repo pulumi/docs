@@ -2,8 +2,6 @@
 title: "workflows"
 title_tag: "gcp.workflows"
 meta_desc: "Explore the resources and functions of the gcp.workflows module."
-aliases:
-    - "docs/reference/pkg/gcp/"
 layout: api
 ---
 

@@ -2,8 +2,6 @@
 title: "translate"
 title_tag: "translate Package"
 meta_desc: ""
-aliases:
-    - "docs/reference/pkg/google-native/"
 layout: api
 ---
 

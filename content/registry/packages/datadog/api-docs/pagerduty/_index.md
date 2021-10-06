@@ -2,8 +2,6 @@
 title: "pagerduty"
 title_tag: "datadog.pagerduty"
 meta_desc: "Explore the resources and functions of the datadog.pagerduty module."
-aliases:
-    - "docs/reference/pkg/datadog/"
 layout: api
 ---
 

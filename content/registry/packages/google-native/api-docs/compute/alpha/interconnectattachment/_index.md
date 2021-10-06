@@ -3,8 +3,6 @@
 title: "InterconnectAttachment"
 title_tag: "google-native.compute/alpha.InterconnectAttachment"
 meta_desc: "Documentation for the google-native.compute/alpha.InterconnectAttachment resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/google-native/InterconnectAttachment/"
 layout: api
 ---
 

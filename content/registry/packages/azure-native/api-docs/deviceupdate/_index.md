@@ -2,8 +2,6 @@
 title: "deviceupdate"
 title_tag: "azure-native.deviceupdate"
 meta_desc: "Explore the resources and functions of the azure-native.deviceupdate module."
-aliases:
-    - "docs/reference/pkg/azure-native/"
 layout: api
 ---
 

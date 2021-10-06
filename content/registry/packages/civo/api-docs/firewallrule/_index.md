@@ -3,8 +3,6 @@
 title: "FirewallRule"
 title_tag: "civo.FirewallRule"
 meta_desc: "Documentation for the civo.FirewallRule resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/civo/FirewallRule/"
 layout: api
 ---
 

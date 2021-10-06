@@ -3,8 +3,6 @@
 title: "Intention"
 title_tag: "consul.Intention"
 meta_desc: "Documentation for the consul.Intention resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/consul/Intention/"
 layout: api
 ---
 

@@ -2,8 +2,6 @@
 title: "compute"
 title_tag: "azure-native.compute"
 meta_desc: "Explore the resources and functions of the azure-native.compute module."
-aliases:
-    - "docs/reference/pkg/azure-native/"
 layout: api
 ---
 

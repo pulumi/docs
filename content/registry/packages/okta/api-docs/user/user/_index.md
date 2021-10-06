@@ -3,8 +3,6 @@
 title: "User"
 title_tag: "okta.user.User"
 meta_desc: "Documentation for the okta.user.User resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/okta/User/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "Function"
 title_tag: "yandex.Function"
 meta_desc: "Documentation for the yandex.Function resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/yandex/Function/"
 layout: api
 ---
 

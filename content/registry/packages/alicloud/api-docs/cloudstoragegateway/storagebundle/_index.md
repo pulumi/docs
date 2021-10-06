@@ -3,8 +3,6 @@
 title: "StorageBundle"
 title_tag: "alicloud.cloudstoragegateway.StorageBundle"
 meta_desc: "Documentation for the alicloud.cloudstoragegateway.StorageBundle resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/alicloud/StorageBundle/"
 layout: api
 ---
 

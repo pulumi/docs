@@ -3,8 +3,6 @@
 title: "getAuthBackendRole"
 title_tag: "vault.kubernetes.getAuthBackendRole"
 meta_desc: "Documentation for the vault.kubernetes.getAuthBackendRole function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

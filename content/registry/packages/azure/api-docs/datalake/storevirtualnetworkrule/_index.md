@@ -3,8 +3,6 @@
 title: "StoreVirtualNetworkRule"
 title_tag: "azure.datalake.StoreVirtualNetworkRule"
 meta_desc: "Documentation for the azure.datalake.StoreVirtualNetworkRule resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/StoreVirtualNetworkRule/"
 layout: api
 ---
 

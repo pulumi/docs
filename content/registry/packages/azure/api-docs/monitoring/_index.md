@@ -2,8 +2,6 @@
 title: "monitoring"
 title_tag: "azure.monitoring"
 meta_desc: "Explore the resources and functions of the azure.monitoring module."
-aliases:
-    - "docs/reference/pkg/azure/"
 layout: api
 ---
 

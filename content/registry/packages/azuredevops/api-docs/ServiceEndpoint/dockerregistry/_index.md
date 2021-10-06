@@ -3,8 +3,6 @@
 title: "DockerRegistry"
 title_tag: "azuredevops.ServiceEndpoint.DockerRegistry"
 meta_desc: "Documentation for the azuredevops.ServiceEndpoint.DockerRegistry resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azuredevops/DockerRegistry/"
 layout: api
 ---
 

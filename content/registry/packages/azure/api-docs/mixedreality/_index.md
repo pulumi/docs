@@ -2,8 +2,6 @@
 title: "mixedreality"
 title_tag: "azure.mixedreality"
 meta_desc: "Explore the resources and functions of the azure.mixedreality module."
-aliases:
-    - "docs/reference/pkg/azure/"
 layout: api
 ---
 

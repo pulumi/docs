@@ -3,8 +3,6 @@
 title: "AFDOriginGroup"
 title_tag: "azure-native.cdn.AFDOriginGroup"
 meta_desc: "Documentation for the azure-native.cdn.AFDOriginGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/AFDOriginGroup/"
 layout: api
 ---
 

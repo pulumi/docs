@@ -2,8 +2,6 @@
 title: "profile"
 title_tag: "okta.profile"
 meta_desc: "Explore the resources and functions of the okta.profile module."
-aliases:
-    - "docs/reference/pkg/okta/"
 layout: api
 ---
 

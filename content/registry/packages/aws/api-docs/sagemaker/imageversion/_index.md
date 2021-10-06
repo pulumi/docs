@@ -3,8 +3,6 @@
 title: "ImageVersion"
 title_tag: "aws.sagemaker.ImageVersion"
 meta_desc: "Documentation for the aws.sagemaker.ImageVersion resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/ImageVersion/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "Trigger"
 title_tag: "azure-native.datafactory.Trigger"
 meta_desc: "Documentation for the azure-native.datafactory.Trigger resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/Trigger/"
 layout: api
 ---
 

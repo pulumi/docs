@@ -3,8 +3,6 @@
 title: "Connection"
 title_tag: "auth0.Connection"
 meta_desc: "Documentation for the auth0.Connection resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/auth0/Connection/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "getServer"
 title_tag: "azure.postgresql.getServer"
 meta_desc: "Documentation for the azure.postgresql.getServer function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

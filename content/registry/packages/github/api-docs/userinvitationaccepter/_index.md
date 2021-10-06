@@ -3,8 +3,6 @@
 title: "UserInvitationAccepter"
 title_tag: "github.UserInvitationAccepter"
 meta_desc: "Documentation for the github.UserInvitationAccepter resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/github/UserInvitationAccepter/"
 layout: api
 ---
 

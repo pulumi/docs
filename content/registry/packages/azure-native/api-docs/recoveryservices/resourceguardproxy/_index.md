@@ -3,8 +3,6 @@
 title: "ResourceGuardProxy"
 title_tag: "azure-native.recoveryservices.ResourceGuardProxy"
 meta_desc: "Documentation for the azure-native.recoveryservices.ResourceGuardProxy resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/ResourceGuardProxy/"
 layout: api
 ---
 

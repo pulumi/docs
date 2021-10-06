@@ -3,8 +3,6 @@
 title: "getEnterpriseKnowledgeGraph"
 title_tag: "azure-native.enterpriseknowledgegraph.getEnterpriseKnowledgeGraph"
 meta_desc: "Documentation for the azure-native.enterpriseknowledgegraph.getEnterpriseKnowledgeGraph function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

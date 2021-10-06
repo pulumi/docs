@@ -3,8 +3,6 @@
 title: "listDeploymentInfo"
 title_tag: "azure-native.elastic.listDeploymentInfo"
 meta_desc: "Documentation for the azure-native.elastic.listDeploymentInfo function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

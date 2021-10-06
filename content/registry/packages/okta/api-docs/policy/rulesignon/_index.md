@@ -3,8 +3,6 @@
 title: "RuleSignon"
 title_tag: "okta.policy.RuleSignon"
 meta_desc: "Documentation for the okta.policy.RuleSignon resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/okta/RuleSignon/"
 layout: api
 ---
 

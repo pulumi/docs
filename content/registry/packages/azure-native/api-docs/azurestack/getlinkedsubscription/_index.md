@@ -3,8 +3,6 @@
 title: "getLinkedSubscription"
 title_tag: "azure-native.azurestack.getLinkedSubscription"
 meta_desc: "Documentation for the azure-native.azurestack.getLinkedSubscription function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

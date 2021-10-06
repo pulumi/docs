@@ -3,8 +3,6 @@
 title: "Provider"
 title_tag: "cloudflare.Provider"
 meta_desc: "Documentation for the cloudflare.Provider resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/cloudflare/cloudflare/"
 layout: api
 ---
 

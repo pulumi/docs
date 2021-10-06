@@ -3,8 +3,6 @@
 title: "ReadinessCheck"
 title_tag: "aws-native.route53recoveryreadiness.ReadinessCheck"
 meta_desc: "Documentation for the aws-native.route53recoveryreadiness.ReadinessCheck resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws-native/ReadinessCheck/"
 layout: api
 ---
 

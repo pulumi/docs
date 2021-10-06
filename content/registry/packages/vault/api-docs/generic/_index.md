@@ -2,8 +2,6 @@
 title: "generic"
 title_tag: "vault.generic"
 meta_desc: "Explore the resources and functions of the vault.generic module."
-aliases:
-    - "docs/reference/pkg/vault/"
 layout: api
 ---
 

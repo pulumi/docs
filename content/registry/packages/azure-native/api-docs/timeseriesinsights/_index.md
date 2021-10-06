@@ -2,8 +2,6 @@
 title: "timeseriesinsights"
 title_tag: "azure-native.timeseriesinsights"
 meta_desc: "Explore the resources and functions of the azure-native.timeseriesinsights module."
-aliases:
-    - "docs/reference/pkg/azure-native/"
 layout: api
 ---
 

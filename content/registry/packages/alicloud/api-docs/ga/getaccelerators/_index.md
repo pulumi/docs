@@ -3,8 +3,6 @@
 title: "getAccelerators"
 title_tag: "alicloud.ga.getAccelerators"
 meta_desc: "Documentation for the alicloud.ga.getAccelerators function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

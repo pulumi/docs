@@ -3,8 +3,6 @@
 title: "OperationByProviderRegistration"
 title_tag: "azure-native.providerhub.OperationByProviderRegistration"
 meta_desc: "Documentation for the azure-native.providerhub.OperationByProviderRegistration resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/OperationByProviderRegistration/"
 layout: api
 ---
 

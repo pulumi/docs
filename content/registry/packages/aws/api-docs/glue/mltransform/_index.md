@@ -3,8 +3,6 @@
 title: "MLTransform"
 title_tag: "aws.glue.MLTransform"
 meta_desc: "Documentation for the aws.glue.MLTransform resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/MLTransform/"
 layout: api
 ---
 

@@ -2,8 +2,6 @@
 title: "elastic"
 title_tag: "azure-native.elastic"
 meta_desc: "Explore the resources and functions of the azure-native.elastic module."
-aliases:
-    - "docs/reference/pkg/azure-native/"
 layout: api
 ---
 

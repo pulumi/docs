@@ -3,8 +3,6 @@
 title: "getConsumerGroups"
 title_tag: "alicloud.actiontrail.getConsumerGroups"
 meta_desc: "Documentation for the alicloud.actiontrail.getConsumerGroups function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

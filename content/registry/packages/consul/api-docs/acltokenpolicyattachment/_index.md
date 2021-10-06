@@ -3,8 +3,6 @@
 title: "AclTokenPolicyAttachment"
 title_tag: "consul.AclTokenPolicyAttachment"
 meta_desc: "Documentation for the consul.AclTokenPolicyAttachment resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/consul/AclTokenPolicyAttachment/"
 layout: api
 ---
 

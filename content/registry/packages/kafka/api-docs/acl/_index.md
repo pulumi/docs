@@ -3,8 +3,6 @@
 title: "Acl"
 title_tag: "kafka.Acl"
 meta_desc: "Documentation for the kafka.Acl resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/kafka/Acl/"
 layout: api
 ---
 

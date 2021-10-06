@@ -3,8 +3,6 @@
 title: "QueuePolicy"
 title_tag: "aws.sqs.QueuePolicy"
 meta_desc: "Documentation for the aws.sqs.QueuePolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/QueuePolicy/"
 layout: api
 ---
 

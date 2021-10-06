@@ -3,8 +3,6 @@
 title: "getAggregateV2"
 title_tag: "openstack.compute.getAggregateV2"
 meta_desc: "Documentation for the openstack.compute.getAggregateV2 function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

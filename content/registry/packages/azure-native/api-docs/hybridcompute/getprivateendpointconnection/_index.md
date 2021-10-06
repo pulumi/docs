@@ -3,8 +3,6 @@
 title: "getPrivateEndpointConnection"
 title_tag: "azure-native.hybridcompute.getPrivateEndpointConnection"
 meta_desc: "Documentation for the azure-native.hybridcompute.getPrivateEndpointConnection function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

@@ -2,8 +2,6 @@
 title: "dns"
 title_tag: "openstack.dns"
 meta_desc: "Explore the resources and functions of the openstack.dns module."
-aliases:
-    - "docs/reference/pkg/openstack/"
 layout: api
 ---
 

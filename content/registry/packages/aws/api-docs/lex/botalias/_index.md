@@ -3,8 +3,6 @@
 title: "BotAlias"
 title_tag: "aws.lex.BotAlias"
 meta_desc: "Documentation for the aws.lex.BotAlias resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/BotAlias/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "getConfig"
 title_tag: "google-native.apigateway/v1beta.getConfig"
 meta_desc: "Documentation for the google-native.apigateway/v1beta.getConfig function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

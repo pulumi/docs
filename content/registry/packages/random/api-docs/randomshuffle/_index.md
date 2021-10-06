@@ -3,8 +3,6 @@
 title: "RandomShuffle"
 title_tag: "random.RandomShuffle"
 meta_desc: "Documentation for the random.RandomShuffle resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/random/RandomShuffle/"
 layout: api
 ---
 

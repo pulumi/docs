@@ -3,8 +3,6 @@
 title: "BackendBucketSignedUrlKey"
 title_tag: "gcp.compute.BackendBucketSignedUrlKey"
 meta_desc: "Documentation for the gcp.compute.BackendBucketSignedUrlKey resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/BackendBucketSignedUrlKey/"
 layout: api
 ---
 

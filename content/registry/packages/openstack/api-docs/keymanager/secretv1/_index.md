@@ -3,8 +3,6 @@
 title: "SecretV1"
 title_tag: "openstack.keymanager.SecretV1"
 meta_desc: "Documentation for the openstack.keymanager.SecretV1 resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/openstack/SecretV1/"
 layout: api
 ---
 

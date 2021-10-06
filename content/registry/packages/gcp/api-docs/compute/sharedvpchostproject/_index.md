@@ -3,8 +3,6 @@
 title: "SharedVPCHostProject"
 title_tag: "gcp.compute.SharedVPCHostProject"
 meta_desc: "Documentation for the gcp.compute.SharedVPCHostProject resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/SharedVPCHostProject/"
 layout: api
 ---
 

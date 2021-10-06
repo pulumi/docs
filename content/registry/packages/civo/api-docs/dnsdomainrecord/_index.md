@@ -3,8 +3,6 @@
 title: "DnsDomainRecord"
 title_tag: "civo.DnsDomainRecord"
 meta_desc: "Documentation for the civo.DnsDomainRecord resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/civo/DnsDomainRecord/"
 layout: api
 ---
 

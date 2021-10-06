@@ -3,8 +3,6 @@
 title: "TeamRepository"
 title_tag: "github.TeamRepository"
 meta_desc: "Documentation for the github.TeamRepository resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/github/TeamRepository/"
 layout: api
 ---
 

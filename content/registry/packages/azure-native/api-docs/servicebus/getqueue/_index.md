@@ -3,8 +3,6 @@
 title: "getQueue"
 title_tag: "azure-native.servicebus.getQueue"
 meta_desc: "Documentation for the azure-native.servicebus.getQueue function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

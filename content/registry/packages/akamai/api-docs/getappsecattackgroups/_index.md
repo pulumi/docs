@@ -3,8 +3,6 @@
 title: "getAppSecAttackGroups"
 title_tag: "akamai.getAppSecAttackGroups"
 meta_desc: "Documentation for the akamai.getAppSecAttackGroups function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

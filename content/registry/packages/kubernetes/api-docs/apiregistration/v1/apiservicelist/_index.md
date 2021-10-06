@@ -3,8 +3,6 @@
 title: "APIServiceList"
 title_tag: "kubernetes.apiregistration.k8s.io/v1.APIServiceList"
 meta_desc: "Documentation for the kubernetes.apiregistration.k8s.io/v1.APIServiceList resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/kubernetes/APIServiceList/"
 layout: api
 ---
 

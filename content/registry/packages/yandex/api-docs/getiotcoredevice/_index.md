@@ -3,8 +3,6 @@
 title: "getIotCoreDevice"
 title_tag: "yandex.getIotCoreDevice"
 meta_desc: "Documentation for the yandex.getIotCoreDevice function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

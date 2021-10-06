@@ -3,8 +3,6 @@
 title: "getNamespaces"
 title_tag: "alicloud.sae.getNamespaces"
 meta_desc: "Documentation for the alicloud.sae.getNamespaces function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "getApp"
 title_tag: "azure-native.appplatform.getApp"
 meta_desc: "Documentation for the azure-native.appplatform.getApp function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

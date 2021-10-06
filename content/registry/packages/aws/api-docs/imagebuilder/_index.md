@@ -2,8 +2,6 @@
 title: "imagebuilder"
 title_tag: "aws.imagebuilder"
 meta_desc: "Explore the resources and functions of the aws.imagebuilder module."
-aliases:
-    - "docs/reference/pkg/aws/"
 layout: api
 ---
 

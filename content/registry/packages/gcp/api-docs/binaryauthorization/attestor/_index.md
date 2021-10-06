@@ -3,8 +3,6 @@
 title: "Attestor"
 title_tag: "gcp.binaryauthorization.Attestor"
 meta_desc: "Documentation for the gcp.binaryauthorization.Attestor resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/Attestor/"
 layout: api
 ---
 

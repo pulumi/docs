@@ -3,8 +3,6 @@
 title: "Entry"
 title_tag: "gcp.datacatalog.Entry"
 meta_desc: "Documentation for the gcp.datacatalog.Entry resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/Entry/"
 layout: api
 ---
 

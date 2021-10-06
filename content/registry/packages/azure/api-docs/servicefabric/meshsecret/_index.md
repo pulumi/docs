@@ -3,8 +3,6 @@
 title: "MeshSecret"
 title_tag: "azure.servicefabric.MeshSecret"
 meta_desc: "Documentation for the azure.servicefabric.MeshSecret resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/MeshSecret/"
 layout: api
 ---
 

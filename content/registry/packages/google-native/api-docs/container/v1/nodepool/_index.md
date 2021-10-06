@@ -3,8 +3,6 @@
 title: "NodePool"
 title_tag: "google-native.container/v1.NodePool"
 meta_desc: "Documentation for the google-native.container/v1.NodePool resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/google-native/NodePool/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "EntityType"
 title_tag: "google-native.dialogflow/v2beta1.EntityType"
 meta_desc: "Documentation for the google-native.dialogflow/v2beta1.EntityType resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/google-native/EntityType/"
 layout: api
 ---
 

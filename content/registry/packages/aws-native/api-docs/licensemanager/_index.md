@@ -2,8 +2,6 @@
 title: "licensemanager"
 title_tag: "aws-native.licensemanager"
 meta_desc: "Explore the resources and functions of the aws-native.licensemanager module."
-aliases:
-    - "docs/reference/pkg/aws-native/"
 layout: api
 ---
 

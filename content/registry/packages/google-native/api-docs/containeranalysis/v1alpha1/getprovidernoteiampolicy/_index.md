@@ -3,8 +3,6 @@
 title: "getProviderNoteIamPolicy"
 title_tag: "google-native.containeranalysis/v1alpha1.getProviderNoteIamPolicy"
 meta_desc: "Documentation for the google-native.containeranalysis/v1alpha1.getProviderNoteIamPolicy function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "AppSecIPGeo"
 title_tag: "akamai.AppSecIPGeo"
 meta_desc: "Documentation for the akamai.AppSecIPGeo resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/akamai/AppSecIPGeo/"
 layout: api
 ---
 

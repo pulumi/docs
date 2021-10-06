@@ -3,8 +3,6 @@
 title: "Cluster"
 title_tag: "azure.avs.Cluster"
 meta_desc: "Documentation for the azure.avs.Cluster resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/Cluster/"
 layout: api
 ---
 

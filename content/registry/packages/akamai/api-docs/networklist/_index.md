@@ -3,8 +3,6 @@
 title: "NetworkList"
 title_tag: "akamai.NetworkList"
 meta_desc: "Documentation for the akamai.NetworkList resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/akamai/NetworkList/"
 layout: api
 ---
 

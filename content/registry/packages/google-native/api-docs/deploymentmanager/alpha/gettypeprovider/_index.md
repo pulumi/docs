@@ -3,8 +3,6 @@
 title: "getTypeProvider"
 title_tag: "google-native.deploymentmanager/alpha.getTypeProvider"
 meta_desc: "Documentation for the google-native.deploymentmanager/alpha.getTypeProvider function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "CertRequest"
 title_tag: "tls.CertRequest"
 meta_desc: "Documentation for the tls.CertRequest resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/tls/CertRequest/"
 layout: api
 ---
 

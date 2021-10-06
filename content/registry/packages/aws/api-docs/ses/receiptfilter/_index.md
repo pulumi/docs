@@ -3,8 +3,6 @@
 title: "ReceiptFilter"
 title_tag: "aws.ses.ReceiptFilter"
 meta_desc: "Documentation for the aws.ses.ReceiptFilter resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/ReceiptFilter/"
 layout: api
 ---
 

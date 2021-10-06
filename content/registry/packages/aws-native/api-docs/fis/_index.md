@@ -2,8 +2,6 @@
 title: "fis"
 title_tag: "aws-native.fis"
 meta_desc: "Explore the resources and functions of the aws-native.fis module."
-aliases:
-    - "docs/reference/pkg/aws-native/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "Hook"
 title_tag: "auth0.Hook"
 meta_desc: "Documentation for the auth0.Hook resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/auth0/Hook/"
 layout: api
 ---
 

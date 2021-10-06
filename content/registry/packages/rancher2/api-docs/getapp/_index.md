@@ -3,8 +3,6 @@
 title: "getApp"
 title_tag: "rancher2.getApp"
 meta_desc: "Documentation for the rancher2.getApp function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

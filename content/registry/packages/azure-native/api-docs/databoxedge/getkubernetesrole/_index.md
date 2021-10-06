@@ -3,8 +3,6 @@
 title: "getKubernetesRole"
 title_tag: "azure-native.databoxedge.getKubernetesRole"
 meta_desc: "Documentation for the azure-native.databoxedge.getKubernetesRole function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

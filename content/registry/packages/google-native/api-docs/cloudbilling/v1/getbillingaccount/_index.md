@@ -3,8 +3,6 @@
 title: "getBillingAccount"
 title_tag: "google-native.cloudbilling/v1.getBillingAccount"
 meta_desc: "Documentation for the google-native.cloudbilling/v1.getBillingAccount function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

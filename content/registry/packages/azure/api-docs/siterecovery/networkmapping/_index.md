@@ -3,8 +3,6 @@
 title: "NetworkMapping"
 title_tag: "azure.siterecovery.NetworkMapping"
 meta_desc: "Documentation for the azure.siterecovery.NetworkMapping resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/NetworkMapping/"
 layout: api
 ---
 

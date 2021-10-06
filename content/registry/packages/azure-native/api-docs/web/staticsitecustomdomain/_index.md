@@ -3,8 +3,6 @@
 title: "StaticSiteCustomDomain"
 title_tag: "azure-native.web.StaticSiteCustomDomain"
 meta_desc: "Documentation for the azure-native.web.StaticSiteCustomDomain resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/StaticSiteCustomDomain/"
 layout: api
 ---
 

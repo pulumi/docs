@@ -3,8 +3,6 @@
 title: "SpectrumApplication"
 title_tag: "cloudflare.SpectrumApplication"
 meta_desc: "Documentation for the cloudflare.SpectrumApplication resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/cloudflare/SpectrumApplication/"
 layout: api
 ---
 

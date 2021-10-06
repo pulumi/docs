@@ -2,8 +2,6 @@
 title: "bigquery"
 title_tag: "gcp.bigquery"
 meta_desc: "Explore the resources and functions of the gcp.bigquery module."
-aliases:
-    - "docs/reference/pkg/gcp/"
 layout: api
 ---
 

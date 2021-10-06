@@ -3,8 +3,6 @@
 title: "getVirtualMachineExtension"
 title_tag: "azure-native.compute.getVirtualMachineExtension"
 meta_desc: "Documentation for the azure-native.compute.getVirtualMachineExtension function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "DeployToken"
 title_tag: "gitlab.DeployToken"
 meta_desc: "Documentation for the gitlab.DeployToken resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gitlab/DeployToken/"
 layout: api
 ---
 

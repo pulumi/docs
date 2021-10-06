@@ -3,8 +3,6 @@
 title: "Template"
 title_tag: "civo.Template"
 meta_desc: "Documentation for the civo.Template resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/civo/Template/"
 layout: api
 ---
 

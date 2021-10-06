@@ -3,8 +3,6 @@
 title: "getHostPool"
 title_tag: "azure-native.desktopvirtualization.getHostPool"
 meta_desc: "Documentation for the azure-native.desktopvirtualization.getHostPool function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

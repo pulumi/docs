@@ -3,8 +3,6 @@
 title: "Transform"
 title_tag: "azure.media.Transform"
 meta_desc: "Documentation for the azure.media.Transform resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/Transform/"
 layout: api
 ---
 

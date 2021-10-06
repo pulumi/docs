@@ -2,8 +2,6 @@
 title: "brain"
 title_tag: "alicloud.brain"
 meta_desc: "Explore the resources and functions of the alicloud.brain module."
-aliases:
-    - "docs/reference/pkg/alicloud/"
 layout: api
 ---
 

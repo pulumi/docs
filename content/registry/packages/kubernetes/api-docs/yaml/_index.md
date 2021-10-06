@@ -2,8 +2,6 @@
 title: "yaml"
 title_tag: "kubernetes.yaml"
 meta_desc: "Explore the resources and functions of the kubernetes.yaml module."
-aliases:
-    - "docs/reference/pkg/kubernetes/"
 layout: api
 ---
 

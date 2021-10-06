@@ -3,8 +3,6 @@
 title: "Provider"
 title_tag: "rancher2.Provider"
 meta_desc: "Documentation for the rancher2.Provider resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/rancher2/rancher2/"
 layout: api
 ---
 

@@ -2,8 +2,6 @@
 title: "slb"
 title_tag: "alicloud.slb"
 meta_desc: "Explore the resources and functions of the alicloud.slb module."
-aliases:
-    - "docs/reference/pkg/alicloud/"
 layout: api
 ---
 

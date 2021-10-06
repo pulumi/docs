@@ -3,8 +3,6 @@
 title: "WebApp"
 title_tag: "gcp.firebase.WebApp"
 meta_desc: "Documentation for the gcp.firebase.WebApp resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/WebApp/"
 layout: api
 ---
 

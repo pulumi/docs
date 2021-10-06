@@ -3,8 +3,6 @@
 title: "AttestorIamBinding"
 title_tag: "gcp.binaryauthorization.AttestorIamBinding"
 meta_desc: "Documentation for the gcp.binaryauthorization.AttestorIamBinding resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/AttestorIamBinding/"
 layout: api
 ---
 

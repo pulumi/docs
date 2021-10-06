@@ -2,8 +2,6 @@
 title: "ssmincidents"
 title_tag: "aws-native.ssmincidents"
 meta_desc: "Explore the resources and functions of the aws-native.ssmincidents module."
-aliases:
-    - "docs/reference/pkg/aws-native/"
 layout: api
 ---
 

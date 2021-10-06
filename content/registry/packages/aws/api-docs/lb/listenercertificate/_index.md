@@ -3,8 +3,6 @@
 title: "ListenerCertificate"
 title_tag: "aws.lb.ListenerCertificate"
 meta_desc: "Documentation for the aws.lb.ListenerCertificate resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/ListenerCertificate/"
 layout: api
 ---
 

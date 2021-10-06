@@ -3,8 +3,6 @@
 title: "ProjectDefaultNetworkTier"
 title_tag: "gcp.compute.ProjectDefaultNetworkTier"
 meta_desc: "Documentation for the gcp.compute.ProjectDefaultNetworkTier resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/ProjectDefaultNetworkTier/"
 layout: api
 ---
 

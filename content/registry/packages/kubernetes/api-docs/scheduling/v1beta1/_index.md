@@ -2,8 +2,6 @@
 title: "scheduling/v1beta1"
 title_tag: "kubernetes.scheduling/v1beta1"
 meta_desc: "Explore the resources and functions of the kubernetes.scheduling/v1beta1 module."
-aliases:
-    - "docs/reference/pkg/kubernetes/"
 layout: api
 ---
 

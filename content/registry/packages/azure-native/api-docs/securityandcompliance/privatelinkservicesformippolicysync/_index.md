@@ -3,8 +3,6 @@
 title: "PrivateLinkServicesForMIPPolicySync"
 title_tag: "azure-native.securityandcompliance.PrivateLinkServicesForMIPPolicySync"
 meta_desc: "Documentation for the azure-native.securityandcompliance.PrivateLinkServicesForMIPPolicySync resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/privateLinkServicesForMIPPolicySync/"
 layout: api
 ---
 

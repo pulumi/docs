@@ -2,8 +2,6 @@
 title: "elasticloadbalancingv2"
 title_tag: "aws-native.elasticloadbalancingv2"
 meta_desc: "Explore the resources and functions of the aws-native.elasticloadbalancingv2 module."
-aliases:
-    - "docs/reference/pkg/aws-native/"
 layout: api
 ---
 

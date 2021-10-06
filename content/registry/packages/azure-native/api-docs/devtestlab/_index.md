@@ -2,8 +2,6 @@
 title: "devtestlab"
 title_tag: "azure-native.devtestlab"
 meta_desc: "Explore the resources and functions of the azure-native.devtestlab module."
-aliases:
-    - "docs/reference/pkg/azure-native/"
 layout: api
 ---
 

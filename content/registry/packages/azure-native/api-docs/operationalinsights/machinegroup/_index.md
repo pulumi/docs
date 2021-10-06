@@ -3,8 +3,6 @@
 title: "MachineGroup"
 title_tag: "azure-native.operationalinsights.MachineGroup"
 meta_desc: "Documentation for the azure-native.operationalinsights.MachineGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/MachineGroup/"
 layout: api
 ---
 

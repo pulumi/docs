@@ -3,8 +3,6 @@
 title: "getPatchDeployment"
 title_tag: "google-native.osconfig/v1beta.getPatchDeployment"
 meta_desc: "Documentation for the google-native.osconfig/v1beta.getPatchDeployment function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

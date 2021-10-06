@@ -3,8 +3,6 @@
 title: "FileFormatGrant"
 title_tag: "snowflake.FileFormatGrant"
 meta_desc: "Documentation for the snowflake.FileFormatGrant resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/snowflake/FileFormatGrant/"
 layout: api
 ---
 

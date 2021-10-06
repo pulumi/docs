@@ -3,8 +3,6 @@
 title: "GroupCluster"
 title_tag: "gitlab.GroupCluster"
 meta_desc: "Documentation for the gitlab.GroupCluster resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gitlab/GroupCluster/"
 layout: api
 ---
 

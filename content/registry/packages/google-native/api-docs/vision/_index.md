@@ -2,8 +2,6 @@
 title: "vision"
 title_tag: "vision Package"
 meta_desc: ""
-aliases:
-    - "docs/reference/pkg/google-native/"
 layout: api
 ---
 

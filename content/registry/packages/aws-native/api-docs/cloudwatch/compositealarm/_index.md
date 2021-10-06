@@ -3,8 +3,6 @@
 title: "CompositeAlarm"
 title_tag: "aws-native.cloudwatch.CompositeAlarm"
 meta_desc: "Documentation for the aws-native.cloudwatch.CompositeAlarm resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws-native/CompositeAlarm/"
 layout: api
 ---
 

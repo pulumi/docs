@@ -2,8 +2,6 @@
 title: "storage"
 title_tag: "azure-native.storage"
 meta_desc: "Explore the resources and functions of the azure-native.storage module."
-aliases:
-    - "docs/reference/pkg/azure-native/"
 layout: api
 ---
 

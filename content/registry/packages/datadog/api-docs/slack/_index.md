@@ -2,8 +2,6 @@
 title: "slack"
 title_tag: "datadog.slack"
 meta_desc: "Explore the resources and functions of the datadog.slack module."
-aliases:
-    - "docs/reference/pkg/datadog/"
 layout: api
 ---
 

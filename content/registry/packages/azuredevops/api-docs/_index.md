@@ -2,8 +2,6 @@
 title: "Azure DevOps"
 title_tag: "Azure DevOps Package"
 meta_desc: "A Pulumi package for creating and managing Azure DevOps."
-aliases:
-    - "docs/reference/pkg/azuredevops/"
 menu:
     reference:
         parent: API Reference

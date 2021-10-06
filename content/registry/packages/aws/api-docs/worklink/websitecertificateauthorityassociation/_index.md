@@ -3,8 +3,6 @@
 title: "WebsiteCertificateAuthorityAssociation"
 title_tag: "aws.worklink.WebsiteCertificateAuthorityAssociation"
 meta_desc: "Documentation for the aws.worklink.WebsiteCertificateAuthorityAssociation resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/WebsiteCertificateAuthorityAssociation/"
 layout: api
 ---
 

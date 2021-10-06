@@ -3,8 +3,6 @@
 title: "getBucketObjectContent"
 title_tag: "gcp.storage.getBucketObjectContent"
 meta_desc: "Documentation for the gcp.storage.getBucketObjectContent function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "SRVRecord"
 title_tag: "azure.privatedns.SRVRecord"
 meta_desc: "Documentation for the azure.privatedns.SRVRecord resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/SRVRecord/"
 layout: api
 ---
 

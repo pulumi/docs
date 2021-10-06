@@ -3,8 +3,6 @@
 title: "Alias"
 title_tag: "alicloud.ram.Alias"
 meta_desc: "Documentation for the alicloud.ram.Alias resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/alicloud/Alias/"
 layout: api
 ---
 

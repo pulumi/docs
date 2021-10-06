@@ -3,8 +3,6 @@
 title: "InstanceGroup"
 title_tag: "aws.emr.InstanceGroup"
 meta_desc: "Documentation for the aws.emr.InstanceGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/InstanceGroup/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "FlowDefinition"
 title_tag: "aws.sagemaker.FlowDefinition"
 meta_desc: "Documentation for the aws.sagemaker.FlowDefinition resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/FlowDefinition/"
 layout: api
 ---
 

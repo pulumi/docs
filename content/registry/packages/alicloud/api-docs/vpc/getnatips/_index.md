@@ -3,8 +3,6 @@
 title: "getNatIps"
 title_tag: "alicloud.vpc.getNatIps"
 meta_desc: "Documentation for the alicloud.vpc.getNatIps function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

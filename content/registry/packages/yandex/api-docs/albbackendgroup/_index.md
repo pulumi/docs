@@ -3,8 +3,6 @@
 title: "AlbBackendGroup"
 title_tag: "yandex.AlbBackendGroup"
 meta_desc: "Documentation for the yandex.AlbBackendGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/yandex/AlbBackendGroup/"
 layout: api
 ---
 

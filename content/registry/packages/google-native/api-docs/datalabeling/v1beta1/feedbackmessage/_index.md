@@ -3,8 +3,6 @@
 title: "FeedbackMessage"
 title_tag: "google-native.datalabeling/v1beta1.FeedbackMessage"
 meta_desc: "Documentation for the google-native.datalabeling/v1beta1.FeedbackMessage resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/google-native/FeedbackMessage/"
 layout: api
 ---
 

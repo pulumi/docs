@@ -3,8 +3,6 @@
 title: "ClusterRoleTemplateBinding"
 title_tag: "rancher2.ClusterRoleTemplateBinding"
 meta_desc: "Documentation for the rancher2.ClusterRoleTemplateBinding resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/rancher2/ClusterRoleTemplateBinding/"
 layout: api
 ---
 

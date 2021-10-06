@@ -3,8 +3,6 @@
 title: "getCurrentAccount"
 title_tag: "snowflake.getCurrentAccount"
 meta_desc: "Documentation for the snowflake.getCurrentAccount function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

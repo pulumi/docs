@@ -3,8 +3,6 @@
 title: "getPort"
 title_tag: "openstack.networking.getPort"
 meta_desc: "Documentation for the openstack.networking.getPort function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "getNomadAccessToken"
 title_tag: "vault.getNomadAccessToken"
 meta_desc: "Documentation for the vault.getNomadAccessToken function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

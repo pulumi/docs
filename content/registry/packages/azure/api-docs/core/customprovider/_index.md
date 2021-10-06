@@ -3,8 +3,6 @@
 title: "CustomProvider"
 title_tag: "azure.core.CustomProvider"
 meta_desc: "Documentation for the azure.core.CustomProvider resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/CustomProvider/"
 layout: api
 ---
 

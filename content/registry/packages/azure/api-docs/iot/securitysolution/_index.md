@@ -3,8 +3,6 @@
 title: "SecuritySolution"
 title_tag: "azure.iot.SecuritySolution"
 meta_desc: "Documentation for the azure.iot.SecuritySolution resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/SecuritySolution/"
 layout: api
 ---
 

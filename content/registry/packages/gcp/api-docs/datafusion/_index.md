@@ -2,8 +2,6 @@
 title: "datafusion"
 title_tag: "gcp.datafusion"
 meta_desc: "Explore the resources and functions of the gcp.datafusion module."
-aliases:
-    - "docs/reference/pkg/gcp/"
 layout: api
 ---
 

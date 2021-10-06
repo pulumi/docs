@@ -3,8 +3,6 @@
 title: "EcsBackupPlan"
 title_tag: "alicloud.hbr.EcsBackupPlan"
 meta_desc: "Documentation for the alicloud.hbr.EcsBackupPlan resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/alicloud/EcsBackupPlan/"
 layout: api
 ---
 

@@ -2,8 +2,6 @@
 title: "chatbot"
 title_tag: "aws-native.chatbot"
 meta_desc: "Explore the resources and functions of the aws-native.chatbot module."
-aliases:
-    - "docs/reference/pkg/aws-native/"
 layout: api
 ---
 

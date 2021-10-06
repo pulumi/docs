@@ -3,8 +3,6 @@
 title: "PrivateEndpointConnectionsSec"
 title_tag: "azure-native.m365securityandcompliance.PrivateEndpointConnectionsSec"
 meta_desc: "Documentation for the azure-native.m365securityandcompliance.PrivateEndpointConnectionsSec resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/PrivateEndpointConnectionsSec/"
 layout: api
 ---
 

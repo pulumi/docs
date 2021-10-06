@@ -3,8 +3,6 @@
 title: "GalleryImage"
 title_tag: "azure-native.compute.GalleryImage"
 meta_desc: "Documentation for the azure-native.compute.GalleryImage resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/GalleryImage/"
 layout: api
 ---
 

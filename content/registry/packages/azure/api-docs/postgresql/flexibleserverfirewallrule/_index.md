@@ -3,8 +3,6 @@
 title: "FlexibleServerFirewallRule"
 title_tag: "azure.postgresql.FlexibleServerFirewallRule"
 meta_desc: "Documentation for the azure.postgresql.FlexibleServerFirewallRule resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/FlexibleServerFirewallRule/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "ActivityLogAlert"
 title_tag: "azure.monitoring.ActivityLogAlert"
 meta_desc: "Documentation for the azure.monitoring.ActivityLogAlert resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/ActivityLogAlert/"
 layout: api
 ---
 

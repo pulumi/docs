@@ -3,8 +3,6 @@
 title: "CaaRecord"
 title_tag: "azure.dns.CaaRecord"
 meta_desc: "Documentation for the azure.dns.CaaRecord resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/CaaRecord/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "getAppSecRules"
 title_tag: "akamai.getAppSecRules"
 meta_desc: "Documentation for the akamai.getAppSecRules function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

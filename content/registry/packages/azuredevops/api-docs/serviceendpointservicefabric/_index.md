@@ -3,8 +3,6 @@
 title: "ServiceEndpointServiceFabric"
 title_tag: "azuredevops.ServiceEndpointServiceFabric"
 meta_desc: "Documentation for the azuredevops.ServiceEndpointServiceFabric resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azuredevops/ServiceEndpointServiceFabric/"
 layout: api
 ---
 

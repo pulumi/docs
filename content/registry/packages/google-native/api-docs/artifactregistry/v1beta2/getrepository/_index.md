@@ -3,8 +3,6 @@
 title: "getRepository"
 title_tag: "google-native.artifactregistry/v1beta2.getRepository"
 meta_desc: "Documentation for the google-native.artifactregistry/v1beta2.getRepository function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

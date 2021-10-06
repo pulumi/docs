@@ -2,8 +2,6 @@
 title: "eventbridge"
 title_tag: "alicloud.eventbridge"
 meta_desc: "Explore the resources and functions of the alicloud.eventbridge module."
-aliases:
-    - "docs/reference/pkg/alicloud/"
 layout: api
 ---
 

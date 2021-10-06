@@ -3,8 +3,6 @@
 title: "HardcodedRoleIdentityMapper"
 title_tag: "keycloak.HardcodedRoleIdentityMapper"
 meta_desc: "Documentation for the keycloak.HardcodedRoleIdentityMapper resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/keycloak/HardcodedRoleIdentityMapper/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "TagOptionResourceAssociation"
 title_tag: "aws.servicecatalog.TagOptionResourceAssociation"
 meta_desc: "Documentation for the aws.servicecatalog.TagOptionResourceAssociation resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/TagOptionResourceAssociation/"
 layout: api
 ---
 

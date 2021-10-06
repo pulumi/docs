@@ -3,8 +3,6 @@
 title: "NetworkProfile"
 title_tag: "azure-native.network.NetworkProfile"
 meta_desc: "Documentation for the azure-native.network.NetworkProfile resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/NetworkProfile/"
 layout: api
 ---
 

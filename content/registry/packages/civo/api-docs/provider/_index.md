@@ -3,8 +3,6 @@
 title: "Provider"
 title_tag: "civo.Provider"
 meta_desc: "Documentation for the civo.Provider resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/civo/civo/"
 layout: api
 ---
 

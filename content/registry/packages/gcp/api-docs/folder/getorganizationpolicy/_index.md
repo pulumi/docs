@@ -3,8 +3,6 @@
 title: "getOrganizationPolicy"
 title_tag: "gcp.folder.getOrganizationPolicy"
 meta_desc: "Documentation for the gcp.folder.getOrganizationPolicy function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

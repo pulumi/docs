@@ -3,8 +3,6 @@
 title: "getRoleDefinition"
 title_tag: "azure-native.authorization.getRoleDefinition"
 meta_desc: "Documentation for the azure-native.authorization.getRoleDefinition function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

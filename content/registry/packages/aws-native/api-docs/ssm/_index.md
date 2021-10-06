@@ -2,8 +2,6 @@
 title: "ssm"
 title_tag: "aws-native.ssm"
 meta_desc: "Explore the resources and functions of the aws-native.ssm module."
-aliases:
-    - "docs/reference/pkg/aws-native/"
 layout: api
 ---
 

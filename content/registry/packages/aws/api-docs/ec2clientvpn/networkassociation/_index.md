@@ -3,8 +3,6 @@
 title: "NetworkAssociation"
 title_tag: "aws.ec2clientvpn.NetworkAssociation"
 meta_desc: "Documentation for the aws.ec2clientvpn.NetworkAssociation resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/NetworkAssociation/"
 layout: api
 ---
 

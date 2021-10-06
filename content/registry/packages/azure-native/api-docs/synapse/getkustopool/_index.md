@@ -3,8 +3,6 @@
 title: "getkustoPool"
 title_tag: "azure-native.synapse.getkustoPool"
 meta_desc: "Documentation for the azure-native.synapse.getkustoPool function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

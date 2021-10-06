@@ -3,8 +3,6 @@
 title: "Instance"
 title_tag: "alicloud.tsdb.Instance"
 meta_desc: "Documentation for the alicloud.tsdb.Instance resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/alicloud/Instance/"
 layout: api
 ---
 

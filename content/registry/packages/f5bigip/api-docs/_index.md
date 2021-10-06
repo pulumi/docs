@@ -2,8 +2,6 @@
 title: "f5 BIG-IP"
 title_tag: "f5 BIG-IP Package"
 meta_desc: "A Pulumi package for creating and managing F5 BigIP resources."
-aliases:
-    - "docs/reference/pkg/f5bigip/"
 menu:
     reference:
         parent: API Reference

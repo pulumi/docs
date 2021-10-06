@@ -2,8 +2,6 @@
 title: "lookoutvision"
 title_tag: "aws-native.lookoutvision"
 meta_desc: "Explore the resources and functions of the aws-native.lookoutvision module."
-aliases:
-    - "docs/reference/pkg/aws-native/"
 layout: api
 ---
 

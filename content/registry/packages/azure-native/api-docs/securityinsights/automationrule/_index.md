@@ -3,8 +3,6 @@
 title: "AutomationRule"
 title_tag: "azure-native.securityinsights.AutomationRule"
 meta_desc: "Documentation for the azure-native.securityinsights.AutomationRule resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/AutomationRule/"
 layout: api
 ---
 

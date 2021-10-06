@@ -3,8 +3,6 @@
 title: "ApnsChannel"
 title_tag: "aws.pinpoint.ApnsChannel"
 meta_desc: "Documentation for the aws.pinpoint.ApnsChannel resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/ApnsChannel/"
 layout: api
 ---
 

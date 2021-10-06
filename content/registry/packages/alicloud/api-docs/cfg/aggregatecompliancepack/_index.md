@@ -3,8 +3,6 @@
 title: "AggregateCompliancePack"
 title_tag: "alicloud.cfg.AggregateCompliancePack"
 meta_desc: "Documentation for the alicloud.cfg.AggregateCompliancePack resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/alicloud/AggregateCompliancePack/"
 layout: api
 ---
 

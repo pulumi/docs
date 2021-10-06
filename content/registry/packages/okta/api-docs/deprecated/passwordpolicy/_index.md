@@ -3,8 +3,6 @@
 title: "PasswordPolicy"
 title_tag: "okta.deprecated.PasswordPolicy"
 meta_desc: "Documentation for the okta.deprecated.PasswordPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/okta/PasswordPolicy/"
 layout: api
 ---
 

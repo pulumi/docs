@@ -2,8 +2,6 @@
 title: "sqladmin"
 title_tag: "sqladmin Package"
 meta_desc: ""
-aliases:
-    - "docs/reference/pkg/google-native/"
 layout: api
 ---
 

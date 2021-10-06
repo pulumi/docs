@@ -3,8 +3,6 @@
 title: "SpringCloudActiveDeployment"
 title_tag: "azure.appplatform.SpringCloudActiveDeployment"
 meta_desc: "Documentation for the azure.appplatform.SpringCloudActiveDeployment resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/SpringCloudActiveDeployment/"
 layout: api
 ---
 

@@ -2,8 +2,6 @@
 title: "actiontrail"
 title_tag: "alicloud.actiontrail"
 meta_desc: "Explore the resources and functions of the alicloud.actiontrail module."
-aliases:
-    - "docs/reference/pkg/alicloud/"
 layout: api
 ---
 

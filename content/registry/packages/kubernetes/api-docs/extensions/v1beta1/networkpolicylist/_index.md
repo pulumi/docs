@@ -3,8 +3,6 @@
 title: "NetworkPolicyList"
 title_tag: "kubernetes.extensions/v1beta1.NetworkPolicyList"
 meta_desc: "Documentation for the kubernetes.extensions/v1beta1.NetworkPolicyList resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/kubernetes/NetworkPolicyList/"
 layout: api
 ---
 

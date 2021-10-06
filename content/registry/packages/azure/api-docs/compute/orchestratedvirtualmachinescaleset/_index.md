@@ -3,8 +3,6 @@
 title: "OrchestratedVirtualMachineScaleSet"
 title_tag: "azure.compute.OrchestratedVirtualMachineScaleSet"
 meta_desc: "Documentation for the azure.compute.OrchestratedVirtualMachineScaleSet resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/OrchestratedVirtualMachineScaleSet/"
 layout: api
 ---
 

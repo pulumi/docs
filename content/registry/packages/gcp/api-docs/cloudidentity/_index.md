@@ -2,8 +2,6 @@
 title: "cloudidentity"
 title_tag: "gcp.cloudidentity"
 meta_desc: "Explore the resources and functions of the gcp.cloudidentity module."
-aliases:
-    - "docs/reference/pkg/gcp/"
 layout: api
 ---
 

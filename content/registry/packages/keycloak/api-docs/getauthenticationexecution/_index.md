@@ -3,8 +3,6 @@
 title: "getAuthenticationExecution"
 title_tag: "keycloak.getAuthenticationExecution"
 meta_desc: "Documentation for the keycloak.getAuthenticationExecution function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

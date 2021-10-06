@@ -3,8 +3,6 @@
 title: "Order"
 title_tag: "alicloud.marketplace.Order"
 meta_desc: "Documentation for the alicloud.marketplace.Order resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/alicloud/Order/"
 layout: api
 ---
 

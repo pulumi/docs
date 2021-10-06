@@ -3,8 +3,6 @@
 title: "ExternalKey"
 title_tag: "aws.kms.ExternalKey"
 meta_desc: "Documentation for the aws.kms.ExternalKey resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/ExternalKey/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "GlobalRoleBinding"
 title_tag: "rancher2.GlobalRoleBinding"
 meta_desc: "Documentation for the rancher2.GlobalRoleBinding resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/rancher2/GlobalRoleBinding/"
 layout: api
 ---
 

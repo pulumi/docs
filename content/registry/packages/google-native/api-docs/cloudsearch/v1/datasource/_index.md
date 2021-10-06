@@ -3,8 +3,6 @@
 title: "DataSource"
 title_tag: "google-native.cloudsearch/v1.DataSource"
 meta_desc: "Documentation for the google-native.cloudsearch/v1.DataSource resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/google-native/DataSource/"
 layout: api
 ---
 

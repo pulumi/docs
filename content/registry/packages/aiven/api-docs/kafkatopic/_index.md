@@ -3,8 +3,6 @@
 title: "KafkaTopic"
 title_tag: "aiven.KafkaTopic"
 meta_desc: "Documentation for the aiven.KafkaTopic resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aiven/KafkaTopic/"
 layout: api
 ---
 

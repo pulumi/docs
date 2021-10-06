@@ -2,8 +2,6 @@
 title: "apigateway"
 title_tag: "aws.apigateway"
 meta_desc: "Explore the resources and functions of the aws.apigateway module."
-aliases:
-    - "docs/reference/pkg/aws/"
 layout: api
 ---
 

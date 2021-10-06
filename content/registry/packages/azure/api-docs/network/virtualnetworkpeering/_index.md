@@ -3,8 +3,6 @@
 title: "VirtualNetworkPeering"
 title_tag: "azure.network.VirtualNetworkPeering"
 meta_desc: "Documentation for the azure.network.VirtualNetworkPeering resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/VirtualNetworkPeering/"
 layout: api
 ---
 

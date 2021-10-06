@@ -3,8 +3,6 @@
 title: "Provider"
 title_tag: "random.Provider"
 meta_desc: "Documentation for the random.Provider resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/random/random/"
 layout: api
 ---
 

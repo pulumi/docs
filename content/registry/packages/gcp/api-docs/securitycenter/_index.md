@@ -2,8 +2,6 @@
 title: "securitycenter"
 title_tag: "gcp.securitycenter"
 meta_desc: "Explore the resources and functions of the gcp.securitycenter module."
-aliases:
-    - "docs/reference/pkg/gcp/"
 layout: api
 ---
 

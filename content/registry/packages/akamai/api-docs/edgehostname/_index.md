@@ -3,8 +3,6 @@
 title: "EdgeHostName"
 title_tag: "akamai.EdgeHostName"
 meta_desc: "Documentation for the akamai.EdgeHostName resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/akamai/EdgeHostName/"
 layout: api
 ---
 

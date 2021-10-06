@@ -2,8 +2,6 @@
 title: "databasegateway"
 title_tag: "alicloud.databasegateway"
 meta_desc: "Explore the resources and functions of the alicloud.databasegateway module."
-aliases:
-    - "docs/reference/pkg/alicloud/"
 layout: api
 ---
 

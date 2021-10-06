@@ -3,8 +3,6 @@
 title: "OidcKeyAllowedClientID"
 title_tag: "vault.identity.OidcKeyAllowedClientID"
 meta_desc: "Documentation for the vault.identity.OidcKeyAllowedClientID resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/vault/OidcKeyAllowedClientID/"
 layout: api
 ---
 

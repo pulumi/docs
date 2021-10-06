@@ -3,8 +3,6 @@
 title: "ImageCache"
 title_tag: "alicloud.eci.ImageCache"
 meta_desc: "Documentation for the alicloud.eci.ImageCache resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/alicloud/ImageCache/"
 layout: api
 ---
 

@@ -2,8 +2,6 @@
 title: "database"
 title_tag: "openstack.database"
 meta_desc: "Explore the resources and functions of the openstack.database module."
-aliases:
-    - "docs/reference/pkg/openstack/"
 layout: api
 ---
 

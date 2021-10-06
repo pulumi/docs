@@ -2,8 +2,6 @@
 title: "containeranalysis"
 title_tag: "containeranalysis Package"
 meta_desc: ""
-aliases:
-    - "docs/reference/pkg/google-native/"
 layout: api
 ---
 

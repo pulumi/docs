@@ -3,8 +3,6 @@
 title: "Hook"
 title_tag: "okta.inline.Hook"
 meta_desc: "Documentation for the okta.inline.Hook resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/okta/Hook/"
 layout: api
 ---
 

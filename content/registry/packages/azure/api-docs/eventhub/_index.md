@@ -2,8 +2,6 @@
 title: "eventhub"
 title_tag: "azure.eventhub"
 meta_desc: "Explore the resources and functions of the azure.eventhub module."
-aliases:
-    - "docs/reference/pkg/azure/"
 layout: api
 ---
 

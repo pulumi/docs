@@ -2,8 +2,6 @@
 title: "efs"
 title_tag: "aws.efs"
 meta_desc: "Explore the resources and functions of the aws.efs module."
-aliases:
-    - "docs/reference/pkg/aws/"
 layout: api
 ---
 

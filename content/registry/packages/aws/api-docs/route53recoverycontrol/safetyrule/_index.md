@@ -3,8 +3,6 @@
 title: "SafetyRule"
 title_tag: "aws.route53recoverycontrol.SafetyRule"
 meta_desc: "Documentation for the aws.route53recoverycontrol.SafetyRule resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/SafetyRule/"
 layout: api
 ---
 

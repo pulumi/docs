@@ -3,8 +3,6 @@
 title: "JitRequest"
 title_tag: "azure-native.solutions.JitRequest"
 meta_desc: "Documentation for the azure-native.solutions.JitRequest resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/JitRequest/"
 layout: api
 ---
 

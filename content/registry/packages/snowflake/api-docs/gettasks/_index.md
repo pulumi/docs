@@ -3,8 +3,6 @@
 title: "getTasks"
 title_tag: "snowflake.getTasks"
 meta_desc: "Documentation for the snowflake.getTasks function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

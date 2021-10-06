@@ -3,8 +3,6 @@
 title: "WorkflowTemplateIamPolicy"
 title_tag: "google-native.dataproc/v1.WorkflowTemplateIamPolicy"
 meta_desc: "Documentation for the google-native.dataproc/v1.WorkflowTemplateIamPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/google-native/WorkflowTemplateIamPolicy/"
 layout: api
 ---
 

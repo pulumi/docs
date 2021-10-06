@@ -3,8 +3,6 @@
 title: "WindowsFileSystem"
 title_tag: "aws.fsx.WindowsFileSystem"
 meta_desc: "Documentation for the aws.fsx.WindowsFileSystem resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/WindowsFileSystem/"
 layout: api
 ---
 

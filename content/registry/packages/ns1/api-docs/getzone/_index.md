@@ -3,8 +3,6 @@
 title: "getZone"
 title_tag: "ns1.getZone"
 meta_desc: "Documentation for the ns1.getZone function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

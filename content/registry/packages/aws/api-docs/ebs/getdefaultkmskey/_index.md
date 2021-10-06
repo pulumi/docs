@@ -3,8 +3,6 @@
 title: "getDefaultKmsKey"
 title_tag: "aws.ebs.getDefaultKmsKey"
 meta_desc: "Documentation for the aws.ebs.getDefaultKmsKey function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

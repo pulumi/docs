@@ -2,8 +2,6 @@
 title: "Repository"
 title_tag: "azuredevops.Repository"
 meta_desc: "Explore the resources and functions of the azuredevops.Repository module."
-aliases:
-    - "docs/reference/pkg/azuredevops/"
 layout: api
 ---
 

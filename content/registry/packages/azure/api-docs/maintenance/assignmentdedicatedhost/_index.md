@@ -3,8 +3,6 @@
 title: "AssignmentDedicatedHost"
 title_tag: "azure.maintenance.AssignmentDedicatedHost"
 meta_desc: "Documentation for the azure.maintenance.AssignmentDedicatedHost resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/AssignmentDedicatedHost/"
 layout: api
 ---
 

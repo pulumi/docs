@@ -3,8 +3,6 @@
 title: "ImageIamBinding"
 title_tag: "gcp.compute.ImageIamBinding"
 meta_desc: "Documentation for the gcp.compute.ImageIamBinding resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/ImageIamBinding/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "AppServicePlanRouteForVnet"
 title_tag: "azure-native.web.AppServicePlanRouteForVnet"
 meta_desc: "Documentation for the azure-native.web.AppServicePlanRouteForVnet resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/AppServicePlanRouteForVnet/"
 layout: api
 ---
 

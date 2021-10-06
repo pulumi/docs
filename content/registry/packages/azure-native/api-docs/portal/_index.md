@@ -2,8 +2,6 @@
 title: "portal"
 title_tag: "azure-native.portal"
 meta_desc: "Explore the resources and functions of the azure-native.portal module."
-aliases:
-    - "docs/reference/pkg/azure-native/"
 layout: api
 ---
 

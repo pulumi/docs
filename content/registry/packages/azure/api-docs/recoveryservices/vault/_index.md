@@ -3,8 +3,6 @@
 title: "Vault"
 title_tag: "azure.recoveryservices.Vault"
 meta_desc: "Documentation for the azure.recoveryservices.Vault resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/Vault/"
 layout: api
 ---
 

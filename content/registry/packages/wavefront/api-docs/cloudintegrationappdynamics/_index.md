@@ -3,8 +3,6 @@
 title: "CloudIntegrationAppDynamics"
 title_tag: "wavefront.CloudIntegrationAppDynamics"
 meta_desc: "Documentation for the wavefront.CloudIntegrationAppDynamics resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/wavefront/CloudIntegrationAppDynamics/"
 layout: api
 ---
 

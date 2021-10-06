@@ -2,8 +2,6 @@
 title: "cloudstoragegateway"
 title_tag: "alicloud.cloudstoragegateway"
 meta_desc: "Explore the resources and functions of the alicloud.cloudstoragegateway module."
-aliases:
-    - "docs/reference/pkg/alicloud/"
 layout: api
 ---
 

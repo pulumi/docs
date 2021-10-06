@@ -3,8 +3,6 @@
 title: "MachineImage"
 title_tag: "gcp.compute.MachineImage"
 meta_desc: "Documentation for the gcp.compute.MachineImage resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/MachineImage/"
 layout: api
 ---
 

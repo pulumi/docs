@@ -2,8 +2,6 @@
 title: "autoscaling/v2beta2"
 title_tag: "kubernetes.autoscaling/v2beta2"
 meta_desc: "Explore the resources and functions of the kubernetes.autoscaling/v2beta2 module."
-aliases:
-    - "docs/reference/pkg/kubernetes/"
 layout: api
 ---
 

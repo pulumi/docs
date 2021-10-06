@@ -3,8 +3,6 @@
 title: "RepositoryEnvironment"
 title_tag: "github.RepositoryEnvironment"
 meta_desc: "Documentation for the github.RepositoryEnvironment resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/github/RepositoryEnvironment/"
 layout: api
 ---
 

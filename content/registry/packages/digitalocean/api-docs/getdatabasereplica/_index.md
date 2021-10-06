@@ -3,8 +3,6 @@
 title: "getDatabaseReplica"
 title_tag: "digitalocean.getDatabaseReplica"
 meta_desc: "Documentation for the digitalocean.getDatabaseReplica function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

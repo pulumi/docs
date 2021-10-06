@@ -3,8 +3,6 @@
 title: "getActionsPublicKey"
 title_tag: "github.getActionsPublicKey"
 meta_desc: "Documentation for the github.getActionsPublicKey function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

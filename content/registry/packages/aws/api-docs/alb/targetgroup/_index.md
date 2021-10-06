@@ -3,8 +3,6 @@
 title: "TargetGroup"
 title_tag: "aws.alb.TargetGroup"
 meta_desc: "Documentation for the aws.alb.TargetGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/TargetGroup/"
 layout: api
 ---
 

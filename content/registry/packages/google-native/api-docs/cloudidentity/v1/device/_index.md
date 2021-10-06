@@ -3,8 +3,6 @@
 title: "Device"
 title_tag: "google-native.cloudidentity/v1.Device"
 meta_desc: "Documentation for the google-native.cloudidentity/v1.Device resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/google-native/Device/"
 layout: api
 ---
 

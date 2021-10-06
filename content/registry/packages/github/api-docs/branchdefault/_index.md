@@ -3,8 +3,6 @@
 title: "BranchDefault"
 title_tag: "github.BranchDefault"
 meta_desc: "Documentation for the github.BranchDefault resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/github/BranchDefault/"
 layout: api
 ---
 

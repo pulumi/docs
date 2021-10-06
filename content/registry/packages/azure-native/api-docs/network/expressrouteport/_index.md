@@ -3,8 +3,6 @@
 title: "ExpressRoutePort"
 title_tag: "azure-native.network.ExpressRoutePort"
 meta_desc: "Documentation for the azure-native.network.ExpressRoutePort resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/ExpressRoutePort/"
 layout: api
 ---
 

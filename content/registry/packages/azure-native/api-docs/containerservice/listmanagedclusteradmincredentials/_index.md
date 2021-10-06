@@ -3,8 +3,6 @@
 title: "listManagedClusterAdminCredentials"
 title_tag: "azure-native.containerservice.listManagedClusterAdminCredentials"
 meta_desc: "Documentation for the azure-native.containerservice.listManagedClusterAdminCredentials function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

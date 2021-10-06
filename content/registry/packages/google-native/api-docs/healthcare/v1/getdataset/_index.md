@@ -3,8 +3,6 @@
 title: "getDataset"
 title_tag: "google-native.healthcare/v1.getDataset"
 meta_desc: "Documentation for the google-native.healthcare/v1.getDataset function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

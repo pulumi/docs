@@ -3,8 +3,6 @@
 title: "getAppSecHostnameCoverageMatchTargets"
 title_tag: "akamai.getAppSecHostnameCoverageMatchTargets"
 meta_desc: "Documentation for the akamai.getAppSecHostnameCoverageMatchTargets function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

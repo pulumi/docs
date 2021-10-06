@@ -3,8 +3,6 @@
 title: "getOvfVmTemplate"
 title_tag: "vsphere.getOvfVmTemplate"
 meta_desc: "Documentation for the vsphere.getOvfVmTemplate function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

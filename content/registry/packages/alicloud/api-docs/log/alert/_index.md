@@ -3,8 +3,6 @@
 title: "Alert"
 title_tag: "alicloud.log.Alert"
 meta_desc: "Documentation for the alicloud.log.Alert resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/alicloud/Alert/"
 layout: api
 ---
 

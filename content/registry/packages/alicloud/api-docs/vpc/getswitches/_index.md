@@ -3,8 +3,6 @@
 title: "getSwitches"
 title_tag: "alicloud.vpc.getSwitches"
 meta_desc: "Documentation for the alicloud.vpc.getSwitches function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

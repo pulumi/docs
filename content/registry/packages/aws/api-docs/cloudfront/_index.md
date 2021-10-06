@@ -2,8 +2,6 @@
 title: "cloudfront"
 title_tag: "aws.cloudfront"
 meta_desc: "Explore the resources and functions of the aws.cloudfront module."
-aliases:
-    - "docs/reference/pkg/aws/"
 layout: api
 ---
 

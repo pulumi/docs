@@ -3,8 +3,6 @@
 title: "RegistryEnterpriseNamespace"
 title_tag: "alicloud.cs.RegistryEnterpriseNamespace"
 meta_desc: "Documentation for the alicloud.cs.RegistryEnterpriseNamespace resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/alicloud/RegistryEnterpriseNamespace/"
 layout: api
 ---
 

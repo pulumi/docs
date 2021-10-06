@@ -3,8 +3,6 @@
 title: "ContainerObject"
 title_tag: "openstack.objectstorage.ContainerObject"
 meta_desc: "Documentation for the openstack.objectstorage.ContainerObject resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/openstack/ContainerObject/"
 layout: api
 ---
 

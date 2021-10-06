@@ -3,8 +3,6 @@
 title: "getAccountBlobContainerSAS"
 title_tag: "azure.storage.getAccountBlobContainerSAS"
 meta_desc: "Documentation for the azure.storage.getAccountBlobContainerSAS function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

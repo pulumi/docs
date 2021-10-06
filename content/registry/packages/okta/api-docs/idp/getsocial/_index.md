@@ -3,8 +3,6 @@
 title: "getSocial"
 title_tag: "okta.idp.getSocial"
 meta_desc: "Documentation for the okta.idp.getSocial function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

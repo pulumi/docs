@@ -3,8 +3,6 @@
 title: "getSnapshot"
 title_tag: "azure-native.containerservice.getSnapshot"
 meta_desc: "Documentation for the azure-native.containerservice.getSnapshot function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "listIntegrationAccountSchemaContentCallbackUrl"
 title_tag: "azure-native.logic.listIntegrationAccountSchemaContentCallbackUrl"
 meta_desc: "Documentation for the azure-native.logic.listIntegrationAccountSchemaContentCallbackUrl function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

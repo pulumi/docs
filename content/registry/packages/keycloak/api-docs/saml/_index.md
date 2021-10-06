@@ -2,8 +2,6 @@
 title: "saml"
 title_tag: "keycloak.saml"
 meta_desc: "Explore the resources and functions of the keycloak.saml module."
-aliases:
-    - "docs/reference/pkg/keycloak/"
 layout: api
 ---
 

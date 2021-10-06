@@ -2,8 +2,6 @@
 title: "Policy"
 title_tag: "azuredevops.Policy"
 meta_desc: "Explore the resources and functions of the azuredevops.Policy module."
-aliases:
-    - "docs/reference/pkg/azuredevops/"
 layout: api
 ---
 

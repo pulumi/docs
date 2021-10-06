@@ -2,8 +2,6 @@
 title: "healthcareapis"
 title_tag: "azure-native.healthcareapis"
 meta_desc: "Explore the resources and functions of the azure-native.healthcareapis module."
-aliases:
-    - "docs/reference/pkg/azure-native/"
 layout: api
 ---
 

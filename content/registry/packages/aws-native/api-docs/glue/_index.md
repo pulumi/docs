@@ -2,8 +2,6 @@
 title: "glue"
 title_tag: "aws-native.glue"
 meta_desc: "Explore the resources and functions of the aws-native.glue module."
-aliases:
-    - "docs/reference/pkg/aws-native/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "CachesIscsiVolume"
 title_tag: "aws.storagegateway.CachesIscsiVolume"
 meta_desc: "Documentation for the aws.storagegateway.CachesIscsiVolume resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/CachesIscsiVolume/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "getApiTokenPermissionGroups"
 title_tag: "cloudflare.getApiTokenPermissionGroups"
 meta_desc: "Documentation for the cloudflare.getApiTokenPermissionGroups function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

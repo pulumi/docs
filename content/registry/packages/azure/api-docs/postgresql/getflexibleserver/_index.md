@@ -3,8 +3,6 @@
 title: "getFlexibleServer"
 title_tag: "azure.postgresql.getFlexibleServer"
 meta_desc: "Documentation for the azure.postgresql.getFlexibleServer function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

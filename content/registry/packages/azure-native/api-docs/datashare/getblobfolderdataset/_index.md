@@ -3,8 +3,6 @@
 title: "getBlobFolderDataSet"
 title_tag: "azure-native.datashare.getBlobFolderDataSet"
 meta_desc: "Documentation for the azure-native.datashare.getBlobFolderDataSet function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "IntegrationAccountPartner"
 title_tag: "azure.logicapps.IntegrationAccountPartner"
 meta_desc: "Documentation for the azure.logicapps.IntegrationAccountPartner resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/IntegrationAccountPartner/"
 layout: api
 ---
 

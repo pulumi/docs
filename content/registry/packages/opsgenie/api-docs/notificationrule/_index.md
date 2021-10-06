@@ -3,8 +3,6 @@
 title: "NotificationRule"
 title_tag: "opsgenie.NotificationRule"
 meta_desc: "Documentation for the opsgenie.NotificationRule resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/opsgenie/NotificationRule/"
 layout: api
 ---
 

@@ -2,8 +2,6 @@
 title: "pinpoint"
 title_tag: "aws.pinpoint"
 meta_desc: "Explore the resources and functions of the aws.pinpoint module."
-aliases:
-    - "docs/reference/pkg/aws/"
 layout: api
 ---
 

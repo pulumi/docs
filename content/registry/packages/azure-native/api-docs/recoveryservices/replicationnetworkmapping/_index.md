@@ -3,8 +3,6 @@
 title: "ReplicationNetworkMapping"
 title_tag: "azure-native.recoveryservices.ReplicationNetworkMapping"
 meta_desc: "Documentation for the azure-native.recoveryservices.ReplicationNetworkMapping resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/ReplicationNetworkMapping/"
 layout: api
 ---
 

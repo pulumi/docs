@@ -3,8 +3,6 @@
 title: "DscpConfiguration"
 title_tag: "azure-native.network.DscpConfiguration"
 meta_desc: "Documentation for the azure-native.network.DscpConfiguration resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/DscpConfiguration/"
 layout: api
 ---
 

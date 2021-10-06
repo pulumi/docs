@@ -3,8 +3,6 @@
 title: "ConfigurationAggregator"
 title_tag: "aws-native.configuration.ConfigurationAggregator"
 meta_desc: "Documentation for the aws-native.configuration.ConfigurationAggregator resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws-native/ConfigurationAggregator/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "getMeshIstioService"
 title_tag: "gcp.monitoring.getMeshIstioService"
 meta_desc: "Documentation for the gcp.monitoring.getMeshIstioService function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

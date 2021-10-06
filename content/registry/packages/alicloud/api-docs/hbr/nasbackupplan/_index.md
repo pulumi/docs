@@ -3,8 +3,6 @@
 title: "NasBackupPlan"
 title_tag: "alicloud.hbr.NasBackupPlan"
 meta_desc: "Documentation for the alicloud.hbr.NasBackupPlan resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/alicloud/NasBackupPlan/"
 layout: api
 ---
 

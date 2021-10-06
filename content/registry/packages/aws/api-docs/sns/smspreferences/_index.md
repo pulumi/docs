@@ -3,8 +3,6 @@
 title: "SmsPreferences"
 title_tag: "aws.sns.SmsPreferences"
 meta_desc: "Documentation for the aws.sns.SmsPreferences resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/SmsPreferences/"
 layout: api
 ---
 

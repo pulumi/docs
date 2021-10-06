@@ -3,8 +3,6 @@
 title: "SharedImageVersion"
 title_tag: "azure.compute.SharedImageVersion"
 meta_desc: "Documentation for the azure.compute.SharedImageVersion resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/SharedImageVersion/"
 layout: api
 ---
 

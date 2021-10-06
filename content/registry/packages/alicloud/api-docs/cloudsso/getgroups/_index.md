@@ -3,8 +3,6 @@
 title: "getGroups"
 title_tag: "alicloud.cloudsso.getGroups"
 meta_desc: "Documentation for the alicloud.cloudsso.getGroups function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

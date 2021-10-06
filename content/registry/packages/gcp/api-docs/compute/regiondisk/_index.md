@@ -3,8 +3,6 @@
 title: "RegionDisk"
 title_tag: "gcp.compute.RegionDisk"
 meta_desc: "Documentation for the gcp.compute.RegionDisk resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/RegionDisk/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "Branch"
 title_tag: "aws.amplify.Branch"
 meta_desc: "Documentation for the aws.amplify.Branch resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/Branch/"
 layout: api
 ---
 

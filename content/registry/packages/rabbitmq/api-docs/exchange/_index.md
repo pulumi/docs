@@ -3,8 +3,6 @@
 title: "Exchange"
 title_tag: "rabbitmq.Exchange"
 meta_desc: "Documentation for the rabbitmq.Exchange resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/rabbitmq/Exchange/"
 layout: api
 ---
 

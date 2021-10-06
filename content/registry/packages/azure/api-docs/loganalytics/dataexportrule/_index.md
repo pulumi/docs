@@ -3,8 +3,6 @@
 title: "DataExportRule"
 title_tag: "azure.loganalytics.DataExportRule"
 meta_desc: "Documentation for the azure.loganalytics.DataExportRule resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/DataExportRule/"
 layout: api
 ---
 

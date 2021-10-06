@@ -3,8 +3,6 @@
 title: "SnapshotCreateVolumePermission"
 title_tag: "aws.ec2.SnapshotCreateVolumePermission"
 meta_desc: "Documentation for the aws.ec2.SnapshotCreateVolumePermission resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/SnapshotCreateVolumePermission/"
 layout: api
 ---
 

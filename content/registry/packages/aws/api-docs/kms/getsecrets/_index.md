@@ -3,8 +3,6 @@
 title: "getSecrets"
 title_tag: "aws.kms.getSecrets"
 meta_desc: "Documentation for the aws.kms.getSecrets function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

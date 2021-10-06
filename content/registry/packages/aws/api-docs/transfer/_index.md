@@ -2,8 +2,6 @@
 title: "transfer"
 title_tag: "aws.transfer"
 meta_desc: "Explore the resources and functions of the aws.transfer module."
-aliases:
-    - "docs/reference/pkg/aws/"
 layout: api
 ---
 

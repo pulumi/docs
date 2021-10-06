@@ -3,8 +3,6 @@
 title: "TlsCipherPolicy"
 title_tag: "alicloud.slb.TlsCipherPolicy"
 meta_desc: "Documentation for the alicloud.slb.TlsCipherPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/alicloud/TlsCipherPolicy/"
 layout: api
 ---
 

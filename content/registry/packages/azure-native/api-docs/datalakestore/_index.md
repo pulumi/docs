@@ -2,8 +2,6 @@
 title: "datalakestore"
 title_tag: "azure-native.datalakestore"
 meta_desc: "Explore the resources and functions of the azure-native.datalakestore module."
-aliases:
-    - "docs/reference/pkg/azure-native/"
 layout: api
 ---
 

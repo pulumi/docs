@@ -3,8 +3,6 @@
 title: "getRegistrationDefinition"
 title_tag: "azure-native.managedservices.getRegistrationDefinition"
 meta_desc: "Documentation for the azure-native.managedservices.getRegistrationDefinition function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

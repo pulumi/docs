@@ -3,8 +3,6 @@
 title: "Template"
 title_tag: "vault.transform.Template"
 meta_desc: "Documentation for the vault.transform.Template resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/vault/Template/"
 layout: api
 ---
 

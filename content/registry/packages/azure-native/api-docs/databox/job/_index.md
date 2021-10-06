@@ -3,8 +3,6 @@
 title: "Job"
 title_tag: "azure-native.databox.Job"
 meta_desc: "Documentation for the azure-native.databox.Job resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/Job/"
 layout: api
 ---
 

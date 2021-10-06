@@ -3,8 +3,6 @@
 title: "OrganizationExclusion"
 title_tag: "gcp.logging.OrganizationExclusion"
 meta_desc: "Documentation for the gcp.logging.OrganizationExclusion resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/OrganizationExclusion/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "getVpc"
 title_tag: "digitalocean.getVpc"
 meta_desc: "Documentation for the digitalocean.getVpc function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

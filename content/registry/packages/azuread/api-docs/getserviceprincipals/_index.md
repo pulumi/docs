@@ -3,8 +3,6 @@
 title: "getServicePrincipals"
 title_tag: "azuread.getServicePrincipals"
 meta_desc: "Documentation for the azuread.getServicePrincipals function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

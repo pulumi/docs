@@ -3,8 +3,6 @@
 title: "UserAttributeMapper"
 title_tag: "keycloak.ldap.UserAttributeMapper"
 meta_desc: "Documentation for the keycloak.ldap.UserAttributeMapper resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/keycloak/UserAttributeMapper/"
 layout: api
 ---
 

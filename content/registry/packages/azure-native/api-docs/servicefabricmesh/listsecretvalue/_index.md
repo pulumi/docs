@@ -3,8 +3,6 @@
 title: "listSecretValue"
 title_tag: "azure-native.servicefabricmesh.listSecretValue"
 meta_desc: "Documentation for the azure-native.servicefabricmesh.listSecretValue function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

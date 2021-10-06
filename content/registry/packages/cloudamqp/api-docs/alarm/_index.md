@@ -3,8 +3,6 @@
 title: "Alarm"
 title_tag: "cloudamqp.Alarm"
 meta_desc: "Documentation for the cloudamqp.Alarm resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/cloudamqp/Alarm/"
 layout: api
 ---
 

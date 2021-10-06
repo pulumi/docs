@@ -3,8 +3,6 @@
 title: "DnsZone"
 title_tag: "yandex.DnsZone"
 meta_desc: "Documentation for the yandex.DnsZone resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/yandex/DnsZone/"
 layout: api
 ---
 

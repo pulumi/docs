@@ -3,8 +3,6 @@
 title: "TagTemplateIamPolicy"
 title_tag: "google-native.datacatalog/v1beta1.TagTemplateIamPolicy"
 meta_desc: "Documentation for the google-native.datacatalog/v1beta1.TagTemplateIamPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/google-native/TagTemplateIamPolicy/"
 layout: api
 ---
 

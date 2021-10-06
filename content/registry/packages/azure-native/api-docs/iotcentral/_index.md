@@ -2,8 +2,6 @@
 title: "iotcentral"
 title_tag: "azure-native.iotcentral"
 meta_desc: "Explore the resources and functions of the azure-native.iotcentral module."
-aliases:
-    - "docs/reference/pkg/azure-native/"
 layout: api
 ---
 

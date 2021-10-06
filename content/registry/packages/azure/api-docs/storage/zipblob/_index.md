@@ -3,8 +3,6 @@
 title: "ZipBlob"
 title_tag: "azure.storage.ZipBlob"
 meta_desc: "Documentation for the azure.storage.ZipBlob resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/ZipBlob/"
 layout: api
 ---
 

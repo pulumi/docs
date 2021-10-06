@@ -3,8 +3,6 @@
 title: "getCertificates"
 title_tag: "hcloud.getCertificates"
 meta_desc: "Documentation for the hcloud.getCertificates function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

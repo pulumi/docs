@@ -2,8 +2,6 @@
 title: "costmanagement"
 title_tag: "azure-native.costmanagement"
 meta_desc: "Explore the resources and functions of the azure-native.costmanagement module."
-aliases:
-    - "docs/reference/pkg/azure-native/"
 layout: api
 ---
 

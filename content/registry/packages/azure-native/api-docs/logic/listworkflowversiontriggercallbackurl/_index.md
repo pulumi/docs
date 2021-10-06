@@ -3,8 +3,6 @@
 title: "listWorkflowVersionTriggerCallbackUrl"
 title_tag: "azure-native.logic.listWorkflowVersionTriggerCallbackUrl"
 meta_desc: "Documentation for the azure-native.logic.listWorkflowVersionTriggerCallbackUrl function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

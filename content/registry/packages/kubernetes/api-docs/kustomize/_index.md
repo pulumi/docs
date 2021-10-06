@@ -2,8 +2,6 @@
 title: "kustomize"
 title_tag: "kubernetes.kustomize"
 meta_desc: "Explore the resources and functions of the kubernetes.kustomize module."
-aliases:
-    - "docs/reference/pkg/kubernetes/"
 layout: api
 ---
 

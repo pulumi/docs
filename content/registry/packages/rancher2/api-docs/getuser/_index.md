@@ -3,8 +3,6 @@
 title: "getUser"
 title_tag: "rancher2.getUser"
 meta_desc: "Documentation for the rancher2.getUser function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

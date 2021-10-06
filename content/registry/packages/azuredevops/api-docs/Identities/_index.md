@@ -2,8 +2,6 @@
 title: "Identities"
 title_tag: "azuredevops.Identities"
 meta_desc: "Explore the resources and functions of the azuredevops.Identities module."
-aliases:
-    - "docs/reference/pkg/azuredevops/"
 layout: api
 ---
 

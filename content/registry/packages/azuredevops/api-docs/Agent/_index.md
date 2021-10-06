@@ -2,8 +2,6 @@
 title: "Agent"
 title_tag: "azuredevops.Agent"
 meta_desc: "Explore the resources and functions of the azuredevops.Agent module."
-aliases:
-    - "docs/reference/pkg/azuredevops/"
 layout: api
 ---
 

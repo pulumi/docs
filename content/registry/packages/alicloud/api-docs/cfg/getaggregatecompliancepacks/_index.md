@@ -3,8 +3,6 @@
 title: "getAggregateCompliancePacks"
 title_tag: "alicloud.cfg.getAggregateCompliancePacks"
 meta_desc: "Documentation for the alicloud.cfg.getAggregateCompliancePacks function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

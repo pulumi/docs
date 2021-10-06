@@ -3,8 +3,6 @@
 title: "OrganizationAdminAccount"
 title_tag: "aws.securityhub.OrganizationAdminAccount"
 meta_desc: "Documentation for the aws.securityhub.OrganizationAdminAccount resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/OrganizationAdminAccount/"
 layout: api
 ---
 

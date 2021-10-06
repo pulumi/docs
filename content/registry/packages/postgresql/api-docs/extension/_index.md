@@ -3,8 +3,6 @@
 title: "Extension"
 title_tag: "postgresql.Extension"
 meta_desc: "Documentation for the postgresql.Extension resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/postgresql/Extension/"
 layout: api
 ---
 

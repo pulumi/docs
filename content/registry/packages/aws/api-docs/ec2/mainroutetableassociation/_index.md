@@ -3,8 +3,6 @@
 title: "MainRouteTableAssociation"
 title_tag: "aws.ec2.MainRouteTableAssociation"
 meta_desc: "Documentation for the aws.ec2.MainRouteTableAssociation resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/MainRouteTableAssociation/"
 layout: api
 ---
 

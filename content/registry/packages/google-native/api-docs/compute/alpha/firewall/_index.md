@@ -3,8 +3,6 @@
 title: "Firewall"
 title_tag: "google-native.compute/alpha.Firewall"
 meta_desc: "Documentation for the google-native.compute/alpha.Firewall resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/google-native/Firewall/"
 layout: api
 ---
 

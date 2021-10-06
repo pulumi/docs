@@ -3,8 +3,6 @@
 title: "Domain"
 title_tag: "linode.Domain"
 meta_desc: "Documentation for the linode.Domain resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/linode/Domain/"
 layout: api
 ---
 

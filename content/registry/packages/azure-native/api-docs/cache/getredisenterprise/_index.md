@@ -3,8 +3,6 @@
 title: "getRedisEnterprise"
 title_tag: "azure-native.cache.getRedisEnterprise"
 meta_desc: "Documentation for the azure-native.cache.getRedisEnterprise function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

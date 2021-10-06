@@ -3,8 +3,6 @@
 title: "getDiskAccessAPrivateEndpointConnection"
 title_tag: "azure-native.compute.getDiskAccessAPrivateEndpointConnection"
 meta_desc: "Documentation for the azure-native.compute.getDiskAccessAPrivateEndpointConnection function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

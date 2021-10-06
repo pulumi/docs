@@ -3,8 +3,6 @@
 title: "TargetTCPProxy"
 title_tag: "gcp.compute.TargetTCPProxy"
 meta_desc: "Documentation for the gcp.compute.TargetTCPProxy resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/TargetTCPProxy/"
 layout: api
 ---
 

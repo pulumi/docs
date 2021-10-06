@@ -3,8 +3,6 @@
 title: "getProtocols"
 title_tag: "alicloud.nas.getProtocols"
 meta_desc: "Documentation for the alicloud.nas.getProtocols function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

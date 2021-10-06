@@ -3,8 +3,6 @@
 title: "Connector"
 title_tag: "azure-native.security.Connector"
 meta_desc: "Documentation for the azure-native.security.Connector resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/Connector/"
 layout: api
 ---
 

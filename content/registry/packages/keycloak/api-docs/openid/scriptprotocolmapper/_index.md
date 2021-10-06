@@ -3,8 +3,6 @@
 title: "ScriptProtocolMapper"
 title_tag: "keycloak.openid.ScriptProtocolMapper"
 meta_desc: "Documentation for the keycloak.openid.ScriptProtocolMapper resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/keycloak/ScriptProtocolMapper/"
 layout: api
 ---
 

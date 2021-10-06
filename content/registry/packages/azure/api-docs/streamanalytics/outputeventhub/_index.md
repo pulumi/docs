@@ -3,8 +3,6 @@
 title: "OutputEventHub"
 title_tag: "azure.streamanalytics.OutputEventHub"
 meta_desc: "Documentation for the azure.streamanalytics.OutputEventHub resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/OutputEventHub/"
 layout: api
 ---
 

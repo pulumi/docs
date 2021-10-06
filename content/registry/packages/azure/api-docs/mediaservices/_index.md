@@ -2,8 +2,6 @@
 title: "mediaservices"
 title_tag: "azure.mediaservices"
 meta_desc: "Explore the resources and functions of the azure.mediaservices module."
-aliases:
-    - "docs/reference/pkg/azure/"
 layout: api
 ---
 

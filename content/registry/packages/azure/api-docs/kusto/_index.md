@@ -2,8 +2,6 @@
 title: "kusto"
 title_tag: "azure.kusto"
 meta_desc: "Explore the resources and functions of the azure.kusto module."
-aliases:
-    - "docs/reference/pkg/azure/"
 layout: api
 ---
 

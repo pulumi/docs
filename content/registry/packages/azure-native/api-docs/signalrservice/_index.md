@@ -2,8 +2,6 @@
 title: "signalrservice"
 title_tag: "azure-native.signalrservice"
 meta_desc: "Explore the resources and functions of the azure-native.signalrservice module."
-aliases:
-    - "docs/reference/pkg/azure-native/"
 layout: api
 ---
 

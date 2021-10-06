@@ -3,8 +3,6 @@
 title: "CatalogTable"
 title_tag: "aws.glue.CatalogTable"
 meta_desc: "Documentation for the aws.glue.CatalogTable resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/CatalogTable/"
 layout: api
 ---
 

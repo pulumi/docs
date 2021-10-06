@@ -3,8 +3,6 @@
 title: "UploadBuffer"
 title_tag: "aws.storagegateway.UploadBuffer"
 meta_desc: "Documentation for the aws.storagegateway.UploadBuffer resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/UploadBuffer/"
 layout: api
 ---
 

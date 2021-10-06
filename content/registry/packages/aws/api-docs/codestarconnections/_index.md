@@ -2,8 +2,6 @@
 title: "codestarconnections"
 title_tag: "aws.codestarconnections"
 meta_desc: "Explore the resources and functions of the aws.codestarconnections module."
-aliases:
-    - "docs/reference/pkg/aws/"
 layout: api
 ---
 

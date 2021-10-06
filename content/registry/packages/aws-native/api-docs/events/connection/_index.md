@@ -3,8 +3,6 @@
 title: "Connection"
 title_tag: "aws-native.events.Connection"
 meta_desc: "Documentation for the aws-native.events.Connection resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws-native/Connection/"
 layout: api
 ---
 

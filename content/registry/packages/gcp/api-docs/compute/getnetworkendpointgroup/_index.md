@@ -3,8 +3,6 @@
 title: "getNetworkEndpointGroup"
 title_tag: "gcp.compute.getNetworkEndpointGroup"
 meta_desc: "Documentation for the gcp.compute.getNetworkEndpointGroup function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "TunnelIamPolicy"
 title_tag: "gcp.iap.TunnelIamPolicy"
 meta_desc: "Documentation for the gcp.iap.TunnelIamPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/TunnelIamPolicy/"
 layout: api
 ---
 

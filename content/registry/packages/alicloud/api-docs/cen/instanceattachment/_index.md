@@ -3,8 +3,6 @@
 title: "InstanceAttachment"
 title_tag: "alicloud.cen.InstanceAttachment"
 meta_desc: "Documentation for the alicloud.cen.InstanceAttachment resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/alicloud/InstanceAttachment/"
 layout: api
 ---
 

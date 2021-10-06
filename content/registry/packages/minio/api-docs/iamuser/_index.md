@@ -3,8 +3,6 @@
 title: "IamUser"
 title_tag: "minio.IamUser"
 meta_desc: "Documentation for the minio.IamUser resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/minio/IamUser/"
 layout: api
 ---
 

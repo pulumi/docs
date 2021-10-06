@@ -2,8 +2,6 @@
 title: "cloudasset"
 title_tag: "cloudasset Package"
 meta_desc: ""
-aliases:
-    - "docs/reference/pkg/google-native/"
 layout: api
 ---
 

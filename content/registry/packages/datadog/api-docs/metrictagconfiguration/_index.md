@@ -3,8 +3,6 @@
 title: "MetricTagConfiguration"
 title_tag: "datadog.MetricTagConfiguration"
 meta_desc: "Documentation for the datadog.MetricTagConfiguration resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/datadog/MetricTagConfiguration/"
 layout: api
 ---
 

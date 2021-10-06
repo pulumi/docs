@@ -2,8 +2,6 @@
 title: "apiextensions"
 title_tag: "apiextensions Package"
 meta_desc: ""
-aliases:
-    - "docs/reference/pkg/kubernetes/"
 layout: api
 ---
 

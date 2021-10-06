@@ -3,8 +3,6 @@
 title: "getRegistryBuildSourceUploadUrl"
 title_tag: "azure-native.containerregistry.getRegistryBuildSourceUploadUrl"
 meta_desc: "Documentation for the azure-native.containerregistry.getRegistryBuildSourceUploadUrl function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

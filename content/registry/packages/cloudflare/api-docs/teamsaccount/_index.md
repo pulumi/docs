@@ -3,8 +3,6 @@
 title: "TeamsAccount"
 title_tag: "cloudflare.TeamsAccount"
 meta_desc: "Documentation for the cloudflare.TeamsAccount resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/cloudflare/TeamsAccount/"
 layout: api
 ---
 

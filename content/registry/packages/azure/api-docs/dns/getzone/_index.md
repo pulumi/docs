@@ -3,8 +3,6 @@
 title: "getZone"
 title_tag: "azure.dns.getZone"
 meta_desc: "Documentation for the azure.dns.getZone function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

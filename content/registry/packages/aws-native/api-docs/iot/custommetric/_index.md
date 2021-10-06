@@ -3,8 +3,6 @@
 title: "CustomMetric"
 title_tag: "aws-native.iot.CustomMetric"
 meta_desc: "Documentation for the aws-native.iot.CustomMetric resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws-native/CustomMetric/"
 layout: api
 ---
 

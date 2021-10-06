@@ -2,8 +2,6 @@
 title: "aws"
 title_tag: "datadog.aws"
 meta_desc: "Explore the resources and functions of the datadog.aws module."
-aliases:
-    - "docs/reference/pkg/datadog/"
 layout: api
 ---
 

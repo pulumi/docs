@@ -2,8 +2,6 @@
 title: "sag"
 title_tag: "alicloud.sag"
 meta_desc: "Explore the resources and functions of the alicloud.sag module."
-aliases:
-    - "docs/reference/pkg/alicloud/"
 layout: api
 ---
 

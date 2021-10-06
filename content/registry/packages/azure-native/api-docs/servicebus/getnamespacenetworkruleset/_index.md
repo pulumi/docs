@@ -3,8 +3,6 @@
 title: "getNamespaceNetworkRuleSet"
 title_tag: "azure-native.servicebus.getNamespaceNetworkRuleSet"
 meta_desc: "Documentation for the azure-native.servicebus.getNamespaceNetworkRuleSet function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

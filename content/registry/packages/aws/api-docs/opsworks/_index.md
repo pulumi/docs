@@ -2,8 +2,6 @@
 title: "opsworks"
 title_tag: "aws.opsworks"
 meta_desc: "Explore the resources and functions of the aws.opsworks module."
-aliases:
-    - "docs/reference/pkg/aws/"
 layout: api
 ---
 

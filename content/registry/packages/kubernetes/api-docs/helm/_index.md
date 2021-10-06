@@ -2,8 +2,6 @@
 title: "helm"
 title_tag: "helm Package"
 meta_desc: ""
-aliases:
-    - "docs/reference/pkg/kubernetes/"
 layout: api
 ---
 

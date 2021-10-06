@@ -2,8 +2,6 @@
 title: "athena"
 title_tag: "aws.athena"
 meta_desc: "Explore the resources and functions of the aws.athena module."
-aliases:
-    - "docs/reference/pkg/aws/"
 layout: api
 ---
 

@@ -2,8 +2,6 @@
 title: "mns"
 title_tag: "alicloud.mns"
 meta_desc: "Explore the resources and functions of the alicloud.mns module."
-aliases:
-    - "docs/reference/pkg/alicloud/"
 layout: api
 ---
 

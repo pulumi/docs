@@ -3,8 +3,6 @@
 title: "AppSecSlowPost"
 title_tag: "akamai.AppSecSlowPost"
 meta_desc: "Documentation for the akamai.AppSecSlowPost resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/akamai/AppSecSlowPost/"
 layout: api
 ---
 

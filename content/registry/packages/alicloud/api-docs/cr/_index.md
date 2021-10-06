@@ -2,8 +2,6 @@
 title: "cr"
 title_tag: "alicloud.cr"
 meta_desc: "Explore the resources and functions of the alicloud.cr module."
-aliases:
-    - "docs/reference/pkg/alicloud/"
 layout: api
 ---
 

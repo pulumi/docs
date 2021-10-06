@@ -3,8 +3,6 @@
 title: "ZoneLockdown"
 title_tag: "cloudflare.ZoneLockdown"
 meta_desc: "Documentation for the cloudflare.ZoneLockdown resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/cloudflare/ZoneLockdown/"
 layout: api
 ---
 

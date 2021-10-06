@@ -3,8 +3,6 @@
 title: "listWebAppBackupConfiguration"
 title_tag: "azure-native.web.listWebAppBackupConfiguration"
 meta_desc: "Documentation for the azure-native.web.listWebAppBackupConfiguration function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

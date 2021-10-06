@@ -3,8 +3,6 @@
 title: "Provider"
 title_tag: "auth0.Provider"
 meta_desc: "Documentation for the auth0.Provider resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/auth0/auth0/"
 layout: api
 ---
 

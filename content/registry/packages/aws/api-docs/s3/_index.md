@@ -2,8 +2,6 @@
 title: "s3"
 title_tag: "aws.s3"
 meta_desc: "Explore the resources and functions of the aws.s3 module."
-aliases:
-    - "docs/reference/pkg/aws/"
 layout: api
 ---
 

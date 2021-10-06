@@ -2,8 +2,6 @@
 title: "databoxedge"
 title_tag: "azure-native.databoxedge"
 meta_desc: "Explore the resources and functions of the azure-native.databoxedge module."
-aliases:
-    - "docs/reference/pkg/azure-native/"
 layout: api
 ---
 

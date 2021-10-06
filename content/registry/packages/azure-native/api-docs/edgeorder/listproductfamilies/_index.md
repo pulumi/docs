@@ -3,8 +3,6 @@
 title: "listProductFamilies"
 title_tag: "azure-native.edgeorder.listProductFamilies"
 meta_desc: "Documentation for the azure-native.edgeorder.listProductFamilies function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

@@ -2,8 +2,6 @@
 title: "accesscontextmanager"
 title_tag: "accesscontextmanager Package"
 meta_desc: ""
-aliases:
-    - "docs/reference/pkg/google-native/"
 layout: api
 ---
 

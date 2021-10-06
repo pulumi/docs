@@ -3,8 +3,6 @@
 title: "OrganizationPolicy"
 title_tag: "google-native.orgpolicy/v2.OrganizationPolicy"
 meta_desc: "Documentation for the google-native.orgpolicy/v2.OrganizationPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/google-native/OrganizationPolicy/"
 layout: api
 ---
 

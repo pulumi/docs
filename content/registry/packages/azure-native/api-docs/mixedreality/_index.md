@@ -2,8 +2,6 @@
 title: "mixedreality"
 title_tag: "azure-native.mixedreality"
 meta_desc: "Explore the resources and functions of the azure-native.mixedreality module."
-aliases:
-    - "docs/reference/pkg/azure-native/"
 layout: api
 ---
 

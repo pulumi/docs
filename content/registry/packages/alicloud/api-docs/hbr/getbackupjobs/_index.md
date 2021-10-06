@@ -3,8 +3,6 @@
 title: "getBackupJobs"
 title_tag: "alicloud.hbr.getBackupJobs"
 meta_desc: "Documentation for the alicloud.hbr.getBackupJobs function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

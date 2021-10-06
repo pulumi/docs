@@ -2,8 +2,6 @@
 title: "rocketmq"
 title_tag: "alicloud.rocketmq"
 meta_desc: "Explore the resources and functions of the alicloud.rocketmq module."
-aliases:
-    - "docs/reference/pkg/alicloud/"
 layout: api
 ---
 

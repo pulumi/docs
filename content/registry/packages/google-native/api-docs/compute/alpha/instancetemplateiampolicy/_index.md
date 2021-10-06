@@ -3,8 +3,6 @@
 title: "InstanceTemplateIamPolicy"
 title_tag: "google-native.compute/alpha.InstanceTemplateIamPolicy"
 meta_desc: "Documentation for the google-native.compute/alpha.InstanceTemplateIamPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/google-native/InstanceTemplateIamPolicy/"
 layout: api
 ---
 

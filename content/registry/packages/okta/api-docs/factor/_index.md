@@ -2,8 +2,6 @@
 title: "factor"
 title_tag: "okta.factor"
 meta_desc: "Explore the resources and functions of the okta.factor module."
-aliases:
-    - "docs/reference/pkg/okta/"
 layout: api
 ---
 

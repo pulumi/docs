@@ -2,8 +2,6 @@
 title: "kinesisfirehose"
 title_tag: "aws-native.kinesisfirehose"
 meta_desc: "Explore the resources and functions of the aws-native.kinesisfirehose module."
-aliases:
-    - "docs/reference/pkg/aws-native/"
 layout: api
 ---
 

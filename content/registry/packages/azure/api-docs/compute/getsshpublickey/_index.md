@@ -3,8 +3,6 @@
 title: "getSshPublicKey"
 title_tag: "azure.compute.getSshPublicKey"
 meta_desc: "Documentation for the azure.compute.getSshPublicKey function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "getADCCatalog"
 title_tag: "azure-native.datacatalog.getADCCatalog"
 meta_desc: "Documentation for the azure-native.datacatalog.getADCCatalog function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

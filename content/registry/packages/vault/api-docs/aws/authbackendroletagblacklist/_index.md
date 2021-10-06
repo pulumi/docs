@@ -3,8 +3,6 @@
 title: "AuthBackendRoletagBlacklist"
 title_tag: "vault.aws.AuthBackendRoletagBlacklist"
 meta_desc: "Documentation for the vault.aws.AuthBackendRoletagBlacklist resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/vault/AuthBackendRoletagBlacklist/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "Host"
 title_tag: "aws.codestarconnections.Host"
 meta_desc: "Documentation for the aws.codestarconnections.Host resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/Host/"
 layout: api
 ---
 

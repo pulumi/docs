@@ -3,8 +3,6 @@
 title: "InstanceGroupNamedPort"
 title_tag: "gcp.compute.InstanceGroupNamedPort"
 meta_desc: "Documentation for the gcp.compute.InstanceGroupNamedPort resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/InstanceGroupNamedPort/"
 layout: api
 ---
 

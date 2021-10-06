@@ -2,8 +2,6 @@
 title: "hpc"
 title_tag: "azure.hpc"
 meta_desc: "Explore the resources and functions of the azure.hpc module."
-aliases:
-    - "docs/reference/pkg/azure/"
 layout: api
 ---
 

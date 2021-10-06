@@ -3,8 +3,6 @@
 title: "Interconnect"
 title_tag: "google-native.compute/beta.Interconnect"
 meta_desc: "Documentation for the google-native.compute/beta.Interconnect resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/google-native/Interconnect/"
 layout: api
 ---
 

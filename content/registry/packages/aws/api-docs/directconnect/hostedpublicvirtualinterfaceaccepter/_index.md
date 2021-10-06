@@ -3,8 +3,6 @@
 title: "HostedPublicVirtualInterfaceAccepter"
 title_tag: "aws.directconnect.HostedPublicVirtualInterfaceAccepter"
 meta_desc: "Documentation for the aws.directconnect.HostedPublicVirtualInterfaceAccepter resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/HostedPublicVirtualInterfaceAccepter/"
 layout: api
 ---
 

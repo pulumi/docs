@@ -3,8 +3,6 @@
 title: "IngestionPolicy"
 title_tag: "wavefront.IngestionPolicy"
 meta_desc: "Documentation for the wavefront.IngestionPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/wavefront/IngestionPolicy/"
 layout: api
 ---
 

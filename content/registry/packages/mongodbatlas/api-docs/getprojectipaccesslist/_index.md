@@ -3,8 +3,6 @@
 title: "getProjectIpAccessList"
 title_tag: "mongodbatlas.getProjectIpAccessList"
 meta_desc: "Documentation for the mongodbatlas.getProjectIpAccessList function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

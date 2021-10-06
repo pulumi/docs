@@ -3,8 +3,6 @@
 title: "AccessPolicy"
 title_tag: "cloudflare.AccessPolicy"
 meta_desc: "Documentation for the cloudflare.AccessPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/cloudflare/AccessPolicy/"
 layout: api
 ---
 

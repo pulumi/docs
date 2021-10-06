@@ -3,8 +3,6 @@
 title: "EipAddress"
 title_tag: "alicloud.ecs.EipAddress"
 meta_desc: "Documentation for the alicloud.ecs.EipAddress resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/alicloud/EipAddress/"
 layout: api
 ---
 

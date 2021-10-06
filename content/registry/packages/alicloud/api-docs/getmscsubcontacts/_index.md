@@ -3,8 +3,6 @@
 title: "getMscSubContacts"
 title_tag: "alicloud.getMscSubContacts"
 meta_desc: "Documentation for the alicloud.getMscSubContacts function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

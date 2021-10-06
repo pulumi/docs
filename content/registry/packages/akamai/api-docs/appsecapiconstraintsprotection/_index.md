@@ -3,8 +3,6 @@
 title: "AppSecApiConstraintsProtection"
 title_tag: "akamai.AppSecApiConstraintsProtection"
 meta_desc: "Documentation for the akamai.AppSecApiConstraintsProtection resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/akamai/AppSecApiConstraintsProtection/"
 layout: api
 ---
 

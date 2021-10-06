@@ -3,8 +3,6 @@
 title: "Directory"
 title_tag: "aws.workspaces.Directory"
 meta_desc: "Documentation for the aws.workspaces.Directory resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/Directory/"
 layout: api
 ---
 

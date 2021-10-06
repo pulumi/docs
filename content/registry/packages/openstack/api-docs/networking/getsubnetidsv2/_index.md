@@ -3,8 +3,6 @@
 title: "getSubnetIdsV2"
 title_tag: "openstack.networking.getSubnetIdsV2"
 meta_desc: "Documentation for the openstack.networking.getSubnetIdsV2 function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

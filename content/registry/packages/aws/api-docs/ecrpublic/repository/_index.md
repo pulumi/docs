@@ -3,8 +3,6 @@
 title: "Repository"
 title_tag: "aws.ecrpublic.Repository"
 meta_desc: "Documentation for the aws.ecrpublic.Repository resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/Repository/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "CaPoolIamBinding"
 title_tag: "gcp.certificateauthority.CaPoolIamBinding"
 meta_desc: "Documentation for the gcp.certificateauthority.CaPoolIamBinding resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/CaPoolIamBinding/"
 layout: api
 ---
 

@@ -2,8 +2,6 @@
 title: "route53recoverycontrol"
 title_tag: "aws-native.route53recoverycontrol"
 meta_desc: "Explore the resources and functions of the aws-native.route53recoverycontrol module."
-aliases:
-    - "docs/reference/pkg/aws-native/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "OccurrenceIamPolicy"
 title_tag: "google-native.containeranalysis/v1alpha1.OccurrenceIamPolicy"
 meta_desc: "Documentation for the google-native.containeranalysis/v1alpha1.OccurrenceIamPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/google-native/OccurrenceIamPolicy/"
 layout: api
 ---
 

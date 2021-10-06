@@ -3,8 +3,6 @@
 title: "getDeploymentIamPolicy"
 title_tag: "google-native.deploymentmanager/alpha.getDeploymentIamPolicy"
 meta_desc: "Documentation for the google-native.deploymentmanager/alpha.getDeploymentIamPolicy function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

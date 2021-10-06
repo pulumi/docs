@@ -3,8 +3,6 @@
 title: "SubnetGroup"
 title_tag: "aws.redshift.SubnetGroup"
 meta_desc: "Documentation for the aws.redshift.SubnetGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/SubnetGroup/"
 layout: api
 ---
 

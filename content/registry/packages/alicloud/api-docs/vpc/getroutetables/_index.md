@@ -3,8 +3,6 @@
 title: "getRouteTables"
 title_tag: "alicloud.vpc.getRouteTables"
 meta_desc: "Documentation for the alicloud.vpc.getRouteTables function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

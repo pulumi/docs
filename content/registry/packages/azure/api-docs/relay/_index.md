@@ -2,8 +2,6 @@
 title: "relay"
 title_tag: "azure.relay"
 meta_desc: "Explore the resources and functions of the azure.relay module."
-aliases:
-    - "docs/reference/pkg/azure/"
 layout: api
 ---
 

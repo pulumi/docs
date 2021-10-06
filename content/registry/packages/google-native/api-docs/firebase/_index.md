@@ -2,8 +2,6 @@
 title: "firebase"
 title_tag: "firebase Package"
 meta_desc: ""
-aliases:
-    - "docs/reference/pkg/google-native/"
 layout: api
 ---
 

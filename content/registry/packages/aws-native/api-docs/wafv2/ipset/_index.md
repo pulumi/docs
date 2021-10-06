@@ -3,8 +3,6 @@
 title: "IPSet"
 title_tag: "aws-native.wafv2.IPSet"
 meta_desc: "Documentation for the aws-native.wafv2.IPSet resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws-native/IPSet/"
 layout: api
 ---
 

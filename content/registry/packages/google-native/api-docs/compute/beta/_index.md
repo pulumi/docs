@@ -2,8 +2,6 @@
 title: "compute/beta"
 title_tag: "google-native.compute/beta"
 meta_desc: "Explore the resources and functions of the google-native.compute/beta module."
-aliases:
-    - "docs/reference/pkg/google-native/"
 layout: api
 ---
 

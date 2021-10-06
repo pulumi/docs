@@ -2,8 +2,6 @@
 title: "identity"
 title_tag: "vault.identity"
 meta_desc: "Explore the resources and functions of the vault.identity module."
-aliases:
-    - "docs/reference/pkg/vault/"
 layout: api
 ---
 

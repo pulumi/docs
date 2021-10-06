@@ -3,8 +3,6 @@
 title: "NetworkFunction"
 title_tag: "azure-native.hybridnetwork.NetworkFunction"
 meta_desc: "Documentation for the azure-native.hybridnetwork.NetworkFunction resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/NetworkFunction/"
 layout: api
 ---
 

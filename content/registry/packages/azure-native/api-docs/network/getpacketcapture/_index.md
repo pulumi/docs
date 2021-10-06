@@ -3,8 +3,6 @@
 title: "getPacketCapture"
 title_tag: "azure-native.network.getPacketCapture"
 meta_desc: "Documentation for the azure-native.network.getPacketCapture function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

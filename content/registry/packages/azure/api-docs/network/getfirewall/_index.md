@@ -3,8 +3,6 @@
 title: "getFirewall"
 title_tag: "azure.network.getFirewall"
 meta_desc: "Documentation for the azure.network.getFirewall function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

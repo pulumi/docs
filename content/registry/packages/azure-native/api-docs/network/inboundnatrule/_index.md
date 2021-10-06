@@ -3,8 +3,6 @@
 title: "InboundNatRule"
 title_tag: "azure-native.network.InboundNatRule"
 meta_desc: "Documentation for the azure-native.network.InboundNatRule resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/InboundNatRule/"
 layout: api
 ---
 

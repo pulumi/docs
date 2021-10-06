@@ -3,8 +3,6 @@
 title: "GenericClientProtocolMapper"
 title_tag: "keycloak.GenericClientProtocolMapper"
 meta_desc: "Documentation for the keycloak.GenericClientProtocolMapper resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/keycloak/GenericClientProtocolMapper/"
 layout: api
 ---
 

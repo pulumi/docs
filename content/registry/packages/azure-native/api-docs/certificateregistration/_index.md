@@ -2,8 +2,6 @@
 title: "certificateregistration"
 title_tag: "azure-native.certificateregistration"
 meta_desc: "Explore the resources and functions of the azure-native.certificateregistration module."
-aliases:
-    - "docs/reference/pkg/azure-native/"
 layout: api
 ---
 

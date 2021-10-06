@@ -3,8 +3,6 @@
 title: "Trigger"
 title_tag: "gcp.eventarc.Trigger"
 meta_desc: "Documentation for the gcp.eventarc.Trigger resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/Trigger/"
 layout: api
 ---
 

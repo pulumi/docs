@@ -3,8 +3,6 @@
 title: "RoleAssignmentArtifact"
 title_tag: "azure-native.blueprint.RoleAssignmentArtifact"
 meta_desc: "Documentation for the azure-native.blueprint.RoleAssignmentArtifact resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/RoleAssignmentArtifact/"
 layout: api
 ---
 

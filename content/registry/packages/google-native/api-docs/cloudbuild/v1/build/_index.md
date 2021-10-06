@@ -3,8 +3,6 @@
 title: "Build"
 title_tag: "google-native.cloudbuild/v1.Build"
 meta_desc: "Documentation for the google-native.cloudbuild/v1.Build resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/google-native/Build/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "getOrganization"
 title_tag: "github.getOrganization"
 meta_desc: "Documentation for the github.getOrganization function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

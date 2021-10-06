@@ -3,8 +3,6 @@
 title: "BasicAuth"
 title_tag: "okta.app.BasicAuth"
 meta_desc: "Documentation for the okta.app.BasicAuth resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/okta/BasicAuth/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "AADDataConnector"
 title_tag: "azure-native.securityinsights.AADDataConnector"
 meta_desc: "Documentation for the azure-native.securityinsights.AADDataConnector resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/AADDataConnector/"
 layout: api
 ---
 

@@ -2,8 +2,6 @@
 title: "aps"
 title_tag: "aws-native.aps"
 meta_desc: "Explore the resources and functions of the aws-native.aps module."
-aliases:
-    - "docs/reference/pkg/aws-native/"
 layout: api
 ---
 

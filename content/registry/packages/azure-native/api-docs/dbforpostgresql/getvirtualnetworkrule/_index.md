@@ -3,8 +3,6 @@
 title: "getVirtualNetworkRule"
 title_tag: "azure-native.dbforpostgresql.getVirtualNetworkRule"
 meta_desc: "Documentation for the azure-native.dbforpostgresql.getVirtualNetworkRule function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

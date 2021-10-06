@@ -2,8 +2,6 @@
 title: "keyvault"
 title_tag: "azure-native.keyvault"
 meta_desc: "Explore the resources and functions of the azure-native.keyvault module."
-aliases:
-    - "docs/reference/pkg/azure-native/"
 layout: api
 ---
 

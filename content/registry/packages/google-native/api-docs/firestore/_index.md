@@ -2,8 +2,6 @@
 title: "firestore"
 title_tag: "firestore Package"
 meta_desc: ""
-aliases:
-    - "docs/reference/pkg/google-native/"
 layout: api
 ---
 

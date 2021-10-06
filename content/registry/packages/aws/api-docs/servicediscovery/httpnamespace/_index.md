@@ -3,8 +3,6 @@
 title: "HttpNamespace"
 title_tag: "aws.servicediscovery.HttpNamespace"
 meta_desc: "Documentation for the aws.servicediscovery.HttpNamespace resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/HttpNamespace/"
 layout: api
 ---
 

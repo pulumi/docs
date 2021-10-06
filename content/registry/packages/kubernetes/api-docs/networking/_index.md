@@ -2,8 +2,6 @@
 title: "networking"
 title_tag: "networking Package"
 meta_desc: ""
-aliases:
-    - "docs/reference/pkg/kubernetes/"
 layout: api
 ---
 

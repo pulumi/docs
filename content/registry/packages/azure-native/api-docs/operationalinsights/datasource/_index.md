@@ -3,8 +3,6 @@
 title: "DataSource"
 title_tag: "azure-native.operationalinsights.DataSource"
 meta_desc: "Documentation for the azure-native.operationalinsights.DataSource resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/DataSource/"
 layout: api
 ---
 

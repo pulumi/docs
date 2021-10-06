@@ -3,8 +3,6 @@
 title: "getZones"
 title_tag: "alicloud.slb.getZones"
 meta_desc: "Documentation for the alicloud.slb.getZones function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "KustoDatabaseDataSet"
 title_tag: "azure-native.datashare.KustoDatabaseDataSet"
 meta_desc: "Documentation for the azure-native.datashare.KustoDatabaseDataSet resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/KustoDatabaseDataSet/"
 layout: api
 ---
 

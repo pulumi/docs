@@ -3,8 +3,6 @@
 title: "CustomHostname"
 title_tag: "cloudflare.CustomHostname"
 meta_desc: "Documentation for the cloudflare.CustomHostname resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/cloudflare/CustomHostname/"
 layout: api
 ---
 

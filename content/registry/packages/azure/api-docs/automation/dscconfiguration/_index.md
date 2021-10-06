@@ -3,8 +3,6 @@
 title: "DscConfiguration"
 title_tag: "azure.automation.DscConfiguration"
 meta_desc: "Documentation for the azure.automation.DscConfiguration resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/DscConfiguration/"
 layout: api
 ---
 

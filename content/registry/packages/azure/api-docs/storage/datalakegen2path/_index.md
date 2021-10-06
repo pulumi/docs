@@ -3,8 +3,6 @@
 title: "DataLakeGen2Path"
 title_tag: "azure.storage.DataLakeGen2Path"
 meta_desc: "Documentation for the azure.storage.DataLakeGen2Path resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/DataLakeGen2Path/"
 layout: api
 ---
 

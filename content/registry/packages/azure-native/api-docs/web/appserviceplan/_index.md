@@ -3,8 +3,6 @@
 title: "AppServicePlan"
 title_tag: "azure-native.web.AppServicePlan"
 meta_desc: "Documentation for the azure-native.web.AppServicePlan resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/AppServicePlan/"
 layout: api
 ---
 

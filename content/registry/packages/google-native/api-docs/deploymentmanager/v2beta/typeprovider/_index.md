@@ -3,8 +3,6 @@
 title: "TypeProvider"
 title_tag: "google-native.deploymentmanager/v2beta.TypeProvider"
 meta_desc: "Documentation for the google-native.deploymentmanager/v2beta.TypeProvider resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/google-native/TypeProvider/"
 layout: api
 ---
 

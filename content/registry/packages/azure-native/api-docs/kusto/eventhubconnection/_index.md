@@ -3,8 +3,6 @@
 title: "EventHubConnection"
 title_tag: "azure-native.kusto.EventHubConnection"
 meta_desc: "Documentation for the azure-native.kusto.EventHubConnection resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/EventHubConnection/"
 layout: api
 ---
 

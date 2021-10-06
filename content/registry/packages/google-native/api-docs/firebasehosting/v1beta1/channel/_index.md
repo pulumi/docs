@@ -3,8 +3,6 @@
 title: "Channel"
 title_tag: "google-native.firebasehosting/v1beta1.Channel"
 meta_desc: "Documentation for the google-native.firebasehosting/v1beta1.Channel resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/google-native/Channel/"
 layout: api
 ---
 

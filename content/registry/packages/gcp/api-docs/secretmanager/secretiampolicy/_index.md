@@ -3,8 +3,6 @@
 title: "SecretIamPolicy"
 title_tag: "gcp.secretmanager.SecretIamPolicy"
 meta_desc: "Documentation for the gcp.secretmanager.SecretIamPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/SecretIamPolicy/"
 layout: api
 ---
 

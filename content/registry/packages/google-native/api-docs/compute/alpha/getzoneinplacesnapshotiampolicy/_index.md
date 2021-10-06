@@ -3,8 +3,6 @@
 title: "getZoneInPlaceSnapshotIamPolicy"
 title_tag: "google-native.compute/alpha.getZoneInPlaceSnapshotIamPolicy"
 meta_desc: "Documentation for the google-native.compute/alpha.getZoneInPlaceSnapshotIamPolicy function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

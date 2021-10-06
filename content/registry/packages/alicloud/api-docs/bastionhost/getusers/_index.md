@@ -3,8 +3,6 @@
 title: "getUsers"
 title_tag: "alicloud.bastionhost.getUsers"
 meta_desc: "Documentation for the alicloud.bastionhost.getUsers function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

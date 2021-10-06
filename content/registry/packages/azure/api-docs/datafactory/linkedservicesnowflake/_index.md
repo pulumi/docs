@@ -3,8 +3,6 @@
 title: "LinkedServiceSnowflake"
 title_tag: "azure.datafactory.LinkedServiceSnowflake"
 meta_desc: "Documentation for the azure.datafactory.LinkedServiceSnowflake resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/LinkedServiceSnowflake/"
 layout: api
 ---
 

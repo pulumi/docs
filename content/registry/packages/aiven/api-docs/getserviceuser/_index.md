@@ -3,8 +3,6 @@
 title: "getServiceUser"
 title_tag: "aiven.getServiceUser"
 meta_desc: "Documentation for the aiven.getServiceUser function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

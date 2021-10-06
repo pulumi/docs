@@ -3,8 +3,6 @@
 title: "getAppSecExportConfiguration"
 title_tag: "akamai.getAppSecExportConfiguration"
 meta_desc: "Documentation for the akamai.getAppSecExportConfiguration function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

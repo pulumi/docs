@@ -3,8 +3,6 @@
 title: "PeeringService"
 title_tag: "azure-native.peering.PeeringService"
 meta_desc: "Documentation for the azure-native.peering.PeeringService resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/PeeringService/"
 layout: api
 ---
 

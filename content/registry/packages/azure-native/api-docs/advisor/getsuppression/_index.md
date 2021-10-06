@@ -3,8 +3,6 @@
 title: "getSuppression"
 title_tag: "azure-native.advisor.getSuppression"
 meta_desc: "Documentation for the azure-native.advisor.getSuppression function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

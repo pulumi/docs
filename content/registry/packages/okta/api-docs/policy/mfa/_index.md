@@ -3,8 +3,6 @@
 title: "Mfa"
 title_tag: "okta.policy.Mfa"
 meta_desc: "Documentation for the okta.policy.Mfa resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/okta/Mfa/"
 layout: api
 ---
 

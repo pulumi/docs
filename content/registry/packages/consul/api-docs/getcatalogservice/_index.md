@@ -3,8 +3,6 @@
 title: "getCatalogService"
 title_tag: "consul.getCatalogService"
 meta_desc: "Documentation for the consul.getCatalogService function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

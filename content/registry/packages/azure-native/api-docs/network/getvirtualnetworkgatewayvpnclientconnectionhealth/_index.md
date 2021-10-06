@@ -3,8 +3,6 @@
 title: "getVirtualNetworkGatewayVpnclientConnectionHealth"
 title_tag: "azure-native.network.getVirtualNetworkGatewayVpnclientConnectionHealth"
 meta_desc: "Documentation for the azure-native.network.getVirtualNetworkGatewayVpnclientConnectionHealth function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

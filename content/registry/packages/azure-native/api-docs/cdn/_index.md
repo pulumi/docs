@@ -2,8 +2,6 @@
 title: "cdn"
 title_tag: "azure-native.cdn"
 meta_desc: "Explore the resources and functions of the azure-native.cdn module."
-aliases:
-    - "docs/reference/pkg/azure-native/"
 layout: api
 ---
 

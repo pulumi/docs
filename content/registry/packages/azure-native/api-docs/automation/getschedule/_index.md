@@ -3,8 +3,6 @@
 title: "getSchedule"
 title_tag: "azure-native.automation.getSchedule"
 meta_desc: "Documentation for the azure-native.automation.getSchedule function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

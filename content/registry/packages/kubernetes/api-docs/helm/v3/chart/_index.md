@@ -3,8 +3,6 @@
 title: "Chart"
 title_tag: "kubernetes.helm.sh/v3.Chart"
 meta_desc: "Documentation for the kubernetes.helm.sh/v3.Chart resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/kubernetes/Chart/"
 layout: api
 ---
 

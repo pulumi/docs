@@ -3,8 +3,6 @@
 title: "NodeGroup"
 title_tag: "aws.eks.NodeGroup"
 meta_desc: "Documentation for the aws.eks.NodeGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/NodeGroup/"
 layout: api
 ---
 

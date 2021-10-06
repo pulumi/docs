@@ -3,8 +3,6 @@
 title: "getSecret"
 title_tag: "gcp.secretmanager.getSecret"
 meta_desc: "Documentation for the gcp.secretmanager.getSecret function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

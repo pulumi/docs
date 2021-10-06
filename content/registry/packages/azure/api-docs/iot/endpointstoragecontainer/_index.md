@@ -3,8 +3,6 @@
 title: "EndpointStorageContainer"
 title_tag: "azure.iot.EndpointStorageContainer"
 meta_desc: "Documentation for the azure.iot.EndpointStorageContainer resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/EndpointStorageContainer/"
 layout: api
 ---
 

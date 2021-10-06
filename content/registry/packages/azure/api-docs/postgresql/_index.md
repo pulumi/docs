@@ -2,8 +2,6 @@
 title: "postgresql"
 title_tag: "azure.postgresql"
 meta_desc: "Explore the resources and functions of the azure.postgresql module."
-aliases:
-    - "docs/reference/pkg/azure/"
 layout: api
 ---
 

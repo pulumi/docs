@@ -3,8 +3,6 @@
 title: "PrivateEndpointConnection"
 title_tag: "azure-native.devices.PrivateEndpointConnection"
 meta_desc: "Documentation for the azure-native.devices.PrivateEndpointConnection resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/PrivateEndpointConnection/"
 layout: api
 ---
 

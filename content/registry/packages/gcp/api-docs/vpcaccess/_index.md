@@ -2,8 +2,6 @@
 title: "vpcaccess"
 title_tag: "gcp.vpcaccess"
 meta_desc: "Explore the resources and functions of the gcp.vpcaccess module."
-aliases:
-    - "docs/reference/pkg/gcp/"
 layout: api
 ---
 

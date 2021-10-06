@@ -3,8 +3,6 @@
 title: "AlertCondition"
 title_tag: "newrelic.AlertCondition"
 meta_desc: "Documentation for the newrelic.AlertCondition resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/newrelic/AlertCondition/"
 layout: api
 ---
 

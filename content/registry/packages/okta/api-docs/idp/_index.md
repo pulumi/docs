@@ -2,8 +2,6 @@
 title: "idp"
 title_tag: "okta.idp"
 meta_desc: "Explore the resources and functions of the okta.idp module."
-aliases:
-    - "docs/reference/pkg/okta/"
 layout: api
 ---
 

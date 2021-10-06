@@ -2,8 +2,6 @@
 title: "servicequotas"
 title_tag: "aws.servicequotas"
 meta_desc: "Explore the resources and functions of the aws.servicequotas module."
-aliases:
-    - "docs/reference/pkg/aws/"
 layout: api
 ---
 

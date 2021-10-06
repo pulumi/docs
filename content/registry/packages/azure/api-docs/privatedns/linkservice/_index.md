@@ -3,8 +3,6 @@
 title: "LinkService"
 title_tag: "azure.privatedns.LinkService"
 meta_desc: "Documentation for the azure.privatedns.LinkService resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/LinkService/"
 layout: api
 ---
 

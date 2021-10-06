@@ -2,8 +2,6 @@
 title: "apps/v1beta2"
 title_tag: "kubernetes.apps/v1beta2"
 meta_desc: "Explore the resources and functions of the kubernetes.apps/v1beta2 module."
-aliases:
-    - "docs/reference/pkg/kubernetes/"
 layout: api
 ---
 

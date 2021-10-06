@@ -3,8 +3,6 @@
 title: "RegionClusterIamPolicy"
 title_tag: "google-native.dataproc/v1.RegionClusterIamPolicy"
 meta_desc: "Documentation for the google-native.dataproc/v1.RegionClusterIamPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/google-native/RegionClusterIamPolicy/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "FileFormat"
 title_tag: "snowflake.FileFormat"
 meta_desc: "Documentation for the snowflake.FileFormat resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/snowflake/FileFormat/"
 layout: api
 ---
 

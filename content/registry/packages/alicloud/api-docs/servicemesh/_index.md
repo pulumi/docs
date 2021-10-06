@@ -2,8 +2,6 @@
 title: "servicemesh"
 title_tag: "alicloud.servicemesh"
 meta_desc: "Explore the resources and functions of the alicloud.servicemesh module."
-aliases:
-    - "docs/reference/pkg/alicloud/"
 layout: api
 ---
 

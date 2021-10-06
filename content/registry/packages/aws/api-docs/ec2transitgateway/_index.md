@@ -2,8 +2,6 @@
 title: "ec2transitgateway"
 title_tag: "aws.ec2transitgateway"
 meta_desc: "Explore the resources and functions of the aws.ec2transitgateway module."
-aliases:
-    - "docs/reference/pkg/aws/"
 layout: api
 ---
 

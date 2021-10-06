@@ -3,8 +3,6 @@
 title: "getProduct"
 title_tag: "azure.apimanagement.getProduct"
 meta_desc: "Documentation for the azure.apimanagement.getProduct function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

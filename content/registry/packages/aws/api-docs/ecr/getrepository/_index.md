@@ -3,8 +3,6 @@
 title: "getRepository"
 title_tag: "aws.ecr.getRepository"
 meta_desc: "Documentation for the aws.ecr.getRepository function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

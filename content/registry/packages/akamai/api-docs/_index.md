@@ -2,8 +2,6 @@
 title: "Akamai"
 title_tag: "Akamai Package"
 meta_desc: "A Pulumi package for creating and managing akamai cloud resources."
-aliases:
-    - "docs/reference/pkg/akamai/"
 menu:
     reference:
         parent: API Reference

@@ -3,8 +3,6 @@
 title: "Certificate"
 title_tag: "azure-native.batch.Certificate"
 meta_desc: "Documentation for the azure-native.batch.Certificate resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/Certificate/"
 layout: api
 ---
 

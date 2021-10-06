@@ -3,8 +3,6 @@
 title: "NotificationChannel"
 title_tag: "aws-native.fms.NotificationChannel"
 meta_desc: "Documentation for the aws-native.fms.NotificationChannel resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws-native/NotificationChannel/"
 layout: api
 ---
 

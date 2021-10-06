@@ -3,8 +3,6 @@
 title: "ConnectedCluster"
 title_tag: "azure-native.kubernetes.ConnectedCluster"
 meta_desc: "Documentation for the azure-native.kubernetes.ConnectedCluster resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/ConnectedCluster/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "Query"
 title_tag: "azure-native.operationalinsights.Query"
 meta_desc: "Documentation for the azure-native.operationalinsights.Query resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/Query/"
 layout: api
 ---
 

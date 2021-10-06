@@ -3,8 +3,6 @@
 title: "SqlDBTableDataSet"
 title_tag: "azure-native.datashare.SqlDBTableDataSet"
 meta_desc: "Documentation for the azure-native.datashare.SqlDBTableDataSet resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/SqlDBTableDataSet/"
 layout: api
 ---
 

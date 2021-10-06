@@ -3,8 +3,6 @@
 title: "Agent"
 title_tag: "google-native.dialogflow/v3beta1.Agent"
 meta_desc: "Documentation for the google-native.dialogflow/v3beta1.Agent resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/google-native/Agent/"
 layout: api
 ---
 

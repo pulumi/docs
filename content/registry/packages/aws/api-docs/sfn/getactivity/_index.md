@@ -3,8 +3,6 @@
 title: "getActivity"
 title_tag: "aws.sfn.getActivity"
 meta_desc: "Documentation for the aws.sfn.getActivity function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

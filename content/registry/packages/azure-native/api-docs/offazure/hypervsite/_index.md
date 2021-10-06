@@ -3,8 +3,6 @@
 title: "HyperVSite"
 title_tag: "azure-native.offazure.HyperVSite"
 meta_desc: "Documentation for the azure-native.offazure.HyperVSite resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/HyperVSite/"
 layout: api
 ---
 

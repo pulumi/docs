@@ -3,8 +3,6 @@
 title: "Database"
 title_tag: "alicloud.polardb.Database"
 meta_desc: "Documentation for the alicloud.polardb.Database resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/alicloud/Database/"
 layout: api
 ---
 

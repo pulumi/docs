@@ -3,8 +3,6 @@
 title: "getIntegrationServiceEnvironmentManagedApi"
 title_tag: "azure-native.logic.getIntegrationServiceEnvironmentManagedApi"
 meta_desc: "Documentation for the azure-native.logic.getIntegrationServiceEnvironmentManagedApi function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "RegexMatchSet"
 title_tag: "aws.waf.RegexMatchSet"
 meta_desc: "Documentation for the aws.waf.RegexMatchSet resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/RegexMatchSet/"
 layout: api
 ---
 

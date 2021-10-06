@@ -2,8 +2,6 @@
 title: "MongoDB Atlas"
 title_tag: "mongodbatlas.MongoDB Atlas"
 meta_desc: "A Pulumi package for creating and managing mongodbatlas cloud resources."
-aliases:
-    - "docs/reference/pkg/mongodbatlas/"
 menu:
     reference:
         parent: API Reference

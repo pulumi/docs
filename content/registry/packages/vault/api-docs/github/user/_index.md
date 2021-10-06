@@ -3,8 +3,6 @@
 title: "User"
 title_tag: "vault.github.User"
 meta_desc: "Documentation for the vault.github.User resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/vault/User/"
 layout: api
 ---
 

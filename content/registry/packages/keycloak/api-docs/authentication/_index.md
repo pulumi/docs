@@ -2,8 +2,6 @@
 title: "authentication"
 title_tag: "keycloak.authentication"
 meta_desc: "Explore the resources and functions of the keycloak.authentication module."
-aliases:
-    - "docs/reference/pkg/keycloak/"
 layout: api
 ---
 

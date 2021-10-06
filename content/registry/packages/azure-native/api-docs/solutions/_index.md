@@ -2,8 +2,6 @@
 title: "solutions"
 title_tag: "azure-native.solutions"
 meta_desc: "Explore the resources and functions of the azure-native.solutions module."
-aliases:
-    - "docs/reference/pkg/azure-native/"
 layout: api
 ---
 

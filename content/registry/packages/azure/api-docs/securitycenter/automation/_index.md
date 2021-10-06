@@ -3,8 +3,6 @@
 title: "Automation"
 title_tag: "azure.securitycenter.Automation"
 meta_desc: "Documentation for the azure.securitycenter.Automation resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/Automation/"
 layout: api
 ---
 

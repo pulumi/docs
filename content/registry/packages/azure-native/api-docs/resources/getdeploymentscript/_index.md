@@ -3,8 +3,6 @@
 title: "getDeploymentScript"
 title_tag: "azure-native.resources.getDeploymentScript"
 meta_desc: "Documentation for the azure-native.resources.getDeploymentScript function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

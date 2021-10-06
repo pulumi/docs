@@ -3,8 +3,6 @@
 title: "getComputeInstanceGroup"
 title_tag: "yandex.getComputeInstanceGroup"
 meta_desc: "Documentation for the yandex.getComputeInstanceGroup function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

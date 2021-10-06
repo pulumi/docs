@@ -3,8 +3,6 @@
 title: "Group"
 title_tag: "azure.management.Group"
 meta_desc: "Documentation for the azure.management.Group resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/Group/"
 layout: api
 ---
 

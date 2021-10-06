@@ -3,8 +3,6 @@
 title: "Container"
 title_tag: "docker.Container"
 meta_desc: "Documentation for the docker.Container resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/docker/Container/"
 layout: api
 ---
 

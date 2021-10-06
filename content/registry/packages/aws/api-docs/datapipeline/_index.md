@@ -2,8 +2,6 @@
 title: "datapipeline"
 title_tag: "aws.datapipeline"
 meta_desc: "Explore the resources and functions of the aws.datapipeline module."
-aliases:
-    - "docs/reference/pkg/aws/"
 layout: api
 ---
 

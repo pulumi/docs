@@ -3,8 +3,6 @@
 title: "getBlobContainerDataSetMapping"
 title_tag: "azure-native.datashare.getBlobContainerDataSetMapping"
 meta_desc: "Documentation for the azure-native.datashare.getBlobContainerDataSetMapping function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

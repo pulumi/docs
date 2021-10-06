@@ -2,8 +2,6 @@
 title: "remotebuildexecution"
 title_tag: "remotebuildexecution Package"
 meta_desc: ""
-aliases:
-    - "docs/reference/pkg/google-native/"
 layout: api
 ---
 

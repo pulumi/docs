@@ -3,8 +3,6 @@
 title: "Upstream"
 title_tag: "kong.Upstream"
 meta_desc: "Documentation for the kong.Upstream resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/kong/Upstream/"
 layout: api
 ---
 

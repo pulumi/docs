@@ -3,8 +3,6 @@
 title: "CloudIntegrationCloudWatch"
 title_tag: "wavefront.CloudIntegrationCloudWatch"
 meta_desc: "Documentation for the wavefront.CloudIntegrationCloudWatch resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/wavefront/CloudIntegrationCloudWatch/"
 layout: api
 ---
 

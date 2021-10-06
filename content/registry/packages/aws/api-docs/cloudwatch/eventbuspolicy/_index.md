@@ -3,8 +3,6 @@
 title: "EventBusPolicy"
 title_tag: "aws.cloudwatch.EventBusPolicy"
 meta_desc: "Documentation for the aws.cloudwatch.EventBusPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/EventBusPolicy/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "SchedulerRule"
 title_tag: "alicloud.ddos.SchedulerRule"
 meta_desc: "Documentation for the alicloud.ddos.SchedulerRule resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/alicloud/SchedulerRule/"
 layout: api
 ---
 

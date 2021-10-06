@@ -3,8 +3,6 @@
 title: "PrivateIpMode"
 title_tag: "mongodbatlas.PrivateIpMode"
 meta_desc: "Documentation for the mongodbatlas.PrivateIpMode resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/mongodbatlas/PrivateIpMode/"
 layout: api
 ---
 

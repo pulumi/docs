@@ -2,8 +2,6 @@
 title: "edgedns"
 title_tag: "akamai.edgedns"
 meta_desc: "Explore the resources and functions of the akamai.edgedns module."
-aliases:
-    - "docs/reference/pkg/akamai/"
 layout: api
 ---
 

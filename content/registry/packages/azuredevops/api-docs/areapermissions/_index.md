@@ -3,8 +3,6 @@
 title: "AreaPermissions"
 title_tag: "azuredevops.AreaPermissions"
 meta_desc: "Documentation for the azuredevops.AreaPermissions resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azuredevops/AreaPermissions/"
 layout: api
 ---
 

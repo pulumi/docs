@@ -2,8 +2,6 @@
 title: "cloudidentity"
 title_tag: "cloudidentity Package"
 meta_desc: ""
-aliases:
-    - "docs/reference/pkg/google-native/"
 layout: api
 ---
 

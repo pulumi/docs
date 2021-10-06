@@ -3,8 +3,6 @@
 title: "EnvironmentContainer"
 title_tag: "azure-native.machinelearningservices.EnvironmentContainer"
 meta_desc: "Documentation for the azure-native.machinelearningservices.EnvironmentContainer resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/EnvironmentContainer/"
 layout: api
 ---
 

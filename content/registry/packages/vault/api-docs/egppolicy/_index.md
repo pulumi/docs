@@ -3,8 +3,6 @@
 title: "EgpPolicy"
 title_tag: "vault.EgpPolicy"
 meta_desc: "Documentation for the vault.EgpPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/vault/EgpPolicy/"
 layout: api
 ---
 

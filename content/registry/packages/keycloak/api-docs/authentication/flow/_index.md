@@ -3,8 +3,6 @@
 title: "Flow"
 title_tag: "keycloak.authentication.Flow"
 meta_desc: "Documentation for the keycloak.authentication.Flow resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/keycloak/Flow/"
 layout: api
 ---
 

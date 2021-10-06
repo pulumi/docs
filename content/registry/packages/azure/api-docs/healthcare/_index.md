@@ -2,8 +2,6 @@
 title: "healthcare"
 title_tag: "azure.healthcare"
 meta_desc: "Explore the resources and functions of the azure.healthcare module."
-aliases:
-    - "docs/reference/pkg/azure/"
 layout: api
 ---
 

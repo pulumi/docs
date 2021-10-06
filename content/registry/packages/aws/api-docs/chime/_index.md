@@ -2,8 +2,6 @@
 title: "chime"
 title_tag: "aws.chime"
 meta_desc: "Explore the resources and functions of the aws.chime module."
-aliases:
-    - "docs/reference/pkg/aws/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "getDatabase"
 title_tag: "azure-native.sql.getDatabase"
 meta_desc: "Documentation for the azure-native.sql.getDatabase function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

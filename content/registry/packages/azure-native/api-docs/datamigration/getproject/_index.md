@@ -3,8 +3,6 @@
 title: "getProject"
 title_tag: "azure-native.datamigration.getProject"
 meta_desc: "Documentation for the azure-native.datamigration.getProject function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

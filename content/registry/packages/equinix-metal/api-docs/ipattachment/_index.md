@@ -3,8 +3,6 @@
 title: "IpAttachment"
 title_tag: "equinix-metal.IpAttachment"
 meta_desc: "Documentation for the equinix-metal.IpAttachment resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/equinix-metal/IpAttachment/"
 layout: api
 ---
 

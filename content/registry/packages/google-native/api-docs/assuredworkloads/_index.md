@@ -2,8 +2,6 @@
 title: "assuredworkloads"
 title_tag: "assuredworkloads Package"
 meta_desc: ""
-aliases:
-    - "docs/reference/pkg/google-native/"
 layout: api
 ---
 

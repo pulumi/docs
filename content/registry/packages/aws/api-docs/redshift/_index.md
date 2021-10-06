@@ -2,8 +2,6 @@
 title: "redshift"
 title_tag: "aws.redshift"
 meta_desc: "Explore the resources and functions of the aws.redshift module."
-aliases:
-    - "docs/reference/pkg/aws/"
 layout: api
 ---
 

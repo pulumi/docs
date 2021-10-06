@@ -3,8 +3,6 @@
 title: "TopicPermissions"
 title_tag: "rabbitmq.TopicPermissions"
 meta_desc: "Documentation for the rabbitmq.TopicPermissions resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/rabbitmq/TopicPermissions/"
 layout: api
 ---
 

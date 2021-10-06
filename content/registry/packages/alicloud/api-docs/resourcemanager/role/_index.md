@@ -3,8 +3,6 @@
 title: "Role"
 title_tag: "alicloud.resourcemanager.Role"
 meta_desc: "Documentation for the alicloud.resourcemanager.Role resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/alicloud/Role/"
 layout: api
 ---
 

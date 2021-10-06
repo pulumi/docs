@@ -3,8 +3,6 @@
 title: "Workspace"
 title_tag: "azure-native.synapse.Workspace"
 meta_desc: "Documentation for the azure-native.synapse.Workspace resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/Workspace/"
 layout: api
 ---
 

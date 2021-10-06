@@ -3,8 +3,6 @@
 title: "getEnvironmentSetting"
 title_tag: "azure-native.labservices.getEnvironmentSetting"
 meta_desc: "Documentation for the azure-native.labservices.getEnvironmentSetting function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

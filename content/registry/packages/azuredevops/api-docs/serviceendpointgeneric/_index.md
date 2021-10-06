@@ -3,8 +3,6 @@
 title: "ServiceEndpointGeneric"
 title_tag: "azuredevops.ServiceEndpointGeneric"
 meta_desc: "Documentation for the azuredevops.ServiceEndpointGeneric resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azuredevops/ServiceEndpointGeneric/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "IntegrationRuntimeSelfHosted"
 title_tag: "azure.datafactory.IntegrationRuntimeSelfHosted"
 meta_desc: "Documentation for the azure.datafactory.IntegrationRuntimeSelfHosted resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/IntegrationRuntimeSelfHosted/"
 layout: api
 ---
 

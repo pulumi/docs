@@ -3,8 +3,6 @@
 title: "SubscriptionTemplateDeployment"
 title_tag: "azure.core.SubscriptionTemplateDeployment"
 meta_desc: "Documentation for the azure.core.SubscriptionTemplateDeployment resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/SubscriptionTemplateDeployment/"
 layout: api
 ---
 

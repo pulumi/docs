@@ -3,8 +3,6 @@
 title: "DataSet"
 title_tag: "azure-native.datashare.DataSet"
 meta_desc: "Documentation for the azure-native.datashare.DataSet resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/DataSet/"
 layout: api
 ---
 

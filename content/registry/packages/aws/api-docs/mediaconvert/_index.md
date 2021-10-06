@@ -2,8 +2,6 @@
 title: "mediaconvert"
 title_tag: "aws.mediaconvert"
 meta_desc: "Explore the resources and functions of the aws.mediaconvert module."
-aliases:
-    - "docs/reference/pkg/aws/"
 layout: api
 ---
 

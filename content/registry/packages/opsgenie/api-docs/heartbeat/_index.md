@@ -3,8 +3,6 @@
 title: "Heartbeat"
 title_tag: "opsgenie.Heartbeat"
 meta_desc: "Documentation for the opsgenie.Heartbeat resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/opsgenie/Heartbeat/"
 layout: api
 ---
 

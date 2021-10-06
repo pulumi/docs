@@ -3,8 +3,6 @@
 title: "LifecyclePolicy"
 title_tag: "aws.dlm.LifecyclePolicy"
 meta_desc: "Documentation for the aws.dlm.LifecyclePolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/LifecyclePolicy/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "AppSecWafMode"
 title_tag: "akamai.AppSecWafMode"
 meta_desc: "Documentation for the akamai.AppSecWafMode resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/akamai/AppSecWafMode/"
 layout: api
 ---
 

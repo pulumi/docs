@@ -2,8 +2,6 @@
 title: "dialogflow"
 title_tag: "dialogflow Package"
 meta_desc: ""
-aliases:
-    - "docs/reference/pkg/google-native/"
 layout: api
 ---
 

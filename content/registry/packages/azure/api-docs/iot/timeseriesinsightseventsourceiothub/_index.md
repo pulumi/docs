@@ -3,8 +3,6 @@
 title: "TimeSeriesInsightsEventSourceIothub"
 title_tag: "azure.iot.TimeSeriesInsightsEventSourceIothub"
 meta_desc: "Documentation for the azure.iot.TimeSeriesInsightsEventSourceIothub resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/TimeSeriesInsightsEventSourceIothub/"
 layout: api
 ---
 

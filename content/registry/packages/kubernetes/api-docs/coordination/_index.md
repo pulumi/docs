@@ -2,8 +2,6 @@
 title: "coordination"
 title_tag: "coordination Package"
 meta_desc: ""
-aliases:
-    - "docs/reference/pkg/kubernetes/"
 layout: api
 ---
 

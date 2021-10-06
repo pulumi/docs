@@ -3,8 +3,6 @@
 title: "MaterializedView"
 title_tag: "snowflake.MaterializedView"
 meta_desc: "Documentation for the snowflake.MaterializedView resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/snowflake/MaterializedView/"
 layout: api
 ---
 

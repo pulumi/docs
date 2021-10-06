@@ -3,8 +3,6 @@
 title: "Listener"
 title_tag: "alicloud.alb.Listener"
 meta_desc: "Documentation for the alicloud.alb.Listener resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/alicloud/Listener/"
 layout: api
 ---
 

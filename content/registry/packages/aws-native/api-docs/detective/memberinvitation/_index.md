@@ -3,8 +3,6 @@
 title: "MemberInvitation"
 title_tag: "aws-native.detective.MemberInvitation"
 meta_desc: "Documentation for the aws-native.detective.MemberInvitation resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws-native/MemberInvitation/"
 layout: api
 ---
 

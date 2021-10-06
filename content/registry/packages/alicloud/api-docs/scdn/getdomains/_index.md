@@ -3,8 +3,6 @@
 title: "getDomains"
 title_tag: "alicloud.scdn.getDomains"
 meta_desc: "Documentation for the alicloud.scdn.getDomains function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

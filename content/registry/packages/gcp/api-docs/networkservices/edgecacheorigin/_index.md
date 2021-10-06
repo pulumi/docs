@@ -3,8 +3,6 @@
 title: "EdgeCacheOrigin"
 title_tag: "gcp.networkservices.EdgeCacheOrigin"
 meta_desc: "Documentation for the gcp.networkservices.EdgeCacheOrigin resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/EdgeCacheOrigin/"
 layout: api
 ---
 

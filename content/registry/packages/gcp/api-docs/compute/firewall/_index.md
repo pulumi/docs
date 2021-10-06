@@ -3,8 +3,6 @@
 title: "Firewall"
 title_tag: "gcp.compute.Firewall"
 meta_desc: "Documentation for the gcp.compute.Firewall resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/Firewall/"
 layout: api
 ---
 

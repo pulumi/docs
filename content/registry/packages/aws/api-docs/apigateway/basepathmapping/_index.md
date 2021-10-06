@@ -3,8 +3,6 @@
 title: "BasePathMapping"
 title_tag: "aws.apigateway.BasePathMapping"
 meta_desc: "Documentation for the aws.apigateway.BasePathMapping resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/BasePathMapping/"
 layout: api
 ---
 

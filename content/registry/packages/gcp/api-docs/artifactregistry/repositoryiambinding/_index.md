@@ -3,8 +3,6 @@
 title: "RepositoryIamBinding"
 title_tag: "gcp.artifactregistry.RepositoryIamBinding"
 meta_desc: "Documentation for the gcp.artifactregistry.RepositoryIamBinding resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/RepositoryIamBinding/"
 layout: api
 ---
 

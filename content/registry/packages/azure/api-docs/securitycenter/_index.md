@@ -2,8 +2,6 @@
 title: "securitycenter"
 title_tag: "azure.securitycenter"
 meta_desc: "Explore the resources and functions of the azure.securitycenter module."
-aliases:
-    - "docs/reference/pkg/azure/"
 layout: api
 ---
 

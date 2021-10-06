@@ -3,8 +3,6 @@
 title: "VirtualWan"
 title_tag: "azure.network.VirtualWan"
 meta_desc: "Documentation for the azure.network.VirtualWan resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/VirtualWan/"
 layout: api
 ---
 

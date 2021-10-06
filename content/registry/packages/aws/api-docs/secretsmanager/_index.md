@@ -2,8 +2,6 @@
 title: "secretsmanager"
 title_tag: "aws.secretsmanager"
 meta_desc: "Explore the resources and functions of the aws.secretsmanager module."
-aliases:
-    - "docs/reference/pkg/aws/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "Database"
 title_tag: "azure.mariadb.Database"
 meta_desc: "Documentation for the azure.mariadb.Database resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/Database/"
 layout: api
 ---
 

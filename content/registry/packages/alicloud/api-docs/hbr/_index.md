@@ -2,8 +2,6 @@
 title: "hbr"
 title_tag: "alicloud.hbr"
 meta_desc: "Explore the resources and functions of the alicloud.hbr module."
-aliases:
-    - "docs/reference/pkg/alicloud/"
 layout: api
 ---
 

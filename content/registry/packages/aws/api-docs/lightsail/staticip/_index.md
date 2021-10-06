@@ -3,8 +3,6 @@
 title: "StaticIp"
 title_tag: "aws.lightsail.StaticIp"
 meta_desc: "Documentation for the aws.lightsail.StaticIp resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/StaticIp/"
 layout: api
 ---
 

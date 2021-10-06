@@ -3,8 +3,6 @@
 title: "getDatacenters"
 title_tag: "hcloud.getDatacenters"
 meta_desc: "Documentation for the hcloud.getDatacenters function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

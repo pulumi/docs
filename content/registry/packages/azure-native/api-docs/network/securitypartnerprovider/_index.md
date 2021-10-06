@@ -3,8 +3,6 @@
 title: "SecurityPartnerProvider"
 title_tag: "azure-native.network.SecurityPartnerProvider"
 meta_desc: "Documentation for the azure-native.network.SecurityPartnerProvider resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/SecurityPartnerProvider/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "EventArchive"
 title_tag: "aws.cloudwatch.EventArchive"
 meta_desc: "Documentation for the aws.cloudwatch.EventArchive resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/EventArchive/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "OuContainer"
 title_tag: "azure-native.aad.OuContainer"
 meta_desc: "Documentation for the azure-native.aad.OuContainer resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/OuContainer/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "getDatacenter"
 title_tag: "vsphere.getDatacenter"
 meta_desc: "Documentation for the vsphere.getDatacenter function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

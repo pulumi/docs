@@ -2,8 +2,6 @@
 title: "policy"
 title_tag: "azure.policy"
 meta_desc: "Explore the resources and functions of the azure.policy module."
-aliases:
-    - "docs/reference/pkg/azure/"
 layout: api
 ---
 

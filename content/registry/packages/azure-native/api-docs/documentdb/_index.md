@@ -2,8 +2,6 @@
 title: "documentdb"
 title_tag: "azure-native.documentdb"
 meta_desc: "Explore the resources and functions of the azure-native.documentdb module."
-aliases:
-    - "docs/reference/pkg/azure-native/"
 layout: api
 ---
 

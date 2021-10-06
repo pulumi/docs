@@ -3,8 +3,6 @@
 title: "getLocalGatewayVirtualInterface"
 title_tag: "aws.ec2.getLocalGatewayVirtualInterface"
 meta_desc: "Documentation for the aws.ec2.getLocalGatewayVirtualInterface function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

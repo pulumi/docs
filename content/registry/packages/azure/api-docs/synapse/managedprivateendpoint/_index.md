@@ -3,8 +3,6 @@
 title: "ManagedPrivateEndpoint"
 title_tag: "azure.synapse.ManagedPrivateEndpoint"
 meta_desc: "Documentation for the azure.synapse.ManagedPrivateEndpoint resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/ManagedPrivateEndpoint/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "getSaasSubscriptionLevel"
 title_tag: "azure-native.saas.getSaasSubscriptionLevel"
 meta_desc: "Documentation for the azure-native.saas.getSaasSubscriptionLevel function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

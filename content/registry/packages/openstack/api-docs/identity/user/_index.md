@@ -3,8 +3,6 @@
 title: "User"
 title_tag: "openstack.identity.User"
 meta_desc: "Documentation for the openstack.identity.User resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/openstack/User/"
 layout: api
 ---
 

@@ -2,8 +2,6 @@
 title: "CloudAMQP"
 title_tag: "cloudamqp.CloudAMQP"
 meta_desc: "A Pulumi package for creating and managing CloudAMQP resources."
-aliases:
-    - "docs/reference/pkg/cloudamqp/"
 menu:
     reference:
         parent: API Reference

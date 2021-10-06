@@ -3,8 +3,6 @@
 title: "getTestResultDownloadURL"
 title_tag: "azure-native.testbase.getTestResultDownloadURL"
 meta_desc: "Documentation for the azure-native.testbase.getTestResultDownloadURL function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

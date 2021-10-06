@@ -3,8 +3,6 @@
 title: "ServiceIamPolicy"
 title_tag: "gcp.endpoints.ServiceIamPolicy"
 meta_desc: "Documentation for the gcp.endpoints.ServiceIamPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/ServiceIamPolicy/"
 layout: api
 ---
 

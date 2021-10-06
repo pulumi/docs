@@ -3,8 +3,6 @@
 title: "ComponentVersion"
 title_tag: "aws-native.greengrassv2.ComponentVersion"
 meta_desc: "Documentation for the aws-native.greengrassv2.ComponentVersion resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws-native/ComponentVersion/"
 layout: api
 ---
 

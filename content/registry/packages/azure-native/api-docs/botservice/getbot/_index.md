@@ -3,8 +3,6 @@
 title: "getBot"
 title_tag: "azure-native.botservice.getBot"
 meta_desc: "Documentation for the azure-native.botservice.getBot function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

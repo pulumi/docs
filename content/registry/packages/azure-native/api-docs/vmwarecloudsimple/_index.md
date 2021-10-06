@@ -2,8 +2,6 @@
 title: "vmwarecloudsimple"
 title_tag: "azure-native.vmwarecloudsimple"
 meta_desc: "Explore the resources and functions of the azure-native.vmwarecloudsimple module."
-aliases:
-    - "docs/reference/pkg/azure-native/"
 layout: api
 ---
 

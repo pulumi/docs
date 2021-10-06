@@ -3,8 +3,6 @@
 title: "ModelExplainabilityJobDefinition"
 title_tag: "aws-native.sagemaker.ModelExplainabilityJobDefinition"
 meta_desc: "Documentation for the aws-native.sagemaker.ModelExplainabilityJobDefinition resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws-native/ModelExplainabilityJobDefinition/"
 layout: api
 ---
 

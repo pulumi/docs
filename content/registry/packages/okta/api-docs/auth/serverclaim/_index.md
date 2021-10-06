@@ -3,8 +3,6 @@
 title: "ServerClaim"
 title_tag: "okta.auth.ServerClaim"
 meta_desc: "Documentation for the okta.auth.ServerClaim resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/okta/ServerClaim/"
 layout: api
 ---
 

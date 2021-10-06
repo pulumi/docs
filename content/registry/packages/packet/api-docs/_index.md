@@ -2,8 +2,6 @@
 title: "Packet"
 title_tag: "packet.Packet"
 meta_desc: "A Pulumi package for creating and managing Packet cloud resources."
-aliases:
-    - "docs/reference/pkg/packet/"
 menu:
     reference:
         parent: API Reference

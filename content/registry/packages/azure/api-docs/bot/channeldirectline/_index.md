@@ -3,8 +3,6 @@
 title: "ChannelDirectLine"
 title_tag: "azure.bot.ChannelDirectLine"
 meta_desc: "Documentation for the azure.bot.ChannelDirectLine resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/ChannelDirectLine/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "AppSecCustomRuleAction"
 title_tag: "akamai.AppSecCustomRuleAction"
 meta_desc: "Documentation for the akamai.AppSecCustomRuleAction resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/akamai/AppSecCustomRuleAction/"
 layout: api
 ---
 

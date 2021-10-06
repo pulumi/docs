@@ -3,8 +3,6 @@
 title: "getBandwidthSetting"
 title_tag: "azure-native.storsimple.getBandwidthSetting"
 meta_desc: "Documentation for the azure-native.storsimple.getBandwidthSetting function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

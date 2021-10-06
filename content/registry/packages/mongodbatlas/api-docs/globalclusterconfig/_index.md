@@ -3,8 +3,6 @@
 title: "GlobalClusterConfig"
 title_tag: "mongodbatlas.GlobalClusterConfig"
 meta_desc: "Documentation for the mongodbatlas.GlobalClusterConfig resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/mongodbatlas/GlobalClusterConfig/"
 layout: api
 ---
 

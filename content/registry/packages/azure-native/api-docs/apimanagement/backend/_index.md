@@ -3,8 +3,6 @@
 title: "Backend"
 title_tag: "azure-native.apimanagement.Backend"
 meta_desc: "Documentation for the azure-native.apimanagement.Backend resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/Backend/"
 layout: api
 ---
 

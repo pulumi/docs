@@ -3,8 +3,6 @@
 title: "ProviderInstance"
 title_tag: "azure-native.hanaonazure.ProviderInstance"
 meta_desc: "Documentation for the azure-native.hanaonazure.ProviderInstance resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/ProviderInstance/"
 layout: api
 ---
 

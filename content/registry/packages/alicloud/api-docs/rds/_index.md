@@ -2,8 +2,6 @@
 title: "rds"
 title_tag: "alicloud.rds"
 meta_desc: "Explore the resources and functions of the alicloud.rds module."
-aliases:
-    - "docs/reference/pkg/alicloud/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "getDatabase"
 title_tag: "azure-native.cache.getDatabase"
 meta_desc: "Documentation for the azure-native.cache.getDatabase function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

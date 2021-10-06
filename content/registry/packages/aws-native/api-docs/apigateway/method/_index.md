@@ -3,8 +3,6 @@
 title: "Method"
 title_tag: "aws-native.apigateway.Method"
 meta_desc: "Documentation for the aws-native.apigateway.Method resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws-native/Method/"
 layout: api
 ---
 

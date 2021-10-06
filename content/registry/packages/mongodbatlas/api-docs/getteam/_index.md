@@ -3,8 +3,6 @@
 title: "getTeam"
 title_tag: "mongodbatlas.getTeam"
 meta_desc: "Documentation for the mongodbatlas.getTeam function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

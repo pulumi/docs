@@ -3,8 +3,6 @@
 title: "Backend"
 title_tag: "azure.apimanagement.Backend"
 meta_desc: "Documentation for the azure.apimanagement.Backend resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/Backend/"
 layout: api
 ---
 

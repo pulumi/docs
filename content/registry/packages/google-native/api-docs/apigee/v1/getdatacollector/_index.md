@@ -3,8 +3,6 @@
 title: "getDataCollector"
 title_tag: "google-native.apigee/v1.getDataCollector"
 meta_desc: "Documentation for the google-native.apigee/v1.getDataCollector function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

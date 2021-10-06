@@ -2,8 +2,6 @@
 title: "helm/v3"
 title_tag: "kubernetes.helm/v3"
 meta_desc: "Explore the resources and functions of the kubernetes.helm/v3 module."
-aliases:
-    - "docs/reference/pkg/kubernetes/"
 layout: api
 ---
 

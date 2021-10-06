@@ -3,8 +3,6 @@
 title: "ProjectLocation"
 title_tag: "gcp.firebase.ProjectLocation"
 meta_desc: "Documentation for the gcp.firebase.ProjectLocation resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/ProjectLocation/"
 layout: api
 ---
 

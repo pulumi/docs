@@ -3,8 +3,6 @@
 title: "SystemTopicEventSubscription"
 title_tag: "azure.eventgrid.SystemTopicEventSubscription"
 meta_desc: "Documentation for the azure.eventgrid.SystemTopicEventSubscription resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/SystemTopicEventSubscription/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "IAMCustomRole"
 title_tag: "gcp.projects.IAMCustomRole"
 meta_desc: "Documentation for the gcp.projects.IAMCustomRole resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/IAMCustomRole/"
 layout: api
 ---
 

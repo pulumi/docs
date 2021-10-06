@@ -2,8 +2,6 @@
 title: "imagebuilder"
 title_tag: "aws-native.imagebuilder"
 meta_desc: "Explore the resources and functions of the aws-native.imagebuilder module."
-aliases:
-    - "docs/reference/pkg/aws-native/"
 layout: api
 ---
 

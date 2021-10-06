@@ -3,8 +3,6 @@
 title: "ReplicationGroup"
 title_tag: "aws.elasticache.ReplicationGroup"
 meta_desc: "Documentation for the aws.elasticache.ReplicationGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/ReplicationGroup/"
 layout: api
 ---
 

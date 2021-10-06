@@ -2,8 +2,6 @@
 title: "ldap"
 title_tag: "keycloak.ldap"
 meta_desc: "Explore the resources and functions of the keycloak.ldap module."
-aliases:
-    - "docs/reference/pkg/keycloak/"
 layout: api
 ---
 

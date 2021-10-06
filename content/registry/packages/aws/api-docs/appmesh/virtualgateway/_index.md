@@ -3,8 +3,6 @@
 title: "VirtualGateway"
 title_tag: "aws.appmesh.VirtualGateway"
 meta_desc: "Documentation for the aws.appmesh.VirtualGateway resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/VirtualGateway/"
 layout: api
 ---
 

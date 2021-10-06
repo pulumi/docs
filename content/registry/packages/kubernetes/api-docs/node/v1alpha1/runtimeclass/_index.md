@@ -3,8 +3,6 @@
 title: "RuntimeClass"
 title_tag: "kubernetes.node.k8s.io/v1alpha1.RuntimeClass"
 meta_desc: "Documentation for the kubernetes.node.k8s.io/v1alpha1.RuntimeClass resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/kubernetes/RuntimeClass/"
 layout: api
 ---
 

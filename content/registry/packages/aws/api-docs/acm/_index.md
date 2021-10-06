@@ -2,8 +2,6 @@
 title: "acm"
 title_tag: "aws.acm"
 meta_desc: "Explore the resources and functions of the aws.acm module."
-aliases:
-    - "docs/reference/pkg/aws/"
 layout: api
 ---
 

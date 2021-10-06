@@ -3,8 +3,6 @@
 title: "getBackendAddressPool"
 title_tag: "azure.lb.getBackendAddressPool"
 meta_desc: "Documentation for the azure.lb.getBackendAddressPool function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

@@ -3,9 +3,7 @@
 title: "SentinelPolicy"
 title_tag: "nomad.SentinelPolicy"
 meta_desc: "Documentation for the nomad.SentinelPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/nomad/SentinelPolicy/"
-layout: api-doc-resource
+layout: api
 ---
 
 

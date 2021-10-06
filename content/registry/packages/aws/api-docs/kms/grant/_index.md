@@ -3,8 +3,6 @@
 title: "Grant"
 title_tag: "aws.kms.Grant"
 meta_desc: "Documentation for the aws.kms.Grant resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/Grant/"
 layout: api
 ---
 

@@ -2,8 +2,6 @@
 title: "iotfleethub"
 title_tag: "aws-native.iotfleethub"
 meta_desc: "Explore the resources and functions of the aws-native.iotfleethub module."
-aliases:
-    - "docs/reference/pkg/aws-native/"
 layout: api
 ---
 

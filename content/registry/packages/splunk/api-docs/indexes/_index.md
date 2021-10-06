@@ -3,8 +3,6 @@
 title: "Indexes"
 title_tag: "splunk.Indexes"
 meta_desc: "Documentation for the splunk.Indexes resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/splunk/Indexes/"
 layout: api
 ---
 

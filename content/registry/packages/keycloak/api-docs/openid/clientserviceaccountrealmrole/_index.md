@@ -3,8 +3,6 @@
 title: "ClientServiceAccountRealmRole"
 title_tag: "keycloak.openid.ClientServiceAccountRealmRole"
 meta_desc: "Documentation for the keycloak.openid.ClientServiceAccountRealmRole resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/keycloak/ClientServiceAccountRealmRole/"
 layout: api
 ---
 

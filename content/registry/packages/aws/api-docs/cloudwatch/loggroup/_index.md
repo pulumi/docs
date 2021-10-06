@@ -3,8 +3,6 @@
 title: "LogGroup"
 title_tag: "aws.cloudwatch.LogGroup"
 meta_desc: "Documentation for the aws.cloudwatch.LogGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/LogGroup/"
 layout: api
 ---
 

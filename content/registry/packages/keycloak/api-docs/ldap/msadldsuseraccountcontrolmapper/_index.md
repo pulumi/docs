@@ -3,8 +3,6 @@
 title: "MsadLdsUserAccountControlMapper"
 title_tag: "keycloak.ldap.MsadLdsUserAccountControlMapper"
 meta_desc: "Documentation for the keycloak.ldap.MsadLdsUserAccountControlMapper resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/keycloak/MsadLdsUserAccountControlMapper/"
 layout: api
 ---
 

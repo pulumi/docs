@@ -3,8 +3,6 @@
 title: "IamServiceAccountIamPolicy"
 title_tag: "yandex.IamServiceAccountIamPolicy"
 meta_desc: "Documentation for the yandex.IamServiceAccountIamPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/yandex/IamServiceAccountIamPolicy/"
 layout: api
 ---
 

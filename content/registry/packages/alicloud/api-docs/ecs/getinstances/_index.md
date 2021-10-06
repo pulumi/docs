@@ -3,8 +3,6 @@
 title: "getInstances"
 title_tag: "alicloud.ecs.getInstances"
 meta_desc: "Documentation for the alicloud.ecs.getInstances function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

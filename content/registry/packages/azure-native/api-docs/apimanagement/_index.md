@@ -2,8 +2,6 @@
 title: "apimanagement"
 title_tag: "azure-native.apimanagement"
 meta_desc: "Explore the resources and functions of the azure-native.apimanagement module."
-aliases:
-    - "docs/reference/pkg/azure-native/"
 layout: api
 ---
 

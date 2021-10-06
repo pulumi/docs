@@ -2,8 +2,6 @@
 title: "AWS Classic"
 title_tag: "AWS Classic Package"
 meta_desc: "A Pulumi package for creating and managing Amazon Web Services (AWS) cloud resources."
-aliases:
-    - "docs/reference/pkg/aws/"
 menu:
     reference:
         parent: API Reference

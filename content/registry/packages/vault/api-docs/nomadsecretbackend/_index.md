@@ -3,8 +3,6 @@
 title: "NomadSecretBackend"
 title_tag: "vault.NomadSecretBackend"
 meta_desc: "Documentation for the vault.NomadSecretBackend resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/vault/NomadSecretBackend/"
 layout: api
 ---
 

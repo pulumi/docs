@@ -3,8 +3,6 @@
 title: "FileServiceProperties"
 title_tag: "azure-native.storage.FileServiceProperties"
 meta_desc: "Documentation for the azure-native.storage.FileServiceProperties resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/FileServiceProperties/"
 layout: api
 ---
 

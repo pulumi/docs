@@ -3,8 +3,6 @@
 title: "FhirStore"
 title_tag: "gcp.healthcare.FhirStore"
 meta_desc: "Documentation for the gcp.healthcare.FhirStore resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/FhirStore/"
 layout: api
 ---
 

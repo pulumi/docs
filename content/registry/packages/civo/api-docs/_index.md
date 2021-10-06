@@ -2,8 +2,6 @@
 title: "Civo"
 title_tag: "civo.Civo"
 meta_desc: "A Pulumi package for creating and managing Civo cloud resources."
-aliases:
-    - "docs/reference/pkg/civo/"
 menu:
     reference:
         parent: API Reference

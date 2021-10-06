@@ -3,8 +3,6 @@
 title: "AppEngineVersionIamBinding"
 title_tag: "gcp.iap.AppEngineVersionIamBinding"
 meta_desc: "Documentation for the gcp.iap.AppEngineVersionIamBinding resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/AppEngineVersionIamBinding/"
 layout: api
 ---
 

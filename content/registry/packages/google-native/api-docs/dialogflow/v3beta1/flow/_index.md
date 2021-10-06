@@ -3,8 +3,6 @@
 title: "Flow"
 title_tag: "google-native.dialogflow/v3beta1.Flow"
 meta_desc: "Documentation for the google-native.dialogflow/v3beta1.Flow resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/google-native/Flow/"
 layout: api
 ---
 

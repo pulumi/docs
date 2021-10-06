@@ -2,8 +2,6 @@
 title: "Snowflake"
 title_tag: "snowflake.Snowflake"
 meta_desc: "A Pulumi package for creating and managing snowflake cloud resources."
-aliases:
-    - "docs/reference/pkg/snowflake/"
 menu:
     reference:
         parent: API Reference

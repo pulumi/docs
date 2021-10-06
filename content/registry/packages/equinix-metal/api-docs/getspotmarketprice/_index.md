@@ -3,8 +3,6 @@
 title: "getSpotMarketPrice"
 title_tag: "equinix-metal.getSpotMarketPrice"
 meta_desc: "Documentation for the equinix-metal.getSpotMarketPrice function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "Endpoint"
 title_tag: "alicloud.polardb.Endpoint"
 meta_desc: "Documentation for the alicloud.polardb.Endpoint resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/alicloud/Endpoint/"
 layout: api
 ---
 

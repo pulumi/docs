@@ -3,8 +3,6 @@
 title: "EcsKeyPair"
 title_tag: "alicloud.ecs.EcsKeyPair"
 meta_desc: "Documentation for the alicloud.ecs.EcsKeyPair resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/alicloud/EcsKeyPair/"
 layout: api
 ---
 

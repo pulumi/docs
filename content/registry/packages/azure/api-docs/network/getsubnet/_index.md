@@ -3,8 +3,6 @@
 title: "getSubnet"
 title_tag: "azure.network.getSubnet"
 meta_desc: "Documentation for the azure.network.getSubnet function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

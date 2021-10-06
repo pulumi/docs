@@ -3,8 +3,6 @@
 title: "getNamespace"
 title_tag: "azure.servicebus.getNamespace"
 meta_desc: "Documentation for the azure.servicebus.getNamespace function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

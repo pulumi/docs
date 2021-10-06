@@ -2,8 +2,6 @@
 title: "alertsmanagement"
 title_tag: "azure-native.alertsmanagement"
 meta_desc: "Explore the resources and functions of the azure-native.alertsmanagement module."
-aliases:
-    - "docs/reference/pkg/azure-native/"
 layout: api
 ---
 

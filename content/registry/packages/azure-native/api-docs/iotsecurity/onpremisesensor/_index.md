@@ -3,8 +3,6 @@
 title: "OnPremiseSensor"
 title_tag: "azure-native.iotsecurity.OnPremiseSensor"
 meta_desc: "Documentation for the azure-native.iotsecurity.OnPremiseSensor resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/OnPremiseSensor/"
 layout: api
 ---
 

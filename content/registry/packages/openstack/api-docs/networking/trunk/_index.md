@@ -3,8 +3,6 @@
 title: "Trunk"
 title_tag: "openstack.networking.Trunk"
 meta_desc: "Documentation for the openstack.networking.Trunk resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/openstack/Trunk/"
 layout: api
 ---
 

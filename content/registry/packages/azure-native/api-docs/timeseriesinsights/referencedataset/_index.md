@@ -3,8 +3,6 @@
 title: "ReferenceDataSet"
 title_tag: "azure-native.timeseriesinsights.ReferenceDataSet"
 meta_desc: "Documentation for the azure-native.timeseriesinsights.ReferenceDataSet resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/ReferenceDataSet/"
 layout: api
 ---
 

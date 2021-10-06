@@ -2,8 +2,6 @@
 title: "trustedorigin"
 title_tag: "okta.trustedorigin"
 meta_desc: "Explore the resources and functions of the okta.trustedorigin module."
-aliases:
-    - "docs/reference/pkg/okta/"
 layout: api
 ---
 

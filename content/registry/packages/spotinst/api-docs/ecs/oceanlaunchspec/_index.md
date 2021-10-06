@@ -3,8 +3,6 @@
 title: "OceanLaunchSpec"
 title_tag: "spotinst.ecs.OceanLaunchSpec"
 meta_desc: "Documentation for the spotinst.ecs.OceanLaunchSpec resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/spotinst/OceanLaunchSpec/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "getBackupPlans"
 title_tag: "alicloud.cassandra.getBackupPlans"
 meta_desc: "Documentation for the alicloud.cassandra.getBackupPlans function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

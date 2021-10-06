@@ -2,8 +2,6 @@
 title: "networkfirewall"
 title_tag: "aws.networkfirewall"
 meta_desc: "Explore the resources and functions of the aws.networkfirewall module."
-aliases:
-    - "docs/reference/pkg/aws/"
 layout: api
 ---
 

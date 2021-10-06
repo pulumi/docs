@@ -3,8 +3,6 @@
 title: "AlertContact"
 title_tag: "alicloud.arms.AlertContact"
 meta_desc: "Documentation for the alicloud.arms.AlertContact resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/alicloud/AlertContact/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "VMwareCollector"
 title_tag: "azure-native.migrate.VMwareCollector"
 meta_desc: "Documentation for the azure-native.migrate.VMwareCollector resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/VMwareCollector/"
 layout: api
 ---
 

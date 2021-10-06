@@ -3,8 +3,6 @@
 title: "getResourceShares"
 title_tag: "alicloud.resourcemanager.getResourceShares"
 meta_desc: "Documentation for the alicloud.resourcemanager.getResourceShares function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

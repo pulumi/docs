@@ -2,8 +2,6 @@
 title: "configuration"
 title_tag: "aws-native.configuration"
 meta_desc: "Explore the resources and functions of the aws-native.configuration module."
-aliases:
-    - "docs/reference/pkg/aws-native/"
 layout: api
 ---
 

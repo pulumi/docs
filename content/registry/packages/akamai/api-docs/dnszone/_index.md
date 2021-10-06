@@ -3,8 +3,6 @@
 title: "DnsZone"
 title_tag: "akamai.DnsZone"
 meta_desc: "Documentation for the akamai.DnsZone resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/akamai/DnsZone/"
 layout: api
 ---
 

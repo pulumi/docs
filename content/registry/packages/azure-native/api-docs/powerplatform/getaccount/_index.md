@@ -3,8 +3,6 @@
 title: "getAccount"
 title_tag: "azure-native.powerplatform.getAccount"
 meta_desc: "Documentation for the azure-native.powerplatform.getAccount function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

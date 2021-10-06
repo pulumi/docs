@@ -3,8 +3,6 @@
 title: "getTag"
 title_tag: "azure-native.apimanagement.getTag"
 meta_desc: "Documentation for the azure-native.apimanagement.getTag function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

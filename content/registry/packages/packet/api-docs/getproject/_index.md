@@ -3,8 +3,6 @@
 title: "getProject"
 title_tag: "packet.getProject"
 meta_desc: "Documentation for the packet.getProject function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

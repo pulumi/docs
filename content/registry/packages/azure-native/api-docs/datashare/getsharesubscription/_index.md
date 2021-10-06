@@ -3,8 +3,6 @@
 title: "getShareSubscription"
 title_tag: "azure-native.datashare.getShareSubscription"
 meta_desc: "Documentation for the azure-native.datashare.getShareSubscription function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

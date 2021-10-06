@@ -3,8 +3,6 @@
 title: "getGlobalAddress"
 title_tag: "gcp.compute.getGlobalAddress"
 meta_desc: "Documentation for the gcp.compute.getGlobalAddress function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

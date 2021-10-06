@@ -2,8 +2,6 @@
 title: "dlp"
 title_tag: "dlp Package"
 meta_desc: ""
-aliases:
-    - "docs/reference/pkg/google-native/"
 layout: api
 ---
 

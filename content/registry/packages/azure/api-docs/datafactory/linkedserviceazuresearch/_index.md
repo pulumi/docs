@@ -3,8 +3,6 @@
 title: "LinkedServiceAzureSearch"
 title_tag: "azure.datafactory.LinkedServiceAzureSearch"
 meta_desc: "Documentation for the azure.datafactory.LinkedServiceAzureSearch resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/LinkedServiceAzureSearch/"
 layout: api
 ---
 

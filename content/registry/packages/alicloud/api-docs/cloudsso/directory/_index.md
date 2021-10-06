@@ -3,8 +3,6 @@
 title: "Directory"
 title_tag: "alicloud.cloudsso.Directory"
 meta_desc: "Documentation for the alicloud.cloudsso.Directory resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/alicloud/Directory/"
 layout: api
 ---
 

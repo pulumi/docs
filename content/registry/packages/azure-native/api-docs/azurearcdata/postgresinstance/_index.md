@@ -3,8 +3,6 @@
 title: "PostgresInstance"
 title_tag: "azure-native.azurearcdata.PostgresInstance"
 meta_desc: "Documentation for the azure-native.azurearcdata.PostgresInstance resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/PostgresInstance/"
 layout: api
 ---
 

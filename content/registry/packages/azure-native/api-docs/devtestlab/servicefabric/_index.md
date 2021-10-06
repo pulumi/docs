@@ -3,8 +3,6 @@
 title: "ServiceFabric"
 title_tag: "azure-native.devtestlab.ServiceFabric"
 meta_desc: "Documentation for the azure-native.devtestlab.ServiceFabric resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/ServiceFabric/"
 layout: api
 ---
 

@@ -2,8 +2,6 @@
 title: "diagflow"
 title_tag: "gcp.diagflow"
 meta_desc: "Explore the resources and functions of the gcp.diagflow module."
-aliases:
-    - "docs/reference/pkg/gcp/"
 layout: api
 ---
 

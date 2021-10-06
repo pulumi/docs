@@ -3,8 +3,6 @@
 title: "Certificate"
 title_tag: "aws-native.iot.Certificate"
 meta_desc: "Documentation for the aws-native.iot.Certificate resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws-native/Certificate/"
 layout: api
 ---
 

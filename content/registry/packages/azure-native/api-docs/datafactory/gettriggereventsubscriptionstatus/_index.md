@@ -3,8 +3,6 @@
 title: "getTriggerEventSubscriptionStatus"
 title_tag: "azure-native.datafactory.getTriggerEventSubscriptionStatus"
 meta_desc: "Documentation for the azure-native.datafactory.getTriggerEventSubscriptionStatus function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "Policy"
 title_tag: "aws-native.fms.Policy"
 meta_desc: "Documentation for the aws-native.fms.Policy resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws-native/Policy/"
 layout: api
 ---
 

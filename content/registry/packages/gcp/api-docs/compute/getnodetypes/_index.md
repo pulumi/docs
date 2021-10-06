@@ -3,8 +3,6 @@
 title: "getNodeTypes"
 title_tag: "gcp.compute.getNodeTypes"
 meta_desc: "Documentation for the gcp.compute.getNodeTypes function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

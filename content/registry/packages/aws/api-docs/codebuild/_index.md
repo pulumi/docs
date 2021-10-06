@@ -2,8 +2,6 @@
 title: "codebuild"
 title_tag: "aws.codebuild"
 meta_desc: "Explore the resources and functions of the aws.codebuild module."
-aliases:
-    - "docs/reference/pkg/aws/"
 layout: api
 ---
 

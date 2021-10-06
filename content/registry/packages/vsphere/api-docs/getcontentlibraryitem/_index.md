@@ -3,8 +3,6 @@
 title: "getContentLibraryItem"
 title_tag: "vsphere.getContentLibraryItem"
 meta_desc: "Documentation for the vsphere.getContentLibraryItem function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "ProjectMetadata"
 title_tag: "gcp.compute.ProjectMetadata"
 meta_desc: "Documentation for the gcp.compute.ProjectMetadata resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/ProjectMetadata/"
 layout: api
 ---
 

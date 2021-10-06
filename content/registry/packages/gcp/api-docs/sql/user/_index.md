@@ -3,8 +3,6 @@
 title: "User"
 title_tag: "gcp.sql.User"
 meta_desc: "Documentation for the gcp.sql.User resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/User/"
 layout: api
 ---
 

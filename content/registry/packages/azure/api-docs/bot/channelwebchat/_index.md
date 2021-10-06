@@ -3,8 +3,6 @@
 title: "ChannelWebChat"
 title_tag: "azure.bot.ChannelWebChat"
 meta_desc: "Documentation for the azure.bot.ChannelWebChat resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/ChannelWebChat/"
 layout: api
 ---
 

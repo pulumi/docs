@@ -2,8 +2,6 @@
 title: "connect"
 title_tag: "aws.connect"
 meta_desc: "Explore the resources and functions of the aws.connect module."
-aliases:
-    - "docs/reference/pkg/aws/"
 layout: api
 ---
 

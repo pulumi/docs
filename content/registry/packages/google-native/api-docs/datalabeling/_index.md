@@ -2,8 +2,6 @@
 title: "datalabeling"
 title_tag: "datalabeling Package"
 meta_desc: ""
-aliases:
-    - "docs/reference/pkg/google-native/"
 layout: api
 ---
 

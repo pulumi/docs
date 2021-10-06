@@ -3,8 +3,6 @@
 title: "StormCluster"
 title_tag: "azure.hdinsight.StormCluster"
 meta_desc: "Documentation for the azure.hdinsight.StormCluster resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/StormCluster/"
 layout: api
 ---
 

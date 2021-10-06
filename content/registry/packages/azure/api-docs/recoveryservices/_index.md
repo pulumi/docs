@@ -2,8 +2,6 @@
 title: "recoveryservices"
 title_tag: "azure.recoveryservices"
 meta_desc: "Explore the resources and functions of the azure.recoveryservices module."
-aliases:
-    - "docs/reference/pkg/azure/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "NotebookWorkspace"
 title_tag: "azure-native.documentdb.NotebookWorkspace"
 meta_desc: "Documentation for the azure-native.documentdb.NotebookWorkspace resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/NotebookWorkspace/"
 layout: api
 ---
 

@@ -2,8 +2,6 @@
 title: "opsworkscm"
 title_tag: "aws-native.opsworkscm"
 meta_desc: "Explore the resources and functions of the aws-native.opsworkscm module."
-aliases:
-    - "docs/reference/pkg/aws-native/"
 layout: api
 ---
 

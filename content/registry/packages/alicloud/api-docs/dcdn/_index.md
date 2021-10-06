@@ -2,8 +2,6 @@
 title: "dcdn"
 title_tag: "alicloud.dcdn"
 meta_desc: "Explore the resources and functions of the alicloud.dcdn module."
-aliases:
-    - "docs/reference/pkg/alicloud/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "Namespace"
 title_tag: "kubernetes.core/v1.Namespace"
 meta_desc: "Documentation for the kubernetes.core/v1.Namespace resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/kubernetes/Namespace/"
 layout: api
 ---
 

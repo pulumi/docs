@@ -2,8 +2,6 @@
 title: "elastictranscoder"
 title_tag: "aws.elastictranscoder"
 meta_desc: "Explore the resources and functions of the aws.elastictranscoder module."
-aliases:
-    - "docs/reference/pkg/aws/"
 layout: api
 ---
 

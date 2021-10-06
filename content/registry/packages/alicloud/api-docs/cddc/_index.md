@@ -2,8 +2,6 @@
 title: "cddc"
 title_tag: "alicloud.cddc"
 meta_desc: "Explore the resources and functions of the alicloud.cddc module."
-aliases:
-    - "docs/reference/pkg/alicloud/"
 layout: api
 ---
 

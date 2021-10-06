@@ -3,8 +3,6 @@
 title: "EncryptionProtector"
 title_tag: "azure-native.sql.EncryptionProtector"
 meta_desc: "Documentation for the azure-native.sql.EncryptionProtector resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/EncryptionProtector/"
 layout: api
 ---
 

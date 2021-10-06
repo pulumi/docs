@@ -3,8 +3,6 @@
 title: "IdentityPoolRoleAttachment"
 title_tag: "aws.cognito.IdentityPoolRoleAttachment"
 meta_desc: "Documentation for the aws.cognito.IdentityPoolRoleAttachment resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/IdentityPoolRoleAttachment/"
 layout: api
 ---
 

@@ -2,8 +2,6 @@
 title: "addons"
 title_tag: "azure-native.addons"
 meta_desc: "Explore the resources and functions of the azure-native.addons module."
-aliases:
-    - "docs/reference/pkg/azure-native/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "SourceControlConfiguration"
 title_tag: "azure-native.kubernetesconfiguration.SourceControlConfiguration"
 meta_desc: "Documentation for the azure-native.kubernetesconfiguration.SourceControlConfiguration resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/SourceControlConfiguration/"
 layout: api
 ---
 

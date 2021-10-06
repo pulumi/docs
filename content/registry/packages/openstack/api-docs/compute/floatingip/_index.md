@@ -3,8 +3,6 @@
 title: "FloatingIp"
 title_tag: "openstack.compute.FloatingIp"
 meta_desc: "Documentation for the openstack.compute.FloatingIp resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/openstack/FloatingIp/"
 layout: api
 ---
 

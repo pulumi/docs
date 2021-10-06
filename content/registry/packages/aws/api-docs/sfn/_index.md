@@ -2,8 +2,6 @@
 title: "sfn"
 title_tag: "aws.sfn"
 meta_desc: "Explore the resources and functions of the aws.sfn module."
-aliases:
-    - "docs/reference/pkg/aws/"
 layout: api
 ---
 

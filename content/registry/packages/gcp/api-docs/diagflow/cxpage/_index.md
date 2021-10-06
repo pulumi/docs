@@ -3,8 +3,6 @@
 title: "CxPage"
 title_tag: "gcp.diagflow.CxPage"
 meta_desc: "Documentation for the gcp.diagflow.CxPage resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/CxPage/"
 layout: api
 ---
 

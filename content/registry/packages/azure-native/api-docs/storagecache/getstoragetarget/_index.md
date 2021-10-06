@@ -3,8 +3,6 @@
 title: "getStorageTarget"
 title_tag: "azure-native.storagecache.getStorageTarget"
 meta_desc: "Documentation for the azure-native.storagecache.getStorageTarget function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

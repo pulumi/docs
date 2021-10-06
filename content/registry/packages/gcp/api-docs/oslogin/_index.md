@@ -2,8 +2,6 @@
 title: "oslogin"
 title_tag: "gcp.oslogin"
 meta_desc: "Explore the resources and functions of the gcp.oslogin module."
-aliases:
-    - "docs/reference/pkg/gcp/"
 layout: api
 ---
 

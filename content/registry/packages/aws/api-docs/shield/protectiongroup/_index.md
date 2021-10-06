@@ -3,8 +3,6 @@
 title: "ProtectionGroup"
 title_tag: "aws.shield.ProtectionGroup"
 meta_desc: "Documentation for the aws.shield.ProtectionGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/ProtectionGroup/"
 layout: api
 ---
 

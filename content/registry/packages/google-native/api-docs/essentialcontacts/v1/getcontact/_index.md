@@ -3,8 +3,6 @@
 title: "getContact"
 title_tag: "google-native.essentialcontacts/v1.getContact"
 meta_desc: "Documentation for the google-native.essentialcontacts/v1.getContact function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "listWorkflowRunActionRepetitionExpressionTraces"
 title_tag: "azure-native.logic.listWorkflowRunActionRepetitionExpressionTraces"
 meta_desc: "Documentation for the azure-native.logic.listWorkflowRunActionRepetitionExpressionTraces function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

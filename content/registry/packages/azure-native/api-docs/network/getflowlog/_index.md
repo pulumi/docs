@@ -3,8 +3,6 @@
 title: "getFlowLog"
 title_tag: "azure-native.network.getFlowLog"
 meta_desc: "Documentation for the azure-native.network.getFlowLog function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

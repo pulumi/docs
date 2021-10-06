@@ -2,8 +2,6 @@
 title: "memcache"
 title_tag: "gcp.memcache"
 meta_desc: "Explore the resources and functions of the gcp.memcache module."
-aliases:
-    - "docs/reference/pkg/gcp/"
 layout: api
 ---
 

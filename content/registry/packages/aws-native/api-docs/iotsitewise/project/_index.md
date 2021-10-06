@@ -3,8 +3,6 @@
 title: "Project"
 title_tag: "aws-native.iotsitewise.Project"
 meta_desc: "Documentation for the aws-native.iotsitewise.Project resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws-native/Project/"
 layout: api
 ---
 

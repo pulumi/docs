@@ -2,8 +2,6 @@
 title: "devtest"
 title_tag: "azure.devtest"
 meta_desc: "Explore the resources and functions of the azure.devtest module."
-aliases:
-    - "docs/reference/pkg/azure/"
 layout: api
 ---
 

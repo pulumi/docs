@@ -3,8 +3,6 @@
 title: "TunnelInstanceIAMMember"
 title_tag: "gcp.iap.TunnelInstanceIAMMember"
 meta_desc: "Documentation for the gcp.iap.TunnelInstanceIAMMember resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/TunnelInstanceIAMMember/"
 layout: api
 ---
 

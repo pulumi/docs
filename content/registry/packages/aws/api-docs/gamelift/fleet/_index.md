@@ -3,8 +3,6 @@
 title: "Fleet"
 title_tag: "aws.gamelift.Fleet"
 meta_desc: "Documentation for the aws.gamelift.Fleet resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/Fleet/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "getEventHubAuthorizationRule"
 title_tag: "azure-native.eventhub.getEventHubAuthorizationRule"
 meta_desc: "Documentation for the azure-native.eventhub.getEventHubAuthorizationRule function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

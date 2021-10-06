@@ -3,8 +3,6 @@
 title: "NamespaceVirtualNetworkRule"
 title_tag: "azure-native.servicebus.NamespaceVirtualNetworkRule"
 meta_desc: "Documentation for the azure-native.servicebus.NamespaceVirtualNetworkRule resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/NamespaceVirtualNetworkRule/"
 layout: api
 ---
 

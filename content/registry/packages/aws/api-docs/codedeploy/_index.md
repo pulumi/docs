@@ -2,8 +2,6 @@
 title: "codedeploy"
 title_tag: "aws.codedeploy"
 meta_desc: "Explore the resources and functions of the aws.codedeploy module."
-aliases:
-    - "docs/reference/pkg/aws/"
 layout: api
 ---
 

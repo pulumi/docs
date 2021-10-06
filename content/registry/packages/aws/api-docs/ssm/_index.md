@@ -2,8 +2,6 @@
 title: "ssm"
 title_tag: "aws.ssm"
 meta_desc: "Explore the resources and functions of the aws.ssm module."
-aliases:
-    - "docs/reference/pkg/aws/"
 layout: api
 ---
 

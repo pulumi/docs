@@ -3,8 +3,6 @@
 title: "Realm"
 title_tag: "gcp.gameservices.Realm"
 meta_desc: "Documentation for the gcp.gameservices.Realm resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/Realm/"
 layout: api
 ---
 

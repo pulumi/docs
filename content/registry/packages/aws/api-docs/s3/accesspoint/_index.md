@@ -3,8 +3,6 @@
 title: "AccessPoint"
 title_tag: "aws.s3.AccessPoint"
 meta_desc: "Documentation for the aws.s3.AccessPoint resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/AccessPoint/"
 layout: api
 ---
 

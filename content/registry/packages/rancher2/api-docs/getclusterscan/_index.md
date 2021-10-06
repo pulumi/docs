@@ -3,8 +3,6 @@
 title: "getClusterScan"
 title_tag: "rancher2.getClusterScan"
 meta_desc: "Documentation for the rancher2.getClusterScan function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

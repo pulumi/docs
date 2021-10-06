@@ -3,8 +3,6 @@
 title: "MicrosoftSecurityIncidentCreationAlertRule"
 title_tag: "azure-native.securityinsights.MicrosoftSecurityIncidentCreationAlertRule"
 meta_desc: "Documentation for the azure-native.securityinsights.MicrosoftSecurityIncidentCreationAlertRule resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/MicrosoftSecurityIncidentCreationAlertRule/"
 layout: api
 ---
 

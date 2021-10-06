@@ -2,8 +2,6 @@
 title: "healthlake"
 title_tag: "aws-native.healthlake"
 meta_desc: "Explore the resources and functions of the aws-native.healthlake module."
-aliases:
-    - "docs/reference/pkg/aws-native/"
 layout: api
 ---
 

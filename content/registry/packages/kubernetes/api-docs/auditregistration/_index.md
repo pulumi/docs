@@ -2,8 +2,6 @@
 title: "auditregistration"
 title_tag: "auditregistration Package"
 meta_desc: ""
-aliases:
-    - "docs/reference/pkg/kubernetes/"
 layout: api
 ---
 

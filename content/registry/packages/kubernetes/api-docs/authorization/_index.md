@@ -2,8 +2,6 @@
 title: "authorization"
 title_tag: "authorization Package"
 meta_desc: ""
-aliases:
-    - "docs/reference/pkg/kubernetes/"
 layout: api
 ---
 

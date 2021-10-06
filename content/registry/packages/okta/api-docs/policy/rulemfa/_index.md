@@ -3,8 +3,6 @@
 title: "RuleMfa"
 title_tag: "okta.policy.RuleMfa"
 meta_desc: "Documentation for the okta.policy.RuleMfa resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/okta/RuleMfa/"
 layout: api
 ---
 

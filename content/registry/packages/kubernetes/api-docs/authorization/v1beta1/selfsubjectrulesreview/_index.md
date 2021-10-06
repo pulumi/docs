@@ -3,8 +3,6 @@
 title: "SelfSubjectRulesReview"
 title_tag: "kubernetes.authorization.k8s.io/v1beta1.SelfSubjectRulesReview"
 meta_desc: "Documentation for the kubernetes.authorization.k8s.io/v1beta1.SelfSubjectRulesReview resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/kubernetes/SelfSubjectRulesReview/"
 layout: api
 ---
 

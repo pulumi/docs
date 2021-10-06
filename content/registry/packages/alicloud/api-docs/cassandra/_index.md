@@ -2,8 +2,6 @@
 title: "cassandra"
 title_tag: "alicloud.cassandra"
 meta_desc: "Explore the resources and functions of the alicloud.cassandra module."
-aliases:
-    - "docs/reference/pkg/alicloud/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "getUserContactMethod"
 title_tag: "pagerduty.getUserContactMethod"
 meta_desc: "Documentation for the pagerduty.getUserContactMethod function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

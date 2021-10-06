@@ -3,8 +3,6 @@
 title: "DatabaseInstance"
 title_tag: "gcp.sql.DatabaseInstance"
 meta_desc: "Documentation for the gcp.sql.DatabaseInstance resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/DatabaseInstance/"
 layout: api
 ---
 

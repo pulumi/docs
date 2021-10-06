@@ -3,8 +3,6 @@
 title: "getADLSGen2FolderDataSet"
 title_tag: "azure-native.datashare.getADLSGen2FolderDataSet"
 meta_desc: "Documentation for the azure-native.datashare.getADLSGen2FolderDataSet function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

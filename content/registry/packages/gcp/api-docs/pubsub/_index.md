@@ -2,8 +2,6 @@
 title: "pubsub"
 title_tag: "gcp.pubsub"
 meta_desc: "Explore the resources and functions of the gcp.pubsub module."
-aliases:
-    - "docs/reference/pkg/gcp/"
 layout: api
 ---
 

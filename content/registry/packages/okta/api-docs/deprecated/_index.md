@@ -2,8 +2,6 @@
 title: "deprecated"
 title_tag: "okta.deprecated"
 meta_desc: "Explore the resources and functions of the okta.deprecated module."
-aliases:
-    - "docs/reference/pkg/okta/"
 layout: api
 ---
 

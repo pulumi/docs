@@ -3,8 +3,6 @@
 title: "Feed"
 title_tag: "google-native.cloudasset/v1.Feed"
 meta_desc: "Documentation for the google-native.cloudasset/v1.Feed resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/google-native/Feed/"
 layout: api
 ---
 

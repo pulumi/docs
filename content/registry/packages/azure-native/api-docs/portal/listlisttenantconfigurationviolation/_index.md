@@ -3,8 +3,6 @@
 title: "listListTenantConfigurationViolation"
 title_tag: "azure-native.portal.listListTenantConfigurationViolation"
 meta_desc: "Documentation for the azure-native.portal.listListTenantConfigurationViolation function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

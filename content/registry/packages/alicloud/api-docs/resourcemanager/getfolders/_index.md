@@ -3,8 +3,6 @@
 title: "getFolders"
 title_tag: "alicloud.resourcemanager.getFolders"
 meta_desc: "Documentation for the alicloud.resourcemanager.getFolders function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

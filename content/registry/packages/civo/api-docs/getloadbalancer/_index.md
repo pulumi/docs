@@ -3,8 +3,6 @@
 title: "getLoadBalancer"
 title_tag: "civo.getLoadBalancer"
 meta_desc: "Documentation for the civo.getLoadBalancer function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

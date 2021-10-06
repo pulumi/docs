@@ -3,8 +3,6 @@
 title: "CloudProviderAccessAuthorization"
 title_tag: "mongodbatlas.CloudProviderAccessAuthorization"
 meta_desc: "Documentation for the mongodbatlas.CloudProviderAccessAuthorization resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/mongodbatlas/CloudProviderAccessAuthorization/"
 layout: api
 ---
 

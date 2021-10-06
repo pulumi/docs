@@ -3,8 +3,6 @@
 title: "IoTHub"
 title_tag: "azure.iot.IoTHub"
 meta_desc: "Documentation for the azure.iot.IoTHub resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/IoTHub/"
 layout: api
 ---
 

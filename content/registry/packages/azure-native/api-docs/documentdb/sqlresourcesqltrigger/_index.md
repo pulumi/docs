@@ -3,8 +3,6 @@
 title: "SqlResourceSqlTrigger"
 title_tag: "azure-native.documentdb.SqlResourceSqlTrigger"
 meta_desc: "Documentation for the azure-native.documentdb.SqlResourceSqlTrigger resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/SqlResourceSqlTrigger/"
 layout: api
 ---
 

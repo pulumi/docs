@@ -3,8 +3,6 @@
 title: "VpnGateway"
 title_tag: "google-native.compute/alpha.VpnGateway"
 meta_desc: "Documentation for the google-native.compute/alpha.VpnGateway resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/google-native/VpnGateway/"
 layout: api
 ---
 

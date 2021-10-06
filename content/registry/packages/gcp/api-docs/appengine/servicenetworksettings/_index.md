@@ -3,8 +3,6 @@
 title: "ServiceNetworkSettings"
 title_tag: "gcp.appengine.ServiceNetworkSettings"
 meta_desc: "Documentation for the gcp.appengine.ServiceNetworkSettings resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/ServiceNetworkSettings/"
 layout: api
 ---
 

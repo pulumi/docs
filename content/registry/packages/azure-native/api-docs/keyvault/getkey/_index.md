@@ -3,8 +3,6 @@
 title: "getKey"
 title_tag: "azure-native.keyvault.getKey"
 meta_desc: "Documentation for the azure-native.keyvault.getKey function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

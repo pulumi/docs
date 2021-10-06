@@ -2,8 +2,6 @@
 title: "xray"
 title_tag: "aws.xray"
 meta_desc: "Explore the resources and functions of the aws.xray module."
-aliases:
-    - "docs/reference/pkg/aws/"
 layout: api
 ---
 

@@ -2,8 +2,6 @@
 title: "dataflow"
 title_tag: "gcp.dataflow"
 meta_desc: "Explore the resources and functions of the gcp.dataflow module."
-aliases:
-    - "docs/reference/pkg/gcp/"
 layout: api
 ---
 

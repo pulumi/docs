@@ -3,8 +3,6 @@
 title: "Gallery"
 title_tag: "azure-native.compute.Gallery"
 meta_desc: "Documentation for the azure-native.compute.Gallery resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/Gallery/"
 layout: api
 ---
 

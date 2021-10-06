@@ -3,8 +3,6 @@
 title: "Account"
 title_tag: "azure-native.deviceupdate.Account"
 meta_desc: "Documentation for the azure-native.deviceupdate.Account resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/Account/"
 layout: api
 ---
 

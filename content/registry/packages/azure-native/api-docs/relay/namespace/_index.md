@@ -3,8 +3,6 @@
 title: "Namespace"
 title_tag: "azure-native.relay.Namespace"
 meta_desc: "Documentation for the azure-native.relay.Namespace resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/Namespace/"
 layout: api
 ---
 

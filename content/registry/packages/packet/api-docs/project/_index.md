@@ -3,8 +3,6 @@
 title: "Project"
 title_tag: "packet.Project"
 meta_desc: "Documentation for the packet.Project resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/packet/Project/"
 layout: api
 ---
 

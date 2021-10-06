@@ -3,8 +3,6 @@
 title: "getNamespaceVirtualNetworkRule"
 title_tag: "azure-native.eventhub.getNamespaceVirtualNetworkRule"
 meta_desc: "Documentation for the azure-native.eventhub.getNamespaceVirtualNetworkRule function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

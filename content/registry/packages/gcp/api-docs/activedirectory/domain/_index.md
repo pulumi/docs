@@ -3,8 +3,6 @@
 title: "Domain"
 title_tag: "gcp.activedirectory.Domain"
 meta_desc: "Documentation for the gcp.activedirectory.Domain resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/Domain/"
 layout: api
 ---
 

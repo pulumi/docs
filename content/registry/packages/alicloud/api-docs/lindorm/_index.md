@@ -2,8 +2,6 @@
 title: "lindorm"
 title_tag: "alicloud.lindorm"
 meta_desc: "Explore the resources and functions of the alicloud.lindorm module."
-aliases:
-    - "docs/reference/pkg/alicloud/"
 layout: api
 ---
 

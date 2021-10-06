@@ -2,8 +2,6 @@
 title: "devices"
 title_tag: "azure-native.devices"
 meta_desc: "Explore the resources and functions of the azure-native.devices module."
-aliases:
-    - "docs/reference/pkg/azure-native/"
 layout: api
 ---
 

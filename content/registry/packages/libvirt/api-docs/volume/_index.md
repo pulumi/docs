@@ -3,8 +3,6 @@
 title: "Volume"
 title_tag: "libvirt.Volume"
 meta_desc: "Documentation for the libvirt.Volume resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/libvirt/Volume/"
 layout: api
 ---
 

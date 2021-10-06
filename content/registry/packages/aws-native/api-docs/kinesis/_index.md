@@ -2,8 +2,6 @@
 title: "kinesis"
 title_tag: "aws-native.kinesis"
 meta_desc: "Explore the resources and functions of the aws-native.kinesis module."
-aliases:
-    - "docs/reference/pkg/aws-native/"
 layout: api
 ---
 

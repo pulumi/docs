@@ -3,8 +3,6 @@
 title: "DefaultSubnet"
 title_tag: "aws.ec2.DefaultSubnet"
 meta_desc: "Documentation for the aws.ec2.DefaultSubnet resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/DefaultSubnet/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "getDevice"
 title_tag: "packet.getDevice"
 meta_desc: "Documentation for the packet.getDevice function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "getRouteEntries"
 title_tag: "alicloud.cen.getRouteEntries"
 meta_desc: "Documentation for the alicloud.cen.getRouteEntries function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

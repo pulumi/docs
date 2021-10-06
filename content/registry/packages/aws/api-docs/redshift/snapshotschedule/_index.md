@@ -3,8 +3,6 @@
 title: "SnapshotSchedule"
 title_tag: "aws.redshift.SnapshotSchedule"
 meta_desc: "Documentation for the aws.redshift.SnapshotSchedule resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/SnapshotSchedule/"
 layout: api
 ---
 

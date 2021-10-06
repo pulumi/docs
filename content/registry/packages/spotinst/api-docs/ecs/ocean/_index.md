@@ -3,8 +3,6 @@
 title: "Ocean"
 title_tag: "spotinst.ecs.Ocean"
 meta_desc: "Documentation for the spotinst.ecs.Ocean resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/spotinst/Ocean/"
 layout: api
 ---
 

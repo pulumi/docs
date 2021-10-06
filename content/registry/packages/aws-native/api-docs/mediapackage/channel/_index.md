@@ -3,8 +3,6 @@
 title: "Channel"
 title_tag: "aws-native.mediapackage.Channel"
 meta_desc: "Documentation for the aws-native.mediapackage.Channel resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws-native/Channel/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "RegionTargetHttpsProxy"
 title_tag: "gcp.compute.RegionTargetHttpsProxy"
 meta_desc: "Documentation for the gcp.compute.RegionTargetHttpsProxy resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/RegionTargetHttpsProxy/"
 layout: api
 ---
 

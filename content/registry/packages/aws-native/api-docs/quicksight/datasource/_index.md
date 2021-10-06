@@ -3,8 +3,6 @@
 title: "DataSource"
 title_tag: "aws-native.quicksight.DataSource"
 meta_desc: "Documentation for the aws-native.quicksight.DataSource resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws-native/DataSource/"
 layout: api
 ---
 

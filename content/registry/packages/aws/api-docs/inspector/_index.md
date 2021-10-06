@@ -2,8 +2,6 @@
 title: "inspector"
 title_tag: "aws.inspector"
 meta_desc: "Explore the resources and functions of the aws.inspector module."
-aliases:
-    - "docs/reference/pkg/aws/"
 layout: api
 ---
 

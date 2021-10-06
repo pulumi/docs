@@ -3,8 +3,6 @@
 title: "MachineConfigV2"
 title_tag: "rancher2.MachineConfigV2"
 meta_desc: "Documentation for the rancher2.MachineConfigV2 resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/rancher2/MachineConfigV2/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "IamPolicy"
 title_tag: "gcp.bigquery.IamPolicy"
 meta_desc: "Documentation for the gcp.bigquery.IamPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/IamPolicy/"
 layout: api
 ---
 

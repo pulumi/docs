@@ -3,8 +3,6 @@
 title: "ClusterTemplate"
 title_tag: "openstack.containerinfra.ClusterTemplate"
 meta_desc: "Documentation for the openstack.containerinfra.ClusterTemplate resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/openstack/ClusterTemplate/"
 layout: api
 ---
 

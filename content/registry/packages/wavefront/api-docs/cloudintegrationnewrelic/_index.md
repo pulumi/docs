@@ -3,8 +3,6 @@
 title: "CloudIntegrationNewRelic"
 title_tag: "wavefront.CloudIntegrationNewRelic"
 meta_desc: "Documentation for the wavefront.CloudIntegrationNewRelic resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/wavefront/CloudIntegrationNewRelic/"
 layout: api
 ---
 

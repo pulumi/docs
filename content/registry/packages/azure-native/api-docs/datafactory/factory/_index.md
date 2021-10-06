@@ -3,8 +3,6 @@
 title: "Factory"
 title_tag: "azure-native.datafactory.Factory"
 meta_desc: "Documentation for the azure-native.datafactory.Factory resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/Factory/"
 layout: api
 ---
 

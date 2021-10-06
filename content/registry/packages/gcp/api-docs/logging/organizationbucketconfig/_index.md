@@ -3,8 +3,6 @@
 title: "OrganizationBucketConfig"
 title_tag: "gcp.logging.OrganizationBucketConfig"
 meta_desc: "Documentation for the gcp.logging.OrganizationBucketConfig resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/OrganizationBucketConfig/"
 layout: api
 ---
 

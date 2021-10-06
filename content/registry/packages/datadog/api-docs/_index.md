@@ -2,8 +2,6 @@
 title: "Datadog"
 title_tag: "Datadog Package"
 meta_desc: "A Pulumi package for creating and managing Datadog resources."
-aliases:
-    - "docs/reference/pkg/datadog/"
 menu:
     reference:
         parent: API Reference

@@ -3,8 +3,6 @@
 title: "ApiAccessKey"
 title_tag: "newrelic.ApiAccessKey"
 meta_desc: "Documentation for the newrelic.ApiAccessKey resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/newrelic/ApiAccessKey/"
 layout: api
 ---
 

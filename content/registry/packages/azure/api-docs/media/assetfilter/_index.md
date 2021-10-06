@@ -3,8 +3,6 @@
 title: "AssetFilter"
 title_tag: "azure.media.AssetFilter"
 meta_desc: "Documentation for the azure.media.AssetFilter resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/AssetFilter/"
 layout: api
 ---
 

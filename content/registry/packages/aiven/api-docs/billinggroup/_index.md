@@ -3,8 +3,6 @@
 title: "BillingGroup"
 title_tag: "aiven.BillingGroup"
 meta_desc: "Documentation for the aiven.BillingGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aiven/BillingGroup/"
 layout: api
 ---
 

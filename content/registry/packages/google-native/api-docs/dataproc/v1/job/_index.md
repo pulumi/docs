@@ -3,8 +3,6 @@
 title: "Job"
 title_tag: "google-native.dataproc/v1.Job"
 meta_desc: "Documentation for the google-native.dataproc/v1.Job resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/google-native/Job/"
 layout: api
 ---
 

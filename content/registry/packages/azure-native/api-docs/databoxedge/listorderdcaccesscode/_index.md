@@ -3,8 +3,6 @@
 title: "listOrderDCAccessCode"
 title_tag: "azure-native.databoxedge.listOrderDCAccessCode"
 meta_desc: "Documentation for the azure-native.databoxedge.listOrderDCAccessCode function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

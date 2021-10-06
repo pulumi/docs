@@ -2,8 +2,6 @@
 title: "datadog"
 title_tag: "azure-native.datadog"
 meta_desc: "Explore the resources and functions of the azure-native.datadog module."
-aliases:
-    - "docs/reference/pkg/azure-native/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "ConfigurationProfile"
 title_tag: "azure-native.changeanalysis.ConfigurationProfile"
 meta_desc: "Documentation for the azure-native.changeanalysis.ConfigurationProfile resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/ConfigurationProfile/"
 layout: api
 ---
 

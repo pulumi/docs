@@ -3,8 +3,6 @@
 title: "getDdosBgpInstances"
 title_tag: "alicloud.ddos.getDdosBgpInstances"
 meta_desc: "Documentation for the alicloud.ddos.getDdosBgpInstances function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

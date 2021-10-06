@@ -3,8 +3,6 @@
 title: "AppSecMatchTarget"
 title_tag: "akamai.AppSecMatchTarget"
 meta_desc: "Documentation for the akamai.AppSecMatchTarget resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/akamai/AppSecMatchTarget/"
 layout: api
 ---
 

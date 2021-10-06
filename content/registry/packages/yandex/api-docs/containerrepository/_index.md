@@ -3,8 +3,6 @@
 title: "ContainerRepository"
 title_tag: "yandex.ContainerRepository"
 meta_desc: "Documentation for the yandex.ContainerRepository resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/yandex/ContainerRepository/"
 layout: api
 ---
 

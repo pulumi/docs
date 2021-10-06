@@ -3,8 +3,6 @@
 title: "OrganizationManagerOrganizationIamBinding"
 title_tag: "yandex.OrganizationManagerOrganizationIamBinding"
 meta_desc: "Documentation for the yandex.OrganizationManagerOrganizationIamBinding resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/yandex/OrganizationManagerOrganizationIamBinding/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "CustomDomain"
 title_tag: "alicloud.fc.CustomDomain"
 meta_desc: "Documentation for the alicloud.fc.CustomDomain resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/alicloud/CustomDomain/"
 layout: api
 ---
 

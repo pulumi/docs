@@ -2,8 +2,6 @@
 title: "Cloudflare"
 title_tag: "cloudflare.Cloudflare"
 meta_desc: "A Pulumi package for creating and managing Cloudflare cloud resources."
-aliases:
-    - "docs/reference/pkg/cloudflare/"
 menu:
     reference:
         parent: API Reference

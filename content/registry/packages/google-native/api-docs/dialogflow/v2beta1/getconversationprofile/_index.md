@@ -3,8 +3,6 @@
 title: "getConversationProfile"
 title_tag: "google-native.dialogflow/v2beta1.getConversationProfile"
 meta_desc: "Documentation for the google-native.dialogflow/v2beta1.getConversationProfile function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

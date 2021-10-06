@@ -3,8 +3,6 @@
 title: "NamespaceAuthorizationRule"
 title_tag: "azure-native.servicebus.NamespaceAuthorizationRule"
 meta_desc: "Documentation for the azure-native.servicebus.NamespaceAuthorizationRule resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/NamespaceAuthorizationRule/"
 layout: api
 ---
 

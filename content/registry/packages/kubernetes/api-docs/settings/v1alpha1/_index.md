@@ -2,8 +2,6 @@
 title: "settings/v1alpha1"
 title_tag: "kubernetes.settings/v1alpha1"
 meta_desc: "Explore the resources and functions of the kubernetes.settings/v1alpha1 module."
-aliases:
-    - "docs/reference/pkg/kubernetes/"
 layout: api
 ---
 

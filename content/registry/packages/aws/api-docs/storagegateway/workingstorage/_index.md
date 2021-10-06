@@ -3,8 +3,6 @@
 title: "WorkingStorage"
 title_tag: "aws.storagegateway.WorkingStorage"
 meta_desc: "Documentation for the aws.storagegateway.WorkingStorage resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/WorkingStorage/"
 layout: api
 ---
 

@@ -2,8 +2,6 @@
 title: "servicelinker"
 title_tag: "azure-native.servicelinker"
 meta_desc: "Explore the resources and functions of the azure-native.servicelinker module."
-aliases:
-    - "docs/reference/pkg/azure-native/"
 layout: api
 ---
 

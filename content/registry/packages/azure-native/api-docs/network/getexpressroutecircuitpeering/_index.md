@@ -3,8 +3,6 @@
 title: "getExpressRouteCircuitPeering"
 title_tag: "azure-native.network.getExpressRouteCircuitPeering"
 meta_desc: "Documentation for the azure-native.network.getExpressRouteCircuitPeering function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

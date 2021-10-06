@@ -3,8 +3,6 @@
 title: "getTargetServer"
 title_tag: "google-native.apigee/v1.getTargetServer"
 meta_desc: "Documentation for the google-native.apigee/v1.getTargetServer function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

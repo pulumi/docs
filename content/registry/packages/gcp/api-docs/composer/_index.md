@@ -2,8 +2,6 @@
 title: "composer"
 title_tag: "gcp.composer"
 meta_desc: "Explore the resources and functions of the gcp.composer module."
-aliases:
-    - "docs/reference/pkg/gcp/"
 layout: api
 ---
 

@@ -2,8 +2,6 @@
 title: "synthetics"
 title_tag: "aws-native.synthetics"
 meta_desc: "Explore the resources and functions of the aws-native.synthetics module."
-aliases:
-    - "docs/reference/pkg/aws-native/"
 layout: api
 ---
 

@@ -2,8 +2,6 @@
 title: "aws"
 title_tag: "spotinst.aws"
 meta_desc: "Explore the resources and functions of the spotinst.aws module."
-aliases:
-    - "docs/reference/pkg/spotinst/"
 layout: api
 ---
 

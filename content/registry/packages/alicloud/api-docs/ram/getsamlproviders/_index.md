@@ -3,8 +3,6 @@
 title: "getSamlProviders"
 title_tag: "alicloud.ram.getSamlProviders"
 meta_desc: "Documentation for the alicloud.ram.getSamlProviders function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

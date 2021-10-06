@@ -3,8 +3,6 @@
 title: "P2sVpnServerConfiguration"
 title_tag: "azure-native.network.P2sVpnServerConfiguration"
 meta_desc: "Documentation for the azure-native.network.P2sVpnServerConfiguration resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/P2sVpnServerConfiguration/"
 layout: api
 ---
 

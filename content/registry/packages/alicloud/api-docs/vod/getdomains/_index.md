@@ -3,8 +3,6 @@
 title: "getDomains"
 title_tag: "alicloud.vod.getDomains"
 meta_desc: "Documentation for the alicloud.vod.getDomains function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

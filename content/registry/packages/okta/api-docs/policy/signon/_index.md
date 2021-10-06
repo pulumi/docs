@@ -3,8 +3,6 @@
 title: "Signon"
 title_tag: "okta.policy.Signon"
 meta_desc: "Documentation for the okta.policy.Signon resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/okta/Signon/"
 layout: api
 ---
 

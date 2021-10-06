@@ -3,8 +3,6 @@
 title: "ObjectStorageBucket"
 title_tag: "linode.ObjectStorageBucket"
 meta_desc: "Documentation for the linode.ObjectStorageBucket resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/linode/ObjectStorageBucket/"
 layout: api
 ---
 

@@ -2,8 +2,6 @@
 title: "securitycenter"
 title_tag: "alicloud.securitycenter"
 meta_desc: "Explore the resources and functions of the alicloud.securitycenter module."
-aliases:
-    - "docs/reference/pkg/alicloud/"
 layout: api
 ---
 

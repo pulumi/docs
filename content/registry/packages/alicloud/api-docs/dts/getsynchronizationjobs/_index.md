@@ -3,8 +3,6 @@
 title: "getSynchronizationJobs"
 title_tag: "alicloud.dts.getSynchronizationJobs"
 meta_desc: "Documentation for the alicloud.dts.getSynchronizationJobs function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

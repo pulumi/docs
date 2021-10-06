@@ -2,8 +2,6 @@
 title: "codegurureviewer"
 title_tag: "aws-native.codegurureviewer"
 meta_desc: "Explore the resources and functions of the aws-native.codegurureviewer module."
-aliases:
-    - "docs/reference/pkg/aws-native/"
 layout: api
 ---
 

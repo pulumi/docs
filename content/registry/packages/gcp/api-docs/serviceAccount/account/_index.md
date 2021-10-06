@@ -3,8 +3,6 @@
 title: "Account"
 title_tag: "gcp.serviceAccount.Account"
 meta_desc: "Documentation for the gcp.serviceAccount.Account resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/Account/"
 layout: api
 ---
 

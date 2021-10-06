@@ -3,8 +3,6 @@
 title: "getContactFlow"
 title_tag: "aws.connect.getContactFlow"
 meta_desc: "Documentation for the aws.connect.getContactFlow function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

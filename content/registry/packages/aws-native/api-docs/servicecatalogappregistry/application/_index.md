@@ -3,8 +3,6 @@
 title: "Application"
 title_tag: "aws-native.servicecatalogappregistry.Application"
 meta_desc: "Documentation for the aws-native.servicecatalogappregistry.Application resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws-native/Application/"
 layout: api
 ---
 

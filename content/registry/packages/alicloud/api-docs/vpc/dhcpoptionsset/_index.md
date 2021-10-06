@@ -3,8 +3,6 @@
 title: "DhcpOptionsSet"
 title_tag: "alicloud.vpc.DhcpOptionsSet"
 meta_desc: "Documentation for the alicloud.vpc.DhcpOptionsSet resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/alicloud/DhcpOptionsSet/"
 layout: api
 ---
 

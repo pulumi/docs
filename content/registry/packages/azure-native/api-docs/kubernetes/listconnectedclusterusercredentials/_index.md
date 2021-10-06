@@ -3,8 +3,6 @@
 title: "listConnectedClusterUserCredentials"
 title_tag: "azure-native.kubernetes.listConnectedClusterUserCredentials"
 meta_desc: "Documentation for the azure-native.kubernetes.listConnectedClusterUserCredentials function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

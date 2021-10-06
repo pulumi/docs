@@ -3,8 +3,6 @@
 title: "getMigrationJobIamPolicy"
 title_tag: "google-native.datamigration/v1.getMigrationJobIamPolicy"
 meta_desc: "Documentation for the google-native.datamigration/v1.getMigrationJobIamPolicy function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

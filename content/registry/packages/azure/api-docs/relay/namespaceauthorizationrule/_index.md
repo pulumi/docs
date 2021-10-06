@@ -3,8 +3,6 @@
 title: "NamespaceAuthorizationRule"
 title_tag: "azure.relay.NamespaceAuthorizationRule"
 meta_desc: "Documentation for the azure.relay.NamespaceAuthorizationRule resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/NamespaceAuthorizationRule/"
 layout: api
 ---
 

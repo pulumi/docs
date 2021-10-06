@@ -2,8 +2,6 @@
 title: "ssl"
 title_tag: "f5bigip.ssl"
 meta_desc: "Explore the resources and functions of the f5bigip.ssl module."
-aliases:
-    - "docs/reference/pkg/f5bigip/"
 layout: api
 ---
 

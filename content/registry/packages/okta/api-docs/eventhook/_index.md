@@ -3,8 +3,6 @@
 title: "EventHook"
 title_tag: "okta.EventHook"
 meta_desc: "Documentation for the okta.EventHook resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/okta/EventHook/"
 layout: api
 ---
 

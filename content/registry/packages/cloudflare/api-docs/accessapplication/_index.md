@@ -3,8 +3,6 @@
 title: "AccessApplication"
 title_tag: "cloudflare.AccessApplication"
 meta_desc: "Documentation for the cloudflare.AccessApplication resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/cloudflare/AccessApplication/"
 layout: api
 ---
 

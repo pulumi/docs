@@ -3,8 +3,6 @@
 title: "RouterInterface"
 title_tag: "alicloud.vpc.RouterInterface"
 meta_desc: "Documentation for the alicloud.vpc.RouterInterface resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/alicloud/RouterInterface/"
 layout: api
 ---
 

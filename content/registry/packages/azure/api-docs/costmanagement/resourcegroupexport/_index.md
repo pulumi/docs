@@ -3,8 +3,6 @@
 title: "ResourceGroupExport"
 title_tag: "azure.costmanagement.ResourceGroupExport"
 meta_desc: "Documentation for the azure.costmanagement.ResourceGroupExport resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/ResourceGroupExport/"
 layout: api
 ---
 

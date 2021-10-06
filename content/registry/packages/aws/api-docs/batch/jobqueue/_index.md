@@ -3,8 +3,6 @@
 title: "JobQueue"
 title_tag: "aws.batch.JobQueue"
 meta_desc: "Documentation for the aws.batch.JobQueue resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/JobQueue/"
 layout: api
 ---
 

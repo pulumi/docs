@@ -2,8 +2,6 @@
 title: "vpnaas"
 title_tag: "openstack.vpnaas"
 meta_desc: "Explore the resources and functions of the openstack.vpnaas module."
-aliases:
-    - "docs/reference/pkg/openstack/"
 layout: api
 ---
 

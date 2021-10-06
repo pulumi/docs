@@ -2,8 +2,6 @@
 title: "firebase"
 title_tag: "gcp.firebase"
 meta_desc: "Explore the resources and functions of the gcp.firebase module."
-aliases:
-    - "docs/reference/pkg/gcp/"
 layout: api
 ---
 

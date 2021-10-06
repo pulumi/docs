@@ -3,8 +3,6 @@
 title: "NetworkWatcherFlowLog"
 title_tag: "azure.network.NetworkWatcherFlowLog"
 meta_desc: "Documentation for the azure.network.NetworkWatcherFlowLog resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/NetworkWatcherFlowLog/"
 layout: api
 ---
 

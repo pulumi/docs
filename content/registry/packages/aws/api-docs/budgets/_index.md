@@ -2,8 +2,6 @@
 title: "budgets"
 title_tag: "aws.budgets"
 meta_desc: "Explore the resources and functions of the aws.budgets module."
-aliases:
-    - "docs/reference/pkg/aws/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "getImages"
 title_tag: "linode.getImages"
 meta_desc: "Documentation for the linode.getImages function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

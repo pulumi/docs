@@ -3,8 +3,6 @@
 title: "RegistryWebhook"
 title_tag: "azure.containerservice.RegistryWebhook"
 meta_desc: "Documentation for the azure.containerservice.RegistryWebhook resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/RegistryWebhook/"
 layout: api
 ---
 

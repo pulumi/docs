@@ -2,8 +2,6 @@
 title: "Azure Active Directory"
 title_tag: "azuread.Azure Active Directory"
 meta_desc: "A Pulumi package for creating and managing azuread cloud resources."
-aliases:
-    - "docs/reference/pkg/azuread/"
 menu:
     reference:
         parent: API Reference

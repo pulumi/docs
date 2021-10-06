@@ -3,8 +3,6 @@
 title: "RepositoryPolicyCheckCredentials"
 title_tag: "azuredevops.RepositoryPolicyCheckCredentials"
 meta_desc: "Documentation for the azuredevops.RepositoryPolicyCheckCredentials resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azuredevops/RepositoryPolicyCheckCredentials/"
 layout: api
 ---
 

@@ -2,8 +2,6 @@
 title: "trafficmanagement"
 title_tag: "akamai.trafficmanagement"
 meta_desc: "Explore the resources and functions of the akamai.trafficmanagement module."
-aliases:
-    - "docs/reference/pkg/akamai/"
 layout: api
 ---
 

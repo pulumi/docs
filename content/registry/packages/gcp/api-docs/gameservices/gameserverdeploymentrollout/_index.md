@@ -3,8 +3,6 @@
 title: "GameServerDeploymentRollout"
 title_tag: "gcp.gameservices.GameServerDeploymentRollout"
 meta_desc: "Documentation for the gcp.gameservices.GameServerDeploymentRollout resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/GameServerDeploymentRollout/"
 layout: api
 ---
 

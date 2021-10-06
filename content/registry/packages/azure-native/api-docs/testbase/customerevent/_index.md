@@ -3,8 +3,6 @@
 title: "CustomerEvent"
 title_tag: "azure-native.testbase.CustomerEvent"
 meta_desc: "Documentation for the azure-native.testbase.CustomerEvent resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/CustomerEvent/"
 layout: api
 ---
 

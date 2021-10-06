@@ -3,8 +3,6 @@
 title: "SubscriptionJob"
 title_tag: "alicloud.dts.SubscriptionJob"
 meta_desc: "Documentation for the alicloud.dts.SubscriptionJob resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/alicloud/SubscriptionJob/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "CustomAssessmentAutomation"
 title_tag: "azure-native.security.CustomAssessmentAutomation"
 meta_desc: "Documentation for the azure-native.security.CustomAssessmentAutomation resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/CustomAssessmentAutomation/"
 layout: api
 ---
 

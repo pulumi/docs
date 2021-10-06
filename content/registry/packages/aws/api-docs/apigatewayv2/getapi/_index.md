@@ -3,8 +3,6 @@
 title: "getApi"
 title_tag: "aws.apigatewayv2.getApi"
 meta_desc: "Documentation for the aws.apigatewayv2.getApi function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

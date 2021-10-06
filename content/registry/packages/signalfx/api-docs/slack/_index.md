@@ -2,8 +2,6 @@
 title: "slack"
 title_tag: "signalfx.slack"
 meta_desc: "Explore the resources and functions of the signalfx.slack module."
-aliases:
-    - "docs/reference/pkg/signalfx/"
 layout: api
 ---
 

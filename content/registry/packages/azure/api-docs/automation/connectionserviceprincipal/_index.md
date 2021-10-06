@@ -3,8 +3,6 @@
 title: "ConnectionServicePrincipal"
 title_tag: "azure.automation.ConnectionServicePrincipal"
 meta_desc: "Documentation for the azure.automation.ConnectionServicePrincipal resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/ConnectionServicePrincipal/"
 layout: api
 ---
 

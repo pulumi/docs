@@ -3,8 +3,6 @@
 title: "getSystemGroups"
 title_tag: "alicloud.videosurveillance.getSystemGroups"
 meta_desc: "Documentation for the alicloud.videosurveillance.getSystemGroups function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

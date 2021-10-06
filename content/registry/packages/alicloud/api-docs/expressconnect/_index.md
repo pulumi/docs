@@ -2,8 +2,6 @@
 title: "expressconnect"
 title_tag: "alicloud.expressconnect"
 meta_desc: "Explore the resources and functions of the alicloud.expressconnect module."
-aliases:
-    - "docs/reference/pkg/alicloud/"
 layout: api
 ---
 

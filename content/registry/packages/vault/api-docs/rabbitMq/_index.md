@@ -2,8 +2,6 @@
 title: "rabbitMq"
 title_tag: "vault.rabbitMq"
 meta_desc: "Explore the resources and functions of the vault.rabbitMq module."
-aliases:
-    - "docs/reference/pkg/vault/"
 layout: api
 ---
 

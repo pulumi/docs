@@ -3,8 +3,6 @@
 title: "Broker"
 title_tag: "aws.mq.Broker"
 meta_desc: "Documentation for the aws.mq.Broker resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/Broker/"
 layout: api
 ---
 

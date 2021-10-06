@@ -2,8 +2,6 @@
 title: "storagegateway"
 title_tag: "aws.storagegateway"
 meta_desc: "Explore the resources and functions of the aws.storagegateway module."
-aliases:
-    - "docs/reference/pkg/aws/"
 layout: api
 ---
 

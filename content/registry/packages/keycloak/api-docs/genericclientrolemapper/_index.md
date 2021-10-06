@@ -3,8 +3,6 @@
 title: "GenericClientRoleMapper"
 title_tag: "keycloak.GenericClientRoleMapper"
 meta_desc: "Documentation for the keycloak.GenericClientRoleMapper resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/keycloak/GenericClientRoleMapper/"
 layout: api
 ---
 

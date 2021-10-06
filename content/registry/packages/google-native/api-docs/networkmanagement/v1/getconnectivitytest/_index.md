@@ -3,8 +3,6 @@
 title: "getConnectivityTest"
 title_tag: "google-native.networkmanagement/v1.getConnectivityTest"
 meta_desc: "Documentation for the google-native.networkmanagement/v1.getConnectivityTest function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

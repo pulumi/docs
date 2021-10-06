@@ -3,8 +3,6 @@
 title: "DigitalTwin"
 title_tag: "azure-native.digitaltwins.DigitalTwin"
 meta_desc: "Documentation for the azure-native.digitaltwins.DigitalTwin resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/DigitalTwin/"
 layout: api
 ---
 

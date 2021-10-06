@@ -3,8 +3,6 @@
 title: "DeploymentGroup"
 title_tag: "aws.codedeploy.DeploymentGroup"
 meta_desc: "Documentation for the aws.codedeploy.DeploymentGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/DeploymentGroup/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "GroupPolicy"
 title_tag: "aws.iam.GroupPolicy"
 meta_desc: "Documentation for the aws.iam.GroupPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/GroupPolicy/"
 layout: api
 ---
 

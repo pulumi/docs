@@ -2,8 +2,6 @@
 title: "opensearch"
 title_tag: "alicloud.opensearch"
 meta_desc: "Explore the resources and functions of the alicloud.opensearch module."
-aliases:
-    - "docs/reference/pkg/alicloud/"
 layout: api
 ---
 

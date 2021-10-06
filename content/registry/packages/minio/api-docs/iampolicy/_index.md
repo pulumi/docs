@@ -3,8 +3,6 @@
 title: "IamPolicy"
 title_tag: "minio.IamPolicy"
 meta_desc: "Documentation for the minio.IamPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/minio/IamPolicy/"
 layout: api
 ---
 

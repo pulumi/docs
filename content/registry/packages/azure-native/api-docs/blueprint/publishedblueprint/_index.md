@@ -3,8 +3,6 @@
 title: "PublishedBlueprint"
 title_tag: "azure-native.blueprint.PublishedBlueprint"
 meta_desc: "Documentation for the azure-native.blueprint.PublishedBlueprint resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/PublishedBlueprint/"
 layout: api
 ---
 

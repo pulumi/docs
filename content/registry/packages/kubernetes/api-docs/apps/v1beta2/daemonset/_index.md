@@ -3,8 +3,6 @@
 title: "DaemonSet"
 title_tag: "kubernetes.apps/v1beta2.DaemonSet"
 meta_desc: "Documentation for the kubernetes.apps/v1beta2.DaemonSet resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/kubernetes/DaemonSet/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "ApplicationInfo"
 title_tag: "alicloud.quotas.ApplicationInfo"
 meta_desc: "Documentation for the alicloud.quotas.ApplicationInfo resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/alicloud/ApplicationInfo/"
 layout: api
 ---
 

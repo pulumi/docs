@@ -3,8 +3,6 @@
 title: "PeriodicTimerEventTrigger"
 title_tag: "azure-native.databoxedge.PeriodicTimerEventTrigger"
 meta_desc: "Documentation for the azure-native.databoxedge.PeriodicTimerEventTrigger resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/PeriodicTimerEventTrigger/"
 layout: api
 ---
 

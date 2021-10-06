@@ -3,8 +3,6 @@
 title: "App"
 title_tag: "azure-native.iotcentral.App"
 meta_desc: "Documentation for the azure-native.iotcentral.App resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/App/"
 layout: api
 ---
 

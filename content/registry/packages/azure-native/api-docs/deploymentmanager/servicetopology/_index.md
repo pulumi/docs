@@ -3,8 +3,6 @@
 title: "ServiceTopology"
 title_tag: "azure-native.deploymentmanager.ServiceTopology"
 meta_desc: "Documentation for the azure-native.deploymentmanager.ServiceTopology resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/ServiceTopology/"
 layout: api
 ---
 

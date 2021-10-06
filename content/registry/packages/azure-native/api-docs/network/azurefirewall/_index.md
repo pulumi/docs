@@ -3,8 +3,6 @@
 title: "AzureFirewall"
 title_tag: "azure-native.network.AzureFirewall"
 meta_desc: "Documentation for the azure-native.network.AzureFirewall resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/AzureFirewall/"
 layout: api
 ---
 

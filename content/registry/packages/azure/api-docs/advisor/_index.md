@@ -2,8 +2,6 @@
 title: "advisor"
 title_tag: "azure.advisor"
 meta_desc: "Explore the resources and functions of the azure.advisor module."
-aliases:
-    - "docs/reference/pkg/azure/"
 layout: api
 ---
 

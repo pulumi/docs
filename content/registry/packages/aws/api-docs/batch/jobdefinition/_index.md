@@ -3,8 +3,6 @@
 title: "JobDefinition"
 title_tag: "aws.batch.JobDefinition"
 meta_desc: "Documentation for the aws.batch.JobDefinition resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/JobDefinition/"
 layout: api
 ---
 

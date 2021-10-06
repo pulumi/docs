@@ -3,8 +3,6 @@
 title: "Server"
 title_tag: "aws.transfer.Server"
 meta_desc: "Documentation for the aws.transfer.Server resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/Server/"
 layout: api
 ---
 

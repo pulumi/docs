@@ -3,8 +3,6 @@
 title: "CustomRole"
 title_tag: "opsgenie.CustomRole"
 meta_desc: "Documentation for the opsgenie.CustomRole resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/opsgenie/CustomRole/"
 layout: api
 ---
 

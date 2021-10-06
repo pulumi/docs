@@ -3,8 +3,6 @@
 title: "getPolicy"
 title_tag: "google-native.orgpolicy/v2.getPolicy"
 meta_desc: "Documentation for the google-native.orgpolicy/v2.getPolicy function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

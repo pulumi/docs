@@ -2,8 +2,6 @@
 title: "agfoodplatform"
 title_tag: "azure-native.agfoodplatform"
 meta_desc: "Explore the resources and functions of the azure-native.agfoodplatform module."
-aliases:
-    - "docs/reference/pkg/azure-native/"
 layout: api
 ---
 

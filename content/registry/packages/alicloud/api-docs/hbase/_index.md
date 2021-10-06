@@ -2,8 +2,6 @@
 title: "hbase"
 title_tag: "alicloud.hbase"
 meta_desc: "Explore the resources and functions of the alicloud.hbase module."
-aliases:
-    - "docs/reference/pkg/alicloud/"
 layout: api
 ---
 

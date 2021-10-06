@@ -3,8 +3,6 @@
 title: "EndpointSliceList"
 title_tag: "kubernetes.discovery.k8s.io/v1beta1.EndpointSliceList"
 meta_desc: "Documentation for the kubernetes.discovery.k8s.io/v1beta1.EndpointSliceList resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/kubernetes/EndpointSliceList/"
 layout: api
 ---
 

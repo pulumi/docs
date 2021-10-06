@@ -3,8 +3,6 @@
 title: "getRecommendations"
 title_tag: "azure.advisor.getRecommendations"
 meta_desc: "Documentation for the azure.advisor.getRecommendations function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

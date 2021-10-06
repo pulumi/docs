@@ -2,8 +2,6 @@
 title: "communication"
 title_tag: "azure.communication"
 meta_desc: "Explore the resources and functions of the azure.communication module."
-aliases:
-    - "docs/reference/pkg/azure/"
 layout: api
 ---
 

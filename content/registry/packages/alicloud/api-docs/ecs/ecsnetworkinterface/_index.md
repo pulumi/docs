@@ -3,8 +3,6 @@
 title: "EcsNetworkInterface"
 title_tag: "alicloud.ecs.EcsNetworkInterface"
 meta_desc: "Documentation for the alicloud.ecs.EcsNetworkInterface resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/alicloud/EcsNetworkInterface/"
 layout: api
 ---
 

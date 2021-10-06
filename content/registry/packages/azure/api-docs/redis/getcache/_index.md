@@ -3,8 +3,6 @@
 title: "getCache"
 title_tag: "azure.redis.getCache"
 meta_desc: "Documentation for the azure.redis.getCache function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

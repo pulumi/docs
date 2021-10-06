@@ -3,8 +3,6 @@
 title: "GtmGeomap"
 title_tag: "akamai.trafficmanagement.GtmGeomap"
 meta_desc: "Documentation for the akamai.trafficmanagement.GtmGeomap resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/akamai/GtmGeomap/"
 layout: api
 ---
 

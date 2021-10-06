@@ -3,8 +3,6 @@
 title: "WebAppSitePushSettings"
 title_tag: "azure-native.web.WebAppSitePushSettings"
 meta_desc: "Documentation for the azure-native.web.WebAppSitePushSettings resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/WebAppSitePushSettings/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "SiteMonitor"
 title_tag: "alicloud.cms.SiteMonitor"
 meta_desc: "Documentation for the alicloud.cms.SiteMonitor resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/alicloud/SiteMonitor/"
 layout: api
 ---
 

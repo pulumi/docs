@@ -3,8 +3,6 @@
 title: "getAgentConfig"
 title_tag: "consul.getAgentConfig"
 meta_desc: "Documentation for the consul.getAgentConfig function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

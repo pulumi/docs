@@ -3,8 +3,6 @@
 title: "TagTemplateIamPolicy"
 title_tag: "gcp.datacatalog.TagTemplateIamPolicy"
 meta_desc: "Documentation for the gcp.datacatalog.TagTemplateIamPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/TagTemplateIamPolicy/"
 layout: api
 ---
 

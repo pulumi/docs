@@ -3,8 +3,6 @@
 title: "getFileCrc64Checksum"
 title_tag: "alicloud.getFileCrc64Checksum"
 meta_desc: "Documentation for the alicloud.getFileCrc64Checksum function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

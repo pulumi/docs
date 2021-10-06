@@ -2,8 +2,6 @@
 title: "sqs"
 title_tag: "aws.sqs"
 meta_desc: "Explore the resources and functions of the aws.sqs module."
-aliases:
-    - "docs/reference/pkg/aws/"
 layout: api
 ---
 

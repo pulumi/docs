@@ -3,8 +3,6 @@
 title: "VpnGatewayRoutePropagation"
 title_tag: "aws.ec2.VpnGatewayRoutePropagation"
 meta_desc: "Documentation for the aws.ec2.VpnGatewayRoutePropagation resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/VpnGatewayRoutePropagation/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "Repository"
 title_tag: "github.Repository"
 meta_desc: "Documentation for the github.Repository resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/github/Repository/"
 layout: api
 ---
 

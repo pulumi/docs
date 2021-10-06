@@ -2,8 +2,6 @@
 title: "domainservices"
 title_tag: "azure.domainservices"
 meta_desc: "Explore the resources and functions of the azure.domainservices module."
-aliases:
-    - "docs/reference/pkg/azure/"
 layout: api
 ---
 

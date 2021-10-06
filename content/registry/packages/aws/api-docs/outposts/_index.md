@@ -2,8 +2,6 @@
 title: "outposts"
 title_tag: "aws.outposts"
 meta_desc: "Explore the resources and functions of the aws.outposts module."
-aliases:
-    - "docs/reference/pkg/aws/"
 layout: api
 ---
 

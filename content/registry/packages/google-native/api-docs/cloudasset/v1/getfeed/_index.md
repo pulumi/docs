@@ -3,8 +3,6 @@
 title: "getFeed"
 title_tag: "google-native.cloudasset/v1.getFeed"
 meta_desc: "Documentation for the google-native.cloudasset/v1.getFeed function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

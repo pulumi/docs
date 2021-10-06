@@ -2,8 +2,6 @@
 title: "ml"
 title_tag: "gcp.ml"
 meta_desc: "Explore the resources and functions of the gcp.ml module."
-aliases:
-    - "docs/reference/pkg/gcp/"
 layout: api
 ---
 

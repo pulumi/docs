@@ -3,8 +3,6 @@
 title: "SavedSearch"
 title_tag: "azure.loganalytics.SavedSearch"
 meta_desc: "Documentation for the azure.loganalytics.SavedSearch resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/SavedSearch/"
 layout: api
 ---
 

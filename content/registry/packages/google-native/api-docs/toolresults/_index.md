@@ -2,8 +2,6 @@
 title: "toolresults"
 title_tag: "toolresults Package"
 meta_desc: ""
-aliases:
-    - "docs/reference/pkg/google-native/"
 layout: api
 ---
 

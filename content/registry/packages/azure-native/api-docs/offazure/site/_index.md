@@ -3,8 +3,6 @@
 title: "Site"
 title_tag: "azure-native.offazure.Site"
 meta_desc: "Documentation for the azure-native.offazure.Site resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/Site/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "ReadWriteDatabase"
 title_tag: "azure-native.kusto.ReadWriteDatabase"
 meta_desc: "Documentation for the azure-native.kusto.ReadWriteDatabase resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/ReadWriteDatabase/"
 layout: api
 ---
 

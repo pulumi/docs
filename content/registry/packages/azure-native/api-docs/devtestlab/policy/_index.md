@@ -3,8 +3,6 @@
 title: "Policy"
 title_tag: "azure-native.devtestlab.Policy"
 meta_desc: "Documentation for the azure-native.devtestlab.Policy resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/Policy/"
 layout: api
 ---
 

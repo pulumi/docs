@@ -3,8 +3,6 @@
 title: "RdsParameterGroup"
 title_tag: "alicloud.rds.RdsParameterGroup"
 meta_desc: "Documentation for the alicloud.rds.RdsParameterGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/alicloud/RdsParameterGroup/"
 layout: api
 ---
 

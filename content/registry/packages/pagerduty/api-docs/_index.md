@@ -2,8 +2,6 @@
 title: "PagerDuty"
 title_tag: "pagerduty.PagerDuty"
 meta_desc: "A Pulumi package for creating and managing pagerduty cloud resources."
-aliases:
-    - "docs/reference/pkg/pagerduty/"
 menu:
     reference:
         parent: API Reference

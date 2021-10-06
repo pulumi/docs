@@ -3,8 +3,6 @@
 title: "getAvailabilityZonesV3"
 title_tag: "openstack.blockstorage.getAvailabilityZonesV3"
 meta_desc: "Documentation for the openstack.blockstorage.getAvailabilityZonesV3 function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

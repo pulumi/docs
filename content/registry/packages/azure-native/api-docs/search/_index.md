@@ -2,8 +2,6 @@
 title: "search"
 title_tag: "azure-native.search"
 meta_desc: "Explore the resources and functions of the azure-native.search module."
-aliases:
-    - "docs/reference/pkg/azure-native/"
 layout: api
 ---
 

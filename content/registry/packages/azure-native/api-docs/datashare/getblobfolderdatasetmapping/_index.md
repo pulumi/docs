@@ -3,8 +3,6 @@
 title: "getBlobFolderDataSetMapping"
 title_tag: "azure-native.datashare.getBlobFolderDataSetMapping"
 meta_desc: "Documentation for the azure-native.datashare.getBlobFolderDataSetMapping function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

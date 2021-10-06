@@ -3,8 +3,6 @@
 title: "getAclAuthMethod"
 title_tag: "consul.getAclAuthMethod"
 meta_desc: "Documentation for the consul.getAclAuthMethod function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

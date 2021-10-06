@@ -3,8 +3,6 @@
 title: "ZoneDnssec"
 title_tag: "cloudflare.ZoneDnssec"
 meta_desc: "Documentation for the cloudflare.ZoneDnssec resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/cloudflare/ZoneDnssec/"
 layout: api
 ---
 

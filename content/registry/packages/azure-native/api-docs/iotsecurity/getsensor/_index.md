@@ -3,8 +3,6 @@
 title: "getSensor"
 title_tag: "azure-native.iotsecurity.getSensor"
 meta_desc: "Documentation for the azure-native.iotsecurity.getSensor function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

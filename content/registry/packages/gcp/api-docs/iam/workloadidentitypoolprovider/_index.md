@@ -3,8 +3,6 @@
 title: "WorkloadIdentityPoolProvider"
 title_tag: "gcp.iam.WorkloadIdentityPoolProvider"
 meta_desc: "Documentation for the gcp.iam.WorkloadIdentityPoolProvider resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/WorkloadIdentityPoolProvider/"
 layout: api
 ---
 

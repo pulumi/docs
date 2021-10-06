@@ -3,8 +3,6 @@
 title: "getDynamic"
 title_tag: "vsphere.getDynamic"
 meta_desc: "Documentation for the vsphere.getDynamic function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

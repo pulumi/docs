@@ -2,8 +2,6 @@
 title: "vertex"
 title_tag: "gcp.vertex"
 meta_desc: "Explore the resources and functions of the gcp.vertex module."
-aliases:
-    - "docs/reference/pkg/gcp/"
 layout: api
 ---
 

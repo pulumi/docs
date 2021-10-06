@@ -2,8 +2,6 @@
 title: "iotsitewise"
 title_tag: "aws-native.iotsitewise"
 meta_desc: "Explore the resources and functions of the aws-native.iotsitewise module."
-aliases:
-    - "docs/reference/pkg/aws-native/"
 layout: api
 ---
 

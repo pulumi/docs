@@ -2,8 +2,6 @@
 title: "scdn"
 title_tag: "alicloud.scdn"
 meta_desc: "Explore the resources and functions of the alicloud.scdn module."
-aliases:
-    - "docs/reference/pkg/alicloud/"
 layout: api
 ---
 

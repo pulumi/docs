@@ -2,8 +2,6 @@
 title: "cloudauth"
 title_tag: "alicloud.cloudauth"
 meta_desc: "Explore the resources and functions of the alicloud.cloudauth module."
-aliases:
-    - "docs/reference/pkg/alicloud/"
 layout: api
 ---
 

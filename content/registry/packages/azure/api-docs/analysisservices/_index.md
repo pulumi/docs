@@ -2,8 +2,6 @@
 title: "analysisservices"
 title_tag: "azure.analysisservices"
 meta_desc: "Explore the resources and functions of the azure.analysisservices module."
-aliases:
-    - "docs/reference/pkg/azure/"
 layout: api
 ---
 

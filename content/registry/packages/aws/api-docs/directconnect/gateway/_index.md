@@ -3,8 +3,6 @@
 title: "Gateway"
 title_tag: "aws.directconnect.Gateway"
 meta_desc: "Documentation for the aws.directconnect.Gateway resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/Gateway/"
 layout: api
 ---
 

@@ -2,8 +2,6 @@
 title: "pagerduty"
 title_tag: "signalfx.pagerduty"
 meta_desc: "Explore the resources and functions of the signalfx.pagerduty module."
-aliases:
-    - "docs/reference/pkg/signalfx/"
 layout: api
 ---
 

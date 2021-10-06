@@ -3,8 +3,6 @@
 title: "UserAssignedIdentity"
 title_tag: "azure-native.managedidentity.UserAssignedIdentity"
 meta_desc: "Documentation for the azure-native.managedidentity.UserAssignedIdentity resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/UserAssignedIdentity/"
 layout: api
 ---
 

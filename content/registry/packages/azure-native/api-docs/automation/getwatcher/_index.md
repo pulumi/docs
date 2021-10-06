@@ -3,8 +3,6 @@
 title: "getWatcher"
 title_tag: "azure-native.automation.getWatcher"
 meta_desc: "Documentation for the azure-native.automation.getWatcher function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

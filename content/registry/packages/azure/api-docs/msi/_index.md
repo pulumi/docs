@@ -2,8 +2,6 @@
 title: "msi"
 title_tag: "azure.msi"
 meta_desc: "Explore the resources and functions of the azure.msi module."
-aliases:
-    - "docs/reference/pkg/azure/"
 layout: api
 ---
 

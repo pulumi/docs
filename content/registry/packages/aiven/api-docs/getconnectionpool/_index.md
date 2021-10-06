@@ -3,8 +3,6 @@
 title: "getConnectionPool"
 title_tag: "aiven.getConnectionPool"
 meta_desc: "Documentation for the aiven.getConnectionPool function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

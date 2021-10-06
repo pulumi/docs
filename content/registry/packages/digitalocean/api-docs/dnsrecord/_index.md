@@ -3,8 +3,6 @@
 title: "DnsRecord"
 title_tag: "digitalocean.DnsRecord"
 meta_desc: "Documentation for the digitalocean.DnsRecord resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/digitalocean/DnsRecord/"
 layout: api
 ---
 

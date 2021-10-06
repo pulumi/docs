@@ -3,8 +3,6 @@
 title: "EnvironmentSpecificationVersion"
 title_tag: "azure-native.machinelearningservices.EnvironmentSpecificationVersion"
 meta_desc: "Documentation for the azure-native.machinelearningservices.EnvironmentSpecificationVersion resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/EnvironmentSpecificationVersion/"
 layout: api
 ---
 

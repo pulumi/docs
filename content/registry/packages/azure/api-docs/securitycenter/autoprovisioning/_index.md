@@ -3,8 +3,6 @@
 title: "AutoProvisioning"
 title_tag: "azure.securitycenter.AutoProvisioning"
 meta_desc: "Documentation for the azure.securitycenter.AutoProvisioning resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/AutoProvisioning/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "TransitRouterRouteTableAssociation"
 title_tag: "alicloud.cen.TransitRouterRouteTableAssociation"
 meta_desc: "Documentation for the alicloud.cen.TransitRouterRouteTableAssociation resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/alicloud/TransitRouterRouteTableAssociation/"
 layout: api
 ---
 

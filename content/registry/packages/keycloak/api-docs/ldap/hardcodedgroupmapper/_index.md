@@ -3,8 +3,6 @@
 title: "HardcodedGroupMapper"
 title_tag: "keycloak.ldap.HardcodedGroupMapper"
 meta_desc: "Documentation for the keycloak.ldap.HardcodedGroupMapper resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/keycloak/HardcodedGroupMapper/"
 layout: api
 ---
 

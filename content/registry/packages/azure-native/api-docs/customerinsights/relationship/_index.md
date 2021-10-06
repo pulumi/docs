@@ -3,8 +3,6 @@
 title: "Relationship"
 title_tag: "azure-native.customerinsights.Relationship"
 meta_desc: "Documentation for the azure-native.customerinsights.Relationship resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/Relationship/"
 layout: api
 ---
 

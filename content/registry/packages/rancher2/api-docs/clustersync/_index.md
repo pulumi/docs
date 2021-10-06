@@ -3,8 +3,6 @@
 title: "ClusterSync"
 title_tag: "rancher2.ClusterSync"
 meta_desc: "Documentation for the rancher2.ClusterSync resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/rancher2/ClusterSync/"
 layout: api
 ---
 

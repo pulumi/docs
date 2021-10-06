@@ -3,8 +3,6 @@
 title: "License"
 title_tag: "vsphere.License"
 meta_desc: "Documentation for the vsphere.License resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/vsphere/License/"
 layout: api
 ---
 

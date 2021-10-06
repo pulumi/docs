@@ -3,8 +3,6 @@
 title: "Group"
 title_tag: "okta.group.Group"
 meta_desc: "Documentation for the okta.group.Group resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/okta/Group/"
 layout: api
 ---
 

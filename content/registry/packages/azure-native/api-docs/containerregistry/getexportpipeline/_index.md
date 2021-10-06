@@ -3,8 +3,6 @@
 title: "getExportPipeline"
 title_tag: "azure-native.containerregistry.getExportPipeline"
 meta_desc: "Documentation for the azure-native.containerregistry.getExportPipeline function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "getDataController"
 title_tag: "azure-native.azurearcdata.getDataController"
 meta_desc: "Documentation for the azure-native.azurearcdata.getDataController function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

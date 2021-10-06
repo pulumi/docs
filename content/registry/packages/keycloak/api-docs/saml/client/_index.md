@@ -3,8 +3,6 @@
 title: "Client"
 title_tag: "keycloak.saml.Client"
 meta_desc: "Documentation for the keycloak.saml.Client resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/keycloak/Client/"
 layout: api
 ---
 

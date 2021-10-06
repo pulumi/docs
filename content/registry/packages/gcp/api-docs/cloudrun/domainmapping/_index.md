@@ -3,8 +3,6 @@
 title: "DomainMapping"
 title_tag: "gcp.cloudrun.DomainMapping"
 meta_desc: "Documentation for the gcp.cloudrun.DomainMapping resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/DomainMapping/"
 layout: api
 ---
 

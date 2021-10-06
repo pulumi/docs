@@ -3,8 +3,6 @@
 title: "Contact"
 title_tag: "aws-native.ssmcontacts.Contact"
 meta_desc: "Documentation for the aws-native.ssmcontacts.Contact resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws-native/Contact/"
 layout: api
 ---
 

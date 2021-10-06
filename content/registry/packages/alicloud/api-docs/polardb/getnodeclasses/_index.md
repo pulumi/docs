@@ -3,8 +3,6 @@
 title: "getNodeClasses"
 title_tag: "alicloud.polardb.getNodeClasses"
 meta_desc: "Documentation for the alicloud.polardb.getNodeClasses function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

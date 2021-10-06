@@ -3,8 +3,6 @@
 title: "OpenSearchAclRule"
 title_tag: "aiven.OpenSearchAclRule"
 meta_desc: "Documentation for the aiven.OpenSearchAclRule resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aiven/OpenSearchAclRule/"
 layout: api
 ---
 

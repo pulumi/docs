@@ -2,8 +2,6 @@
 title: "hanaonazure"
 title_tag: "azure-native.hanaonazure"
 meta_desc: "Explore the resources and functions of the azure-native.hanaonazure module."
-aliases:
-    - "docs/reference/pkg/azure-native/"
 layout: api
 ---
 

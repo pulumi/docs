@@ -3,8 +3,6 @@
 title: "DiskIamPolicy"
 title_tag: "google-native.compute/beta.DiskIamPolicy"
 meta_desc: "Documentation for the google-native.compute/beta.DiskIamPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/google-native/DiskIamPolicy/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "Project"
 title_tag: "alicloud.imm.Project"
 meta_desc: "Documentation for the alicloud.imm.Project resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/alicloud/Project/"
 layout: api
 ---
 

@@ -2,8 +2,6 @@
 title: "confidentialledger"
 title_tag: "azure-native.confidentialledger"
 meta_desc: "Explore the resources and functions of the azure-native.confidentialledger module."
-aliases:
-    - "docs/reference/pkg/azure-native/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "BookmarkApp"
 title_tag: "okta.deprecated.BookmarkApp"
 meta_desc: "Documentation for the okta.deprecated.BookmarkApp resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/okta/BookmarkApp/"
 layout: api
 ---
 

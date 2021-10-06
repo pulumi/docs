@@ -2,8 +2,6 @@
 title: "privatelink"
 title_tag: "alicloud.privatelink"
 meta_desc: "Explore the resources and functions of the alicloud.privatelink module."
-aliases:
-    - "docs/reference/pkg/alicloud/"
 layout: api
 ---
 

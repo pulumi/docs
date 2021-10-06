@@ -2,8 +2,6 @@
 title: "websecurityscanner/v1beta"
 title_tag: "google-native.websecurityscanner/v1beta"
 meta_desc: "Explore the resources and functions of the google-native.websecurityscanner/v1beta module."
-aliases:
-    - "docs/reference/pkg/google-native/"
 layout: api
 ---
 

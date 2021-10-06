@@ -3,8 +3,6 @@
 title: "DpsSharedAccessPolicy"
 title_tag: "azure.iot.DpsSharedAccessPolicy"
 meta_desc: "Documentation for the azure.iot.DpsSharedAccessPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/DpsSharedAccessPolicy/"
 layout: api
 ---
 

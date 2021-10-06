@@ -3,8 +3,6 @@
 title: "HealthCheck"
 title_tag: "spotinst.HealthCheck"
 meta_desc: "Documentation for the spotinst.HealthCheck resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/spotinst/HealthCheck/"
 layout: api
 ---
 

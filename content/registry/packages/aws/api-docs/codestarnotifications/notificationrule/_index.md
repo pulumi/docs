@@ -3,8 +3,6 @@
 title: "NotificationRule"
 title_tag: "aws.codestarnotifications.NotificationRule"
 meta_desc: "Documentation for the aws.codestarnotifications.NotificationRule resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/NotificationRule/"
 layout: api
 ---
 

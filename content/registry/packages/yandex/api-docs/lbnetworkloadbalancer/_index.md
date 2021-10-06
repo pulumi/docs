@@ -3,8 +3,6 @@
 title: "LbNetworkLoadBalancer"
 title_tag: "yandex.LbNetworkLoadBalancer"
 meta_desc: "Documentation for the yandex.LbNetworkLoadBalancer resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/yandex/LbNetworkLoadBalancer/"
 layout: api
 ---
 

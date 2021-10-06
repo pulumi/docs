@@ -3,8 +3,6 @@
 title: "getBillingRoleAssignmentByBillingAccount"
 title_tag: "azure-native.billing.getBillingRoleAssignmentByBillingAccount"
 meta_desc: "Documentation for the azure-native.billing.getBillingRoleAssignmentByBillingAccount function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

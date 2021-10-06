@@ -2,8 +2,6 @@
 title: "networkfirewall"
 title_tag: "aws-native.networkfirewall"
 meta_desc: "Explore the resources and functions of the aws-native.networkfirewall module."
-aliases:
-    - "docs/reference/pkg/aws-native/"
 layout: api
 ---
 

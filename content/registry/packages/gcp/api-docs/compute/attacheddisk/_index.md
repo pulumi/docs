@@ -3,8 +3,6 @@
 title: "AttachedDisk"
 title_tag: "gcp.compute.AttachedDisk"
 meta_desc: "Documentation for the gcp.compute.AttachedDisk resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/AttachedDisk/"
 layout: api
 ---
 

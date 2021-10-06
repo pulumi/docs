@@ -3,8 +3,6 @@
 title: "Assignment"
 title_tag: "azure-native.security.Assignment"
 meta_desc: "Documentation for the azure-native.security.Assignment resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/Assignment/"
 layout: api
 ---
 

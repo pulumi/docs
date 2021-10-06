@@ -2,8 +2,6 @@
 title: "proximity"
 title_tag: "azure.proximity"
 meta_desc: "Explore the resources and functions of the azure.proximity module."
-aliases:
-    - "docs/reference/pkg/azure/"
 layout: api
 ---
 

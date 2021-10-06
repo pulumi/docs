@@ -3,8 +3,6 @@
 title: "getSecurityPolicies"
 title_tag: "alicloud.alb.getSecurityPolicies"
 meta_desc: "Documentation for the alicloud.alb.getSecurityPolicies function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

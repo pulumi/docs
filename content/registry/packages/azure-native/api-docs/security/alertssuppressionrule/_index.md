@@ -3,8 +3,6 @@
 title: "AlertsSuppressionRule"
 title_tag: "azure-native.security.AlertsSuppressionRule"
 meta_desc: "Documentation for the azure-native.security.AlertsSuppressionRule resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/AlertsSuppressionRule/"
 layout: api
 ---
 

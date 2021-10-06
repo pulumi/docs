@@ -3,8 +3,6 @@
 title: "Certifiate"
 title_tag: "azure.keyvault.Certifiate"
 meta_desc: "Documentation for the azure.keyvault.Certifiate resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/Certifiate/"
 layout: api
 ---
 

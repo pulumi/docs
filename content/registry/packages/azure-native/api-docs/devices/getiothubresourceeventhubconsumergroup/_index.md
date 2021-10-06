@@ -3,8 +3,6 @@
 title: "getIotHubResourceEventHubConsumerGroup"
 title_tag: "azure-native.devices.getIotHubResourceEventHubConsumerGroup"
 meta_desc: "Documentation for the azure-native.devices.getIotHubResourceEventHubConsumerGroup function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

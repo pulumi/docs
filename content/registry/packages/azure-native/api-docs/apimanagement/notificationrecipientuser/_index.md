@@ -3,8 +3,6 @@
 title: "NotificationRecipientUser"
 title_tag: "azure-native.apimanagement.NotificationRecipientUser"
 meta_desc: "Documentation for the azure-native.apimanagement.NotificationRecipientUser resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/NotificationRecipientUser/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "getFolder"
 title_tag: "gcp.organizations.getFolder"
 meta_desc: "Documentation for the gcp.organizations.getFolder function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

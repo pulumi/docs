@@ -3,8 +3,6 @@
 title: "Image"
 title_tag: "aws.imagebuilder.Image"
 meta_desc: "Documentation for the aws.imagebuilder.Image resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/Image/"
 layout: api
 ---
 

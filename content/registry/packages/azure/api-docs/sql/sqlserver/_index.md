@@ -3,8 +3,6 @@
 title: "SqlServer"
 title_tag: "azure.sql.SqlServer"
 meta_desc: "Documentation for the azure.sql.SqlServer resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/SqlServer/"
 layout: api
 ---
 

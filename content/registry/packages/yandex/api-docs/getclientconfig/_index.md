@@ -3,8 +3,6 @@
 title: "getClientConfig"
 title_tag: "yandex.getClientConfig"
 meta_desc: "Documentation for the yandex.getClientConfig function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "getEntityInsights"
 title_tag: "azure-native.securityinsights.getEntityInsights"
 meta_desc: "Documentation for the azure-native.securityinsights.getEntityInsights function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

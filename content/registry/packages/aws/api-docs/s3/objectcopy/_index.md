@@ -3,8 +3,6 @@
 title: "ObjectCopy"
 title_tag: "aws.s3.ObjectCopy"
 meta_desc: "Documentation for the aws.s3.ObjectCopy resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/ObjectCopy/"
 layout: api
 ---
 

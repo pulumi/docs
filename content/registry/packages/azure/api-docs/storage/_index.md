@@ -2,8 +2,6 @@
 title: "storage"
 title_tag: "azure.storage"
 meta_desc: "Explore the resources and functions of the azure.storage module."
-aliases:
-    - "docs/reference/pkg/azure/"
 layout: api
 ---
 

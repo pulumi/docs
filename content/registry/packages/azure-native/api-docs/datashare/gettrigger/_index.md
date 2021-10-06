@@ -3,8 +3,6 @@
 title: "getTrigger"
 title_tag: "azure-native.datashare.getTrigger"
 meta_desc: "Documentation for the azure-native.datashare.getTrigger function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

@@ -2,8 +2,6 @@
 title: "cloudfront"
 title_tag: "aws-native.cloudfront"
 meta_desc: "Explore the resources and functions of the aws-native.cloudfront module."
-aliases:
-    - "docs/reference/pkg/aws-native/"
 layout: api
 ---
 

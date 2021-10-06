@@ -3,8 +3,6 @@
 title: "getNatGateway"
 title_tag: "azure.network.getNatGateway"
 meta_desc: "Documentation for the azure.network.getNatGateway function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

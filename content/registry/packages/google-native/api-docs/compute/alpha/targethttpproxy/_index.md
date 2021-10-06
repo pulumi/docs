@@ -3,8 +3,6 @@
 title: "TargetHttpProxy"
 title_tag: "google-native.compute/alpha.TargetHttpProxy"
 meta_desc: "Documentation for the google-native.compute/alpha.TargetHttpProxy resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/google-native/TargetHttpProxy/"
 layout: api
 ---
 

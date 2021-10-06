@@ -2,8 +2,6 @@
 title: "appconfig"
 title_tag: "aws.appconfig"
 meta_desc: "Explore the resources and functions of the aws.appconfig module."
-aliases:
-    - "docs/reference/pkg/aws/"
 layout: api
 ---
 

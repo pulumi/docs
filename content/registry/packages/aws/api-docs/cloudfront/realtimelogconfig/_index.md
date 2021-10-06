@@ -3,8 +3,6 @@
 title: "RealtimeLogConfig"
 title_tag: "aws.cloudfront.RealtimeLogConfig"
 meta_desc: "Documentation for the aws.cloudfront.RealtimeLogConfig resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/RealtimeLogConfig/"
 layout: api
 ---
 

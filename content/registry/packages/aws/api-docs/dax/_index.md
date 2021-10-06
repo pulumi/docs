@@ -2,8 +2,6 @@
 title: "dax"
 title_tag: "aws.dax"
 meta_desc: "Explore the resources and functions of the aws.dax module."
-aliases:
-    - "docs/reference/pkg/aws/"
 layout: api
 ---
 

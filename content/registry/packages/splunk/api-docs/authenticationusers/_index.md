@@ -3,8 +3,6 @@
 title: "AuthenticationUsers"
 title_tag: "splunk.AuthenticationUsers"
 meta_desc: "Documentation for the splunk.AuthenticationUsers resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/splunk/AuthenticationUsers/"
 layout: api
 ---
 

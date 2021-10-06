@@ -3,8 +3,6 @@
 title: "DatasetKustoCluster"
 title_tag: "azure.datashare.DatasetKustoCluster"
 meta_desc: "Documentation for the azure.datashare.DatasetKustoCluster resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/DatasetKustoCluster/"
 layout: api
 ---
 

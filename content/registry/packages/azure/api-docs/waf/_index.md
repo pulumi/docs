@@ -2,8 +2,6 @@
 title: "waf"
 title_tag: "azure.waf"
 meta_desc: "Explore the resources and functions of the azure.waf module."
-aliases:
-    - "docs/reference/pkg/azure/"
 layout: api
 ---
 

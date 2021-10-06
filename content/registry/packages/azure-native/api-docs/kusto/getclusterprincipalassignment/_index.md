@@ -3,8 +3,6 @@
 title: "getClusterPrincipalAssignment"
 title_tag: "azure-native.kusto.getClusterPrincipalAssignment"
 meta_desc: "Documentation for the azure-native.kusto.getClusterPrincipalAssignment function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

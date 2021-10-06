@@ -3,8 +3,6 @@
 title: "Service"
 title_tag: "gcp.cloudrun.Service"
 meta_desc: "Documentation for the gcp.cloudrun.Service resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/Service/"
 layout: api
 ---
 

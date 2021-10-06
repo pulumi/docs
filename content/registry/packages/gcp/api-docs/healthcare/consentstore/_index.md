@@ -3,8 +3,6 @@
 title: "ConsentStore"
 title_tag: "gcp.healthcare.ConsentStore"
 meta_desc: "Documentation for the gcp.healthcare.ConsentStore resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/ConsentStore/"
 layout: api
 ---
 

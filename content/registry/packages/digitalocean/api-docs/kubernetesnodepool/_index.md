@@ -3,8 +3,6 @@
 title: "KubernetesNodePool"
 title_tag: "digitalocean.KubernetesNodePool"
 meta_desc: "Documentation for the digitalocean.KubernetesNodePool resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/digitalocean/KubernetesNodePool/"
 layout: api
 ---
 

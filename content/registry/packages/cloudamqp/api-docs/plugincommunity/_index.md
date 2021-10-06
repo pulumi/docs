@@ -3,8 +3,6 @@
 title: "PluginCommunity"
 title_tag: "cloudamqp.PluginCommunity"
 meta_desc: "Documentation for the cloudamqp.PluginCommunity resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/cloudamqp/PluginCommunity/"
 layout: api
 ---
 

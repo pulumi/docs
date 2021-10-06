@@ -3,8 +3,6 @@
 title: "UserGroupMemberships"
 title_tag: "okta.UserGroupMemberships"
 meta_desc: "Documentation for the okta.UserGroupMemberships resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/okta/UserGroupMemberships/"
 layout: api
 ---
 

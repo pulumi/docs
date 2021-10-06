@@ -3,8 +3,6 @@
 title: "getSecureCredential"
 title_tag: "newrelic.synthetics.getSecureCredential"
 meta_desc: "Documentation for the newrelic.synthetics.getSecureCredential function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

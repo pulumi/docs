@@ -3,8 +3,6 @@
 title: "ComputeInstance"
 title_tag: "yandex.ComputeInstance"
 meta_desc: "Documentation for the yandex.ComputeInstance resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/yandex/ComputeInstance/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "ProtectionContainer"
 title_tag: "azure-native.recoveryservices.ProtectionContainer"
 meta_desc: "Documentation for the azure-native.recoveryservices.ProtectionContainer resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/ProtectionContainer/"
 layout: api
 ---
 

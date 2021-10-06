@@ -3,8 +3,6 @@
 title: "Acl"
 title_tag: "alicloud.slb.Acl"
 meta_desc: "Documentation for the alicloud.slb.Acl resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/alicloud/Acl/"
 layout: api
 ---
 

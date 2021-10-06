@@ -2,8 +2,6 @@
 title: "objectstorage"
 title_tag: "openstack.objectstorage"
 meta_desc: "Explore the resources and functions of the openstack.objectstorage module."
-aliases:
-    - "docs/reference/pkg/openstack/"
 layout: api
 ---
 

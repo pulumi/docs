@@ -3,8 +3,6 @@
 title: "ServiceIamMember"
 title_tag: "gcp.endpoints.ServiceIamMember"
 meta_desc: "Documentation for the gcp.endpoints.ServiceIamMember resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/ServiceIamMember/"
 layout: api
 ---
 

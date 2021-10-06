@@ -3,8 +3,6 @@
 title: "NodeGroupSecurityGroup"
 title_tag: "eks.NodeGroupSecurityGroup"
 meta_desc: "Documentation for the eks.NodeGroupSecurityGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/eks/NodeGroupSecurityGroup/"
 layout: api
 ---
 

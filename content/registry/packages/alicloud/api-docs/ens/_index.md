@@ -2,8 +2,6 @@
 title: "ens"
 title_tag: "alicloud.ens"
 meta_desc: "Explore the resources and functions of the alicloud.ens module."
-aliases:
-    - "docs/reference/pkg/alicloud/"
 layout: api
 ---
 

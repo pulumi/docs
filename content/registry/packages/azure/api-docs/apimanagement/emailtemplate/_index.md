@@ -3,8 +3,6 @@
 title: "EmailTemplate"
 title_tag: "azure.apimanagement.EmailTemplate"
 meta_desc: "Documentation for the azure.apimanagement.EmailTemplate resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/EmailTemplate/"
 layout: api
 ---
 

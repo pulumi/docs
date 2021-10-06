@@ -3,8 +3,6 @@
 title: "ScramSecretAssociation"
 title_tag: "aws.msk.ScramSecretAssociation"
 meta_desc: "Documentation for the aws.msk.ScramSecretAssociation resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/ScramSecretAssociation/"
 layout: api
 ---
 

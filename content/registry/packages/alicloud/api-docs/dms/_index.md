@@ -2,8 +2,6 @@
 title: "dms"
 title_tag: "alicloud.dms"
 meta_desc: "Explore the resources and functions of the alicloud.dms module."
-aliases:
-    - "docs/reference/pkg/alicloud/"
 layout: api
 ---
 

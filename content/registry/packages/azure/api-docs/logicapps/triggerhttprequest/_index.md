@@ -3,8 +3,6 @@
 title: "TriggerHttpRequest"
 title_tag: "azure.logicapps.TriggerHttpRequest"
 meta_desc: "Documentation for the azure.logicapps.TriggerHttpRequest resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/TriggerHttpRequest/"
 layout: api
 ---
 

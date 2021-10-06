@@ -3,8 +3,6 @@
 title: "Integration"
 title_tag: "aws.apigatewayv2.Integration"
 meta_desc: "Documentation for the aws.apigatewayv2.Integration resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/Integration/"
 layout: api
 ---
 

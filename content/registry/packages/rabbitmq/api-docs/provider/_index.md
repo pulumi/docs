@@ -3,8 +3,6 @@
 title: "Provider"
 title_tag: "rabbitmq.Provider"
 meta_desc: "Documentation for the rabbitmq.Provider resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/rabbitmq/rabbitmq/"
 layout: api
 ---
 

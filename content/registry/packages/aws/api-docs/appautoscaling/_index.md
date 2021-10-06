@@ -2,8 +2,6 @@
 title: "appautoscaling"
 title_tag: "aws.appautoscaling"
 meta_desc: "Explore the resources and functions of the aws.appautoscaling module."
-aliases:
-    - "docs/reference/pkg/aws/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "getEndpoint"
 title_tag: "google-native.servicedirectory/v1beta1.getEndpoint"
 meta_desc: "Documentation for the google-native.servicedirectory/v1beta1.getEndpoint function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

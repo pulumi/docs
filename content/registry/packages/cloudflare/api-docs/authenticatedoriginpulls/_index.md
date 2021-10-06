@@ -3,8 +3,6 @@
 title: "AuthenticatedOriginPulls"
 title_tag: "cloudflare.AuthenticatedOriginPulls"
 meta_desc: "Documentation for the cloudflare.AuthenticatedOriginPulls resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/cloudflare/AuthenticatedOriginPulls/"
 layout: api
 ---
 

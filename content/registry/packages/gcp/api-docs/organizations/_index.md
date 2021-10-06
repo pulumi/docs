@@ -2,8 +2,6 @@
 title: "organizations"
 title_tag: "gcp.organizations"
 meta_desc: "Explore the resources and functions of the gcp.organizations module."
-aliases:
-    - "docs/reference/pkg/gcp/"
 layout: api
 ---
 

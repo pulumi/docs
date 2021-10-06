@@ -3,8 +3,6 @@
 title: "Configuration"
 title_tag: "azure-native.dbformariadb.Configuration"
 meta_desc: "Documentation for the azure-native.dbformariadb.Configuration resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/Configuration/"
 layout: api
 ---
 

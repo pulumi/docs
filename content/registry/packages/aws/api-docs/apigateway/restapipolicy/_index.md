@@ -3,8 +3,6 @@
 title: "RestApiPolicy"
 title_tag: "aws.apigateway.RestApiPolicy"
 meta_desc: "Documentation for the aws.apigateway.RestApiPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/RestApiPolicy/"
 layout: api
 ---
 

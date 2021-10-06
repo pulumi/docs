@@ -3,8 +3,6 @@
 title: "getApplicationPublishedAppIds"
 title_tag: "azuread.getApplicationPublishedAppIds"
 meta_desc: "Documentation for the azuread.getApplicationPublishedAppIds function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

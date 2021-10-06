@@ -2,8 +2,6 @@
 title: "signer"
 title_tag: "aws-native.signer"
 meta_desc: "Explore the resources and functions of the aws-native.signer module."
-aliases:
-    - "docs/reference/pkg/aws-native/"
 layout: api
 ---
 

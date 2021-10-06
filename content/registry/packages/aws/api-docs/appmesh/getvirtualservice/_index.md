@@ -3,8 +3,6 @@
 title: "getVirtualService"
 title_tag: "aws.appmesh.getVirtualService"
 meta_desc: "Documentation for the aws.appmesh.getVirtualService function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

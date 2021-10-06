@@ -2,8 +2,6 @@
 title: "gcp"
 title_tag: "datadog.gcp"
 meta_desc: "Explore the resources and functions of the datadog.gcp module."
-aliases:
-    - "docs/reference/pkg/datadog/"
 layout: api
 ---
 

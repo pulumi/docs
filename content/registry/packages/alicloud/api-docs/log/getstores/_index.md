@@ -3,8 +3,6 @@
 title: "getStores"
 title_tag: "alicloud.log.getStores"
 meta_desc: "Documentation for the alicloud.log.getStores function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

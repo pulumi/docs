@@ -3,8 +3,6 @@
 title: "getFolderIamPolicy"
 title_tag: "google-native.cloudresourcemanager/v2.getFolderIamPolicy"
 meta_desc: "Documentation for the google-native.cloudresourcemanager/v2.getFolderIamPolicy function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

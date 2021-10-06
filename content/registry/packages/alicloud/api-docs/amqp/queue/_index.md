@@ -3,8 +3,6 @@
 title: "Queue"
 title_tag: "alicloud.amqp.Queue"
 meta_desc: "Documentation for the alicloud.amqp.Queue resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/alicloud/Queue/"
 layout: api
 ---
 

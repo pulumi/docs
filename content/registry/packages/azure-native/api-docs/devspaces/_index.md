@@ -2,8 +2,6 @@
 title: "devspaces"
 title_tag: "azure-native.devspaces"
 meta_desc: "Explore the resources and functions of the azure-native.devspaces module."
-aliases:
-    - "docs/reference/pkg/azure-native/"
 layout: api
 ---
 

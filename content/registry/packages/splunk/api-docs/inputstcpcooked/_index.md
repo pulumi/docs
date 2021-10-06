@@ -3,8 +3,6 @@
 title: "InputsTcpCooked"
 title_tag: "splunk.InputsTcpCooked"
 meta_desc: "Documentation for the splunk.InputsTcpCooked resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/splunk/InputsTcpCooked/"
 layout: api
 ---
 

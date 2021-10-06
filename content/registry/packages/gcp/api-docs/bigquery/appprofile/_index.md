@@ -3,8 +3,6 @@
 title: "AppProfile"
 title_tag: "gcp.bigquery.AppProfile"
 meta_desc: "Documentation for the gcp.bigquery.AppProfile resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/AppProfile/"
 layout: api
 ---
 

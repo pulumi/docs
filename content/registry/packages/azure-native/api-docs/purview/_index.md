@@ -2,8 +2,6 @@
 title: "purview"
 title_tag: "azure-native.purview"
 meta_desc: "Explore the resources and functions of the azure-native.purview module."
-aliases:
-    - "docs/reference/pkg/azure-native/"
 layout: api
 ---
 

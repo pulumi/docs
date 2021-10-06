@@ -3,8 +3,6 @@
 title: "VolumeAttach"
 title_tag: "openstack.compute.VolumeAttach"
 meta_desc: "Documentation for the openstack.compute.VolumeAttach resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/openstack/VolumeAttach/"
 layout: api
 ---
 

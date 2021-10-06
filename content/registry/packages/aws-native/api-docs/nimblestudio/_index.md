@@ -2,8 +2,6 @@
 title: "nimblestudio"
 title_tag: "aws-native.nimblestudio"
 meta_desc: "Explore the resources and functions of the aws-native.nimblestudio module."
-aliases:
-    - "docs/reference/pkg/aws-native/"
 layout: api
 ---
 

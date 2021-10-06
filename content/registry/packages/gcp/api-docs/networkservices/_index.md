@@ -2,8 +2,6 @@
 title: "networkservices"
 title_tag: "gcp.networkservices"
 meta_desc: "Explore the resources and functions of the gcp.networkservices module."
-aliases:
-    - "docs/reference/pkg/gcp/"
 layout: api
 ---
 

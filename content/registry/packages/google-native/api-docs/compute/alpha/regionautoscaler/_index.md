@@ -3,8 +3,6 @@
 title: "RegionAutoscaler"
 title_tag: "google-native.compute/alpha.RegionAutoscaler"
 meta_desc: "Documentation for the google-native.compute/alpha.RegionAutoscaler resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/google-native/RegionAutoscaler/"
 layout: api
 ---
 

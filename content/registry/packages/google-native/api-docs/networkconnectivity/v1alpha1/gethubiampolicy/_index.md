@@ -3,8 +3,6 @@
 title: "getHubIamPolicy"
 title_tag: "google-native.networkconnectivity/v1alpha1.getHubIamPolicy"
 meta_desc: "Documentation for the google-native.networkconnectivity/v1alpha1.getHubIamPolicy function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

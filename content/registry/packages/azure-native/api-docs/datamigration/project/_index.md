@@ -3,8 +3,6 @@
 title: "Project"
 title_tag: "azure-native.datamigration.Project"
 meta_desc: "Documentation for the azure-native.datamigration.Project resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/Project/"
 layout: api
 ---
 

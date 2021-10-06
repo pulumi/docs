@@ -3,8 +3,6 @@
 title: "NetworkConnectionMonitor"
 title_tag: "azure.network.NetworkConnectionMonitor"
 meta_desc: "Documentation for the azure.network.NetworkConnectionMonitor resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/NetworkConnectionMonitor/"
 layout: api
 ---
 

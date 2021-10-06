@@ -2,8 +2,6 @@
 title: "hdinsight"
 title_tag: "azure-native.hdinsight"
 meta_desc: "Explore the resources and functions of the azure-native.hdinsight module."
-aliases:
-    - "docs/reference/pkg/azure-native/"
 layout: api
 ---
 

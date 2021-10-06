@@ -3,8 +3,6 @@
 title: "Queue"
 title_tag: "aws.mediaconvert.Queue"
 meta_desc: "Documentation for the aws.mediaconvert.Queue resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/Queue/"
 layout: api
 ---
 

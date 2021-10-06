@@ -3,8 +3,6 @@
 title: "getBandwidthLimits"
 title_tag: "alicloud.cen.getBandwidthLimits"
 meta_desc: "Documentation for the alicloud.cen.getBandwidthLimits function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

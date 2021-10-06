@@ -3,8 +3,6 @@
 title: "getWatchlist"
 title_tag: "azure-native.securityinsights.getWatchlist"
 meta_desc: "Documentation for the azure-native.securityinsights.getWatchlist function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

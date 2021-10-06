@@ -3,8 +3,6 @@
 title: "getTask"
 title_tag: "google-native.cloudtasks/v2beta3.getTask"
 meta_desc: "Documentation for the google-native.cloudtasks/v2beta3.getTask function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

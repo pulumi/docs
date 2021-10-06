@@ -3,8 +3,6 @@
 title: "getDeployGroups"
 title_tag: "alicloud.edas.getDeployGroups"
 meta_desc: "Documentation for the alicloud.edas.getDeployGroups function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

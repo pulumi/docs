@@ -3,8 +3,6 @@
 title: "getBundle"
 title_tag: "aws.workspaces.getBundle"
 meta_desc: "Documentation for the aws.workspaces.getBundle function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

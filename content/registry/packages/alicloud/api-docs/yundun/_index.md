@@ -2,8 +2,6 @@
 title: "yundun"
 title_tag: "alicloud.yundun"
 meta_desc: "Explore the resources and functions of the alicloud.yundun module."
-aliases:
-    - "docs/reference/pkg/alicloud/"
 layout: api
 ---
 

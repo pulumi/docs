@@ -3,8 +3,6 @@
 title: "FunctionAsyncInvokeConfig"
 title_tag: "alicloud.fc.FunctionAsyncInvokeConfig"
 meta_desc: "Documentation for the alicloud.fc.FunctionAsyncInvokeConfig resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/alicloud/FunctionAsyncInvokeConfig/"
 layout: api
 ---
 

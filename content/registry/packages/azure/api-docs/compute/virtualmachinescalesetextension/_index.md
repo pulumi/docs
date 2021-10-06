@@ -3,8 +3,6 @@
 title: "VirtualMachineScaleSetExtension"
 title_tag: "azure.compute.VirtualMachineScaleSetExtension"
 meta_desc: "Documentation for the azure.compute.VirtualMachineScaleSetExtension resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/VirtualMachineScaleSetExtension/"
 layout: api
 ---
 

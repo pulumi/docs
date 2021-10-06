@@ -2,8 +2,6 @@
 title: "ServiceEndpoint"
 title_tag: "azuredevops.ServiceEndpoint"
 meta_desc: "Explore the resources and functions of the azuredevops.ServiceEndpoint module."
-aliases:
-    - "docs/reference/pkg/azuredevops/"
 layout: api
 ---
 

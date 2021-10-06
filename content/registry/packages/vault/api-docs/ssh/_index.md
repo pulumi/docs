@@ -2,8 +2,6 @@
 title: "ssh"
 title_tag: "vault.ssh"
 meta_desc: "Explore the resources and functions of the vault.ssh module."
-aliases:
-    - "docs/reference/pkg/vault/"
 layout: api
 ---
 

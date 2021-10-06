@@ -3,8 +3,6 @@
 title: "Provider"
 title_tag: "rke.Provider"
 meta_desc: "Documentation for the rke.Provider resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/rke/rke/"
 layout: api
 ---
 

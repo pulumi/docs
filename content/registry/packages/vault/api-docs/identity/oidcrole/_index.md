@@ -3,8 +3,6 @@
 title: "OidcRole"
 title_tag: "vault.identity.OidcRole"
 meta_desc: "Documentation for the vault.identity.OidcRole resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/vault/OidcRole/"
 layout: api
 ---
 

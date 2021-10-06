@@ -3,8 +3,6 @@
 title: "getOriginRequestPolicy"
 title_tag: "aws.cloudfront.getOriginRequestPolicy"
 meta_desc: "Documentation for the aws.cloudfront.getOriginRequestPolicy function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

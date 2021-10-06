@@ -2,8 +2,6 @@
 title: "testing"
 title_tag: "testing Package"
 meta_desc: ""
-aliases:
-    - "docs/reference/pkg/google-native/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "getPipeline"
 title_tag: "azure-native.devops.getPipeline"
 meta_desc: "Documentation for the azure-native.devops.getPipeline function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

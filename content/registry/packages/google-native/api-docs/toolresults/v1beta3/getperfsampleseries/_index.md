@@ -3,8 +3,6 @@
 title: "getPerfSampleSeries"
 title_tag: "google-native.toolresults/v1beta3.getPerfSampleSeries"
 meta_desc: "Documentation for the google-native.toolresults/v1beta3.getPerfSampleSeries function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

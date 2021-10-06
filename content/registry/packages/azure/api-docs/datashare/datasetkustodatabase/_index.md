@@ -3,8 +3,6 @@
 title: "DatasetKustoDatabase"
 title_tag: "azure.datashare.DatasetKustoDatabase"
 meta_desc: "Documentation for the azure.datashare.DatasetKustoDatabase resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/DatasetKustoDatabase/"
 layout: api
 ---
 

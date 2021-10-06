@@ -2,8 +2,6 @@
 title: "vSphere"
 title_tag: "vsphere.vSphere"
 meta_desc: "A Pulumi package for creating vsphere resources"
-aliases:
-    - "docs/reference/pkg/vsphere/"
 menu:
     reference:
         parent: API Reference

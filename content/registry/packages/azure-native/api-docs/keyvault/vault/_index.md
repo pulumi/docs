@@ -3,8 +3,6 @@
 title: "Vault"
 title_tag: "azure-native.keyvault.Vault"
 meta_desc: "Documentation for the azure-native.keyvault.Vault resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/Vault/"
 layout: api
 ---
 

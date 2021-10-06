@@ -3,8 +3,6 @@
 title: "getTopic"
 title_tag: "azure-native.eventgrid.getTopic"
 meta_desc: "Documentation for the azure-native.eventgrid.getTopic function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

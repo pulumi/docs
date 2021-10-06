@@ -3,8 +3,6 @@
 title: "NetworkRoute"
 title_tag: "hcloud.NetworkRoute"
 meta_desc: "Documentation for the hcloud.NetworkRoute resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/hcloud/NetworkRoute/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "ApnsSandboxChannel"
 title_tag: "aws.pinpoint.ApnsSandboxChannel"
 meta_desc: "Documentation for the aws.pinpoint.ApnsSandboxChannel resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/ApnsSandboxChannel/"
 layout: api
 ---
 

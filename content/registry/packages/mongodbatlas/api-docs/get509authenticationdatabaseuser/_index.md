@@ -3,8 +3,6 @@
 title: "get509AuthenticationDatabaseUser"
 title_tag: "mongodbatlas.get509AuthenticationDatabaseUser"
 meta_desc: "Documentation for the mongodbatlas.get509AuthenticationDatabaseUser function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

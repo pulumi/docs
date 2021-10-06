@@ -2,8 +2,6 @@
 title: "securitycenter"
 title_tag: "securitycenter Package"
 meta_desc: ""
-aliases:
-    - "docs/reference/pkg/google-native/"
 layout: api
 ---
 

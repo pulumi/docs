@@ -3,8 +3,6 @@
 title: "getAppUserAssignments"
 title_tag: "okta.getAppUserAssignments"
 meta_desc: "Documentation for the okta.getAppUserAssignments function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

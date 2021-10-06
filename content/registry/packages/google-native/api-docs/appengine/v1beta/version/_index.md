@@ -3,8 +3,6 @@
 title: "Version"
 title_tag: "google-native.appengine/v1beta.Version"
 meta_desc: "Documentation for the google-native.appengine/v1beta.Version resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/google-native/Version/"
 layout: api
 ---
 

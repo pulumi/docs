@@ -3,8 +3,6 @@
 title: "Integration"
 title_tag: "signalfx.aws.Integration"
 meta_desc: "Documentation for the signalfx.aws.Integration resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/signalfx/Integration/"
 layout: api
 ---
 

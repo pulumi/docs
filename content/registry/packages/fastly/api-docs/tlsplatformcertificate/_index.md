@@ -3,8 +3,6 @@
 title: "TlsPlatformCertificate"
 title_tag: "fastly.TlsPlatformCertificate"
 meta_desc: "Documentation for the fastly.TlsPlatformCertificate resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/fastly/TlsPlatformCertificate/"
 layout: api
 ---
 

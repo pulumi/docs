@@ -3,8 +3,6 @@
 title: "PrometheusAlertRule"
 title_tag: "alicloud.arms.PrometheusAlertRule"
 meta_desc: "Documentation for the alicloud.arms.PrometheusAlertRule resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/alicloud/PrometheusAlertRule/"
 layout: api
 ---
 

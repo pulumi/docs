@@ -3,8 +3,6 @@
 title: "ConfluentEnvironment"
 title_tag: "confluent.ConfluentEnvironment"
 meta_desc: "Documentation for the confluent.ConfluentEnvironment resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/confluent/ConfluentEnvironment/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "Budget"
 title_tag: "azure-native.consumption.Budget"
 meta_desc: "Documentation for the azure-native.consumption.Budget resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/Budget/"
 layout: api
 ---
 

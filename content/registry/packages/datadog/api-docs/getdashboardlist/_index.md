@@ -3,8 +3,6 @@
 title: "getDashboardList"
 title_tag: "datadog.getDashboardList"
 meta_desc: "Documentation for the datadog.getDashboardList function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

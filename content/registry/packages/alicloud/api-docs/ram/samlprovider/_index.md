@@ -3,8 +3,6 @@
 title: "SamlProvider"
 title_tag: "alicloud.ram.SamlProvider"
 meta_desc: "Documentation for the alicloud.ram.SamlProvider resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/alicloud/SamlProvider/"
 layout: api
 ---
 

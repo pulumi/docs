@@ -3,8 +3,6 @@
 title: "getManagementLockAtSubscriptionLevel"
 title_tag: "azure-native.authorization.getManagementLockAtSubscriptionLevel"
 meta_desc: "Documentation for the azure-native.authorization.getManagementLockAtSubscriptionLevel function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

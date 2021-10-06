@@ -3,8 +3,6 @@
 title: "ScheduledQueryRulesAlert"
 title_tag: "azure.monitoring.ScheduledQueryRulesAlert"
 meta_desc: "Documentation for the azure.monitoring.ScheduledQueryRulesAlert resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/ScheduledQueryRulesAlert/"
 layout: api
 ---
 

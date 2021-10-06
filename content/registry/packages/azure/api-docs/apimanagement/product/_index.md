@@ -3,8 +3,6 @@
 title: "Product"
 title_tag: "azure.apimanagement.Product"
 meta_desc: "Documentation for the azure.apimanagement.Product resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/Product/"
 layout: api
 ---
 

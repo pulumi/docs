@@ -3,8 +3,6 @@
 title: "AttestationProvider"
 title_tag: "azure-native.attestation.AttestationProvider"
 meta_desc: "Documentation for the azure-native.attestation.AttestationProvider resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/AttestationProvider/"
 layout: api
 ---
 

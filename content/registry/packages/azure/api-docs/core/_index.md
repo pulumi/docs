@@ -2,8 +2,6 @@
 title: "core"
 title_tag: "azure.core"
 meta_desc: "Explore the resources and functions of the azure.core module."
-aliases:
-    - "docs/reference/pkg/azure/"
 layout: api
 ---
 

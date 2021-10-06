@@ -3,8 +3,6 @@
 title: "TransitVirtualInterface"
 title_tag: "aws.directconnect.TransitVirtualInterface"
 meta_desc: "Documentation for the aws.directconnect.TransitVirtualInterface resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/TransitVirtualInterface/"
 layout: api
 ---
 

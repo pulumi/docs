@@ -3,8 +3,6 @@
 title: "RuleSet"
 title_tag: "azure-native.cdn.RuleSet"
 meta_desc: "Documentation for the azure-native.cdn.RuleSet resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/RuleSet/"
 layout: api
 ---
 

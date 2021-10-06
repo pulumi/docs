@@ -3,8 +3,6 @@
 title: "getVlan"
 title_tag: "equinix-metal.getVlan"
 meta_desc: "Documentation for the equinix-metal.getVlan function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "ApplicationSecurityGroup"
 title_tag: "azure.network.ApplicationSecurityGroup"
 meta_desc: "Documentation for the azure.network.ApplicationSecurityGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/ApplicationSecurityGroup/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "getOrganizationContact"
 title_tag: "google-native.essentialcontacts/v1.getOrganizationContact"
 meta_desc: "Documentation for the google-native.essentialcontacts/v1.getOrganizationContact function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

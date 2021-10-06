@@ -3,8 +3,6 @@
 title: "TagTemplate"
 title_tag: "gcp.datacatalog.TagTemplate"
 meta_desc: "Documentation for the gcp.datacatalog.TagTemplate resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/TagTemplate/"
 layout: api
 ---
 

@@ -2,8 +2,6 @@
 title: "iotwireless"
 title_tag: "aws-native.iotwireless"
 meta_desc: "Explore the resources and functions of the aws-native.iotwireless module."
-aliases:
-    - "docs/reference/pkg/aws-native/"
 layout: api
 ---
 

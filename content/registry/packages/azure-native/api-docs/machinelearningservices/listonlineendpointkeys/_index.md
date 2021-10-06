@@ -3,8 +3,6 @@
 title: "listOnlineEndpointKeys"
 title_tag: "azure-native.machinelearningservices.listOnlineEndpointKeys"
 meta_desc: "Documentation for the azure-native.machinelearningservices.listOnlineEndpointKeys function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "RegistryEnterpriseSyncRule"
 title_tag: "alicloud.cs.RegistryEnterpriseSyncRule"
 meta_desc: "Documentation for the alicloud.cs.RegistryEnterpriseSyncRule resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/alicloud/RegistryEnterpriseSyncRule/"
 layout: api
 ---
 

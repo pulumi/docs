@@ -2,8 +2,6 @@
 title: "windowsesu"
 title_tag: "azure-native.windowsesu"
 meta_desc: "Explore the resources and functions of the azure-native.windowsesu module."
-aliases:
-    - "docs/reference/pkg/azure-native/"
 layout: api
 ---
 

@@ -2,8 +2,6 @@
 title: "user"
 title_tag: "okta.user"
 meta_desc: "Explore the resources and functions of the okta.user module."
-aliases:
-    - "docs/reference/pkg/okta/"
 layout: api
 ---
 

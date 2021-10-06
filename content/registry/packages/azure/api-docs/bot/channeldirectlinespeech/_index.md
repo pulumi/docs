@@ -3,8 +3,6 @@
 title: "ChannelDirectLineSpeech"
 title_tag: "azure.bot.ChannelDirectLineSpeech"
 meta_desc: "Documentation for the azure.bot.ChannelDirectLineSpeech resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/ChannelDirectLineSpeech/"
 layout: api
 ---
 

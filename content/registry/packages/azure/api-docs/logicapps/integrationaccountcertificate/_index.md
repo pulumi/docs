@@ -3,8 +3,6 @@
 title: "IntegrationAccountCertificate"
 title_tag: "azure.logicapps.IntegrationAccountCertificate"
 meta_desc: "Documentation for the azure.logicapps.IntegrationAccountCertificate resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/IntegrationAccountCertificate/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "listObjectAnchorsAccountKeys"
 title_tag: "azure-native.mixedreality.listObjectAnchorsAccountKeys"
 meta_desc: "Documentation for the azure-native.mixedreality.listObjectAnchorsAccountKeys function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

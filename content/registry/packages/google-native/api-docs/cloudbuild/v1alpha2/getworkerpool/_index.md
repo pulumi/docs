@@ -3,8 +3,6 @@
 title: "getWorkerPool"
 title_tag: "google-native.cloudbuild/v1alpha2.getWorkerPool"
 meta_desc: "Documentation for the google-native.cloudbuild/v1alpha2.getWorkerPool function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

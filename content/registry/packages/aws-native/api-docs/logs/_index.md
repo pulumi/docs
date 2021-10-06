@@ -2,8 +2,6 @@
 title: "logs"
 title_tag: "aws-native.logs"
 meta_desc: "Explore the resources and functions of the aws-native.logs module."
-aliases:
-    - "docs/reference/pkg/aws-native/"
 layout: api
 ---
 

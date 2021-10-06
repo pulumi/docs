@@ -3,8 +3,6 @@
 title: "ReplicaSet"
 title_tag: "kubernetes.extensions/v1beta1.ReplicaSet"
 meta_desc: "Documentation for the kubernetes.extensions/v1beta1.ReplicaSet resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/kubernetes/ReplicaSet/"
 layout: api
 ---
 

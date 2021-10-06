@@ -3,8 +3,6 @@
 title: "getPrivateEndpointConnection"
 title_tag: "azure-native.offazure.getPrivateEndpointConnection"
 meta_desc: "Documentation for the azure-native.offazure.getPrivateEndpointConnection function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

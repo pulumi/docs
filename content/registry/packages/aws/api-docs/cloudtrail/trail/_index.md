@@ -3,8 +3,6 @@
 title: "Trail"
 title_tag: "aws.cloudtrail.Trail"
 meta_desc: "Documentation for the aws.cloudtrail.Trail resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/Trail/"
 layout: api
 ---
 

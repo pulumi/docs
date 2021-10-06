@@ -2,8 +2,6 @@
 title: "desktopvirtualization"
 title_tag: "azure-native.desktopvirtualization"
 meta_desc: "Explore the resources and functions of the azure-native.desktopvirtualization module."
-aliases:
-    - "docs/reference/pkg/azure-native/"
 layout: api
 ---
 

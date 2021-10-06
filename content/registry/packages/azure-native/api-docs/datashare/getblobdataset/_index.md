@@ -3,8 +3,6 @@
 title: "getBlobDataSet"
 title_tag: "azure-native.datashare.getBlobDataSet"
 meta_desc: "Documentation for the azure-native.datashare.getBlobDataSet function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

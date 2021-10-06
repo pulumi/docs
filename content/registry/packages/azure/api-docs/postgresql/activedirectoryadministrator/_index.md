@@ -3,8 +3,6 @@
 title: "ActiveDirectoryAdministrator"
 title_tag: "azure.postgresql.ActiveDirectoryAdministrator"
 meta_desc: "Documentation for the azure.postgresql.ActiveDirectoryAdministrator resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/ActiveDirectoryAdministrator/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "getIoMAMPolicyByName"
 title_tag: "azure-native.intune.getIoMAMPolicyByName"
 meta_desc: "Documentation for the azure-native.intune.getIoMAMPolicyByName function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

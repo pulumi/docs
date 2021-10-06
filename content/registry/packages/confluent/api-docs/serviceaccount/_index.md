@@ -3,8 +3,6 @@
 title: "ServiceAccount"
 title_tag: "confluent.ServiceAccount"
 meta_desc: "Documentation for the confluent.ServiceAccount resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/confluent/ServiceAccount/"
 layout: api
 ---
 

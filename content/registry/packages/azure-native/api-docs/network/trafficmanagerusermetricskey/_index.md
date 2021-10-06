@@ -3,8 +3,6 @@
 title: "TrafficManagerUserMetricsKey"
 title_tag: "azure-native.network.TrafficManagerUserMetricsKey"
 meta_desc: "Documentation for the azure-native.network.TrafficManagerUserMetricsKey resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/TrafficManagerUserMetricsKey/"
 layout: api
 ---
 

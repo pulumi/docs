@@ -3,8 +3,6 @@
 title: "QueryDefinition"
 title_tag: "aws.cloudwatch.QueryDefinition"
 meta_desc: "Documentation for the aws.cloudwatch.QueryDefinition resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/QueryDefinition/"
 layout: api
 ---
 

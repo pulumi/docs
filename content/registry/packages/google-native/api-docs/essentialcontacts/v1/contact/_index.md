@@ -3,8 +3,6 @@
 title: "Contact"
 title_tag: "google-native.essentialcontacts/v1.Contact"
 meta_desc: "Documentation for the google-native.essentialcontacts/v1.Contact resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/google-native/Contact/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "SynapseWorkspaceSqlPoolTableDataSetMapping"
 title_tag: "azure-native.datashare.SynapseWorkspaceSqlPoolTableDataSetMapping"
 meta_desc: "Documentation for the azure-native.datashare.SynapseWorkspaceSqlPoolTableDataSetMapping resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/SynapseWorkspaceSqlPoolTableDataSetMapping/"
 layout: api
 ---
 

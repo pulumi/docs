@@ -3,8 +3,6 @@
 title: "getCommands"
 title_tag: "alicloud.ecs.getCommands"
 meta_desc: "Documentation for the alicloud.ecs.getCommands function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

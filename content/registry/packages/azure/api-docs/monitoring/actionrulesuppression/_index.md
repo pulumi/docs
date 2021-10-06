@@ -3,8 +3,6 @@
 title: "ActionRuleSuppression"
 title_tag: "azure.monitoring.ActionRuleSuppression"
 meta_desc: "Documentation for the azure.monitoring.ActionRuleSuppression resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/ActionRuleSuppression/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "DdosCustomPolicy"
 title_tag: "azure-native.network.DdosCustomPolicy"
 meta_desc: "Documentation for the azure-native.network.DdosCustomPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/DdosCustomPolicy/"
 layout: api
 ---
 

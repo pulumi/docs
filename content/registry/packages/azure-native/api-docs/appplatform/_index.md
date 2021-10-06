@@ -2,8 +2,6 @@
 title: "appplatform"
 title_tag: "azure-native.appplatform"
 meta_desc: "Explore the resources and functions of the azure-native.appplatform module."
-aliases:
-    - "docs/reference/pkg/azure-native/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "DomainConfiguration"
 title_tag: "aws-native.iot.DomainConfiguration"
 meta_desc: "Documentation for the aws-native.iot.DomainConfiguration resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws-native/DomainConfiguration/"
 layout: api
 ---
 

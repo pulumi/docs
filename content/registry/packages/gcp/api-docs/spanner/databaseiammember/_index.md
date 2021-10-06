@@ -3,8 +3,6 @@
 title: "DatabaseIAMMember"
 title_tag: "gcp.spanner.DatabaseIAMMember"
 meta_desc: "Documentation for the gcp.spanner.DatabaseIAMMember resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/DatabaseIAMMember/"
 layout: api
 ---
 

@@ -2,8 +2,6 @@
 title: "containerinstance"
 title_tag: "azure-native.containerinstance"
 meta_desc: "Explore the resources and functions of the azure-native.containerinstance module."
-aliases:
-    - "docs/reference/pkg/azure-native/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "ConsumerGroup"
 title_tag: "azure.eventhub.ConsumerGroup"
 meta_desc: "Documentation for the azure.eventhub.ConsumerGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/ConsumerGroup/"
 layout: api
 ---
 

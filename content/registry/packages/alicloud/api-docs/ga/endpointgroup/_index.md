@@ -3,8 +3,6 @@
 title: "EndpointGroup"
 title_tag: "alicloud.ga.EndpointGroup"
 meta_desc: "Documentation for the alicloud.ga.EndpointGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/alicloud/EndpointGroup/"
 layout: api
 ---
 

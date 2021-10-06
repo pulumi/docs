@@ -2,8 +2,6 @@
 title: "servicenetworking"
 title_tag: "gcp.servicenetworking"
 meta_desc: "Explore the resources and functions of the gcp.servicenetworking module."
-aliases:
-    - "docs/reference/pkg/gcp/"
 layout: api
 ---
 

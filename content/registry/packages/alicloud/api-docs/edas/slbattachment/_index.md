@@ -3,8 +3,6 @@
 title: "SlbAttachment"
 title_tag: "alicloud.edas.SlbAttachment"
 meta_desc: "Documentation for the alicloud.edas.SlbAttachment resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/alicloud/SlbAttachment/"
 layout: api
 ---
 

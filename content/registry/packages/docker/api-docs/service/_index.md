@@ -3,8 +3,6 @@
 title: "Service"
 title_tag: "docker.Service"
 meta_desc: "Documentation for the docker.Service resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/docker/Service/"
 layout: api
 ---
 

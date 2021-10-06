@@ -2,8 +2,6 @@
 title: "cdn"
 title_tag: "alicloud.cdn"
 meta_desc: "Explore the resources and functions of the alicloud.cdn module."
-aliases:
-    - "docs/reference/pkg/alicloud/"
 layout: api
 ---
 

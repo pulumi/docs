@@ -3,8 +3,6 @@
 title: "GrantRole"
 title_tag: "postgresql.GrantRole"
 meta_desc: "Documentation for the postgresql.GrantRole resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/postgresql/GrantRole/"
 layout: api
 ---
 

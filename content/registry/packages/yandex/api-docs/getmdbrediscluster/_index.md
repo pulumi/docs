@@ -3,8 +3,6 @@
 title: "getMdbRedisCluster"
 title_tag: "yandex.getMdbRedisCluster"
 meta_desc: "Documentation for the yandex.getMdbRedisCluster function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "getFileFormats"
 title_tag: "snowflake.getFileFormats"
 meta_desc: "Documentation for the snowflake.getFileFormats function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

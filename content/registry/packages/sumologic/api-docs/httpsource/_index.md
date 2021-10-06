@@ -3,8 +3,6 @@
 title: "HttpSource"
 title_tag: "sumologic.HttpSource"
 meta_desc: "Documentation for the sumologic.HttpSource resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/sumologic/HttpSource/"
 layout: api
 ---
 

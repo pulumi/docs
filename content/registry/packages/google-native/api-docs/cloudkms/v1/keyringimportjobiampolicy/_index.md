@@ -3,8 +3,6 @@
 title: "KeyRingImportJobIamPolicy"
 title_tag: "google-native.cloudkms/v1.KeyRingImportJobIamPolicy"
 meta_desc: "Documentation for the google-native.cloudkms/v1.KeyRingImportJobIamPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/google-native/KeyRingImportJobIamPolicy/"
 layout: api
 ---
 

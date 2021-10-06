@@ -2,8 +2,6 @@
 title: "translate/v3beta1"
 title_tag: "google-native.translate/v3beta1"
 meta_desc: "Explore the resources and functions of the google-native.translate/v3beta1 module."
-aliases:
-    - "docs/reference/pkg/google-native/"
 layout: api
 ---
 

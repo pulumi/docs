@@ -3,8 +3,6 @@
 title: "KeyRing"
 title_tag: "gcp.kms.KeyRing"
 meta_desc: "Documentation for the gcp.kms.KeyRing resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/KeyRing/"
 layout: api
 ---
 

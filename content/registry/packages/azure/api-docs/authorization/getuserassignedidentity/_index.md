@@ -3,8 +3,6 @@
 title: "getUserAssignedIdentity"
 title_tag: "azure.authorization.getUserAssignedIdentity"
 meta_desc: "Documentation for the azure.authorization.getUserAssignedIdentity function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

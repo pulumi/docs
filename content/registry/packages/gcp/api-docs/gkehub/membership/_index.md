@@ -3,8 +3,6 @@
 title: "Membership"
 title_tag: "gcp.gkehub.Membership"
 meta_desc: "Documentation for the gcp.gkehub.Membership resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/Membership/"
 layout: api
 ---
 

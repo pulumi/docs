@@ -3,8 +3,6 @@
 title: "Embedded"
 title_tag: "azure.powerbi.Embedded"
 meta_desc: "Documentation for the azure.powerbi.Embedded resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/Embedded/"
 layout: api
 ---
 

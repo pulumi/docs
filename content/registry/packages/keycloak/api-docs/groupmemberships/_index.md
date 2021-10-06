@@ -3,8 +3,6 @@
 title: "GroupMemberships"
 title_tag: "keycloak.GroupMemberships"
 meta_desc: "Documentation for the keycloak.GroupMemberships resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/keycloak/GroupMemberships/"
 layout: api
 ---
 

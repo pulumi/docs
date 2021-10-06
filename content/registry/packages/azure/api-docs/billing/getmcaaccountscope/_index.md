@@ -3,8 +3,6 @@
 title: "getMcaAccountScope"
 title_tag: "azure.billing.getMcaAccountScope"
 meta_desc: "Documentation for the azure.billing.getMcaAccountScope function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "UsagePlanKey"
 title_tag: "aws.apigateway.UsagePlanKey"
 meta_desc: "Documentation for the aws.apigateway.UsagePlanKey resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/UsagePlanKey/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "QosPolicy"
 title_tag: "openstack.networking.QosPolicy"
 meta_desc: "Documentation for the openstack.networking.QosPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/openstack/QosPolicy/"
 layout: api
 ---
 

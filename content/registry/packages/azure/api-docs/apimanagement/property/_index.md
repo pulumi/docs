@@ -3,8 +3,6 @@
 title: "Property"
 title_tag: "azure.apimanagement.Property"
 meta_desc: "Documentation for the azure.apimanagement.Property resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/Property/"
 layout: api
 ---
 

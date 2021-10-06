@@ -3,8 +3,6 @@
 title: "getHybridUseBenefit"
 title_tag: "azure-native.softwareplan.getHybridUseBenefit"
 meta_desc: "Documentation for the azure-native.softwareplan.getHybridUseBenefit function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

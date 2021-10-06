@@ -2,8 +2,6 @@
 title: "managedservices"
 title_tag: "azure-native.managedservices"
 meta_desc: "Explore the resources and functions of the azure-native.managedservices module."
-aliases:
-    - "docs/reference/pkg/azure-native/"
 layout: api
 ---
 

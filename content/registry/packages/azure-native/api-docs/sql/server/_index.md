@@ -3,8 +3,6 @@
 title: "Server"
 title_tag: "azure-native.sql.Server"
 meta_desc: "Documentation for the azure-native.sql.Server resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/Server/"
 layout: api
 ---
 

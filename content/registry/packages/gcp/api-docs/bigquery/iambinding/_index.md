@@ -3,8 +3,6 @@
 title: "IamBinding"
 title_tag: "gcp.bigquery.IamBinding"
 meta_desc: "Documentation for the gcp.bigquery.IamBinding resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/IamBinding/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "Authority"
 title_tag: "gcp.certificateauthority.Authority"
 meta_desc: "Documentation for the gcp.certificateauthority.Authority resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/Authority/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "getAuthorizationPolicyIamPolicy"
 title_tag: "google-native.networksecurity/v1beta1.getAuthorizationPolicyIamPolicy"
 meta_desc: "Documentation for the google-native.networksecurity/v1beta1.getAuthorizationPolicyIamPolicy function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

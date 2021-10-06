@@ -3,8 +3,6 @@
 title: "SourceControl"
 title_tag: "azure-native.securityinsights.SourceControl"
 meta_desc: "Documentation for the azure-native.securityinsights.SourceControl resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/SourceControl/"
 layout: api
 ---
 

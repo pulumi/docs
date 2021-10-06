@@ -3,8 +3,6 @@
 title: "AssessmentTarget"
 title_tag: "aws.inspector.AssessmentTarget"
 meta_desc: "Documentation for the aws.inspector.AssessmentTarget resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/AssessmentTarget/"
 layout: api
 ---
 

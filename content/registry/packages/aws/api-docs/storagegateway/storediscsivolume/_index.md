@@ -3,8 +3,6 @@
 title: "StoredIscsiVolume"
 title_tag: "aws.storagegateway.StoredIscsiVolume"
 meta_desc: "Documentation for the aws.storagegateway.StoredIscsiVolume resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/StoredIscsiVolume/"
 layout: api
 ---
 

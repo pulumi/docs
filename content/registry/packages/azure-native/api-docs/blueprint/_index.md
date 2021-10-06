@@ -2,8 +2,6 @@
 title: "blueprint"
 title_tag: "azure-native.blueprint"
 meta_desc: "Explore the resources and functions of the azure-native.blueprint module."
-aliases:
-    - "docs/reference/pkg/azure-native/"
 layout: api
 ---
 

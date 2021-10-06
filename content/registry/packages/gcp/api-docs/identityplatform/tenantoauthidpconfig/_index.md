@@ -3,8 +3,6 @@
 title: "TenantOauthIdpConfig"
 title_tag: "gcp.identityplatform.TenantOauthIdpConfig"
 meta_desc: "Documentation for the gcp.identityplatform.TenantOauthIdpConfig resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/TenantOauthIdpConfig/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "getAccounts"
 title_tag: "alicloud.polardb.getAccounts"
 meta_desc: "Documentation for the alicloud.polardb.getAccounts function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

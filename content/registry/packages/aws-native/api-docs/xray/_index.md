@@ -2,8 +2,6 @@
 title: "xray"
 title_tag: "aws-native.xray"
 meta_desc: "Explore the resources and functions of the aws-native.xray module."
-aliases:
-    - "docs/reference/pkg/aws-native/"
 layout: api
 ---
 

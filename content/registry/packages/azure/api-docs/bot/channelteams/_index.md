@@ -3,8 +3,6 @@
 title: "ChannelTeams"
 title_tag: "azure.bot.ChannelTeams"
 meta_desc: "Documentation for the azure.bot.ChannelTeams resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/ChannelTeams/"
 layout: api
 ---
 

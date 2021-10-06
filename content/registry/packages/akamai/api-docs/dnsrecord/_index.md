@@ -3,8 +3,6 @@
 title: "DnsRecord"
 title_tag: "akamai.DnsRecord"
 meta_desc: "Documentation for the akamai.DnsRecord resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/akamai/DnsRecord/"
 layout: api
 ---
 

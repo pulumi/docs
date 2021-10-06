@@ -3,8 +3,6 @@
 title: "CxFlow"
 title_tag: "gcp.diagflow.CxFlow"
 meta_desc: "Documentation for the gcp.diagflow.CxFlow resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/CxFlow/"
 layout: api
 ---
 

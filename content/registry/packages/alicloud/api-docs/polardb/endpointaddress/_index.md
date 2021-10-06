@@ -3,8 +3,6 @@
 title: "EndpointAddress"
 title_tag: "alicloud.polardb.EndpointAddress"
 meta_desc: "Documentation for the alicloud.polardb.EndpointAddress resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/alicloud/EndpointAddress/"
 layout: api
 ---
 

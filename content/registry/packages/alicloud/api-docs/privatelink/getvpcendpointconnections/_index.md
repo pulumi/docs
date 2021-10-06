@@ -3,8 +3,6 @@
 title: "getVpcEndpointConnections"
 title_tag: "alicloud.privatelink.getVpcEndpointConnections"
 meta_desc: "Documentation for the alicloud.privatelink.getVpcEndpointConnections function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

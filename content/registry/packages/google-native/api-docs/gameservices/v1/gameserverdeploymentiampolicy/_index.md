@@ -3,8 +3,6 @@
 title: "GameServerDeploymentIamPolicy"
 title_tag: "google-native.gameservices/v1.GameServerDeploymentIamPolicy"
 meta_desc: "Documentation for the google-native.gameservices/v1.GameServerDeploymentIamPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/google-native/GameServerDeploymentIamPolicy/"
 layout: api
 ---
 

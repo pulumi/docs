@@ -3,8 +3,6 @@
 title: "VolumeTypeV3"
 title_tag: "openstack.blockstorage.VolumeTypeV3"
 meta_desc: "Documentation for the openstack.blockstorage.VolumeTypeV3 resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/openstack/VolumeTypeV3/"
 layout: api
 ---
 

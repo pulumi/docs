@@ -3,8 +3,6 @@
 title: "WebTypeComputeIamPolicy"
 title_tag: "gcp.iap.WebTypeComputeIamPolicy"
 meta_desc: "Documentation for the gcp.iap.WebTypeComputeIamPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/WebTypeComputeIamPolicy/"
 layout: api
 ---
 

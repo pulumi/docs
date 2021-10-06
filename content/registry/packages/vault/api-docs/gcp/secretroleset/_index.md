@@ -3,8 +3,6 @@
 title: "SecretRoleset"
 title_tag: "vault.gcp.SecretRoleset"
 meta_desc: "Documentation for the vault.gcp.SecretRoleset resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/vault/SecretRoleset/"
 layout: api
 ---
 

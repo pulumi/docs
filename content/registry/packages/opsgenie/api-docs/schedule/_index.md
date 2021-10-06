@@ -3,8 +3,6 @@
 title: "Schedule"
 title_tag: "opsgenie.Schedule"
 meta_desc: "Documentation for the opsgenie.Schedule resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/opsgenie/Schedule/"
 layout: api
 ---
 

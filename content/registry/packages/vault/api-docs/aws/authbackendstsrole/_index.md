@@ -3,8 +3,6 @@
 title: "AuthBackendStsRole"
 title_tag: "vault.aws.AuthBackendStsRole"
 meta_desc: "Documentation for the vault.aws.AuthBackendStsRole resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/vault/AuthBackendStsRole/"
 layout: api
 ---
 

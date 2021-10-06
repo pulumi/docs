@@ -3,8 +3,6 @@
 title: "Workspace"
 title_tag: "aws.amp.Workspace"
 meta_desc: "Documentation for the aws.amp.Workspace resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/Workspace/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "getRemoteImage"
 title_tag: "docker.getRemoteImage"
 meta_desc: "Documentation for the docker.getRemoteImage function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "getNetworkFunction"
 title_tag: "azure-native.hybridnetwork.getNetworkFunction"
 meta_desc: "Documentation for the azure-native.hybridnetwork.getNetworkFunction function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

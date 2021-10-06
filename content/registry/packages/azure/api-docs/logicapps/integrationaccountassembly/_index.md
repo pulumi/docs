@@ -3,8 +3,6 @@
 title: "IntegrationAccountAssembly"
 title_tag: "azure.logicapps.IntegrationAccountAssembly"
 meta_desc: "Documentation for the azure.logicapps.IntegrationAccountAssembly resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/IntegrationAccountAssembly/"
 layout: api
 ---
 

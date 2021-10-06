@@ -2,8 +2,6 @@
 title: "Docker"
 title_tag: "docker.Docker"
 meta_desc: "A Pulumi package for interacting with Docker in Pulumi programs"
-aliases:
-    - "docs/reference/pkg/docker/"
 menu:
     reference:
         parent: API Reference

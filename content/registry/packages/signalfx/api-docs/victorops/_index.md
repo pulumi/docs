@@ -2,8 +2,6 @@
 title: "victorops"
 title_tag: "signalfx.victorops"
 meta_desc: "Explore the resources and functions of the signalfx.victorops module."
-aliases:
-    - "docs/reference/pkg/signalfx/"
 layout: api
 ---
 

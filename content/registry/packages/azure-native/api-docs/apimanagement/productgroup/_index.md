@@ -3,8 +3,6 @@
 title: "ProductGroup"
 title_tag: "azure-native.apimanagement.ProductGroup"
 meta_desc: "Documentation for the azure-native.apimanagement.ProductGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/ProductGroup/"
 layout: api
 ---
 

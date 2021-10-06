@@ -2,8 +2,6 @@
 title: "polardb"
 title_tag: "alicloud.polardb"
 meta_desc: "Explore the resources and functions of the alicloud.polardb module."
-aliases:
-    - "docs/reference/pkg/alicloud/"
 layout: api
 ---
 

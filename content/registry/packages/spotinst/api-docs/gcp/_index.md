@@ -2,8 +2,6 @@
 title: "gcp"
 title_tag: "spotinst.gcp"
 meta_desc: "Explore the resources and functions of the spotinst.gcp module."
-aliases:
-    - "docs/reference/pkg/spotinst/"
 layout: api
 ---
 

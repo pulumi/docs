@@ -3,8 +3,6 @@
 title: "Task"
 title_tag: "google-native.cloudtasks/v2.Task"
 meta_desc: "Documentation for the google-native.cloudtasks/v2.Task resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/google-native/Task/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "AutoscalingConfig"
 title_tag: "alicloud.cs.AutoscalingConfig"
 meta_desc: "Documentation for the alicloud.cs.AutoscalingConfig resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/alicloud/AutoscalingConfig/"
 layout: api
 ---
 

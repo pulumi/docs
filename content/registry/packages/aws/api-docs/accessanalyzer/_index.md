@@ -2,8 +2,6 @@
 title: "accessanalyzer"
 title_tag: "aws.accessanalyzer"
 meta_desc: "Explore the resources and functions of the aws.accessanalyzer module."
-aliases:
-    - "docs/reference/pkg/aws/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "PrivateLinkServicesForO365ManagementActivityAPI"
 title_tag: "azure-native.m365securityandcompliance.PrivateLinkServicesForO365ManagementActivityAPI"
 meta_desc: "Documentation for the azure-native.m365securityandcompliance.PrivateLinkServicesForO365ManagementActivityAPI resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/privateLinkServicesForO365ManagementActivityAPI/"
 layout: api
 ---
 

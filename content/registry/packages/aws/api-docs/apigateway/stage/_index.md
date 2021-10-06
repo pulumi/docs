@@ -3,8 +3,6 @@
 title: "Stage"
 title_tag: "aws.apigateway.Stage"
 meta_desc: "Documentation for the aws.apigateway.Stage resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/Stage/"
 layout: api
 ---
 

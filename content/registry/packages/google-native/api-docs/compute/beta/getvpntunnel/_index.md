@@ -3,8 +3,6 @@
 title: "getVpnTunnel"
 title_tag: "google-native.compute/beta.getVpnTunnel"
 meta_desc: "Documentation for the google-native.compute/beta.getVpnTunnel function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

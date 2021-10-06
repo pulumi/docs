@@ -3,8 +3,6 @@
 title: "DispatchRule"
 title_tag: "alicloud.arms.DispatchRule"
 meta_desc: "Documentation for the alicloud.arms.DispatchRule resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/alicloud/DispatchRule/"
 layout: api
 ---
 

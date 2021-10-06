@@ -2,8 +2,6 @@
 title: "auditmanager"
 title_tag: "aws-native.auditmanager"
 meta_desc: "Explore the resources and functions of the aws-native.auditmanager module."
-aliases:
-    - "docs/reference/pkg/aws-native/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "getIpFirewallRule"
 title_tag: "azure-native.synapse.getIpFirewallRule"
 meta_desc: "Documentation for the azure-native.synapse.getIpFirewallRule function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

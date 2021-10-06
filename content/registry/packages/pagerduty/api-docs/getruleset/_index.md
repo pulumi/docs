@@ -3,8 +3,6 @@
 title: "getRuleset"
 title_tag: "pagerduty.getRuleset"
 meta_desc: "Documentation for the pagerduty.getRuleset function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

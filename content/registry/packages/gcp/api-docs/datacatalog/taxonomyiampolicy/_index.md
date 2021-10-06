@@ -3,8 +3,6 @@
 title: "TaxonomyIamPolicy"
 title_tag: "gcp.datacatalog.TaxonomyIamPolicy"
 meta_desc: "Documentation for the gcp.datacatalog.TaxonomyIamPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/TaxonomyIamPolicy/"
 layout: api
 ---
 

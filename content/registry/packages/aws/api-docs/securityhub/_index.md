@@ -2,8 +2,6 @@
 title: "securityhub"
 title_tag: "aws.securityhub"
 meta_desc: "Explore the resources and functions of the aws.securityhub module."
-aliases:
-    - "docs/reference/pkg/aws/"
 layout: api
 ---
 

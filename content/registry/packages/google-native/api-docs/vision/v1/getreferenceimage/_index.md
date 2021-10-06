@@ -3,8 +3,6 @@
 title: "getReferenceImage"
 title_tag: "google-native.vision/v1.getReferenceImage"
 meta_desc: "Documentation for the google-native.vision/v1.getReferenceImage function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

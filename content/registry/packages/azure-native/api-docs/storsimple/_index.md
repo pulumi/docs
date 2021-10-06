@@ -2,8 +2,6 @@
 title: "storsimple"
 title_tag: "azure-native.storsimple"
 meta_desc: "Explore the resources and functions of the azure-native.storsimple module."
-aliases:
-    - "docs/reference/pkg/azure-native/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "HaVpnGateway"
 title_tag: "gcp.compute.HaVpnGateway"
 meta_desc: "Documentation for the gcp.compute.HaVpnGateway resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gcp/HaVpnGateway/"
 layout: api
 ---
 

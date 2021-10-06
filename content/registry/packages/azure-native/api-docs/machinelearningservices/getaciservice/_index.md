@@ -3,8 +3,6 @@
 title: "getACIService"
 title_tag: "azure-native.machinelearningservices.getACIService"
 meta_desc: "Documentation for the azure-native.machinelearningservices.getACIService function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

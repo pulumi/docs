@@ -2,8 +2,6 @@
 title: "datafactory"
 title_tag: "azure.datafactory"
 meta_desc: "Explore the resources and functions of the azure.datafactory module."
-aliases:
-    - "docs/reference/pkg/azure/"
 layout: api
 ---
 

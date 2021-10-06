@@ -3,8 +3,6 @@
 title: "ClusterParameterGroup"
 title_tag: "aws.neptune.ClusterParameterGroup"
 meta_desc: "Documentation for the aws.neptune.ClusterParameterGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/ClusterParameterGroup/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "IntegrationMetric"
 title_tag: "cloudamqp.IntegrationMetric"
 meta_desc: "Documentation for the cloudamqp.IntegrationMetric resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/cloudamqp/IntegrationMetric/"
 layout: api
 ---
 

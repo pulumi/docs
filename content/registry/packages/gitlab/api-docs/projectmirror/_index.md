@@ -3,8 +3,6 @@
 title: "ProjectMirror"
 title_tag: "gitlab.ProjectMirror"
 meta_desc: "Documentation for the gitlab.ProjectMirror resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gitlab/ProjectMirror/"
 layout: api
 ---
 

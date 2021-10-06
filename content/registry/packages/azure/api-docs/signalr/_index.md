@@ -2,8 +2,6 @@
 title: "signalr"
 title_tag: "azure.signalr"
 meta_desc: "Explore the resources and functions of the azure.signalr module."
-aliases:
-    - "docs/reference/pkg/azure/"
 layout: api
 ---
 

@@ -3,8 +3,6 @@
 title: "Rule"
 title_tag: "okta.group.Rule"
 meta_desc: "Documentation for the okta.group.Rule resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/okta/Rule/"
 layout: api
 ---
 

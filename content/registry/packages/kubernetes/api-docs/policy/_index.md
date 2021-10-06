@@ -2,8 +2,6 @@
 title: "policy"
 title_tag: "policy Package"
 meta_desc: ""
-aliases:
-    - "docs/reference/pkg/kubernetes/"
 layout: api
 ---
 

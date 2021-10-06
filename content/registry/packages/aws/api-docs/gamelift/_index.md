@@ -2,8 +2,6 @@
 title: "gamelift"
 title_tag: "aws.gamelift"
 meta_desc: "Explore the resources and functions of the aws.gamelift module."
-aliases:
-    - "docs/reference/pkg/aws/"
 layout: api
 ---
 

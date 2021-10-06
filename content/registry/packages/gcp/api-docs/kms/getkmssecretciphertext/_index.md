@@ -3,8 +3,6 @@
 title: "getKMSSecretCiphertext"
 title_tag: "gcp.kms.getKMSSecretCiphertext"
 meta_desc: "Documentation for the gcp.kms.getKMSSecretCiphertext function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

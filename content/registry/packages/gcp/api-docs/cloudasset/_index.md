@@ -2,8 +2,6 @@
 title: "cloudasset"
 title_tag: "gcp.cloudasset"
 meta_desc: "Explore the resources and functions of the gcp.cloudasset module."
-aliases:
-    - "docs/reference/pkg/gcp/"
 layout: api
 ---
 

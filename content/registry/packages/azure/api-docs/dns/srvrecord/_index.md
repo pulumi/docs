@@ -3,8 +3,6 @@
 title: "SrvRecord"
 title_tag: "azure.dns.SrvRecord"
 meta_desc: "Documentation for the azure.dns.SrvRecord resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/SrvRecord/"
 layout: api
 ---
 

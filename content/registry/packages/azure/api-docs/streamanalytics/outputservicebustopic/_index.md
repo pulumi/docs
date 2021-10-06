@@ -3,8 +3,6 @@
 title: "OutputServicebusTopic"
 title_tag: "azure.streamanalytics.OutputServicebusTopic"
 meta_desc: "Documentation for the azure.streamanalytics.OutputServicebusTopic resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure/OutputServicebusTopic/"
 layout: api
 ---
 

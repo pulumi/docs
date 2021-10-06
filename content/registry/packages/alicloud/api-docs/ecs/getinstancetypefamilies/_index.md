@@ -3,8 +3,6 @@
 title: "getInstanceTypeFamilies"
 title_tag: "alicloud.ecs.getInstanceTypeFamilies"
 meta_desc: "Documentation for the alicloud.ecs.getInstanceTypeFamilies function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

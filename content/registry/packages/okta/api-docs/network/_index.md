@@ -2,8 +2,6 @@
 title: "network"
 title_tag: "okta.network"
 meta_desc: "Explore the resources and functions of the okta.network module."
-aliases:
-    - "docs/reference/pkg/okta/"
 layout: api
 ---
 

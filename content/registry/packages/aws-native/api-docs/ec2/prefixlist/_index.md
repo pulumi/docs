@@ -3,8 +3,6 @@
 title: "PrefixList"
 title_tag: "aws-native.ec2.PrefixList"
 meta_desc: "Documentation for the aws-native.ec2.PrefixList resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws-native/PrefixList/"
 layout: api
 ---
 

@@ -2,8 +2,6 @@
 title: "lightsail"
 title_tag: "aws.lightsail"
 meta_desc: "Explore the resources and functions of the aws.lightsail module."
-aliases:
-    - "docs/reference/pkg/aws/"
 layout: api
 ---
 

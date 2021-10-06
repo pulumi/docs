@@ -3,8 +3,6 @@
 title: "getOnlineDeploymentLogs"
 title_tag: "azure-native.machinelearningservices.getOnlineDeploymentLogs"
 meta_desc: "Documentation for the azure-native.machinelearningservices.getOnlineDeploymentLogs function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

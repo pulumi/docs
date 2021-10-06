@@ -3,8 +3,6 @@
 title: "getMonitorGroups"
 title_tag: "alicloud.cms.getMonitorGroups"
 meta_desc: "Documentation for the alicloud.cms.getMonitorGroups function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

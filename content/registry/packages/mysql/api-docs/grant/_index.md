@@ -3,8 +3,6 @@
 title: "Grant"
 title_tag: "mysql.Grant"
 meta_desc: "Documentation for the mysql.Grant resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/mysql/Grant/"
 layout: api
 ---
 

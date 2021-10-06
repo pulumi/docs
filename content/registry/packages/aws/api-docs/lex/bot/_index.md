@@ -3,8 +3,6 @@
 title: "Bot"
 title_tag: "aws.lex.Bot"
 meta_desc: "Documentation for the aws.lex.Bot resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/aws/Bot/"
 layout: api
 ---
 

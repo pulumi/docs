@@ -3,8 +3,6 @@
 title: "listAccountChannelTypes"
 title_tag: "azure-native.engagementfabric.listAccountChannelTypes"
 meta_desc: "Documentation for the azure-native.engagementfabric.listAccountChannelTypes function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

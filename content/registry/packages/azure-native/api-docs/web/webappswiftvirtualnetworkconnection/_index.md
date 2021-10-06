@@ -3,8 +3,6 @@
 title: "WebAppSwiftVirtualNetworkConnection"
 title_tag: "azure-native.web.WebAppSwiftVirtualNetworkConnection"
 meta_desc: "Documentation for the azure-native.web.WebAppSwiftVirtualNetworkConnection resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/azure-native/WebAppSwiftVirtualNetworkConnection/"
 layout: api
 ---
 

@@ -2,8 +2,6 @@
 title: "sns"
 title_tag: "aws.sns"
 meta_desc: "Explore the resources and functions of the aws.sns module."
-aliases:
-    - "docs/reference/pkg/aws/"
 layout: api
 ---
 

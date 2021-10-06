@@ -3,8 +3,6 @@
 title: "ProjectShareGroup"
 title_tag: "gitlab.ProjectShareGroup"
 meta_desc: "Documentation for the gitlab.ProjectShareGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/gitlab/ProjectShareGroup/"
 layout: api
 ---
 

@@ -2,8 +2,6 @@
 title: "hardwaresecuritymodules"
 title_tag: "azure-native.hardwaresecuritymodules"
 meta_desc: "Explore the resources and functions of the azure-native.hardwaresecuritymodules module."
-aliases:
-    - "docs/reference/pkg/azure-native/"
 layout: api
 ---
 

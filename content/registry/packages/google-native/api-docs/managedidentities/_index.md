@@ -2,8 +2,6 @@
 title: "managedidentities"
 title_tag: "managedidentities Package"
 meta_desc: ""
-aliases:
-    - "docs/reference/pkg/google-native/"
 layout: api
 ---
 

@@ -2,8 +2,6 @@
 title: "sql"
 title_tag: "gcp.sql"
 meta_desc: "Explore the resources and functions of the gcp.sql module."
-aliases:
-    - "docs/reference/pkg/gcp/"
 layout: api
 ---
 

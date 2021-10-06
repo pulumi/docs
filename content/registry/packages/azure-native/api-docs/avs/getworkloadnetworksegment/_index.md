@@ -3,8 +3,6 @@
 title: "getWorkloadNetworkSegment"
 title_tag: "azure-native.avs.getWorkloadNetworkSegment"
 meta_desc: "Documentation for the azure-native.avs.getWorkloadNetworkSegment function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

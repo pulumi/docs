@@ -2,8 +2,6 @@
 title: "cloudfunctions"
 title_tag: "gcp.cloudfunctions"
 meta_desc: "Explore the resources and functions of the gcp.cloudfunctions module."
-aliases:
-    - "docs/reference/pkg/gcp/"
 layout: api
 ---
 

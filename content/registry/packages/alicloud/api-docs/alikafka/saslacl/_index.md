@@ -3,8 +3,6 @@
 title: "SaslAcl"
 title_tag: "alicloud.alikafka.SaslAcl"
 meta_desc: "Documentation for the alicloud.alikafka.SaslAcl resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/alicloud/SaslAcl/"
 layout: api
 ---
 

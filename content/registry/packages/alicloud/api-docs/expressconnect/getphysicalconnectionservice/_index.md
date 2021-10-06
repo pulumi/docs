@@ -3,8 +3,6 @@
 title: "getPhysicalConnectionService"
 title_tag: "alicloud.expressconnect.getPhysicalConnectionService"
 meta_desc: "Documentation for the alicloud.expressconnect.getPhysicalConnectionService function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

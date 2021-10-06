@@ -3,8 +3,6 @@
 title: "NodeDriver"
 title_tag: "rancher2.NodeDriver"
 meta_desc: "Documentation for the rancher2.NodeDriver resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/rancher2/NodeDriver/"
 layout: api
 ---
 

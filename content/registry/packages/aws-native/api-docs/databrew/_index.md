@@ -2,8 +2,6 @@
 title: "databrew"
 title_tag: "aws-native.databrew"
 meta_desc: "Explore the resources and functions of the aws-native.databrew module."
-aliases:
-    - "docs/reference/pkg/aws-native/"
 layout: api
 ---
 

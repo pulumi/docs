@@ -3,8 +3,6 @@
 title: "AppSecEvalGroup"
 title_tag: "akamai.AppSecEvalGroup"
 meta_desc: "Documentation for the akamai.AppSecEvalGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/akamai/AppSecEvalGroup/"
 layout: api
 ---
 

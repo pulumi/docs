@@ -3,8 +3,6 @@
 title: "User"
 title_tag: "linode.User"
 meta_desc: "Documentation for the linode.User resource with examples, input properties, output properties, lookup functions, and supporting types."
-aliases:
-    - "/docs/reference/pkg/linode/User/"
 layout: api
 ---
 

@@ -2,8 +2,6 @@
 title: "privatelink"
 title_tag: "azure.privatelink"
 meta_desc: "Explore the resources and functions of the azure.privatelink module."
-aliases:
-    - "docs/reference/pkg/azure/"
 layout: api
 ---
 

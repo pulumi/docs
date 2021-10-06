@@ -3,8 +3,6 @@
 title: "getVbrHealthChecks"
 title_tag: "alicloud.cen.getVbrHealthChecks"
 meta_desc: "Documentation for the alicloud.cen.getVbrHealthChecks function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

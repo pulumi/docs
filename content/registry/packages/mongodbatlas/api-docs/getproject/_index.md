@@ -3,8 +3,6 @@
 title: "getProject"
 title_tag: "mongodbatlas.getProject"
 meta_desc: "Documentation for the mongodbatlas.getProject function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

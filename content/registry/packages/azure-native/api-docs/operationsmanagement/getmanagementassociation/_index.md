@@ -3,8 +3,6 @@
 title: "getManagementAssociation"
 title_tag: "azure-native.operationsmanagement.getManagementAssociation"
 meta_desc: "Documentation for the azure-native.operationsmanagement.getManagementAssociation function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 

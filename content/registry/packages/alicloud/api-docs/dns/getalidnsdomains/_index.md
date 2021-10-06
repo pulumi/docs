@@ -3,8 +3,6 @@
 title: "getAlidnsDomains"
 title_tag: "alicloud.dns.getAlidnsDomains"
 meta_desc: "Documentation for the alicloud.dns.getAlidnsDomains function with examples, input properties, output properties, and supporting types."
-aliases:
-    - "/docs/reference/pkg///"
 layout: api
 ---
 
