@@ -1393,7 +1393,7 @@ Either of the following is supported: `SampleCount`, `Average`, `Sum`, `Minimum`
 <a href="#alarmactions_nodejs" style="color: inherit; text-decoration: inherit;">alarm<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Topic[]</span>
+        <span class="property-type">(string | Topic)[]</span>
     </dt>
     <dd>{{% md %}}The list of actions to execute when this alarm transitions into an ALARM state from any other state. Each action is specified as an Amazon Resource Name (ARN).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1452,7 +1452,7 @@ The following values are supported: `ignore`, and `evaluate`.
 <a href="#insufficientdataactions_nodejs" style="color: inherit; text-decoration: inherit;">insufficient<wbr>Data<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Topic[]</span>
+        <span class="property-type">(string | Topic)[]</span>
     </dt>
     <dd>{{% md %}}The list of actions to execute when this alarm transitions into an INSUFFICIENT_DATA state from any other state. Each action is specified as an Amazon Resource Name (ARN).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1499,7 +1499,7 @@ See docs for [supported metrics](https://docs.aws.amazon.com/AmazonCloudWatch/la
 <a href="#okactions_nodejs" style="color: inherit; text-decoration: inherit;">ok<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Topic[]</span>
+        <span class="property-type">(string | Topic)[]</span>
     </dt>
     <dd>{{% md %}}The list of actions to execute when this alarm transitions into an OK state from any other state. Each action is specified as an Amazon Resource Name (ARN).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2527,7 +2527,7 @@ Either of the following is supported: `SampleCount`, `Average`, `Sum`, `Minimum`
 <a href="#state_alarmactions_nodejs" style="color: inherit; text-decoration: inherit;">alarm<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Topic[]</span>
+        <span class="property-type">(string | Topic)[]</span>
     </dt>
     <dd>{{% md %}}The list of actions to execute when this alarm transitions into an ALARM state from any other state. Each action is specified as an Amazon Resource Name (ARN).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2613,7 +2613,7 @@ The following values are supported: `ignore`, and `evaluate`.
 <a href="#state_insufficientdataactions_nodejs" style="color: inherit; text-decoration: inherit;">insufficient<wbr>Data<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Topic[]</span>
+        <span class="property-type">(string | Topic)[]</span>
     </dt>
     <dd>{{% md %}}The list of actions to execute when this alarm transitions into an INSUFFICIENT_DATA state from any other state. Each action is specified as an Amazon Resource Name (ARN).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2660,7 +2660,7 @@ See docs for [supported metrics](https://docs.aws.amazon.com/AmazonCloudWatch/la
 <a href="#state_okactions_nodejs" style="color: inherit; text-decoration: inherit;">ok<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Topic[]</span>
+        <span class="property-type">(string | Topic)[]</span>
     </dt>
     <dd>{{% md %}}The list of actions to execute when this alarm transitions into an OK state from any other state. Each action is specified as an Amazon Resource Name (ARN).
 {{% /md %}}</dd><dt class="property-optional"
