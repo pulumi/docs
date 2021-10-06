@@ -67,6 +67,8 @@ component_packages=(
     "eks"
 )
 
+source ./scripts/resource_docs_common.sh
+
 generate_metadata() {
     provider=$1
     repository="pulumi-${provider}"

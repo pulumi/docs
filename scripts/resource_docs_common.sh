@@ -19,15 +19,13 @@ function get_schema_file_path() {
 
     # Use a previously generated schema.json file if it exists.
     if [ -f "${EXISTING_SCHEMA_JSON_FILE}" ]; then
-        echo "Found an existing Pulumi schema at ${EXISTING_SCHEMA_JSON_FILE}"
         EXISTING_SCHEMA_FILE=${EXISTING_SCHEMA_JSON_FILE}
     elif [ -f "${EXISTING_SCHEMA_YAML_FILE}" ]; then
-        echo "Found an existing Pulumi schema at ${EXISTING_SCHEMA_YAML_FILE}"
         EXISTING_SCHEMA_FILE=${EXISTING_SCHEMA_YAML_FILE}
     else
         echo "Error: A schema file was not found in the package's repo. Cannot generate resource docs."
         exit 1
     fi
 
-    return "${EXISTING_SCHEMA_FILE}"
+    echo "${EXISTING_SCHEMA_FILE}"
 }
