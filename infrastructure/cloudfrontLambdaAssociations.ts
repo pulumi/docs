@@ -141,11 +141,15 @@ function getRegistryRedirect(uri: string): string | undefined {
 
 function getCloudProvidersRedirect(uri: string): string | undefined {
     if (uri.match(/\/docs\/intro\/cloud-providers/)) {
-        return uri.replace("docs/intro/cloud-providers", "registry/packages").replace("packet", "equinix-metal").replace("setup", "installation-configuration");
+        return uri.replace("docs/intro/cloud-providers", "registry/packages")
+            .replace("packet", "equinix-metal")
+            .replace("setup", "installation-configuration");
     }
 
     if (uri.match(/\/docs\/reference\/clouds/)) {
-        return uri.replace("docs/reference/clouds", "registry/packages").replace("packet", "equinix-metal").replace("setup", "installation-configuration");
+        return uri.replace("docs/reference/clouds", "registry/packages")
+            .replace("packet", "equinix-metal")
+            .replace("setup", "installation-configuration");
     }
 
     return undefined;
@@ -160,7 +164,8 @@ function getAPIDocsRedirect(uri: string): string | undefined {
     if (apiDocsPage) {
         const packageName = apiDocsPage[1];
 
-        return uri.replace("docs/reference/pkg", "registry/packages").replace(packageName, `${packageName}/api-docs`);
+        return uri.replace("docs/reference/pkg", "registry/packages")
+            .replace(packageName, `${packageName}/api-docs`);
     }
 
     return undefined;
@@ -171,7 +176,9 @@ function getTutorialsRedirect(uri: string): string | undefined {
     if (tutorialsPage) {
         const packageName = tutorialsPage[1];
 
-        return uri.replace("docs/tutorials", "registry/packages").replace("docs/reference/tutorials", "registry/packages").replace(packageName, `${packageName}/how-to-guides`);
+        return uri.replace("docs/tutorials", "registry/packages")
+            .replace("docs/reference/tutorials", "registry/packages")
+            .replace(packageName, `${packageName}/how-to-guides`);
     }
 
     return undefined;
