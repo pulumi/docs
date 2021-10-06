@@ -20,6 +20,7 @@ Explore the resources and functions of the aws.kinesis module.
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
+    <li><a href="getfirehosedeliverystream" title="GetFirehoseDeliveryStream"><span class="symbol function"></span>GetFirehoseDeliveryStream</a></li>
     <li><a href="getstream" title="GetStream"><span class="symbol function"></span>GetStream</a></li>
     <li><a href="getstreamconsumer" title="GetStreamConsumer"><span class="symbol function"></span>GetStreamConsumer</a></li>
 </ul>
@@ -33,6 +34,6 @@ Explore the resources and functions of the aws.kinesis module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.22.1</dd>
+	<dd>4.23.0</dd>
 </dl>
 

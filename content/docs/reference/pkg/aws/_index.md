@@ -1,6 +1,6 @@
 ---
-title: "AWS"
-title_tag: "AWS Package"
+title: "AWS Classic"
+title_tag: "AWS Classic Package"
 meta_desc: "A Pulumi package for creating and managing Amazon Web Services (AWS) cloud resources."
 menu:
     reference:
@@ -38,6 +38,7 @@ A Pulumi package for creating and managing Amazon Web Services (AWS) cloud resou
     <li><a href="cfg/" title="cfg"><span class="symbol module"></span>cfg</a></li>
     <li><a href="chime/" title="chime"><span class="symbol module"></span>chime</a></li>
     <li><a href="cloud9/" title="cloud9"><span class="symbol module"></span>cloud9</a></li>
+    <li><a href="cloudcontrol/" title="cloudcontrol"><span class="symbol module"></span>cloudcontrol</a></li>
     <li><a href="cloudformation/" title="cloudformation"><span class="symbol module"></span>cloudformation</a></li>
     <li><a href="cloudfront/" title="cloudfront"><span class="symbol module"></span>cloudfront</a></li>
     <li><a href="cloudhsmv2/" title="cloudhsmv2"><span class="symbol module"></span>cloudhsmv2</a></li>
@@ -193,6 +194,6 @@ A Pulumi package for creating and managing Amazon Web Services (AWS) cloud resou
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.22.1</dd>
+	<dd>4.23.0</dd>
 </dl>
 

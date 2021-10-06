@@ -36,6 +36,7 @@ construction to achieve fine-grained programmatic control over provider settings
              <span class="nx">default_tags</span><span class="p">:</span> <span class="nx">Optional[ProviderDefaultTagsArgs]</span> = None<span class="p">,</span>
              <span class="nx">endpoints</span><span class="p">:</span> <span class="nx">Optional[Sequence[ProviderEndpointArgs]]</span> = None<span class="p">,</span>
              <span class="nx">forbidden_account_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+             <span class="nx">http_proxy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">ignore_tags</span><span class="p">:</span> <span class="nx">Optional[ProviderIgnoreTagsArgs]</span> = None<span class="p">,</span>
              <span class="nx">insecure</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
              <span class="nx">max_retries</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
@@ -229,6 +230,16 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="httpproxy_csharp">
+<a href="#httpproxy_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Proxy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The address of an HTTP proxy to use when accessing the AWS API. Can also be configured using the `HTTP_PROXY` or
+`HTTPS_PROXY` environment variables.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="ignoretags_csharp">
 <a href="#ignoretags_csharp" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Tags</a>
 </span>
@@ -244,7 +255,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Explicitly allow the provider to perform "insecure" SSL requests. If omitted,default value is `false`
+    <dd>{{% md %}}Explicitly allow the provider to perform "insecure" SSL requests. If omitted, default value is `false`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxretries_csharp">
@@ -412,6 +423,16 @@ not public (yet).
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="httpproxy_go">
+<a href="#httpproxy_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Proxy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The address of an HTTP proxy to use when accessing the AWS API. Can also be configured using the `HTTP_PROXY` or
+`HTTPS_PROXY` environment variables.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="ignoretags_go">
 <a href="#ignoretags_go" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Tags</a>
 </span>
@@ -427,7 +448,7 @@ not public (yet).
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Explicitly allow the provider to perform "insecure" SSL requests. If omitted,default value is `false`
+    <dd>{{% md %}}Explicitly allow the provider to perform "insecure" SSL requests. If omitted, default value is `false`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxretries_go">
@@ -595,6 +616,16 @@ not public (yet).
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="httpproxy_nodejs">
+<a href="#httpproxy_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Proxy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The address of an HTTP proxy to use when accessing the AWS API. Can also be configured using the `HTTP_PROXY` or
+`HTTPS_PROXY` environment variables.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="ignoretags_nodejs">
 <a href="#ignoretags_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Tags</a>
 </span>
@@ -610,7 +641,7 @@ not public (yet).
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Explicitly allow the provider to perform "insecure" SSL requests. If omitted,default value is `false`
+    <dd>{{% md %}}Explicitly allow the provider to perform "insecure" SSL requests. If omitted, default value is `false`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxretries_nodejs">
@@ -778,6 +809,16 @@ not public (yet).
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="http_proxy_python">
+<a href="#http_proxy_python" style="color: inherit; text-decoration: inherit;">http_<wbr>proxy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The address of an HTTP proxy to use when accessing the AWS API. Can also be configured using the `HTTP_PROXY` or
+`HTTPS_PROXY` environment variables.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="ignore_tags_python">
 <a href="#ignore_tags_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>tags</a>
 </span>
@@ -793,7 +834,7 @@ not public (yet).
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Explicitly allow the provider to perform "insecure" SSL requests. If omitted,default value is `false`
+    <dd>{{% md %}}Explicitly allow the provider to perform "insecure" SSL requests. If omitted, default value is `false`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_retries_python">
@@ -1464,6 +1505,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="cloud9_csharp">
 <a href="#cloud9_csharp" style="color: inherit; text-decoration: inherit;">Cloud9</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="cloudcontrolapi_csharp">
+<a href="#cloudcontrolapi_csharp" style="color: inherit; text-decoration: inherit;">Cloudcontrolapi</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -2762,6 +2811,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="cloudcontrolapi_go">
+<a href="#cloudcontrolapi_go" style="color: inherit; text-decoration: inherit;">Cloudcontrolapi</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="cloudformation_go">
 <a href="#cloudformation_go" style="color: inherit; text-decoration: inherit;">Cloudformation</a>
 </span>
@@ -4054,6 +4111,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="cloudcontrolapi_nodejs">
+<a href="#cloudcontrolapi_nodejs" style="color: inherit; text-decoration: inherit;">cloudcontrolapi</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="cloudformation_nodejs">
 <a href="#cloudformation_nodejs" style="color: inherit; text-decoration: inherit;">cloudformation</a>
 </span>
@@ -5340,6 +5405,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="cloud9_python">
 <a href="#cloud9_python" style="color: inherit; text-decoration: inherit;">cloud9</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="cloudcontrolapi_python">
+<a href="#cloudcontrolapi_python" style="color: inherit; text-decoration: inherit;">cloudcontrolapi</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>

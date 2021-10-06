@@ -2077,6 +2077,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#domaindefaultusersettingsjupyterserverappsettingsdefaultresourcespec">Domain<wbr>Default<wbr>User<wbr>Settings<wbr>Jupyter<wbr>Server<wbr>App<wbr>Settings<wbr>Default<wbr>Resource<wbr>Spec</a></span>
     </dt>
     <dd>{{% md %}}The default instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance. see Default Resource Spec below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="lifecycleconfigarns_csharp">
+<a href="#lifecycleconfigarns_csharp" style="color: inherit; text-decoration: inherit;">Lifecycle<wbr>Config<wbr>Arns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the Lifecycle Configurations.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2090,6 +2099,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#domaindefaultusersettingsjupyterserverappsettingsdefaultresourcespec">Domain<wbr>Default<wbr>User<wbr>Settings<wbr>Jupyter<wbr>Server<wbr>App<wbr>Settings<wbr>Default<wbr>Resource<wbr>Spec</a></span>
     </dt>
     <dd>{{% md %}}The default instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance. see Default Resource Spec below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="lifecycleconfigarns_go">
+<a href="#lifecycleconfigarns_go" style="color: inherit; text-decoration: inherit;">Lifecycle<wbr>Config<wbr>Arns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the Lifecycle Configurations.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2103,6 +2121,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#domaindefaultusersettingsjupyterserverappsettingsdefaultresourcespec">Domain<wbr>Default<wbr>User<wbr>Settings<wbr>Jupyter<wbr>Server<wbr>App<wbr>Settings<wbr>Default<wbr>Resource<wbr>Spec</a></span>
     </dt>
     <dd>{{% md %}}The default instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance. see Default Resource Spec below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="lifecycleconfigarns_nodejs">
+<a href="#lifecycleconfigarns_nodejs" style="color: inherit; text-decoration: inherit;">lifecycle<wbr>Config<wbr>Arns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the Lifecycle Configurations.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2116,6 +2143,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#domaindefaultusersettingsjupyterserverappsettingsdefaultresourcespec">Domain<wbr>Default<wbr>User<wbr>Settings<wbr>Jupyter<wbr>Server<wbr>App<wbr>Settings<wbr>Default<wbr>Resource<wbr>Spec</a></span>
     </dt>
     <dd>{{% md %}}The default instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance. see Default Resource Spec below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="lifecycle_config_arns_python">
+<a href="#lifecycle_config_arns_python" style="color: inherit; text-decoration: inherit;">lifecycle_<wbr>config_<wbr>arns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the Lifecycle Configurations.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2230,6 +2266,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#domaindefaultusersettingskernelgatewayappsettingsdefaultresourcespec">Domain<wbr>Default<wbr>User<wbr>Settings<wbr>Kernel<wbr>Gateway<wbr>App<wbr>Settings<wbr>Default<wbr>Resource<wbr>Spec</a></span>
     </dt>
     <dd>{{% md %}}The default instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance. see Default Resource Spec below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="lifecycleconfigarns_csharp">
+<a href="#lifecycleconfigarns_csharp" style="color: inherit; text-decoration: inherit;">Lifecycle<wbr>Config<wbr>Arns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the Lifecycle Configurations.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2252,6 +2297,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#domaindefaultusersettingskernelgatewayappsettingsdefaultresourcespec">Domain<wbr>Default<wbr>User<wbr>Settings<wbr>Kernel<wbr>Gateway<wbr>App<wbr>Settings<wbr>Default<wbr>Resource<wbr>Spec</a></span>
     </dt>
     <dd>{{% md %}}The default instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance. see Default Resource Spec below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="lifecycleconfigarns_go">
+<a href="#lifecycleconfigarns_go" style="color: inherit; text-decoration: inherit;">Lifecycle<wbr>Config<wbr>Arns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the Lifecycle Configurations.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2274,6 +2328,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#domaindefaultusersettingskernelgatewayappsettingsdefaultresourcespec">Domain<wbr>Default<wbr>User<wbr>Settings<wbr>Kernel<wbr>Gateway<wbr>App<wbr>Settings<wbr>Default<wbr>Resource<wbr>Spec</a></span>
     </dt>
     <dd>{{% md %}}The default instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance. see Default Resource Spec below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="lifecycleconfigarns_nodejs">
+<a href="#lifecycleconfigarns_nodejs" style="color: inherit; text-decoration: inherit;">lifecycle<wbr>Config<wbr>Arns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the Lifecycle Configurations.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2296,6 +2359,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#domaindefaultusersettingskernelgatewayappsettingsdefaultresourcespec">Domain<wbr>Default<wbr>User<wbr>Settings<wbr>Kernel<wbr>Gateway<wbr>App<wbr>Settings<wbr>Default<wbr>Resource<wbr>Spec</a></span>
     </dt>
     <dd>{{% md %}}The default instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance. see Default Resource Spec below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="lifecycle_config_arns_python">
+<a href="#lifecycle_config_arns_python" style="color: inherit; text-decoration: inherit;">lifecycle_<wbr>config_<wbr>arns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the Lifecycle Configurations.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

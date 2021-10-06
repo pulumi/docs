@@ -374,7 +374,7 @@ The LayerVersion resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The compatible architectures for the specific Lambda Layer Version. Valid values are `arm64` and `x86_64`. If not supplied, a value of `null` is assumed and will default to the value used for the function architecture.
+    <dd>{{% md %}}A list of [Architectures](https://docs.aws.amazon.com/lambda/latest/dg/API_PublishLayerVersion.html#SSS-PublishLayerVersion-request-CompatibleArchitectures) this layer is compatible with. Currently `x86_64` and `arm64` can be specified.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="compatibleruntimes_csharp">
@@ -468,7 +468,7 @@ The LayerVersion resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The compatible architectures for the specific Lambda Layer Version. Valid values are `arm64` and `x86_64`. If not supplied, a value of `null` is assumed and will default to the value used for the function architecture.
+    <dd>{{% md %}}A list of [Architectures](https://docs.aws.amazon.com/lambda/latest/dg/API_PublishLayerVersion.html#SSS-PublishLayerVersion-request-CompatibleArchitectures) this layer is compatible with. Currently `x86_64` and `arm64` can be specified.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="compatibleruntimes_go">
@@ -562,7 +562,7 @@ The LayerVersion resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The compatible architectures for the specific Lambda Layer Version. Valid values are `arm64` and `x86_64`. If not supplied, a value of `null` is assumed and will default to the value used for the function architecture.
+    <dd>{{% md %}}A list of [Architectures](https://docs.aws.amazon.com/lambda/latest/dg/API_PublishLayerVersion.html#SSS-PublishLayerVersion-request-CompatibleArchitectures) this layer is compatible with. Currently `x86_64` and `arm64` can be specified.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="compatibleruntimes_nodejs">
@@ -656,7 +656,7 @@ The LayerVersion resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The compatible architectures for the specific Lambda Layer Version. Valid values are `arm64` and `x86_64`. If not supplied, a value of `null` is assumed and will default to the value used for the function architecture.
+    <dd>{{% md %}}A list of [Architectures](https://docs.aws.amazon.com/lambda/latest/dg/API_PublishLayerVersion.html#SSS-PublishLayerVersion-request-CompatibleArchitectures) this layer is compatible with. Currently `x86_64` and `arm64` can be specified.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="compatible_runtimes_python">
@@ -801,7 +801,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This Lamba Layer version.
+    <dd>{{% md %}}This Lambda Layer version.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -876,7 +876,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This Lamba Layer version.
+    <dd>{{% md %}}This Lambda Layer version.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -951,7 +951,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This Lamba Layer version.
+    <dd>{{% md %}}This Lambda Layer version.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1026,7 +1026,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}This Lamba Layer version.
+    <dd>{{% md %}}This Lambda Layer version.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1199,7 +1199,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The compatible architectures for the specific Lambda Layer Version. Valid values are `arm64` and `x86_64`. If not supplied, a value of `null` is assumed and will default to the value used for the function architecture.
+    <dd>{{% md %}}A list of [Architectures](https://docs.aws.amazon.com/lambda/latest/dg/API_PublishLayerVersion.html#SSS-PublishLayerVersion-request-CompatibleArchitectures) this layer is compatible with. Currently `x86_64` and `arm64` can be specified.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_compatibleruntimes_csharp">
@@ -1325,7 +1325,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This Lamba Layer version.
+    <dd>{{% md %}}This Lambda Layer version.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1356,7 +1356,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The compatible architectures for the specific Lambda Layer Version. Valid values are `arm64` and `x86_64`. If not supplied, a value of `null` is assumed and will default to the value used for the function architecture.
+    <dd>{{% md %}}A list of [Architectures](https://docs.aws.amazon.com/lambda/latest/dg/API_PublishLayerVersion.html#SSS-PublishLayerVersion-request-CompatibleArchitectures) this layer is compatible with. Currently `x86_64` and `arm64` can be specified.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_compatibleruntimes_go">
@@ -1482,7 +1482,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This Lamba Layer version.
+    <dd>{{% md %}}This Lambda Layer version.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1513,7 +1513,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The compatible architectures for the specific Lambda Layer Version. Valid values are `arm64` and `x86_64`. If not supplied, a value of `null` is assumed and will default to the value used for the function architecture.
+    <dd>{{% md %}}A list of [Architectures](https://docs.aws.amazon.com/lambda/latest/dg/API_PublishLayerVersion.html#SSS-PublishLayerVersion-request-CompatibleArchitectures) this layer is compatible with. Currently `x86_64` and `arm64` can be specified.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_compatibleruntimes_nodejs">
@@ -1639,7 +1639,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This Lamba Layer version.
+    <dd>{{% md %}}This Lambda Layer version.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1670,7 +1670,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The compatible architectures for the specific Lambda Layer Version. Valid values are `arm64` and `x86_64`. If not supplied, a value of `null` is assumed and will default to the value used for the function architecture.
+    <dd>{{% md %}}A list of [Architectures](https://docs.aws.amazon.com/lambda/latest/dg/API_PublishLayerVersion.html#SSS-PublishLayerVersion-request-CompatibleArchitectures) this layer is compatible with. Currently `x86_64` and `arm64` can be specified.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_compatible_runtimes_python">
@@ -1796,7 +1796,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}This Lamba Layer version.
+    <dd>{{% md %}}This Lambda Layer version.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
