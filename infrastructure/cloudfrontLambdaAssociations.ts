@@ -172,7 +172,7 @@ function getAPIDocsRedirect(uri: string): string | undefined {
 }
 
 function getTutorialsRedirect(uri: string): string | undefined {
-    const tutorialsPage = uri.match(/\/docs\/(?:reference\/)?tutorials([^\/]+)/);
+    const tutorialsPage = uri.match(/\/docs\/(?:reference\/)?tutorials\/([^\/]+)/);
     if (tutorialsPage) {
         const packageName = tutorialsPage[1];
 
