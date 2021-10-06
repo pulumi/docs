@@ -57,13 +57,21 @@ generate_docs() {
     # Go back to the docs repo.
     popd
 
-    EXISTING_SCHEMA_FILE="../${repository}/provider/cmd/pulumi-resource-${provider}/schema.json"
+    # This path is related to the root of the docs repo.
+    SCHEMA_FILE_ROOT_REL_PATH="../${repository}/provider/cmd/pulumi-resource-${provider}"
+    EXISTING_SCHEMA_JSON_FILE="${SCHEMA_FILE_ROOT_REL_PATH}/schema.json"
+    EXISTING_SCHEMA_YAML_FILE="${SCHEMA_FILE_ROOT_REL_PATH}/schema.yaml"
+    EXISTING_SCHEMA_FILE=""
 
     # Use a previously generated schema.json file if it exists.
-    if [ -f "${EXISTING_SCHEMA_FILE}" ]; then
-        echo "Will use the previously generated schema.json for generating resource docs..."
+    if [ -f "${EXISTING_SCHEMA_JSON_FILE}" ]; then
+        echo "Will use the previously generated schema located at ${EXISTING_SCHEMA_JSON_FILE} for generating resource docs..."
+        EXISTING_SCHEMA_FILE=${EXISTING_SCHEMA_JSON_FILE}
+    elif [ -f "${EXISTING_SCHEMA_YAML_FILE}" ]; then
+        echo "Will use the previously generated schema located at ${EXISTING_SCHEMA_YAML_FILE} for generating resource docs..."
+        EXISTING_SCHEMA_FILE=${EXISTING_SCHEMA_YAML_FILE}
     else
-        echo "Could not find a previously generated schema.json file. Will generate schema..."
+        echo "Could not find a previously generated schema. Will generate schema..."
 
         if [ -n "${INSTALL_RESOURCE_PLUGIN:-}" ]; then
             echo "Installing resource plugin for ${provider}. Version: ${plugin_version}"
@@ -75,7 +83,8 @@ generate_docs() {
         popd
     fi
 
-    SCHEMA_FILE="../../../${repository}/provider/cmd/pulumi-resource-${provider}/schema.json"
+    # This path should be relative to the tools/resourcedocsgen tool.
+    SCHEMA_FILE="../../${EXISTING_SCHEMA_FILE}"
 
     OVERLAY_SCHEMA_FILE=""
     if [ -d "${TOOL_RESDOCGEN}/overlays/${provider}" ] && [ -f "${TOOL_RESDOCGEN}/overlays/${provider}/overlays.json" ]; then
