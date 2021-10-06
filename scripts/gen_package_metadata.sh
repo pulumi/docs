@@ -19,6 +19,8 @@ PUBLISHER=${4:-Pulumi}
 TITLE=${5:-}
 # Pass a non-empty string as the 6th arg to override the category of the package.
 CATEGORY=${6:-}
+# Pass true as the 7th arg if the package is a component.
+COMPONENT=${7:-}
 
 if [ -z "${TITLE:-}" ]; then
     TITLE=${REPO_OVERRIDE}
@@ -49,10 +51,14 @@ DEFAULT_PKGS=(
 )
 
 featured_packages=(
-  "aws"
-  "azure-native"
-  "google-native"
-  "kubernetes"
+    "aws"
+    "azure-native"
+    "google-native"
+    "kubernetes"
+)
+
+component_packages=(
+    "eks"
 )
 
 # The timestamp when the package was last updated.
@@ -127,6 +133,20 @@ generate_metadata() {
         featured_flag="--featured"
     fi
 
+    component_flag=""
+    # If the current package is one of the known component packages
+    # then mark it as such. Otherwise, check if COMPONENT is true
+    # in order to mark the current package as a component.
+    #
+    # Same as above, the surrounding white-space is needed here for
+    # the regex match.
+    # shellcheck disable=SC2076
+    if [[ " ${component_packages[*]} " =~ " ${provider} " ]]; then
+        component_flag="--component"
+    elif [ "${COMPONENT:-}" == "true" ]; then
+        component_flag="--component"
+    fi
+
     resourcedocsgen metadata \
       --metadataOutDir "${METADATA_OUT_DIR}" \
       --schemaFile "${SCHEMA_FILE}" \
@@ -135,7 +155,7 @@ generate_metadata() {
       --updatedOn "${PKG_UPDATED_ON}" \
       --title "${TITLE}" \
       --category "${CATEGORY}" \
-      --logtostderr ${featured_flag} || exit 3
+      --logtostderr ${featured_flag} ${component_flag} || exit 3
 
     popd
 

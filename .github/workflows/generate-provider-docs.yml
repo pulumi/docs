@@ -1,10 +1,11 @@
 env:
   GITHUB_TOKEN: ${{ secrets.PULUMI_BOT_TOKEN }}
-  PROVIDER_SHORT_NAME: ${{ github.event.client_payload.project-shortname }}
-  PROVIDER_NAME: ${{ github.event.client_payload.project }}
-  PROVIDER_DISPLAY_NAME: ${{ github.event.client_payload.display-name }}
-  PROVIDER_PUBLISHER_NAME: ${{ github.event.client_payload.publisher }}
   PROVIDER_CATEGORY: ${{ github.event.client_payload.category }}
+  PROVIDER_DISPLAY_NAME: ${{ github.event.client_payload.display-name }}
+  PROVIDER_IS_COMPONENT: ${{ github.event.client_payload.is_component }}
+  PROVIDER_NAME: ${{ github.event.client_payload.project }}
+  PROVIDER_SHORT_NAME: ${{ github.event.client_payload.project-shortname }}
+  PROVIDER_PUBLISHER_NAME: ${{ github.event.client_payload.publisher }}
   PROVIDER_VERSION: ${{ github.event.client_payload.ref }}
 
 name: provider docs build
@@ -133,7 +134,7 @@ jobs:
       # Generate the package metadata only for those packages for which we also generate resource docs.
       - if: github.event.action != 'non-resource-provider'
         name: generate package metadata
-        run: ./scripts/gen_package_metadata.sh ../../../registry/themes/default/data/registry/packages "${{ env.PROVIDER_SHORT_NAME }}" "${{ env.PROVIDER_VERSION }}"
+        run: ./scripts/gen_package_metadata.sh ../../../registry/themes/default/data/registry/packages "${{ env.PROVIDER_SHORT_NAME }}" "${{ env.PROVIDER_VERSION }}" "${{ env.PROVIDER_PUBLISHER_NAME }}" "${{ env.PROVIDER_DISPLAY_NAME }}" "${{ env.PROVIDER_CATEGORY }}" "${{ env.PROVIDER_IS_COMPONENT }}"
         working-directory: docs
       - name: git status
         run: git status && git diff
