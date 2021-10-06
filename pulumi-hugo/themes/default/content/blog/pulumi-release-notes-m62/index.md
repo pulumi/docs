@@ -25,7 +25,7 @@ It's been a busy few weeks at Pulumi, including for some of our community contri
 
 ### AWS Native Provider, powered by the AWS Cloud Control API
 
-Last week, we announced the release of the new [AWS Native]({{< relref "/docs/intro/cloud-providers/aws-native" >}}) provider for Pulumi, which is now available in preview. AWS is the most-used cloud provider across the Pulumi ecosystem, and with the new AWS Native provider, we are focused on delivering the best possible support for the AWS platform to all Pulumi users. The AWS Native provider offers same-day support for all new AWS features and releases covered by the newly released AWS Cloud Control API, which typically supports new AWS features on the day of launch.
+Last week, we announced the release of the new [AWS Native]({{< relref "/registry/packages/aws-native" >}}) provider for Pulumi, which is now available in preview. AWS is the most-used cloud provider across the Pulumi ecosystem, and with the new AWS Native provider, we are focused on delivering the best possible support for the AWS platform to all Pulumi users. The AWS Native provider offers same-day support for all new AWS features and releases covered by the newly released AWS Cloud Control API, which typically supports new AWS features on the day of launch.
 
 This release also includes a new tool for migrating existing CloudFormation templates into Pulumi programs in your favorite language, powered by the new AWS Native provider and AWS Cloud Control API, as well as the ability to deploy any 3rd party resources in the CloudFormation Registry, including resources from Atlassian, Datadog, Densify, Dynatrace, Fortinet, New Relic, and Spot by NetApp.
 
