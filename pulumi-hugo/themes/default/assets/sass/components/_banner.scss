@@ -1,5 +1,7 @@
 pulumi-banner {
-    @apply hidden bg-blue-600 text-white font-body text-base text-center py-3 px-4 shadow;
+    @apply hidden text-white font-body text-base text-center py-3 px-4 shadow;
+
+    background-image: linear-gradient(77.95deg, #F6BF28 0.06%, #F2707E 48.58%, #BF4E86 95.36%);
 
     &[visible] {
         @apply block;
@@ -34,7 +36,7 @@ pulumi-banner {
     }
 
     .summary {
-        @apply mx-4;
+        @apply mx-4 font-bold;
 
         @screen md {
             @apply mr-1;
