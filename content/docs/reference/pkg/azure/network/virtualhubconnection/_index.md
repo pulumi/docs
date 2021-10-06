@@ -45,7 +45,7 @@ class MyStack : Stack
             Location = exampleResourceGroup.Location,
             ResourceGroupName = exampleResourceGroup.Name,
         });
-        var test = new Azure.Network.VirtualWan("test", new Azure.Network.VirtualWanArgs
+        var exampleVirtualWan = new Azure.Network.VirtualWan("exampleVirtualWan", new Azure.Network.VirtualWanArgs
         {
             ResourceGroupName = exampleResourceGroup.Name,
             Location = exampleResourceGroup.Location,
@@ -54,7 +54,7 @@ class MyStack : Stack
         {
             ResourceGroupName = exampleResourceGroup.Name,
             Location = exampleResourceGroup.Location,
-            VirtualWanId = azurerm_virtual_wan.Example.Id,
+            VirtualWanId = exampleVirtualWan.Id,
             AddressPrefix = "10.0.1.0/24",
         });
         var exampleVirtualHubConnection = new Azure.Network.VirtualHubConnection("exampleVirtualHubConnection", new Azure.Network.VirtualHubConnectionArgs
@@ -100,7 +100,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		_, err = network.NewVirtualWan(ctx, "test", &network.VirtualWanArgs{
+		exampleVirtualWan, err := network.NewVirtualWan(ctx, "exampleVirtualWan", &network.VirtualWanArgs{
 			ResourceGroupName: exampleResourceGroup.Name,
 			Location:          exampleResourceGroup.Location,
 		})
@@ -110,7 +110,7 @@ func main() {
 		exampleVirtualHub, err := network.NewVirtualHub(ctx, "exampleVirtualHub", &network.VirtualHubArgs{
 			ResourceGroupName: exampleResourceGroup.Name,
 			Location:          exampleResourceGroup.Location,
-			VirtualWanId:      pulumi.Any(azurerm_virtual_wan.Example.Id),
+			VirtualWanId:      exampleVirtualWan.ID(),
 			AddressPrefix:     pulumi.String("10.0.1.0/24"),
 		})
 		if err != nil {
@@ -143,13 +143,13 @@ example_virtual_network = azure.network.VirtualNetwork("exampleVirtualNetwork",
     address_spaces=["172.0.0.0/16"],
     location=example_resource_group.location,
     resource_group_name=example_resource_group.name)
-test = azure.network.VirtualWan("test",
+example_virtual_wan = azure.network.VirtualWan("exampleVirtualWan",
     resource_group_name=example_resource_group.name,
     location=example_resource_group.location)
 example_virtual_hub = azure.network.VirtualHub("exampleVirtualHub",
     resource_group_name=example_resource_group.name,
     location=example_resource_group.location,
-    virtual_wan_id=azurerm_virtual_wan["example"]["id"],
+    virtual_wan_id=example_virtual_wan.id,
     address_prefix="10.0.1.0/24")
 example_virtual_hub_connection = azure.network.VirtualHubConnection("exampleVirtualHubConnection",
     virtual_hub_id=example_virtual_hub.id,
@@ -173,14 +173,14 @@ const exampleVirtualNetwork = new azure.network.VirtualNetwork("exampleVirtualNe
     location: exampleResourceGroup.location,
     resourceGroupName: exampleResourceGroup.name,
 });
-const test = new azure.network.VirtualWan("test", {
+const exampleVirtualWan = new azure.network.VirtualWan("exampleVirtualWan", {
     resourceGroupName: exampleResourceGroup.name,
     location: exampleResourceGroup.location,
 });
 const exampleVirtualHub = new azure.network.VirtualHub("exampleVirtualHub", {
     resourceGroupName: exampleResourceGroup.name,
     location: exampleResourceGroup.location,
-    virtualWanId: azurerm_virtual_wan.example.id,
+    virtualWanId: exampleVirtualWan.id,
     addressPrefix: "10.0.1.0/24",
 });
 const exampleVirtualHubConnection = new azure.network.VirtualHubConnection("exampleVirtualHubConnection", {
