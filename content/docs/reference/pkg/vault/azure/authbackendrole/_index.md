@@ -387,7 +387,7 @@ document must match the one specified by this field.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on the virtual
-machiness that can perform the login operation that they be associated with
+machines that can perform the login operation that they be associated with
 the resource group that matches the value specified by this field.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -616,7 +616,7 @@ document must match the one specified by this field.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on the virtual
-machiness that can perform the login operation that they be associated with
+machines that can perform the login operation that they be associated with
 the resource group that matches the value specified by this field.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -845,7 +845,7 @@ document must match the one specified by this field.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on the virtual
-machiness that can perform the login operation that they be associated with
+machines that can perform the login operation that they be associated with
 the resource group that matches the value specified by this field.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1074,7 +1074,7 @@ document must match the one specified by this field.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on the virtual
-machiness that can perform the login operation that they be associated with
+machines that can perform the login operation that they be associated with
 the resource group that matches the value specified by this field.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1495,7 +1495,7 @@ document must match the one specified by this field.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on the virtual
-machiness that can perform the login operation that they be associated with
+machines that can perform the login operation that they be associated with
 the resource group that matches the value specified by this field.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1724,7 +1724,7 @@ document must match the one specified by this field.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on the virtual
-machiness that can perform the login operation that they be associated with
+machines that can perform the login operation that they be associated with
 the resource group that matches the value specified by this field.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1953,7 +1953,7 @@ document must match the one specified by this field.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on the virtual
-machiness that can perform the login operation that they be associated with
+machines that can perform the login operation that they be associated with
 the resource group that matches the value specified by this field.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2182,7 +2182,7 @@ document must match the one specified by this field.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on the virtual
-machiness that can perform the login operation that they be associated with
+machines that can perform the login operation that they be associated with
 the resource group that matches the value specified by this field.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">

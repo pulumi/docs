@@ -250,7 +250,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Speficies whether to show this mount in the UI-specific listing endpoint.
+    <dd>{{% md %}}Specifies whether to show this mount in the UI-specific listing endpoint.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="local_csharp">
@@ -334,7 +334,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Speficies whether to show this mount in the UI-specific listing endpoint.
+    <dd>{{% md %}}Specifies whether to show this mount in the UI-specific listing endpoint.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="local_go">
@@ -418,7 +418,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Speficies whether to show this mount in the UI-specific listing endpoint.
+    <dd>{{% md %}}Specifies whether to show this mount in the UI-specific listing endpoint.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="local_nodejs">
@@ -502,7 +502,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Speficies whether to show this mount in the UI-specific listing endpoint.
+    <dd>{{% md %}}Specifies whether to show this mount in the UI-specific listing endpoint.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="local_python">
