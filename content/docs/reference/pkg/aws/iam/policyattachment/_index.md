@@ -528,7 +528,7 @@ The PolicyAttachment resource accepts the following [input]({{< relref "/docs/in
 <a href="#groups_nodejs" style="color: inherit; text-decoration: inherit;">groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Group[]</span>
+        <span class="property-type">(string | Group)[]</span>
     </dt>
     <dd>{{% md %}}The group(s) the policy should be applied to
 {{% /md %}}</dd><dt class="property-optional"
@@ -546,7 +546,7 @@ The PolicyAttachment resource accepts the following [input]({{< relref "/docs/in
 <a href="#roles_nodejs" style="color: inherit; text-decoration: inherit;">roles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Role[]</span>
+        <span class="property-type">(string | Role)[]</span>
     </dt>
     <dd>{{% md %}}The role(s) the policy should be applied to
 {{% /md %}}</dd><dt class="property-optional"
@@ -555,7 +555,7 @@ The PolicyAttachment resource accepts the following [input]({{< relref "/docs/in
 <a href="#users_nodejs" style="color: inherit; text-decoration: inherit;">users</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | User[]</span>
+        <span class="property-type">(string | User)[]</span>
     </dt>
     <dd>{{% md %}}The user(s) the policy should be applied to
 {{% /md %}}</dd></dl>
@@ -900,7 +900,7 @@ The following state arguments are supported:
 <a href="#state_groups_nodejs" style="color: inherit; text-decoration: inherit;">groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Group[]</span>
+        <span class="property-type">(string | Group)[]</span>
     </dt>
     <dd>{{% md %}}The group(s) the policy should be applied to
 {{% /md %}}</dd><dt class="property-optional"
@@ -927,7 +927,7 @@ The following state arguments are supported:
 <a href="#state_roles_nodejs" style="color: inherit; text-decoration: inherit;">roles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Role[]</span>
+        <span class="property-type">(string | Role)[]</span>
     </dt>
     <dd>{{% md %}}The role(s) the policy should be applied to
 {{% /md %}}</dd><dt class="property-optional"
@@ -936,7 +936,7 @@ The following state arguments are supported:
 <a href="#state_users_nodejs" style="color: inherit; text-decoration: inherit;">users</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | User[]</span>
+        <span class="property-type">(string | User)[]</span>
     </dt>
     <dd>{{% md %}}The user(s) the policy should be applied to
 {{% /md %}}</dd></dl>
