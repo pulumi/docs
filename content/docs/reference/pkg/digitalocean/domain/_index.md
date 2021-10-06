@@ -374,7 +374,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="ttl_csharp">
+<a href="#ttl_csharp" style="color: inherit; text-decoration: inherit;">Ttl</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The TTL value of the domain
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -395,7 +404,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="ttl_go">
+<a href="#ttl_go" style="color: inherit; text-decoration: inherit;">Ttl</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The TTL value of the domain
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -416,7 +434,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="ttl_nodejs">
+<a href="#ttl_nodejs" style="color: inherit; text-decoration: inherit;">ttl</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The TTL value of the domain
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -437,7 +464,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="ttl_python">
+<a href="#ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The TTL value of the domain
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -458,7 +494,8 @@ Get an existing Domain resource's state with the given name, ID, and optional ex
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
         <span class="nx">domain_urn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Domain</code></pre></div>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">ttl</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">) -&gt;</span> Domain</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -597,6 +634,15 @@ is used to created an initial A record for the domain.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the domain
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_ttl_csharp">
+<a href="#state_ttl_csharp" style="color: inherit; text-decoration: inherit;">Ttl</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The TTL value of the domain
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -629,6 +675,15 @@ is used to created an initial A record for the domain.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the domain
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_ttl_go">
+<a href="#state_ttl_go" style="color: inherit; text-decoration: inherit;">Ttl</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The TTL value of the domain
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -661,6 +716,15 @@ is used to created an initial A record for the domain.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the domain
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_ttl_nodejs">
+<a href="#state_ttl_nodejs" style="color: inherit; text-decoration: inherit;">ttl</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The TTL value of the domain
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -693,6 +757,15 @@ is used to created an initial A record for the domain.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the domain
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_ttl_python">
+<a href="#state_ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The TTL value of the domain
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
