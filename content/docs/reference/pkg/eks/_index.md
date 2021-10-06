@@ -1,6 +1,6 @@
 ---
-title: "EKS"
-title_tag: "eks.EKS"
+title: "Amazon EKS"
+title_tag: "eks.Amazon EKS"
 meta_desc: "Pulumi Amazon Web Services (AWS) EKS Components."
 menu:
     reference:
@@ -30,6 +30,6 @@ Pulumi Amazon Web Services (AWS) EKS Components.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.33.0</dd>
+	<dd>0.34.0</dd>
 </dl>
 
