@@ -3,6 +3,8 @@
 title: "Bucket"
 title_tag: "aws.s3.Bucket"
 meta_desc: "Documentation for the aws.s3.Bucket resource with examples, input properties, output properties, lookup functions, and supporting types."
+layout: api
+no_edit_this_page: true
 ---
 
 
@@ -1848,7 +1850,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the bucket. If omitted, this provider will assign a random, unique name. Must be less than or equal to 63 characters in length.
+    <dd>{{% md %}}The name of the bucket. If omitted, this provider will assign a random, unique name. Must be lowercase and less than or equal to 63 characters in length. A full list of bucket naming rules [may be found here](https://docs.aws.amazon.com/AmazonS3/latest/userguide/bucketnamingrules.html).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bucketprefix_csharp">
@@ -1857,7 +1859,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Creates a unique bucket name beginning with the specified prefix. Conflicts with `bucket`. Must be less than or equal to 37 characters in length.
+    <dd>{{% md %}}Creates a unique bucket name beginning with the specified prefix. Conflicts with `bucket`. Must be lowercase and less than or equal to 37 characters in length. A full list of bucket naming rules [may be found here](https://docs.aws.amazon.com/AmazonS3/latest/userguide/bucketnamingrules.html).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="corsrules_csharp">
@@ -2044,7 +2046,7 @@ developer guide for more information.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the bucket. If omitted, this provider will assign a random, unique name. Must be less than or equal to 63 characters in length.
+    <dd>{{% md %}}The name of the bucket. If omitted, this provider will assign a random, unique name. Must be lowercase and less than or equal to 63 characters in length. A full list of bucket naming rules [may be found here](https://docs.aws.amazon.com/AmazonS3/latest/userguide/bucketnamingrules.html).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bucketprefix_go">
@@ -2053,7 +2055,7 @@ developer guide for more information.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Creates a unique bucket name beginning with the specified prefix. Conflicts with `bucket`. Must be less than or equal to 37 characters in length.
+    <dd>{{% md %}}Creates a unique bucket name beginning with the specified prefix. Conflicts with `bucket`. Must be lowercase and less than or equal to 37 characters in length. A full list of bucket naming rules [may be found here](https://docs.aws.amazon.com/AmazonS3/latest/userguide/bucketnamingrules.html).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="corsrules_go">
@@ -2240,7 +2242,7 @@ developer guide for more information.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the bucket. If omitted, this provider will assign a random, unique name. Must be less than or equal to 63 characters in length.
+    <dd>{{% md %}}The name of the bucket. If omitted, this provider will assign a random, unique name. Must be lowercase and less than or equal to 63 characters in length. A full list of bucket naming rules [may be found here](https://docs.aws.amazon.com/AmazonS3/latest/userguide/bucketnamingrules.html).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bucketprefix_nodejs">
@@ -2249,7 +2251,7 @@ developer guide for more information.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Creates a unique bucket name beginning with the specified prefix. Conflicts with `bucket`. Must be less than or equal to 37 characters in length.
+    <dd>{{% md %}}Creates a unique bucket name beginning with the specified prefix. Conflicts with `bucket`. Must be lowercase and less than or equal to 37 characters in length. A full list of bucket naming rules [may be found here](https://docs.aws.amazon.com/AmazonS3/latest/userguide/bucketnamingrules.html).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="corsrules_nodejs">
@@ -2436,7 +2438,7 @@ developer guide for more information.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the bucket. If omitted, this provider will assign a random, unique name. Must be less than or equal to 63 characters in length.
+    <dd>{{% md %}}The name of the bucket. If omitted, this provider will assign a random, unique name. Must be lowercase and less than or equal to 63 characters in length. A full list of bucket naming rules [may be found here](https://docs.aws.amazon.com/AmazonS3/latest/userguide/bucketnamingrules.html).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bucket_prefix_python">
@@ -2445,7 +2447,7 @@ developer guide for more information.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Creates a unique bucket name beginning with the specified prefix. Conflicts with `bucket`. Must be less than or equal to 37 characters in length.
+    <dd>{{% md %}}Creates a unique bucket name beginning with the specified prefix. Conflicts with `bucket`. Must be lowercase and less than or equal to 37 characters in length. A full list of bucket naming rules [may be found here](https://docs.aws.amazon.com/AmazonS3/latest/userguide/bucketnamingrules.html).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cors_rules_python">
@@ -2990,7 +2992,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the bucket. If omitted, this provider will assign a random, unique name. Must be less than or equal to 63 characters in length.
+    <dd>{{% md %}}The name of the bucket. If omitted, this provider will assign a random, unique name. Must be lowercase and less than or equal to 63 characters in length. A full list of bucket naming rules [may be found here](https://docs.aws.amazon.com/AmazonS3/latest/userguide/bucketnamingrules.html).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_bucketprefix_csharp">
@@ -2999,7 +3001,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Creates a unique bucket name beginning with the specified prefix. Conflicts with `bucket`. Must be less than or equal to 37 characters in length.
+    <dd>{{% md %}}Creates a unique bucket name beginning with the specified prefix. Conflicts with `bucket`. Must be lowercase and less than or equal to 37 characters in length. A full list of bucket naming rules [may be found here](https://docs.aws.amazon.com/AmazonS3/latest/userguide/bucketnamingrules.html).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_bucketregionaldomainname_csharp">
@@ -3213,7 +3215,7 @@ developer guide for more information.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the bucket. If omitted, this provider will assign a random, unique name. Must be less than or equal to 63 characters in length.
+    <dd>{{% md %}}The name of the bucket. If omitted, this provider will assign a random, unique name. Must be lowercase and less than or equal to 63 characters in length. A full list of bucket naming rules [may be found here](https://docs.aws.amazon.com/AmazonS3/latest/userguide/bucketnamingrules.html).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_bucketdomainname_go">
@@ -3231,7 +3233,7 @@ developer guide for more information.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Creates a unique bucket name beginning with the specified prefix. Conflicts with `bucket`. Must be less than or equal to 37 characters in length.
+    <dd>{{% md %}}Creates a unique bucket name beginning with the specified prefix. Conflicts with `bucket`. Must be lowercase and less than or equal to 37 characters in length. A full list of bucket naming rules [may be found here](https://docs.aws.amazon.com/AmazonS3/latest/userguide/bucketnamingrules.html).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_bucketregionaldomainname_go">
@@ -3445,7 +3447,7 @@ developer guide for more information.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the bucket. If omitted, this provider will assign a random, unique name. Must be less than or equal to 63 characters in length.
+    <dd>{{% md %}}The name of the bucket. If omitted, this provider will assign a random, unique name. Must be lowercase and less than or equal to 63 characters in length. A full list of bucket naming rules [may be found here](https://docs.aws.amazon.com/AmazonS3/latest/userguide/bucketnamingrules.html).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_bucketdomainname_nodejs">
@@ -3463,7 +3465,7 @@ developer guide for more information.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Creates a unique bucket name beginning with the specified prefix. Conflicts with `bucket`. Must be less than or equal to 37 characters in length.
+    <dd>{{% md %}}Creates a unique bucket name beginning with the specified prefix. Conflicts with `bucket`. Must be lowercase and less than or equal to 37 characters in length. A full list of bucket naming rules [may be found here](https://docs.aws.amazon.com/AmazonS3/latest/userguide/bucketnamingrules.html).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_bucketregionaldomainname_nodejs">
@@ -3677,7 +3679,7 @@ developer guide for more information.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the bucket. If omitted, this provider will assign a random, unique name. Must be less than or equal to 63 characters in length.
+    <dd>{{% md %}}The name of the bucket. If omitted, this provider will assign a random, unique name. Must be lowercase and less than or equal to 63 characters in length. A full list of bucket naming rules [may be found here](https://docs.aws.amazon.com/AmazonS3/latest/userguide/bucketnamingrules.html).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_bucket_domain_name_python">
@@ -3695,7 +3697,7 @@ developer guide for more information.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Creates a unique bucket name beginning with the specified prefix. Conflicts with `bucket`. Must be less than or equal to 37 characters in length.
+    <dd>{{% md %}}Creates a unique bucket name beginning with the specified prefix. Conflicts with `bucket`. Must be lowercase and less than or equal to 37 characters in length. A full list of bucket naming rules [may be found here](https://docs.aws.amazon.com/AmazonS3/latest/userguide/bucketnamingrules.html).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_bucket_regional_domain_name_python">

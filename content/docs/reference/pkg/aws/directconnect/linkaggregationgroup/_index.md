@@ -3,6 +3,8 @@
 title: "LinkAggregationGroup"
 title_tag: "aws.directconnect.LinkAggregationGroup"
 meta_desc: "Documentation for the aws.directconnect.LinkAggregationGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
+layout: api
+no_edit_this_page: true
 ---
 
 

@@ -3,6 +3,8 @@
 title: "Deployment"
 title_tag: "kubernetes.apps/v1beta2.Deployment"
 meta_desc: "Documentation for the kubernetes.apps/v1beta2.Deployment resource with examples, input properties, output properties, lookup functions, and supporting types."
+layout: api
+no_edit_this_page: true
 ---
 
 

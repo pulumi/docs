@@ -3,6 +3,8 @@
 title: "UserGroup"
 title_tag: "aws.elasticache.UserGroup"
 meta_desc: "Documentation for the aws.elasticache.UserGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
+layout: api
+no_edit_this_page: true
 ---
 
 

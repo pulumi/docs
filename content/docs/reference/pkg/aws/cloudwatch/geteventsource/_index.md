@@ -3,6 +3,8 @@
 title: "getEventSource"
 title_tag: "aws.cloudwatch.getEventSource"
 meta_desc: "Documentation for the aws.cloudwatch.getEventSource function with examples, input properties, output properties, and supporting types."
+layout: api
+no_edit_this_page: true
 ---
 
 

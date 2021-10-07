@@ -3,6 +3,8 @@
 title: "getRateBasedMod"
 title_tag: "aws.wafregional.getRateBasedMod"
 meta_desc: "Documentation for the aws.wafregional.getRateBasedMod function with examples, input properties, output properties, and supporting types."
+layout: api
+no_edit_this_page: true
 ---
 
 

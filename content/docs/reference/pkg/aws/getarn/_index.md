@@ -3,6 +3,8 @@
 title: "getArn"
 title_tag: "aws.getArn"
 meta_desc: "Documentation for the aws.getArn function with examples, input properties, output properties, and supporting types."
+layout: api
+no_edit_this_page: true
 ---
 
 

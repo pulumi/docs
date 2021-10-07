@@ -3,6 +3,8 @@
 title: "getEndpoint"
 title_tag: "aws.iot.getEndpoint"
 meta_desc: "Documentation for the aws.iot.getEndpoint function with examples, input properties, output properties, and supporting types."
+layout: api
+no_edit_this_page: true
 ---
 
 

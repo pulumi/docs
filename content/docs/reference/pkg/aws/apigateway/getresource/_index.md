@@ -3,6 +3,8 @@
 title: "getResource"
 title_tag: "aws.apigateway.getResource"
 meta_desc: "Documentation for the aws.apigateway.getResource function with examples, input properties, output properties, and supporting types."
+layout: api
+no_edit_this_page: true
 ---
 
 

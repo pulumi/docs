@@ -3,6 +3,8 @@
 title: "GatewayAssociationProposal"
 title_tag: "aws.directconnect.GatewayAssociationProposal"
 meta_desc: "Documentation for the aws.directconnect.GatewayAssociationProposal resource with examples, input properties, output properties, lookup functions, and supporting types."
+layout: api
+no_edit_this_page: true
 ---
 
 

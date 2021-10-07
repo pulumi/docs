@@ -3,6 +3,8 @@
 title: "JobList"
 title_tag: "kubernetes.batch/v1.JobList"
 meta_desc: "Documentation for the kubernetes.batch/v1.JobList resource with examples, input properties, output properties, lookup functions, and supporting types."
+layout: api
+no_edit_this_page: true
 ---
 
 

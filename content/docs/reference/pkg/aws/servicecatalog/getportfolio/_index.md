@@ -3,6 +3,8 @@
 title: "getPortfolio"
 title_tag: "aws.servicecatalog.getPortfolio"
 meta_desc: "Documentation for the aws.servicecatalog.getPortfolio function with examples, input properties, output properties, and supporting types."
+layout: api
+no_edit_this_page: true
 ---
 
 

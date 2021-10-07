@@ -3,6 +3,8 @@
 title: "CustomDomainAssociation"
 title_tag: "aws.apprunner.CustomDomainAssociation"
 meta_desc: "Documentation for the aws.apprunner.CustomDomainAssociation resource with examples, input properties, output properties, lookup functions, and supporting types."
+layout: api
+no_edit_this_page: true
 ---
 
 

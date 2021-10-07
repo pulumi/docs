@@ -3,6 +3,8 @@
 title: "getService"
 title_tag: "aws.servicequotas.getService"
 meta_desc: "Documentation for the aws.servicequotas.getService function with examples, input properties, output properties, and supporting types."
+layout: api
+no_edit_this_page: true
 ---
 
 

@@ -3,6 +3,8 @@
 title: "getTransitGatewayRouteTables"
 title_tag: "aws.ec2.getTransitGatewayRouteTables"
 meta_desc: "Documentation for the aws.ec2.getTransitGatewayRouteTables function with examples, input properties, output properties, and supporting types."
+layout: api
+no_edit_this_page: true
 ---
 
 

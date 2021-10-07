@@ -3,6 +3,8 @@
 title: "OriginAccessIdentity"
 title_tag: "aws.cloudfront.OriginAccessIdentity"
 meta_desc: "Documentation for the aws.cloudfront.OriginAccessIdentity resource with examples, input properties, output properties, lookup functions, and supporting types."
+layout: api
+no_edit_this_page: true
 ---
 
 

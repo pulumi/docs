@@ -3,6 +3,8 @@
 title: "OrganizationManagedRule"
 title_tag: "aws.cfg.OrganizationManagedRule"
 meta_desc: "Documentation for the aws.cfg.OrganizationManagedRule resource with examples, input properties, output properties, lookup functions, and supporting types."
+layout: api
+no_edit_this_page: true
 ---
 
 

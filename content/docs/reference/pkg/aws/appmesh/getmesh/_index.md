@@ -3,6 +3,8 @@
 title: "getMesh"
 title_tag: "aws.appmesh.getMesh"
 meta_desc: "Documentation for the aws.appmesh.getMesh function with examples, input properties, output properties, and supporting types."
+layout: api
+no_edit_this_page: true
 ---
 
 

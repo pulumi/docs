@@ -3,6 +3,8 @@
 title: "HostedPrivateVirtualInterface"
 title_tag: "aws.directconnect.HostedPrivateVirtualInterface"
 meta_desc: "Documentation for the aws.directconnect.HostedPrivateVirtualInterface resource with examples, input properties, output properties, lookup functions, and supporting types."
+layout: api
+no_edit_this_page: true
 ---
 
 
