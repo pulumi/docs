@@ -610,8 +610,8 @@ self_link nor project are provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A list of short names or self_links of resource policies to attach to the instance. Modifying this list will cause the
-instance to recreate. Currently a max of 1 resource policy is supported.
+    <dd>{{% md %}}A list of short names or self_links of resource policies to attach to the instance. Currently a max of 1 resource policy
+is supported.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scheduling_csharp">
@@ -894,8 +894,8 @@ self_link nor project are provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A list of short names or self_links of resource policies to attach to the instance. Modifying this list will cause the
-instance to recreate. Currently a max of 1 resource policy is supported.
+    <dd>{{% md %}}A list of short names or self_links of resource policies to attach to the instance. Currently a max of 1 resource policy
+is supported.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scheduling_go">
@@ -1178,8 +1178,8 @@ self_link nor project are provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A list of short names or self_links of resource policies to attach to the instance. Modifying this list will cause the
-instance to recreate. Currently a max of 1 resource policy is supported.
+    <dd>{{% md %}}A list of short names or self_links of resource policies to attach to the instance. Currently a max of 1 resource policy
+is supported.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scheduling_nodejs">
@@ -1462,8 +1462,8 @@ self_link nor project are provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A list of short names or self_links of resource policies to attach to the instance. Modifying this list will cause the
-instance to recreate. Currently a max of 1 resource policy is supported.
+    <dd>{{% md %}}A list of short names or self_links of resource policies to attach to the instance. Currently a max of 1 resource policy
+is supported.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scheduling_python">
@@ -2250,8 +2250,8 @@ self_link nor project are provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A list of short names or self_links of resource policies to attach to the instance. Modifying this list will cause the
-instance to recreate. Currently a max of 1 resource policy is supported.
+    <dd>{{% md %}}A list of short names or self_links of resource policies to attach to the instance. Currently a max of 1 resource policy
+is supported.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_scheduling_csharp">
@@ -2597,8 +2597,8 @@ self_link nor project are provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A list of short names or self_links of resource policies to attach to the instance. Modifying this list will cause the
-instance to recreate. Currently a max of 1 resource policy is supported.
+    <dd>{{% md %}}A list of short names or self_links of resource policies to attach to the instance. Currently a max of 1 resource policy
+is supported.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_scheduling_go">
@@ -2944,8 +2944,8 @@ self_link nor project are provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A list of short names or self_links of resource policies to attach to the instance. Modifying this list will cause the
-instance to recreate. Currently a max of 1 resource policy is supported.
+    <dd>{{% md %}}A list of short names or self_links of resource policies to attach to the instance. Currently a max of 1 resource policy
+is supported.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_scheduling_nodejs">
@@ -3291,8 +3291,8 @@ self_link nor project are provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A list of short names or self_links of resource policies to attach to the instance. Modifying this list will cause the
-instance to recreate. Currently a max of 1 resource policy is supported.
+    <dd>{{% md %}}A list of short names or self_links of resource policies to attach to the instance. Currently a max of 1 resource policy
+is supported.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_scheduling_python">

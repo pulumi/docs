@@ -16,6 +16,7 @@ Explore the resources and functions of the gcp.monitoring module.
     <li><a href="dashboard" title="Dashboard"><span class="symbol resource"></span>Dashboard</a></li>
     <li><a href="group" title="Group"><span class="symbol resource"></span>Group</a></li>
     <li><a href="metricdescriptor" title="MetricDescriptor"><span class="symbol resource"></span>MetricDescriptor</a></li>
+    <li><a href="monitoredproject" title="MonitoredProject"><span class="symbol resource"></span>MonitoredProject</a></li>
     <li><a href="notificationchannel" title="NotificationChannel"><span class="symbol resource"></span>NotificationChannel</a></li>
     <li><a href="slo" title="Slo"><span class="symbol resource"></span>Slo</a></li>
     <li><a href="uptimecheckconfig" title="UptimeCheckConfig"><span class="symbol resource"></span>UptimeCheckConfig</a></li>
@@ -41,6 +42,6 @@ Explore the resources and functions of the gcp.monitoring module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>5.21.0</dd>
+	<dd>5.22.0</dd>
 </dl>
 

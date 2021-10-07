@@ -75,7 +75,58 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+```go
+package main
+
+import (
+	"io/ioutil"
+
+	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/identityplatform"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func readFileOrPanic(path string) pulumi.StringPtrInput {
+	data, err := ioutil.ReadFile(path)
+	if err != nil {
+		panic(err.Error())
+	}
+	return pulumi.String(string(data))
+}
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		tenant, err := identityplatform.NewTenant(ctx, "tenant", &identityplatform.TenantArgs{
+			DisplayName: pulumi.String("tenant"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = identityplatform.NewTenantInboundSamlConfig(ctx, "tenantSamlConfig", &identityplatform.TenantInboundSamlConfigArgs{
+			DisplayName: pulumi.String("Display Name"),
+			Tenant:      tenant.Name,
+			IdpConfig: &identityplatform.TenantInboundSamlConfigIdpConfigArgs{
+				IdpEntityId: pulumi.String("tf-idp"),
+				SignRequest: pulumi.Bool(true),
+				SsoUrl:      pulumi.String("https://example.com"),
+				IdpCertificates: identityplatform.TenantInboundSamlConfigIdpConfigIdpCertificateArray{
+					&identityplatform.TenantInboundSamlConfigIdpConfigIdpCertificateArgs{
+						X509Certificate: readFileOrPanic("test-fixtures/rsa_cert.pem"),
+					},
+				},
+			},
+			SpConfig: &identityplatform.TenantInboundSamlConfigSpConfigArgs{
+				SpEntityId:  pulumi.String("tf-sp"),
+				CallbackUri: pulumi.String("https://example.com"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 
 {{< /example >}}
 

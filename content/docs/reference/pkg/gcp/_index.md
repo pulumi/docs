@@ -1,6 +1,6 @@
 ---
-title: "GCP"
-title_tag: "GCP Package"
+title: "Google Cloud Classic"
+title_tag: "Google Cloud Classic Package"
 meta_desc: "A Pulumi package for creating and managing Google Cloud Platform resources."
 menu:
     reference:
@@ -68,6 +68,7 @@ A Pulumi package for creating and managing Google Cloud Platform resources.
     <li><a href="networkservices/" title="networkservices"><span class="symbol module"></span>networkservices</a></li>
     <li><a href="notebooks/" title="notebooks"><span class="symbol module"></span>notebooks</a></li>
     <li><a href="organizations/" title="organizations"><span class="symbol module"></span>organizations</a></li>
+    <li><a href="orgpolicy/" title="orgpolicy"><span class="symbol module"></span>orgpolicy</a></li>
     <li><a href="osconfig/" title="osconfig"><span class="symbol module"></span>osconfig</a></li>
     <li><a href="oslogin/" title="oslogin"><span class="symbol module"></span>oslogin</a></li>
     <li><a href="projects/" title="projects"><span class="symbol module"></span>projects</a></li>
@@ -106,6 +107,6 @@ A Pulumi package for creating and managing Google Cloud Platform resources.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>5.21.0</dd>
+	<dd>5.22.0</dd>
 </dl>
 
