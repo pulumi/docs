@@ -410,7 +410,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the users password is exempt from expiring. Defaults to `false`.
+    <dd>{{% md %}}Whether the user's password is exempt from expiring. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablestrongpassword_csharp">
@@ -720,7 +720,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the users password is exempt from expiring. Defaults to `false`.
+    <dd>{{% md %}}Whether the user's password is exempt from expiring. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablestrongpassword_go">
@@ -1030,7 +1030,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether the users password is exempt from expiring. Defaults to `false`.
+    <dd>{{% md %}}Whether the user's password is exempt from expiring. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablestrongpassword_nodejs">
@@ -1340,7 +1340,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the users password is exempt from expiring. Defaults to `false`.
+    <dd>{{% md %}}Whether the user's password is exempt from expiring. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disable_strong_password_python">
@@ -2345,7 +2345,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the users password is exempt from expiring. Defaults to `false`.
+    <dd>{{% md %}}Whether the user's password is exempt from expiring. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disablestrongpassword_csharp">
@@ -2772,7 +2772,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the users password is exempt from expiring. Defaults to `false`.
+    <dd>{{% md %}}Whether the user's password is exempt from expiring. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disablestrongpassword_go">
@@ -3199,7 +3199,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether the users password is exempt from expiring. Defaults to `false`.
+    <dd>{{% md %}}Whether the user's password is exempt from expiring. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disablestrongpassword_nodejs">
@@ -3626,7 +3626,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the users password is exempt from expiring. Defaults to `false`.
+    <dd>{{% md %}}Whether the user's password is exempt from expiring. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disable_strong_password_python">
