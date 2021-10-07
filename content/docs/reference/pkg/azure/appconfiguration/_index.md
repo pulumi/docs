@@ -11,6 +11,7 @@ Explore the resources and functions of the azure.appconfiguration module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
+    <li><a href="configurationfeature" title="ConfigurationFeature"><span class="symbol resource"></span>ConfigurationFeature</a></li>
     <li><a href="configurationkey" title="ConfigurationKey"><span class="symbol resource"></span>ConfigurationKey</a></li>
     <li><a href="configurationstore" title="ConfigurationStore"><span class="symbol resource"></span>ConfigurationStore</a></li>
 </ul>
@@ -29,6 +30,6 @@ Explore the resources and functions of the azure.appconfiguration module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/hashicorp/terraform-provider-azurerm).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.20.1</dd>
+	<dd>4.21.0</dd>
 </dl>
 

@@ -104,6 +104,7 @@ class MyStack : Stack
                     Enabled = false,
                     Threshold = 100,
                     Operator = "GreaterThan",
+                    ThresholdType = "Forecasted",
                     ContactEmails = 
                     {
                         "foo@example.com",
@@ -196,9 +197,10 @@ func main() {
 					},
 				},
 				&consumption.BudgetSubscriptionNotificationArgs{
-					Enabled:   pulumi.Bool(false),
-					Threshold: pulumi.Int(100),
-					Operator:  pulumi.String("GreaterThan"),
+					Enabled:       pulumi.Bool(false),
+					Threshold:     pulumi.Int(100),
+					Operator:      pulumi.String("GreaterThan"),
+					ThresholdType: pulumi.String("Forecasted"),
 					ContactEmails: pulumi.StringArray{
 						pulumi.String("foo@example.com"),
 						pulumi.String("bar@example.com"),
@@ -266,6 +268,7 @@ example_budget_subscription = azure.consumption.BudgetSubscription("exampleBudge
             enabled=False,
             threshold=100,
             operator="GreaterThan",
+            threshold_type="Forecasted",
             contact_emails=[
                 "foo@example.com",
                 "bar@example.com",
@@ -328,6 +331,7 @@ const exampleBudgetSubscription = new azure.consumption.BudgetSubscription("exam
             enabled: false,
             threshold: 100,
             operator: "GreaterThan",
+            thresholdType: "Forecasted",
             contactEmails: [
                 "foo@example.com",
                 "bar@example.com",
@@ -362,6 +366,7 @@ const exampleBudgetSubscription = new azure.consumption.BudgetSubscription("exam
 <span class="k">def </span><span class="nx">BudgetSubscription</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
                        <span class="nx">amount</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">,</span>
+                       <span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                        <span class="nx">filter</span><span class="p">:</span> <span class="nx">Optional[BudgetSubscriptionFilterArgs]</span> = None<span class="p">,</span>
                        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                        <span class="nx">notifications</span><span class="p">:</span> <span class="nx">Optional[Sequence[BudgetSubscriptionNotificationArgs]]</span> = None<span class="p">,</span>
@@ -533,6 +538,15 @@ The BudgetSubscription resource accepts the following [input]({{< relref "/docs/
     <dd>{{% md %}}A `time_period` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="etag_csharp">
+<a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ETag of the Subscription Consumption Budget.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="filter_csharp">
 <a href="#filter_csharp" style="color: inherit; text-decoration: inherit;">Filter</a>
 </span>
@@ -598,6 +612,15 @@ The BudgetSubscription resource accepts the following [input]({{< relref "/docs/
         <span class="property-type"><a href="#budgetsubscriptiontimeperiod">Budget<wbr>Subscription<wbr>Time<wbr>Period<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `time_period` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="etag_go">
+<a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ETag of the Subscription Consumption Budget.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filter_go">
@@ -667,6 +690,15 @@ The BudgetSubscription resource accepts the following [input]({{< relref "/docs/
     <dd>{{% md %}}A `time_period` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="etag_nodejs">
+<a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ETag of the Subscription Consumption Budget.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="filter_nodejs">
 <a href="#filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
 </span>
@@ -732,6 +764,15 @@ The BudgetSubscription resource accepts the following [input]({{< relref "/docs/
         <span class="property-type"><a href="#budgetsubscriptiontimeperiod">Budget<wbr>Subscription<wbr>Time<wbr>Period<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `time_period` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="etag_python">
+<a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ETag of the Subscription Consumption Budget.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filter_python">
@@ -834,6 +875,7 @@ Get an existing BudgetSubscription resource's state with the given name, ID, and
         <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
         <span class="nx">amount</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">,</span>
+        <span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">filter</span><span class="p">:</span> <span class="nx">Optional[BudgetSubscriptionFilterArgs]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">notifications</span><span class="p">:</span> <span class="nx">Optional[Sequence[BudgetSubscriptionNotificationArgs]]</span> = None<span class="p">,</span>
@@ -961,6 +1003,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The total amount of cost to track with the budget.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_etag_csharp">
+<a href="#state_etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ETag of the Subscription Consumption Budget.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_filter_csharp">
 <a href="#state_filter_csharp" style="color: inherit; text-decoration: inherit;">Filter</a>
 </span>
@@ -1026,6 +1077,15 @@ The following state arguments are supported:
         <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The total amount of cost to track with the budget.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_etag_go">
+<a href="#state_etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ETag of the Subscription Consumption Budget.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_filter_go">
@@ -1095,6 +1155,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The total amount of cost to track with the budget.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_etag_nodejs">
+<a href="#state_etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ETag of the Subscription Consumption Budget.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_filter_nodejs">
 <a href="#state_filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
 </span>
@@ -1160,6 +1229,15 @@ The following state arguments are supported:
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The total amount of cost to track with the budget.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_etag_python">
+<a href="#state_etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ETag of the Subscription Consumption Budget.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_filter_python">
@@ -2003,6 +2081,15 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the notification be enabled?
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="thresholdtype_csharp">
+<a href="#thresholdtype_csharp" style="color: inherit; text-decoration: inherit;">Threshold<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of threshold for the notification. This determines whether the notification is triggered by forecasted costs or actual costs. The allowed values are `Actual` and `Forecasted`. Default is `Actual`. Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2061,6 +2148,15 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the notification be enabled?
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="thresholdtype_go">
+<a href="#thresholdtype_go" style="color: inherit; text-decoration: inherit;">Threshold<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of threshold for the notification. This determines whether the notification is triggered by forecasted costs or actual costs. The allowed values are `Actual` and `Forecasted`. Default is `Actual`. Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2119,6 +2215,15 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should the notification be enabled?
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="thresholdtype_nodejs">
+<a href="#thresholdtype_nodejs" style="color: inherit; text-decoration: inherit;">threshold<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of threshold for the notification. This determines whether the notification is triggered by forecasted costs or actual costs. The allowed values are `Actual` and `Forecasted`. Default is `Actual`. Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2177,6 +2282,15 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the notification be enabled?
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="threshold_type_python">
+<a href="#threshold_type_python" style="color: inherit; text-decoration: inherit;">threshold_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The type of threshold for the notification. This determines whether the notification is triggered by forecasted costs or actual costs. The allowed values are `Actual` and `Forecasted`. Default is `Actual`. Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
