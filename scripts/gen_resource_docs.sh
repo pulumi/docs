@@ -11,6 +11,16 @@ REPO_OVERRIDE=${1:-}
 INSTALL_RESOURCE_PLUGIN=${2:-}
 # Pass a 3rd argument to override the resource plugin version installed by this script.
 INSTALL_RESOURCE_PLUGIN_VERSION=${3:-}
+# Pass a non-empty string as the 4th arg to override the path to the Pulumi schema file.
+# The path must start from the root of the package's repository.
+# For example, if the schema is in the root of the package repo, then
+# this value should be set to `/schema.json` (if using a JSON schema, .yaml otherwise)
+# And if the schema is in a folder called provider, then this would be set to
+# `/provider/schema.json` (or .yaml).
+#
+# If not set, the default location for the schema will be used which is
+# /provider/cmd/pulumi-resource-${provider}/schema.[json|yaml].
+SCHEMA_FILE_PATH=${4:-}
 
 PACKDIR="content/registry/packages/"
 ABSOLUTEPACKDIR="$(pwd)/$PACKDIR"
@@ -31,6 +41,8 @@ echo "Generating docs templates bundle in pulumi/pulumi"
 pushd ../pulumi
 make generate
 popd
+
+source ./scripts/resource_docs_common.sh
 
 generate_docs() {
     provider=$1
@@ -57,25 +69,20 @@ generate_docs() {
     # Go back to the docs repo.
     popd
 
-    EXISTING_SCHEMA_FILE="../${repository}/provider/cmd/pulumi-resource-${provider}/schema.json"
-
-    # Use a previously generated schema.json file if it exists.
-    if [ -f "${EXISTING_SCHEMA_FILE}" ]; then
-        echo "Will use the previously generated schema.json for generating resource docs..."
-    else
-        echo "Could not find a previously generated schema.json file. Will generate schema..."
-
-        if [ -n "${INSTALL_RESOURCE_PLUGIN:-}" ]; then
-            echo "Installing resource plugin for ${provider}. Version: ${plugin_version}"
-            pulumi plugin install resource "${provider}" "${plugin_version}"
+    EXISTING_SCHEMA_FILE=""
+    # If the schema file path was overridden, then just use that.
+    if [ -n "${SCHEMA_FILE_PATH:-}" ]; then
+        EXISTING_SCHEMA_FILE="../${repository}${SCHEMA_FILE_PATH}"
+        if [ ! -f "${EXISTING_SCHEMA_FILE}" ]; then
+            echo "Pulumi schema file at path ${SCHEMA_FILE_PATH} does not exist."
+            exit 1
         fi
-
-        pushd "../${repository}"
-        make generate_schema
-        popd
+    else
+        EXISTING_SCHEMA_FILE=$(get_schema_file_path "${repository}" "${provider}")
     fi
 
-    SCHEMA_FILE="../../../${repository}/provider/cmd/pulumi-resource-${provider}/schema.json"
+    # This path should be relative to the tools/resourcedocsgen tool.
+    SCHEMA_FILE="../../${EXISTING_SCHEMA_FILE}"
 
     OVERLAY_SCHEMA_FILE=""
     if [ -d "${TOOL_RESDOCGEN}/overlays/${provider}" ] && [ -f "${TOOL_RESDOCGEN}/overlays/${provider}/overlays.json" ]; then
