@@ -44,4 +44,7 @@ type PackageMeta struct {
 	Featured bool `yaml:"featured"`
 	// Native is true if the package does not use the TF bridge.
 	Native bool `yaml:"native"`
+	// Component indicates if the package is a component and not
+	// a provider.
+	Component bool `yaml:"component"`
 }

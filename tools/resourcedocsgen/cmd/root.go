@@ -3,10 +3,13 @@ package cmd
 import (
 	"encoding/json"
 	"io/ioutil"
+	"strings"
 
 	"github.com/pkg/errors"
 
 	"github.com/spf13/cobra"
+
+	"github.com/ghodss/yaml"
 
 	pschema "github.com/pulumi/pulumi/pkg/v3/codegen/schema"
 	"github.com/pulumi/pulumi/sdk/v3/go/common/util/logging"
@@ -33,6 +36,15 @@ func RootCmd() *cobra.Command {
 			schema, err := ioutil.ReadFile(schemaFile)
 			if err != nil {
 				return errors.Wrap(err, "reading schema file from path")
+			}
+
+			// The source schema can be in YAML format. If that's the case
+			// convert it to JSON first.
+			if strings.HasSuffix(schemaFile, ".yaml") {
+				schema, err = yaml.YAMLToJSON(schema)
+				if err != nil {
+					return errors.Wrap(err, "reading YAML schema")
+				}
 			}
 
 			mainSpec = &pschema.PackageSpec{}

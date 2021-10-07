@@ -166,6 +166,7 @@ var titleLookup = map[string]string{
 func packageMetadataCmd() *cobra.Command {
 	var metadataOutDir string
 	var categoryStr string
+	var component bool
 	var featured bool
 	var publisher string
 	var title string
@@ -203,6 +204,17 @@ func packageMetadataCmd() *cobra.Command {
 			if v, ok := titleLookup[mainSpec.Name]; ok {
 				title = v
 			}
+
+			// TODO[pulumi/pulumi#7813]: Use tags in the schema spec to determine
+			// if the package is a native provider or not.
+			native := mainSpec.Attribution == ""
+			// Due to the way we currently detect if a package is a native provider
+			// or not (see above) a package cannot be both a native provider AND a
+			// component so if a package is a component, override the native property
+			// to false.
+			if component {
+				native = false
+			}
 			pm := pkg.PackageMeta{
 				Name:          mainSpec.Name,
 				UpdatedOn:     updatedOn,
@@ -211,8 +223,9 @@ func packageMetadataCmd() *cobra.Command {
 				Description:   mainSpec.Description,
 				Category:      category,
 				PackageStatus: status,
+				Component:     component,
 				Featured:      featured,
-				Native:        mainSpec.Attribution == "",
+				Native:        native,
 				Version:       version,
 				LogoURL:       mainSpec.LogoURL,
 			}
@@ -236,6 +249,7 @@ func packageMetadataCmd() *cobra.Command {
 	cmd.Flags().StringVar(&publisher, "publisher", "Pulumi", "The publisher's display name to be shown in the package")
 	cmd.Flags().StringVar(&title, "title", "", "The display name of the package. If ommitted, the name of the package will be used")
 	cmd.Flags().Int64Var(&updatedOn, "updatedOn", time.Now().Unix(), "The timestamp (epoch) to use for when the package was last updated")
+	cmd.Flags().BoolVar(&component, "component", false, "Whether or not this package is a component and not a provider")
 
 	cmd.MarkFlagRequired("metadataOutDir")
 
