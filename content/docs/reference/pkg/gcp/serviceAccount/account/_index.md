@@ -88,9 +88,9 @@ func main() {
 
 ```python
 import pulumi
-import pulumi_gcp as gcp
+from pulumi_gcp import serviceaccount
 
-service_account = gcp.service_account.Account("serviceAccount",
+service_account = serviceaccount.Account("serviceAccount",
     account_id="service-account-id",
     display_name="Service Account")
 ```
