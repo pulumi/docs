@@ -41,7 +41,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var groups = Output.Create(AzureAD.GetGroups.InvokeAsync(new AzureAD.GetGroupsArgs
+        var example = Output.Create(AzureAD.GetGroups.InvokeAsync(new AzureAD.GetGroupsArgs
         {
             DisplayNames = 
             {
@@ -94,7 +94,7 @@ func main() {
 import pulumi
 import pulumi_azuread as azuread
 
-groups = azuread.get_groups(display_names=[
+example = azuread.get_groups(display_names=[
     "group-a",
     "group-b",
 ])
@@ -110,7 +110,7 @@ groups = azuread.get_groups(display_names=[
 import * as pulumi from "@pulumi/pulumi";
 import * as azuread from "@pulumi/azuread";
 
-const groups = pulumi.output(azuread.getGroups({
+const example = pulumi.output(azuread.getGroups({
     displayNames: [
         "group-a",
         "group-b",
@@ -142,8 +142,10 @@ const groups = pulumi.output(azuread.getGroups({
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_groups(</span><span class="nx">display_names</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+               <span class="nx">mail_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                <span class="nx">object_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
                <span class="nx">return_all</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+               <span class="nx">security_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetGroupsResult</code></pre></div>
 {{% /choosable %}}
 
@@ -179,6 +181,15 @@ The following arguments are supported:
     <dd>{{% md %}}The display names of the groups.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="mailenabled_csharp">
+<a href="#mailenabled_csharp" style="color: inherit; text-decoration: inherit;">Mail<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the returned groups should be mail-enabled. By itself this does not exclude security-enabled groups. Setting this to `true` ensures all groups are mail-enabled, and setting to `false` ensures that all groups are _not_ mail-enabled. To ignore this filter, omit the property or set it to null. Cannot be specified together with `object_ids`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="objectids_csharp">
 <a href="#objectids_csharp" style="color: inherit; text-decoration: inherit;">Object<wbr>Ids</a>
 </span>
@@ -195,6 +206,15 @@ The following arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A flag to denote if all groups should be fetched and returned.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="securityenabled_csharp">
+<a href="#securityenabled_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the returned groups should be security-enabled. By itself this does not exclude mail-enabled groups. Setting this to `true` ensures all groups are security-enabled, and setting to `false` ensures that all groups are _not_ security-enabled. To ignore this filter, omit the property or set it to null. Cannot be specified together with `object_ids`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -208,6 +228,15 @@ The following arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The display names of the groups.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="mailenabled_go">
+<a href="#mailenabled_go" style="color: inherit; text-decoration: inherit;">Mail<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the returned groups should be mail-enabled. By itself this does not exclude security-enabled groups. Setting this to `true` ensures all groups are mail-enabled, and setting to `false` ensures that all groups are _not_ mail-enabled. To ignore this filter, omit the property or set it to null. Cannot be specified together with `object_ids`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="objectids_go">
@@ -226,6 +255,15 @@ The following arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A flag to denote if all groups should be fetched and returned.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="securityenabled_go">
+<a href="#securityenabled_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the returned groups should be security-enabled. By itself this does not exclude mail-enabled groups. Setting this to `true` ensures all groups are security-enabled, and setting to `false` ensures that all groups are _not_ security-enabled. To ignore this filter, omit the property or set it to null. Cannot be specified together with `object_ids`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -239,6 +277,15 @@ The following arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The display names of the groups.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="mailenabled_nodejs">
+<a href="#mailenabled_nodejs" style="color: inherit; text-decoration: inherit;">mail<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether the returned groups should be mail-enabled. By itself this does not exclude security-enabled groups. Setting this to `true` ensures all groups are mail-enabled, and setting to `false` ensures that all groups are _not_ mail-enabled. To ignore this filter, omit the property or set it to null. Cannot be specified together with `object_ids`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="objectids_nodejs">
@@ -257,6 +304,15 @@ The following arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}A flag to denote if all groups should be fetched and returned.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="securityenabled_nodejs">
+<a href="#securityenabled_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether the returned groups should be security-enabled. By itself this does not exclude mail-enabled groups. Setting this to `true` ensures all groups are security-enabled, and setting to `false` ensures that all groups are _not_ security-enabled. To ignore this filter, omit the property or set it to null. Cannot be specified together with `object_ids`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -270,6 +326,15 @@ The following arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The display names of the groups.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="mail_enabled_python">
+<a href="#mail_enabled_python" style="color: inherit; text-decoration: inherit;">mail_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the returned groups should be mail-enabled. By itself this does not exclude security-enabled groups. Setting this to `true` ensures all groups are mail-enabled, and setting to `false` ensures that all groups are _not_ mail-enabled. To ignore this filter, omit the property or set it to null. Cannot be specified together with `object_ids`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="object_ids_python">
@@ -288,6 +353,15 @@ The following arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A flag to denote if all groups should be fetched and returned.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="security_enabled_python">
+<a href="#security_enabled_python" style="color: inherit; text-decoration: inherit;">security_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the returned groups should be security-enabled. By itself this does not exclude mail-enabled groups. Setting this to `true` ensures all groups are security-enabled, and setting to `false` ensures that all groups are _not_ security-enabled. To ignore this filter, omit the property or set it to null. Cannot be specified together with `object_ids`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -321,6 +395,14 @@ The following output properties are available:
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="mailenabled_csharp">
+<a href="#mailenabled_csharp" style="color: inherit; text-decoration: inherit;">Mail<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="objectids_csharp">
 <a href="#objectids_csharp" style="color: inherit; text-decoration: inherit;">Object<wbr>Ids</a>
 </span>
@@ -329,6 +411,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The object IDs of the groups.
 {{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="securityenabled_csharp">
+<a href="#securityenabled_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="returnall_csharp">
 <a href="#returnall_csharp" style="color: inherit; text-decoration: inherit;">Return<wbr>All</a>
@@ -360,6 +450,14 @@ The following output properties are available:
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="mailenabled_go">
+<a href="#mailenabled_go" style="color: inherit; text-decoration: inherit;">Mail<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="objectids_go">
 <a href="#objectids_go" style="color: inherit; text-decoration: inherit;">Object<wbr>Ids</a>
 </span>
@@ -368,6 +466,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The object IDs of the groups.
 {{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="securityenabled_go">
+<a href="#securityenabled_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="returnall_go">
 <a href="#returnall_go" style="color: inherit; text-decoration: inherit;">Return<wbr>All</a>
@@ -399,6 +505,14 @@ The following output properties are available:
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="mailenabled_nodejs">
+<a href="#mailenabled_nodejs" style="color: inherit; text-decoration: inherit;">mail<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="objectids_nodejs">
 <a href="#objectids_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Ids</a>
 </span>
@@ -407,6 +521,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The object IDs of the groups.
 {{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="securityenabled_nodejs">
+<a href="#securityenabled_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="returnall_nodejs">
 <a href="#returnall_nodejs" style="color: inherit; text-decoration: inherit;">return<wbr>All</a>
@@ -438,6 +560,14 @@ The following output properties are available:
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="mail_enabled_python">
+<a href="#mail_enabled_python" style="color: inherit; text-decoration: inherit;">mail_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="object_ids_python">
 <a href="#object_ids_python" style="color: inherit; text-decoration: inherit;">object_<wbr>ids</a>
 </span>
@@ -446,6 +576,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The object IDs of the groups.
 {{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="security_enabled_python">
+<a href="#security_enabled_python" style="color: inherit; text-decoration: inherit;">security_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="return_all_python">
 <a href="#return_all_python" style="color: inherit; text-decoration: inherit;">return_<wbr>all</a>
