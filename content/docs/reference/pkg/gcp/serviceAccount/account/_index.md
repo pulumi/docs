@@ -1,8 +1,8 @@
 
 ---
 title: "Account"
-title_tag: "gcp.serviceAccount.Account"
-meta_desc: "Documentation for the gcp.serviceAccount.Account resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "gcp.serviceaccount.Account"
+meta_desc: "Documentation for the gcp.serviceaccount.Account resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -42,7 +42,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var serviceAccount = new Gcp.ServiceAccount.Account("serviceAccount", new Gcp.ServiceAccount.AccountArgs
+        var serviceAccount = new Gcp.serviceaccount.Account("serviceAccount", new Gcp.serviceaccount.AccountArgs
         {
             AccountId = "service-account-id",
             DisplayName = "Service Account",
@@ -106,7 +106,7 @@ service_account = serviceaccount.Account("serviceAccount",
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const serviceAccount = new gcp.serviceAccount.Account("service_account", {
+const serviceAccount = new gcp.serviceaccount.Account("service_account", {
     accountId: "service-account-id",
     displayName: "Service Account",
 });
