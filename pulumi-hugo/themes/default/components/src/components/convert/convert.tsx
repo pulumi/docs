@@ -510,7 +510,6 @@ export class Convert {
                     </span>
                 </div>;
             case "output":
-                const issueURL = this.conversionTool.githubURL + "/issues"
                 return <div class={ this.statusBarClasses }>
                     <span class="icon"></span>
                     <span class="message">{ this.outputResult?.status?.message }</span>
@@ -521,14 +520,8 @@ export class Convert {
                         </p>
                         <p>
                             There could be a problem with the code you submitted, or it might use a
-                            feature { this.conversionTool.name } doesn't yet support. See below for details.
-                            Please also check the <a href={issueURL}>known issues</a> or
-                            report a <a href={issueURL}>new issue</a> if you believe this
-                            might be a bug or missing feature in { this.conversionTool.name }.
-
-                            For help converting this or another { this.sourceLanguageName } project to Pulumi,
-                            please join us in the <a href="https://slack.pulumi.com/">Pulumi Community Slack</a>.
-                            We're here to help!
+                            feature { this.conversionTool.name } doesn't support. Join us
+                            in <a href="https://slack.pulumi.com/">Community Slack</a> for help.
                         </p>
                     </div>
                     <div class={ this.combineClasses("alert", "alert-warn", this.alertDismissed ? "dismissed" : undefined) }>
@@ -537,15 +530,10 @@ export class Convert {
                             <strong>Sorry, we were unable to convert your code completely.</strong>
                         </p>
                         <p>
-                            The code you submitted was valid, but { this.conversionTool.name } was unable to
-                            convert it completely, so a partial conversion has been provided for you. See below
-                            for details. Please also check the <a href={issueURL}>known issues</a> or
-                            report a <a href={issueURL}>new issue</a> if you believe this
-                            might be a bug or missing feature in { this.conversionTool.name }.
-
-                            For help converting this or another { this.sourceLanguageName } project to Pulumi,
-                            please join us in the <a href="https://slack.pulumi.com/">Pulumi Community Slack</a>.
-                            We're here to help!
+                            The code was valid, but { this.conversionTool.name } was unable to convert it completely.
+                            There could be a problem with the code you submitted, or it might use a
+                            feature { this.conversionTool.name } doesn't support. Join us
+                            in <a href="https://slack.pulumi.com/">Community Slack</a> for help.
                         </p>
                     </div>
                 </div>;
@@ -586,7 +574,7 @@ export class Convert {
                             We've included a few examples for reference &mdash; feel free to edit them as you like,
                             or replace them with your own code. (And don't worry, we send your code over SSL
                             and don't store anything on our servers.) When you're ready to transform
-                            your { this.sourceLanguageName } code to Pulumi, click <strong>Convert</strong>.
+                            your { this.sourceLanguageName } code to Pulumi, select <strong>Convert</strong>.
                         </p>
                     </div>
                     <div class="editor-container">
