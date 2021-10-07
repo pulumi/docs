@@ -267,6 +267,7 @@ const example_asymmetric_sign_key = new gcp.kms.CryptoKey("example-asymmetric-si
 <span class="k">def </span><span class="nx">CryptoKey</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
               <span class="nx">destroy_scheduled_duration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">import_only</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
               <span class="nx">key_ring</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
               <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
               <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -423,6 +424,15 @@ Format: `'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}'`.
 If not specified at creation time, the default duration is 24 hours.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="importonly_csharp">
+<a href="#importonly_csharp" style="color: inherit; text-decoration: inherit;">Import<wbr>Only</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether this key may contain imported versions only.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="labels_csharp">
 <a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
 </span>
@@ -508,6 +518,15 @@ Format: `'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}'`.
     </dt>
     <dd>{{% md %}}The period of time that versions of this key spend in the DESTROY_SCHEDULED state before transitioning to DESTROYED.
 If not specified at creation time, the default duration is 24 hours.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="importonly_go">
+<a href="#importonly_go" style="color: inherit; text-decoration: inherit;">Import<wbr>Only</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether this key may contain imported versions only.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_go">
@@ -597,6 +616,15 @@ Format: `'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}'`.
 If not specified at creation time, the default duration is 24 hours.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="importonly_nodejs">
+<a href="#importonly_nodejs" style="color: inherit; text-decoration: inherit;">import<wbr>Only</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether this key may contain imported versions only.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="labels_nodejs">
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
@@ -682,6 +710,15 @@ Format: `'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}'`.
     </dt>
     <dd>{{% md %}}The period of time that versions of this key spend in the DESTROY_SCHEDULED state before transitioning to DESTROYED.
 If not specified at creation time, the default duration is 24 hours.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="import_only_python">
+<a href="#import_only_python" style="color: inherit; text-decoration: inherit;">import_<wbr>only</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether this key may contain imported versions only.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_python">
@@ -856,6 +893,7 @@ Get an existing CryptoKey resource's state with the given name, ID, and optional
         <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
         <span class="nx">destroy_scheduled_duration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">import_only</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">key_ring</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -986,6 +1024,15 @@ The following state arguments are supported:
 If not specified at creation time, the default duration is 24 hours.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_importonly_csharp">
+<a href="#state_importonly_csharp" style="color: inherit; text-decoration: inherit;">Import<wbr>Only</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether this key may contain imported versions only.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_keyring_csharp">
 <a href="#state_keyring_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Ring</a>
 </span>
@@ -1080,6 +1127,15 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The period of time that versions of this key spend in the DESTROY_SCHEDULED state before transitioning to DESTROYED.
 If not specified at creation time, the default duration is 24 hours.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_importonly_go">
+<a href="#state_importonly_go" style="color: inherit; text-decoration: inherit;">Import<wbr>Only</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether this key may contain imported versions only.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_keyring_go">
@@ -1178,6 +1234,15 @@ Structure is documented below.
 If not specified at creation time, the default duration is 24 hours.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_importonly_nodejs">
+<a href="#state_importonly_nodejs" style="color: inherit; text-decoration: inherit;">import<wbr>Only</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether this key may contain imported versions only.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_keyring_nodejs">
 <a href="#state_keyring_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Ring</a>
 </span>
@@ -1272,6 +1337,15 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The period of time that versions of this key spend in the DESTROY_SCHEDULED state before transitioning to DESTROYED.
 If not specified at creation time, the default duration is 24 hours.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_import_only_python">
+<a href="#state_import_only_python" style="color: inherit; text-decoration: inherit;">import_<wbr>only</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether this key may contain imported versions only.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_key_ring_python">

@@ -18,6 +18,205 @@ To get more information about Gateway, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/api-gateway/docs/quickstart)
 
+{{% examples %}}
+
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+
+### Apigateway Gateway Basic
+
+
+{{< example csharp >}}
+
+```csharp
+using System;
+using System.IO;
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+	private static string ReadFileBase64(string path) {
+		return Convert.ToBase64String(System.Text.UTF8.GetBytes(File.ReadAllText(path)))
+	}
+
+    public MyStack()
+    {
+        var apiGwApi = new Gcp.ApiGateway.Api("apiGwApi", new Gcp.ApiGateway.ApiArgs
+        {
+            ApiId = "api-gw",
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+        var apiGwApiConfig = new Gcp.ApiGateway.ApiConfig("apiGwApiConfig", new Gcp.ApiGateway.ApiConfigArgs
+        {
+            Api = apiGwApi.ApiId,
+            ApiConfigId = "config",
+            OpenapiDocuments = 
+            {
+                new Gcp.ApiGateway.Inputs.ApiConfigOpenapiDocumentArgs
+                {
+                    Document = new Gcp.ApiGateway.Inputs.ApiConfigOpenapiDocumentDocumentArgs
+                    {
+                        Path = "spec.yaml",
+                        Contents = ReadFileBase64("test-fixtures/apigateway/openapi.yaml"),
+                    },
+                },
+            },
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+        var apiGwGateway = new Gcp.ApiGateway.Gateway("apiGwGateway", new Gcp.ApiGateway.GatewayArgs
+        {
+            ApiConfig = apiGwApiConfig.Id,
+            GatewayId = "api-gw",
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"encoding/base64"
+	"io/ioutil"
+
+	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/apigateway"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func filebase64OrPanic(path string) pulumi.StringPtrInput {
+	if fileData, err := ioutil.ReadFile(path); err == nil {
+		return pulumi.String(base64.StdEncoding.EncodeToString(fileData[:]))
+	} else {
+		panic(err.Error())
+	}
+}
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		apiGwApi, err := apigateway.NewApi(ctx, "apiGwApi", &apigateway.ApiArgs{
+			ApiId: pulumi.String("api-gw"),
+		}, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		apiGwApiConfig, err := apigateway.NewApiConfig(ctx, "apiGwApiConfig", &apigateway.ApiConfigArgs{
+			Api:         apiGwApi.ApiId,
+			ApiConfigId: pulumi.String("config"),
+			OpenapiDocuments: apigateway.ApiConfigOpenapiDocumentArray{
+				&apigateway.ApiConfigOpenapiDocumentArgs{
+					Document: &apigateway.ApiConfigOpenapiDocumentDocumentArgs{
+						Path:     pulumi.String("spec.yaml"),
+						Contents: filebase64OrPanic("test-fixtures/apigateway/openapi.yaml"),
+					},
+				},
+			},
+		}, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		_, err = apigateway.NewGateway(ctx, "apiGwGateway", &apigateway.GatewayArgs{
+			ApiConfig: apiGwApiConfig.ID(),
+			GatewayId: pulumi.String("api-gw"),
+		}, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import base64
+import pulumi_gcp as gcp
+
+api_gw_api = gcp.apigateway.Api("apiGwApi", api_id="api-gw",
+opts=pulumi.ResourceOptions(provider=google_beta))
+api_gw_api_config = gcp.apigateway.ApiConfig("apiGwApiConfig",
+    api=api_gw_api.api_id,
+    api_config_id="config",
+    openapi_documents=[gcp.apigateway.ApiConfigOpenapiDocumentArgs(
+        document=gcp.apigateway.ApiConfigOpenapiDocumentDocumentArgs(
+            path="spec.yaml",
+            contents=(lambda path: base64.b64encode(open(path).read().encode()).decode())("test-fixtures/apigateway/openapi.yaml"),
+        ),
+    )],
+    opts=pulumi.ResourceOptions(provider=google_beta))
+api_gw_gateway = gcp.apigateway.Gateway("apiGwGateway",
+    api_config=api_gw_api_config.id,
+    gateway_id="api-gw",
+    opts=pulumi.ResourceOptions(provider=google_beta))
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+import * from "fs";
+
+const apiGwApi = new gcp.apigateway.Api("apiGwApi", {apiId: "api-gw"}, {
+    provider: google_beta,
+});
+const apiGwApiConfig = new gcp.apigateway.ApiConfig("apiGwApiConfig", {
+    api: apiGwApi.apiId,
+    apiConfigId: "config",
+    openapiDocuments: [{
+        document: {
+            path: "spec.yaml",
+            contents: Buffer.from(fs.readFileSync("test-fixtures/apigateway/openapi.yaml"), 'binary').toString('base64'),
+        },
+    }],
+}, {
+    provider: google_beta,
+});
+const apiGwGateway = new gcp.apigateway.Gateway("apiGwGateway", {
+    apiConfig: apiGwApiConfig.id,
+    gatewayId: "api-gw",
+}, {
+    provider: google_beta,
+});
+```
+
+
+{{< /example >}}
+
+
+
+
+
+{{% /examples %}}
+
+
 
 
 ## Create a Gateway Resource {#create}

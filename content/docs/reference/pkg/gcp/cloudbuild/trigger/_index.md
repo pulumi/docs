@@ -527,6 +527,189 @@ const build_trigger = new gcp.cloudbuild.Trigger("build-trigger", {
 
 
 
+### Cloudbuild Trigger Service Account
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var cloudbuildServiceAccount = new Gcp.ServiceAccount.Account("cloudbuildServiceAccount", new Gcp.ServiceAccount.AccountArgs
+        {
+            AccountId = "my-service-account",
+        });
+        var actAs = new Gcp.Projects.IAMMember("actAs", new Gcp.Projects.IAMMemberArgs
+        {
+            Role = "roles/iam.serviceAccountUser",
+            Member = cloudbuildServiceAccount.Email.Apply(email => $"serviceAccount:{email}"),
+        });
+        var logsWriter = new Gcp.Projects.IAMMember("logsWriter", new Gcp.Projects.IAMMemberArgs
+        {
+            Role = "roles/logging.logWriter",
+            Member = cloudbuildServiceAccount.Email.Apply(email => $"serviceAccount:{email}"),
+        });
+        var service_account_trigger = new Gcp.CloudBuild.Trigger("service-account-trigger", new Gcp.CloudBuild.TriggerArgs
+        {
+            TriggerTemplate = new Gcp.CloudBuild.Inputs.TriggerTriggerTemplateArgs
+            {
+                BranchName = "master",
+                RepoName = "my-repo",
+            },
+            ServiceAccount = cloudbuildServiceAccount.Id,
+            Filename = "cloudbuild.yaml",
+        }, new CustomResourceOptions
+        {
+            DependsOn = 
+            {
+                actAs,
+                logsWriter,
+            },
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/cloudbuild"
+	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/projects"
+	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/serviceAccount"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		cloudbuildServiceAccount, err := serviceAccount.NewAccount(ctx, "cloudbuildServiceAccount", &serviceAccount.AccountArgs{
+			AccountId: pulumi.String("my-service-account"),
+		})
+		if err != nil {
+			return err
+		}
+		actAs, err := projects.NewIAMMember(ctx, "actAs", &projects.IAMMemberArgs{
+			Role: pulumi.String("roles/iam.serviceAccountUser"),
+			Member: cloudbuildServiceAccount.Email.ApplyT(func(email string) (string, error) {
+				return fmt.Sprintf("%v%v", "serviceAccount:", email), nil
+			}).(pulumi.StringOutput),
+		})
+		if err != nil {
+			return err
+		}
+		logsWriter, err := projects.NewIAMMember(ctx, "logsWriter", &projects.IAMMemberArgs{
+			Role: pulumi.String("roles/logging.logWriter"),
+			Member: cloudbuildServiceAccount.Email.ApplyT(func(email string) (string, error) {
+				return fmt.Sprintf("%v%v", "serviceAccount:", email), nil
+			}).(pulumi.StringOutput),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = cloudbuild.NewTrigger(ctx, "service_account_trigger", &cloudbuild.TriggerArgs{
+			TriggerTemplate: &cloudbuild.TriggerTriggerTemplateArgs{
+				BranchName: pulumi.String("master"),
+				RepoName:   pulumi.String("my-repo"),
+			},
+			ServiceAccount: cloudbuildServiceAccount.ID(),
+			Filename:       pulumi.String("cloudbuild.yaml"),
+		}, pulumi.DependsOn([]pulumi.Resource{
+			actAs,
+			logsWriter,
+		}))
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+cloudbuild_service_account = gcp.service_account.Account("cloudbuildServiceAccount", account_id="my-service-account")
+act_as = gcp.projects.IAMMember("actAs",
+    role="roles/iam.serviceAccountUser",
+    member=cloudbuild_service_account.email.apply(lambda email: f"serviceAccount:{email}"))
+logs_writer = gcp.projects.IAMMember("logsWriter",
+    role="roles/logging.logWriter",
+    member=cloudbuild_service_account.email.apply(lambda email: f"serviceAccount:{email}"))
+service_account_trigger = gcp.cloudbuild.Trigger("service-account-trigger",
+    trigger_template=gcp.cloudbuild.TriggerTriggerTemplateArgs(
+        branch_name="master",
+        repo_name="my-repo",
+    ),
+    service_account=cloudbuild_service_account.id,
+    filename="cloudbuild.yaml",
+    opts=pulumi.ResourceOptions(depends_on=[
+            act_as,
+            logs_writer,
+        ]))
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const cloudbuildServiceAccount = new gcp.serviceaccount.Account("cloudbuildServiceAccount", {accountId: "my-service-account"});
+const actAs = new gcp.projects.IAMMember("actAs", {
+    role: "roles/iam.serviceAccountUser",
+    member: pulumi.interpolate`serviceAccount:${cloudbuildServiceAccount.email}`,
+});
+const logsWriter = new gcp.projects.IAMMember("logsWriter", {
+    role: "roles/logging.logWriter",
+    member: pulumi.interpolate`serviceAccount:${cloudbuildServiceAccount.email}`,
+});
+const service_account_trigger = new gcp.cloudbuild.Trigger("service-account-trigger", {
+    triggerTemplate: {
+        branchName: "master",
+        repoName: "my-repo",
+    },
+    serviceAccount: cloudbuildServiceAccount.id,
+    filename: "cloudbuild.yaml",
+}, {
+    dependsOn: [
+        actAs,
+        logsWriter,
+    ],
+});
+```
+
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
 
@@ -555,6 +738,7 @@ const build_trigger = new gcp.cloudbuild.Trigger("build-trigger", {
             <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">pubsub_config</span><span class="p">:</span> <span class="nx">Optional[TriggerPubsubConfigArgs]</span> = None<span class="p">,</span>
+            <span class="nx">service_account</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">substitutions</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
             <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
             <span class="nx">trigger_template</span><span class="p">:</span> <span class="nx">Optional[TriggerTriggerTemplateArgs]</span> = None<span class="p">,</span>
@@ -801,6 +985,19 @@ One of `trigger_template`, `github`, `pubsub_config` or `webhook_config` must be
 Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="serviceaccount_csharp">
+<a href="#serviceaccount_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Account</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The service account used for all user-controlled operations including
+triggers.patch, triggers.run, builds.create, and builds.cancel.
+If no service account is set, then the standard Cloud Build service account
+([PROJECT_NUM]@system.gserviceaccount.com) will be used instead.
+Format: projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT_ID_OR_EMAIL}
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="substitutions_csharp">
 <a href="#substitutions_csharp" style="color: inherit; text-decoration: inherit;">Substitutions</a>
 </span>
@@ -960,6 +1157,19 @@ If it is not provided, the provider project is used.
 a build whenever a Pub/Sub message is published.
 One of `trigger_template`, `github`, `pubsub_config` or `webhook_config` must be provided.
 Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="serviceaccount_go">
+<a href="#serviceaccount_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Account</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The service account used for all user-controlled operations including
+triggers.patch, triggers.run, builds.create, and builds.cancel.
+If no service account is set, then the standard Cloud Build service account
+([PROJECT_NUM]@system.gserviceaccount.com) will be used instead.
+Format: projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT_ID_OR_EMAIL}
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="substitutions_go">
@@ -1123,6 +1333,19 @@ One of `trigger_template`, `github`, `pubsub_config` or `webhook_config` must be
 Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="serviceaccount_nodejs">
+<a href="#serviceaccount_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Account</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The service account used for all user-controlled operations including
+triggers.patch, triggers.run, builds.create, and builds.cancel.
+If no service account is set, then the standard Cloud Build service account
+([PROJECT_NUM]@system.gserviceaccount.com) will be used instead.
+Format: projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT_ID_OR_EMAIL}
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="substitutions_nodejs">
 <a href="#substitutions_nodejs" style="color: inherit; text-decoration: inherit;">substitutions</a>
 </span>
@@ -1282,6 +1505,19 @@ If it is not provided, the provider project is used.
 a build whenever a Pub/Sub message is published.
 One of `trigger_template`, `github`, `pubsub_config` or `webhook_config` must be provided.
 Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="service_account_python">
+<a href="#service_account_python" style="color: inherit; text-decoration: inherit;">service_<wbr>account</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The service account used for all user-controlled operations including
+triggers.patch, triggers.run, builds.create, and builds.cancel.
+If no service account is set, then the standard Cloud Build service account
+([PROJECT_NUM]@system.gserviceaccount.com) will be used instead.
+Format: projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT_ID_OR_EMAIL}
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="substitutions_python">
@@ -1483,6 +1719,7 @@ Get an existing Trigger resource's state with the given name, ID, and optional e
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">pubsub_config</span><span class="p">:</span> <span class="nx">Optional[TriggerPubsubConfigArgs]</span> = None<span class="p">,</span>
+        <span class="nx">service_account</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">substitutions</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
         <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
         <span class="nx">trigger_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -1722,6 +1959,19 @@ One of `trigger_template`, `github`, `pubsub_config` or `webhook_config` must be
 Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_serviceaccount_csharp">
+<a href="#state_serviceaccount_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Account</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The service account used for all user-controlled operations including
+triggers.patch, triggers.run, builds.create, and builds.cancel.
+If no service account is set, then the standard Cloud Build service account
+([PROJECT_NUM]@system.gserviceaccount.com) will be used instead.
+Format: projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT_ID_OR_EMAIL}
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_substitutions_csharp">
 <a href="#state_substitutions_csharp" style="color: inherit; text-decoration: inherit;">Substitutions</a>
 </span>
@@ -1899,6 +2149,19 @@ If it is not provided, the provider project is used.
 a build whenever a Pub/Sub message is published.
 One of `trigger_template`, `github`, `pubsub_config` or `webhook_config` must be provided.
 Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_serviceaccount_go">
+<a href="#state_serviceaccount_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Account</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The service account used for all user-controlled operations including
+triggers.patch, triggers.run, builds.create, and builds.cancel.
+If no service account is set, then the standard Cloud Build service account
+([PROJECT_NUM]@system.gserviceaccount.com) will be used instead.
+Format: projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT_ID_OR_EMAIL}
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_substitutions_go">
@@ -2080,6 +2343,19 @@ One of `trigger_template`, `github`, `pubsub_config` or `webhook_config` must be
 Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_serviceaccount_nodejs">
+<a href="#state_serviceaccount_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Account</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The service account used for all user-controlled operations including
+triggers.patch, triggers.run, builds.create, and builds.cancel.
+If no service account is set, then the standard Cloud Build service account
+([PROJECT_NUM]@system.gserviceaccount.com) will be used instead.
+Format: projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT_ID_OR_EMAIL}
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_substitutions_nodejs">
 <a href="#state_substitutions_nodejs" style="color: inherit; text-decoration: inherit;">substitutions</a>
 </span>
@@ -2257,6 +2533,19 @@ If it is not provided, the provider project is used.
 a build whenever a Pub/Sub message is published.
 One of `trigger_template`, `github`, `pubsub_config` or `webhook_config` must be provided.
 Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_service_account_python">
+<a href="#state_service_account_python" style="color: inherit; text-decoration: inherit;">service_<wbr>account</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The service account used for all user-controlled operations including
+triggers.patch, triggers.run, builds.create, and builds.cancel.
+If no service account is set, then the standard Cloud Build service account
+([PROJECT_NUM]@system.gserviceaccount.com) will be used instead.
+Format: projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT_ID_OR_EMAIL}
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_substitutions_python">

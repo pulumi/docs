@@ -515,7 +515,7 @@ gcp.container.Cluster for schema.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodepoolnodeconfig">Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The network configuration of the pool. See
+    <dd>{{% md %}}Parameters used in creating the default node pool. See
 gcp.container.Cluster for schema.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -682,7 +682,7 @@ gcp.container.Cluster for schema.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodepoolnodeconfig">Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The network configuration of the pool. See
+    <dd>{{% md %}}Parameters used in creating the default node pool. See
 gcp.container.Cluster for schema.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -849,7 +849,7 @@ gcp.container.Cluster for schema.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodepoolnodeconfig">Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The network configuration of the pool. See
+    <dd>{{% md %}}Parameters used in creating the default node pool. See
 gcp.container.Cluster for schema.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1016,7 +1016,7 @@ gcp.container.Cluster for schema.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodepoolnodeconfig">Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The network configuration of the pool. See
+    <dd>{{% md %}}Parameters used in creating the default node pool. See
 gcp.container.Cluster for schema.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1457,7 +1457,7 @@ gcp.container.Cluster for schema.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodepoolnodeconfig">Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The network configuration of the pool. See
+    <dd>{{% md %}}Parameters used in creating the default node pool. See
 gcp.container.Cluster for schema.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1641,7 +1641,7 @@ gcp.container.Cluster for schema.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodepoolnodeconfig">Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The network configuration of the pool. See
+    <dd>{{% md %}}Parameters used in creating the default node pool. See
 gcp.container.Cluster for schema.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1825,7 +1825,7 @@ gcp.container.Cluster for schema.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodepoolnodeconfig">Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The network configuration of the pool. See
+    <dd>{{% md %}}Parameters used in creating the default node pool. See
 gcp.container.Cluster for schema.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2009,7 +2009,7 @@ gcp.container.Cluster for schema.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodepoolnodeconfig">Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The network configuration of the pool. See
+    <dd>{{% md %}}Parameters used in creating the default node pool. See
 gcp.container.Cluster for schema.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">

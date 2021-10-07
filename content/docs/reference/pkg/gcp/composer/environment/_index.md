@@ -2988,6 +2988,16 @@ pinning it to a version specifier, use the empty string as the value.
     <dd>{{% md %}}-
 The major version of Python used to run the Apache Airflow scheduler, worker, and webserver processes.
 Can be set to '2' or '3'. If not specified, the default is '2'. Cannot be updated.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="schedulercount_csharp">
+<a href="#schedulercount_csharp" style="color: inherit; text-decoration: inherit;">Scheduler<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}-
+The number of schedulers for Airflow. This field is supported for Cloud Composer environments in versions composer-1.*.*-airflow-2.*.*.`
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3084,6 +3094,16 @@ pinning it to a version specifier, use the empty string as the value.
     <dd>{{% md %}}-
 The major version of Python used to run the Apache Airflow scheduler, worker, and webserver processes.
 Can be set to '2' or '3'. If not specified, the default is '2'. Cannot be updated.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="schedulercount_go">
+<a href="#schedulercount_go" style="color: inherit; text-decoration: inherit;">Scheduler<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}-
+The number of schedulers for Airflow. This field is supported for Cloud Composer environments in versions composer-1.*.*-airflow-2.*.*.`
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3180,6 +3200,16 @@ pinning it to a version specifier, use the empty string as the value.
     <dd>{{% md %}}-
 The major version of Python used to run the Apache Airflow scheduler, worker, and webserver processes.
 Can be set to '2' or '3'. If not specified, the default is '2'. Cannot be updated.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="schedulercount_nodejs">
+<a href="#schedulercount_nodejs" style="color: inherit; text-decoration: inherit;">scheduler<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}-
+The number of schedulers for Airflow. This field is supported for Cloud Composer environments in versions composer-1.*.*-airflow-2.*.*.`
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3276,6 +3306,16 @@ pinning it to a version specifier, use the empty string as the value.
     <dd>{{% md %}}-
 The major version of Python used to run the Apache Airflow scheduler, worker, and webserver processes.
 Can be set to '2' or '3'. If not specified, the default is '2'. Cannot be updated.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="scheduler_count_python">
+<a href="#scheduler_count_python" style="color: inherit; text-decoration: inherit;">scheduler_<wbr>count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}-
+The number of schedulers for Airflow. This field is supported for Cloud Composer environments in versions composer-1.*.*-airflow-2.*.*.`
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

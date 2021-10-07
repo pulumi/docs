@@ -31,6 +31,214 @@ Your account must have the `serviceusage.services.use` permission on the
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
+### Cloud Identity Group Membership
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var @group = new Gcp.CloudIdentity.Group("group", new Gcp.CloudIdentity.GroupArgs
+        {
+            DisplayName = "my-identity-group",
+            Parent = "customers/A01b123xz",
+            GroupKey = new Gcp.CloudIdentity.Inputs.GroupGroupKeyArgs
+            {
+                Id = "my-identity-group@example.com",
+            },
+            Labels = 
+            {
+                { "cloudidentity.googleapis.com/groups.discussion_forum", "" },
+            },
+        });
+        var child_group = new Gcp.CloudIdentity.Group("child-group", new Gcp.CloudIdentity.GroupArgs
+        {
+            DisplayName = "my-identity-group-child",
+            Parent = "customers/A01b123xz",
+            GroupKey = new Gcp.CloudIdentity.Inputs.GroupGroupKeyArgs
+            {
+                Id = "my-identity-group-child@example.com",
+            },
+            Labels = 
+            {
+                { "cloudidentity.googleapis.com/groups.discussion_forum", "" },
+            },
+        });
+        var cloudIdentityGroupMembershipBasic = new Gcp.CloudIdentity.GroupMembership("cloudIdentityGroupMembershipBasic", new Gcp.CloudIdentity.GroupMembershipArgs
+        {
+            Group = @group.Id,
+            PreferredMemberKey = new Gcp.CloudIdentity.Inputs.GroupMembershipPreferredMemberKeyArgs
+            {
+                Id = child_group.GroupKey.Apply(groupKey => groupKey.Id),
+            },
+            Roles = 
+            {
+                new Gcp.CloudIdentity.Inputs.GroupMembershipRoleArgs
+                {
+                    Name = "MEMBER",
+                },
+            },
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/cloudidentity"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		group, err := cloudidentity.NewGroup(ctx, "group", &cloudidentity.GroupArgs{
+			DisplayName: pulumi.String("my-identity-group"),
+			Parent:      pulumi.String("customers/A01b123xz"),
+			GroupKey: &cloudidentity.GroupGroupKeyArgs{
+				Id: pulumi.String("my-identity-group@example.com"),
+			},
+			Labels: pulumi.StringMap{
+				"cloudidentity.googleapis.com/groups.discussion_forum": pulumi.String(""),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = cloudidentity.NewGroup(ctx, "child_group", &cloudidentity.GroupArgs{
+			DisplayName: pulumi.String("my-identity-group-child"),
+			Parent:      pulumi.String("customers/A01b123xz"),
+			GroupKey: &cloudidentity.GroupGroupKeyArgs{
+				Id: pulumi.String("my-identity-group-child@example.com"),
+			},
+			Labels: pulumi.StringMap{
+				"cloudidentity.googleapis.com/groups.discussion_forum": pulumi.String(""),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = cloudidentity.NewGroupMembership(ctx, "cloudIdentityGroupMembershipBasic", &cloudidentity.GroupMembershipArgs{
+			Group: group.ID(),
+			PreferredMemberKey: &cloudidentity.GroupMembershipPreferredMemberKeyArgs{
+				Id: child_group.GroupKey.ApplyT(func(groupKey cloudidentity.GroupGroupKey) (string, error) {
+					return groupKey.Id, nil
+				}).(pulumi.StringOutput),
+			},
+			Roles: cloudidentity.GroupMembershipRoleArray{
+				&cloudidentity.GroupMembershipRoleArgs{
+					Name: pulumi.String("MEMBER"),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+group = gcp.cloudidentity.Group("group",
+    display_name="my-identity-group",
+    parent="customers/A01b123xz",
+    group_key=gcp.cloudidentity.GroupGroupKeyArgs(
+        id="my-identity-group@example.com",
+    ),
+    labels={
+        "cloudidentity.googleapis.com/groups.discussion_forum": "",
+    })
+child_group = gcp.cloudidentity.Group("child-group",
+    display_name="my-identity-group-child",
+    parent="customers/A01b123xz",
+    group_key=gcp.cloudidentity.GroupGroupKeyArgs(
+        id="my-identity-group-child@example.com",
+    ),
+    labels={
+        "cloudidentity.googleapis.com/groups.discussion_forum": "",
+    })
+cloud_identity_group_membership_basic = gcp.cloudidentity.GroupMembership("cloudIdentityGroupMembershipBasic",
+    group=group.id,
+    preferred_member_key=gcp.cloudidentity.GroupMembershipPreferredMemberKeyArgs(
+        id=child_group.group_key.id,
+    ),
+    roles=[gcp.cloudidentity.GroupMembershipRoleArgs(
+        name="MEMBER",
+    )])
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const group = new gcp.cloudidentity.Group("group", {
+    displayName: "my-identity-group",
+    parent: "customers/A01b123xz",
+    groupKey: {
+        id: "my-identity-group@example.com",
+    },
+    labels: {
+        "cloudidentity.googleapis.com/groups.discussion_forum": "",
+    },
+});
+const child_group = new gcp.cloudidentity.Group("child-group", {
+    displayName: "my-identity-group-child",
+    parent: "customers/A01b123xz",
+    groupKey: {
+        id: "my-identity-group-child@example.com",
+    },
+    labels: {
+        "cloudidentity.googleapis.com/groups.discussion_forum": "",
+    },
+});
+const cloudIdentityGroupMembershipBasic = new gcp.cloudidentity.GroupMembership("cloudIdentityGroupMembershipBasic", {
+    group: group.id,
+    preferredMemberKey: {
+        id: child_group.groupKey.apply(groupKey => groupKey.id),
+    },
+    roles: [{
+        name: "MEMBER",
+    }],
+});
+```
+
+
+{{< /example >}}
+
+
+
+
 ### Cloud Identity Group Membership User
 
 

@@ -98,7 +98,6 @@ class MyStack : Stack
             Region = "us-west2",
             Subnetwork = "default",
             AddressType = "INTERNAL",
-            Address = "10.168.0.17",
         });
         var pscIlbConsumer = new Gcp.Compute.ForwardingRule("pscIlbConsumer", new Gcp.Compute.ForwardingRuleArgs
         {
@@ -199,7 +198,6 @@ func main() {
 			Region:      pulumi.String("us-west2"),
 			Subnetwork:  pulumi.String("default"),
 			AddressType: pulumi.String("INTERNAL"),
-			Address:     pulumi.String("10.168.0.17"),
 		})
 		if err != nil {
 			return err
@@ -265,8 +263,7 @@ psc_ilb_service_attachment = gcp.compute.ServiceAttachment("pscIlbServiceAttachm
 psc_ilb_consumer_address = gcp.compute.Address("pscIlbConsumerAddress",
     region="us-west2",
     subnetwork="default",
-    address_type="INTERNAL",
-    address="10.168.0.17")
+    address_type="INTERNAL")
 psc_ilb_consumer = gcp.compute.ForwardingRule("pscIlbConsumer",
     region="us-west2",
     target=psc_ilb_service_attachment.id,
@@ -329,7 +326,6 @@ const pscIlbConsumerAddress = new gcp.compute.Address("pscIlbConsumerAddress", {
     region: "us-west2",
     subnetwork: "default",
     addressType: "INTERNAL",
-    address: "10.168.0.17",
 });
 const pscIlbConsumer = new gcp.compute.ForwardingRule("pscIlbConsumer", {
     region: "us-west2",
