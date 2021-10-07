@@ -37,6 +37,6 @@ Explore the resources and functions of the azure-native.servicefabricmesh module
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.35.0</dd>
+	<dd>1.36.0</dd>
 </dl>
 

@@ -2748,7 +2748,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-native:automation:AutomationAccount ContoseAutomationAccount /subscriptions/subid/resourceGroups/rg/providers/Microsoft.Automation/automationAccounts/myAutomationAccount9 
+$ pulumi import azure-native:automation:AutomationAccount myAutomationAccount9 /subscriptions/subid/resourceGroups/rg/providers/Microsoft.Automation/automationAccounts/myAutomationAccount9 
 ```
 
 

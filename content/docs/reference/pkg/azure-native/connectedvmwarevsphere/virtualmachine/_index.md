@@ -5958,7 +5958,7 @@ that the nic is connected to.{{% /md %}}</dd><dt class="property-optional"
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-native:connectedvmwarevsphere:VirtualMachine ContosoAgent /subscriptions/fd3c3665-1729-4b7b-9a38-238e83b0f98b/resourceGroups/testrg/providers/Microsoft.ConnectedVMwarevSphere/VirtualMachines/ContosoAgent 
+$ pulumi import azure-native:connectedvmwarevsphere:VirtualMachine DemoVM /subscriptions/fd3c3665-1729-4b7b-9a38-238e83b0f98b/resourceGroups/testrg/providers/Microsoft.ConnectedVMwarevSphere/VirtualMachines/DemoVM 
 ```
 
 
