@@ -4964,7 +4964,8 @@ Otherwise, specify the default value of 2.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Enables or disables the IPv6 endpoint for the instance metadata service. (Default: `disabled`).
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httpputresponsehoplimit_csharp">
 <a href="#httpputresponsehoplimit_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Put<wbr>Response<wbr>Hop<wbr>Limit</a>
@@ -5003,7 +5004,8 @@ Otherwise, specify the default value of 2.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Enables or disables the IPv6 endpoint for the instance metadata service. (Default: `disabled`).
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httpputresponsehoplimit_go">
 <a href="#httpputresponsehoplimit_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Put<wbr>Response<wbr>Hop<wbr>Limit</a>
@@ -5042,7 +5044,8 @@ Otherwise, specify the default value of 2.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Enables or disables the IPv6 endpoint for the instance metadata service. (Default: `disabled`).
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httpputresponsehoplimit_nodejs">
 <a href="#httpputresponsehoplimit_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Put<wbr>Response<wbr>Hop<wbr>Limit</a>
@@ -5081,7 +5084,8 @@ Otherwise, specify the default value of 2.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Enables or disables the IPv6 endpoint for the instance metadata service. (Default: `disabled`).
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="http_put_response_hop_limit_python">
 <a href="#http_put_response_hop_limit_python" style="color: inherit; text-decoration: inherit;">http_<wbr>put_<wbr>response_<wbr>hop_<wbr>limit</a>

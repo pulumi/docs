@@ -130,7 +130,8 @@ const existing = aws.lambda.getLayerVersion({
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_layer_version(</span><span class="nx">compatible_runtime</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_layer_version(</span><span class="nx">compatible_architecture</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                      <span class="nx">compatible_runtime</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                       <span class="nx">layer_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                       <span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
                       <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetLayerVersionResult</code></pre></div>
@@ -168,6 +169,15 @@ The following arguments are supported:
     <dd>{{% md %}}Name of the lambda layer.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="compatiblearchitecture_csharp">
+<a href="#compatiblearchitecture_csharp" style="color: inherit; text-decoration: inherit;">Compatible<wbr>Architecture</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specific architecture the layer version could support. Conflicts with `version`. If specified, the latest available layer version supporting the provided architecture will be used.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="compatibleruntime_csharp">
 <a href="#compatibleruntime_csharp" style="color: inherit; text-decoration: inherit;">Compatible<wbr>Runtime</a>
 </span>
@@ -183,7 +193,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Specific layer version. Conflicts with `compatible_runtime`. If omitted, the latest available layer version will be used.
+    <dd>{{% md %}}Specific layer version. Conflicts with `compatible_runtime` and `compatible_architecture`. If omitted, the latest available layer version will be used.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -197,6 +207,15 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the lambda layer.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="compatiblearchitecture_go">
+<a href="#compatiblearchitecture_go" style="color: inherit; text-decoration: inherit;">Compatible<wbr>Architecture</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specific architecture the layer version could support. Conflicts with `version`. If specified, the latest available layer version supporting the provided architecture will be used.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="compatibleruntime_go">
@@ -214,7 +233,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Specific layer version. Conflicts with `compatible_runtime`. If omitted, the latest available layer version will be used.
+    <dd>{{% md %}}Specific layer version. Conflicts with `compatible_runtime` and `compatible_architecture`. If omitted, the latest available layer version will be used.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -228,6 +247,15 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the lambda layer.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="compatiblearchitecture_nodejs">
+<a href="#compatiblearchitecture_nodejs" style="color: inherit; text-decoration: inherit;">compatible<wbr>Architecture</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specific architecture the layer version could support. Conflicts with `version`. If specified, the latest available layer version supporting the provided architecture will be used.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="compatibleruntime_nodejs">
@@ -245,7 +273,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Specific layer version. Conflicts with `compatible_runtime`. If omitted, the latest available layer version will be used.
+    <dd>{{% md %}}Specific layer version. Conflicts with `compatible_runtime` and `compatible_architecture`. If omitted, the latest available layer version will be used.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -259,6 +287,15 @@ The following arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the lambda layer.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="compatible_architecture_python">
+<a href="#compatible_architecture_python" style="color: inherit; text-decoration: inherit;">compatible_<wbr>architecture</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specific architecture the layer version could support. Conflicts with `version`. If specified, the latest available layer version supporting the provided architecture will be used.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="compatible_runtime_python">
@@ -276,7 +313,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Specific layer version. Conflicts with `compatible_runtime`. If omitted, the latest available layer version will be used.
+    <dd>{{% md %}}Specific layer version. Conflicts with `compatible_runtime` and `compatible_architecture`. If omitted, the latest available layer version will be used.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -307,7 +344,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The compatible architectures of the specific Lambda Layer Version.
+    <dd>{{% md %}}A list of [Architectures](https://docs.aws.amazon.com/lambda/latest/dg/API_GetLayerVersion.html#SSS-GetLayerVersion-response-CompatibleArchitectures) the specific Lambda Layer version is compatible with.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="compatibleruntimes_csharp">
@@ -417,6 +454,14 @@ The following output properties are available:
     <dd>{{% md %}}This Lamba Layer version.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="compatiblearchitecture_csharp">
+<a href="#compatiblearchitecture_csharp" style="color: inherit; text-decoration: inherit;">Compatible<wbr>Architecture</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="compatibleruntime_csharp">
 <a href="#compatibleruntime_csharp" style="color: inherit; text-decoration: inherit;">Compatible<wbr>Runtime</a>
 </span>
@@ -444,7 +489,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The compatible architectures of the specific Lambda Layer Version.
+    <dd>{{% md %}}A list of [Architectures](https://docs.aws.amazon.com/lambda/latest/dg/API_GetLayerVersion.html#SSS-GetLayerVersion-response-CompatibleArchitectures) the specific Lambda Layer version is compatible with.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="compatibleruntimes_go">
@@ -554,6 +599,14 @@ The following output properties are available:
     <dd>{{% md %}}This Lamba Layer version.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="compatiblearchitecture_go">
+<a href="#compatiblearchitecture_go" style="color: inherit; text-decoration: inherit;">Compatible<wbr>Architecture</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="compatibleruntime_go">
 <a href="#compatibleruntime_go" style="color: inherit; text-decoration: inherit;">Compatible<wbr>Runtime</a>
 </span>
@@ -581,7 +634,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The compatible architectures of the specific Lambda Layer Version.
+    <dd>{{% md %}}A list of [Architectures](https://docs.aws.amazon.com/lambda/latest/dg/API_GetLayerVersion.html#SSS-GetLayerVersion-response-CompatibleArchitectures) the specific Lambda Layer version is compatible with.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="compatibleruntimes_nodejs">
@@ -691,6 +744,14 @@ The following output properties are available:
     <dd>{{% md %}}This Lamba Layer version.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="compatiblearchitecture_nodejs">
+<a href="#compatiblearchitecture_nodejs" style="color: inherit; text-decoration: inherit;">compatible<wbr>Architecture</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="compatibleruntime_nodejs">
 <a href="#compatibleruntime_nodejs" style="color: inherit; text-decoration: inherit;">compatible<wbr>Runtime</a>
 </span>
@@ -718,7 +779,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The compatible architectures of the specific Lambda Layer Version.
+    <dd>{{% md %}}A list of [Architectures](https://docs.aws.amazon.com/lambda/latest/dg/API_GetLayerVersion.html#SSS-GetLayerVersion-response-CompatibleArchitectures) the specific Lambda Layer version is compatible with.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="compatible_runtimes_python">
@@ -827,6 +888,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}This Lamba Layer version.
 {{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="compatible_architecture_python">
+<a href="#compatible_architecture_python" style="color: inherit; text-decoration: inherit;">compatible_<wbr>architecture</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="compatible_runtime_python">
 <a href="#compatible_runtime_python" style="color: inherit; text-decoration: inherit;">compatible_<wbr>runtime</a>
