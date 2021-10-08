@@ -20,6 +20,7 @@ Explore the resources and functions of the azure.backup module.
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
+    <li><a href="getpolicyfileshare" title="GetPolicyFileshare"><span class="symbol function"></span>GetPolicyFileshare</a></li>
     <li><a href="getpolicyvm" title="GetPolicyVM"><span class="symbol function"></span>GetPolicyVM</a></li>
 </ul>
 
@@ -32,6 +33,6 @@ Explore the resources and functions of the azure.backup module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/hashicorp/terraform-provider-azurerm).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.21.0</dd>
+	<dd>4.22.0</dd>
 </dl>
 

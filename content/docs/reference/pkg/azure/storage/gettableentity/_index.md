@@ -35,7 +35,7 @@ class MyStack : Stack
     {
         var example = Output.Create(Azure.Storage.GetTableEntity.InvokeAsync(new Azure.Storage.GetTableEntityArgs
         {
-            PartitionKey = "example-parition-key",
+            PartitionKey = "example-partition-key",
             RowKey = "example-row-key",
             StorageAccountName = "example-storage-account-name",
             TableName = "example-table-name",
@@ -62,7 +62,7 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := storage.LookupTableEntity(ctx, &storage.LookupTableEntityArgs{
-			PartitionKey:       "example-parition-key",
+			PartitionKey:       "example-partition-key",
 			RowKey:             "example-row-key",
 			StorageAccountName: "example-storage-account-name",
 			TableName:          "example-table-name",
@@ -85,7 +85,7 @@ func main() {
 import pulumi
 import pulumi_azure as azure
 
-example = azure.storage.get_table_entity(partition_key="example-parition-key",
+example = azure.storage.get_table_entity(partition_key="example-partition-key",
     row_key="example-row-key",
     storage_account_name="example-storage-account-name",
     table_name="example-table-name")
@@ -103,7 +103,7 @@ import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
 const example = pulumi.output(azure.storage.getTableEntity({
-    partitionKey: "example-parition-key",
+    partitionKey: "example-partition-key",
     rowKey: "example-row-key",
     storageAccountName: "example-storage-account-name",
     tableName: "example-table-name",

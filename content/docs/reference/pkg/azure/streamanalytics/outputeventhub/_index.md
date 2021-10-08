@@ -245,6 +245,7 @@ const exampleOutputEventHub = new azure.streamanalytics.OutputEventHub("exampleO
                    <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
                    <span class="nx">eventhub_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                    <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">partition_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                    <span class="nx">property_columns</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
                    <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                    <span class="nx">serialization</span><span class="p">:</span> <span class="nx">Optional[OutputEventHubSerializationArgs]</span> = None<span class="p">,</span>
@@ -453,6 +454,15 @@ The OutputEventHub resource accepts the following [input]({{< relref "/docs/intr
     <dd>{{% md %}}The name of the Stream Output. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="partitionkey_csharp">
+<a href="#partitionkey_csharp" style="color: inherit; text-decoration: inherit;">Partition<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The column that is used for the Event Hub partition key.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="propertycolumns_csharp">
 <a href="#propertycolumns_csharp" style="color: inherit; text-decoration: inherit;">Property<wbr>Columns</a>
 </span>
@@ -536,6 +546,15 @@ The OutputEventHub resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Stream Output. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="partitionkey_go">
+<a href="#partitionkey_go" style="color: inherit; text-decoration: inherit;">Partition<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The column that is used for the Event Hub partition key.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="propertycolumns_go">
@@ -623,6 +642,15 @@ The OutputEventHub resource accepts the following [input]({{< relref "/docs/intr
     <dd>{{% md %}}The name of the Stream Output. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="partitionkey_nodejs">
+<a href="#partitionkey_nodejs" style="color: inherit; text-decoration: inherit;">partition<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The column that is used for the Event Hub partition key.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="propertycolumns_nodejs">
 <a href="#propertycolumns_nodejs" style="color: inherit; text-decoration: inherit;">property<wbr>Columns</a>
 </span>
@@ -708,6 +736,15 @@ The OutputEventHub resource accepts the following [input]({{< relref "/docs/intr
     <dd>{{% md %}}The name of the Stream Output. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="partition_key_python">
+<a href="#partition_key_python" style="color: inherit; text-decoration: inherit;">partition_<wbr>key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The column that is used for the Event Hub partition key.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="property_columns_python">
 <a href="#property_columns_python" style="color: inherit; text-decoration: inherit;">property_<wbr>columns</a>
 </span>
@@ -791,6 +828,7 @@ Get an existing OutputEventHub resource's state with the given name, ID, and opt
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
         <span class="nx">eventhub_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">partition_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">property_columns</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
         <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">serialization</span><span class="p">:</span> <span class="nx">Optional[OutputEventHubSerializationArgs]</span> = None<span class="p">,</span>
@@ -928,6 +966,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The name of the Stream Output. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_partitionkey_csharp">
+<a href="#state_partitionkey_csharp" style="color: inherit; text-decoration: inherit;">Partition<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The column that is used for the Event Hub partition key.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_propertycolumns_csharp">
 <a href="#state_propertycolumns_csharp" style="color: inherit; text-decoration: inherit;">Property<wbr>Columns</a>
 </span>
@@ -1011,6 +1058,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Stream Output. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_partitionkey_go">
+<a href="#state_partitionkey_go" style="color: inherit; text-decoration: inherit;">Partition<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The column that is used for the Event Hub partition key.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_propertycolumns_go">
@@ -1098,6 +1154,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The name of the Stream Output. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_partitionkey_nodejs">
+<a href="#state_partitionkey_nodejs" style="color: inherit; text-decoration: inherit;">partition<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The column that is used for the Event Hub partition key.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_propertycolumns_nodejs">
 <a href="#state_propertycolumns_nodejs" style="color: inherit; text-decoration: inherit;">property<wbr>Columns</a>
 </span>
@@ -1181,6 +1246,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Stream Output. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_partition_key_python">
+<a href="#state_partition_key_python" style="color: inherit; text-decoration: inherit;">partition_<wbr>key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The column that is used for the Event Hub partition key.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_property_columns_python">
