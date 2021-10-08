@@ -171,7 +171,7 @@ let assetArchive = new pulumi.asset.AssetArchive({
 ```python
 file_archive = pulumi.FileArchive("./file.zip")
 remote_archive = pulumi.RemoteArchive("http://contoso.com/file.zip")
-asset_archive = pulumiAssetArchive({
+asset_archive = pulumi.AssetArchive({
     "file": pulumi.StringAsset("Hello, world!"),
     "folder": pulumi.FileArchive("./folder")
 })
