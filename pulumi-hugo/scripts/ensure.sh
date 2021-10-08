@@ -39,4 +39,3 @@ fi
 
 echo "Installing Node.js modules..."
 yarn install
-yarn --cwd themes/default run ensure
